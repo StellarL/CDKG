@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637136447764346250%26DBCODE%3dCJFD%26TABLEName%3dCJFDTEMP%26FileName%3dJSJY201911023%26RESULT%3d1%26SIGN%3dbG6o3mAdVuobFNhfZeFt3sl3Hw4%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201911023&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201911023&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201911023&amp;v=Mjk0NTN5bm5XNzNJTHo3QmQ3RzRIOWpOcm85SFo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Y=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="0 引言 ">0 引言</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="1 经验回放模块的接口形式 ">1 经验回放模块的接口形式</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#63" data-title="2 经验回放模块的架构设计 ">2 经验回放模块的架构设计</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#66" data-title="2.1 &lt;b&gt;功能内核&lt;/b&gt;(C++)">2.1 <b>功能内核</b>(C++)</a></li>
+                                                <li><a href="#74" data-title="2.2 &lt;b&gt;包装类&lt;/b&gt;(python)">2.2 <b>包装类</b>(python)</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#92" data-title="3 实现细节与理论分析 ">3 实现细节与理论分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#95" data-title="3.1 get_batch&lt;b&gt;操作的性能优化&lt;/b&gt;">3.1 get_batch<b>操作的性能优化</b></a></li>
+                                                <li><a href="#104" data-title="3.2 record&lt;b&gt;操作中记录淘汰过程及其性能优化&lt;/b&gt;">3.2 record<b>操作中记录淘汰过程及其性能优化</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#129" data-title="4 性能测试与讨论 ">4 性能测试与讨论</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#147" data-title="5 结语 ">5 结语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#65" data-title="图1 经验回放模块整体架构">图1 经验回放模块整体架构</a></li>
+                                                <li><a href="#128" data-title="图2 删除回合&lt;i&gt;e&lt;/i&gt;">图2 删除回合<i>e</i></a></li>
+                                                <li><a href="#133" data-title="&lt;b&gt;表&lt;/b&gt;1 &lt;b&gt;不同&lt;/b&gt;&lt;i&gt;k&lt;/i&gt;、&lt;i&gt;s&lt;/i&gt;&lt;b&gt;组合下的统计量&lt;/b&gt;record_100 "><b>表</b>1 <b>不同</b><i>k</i>、<i>s</i><b>组合下的统计量</b>record_100 </a></li>
+                                                <li><a href="#134" data-title="&lt;b&gt;表&lt;/b&gt;2 &lt;b&gt;不同&lt;/b&gt;&lt;i&gt;k&lt;/i&gt;、&lt;i&gt;s&lt;/i&gt;&lt;b&gt;组合下的统计量&lt;/b&gt;get_5000 "><b>表</b>2 <b>不同</b><i>k</i>、<i>s</i><b>组合下的统计量</b>get_5000 </a></li>
+                                                <li><a href="#136" data-title="图3 record_100的时间开销与&lt;i&gt;k&lt;/i&gt;、&lt;i&gt;s&lt;/i&gt;关系曲面">图3 record_100的时间开销与<i>k</i>、<i>s</i>关系曲面</a></li>
+                                                <li><a href="#137" data-title="图4 get_5000的时间开销与&lt;i&gt;k&lt;/i&gt;、&lt;i&gt;s&lt;/i&gt;关系曲面">图4 get_5000的时间开销与<i>k</i>、<i>s</i>关系曲面</a></li>
+                                                <li><a href="#139" data-title="图5 get_5000的时间开销与数据规模&lt;i&gt;N&lt;/i&gt;的关系曲线">图5 get_5000的时间开销与数据规模<i>N</i>的关系曲线</a></li>
+                                                <li><a href="#143" data-title="&lt;b&gt;表&lt;/b&gt;3 python&lt;b&gt;实现经验回放的&lt;/b&gt; record_100&lt;b&gt;与&lt;/b&gt;get_5000&lt;b&gt;的耗时 &lt;/b&gt;"><b>表</b>3 python<b>实现经验回放的</b> record_100<b>与</b>get_5000<b>的耗时 </b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="164">
+
+
+                                    <a id="bibliography_1" title=" SUTTON R S.Learning to predict by the methods of temporal differences[J].Machine Learning,1988,3(1):9-44." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00001337997&amp;v=MjgwMTBIN1I3cWRaK1p1RmlybFVyM0FJbDA9Tmo3QmFyTzRIdEhOckl4Q2JlSUlZM2s1ekJkaDRqOTlTWHFScnhveGNN&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         SUTTON R S.Learning to predict by the methods of temporal differences[J].Machine Learning,1988,3(1):9-44.
+                                    </a>
+                                </li>
+                                <li id="166">
+
+
+                                    <a id="bibliography_2" title=" WATKINS C J C H,DAYAN P.Q-learning[J].Machine Learning,1992,8(3/4):279-292." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00001338455&amp;v=MDYzNzhIN1I3cWRaK1p1RmlybFVyM0FJbDA9Tmo3QmFyTzRIdEhOckl4TllPNEtZM2s1ekJkaDRqOTlTWHFScnhveGNN&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         WATKINS C J C H,DAYAN P.Q-learning[J].Machine Learning,1992,8(3/4):279-292.
+                                    </a>
+                                </li>
+                                <li id="168">
+
+
+                                    <a id="bibliography_3" title=" 沙宗轩,薛菲,朱杰.基于并行强化学习的云机器人任务调度策略[J].计算机应用,2019,39(2):501-508.(SHA Z X,XUE F,ZHU J.Scheduling strategy of cloud robots based on parallel reinforcement learning[J].Journal of Computer Applications,2019,39(2):501-508.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201902034&amp;v=MDY1NDc0SDlqTXJZOUdZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeW5uVzczTEx6N0JkN0c=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         沙宗轩,薛菲,朱杰.基于并行强化学习的云机器人任务调度策略[J].计算机应用,2019,39(2):501-508.(SHA Z X,XUE F,ZHU J.Scheduling strategy of cloud robots based on parallel reinforcement learning[J].Journal of Computer Applications,2019,39(2):501-508.)
+                                    </a>
+                                </li>
+                                <li id="170">
+
+
+                                    <a id="bibliography_4" title=" SHAKEEL P M,BASKAR S,DHULIPALA V R S,et al.Maintaining security and privacy in health care system using learning based deep-Q-networks[J].Journal of Medical Systems,2018,42(10):186-186." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Maintaining security and privacy in health care system using learning based deep-Q-networks">
+                                        <b>[4]</b>
+                                         SHAKEEL P M,BASKAR S,DHULIPALA V R S,et al.Maintaining security and privacy in health care system using learning based deep-Q-networks[J].Journal of Medical Systems,2018,42(10):186-186.
+                                    </a>
+                                </li>
+                                <li id="172">
+
+
+                                    <a id="bibliography_5" title=" MNIH V,KAVUKCUOGLU K,SILVER D,et al.Human-level control through deep reinforcement learning[J].Nature,2015,518(7540):529-533." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Human-level control through deep reinforcement learning">
+                                        <b>[5]</b>
+                                         MNIH V,KAVUKCUOGLU K,SILVER D,et al.Human-level control through deep reinforcement learning[J].Nature,2015,518(7540):529-533.
+                                    </a>
+                                </li>
+                                <li id="174">
+
+
+                                    <a id="bibliography_6" title=" SILVER D,HUANG A,MADDISON C J,et al.Mastering the game of go with deep neural networks and tree search[J].Nature,2016,529(7587):484-489." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Mastering the game of Go with deep neural networks and tree search">
+                                        <b>[6]</b>
+                                         SILVER D,HUANG A,MADDISON C J,et al.Mastering the game of go with deep neural networks and tree search[J].Nature,2016,529(7587):484-489.
+                                    </a>
+                                </li>
+                                <li id="176">
+
+
+                                    <a id="bibliography_7" title=" 赵玉婷,韩宝玲,罗庆生.基于deep Q-network双足机器人非平整地面行走稳定性控制方法[J].计算机应用,2018,38(9):2459-2463.(ZHAO Y T,HAN B L,LUO Q S.Walking stability control method based on deep Q-network for biped robot on uneven ground[J].Journal of Computer Applications,2018,38(9):2459-2463.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201809004&amp;v=MjE4NDBMejdCZDdHNEg5bk1wbzlGWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlublc3M0w=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         赵玉婷,韩宝玲,罗庆生.基于deep Q-network双足机器人非平整地面行走稳定性控制方法[J].计算机应用,2018,38(9):2459-2463.(ZHAO Y T,HAN B L,LUO Q S.Walking stability control method based on deep Q-network for biped robot on uneven ground[J].Journal of Computer Applications,2018,38(9):2459-2463.)
+                                    </a>
+                                </li>
+                                <li id="178">
+
+
+                                    <a id="bibliography_8" title=" ALANSARY A,OKTAY O,LI Y W,et al.Evaluating reinforcement learning agents for anatomical landmark detection[J].Medical Image Analysis,2019,53:156-164." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Evaluating reinforcement learning agents for anatomical landmark detection">
+                                        <b>[8]</b>
+                                         ALANSARY A,OKTAY O,LI Y W,et al.Evaluating reinforcement learning agents for anatomical landmark detection[J].Medical Image Analysis,2019,53:156-164.
+                                    </a>
+                                </li>
+                                <li id="180">
+
+
+                                    <a id="bibliography_9" title=" ZHU J,ZHU J,WANG Z,et al.Hierarchical decision and control for continuous multitarget problem:policy evaluation with action delay[J].IEEE Transactions on Neural Networks and Learning Systems,2019,30(2):464-473." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Hierarchical decision and control for continuous multitarget problem:policy evaluation with action delay">
+                                        <b>[9]</b>
+                                         ZHU J,ZHU J,WANG Z,et al.Hierarchical decision and control for continuous multitarget problem:policy evaluation with action delay[J].IEEE Transactions on Neural Networks and Learning Systems,2019,30(2):464-473.
+                                    </a>
+                                </li>
+                                <li id="182">
+
+
+                                    <a id="bibliography_10" title=" LIN L J.Self-improving reactive Agents based on reinforcement learning,planning and teaching[J].Machine Learning,1992,8(3/4):293-321." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00001338439&amp;v=MjEzNDVYcVJyeG94Y01IN1I3cWRaK1p1RmlybFVyM0FJbDA9Tmo3QmFyTzRIdEhOckl4TllPZ0dZM2s1ekJkaDRqOTlT&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         LIN L J.Self-improving reactive Agents based on reinforcement learning,planning and teaching[J].Machine Learning,1992,8(3/4):293-321.
+                                    </a>
+                                </li>
+                                <li id="184">
+
+
+                                    <a id="bibliography_11" title=" WULFING J,KUMAR S S,BOEDECKER J,et al.Adaptive long-term control of biological neural networks with deep reinforcement learning[J].Neurocomputing,2019,342:66-74." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Adaptive long-term control of biological neural networks with deep reinforcement learning">
+                                        <b>[11]</b>
+                                         WULFING J,KUMAR S S,BOEDECKER J,et al.Adaptive long-term control of biological neural networks with deep reinforcement learning[J].Neurocomputing,2019,342:66-74.
+                                    </a>
+                                </li>
+                                <li id="186">
+
+
+                                    <a id="bibliography_12" title=" HOCHREITER S,SCHMIDHUBER J.Long short-term memory[J].Neural Computation,1997,9:1735-1780." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJBK&amp;filename=SJBK15090500014198&amp;v=MTc5MjRlcnFRVE1ud1plWnRGaW5sVXIzSUlWd2NhQkU9TmlmSlpiSzlIdGpNcW85RlpPb0xEWFV4b0JNVDZUNFBRSC9pclJkRw==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         HOCHREITER S,SCHMIDHUBER J.Long short-term memory[J].Neural Computation,1997,9:1735-1780.
+                                    </a>
+                                </li>
+                                <li id="188">
+
+
+                                    <a id="bibliography_13" title=" KIM J J,CHA S H,CHO K H,et al.Deep reinforcement learning based multi-Agent collaborated network for distributed stock trading[J].International Journal of Grid and Distributed Computing,2018,11(2):11-20." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep reinforcement learning based multi-Agent collaborated network for distributed stock trading">
+                                        <b>[13]</b>
+                                         KIM J J,CHA S H,CHO K H,et al.Deep reinforcement learning based multi-Agent collaborated network for distributed stock trading[J].International Journal of Grid and Distributed Computing,2018,11(2):11-20.
+                                    </a>
+                                </li>
+                                <li id="190">
+
+
+                                    <a id="bibliography_14" title=" 朱斐,吴文,刘全,等.一种最大置信上界经验采样的深度Q网络方法[J].计算机研究与发展,2018,55(8):1694-1705.(ZHU F,WU W,LIU Q,et al.A deep Q-network method based on upper confidence bound experience sampling[J].Journal of Computer Research and Development,2018,55(8):1694-1705.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201808011&amp;v=MjU5OTJwNDlFWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlublc3M0xMeXZTZExHNEg5bk0=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         朱斐,吴文,刘全,等.一种最大置信上界经验采样的深度Q网络方法[J].计算机研究与发展,2018,55(8):1694-1705.(ZHU F,WU W,LIU Q,et al.A deep Q-network method based on upper confidence bound experience sampling[J].Journal of Computer Research and Development,2018,55(8):1694-1705.)
+                                    </a>
+                                </li>
+                                <li id="192">
+
+
+                                    <a id="bibliography_15" title=" BRUIN T D,KOBER J,TUYLS K,et al.Experience selection in deep reinforcement learning for control[J].Journal of Machine Learning Research,2018,19:1-56." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Experience selection in deep reinforcement learning for control">
+                                        <b>[15]</b>
+                                         BRUIN T D,KOBER J,TUYLS K,et al.Experience selection in deep reinforcement learning for control[J].Journal of Machine Learning Research,2018,19:1-56.
+                                    </a>
+                                </li>
+                                <li id="194">
+
+
+                                    <a id="bibliography_16" title=" YOU S X,DIAO M,GAO L P.Deep reinforcement learning for target searching in cognitive electronic warfare[J].IEEE Access,2019,7:37432-37447." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep reinforcement learning for target searching in cognitive electronic warfare">
+                                        <b>[16]</b>
+                                         YOU S X,DIAO M,GAO L P.Deep reinforcement learning for target searching in cognitive electronic warfare[J].IEEE Access,2019,7:37432-37447.
+                                    </a>
+                                </li>
+                                <li id="196">
+
+
+                                    <a id="bibliography_17" title=" LEI X Y,ZHANG Z A,DONG P F.Dynamic path planning of unknown environment based on deep reinforcement learning[J].Journal of Robotics,2018,2018:Article ID 5781591." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJHD&amp;filename=SJHD7BB5C552B01AE8709198855ED90F3387&amp;v=MDk5NTl4eUJZYTZ6WjFRSHJuMldZOGVjU1hScktZQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQnJMVTA1dHBoeGJxM3dxcz1OaWZEYXJUS2JOUy9xb3BIRnVzT2ZRaw==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                         LEI X Y,ZHANG Z A,DONG P F.Dynamic path planning of unknown environment based on deep reinforcement learning[J].Journal of Robotics,2018,2018:Article ID 5781591.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+    <div class="head-tag">   
+            <p>
+               <b> 网络首发时间: 2019-08-30 14:56</b>
+            </p>     
+    </div>
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJY" target="_blank">计算机应用</a>
+                2019,39(11),3242-3249 DOI:10.11772/j.issn.1001-9081.2019050810            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>一种高效的经验回放模块设计</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%88%E5%8B%83&amp;code=27771231&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陈勃</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E9%94%A6%E8%89%B3&amp;code=43224072&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王锦艳</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E7%A6%8F%E5%B7%9E%E5%A4%A7%E5%AD%A6%E6%95%B0%E5%AD%A6%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AD%A6%E9%99%A2&amp;code=0094575&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">福州大学数学与计算机科学学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对深度Q网络(DQN)应用中基于python数据结构直接实现的经验回放过程时常成为性能瓶颈,提出一种具有高性能及通用性的经验回放模块设计方案。该设计方案具有两层软件结构:底层的功能内核由C++语言实现,以提供较高的执行效率;上层则由python语言编写,以面向对象的方式封装模块功能并提供调用接口,使模块具有较高易用性。针对经验回放所涉及的关键操作,一些技术细节被充分研究和精心设计,例如,将优先级回放机制作为附属组件与模块的主体运行逻辑分离,将样本的可抽取性验证提前到样本记录操作中进行,使用高效的样本淘汰策略与算法等。这些措施使模块具有较高的通用性和可扩展性。实验结果表明,按照该模块实现的经验回放过程,整体执行效率得到了充分优化,两个关键操作——样本记录与样本抽取,皆可高效执行。与基于python数据结构的直接实现方式相比,所提模块在样本抽取操作上的性能提升了约100倍,从而避免了经验回放过程成为整个系统的性能瓶颈,满足了各类DQN相关应用项目的需要。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">强化学习;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">深度学习;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B7%B1%E5%BA%A6Q%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">深度Q网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%BB%8F%E9%AA%8C%E5%9B%9E%E6%94%BE&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">经验回放;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">软件设计;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    *陈勃(1984—),男,福建福州人,副教授,博士,CCF会员,主要研究方向:人工智能、多主体仿真,电子邮箱,bo.chen@fzu.edu.cn;
+                                </span>
+                                <span>
+                                    王锦艳(1995—),女,福建福州人,硕士研究生,主要研究方向:机器学习、多主体仿真。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2019-05-13</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>福建省自然科学基金资助项目(2016J01294);</span>
+                    </p>
+            </div>
+                    <h1><b>Design of experience-replay module with high performance</b></h1>
+                    <h2>
+                    <span>CHEN Bo</span>
+                    <span>WANG Jinyan</span>
+            </h2>
+                    <h2>
+                    <span>College of Mathematics and Computer Science, Fuzhou University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Concerning the problem that a straightforward implementation of the experience-replay procedure based on python data-structures may lead to a performance bottleneck in Deep Q Network(DQN) related applications, a design scheme of a universal experience-replay module was proposed to provide high performance. The proposed module consists of two software layers. One of them, called the “kernel”, was written in C++, to implement fundamental functions for experience-replay, achieving a high execution efficiency. And the other layer “wrapper”, written in python, encapsulated the module function and provided the call interface in an object-oriented style, guaranteeing the usability. For the critical operations in experience-replay, the software structure and algorithms were well researched and designed. The measures include implementing the priority replay mechanism as an accessorial part of the main module with logical separation, bringing forward the samples' verification of “get<sub>b</sub>atch” to the “record” operation, using efficient strategies and algorithms in eliminating samples, and so on. With such measures, the proposed module is universal and extendible. The experimental results show that the execution efficiency of the experience-replay process is well optimized by using the proposed module, and the two critical operations, the “record” and the “get<sub>b</sub>atch”, can be executed efficiently. The proposed module operates the “get<sub>b</sub>atch” about 100 times faster compared with the straightforward implementation based on python data-structures. Therefore, the experience-replay process is no longer a performance bottleneck in the system, meeting the requirements of various kinds of DQN-related applications.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=reinforcement%20learning&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">reinforcement learning;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=deep%20learning&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">deep learning;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Deep%20Q%20Network(DQN)&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Deep Q Network(DQN);</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=experience-replay&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">experience-replay;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=software%20design&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">software design;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                            <b>Author：</b>
+                                                        <span>
+                                    CHEN Bo, born in 1984, Ph. D., associate professor. His research interests include artificial intelligence, multi-Agent simulation.;
+                                </span>
+                                <span>
+                                    WANG Jinyan, born in 1995, M. S. candidate. Her research interests include machine learning, multi-Agent simulation.;
+                                </span>
+                    </p>
+                                    <p><b>Received：</b> 2019-05-13</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>supported by the Natural Science Foundation of Fujian Province(2016J01294);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="37" name="37" class="anchor-tag">0 引言</h3>
+                <div class="p1">
+                    <p id="38">Q学习(Q-Learning)是强化学习方法的一个重要分支,用于从智能个体的过往行为和环境反馈中学习行为决策模式。此类强化学习过程利用时间差分(Temporal Difference,TD)方法<citation id="198" type="reference"><link href="164" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>,迭代地累积个体的短期收益(Reward),从而评估在每种可观察状态(State)下施行每种动作(Action)的长程收益值(Q值),来为个体决策作出参考<citation id="199" type="reference"><link href="166" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>。传统Q-Learning通常采用二维表格的形式来记录Q值,但这对于具有大量可观察状态或者连续状态的场合显然不适用<citation id="200" type="reference"><link href="168" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。随着近年来深度学习软硬件技术的蓬勃发展,深度Q网络(Deep Q Network,DQN)方法应运而生。它采用深度神经网络拟合Q函数<citation id="206" type="reference"><link href="170" rel="bibliography" /><link href="172" rel="bibliography" /><sup>[<a class="sup">4</a>,<a class="sup">5</a>]</sup></citation>,而非利用二维表格,从而能够处理巨大的或者连续的状态空间。DQN方法诞生以来,在应用领域取得了许多显著的成果,例如,Mnih等<citation id="201" type="reference"><link href="172" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>以雅达利(Atari) 2600平台中的游戏为环境训练神经网络,经过训练后该网络在多项游戏中的表现超过人类水平;DeepMind团队研发的智能围棋程序AlphaGo于2016年击败顶级人类棋手李世石,并于2017年击败世界冠军柯洁<citation id="202" type="reference"><link href="174" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>;赵玉婷等<citation id="203" type="reference"><link href="176" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>在2018年将DQN方法应用于双足机器人在非平整地面上的行走控制,使得行走稳定性明显改善。Alansary等<citation id="204" type="reference"><link href="178" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>在2019年提出基于DQN框架的强化学习主体,用于医学图像中的自动标志检测;Zhu等<citation id="205" type="reference"><link href="180" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>在2019年将DQN方法用于国际空中机器人大赛(International Aerial Robotics Competition,IARC)的牧羊人游戏任务中,并验证了方法的有效性和效率等。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">DQN方法之所以能够取得如此丰硕的成果,除了它利用神经网络对Q函数进行了更具适用性的表示之外,另两个重要的原因是:其一,利用单独的、延迟更新的目标网络来计算学习目标,使得训练过程中的误差值不致有过大波动,以保证训练的收敛;其二,引入了经验回放(Experience Replay)机制,消除了训练样本间的相关性,从而符合训练样本独立同分布的统计学假设<citation id="207" type="reference"><link href="172" rel="bibliography" /><link href="182" rel="bibliography" /><sup>[<a class="sup">5</a>,<a class="sup">10</a>]</sup></citation>。由此可见,经验回放是DQN方法中的一个重要环节。而从软件设计与实现的角度,应当将经验回放过程作为独立模块进行封装,以便于整个DQN方法的实现与应用。在经验回放模块的设计中主要需要关注以下两点:</p>
+                </div>
+                <div class="p1">
+                    <p id="40">1) 运行性能。DQN相关应用中,将频繁使用经验回放模块的三个操作,即经验的记录(record)、采样抽取(get_batch)和优先级设置(set_priority)。这三个操作所产生的时间开销必须得到优化,否则,可能成为整个系统的性能瓶颈,影响整体的执行效率。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">2) 通用性。作为一个独立模块,应当为各类DQN相关应用提供支持,而非只针对某种特殊的应用场景。具体而言,应当支持记录任意结构的可观察状态(State),兼顾时间序列与非时间序列两类数据,以及支持多样化的采样抽取策略等。</p>
+                </div>
+                <div class="p1">
+                    <p id="42">本文针对以上两点需求,提出一种可行的经验回放模块设计方案,并展示和讨论其实现效果。</p>
+                </div>
+                <h3 id="43" name="43" class="anchor-tag">1 经验回放模块的接口形式</h3>
+                <div class="p1">
+                    <p id="44">作为一个封装的模块,需要定义可供外部调用的接口,这包括一组相关的软件实体概念和一组可供调用的操作方法。本章将对其进行介绍。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">首先,本文提出的经验回放模块涉及下述软件实体概念:</p>
+                </div>
+                <div class="p1">
+                    <p id="46">1) 可观察状态(state)。DQN系统中的state是网络的输入,是智能个体可观察到的环境的数字化表示。在不同应用中,state可以具有不同的形式,可以是向量、矩阵,或者具有任意高维形状。经验回放模块不应假设state具有任何特定形状或含义,从而保证模块的通用性。</p>
+                </div>
+                <div class="p1">
+                    <p id="47">2) 动作(action)。智能体能够采取的行动的编码,是一个整型数值。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">3) 奖励(reward)。智能体在某个state下采取某个action后立即获得的奖励,是一个实数(浮点)型值。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">4) 记录(record)。一个state、action、reward的组合成为一条record。为支持时间序列相关应用,经验回放模块应当维护record间的顺序关系。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">5) 回合(episode)及其句柄(handle):具有时间顺序关系的若干record组成一个episode。在实际的DQN相关应用中,episode通常对应了智能体完成某次任务的完整体验,例如一局完整的游戏。经验回放模块用一个唯一的整型数来标识某个episode,称作这个episode的handle。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">6) 采样准则(pick_policy)。在使用非时间序列数据的应用<citation id="208" type="reference"><link href="184" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>中,采样抽取时以单个record为采样的最小单元。而时间序列相关的应用<citation id="209" type="reference"><link href="186" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>中,可能需要连续抽取长度为pick_len的若干个连续的record。此外,某些应用中,允许抽取的片段长度不足预期值pick_len(当到达episode结尾时),使得实际抽取的片段长度参差不齐(但不超过pick_len)。上述这些采样抽取相关的准则在这里称作pick_policy。</p>
+                </div>
+                <div class="p1">
+                    <p id="52">7) 可抽取样本(pick)。具有顺序关系的若干record组成一个片段,如果片段符合pick_policy,则在采样抽取时可作为候选片段,称作一个pick。任意一个pick可以用其来源的episode及其首个record在该episode中的时间序列位置表示,故可记作有序对〈pick_epi, pick_pos〉。</p>
+                </div>
+                <div class="p1">
+                    <p id="53">8) 优先级(priority)。当对记录在经验回放模块中的数据进行采样抽取时,可以使用均匀随机抽取或者依优先级抽取的策略。若使用后者,则整个经验回放过程被称作“优先级经验回放”(Prioritized Experience Replay)<citation id="210" type="reference"><link href="188" rel="bibliography" /><link href="190" rel="bibliography" /><link href="192" rel="bibliography" /><sup>[<a class="sup">13</a>,<a class="sup">14</a>,<a class="sup">15</a>]</sup></citation>,此时,每个pick应当具有某种优先级数priority,它应是一个实数(浮点)型值。</p>
+                </div>
+                <div class="p1">
+                    <p id="54">9) 抽取选择器(pick_selector)及其句柄(handle)。为使得模块能够支持多样化的采样抽取策略(均匀随机或者多种优先级抽取算法),本文提出的软件结构中,将采样抽取策略抽象为一种称为pick_selector的附属组件(详见第2章),经验回放模块利用不同的pick_selector以实施不同的采样抽取行为。每个pick_selector实例用一个唯一的整型数标识,称为它的handle。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">在以上实体概念的基础上,定义经验回放模块应当支持的主要操作方法有:</p>
+                </div>
+                <div class="p1">
+                    <p id="56">1) new_episode()。建立一个新的episode,并返回其对应的句柄h_epi。</p>
+                </div>
+                <div class="p1">
+                    <p id="57">2) new_pick_selector(pick_selector_class)。建立一个pick_selector的实例,其类型为pick_selector_class,并返回该抽取选择器的句柄h_ps。</p>
+                </div>
+                <div class="p1">
+                    <p id="58">3) record(h_epi, state, action, reward, final_state)。在以句柄h_epi标识的episode中追加一条完整的record,即一个state、action、reward的组合。final_state是一个可选项,若传入final_state则指示该回合以状态final_state结束。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">4) get_batch(batch_size, h_ps)。用以句柄h_ps标识的pick_selector采样抽取batch_size个的pick。返回值为一个元组:(batch_state, batch_action, batch_reward, batch_state_next, seq_len, seq_len_next, batch_pick_epi, batch_pick_pos)。其中,返回量batch_state的形状比单一state的形状多出两维,呈现为(batch_size, pick_len,…,…),即以矩阵形式给出抽取的每个pick中的每个时间点上的state。类似地,batch_action和batch_reward的形状为(batch_size, pick_len),分别表示每个pick中的每个时间点上的action和reward。batch_state_next形状与batch_state相同,给出了每个pick中的每个时间点的下一时刻的state。seq_len和seq_len_next都是长度为batch_size的向量。如前文所述,由于某些抽取准则中可能允许抽取不足pick_len长度的pick,故需要用seq_len和seq_len_next分别反馈batch_state和batch_state_next中每个pick实际有效的时间序列长度。这样,抽取出的数据中长于这些实际长度的部分才可以被外部的应用所忽略。batch_pick_epi和batch_pick_pos分别是pick_epi和pick_pos的向量,长度也为batch_size。它们用于标识所抽取的每个pick的来源,以便set_priority方法反馈更新其优先级。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">5) set_priority(h_ps, pick_epi, pick_pos, priority)。针对以h_ps标识的pick_selector,对以〈pick_epi, pick_pos〉标识的pick设置优先级priority。</p>
+                </div>
+                <div class="p1">
+                    <p id="61">6) serialize()。序列化导出经验回放模块的数据,用于持久化保存经验池。</p>
+                </div>
+                <div class="p1">
+                    <p id="62">7) unserialize()。反序列化,用于从保存的持久化数据中恢复经验回放模块。</p>
+                </div>
+                <h3 id="63" name="63" class="anchor-tag">2 经验回放模块的架构设计</h3>
+                <div class="p1">
+                    <p id="64">由于目前大量的强化学习应用基于python实现<citation id="211" type="reference"><link href="194" rel="bibliography" /><link href="196" rel="bibliography" /><sup>[<a class="sup">16</a>,<a class="sup">17</a>]</sup></citation>,与之相适应,以往的经验回放模块大多也都由python编写。这使得模块便于被应用系统所调用。然而,受限于python解释器本身的效率,此类经验回放模块无法达到较高的运行性能,进而影响整个应用的性能。本文综合考虑性能和易用性,在架构设计上采用双层的软件结构(如图 1):基本功能由C++语言实现,以谋求较高的运行性能,这些基本功能被导出为动态链接库中的函数接口,而后由python编写的包装类进行封装,以面向对象的形式提供给外部应用。这种架构兼顾了两方面的需求,既实现了性能的优化,又便于被python应用所使用。下面将介绍上述两层结构各自的分工及设计。</p>
+                </div>
+                <div class="area_img" id="65">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201911023_065.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 经验回放模块整体架构" src="Detail/GetImg?filename=images/JSJY201911023_065.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 经验回放模块整体架构  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201911023_065.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 1 Architecture of experience-replay module</p>
+
+                </div>
+                <h4 class="anchor-tag" id="66" name="66">2.1 <b>功能内核</b>(C++)</h4>
+                <div class="p1">
+                    <p id="67">功能内核进一步分为函数接口层和数据结构层,前者用于实现内核的主要功能,并为python实现的包装类提供函数接口,而后者则包含关键的数据结构,以及一些底层的算法步骤。</p>
+                </div>
+                <div class="p1">
+                    <p id="68">数据结构层的EX_RP结构体是内核中最关键的数据结构,其主要包含了一个称为“episodes”的映射表(以C++标准模板库的map容器承载),以及一个名为batch_maker的结构体。前者以episode的句柄h_epi为键值,存储指向episode结构体的指针——在单个episode中,向量(以vector容器承载)states、actions、rewards分别以时间顺序存放每一时刻的state、action、reward。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">batch_maker结构体在对经验数据进行采样抽取操作时至关重要,其中主要包含两个成员向量:pick_table与ps_table。</p>
+                </div>
+                <div class="p1">
+                    <p id="70">pick_table中保存了所有episode中可供抽取的pick的访问位置信息,形式为有序对〈pick_epi, pick_pos〉,其中的pick_epi实际是一个指向episodes中相应episode节点的指针。另一方面,在episode节点中的向量pick_index则记录了该episode中可用的pick在pick_table中对应索引项的位置。于是存放于episode中具体的pick数据和pick_table中的全局索引可以实现快速地相互查询,这一特性在性能优化中十分必要(详见第4章)。</p>
+                </div>
+                <div class="p1">
+                    <p id="71">ps_table是用于记录“抽取选择器”(pick_selector)的向量,其中保存了指向pick_selector对象的指针。作为经验回放模块的附属组件,接口类PickSelector指示一组需要实现的接口函数,通过对这些接口的不同实现,可派生多种PickSelector的子类,形如PickSelectorX,用于实现不同的优先级回放策略。通过相应的new_pick_selector_X函数可创建PickSelectorX类型的对象实例,并将其指针记录到ps_table中。而后,其中的接口函数将在内核运行的适当时机被回调。例如,其中的select函数将在get_batch过程中被调用,以实现样本选取的具体行为;而每次向pick_table中添加新pick信息时,on_pick_table_push_back函数会被回调,以保证数据一致,等等。由于篇幅限制,且此处旨在描述整体架构,故对于具体接口定义和实现不作一一详述。这种将pick_selector作为附属组件的做法,将选择器的实现与经验回放模块的主体运行逻辑分离,使得多样化的抽取采样策略能够灵活地添加并运用于系统中,从而增强了模块的通用性和可扩展性。</p>
+                </div>
+                <div class="p1">
+                    <p id="72">数据结构层之上的函数接口层实现了模块的具体行为:例如,如前文所述,new_pick_selector_X创建类型为PickSelectorX的抽取选择器实例,并将其指针记录到ps_table中;record实现经验数据的记录;get_batch实现经验数据的采样抽取,等。这些接口基本与经验回放模块的外部接口相对应,图1中已展示了其中的一部分,本文将在第4章中详述其中record和get_batch的一些实现细节。</p>
+                </div>
+                <div class="p1">
+                    <p id="73">面向其上层,函数接口层以动态链接库形式导出上述接口方法,以便python实现的包装类调用。</p>
+                </div>
+                <h4 class="anchor-tag" id="74" name="74">2.2 <b>包装类</b>(python)</h4>
+                <div class="p1">
+                    <p id="75">python实现的包装类ExperienceReplay中包含外部接口的封装。其利用ctypes模块导入C++实现的内核动态链接库后,调用函数接口层提供的函数以实现模块的实质功能。此外,该包装类还提供附加特性,包括线程安全与数据形式转换等。</p>
+                </div>
+                <div class="p1">
+                    <p id="76">首先,经验模块可能被多线程调用,故应当考虑其访问过程中的线程安全,以确保数据的一致性。ExperienceReplay中含有一个成员变量_mutex,它是一个threading.Semaphore类型的信号量。通过对_mutex的请求与释放,可以实现简单的线程安全:ExperienceReplay中的任何方法,在需要“原子性访问”其成员变量或调用内核函数的代码段前皆添加了_mutex.acquire(),以请求信号量,而在访问完成后皆以_mutex.release()释放信号量。</p>
+                </div>
+                <div class="p1">
+                    <p id="77">其次,对于数据形式的转换主要有两个任务:</p>
+                </div>
+                <div class="p1">
+                    <p id="78">1) state形状的维护。如前文所述,模块应当支持各种形状的state,但内核中并不维护或假设state的形状。因此,在ExperienceReplay中,将应用层传入的state形状保存为成员变量——元组_state_shape,而后将state变形为一维数组传入内核处理;当需要对外回馈state数据时,则应当以先前保存的形状_state_shape重塑(reshape)传出的一维数组。这一数据转换过程,使得应用层能够使用任意形状的state。</p>
+                </div>
+                <div class="p1">
+                    <p id="79">2) python数据类型与C数据类型转换。内核接口使用C语言风格的数据类型和数据访问方式,而应用层却需要以python风格的数据类型存储和使用数据,ExperienceReplay中为此进行了必要的转换。例如,较为复杂的get_batch操作对应的内核函数接口形式为:</p>
+                </div>
+                <div class="area_img" id="163">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJY201911023_16300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="85">其中,参数ptrER为欲操作的EX_RP对象的指针,包装类初始化时通过调用接口函数ex_rp_new 已创建了一个EX_RP对象并获取了该指针,保存为成员变量_kernel,故此时只需直接传入即可。参数hPS与batch_size分别指示所使用的选择器句柄,以及采样抽取样本量。对于python环境下传入的任意整型数,可以使用ctypes模块方法ctypes.int()转换为C语言风格整型数以传入内核接口函数,此处即为:hPS=ctypes.int(hPS)和batch_size=ctypes.int(batch_size)。剩余的参数皆为传出数据的指针——在包装类方法中为其申请空间,而后将指针传入,内核将修改地址内的数据,作为处理结果,之后包装类则可在这些空间中访问到这些结果。以batch_action为例,它将用于存储get_batch结果中的batch_action分量(其他传出分量的解释详见第1章),形状应当是(batch_size, pick_len)。但无论外部数据形状如何,内核函数的参数定义皆为一维数组,故包装类中应当先为batch_action申请大小为batch_size*pick_len的一维整型空间并获得地址指针:batch_action=(ctypes.c_int * (batch_size * pick_len))(),而后将batch_action传入内核。内核处理后,将传出数据重塑为具有形状(batch_size, pick_len)的numpy.array类型数据以向应用层传出,即:</p>
+                </div>
+                <div class="p1">
+                    <p id="86">batch_action=numpy.array(batch_action).reshape([batch_size, pick_len])</p>
+                </div>
+                <div class="p1">
+                    <p id="88">上述数据类型的转换,使得应用层可以完全使用python风格的数据类型和数据访问方式,而无需关注底层较为复杂繁琐的实际数据交互,大大增强了模块的易用性。</p>
+                </div>
+                <div class="p1">
+                    <p id="89">除了主要的ExperienceReplay类外,包装层还将所有用于创建pick_selector的接口函数new_pick_selector_X封装于类PickSelectorClass中——PickSelectorClass中名为X的静态函数(带有修饰符@staticmethod)实际调用接口函数new_pick_selector_X。当用户层调用ExperienceReplay中的new_pick_selector方法时需传入函数名称PickSelectorClass.X作为参数,形如:</p>
+                </div>
+                <div class="p1">
+                    <p id="90">new_pick_selector(PickSelectorClass.X)</p>
+                </div>
+                <div class="p1">
+                    <p id="91">而new_pick_selector方法执行中将回调该函数,从而在数据结构层创建PickSelectorX类型的实例。这种接口调用方式使得应用层无需关心底层将pick_selector与经验回放模块主体分离的设计细节,更易于理解和使用。</p>
+                </div>
+                <h3 id="92" name="92" class="anchor-tag">3 实现细节与理论分析</h3>
+                <div class="p1">
+                    <p id="93">本文提出的经验回放模块在实现阶段主要关注性能的优化。在实际应用中,record、get_batch和set_priority是需要被反复调用的三个接口方法,可能成为实际应用中的性能瓶颈。因此,它们是性能优化的重点。其中,set_priority的性能由具体的优先级算法主导,不是本文论述的要点。于是,本文着重关注record和get_batch的性能优化。</p>
+                </div>
+                <div class="p1">
+                    <p id="94">在实践中,由于record操作仅处理单条记录的插入,而get_batch需要一次性抽取batch_size条记录,故其时间开销大约相差batch_size倍,get_batch操作是实际的性能瓶颈。此外,若经验池的容量有限,则在某些时刻进行record操作时还需考虑记录的淘汰(删除),这一操作复杂度可能较高,需要加以优化。综上,本章将主要讨论get_batch操作以及record中记录淘汰过程的性能优化。</p>
+                </div>
+                <h4 class="anchor-tag" id="95" name="95">3.1 get_batch<b>操作的性能优化</b></h4>
+                <div class="p1">
+                    <p id="96">get_batch操作过程逻辑上需要依pick_policy的规则整理所有可用的pick,而后利用pick_selector进行样本抽取。若已有样本(record)规模为<i>N</i>,则这一过程的时间复杂度可达<i>O</i>(<i>N</i>)。这是由于在整理可用pick的过程中需要遍历所有record,以检查其是否为可用的pick;即使不预先整理所有可用pick,为了支持均匀随机采样策略,在样本抽取步骤中也需要遍历所有episode,才能实现在所有record中进行无差别的均匀采样。这也将使得get_batch操作的时间开销与<i>N</i>相关。</p>
+                </div>
+                <div class="p1">
+                    <p id="97">对于get_batch的性能优化,本文的指导思想是,将验证pick可用性的步骤移动到record操作中完成:当一个新的record被添加到经验池中时,立即检验是否因此增加了一个可用pick,而当可用pick被验证时,它立即被记录到pick_table中。于是,在get_batch时无需再进行pick的整理和验证,只需要从全局的pick_table中利用pick_selector进行样本抽取即可。get_batch的步骤为:</p>
+                </div>
+                <div class="p1">
+                    <p id="98">1)调用pick_selector的select接口,以选取batch_size个pick在pick_table中的位置,记作数组pick_index。</p>
+                </div>
+                <div class="p1">
+                    <p id="99">2)依据pick_index,在pick_table中取得pick的访问位置信息,即batch_size个有序对〈pick_epi, pick_pos〉。</p>
+                </div>
+                <div class="p1">
+                    <p id="100">3)对每个被选取的有序对,根据指针pick_epi访问episode节点,并在pick_pos位置抽取pick数据。</p>
+                </div>
+                <div class="p1">
+                    <p id="101">上述流程中,除了pick_selector中select接口的具体实现因抽样策略而不同,其他步骤的时间开销皆与样本规模<i>N</i>无关。对于select接口,若在均匀随机抽样策略下,其时间开销本就与<i>N</i>无关;若采用各种优先级抽取策略,也可采用为与<i>N</i>无关,或者具有<i>O</i>(lb <i>N</i>)复杂度的算法过程,例如同样可将优先级排序过程移动到record和set_priority操作中完成(实现于PickSelector的回调函数接口on_pick_table_push_back和set_priority中),从而避免在select接口中进行耗时的优先级排序。事实上,select接口的优化方式依赖于专门设计的数据结构和算法,是另一个值得研究的话题,但不是本文讨论的重点内容,故不作更多展开说明。</p>
+                </div>
+                <div class="p1">
+                    <p id="102">另一方面,将pick可用性的验证移动到record操作中,使得record操作增加了验证单个pick可用性的时间开销,但这与<i>N</i>的大小无关,故并不增加record操作的时间复杂度。</p>
+                </div>
+                <div class="p1">
+                    <p id="103">综上,按照上述优化方式,get_batch操作的时间复杂度由具体的抽样选择器的select方法决定,可控制在<i>O</i>(1)或者<i>O</i>(log <i>N</i>),且优化后不会提高record操作的时间复杂度。因此,模块的整体运行性能可得到提升。</p>
+                </div>
+                <h4 class="anchor-tag" id="104" name="104">3.2 record<b>操作中记录淘汰过程及其性能优化</b></h4>
+                <div class="p1">
+                    <p id="105">record操作的基本流程为:</p>
+                </div>
+                <div class="p1">
+                    <p id="106">1)检查传入的句柄h_epi所标识的episode是否存在,若不存在,则调用new_episode以创建新episode,并将h_epi修改为新句柄。</p>
+                </div>
+                <div class="p1">
+                    <p id="107">2)将新的record数据写入上述episode。</p>
+                </div>
+                <div class="p1">
+                    <p id="108">3)依照pick_policy检验新的record是否造成可用pick增加,如果生成了新的pick,则将其记录到pick_table,且将pick在pick_table中记录的位置写入episode的pick_index。</p>
+                </div>
+                <div class="p1">
+                    <p id="109">4)检查经验池中的record数量是否达到上限,若达上限,则触发记录淘汰过程。</p>
+                </div>
+                <div class="p1">
+                    <p id="110">一般而言,上层应用应直接通过new_episode操作显式创建episode,并使用其返回的句柄h_epi来指代这个episode。但应当注意到,所创建出的episode句柄h_epi并非永久有效:若经验池容量有限,则当记录数到达上限时,步骤4)将会淘汰某些记录。本文提出的方案将淘汰某个episode的所有记录,于是被淘汰的episode将从池中消失。若此时上层应用中该episode仍活跃(有新记录产生),则可能再次发起record操作,这种情况下经验回放模块的行为将是,在步骤1)中重新分配新的episode句柄h_epi,并作为record操作的返回值传递给上层应用。于是,对于上层应用而言,应当处理record操作的返回值,以获知episode的句柄是否发生了变化。</p>
+                </div>
+                <div class="p1">
+                    <p id="111">对于记录淘汰过程,这里需要讨论以下两个问题:</p>
+                </div>
+                <div class="p1">
+                    <p id="112">1) 淘汰episode的选择。这里考虑两种淘汰策略:先进先出(First In First Out,FIFO)策略和二次机会(Second Chance)策略。这两种策略的指导思想皆源于操作系统的页面置换算法。</p>
+                </div>
+                <div class="p1">
+                    <p id="113">FIFO策略简单地依据episode生成的先后顺序选择拟淘汰的episode:需规定EX_RP以自增方式生成episode的句柄,即每次new_episode操作从0开始依次以自然数指派新的句柄,下一个将被分配的句柄值记为EX_RP结构体的成员变量h_epi_head,则句柄大小即可代表episode的新旧程度。维护一个成员变量h_epi_tail以记录当前最小的句柄值,则每次淘汰时直接选择h_epi_tail所指代的episode即可。淘汰完成后h_epi_tail增加1,从而指向下一个待淘汰的episode。</p>
+                </div>
+                <div class="p1">
+                    <p id="114">二次机会策略则需要在每个episode节点中添加一个布尔型成员变量access_flag,用于指示episode是否被采样抽取过——每次get_batch操作抽取到一个pick时,会将对应episode的access_flag置为true。而在EX_RP结构中,额外维护一个成员变量h_epi_remove以记录下一个拟淘汰的episode。当需要淘汰时,h_epi_remove在h_epi_tail与h_epi_head之间循环移动,以查找access_flag为false的episode,将其作为被淘汰的对象。其间,h_epi_remove掠过的episode的access_flag将被重置为false——即给予每个曾被抽取过的episode一次从淘汰中豁免的机会。</p>
+                </div>
+                <div class="p1">
+                    <p id="115">实际应用中应当采用何种淘汰策略,应当与采样抽取策略配合:对于均匀随机采样,经验池中的pick均无差别,则淘汰时使用FIFO策略即可;而对于各种优先级采样,优先级高的pick将更有可能被采样,在淘汰时使用二次机会策略,可以保证这些价值较高的pick被尽可能地保留在池中。此外,基于操作系统研发中十分成熟的页面置换算法,容易实现其他类似的淘汰策略,例如最近最少使用算法(Least Recently Used,LRU)、最不常用算法(Least Frequently Used,LFU)等。</p>
+                </div>
+                <div class="p1">
+                    <p id="116">2) 淘汰过程的性能优化。如前文所述,淘汰过程将从经验池中删除某个episode的全部记录,即从episodes中删除episode对应的节点,并从pick_table中删除所有属于该episode的pick信息。前者的时间开销与全局样本规模<i>N</i>无关,但后者则是在长度约为<i>N</i>的vector中删除散放的<i>n</i>个数据项(假设该episode中包含<i>n</i>条记录)。按照通常vector中的删除操作,需要考虑数据的成块挪动,具有较高时间开销,整体复杂度为<i>O</i>(<i>nN</i>)。需要对其进行优化。</p>
+                </div>
+                <div class="p1">
+                    <p id="117">本文的优化思路是,考虑到pick_table中的数据无需保持有序,如图2所示,若需从中删除数据项<i>i</i>,可将其与pick_table的最后一个数据项<i>j</i>交换,而后再删除。如此,便可避免数据的成块挪动。假设某时刻pick_table最后一个数据项的位置为<i>j</i>,pick_table[<i>j</i>]=〈pick_epi, pick_pos〉标识了这最后一个pick所属的episode为pick_epi,位置为pick_pos。则删除某个episode(记为<i>e</i>)的具体流程为:</p>
+                </div>
+                <div class="p1">
+                    <p id="118">① 从<i>e</i>的pick_index向量中依次查找下一个pick在pick_table中对应索引的位置<i>i</i>,若已达pick_index的结尾,则跳转到步骤⑧;</p>
+                </div>
+                <div class="p1">
+                    <p id="119">② 若<i>j</i> ≥ 0,则设<i>e</i>′=pick_index[<i>j</i>].pick_epi,<i>p</i>′= pick_index[<i>j</i>].pick_pos;</p>
+                </div>
+                <div class="p1">
+                    <p id="120">③ 若<i>i</i> ≤ <i>j</i>且<i>e</i>′= <i>e</i>,则<i>j</i>=<i>j</i>-1,并回到步骤②;</p>
+                </div>
+                <div class="p1">
+                    <p id="121">④ 若<i>i</i> &gt; <i>j</i>,则回到步骤①;</p>
+                </div>
+                <div class="p1">
+                    <p id="122">⑤ 修改<i>e</i>′.pick_index[<i>p</i>′]=<i>i</i>;</p>
+                </div>
+                <div class="p1">
+                    <p id="123">⑥ 将pick_table[<i>i</i>]与pick_table [<i>j</i>]数据交换;</p>
+                </div>
+                <div class="p1">
+                    <p id="124">⑦ <i>j</i>=<i>j</i>-1,并回到步骤①;</p>
+                </div>
+                <div class="p1">
+                    <p id="125">⑧ 删除pick_table中位于<i>j</i>之后的数据;</p>
+                </div>
+                <div class="p1">
+                    <p id="126">⑨ 从episodes中删除<i>e</i>。</p>
+                </div>
+                <div class="p1">
+                    <p id="127">依上述流程,淘汰一个episode的时间复杂度降为<i>O</i>(<i>n</i>),即仅与拟淘汰episode的记录数<i>n</i>有关,而与全局样本规模<i>N</i>无关。又易知,当经验池容量满后,若episode的平均记录数为<i>n</i>,则平均每进行<i>n</i>次record操作,才会发生一次淘汰。于是,淘汰过程实际为record带来等效于<i>O</i>(1)复杂度的时间开销。而不发生淘汰时record的时间开销也仅为<i>O</i>(1),因此,经过上述优化后,record操作的整体时间复杂度为<i>O</i>(1)。</p>
+                </div>
+                <div class="area_img" id="128">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201911023_128.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 删除回合e" src="Detail/GetImg?filename=images/JSJY201911023_128.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 删除回合<i>e</i>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201911023_128.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 2 Remove the episode <i>e</i></p>
+
+                </div>
+                <h3 id="129" name="129" class="anchor-tag">4 性能测试与讨论</h3>
+                <div class="p1">
+                    <p id="130">为测试所提出的方法的实际执行性能,本文设计并实施了一项简单的实验。该测试实验运行环境的主要参数为:Intel Core i7-7700K CPU 4.2 GHz、16 GB RAM、Windows 10操作系统。</p>
+                </div>
+                <div class="p1">
+                    <p id="131">每次实验中,模拟一个假设的数据记录(record)与样本抽取(get_batch)过程。首先,假设有来自2<sup><i>k</i></sup>个回合的数据,每个回合含有2<sup><i>s</i></sup>条随机生成的记录,故总计数据规模为<i>N</i>=2<sup><i>k</i></sup><sup>+</sup><sup><i>s</i></sup>条记录;然后,将这些记录利用record操作逐条添加进空的经验池,统计这一过程耗费的时间,计算出平均每100次record操作的时间开销,记作统计量record_100;接着,对这个经验池进行10 000次get_batch操作,单次抽取5 000个记录片段(<i>batch</i>_<i>size</i>=5 000),每个片段的时间长度为8(<i>pick</i>_<i>len</i>=8),统计其耗费的时间,从而计算每次get_batch的平均时间开销,记作统计量get_5000。</p>
+                </div>
+                <div class="p1">
+                    <p id="132">分别取<i>k</i>=5, 5.5, 6, 6.5, …, 11; <i>s</i>=6, 6.5, 7, 7.5, …, 12,共进行169次不同<i>k</i>、<i>s</i>组合的实验,得到一组时间开销统计量。为避免计算机在运行测试时由于不可预期的原因(如后台运行的其他程序等)造成统计误差,上述实验反复进行了5次。对于每个统计量,皆取得5次实验的最小值,得到的结果数值如表1、2所示。</p>
+                </div>
+                <div class="area_img" id="133">
+                                            <p class="img_tit">
+                                                <b>表</b>1 <b>不同</b><i>k</i>、<i>s</i><b>组合下的统计量</b>record_100 
+                                                    <br />
+                                                Tab. 1 record_100 with different combinations of <i>k</i> and <i>s</i>
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201911023_13300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/JSJY201911023_13300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                <p class="img_note">单位: ms</p>
+                                <p class="img_note">unit: ms</p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201911023_13300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表1 不同k、s组合下的统计量record_100" src="Detail/GetImg?filename=images/JSJY201911023_13300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <div class="area_img" id="134">
+                    <p class="img_tit"><b>表</b>2 <b>不同</b><i>k</i>、<i>s</i><b>组合下的统计量</b>get_5000  <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Tab. 2 get_5000 with different combinations of <i>k</i> and <i>s</i></p>
+                    <p class="img_note">单位: ms</p>
+                    <table id="134" border="1"><tr><td rowspan="2"><br /><i>k</i></td><td colspan="13"><br />s</td></tr><tr><td><br />6.0</td><td>6.5</td><td>7.0</td><td>7.5</td><td>8.0</td><td>8.5</td><td>9.0</td><td>9.5</td><td>10.0</td><td>10.5</td><td>11.0</td><td>11.5</td><td>12.0</td></tr><tr><td><br />5.0</td><td>0.30</td><td>0.30</td><td>0.30</td><td>0.30</td><td>0.30</td><td>0.31</td><td>0.31</td><td>0.31</td><td>0.32</td><td>0.33</td><td>0.33</td><td>0.37</td><td>0.40</td></tr><tr><td><br />5.5</td><td>0.30</td><td>0.31</td><td>0.31</td><td>0.30</td><td>0.31</td><td>0.31</td><td>0.31</td><td>0.32</td><td>0.32</td><td>0.32</td><td>0.34</td><td>0.39</td><td>0.44</td></tr><tr><td><br />6.0</td><td>0.32</td><td>0.32</td><td>0.31</td><td>0.31</td><td>0.32</td><td>0.32</td><td>0.32</td><td>0.33</td><td>0.34</td><td>0.35</td><td>0.39</td><td>0.47</td><td>0.51</td></tr><tr><td><br />6.5</td><td>0.32</td><td>0.32</td><td>0.32</td><td>0.32</td><td>0.33</td><td>0.33</td><td>0.33</td><td>0.35</td><td>0.36</td><td>0.40</td><td>0.45</td><td>0.52</td><td>0.56</td></tr><tr><td><br />7.0</td><td>0.31</td><td>0.32</td><td>0.32</td><td>0.32</td><td>0.32</td><td>0.33</td><td>0.33</td><td>0.37</td><td>0.41</td><td>0.47</td><td>0.51</td><td>0.55</td><td>0.60</td></tr><tr><td><br />7.5</td><td>0.32</td><td>0.32</td><td>0.33</td><td>0.33</td><td>0.33</td><td>0.35</td><td>0.35</td><td>0.41</td><td>0.46</td><td>0.52</td><td>0.56</td><td>0.59</td><td>0.62</td></tr><tr><td><br />8.0</td><td>0.32</td><td>0.33</td><td>0.34</td><td>0.34</td><td>0.35</td><td>0.38</td><td>0.42</td><td>0.47</td><td>0.52</td><td>0.56</td><td>0.59</td><td>0.62</td><td>0.64</td></tr><tr><td><br />8.5</td><td>0.33</td><td>0.34</td><td>0.34</td><td>0.35</td><td>0.37</td><td>0.42</td><td>0.47</td><td>0.52</td><td>0.57</td><td>0.60</td><td>0.63</td><td>0.65</td><td>0.67</td></tr><tr><td><br />9.0</td><td>0.33</td><td>0.34</td><td>0.35</td><td>0.38</td><td>0.43</td><td>0.49</td><td>0.54</td><td>0.57</td><td>0.61</td><td>0.63</td><td>0.66</td><td>0.67</td><td>0.69</td></tr><tr><td><br />9.5</td><td>0.34</td><td>0.35</td><td>0.38</td><td>0.43</td><td>0.49</td><td>0.54</td><td>0.59</td><td>0.62</td><td>0.64</td><td>0.67</td><td>0.69</td><td>0.70</td><td>0.71</td></tr><tr><td><br />10.0</td><td>0.36</td><td>0.38</td><td>0.43</td><td>0.50</td><td>0.55</td><td>0.59</td><td>0.63</td><td>0.65</td><td>0.68</td><td>0.70</td><td>0.71</td><td>0.72</td><td>0.73</td></tr><tr><td><br />10.5</td><td>0.39</td><td>0.43</td><td>0.50</td><td>0.57</td><td>0.61</td><td>0.64</td><td>0.66</td><td>0.68</td><td>0.70</td><td>0.71</td><td>0.73</td><td>0.74</td><td>0.75</td></tr><tr><td><br />11.0</td><td>0.45</td><td>0.50</td><td>0.56</td><td>0.62</td><td>0.64</td><td>0.67</td><td>0.69</td><td>0.72</td><td>0.73</td><td>0.73</td><td>0.75</td><td>0.76</td><td>0.77</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="135">统计量record_100与get_5000可视化作图如图3与图4。可以看到record的操作的时间开销与数据的规模<i>N</i>基本无关,这与第3章的理论分析相符,且record_100耗时皆在700 μs 左右,即单次record操作耗时仅7 μs,在实际应用中不会成为性能瓶颈。</p>
+                </div>
+                <div class="area_img" id="136">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201911023_136.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 record_100的时间开销与k、s关系曲面" src="Detail/GetImg?filename=images/JSJY201911023_136.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 record_100的时间开销与<i>k</i>、<i>s</i>关系曲面  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201911023_136.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 3 Relationship curve of time cost of record_100 with <i>k</i> and <i>s</i></p>
+
+                </div>
+                <div class="area_img" id="137">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201911023_137.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 get_5000的时间开销与k、s关系曲面" src="Detail/GetImg?filename=images/JSJY201911023_137.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 get_5000的时间开销与<i>k</i>、<i>s</i>关系曲面  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201911023_137.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 4 Relationship curve of time cost of get_5000 with <i>k</i> and <i>s</i></p>
+
+                </div>
+                <div class="p1">
+                    <p id="138">另一方面,与理论分析有所不同,从图4可看出,get_batch操作的时间开销与数据规模(<i>N</i>=2<sup><i>k</i></sup><sup>+</sup><sup><i>s</i></sup>)相关。进一步绘制数据规模<i>N</i>同get_5000的关系曲线(相同<i>N</i>值下的多个get_5000取平均值),如图5所示。</p>
+                </div>
+                <div class="area_img" id="139">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201911023_139.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 get_5000的时间开销与数据规模N的关系曲线" src="Detail/GetImg?filename=images/JSJY201911023_139.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 get_5000的时间开销与数据规模<i>N</i>的关系曲线  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201911023_139.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 5 Relationship between time cost of get_5000 and data size <i>N</i></p>
+
+                </div>
+                <div class="p1">
+                    <p id="140">从图5可以看到,当lb <i>N</i>&lt;16时,时间开销基本与规模无关,当lb <i>N</i> ≥ 16时,时间开销上涨,初期上涨较快,而后期上涨趋势逐渐放缓。本文认为,之所以get_batch的时间开销并非完全如理论分析所描述的常数级别,是由于记录抽取操作需要一次性访问大量记录,这些记录在内存中分散的程度,与数据规模相关:当数据规模小于某个范围时,内存访问较为集中,CPU缓存命中率很高,时间开销则在很低水平上基本呈现常数级复杂度;但当数据规模上升时,CPU缓存命中率将下降,实际访存的时间将被增长,从而导致此时的时间开销随数据规模增长。</p>
+                </div>
+                <div class="p1">
+                    <p id="141">因此,与理论分析不符的时间开销增长是由于CPU缓存等硬件级别或系统优化层面上的机制所导致,与算法本身的性能特性无关。而且,可以看到,无论时间开销增长情况如何,在较大的数据规模上,做一次get_batch(5 000条记录)消耗的时间也能控制在800 μs以下,且增长速率很低——低于具有<i>O</i>(lb <i>N</i>)理论复杂度的算法。这一性能是令人满意的,且不会在实际应用中形成性能瓶颈。</p>
+                </div>
+                <div class="p1">
+                    <p id="142">此外,为对比以C++为内核实现的经验回放与单纯依靠python实现的性能差异,我们还将本文中的C++内核替换为python实现的版本,并尝试执行同样的测试。表3展示了仅使用python版本时record_100与get_5000的耗时。</p>
+                </div>
+                <div class="area_img" id="143">
+                    <p class="img_tit"><b>表</b>3 python<b>实现经验回放的</b> record_100<b>与</b>get_5000<b>的耗时 </b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Tab. 3 Time cost of record_100 and get_5000 with python-only implementation </p>
+                    <p class="img_note">单位:ms</p>
+                    <table id="143" border="1"><tr><td rowspan="2"><br /><i>k</i></td><td colspan="4"><br /><i>s</i>值(record_100)</td><td rowspan="2"></td><td colspan="4"><br /><i>s</i>值(get_5000)</td></tr><tr><td><br />7.0</td><td>7.5</td><td>8.0</td><td>8.5</td><td><br />7.0</td><td>7.5</td><td>8.0</td><td>8.5</td></tr><tr><td><br />6.0</td><td>0.50</td><td>0.49</td><td>0.49</td><td>0.49</td><td></td><td>33.4</td><td>33.4</td><td>33.8</td><td>34.8</td></tr><tr><td><br />6.5</td><td>0.49</td><td>0.49</td><td>0.48</td><td>0.49</td><td></td><td>33.6</td><td>33.9</td><td>34.4</td><td>36.2</td></tr><tr><td><br />7.0</td><td>0.48</td><td>0.49</td><td>0.49</td><td>0.49</td><td></td><td>33.8</td><td>34.7</td><td>35.8</td><td>37.6</td></tr><tr><td><br />7.5</td><td>0.49</td><td>0.49</td><td>0.49</td><td>0.49</td><td></td><td>34.6</td><td>35.8</td><td>37.2</td><td>38.9</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="144">可以看到,在纯python版本中record_100数值在500 μs左右,即单次record操作耗时5 μs,较本文方法略低。这是由于record操作本身业务逻辑简单,单次处理数据量小,无论使用python还是C++实现都十分迅速。因此当使用本文的C++与python混合方案时C++/python间的接口开销使得综合性能有所损失。</p>
+                </div>
+                <div class="p1">
+                    <p id="145">然而,在实际的DQN应用中,模型训练过程才是性能提升的关键,而record操作无论从数据处理量还是耗时占比上与get_batch操作相比都不是同个数量级。而且本文的优化策略之一就是以合理地牺牲record性能来提升get_batch的执行效率。因此,get_5000数值对于性能评价才更具实际意义。</p>
+                </div>
+                <div class="p1">
+                    <p id="146">从表3可以看出,仅使用python实现时的get_5000高达33 ms以上。对照表2,这个数值是本文提出的方法在同等条件下的约100倍。在实际的DQN应用中,如此低效的get_batch往往比计算设备(如GPU等)中模型训练的实际运算过程还慢,导致计算设备不得不等待训练样本的填充,从而拖累整个训练过程。由此可见,本文利用C++作为处理内核来替代python实现的主要优势在于将get_batch操作的耗时压缩至原来的百分之一左右,从而避免其成为性能瓶颈,使模型计算设备无须等待训练样本的填充,而达到更高的设备利用率。</p>
+                </div>
+                <h3 id="147" name="147" class="anchor-tag">5 结语</h3>
+                <div class="p1">
+                    <p id="148">本文设计并实现了一种高效的经验回放模块以供DQN相关的应用项目使用,所提出的模块具有易用性好,通用性、可扩展性高,执行性能高等特点。在设计上,该模块采用两层结构,底层的功能内核以C++语言实现,以提供较高的执行效率,而上层以python语言封装并对外部应用提供接口,使得基于python编写的应用项目能够以面向对象的方式轻松调用。针对经验回放所涉及的关键操作,一些技术细节被充分研究和精心设计。例如,将优先级回放机制作为附属组件与模块的主体运行逻辑分离、将样本的可抽取性验证提前到record操作中进行、使用高效的记录淘汰策略与算法等。这些措施使得模块具有较高的通用性和可扩展性,且整体执行效率得到了充分优化。本文的实验分析部分验证了模块的实际性能,两个核心操作record和get_batch皆可被高效执行,且与单纯使用python实现的常用方法相比,get_batch操作的性能提升约100倍,从而避免在整个DQN相关应用中成为性能瓶颈,满足了实际应用的需要。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="164">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00001337997&amp;v=MTI0MDRGaXJsVXIzQUlsMD1OajdCYXJPNEh0SE5ySXhDYmVJSVkzazV6QmRoNGo5OVNYcVJyeG94Y01IN1I3cWRaK1p1&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> SUTTON R S.Learning to predict by the methods of temporal differences[J].Machine Learning,1988,3(1):9-44.
+                            </a>
+                        </p>
+                        <p id="166">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00001338455&amp;v=MjUyMTU9Tmo3QmFyTzRIdEhOckl4TllPNEtZM2s1ekJkaDRqOTlTWHFScnhveGNNSDdSN3FkWitadUZpcmxVcjNBSWww&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> WATKINS C J C H,DAYAN P.Q-learning[J].Machine Learning,1992,8(3/4):279-292.
+                            </a>
+                        </p>
+                        <p id="168">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201902034&amp;v=MzEwMzJyWTlHWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlublc3M0xMejdCZDdHNEg5ak0=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 沙宗轩,薛菲,朱杰.基于并行强化学习的云机器人任务调度策略[J].计算机应用,2019,39(2):501-508.(SHA Z X,XUE F,ZHU J.Scheduling strategy of cloud robots based on parallel reinforcement learning[J].Journal of Computer Applications,2019,39(2):501-508.)
+                            </a>
+                        </p>
+                        <p id="170">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Maintaining security and privacy in health care system using learning based deep-Q-networks">
+
+                                <b>[4]</b> SHAKEEL P M,BASKAR S,DHULIPALA V R S,et al.Maintaining security and privacy in health care system using learning based deep-Q-networks[J].Journal of Medical Systems,2018,42(10):186-186.
+                            </a>
+                        </p>
+                        <p id="172">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Human-level control through deep reinforcement learning">
+
+                                <b>[5]</b> MNIH V,KAVUKCUOGLU K,SILVER D,et al.Human-level control through deep reinforcement learning[J].Nature,2015,518(7540):529-533.
+                            </a>
+                        </p>
+                        <p id="174">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Mastering the game of Go with deep neural networks and tree search">
+
+                                <b>[6]</b> SILVER D,HUANG A,MADDISON C J,et al.Mastering the game of go with deep neural networks and tree search[J].Nature,2016,529(7587):484-489.
+                            </a>
+                        </p>
+                        <p id="176">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201809004&amp;v=MDkxMzFNcG85RllJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5bm5XNzNMTHo3QmQ3RzRIOW4=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 赵玉婷,韩宝玲,罗庆生.基于deep Q-network双足机器人非平整地面行走稳定性控制方法[J].计算机应用,2018,38(9):2459-2463.(ZHAO Y T,HAN B L,LUO Q S.Walking stability control method based on deep Q-network for biped robot on uneven ground[J].Journal of Computer Applications,2018,38(9):2459-2463.)
+                            </a>
+                        </p>
+                        <p id="178">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Evaluating reinforcement learning agents for anatomical landmark detection">
+
+                                <b>[8]</b> ALANSARY A,OKTAY O,LI Y W,et al.Evaluating reinforcement learning agents for anatomical landmark detection[J].Medical Image Analysis,2019,53:156-164.
+                            </a>
+                        </p>
+                        <p id="180">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Hierarchical decision and control for continuous multitarget problem:policy evaluation with action delay">
+
+                                <b>[9]</b> ZHU J,ZHU J,WANG Z,et al.Hierarchical decision and control for continuous multitarget problem:policy evaluation with action delay[J].IEEE Transactions on Neural Networks and Learning Systems,2019,30(2):464-473.
+                            </a>
+                        </p>
+                        <p id="182">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00001338439&amp;v=MTQ1NzE3UjdxZForWnVGaXJsVXIzQUlsMD1OajdCYXJPNEh0SE5ySXhOWU9nR1kzazV6QmRoNGo5OVNYcVJyeG94Y01I&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> LIN L J.Self-improving reactive Agents based on reinforcement learning,planning and teaching[J].Machine Learning,1992,8(3/4):293-321.
+                            </a>
+                        </p>
+                        <p id="184">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Adaptive long-term control of biological neural networks with deep reinforcement learning">
+
+                                <b>[11]</b> WULFING J,KUMAR S S,BOEDECKER J,et al.Adaptive long-term control of biological neural networks with deep reinforcement learning[J].Neurocomputing,2019,342:66-74.
+                            </a>
+                        </p>
+                        <p id="186">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJBK&amp;filename=SJBK15090500014198&amp;v=MjMwNTk5SHRqTXFvOUZaT29MRFhVeG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnRGaW5sVXIzSUlWd2NhQkU9TmlmSlpiSw==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> HOCHREITER S,SCHMIDHUBER J.Long short-term memory[J].Neural Computation,1997,9:1735-1780.
+                            </a>
+                        </p>
+                        <p id="188">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep reinforcement learning based multi-Agent collaborated network for distributed stock trading">
+
+                                <b>[13]</b> KIM J J,CHA S H,CHO K H,et al.Deep reinforcement learning based multi-Agent collaborated network for distributed stock trading[J].International Journal of Grid and Distributed Computing,2018,11(2):11-20.
+                            </a>
+                        </p>
+                        <p id="190">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201808011&amp;v=MTQyOTJwNDlFWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlublc3M0xMeXZTZExHNEg5bk0=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 朱斐,吴文,刘全,等.一种最大置信上界经验采样的深度Q网络方法[J].计算机研究与发展,2018,55(8):1694-1705.(ZHU F,WU W,LIU Q,et al.A deep Q-network method based on upper confidence bound experience sampling[J].Journal of Computer Research and Development,2018,55(8):1694-1705.)
+                            </a>
+                        </p>
+                        <p id="192">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Experience selection in deep reinforcement learning for control">
+
+                                <b>[15]</b> BRUIN T D,KOBER J,TUYLS K,et al.Experience selection in deep reinforcement learning for control[J].Journal of Machine Learning Research,2018,19:1-56.
+                            </a>
+                        </p>
+                        <p id="194">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep reinforcement learning for target searching in cognitive electronic warfare">
+
+                                <b>[16]</b> YOU S X,DIAO M,GAO L P.Deep reinforcement learning for target searching in cognitive electronic warfare[J].IEEE Access,2019,7:37432-37447.
+                            </a>
+                        </p>
+                        <p id="196">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJHD&amp;filename=SJHD7BB5C552B01AE8709198855ED90F3387&amp;v=Mjg0NDNIRnVzT2ZRa3h5QllhNnpaMVFIcm4yV1k4ZWNTWFJyS1lDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZCckxVMDV0cGh4YnEzd3FzPU5pZkRhclRLYk5TL3FvcA==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b> LEI X Y,ZHANG Z A,DONG P F.Dynamic path planning of unknown environment based on deep reinforcement learning[J].Journal of Robotics,2018,2018:Article ID 5781591.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJY201911023" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201911023&amp;v=Mjk0NTN5bm5XNzNJTHo3QmQ3RzRIOWpOcm85SFo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Y=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="0" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

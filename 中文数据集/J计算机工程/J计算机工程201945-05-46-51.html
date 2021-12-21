@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130525490498750%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201905007%26RESULT%3d1%26SIGN%3dvJfOZFre3Rimm7WYw4r99c0u4cY%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201905007&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201905007&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201905007&amp;v=MDI2MDdUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkzbFZyM05MejdCYmJHNEg5ak1xbzlGWTRRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#49" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#52" data-title="1 相关技术 ">1 相关技术</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#63" data-title="2 缓存放置策略BEP ">2 缓存放置策略BEP</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#65" data-title="2.1 边缘动态流行度统计">2.1 边缘动态流行度统计</a></li>
+                                                <li><a href="#73" data-title="2.2 缓存决策算法">2.2 缓存决策算法</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#118" data-title="3 实验结果与分析 ">3 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#119" data-title="3.1 实验环境与参数设置">3.1 实验环境与参数设置</a></li>
+                                                <li><a href="#122" data-title="3.2 性能指标">3.2 性能指标</a></li>
+                                                <li><a href="#128" data-title="3.3 各缓存策略性能对比与分析">3.3 各缓存策略性能对比与分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#145" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#72" data-title="&lt;b&gt;表1 边缘节点流行度表&lt;/b&gt;"><b>表1 边缘节点流行度表</b></a></li>
+                                                <li><a href="#117" data-title="&lt;b&gt;图1 示例拓扑&lt;/b&gt;"><b>图1 示例拓扑</b></a></li>
+                                                <li><a href="#132" data-title="&lt;b&gt;图2 各策略全网缓存命中率随节点缓存大小的变化情况&lt;/b&gt;"><b>图2 各策略全网缓存命中率随节点缓存大小的变化情况</b></a></li>
+                                                <li><a href="#134" data-title="&lt;b&gt;图3 各策略全网缓存命中率随Zipf参数的变化情况&lt;/b&gt;"><b>图3 各策略全网缓存命中率随Zipf参数的变化情况</b></a></li>
+                                                <li><a href="#137" data-title="&lt;b&gt;图4 各策略服务器负载随节点缓存大小的变化情况&lt;/b&gt;"><b>图4 各策略服务器负载随节点缓存大小的变化情况</b></a></li>
+                                                <li><a href="#139" data-title="&lt;b&gt;图5 各策略服务器负载随Zipf参数的变化情况&lt;/b&gt;"><b>图5 各策略服务器负载随Zipf参数的变化情况</b></a></li>
+                                                <li><a href="#142" data-title="&lt;b&gt;图6 各策略平均时延随节点缓存大小的变化情况&lt;/b&gt;"><b>图6 各策略平均时延随节点缓存大小的变化情况</b></a></li>
+                                                <li><a href="#143" data-title="&lt;b&gt;图7 各策略平均时延随Zipf参数的变化情况&lt;/b&gt;"><b>图7 各策略平均时延随Zipf参数的变化情况</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" VNI Cisco.Cisco visual networking index:forecast and methodology, 2016-2021[EB/OL].[2018-01-02].http://s2.q4cdn.com/230918913/files/doc_downloads/report_2014/white_paper_c11-481360.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Cisco visual networking index:forecast and methodology,2016-2021">
+                                        <b>[1]</b>
+                                         VNI Cisco.Cisco visual networking index:forecast and methodology, 2016-2021[EB/OL].[2018-01-02].http://s2.q4cdn.com/230918913/files/doc_downloads/report_2014/white_paper_c11-481360.pdf.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" ZHANG Lixia, AFANASYEV A, BURKE J, et al.Named data networking[J].ACM SIGCOMM Computer Commu-nication Review, 2014, 44 (3) :66-73." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM14090900000279&amp;v=MjgzNjJLOEh0ak1wbzlGWk9zUERuc3dvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMbklKVjRSYUJjPU5pZklZNw==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         ZHANG Lixia, AFANASYEV A, BURKE J, et al.Named data networking[J].ACM SIGCOMM Computer Commu-nication Review, 2014, 44 (3) :66-73.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" AHLGREN B, DANNEWITZ C, IMBRENDA C, et al.A survey of information-centric networking[J].IEEE Communications Magazine, 2012, 50 (7) :26-36." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A survey of information-centric networking">
+                                        <b>[3]</b>
+                                         AHLGREN B, DANNEWITZ C, IMBRENDA C, et al.A survey of information-centric networking[J].IEEE Communications Magazine, 2012, 50 (7) :26-36.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" JACOBSON V, SMETTERS D K, THORNTON J D, et al.Networking named content[C]//Proceedings of the 5th International Conference on Emerging Networking Experiments and Technologies.New York, USA:ACM Press, 2009:1-12." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Networking named content">
+                                        <b>[4]</b>
+                                         JACOBSON V, SMETTERS D K, THORNTON J D, et al.Networking named content[C]//Proceedings of the 5th International Conference on Emerging Networking Experiments and Technologies.New York, USA:ACM Press, 2009:1-12.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" CHAI W K, HE Diliang, PSARAS I, et al.Cache “less for more” in information-centric networks[J].Computer Communications, 2013, 36 (7) :758-770." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13050900203757&amp;v=MjgwMjFiSzdIdFRNcG85Rlp1c01DM2srb0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTG5JSlY0UmFCYz1OaWZPZg==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         CHAI W K, HE Diliang, PSARAS I, et al.Cache “less for more” in information-centric networks[J].Computer Communications, 2013, 36 (7) :758-770.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 崔现东, 刘江, 黄韬, 等.基于节点介数和替换率的内容中心网络网内缓存策略[J].电子与信息学报, 2014, 36 (1) :1-7." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZYX201401001&amp;v=MDI4MDJDVVJMT2VaZVJvRnkzbFZyM05JVGZTZHJHNEg5WE1ybzlGWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         崔现东, 刘江, 黄韬, 等.基于节点介数和替换率的内容中心网络网内缓存策略[J].电子与信息学报, 2014, 36 (1) :1-7.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" GILL A S, D’ACUNTO L, TRICHIAS K, et al.BidCache:auction-based in-network caching in ICN[C]//Proceedings of 2016 IEEE Globecom Workshops.Washington D.C., USA:IEEE Press, 2016:1-6." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=BidCache:Auction-Based In-Network Caching in ICN">
+                                        <b>[7]</b>
+                                         GILL A S, D’ACUNTO L, TRICHIAS K, et al.BidCache:auction-based in-network caching in ICN[C]//Proceedings of 2016 IEEE Globecom Workshops.Washington D.C., USA:IEEE Press, 2016:1-6.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" LI Zhe, SIMON G.Time-shifted TV in content centric networks:the case for cooperative in-network caching[C]//Proceedings of IEEE International Conference on Communications.Washington D.C., USA:IEEE Press, 2011:1-6." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Time-shifted TV in content centric networks:the case for cooperative in-network caching">
+                                        <b>[8]</b>
+                                         LI Zhe, SIMON G.Time-shifted TV in content centric networks:the case for cooperative in-network caching[C]//Proceedings of IEEE International Conference on Communications.Washington D.C., USA:IEEE Press, 2011:1-6.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" AOKI M, SHIGEYASU T.Effective content management technique based on cooperation cache among neighboring routers in content-centric networking[C]//Proceedings of International Conference on Advanced Information Networking and Applications Workshops.Washington D.C., USA:IEEE Press, 2017:335-340." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Effective content management technique based on cooperation cache among neighboring routers in content-centric networking">
+                                        <b>[9]</b>
+                                         AOKI M, SHIGEYASU T.Effective content management technique based on cooperation cache among neighboring routers in content-centric networking[C]//Proceedings of International Conference on Advanced Information Networking and Applications Workshops.Washington D.C., USA:IEEE Press, 2017:335-340.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" ZHANG Guoqiang, LI Yang, LIN Tao.Caching in information centric networking:a survey[J].Computer Networks, 2013, 57 (16) :3128-3141." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14010600498505&amp;v=MTg3MzQvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSUpWNFJhQmM9TmlmT2ZiSzhIdERNcVk5RllPSUhDWHc4b0JNVDZUNFBRSA==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         ZHANG Guoqiang, LI Yang, LIN Tao.Caching in information centric networking:a survey[J].Computer Networks, 2013, 57 (16) :3128-3141.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" LAOUTARIS N, CHE Hao, STAVRAKAKIS I.The LCD interconnection of LRU caches and its analysis[J].Performance Evaluation, 2006, 63 (7) :609-634." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13012300551129&amp;v=MjQ3ODVIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMbklKVjRSYUJjPU5pZk9mYks3SHRET3JJOUZZZTRPRFg0d29CTVQ2VDRQUQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         LAOUTARIS N, CHE Hao, STAVRAKAKIS I.The LCD interconnection of LRU caches and its analysis[J].Performance Evaluation, 2006, 63 (7) :609-634.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" TARNOI S, SUKSOMBOON K, KUMWILAISAK W, et al.Performance of probabilistic caching and cache replacement policies for content-centric Networks[C]//Proceedings of 2014 IEEE Conference on Local Computer Networks.Washington D.C., USA:IEEE Press, 2014:99-106." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Performance of probabilistic caching and cache replacement policies for content-centric netw orks">
+                                        <b>[12]</b>
+                                         TARNOI S, SUKSOMBOON K, KUMWILAISAK W, et al.Performance of probabilistic caching and cache replacement policies for content-centric Networks[C]//Proceedings of 2014 IEEE Conference on Local Computer Networks.Washington D.C., USA:IEEE Press, 2014:99-106.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" PSARAS I, CHAI W K, PAVLOU G.Probabilistic in-network caching for information-centric networks[C]//Proceedings of the 2nd Edition of the ICN Workshop on Information-centric Networking.New York, USA:ACM Press, 2012:55-60." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Probabilistic in-network caching for information-centric networks">
+                                        <b>[13]</b>
+                                         PSARAS I, CHAI W K, PAVLOU G.Probabilistic in-network caching for information-centric networks[C]//Proceedings of the 2nd Edition of the ICN Workshop on Information-centric Networking.New York, USA:ACM Press, 2012:55-60.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" FREEMAN L C.A set of measures of centrality based on betweenness[J].Sociometry, 1977, 40 (1) :35-41." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJST&amp;filename=SJST8900EAD5B0FD54F04AAB335000D3D738&amp;v=MDgwODFiUTM1TjVod2JpNndxMD1OaWZZZXJ1eEh0RzUzdnRBRnV0NWVIazl1UllYbTA0UFMzem5yQkkxRGJIZ1FybVhDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcA==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         FREEMAN L C.A set of measures of centrality based on betweenness[J].Sociometry, 1977, 40 (1) :35-41.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" YU Meiju, LI Ru, LIU Yingqi, et al.A caching strategy based on content popularity and router level for NDN[C]//Proceedings of IEEE International Conference on Electronics Information and Emergency Communication.Washington D.C., USA:IEEE Press, 2017:195-198." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A caching strategy based on content popularity and router level for NDN">
+                                        <b>[15]</b>
+                                         YU Meiju, LI Ru, LIU Yingqi, et al.A caching strategy based on content popularity and router level for NDN[C]//Proceedings of IEEE International Conference on Electronics Information and Emergency Communication.Washington D.C., USA:IEEE Press, 2017:195-198.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" 丁尧, 郑烇, 郭晨, 等.基于节点热度与缓存替换率的ICN协作缓存[J].计算机工程, 2018, 44 (2) :56-60, 67." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201802009&amp;v=MDcyMzh0R0ZyQ1VSTE9lWmVSb0Z5M2xWcjNOTHo3QmJiRzRIOW5Nclk5RmJZUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         丁尧, 郑烇, 郭晨, 等.基于节点热度与缓存替换率的ICN协作缓存[J].计算机工程, 2018, 44 (2) :56-60, 67.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" 吴海博, 李俊, 智江.基于概率的启发式ICN缓存内容放置方法[J].通信学报, 2016, 37 (5) :62-72." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=TXXB201605008&amp;v=MjM5MzQzbFZyM05NVFhUYkxHNEg5Zk1xbzlGYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                         吴海博, 李俊, 智江.基于概率的启发式ICN缓存内容放置方法[J].通信学报, 2016, 37 (5) :62-72.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_18" title=" CHE Hao, TUNG Y, WANG Zhijun.Hierarchical Web caching systems:modeling, design and experimental results[J].IEEE Journal on Selected Areas in Communications, 2002, 20 (7) :1305-1314." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Hierarchical web caching systems: Modeling, design and experimental results">
+                                        <b>[18]</b>
+                                         CHE Hao, TUNG Y, WANG Zhijun.Hierarchical Web caching systems:modeling, design and experimental results[J].IEEE Journal on Selected Areas in Communications, 2002, 20 (7) :1305-1314.
+                                    </a>
+                                </li>
+                                <li id="39">
+
+
+                                    <a id="bibliography_19" title=" GUAN Jianfeng, QUAN Wei, XU Changqiao, et al.The location selection for CCN router based on the network centrality[C]//Proceedings of IEEE International Conference on Cloud Computing and Intelligent Systems.Washington D.C., USA:IEEE Press, 2013:568-582." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The location selection for CCN router based on the network centrality">
+                                        <b>[19]</b>
+                                         GUAN Jianfeng, QUAN Wei, XU Changqiao, et al.The location selection for CCN router based on the network centrality[C]//Proceedings of IEEE International Conference on Cloud Computing and Intelligent Systems.Washington D.C., USA:IEEE Press, 2013:568-582.
+                                    </a>
+                                </li>
+                                <li id="41">
+
+
+                                    <a id="bibliography_20" title=" AFANASYEV A, MOISEENKO I, ZHANG Lixia.ndnSIM:NDN simulator for NS-3[EB/OL].[2018-01-02].http://www.named-data.net/techreport/TR005-ndnsim.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=ndnSIM:NDN simulator for NS-3">
+                                        <b>[20]</b>
+                                         AFANASYEV A, MOISEENKO I, ZHANG Lixia.ndnSIM:NDN simulator for NS-3[EB/OL].[2018-01-02].http://www.named-data.net/techreport/TR005-ndnsim.pdf.
+                                    </a>
+                                </li>
+                                <li id="43">
+
+
+                                    <a id="bibliography_21" title=" MASTORAKIS S, AFANASYEV A, MOISEENKO I, et al.ndnSIM 2.0:a new version of the NDN simulator for NS-3[EB/OL].[2018-01-02].http://named-data.net/techreport/ndn-0028-1-ndnsim-v2.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=ndnSIM 2.0:a new version of the NDN simulator for NS-3">
+                                        <b>[21]</b>
+                                         MASTORAKIS S, AFANASYEV A, MOISEENKO I, et al.ndnSIM 2.0:a new version of the NDN simulator for NS-3[EB/OL].[2018-01-02].http://named-data.net/techreport/ndn-0028-1-ndnsim-v2.pdf.
+                                    </a>
+                                </li>
+                                <li id="45">
+
+
+                                    <a id="bibliography_22" title=" ZHANG Lixia.On the evolution of ndnSIM:an open-source simulator for NDN experi-mentation[M].New York, USA:ACM Press, 2017." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCMA7083E5AD2F608CDC98A2561D602014B&amp;v=MDMzOTI1TjVod2JpNndxMD1OaWZJWThLL0h0blAyb28wRU9sNUNud3h2R0pnNHpjTVNucmtyV1l6ZWJDVVJMN3RDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMw==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[22]</b>
+                                         ZHANG Lixia.On the evolution of ndnSIM:an open-source simulator for NDN experi-mentation[M].New York, USA:ACM Press, 2017.
+                                    </a>
+                                </li>
+                                <li id="47">
+
+
+                                    <a id="bibliography_23" title=" BRESLAU L, CAO Pei, FAN Li, et al.Web caching and Zipf-like distributions:evidence and implications[C]//Proceedings of the 18th Annual Joint Conference of the IEEE Computer and Communications Societies.Washington D.C., USA:IEEE Press, 1999:126-134." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Web caching and zipf-like distributions: evidence and implications">
+                                        <b>[23]</b>
+                                         BRESLAU L, CAO Pei, FAN Li, et al.Web caching and Zipf-like distributions:evidence and implications[C]//Proceedings of the 18th Annual Joint Conference of the IEEE Computer and Communications Societies.Washington D.C., USA:IEEE Press, 1999:126-134.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(05),46-51 DOI:10.19678/j.issn.1000-3428.0050182            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于节点介数与边缘流行度的NDN缓存策略</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%88%E5%8A%BC%E5%8D%9A&amp;code=39127283&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陈劼博</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%83%91%E7%83%87&amp;code=09548821&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">郑烇</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E5%B5%A9&amp;code=09579209&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王嵩</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6%E8%87%AA%E5%8A%A8%E5%8C%96%E7%B3%BB%E6%9C%AA%E6%9D%A5%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=0002522&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中国科学技术大学自动化系未来网络实验室</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对命名数据网络 (NDN) 架构中多数缓存策略的冗余与低效问题, 提出一种基于节点介数与边缘内容流行度的缓存放置策略BEP。结合节点的介数中心性与内容的动态流行度, 同时考虑缓存的过滤作用, 将最流行的内容放置在最重要的节点上, 以高效利用稀缺的缓存资源。仿真结果表明, 与经典NDN缓存策略LCE、LCD相比, BEP能有效提高缓存命中率, 降低服务器负载。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%91%BD%E5%90%8D%E6%95%B0%E6%8D%AE%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">命名数据网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%BC%93%E5%AD%98&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">缓存;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%8A%82%E7%82%B9%E4%B8%AD%E5%BF%83%E6%80%A7&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">节点中心性;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B5%81%E8%A1%8C%E5%BA%A6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">流行度;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%BC%93%E5%AD%98%E5%86%B3%E7%AD%96&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">缓存决策;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%BD%91%E7%BB%9C%E8%BE%B9%E7%BC%98&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">网络边缘;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    陈劼博 (1993—) , 男, 硕士研究生, 主研方向为未来网络架构、网络缓存技术;;
+                                </span>
+                                <span>
+                                    *郑烇 (通信作者) 、王嵩, 副教授。E-mail: qzheng@ ustc. edu. cn;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-01-19</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金重点项目“三网融合业务接入系统的分析、建模与调控” (61233003);</span>
+                    </p>
+            </div>
+                    <h1><b>NDN Caching Strategy Based on Node Median and Edge Popularity</b></h1>
+                    <h2>
+                    <span>CHEN Jiebo</span>
+                    <span>ZHENG Quan</span>
+                    <span>WANG Song</span>
+            </h2>
+                    <h2>
+                    <span>Laboratory for Future Networks, Department of Automation, University of Science and Technology of China</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Aiming at the redundancy and inefficiency of most caching strategy in Named Data Networking (NDN) architecture, a caching placement strategy BEP based on node median and edge content popularity is proposed.Combining the median centrality of node with the dynamic popularity of content, and considering the filtering effect of caches, the most popular content is placed on the most important node to make efficient use of scarce cache resources.Simulation results show that compared with the classical NDN caching strategies LCE and LCD, BEP can effectively improve the cache hit rate and reduce the server load.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Named%20Data%20Networking%20(NDN)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Named Data Networking (NDN) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=caching&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">caching;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=node%20centrality&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">node centrality;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=popularity&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">popularity;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=caching%20decision&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">caching decision;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=network%20edge&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">network edge;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-01-19</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="49" name="49" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="50">Cisco公司的VNI预测报告指出<citation id="147" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>, 未来五年内全球IP流量将会在2017年的基础上翻三番, 且视频流量将占据越来越大的比例。命名数据网络 (Named Data Networking, NDN) <citation id="148" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>是ICN (Information Centric Networking) <citation id="149" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>的主要实现方式之一, 泛在的网络缓存使其能够快速响应用户请求, 降低服务器负载, 减少响应时间, 并在一定程度上减少带宽的使用, 最终以较低的存储空间获取时间与带宽资源。NDN默认的缓存策略LCE (Leave Copy Everywhere) <citation id="150" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>将内容缓存在数据包经过的所有节点上, 该策略会产生大量的内容冗余副本, 且多数副本不会被再次请求, 最终造成了极大的资源浪费。文献<citation id="151" type="reference">[<a class="sup">5</a>]</citation>提出的Betw策略将内容放置在介数最大的节点上, 但其没有考虑高替换率问题<citation id="152" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>, 从而造成热点内容被过早替换的现象。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">为解决NDN架构中缓存策略的冗余与低效问题, 本文综合考虑内容的动态流行度、节点在拓扑结构中的重要程度, 以及缓存对用户请求的过滤作用, 提出一种基于节点介数与边缘内容流行度的缓存放置策略BEP (Betweenness and Edge Popularity) 。将最流行的内容放置在最重要的节点上, 利用稀缺的缓存资源来避免大量的冗余, 同时解决Betw策略的高替换率问题, 从而提升整个缓存系统的性能。</p>
+                </div>
+                <h3 id="52" name="52" class="anchor-tag">1 相关技术</h3>
+                <div class="p1">
+                    <p id="53">NDN缓存主要分为缓存放置策略和缓存替换策略。前者决定将内容放置在哪些节点, 后者决定替换节点中的哪些内容。本文主要研究缓存放置策略。在缓存放置策略中, 研究者们更加倾向于利用节点或网络信息进行协作缓存, 协作方式分为显示协作和隐式协作。虽然显示协作<citation id="157" type="reference"><link href="15" rel="bibliography" /><link href="17" rel="bibliography" /><link href="19" rel="bibliography" /><sup>[<a class="sup">7</a>,<a class="sup">8</a>,<a class="sup">9</a>]</sup></citation>的缓存放置策略能够降低缓存系统的内容冗余度, 确保缓存多样性, 提高缓存收益, 但是需要额外的信息交互和计算工作, 即需要大量的计算和网络资源。不同于显示协作, 隐式协作无需提前获取网内节点的状态信息, 其主要策略有介数Betw<citation id="153" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>、MCD<citation id="154" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>、LCD<citation id="155" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>以及ProbCache<citation id="156" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>等。</p>
+                </div>
+                <div class="p1">
+                    <p id="54">NDN默认的缓存放置策略是LCE<citation id="158" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>, 该策略算法简单、运算速度快, 但会造成大量的内容冗余<citation id="159" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>, 且大部分内容在被用户再次请求之前就被替换掉, 成为一次无效缓存。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">LCD策略<citation id="160" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>每次将内容缓存在命中节点的下一跳, 即每命中一次, 内容向用户移动一跳。该策略能够隐式利用内容的请求频率, 将请求频率较高的内容移到距离用户较近的节点上, 从而解决LCE的高冗余度问题。但由于其移动速度较慢, 内容很有可能在中途节点被替换掉, 使用户不得不重新从上游节点获得内容。MCD策略<citation id="161" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>与LCD思想基本一致, 只是在内容向下游移动之后, MCD策略会删除上游节点中的副本。MCD的冗余度比LCD低<citation id="162" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>, 但其内容一旦被替换掉, 用户就不得不重新从源服务器重新获取内容。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">概率缓存<citation id="163" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>是一种简单高效的缓存策略, 其在数据包经过每个节点时以概率<i>p</i>缓存该数据包, 在一定程度上解决了LCE的高冗余度问题, 但该策略具有一定的随机性, 使其广泛应用受到限制。</p>
+                </div>
+                <div class="p1">
+                    <p id="57">文献<citation id="164" type="reference">[<a class="sup">13</a>]</citation>提出的ProbCache策略综合考虑数据包距离用户的距离和节点可用缓存的大小, 数据包越接近用户节点, 内容被缓存下来的概率就越大, 同时缓存容量充足的节点有更高的概率缓存内容。但ProbCache策略可能会引起边缘节点的缓存竞争, 造成节点替换率过高、命中率过低的结果。</p>
+                </div>
+                <div class="p1">
+                    <p id="58">文献<citation id="165" type="reference">[<a class="sup">5</a>]</citation>提出的Betw策略利用了复杂网络中的介数概念<citation id="166" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>。用节点的介数来衡量节点在网络拓扑中的重要程度, 其数学定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="59" class="code-formula">
+                        <mathml id="59"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><msub><mrow></mrow><mi>B</mi></msub><mo stretchy="false"> (</mo><mi>v</mi><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>s</mi><mo>≠</mo><mi>v</mi><mo>≠</mo><mi>t</mi><mo>∈</mo><mi>V</mi></mrow></munder><mrow><mfrac><mrow><mi>σ</mi><msub><mrow></mrow><mrow><mi>s</mi><mo>, </mo><mi>t</mi></mrow></msub><mo stretchy="false"> (</mo><mi>v</mi><mo stretchy="false">) </mo></mrow><mrow><mi>σ</mi><msub><mrow></mrow><mrow><mi>s</mi><mo>, </mo><mi>t</mi></mrow></msub></mrow></mfrac></mrow></mstyle><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="60">其中, <i>V</i>是网络拓扑中所有节点的集合, <i>C</i><sub><i>B</i></sub> (<i>v</i>) 是节点<i>v</i>的介数, <i>s</i>、<i>t</i>是不同于<i>v</i>的另外2个节点, <i>σ</i><sub><i>s</i>, <i>t</i></sub>是节点<i>s</i>到<i>t</i>所有最短路径的数量, <i>σ</i><sub><i>s</i>, <i>t</i></sub> (<i>v</i>) 是<i>s</i>到<i>t</i>的最短路径中经过节点<i>v</i>的数量。从式 (1) 可以看出, 节点的介数越大, 经过该节点的路径越多, 该节点在网络中成为一个枢纽节点的可能性越大。Betw策略将内容缓存在兴趣包经过的介数最大的节点上, 在降低冗余度的同时, 利用该节点高介数的特性, 使得更多的其他节点能够快速地获取内容。但该策略的主要缺点是没有考虑高替换率问题<citation id="167" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>, 若所有内容都放置在介数最高的节点上, 缓存容量的限制将会造成缓存替换, 最终热点内容可能被替换出缓存, 而非热点内容将占据缓存。</p>
+                </div>
+                <div class="p1">
+                    <p id="61">分级缓存策略<citation id="168" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>将缓存和内容根据请求和跳数进行分级, 并按照级别放置, 该策略未考虑边缘节点对请求的过滤作用, 导致分级不准确。文献<citation id="169" type="reference">[<a class="sup">16</a>]</citation>同时考虑节点热度和缓存替换率, 但其仅将请求数量作为节点的热度评判标准, 使得缓存集中在源节点周围。文献<citation id="170" type="reference">[<a class="sup">17</a>]</citation>从缓存收益的角度出发, 以随机的方式将高收益内容以高概率进行缓存, 该策略是对概率缓存<citation id="171" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>和ProbCache<citation id="172" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>的一种改进, 但其仍无法解决边缘节点的缓存竞争问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="62">现有关于NDN网络缓存的研究大都仅考虑内容特征或拓扑特征, 且未对缓存的过滤作用进行探索。将内容特征和拓扑特征相结合, 能够利用更多的信息并更合理地放置网络内容, 从而提高缓存命中率, 降低服务器负载, 最终提升用户体验。</p>
+                </div>
+                <h3 id="63" name="63" class="anchor-tag">2 缓存放置策略BEP</h3>
+                <div class="p1">
+                    <p id="64">为提高缓存空间的利用率, 降低服务器负载, 本文结合内容的动态性、流行度以及节点在拓扑中的重要程度, 提出一种缓存放置策略BEP。在网络的边缘周期性地统计每个内容的流行度, 根据流行度的排名和沿途节点的重要程度决定内容的缓存位置。BEP的核心思想是将最流行的内容缓存在最核心的节点上, 非流行内容放置在次要节点上, 从而解决Betw中所有内容都放置在核心节点上所造成的高替换率问题, 使得核心节点缓存流行的内容, 最终对稀缺的缓存资源进行更高效的利用。</p>
+                </div>
+                <h4 class="anchor-tag" id="65" name="65">2.1 边缘动态流行度统计</h4>
+                <div class="p1">
+                    <p id="66">在树状拓扑中对于LRU (Least Recently Used) 策略, 一个缓存节点相当于一个低通滤波器<citation id="173" type="reference"><link href="37" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>, 节点缓存高频内容并服务相应的请求, 低频内容将会通过该节点向上转发。因此, 在树状拓扑中, 对上层节点的请求统计并不能反映所有内容的真实请求频率, 以此频率计算统计内容流行度将不具备代表性与全局正确性。</p>
+                </div>
+                <div class="p1">
+                    <p id="67">运营商在边缘网络中的典型拓扑就是树状拓扑, 因此, 本文针对树状拓扑提出一种在边缘节点 (即叶子节点) 统计并计算内容流行度的算法。内容流行度即用户对内容的请求次数, 本文算法周期性地统计每个内容在每个叶子节点上的请求次数, 并计算相应的流行度。内容<i>c</i>在节点<i>n</i>的第<i>i</i>个计时周期内流行度的计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="68"><i>Popularity</i><sub><i>c</i>, <i>n</i></sub> (<i>i</i>) =<i>α</i>×<i>Popularity</i><sub><i>c</i>, <i>n</i></sub> (<i>i</i>-1) +</p>
+                </div>
+                <div class="p1">
+                    <p id="69"> (1-<i>α</i>) ×<i>N</i><sub><i>c</i>, <i>n</i></sub> (<i>i</i>)      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="70">其中, <i>α</i>是衰减因子, 0&lt;<i>α</i>&lt;1, 其表示本周期之前该内容流行度所占的比例, <i>N</i><sub><i>c</i>, <i>n</i></sub> (<i>i</i>) 表示内容<i>c</i>在节点<i>n</i>的第<i>i</i>个计时周期内被请求的次数。距离当前周期越远的周期, 请求次数在流行度中所占的比例就越小。式 (2) 是较常用的流行度计算方法, 能够动态适应内容流行度的变化, 较好地反映近期的热点内容, 从而对缓存对象进行准确判断。</p>
+                </div>
+                <div class="p1">
+                    <p id="71">为实现对动态流行度的统计和计算, 本文在NDN网络节点中加入一个流行度表, 如表1所示。假设<i>α</i>取值为0.75, 已知内容的历史流行度和当前周期被请求的次数, 可以通过式 (2) 计算出当前的内容流行度。</p>
+                </div>
+                <div class="area_img" id="72">
+                    <p class="img_tit"><b>表1 边缘节点流行度表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="72" border="1"><tr><td>内容</td><td>历史流行度</td><td>本周期内请求次数</td><td>当前流行度</td></tr><tr><td>/video/1.mpg</td><td>25.24</td><td>30</td><td>26.43</td></tr><tr><td><br />/video/2.mpg</td><td>16.32</td><td>20</td><td>17.24</td></tr><tr><td><br />/video/3.mpg</td><td>14.23</td><td>10</td><td>13.17</td></tr><tr><td><br />/video/4.mpg</td><td>9.16</td><td>0</td><td>6.87</td></tr><tr><td><br />︙</td><td>︙</td><td>︙</td><td>︙</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="73" name="73">2.2 缓存决策算法</h4>
+                <div class="p1">
+                    <p id="74">在网络拓扑中, 不同节点的重要程度不同, 某些节点能够联通较多其他节点, 可以认为这种节点在网络拓扑中属于重要节点, 有较多的网络请求会途经这类节点。如果将最流行的内容放置在最重要的节点上, 将有很多的请求会在重要节点得到响应而不会产生更多的转发, 最终提高全网命中率并降低服务器负载。</p>
+                </div>
+                <div class="p1">
+                    <p id="75">在CCN网络中, 与其他中心性相比, 介数中心性具有较低的服务器部署成本与较短的请求时延<citation id="174" type="reference"><link href="39" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>。因此, 本文选择介数中心性作为节点重要性的度量。在边缘节点进行内容流行度统计之后, 需要根据内容排名和节点缓存能力大小将内容放置在合适的节点上。</p>
+                </div>
+                <div class="p1">
+                    <p id="76">用户产生兴趣包后, 根据相应的转发策略将兴趣包转发给服务器, 在第一跳即边缘节点, BEP策略会根据内容流行度表获取该内容的流行度排名并添加到兴趣包中。另外, BEP策略会记录沿路所有节点的介数大小, 在缓存命中或者兴趣包到达服务器时, 当前节点根据兴趣包中的信息找出合适的节点, 并将该节点的介数添加到返回的数据包中, 数据包在返回过程中与沿途节点的介数逐一比较, 当节点介数与数据包中介数相等时, 就将此数据缓存在当前节点。设节点缓存能力大小为<i>CacheSize</i>, 内容<i>c</i>在边缘节点的流行度排名为<i>Rank</i><sub><i>c</i></sub>, 则应放置节点的介数在沿途所有节点介数中的排名<i>R</i><sub>betweenness</sub>为:</p>
+                </div>
+                <div class="p1">
+                    <p id="77"><i>R</i><sub>betweenness</sub>=<image href="images/JSJC201905007_078.jpg" type="" display="inline" placement="inline"><alt></alt></image><mathml id="79"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mi>R</mi><mi>a</mi><mi>n</mi><mi>k</mi><msub><mrow></mrow><mi>c</mi></msub></mrow><mrow><mi>C</mi><mi>a</mi><mi>c</mi><mi>h</mi><mi>e</mi><mi>S</mi><mi>i</mi><mi>z</mi><mi>e</mi></mrow></mfrac></mrow></math></mathml><image href="images/JSJC201905007_080.jpg" type="" display="inline" placement="inline"><alt></alt></image> (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="81">BEP算法伪代码如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="82"><b>算法1</b> BEP算法</p>
+                </div>
+                <div class="area_img" id="177">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201905007_17700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="177">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201905007_17701.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="116">介数仅与拓扑结构相关, 因此, 本文提前计算好所用介数并存入各节点中。如图1所示, 在网络拓扑中共有3个用户和一个服务器节点, 假设中间5个网络节点的缓存大小为1。由式 (1) 可算得各节点的介数大小, 图1中节点下方数字代表各自的介数值, 假设节点<i>v</i><sub>3</sub>的流行度表为表1。在初始时刻, <i>v</i><sub>1</sub>～<i>v</i><sub>5</sub> 5个节点缓存都为空。若此时用户<i>A</i>请求名为/video/1.mpg的内容, 边缘节点<i>v</i><sub>3</sub>收到此兴趣包后, 通过查询流行度表可知, 该内容流行度排名为1, 因此将兴趣包的<i>Rank</i><sub><i>c</i></sub>设置为1, 并将<i>v</i><sub>3</sub>的介数值0.25加入兴趣包的介数数组中, 然后将兴趣包转发至<i>v</i><sub>2</sub>节点。<i>v</i><sub>2</sub>节点收到该兴趣包后, 将自己的介数值0.71加入介数数组中。最终兴趣包到达服务器<i>S</i>。服务器<i>S</i>获得兴趣包的<i>Rank</i><sub><i>c</i></sub>值和介数数组[0.61, 0.71, 0.25], 由<i>CacheSize</i>=1和式 (3) 可以算得<i>R</i><sub>betweenness</sub>=1, 因此, 从介数数组中找到最大值0.71放入返回的数据包中。数据包返回时逐一比较沿途节点的介数, 当介数等于0.71时就将数据缓存在该节点。在图1的示例拓扑中, 内容将被缓存在节点<i>v</i><sub>2</sub>中。若用户<i>A</i>请求内容/video/2.mpg, 则<i>R</i><sub>betweenness</sub>=2, 此时返回数据包将携带排名第2的介数0.61, 节点<i>v</i><sub>1</sub>会缓存这一内容。</p>
+                </div>
+                <div class="area_img" id="117">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905007_117.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 示例拓扑" src="Detail/GetImg?filename=images/JSJC201905007_117.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 示例拓扑</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905007_117.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="118" name="118" class="anchor-tag">3 实验结果与分析</h3>
+                <h4 class="anchor-tag" id="119" name="119">3.1 实验环境与参数设置</h4>
+                <div class="p1">
+                    <p id="120">本文选用ndnSIM<citation id="176" type="reference"><link href="41" rel="bibliography" /><link href="43" rel="bibliography" /><link href="45" rel="bibliography" /><sup>[<a class="sup">20</a>,<a class="sup">21</a>,<a class="sup">22</a>]</sup></citation>作为网络仿真平台以验证BEP策略的性能。实验环境设置:操作系统为MacOS High Sierra 10.13, 内存为4 GB, CPU为Intel Core i5 16 GHz, ndnSIM版本为2.4。仿真拓扑采用树状结构, 共7层, 从根节点开始随机生成子节点, 每个节点有0～5个子节点, 最终生成628个节点。其中, 设置1个源服务器节点 (树的根节点) , 377个用户节点 (所有叶子节点) 。网络内共有<i>N</i>=2 000种不同的内容, 每个内容大小都相同, 为1 024 KB, 内容流行度服从Zipf-Mandelbrot分布<citation id="175" type="reference"><link href="47" rel="bibliography" /><sup>[<a class="sup">23</a>]</sup></citation>, Zipf参数范围为0.5～1.5。每个用户节点的请求都服从泊松分布, 且频率<i>λ</i>=10 req/s。每个节点的缓存大小都相同且为<i>C</i>, <i>C</i>的取值范围为10个～100个内容, 使得内容存储 (Content Store, CS) 表缓存大小与内容总量之比<mathml id="121"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>R</mi><mo stretchy="false"> (</mo><mi>R</mi><mo>=</mo><mfrac><mi>C</mi><mi>Ν</mi></mfrac><mo stretchy="false">) </mo></mrow></math></mathml>控制在0.005～0.050之间, 以确保节点缓存容量远小于内容总量, 符合网络真实情况。在BEP算法中, 统计边缘流行度时衰减因子<i>α</i>取值为0.75, 统计计算周期为1 s, 仿真时长为50 s, 前5 s为系统初始化热身阶段, 取后45 s的数据作为比较用数据。缓存替换算法采用默认的LRU, 对照组为NDN网络架构中常用的5种缓存放置策略LCE、LCD、Betw、Probability以及ProbCache, 其中, Probability的缓存概率取值为0.5。</p>
+                </div>
+                <h4 class="anchor-tag" id="122" name="122">3.2 性能指标</h4>
+                <div class="p1">
+                    <p id="123">本文选用网络缓存研究中常用的3个指标对各策略进行衡量和比较:</p>
+                </div>
+                <div class="p1">
+                    <p id="124">1) 全网命中率<i>Ratio</i>。设兴趣包在服务器以外的节点中命中次数为<i>hit</i>, 兴趣包总数为<i>total</i>, 则<mathml id="125"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>R</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mo>=</mo><mfrac><mrow><mi>h</mi><mi>i</mi><mi>t</mi></mrow><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></mfrac></mrow></math></mathml>。命中率能够直观反映缓存系统的优劣, 命中率较高则说明缓存系统性能较好, 其中有较大比例的请求都提前得到了响应, 这正是缓存的重要作用之一。</p>
+                </div>
+                <div class="p1">
+                    <p id="126">2) 服务器负载load, 为服务器每秒需要处理的兴趣包数量, 该值越大, 服务器越繁忙。服务器负载反映了服务器所承受的压力, 如果服务器负载过高而服务器处理能力不足, 将会造成极大的网络延迟甚至丢包。因此, 在可能的情况下应尽量降低服务器负载。</p>
+                </div>
+                <div class="p1">
+                    <p id="127">3) 平均时延delay, 反映了用户从发出请求到收到响应的平均时间, 单位为<i>ms</i>, 该值越大, 用户体验越差。缓存很重要的一个作用就是提升用户体验, 因此, 用户的请求时延是衡量缓存系统性能的一个重要指标。</p>
+                </div>
+                <h4 class="anchor-tag" id="128" name="128">3.3 各缓存策略性能对比与分析</h4>
+                <div class="p1">
+                    <p id="129">本节通过改变节点缓存大小和Zipf参数来研究比较3.2节3个性能指标在各缓存策略下的表现。</p>
+                </div>
+                <h4 class="anchor-tag" id="130" name="130">3.3.1 全网命中率</h4>
+                <div class="p1">
+                    <p id="131">图2所示为6种缓存策略下用户全网命中率随缓存大小的变化曲线, 其中, Zipf参数为0.7。由图2 可以看出, BEP策略的全网命中率远高于LCE策略, 当缓存容量为0.025时, BEP的全网命中率相较LCE提高了55.25%。当节点缓存较小时, LCD有比Betw更高的缓存命中率, 当节点缓存较大时, Betw的命中率高于LCD, 原因是缓存较小时, Betw的缓存资源紧张, 其高替换率的缺点变得尤其突出, 导致其性能较差, 但随着节点缓存大小的增加, 单个节点能够缓存更多的内容, 从而缓解了Betw的高替换率问题。而作为Betw的改进方案, BEP在全网缓存命中率方面优于其他所有缓存放置策略, 当缓存容量为0.025时, BEP的全网缓存命中率相较Betw提高了23.77%。</p>
+                </div>
+                <div class="area_img" id="132">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905007_132.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 各策略全网缓存命中率随节点缓存大小的变化情况" src="Detail/GetImg?filename=images/JSJC201905007_132.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 各策略全网缓存命中率随节点缓存大小的变化情况</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905007_132.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="133">将缓存容量固定为0.025, 改变Zipf参数时各缓存策略的全网缓存命中率变化情况如图3所示。从图3可以看出, BEP策略依然具有最优的性能。随着Zipf参数的增大, 有更多的用户请求集中在更少的内容上, 因此, 当Zipf参数达到1.5时, 大部分流行度高的请求都能够被缓存, 6种缓存策略的命中率都在90%左右, 其中, BEP策略高达92.14%。</p>
+                </div>
+                <div class="area_img" id="134">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905007_134.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 各策略全网缓存命中率随Zipf参数的变化情况" src="Detail/GetImg?filename=images/JSJC201905007_134.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 各策略全网缓存命中率随Zipf参数的变化情况</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905007_134.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="135" name="135">3.3.2 服务器负载</h4>
+                <div class="p1">
+                    <p id="136">将Zipf参数固定为0.7, 改变节点缓存容量大小, 各缓存策略下服务器负载变化情况如图4所示。从图4可以看出, 随着节点缓存容量的增大, 各策略的服务器负载呈现下降的趋势。将Betw与LCD进行对比, 在缓存较小时, LCD性能更优, 而缓存较大时, Betw性能更优。当缓存容量为0.025时, BEP的服务器负载较LCE、Betw、LCD分别降低了17.30%、10.67%、9.44%。</p>
+                </div>
+                <div class="area_img" id="137">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905007_137.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 各策略服务器负载随节点缓存大小的变化情况" src="Detail/GetImg?filename=images/JSJC201905007_137.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 各策略服务器负载随节点缓存大小的变化情况</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905007_137.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="138">将缓存容量固定为0.025, 改变Zipf参数时各缓存策略的服务器负载变化情况如图5所示。从图5可以看出, 当Zipf参数足够大时, 服务器负载可以达到相当低的水平, 当Zipf参数为1.5时, BEP服务器负载仅为287.5 req/s, 其他5种策略的服务器负载也在420 req/s以下, 从整体来看, BEP在服务器负载方面依然具有最优的性能。</p>
+                </div>
+                <div class="area_img" id="139">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905007_139.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 各策略服务器负载随Zipf参数的变化情况" src="Detail/GetImg?filename=images/JSJC201905007_139.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 各策略服务器负载随Zipf参数的变化情况</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905007_139.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="140" name="140">3.3.3 平均时延</h4>
+                <div class="p1">
+                    <p id="141">图6所示为Zipf参数为0.7时各缓存策略平均时延随节点缓存大小的变化情况, 图7所示为节点缓存大小为0.025时各缓存策略平均时延随Zipf参数的变化情况。从中可以看出, 本文BEP策略均优于其余5种策略, 当Zipf参数为0.7且节点缓存大小为0.025时, BEP平均时延比LCE、Betw和LCD分别降低13.24%、6.70%和4.43%。</p>
+                </div>
+                <div class="area_img" id="142">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905007_142.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 各策略平均时延随节点缓存大小的变化情况" src="Detail/GetImg?filename=images/JSJC201905007_142.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 各策略平均时延随节点缓存大小的变化情况</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905007_142.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="143">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905007_143.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 各策略平均时延随Zipf参数的变化情况" src="Detail/GetImg?filename=images/JSJC201905007_143.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图7 各策略平均时延随Zipf参数的变化情况</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905007_143.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="144">从图7还可以看出, 当Zipf参数大于1.1时, 本文BEP策略在平均时延上与Betw策略几乎相同, 这是由于当Zipf参数较大时, 更多的请求集中在更少的内容上, 导致用户请求更加单一化, BEP将最流行的内容放置在最重要的节点上, 而Betw将所有内容都放置在最重要的节点上, 当Zipf参数足够大时, 几乎所有的用户请求都是流行的内容, 因此两者性能相近。</p>
+                </div>
+                <h3 id="145" name="145" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="146">本文结合节点的中心性、内容的流行度以及缓存对请求的过滤作用, 将内容信息与拓扑信息相结合, 提出一种缓存放置策略BEP。该策略解决了Betw策略替换率过高的问题, 同时避免了LCE策略的冗余与低效现象。仿真结果表明, 相对LCE、LCD等策略, 在全网缓存命中率和服务器负载方面, BEP具有较好的性能表现。下一步考虑将缓存放置策略和路由机制相结合并利用更多的信息, 以降低缓存成本, 提升缓存收益, 为互联网服务提供商或内容提供商呈现更友好的缓存策略。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Cisco visual networking index:forecast and methodology,2016-2021">
+
+                                <b>[1]</b> VNI Cisco.Cisco visual networking index:forecast and methodology, 2016-2021[EB/OL].[2018-01-02].http://s2.q4cdn.com/230918913/files/doc_downloads/report_2014/white_paper_c11-481360.pdf.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM14090900000279&amp;v=MDU5OTdvOUZaT3NQRG5zd29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSUpWNFJhQmM9TmlmSVk3SzhIdGpNcA==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> ZHANG Lixia, AFANASYEV A, BURKE J, et al.Named data networking[J].ACM SIGCOMM Computer Commu-nication Review, 2014, 44 (3) :66-73.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A survey of information-centric networking">
+
+                                <b>[3]</b> AHLGREN B, DANNEWITZ C, IMBRENDA C, et al.A survey of information-centric networking[J].IEEE Communications Magazine, 2012, 50 (7) :26-36.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Networking named content">
+
+                                <b>[4]</b> JACOBSON V, SMETTERS D K, THORNTON J D, et al.Networking named content[C]//Proceedings of the 5th International Conference on Emerging Networking Experiments and Technologies.New York, USA:ACM Press, 2009:1-12.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13050900203757&amp;v=MDQ0NzJIeWptVUxuSUpWNFJhQmM9TmlmT2ZiSzdIdFRNcG85Rlp1c01DM2srb0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> CHAI W K, HE Diliang, PSARAS I, et al.Cache “less for more” in information-centric networks[J].Computer Communications, 2013, 36 (7) :758-770.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZYX201401001&amp;v=MjczNDNVUkxPZVplUm9GeTNsVnIzTklUZlNkckc0SDlYTXJvOUZaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 崔现东, 刘江, 黄韬, 等.基于节点介数和替换率的内容中心网络网内缓存策略[J].电子与信息学报, 2014, 36 (1) :1-7.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=BidCache:Auction-Based In-Network Caching in ICN">
+
+                                <b>[7]</b> GILL A S, D’ACUNTO L, TRICHIAS K, et al.BidCache:auction-based in-network caching in ICN[C]//Proceedings of 2016 IEEE Globecom Workshops.Washington D.C., USA:IEEE Press, 2016:1-6.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Time-shifted TV in content centric networks:the case for cooperative in-network caching">
+
+                                <b>[8]</b> LI Zhe, SIMON G.Time-shifted TV in content centric networks:the case for cooperative in-network caching[C]//Proceedings of IEEE International Conference on Communications.Washington D.C., USA:IEEE Press, 2011:1-6.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Effective content management technique based on cooperation cache among neighboring routers in content-centric networking">
+
+                                <b>[9]</b> AOKI M, SHIGEYASU T.Effective content management technique based on cooperation cache among neighboring routers in content-centric networking[C]//Proceedings of International Conference on Advanced Information Networking and Applications Workshops.Washington D.C., USA:IEEE Press, 2017:335-340.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14010600498505&amp;v=MDUzMzFUNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMbklKVjRSYUJjPU5pZk9mYks4SHRETXFZOUZZT0lIQ1h3OG9CTQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> ZHANG Guoqiang, LI Yang, LIN Tao.Caching in information centric networking:a survey[J].Computer Networks, 2013, 57 (16) :3128-3141.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13012300551129&amp;v=MDM5MzdWNFJhQmM9TmlmT2ZiSzdIdERPckk5RlllNE9EWDR3b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTG5JSg==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> LAOUTARIS N, CHE Hao, STAVRAKAKIS I.The LCD interconnection of LRU caches and its analysis[J].Performance Evaluation, 2006, 63 (7) :609-634.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Performance of probabilistic caching and cache replacement policies for content-centric netw orks">
+
+                                <b>[12]</b> TARNOI S, SUKSOMBOON K, KUMWILAISAK W, et al.Performance of probabilistic caching and cache replacement policies for content-centric Networks[C]//Proceedings of 2014 IEEE Conference on Local Computer Networks.Washington D.C., USA:IEEE Press, 2014:99-106.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Probabilistic in-network caching for information-centric networks">
+
+                                <b>[13]</b> PSARAS I, CHAI W K, PAVLOU G.Probabilistic in-network caching for information-centric networks[C]//Proceedings of the 2nd Edition of the ICN Workshop on Information-centric Networking.New York, USA:ACM Press, 2012:55-60.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJST&amp;filename=SJST8900EAD5B0FD54F04AAB335000D3D738&amp;v=MDk2ODdYbTA0UFMzem5yQkkxRGJIZ1FybVhDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMzVONWh3Ymk2d3EwPU5pZlllcnV4SHRHNTN2dEFGdXQ1ZUhrOXVSWQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> FREEMAN L C.A set of measures of centrality based on betweenness[J].Sociometry, 1977, 40 (1) :35-41.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A caching strategy based on content popularity and router level for NDN">
+
+                                <b>[15]</b> YU Meiju, LI Ru, LIU Yingqi, et al.A caching strategy based on content popularity and router level for NDN[C]//Proceedings of IEEE International Conference on Electronics Information and Emergency Communication.Washington D.C., USA:IEEE Press, 2017:195-198.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201802009&amp;v=MTY0NThRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkzbFZyM05MejdCYmJHNEg5bk1yWTlGYlk=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> 丁尧, 郑烇, 郭晨, 等.基于节点热度与缓存替换率的ICN协作缓存[J].计算机工程, 2018, 44 (2) :56-60, 67.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=TXXB201605008&amp;v=MTgxNDR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkzbFZyM05NVFhUYkxHNEg5Zk1xbzlGYklRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b> 吴海博, 李俊, 智江.基于概率的启发式ICN缓存内容放置方法[J].通信学报, 2016, 37 (5) :62-72.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Hierarchical web caching systems: Modeling, design and experimental results">
+
+                                <b>[18]</b> CHE Hao, TUNG Y, WANG Zhijun.Hierarchical Web caching systems:modeling, design and experimental results[J].IEEE Journal on Selected Areas in Communications, 2002, 20 (7) :1305-1314.
+                            </a>
+                        </p>
+                        <p id="39">
+                            <a id="bibliography_19" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The location selection for CCN router based on the network centrality">
+
+                                <b>[19]</b> GUAN Jianfeng, QUAN Wei, XU Changqiao, et al.The location selection for CCN router based on the network centrality[C]//Proceedings of IEEE International Conference on Cloud Computing and Intelligent Systems.Washington D.C., USA:IEEE Press, 2013:568-582.
+                            </a>
+                        </p>
+                        <p id="41">
+                            <a id="bibliography_20" target="_blank" href="http://scholar.cnki.net/result.aspx?q=ndnSIM:NDN simulator for NS-3">
+
+                                <b>[20]</b> AFANASYEV A, MOISEENKO I, ZHANG Lixia.ndnSIM:NDN simulator for NS-3[EB/OL].[2018-01-02].http://www.named-data.net/techreport/TR005-ndnsim.pdf.
+                            </a>
+                        </p>
+                        <p id="43">
+                            <a id="bibliography_21" target="_blank" href="http://scholar.cnki.net/result.aspx?q=ndnSIM 2.0:a new version of the NDN simulator for NS-3">
+
+                                <b>[21]</b> MASTORAKIS S, AFANASYEV A, MOISEENKO I, et al.ndnSIM 2.0:a new version of the NDN simulator for NS-3[EB/OL].[2018-01-02].http://named-data.net/techreport/ndn-0028-1-ndnsim-v2.pdf.
+                            </a>
+                        </p>
+                        <p id="45">
+                            <a id="bibliography_22" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCMA7083E5AD2F608CDC98A2561D602014B&amp;v=MDg5NTZTbnJrcldZemViQ1VSTDd0Q09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TjVod2JpNndxMD1OaWZJWThLL0h0blAyb28wRU9sNUNud3h2R0pnNHpjTQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[22]</b> ZHANG Lixia.On the evolution of ndnSIM:an open-source simulator for NDN experi-mentation[M].New York, USA:ACM Press, 2017.
+                            </a>
+                        </p>
+                        <p id="47">
+                            <a id="bibliography_23" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Web caching and zipf-like distributions: evidence and implications">
+
+                                <b>[23]</b> BRESLAU L, CAO Pei, FAN Li, et al.Web caching and Zipf-like distributions:evidence and implications[C]//Proceedings of the 18th Annual Joint Conference of the IEEE Computer and Communications Societies.Washington D.C., USA:IEEE Press, 1999:126-134.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201905007" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201905007&amp;v=MDI2MDdUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkzbFZyM05MejdCYmJHNEg5ak1xbzlGWTRRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

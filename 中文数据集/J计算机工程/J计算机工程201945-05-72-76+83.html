@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130525631123750%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201905011%26RESULT%3d1%26SIGN%3dhZPSGsE%252b1dyioo%252fblRI1TOQpSdg%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201905011&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201905011&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201905011&amp;v=MDM4NjBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5M2xWNy9QTHo3QmJiRzRIOWpNcW85RVpZUUs=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#33" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="1 相关工作 ">1 相关工作</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#42" data-title="2 QEMU库函数处理过程 ">2 QEMU库函数处理过程</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#50" data-title="3 面向SW平台库函数的处理方案 ">3 面向SW平台库函数的处理方案</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#51" data-title="3.1 helper函数的替换翻译模式">3.1 helper函数的替换翻译模式</a></li>
+                                                <li><a href="#62" data-title="3.2 基本块合并框架构建">3.2 基本块合并框架构建</a></li>
+                                                <li><a href="#65" data-title="3.3 适应平台的函数解析查找优化">3.3 适应平台的函数解析查找优化</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#73" data-title="4 算法设计与实现 ">4 算法设计与实现</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#102" data-title="5 实验结果与分析 ">5 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#104" data-title="5.1 实验环境">5.1 实验环境</a></li>
+                                                <li><a href="#110" data-title="5.2 结果分析">5.2 结果分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#118" data-title="6 结束语 ">6 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#39" data-title="&lt;b&gt;图1 QEMU系统架构&lt;/b&gt;"><b>图1 QEMU系统架构</b></a></li>
+                                                <li><a href="#45" data-title="&lt;b&gt;图2 库函数替换与一般动态二进制翻译流程&lt;/b&gt;"><b>图2 库函数替换与一般动态二进制翻译流程</b></a></li>
+                                                <li><a href="#53" data-title="&lt;b&gt;图3 优化后翻译流程&lt;/b&gt;"><b>图3 优化后翻译流程</b></a></li>
+                                                <li><a href="#64" data-title="&lt;b&gt;图4 基本块合并翻译框架&lt;/b&gt;"><b>图4 基本块合并翻译框架</b></a></li>
+                                                <li><a href="#68" data-title="&lt;b&gt;图5 共享库函数名称解析过程&lt;/b&gt;"><b>图5 共享库函数名称解析过程</b></a></li>
+                                                <li><a href="#100" data-title="&lt;b&gt;图6 核心代码生成&lt;/b&gt;"><b>图6 核心代码生成</b></a></li>
+                                                <li><a href="#106" data-title="&lt;b&gt;表1 二进制翻译环境&lt;/b&gt;"><b>表1 二进制翻译环境</b></a></li>
+                                                <li><a href="#109" data-title="&lt;b&gt;表2 spec cpu2006测试用例&lt;/b&gt;"><b>表2 spec cpu2006测试用例</b></a></li>
+                                                <li><a href="#116" data-title="&lt;b&gt;图7 实验加速比对照&lt;/b&gt;"><b>图7 实验加速比对照</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" ALTMAN E R, KAELI D, SHEFFER Y.Welcome to the opportunities of binary translation[J].Computer, 2000, 33 (3) :40-45." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Welcome to the opportunities of binary translation">
+                                        <b>[1]</b>
+                                         ALTMAN E R, KAELI D, SHEFFER Y.Welcome to the opportunities of binary translation[J].Computer, 2000, 33 (3) :40-45.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 杨浩, 唐锋, 谢海斌, 等.二进制翻译中的库函数处理[J].计算机研究与发展, 2006, 43 (12) :2174-2179." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ200612027&amp;v=MTM0MjllUm9GeTNsVjcvUEx5dlNkTEc0SHRmTnJZOUhZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVo=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         杨浩, 唐锋, 谢海斌, 等.二进制翻译中的库函数处理[J].计算机研究与发展, 2006, 43 (12) :2174-2179.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 谢海斌, 张兆庆, 武成岗, 等.二进制翻译中系统库函数的分类处理方法[J].计算机应用研究, 2008, 25 (4) :1057-1064." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ200804029&amp;v=MTY1OTh0R0ZyQ1VSTE9lWmVSb0Z5M2xWNy9QTHo3U1pMRzRIdG5NcTQ5SGJZUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         谢海斌, 张兆庆, 武成岗, 等.二进制翻译中系统库函数的分类处理方法[J].计算机应用研究, 2008, 25 (4) :1057-1064.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" LIANG Yi, SHAO Yuanhua, YANG Guo, et al.Register allocation for QEMU dynamic binary translation systems[J].International Journal of Hybrid Information Technology, 2015, 8:25-39." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Register allocation for QEMU dynamic binary translation systems">
+                                        <b>[4]</b>
+                                         LIANG Yi, SHAO Yuanhua, YANG Guo, et al.Register allocation for QEMU dynamic binary translation systems[J].International Journal of Hybrid Information Technology, 2015, 8:25-39.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" HAWKINS B, DEMSKY B, BRUENING D, et al.Optimizing binary translation of dynamically generated code[C]//Proceedings of IEEE International Symposium on Code Generation and Optimization.Washington D.C., USA:IEEE Press, 2015:68-78." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Optimizing Binary Translation of Dynamically Generated code">
+                                        <b>[5]</b>
+                                         HAWKINS B, DEMSKY B, BRUENING D, et al.Optimizing binary translation of dynamically generated code[C]//Proceedings of IEEE International Symposium on Code Generation and Optimization.Washington D.C., USA:IEEE Press, 2015:68-78.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" BELLARD F.A fast and portable dynamic translator[C]//Proceedings of Annual Conference on USENIX Annual Technical.Washington D.C., USA:IEEE Press, 2005:125-136." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A fast and portable dynamic translator">
+                                        <b>[6]</b>
+                                         BELLARD F.A fast and portable dynamic translator[C]//Proceedings of Annual Conference on USENIX Annual Technical.Washington D.C., USA:IEEE Press, 2005:125-136.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 芮雪, 王亮亮, 杨琴.国产处理器研究与发展现状综述[J].现代计算机 (普及版) , 2014 (8) :15-19." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDJS201408006&amp;v=MzI1OTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTNsVjcvUFBTbkJmYkc0SDlYTXA0OUZZb1E=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         芮雪, 王亮亮, 杨琴.国产处理器研究与发展现状综述[J].现代计算机 (普及版) , 2014 (8) :15-19.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" MICHEL L, PETROT F.Dynamic binary translation of VLIW codes on scalar architectures[J].IEEE Transactions on Computer-aided Design of Integrated Circuits and Systems, 2017 (99) :1." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Dynamic Binary Translation of VLIW Codes on Scalar Architectures">
+                                        <b>[8]</b>
+                                         MICHEL L, PETROT F.Dynamic binary translation of VLIW codes on scalar architectures[J].IEEE Transactions on Computer-aided Design of Integrated Circuits and Systems, 2017 (99) :1.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" WU Xia, CHENG Wen.Fast optimization of binary clusters using a novel dynamic lattice searching method[J].Journal of Chemical Physics, 2014, 141 (12) :124-130." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Fast optimization of binary clusters using a novel dynamic lattice searching method">
+                                        <b>[9]</b>
+                                         WU Xia, CHENG Wen.Fast optimization of binary clusters using a novel dynamic lattice searching method[J].Journal of Chemical Physics, 2014, 141 (12) :124-130.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" D’ANTRAS A, GORGOVAN C, GARISDE J.Optimizing indirect branches in dynamic binary translators[J].ACM Transactions on Architecture and Code Optimization, 2016, 13 (1) :1-25." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM95BDCA61642E84F2459FB7A409708B23&amp;v=MTk4MDR1UlFYN3pZTE9uaVRxQkk4ZnJLY043aWNDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMzVONWh3Ymk3d0s4PU5pZklZN3E5YktXLzNvbEVZdThOZVhROQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         D’ANTRAS A, GORGOVAN C, GARISDE J.Optimizing indirect branches in dynamic binary translators[J].ACM Transactions on Architecture and Code Optimization, 2016, 13 (1) :1-25.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" YOHN J W, BAUMAN M A, KAO F J, et al.Operand and limits optimization for binary translation system:US9021454[P].2015." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Operand and limits optimization for binary translation system">
+                                        <b>[11]</b>
+                                         YOHN J W, BAUMAN M A, KAO F J, et al.Operand and limits optimization for binary translation system:US9021454[P].2015.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 吴浩.二进制翻译系统QEMU的优化技术[D].上海:上海交通大学, 2007." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=2007052402.nh&amp;v=MjY5NzdCdEdGckNVUkxPZVplUm9GeTNsVjcvUFYxMjdHYk85SE5YTXJaRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         吴浩.二进制翻译系统QEMU的优化技术[D].上海:上海交通大学, 2007.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 宁涛, 王铮, 龙川.面向一般应用的动态加载机制[J].计算机工程, 2008, 34 (17) :79-81." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC200817032&amp;v=MjMzMDBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5M2xWNy9QTHo3QmJiRzRIdG5OcUk5R1pvUUs=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         宁涛, 王铮, 龙川.面向一般应用的动态加载机制[J].计算机工程, 2008, 34 (17) :79-81.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 谭捷, 庞建民, 单征, 等.二进制翻译中冗余指令优化算法[J].计算机研究与发展, 2017, 54 (9) :1931-1944." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201709008&amp;v=Mjc5NjBMeXZTZExHNEg5Yk1wbzlGYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkzbFY3L1A=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         谭捷, 庞建民, 单征, 等.二进制翻译中冗余指令优化算法[J].计算机研究与发展, 2017, 54 (9) :1931-1944.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 戴涛, 单征, 卢帅兵, 等.基于优先级动态二进制翻译寄存器分配算法[J].浙江大学学报 (工学版) , 2016, 50 (7) :1338-1346." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZDZC201607016&amp;v=MDYzMTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTNsVjcvUFB5blJiYkc0SDlmTXFJOUVZb1E=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         戴涛, 单征, 卢帅兵, 等.基于优先级动态二进制翻译寄存器分配算法[J].浙江大学学报 (工学版) , 2016, 50 (7) :1338-1346.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(05),72-76+83 DOI:10.19678/j.issn.1000-3428.0050157            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>面向国产平台的二进制翻译库函数替换优化处理机制</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E5%AE%B6%E8%B1%AA&amp;code=38999076&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张家豪</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%8D%95%E5%BE%81&amp;code=20437679&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">单征</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%B2%B3%E5%B3%B0&amp;code=21138539&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">岳峰</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%82%85%E7%AB%8B%E5%9B%BD&amp;code=29138491&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">傅立国</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E5%86%9B&amp;code=20613916&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王军</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%95%B0%E5%AD%A6%E5%B7%A5%E7%A8%8B%E4%B8%8E%E5%85%88%E8%BF%9B%E8%AE%A1%E7%AE%97%E5%9B%BD%E5%AE%B6%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=0199248&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">数学工程与先进计算国家重点实验室</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>在二进制翻译中, 库函数本地化处理是指不直接翻译源文件中的库函数而是使用本地目标机的库函数进行替换, 以此提高翻译性能。针对国产平台二进制翻译中库函数处理翻译模式的相关特性, 提出一种库函数解析处理机制, 借助helper函数实现库函数替换操作。通过修改基本块划分规则, 将库函数替换部分翻译的基本块进行合并, 构建超级块, 减少源程序中基本块划分数量与程序执行跳转次数, 在保证翻译正确性基础上有效提高翻译效率。在动态二进制翻译器QEMU上进行的实验结果表明, 与未优化的库函数处理翻译方式相比, 翻译后程序加速比平均提升9%, 有效提高了翻译效率。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%BA%8C%E8%BF%9B%E5%88%B6%E7%BF%BB%E8%AF%91&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">二进制翻译;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%BA%93%E5%87%BD%E6%95%B0%E8%A7%A3%E6%9E%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">库函数解析;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%9F%BA%E6%9C%AC%E5%9D%97%E5%90%88%E5%B9%B6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">基本块合并;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=QEMU%E7%BF%BB%E8%AF%91%E5%99%A8&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">QEMU翻译器;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%9B%BD%E4%BA%A7%E5%B9%B3%E5%8F%B0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">国产平台;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    张家豪 (1991—) 男, 硕士研究生, 主研方向为计算机体系结构;;
+                                </span>
+                                <span>
+                                    *单征 (通信作者) , 副教授、博士、博士生导师;;
+                                </span>
+                                <span>
+                                    岳峰, 讲师、博士;;
+                                </span>
+                                <span>
+                                    傅立国, 博士;;
+                                </span>
+                                <span>
+                                    王军, 硕士研究生。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-01-17</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金 (61472447);</span>
+                                <span>国家高技术研究发展计划 (2009AA012201);</span>
+                                <span>“核高基”重大专项 (2009ZX01036-001-001);</span>
+                    </p>
+            </div>
+                    <h1><b>Binary Translation Library Function Replacement Optimization Processing Mechanism for Domestic Platform</b></h1>
+                    <h2>
+                    <span>ZHANG Jiahao</span>
+                    <span>SHAN Zheng</span>
+                    <span>YUE Feng</span>
+                    <span>FU Liguo</span>
+                    <span>WANG Jun</span>
+            </h2>
+                    <h2>
+                    <span>State Key Laboratory of Mathematical Engineering and Advanced Computing</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>In binary translation, library functions localization processings do not directly translate library functions in source files but use library functions of local target machines to improve translation performance.Aiming at the related characteristics of library function processing translation mode in binary translation of domestic platform, a library function analysis processing mechanism is proposed.The library function replacement operation is realized by the helper function.By modifying the basic block partitioning rules, the library function replaces the partially translated basic blocks to merge, constructs the super block, reduces the number of basic block partitions and program execution jumps in the source program, and effectively improves the translation efficiency on the basis of ensuring the translation correctness.Experimental results based on the dynamic binary translator QEMU show that compared with the unoptimized library function processing translation method, the post-translation program acceleration ratio is increased by 9%, which verifies the effectiveness of the mechanism.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=binary%20translation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">binary translation;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=library%20function%20analysis&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">library function analysis;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=basic%20block%20merging&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">basic block merging;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=QEMU%20translator&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">QEMU translator;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=domestic%20platform&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">domestic platform;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-01-17</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="33" name="33" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="34">二进制翻译技术是解决软件移植问题的重要手段, 在遗产代码移植、程序优化、系统安全等方面都有着重要的意义<citation id="120" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。二进制翻译系统的出现, 对国产新平台的推广具有重要意义, 它使得应用软件可以通过二进制翻译系统直接在新体系结构平台上运行, 减少了对专用硬件结构的依赖。二进制翻译技术是解决国产CPU平台对主流软件系统兼容的重要选择之一, 能够给国产CPU体系提供创新发展的机遇。近年来, 国内外相关领域学者针对此技术进行了深入的研究。</p>
+                </div>
+                <div class="p1">
+                    <p id="35">库函数本地化处理是二进制翻译中提高翻译效率的热点技术, 其核心思想是在二进制翻译阶段将源二进制文件中的库函数调用按目标机的传参规则准备好参数, 然后调用目标机的库函数, 即无需翻译库函数, 从而提升二进制翻译系统的性能<citation id="121" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>。随着编程模块化和代码重用思想的普及, 源代码会较为频繁地调用系统库函数, 尤其是具有实际应用价值的大程序<citation id="122" type="reference"><link href="7" rel="bibliography" /><link href="9" rel="bibliography" /><link href="11" rel="bibliography" /><sup>[<a class="sup">3</a>,<a class="sup">4</a>,<a class="sup">5</a>]</sup></citation>。因此, 通过对库函数调用的处理操作可以在保证原程序正确执行的基础上提高翻译代码的质量以及执行效率, 对二进制翻译在国产平台下的应用具有重要意义。</p>
+                </div>
+                <div class="p1">
+                    <p id="36">本文针对国产申威平台处理器相关特性, 设计源二进制文件中的库函数在国产目标平台下的解析处理机制。借助helper函数实现库函数替换, 通过修改基本块划分规则, 合并翻译基本块构建超级块, 减少基本块数量与程序执行过程中基本块间跳转次数, 以有效提高翻译效率。</p>
+                </div>
+                <h3 id="37" name="37" class="anchor-tag">1 相关工作</h3>
+                <div class="p1">
+                    <p id="38">QEMU是文献<citation id="123" type="reference">[<a class="sup">6</a>]</citation>编写的开源可变源和目标的高效跨平台的动态二进制翻译系统。QEMU在用户模式下, 支持多源平台和多目标平台。QEMU采用指令集无关中间表示TCG, 可实现将X86、ARM、Alpha、PowerPC等平台的指令序列翻译为TCG中间表示, 再翻译为目标指令集。TCG技术屏蔽了不同平台之间的差异, 是QEMU跨平台性的关键技术。QEMU系统架构如图1所示。</p>
+                </div>
+                <div class="area_img" id="39">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905011_039.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 QEMU系统架构" src="Detail/GetImg?filename=images/JSJC201905011_039.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 QEMU系统架构</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905011_039.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="40">目前QEMU在对部分主流平台的翻译中已经达到了较好的执行效率。同时, 由于QEMU代码开源性、翻译高效性以及可变源和目标特性等优势, 使得其成为热门的研究动态二进制翻译工具之一。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">申威处理器或申威CPU, 简称“SW处理器”, SW处理器源自于DEC的Alpha 21164, 采用基于RISC的自主指令集, 具有完全的自主产权, 其研制得到了国家“核高基”专项资金支持<citation id="124" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>。在国家“核高基”重大专项支持下采用自主指令集, 是具有完全自主知识产权的处理器系列。本课题组在QEMU基础上, 结合SW处理器平台相关特性, 设计了针对SW平台的TCG后端代码生成翻译模块, 同时构建设计了Static QEMU, 改造QEMU的解码模块, 按照基本块划分的信息进行解码, 生成基本块的 TCG中间表示, 使QEMU契合SW处理器平台, 实现基本的二进制翻译功能。</p>
+                </div>
+                <h3 id="42" name="42" class="anchor-tag">2 QEMU库函数处理过程</h3>
+                <div class="p1">
+                    <p id="43">类似于处理器的执行过程, 动态二进制翻译过程可以概括为查找、翻译、执行3个子过程<citation id="125" type="reference"><link href="17" rel="bibliography" /><link href="19" rel="bibliography" /><sup>[<a class="sup">8</a>,<a class="sup">9</a>]</sup></citation>。而库函数处理区别于常规的动态二进制翻译过程主要体现在查找和翻译2个过程。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">图2中的实线部分展示了库函数在常规动态二进制翻译中处理过程。在动态二进制翻译中, 按照一般的翻译处理方式, 会从call指令开始, 参照指令的操作语义将指令用中间语言表示, 再使用后端将其转换成可执行代码。这种方式使得源程序与翻译后程序保持状态一致, 可以有效保证翻译程序的正确性。</p>
+                </div>
+                <div class="area_img" id="45">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905011_045.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 库函数替换与一般动态二进制翻译流程" src="Detail/GetImg?filename=images/JSJC201905011_045.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 库函数替换与一般动态二进制翻译流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905011_045.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="46">图2中的虚线部分展示了使用库函数本地化处理的翻译方式, 在翻译中会将call指令翻译成特殊的中间表示, 这种中间表示不使用平台相关的后端进行代码生成, 而是调用翻译器提供的模板函数作为翻译结果去执行。在使用库函数处理的方式翻译call指令时, 先解析该地址的语义, 查询对应的函数名, 然后查找相应的处理函数, 最终完成共享库函数调用全过程的翻译。</p>
+                </div>
+                <div class="p1">
+                    <p id="47">使用本地编译优化的模板处理函数, 其代码的执行效率远远超过一般指令序列动态翻译所生成代码的执行效率, 同时还节约了相应指令序列的翻译时间。相较于传统动态二进制翻译模式, 库函数替换具有代码膨胀率低、翻译效率高的优势。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">QEMU使用基本块作为翻译的基本单元, 划分基本块一般以跳转指令作为基本块的结束部分。在程序翻译中采用边执行边翻译的模式, 在执行完一个基本块后, 需要判断下一个基本块是否已经被翻译<citation id="127" type="reference"><link href="21" rel="bibliography" /><link href="23" rel="bibliography" /><sup>[<a class="sup">10</a>,<a class="sup">11</a>]</sup></citation>。如果基本块已经被翻译, 那么就直接执行T-Cache中翻译后的基本块, 否则必须翻译基本块, 然后才能执行<citation id="126" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>。无论是传统二进制翻译还是库函数替换翻译流程, 在一次库函数翻译中, 至少需要翻译3个基本块, 程序每执行一个基本块就需要从执行状态切换出来进行判断, 然后再进入执行或翻译状态, 这种频繁的跳转对翻译的效率有一定影响。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">在当前关于库函数本地化的研究中, 主要是从函数的快速识别与替换方面入手<citation id="128" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>, 但是库函数的查找和替换时间不可避免。因此, 本文拟从库函数处理基本块间的跳转入手, 通过基本块的合并减少基本块加载次数, 优化程序翻译执行时间, 提升翻译效率。</p>
+                </div>
+                <h3 id="50" name="50" class="anchor-tag">3 面向SW平台库函数的处理方案</h3>
+                <h4 class="anchor-tag" id="51" name="51">3.1 helper函数的替换翻译模式</h4>
+                <div class="p1">
+                    <p id="52">QEMU使用helper机制对库函数进行辅助翻译处理, 其以C语言作为基本语言, 获取解析后的库函数参数后进行本地库函数的替换操作并在翻译完毕后返回, 保证上下文一致性, 确保翻译的正确执行。其基本工作流程如图3所示。</p>
+                </div>
+                <div class="area_img" id="53">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905011_053.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 优化后翻译流程" src="Detail/GetImg?filename=images/JSJC201905011_053.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 优化后翻译流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905011_053.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="54">在一次完整库函数处理的翻译过程中, 需要进行2次查询判断:</p>
+                </div>
+                <div class="p1">
+                    <p id="55">1) 根据call指令信息进行解析, 查询addr对应的函数名func_name, 并对该函数名进行判断, 如果满足本地库函数替换条件, 则转入判断2) , 反之则进入一般二进制翻译流程。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">2) 将原函数的参数信息进行保存, 查询名为func_name的库函数对应的处理函数func_helper, 如果查询到函数存在本地函数表中, 则helper函数读取传递的参数信息并实现本地库函数对原函数的替换, 之后对翻译环境进行恢复。如果未查询到相应函数, 则进入一般二进制翻译流程。</p>
+                </div>
+                <div class="p1">
+                    <p id="57">helper函数主要实现以下3个功能:</p>
+                </div>
+                <div class="p1">
+                    <p id="58">1) 环境模拟:接收传参数, 处理参数信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">2) 目标替代:调用库函数并形成相对应的后端二进制代码段, 相当于生成了一个翻译完成的基本块后端代码, 此功能是helper函数的核心功能。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">3) 处理返回值:按照目标机返回值的约定取出返回值, 然后按照源系统约定放入到目标机模拟源系统的模拟寄存器或内存中<citation id="129" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="61">通过分析helper函数, 可以在保留其核心功能的情况下对传参信息和返回值进行处理, 构建基本块合并翻译框架。</p>
+                </div>
+                <h4 class="anchor-tag" id="62" name="62">3.2 基本块合并框架构建</h4>
+                <div class="p1">
+                    <p id="63">如图4所示, 左侧是传统二进制翻译和未修改的库函数基本块划分方式, 每当遇到call指令就作为一个基本块结尾, 一次库函数调用要将源代码段划分为3个基本块依次加载到内存中进行翻译操作, 上一部分翻译完成后再进行之后的翻译。而如图4右侧所示的方法中, 通过对helper函数的修改, 如果函数解析后可以进行库函数替换操作, 当翻译中遇到call指令时, 对之后的内容进行分析处理, 如果得出的函数为库函数, 则不进行基本块划分, 而是查询helper函数表找到库函数对应的helper函数替换原有地址。前后的基本块可合并为一个完成的“超级块”在翻译过程中只需要一次加载, 同时节省了部分地址查找跳转的时间开销, 提高了翻译效率。</p>
+                </div>
+                <div class="area_img" id="64">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905011_064.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 基本块合并翻译框架" src="Detail/GetImg?filename=images/JSJC201905011_064.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 基本块合并翻译框架</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905011_064.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="65" name="65">3.3 适应平台的函数解析查找优化</h4>
+                <h4 class="anchor-tag" id="66" name="66">3.3.1 函数名称解析</h4>
+                <div class="p1">
+                    <p id="67">在源程序中使用call指令对库函数进行调用, 以ELF文件格式为例, 每一个ELF动态链接库和使用动态链接库的可执行程序都有一个过程链接表PLT, PLT表的每一项都是一小段代码, 对应本运行模块要引用的一个全局函数。程序对某个函数的访问都被调整为对 PLT入口的访问。每个PLT入口项对应一个GOT项, 执行函数实际上就是跳转到相应 GOT 项存储的地址, 该GOT项初始值为 PLT <i>n</i>项中的 push指令地址<citation id="130" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>。进行函数调用时先在PLT表中获取函数的入口地址后再从PLT表中跳到真正的函数入口, 在确定ABI规范下, 外部链接函数名称的解析过程是固定的, 其共享库函数名称解析过程如图5所示。</p>
+                </div>
+                <div class="area_img" id="68">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905011_068.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 共享库函数名称解析过程" src="Detail/GetImg?filename=images/JSJC201905011_068.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 共享库函数名称解析过程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905011_068.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="69">翻译程序首先根据PLT入口的序号n在rela.plt中查询符号名的索引, 然后依次在dyn.sym段、sym.tab段和str段中索引查询, 最终得到外部链接函数名称的字符串, 用以查询本地库替换。</p>
+                </div>
+                <h4 class="anchor-tag" id="70" name="70">3.3.2 函数查询优化</h4>
+                <div class="p1">
+                    <p id="71">对于查询成功的库函数, 在2次查询 (plt_entry查询、翻译器支持库函数处理的函数名称查询) 以及1次解析 (使用plt_entry解析函数名称) 过程中, 需要使用若干张查询表。特别是在共享库函数名称解析的过程中, 需要基于文件规范从多个表格中进行多次索引查询获取函数名称。</p>
+                </div>
+                <div class="p1">
+                    <p id="72">基于以上原因, 本文构建查询表func.lib与func.info, 其中, func.lib是函数名称查询表, func.info是函数具体信息表, 两者之间是一一映射关系, 只需要在func.lib中查询到函数名称就可对应到func.info中进行相应helper函数调用。其中func.lib使用哈希表结构, 查询复杂度为1, 相较于遍历查找复杂度<i>n</i>与二分查找复杂度lb <i>n</i>, 可以有效减少函数查询时间, 提升程序翻译执行效率。</p>
+                </div>
+                <h3 id="73" name="73" class="anchor-tag">4 算法设计与实现</h3>
+                <div class="p1">
+                    <p id="74">修改后的helper函数工作流程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="75"><b>步骤1</b> 获取函数名称找到指定helper函数后, 可以通过源代码获取到参数信息, 之后加载到helper函数指定位置作为参数信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="76"><b>步骤2</b> 将helper函数生成的后端代码替换原有call指令, 并删除原有的传参信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="77"><b>步骤3</b> 修改返回值信息, 使程序跳转到下一条待执行指令。经过修改程序的算法伪代码如下所示。</p>
+                </div>
+                <div class="area_img" id="132">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201905011_13200.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="99">其中, 第1行～第14行为主要翻译流程, 第14行～第20行为helper函数内具体功能。通过下面的例子进行详细分析, 源系统为X86架构, 源二进制代码和生成代码核心部分如图6所示。</p>
+                </div>
+                <div class="area_img" id="100">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905011_100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 核心代码生成" src="Detail/GetImg?filename=images/JSJC201905011_100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 核心代码生成</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905011_100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="101">在程序翻译中, 遇到调用库函数指令“call q400a70”, 通过解析查询找到与之相对应的翻译函数helper_sqrtsd, 对原有call指令进行替换操作实现超级块的构建。翻译超级块时, 其余指令按照传统的QEMU翻译方式先转换为TCG中间代码再进行后端代码生成, call指令调用helper函数直接生成后端代码。由于原传参信息已经传入helper函数中进行函数执行, 因此要注释掉后端代码中相关代码。按照此翻译流程, 该x86代码段只需一次翻译即可, 减少了基本块间的跳转次数, 同时减少了基本块间的参数保存于传递冗余指令操作, 翻译产生的后端代码比原翻译模式少, 程序的翻译执行效率提高。</p>
+                </div>
+                <h3 id="102" name="102" class="anchor-tag">5 实验结果与分析</h3>
+                <div class="p1">
+                    <p id="103">为进一步验证优化的效果, 在动态二进制翻译器QEMU上实现了库函数处理的翻译机制, 在此基础上实现了本文提出的优化方法, 最后在SW平台上进行了实验验证。关于库函数处理机制的正确性验证在课题组之前的研究中已经通过了相关的正确性测试<citation id="131" type="reference"><link href="29" rel="bibliography" /><link href="31" rel="bibliography" /><sup>[<a class="sup">14</a>,<a class="sup">15</a>]</sup></citation>。</p>
+                </div>
+                <h4 class="anchor-tag" id="104" name="104">5.1 实验环境</h4>
+                <div class="p1">
+                    <p id="105">实验测试所使用的环境如表1所示。</p>
+                </div>
+                <div class="area_img" id="106">
+                    <p class="img_tit"><b>表1 二进制翻译环境</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="106" border="1"><tr><td><br />配置</td><td>源平台</td><td>目标平台</td></tr><tr><td><br />OS</td><td>Fedora 2.6.27.5-117.fc10.i686</td><td>中标麒麟 4.0.0</td></tr><tr><td><br />CPU</td><td>Intel (R) Core (TM) 2 Quad CPU<br />Q9500 @ 2.83 GHz</td><td>SW410</td></tr><tr><td><br />编译器</td><td>gcc-5.1.1</td><td>gcc-5.1.1</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="107">实验使用的翻译器为QEMU-2.5.1, 通过修改, 支持标准C库中math.h、stdio.h和string.h下定义的大部分函数的库函数处理。</p>
+                </div>
+                <div class="p1">
+                    <p id="108">实验使用的测试集来自标准性能测试集spec cpu2006。具体的测试用例包括spec cpu2006中所有的C程序, 如表2所示。</p>
+                </div>
+                <div class="area_img" id="109">
+                    <p class="img_tit"><b>表2 spec cpu2006测试用例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="109" border="1"><tr><td><br />测试用例</td><td>任务</td></tr><tr><td><br />401.bzip2</td><td>Compression</td></tr><tr><td><br />403.gcc</td><td>Compiler</td></tr><tr><td><br />429.mcf</td><td>Combinatorial Optimization</td></tr><tr><td><br />445.gobmk</td><td>Artificial Intelligence:go</td></tr><tr><td><br />456.hmmer</td><td>Search Gene Sequence</td></tr><tr><td><br />458.sjeng</td><td>Artificial Intelligence:chess</td></tr><tr><td><br />462.libquantum</td><td>Physics:Quantum Computing</td></tr><tr><td><br />464.h264ref</td><td>Video Compression</td></tr><tr><td><br />433.milc</td><td>Physics:Quantum Chromodynamics</td></tr><tr><td><br />470.lbm</td><td>Fluid Dynamics</td></tr><tr><td><br />482.sphinx3</td><td>Speech recognition</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="110" name="110">5.2 结果分析</h4>
+                <div class="p1">
+                    <p id="111">库函数本地化是基于动态二进制翻译模式进行的优化, 与静态二进制翻译生成翻译后的可执行文件不同, 动态二进制翻译将程序基本块作为基本单位, 采用边翻译边执行的模式, 因此, 可以将程序翻译执行时间作为衡量翻译效率的指标。</p>
+                </div>
+                <div class="p1">
+                    <p id="112">实验对每个测试用例翻译执行的时间进行3组测试, 每组测试的结果取5次执行时间的算数平均值。第1组测试使用一般的动态二进制翻译方式;第2组测试使用未优化的库函数处理翻译方式;第3组测试使用基本块合并优化库函数处理翻译方式。</p>
+                </div>
+                <div class="p1">
+                    <p id="113">为更直观地反映翻译效率变化, 本文引入加速比<i>S</i><sub>p</sub>, 其计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="114"><i>S</i><sub>p</sub>=<i>T</i><sub>native</sub>/<i>T</i><sub>translated</sub></p>
+                </div>
+                <div class="p1">
+                    <p id="115">其中, <i>T</i><sub>native</sub>为基本时间, <i>T</i><sub>translated</sub>为优化后的时间。本文实验将第1组作为基本时间, 图7是测试环境下第2组、第3组相对第1组的加速比。</p>
+                </div>
+                <div class="area_img" id="116">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905011_116.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 实验加速比对照" src="Detail/GetImg?filename=images/JSJC201905011_116.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图7 实验加速比对照</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905011_116.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="117">通过spec中2组加速比的对照可以发现, 经过基本块合并后的库函数处理翻译方式, 相较于未优化的库函数处理翻译方式, 平均加速比有9%左右的提升。特别是对于部分有负加速的测试用例, 该方式也具有较好的加速比。</p>
+                </div>
+                <h3 id="118" name="118" class="anchor-tag">6 结束语</h3>
+                <div class="p1">
+                    <p id="119">本文对国产SW平台二进制翻译中库函数处理翻译模式进行优化, 设计一种源二进制文件中库函数在国产目标平台下的解析处理机制。结合QEMU中的helper机制构建超级块, 对helper函数进行修改, 使其能够对特定的本地库函数进行解析, 并根据国产SW平台的特性, 实现由源程序向特定平台的转换。通过基于动态二进制转换器QEMU的实验验证, 结果表明, 该方法针对库函数查询开销的优化是有效的。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Welcome to the opportunities of binary translation">
+
+                                <b>[1]</b> ALTMAN E R, KAELI D, SHEFFER Y.Welcome to the opportunities of binary translation[J].Computer, 2000, 33 (3) :40-45.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ200612027&amp;v=MjcwNzZZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTNsVjcvUEx5dlNkTEc0SHRmTnJZOUg=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 杨浩, 唐锋, 谢海斌, 等.二进制翻译中的库函数处理[J].计算机研究与发展, 2006, 43 (12) :2174-2179.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ200804029&amp;v=MjAyMzZiWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTNsVjcvUEx6N1NaTEc0SHRuTXE0OUg=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 谢海斌, 张兆庆, 武成岗, 等.二进制翻译中系统库函数的分类处理方法[J].计算机应用研究, 2008, 25 (4) :1057-1064.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Register allocation for QEMU dynamic binary translation systems">
+
+                                <b>[4]</b> LIANG Yi, SHAO Yuanhua, YANG Guo, et al.Register allocation for QEMU dynamic binary translation systems[J].International Journal of Hybrid Information Technology, 2015, 8:25-39.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Optimizing Binary Translation of Dynamically Generated code">
+
+                                <b>[5]</b> HAWKINS B, DEMSKY B, BRUENING D, et al.Optimizing binary translation of dynamically generated code[C]//Proceedings of IEEE International Symposium on Code Generation and Optimization.Washington D.C., USA:IEEE Press, 2015:68-78.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A fast and portable dynamic translator">
+
+                                <b>[6]</b> BELLARD F.A fast and portable dynamic translator[C]//Proceedings of Annual Conference on USENIX Annual Technical.Washington D.C., USA:IEEE Press, 2005:125-136.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDJS201408006&amp;v=MjM3NTc3L1BQU25CZmJHNEg5WE1wNDlGWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkzbFY=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 芮雪, 王亮亮, 杨琴.国产处理器研究与发展现状综述[J].现代计算机 (普及版) , 2014 (8) :15-19.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Dynamic Binary Translation of VLIW Codes on Scalar Architectures">
+
+                                <b>[8]</b> MICHEL L, PETROT F.Dynamic binary translation of VLIW codes on scalar architectures[J].IEEE Transactions on Computer-aided Design of Integrated Circuits and Systems, 2017 (99) :1.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Fast optimization of binary clusters using a novel dynamic lattice searching method">
+
+                                <b>[9]</b> WU Xia, CHENG Wen.Fast optimization of binary clusters using a novel dynamic lattice searching method[J].Journal of Chemical Physics, 2014, 141 (12) :124-130.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM95BDCA61642E84F2459FB7A409708B23&amp;v=MjU5MDVTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TjVod2JpN3dLOD1OaWZJWTdxOWJLVy8zb2xFWXU4TmVYUTl1UlFYN3pZTE9uaVRxQkk4ZnJLY043aWNDT052Rg==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> D’ANTRAS A, GORGOVAN C, GARISDE J.Optimizing indirect branches in dynamic binary translators[J].ACM Transactions on Architecture and Code Optimization, 2016, 13 (1) :1-25.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Operand and limits optimization for binary translation system">
+
+                                <b>[11]</b> YOHN J W, BAUMAN M A, KAO F J, et al.Operand and limits optimization for binary translation system:US9021454[P].2015.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=2007052402.nh&amp;v=MTQyNjllUm9GeTNsVjcvUFYxMjdHYk85SE5YTXJaRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVo=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 吴浩.二进制翻译系统QEMU的优化技术[D].上海:上海交通大学, 2007.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC200817032&amp;v=MTUwNzdvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5M2xWNy9QTHo3QmJiRzRIdG5OcUk5R1o=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 宁涛, 王铮, 龙川.面向一般应用的动态加载机制[J].计算机工程, 2008, 34 (17) :79-81.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201709008&amp;v=MTgyMzJGeTNsVjcvUEx5dlNkTEc0SDliTXBvOUZiSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm8=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 谭捷, 庞建民, 单征, 等.二进制翻译中冗余指令优化算法[J].计算机研究与发展, 2017, 54 (9) :1931-1944.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZDZC201607016&amp;v=MDM2NTc3L1BQeW5SYmJHNEg5Zk1xSTlFWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkzbFY=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 戴涛, 单征, 卢帅兵, 等.基于优先级动态二进制翻译寄存器分配算法[J].浙江大学学报 (工学版) , 2016, 50 (7) :1338-1346.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201905011" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201905011&amp;v=MDM4NjBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5M2xWNy9QTHo3QmJiRzRIOWpNcW85RVpZUUs=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

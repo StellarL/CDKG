@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637131274804717500%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dBJJZ201901012%26RESULT%3d1%26SIGN%3dQes%252bixuM4rm3Hf5F4A%252bLdaweABk%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=BJJZ201901012&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=BJJZ201901012&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJJZ201901012&amp;v=MzE5MDNVUkxPZVplUm5GeW5oVmJ2QUp5ZkJkTEc0SDlqTXJvOUVab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#32" data-title="&lt;b&gt;1 相关研究&lt;/b&gt; "><b>1 相关研究</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#36" data-title="&lt;b&gt;2 网站URL特征&lt;/b&gt; "><b>2 网站URL特征</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#54" data-title="&lt;b&gt;3 网站页面特征&lt;/b&gt; "><b>3 网站页面特征</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#70" data-title="&lt;b&gt;4 分类算法&lt;/b&gt; "><b>4 分类算法</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#72" data-title="&lt;b&gt;4.1 KNN算法&lt;/b&gt;"><b>4.1 KNN算法</b></a></li>
+                                                <li><a href="#83" data-title="&lt;b&gt;4.2 SVM算法&lt;/b&gt;"><b>4.2 SVM算法</b></a></li>
+                                                <li><a href="#120" data-title="&lt;b&gt;4.3 朴素贝叶斯算法&lt;/b&gt;"><b>4.3 朴素贝叶斯算法</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#132" data-title="&lt;b&gt;5 实验结果与分析&lt;/b&gt; "><b>5 实验结果与分析</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#133" data-title="&lt;b&gt;5.1 实验评估方法&lt;/b&gt;"><b>5.1 实验评估方法</b></a></li>
+                                                <li><a href="#142" data-title="&lt;b&gt;5.2 实验数据准备&lt;/b&gt;"><b>5.2 实验数据准备</b></a></li>
+                                                <li><a href="#145" data-title="&lt;b&gt;5.3 不同分类器测试结果比较&lt;/b&gt;"><b>5.3 不同分类器测试结果比较</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#165" data-title="&lt;b&gt;6 结论&lt;/b&gt; "><b>6 结论</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#144" data-title="&lt;b&gt;表1 训练数据和测试数据&lt;/b&gt;"><b>表1 训练数据和测试数据</b></a></li>
+                                                <li><a href="#147" data-title="&lt;b&gt;图1 不同&lt;i&gt;k&lt;/i&gt;值下的KNN分类器的F1值&lt;/b&gt;"><b>图1 不同<i>k</i>值下的KNN分类器的F1值</b></a></li>
+                                                <li><a href="#155" data-title="&lt;b&gt;表2 4种分类方法在URL检测方面的性能比较&lt;/b&gt;"><b>表2 4种分类方法在URL检测方面的性能比较</b></a></li>
+                                                <li><a href="#158" data-title="&lt;b&gt;表3 4种分类方法在页面内容方面的性能比较&lt;/b&gt;"><b>表3 4种分类方法在页面内容方面的性能比较</b></a></li>
+                                                <li><a href="#163" data-title="&lt;b&gt;图2 对于4种分类器在不同页面特征数下的F1值比较&lt;/b&gt;"><b>图2 对于4种分类器在不同页面特征数下的F1值比较</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" >
+                                        <b>[1]</b>
+                                     谭光林. 反钓鱼系统的研究与设计[D]. 北京:北京邮电大学, 2012. TAN Guanglin. Research and design of anti-phishing system[D]. Beijing: Beijing University of Posts and Telecommunications, 2012. (in Chinese) </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 王婷. 基于RFE_SVM的钓鱼网页识别技术的研究[D].武汉:华中科技大学, 2012. WANG Ting.Research on phishing recognition technology based on RFE-SVM [D].Wuhan: Huazhong University of Science and Technology, 2012. (in Chinese) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1013015760.nh&amp;v=MTE5NjdUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJuRnluaFZidkFWRjI2SGJPNUc5YktyNUViUElRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         王婷. 基于RFE_SVM的钓鱼网页识别技术的研究[D].武汉:华中科技大学, 2012. WANG Ting.Research on phishing recognition technology based on RFE-SVM [D].Wuhan: Huazhong University of Science and Technology, 2012. (in Chinese) 
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 黄华军, 钱亮, 王耀钧.基于异常特征的钓鱼网站URL检测技术[J]. 信息网络安全, 2012 (1) : 23-25. HUANG Huajun, QIAN Liang, WANG Yaojun. Detection of phishing URL based on abnormal feature[J]. Netinfo Security, 2012 (1) : 23-25. (in Chinese) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XXAQ201201011&amp;v=MTc5NzVxcUJ0R0ZyQ1VSTE9lWmVSbkZ5bmhWYnZBUFRYS2Y3RzRIOVBNcm85RVpZUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         黄华军, 钱亮, 王耀钧.基于异常特征的钓鱼网站URL检测技术[J]. 信息网络安全, 2012 (1) : 23-25. HUANG Huajun, QIAN Liang, WANG Yaojun. Detection of phishing URL based on abnormal feature[J]. Netinfo Security, 2012 (1) : 23-25. (in Chinese) 
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" 曹晓芸. 基于敏感特征的网络钓鱼检测方法研究[D].大连:大连理工大学, 2012. CAO Xiaoyun. The method study of phishing defense based on sensitive characters[D]. Dalian: Dalian University of Technology, 2012. (in Chinese) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1012394638.nh&amp;v=MjM0MTViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJuRnluaFZidkFWRjI2SExDeEd0ZlBwNUU=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         曹晓芸. 基于敏感特征的网络钓鱼检测方法研究[D].大连:大连理工大学, 2012. CAO Xiaoyun. The method study of phishing defense based on sensitive characters[D]. Dalian: Dalian University of Technology, 2012. (in Chinese) 
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" 顾晓清, 王洪元, 倪彤光, 等. 基于贝叶斯和支持向量机的钓鱼网站检测方法[J]. 计算机工程与应用, 2015 (4) :87-89.GU Xiaoqing, WANG Hongyuan, NI Tongguang, et al. Phishing website detection method based on Bayesian and support vector machine [J]. Comupter Engineering and Applications, 2015 (4) : 87-89. (in Chinese) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSGG201504018&amp;v=MDY0NDVSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm5GeW5oVmJ2QUx6N01hYkc0SDlUTXE0OUViSVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         顾晓清, 王洪元, 倪彤光, 等. 基于贝叶斯和支持向量机的钓鱼网站检测方法[J]. 计算机工程与应用, 2015 (4) :87-89.GU Xiaoqing, WANG Hongyuan, NI Tongguang, et al. Phishing website detection method based on Bayesian and support vector machine [J]. Comupter Engineering and Applications, 2015 (4) : 87-89. (in Chinese) 
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 赵加林. 基于K-Means和SVM的流行中文钓鱼网站识别研究[J]. 软件导刊, 2016 (4) :176-178. ZGAO Jialin. Research on popular Chinese phishing website recognition based on K-Means and SVM[J].Software Guide, 2016 (4) :176-178. (in Chinese) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJDK201604063&amp;v=MzAzMDF5ZlBaYkc0SDlmTXE0OURaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm5GeW5oVmJ2QU4=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         赵加林. 基于K-Means和SVM的流行中文钓鱼网站识别研究[J]. 软件导刊, 2016 (4) :176-178. ZGAO Jialin. Research on popular Chinese phishing website recognition based on K-Means and SVM[J].Software Guide, 2016 (4) :176-178. (in Chinese) 
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" Wikipedia [EB/OL][2018-7-20]. https://en.wikipedia.org/wiki/Supervised_learning." target="_blank"
+                                       href="">
+                                        <b>[7]</b>
+                                         Wikipedia [EB/OL][2018-7-20]. https://en.wikipedia.org/wiki/Supervised_learning.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" LA L, GUO Q, YANG D Q, et al. Multiclass boosting with adaptive group-based kNN and its application in text categorization[J]. Mathematical Problems in Engineering, 2012, 16 (3) : 473-486." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJHD&amp;filename=SJHD120904000012&amp;v=MTIyMjROaWZEYXJLNkh0ak1xNDlGWk9zT0RoTTh6eFVTbURkOVNIN24zeEU5ZmJ2bktyaWZadTl1RkN2c1U3N01KbG9j&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         LA L, GUO Q, YANG D Q, et al. Multiclass boosting with adaptive group-based kNN and its application in text categorization[J]. Mathematical Problems in Engineering, 2012, 16 (3) : 473-486.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" CHANGE C C, LIN C J. LIBSVM: a library for support vector machines[J]. ACM Transactions on Intelligent Systems and Technology, 2011, 2 (3) : 389-396." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000002769&amp;v=MDUzNThqbVVMYklJVm9TYmhvPU5pZklZN0s3SHRqTnI0OUZaT3NOQzNvd29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         CHANGE C C, LIN C J. LIBSVM: a library for support vector machines[J]. ACM Transactions on Intelligent Systems and Technology, 2011, 2 (3) : 389-396.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" JIANG L X, LI C Q, WANG S S, et al. Deep feature weighting for na&#239;ve bayes and its application to text categorization [J]. Mathematical Problems in Artificial Intelligence, 2016, 52 (C) : 26-39." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep feature weighting for na?ve bayes and its application to text categorization">
+                                        <b>[10]</b>
+                                         JIANG L X, LI C Q, WANG S S, et al. Deep feature weighting for na&#239;ve bayes and its application to text categorization [J]. Mathematical Problems in Artificial Intelligence, 2016, 52 (C) : 26-39.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" NLTK [EB/OL][2018-7-20]. https://www.nltk.org/." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=NLTK">
+                                        <b>[11]</b>
+                                         NLTK [EB/OL][2018-7-20]. https://www.nltk.org/.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" >
+                                        <b>[12]</b>
+                                     初一. 基于Web页面特征的反钓鱼系统的设计与实现[D].北京:北京邮电大学, 2013. CHU Yi. Design and implementation of system based on Web page features[D]. Beijing: Beijing University of Posts and Telecommunications, 2013. (in Chinese) </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" PhishTank [DB/OL].[2018-02-23].http://data.phishtank.com/data/online-valid.xml." target="_blank"
+                                       href="">
+                                        <b>[13]</b>
+                                         PhishTank [DB/OL].[2018-02-23].http://data.phishtank.com/data/online-valid.xml.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" Alexa [EB/OL]. [2017-08-08]. https://www.alexa.com/topsites." target="_blank"
+                                       href="">
+                                        <b>[14]</b>
+                                         Alexa [EB/OL]. [2017-08-08]. https://www.alexa.com/topsites.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=BJJZ" target="_blank">北京建筑大学学报</a>
+                2019,35(01),76-81 DOI:10.19740/j.1004-6011.2019.01.12            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>钓鱼网站分类检测算法的比较性研究</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E6%96%87%E8%85%BE&amp;code=41430994&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王文腾</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E4%BC%A0%E6%B6%9B&amp;code=33744757&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王传涛</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%A2%AD%E8%96%87&amp;code=41430995&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">袭薇</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E4%BD%9F%E6%99%96&amp;code=41430996&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">佟晖</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8C%97%E4%BA%AC%E5%BB%BA%E7%AD%91%E5%A4%A7%E5%AD%A6%E6%9C%BA%E7%94%B5%E4%B8%8E%E8%BD%A6%E8%BE%86%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=1698726&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北京建筑大学机电与车辆工程学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8C%97%E4%BA%AC%E5%B8%82%E5%85%AC%E5%AE%89%E5%B1%80&amp;code=0087050&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北京市公安局</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E5%B8%82%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%BB%BC%E5%90%88%E7%AE%A1%E7%90%86%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=0054402&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海市信息安全综合管理技术研究重点实验室</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>钓鱼网站一直是网络安全中需要解决的难题之一, 它的隐蔽性很高, 但造成的损失往往很大.针对钓鱼网站的研究, 有很多学者通过机器学习算法对钓鱼网站和正常网站进行分类.根据在钓鱼网站检测中常用的分类算法 (KNN;SVM;贝叶斯) 为基础, 通过对网站的URL特征和页面内容特征进行实验比较研究.实验结果表明, 在URL特征和页面内容特征上, 线性SVM分类器的准确率和召回率都高于KNN算法和多项式的朴素贝叶斯算法.</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%92%93%E9%B1%BC%E7%BD%91%E7%AB%99&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">钓鱼网站;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">机器学习;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=KNN&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">KNN;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=SVM&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">SVM;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%B4%9D%E5%8F%B6%E6%96%AF&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">贝叶斯;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%88%86%E7%B1%BB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">分类;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    王文腾 (1994—) , 男, 硕士研究生, 研究方向:管理信息系统.;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-10-29</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金项目 (11774380);</span>
+                    </p>
+            </div>
+                    <h1><b>Research on the Performance of Phishing Classification Detection Algorithm</b></h1>
+                    <h2>
+                    <span>WANG Wenteng</span>
+                    <span>WANG Chuantao</span>
+                    <span>XI Wei</span>
+                    <span>TONG Hui</span>
+            </h2>
+                    <h2>
+                    <span>School of Mechanical-Electronic and Vehicle Engineering, Beijing University of Civil Engineering and Architecture</span>
+                    <span>Beijing Public Security Bureau</span>
+                    <span>Shanghai Key Laboratory of Information Security Integrated Management Technology</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Phishing has always been one of the difficult problems to be solved in network security. It has high concealment, but the loss caused by it is often very large. For the research of phishing, many scholars classify phishing and normal websites by machine learning algorithm. This paper is mainly based on the classification algorithm (KNN;SVM;Bayes) commonly used in phishing detecting and though the URL characteristics and page content characteristics of the website are compared and studied experimentally. Experimental results show that the accuracy and recall rate of linear SVM classifier are higher than KNN algorithm and polynomial Native Bayes algorithm in URL feature and page content feature.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=phishing&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">phishing;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=machine%20learning&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">machine learning;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=KNN&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">KNN;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=SVM&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">SVM;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Bayes&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Bayes;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=classifier&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">classifier;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-10-29</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <div class="p1">
+                    <p id="31">“钓鱼网站”就是指钓鱼者利用带有欺骗性的电子邮件和伪造的非常相似的网站对受害者进行欺骗<citation id="169" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>. 攻击者会仿制一个和目标网站十分相似的网站作为钓鱼网站, 或者制作成虚假信息的网站. 当受害者访问该网站并提交个人信息时, 攻击者就可能从中获取受害者提交的敏感信息, 如各类账号、密码等, 或者是直接造成受害者财产损失. 由于这类攻击的隐蔽性很好, 造成危害较大, 所以属于严重的互联网犯罪.</p>
+                </div>
+                <h3 id="32" name="32" class="anchor-tag"><b>1 相关研究</b></h3>
+                <div class="p1">
+                    <p id="33">目前关于钓鱼网站研究主要分以下几类:一是基于黑白名单过滤<citation id="170" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>的浏览器插件. 这些检测插件大多采用URL (统一资源定位符) 黑名单技术, 将待测网站的URL在黑名单数据库中进行匹配. 但钓鱼网站更新快存活时间短, 所以无法检测最新钓鱼网站. 第二类是分析钓鱼网站URL地址<citation id="171" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>. 这种方法对于部分钓鱼网站的识别效果很显著, 但URL特征并不能完全鉴别钓鱼网站, 这种方式可能会伴随漏判和误判的概率. 第三种方式是根据页面内容特征来识别钓鱼网站<citation id="172" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>. 这种方式会比第二种方式的查全率和准确率更高, 但面临的问题就是获取页面内容会降低识别的效率, 在提取页面特征时也会比URL特征提取要复杂.</p>
+                </div>
+                <div class="p1">
+                    <p id="34">针对检测方式, 很多学者都采用机器学习的分类算法进行分类检测. 顾晓清等<citation id="173" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>提出, 针对URL特征, 通过比较阈值改进贝叶斯算法. 赵加林<citation id="174" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>提出对针对网页的K-Means与SVM结合算法. 可以看出, 机器学习中的监督式的分类方法<citation id="175" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>在钓鱼网站识别研究中应用较多.</p>
+                </div>
+                <div class="p1">
+                    <p id="35">上述研究通常是侧重钓鱼网站检测的某一方面, 使用一种分类算法作为模型建立的算法. 本文着重通过实验比较常见的3种分类算法 (KNN<citation id="176" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>, SVM<citation id="177" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>, 朴素贝叶斯<citation id="178" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>) 分别通过URL特征和页面文本特征, 对钓鱼网站进行检测, 区分其性能差异.</p>
+                </div>
+                <h3 id="36" name="36" class="anchor-tag"><b>2 网站URL特征</b></h3>
+                <div class="p1">
+                    <p id="37">钓鱼网站的主要欺骗方式之一是通过URL地址的相似性加以伪装. 但是部分钓鱼网站的URL与被模仿网站的URL还是有很多区别的. 根据参考资料, 将已有钓鱼网站URL与正常网站URL做比对得到的特征组成特征集合.</p>
+                </div>
+                <div class="p1">
+                    <p id="38">通过相关文献研究的基础和对已有的钓鱼网站URL分析, 本文选取出由11个特征组成的特征向量<i>FV</i>:</p>
+                </div>
+                <div class="p1">
+                    <p id="39"><i>FV</i>=〈<i>F</i><sub>1</sub>, <i>F</i><sub>2</sub>, <i>F</i><sub>3</sub>, <i>F</i><sub>4</sub>, <i>F</i><sub>5</sub>, <i>F</i><sub>6</sub>, <i>F</i><sub>7</sub>, <i>F</i><sub>8</sub>, <i>F</i><sub>9</sub>, <i>F</i><sub>10</sub>, <i>F</i><sub>11</sub>〉</p>
+                </div>
+                <div class="p1">
+                    <p id="40">F1:在URL的域名部分含有特殊符号“-”, 这个符号通常放置于被模仿网站域名中间或者用某些词和被模仿网站域名连接, 这种方式在URL的域名处迷惑用户.</p>
+                </div>
+                <div class="p1">
+                    <p id="41">F2:在URL的查询部分含有“@”“·”, 有些钓鱼网站在查询部分以邮箱账号的形式作为查询参数.</p>
+                </div>
+                <div class="p1">
+                    <p id="42">F3:在URL路径中包含“·”“\\\\”, 这两种符号经常用于在URL的路径中添加了被模仿URL的真实域名, 然后再用这两种符号连接.</p>
+                </div>
+                <div class="p1">
+                    <p id="43">F4:URL的长度, 在没有查询参数的URL长度定义的最大阈值为85, 如果有查询参数, 最大阈值为115.</p>
+                </div>
+                <div class="p1">
+                    <p id="44">F5:URL域名的长度, 定义域名长度的最大阈值为39.</p>
+                </div>
+                <div class="p1">
+                    <p id="45">F6:URL域名级数, 有些钓鱼网站通过多级域名, 在中间添加了真实域名的字符串, 导致用户被迷惑. 定义级数的最大阈值为4.</p>
+                </div>
+                <div class="p1">
+                    <p id="46">F7:URL路径级数, 与URL域名级数类似, 通过多级路径, 将被模仿的域名添加到路径中. 定义级数的最大阈值为6.</p>
+                </div>
+                <div class="p1">
+                    <p id="47">F8:URL以IP地址替换域名, 这种方式会阻止用户从域名中了解网站, 从而迷惑用户.</p>
+                </div>
+                <div class="p1">
+                    <p id="48">F9:URL路径中出现某些品牌, 在路径中包含品牌以此迷惑用户. 从PishingTank上收集了99个品牌作为一个品牌集合.</p>
+                </div>
+                <div class="p1">
+                    <p id="49">F10:URL域名的长度, 定义域名长度的最小阈值为7.</p>
+                </div>
+                <div class="p1">
+                    <p id="50">F11:URL中包含敏感词. 有些钓鱼者为了迷惑用户, 在URL刻意添加“account”“banking”这些词. 由8个敏感词组成的集合:</p>
+                </div>
+                <div class="area_img" id="183">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/BJJZ201901012_18300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="53"><i>i</i>∈{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}      (2) </p>
+                </div>
+                <h3 id="54" name="54" class="anchor-tag"><b>3 网站页面特征</b></h3>
+                <div class="p1">
+                    <p id="55">用户通过钓鱼网站的URL访问该网站, 但要使用户相信该钓鱼网站的内容, 还需对其页面结构或页面内容进行处理. 钓鱼网站通常仿冒相关网站的结构和文本内容, 但由于它的目的性与正常网站不同, 所以其内容又与被仿网站有一定的区别, 因此利用这一特点便可以通过网页的文本内容或页面结构进行判断区分.</p>
+                </div>
+                <div class="p1">
+                    <p id="56">根据网页内容进行提取特征. 详细步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="57">1) 首先请求可以正常访问的钓鱼网站, 然后提取网页中所有的字符串.</p>
+                </div>
+                <div class="p1">
+                    <p id="58">2) 对提取的整段字符串进行清洗, 去除整段字符串中的特殊字符和转义字符. 然后利用NLTK<citation id="179" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>进行分词、去除停用词, 得到每一个词组成的字符串集合.</p>
+                </div>
+                <div class="p1">
+                    <p id="59">例如:{facebook help center facebook update your security…}</p>
+                </div>
+                <div class="p1">
+                    <p id="60">3) 接下来利用TF-IDF方法对每个词加权. TF-IDF是一种统计方法<citation id="180" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>, 它就是为了克服词频统计技术的缺陷而产生的. 它引入了“逆文档频率”概念, 衡量了一个词的常见程度. TF-IDF的假设是:如果某个词或短语在一篇文章中出现的频率高, 并且在其他文章中很少出, 那么它很可能就反映了这篇文章的特性, 因此要提高它的权值. 在网页内容上有很多出现频率很高的词, 但并不能凸显出这个文本的特性, 要适当降低这类词的寻找.</p>
+                </div>
+                <div class="p1">
+                    <p id="61">假设<i>X</i><sub><i>i</i></sub>为某个词, Number (<i>j</i>, <i>X</i><sub><i>i</i></sub>) 为在<i>j</i>文件中出现<i>X</i><sub><i>i</i></sub>词的次数, Number (<i>j</i>, <i>X</i><sub>max</sub>) 表示<i>j</i>文件中出现最多的词的个数. 那么<i>X</i><sub><i>i</i></sub>的词频TF为:</p>
+                </div>
+                <div class="p1">
+                    <p id="62"><mathml id="63"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><mi>F</mi><mo stretchy="false"> (</mo><mi>X</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mtext>Ν</mtext><mtext>u</mtext><mtext>m</mtext><mtext>b</mtext><mtext>e</mtext><mtext>r</mtext><mo stretchy="false"> (</mo><mi>j</mi><mo>, </mo><mi>X</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo></mrow><mrow><mtext>Ν</mtext><mtext>u</mtext><mtext>m</mtext><mtext>b</mtext><mtext>e</mtext><mtext>r</mtext><mo stretchy="false"> (</mo><mi>j</mi><mo>, </mo><mi>X</mi><msub><mrow></mrow><mrow><mi>max</mi></mrow></msub><mo stretchy="false">) </mo></mrow></mfrac></mrow></math></mathml>      (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="64">假设ContainFile (<i>X</i><sub><i>i</i></sub>) 为出现<i>X</i><sub><i>i</i></sub>的文件数, SumFile为文件的总数, 那么逆文档频率<i>IDF</i>为:</p>
+                </div>
+                <div class="p1">
+                    <p id="65"><mathml id="66"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ι</mi><mi>D</mi><mi>F</mi><mo stretchy="false"> (</mo><mi>X</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>=</mo><mrow><mi>log</mi></mrow><mfrac><mrow><mtext>S</mtext><mtext>u</mtext><mtext>m</mtext><mtext>F</mtext><mtext>i</mtext><mtext>l</mtext><mtext>e</mtext></mrow><mrow><mtext>C</mtext><mtext>o</mtext><mtext>n</mtext><mtext>t</mtext><mtext>a</mtext><mtext>i</mtext><mtext>n</mtext><mtext>F</mtext><mtext>i</mtext><mtext>l</mtext><mi>e</mi><mo stretchy="false"> (</mo><mi>X</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></math></mathml>      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="67">所以结合式 (1) 和式 (2) <i>X</i><sub><i>i</i></sub>的TF-IDF值为:</p>
+                </div>
+                <div class="p1">
+                    <p id="68">TF-IDF (<i>X</i><sub><i>i</i></sub>) =TF (<i>X</i><sub><i>i</i></sub>) IDF (<i>X</i><sub><i>i</i></sub>)      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="69">4) 将每个文本按权重由大到小选取前<i>n</i>个的词, 再将所有选取的词整合在一起组成特征词集合.</p>
+                </div>
+                <h3 id="70" name="70" class="anchor-tag"><b>4 分类算法</b></h3>
+                <div class="p1">
+                    <p id="71">本文主要涉及3种常见分类算法:最近邻算法 (KNN) , 支持向量机算法 (SVM) 和朴素贝叶斯算法 (Naive Bayes) .</p>
+                </div>
+                <h4 class="anchor-tag" id="72" name="72"><b>4.1 KNN算法</b></h4>
+                <div class="p1">
+                    <p id="73">KNN算法是通过测量不同特征值之间的距离进行分类. 它的思路是:一个样本在特征空间中的K个最临近的样本中的大多数属于某一个类别, 则该样本也属于这个类别. KNN算法中, 所选择的邻居都是已经正确分类的对象. 该方法在决策上只依据最邻近的一个或者几个样本的类别来决定待分样本所属的类别.</p>
+                </div>
+                <div class="p1">
+                    <p id="74">在KNN算法中, 通过计算对象间的距离作为对象之间的非相似性指标, 一般使用欧式距离公式计算:</p>
+                </div>
+                <div class="p1">
+                    <p id="75"><i>d</i> (<i>x</i>, <i>y</i>) =<mathml id="76"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msqrt><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo stretchy="false"> (</mo></mstyle><mi>x</mi><msub><mrow></mrow><mi>k</mi></msub><mo>-</mo><mi>y</mi><msub><mrow></mrow><mi>k</mi></msub><mo stretchy="false">) </mo><msup><mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math></mathml>      (6) </p>
+                </div>
+                <div class="p1">
+                    <p id="77">其算法描述为:</p>
+                </div>
+                <div class="p1">
+                    <p id="78">1) 计算测试数据与各个训练数据之间的距离;</p>
+                </div>
+                <div class="p1">
+                    <p id="79">2) 按照距离的递增关系进行排序;</p>
+                </div>
+                <div class="p1">
+                    <p id="80">3) 选取距离最小的<i>K</i>个点;</p>
+                </div>
+                <div class="p1">
+                    <p id="81">4) 确定前<i>K</i>个点所在的类别的出现频率;</p>
+                </div>
+                <div class="p1">
+                    <p id="82">5) 返回前<i>K</i>个点中出现频率最高的类别作为测试数据的预测分类.</p>
+                </div>
+                <h4 class="anchor-tag" id="83" name="83"><b>4.2 SVM算法</b></h4>
+                <div class="p1">
+                    <p id="84">SVM (Support Vector Machines) 在分类算法中应用广泛, 它在处理高纬度数据集时有很好的分类效果. SVM的目的是寻找一个超平面, 使样本分成两类, 并且间隔最大.</p>
+                </div>
+                <div class="p1">
+                    <p id="85">对于二类分类问题, 假设训练集为:</p>
+                </div>
+                <div class="p1">
+                    <p id="86"><i>T</i>={ (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>) , (<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>) , …, (<i>x</i><sub><i>n</i></sub>, <i>y</i><sub><i>n</i></sub>) }</p>
+                </div>
+                <div class="p1">
+                    <p id="87">其中<i>x</i><sub><i>i</i></sub>为相应样本, <i>y</i><sub><i>i</i></sub>为样本类标记, 且<i>y</i><sub><i>i</i></sub>∈{0, 1}.</p>
+                </div>
+                <div class="p1">
+                    <p id="88">分类平面形式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="89"><i>g</i> (<i>x</i>) =<i>w</i><sup><i>t</i></sup><i>x</i>+<i>b</i>      (7) </p>
+                </div>
+                <div class="p1">
+                    <p id="90">其中<i>w</i>是分类权重向量, <i>b</i>是分类阈值. 若使式 (5) 对两类样本都满足|<i>g</i> (<i>x</i>) |≥1, 即:</p>
+                </div>
+                <div class="p1">
+                    <p id="91"><i>y</i><sub><i>i</i></sub> (<i>w</i><sup><i>t</i></sup><i>x</i>+<i>b</i>) -1≥0, <i>i</i>=1, 2, …, <i>n</i>      (8) </p>
+                </div>
+                <div class="p1">
+                    <p id="92"><mathml id="93"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mtext>m</mtext><mtext>a</mtext><mtext>r</mtext><mtext>g</mtext><mtext>i</mtext><mtext>n</mtext><mo>=</mo><mfrac><mn>2</mn><mrow><mo stretchy="false">∥</mo><mi>w</mi><mo stretchy="false">∥</mo></mrow></mfrac></mrow></math></mathml>如果想要最大化margin, 相当于最小化<mathml id="94"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">∥</mo><mi>w</mi><mo stretchy="false">∥</mo><msup><mrow></mrow><mn>2</mn></msup></mrow></math></mathml>, 所以线性分类的约束最优化问题为:</p>
+                </div>
+                <div class="p1">
+                    <p id="95"><mathml id="96"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mrow><mi>w</mi><mo>, </mo><mi>b</mi></mrow></munder><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">∥</mo><mi>w</mi><mo stretchy="false">∥</mo><msup><mrow></mrow><mn>2</mn></msup></mrow></math></mathml>      (9) </p>
+                </div>
+                <div class="p1">
+                    <p id="97">s.t. <i>y</i><sub><i>i</i></sub> (<i>w</i><sup><i>t</i></sup><i>x</i>+<i>b</i>) -1≥0      (10) </p>
+                </div>
+                <div class="p1">
+                    <p id="98">考虑异常点的情况, 可以加入松弛变量<i>ε</i>来处理:</p>
+                </div>
+                <div class="p1">
+                    <p id="99"><i>y</i><sub><i>i</i></sub> (<i>w</i><sup><i>t</i></sup><i>x</i>+<i>b</i>) -1≥1-<i>ε</i>      (11) </p>
+                </div>
+                <div class="p1">
+                    <p id="100">则把目标函数变为:</p>
+                </div>
+                <div class="p1">
+                    <p id="101"><mathml id="102"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mrow><mi>w</mi><mo>, </mo><mi>b</mi><mo>, </mo><mi>ε</mi></mrow></munder><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false">∥</mo><mi>w</mi><mo stretchy="false">∥</mo><msup><mrow></mrow><mn>2</mn></msup><mo>+</mo><mi>C</mi></mrow></math></mathml><mathml id="103"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle></mrow></math></mathml><i>ε</i><sub><i>i</i></sub>      (12) </p>
+                </div>
+                <div class="p1">
+                    <p id="104">其中, <i>C</i>为惩罚函数, 通过构造拉格朗日函数并求解偏导数可以得到等价对偶问题:</p>
+                </div>
+                <div class="p1">
+                    <p id="105"><mathml id="106"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mi>a</mi></munder><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math></mathml><mathml id="107"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle></mrow></math></mathml><i>a</i><sub><i>i</i></sub><i>a</i><sub><i>j</i></sub><i>y</i><sub><i>i</i></sub><i>y</i><sub><i>j</i></sub> (<i>a</i><sub><i>i</i></sub><i>a</i><sub><i>i</i></sub>) -<mathml id="108"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle></mrow></math></mathml><i>a</i><sub><i>i</i></sub>      (13) </p>
+                </div>
+                <div class="p1">
+                    <p id="109">s.t.<mathml id="110"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle></mrow></math></mathml><i>a</i><sub><i>i</i></sub><i>y</i><sub><i>i</i></sub>=0 0≤<i>a</i><sub><i>i</i></sub>≤<i>C</i>, <i>i</i>=1, 2, …, <i>n</i>      (14) </p>
+                </div>
+                <div class="p1">
+                    <p id="111">如果是非线性问题, 一般采用低维空间映射到高维空间<i>x</i>→ (<i>x</i>) 后实现线性可分. 在SVM的等价对偶问题中目标函数中有样本点的内积, 在空间变换后, 由于维度增加导致内积计算成本增加, 这时核函数 (kernel function) 便派上用场了, 将映射后的高维空间内积转换成低维空间的函数:</p>
+                </div>
+                <div class="p1">
+                    <p id="112"><i>K</i> (<i>x</i>, <i>z</i>) =ϕ (<i>x</i>) ϕ (<i>z</i>)      (15) </p>
+                </div>
+                <div class="p1">
+                    <p id="113">将其代入式 (11) 可得非线性SVM的最优化问题:</p>
+                </div>
+                <div class="p1">
+                    <p id="114"><mathml id="115"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mi>a</mi></munder><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></math></mathml><mathml id="116"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle></mrow></math></mathml><i>a</i><sub><i>i</i></sub><i>a</i><sub><i>j</i></sub><i>y</i><sub><i>i</i></sub><i>y</i><sub><i>j</i></sub><i>K</i> (<i>x</i>, <i>x</i><sub><i>j</i></sub>) -<mathml id="117"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle></mrow></math></mathml><i>a</i><sub><i>i</i></sub>      (16) </p>
+                </div>
+                <div class="p1">
+                    <p id="118">s.t.<mathml id="119"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle></mrow></math></mathml><i>a</i><sub><i>i</i></sub><i>y</i><sub><i>i</i></sub>=0 0≤<i>a</i><sub><i>i</i></sub>≤<i>C</i>, <i>i</i>=1, 2, …, <i>n</i>      (17) </p>
+                </div>
+                <h4 class="anchor-tag" id="120" name="120"><b>4.3 朴素贝叶斯算法</b></h4>
+                <div class="p1">
+                    <p id="121">朴素贝叶斯 (Naive Bayes) 属于监督学习的生成模型, 实现简单, 没有迭代, 学习效率高, 在大样本量下会有较好的表现.</p>
+                </div>
+                <div class="p1">
+                    <p id="122">朴素贝叶斯的主要思路是:通过联合概率<i>P</i> (<i>x</i>, <i>y</i>) =<i>P</i> (<i>x</i>|<i>y</i>) <i>P</i> (<i>y</i>) 建立模型后, 通过运用贝叶斯定理求解后验概率<i>P</i> (<i>y</i>|<i>x</i>) , 将后验概率最大者对应的类别作为预测分类.</p>
+                </div>
+                <div class="p1">
+                    <p id="123">假设训练集为:<i>T</i>={ (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>) , (<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>) , …, (<i>x</i><sub><i>n</i></sub>, <i>y</i><sub><i>n</i></sub>) }, 其类别为<i>y</i><sub><i>i</i></sub>∈{<i>c</i><sub>1</sub>, <i>c</i><sub>2</sub>, …, <i>c</i><sub><i>k</i></sub>}, 由贝叶斯定理可知:</p>
+                </div>
+                <div class="p1">
+                    <p id="124"><mathml id="125"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><mo stretchy="false"> (</mo><mi>y</mi><mo>=</mo><mi>c</mi><msub><mrow></mrow><mi>k</mi></msub><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mi>p</mi><mo stretchy="false"> (</mo><mi>x</mi><mo stretchy="false">|</mo><mi>y</mi><mo>=</mo><mi>c</mi><mi>k</mi><mo stretchy="false">) </mo><mi>p</mi><mo stretchy="false"> (</mo><mi>y</mi><mo>=</mo><mi>c</mi><msub><mrow></mrow><mi>k</mi></msub><mo stretchy="false">) </mo></mrow><mrow><mi>p</mi><mo stretchy="false"> (</mo><mi>x</mi><mo stretchy="false">) </mo></mrow></mfrac></mrow></math></mathml>      (18) </p>
+                </div>
+                <div class="p1">
+                    <p id="126">其中对于<i>c</i><sub><i>k</i></sub>而言, <i>p</i> (<i>x</i>) 是恒等的, 所以可以舍弃. 先验概率<i>p</i> (<i>y</i>=<i>c</i><sub><i>k</i></sub>) 可以通过计算频率得到, 而条件概率<i>p</i> (<i>x</i>|<i>y</i>=<i>c</i><sub><i>k</i></sub>) 通过朴素贝叶斯对条件概率做了条件独立性的假设, 即条件相互独立的为前提, 则:</p>
+                </div>
+                <div class="p1">
+                    <p id="127"><i>p</i> (<i>x</i>|<i>y</i>=<i>c</i><sub><i>k</i></sub>) =<mathml id="128"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle></mrow></math></mathml><i>p</i> (<i>x</i><sub><i>i</i></sub>|<i>c</i><sub><i>k</i></sub>)      (19) </p>
+                </div>
+                <div class="p1">
+                    <p id="129">可得预测类别:</p>
+                </div>
+                <div class="p1">
+                    <p id="130"><mathml id="131"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>arg</mi><mspace width="0.25em" /><mi>max</mi></mrow></mstyle><mrow><mi>c</mi><msub><mrow></mrow><mi>k</mi></msub></mrow></munder><mi>p</mi><mo stretchy="false"> (</mo><mi>x</mi><mo stretchy="false">|</mo><mi>y</mi><mo>=</mo><mi>c</mi><msub><mrow></mrow><mi>k</mi></msub><mo stretchy="false">) </mo><mi>p</mi><mo stretchy="false"> (</mo><mi>y</mi><mo>=</mo><mi>c</mi><msub><mrow></mrow><mi>k</mi></msub><mo stretchy="false">) </mo></mrow></math></mathml>      (20) </p>
+                </div>
+                <h3 id="132" name="132" class="anchor-tag"><b>5 实验结果与分析</b></h3>
+                <h4 class="anchor-tag" id="133" name="133"><b>5.1 实验评估方法</b></h4>
+                <div class="p1">
+                    <p id="134">采用准确率 (<i>precision</i>) 、召回率 (<i>recall</i>) 和综合的准确率和召回率的分类率 (<i>F</i>1) 作为本次实验的分类型评价指标. 其中准确率是指模型判为正的所有样本中有多少是真正的正样本;召回率是指所有正样本有多少被模型判为正样本;而<i>F</i>1是准确率和召回率的结合.</p>
+                </div>
+                <div class="p1">
+                    <p id="135">假设模型输出正样本集合 (模型检测出的钓鱼网站集合) 为<i>A</i>, 真正的正样本集合 (钓鱼网站总体集合) 为<i>B</i>, 则:</p>
+                </div>
+                <div class="p1">
+                    <p id="136">Precision<mathml id="137"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false"> (</mo><mi>A</mi><mo>, </mo><mi>B</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mo stretchy="false">|</mo><mi>A</mi><mstyle displaystyle="true"><mo>∩</mo><mi>B</mi></mstyle><mo stretchy="false">|</mo></mrow><mrow><mo stretchy="false">|</mo><mi>A</mi><mo stretchy="false">|</mo></mrow></mfrac></mrow></math></mathml>      (21) </p>
+                </div>
+                <div class="p1">
+                    <p id="138">Recall<mathml id="139"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false"> (</mo><mi>A</mi><mo>, </mo><mi>B</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mo stretchy="false">|</mo><mi>A</mi><mstyle displaystyle="true"><mo>∩</mo><mi>B</mi></mstyle><mo stretchy="false">|</mo></mrow><mrow><mo stretchy="false">|</mo><mi>B</mi><mo stretchy="false">|</mo></mrow></mfrac></mrow></math></mathml>      (22) </p>
+                </div>
+                <div class="p1">
+                    <p id="140"><mathml id="141"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>F</mi><mn>1</mn><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mtext>p</mtext><mtext>r</mtext><mtext>e</mtext><mtext>c</mtext><mtext>i</mtext><mtext>s</mtext><mtext>i</mtext><mtext>o</mtext><mtext>n</mtext><mo>×</mo><mtext>r</mtext><mtext>e</mtext><mtext>c</mtext><mtext>a</mtext><mtext>l</mtext><mtext>l</mtext></mrow><mrow><mtext>p</mtext><mtext>r</mtext><mtext>e</mtext><mtext>c</mtext><mtext>i</mtext><mtext>s</mtext><mtext>i</mtext><mtext>o</mtext><mtext>n</mtext><mo>+</mo><mtext>r</mtext><mtext>e</mtext><mtext>c</mtext><mtext>a</mtext><mtext>l</mtext><mtext>l</mtext></mrow></mfrac></mrow></math></mathml>      (23) </p>
+                </div>
+                <h4 class="anchor-tag" id="142" name="142"><b>5.2 实验数据准备</b></h4>
+                <div class="p1">
+                    <p id="143">本次实验所用的钓鱼网站 (正类) 来自PhishTank<citation id="181" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>上提供的黑名单数据. 实验总共提取两次, 第一次是2017年8月8日提取了3 123条钓鱼网站用于URL检测部分;由于钓鱼网站存活期较短, 所以第二次是从2018年2月18日和2018年2月23日两天中提取有效2 000钓鱼网站用于网站页面检测部分. 实验中用到的可信网站 (负类) 来自Alexa<citation id="182" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>上排名前500, 在这500个网站中, 每个网站以深度为1进行遍历, 总共得到38 019个网站, 从中提取有效可信网站1 307条用于URL检测部分, 提取2 000条用于网站页面检测部分. 对于训练数据和测试数据采用的分配方式, 如表1所示.</p>
+                </div>
+                <div class="area_img" id="144">
+                    <p class="img_tit"><b>表1 训练数据和测试数据</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Tab.1 Training data and test data</b></p>
+                    <p class="img_note"></p>
+                    <table id="144" border="1"><tr><td><br /></td><td>训练数据/个</td><td>测试数据/个</td><td>总计/个</td></tr><tr><td><br />URL检测部分</td><td>3 534</td><td>844</td><td>4 378</td></tr><tr><td><br />页面内容检测部分</td><td>3 200</td><td>800</td><td>4 000</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="145" name="145"><b>5.3 不同分类器测试结果比较</b></h4>
+                <div class="p1">
+                    <p id="146">首先通过实验确定KNN算法中的最优<i>k</i>值, 从图1中可以看出, 随着<i>k</i>值的增加, KNN分类器的F1值呈递减趋势, 在页面内容检测的折线图更为明显. 当<i>k</i>值为5时KNN分类器的效果最佳, 对于URL检测和页面内容检测的F1分别为89.18%和94.69%. 因此后续采用<i>k</i>值为5的KNN分类器进行实验.</p>
+                </div>
+                <div class="area_img" id="147">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/BJJZ201901012_147.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 不同k值下的KNN分类器的F1值" src="Detail/GetImg?filename=images/BJJZ201901012_147.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 不同<i>k</i>值下的KNN分类器的F1值</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/BJJZ201901012_147.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"><b>Fig.1 F1 value of KNN classifier under different  <i>k</i> values</b></p>
+
+                </div>
+                <div class="p1">
+                    <p id="148"><b>4</b>种分类方法在<b>URL</b>检测中的性能比较, 支持向量机 (<b>SVM</b>) 分类器. 本实验分别选择线性<b>SVM</b>和径向基核函数的<b>SVM</b>作为非线性<b>SVM</b>. 径向基核函数的形式为:</p>
+                </div>
+                <div class="area_img" id="184">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/BJJZ201901012_18400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="152">其中<i>σ</i>代表径向基的宽度, 这里<mathml id="153"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>σ</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mi>n</mi><mi>u</mi><mi>m</mi><mi>b</mi><mi>e</mi><mi>r</mi><mo stretchy="false"> (</mo><mi>f</mi><mi>e</mi><mi>a</mi><mi>t</mi><mi>u</mi><mi>r</mi><mi>e</mi><mo stretchy="false">) </mo></mrow></mfrac><mo>.</mo><mspace width="0.25em" /></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="154">表<b>2</b>是<b>4</b>种分类方法在URL检测方面的性能比较. 其中URL特征数为<b>11</b>个. 在表中可以看出, 除朴素贝叶斯方法外的其他三种方法的准确率和召回率相差都不大, 准确率达到<b>85</b>%左右. 由于训练和测试的数据集不大, 而且特征数也不多, 所以训练和测试的时间比较短.</p>
+                </div>
+                <div class="area_img" id="155">
+                    <p class="img_tit"><b>表2 4种分类方法在URL检测方面的性能比较</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Tab.2 Comparison of performance of four classification methods in URL detection</b></p>
+                    <p class="img_note"></p>
+                    <table id="155" border="1"><tr><td><br /></td><td>Precision/<br />%</td><td>Recall/<br />%</td><td>F1/<br />%</td><td>训练<br />时间/s</td><td>测试<br />时间/s</td></tr><tr><td><br />NB</td><td>74.66</td><td>60.21</td><td>84.20</td><td>0.00</td><td>0.00</td></tr><tr><td><br />KNN (<i>k</i>=5) </td><td>85.29</td><td>89.03</td><td>88.71</td><td>0.02</td><td>0.05</td></tr><tr><td><br />线性SVM</td><td>85.52</td><td>89.80</td><td>88.81</td><td>0.00</td><td>0.00</td></tr><tr><td><br />非线性SVM</td><td>85.41</td><td>89.72</td><td>88.71</td><td>0.16</td><td>0.02</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="156">表3是4种分类方法在页面内容方面的性能比较, 其中页面特征为2 000个钓鱼网站页面的权重由大到小排名前5的特征组成, 所得的页面特征数为1 165个. 可以从表中很明显看出线性SVM分类器的准确率和召回率都是最高, 都近似96.88%, 而采用径向基核函数的SVM分类器的准确率和召回率都是最低的, 所以在选用SVM算法的时候, 对于线性和非线性SVM算法的选择很重要.</p>
+                </div>
+                <div class="p1">
+                    <p id="157">综合表2和表3可以看出, 对于页面内容检测的准确率和召回率都要高于针对URL特征检测. 笔者认为出现这种现象有以下几个原因:</p>
+                </div>
+                <div class="area_img" id="158">
+                    <p class="img_tit"><b>表3 4种分类方法在页面内容方面的性能比较</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Tab.3 Comparison of performance of four classification methods in terms of page content</b></p>
+                    <p class="img_note"></p>
+                    <table id="158" border="1"><tr><td><br /></td><td>Precision/<br />%</td><td>Recall/<br />%</td><td>F1/<br />%</td><td>训练<br />时间/s</td><td>测试<br />时间/s</td></tr><tr><td><br />NB</td><td>90.38</td><td>90.38</td><td>90.17</td><td>0.03</td><td>0.00</td></tr><tr><td><br />KNN (<i>k</i>=5) </td><td>93.38</td><td>93.37</td><td>93.18</td><td>0.17</td><td>3.08</td></tr><tr><td><br />线性SVM</td><td>96.88</td><td>96.88</td><td>96.80</td><td>0.09</td><td>0.00</td></tr><tr><td><br />非线性SVM</td><td>86.37</td><td>86.63</td><td>87.25</td><td>4.66</td><td>1.08</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="159">1) 网站URL没有进行黑白名单的过滤, 导致很多正规网站由于也存在敏感词汇而被认为存在了钓鱼网站URL的特征;</p>
+                </div>
+                <div class="p1">
+                    <p id="160">2) 有一部分钓鱼网站并没有出现钓鱼网站的URL特征, 而正常网站却有部分存在, 导致分类器误判;</p>
+                </div>
+                <div class="p1">
+                    <p id="161">3) 页面内容检测中, 很多钓鱼网站针对的目标网站比较集中, 导致很多钓鱼网站的制作与目标网站比较类似, 所以特征也较为相似, 因此分类器分类比较准确;</p>
+                </div>
+                <div class="p1">
+                    <p id="162">4) 还有一个原因是页面内容特征的特征维度远远高于URL特征, 这个方面也导致部分分类器的训练和测试时间都大大增加.</p>
+                </div>
+                <div class="area_img" id="163">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/BJJZ201901012_163.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 对于4种分类器在不同页面特征数下的F1值比较" src="Detail/GetImg?filename=images/BJJZ201901012_163.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 对于4种分类器在不同页面特征数下的F1值比较</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/BJJZ201901012_163.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"><b>Fig.2 Comparison of F1 values for four classifiers  with different page feature numbers</b></p>
+
+                </div>
+                <div class="p1">
+                    <p id="164">图<b>2</b>是对于在页面内容检测部分, 对于不同特征数的情况, <b>4</b>种分类器的<b>F1</b>比较. 通过以每篇文档中权重由大到小排名前<b>2、5、10、15、20</b>的词为基准提取特征, 可以得到图中横轴的<b>4</b>个特征数. 从图中可以明显观察出线性<b>SVM</b>分类器的<b>F1</b>最高, 并且当特征数为<b>1 893</b>个时效果最佳. 当特征数从<b>1 893</b>个继续增加分类器的效果都会相对降低. 笔者认为, 特征个数的选取不能无限制的增加, 而应该以实际情况选取. 本次实验样本总数为<b>4 000</b>个, 而当特征个数逐渐增加的过程中, 样本总量却没变, 造成维度较高, 分类器训练和测试不能达到很好的效果.</p>
+                </div>
+                <h3 id="165" name="165" class="anchor-tag"><b>6 结论</b></h3>
+                <div class="p1">
+                    <p id="166">本文通过实验对比朴素贝叶斯、<b>KNN</b>和<b>SVM</b>算法针对钓鱼网站的分类效果. 对于以<b>URL</b>特征的实验中, 朴素贝叶斯分类器的效果相对较差, 而其他分类器相差不大;而对于特征维度较高的页面内容特征的实验中, 线性<b>SVM</b>分类器表现出了不错的效果, 准确率和召回率都高于其他分类器. 对于英文类页面内容, 通过实验对比选取最佳特征数量, 改良后的线性<b>SVM</b>分类器检测准确率可以达到<b>96</b>%. 针对研究存在的不足, 后续研究工作主要对两方面进改进:</p>
+                </div>
+                <div class="p1">
+                    <p id="167"><b>1</b>) 对特征优化, 在特征提取前可以加入黑白名单过滤;</p>
+                </div>
+                <div class="p1">
+                    <p id="168"><b>2) SVM</b>方法中核函数及其参数的选取, <b>SVM</b>核函数还可以选择多项式核函数进行比较. 模型完善后创建<b>web</b>应用, 可以部署到线上服务器, 为用户提供钓鱼网站检测的一项应用服务.</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" >
+                                    <b>[1]</b>
+                                 谭光林. 反钓鱼系统的研究与设计[D]. 北京:北京邮电大学, 2012. TAN Guanglin. Research and design of anti-phishing system[D]. Beijing: Beijing University of Posts and Telecommunications, 2012. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1013015760.nh&amp;v=MjU4MTBiS3I1RWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm5GeW5oVmJ2QVZGMjZIYk81Rzk=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 王婷. 基于RFE_SVM的钓鱼网页识别技术的研究[D].武汉:华中科技大学, 2012. WANG Ting.Research on phishing recognition technology based on RFE-SVM [D].Wuhan: Huazhong University of Science and Technology, 2012. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XXAQ201201011&amp;v=MDczMDhaZVJuRnluaFZidkFQVFhLZjdHNEg5UE1ybzlFWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2U=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 黄华军, 钱亮, 王耀钧.基于异常特征的钓鱼网站URL检测技术[J]. 信息网络安全, 2012 (1) : 23-25. HUANG Huajun, QIAN Liang, WANG Yaojun. Detection of phishing URL based on abnormal feature[J]. Netinfo Security, 2012 (1) : 23-25. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1012394638.nh&amp;v=MTk5OTM1RWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm5GeW5oVmJ2QVZGMjZITEN4R3RmUHA=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 曹晓芸. 基于敏感特征的网络钓鱼检测方法研究[D].大连:大连理工大学, 2012. CAO Xiaoyun. The method study of phishing defense based on sensitive characters[D]. Dalian: Dalian University of Technology, 2012. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSGG201504018&amp;v=MDA2MjVSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm5GeW5oVmJ2QUx6N01hYkc0SDlUTXE0OUViSVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 顾晓清, 王洪元, 倪彤光, 等. 基于贝叶斯和支持向量机的钓鱼网站检测方法[J]. 计算机工程与应用, 2015 (4) :87-89.GU Xiaoqing, WANG Hongyuan, NI Tongguang, et al. Phishing website detection method based on Bayesian and support vector machine [J]. Comupter Engineering and Applications, 2015 (4) : 87-89. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJDK201604063&amp;v=MjA3MDJmUFpiRzRIOWZNcTQ5RFo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSbkZ5bmhWYnZBTnk=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 赵加林. 基于K-Means和SVM的流行中文钓鱼网站识别研究[J]. 软件导刊, 2016 (4) :176-178. ZGAO Jialin. Research on popular Chinese phishing website recognition based on K-Means and SVM[J].Software Guide, 2016 (4) :176-178. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="">
+
+                                <b>[7]</b> Wikipedia [EB/OL][2018-7-20]. https://en.wikipedia.org/wiki/Supervised_learning.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJHD&amp;filename=SJHD120904000012&amp;v=MDQwNzdyaWZadTl1RkN2c1U3N01KbG9jTmlmRGFySzZIdGpNcTQ5RlpPc09EaE04enhVU21EZDlTSDduM3hFOWZidm5L&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> LA L, GUO Q, YANG D Q, et al. Multiclass boosting with adaptive group-based kNN and its application in text categorization[J]. Mathematical Problems in Engineering, 2012, 16 (3) : 473-486.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000002769&amp;v=MTk4ODY0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMYklJVm9TYmhvPU5pZklZN0s3SHRqTnI0OUZaT3NOQzNvd29CTVQ2VA==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> CHANGE C C, LIN C J. LIBSVM: a library for support vector machines[J]. ACM Transactions on Intelligent Systems and Technology, 2011, 2 (3) : 389-396.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep feature weighting for na?ve bayes and its application to text categorization">
+
+                                <b>[10]</b> JIANG L X, LI C Q, WANG S S, et al. Deep feature weighting for naïve bayes and its application to text categorization [J]. Mathematical Problems in Artificial Intelligence, 2016, 52 (C) : 26-39.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=NLTK">
+
+                                <b>[11]</b> NLTK [EB/OL][2018-7-20]. https://www.nltk.org/.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" >
+                                    <b>[12]</b>
+                                 初一. 基于Web页面特征的反钓鱼系统的设计与实现[D].北京:北京邮电大学, 2013. CHU Yi. Design and implementation of system based on Web page features[D]. Beijing: Beijing University of Posts and Telecommunications, 2013. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="">
+
+                                <b>[13]</b> PhishTank [DB/OL].[2018-02-23].http://data.phishtank.com/data/online-valid.xml.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="">
+
+                                <b>[14]</b> Alexa [EB/OL]. [2017-08-08]. https://www.alexa.com/topsites.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="BJJZ201901012" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJJZ201901012&amp;v=MzE5MDNVUkxPZVplUm5GeW5oVmJ2QUp5ZkJkTEc0SDlqTXJvOUVab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yys4Q3NseWFnUEszSjFGaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

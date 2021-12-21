@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130603729025000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201904031%26RESULT%3d1%26SIGN%3dHGWyCX%252fhVAvyklgUKRZM1B%252fYbfE%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201904031&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201904031&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201904031&amp;v=MTIzNjViRzRIOWpNcTQ5R1pZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L25VNzNNTHo3QmI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#45" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#49" data-title="1 数据模型及相关定义 ">1 数据模型及相关定义</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#59" data-title="2 实体的top-&lt;i&gt;k&lt;/i&gt;扩展 ">2 实体的top-<i>k</i>扩展</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#61" data-title="2.1 基于一致性匹配度的实体top-&lt;i&gt;k&lt;/i&gt;扩展">2.1 基于一致性匹配度的实体top-<i>k</i>扩展</a></li>
+                                                <li><a href="#122" data-title="2.2 基于分支限界的实体&lt;i&gt;top&lt;/i&gt;-k扩展">2.2 基于分支限界的实体<i>top</i>-k扩展</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#185" data-title="3 实验结果与分析 ">3 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#186" data-title="3.1 实验参数设置">3.1 实验参数设置</a></li>
+                                                <li><a href="#190" data-title="3.2 算法性能分析">3.2 算法性能分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#228" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#51" data-title="&lt;b&gt;表1 实体top-&lt;i&gt;k&lt;/i&gt;扩展相关符号与定义&lt;/b&gt;"><b>表1 实体top-<i>k</i>扩展相关符号与定义</b></a></li>
+                                                <li><a href="#128" data-title="&lt;b&gt;图1 实体扩展示例&lt;/b&gt;"><b>图1 实体扩展示例</b></a></li>
+                                                <li><a href="#130" data-title="&lt;b&gt;图2 一致性匹配示意&lt;/b&gt;"><b>图2 一致性匹配示意</b></a></li>
+                                                <li><a href="#178" data-title="&lt;b&gt;图3 实体top-&lt;i&gt;k&lt;/i&gt;扩展分支限界示意图&lt;/b&gt;"><b>图3 实体top-<i>k</i>扩展分支限界示意图</b></a></li>
+                                                <li><a href="#181" data-title="&lt;b&gt;表2 基于分支限界的实体top-&lt;i&gt;k&lt;/i&gt;扩展结果&lt;/b&gt;"><b>表2 基于分支限界的实体top-<i>k</i>扩展结果</b></a></li>
+                                                <li><a href="#183" data-title="&lt;b&gt;表3 InfoGather算法实体top-&lt;i&gt;k&lt;/i&gt;扩展结果&lt;/b&gt;"><b>表3 InfoGather算法实体top-<i>k</i>扩展结果</b></a></li>
+                                                <li><a href="#189" data-title="&lt;b&gt;表4 查询表的特征值&lt;/b&gt;"><b>表4 查询表的特征值</b></a></li>
+                                                <li><a href="#209" data-title="&lt;b&gt;图4 不同覆盖率阈值下可信度的平均值&lt;/b&gt;"><b>图4 不同覆盖率阈值下可信度的平均值</b></a></li>
+                                                <li><a href="#212" data-title="&lt;b&gt;图5 2种算法在不同数据集上的覆盖率对比&lt;/b&gt;"><b>图5 2种算法在不同数据集上的覆盖率对比</b></a></li>
+                                                <li><a href="#213" data-title="&lt;b&gt;图6 2种算法在不同数据集上的一致性对比&lt;/b&gt;"><b>图6 2种算法在不同数据集上的一致性对比</b></a></li>
+                                                <li><a href="#216" data-title="&lt;b&gt;图7 2种算法在不同数据集上的精确度对比&lt;/b&gt;"><b>图7 2种算法在不同数据集上的精确度对比</b></a></li>
+                                                <li><a href="#218" data-title="&lt;b&gt;图8 2种算法在不同数据集上的可信度对比&lt;/b&gt;"><b>图8 2种算法在不同数据集上的可信度对比</b></a></li>
+                                                <li><a href="#226" data-title="&lt;b&gt;图9 2种算法的多样性对比&lt;/b&gt;"><b>图9 2种算法的多样性对比</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="15">
+
+
+                                    <a id="bibliography_1" title=" 张丽方, 王宁, 齐飞.Web表格的实体列发现算法[J].计算机工程, 2017, 43 (12) :165-172." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201712031&amp;v=MjIyNzBiTnJZOUdaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9uVTczTUx6N0JiYkc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         张丽方, 王宁, 齐飞.Web表格的实体列发现算法[J].计算机工程, 2017, 43 (12) :165-172.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_2" title=" CAFARELLA M J, HALEVY A, KHOUSSAINOVA N.Data integration for the relational web[J].Proceedings of the VLDB Endowment, 2009, 2 (1) :1090-1101." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Data integration for the relational web">
+                                        <b>[2]</b>
+                                         CAFARELLA M J, HALEVY A, KHOUSSAINOVA N.Data integration for the relational web[J].Proceedings of the VLDB Endowment, 2009, 2 (1) :1090-1101.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_3" title=" CAFARELLA M J, HALEVY A, WANG D Z, et al.Web tables:exploring the power of tables on the web[J], Proceedings of the VLDB Endowment, 2008, 1 (1) :538-549." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=WebTables: exploring the power of tables on the web">
+                                        <b>[3]</b>
+                                         CAFARELLA M J, HALEVY A, WANG D Z, et al.Web tables:exploring the power of tables on the web[J], Proceedings of the VLDB Endowment, 2008, 1 (1) :538-549.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_4" title=" CAFARELLA M J, HALEVY A, WANG D Z, et al.Uncovering the relational web[EB/OL].[2017-12-01].http://web.eecs.umich.edu/～michjc/papers/web tables_webdb08.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Uncovering the relational web">
+                                        <b>[4]</b>
+                                         CAFARELLA M J, HALEVY A, WANG D Z, et al.Uncovering the relational web[EB/OL].[2017-12-01].http://web.eecs.umich.edu/～michjc/papers/web tables_webdb08.pdf.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_5" title=" BALAKRISHNAN S, HALEVY A, HARB B, et al.Applying web tables in practice[EB/OL].[2017-12-01].http://cidrdb.org/cidr2015/Papers/CIDR15_Paper3.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Applying web tables in practice">
+                                        <b>[5]</b>
+                                         BALAKRISHNAN S, HALEVY A, HARB B, et al.Applying web tables in practice[EB/OL].[2017-12-01].http://cidrdb.org/cidr2015/Papers/CIDR15_Paper3.pdf.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_6" title=" GONZALEZ H, HALEVY A Y, JENSEN C S, et al.Google fusion tables:Web-centered data management and collaboration[C]//Proceedings of 2010 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2010:1061-1066." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Google fusion tables:web-centered data management and collaboration">
+                                        <b>[6]</b>
+                                         GONZALEZ H, HALEVY A Y, JENSEN C S, et al.Google fusion tables:Web-centered data management and collaboration[C]//Proceedings of 2010 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2010:1061-1066.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_7" title=" YAKOUT M, GANJAM K, CHAKRABARTI K, et al.Infogather:entity augmentation and attribute discovery by holistic matching with web tables[C]//Proceedings of 2012 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2012:97-108." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=InfoGather:Entity Augmentation and Attribute Discovery By Holistic Matching with Web Tables">
+                                        <b>[7]</b>
+                                         YAKOUT M, GANJAM K, CHAKRABARTI K, et al.Infogather:entity augmentation and attribute discovery by holistic matching with web tables[C]//Proceedings of 2012 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2012:97-108.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_8" title=" ZHANG M, CHAKRABARTI K.Infogather+:semantic matching and annotation of numeric and time-varying attributes in web tables[C]//Proceedings of 2013 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2013:145-156." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Infogather+:Semantic matching and annotation of numeric and time-varying attributes in web tables">
+                                        <b>[8]</b>
+                                         ZHANG M, CHAKRABARTI K.Infogather+:semantic matching and annotation of numeric and time-varying attributes in web tables[C]//Proceedings of 2013 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2013:145-156.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_9" title=" BIZER C.Search joins with the Web[C]//Proceedings of the 17th International Conference on Database Theory.Berlin, Germany:Springer, 2014:3." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Search joins with the Web">
+                                        <b>[9]</b>
+                                         BIZER C.Search joins with the Web[C]//Proceedings of the 17th International Conference on Database Theory.Berlin, Germany:Springer, 2014:3.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_10" title=" EBERIUS J, THIELE M, BRAUNSCHWEIG K, et al.Top-k entity augmentation using consistent set covering[C]//Proceedings of the 27th International Conference on Scientific and Statistical Database Management.New York, USA:ACM Press, 2015:1-12." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Top-k entity augmentation using consistent set covering">
+                                        <b>[10]</b>
+                                         EBERIUS J, THIELE M, BRAUNSCHWEIG K, et al.Top-k entity augmentation using consistent set covering[C]//Proceedings of the 27th International Conference on Scientific and Statistical Database Management.New York, USA:ACM Press, 2015:1-12.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_11" title=" RAHM E, BERNSTEIN P A.A survey of approaches to automatic schema matching[J].The International Journal on Very Large Data Bases, 2001, 10 (4) :334-350." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00002608083&amp;v=Mjk4NTdYcVJyeG94Y01IN1I3cWVidWR0RkM3bFZMM0lJbG89Tmo3QmFyTzRIdEhPcVk5TlpPTU1ZM2s1ekJkaDRqOTlT&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         RAHM E, BERNSTEIN P A.A survey of approaches to automatic schema matching[J].The International Journal on Very Large Data Bases, 2001, 10 (4) :334-350.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_12" title=" 孙瑾.数据库模式匹配方法的研究[D].济南:山东大学, 2009." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=2009246561.nh&amp;v=MDE5ODc4R05US3JwRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9uVTczTVYxMjdGN0c=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         孙瑾.数据库模式匹配方法的研究[D].济南:山东大学, 2009.
+                                    </a>
+                                </li>
+                                <li id="39">
+
+
+                                    <a id="bibliography_13" title=" SARMA A D, FANG L, GUPTA N, et al.Finding related tables[C]//Proceedings of 2012 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2012:817-828." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Finding related tables">
+                                        <b>[13]</b>
+                                         SARMA A D, FANG L, GUPTA N, et al.Finding related tables[C]//Proceedings of 2012 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2012:817-828.
+                                    </a>
+                                </li>
+                                <li id="41">
+
+
+                                    <a id="bibliography_14" title=" WU W, LI H, WANG H, et al.Probase:a probabilistic taxonomy for text understanding[C]//Proceedings of 2012 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2012:481-492." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Probase:A probabilistic taxonomy for text understanding">
+                                        <b>[14]</b>
+                                         WU W, LI H, WANG H, et al.Probase:a probabilistic taxonomy for text understanding[C]//Proceedings of 2012 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2012:481-492.
+                                    </a>
+                                </li>
+                                <li id="43">
+
+
+                                    <a id="bibliography_15" title=" 孙焕良, 卢智, 刘俊岭, 等.图数据中Top-k属性差异q-clique查询[J].计算机学报, 2012, 35 (11) :2265-2274." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201211005&amp;v=MjYyODBMejdCZHJHNEg5UE5ybzlGWVlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkvblU3M00=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         孙焕良, 卢智, 刘俊岭, 等.图数据中Top-k属性差异q-clique查询[J].计算机学报, 2012, 35 (11) :2265-2274.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(04),181-188 DOI:10.19678/j.issn.1000-3428.0049737            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于一致性支持度的实体top-<i>k</i>扩展算法</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%AD%99%E4%BC%9F%E5%A8%9F&amp;code=37769323&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">孙伟娟</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E5%AE%81&amp;code=06320375&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王宁</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8C%97%E4%BA%AC%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&amp;code=0111847&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北京交通大学计算机与信息技术学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>现有的实体扩展技术返回单一结果, 且只适用于扩展单个属性列, 对于多属性列的实体扩展易产生实体不一致的问题。为此, 提出2种实体top-<i>k</i>扩展算法。根据答案表之间的一致性匹配度, 在众多网络表格中找到<i>k</i>个具有最高一致性支持度的答案表集合, 以补充待扩展实体的缺失信息。实验结果表明, 2种算法能够较好地实现实体的top-<i>k</i>扩展, 并保持扩展结果的高一致性和高准确度。基于一致性匹配度的实体top-<i>k</i>扩展算法具有较高的多样性, 而基于分支限界的实体top-<i>k</i>扩展算法在可信度方面有更好的表现。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%AE%9E%E4%BD%93top-%3Ci%3Ek%3C%2Fi%3E%E6%89%A9%E5%B1%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">实体top-<i>k</i>扩展;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%BD%91%E7%BB%9C%E8%A1%A8%E6%A0%BC&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">网络表格;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%88%86%E6%94%AF%E9%99%90%E5%AE%9A&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">分支限定;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%B8%80%E8%87%B4%E6%80%A7%E5%8C%B9%E9%85%8D%E5%BA%A6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">一致性匹配度;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%95%B0%E6%8D%AE%E9%9B%86%E6%88%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">数据集成;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    孙伟娟 (1993—) , 女, 硕士研究生, 主研方向为Web数据集成、数据挖掘;;
+                                </span>
+                                <span>
+                                    王宁, 教授、博士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2017-12-19</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金 (61370060);</span>
+                                <span>中央高校基本科研业务费专项资金 (2017YJS065);</span>
+                    </p>
+            </div>
+                    <h1><b>Top-<i>k</i> Entity Augmentation Algorithm Based on Consistent Supporting Degree</b></h1>
+                    <h2>
+                    <span>SUN Weijuan</span>
+                    <span>WANG Ning</span>
+            </h2>
+                    <h2>
+                    <span>School of Computer and Information Technology, Beijing Jiaotong University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Existing entity augmentation techniques can only return a single result, and they are only applicable for augmenting entities with a single attribute.As for entities having multiple attributes, they will return inconsistent results.Two kinds of top-<i>k</i> entity augmentation algorithm are proposed to settle the problems.According to the consistent matching degree, <i>k</i> answer table sets with the highest consistency supporting degree were found in many Web tables to settle entity inconsistent problem.Experimental results show that these two algorithms have implemented top-<i>k</i> entity augmentation with high result consistency and accuracy.The diversity of the algorithm based on consistent matching degree is higher, while the algorithm based on branch-and-bound is more effective in getting reliable entity augmentation results.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=top-%3Ci%3Ek%3C%2Fi%3E%20entity%20augmentation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">top-<i>k</i> entity augmentation;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Web%20table&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Web table;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=branch-and-bound&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">branch-and-bound;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=consistent%20matching%20degree&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">consistent matching degree;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=data%20integration&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">data integration;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2017-12-19</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="45" name="45" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="46">近年来, 针对网络表格的研究逐渐得到人们的关注。相对于文本型数据, 网络表格可以帮助人们更加直观地了解自己感兴趣的信息且这些信息通常分散在多个网络表格中<citation id="230" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。对于给定的实体与待扩展的属性名, 实体扩展以网络表格为数据源, 可返回每一实体相对应的属性值。实体扩展技术目前已被广泛应用于数据集成<citation id="231" type="reference"><link href="17" rel="bibliography" /><link href="19" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>]</sup></citation>和搜索引擎中<citation id="232" type="reference"><link href="21" rel="bibliography" /><link href="23" rel="bibliography" /><link href="25" rel="bibliography" /><sup>[<a class="sup">4</a>,<a class="sup">5</a>,<a class="sup">6</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="47">为了实现实体扩展, InfoGather系统<citation id="233" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>同时考虑与查询表具有相同属性名或相同实体的网络表格, 通过整体匹配达到扩展实体的目的。InfoGather+系统<citation id="234" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>解决了数值型数据之间单位与度量的换算问题, 实现数值型和时变型属性的扩展。文献<citation id="235" type="reference">[<a class="sup">9</a>]</citation>提出一种SearchJoin搜索引擎, 实现表格的搜索、连接以及合并操作。文献<citation id="236" type="reference">[<a class="sup">10</a>]</citation>提出基于集合覆盖的top-<i>k</i>扩展。然而, 上述方法均假设网络表格为实体-属性二元关系, 仅适用于单列属性的扩展。对于多列属性的扩展, 将<i>n</i>元的网络表格拆分为若干个实体-属性二元关系表, 拼接后容易出现实体不一致的现象。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">由网络表格之间的匹配关系可知, 用于返回结果表的网络表格在语义上和内容上相互匹配, 才能获得实体一致的结果。本文给出2种算法以实现实体的top-<i>k</i>扩展。第1种算法考虑种子表的重要性, 根据网络表格与查询表的匹配度来查找top-<i>k</i>个种子表, 并将其作为查询表的不同维度, 扩展得到top-<i>k</i>个结果表。第2种算法以网络表格为结点, 以表格间的匹配关系为边, 得到一致性匹配图。用于返回结果表的网络表格可构成一致性匹配图的完全子图, 从而将网络表格top-<i>k</i>扩展问题转换为在一致性匹配图中查找top-<i>k</i>个满足给定覆盖率阈值的完全子图的问题。</p>
+                </div>
+                <h3 id="49" name="49" class="anchor-tag">1 数据模型及相关定义</h3>
+                <div class="p1">
+                    <p id="50">为了更好地理解相关概念, 表1给出相关符号及其对应概念。</p>
+                </div>
+                <div class="area_img" id="51">
+                    <p class="img_tit"><b>表1 实体top-<i>k</i>扩展相关符号与定义</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="51" border="1"><tr><td><br />符号</td><td>详细描述</td></tr><tr><td><br /><i>Q</i> (<i>E</i>, <i>A</i>) </td><td>查询表, <i>E</i>代表实体集, <i>A</i>代表待扩展的属性名的集合</td></tr><tr><td><br /><i>T</i>={<i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, …, <i>t</i><sub><i>n</i></sub>}</td><td>网络表格集合, <i>T</i>为实体扩展的数据源</td></tr><tr><td><br /><i>RT</i></td><td>结果表, 实体扩展查询所返回的结果</td></tr><tr><td><br /><i>AT</i>={<i>at</i><sub>1</sub>, <i>at</i><sub>2</sub>, …, <i>at</i><sub><i>n</i></sub>}</td><td>答案表集合 (<i>AT</i>⊆<i>T</i>) , 每一个结果表对应一个答案表集合</td></tr><tr><td><br /><i>thCov</i></td><td>实体扩展的覆盖率阈值</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="52">对于实体扩展而言, 返回单一的结果表并不能满足用户的需求。假设带扩展的属性列为“利润”, 其所指代的具体含义并不清楚。同时, 公司不同年份具有不同的利润, 返回单一的结果表不能体现差异性。因此, 需要按照某一特定的排序方式, 返回top-<i>k</i>个结果表供用户甄选。</p>
+                </div>
+                <div class="p1">
+                    <p id="53">实体扩展结果不一致的主要原因是忽略了答案表之间的匹配关系。给定答案表集合<i>AT</i>, <i>AT</i>中任意2个答案表之间都应具有匹配关系, 答案表之间的匹配程度越高, 该答案表集合为实体扩展提供一致性结果的可能性越大。给定一系列答案表集合<image href="images/JSJC201904031_054.jpg" type="" display="inline" placement="inline"><alt></alt></image>={<i>AT</i><sub>1</sub>, <i>AT</i><sub>2</sub>, …, <i>AT</i><sub><i>n</i></sub>}, 对于答案表集合<i>AT</i><sub><i>i</i></sub>及其对应的结果表<i>RT</i><sub><i>i</i></sub>, 任意2个答案表之间的匹配度之和就表示<i>RT</i><sub><i>i</i></sub>成为查询结果的可能性。同时, 答案表集合能够作为查询结果的重要条件是, 每一个答案表都应与查询表具有较高的匹配度。</p>
+                </div>
+                <div class="p1">
+                    <p id="55"><b>定义1</b> 给定查询表<i>Q</i> (<i>E</i>, <i>A</i>) 与网络表格集合<i>T</i>, 设<i>AT</i>为实现查询表实体扩展的答案表集合且<i>AT</i>⊆<i>T</i>, 则该答案表集合的一致性支持度为:</p>
+                </div>
+                <div class="p1">
+                    <p id="56" class="code-formula">
+                        <mathml id="56"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo stretchy="false"> (</mo><mi>A</mi><mi>Τ</mi><mo>, </mo><mi>Q</mi><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo>∈</mo><mi>A</mi><mi>Τ</mi></mrow></munder><mi>m</mi></mstyle><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo stretchy="false"> (</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo>+</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>A</mi><mi>Τ</mi></mrow></munder><mi>m</mi></mstyle><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo stretchy="false"> (</mo><mi>Q</mi><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="57">其中, <i>match</i> () 表示表格间的一致性匹配度。</p>
+                </div>
+                <div class="p1">
+                    <p id="58">本文将具有较大一致性支持度的答案表集合视为好的结果, 当2个答案表集合一致性支持度相同时, 答案表个数较少的被视为较好的结果。由于将所有的答案表集合所对应的结果表全部返回给用户缺乏实际意义, 本文试图找出<i>k</i>个具有最大一致性支持度且具有较少答案表的集合, 返回其所对应的结果表。</p>
+                </div>
+                <h3 id="59" name="59" class="anchor-tag">2 实体的top-<i>k</i>扩展</h3>
+                <div class="p1">
+                    <p id="60">本文提出2种算法实现实体的top-<i>k</i>扩展。一种是基于一致性匹配度查找top-<i>k</i>个答案表集合, 另一种是基于分支限界算法实现top-<i>k</i>答案表集合的搜索。</p>
+                </div>
+                <h4 class="anchor-tag" id="61" name="61">2.1 基于一致性匹配度的实体top-<i>k</i>扩展</h4>
+                <div class="p1">
+                    <p id="62">给定查询表<i>Q</i> (<i>E</i>, <i>A</i>) 与网络表格集合<i>T</i>, 实体top-<i>k</i>扩展的目的是找到集合<i>T</i>的<i>k</i>个互不相同的答案表集合, 从中截取查询表中的缺失属性值。简而言之, 其研究的重点是找到<i>T</i>中所有满足覆盖率阈值的答案表集合, 并从中选取top-<i>k</i>个一致性匹配度较高、答案表个数较少的答案表集合。</p>
+                </div>
+                <div class="p1">
+                    <p id="63">网络表格数量庞大, 其中必然存在无关网络表。为了避免返回的答案表中包含这些无关网络表, 降低查询的准确度, 本文选择与查询表具有较高匹配度的top-<i>k</i>个网络表格作为初始的答案表。按照网络表格与查询表的一致性匹配度排序, 得到<i>k</i>个答案表的集合。具体步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="64"><b>步骤1</b> 查找种子表集。根据网络表格与查询表的一致性匹配度选取top-<i>k</i>个种子表, 构成种子表集合<citation id="237" type="reference"><link href="35" rel="bibliography" /><link href="37" rel="bibliography" /><sup>[<a class="sup">11</a>,<a class="sup">12</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="65"><b>步骤2</b> 确定候选表。为了使答案表集合的覆盖率达到给定的阈值<i>thCov</i>, 本文以种子表为初始答案表, 不断地查找候选表。</p>
+                </div>
+                <h4 class="anchor-tag" id="66" name="66">2.1.1 种子表集查找</h4>
+                <div class="p1">
+                    <p id="67">根据网络表格与查询表的匹配度来寻找种子表。表格之间的匹配度主要表现在语义相似度和内容相似度2个方面。</p>
+                </div>
+                <div class="p1">
+                    <p id="68">由于实体列的概念可以代表整个表的概念<citation id="238" type="reference"><link href="39" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>, 当2张表格的实体集语义相关时, 就认为表格之间语义相关。本文利用Probase库<citation id="239" type="reference"><link href="41" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>决定2个实体集是否语义相关。对于一个表格中的每一个实体, 计算其与另一个表格中每一个实体的相关度, 然后, 聚集实体对的相关度获得2个表格<i>t</i><sub><i>i</i></sub>和<i>t</i><sub><i>j</i></sub>的语义相关度, 计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="69" class="code-formula">
+                        <mathml id="69"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>R</mi><mi>D</mi><mo stretchy="false"> (</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mo>∀</mo><mi>e</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>E</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mo>∀</mo><mi>e</mi><msub><mrow></mrow><mi>j</mi></msub><mo>∈</mo><mi>E</mi><msub><mrow></mrow><mi>j</mi></msub></mrow></munder><mtext> </mtext></mstyle><mi>J</mi><mi>a</mi><mi>c</mi><mi>c</mi><mi>a</mi><mi>r</mi><mi>d</mi><mo stretchy="false"> (</mo><mi>C</mi><mo stretchy="false"> (</mo><mi>e</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>, </mo><mi>C</mi><mo stretchy="false"> (</mo><mi>e</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow><mrow><mrow><mo>|</mo><mrow><mi>E</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mo>|</mo></mrow><mo>⋅</mo><mrow><mo>|</mo><mrow><mi>E</mi><msub><mrow></mrow><mi>j</mi></msub></mrow><mo>|</mo></mrow></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="70">其中, <i>E</i><sub><i>i</i></sub>、<i>E</i><sub><i>j</i></sub>分别是<i>t</i><sub><i>i</i></sub>和<i>t</i><sub><i>j</i></sub>的实体集, <i>C</i> (<i>e</i>) 是由Probase库返回的实体<i>e</i>的概念集。</p>
+                </div>
+                <div class="p1">
+                    <p id="71">一般来说, 如果2个表格中的相同实体, 在同一属性名上具有相同的属性值, 则这2个表格在内容上相互匹配。例如, 2个表格都有实体“中国”, 其首都列上的属性值都应为“北京”, 如果在首都这一属性列上的相同实体的属性值所占的比例达到某个阈值, 就认为这2列属性为匹配列。为了判断2个表格在属性值上是否一致性匹配, 首先要找到这2个表中具有相同属性名的映射列。如果所有的映射列都为匹配列, 则这2个表格在值上相互匹配。在查询表缺失属性值的情况下, 如果它与一个网络表格具有相同的实体和属性名, 则其在内容上被认为是相互匹配的。为此, 本文提出表格匹配度的概念以判断2个表格是否在内容上相互匹配。</p>
+                </div>
+                <div class="p1">
+                    <p id="72"><b>定义2</b> 给定2个表格<i>t</i><sub><i>i</i></sub>和<i>t</i><sub><i>j</i></sub>, <i>C</i><sub><i>i</i></sub>和<i>C</i><sub><i>j</i></sub>分别是<i>t</i><sub><i>i</i></sub>和<i>t</i><sub><i>j</i></sub>的映射列, 则<i>t</i><sub><i>i</i></sub>和<i>t</i><sub><i>j</i></sub>的表格匹配度<i>TMD</i> (<i>t</i><sub><i>i</i></sub>, <i>t</i><sub><i>j</i></sub>) 可利用式 (3) 来计算:</p>
+                </div>
+                <div class="p1">
+                    <p id="73" class="code-formula">
+                        <mathml id="73"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mtext> </mtext><mtext> </mtext><mi>Τ</mi><mi>Μ</mi><mi>D</mi><mo stretchy="false"> (</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mfrac><mrow><mrow><mo>|</mo><mrow><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>.</mo><mi>E</mi><mstyle displaystyle="true"><mo>∩</mo><mi>t</mi></mstyle><msub><mrow></mrow><mi>j</mi></msub><mo>.</mo><mi>E</mi></mrow><mo>|</mo></mrow></mrow><mrow><mi>min</mi><mo stretchy="false">{</mo><mrow><mo>|</mo><mrow><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>.</mo><mi>E</mi></mrow><mo>|</mo></mrow><mo>, </mo><mrow><mo>|</mo><mrow><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo>.</mo><mi>E</mi></mrow><mo>|</mo></mrow><mo stretchy="false">}</mo></mrow></mfrac><mo>×</mo><mfrac><mrow><mrow><mo>|</mo><mrow><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>.</mo><mi>A</mi><mstyle displaystyle="true"><mo>∩</mo><mi>t</mi></mstyle><msub><mrow></mrow><mi>j</mi></msub><mo>.</mo><mi>A</mi></mrow><mo>|</mo></mrow></mrow><mrow><mi>min</mi><mo stretchy="false">{</mo><mrow><mo>|</mo><mrow><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>.</mo><mi>A</mi></mrow><mo>|</mo></mrow><mo>, </mo><mrow><mo>|</mo><mrow><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo>.</mo><mi>A</mi></mrow><mo>|</mo></mrow><mo stretchy="false">}</mo></mrow></mfrac><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mi>Q</mi><mo>∨</mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo>=</mo></mtd></mtr><mtr><mtd columnalign="left"><mi>Q</mi><mfrac><mrow><mrow><mo>|</mo><mrow><mo stretchy="false">{</mo><mo>&lt;</mo><mi>C</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>C</mi><msub><mrow></mrow><mi>j</mi></msub><mo>&gt;</mo><mo stretchy="false">|</mo><mi>C</mi><msub><mrow></mrow><mi>i</mi></msub><mo>≈</mo><mi>C</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">}</mo></mrow><mo>|</mo></mrow></mrow><mrow><mrow><mo>|</mo><mrow><mo stretchy="false">{</mo><mo>&lt;</mo><mi>C</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>C</mi><msub><mrow></mrow><mi>j</mi></msub><mo>&gt;</mo><mo stretchy="false">}</mo></mrow><mo>|</mo></mrow></mrow></mfrac><mo>, </mo><mrow><mo>|</mo><mrow><mo stretchy="false">{</mo><mo>&lt;</mo><mi>C</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>C</mi><msub><mrow></mrow><mi>j</mi></msub><mo>&gt;</mo><mo stretchy="false">}</mo></mrow><mo>|</mo></mrow><mo>≠</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="left"><mo>-</mo><mn>1</mn><mo>, </mo><mtext>其</mtext><mtext>他</mtext></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="74">其中, <i>t</i>.<i>E</i>是表格<i>t</i>的实体集, <i>t</i>.<i>A</i>是表格<i>t</i>的一系列属性名, <i>C</i><sub><i>i</i></sub>≈<i>C</i><sub><i>j</i></sub>表示<i>C</i><sub><i>i</i></sub>和<i>C</i><sub><i>j</i></sub>是匹配列。</p>
+                </div>
+                <div class="p1">
+                    <p id="75">在定义2中, 当2个表格没有映射列时, 其表格匹配度为-1。在这种情况下, 匹配度只能通过表格间的语义相关度来表示。当2个表格具有映射列时, 通过考虑表格间的语义相关度与内容相关性来衡量匹配度。</p>
+                </div>
+                <div class="p1">
+                    <p id="76"><b>定义3</b> 给定2个网络表格<i>t</i><sub><i>i</i></sub>和<i>t</i><sub><i>j</i></sub>, 它们之间的一致性匹配度定义为:</p>
+                </div>
+                <div class="p1">
+                    <p id="77" class="code-formula">
+                        <mathml id="77"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>m</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo stretchy="false"> (</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mi>S</mi><mi>R</mi><mi>D</mi><mo stretchy="false"> (</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo>⋅</mo><mi>Τ</mi><mi>Μ</mi><mi>D</mi><mo stretchy="false"> (</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo>, </mo><mi>Τ</mi><mi>Μ</mi><mi>D</mi><mo stretchy="false"> (</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo>≠</mo><mo>-</mo><mn>1</mn></mtd></mtr><mtr><mtd columnalign="left"><mi>S</mi><mi>R</mi><mi>D</mi><mo stretchy="false"> (</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo>, </mo><mtext>其</mtext><mtext>他</mtext></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>4</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="78">对于任意的网络表格<i>t</i><sub><i>i</i></sub>, 计算它与查询表<i>Q</i>的一致性匹配度<i>match</i> (<i>Q</i>, <i>t</i><sub><i>i</i></sub>) , 根据匹配度的大小进行排序, 从而得到top-<i>k</i>个种子表, 这些种子表构成初始的答案表集合。</p>
+                </div>
+                <h4 class="anchor-tag" id="79" name="79">2.1.2 候选表查找</h4>
+                <div class="p1">
+                    <p id="80">对于答案表集合<i>AT</i>, 以<i>cov</i> (<i>AT</i>) 表示其覆盖率。对于覆盖率小于<i>thCov</i>的答案表集合, 需要不断查找候选表来提高其覆盖率, 因此给出覆盖补足率的概念。网络表格拥有的覆盖补足率越高, 能大幅提高答案表集合覆盖率的可能性越大。</p>
+                </div>
+                <div class="p1">
+                    <p id="81"><b>定义4</b> 给定查询表<i>Q</i> (<i>E</i>, <i>A</i>) 与覆盖率小于<i>thCov</i>的答案表集合, 网络表格<i>t</i>的覆盖补足率为:</p>
+                </div>
+                <div class="p1">
+                    <p id="82"><i>SC</i> (<i>AT</i>, <i>t</i>) =<i>cov</i> (<i>AT</i>∪{<i>t</i>}) -<i>cov</i> (<i>AT</i>)      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="83">通过查找候选表<i>t</i>构建满足覆盖率阈值的答案表集合, 候选表<i>t</i>满足以下条件:</p>
+                </div>
+                <div class="p1">
+                    <p id="84" class="code-formula">
+                        <mathml id="84"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>t</mi><mo>=</mo><mrow><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mtext>a</mtext><mtext>r</mtext><mtext>g</mtext><mtext>m</mtext><mtext>a</mtext><mtext>x</mtext></mrow></mstyle><mrow><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>Τ</mi><mo>-</mo><mi>A</mi><mi>Τ</mi></mrow></munder></mrow><mtext> </mtext><mi>S</mi><mi>C</mi><mo stretchy="false"> (</mo><mi>A</mi><mi>Τ</mi><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>⋅</mo><mi>S</mi><mi>R</mi><mi>D</mi><mo stretchy="false"> (</mo><mi>Q</mi><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>+</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>j</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>A</mi><mi>Τ</mi></mrow></munder><mi>m</mi></mstyle><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo stretchy="false"> (</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="85">式 (6) 表示所选取到的候选表与查询表以及其他答案表之间具有最高的一致性匹配度。得到候选表后, 将其加入到答案表集合中。如果此时答案表集合的覆盖率仍无法满足覆盖率阈值, 则继续重复上述候选表查找步骤。具体过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="86"><b>算法1</b> CM_TOP<i>K</i></p>
+                </div>
+                <div class="p1">
+                    <p id="87"><b>输入</b> 查询表<i>Q</i> (<i>E</i>, <i>A</i>) 、覆盖率阈值<i>thCov</i>、网络表格<i>T</i></p>
+                </div>
+                <div class="p1">
+                    <p id="88"><b>输出</b> 答案表集合<i>AT</i></p>
+                </div>
+                <div class="p1">
+                    <p id="89">1.初始化<image href="images/JSJC201904031_090.jpg" type="" display="inline" placement="inline"><alt></alt></image>←ϕ, map←ϕ;</p>
+                </div>
+                <div class="p1">
+                    <p id="91">2.for each t<sub>i</sub> in T</p>
+                </div>
+                <div class="p1">
+                    <p id="92">3.map←&lt;t<sub>i</sub>, match (Q, t<sub>i</sub>) &gt;;</p>
+                </div>
+                <div class="p1">
+                    <p id="93">4.HashMapSort (map) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="94">5.end for</p>
+                </div>
+                <div class="p1">
+                    <p id="95">6.for i from 1 to k</p>
+                </div>
+                <div class="p1">
+                    <p id="96">7.t<sub>i</sub>是map的第i个表格;</p>
+                </div>
+                <div class="p1">
+                    <p id="97">8.U←BuildAT (AT, Q, T, thCov) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="98">9.<image href="images/JSJC201904031_099.jpg" type="" display="inline" placement="inline"><alt></alt></image>←U;</p>
+                </div>
+                <div class="p1">
+                    <p id="100">10.end for</p>
+                </div>
+                <div class="p1">
+                    <p id="101">11.return<image href="images/JSJC201904031_102.jpg" type="" display="inline" placement="inline"><alt></alt></image></p>
+                </div>
+                <div class="p1">
+                    <p id="103">function BuildAT (AT, Q, T, thCov) </p>
+                </div>
+                <div class="p1">
+                    <p id="104">12.if cov (AT) ≥thCov then</p>
+                </div>
+                <div class="p1">
+                    <p id="105">13.return AT;</p>
+                </div>
+                <div class="p1">
+                    <p id="106">14.else</p>
+                </div>
+                <div class="p1">
+                    <p id="107">15.F=T-AT;</p>
+                </div>
+                <div class="p1">
+                    <p id="108"><mathml id="109"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>1</mn><mn>6</mn><mo>.</mo><mtext>t</mtext><msub><mrow></mrow><mrow><mi>max</mi></mrow></msub><mo>=</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mtext>a</mtext><mtext>r</mtext><mtext>g</mtext><mtext>m</mtext><mtext>a</mtext><mtext>x</mtext><mspace width="0.25em" /></mrow></mstyle><mrow><mtext>t</mtext><msub><mrow></mrow><mtext>i</mtext></msub><mo>∈</mo><mtext>F</mtext></mrow></munder><mrow><mtext>S</mtext><mtext>C</mtext><mo stretchy="false"> (</mo><mtext>Q</mtext><mo>, </mo><mtext>t</mtext></mrow><msub><mrow></mrow><mtext>i</mtext></msub><mo stretchy="false">) </mo><mo>⋅</mo><mrow><mtext>S</mtext><mtext>R</mtext><mtext>D</mtext><mo stretchy="false"> (</mo><mtext>Q</mtext><mo>, </mo><mtext>t</mtext></mrow><msub><mrow></mrow><mtext>i</mtext></msub><mo stretchy="false">) </mo><mo>+</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mtext>t</mtext><msub><mrow></mrow><mtext>j</mtext></msub><mo>∈</mo><mtext>A</mtext><mtext>Τ</mtext></mrow></munder><mrow><mtext>m</mtext><mtext>a</mtext><mtext>c</mtext><mtext>t</mtext><mtext>h</mtext><mo stretchy="false"> (</mo><mtext>t</mtext></mrow></mstyle><msub><mrow></mrow><mtext>j</mtext></msub><mrow><mo>, </mo><mtext>t</mtext></mrow><msub><mrow></mrow><mtext>i</mtext></msub><mo stretchy="false">) </mo></mrow></math></mathml>;</p>
+                </div>
+                <div class="p1">
+                    <p id="110">17.if SC (Q, t<sub>max</sub>) ≤ε then</p>
+                </div>
+                <div class="p1">
+                    <p id="111">18.return AT;</p>
+                </div>
+                <div class="p1">
+                    <p id="112">19.else</p>
+                </div>
+                <div class="p1">
+                    <p id="113">20.AT=AT∪{t<sub>max</sub>};</p>
+                </div>
+                <div class="p1">
+                    <p id="114">21.BuildAT (AT, Q, T, thCov) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="115">22.end if</p>
+                </div>
+                <div class="p1">
+                    <p id="116">23.end if</p>
+                </div>
+                <div class="p1">
+                    <p id="117">其中, <i>HashMapSort</i> (<i>map</i>) 是<i>map</i>集合的排序函数。对于给定的集合<i>map</i>, 根据集合中值的大小进行排序, 找到<i>k</i>个与查询表具有最大一致性匹配度的网络表格。</p>
+                </div>
+                <div class="p1">
+                    <p id="118">初始答案表集合通过计算答案表与查询表的一致性匹配度获取。算法1以初始答案表集合为基础, 通过选取与查询表以及其他答案表具有最高一致性匹配度的表作为候选表, 以此扩展答案表集合。算法最终可以得到具有最高一致性支持度的top-<i>k</i>个答案表集合。</p>
+                </div>
+                <div class="p1">
+                    <p id="119">在算法1中, 当答案表集合的覆盖率不满足要求时, 通过不断调用<i>BuildAT</i> (<i>AT</i>, <i>Q</i>, <i>T</i>, <i>thCov</i>) 函数查找候选表以提高其覆盖率。对于不同的数据集, 算法1迭代的次数不同。</p>
+                </div>
+                <div class="p1">
+                    <p id="120">给定<i>N</i>个网络表格, 算法1在最坏情况下的时间复杂度为<i>O</i> (<i>N</i><sup>2</sup>) 。基于一致性匹配度的实体top-<i>k</i>算法的时间复杂度主要取决于2个方面:1) 种子表的查找;2) 满足覆盖率阈值的答案表集合的构建。为了查找<i>k</i>个种子表, 需计算每一个网络表格与查询表的一致性匹配度, 因此算法1需执行<i>N</i>次。对于不满足覆盖率阈值的种子表, 最坏的情况是需遍历所有的网络表格才可得到满足覆盖率阈值的答案表集合。对于此类种子表, 为构建满足覆盖率阈值的答案表集合需执行<i>BuildAT</i>函数<mathml id="121"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mo stretchy="false"> (</mo><mi>Ν</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>Ν</mi></mrow><mn>2</mn></mfrac></mrow></math></mathml>次。</p>
+                </div>
+                <h4 class="anchor-tag" id="122" name="122">2.2 基于分支限界的实体<i>top</i>-k扩展</h4>
+                <div class="p1">
+                    <p id="123">网络表格不同于传统的关系型表格, 其有可能会缺失表头信息。因此, 简单地根据其与查询表的一致性匹配度查找top-<i>k</i>个种子表, 再扩展为符合覆盖率阈值的答案表集合, 可能会错过一些答案表。更为稳妥的方式是找到网络表格中所有满足覆盖率阈值的答案表集合, 根据其一致性支持度与答案表的个数选取top-<i>k</i>个答案表集合。</p>
+                </div>
+                <h4 class="anchor-tag" id="124" name="124">2.2.1 一致性匹配图构建</h4>
+                <div class="p1">
+                    <p id="125">为确保实体扩展的一致性, 假设最终返回的结果表为<i>RT</i>, 为<i>RT</i>提供缺失值的答案表集合为<i>AT</i>, 本文要求对于任意<i>t</i><sub><i>i</i></sub>, <i>t</i><sub><i>j</i></sub>∈<i>AT</i>, 都存在<i>match</i> (<i>t</i><sub><i>i</i></sub>, <i>t</i><sub><i>j</i></sub>) &gt;0。以网络表格为结点, 以网络表格之间的一致性匹配度为边的权重, 可以得到一致性匹配图<i>G</i> (<i>V</i>, <i>E</i>, <i>ω</i>) , 从而获得top-<i>k</i>个答案表集合, 它们就是一致性匹配图的<i>k</i>个完全子图。</p>
+                </div>
+                <div class="p1">
+                    <p id="126"><b>定义5</b> 对于给定的网络表格<i>T</i>, 一致性匹配图表示为<i>G</i> (<i>V</i>, <i>E</i>, <i>ω</i>) , 是一个加权无向图。其中, <i>V</i>是网络表格<i>T</i>的集合, <i>E</i>是一系列网络表格间的匹配关系, 当且仅当<i>match</i> (<i>t</i><sub><i>i</i></sub>, <i>t</i><sub><i>j</i></sub>) &gt;0时, 〈<i>t</i><sub><i>i</i></sub>, <i>t</i><sub><i>j</i></sub>〉∈<i>E</i>。<i>ω</i>是一系列网络表格的匹配度, 对于任意的〈<i>t</i><sub><i>i</i></sub>, <i>t</i><sub><i>j</i></sub>〉∈<i>E</i>, <i>w</i> (<i>t</i><sub><i>i</i></sub>, <i>t</i><sub><i>j</i></sub>) ∈<i>ω</i>且<i>w</i> (<i>t</i><sub><i>i</i></sub>, <i>t</i><sub><i>j</i></sub>) =<i>match</i> (<i>t</i><sub><i>i</i></sub>, <i>t</i><sub><i>j</i></sub>) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="127">根据定义5, 可对任意的网络表格集合构建一致性匹配图。为了更好地理解一致性匹配图, 本文以图1所示的网络表格为例具体描述一致性匹配图的构建过程。在图1中, 虚线左侧是需要扩展的实体构成的查询表, 虚线右侧是作为数据源的网络表格。</p>
+                </div>
+                <div class="area_img" id="128">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904031_128.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 实体扩展示例" src="Detail/GetImg?filename=images/JSJC201904031_128.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 实体扩展示例</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904031_128.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="129">图2给出图1的一致性匹配图, 其中, 结点代表网络表格集合中的各个表格, 边代表相连的2个网络表格具有一致性匹配关系, 边上的数值为权重, 为表格间的一致性匹配度。</p>
+                </div>
+                <div class="area_img" id="130">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904031_130.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 一致性匹配示意" src="Detail/GetImg?filename=images/JSJC201904031_130.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 一致性匹配示意</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904031_130.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="131" name="131">2.2.2 top-<i>k</i>个答案表集合获取</h4>
+                <div class="p1">
+                    <p id="132">为了得到实体扩展的top-<i>k</i>个答案表集合, 需要首先获得一致性匹配图中所有满足覆盖率阈值的完全子集, 计算它们的一致性支持度, 从中获得具有最大一致性支持度的结果输出。重复上述查询步骤, 直到输出<i>k</i>个查询结果或者图中不再有满足覆盖率需求的完全子图为止。</p>
+                </div>
+                <div class="p1">
+                    <p id="133">最基本的方法是遍历一致性匹配图上的每个结点, 找到所有符合覆盖率需求的完全子图。由于网络表格中必然存在与查询表无关的项, 因此遍历效率极低。为了解决这一问题, 本文提出一种分支限界的网络表格top-<i>k</i>扩展算法<citation id="240" type="reference"><link href="43" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>。在搜索满足覆盖率阈值的完全子集时, 通过以下剪枝规则来减小搜索空间:</p>
+                </div>
+                <div class="p1">
+                    <p id="134"><b>规则1</b> 若结点<i>t</i><sub><i>i</i></sub>的覆盖补足率小于<i>ε</i>, 即结点<i>t</i><sub><i>i</i></sub>不足以将答案表集合的覆盖率提高, 则舍弃整条分支。</p>
+                </div>
+                <div class="p1">
+                    <p id="135"><b>规则2</b> 若结点<i>t</i><sub><i>i</i></sub>与查询表<i>Q</i>的一致性匹配度为0, 即结点与查询表不匹配, 则舍弃包含该节点的所有分支。</p>
+                </div>
+                <div class="p1">
+                    <p id="136">从一致性匹配图中的每个结点依次向下搜索, 查找满足覆盖率阈值的完全子集。当遇到满足剪枝规则的结点时, 舍弃该结点的所有分支, 直到最后一个结点搜索完成并得到所有的答案表集合。最后, 通过计算答案表集合的一致性支持度得到top-<i>k</i>个答案表集合。具体执行过程如算法2所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="137"><b>算法2</b> BB_TOP<i>K</i></p>
+                </div>
+                <div class="p1">
+                    <p id="138"><b>输入</b> 一致性匹配图<i>G</i> (<i>V</i>, <i>E</i>, <i>ω</i>) , 查询表<i>Q</i> (<i>E</i>, <i>A</i>) , 覆盖率阈值<i>thCov</i></p>
+                </div>
+                <div class="p1">
+                    <p id="139"><b>输出</b><i>G</i> (<i>V</i>, <i>E</i>, <i>ω</i>) 中具有最大一致性支持度的<i>k</i>个完全子图</p>
+                </div>
+                <div class="p1">
+                    <p id="140">1.初始化<image href="images/JSJC201904031_141.jpg" type="" display="inline" placement="inline"><alt></alt></image>←ϕ, map←ϕ</p>
+                </div>
+                <div class="p1">
+                    <p id="142">2.for each v<sub>i</sub> in G.V</p>
+                </div>
+                <div class="p1">
+                    <p id="143">3.U<sub>i</sub>={v<sub>i</sub>};</p>
+                </div>
+                <div class="p1">
+                    <p id="144">4.U=BuildAT (U<sub>i</sub>, Q (E, A) , G (V, S, ω) , i) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="145">5.<image href="images/JSJC201904031_146.jpg" type="" display="inline" placement="inline"><alt></alt></image>中加入U;</p>
+                </div>
+                <div class="p1">
+                    <p id="147">6.end for</p>
+                </div>
+                <div class="p1">
+                    <p id="148">7.for each U<sub>i</sub> in<image href="images/JSJC201904031_149.jpg" type="" display="inline" placement="inline"><alt></alt></image></p>
+                </div>
+                <div class="p1">
+                    <p id="150">8.map←&lt;U<sub>i</sub>, dmatch (U<sub>i</sub>, Q) &gt;;</p>
+                </div>
+                <div class="p1">
+                    <p id="151">9.end for</p>
+                </div>
+                <div class="p1">
+                    <p id="152">10.HashMapSort (map) </p>
+                </div>
+                <div class="p1">
+                    <p id="153">11.return top-k map function BuildAT (U, Q (E, A) , G (V, S, ω) , t, thCov) </p>
+                </div>
+                <div class="p1">
+                    <p id="155">12.if cov (U) ≥thCov then</p>
+                </div>
+                <div class="p1">
+                    <p id="156">13.return U;</p>
+                </div>
+                <div class="p1">
+                    <p id="157">14.if<mathml id="158"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mtext>t</mtext><mo>≥</mo><mrow><mo>|</mo><mrow><mtext>G</mtext><mo>.</mo><mtext>V</mtext></mrow><mo>|</mo></mrow><mspace width="0.25em" /><mtext>t</mtext><mtext>h</mtext><mtext>e</mtext><mtext>n</mtext></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="159">15.return null;</p>
+                </div>
+                <div class="p1">
+                    <p id="160">16.else</p>
+                </div>
+                <div class="p1">
+                    <p id="161">17.F=G.V-{v<sub>1</sub>, v<sub>2</sub>, …, v<sub>t</sub>};</p>
+                </div>
+                <div class="p1">
+                    <p id="162">18.在F中找到U中所有结点的公共邻接点U′;</p>
+                </div>
+                <div class="p1">
+                    <p id="163">19.for each v<sub>temp</sub> in U′</p>
+                </div>
+                <div class="p1">
+                    <p id="164">20.if match (Q, v<sub>temp</sub>) =0 then</p>
+                </div>
+                <div class="p1">
+                    <p id="165">21.continue;</p>
+                </div>
+                <div class="p1">
+                    <p id="166">22.if SC (U, v<sub>temp</sub>) ≤ε then</p>
+                </div>
+                <div class="p1">
+                    <p id="167">23.continue;</p>
+                </div>
+                <div class="p1">
+                    <p id="168">24.else</p>
+                </div>
+                <div class="p1">
+                    <p id="169">25.将v<sub>temp</sub>加入到U中;</p>
+                </div>
+                <div class="p1">
+                    <p id="170">26.BuildAT (U, Q (E, A) , G (V, S, ω) , temp, thCov) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="171">27.end if</p>
+                </div>
+                <div class="p1">
+                    <p id="172">28.end for</p>
+                </div>
+                <div class="p1">
+                    <p id="173">29.end if</p>
+                </div>
+                <div class="p1">
+                    <p id="174">算法2的时间复杂度主要取决于2个部分:</p>
+                </div>
+                <div class="p1">
+                    <p id="175">1) 一致性匹配图的构建。</p>
+                </div>
+                <div class="p1">
+                    <p id="176">2) 所有满足覆盖率阈值的答案表集合的查找。满足覆盖率阈值的答案表集合主要通过深度优先搜索得到, 所以时间复杂度为<i>O</i> (<i>N</i>+<i>e</i>) , 其中, <i>N</i>为网络表格的个数, <i>e</i>为一致性匹配图边的个数。</p>
+                </div>
+                <div class="p1">
+                    <p id="177">本文以图2中的一致性匹配图为例解释算法2的具体过程。查找图1给定查询表的top-2个答案表集合, 其覆盖率阈值为0.5, 具体查找过程如图3所示。在图3中, “√”处即为最终返回的top-2个答案表集合。</p>
+                </div>
+                <div class="area_img" id="178">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904031_178.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 实体top-k扩展分支限界示意图" src="Detail/GetImg?filename=images/JSJC201904031_178.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 实体top-<i>k</i>扩展分支限界示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904031_178.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="179">图3以树形结构来解释如何在一致性匹配图中得到所有满足覆盖率阈值的答案表集合。在图3中, 每个结点都包含3层。第1层表示现有答案表集合<i>AT</i>, 第2层表示<i>AT</i>中所有结点的公共邻接点, 最后一层包含新加入<i>AT</i>的结点<i>t</i><sub><i>i</i></sub>与查询表的一致性匹配度以及<i>t</i><sub><i>i</i></sub>的覆盖补足率。</p>
+                </div>
+                <div class="p1">
+                    <p id="180">从<i>t</i><sub>1</sub>结点开始搜索, 得到其所有的邻接点<i>t</i><sub>2</sub>、<i>t</i><sub>6</sub>和<i>t</i><sub>7</sub>。由于结点<i>t</i><sub>1</sub>与查询表的一致性匹配度大于0且覆盖补足率大于<i>ε</i>, 因此可以继续往下搜索。向<i>AT</i>中依次添加<i>t</i><sub>1</sub>的邻接点<i>t</i><sub>2</sub>, 它对于答案表集合的覆盖补足率为0, 满足剪枝规则1, 因此剪切相应的分支。而新添加的邻接点<i>t</i><sub>6</sub>并不满足剪枝规则, 但是并无候选表可以提高答案表集合的覆盖率, 所以终止此分支的搜索。通过搜索得到答案表集合{<i>t</i><sub>1</sub>, <i>t</i><sub>7</sub>}满足覆盖率阈值, 且只有{<i>t</i><sub>1</sub>, <i>t</i><sub>7</sub>}满足, 因此, 最终返回的top-2答案表集合为{<i>t</i><sub>1</sub>, <i>t</i><sub>7</sub>}, 具体结果如表2所示。</p>
+                </div>
+                <div class="area_img" id="181">
+                    <p class="img_tit"><b>表2 基于分支限界的实体top-<i>k</i>扩展结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="181" border="1"><tr><td><br />公司</td><td>总部所在地</td><td>利润/10<sup>10</sup>美元</td><td>排名</td></tr><tr><td><br />花旗集团</td><td>美国</td><td>24.64</td><td>1</td></tr><tr><td><br />苹果</td><td>—</td><td>—</td><td>—</td></tr><tr><td><br />摩根大通</td><td>美国</td><td>8.48</td><td>9</td></tr><tr><td><br />电装</td><td>日本</td><td>8.51</td><td>—</td></tr><tr><td><br />保时捷</td><td>—</td><td>—</td><td>—</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="182">采用传统的InfoGather算法进行扩展时, 由于<i>t</i><sub>1</sub>、<i>t</i><sub>4</sub>与查询表的相似度相同, 结果表的第1列和第3列从<i>t</i><sub>1</sub>中选取, 而第2列从<i>t</i><sub>4</sub>中选取, 如表3所示。事实上, <i>t</i><sub>1</sub>和<i>t</i><sub>4</sub>分别是2006年和2008年的数据, 结果表的实体存在明显差别。</p>
+                </div>
+                <div class="area_img" id="183">
+                    <p class="img_tit"><b>表3 InfoGather算法实体top-<i>k</i>扩展结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="183" border="1"><tr><td><br />公司</td><td>总部所在地</td><td>利润/10<sup>10</sup>美元</td><td>排名</td></tr><tr><td><br />花旗集团</td><td>美国</td><td>—</td><td>1</td></tr><tr><td><br />苹果</td><td>美国</td><td>—</td><td>—</td></tr><tr><td><br />摩根大通</td><td>美国</td><td>—</td><td>9</td></tr><tr><td><br />电装</td><td>—</td><td>1.75</td><td>—</td></tr><tr><td><br />保时捷</td><td>—</td><td>5.72</td><td>—</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="184">从表2和表3可知, 本文算法能给出高一致性和准确性的结果表。获取top-<i>k</i>个答案表集合后, 对于每一个答案表集合都可以返回一个结果表, 可返回top-<i>k</i>个结果表。</p>
+                </div>
+                <h3 id="185" name="185" class="anchor-tag">3 实验结果与分析</h3>
+                <h4 class="anchor-tag" id="186" name="186">3.1 实验参数设置</h4>
+                <div class="p1">
+                    <p id="187">实验在Inter Core i5-2320 3.00 GHz、4 GB内存、1 TB硬盘的计算机上完成, 采用Windows 7操作系统、Java编程语言, 开发环境为Eclipse。</p>
+                </div>
+                <div class="p1">
+                    <p id="188">表4给出用于扩展实体的查询表信息, 数据源来自WDC网络表格语义库, 从中获取16 GB的网络表格。</p>
+                </div>
+                <div class="area_img" id="189">
+                    <p class="img_tit"><b>表4 查询表的特征值</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="189" border="1"><tr><td><br />查询表类型</td><td>实体名</td><td>待扩展属性名</td></tr><tr><td><br />书</td><td>书名</td><td>作者、出版日期</td></tr><tr><td><br />公司</td><td>公司名</td><td>总部、产业</td></tr><tr><td><br />国家</td><td>国家名</td><td>首都、面积</td></tr><tr><td><br />歌曲</td><td>歌曲名</td><td>歌手、歌曲时长</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="190" name="190">3.2 算法性能分析</h4>
+                <div class="p1">
+                    <p id="191">本文提出2种top-<i>k</i>扩展算法:</p>
+                </div>
+                <div class="p1">
+                    <p id="192">1) MDT算法:基于一致性匹配度的top-<i>k</i>扩展算法。通过计算查询表与网络表格的一致性匹配度得到top-<i>k</i>个种子表, 以种子表作为查询表的不同维度, 扩展得到top-<i>k</i>个答案表集合。</p>
+                </div>
+                <div class="p1">
+                    <p id="193">2) BBT算法:基于分支限界的top-<i>k</i>扩展算法。该方法根据网络表格间的一致性匹配度建立一致性匹配图。通过分支限界的搜索方法, 得到所有满足覆盖率阈值的答案表集合, 并从中得到top-<i>k</i>个答案表集合。</p>
+                </div>
+                <div class="p1">
+                    <p id="194">本文从一致性、覆盖率、精确度以及可信度4个方面来对比MDT算法与BBT算法的性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="195">覆盖率是指答案表集合所能填充的查询表的比例, 如式 (7) 所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="196" class="code-formula">
+                        <mathml id="196"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mi>c</mi><mi>o</mi><mi>v</mi></mrow><mo>=</mo><mfrac><mrow><mrow><mo>|</mo><mrow><mi>v</mi><mi>a</mi><mi>u</mi><mi>l</mi><mi>e</mi><mi>s</mi><mo>_</mo><mtext> </mtext><mi>f</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>d</mi></mrow><mo>|</mo></mrow></mrow><mrow><mo>#</mo><mi>C</mi><mi>e</mi><mi>l</mi><mi>l</mi><mi>s</mi><mo stretchy="false"> (</mo><mi>Q</mi><mo stretchy="false">) </mo></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>7</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="197">其中, #<i>Cells</i> (<i>Q</i>) 表示查询表的单元格总数。</p>
+                </div>
+                <div class="p1">
+                    <p id="198">精确度是指结果表中所填充内容的准确率, 如式 (8) 所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="199" class="code-formula">
+                        <mathml id="199"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mo>=</mo><mfrac><mrow><mrow><mo>|</mo><mrow><mi>v</mi><mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mi>s</mi><mo>_</mo><mtext> </mtext><mi>f</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>d</mi><mstyle displaystyle="true"><mo>∩</mo><mi>v</mi></mstyle><mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mi>s</mi><mo>_</mo><mi>t</mi><mi>r</mi><mi>u</mi><mi>t</mi><mi>h</mi></mrow><mo>|</mo></mrow></mrow><mrow><mrow><mo>|</mo><mrow><mi>v</mi><mi>a</mi><mi>l</mi><mi>u</mi><mi>e</mi><mi>s</mi><mo>_</mo><mtext> </mtext><mi>f</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>d</mi></mrow><mo>|</mo></mrow></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>8</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="200">一致性是指答案表之间的一致性匹配度, 当只有1个答案表时, 将一致性设为最高值1, 如式 (9) 所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="201" class="code-formula">
+                        <mathml id="201"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>c</mi><mi>o</mi><mi>n</mi><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mn>1</mn><mo>, </mo><mrow><mo>|</mo><mrow><mi>A</mi><mi>Τ</mi></mrow><mo>|</mo></mrow><mo>=</mo><mn>1</mn></mtd></mtr><mtr><mtd columnalign="left"><mn>1</mn><mo>-</mo><mrow><mo>|</mo><mrow><mi>lg</mi><mrow><mo>〚</mo><mi>s</mi><mi>i</mi><mi>m</mi><mo stretchy="false"> (</mo><mi>A</mi><mi>Τ</mi><mo stretchy="false">) </mo><mo>≥</mo><mn>0</mn><mo>.</mo><mn>1</mn><mo>〛</mo></mrow><msubsup><mrow></mrow><mrow><mn>0</mn><mo>.</mo><mn>1</mn></mrow><mrow><mi>s</mi><mi>i</mi><mi>m</mi><mo stretchy="false"> (</mo><mi>A</mi><mi>Τ</mi><mo stretchy="false">) </mo></mrow></msubsup></mrow><mo>|</mo></mrow><mo>, </mo><mtext>其</mtext><mtext>他</mtext></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>9</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="202">其中, <i>sim</i> (<i>AT</i>) =<i>avg</i><mathml id="203"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mo>∀</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo>∈</mo><mi>A</mi><mi>Τ</mi></mrow></munder><mi>m</mi></mstyle><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo stretchy="false"> (</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo></mrow></math></mathml>并且<mathml id="204"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>〚</mo><mi>s</mi><mi>i</mi><mi>m</mi><mo stretchy="false"> (</mo><mi>A</mi><mi>Τ</mi><mo stretchy="false">) </mo><mo>≥</mo><mn>0</mn><mo>.</mo><mn>1</mn><mo>〛</mo></mrow><msubsup><mrow></mrow><mrow><mn>0</mn><mo>.</mo><mn>1</mn></mrow><mrow><mi>s</mi><mi>i</mi><mi>m</mi><mo stretchy="false"> (</mo><mi>A</mi><mi>Τ</mi><mo stretchy="false">) </mo></mrow></msubsup><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mi>s</mi><mi>i</mi><mi>m</mi><mo stretchy="false"> (</mo><mi>A</mi><mi>Τ</mi><mo stretchy="false">) </mo><mo>, </mo><mi>s</mi><mi>i</mi><mi>m</mi><mo stretchy="false"> (</mo><mi>A</mi><mi>Τ</mi><mo stretchy="false">) </mo><mo>≥</mo><mn>0</mn><mo>.</mo><mn>1</mn></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn><mo>.</mo><mn>1</mn><mo>, </mo><mtext>其</mtext><mtext>他</mtext><mspace width="0.25em" /></mtd></mtr></mtable></mrow></mrow></mrow></math></mathml>。</p>
+                </div>
+                <div class="p1">
+                    <p id="206">可信度为一致性、覆盖率和精确度的调和平均值, 如式 (10) 所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="207" class="code-formula">
+                        <mathml id="207"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>r</mi><mi>e</mi><mi>l</mi><mi>i</mi><mi>a</mi><mo>=</mo><mfrac><mrow><mn>3</mn><mi>c</mi><mi>o</mi><mi>v</mi><mo>⋅</mo><mi>p</mi><mi>r</mi><mi>e</mi><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>n</mi></mrow><mrow><mi>c</mi><mi>o</mi><mi>v</mi><mo>⋅</mo><mi>p</mi><mi>r</mi><mi>e</mi><mo>+</mo><mi>p</mi><mi>r</mi><mi>e</mi><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>n</mi><mo>+</mo><mi>c</mi><mi>o</mi><mi>v</mi><mo>⋅</mo><mi>c</mi><mi>o</mi><mi>n</mi></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>0</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="208">在各个数据集上, 不同覆盖率阈值下可信度的平均值如图4所示。由图4可知, 当thCov取0.7时, 可信度值最大, 因此, 本文假设thCov为0.7。</p>
+                </div>
+                <div class="area_img" id="209">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904031_209.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 不同覆盖率阈值下可信度的平均值" src="Detail/GetImg?filename=images/JSJC201904031_209.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 不同覆盖率阈值下可信度的平均值</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904031_209.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="210">在WDC数据集上进行实验, 对比MDT算法与BBT算法的实验结果, 以验证本文2种算法在网络表格top-<i>k</i>扩展上的有效性。</p>
+                </div>
+                <div class="p1">
+                    <p id="211">图5、图6分别给出2种算法的覆盖率和一致性对比。由图5可以看出, 在“书”与“歌曲”数据集上, BBT算法存在覆盖率为0的情况, MDT算法覆盖率均大于0, 但是并未都达到覆盖率阈值。这是因为, MDT算法在查找答案表集合时, 如果其覆盖率达不到阈值, 会返回所能提供的最大覆盖率, 而BBT算法则会剪枝, 因此返回值为空。在“公司”与“国家”数据集上, BBT算法的覆盖率全部达到阈值, 而MDT算法的覆盖率存在小于阈值的情况。这是因为, MDT算法只根据找到的top-<i>k</i>个种子表进行扩展, 得到答案表集合, 可能会错过一些能够提供高覆盖率的答案表集合。而BBT算法会在找到的所有满足覆盖率阈值的答案表集合中查找top-<i>k</i>个答案表集合, 能够避免上述情况的发生。</p>
+                </div>
+                <div class="area_img" id="212">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904031_212.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 2种算法在不同数据集上的覆盖率对比" src="Detail/GetImg?filename=images/JSJC201904031_212.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 2种算法在不同数据集上的覆盖率对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904031_212.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="213">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904031_213.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 2种算法在不同数据集上的一致性对比" src="Detail/GetImg?filename=images/JSJC201904031_213.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 2种算法在不同数据集上的一致性对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904031_213.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="214">由图6可知, MDT算法与BBT算法无明显区别, 2个算法都随着<i>k</i>的增大而减小。MDT算法以种子表作为查询表不同的维度进行扩展。在选取候选表时, 随着<i>k</i>的增大, 已选网络表格的数目增大, 可选的候选表的数目减少, 因此一致性降低。BBT算法在所有满足覆盖率阈值的答案表集合中, 根据其一致性支持度来获取top-<i>k</i>个答案表集合, 而一致性支持度的重要组成部分就是答案表集合的一致性, 因此, 随着<i>k</i>的增大, BBT算法的一致性降低。</p>
+                </div>
+                <div class="p1">
+                    <p id="215">图7给出2种算法的准确度对比, 由图7可知, 2种算法的准确度基本一致且并未随<i>k</i>的增大而降低。这是因为2种算法都考虑了答案表之间的一致性匹配关系, 大幅提高了准确度。</p>
+                </div>
+                <div class="area_img" id="216">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904031_216.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 2种算法在不同数据集上的精确度对比" src="Detail/GetImg?filename=images/JSJC201904031_216.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图7 2种算法在不同数据集上的精确度对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904031_216.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="217">图8为2种算法的可信度对比。可信度是准确度、一致性和覆盖率的调和平均值, 能够更好地衡量算法性能。</p>
+                </div>
+                <div class="area_img" id="218">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904031_218.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图8 2种算法在不同数据集上的可信度对比" src="Detail/GetImg?filename=images/JSJC201904031_218.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图8 2种算法在不同数据集上的可信度对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904031_218.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="219">由图8可以看出, 2种算法的可信度都随着<i>k</i>的增大呈下降态势, 且BBT算法优于MDT算法。</p>
+                </div>
+                <div class="p1">
+                    <p id="220">对于实体top-<i>k</i>扩展, 为了使结果表尽可能地提供不同的信息, 利用同一数据集的不同答案表集合之间的差异性来衡量结果表的多样性。对于答案表集合<i>AT</i><sub><i>i</i></sub>和<i>AT</i><sub><i>j</i></sub>, 取其中任意2个答案表<i>t</i><sub><i>i</i></sub>和<i>t</i><sub><i>j</i></sub>, 计算它们的一致性匹配度并取其均值作为答案表集合<i>AT</i><sub><i>i</i></sub>和<i>AT</i><sub><i>j</i></sub>的相似度。这2个答案表集合的相似度越高, 结果表的多样性就越低。对于top-<i>k</i>个答案表集合, 通过式 (11) 计算结果表的多样性。</p>
+                </div>
+                <div class="p1">
+                    <p id="221"><i>div</i>=1-<i>F</i><sub>∀<i>AT</i><sub><i>i</i></sub>, <i>AT</i><sub><i>j</i></sub>∈</sub><image href="images/JSJC201904031_222.jpg" type="" display="inline" placement="inline"><alt></alt></image><sub></sub><i>avg</i><mathml id="223"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>A</mi><mi>Τ</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo>∈</mo><mi>A</mi><mi>Τ</mi><msub><mrow></mrow><mi>j</mi></msub></mrow></munder><mi>m</mi></mstyle><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo stretchy="false"> (</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo></mrow></math></mathml>      (11) </p>
+                </div>
+                <div class="p1">
+                    <p id="224">其中, <i>F</i>函数可以表示为多种形式, 例如最大值、平均值等, 本文取最大值。</p>
+                </div>
+                <div class="p1">
+                    <p id="225">2种算法在不同数据集上的多样性对比结果如图9所示。由图9可知, MDT算法的多样性在4个数据集上均大于BBT算法, 这是因为MDT算法根据top-<i>k</i>个种子表扩展得到结果集, 通过查找不同的种子表并将其作为初始答案表进行扩展得到最终的答案表集合, 大幅提高了答案表集合的多样性。</p>
+                </div>
+                <div class="area_img" id="226">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904031_226.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图9 2种算法的多样性对比" src="Detail/GetImg?filename=images/JSJC201904031_226.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图9 2种算法的多样性对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904031_226.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="227">总体来说, MDT算法得到的top-<i>k</i>个结果表具有较高的多样性, 但是可信度低于BBT算法。BBT算法能够提供更加准确和一致的结果, 但是在数据集不充分的情况下会返回空值。用户可根据不同的需求酌情选取扩展算法。</p>
+                </div>
+                <h3 id="228" name="228" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="229">为了解决实体扩展不一致的问题, 本文提出一致性匹配度这一概念, 认为任意2个答案表之间都应具有较高的一致性匹配度。基于一致性匹配关系, 将MDT算法与BBT算法用于实体的top-<i>k</i>扩展。实验结果表明, 这2种算法解决了传统top-<i>k</i>扩展方法只能应用于单列扩展的弊端, 实现了实体的多列扩展。下一步将尝试实现实体扩展的并行算法。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="15">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201712031&amp;v=MTEyMDhaZVJvRnkvblU3M01MejdCYmJHNEg5Yk5yWTlHWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2U=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 张丽方, 王宁, 齐飞.Web表格的实体列发现算法[J].计算机工程, 2017, 43 (12) :165-172.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Data integration for the relational web">
+
+                                <b>[2]</b> CAFARELLA M J, HALEVY A, KHOUSSAINOVA N.Data integration for the relational web[J].Proceedings of the VLDB Endowment, 2009, 2 (1) :1090-1101.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=WebTables: exploring the power of tables on the web">
+
+                                <b>[3]</b> CAFARELLA M J, HALEVY A, WANG D Z, et al.Web tables:exploring the power of tables on the web[J], Proceedings of the VLDB Endowment, 2008, 1 (1) :538-549.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Uncovering the relational web">
+
+                                <b>[4]</b> CAFARELLA M J, HALEVY A, WANG D Z, et al.Uncovering the relational web[EB/OL].[2017-12-01].http://web.eecs.umich.edu/～michjc/papers/web tables_webdb08.pdf.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Applying web tables in practice">
+
+                                <b>[5]</b> BALAKRISHNAN S, HALEVY A, HARB B, et al.Applying web tables in practice[EB/OL].[2017-12-01].http://cidrdb.org/cidr2015/Papers/CIDR15_Paper3.pdf.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Google fusion tables:web-centered data management and collaboration">
+
+                                <b>[6]</b> GONZALEZ H, HALEVY A Y, JENSEN C S, et al.Google fusion tables:Web-centered data management and collaboration[C]//Proceedings of 2010 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2010:1061-1066.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=InfoGather:Entity Augmentation and Attribute Discovery By Holistic Matching with Web Tables">
+
+                                <b>[7]</b> YAKOUT M, GANJAM K, CHAKRABARTI K, et al.Infogather:entity augmentation and attribute discovery by holistic matching with web tables[C]//Proceedings of 2012 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2012:97-108.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Infogather+:Semantic matching and annotation of numeric and time-varying attributes in web tables">
+
+                                <b>[8]</b> ZHANG M, CHAKRABARTI K.Infogather+:semantic matching and annotation of numeric and time-varying attributes in web tables[C]//Proceedings of 2013 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2013:145-156.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Search joins with the Web">
+
+                                <b>[9]</b> BIZER C.Search joins with the Web[C]//Proceedings of the 17th International Conference on Database Theory.Berlin, Germany:Springer, 2014:3.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Top-k entity augmentation using consistent set covering">
+
+                                <b>[10]</b> EBERIUS J, THIELE M, BRAUNSCHWEIG K, et al.Top-k entity augmentation using consistent set covering[C]//Proceedings of the 27th International Conference on Scientific and Statistical Database Management.New York, USA:ACM Press, 2015:1-12.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00002608083&amp;v=MzA0NDRSN3FlYnVkdEZDN2xWTDNJSWxvPU5qN0Jhck80SHRIT3FZOU5aT01NWTNrNXpCZGg0ajk5U1hxUnJ4b3hjTUg3&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> RAHM E, BERNSTEIN P A.A survey of approaches to automatic schema matching[J].The International Journal on Very Large Data Bases, 2001, 10 (4) :334-350.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=2009246561.nh&amp;v=MTc5NjBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L25VNzNNVjEyN0Y3RzhHTlRLcnBFYlBJUUs=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 孙瑾.数据库模式匹配方法的研究[D].济南:山东大学, 2009.
+                            </a>
+                        </p>
+                        <p id="39">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Finding related tables">
+
+                                <b>[13]</b> SARMA A D, FANG L, GUPTA N, et al.Finding related tables[C]//Proceedings of 2012 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2012:817-828.
+                            </a>
+                        </p>
+                        <p id="41">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Probase:A probabilistic taxonomy for text understanding">
+
+                                <b>[14]</b> WU W, LI H, WANG H, et al.Probase:a probabilistic taxonomy for text understanding[C]//Proceedings of 2012 ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2012:481-492.
+                            </a>
+                        </p>
+                        <p id="43">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201211005&amp;v=MDE1MTQ5RllZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L25VNzNNTHo3QmRyRzRIOVBOcm8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 孙焕良, 卢智, 刘俊岭, 等.图数据中Top-k属性差异q-clique查询[J].计算机学报, 2012, 35 (11) :2265-2274.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201904031" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201904031&amp;v=MTIzNjViRzRIOWpNcTQ5R1pZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L25VNzNNTHo3QmI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

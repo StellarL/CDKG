@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637135592325315000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJYRJ201909014%26RESULT%3d1%26SIGN%3diRN35Lc%252bmP1XN1HBXl%252byK3%252fckXY%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201909014&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201909014&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201909014&amp;v=MDM3NzN5bmhVYnZMTHpUWlpMRzRIOWpNcG85RVlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEY=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="&lt;b&gt;0 引 言&lt;/b&gt; "><b>0 引 言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#47" data-title="&lt;b&gt;1 研究目标&lt;/b&gt; "><b>1 研究目标</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#50" data-title="&lt;b&gt;2 数 据&lt;/b&gt; "><b>2 数 据</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#51" data-title="&lt;b&gt;2.1 数据提取&lt;/b&gt;"><b>2.1 数据提取</b></a></li>
+                                                <li><a href="#56" data-title="&lt;b&gt;2.2 数据预处理&lt;/b&gt;"><b>2.2 数据预处理</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#58" data-title="&lt;b&gt;3 构建模型&lt;/b&gt; "><b>3 构建模型</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#59" data-title="&lt;b&gt;3.1 神经网络结构&lt;/b&gt;"><b>3.1 神经网络结构</b></a></li>
+                                                <li><a href="#71" data-title="&lt;b&gt;3.2 BP算法&lt;/b&gt;"><b>3.2 BP算法</b></a></li>
+                                                <li><a href="#75" data-title="&lt;b&gt;3.3 特征变量筛选与显著性&lt;/b&gt;"><b>3.3 特征变量筛选与显著性</b></a></li>
+                                                <li><a href="#82" data-title="&lt;b&gt;3.4 ROC曲线和混淆矩阵&lt;/b&gt;"><b>3.4 ROC曲线和混淆矩阵</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#88" data-title="&lt;b&gt;4 模型评价&lt;/b&gt; "><b>4 模型评价</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#103" data-title="&lt;b&gt;5 结 语&lt;/b&gt; "><b>5 结 语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#53" data-title="&lt;b&gt;表1 原始属性&lt;/b&gt;"><b>表1 原始属性</b></a></li>
+                                                <li><a href="#61" data-title="图1 神经网络结构">图1 神经网络结构</a></li>
+                                                <li><a href="#70" data-title="图2 隐藏层节点内部工作原理示意图">图2 隐藏层节点内部工作原理示意图</a></li>
+                                                <li><a href="#73" data-title="图3 隐藏层节点内部工作原理">图3 隐藏层节点内部工作原理</a></li>
+                                                <li><a href="#90" data-title="&lt;b&gt;表2 人工神经网络(ANN)输入的显著相关性&lt;/b&gt;"><b>表2 人工神经网络(ANN)输入的显著相关性</b></a></li>
+                                                <li><a href="#93" data-title="表3 BP神经网络故障预测模型的特征移除顺序">表3 BP神经网络故障预测模型的特征移除顺序</a></li>
+                                                <li><a href="#96" data-title="图4 为BP神经网络故障预测模型测试集误
+分类率随移除特征变量变化图">图4 为BP神经网络故障预测模型测试集误
+分类率随移除特征变量变化图</a></li>
+                                                <li><a href="#97" data-title="图5 BP神经网络故障预测模型的ROC曲线(AUC=0.87)">图5 BP神经网络故障预测模型的ROC曲线(AUC=0.87)</a></li>
+                                                <li><a href="#98" data-title="图6 BP神经网络故障预测模型的混淆矩阵">图6 BP神经网络故障预测模型的混淆矩阵</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" Clapper J R,Young J J,Cartwright J E,et al.Unmanned Systems Integrated Roadmap 2009-2034[R].Office of the Secretary of Defense,Washington,DC,2010." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Unmanned Systems Integrated Roadmap 2009-2034">
+                                        <b>[1]</b>
+                                         Clapper J R,Young J J,Cartwright J E,et al.Unmanned Systems Integrated Roadmap 2009-2034[R].Office of the Secretary of Defense,Washington,DC,2010.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" Williams K W.A summary of unmanned aircraft accident/incident data:Human factors implications[R].US Department of Transportation,Federal Aviation Administration,2004." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A summary of unmanned aircraft accident/incident data:Human factors implications">
+                                        <b>[2]</b>
+                                         Williams K W.A summary of unmanned aircraft accident/incident data:Human factors implications[R].US Department of Transportation,Federal Aviation Administration,2004.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" Tvaryanas A P,Thompson W T.Recurrent error pathways in HFACS data:analysis of 95 mishaps with remotely piloted aircraft[J].Aviation,space,and environmental medicine,2008,79(5):525-532." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCV&amp;filename=SJCV15091000001059&amp;v=MTA1NzNIL2lyUmRHZXJxUVRNbndaZVp0RmlubFVyeklJVm9XYmhFPU5pZkllTEs5SHRqTnI0OUZaT3NPREhrd29CTVQ2VDRQUQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         Tvaryanas A P,Thompson W T.Recurrent error pathways in HFACS data:analysis of 95 mishaps with remotely piloted aircraft[J].Aviation,space,and environmental medicine,2008,79(5):525-532.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" Dalamagkidis K,Valavanis K P,Piegl L A.On unmanned aircraft systems issues,challenges and operational restrictions preventing integration into the National Airspace System[J].Progress in Aerospace Sciences,2008,44(7-8):503-519." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13012100662138&amp;v=MTM1NTAwTkRYOHhvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0RmlubFVyeklJVm9XYmhFPU5pZk9mYks3SHRET3JvOUZZdQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         Dalamagkidis K,Valavanis K P,Piegl L A.On unmanned aircraft systems issues,challenges and operational restrictions preventing integration into the National Airspace System[J].Progress in Aerospace Sciences,2008,44(7-8):503-519.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" Clothier R A,Palmer J L,Walker R A,et al.Definition of an airworthiness certification framework for civil unmanned aircraft systems[J].Safety science,2011,49(6):871-885." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501879003&amp;v=MDgzOTVQUUgvaXJSZEdlcnFRVE1ud1plWnRGaW5sVXJ6SUlWb1diaEU9TmlmT2ZiSzdIdEROcW85RWJPd0dESHc2b0JNVDZUNA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         Clothier R A,Palmer J L,Walker R A,et al.Definition of an airworthiness certification framework for civil unmanned aircraft systems[J].Safety science,2011,49(6):871-885.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" Magister T.The small unmanned aircraft blunt criterion based injury potential estimation[J].Safety science,2010,48(10):1313-1320." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501879134&amp;v=MDM4MTd0RE5xbzlFYk93R0RYODlvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0RmlubFVyeklJVm9XYmhFPU5pZk9mYks3SA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         Magister T.The small unmanned aircraft blunt criterion based injury potential estimation[J].Safety science,2010,48(10):1313-1320.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" Nullmeyer R,Herz R,Montijo G.Training interventions to reduce air force predator mishaps[R].Air Force Research Lab Mesa AZ Human Effectiveness Directorate,2009." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Training interventions to reduce air force predator mishaps">
+                                        <b>[7]</b>
+                                         Nullmeyer R,Herz R,Montijo G.Training interventions to reduce air force predator mishaps[R].Air Force Research Lab Mesa AZ Human Effectiveness Directorate,2009.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" Carnie R J,Walker R A,Corke P I.Image processing algorithms for UAV “sense and avoid”[C]// Proceedings 2006 IEEE International Conference on Robotics and Automation.ICRA 2006.IEEE,2006:2848-2853." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Image Processing Algorithms for UAV Sense andAvoid">
+                                        <b>[8]</b>
+                                         Carnie R J,Walker R A,Corke P I.Image processing algorithms for UAV “sense and avoid”[C]// Proceedings 2006 IEEE International Conference on Robotics and Automation.ICRA 2006.IEEE,2006:2848-2853.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" Teets Jr E,Donohue C,Underwood K,et al.Atmospheric considerations for uninhabited aerial vehicle (UAV) flight test planning[C]//36th AIAA Aerospace Sciences Meeting and Exhibit.1998:748." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Atmospheric considerations for uninhabited aerial vehicle (UAV) flight test planning">
+                                        <b>[9]</b>
+                                         Teets Jr E,Donohue C,Underwood K,et al.Atmospheric considerations for uninhabited aerial vehicle (UAV) flight test planning[C]//36th AIAA Aerospace Sciences Meeting and Exhibit.1998:748.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" Weibel R E,Hansman R J.Safety Considerations for Operation of Unmanned Aerial Vehicles in the National Airspace System[R].Cambridge,MA:MIT International Center for Air Transportation,2005." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Safety Considerations for Operation of Unmanned Aerial Vehicles in the National Airspace System">
+                                        <b>[10]</b>
+                                         Weibel R E,Hansman R J.Safety Considerations for Operation of Unmanned Aerial Vehicles in the National Airspace System[R].Cambridge,MA:MIT International Center for Air Transportation,2005.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" >
+                                        <b>[11]</b>
+                                     Magister T.The small unmanned aircraft blunt criterion based injury potential estimation[J].Safety science,2010,48(10):1313-1320.</a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" Dermentzoudis M.Establishment of models and data tracking for small UAV reliability[R].Naval Postgraduate School Monterey CA,2004." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Establishment of models and data tracking for small UAV reliability">
+                                        <b>[12]</b>
+                                         Dermentzoudis M.Establishment of models and data tracking for small UAV reliability[R].Naval Postgraduate School Monterey CA,2004.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 刁文琦,宁彬,孙国强.无人机故障树分析(FTA)技术研究及工程应用[J].飞机设计,2012,32(5):56-60." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=FJSJ201205012&amp;v=MjE5MjI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5oVWJ2TEl5ZllaTEc0SDlQTXFvOUVab1FLREg=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         刁文琦,宁彬,孙国强.无人机故障树分析(FTA)技术研究及工程应用[J].飞机设计,2012,32(5):56-60.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 冯军.基于FTF方法的无人机液压与冷气系统可靠性分析[D].成都:电子科技大学,2011." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1011191984.nh&amp;v=MDcwODIyNkg3S3hIOWpFcTVFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5bmhVYnZMVkY=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         冯军.基于FTF方法的无人机液压与冷气系统可靠性分析[D].成都:电子科技大学,2011.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" Benjamin C C.Methods for Improvements in Airworthiness of Small UAS[R].North Carolina State University,2008." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Methods for Improvements in Airworthiness of Small UAS">
+                                        <b>[15]</b>
+                                         Benjamin C C.Methods for Improvements in Airworthiness of Small UAS[R].North Carolina State University,2008.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" 王俊祥.FMECA方法在无人机燃油系统中的应用[D].成都:电子科技大学,2011." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1011192206.nh&amp;v=MjExNjNVUjdxZlp1WnRGeW5oVWJ2TFZGMjZIN0t4SE5QTXFaRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         王俊祥.FMECA方法在无人机燃油系统中的应用[D].成都:电子科技大学,2011.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" 孙月.基于FMECA和FTA的无人机起降系统可靠性研究[D].成都:电子科技大学,2010." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=2010233027.nh&amp;v=MTkyNzViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnluaFVidkxWMTI2SHJHN0hkSE9xSkU=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                         孙月.基于FMECA和FTA的无人机起降系统可靠性研究[D].成都:电子科技大学,2010.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_18" title=" Bauer K.OPER 685-Multivariate Analysis Class Notes[D].Wright-Patterson AFB OH:Air Force Institute of Technology,2013." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=OPER 685-Multivariate Analysis Class Notes">
+                                        <b>[18]</b>
+                                         Bauer K.OPER 685-Multivariate Analysis Class Notes[D].Wright-Patterson AFB OH:Air Force Institute of Technology,2013.
+                                    </a>
+                                </li>
+                                <li id="39">
+
+
+                                    <a id="bibliography_19" title=" Tarr G L.Multi-layered feedforward neural networks for image segmentation[D].Air Force Institute of Technology,School of Engineering,1991." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Multi-layered feedforward neural networks for image segmentation">
+                                        <b>[19]</b>
+                                         Tarr G L.Multi-layered feedforward neural networks for image segmentation[D].Air Force Institute of Technology,School of Engineering,1991.
+                                    </a>
+                                </li>
+                                <li id="41">
+
+
+                                    <a id="bibliography_20" title=" Bauer Jr K W,Alsing S G,Greene K A.Feature screening using signal-to-noise ratios[J].Neurocomputing,2000,31(1/4):29-44." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501915233&amp;v=MDc2MDBGaW5sVXJ6SUlWb1diaEU9TmlmT2ZiSzdIdEROcW85RWJlb0tEbjg2b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[20]</b>
+                                         Bauer Jr K W,Alsing S G,Greene K A.Feature screening using signal-to-noise ratios[J].Neurocomputing,2000,31(1/4):29-44.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JYRJ" target="_blank">计算机应用与软件</a>
+                2019,36(09),70-75 DOI:10.3969/j.issn.1000-386x.2019.09.013            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>BP神经网络模型在无人机系统故障预测中的应用分析</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%8B%8F%E7%BB%AD%E5%86%9B&amp;code=40342332&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">苏续军</a>
+                                <a href="javascript:;">吕学志</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E9%99%86%E5%86%9B%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6%E7%9F%B3%E5%AE%B6%E5%BA%84%E6%A0%A1%E5%8C%BA%E4%B8%80%E7%B3%BB&amp;code=1701801&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陆军工程大学石家庄校区一系</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E9%99%86%E5%86%9B%E7%82%AE%E5%85%B5%E8%AE%AD%E7%BB%83%E5%9F%BA%E5%9C%B0%E6%A8%A1%E6%8B%9F%E8%AE%AD%E7%BB%83%E4%B8%AD%E5%BF%83&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陆军炮兵训练基地模拟训练中心</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>提出一种利用BP神经网络预测无人机系统故障的方法。对利用无人机系统故障数据集预测无人机故障的相关问题进行分析;给出BP神经网络的建模思路和计算方法;探讨使用特征变量显著性筛选技术识别故障影响因素。实际计算表明该方法能有效应用于无人机故障预测,具可行性。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%95%B0%E6%8D%AE%E6%8C%96%E6%8E%98&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">数据挖掘;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%97%A0%E4%BA%BA%E6%9C%BA&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">无人机;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8F%AF%E9%9D%A0%E6%80%A7&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">可靠性;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%BA%8B%E6%95%85&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">事故;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=BP%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">BP神经网络;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    苏续军,讲师,主研领域:装备保障工程,兵器测试与诊断。;
+                                </span>
+                                <span>
+                                    吕学志,讲师。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-12-21</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金项目(U1435218);</span>
+                                <span>中国博士后科学基金项目(2017M613360);</span>
+                                <span>军内装备科研项目(012016012600B12507);</span>
+                    </p>
+            </div>
+                    <h1><b>APPLICATION AND ANALYSIS OF BP NEURAL NETWORK MODEL IN UNMANNED AERIAL VEHICLE SYSTEM FAILURE PREDICTION</b></h1>
+                    <h2>
+                    <span>Su Xujun</span>
+                    <span>Lü Xuezhi</span>
+            </h2>
+                    <h2>
+                    <span>Artillery Department, Army Engineering University</span>
+                    <span>Ninth Comprehensive Training Base of Army</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>This paper described how to use BP neural network to predict the failure of UAV systems. It analyzed the problems of UAV faults prediction using UAV system fault dataset, put forward modeling ideas and calculation methods of BP neural network, and discussed characteristic variable significance screening technology to identify the influencing factors of faults. The actual results show that the proposed model and calculation method can be effectively applied to UAV fault prediction, and it is feasible.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Data%20mining&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Data mining;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=UAV&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">UAV;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Reliability&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Reliability;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Failure&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Failure;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=BP%20neural%20network&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">BP neural network;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-12-21</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="43" name="43" class="anchor-tag"><b>0 引 言</b></h3>
+                <div class="p1">
+                    <p id="44">目前,无人机由于其自身特点和优越性能在军事、经济等领域得到了广泛应用,地位愈显重要。随着无人机技术越来越先进,无人机构造组成越来越复杂,由于受操控技能的熟练性和各种环境因素的影响,无人机故障时有发生。为了避免故障发生,减少对作战、训练任务的影响,对无人机故障进行预测并分析造成故障的重要因素尤为重要。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">国内外相关研究主要集中在大型无人机系统上。大型无人机系统的误操作率往往比有人驾驶飞机大一到两个数量级<citation id="105" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>研究发现人为错误占早期大型无人机事故的21%至80%<citation id="106" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>,而最近的研究发现它接近56%～69%<citation id="107" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。从理论上讲,提高无人机自动化程度和操控人员的经验水平可以减少大型无人机中的人为错误<citation id="108" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>。为了避免大型无人机与其他飞行器碰撞<citation id="109" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>,以及避免造成地面人员或财产的伤害<citation id="110" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>,研究建议继续开发<citation id="111" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>感知技术、规避技术、自动着陆技术<citation id="112" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>。其他研究认为环境因素对大型无人机和有人驾驶飞机可靠性有很大影响,例如风速和风向<citation id="113" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">与载人飞行器相比,可用于无人机系统分析的数据要少得多。因此,大多数无人机可靠性研究倾向于通过指定最小故障率来满足可靠性目标<citation id="114" type="reference"><link href="21" rel="bibliography" /><link href="23" rel="bibliography" /><sup>[<a class="sup">10</a>,<a class="sup">11</a>]</sup></citation>,或利用故障树分析<citation id="115" type="reference"><link href="25" rel="bibliography" /><link href="27" rel="bibliography" /><link href="29" rel="bibliography" /><sup>[<a class="sup">12</a>,<a class="sup">13</a>,<a class="sup">14</a>]</sup></citation>、故障模式和影响分析<citation id="116" type="reference"><link href="31" rel="bibliography" /><link href="33" rel="bibliography" /><link href="35" rel="bibliography" /><sup>[<a class="sup">15</a>,<a class="sup">16</a>,<a class="sup">17</a>]</sup></citation>对无人机可靠性进行分析。这些无人机可靠性研究都是基于理论的分析,而不是基于数据的分析。本文将通过BP神经网络技术,建立无人机的故障预测模型,并分析影响无人机可靠性的重要因素,扩展之前的研究概念。</p>
+                </div>
+                <h3 id="47" name="47" class="anchor-tag"><b>1 研究目标</b></h3>
+                <div class="p1">
+                    <p id="48">本文的研究目标是利用已有的无人机飞行数据集进行处理,采用BP神经网络技术建立无人机故障预测模型,并分析影响无人机可靠性的重要因素。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">在本文中,使用“故障”这一术语来描述阻止无人机完成任务的任何事件。“故障”这一术语取决于使用无人机执行的任务。用于该分析的数据背景是实验室级测试。本文分析的无人机任务是飞行实验,其产品是飞行报告。因此,出于本文的目的,如果无人机未能收集实验计划收集的数据,则认为无人机飞行实验故障。如果无人机在起飞时坠毁,那显然是故障,因为没有收集数据。如果无人机在飞行中遭遇紧急情况,并自动安全着陆,但是没有收集到所有测试数据,那么尽管系统保持完好无损,但仍然是故障的。如果在收集所有数据后无人机硬着陆,则该飞行不被视为故障,因为尽管在着陆时无人机受损,但完成任务。</p>
+                </div>
+                <h3 id="50" name="50" class="anchor-tag"><b>2 数 据</b></h3>
+                <h4 class="anchor-tag" id="51" name="51"><b>2.1 数据提取</b></h4>
+                <div class="p1">
+                    <p id="52">相关无人机数据集来自某实验中心2010年到2016年的各种型号无人机飞行记录。飞行记录包括测试的无人机型号、飞行员、飞行过程描述以及测试现场的环境条件。无人机包括成熟的民用无人机和处于试验阶段的军用原型机。无人机可以由操控手(地面站操作员)手动控制飞行,或者完全自动飞行,或者同时采用两种飞行模式。通常操控手(地面站操作员)地面飞行员提供方位,而自动飞行仪负责确保无人机的飞行速度和高度。出于分析的需要,仅当操控手负责控制无人机所有飞行参数时,无人机才被认为是在手动模式下飞行。无人机数据集包括1 054次飞行的20个特征因素,以及每次飞行的结果(故障/无故障)。有关变量如表1所示。</p>
+                </div>
+                <div class="area_img" id="53">
+                    <p class="img_tit"><b>表1 原始属性</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="53" border="1"><tr><td><br /></td><td> 特征变量</td><td> 描述</td></tr><tr><td><br />1</td><td>型号间隔天数</td><td>自相同型号无人机上次飞行以来的天数</td></tr><tr><td><br />2</td><td>自动驾驶间隔天数</td><td>自从上次无人机采用自动驾驶模式以来的天数</td></tr><tr><td><br />3</td><td>飞行间隔天数</td><td>上次飞行后的天数<br /></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="54"><b>续表1</b></p>
+                </div>
+                <div class="area_img" id="55">
+                    <p class="img_tit"> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="55" border="1"><tr><td></td><td> 特征变量</td><td> 描述</td></tr><tr><td><br />4</td><td>任务间隔天数</td><td>自上次任务以来的天数</td></tr><tr><td><br />5</td><td>场地间隔天数</td><td>自上次在该场地飞行以来的天数</td></tr><tr><td><br />6</td><td>操控手间隔天数</td><td>自操控手上次操控无人机以来的天数</td></tr><tr><td><br />7</td><td>待机间隔天数</td><td>自该架无人机上次飞行以来的天数</td></tr><tr><td><br />8</td><td>手动驾驶</td><td>手动驾驶取1,自动驾驶取0</td></tr><tr><td><br />9</td><td>最大风速</td><td>地面最大风速</td></tr><tr><td><br />10</td><td>最小风速</td><td>地面最小风速</td></tr><tr><td><br />11</td><td>型号飞行次数</td><td>该型号无人机的飞行次数</td></tr><tr><td><br />12</td><td>自动飞行次数</td><td>自动驾驶的飞行次数</td></tr><tr><td><br />13</td><td>场地飞行次数</td><td>某场地的飞行次次输</td></tr><tr><td><br />14</td><td>操控手飞行次数</td><td>操控手操控无人机的飞行次数</td></tr><tr><td><br />15</td><td>飞行次数</td><td>该架无人机的飞行次数</td></tr><tr><td><br />16</td><td>飞行总数</td><td>飞行总数</td></tr><tr><td><br />17</td><td>原型机</td><td>成熟民用机取0,军用原型机取1</td></tr><tr><td><br />18</td><td>温度</td><td>预测环境温度</td></tr><tr><td><br />19</td><td>任务开始时间</td><td>任务开始时间</td></tr><tr><td><br />20</td><td>风差</td><td>最大风减去最小风</td></tr><tr><td><br />21</td><td>结果</td><td>无故障取0,故障取1</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="56" name="56"><b>2.2 数据预处理</b></h4>
+                <div class="p1">
+                    <p id="57">并非每次无人机飞行都有完整的数据。例如,一些飞行缺少风速和温度,而另一些飞行缺少过程描述,因此没有飞行故障记录。如果发现在飞行记录中缺少重要特征值,则从数据集中删除该条飞行记录。前954次飞行数据(来自总共1 104次的飞行数据,涵盖2010年1月到2016年9月)用于建模,而剩余的99次飞行(2016年10月至12月)用于数据验证。</p>
+                </div>
+                <h3 id="58" name="58" class="anchor-tag"><b>3 构建模型</b></h3>
+                <h4 class="anchor-tag" id="59" name="59"><b>3.1 神经网络结构</b></h4>
+                <div class="p1">
+                    <p id="60">神经网络长期以来一直用于分类目的。典型的前馈神经网络包括输入层、隐藏层和输出层,通过将输入向量逐层加权非线性处理最终得到输出向量,从而产生分类。本文使用的前馈人工神经网络结构如图1所示,它具有1个隐藏层和1个分类器节点。</p>
+                </div>
+                <div class="area_img" id="61">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201909014_061.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 神经网络结构" src="Detail/GetImg?filename=images/JYRJ201909014_061.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 神经网络结构  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201909014_061.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="62">首先,对数据集进行归一化,每个特征输入值减去该特征的平均值并除以其标准差来归一化。</p>
+                </div>
+                <div class="p1">
+                    <p id="63">在进入图1中的每个隐藏层节点之前,该归一化输入乘以权重<i>w</i><mathml id="64"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow><mn>1</mn></msubsup></mrow></math></mathml>。在隐藏层中的每个节点内,对所有特征的加权输入求和,然后使用sigmoid函数将其标准化为0到1范围,对于给定的数字输入<i>x</i>,sigmoid函数如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="65" class="code-formula">
+                        <mathml id="65"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>σ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><mtext>e</mtext><msup><mrow></mrow><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow></mfrac></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="66">在通过sigmoid函数将加权的求和值映射到0到1范围之后,每个隐藏层节点的输出乘以数字权重<i>w</i><mathml id="67"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>j</mi><mi>k</mi></mrow><mn>2</mn></msubsup></mrow></math></mathml>,并成为输出层节点的输入。输出层节点对这些输入进行求和,并通过sigmoid函数将它们完全映射到0到1。每个输出节点对应于可能的结果。输出值最高的节点为输入向量提供组分类。对于无人机飞行数据,如果输出节点1的值大于输出节点0的值,则该飞行被分类在组1(“故障”)中。如果输出节点0的值大于输出节点1的值,则该飞行被归类为组0(“无故障”)。</p>
+                </div>
+                <div class="p1">
+                    <p id="68">为了更好地了解神经网络过程,隐藏层节点(<i>x</i><mathml id="69"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>2</mn><mn>1</mn></msubsup></mrow></math></mathml>)的内部工作原理如图2所示。出于解释目的,输入层中显示了一些可能的属性,但不一定反映最终模型的重要属性。</p>
+                </div>
+                <div class="area_img" id="70">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201909014_070.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 隐藏层节点内部工作原理示意图" src="Detail/GetImg?filename=images/JYRJ201909014_070.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 隐藏层节点内部工作原理示意图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201909014_070.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="71" name="71"><b>3.2 BP算法</b></h4>
+                <div class="p1">
+                    <p id="72">BP算法的学习过程由信号的正向传播与误差的逆向传播两个过程组成。正向传播时,输入信号经过隐层的处理后,传向输出层。若输出层节点未能得到期望的输出,则转入误差的逆向传播阶段,将输出误差按某种形式,通过隐层向输入层返回,并“分摊”给隐层节点与输入层节点,从而获得各层单元的参考误差或称误差信号,作为修改各单元权值的依据。这种信号正向传播与误差逆向传播修改着各单元权值,是周而复始进行的。权值不断修改的过程,也就是网络学习的过程(或称训练过程)。此过程一直进行到网络输出的误差逐渐减少到可接受的程度或达到设定的学习次数为止,BP算法学习过程的流程图如图3所示。</p>
+                </div>
+                <div class="area_img" id="73">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201909014_073.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 隐藏层节点内部工作原理" src="Detail/GetImg?filename=images/JYRJ201909014_073.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 隐藏层节点内部工作原理  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201909014_073.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="74">只有一部分数据(通常为60%～70%)进行网络训练,而剩余数据被用于验证和测试。反向传播用于仅调整训练数据子集的网络权重。验证数据通过网络前馈以确定它们的映射错误。通常,当验证数据错误最小时,网络被认为是最优化的。因为具有足够节点的神经网络可以映射任意复杂的表面,所以验证数据集用于防止过度拟合。</p>
+                </div>
+                <h4 class="anchor-tag" id="75" name="75"><b>3.3 特征变量筛选与显著性</b></h4>
+                <div class="p1">
+                    <p id="76">确定特征变量显著性对于特征变量简约和解释非常重要。针对神经网络特征通常有两种主要显著性指标:基于权重的显著性度量和基于导数的显著性度量<citation id="117" type="reference"><link href="37" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>。1) 基于权重的度量采用给定特征的较低层级权重(<i>w</i><mathml id="77"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow><mn>1</mn></msubsup></mrow></math></mathml>)的平方和,假设特征较为突出权重显著大于或小于0,而较不显著的特征往往具有较小的权重<citation id="118" type="reference"><link href="39" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>。2) 基于导数的显著性度量计算网络输出相对于特征输入的偏导数,以确定显著性度量。在这两种情况下,可以将候选特征(考虑从模型中移除)的显著性与注入的噪声特征进行比较,该特征通常是从0到1的均匀随机变量。如果候选特征在统计上显著不同于噪声,则认为该特征是显著的。</p>
+                </div>
+                <div class="p1">
+                    <p id="78">本文的无人机故障建模采用信噪比(SNR)显著性指标 <citation id="119" type="reference"><link href="41" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>。此度量是基于权重的,并使用注入的噪声输入作为所有候选特征的比较。通过采用候选特征<i>i</i>权重的平方和与注入噪声的比率(并转换为分贝尺度)来计算显著性度量:</p>
+                </div>
+                <div class="p1">
+                    <p id="79"><i>SNR</i><sub><i>i</i></sub>=10lg=<mathml id="80"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>J</mi></munderover><mo stretchy="false">(</mo></mstyle><mi>w</mi><msubsup><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow><mn>1</mn></msubsup><mo stretchy="false">)</mo><mn>2</mn></mrow><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>J</mi></munderover><mo stretchy="false">(</mo></mstyle><mi>w</mi><msubsup><mrow></mrow><mrow><mi>n</mi><mi>j</mi></mrow><mn>1</mn></msubsup><mo stretchy="false">)</mo><mn>2</mn></mrow></mfrac></mrow></math></mathml>      (1)</p>
+                </div>
+                <div class="p1">
+                    <p id="81">神经网络是随机初始化的,通常可以为相同的输入产生不同的结果。为了解释这种随机性,针对若干神经网络计算每个特征的信噪比显著性指标。信噪比显著性指标用于对特征变量进行排序,之后删除最不显著的特征(排名最低的)并再计算神经网络对测试数据集的平均分类准确度,当删除特征变量后的分类精度显著下降时,删除的最后一个特征变量将保留在神经网络模型中。如果没有明显的下降,分析人员可以自行决定分类准确度可接受的截止点。模型中保留下来的特征变量被认为是重要的。</p>
+                </div>
+                <h4 class="anchor-tag" id="82" name="82"><b>3.4 ROC曲线和混淆矩阵</b></h4>
+                <div class="p1">
+                    <p id="83">模型性能评价主要使用受试者工作特征(Receiver Operating Characteristic, ROC)曲线和混淆矩阵。</p>
+                </div>
+                <div class="p1">
+                    <p id="84">ROC曲线是一种非常有效的模型评价方法,可为选定临界值给出定量提示。ROC曲线是根据一系列不同的二分类方式(临界值或者阈值),将真阳性率(Sensitivity,灵敏度)为纵坐标,假阳性(1-Specificity,1-特异性)为横坐标绘制的曲线。该曲线下的积分面积(Area Under Curve, AUC)大小与每种方法的优劣密切相关,反映分类器正确分类的统计概率,其值越接近1说明该算法的效果越好。</p>
+                </div>
+                <div class="p1">
+                    <p id="85">混淆矩阵(Confusion Matrix)是模式识别领域中一种常用的表达形式。它描绘样本数据的真实属性与识别结果类型之间的关系。是评价分类器性能的一种常用方法。假设对于<i>N</i>类模式的分类任务,识别数据集<i>D</i>包括<i>T</i><sub>0</sub>个样本,每类模式分别含有<i>T</i><sub><i>i</i></sub>个数据(<i>i</i>=1,2,…,<i>N</i>)。采用某种识别算法构造分类器<i>C</i>,<i>cm</i><sub><i>ij</i></sub>表示第<i>i</i>类模式被分类器<i>C</i>判断成第<i>j</i>类模式的数据量,则可得到如下<i>N</i>×<i>N</i>维混淆矩阵<b><i>CM</i></b>(<i>C</i>,<i>D</i>)。</p>
+                </div>
+                <div class="p1">
+                    <p id="86" class="code-formula">
+                        <mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">C</mi><mi mathvariant="bold-italic">Μ</mi><mo stretchy="false">(</mo><mi>C</mi><mo>,</mo><mi>D</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mi>c</mi><mi>m</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>1</mn></mrow></msub></mtd><mtd><mi>c</mi><mi>m</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><mi>c</mi><mi>m</mi><msub><mrow></mrow><mrow><mn>1</mn><mi>Ν</mi></mrow></msub></mtd></mtr><mtr><mtd><mi>c</mi><mi>m</mi><msub><mrow></mrow><mrow><mn>2</mn><mn>1</mn></mrow></msub></mtd><mtd><mi>c</mi><mi>m</mi><msub><mrow></mrow><mrow><mn>2</mn><mn>2</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><mi>c</mi><mi>m</mi><msub><mrow></mrow><mrow><mn>2</mn><mi>Ν</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><mi>c</mi><mi>m</mi><msub><mrow></mrow><mrow><mi>Ν</mi><mn>1</mn></mrow></msub></mtd><mtd><mi>c</mi><mi>m</mi><msub><mrow></mrow><mrow><mi>Ν</mi><mn>2</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><mi>c</mi><mi>m</mi><msub><mrow></mrow><mrow><mi>Ν</mi><mi>Ν</mi></mrow></msub></mtd></mtr></mtable></mrow><mo>]</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="87">混淆矩阵中元素的行下标对应目标的真实属性,列下标对应分类器产生的识别属性。对角线元素表示各模式能够被分类器<i>C</i>正确识别的数据量,而非对角线元素则表示发生错误判断的数据量。</p>
+                </div>
+                <h3 id="88" name="88" class="anchor-tag"><b>4 模型评价</b></h3>
+                <div class="p1">
+                    <p id="89">构建了基于BP神经网络无人机故障预测模型,并进行特征筛选。用于此分析的数据集包含<i>n</i>=1 064次飞行完整数据,并且Pr{FAILURE=0}=0.68和Pr{FAILURE=1}=0.32。因为所有特征变量都存在于基本模型中,通过顺序移除非显著特征变化对模型进行了改进。删除相关性较大的特征变量,例如风差,因为它是另外两个变量的函数。计算输入数据的相关矩阵,得到如表2所示的显著相关性。</p>
+                </div>
+                <div class="area_img" id="90">
+                    <p class="img_tit"><b>表2 人工神经网络(ANN)输入的显著相关性</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="90" border="1"><tr><td><br />因素1</td><td>因素2</td><td>关联</td></tr><tr><td><br />飞行总数</td><td>自动飞行次数</td><td>0.833</td></tr><tr><td><br />待机间隔天数</td><td>型号间隔天数</td><td>0.702</td></tr><tr><td><br />最小风速</td><td>最大风速</td><td>0.689</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="91">出于解释原因,“自动飞行次数”被排除在考虑之外。跟“自动飞行次数”相比较,记录和解释“飞行总数”更容易。同样,“最小风速”被排除在考虑范围之外。其决策价值低于“最大风速”,因为大多数法规和安全要求都规定了无人机飞行的最大风力等级。预计“待机间隔天数”和“型号间隔天数”在模型中不显著,所以模型中并不保留这两个特征变量。</p>
+                </div>
+                <div class="p1">
+                    <p id="92">选择具有1个隐藏层(18个隐藏节点)、使用反向误差传播的前馈神经模型。统一加入随机噪声变量,数据随机分组,分为训练和测试集(分别为90%、10%)。随机初始化和训练神经网络,并计算每个特征的信噪比显著性。从模型中删除排名最不显著的特征。按表3中给出的顺序移除特征。</p>
+                </div>
+                <div class="area_img" id="93">
+                    <p class="img_tit">表3 BP神经网络故障预测模型的特征移除顺序 <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="93" border="1"><tr><td><br />已删除特征数总数</td><td> 用于删除的特征</td></tr><tr><td><br />0</td><td>场地间隔天数</td></tr><tr><td><br />1</td><td>操控手间隔天数</td></tr><tr><td><br />2</td><td>型号间隔天数</td></tr><tr><td><br />3</td><td>自动驾驶间隔天数</td></tr><tr><td><br />4</td><td>待机间隔天数</td></tr><tr><td><br />5</td><td>任务开始时间</td></tr><tr><td><br />6</td><td>飞行间隔天数</td></tr><tr><td><br />7</td><td>任务间隔天数</td></tr><tr><td><br />8</td><td>温度</td></tr><tr><td><br />9</td><td>最大风速</td></tr><tr><td><br />10</td><td>手动驾驶</td></tr><tr><td><br />11</td><td>飞行次数</td></tr><tr><td><br />12</td><td>操控手飞行次数</td></tr><tr><td><br />13</td><td>型号飞行次数</td></tr><tr><td><br />14</td><td>飞行总数</td></tr><tr><td><br />15</td><td>场地飞行次数</td></tr><tr><td><br />16</td><td>原型机</td></tr><tr><td><br />17</td><td>噪声</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="94">将测试集误分类率与神经网络的移除特征的数量作图,以确定在模型中保留的最佳特征数(参见图4)。该图显示错误分类率下降,直到9到11个特征删除后,错误分类率急剧增加。将三个候选模型(分别具有9、10和11个特征的模型)进行相互比较。具有10个特征的模型以最低的平均测试集错误分类率表现最佳。最佳模型的权重是从表现最佳的候选模型中选出的。使用ROC曲线(参见图5)和混淆矩阵(参见图6)验证了最终模型的性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="95">该模型保留了以下特征变量:手动驾驶、飞行次数、操控手飞行次数、型号飞行次数、飞行总数、场地飞行次数和原型机。该模型的ROC曲线的AUC表明模型要好于猜测,可以更好地预测无人机飞行故障,并且混淆矩阵表现出87%的准确度。</p>
+                </div>
+                <div class="area_img" id="96">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201909014_096.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 为BP神经网络故障预测模型测试集误
+分类率随移除特征变量变化图" src="Detail/GetImg?filename=images/JYRJ201909014_096.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 为BP神经网络故障预测模型测试集误
+分类率随移除特征变量变化图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201909014_096.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="97">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201909014_097.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 BP神经网络故障预测模型的ROC曲线(AUC=0.87)" src="Detail/GetImg?filename=images/JYRJ201909014_097.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 BP神经网络故障预测模型的ROC曲线(AUC=0.87)  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201909014_097.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="98">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201909014_09800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 BP神经网络故障预测模型的混淆矩阵" src="Detail/GetImg?filename=images/JYRJ201909014_09800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 BP神经网络故障预测模型的混淆矩阵  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201909014_09800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="100">对无人机和载人飞机事故的文献回顾表明,人为错误是飞机故障的主要原因,增加飞行员经验有助于降低故障率。 但是,并没有发现操控手经验(“操控手飞行次数”和“操控手间隔天数”)显著影响故障率。同样地,“最大风速”也并未显著影响故障率。这主要是由于测试人员在飞行之前会判断谁应该操控无人机或者哪些风对于给定的测试飞行是安全的,这足以使这两个因素不会影响测试飞行。</p>
+                </div>
+                <div class="p1">
+                    <p id="101">无人机的故障率随着所有平台的“飞行总数”(NFTOT)以及“型号飞行次数”的增加而减少,这说明更好的组织经验同样可以降低故障率。</p>
+                </div>
+                <div class="p1">
+                    <p id="102">最重要的结论是军用原型机故障率是民用成熟机的6倍,而手动飞行模式下的故障率是自动驾驶模式的2倍。减少故障率的简单方法是尽可能用商用成熟机代替军用原型机,特别是在载荷高价值或执行重要任务时。此外,应尽可能用自动驾驶模式代替手动操控模式,尤其是对于重要的飞行任务。</p>
+                </div>
+                <h3 id="103" name="103" class="anchor-tag"><b>5 结 语</b></h3>
+                <div class="p1">
+                    <p id="104">本文介绍了如何利用神经网络对无人机系统事故进行预测,对利用无人机系统故障数据集预测无人机故障问题进行了描述,给出了建模思路和方法框架,介绍了人工神经网络,并探讨了使用特征变量显著性筛选技术识别故障影响因素。在实例中利用本文提出的方法对无人机故障进行了预测,并量化了统计上显著的故障因素。提出了预防故障的建议,验证了方法的可行性与有效性。该方法可以充分利用故障数据中隐含的信息,以及多种神经网络的优点,具有一定的通用性与实用性。在以后的研究中,可以采用其他特征变量选择方法,如因子分析、主成分分析等;可以采用其他数据建模方法,如Logistics回归、SVM、深度学习网络等;采集无人机的各种性能数据、测试数据等,分析这些因素对无人机故障的影响。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Unmanned Systems Integrated Roadmap 2009-2034">
+
+                                <b>[1]</b> Clapper J R,Young J J,Cartwright J E,et al.Unmanned Systems Integrated Roadmap 2009-2034[R].Office of the Secretary of Defense,Washington,DC,2010.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A summary of unmanned aircraft accident/incident data:Human factors implications">
+
+                                <b>[2]</b> Williams K W.A summary of unmanned aircraft accident/incident data:Human factors implications[R].US Department of Transportation,Federal Aviation Administration,2004.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCV&amp;filename=SJCV15091000001059&amp;v=MjkyMThud1plWnRGaW5sVXJ6SUlWb1diaEU9TmlmSWVMSzlIdGpOcjQ5RlpPc09ESGt3b0JNVDZUNFBRSC9pclJkR2VycVFUTQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> Tvaryanas A P,Thompson W T.Recurrent error pathways in HFACS data:analysis of 95 mishaps with remotely piloted aircraft[J].Aviation,space,and environmental medicine,2008,79(5):525-532.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13012100662138&amp;v=MjA2MzZRSC9pclJkR2VycVFUTW53WmVadEZpbmxVcnpJSVZvV2JoRT1OaWZPZmJLN0h0RE9ybzlGWXUwTkRYOHhvQk1UNlQ0UA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> Dalamagkidis K,Valavanis K P,Piegl L A.On unmanned aircraft systems issues,challenges and operational restrictions preventing integration into the National Airspace System[J].Progress in Aerospace Sciences,2008,44(7-8):503-519.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501879003&amp;v=MDk2NDRVcnpJSVZvV2JoRT1OaWZPZmJLN0h0RE5xbzlFYk93R0RIdzZvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0RmlubA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> Clothier R A,Palmer J L,Walker R A,et al.Definition of an airworthiness certification framework for civil unmanned aircraft systems[J].Safety science,2011,49(6):871-885.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501879134&amp;v=MDIzNTJlcnFRVE1ud1plWnRGaW5sVXJ6SUlWb1diaEU9TmlmT2ZiSzdIdEROcW85RWJPd0dEWDg5b0JNVDZUNFBRSC9pclJkRw==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> Magister T.The small unmanned aircraft blunt criterion based injury potential estimation[J].Safety science,2010,48(10):1313-1320.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Training interventions to reduce air force predator mishaps">
+
+                                <b>[7]</b> Nullmeyer R,Herz R,Montijo G.Training interventions to reduce air force predator mishaps[R].Air Force Research Lab Mesa AZ Human Effectiveness Directorate,2009.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Image Processing Algorithms for UAV Sense andAvoid">
+
+                                <b>[8]</b> Carnie R J,Walker R A,Corke P I.Image processing algorithms for UAV “sense and avoid”[C]// Proceedings 2006 IEEE International Conference on Robotics and Automation.ICRA 2006.IEEE,2006:2848-2853.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Atmospheric considerations for uninhabited aerial vehicle (UAV) flight test planning">
+
+                                <b>[9]</b> Teets Jr E,Donohue C,Underwood K,et al.Atmospheric considerations for uninhabited aerial vehicle (UAV) flight test planning[C]//36th AIAA Aerospace Sciences Meeting and Exhibit.1998:748.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Safety Considerations for Operation of Unmanned Aerial Vehicles in the National Airspace System">
+
+                                <b>[10]</b> Weibel R E,Hansman R J.Safety Considerations for Operation of Unmanned Aerial Vehicles in the National Airspace System[R].Cambridge,MA:MIT International Center for Air Transportation,2005.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" >
+                                    <b>[11]</b>
+                                 Magister T.The small unmanned aircraft blunt criterion based injury potential estimation[J].Safety science,2010,48(10):1313-1320.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Establishment of models and data tracking for small UAV reliability">
+
+                                <b>[12]</b> Dermentzoudis M.Establishment of models and data tracking for small UAV reliability[R].Naval Postgraduate School Monterey CA,2004.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=FJSJ201205012&amp;v=MjMwMzh2TEl5ZllaTEc0SDlQTXFvOUVab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5oVWI=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 刁文琦,宁彬,孙国强.无人机故障树分析(FTA)技术研究及工程应用[J].飞机设计,2012,32(5):56-60.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1011191984.nh&amp;v=MTkyNTRuaFVidkxWRjI2SDdLeEg5akVxNUViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnk=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 冯军.基于FTF方法的无人机液压与冷气系统可靠性分析[D].成都:电子科技大学,2011.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Methods for Improvements in Airworthiness of Small UAS">
+
+                                <b>[15]</b> Benjamin C C.Methods for Improvements in Airworthiness of Small UAS[R].North Carolina State University,2008.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1011192206.nh&amp;v=MDI5NjR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnluaFVidkxWRjI2SDdLeEhOUE1xWkViUElRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> 王俊祥.FMECA方法在无人机燃油系统中的应用[D].成都:电子科技大学,2011.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=2010233027.nh&amp;v=MDQ1MDExMjZIckc3SGRIT3FKRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5oVWJ2TFY=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b> 孙月.基于FMECA和FTA的无人机起降系统可靠性研究[D].成都:电子科技大学,2010.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=OPER 685-Multivariate Analysis Class Notes">
+
+                                <b>[18]</b> Bauer K.OPER 685-Multivariate Analysis Class Notes[D].Wright-Patterson AFB OH:Air Force Institute of Technology,2013.
+                            </a>
+                        </p>
+                        <p id="39">
+                            <a id="bibliography_19" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Multi-layered feedforward neural networks for image segmentation">
+
+                                <b>[19]</b> Tarr G L.Multi-layered feedforward neural networks for image segmentation[D].Air Force Institute of Technology,School of Engineering,1991.
+                            </a>
+                        </p>
+                        <p id="41">
+                            <a id="bibliography_20" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501915233&amp;v=MjQ3NTRmT2ZiSzdIdEROcW85RWJlb0tEbjg2b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadEZpbmxVcnpJSVZvV2JoRT1OaQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[20]</b> Bauer Jr K W,Alsing S G,Greene K A.Feature screening using signal-to-noise ratios[J].Neurocomputing,2000,31(1/4):29-44.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JYRJ201909014" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201909014&amp;v=MDM3NzN5bmhVYnZMTHpUWlpMRzRIOWpNcG85RVlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEY=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

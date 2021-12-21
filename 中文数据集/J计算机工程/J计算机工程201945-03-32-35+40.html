@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130624321056250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201903006%26RESULT%3d1%26SIGN%3dc0dhpLC%252f3kM594H4fSCfeJ%252fSgAE%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201903006&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201903006&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201903006&amp;v=MDY3NzhyQkx6N0JiYkc0SDlqTXJJOUZZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9oVWI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#35" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#38" data-title="1 相关工作 ">1 相关工作</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#50" data-title="2 LBPFP算法 ">2 LBPFP算法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#52" data-title="2.1 链头表数据结构优化">2.1 链头表数据结构优化</a></li>
+                                                <li><a href="#58" data-title="2.2 计算量模型优化">2.2 计算量模型优化</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#95" data-title="3 实验与结果分析 ">3 实验与结果分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#100" data-title="3.1 数据规模对算法性能的影响">3.1 数据规模对算法性能的影响</a></li>
+                                                <li><a href="#104" data-title="3.2 支持度对算法性能的影响">3.2 支持度对算法性能的影响</a></li>
+                                                <li><a href="#108" data-title="3.3 节点个数对算法性能的影响">3.3 节点个数对算法性能的影响</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#112" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#40" data-title="&lt;b&gt;图1 PFP算法的并行流程&lt;/b&gt;"><b>图1 PFP算法的并行流程</b></a></li>
+                                                <li><a href="#54" data-title="&lt;b&gt;表1 PFP算法的应用样例&lt;/b&gt;"><b>表1 PFP算法的应用样例</b></a></li>
+                                                <li><a href="#55" data-title="&lt;b&gt;图2 链头表数据结构示意图&lt;/b&gt;"><b>图2 链头表数据结构示意图</b></a></li>
+                                                <li><a href="#60" data-title="&lt;b&gt;图3 分组示意图&lt;/b&gt;"><b>图3 分组示意图</b></a></li>
+                                                <li><a href="#97" data-title="&lt;b&gt;表2 集群环境参数&lt;/b&gt;"><b>表2 集群环境参数</b></a></li>
+                                                <li><a href="#98" data-title="&lt;b&gt;表3 webdocs.dat数据集的基本描述&lt;/b&gt;"><b>表3 webdocs.dat数据集的基本描述</b></a></li>
+                                                <li><a href="#102" data-title="&lt;b&gt;图4 不同数据规模的实验结果&lt;/b&gt;"><b>图4 不同数据规模的实验结果</b></a></li>
+                                                <li><a href="#106" data-title="&lt;b&gt;图5 不同支持度的实验结果&lt;/b&gt;"><b>图5 不同支持度的实验结果</b></a></li>
+                                                <li><a href="#110" data-title="&lt;b&gt;图6 不同节点数的实验结果&lt;/b&gt;"><b>图6 不同节点数的实验结果</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" LI H, WANG Y, ZHANG D, et al.PFP:Parallel FP-Growth for query recommendation[C]//Proceedings of 2008 ACM Conference on Recom mended Systems.New York, USA:ACM Press, 2008:125-137." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=PFP:Parallel FP-Growth for query recommendation">
+                                        <b>[1]</b>
+                                         LI H, WANG Y, ZHANG D, et al.PFP:Parallel FP-Growth for query recommendation[C]//Proceedings of 2008 ACM Conference on Recom mended Systems.New York, USA:ACM Press, 2008:125-137.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" LEE K H, LEE Y J, CHOI H, et al.Parallel data processing with MapReduce:A survey[J].ACM SIGMOD Record, 2012, 40 (4) :11-20." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000003940&amp;v=MTE0NjhUTW53WmVadUh5am1VTG5JSjFvV2J4cz1OaWZJWTdLN0h0ak5yNDlGWk9zTUJYZzVvQk1UNlQ0UFFIL2lyUmRHZXJxUQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         LEE K H, LEE Y J, CHOI H, et al.Parallel data processing with MapReduce:A survey[J].ACM SIGMOD Record, 2012, 40 (4) :11-20.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" HAN J, PEI J, YIN Y.Mining frequent patterns without candidate generation[C]//Proceedings of 2000 ACM SIGMOD International Conference on Management of Date.New York, USA:ACM Press, 2000:1-12." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Mining frequent patterns without candidate generation">
+                                        <b>[3]</b>
+                                         HAN J, PEI J, YIN Y.Mining frequent patterns without candidate generation[C]//Proceedings of 2000 ACM SIGMOD International Conference on Management of Date.New York, USA:ACM Press, 2000:1-12.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" 陈兴蜀, 张帅, 童浩, 等.基于布尔矩阵和MapReduce的FP-Growth算法[J].华南理工大学学报 (自然科学版) , 2014 (1) :135-141." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HNLG201401026&amp;v=MjUwMzBYTXJvOUhZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9oVWJyQkxTUEhhYkc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         陈兴蜀, 张帅, 童浩, 等.基于布尔矩阵和MapReduce的FP-Growth算法[J].华南理工大学学报 (自然科学版) , 2014 (1) :135-141.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" WEI F, XIANG L.Improved frequent pattern mining algorithm based on FP-tree[EB/OL].[2017-11-11].http://pos.sissa.it/cgi-bin/reader/conf.cgi?confid=264, id.37.2015." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Improved frequent pattern mining algorithm based on FP-tree">
+                                        <b>[5]</b>
+                                         WEI F, XIANG L.Improved frequent pattern mining algorithm based on FP-tree[EB/OL].[2017-11-11].http://pos.sissa.it/cgi-bin/reader/conf.cgi?confid=264, id.37.2015.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 马月坤, 刘鹏飞, 张振友, 等.改进的FP-Growth算法及其分布式并行实现[J].哈尔滨理工大学学报, 2016, 21 (2) :20-27." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HLGX201602005&amp;v=MTI3OTFNclk5RllZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJCTFNITWRyRzRIOWY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         马月坤, 刘鹏飞, 张振友, 等.改进的FP-Growth算法及其分布式并行实现[J].哈尔滨理工大学学报, 2016, 21 (2) :20-27.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 方向, 张功萱.基于Spark的PFP-Growth并行算法优化实现[J].现代电子技术, 2016, 39 (8) :9-13." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDDJ201608003&amp;v=MDY5NjRaTEc0SDlmTXA0OUZaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9oVWJyQlBTblA=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         方向, 张功萱.基于Spark的PFP-Growth并行算法优化实现[J].现代电子技术, 2016, 39 (8) :9-13.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 宁慧, 王素红, 崔立刚, 等.基于改进的 FP-tree 最大频繁模式挖掘算法[J].应用科技, 2016, 43 (2) :37-43." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=YYKJ201602009&amp;v=MDcyOTVxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJCUERUQVpMRzRIOWZNclk5RmJZUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         宁慧, 王素红, 崔立刚, 等.基于改进的 FP-tree 最大频繁模式挖掘算法[J].应用科技, 2016, 43 (2) :37-43.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" 程广, 王晓峰.基于MapReduce的并行关联规则增量更新算法[J].计算机工程, 2016, 42 (2) :21-25." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201602004&amp;v=MTY5NzN5L2hVYnJCTHo3QmJiRzRIOWZNclk5RllJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Y=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         程广, 王晓峰.基于MapReduce的并行关联规则增量更新算法[J].计算机工程, 2016, 42 (2) :21-25.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" ZHOU L, ZHONG Z, CHANG J, et al.Balanced parallel FP-Growth with MapReduce[C]//Proceedings of Information Computing and Telecommunications.Washington D.C., USA:IEEE Press, 2011:243-246." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Balanced parallel FP-Growth with MapReduce">
+                                        <b>[10]</b>
+                                         ZHOU L, ZHONG Z, CHANG J, et al.Balanced parallel FP-Growth with MapReduce[C]//Proceedings of Information Computing and Telecommunications.Washington D.C., USA:IEEE Press, 2011:243-246.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" YANG Q, DU F, ZHU X, et al.Improved balanced parallel FP-Growth with MapReduce[C]//Proceedings of 2016 Joint International Conference on Artificial Intelligence and Computer Engineering and International Conference on Network and Communication Security.Lancaster, USA:Destech Publications, 2016:1-5." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Improved balanced parallel FP-Growth with MapReduce">
+                                        <b>[11]</b>
+                                         YANG Q, DU F, ZHU X, et al.Improved balanced parallel FP-Growth with MapReduce[C]//Proceedings of 2016 Joint International Conference on Artificial Intelligence and Computer Engineering and International Conference on Network and Communication Security.Lancaster, USA:Destech Publications, 2016:1-5.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 厍向阳, 张玲.基于Hadoop的FP-Growth关联规则并行改进算法[J].计算机应用研究, 2018, 35 (1) :1-6." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201801022&amp;v=MjkxMjY0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJCTHo3U1pMRzRIOW5Ncm85SFpvUUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         厍向阳, 张玲.基于Hadoop的FP-Growth关联规则并行改进算法[J].计算机应用研究, 2018, 35 (1) :1-6.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" PRAMUDIONO I, KITSUREGAWA M.Parallel FP-Growth on PC cluster[C]//Proceedings of Pacific-Asia Conference on Advances in Knowledge Discovery and Data Mining.Berlin, Germany:Springer, 2003:467-473." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Parallel FP-Growth on PC Cluster">
+                                        <b>[13]</b>
+                                         PRAMUDIONO I, KITSUREGAWA M.Parallel FP-Growth on PC cluster[C]//Proceedings of Pacific-Asia Conference on Advances in Knowledge Discovery and Data Mining.Berlin, Germany:Springer, 2003:467-473.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" YAN X, ZHANG J, XUN Y, et al.A parallel algorithm for mining constrained frequent patterns using MapReduce[J].Soft Computing, 2015, 21 (9) :1-13." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A parallel algorithm for mining constrained frequent patterns using MapReduce">
+                                        <b>[14]</b>
+                                         YAN X, ZHANG J, XUN Y, et al.A parallel algorithm for mining constrained frequent patterns using MapReduce[J].Soft Computing, 2015, 21 (9) :1-13.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 施亮, 钱雪忠.基于Hadoop的并行FP-Growth算法的研究与实现[J].微电子学与计算机, 2015, 32 (4) :150-154." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WXYJ201504034&amp;v=MjYzMzdickJNalhTWkxHNEg5VE1xNDlHWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkvaFU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         施亮, 钱雪忠.基于Hadoop的并行FP-Growth算法的研究与实现[J].微电子学与计算机, 2015, 32 (4) :150-154.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" Frequent itemset ming dataset repository [EB/OL].[2017-11-11].http://fimi.ua.ac.be/data." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Frequent itemset ming dataset repository">
+                                        <b>[16]</b>
+                                         Frequent itemset ming dataset repository [EB/OL].[2017-11-11].http://fimi.ua.ac.be/data.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(03),32-35+40 DOI:10.19678/j.issn.1000-3428.0049606            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于负载均衡的并行FP-Growth算法</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%AB%98%E6%9D%83&amp;code=38477644&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">高权</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E4%B8%87%E6%99%93%E5%86%AC&amp;code=08049247&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">万晓冬</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8D%97%E4%BA%AC%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9%E5%A4%A7%E5%AD%A6%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2&amp;code=0014291&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">南京航空航天大学自动化学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对FP-Growth算法查找操作时间复杂度较高的问题, 提出一种新的算法LBPFP。在PFP算法基础上, 将哈希表加入链头表以实现项地址的快速访问, 并设计基于前缀长度的计算量模型, 优化并行流程, 提升算法的执行效率。在webdocs.dat数据库上进行对比实验, 结果表明, LBPFP算法比PFP、HPFP、DPFP算法具有更高的频繁项集挖掘效率。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Spark%E5%B9%B3%E5%8F%B0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Spark平台;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%A2%91%E7%B9%81%E6%A8%A1%E5%BC%8F%E5%A2%9E%E9%95%BF&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">频繁模式增长;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%B9%B6%E8%A1%8C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">并行;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">负载均衡;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%93%BE%E5%A4%B4%E8%A1%A8&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">链头表;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AE%A1%E7%AE%97%E9%87%8F%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">计算量模型;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    高权 (1990—) , 男, 硕士研究生, 主研方向为大数据分析、数据挖掘;;
+                                </span>
+                                <span>
+                                    万晓冬, 副研究员。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2017-12-07</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家部委基金;</span>
+                    </p>
+            </div>
+                    <h1><b>Parallel FP-Growth Algorithm Based on Load Balance</b></h1>
+                    <h2>
+                    <span>GAO Quan</span>
+                    <span>WAN Xiaodong</span>
+            </h2>
+                    <h2>
+                    <span>College of Automation Engineering, Nanjing University of Aeronautics and Astronautics</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Aiming at the problem that the lookup operation of FP-Growth algorithm has a high time complexity, this paper proposes a new algorithm named LBPFP.The algorithm is based on PFP algorithm, which is added a hash table to the head table to achieve fast access to item and is designed a workload model based on the prefix length to optimize the parallel process and improve the efficiency of the algorithm.The comparison experiments in the webdocs.dat database show that the LBPFP algorithm has better performance than the PFP, HPFP and DPFP algorithms.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Spark%20platform&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Spark platform;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=FP-Growth&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">FP-Growth;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=parallel&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">parallel;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=load%20balance&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">load balance;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=head%20table&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">head table;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=workload%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">workload model;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2017-12-07</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="35" name="35" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="36">随着数据规模的不断增大, 串行算法在时间和空间上的开销迅速增长。面对大规模数据带来的处理速度过慢和存储容量不足等问题, 基于集群的算法并行化方案是有效的解决方案。文献<citation id="114" type="reference">[<a class="sup">1</a>]</citation>提出PFP算法, 在MapReduce<citation id="115" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>框架下实现FP-Growth算法<citation id="116" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>的并行化, 成为一种典型的并行化实现方案, 也是Hadoop、Spark平台的算法库成员。随后, 众多研究学者在PFP算法的基础上深入研究。文献<citation id="117" type="reference">[<a class="sup">4</a>]</citation>提出用布尔型矩阵减少事务数据库的扫描次数, 从而优化了PFP算法的执行流程。文献<citation id="118" type="reference">[<a class="sup">5</a>]</citation>使用二维表压缩记录频繁项的支持度, 避免产生大量的条件FP树。文献<citation id="119" type="reference">[<a class="sup">6</a>]</citation>根据项合并策略减小搜索空间规模, 优化FP-Growth算法的挖掘效率, 并利用Hadoop平台的MapReduce编程模式实现并行化, 进一步提升大数据环境下的挖掘效率。文献<citation id="120" type="reference">[<a class="sup">7</a>]</citation>针对事务共享前缀过长的特殊情况拆分模式树, 优化FP-Growth算法, 并在Spark平台上完成并行化。文献<citation id="121" type="reference">[<a class="sup">8</a>]</citation>提升PFP算法挖掘最大频繁项集的效率。文献<citation id="122" type="reference">[<a class="sup">9</a>]</citation>改进PFP算法, 并在数据库增量更新下挖掘关联规则。文献<citation id="123" type="reference">[<a class="sup">10</a>]</citation>在PFP算法中引入负载均衡策略, 根据计算量模型估算负载大小再分组, 大幅提升了并行执行效率。文献<citation id="124" type="reference">[<a class="sup">11</a>]</citation>在考虑负载均衡的同时, 对FP-Growth算法使用剪枝策略, 合并多路径中的同名项, 从而减少挖掘FP树的递归次数。</p>
+                </div>
+                <div class="p1">
+                    <p id="37">本文以PFP算法为基础, 针对FP-Growth算法中原始链头表的数据结构对排序、查找等操作产生的较高时间复杂度问题, 以及现有计算量模型估算不准确带来的负载不均问题进行优化, 提出一种并行算法LBPFP, 以提升并行效率, 降低时间成本。</p>
+                </div>
+                <h3 id="38" name="38" class="anchor-tag">1 相关工作</h3>
+                <div class="p1">
+                    <p id="39">PFP算法的执行流程如图1所示, 主要由3个MapReduce任务完成。</p>
+                </div>
+                <div class="area_img" id="40">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903006_040.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 PFP算法的并行流程" src="Detail/GetImg?filename=images/JSJC201903006_040.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 PFP算法的并行流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903006_040.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="41">PFP算法详细描述如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="42"><b>步骤1</b> 利用Map任务将事务数据集DB划分到不同节点上, 并将事务<i>T</i><sub><i>i</i></sub>映射成键值对 (<i>a</i><sub><i>j</i></sub>, 1) , 其中<i>a</i><sub><i>j</i></sub>属于<i>T</i><sub><i>i</i></sub>。</p>
+                </div>
+                <div class="p1">
+                    <p id="43"><b>步骤2</b> 利用Reduce任务统计各项的支持数, 生成频繁项目表F_List。</p>
+                </div>
+                <div class="p1">
+                    <p id="44"><b>步骤3</b> 将F_List中的项分组, 结果存储在G_List中, 由单节点完成。</p>
+                </div>
+                <div class="p1">
+                    <p id="45"><b>步骤4</b> 根据G_List, 用Map任务生成组间独立的事务, 然后由Reduce任务对组内事务进行FP-Growth挖掘, 返回局部支持数最高的前<i>K</i>项模式。</p>
+                </div>
+                <div class="p1">
+                    <p id="46"><b>步骤5</b> 聚合步骤4的计算结果, 先用Map任务合并相同键值, 再用Reduce任务计算全局支持数最高的前<i>K</i>项模式。</p>
+                </div>
+                <div class="p1">
+                    <p id="47">然而, PFP算法仅采用了等量分组策略, 并没有考虑不同频繁项会产生不同计算量的问题<citation id="125" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>。在数据量增大的情况下, 不同分组之间的负载差异会增大, 出现部分节点完成少量计算任务后空闲等待的情况, 明显降低了整个并行算法的性能。而文献<citation id="127" type="reference">[<a class="sup">5</a>,<a class="sup">6</a>]</citation>给出一种主流的负载均衡策略, 用以估算每个频繁项的负载大小, 然后在分组中利用贪心策略, 将负载大的项放到负载总和最小的组以实现负载均衡。计算量模型计算公式如下<citation id="126" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>:</p>
+                </div>
+                <div class="p1">
+                    <p id="48"><i>L</i><sub><i>i</i></sub>=lb (<i>P</i><sub><i>i</i></sub>)      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="49">其中, 项目<i>i</i>对应的计算量为<i>L</i><sub><i>i</i></sub>, 在链头表中的位置为<i>P</i><sub><i>i</i></sub>。这种计算量模型也被文献<citation id="128" type="reference">[<a class="sup">14</a>,<a class="sup">15</a>]</citation>使用到各自的负载均衡策略中。</p>
+                </div>
+                <h3 id="50" name="50" class="anchor-tag">2 LBPFP算法</h3>
+                <div class="p1">
+                    <p id="51">本文提出一种LBPFP算法, 通过优化FP-Growth算法中链头表的数据结构, 降低时间复杂度, 改进负载均衡策略中的计算量模型, 缩小分组带来的计算时间差异, 提升并行执行的效率, 并给出Spark下优化算法LBPFP的实现过程。</p>
+                </div>
+                <h4 class="anchor-tag" id="52" name="52">2.1 链头表数据结构优化</h4>
+                <div class="p1">
+                    <p id="53">根据表1给出的事务数据库, 构建优化前后的链头表, 如图2所示。</p>
+                </div>
+                <div class="area_img" id="54">
+                    <p class="img_tit"><b>表1 PFP算法的应用样例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="54" border="1"><tr><td><br />事务<i>T</i></td><td>排序后的事务</td><td>独立的事务片段</td></tr><tr><td><br />r z h k p</td><td>z r</td><td>r:z</td></tr><tr><td><br />z y x w v u t s</td><td>z x s t y</td><td>y:z x s t<br />t:z x s<br />s:z x<br />x:z</td></tr><tr><td><br />s x o n r</td><td>x r s</td><td>s:x r<br />r:x</td></tr><tr><td><br />x z y m t s q e</td><td>z x s t y</td><td>y:z x s t<br />t:z x s<br />s:z x<br />x:z</td></tr><tr><td><br />z</td><td>z</td><td>Ø</td></tr><tr><td><br />x z y r q t p</td><td>z x r t y</td><td>y:z x r t<br />t:z x r<br />r:z x<br />x:z</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="55">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903006_055.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 链头表数据结构示意图" src="Detail/GetImg?filename=images/JSJC201903006_055.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 链头表数据结构示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903006_055.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="56">原始链头表采用数组结构, 按支持度由高到低的顺序存储频繁项和节点链的头节点。假设链头表含有<i>m</i>个频繁项, 则一个含有<i>k</i>个元素的事务在排序中需要比较<i>k</i>·<i>m</i>次, 在插入到FP树中需要比较<i>m</i>·<i>m</i>次, 时间复杂度为<i>O</i> ( (<i>k</i>+<i>m</i>) ·<i>m</i>) =<i>O</i> (<i>m</i><sup>2</sup>) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="57">优化后的链头表包含一个数组和一张哈希表。其中, 数组按支持度由高到低的顺序存储由频繁项和标志位组成的二元组;哈希表存储键值对, 键为频繁项, 值为二元组, 其中第1个元素是频繁项在数组中的位置, 第2个元素是节点链的头节点。此时, 排序逻辑为:根据项目名查找哈希表, 获取数组的下标值, 并将数组中对应元组中的标志位置为True, 再获取数组中标志位为True的项, 并将标志位复位为False。排序的时间复杂度为<i>O</i> (<i>k</i>) , 插入FP树的时间复杂度为<i>O</i> (<i>m</i>) , 总的时间复杂度为<i>O</i> (<i>k</i>+<i>m</i>) =<i>O</i> (<i>m</i>) , 较优化前降低了一个数量级。</p>
+                </div>
+                <h4 class="anchor-tag" id="58" name="58">2.2 计算量模型优化</h4>
+                <div class="p1">
+                    <p id="59">式 (1) 给出的计算量模型仅与链头表中项目的位置有关, 并不能反映数据自身的特征。如图3所示, 在FP树中挖掘以r为模式后缀的频繁项集, 产生的负载量应比s大, 而现有模型估算的r计算量却小于s, 由此进行的分组仍存在一定程度的负载不均衡现象。</p>
+                </div>
+                <div class="area_img" id="60">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903006_060.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 分组示意图" src="Detail/GetImg?filename=images/JSJC201903006_060.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 分组示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903006_060.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="61">为此, 本文提出基于前缀长度的计算量模型, 同时反映项目在FP树中由深度与多路径产生的计算量。</p>
+                </div>
+                <div class="p1">
+                    <p id="62">考虑前缀长度作为后验知识带来的计算任务, 本文对PFP算法流程作出改进, 以保证事务数据库的扫描次数不变, 提升并行化效率。具体的步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="63">1) 对排序后的事务进行flatMap操作, 生成&lt;key:项, value:事务片段&gt;, 再通过groupByKey () 生成独立的条件事务集, 用于构建每一项的条件FP树, 计算前缀长度, 并将前缀长度和条件FP树保存到项对应的键值对中。</p>
+                </div>
+                <div class="p1">
+                    <p id="64">2) 根据链头表中从下向上的顺序逐项对前缀长度进行分组计算:每次将新项目的前缀长度累加到总长度最小的组中, 同时赋予该项相应的组号gid, 直到分组结束。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">3) 根据哈希结构G_List中保存的 (key:组号, value:划分到该组的各项对应的条件FP树) , 调用Growth () 函数挖掘以各项为模式后缀的频繁项集。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">在LBPFP算法中, 只扫描原始事务数据库2次, 直接由以项为键、事务片段为值的键值对构建各频繁项的条件FP树, 省去构造FP树的过程。同时, 前缀长度更加准确地衡量出负载的大小, 通过均衡策略分组后, 可降低各节点之间计算时间的差距。LBPFP算法在Spark下的执行过程如算法1所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="67"><b>算法1</b> LBPFP算法</p>
+                </div>
+                <div class="area_img" id="130">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201903006_13000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="95" name="95" class="anchor-tag">3 实验与结果分析</h3>
+                <div class="p1">
+                    <p id="96">为验证LBPFP算法的优化效果, 本文用4台PC机搭建Spark集群环境, 具体参数如表2所示。实验使用公开数据集webdocs.dat<citation id="129" type="reference"><link href="33" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>, 其基本特征如表3所示。</p>
+                </div>
+                <div class="area_img" id="97">
+                    <p class="img_tit"><b>表2 集群环境参数</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="97" border="1"><tr><td>序号</td><td>机器名</td><td>运行进程</td><td>核数/内存</td><td>环境参数</td></tr><tr><td><br />1</td><td>cmaster0</td><td>Master/Worker</td><td>4核/8 GB</td><td rowspan="4">CentOS 7.1<br />Spark-2.1.0<br />Scala-2.1.1</td></tr><tr><td><br />2</td><td>cslave0</td><td>Worker</td><td>2核/4 GB</td></tr><tr><td><br />3</td><td>cslave1</td><td>Worker</td><td>2核/4 GB</td></tr><tr><td><br />4</td><td>cslave2</td><td>Worker</td><td>2核/4 GB</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="98">
+                    <p class="img_tit"><b>表3 webdocs.dat数据集的基本描述</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="98" border="1"><tr><td>数据集</td><td>数据量/GB</td><td>记录数</td><td>基本项数</td><td>事务最大长度</td></tr><tr><td>webdocs.dat</td><td>1.48</td><td>1 692 082</td><td>5 267 656</td><td>71 472</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="99">本文实验以IntelliJ IDEA为开发环境, 在Spark集群下实现PFP算法、HPFP算法 (在PFP算法基础上只优化链头表) 、DPFP算法 (在HPFP算法中加入典型的负载均衡策略) 以及本文提出的LBPFP算法 (优化DPFP算法中负载均衡策略使用的计算量模型) , 并从数据规模、支持度、集群节点个数角度比较4种算法的挖掘效率, 取5次实验数据的平均值作为最终结果。</p>
+                </div>
+                <h4 class="anchor-tag" id="100" name="100">3.1 数据规模对算法性能的影响</h4>
+                <div class="p1">
+                    <p id="101">从webdocs.dat中随机抽取不同规模的样本数据, 构建实验数据集data1、data2、data3、data4, 依次包含40万、80万、120万、160万条记录, 取最小支持度为0.6, 分别使用4种算法进行挖掘分析, 结果如图4所示。</p>
+                </div>
+                <div class="area_img" id="102">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903006_102.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 不同数据规模的实验结果" src="Detail/GetImg?filename=images/JSJC201903006_102.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 不同数据规模的实验结果</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903006_102.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="103">由图4可知, 当数据量较小时, 4种算法的运行时间接近。随着数据量的增大, HPFP、DPFP、LBPFP 3种算法相对于PFP算法都具有明显的优化效果, 说明优化链头表与采用负载均衡策略都对算法性能有较大的提升。DPFP算法与LBPFP算法在较大数据规模下表现出更高的算法性能, 说明负载均衡策略对并行算法执行效率的提升有重要作用。LBPFP算法相对DPFP算法表现出更好的挖掘效率, 说明优化计算量模型提升了算法性能。</p>
+                </div>
+                <h4 class="anchor-tag" id="104" name="104">3.2 支持度对算法性能的影响</h4>
+                <div class="p1">
+                    <p id="105">分别取最小支持度为0.2、0.4、0.6、0.8, 对所有数据进行挖掘分析, 结果如图5所示。</p>
+                </div>
+                <div class="area_img" id="106">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903006_106.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 不同支持度的实验结果" src="Detail/GetImg?filename=images/JSJC201903006_106.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 不同支持度的实验结果</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903006_106.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="107">由图5可知, 随着支持度的增大, 需要处理的挖掘任务必然减少, 4种算法的运行时间也都必然减小, 但采用负载均衡策略的DPFP算法、LBPFP算法能在数据量较大 (即支持度较小) 的情况下保持更好的性能。在4种算法的相互比较中可以发现, DPFP算法相对于HPFP算法的提升效果整体上高于HPFP算法相对于PFP算法的提升效果, 且LBPFP算法的性能相对PFP算法至少提升了1倍, 说明优化的负载均衡策略有效提升了算法处理海量数据的能力。</p>
+                </div>
+                <h4 class="anchor-tag" id="108" name="108">3.3 节点个数对算法性能的影响</h4>
+                <div class="p1">
+                    <p id="109">调整节点数分别为1、2、3、4, 对所有数据进行挖掘分析, 结果如图6所示。</p>
+                </div>
+                <div class="area_img" id="110">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903006_110.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 不同节点数的实验结果" src="Detail/GetImg?filename=images/JSJC201903006_110.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 不同节点数的实验结果</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903006_110.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="111">由图6可知, 随着节点数的增加, 4种算法的运行时间大幅减少, 说明并行算法能有效地处理大规模数据。其中, LBPFP算法性能明显优于其他3种算法, 表明本文优化的负载均衡算法能在多个节点间更合理地分配计算任务, 提升了并行执行的效率。</p>
+                </div>
+                <h3 id="112" name="112" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="113">本文提出一种LBPFP算法, 通过在链头表中引入哈希表提升项的访问速度, 并针对负载均衡策略中负载估算不准带来的分组不均衡问题, 建立基于前缀长度的计算量模型, 改进并行化流程, 提升算法性能。通过对比实验, 从数据规模、支持度大小、节点数量的角度出发, 证明LBPFP算法极大地提高了频繁项集的挖掘效率。下一步将考虑在FP树中引入剪枝策略、降低节点通信量, 提升算法效率。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=PFP:Parallel FP-Growth for query recommendation">
+
+                                <b>[1]</b> LI H, WANG Y, ZHANG D, et al.PFP:Parallel FP-Growth for query recommendation[C]//Proceedings of 2008 ACM Conference on Recom mended Systems.New York, USA:ACM Press, 2008:125-137.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000003940&amp;v=MDI2NzRnNW9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSUoxb1dieHM9TmlmSVk3SzdIdGpOcjQ5RlpPc01CWA==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> LEE K H, LEE Y J, CHOI H, et al.Parallel data processing with MapReduce:A survey[J].ACM SIGMOD Record, 2012, 40 (4) :11-20.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Mining frequent patterns without candidate generation">
+
+                                <b>[3]</b> HAN J, PEI J, YIN Y.Mining frequent patterns without candidate generation[C]//Proceedings of 2000 ACM SIGMOD International Conference on Management of Date.New York, USA:ACM Press, 2000:1-12.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HNLG201401026&amp;v=MTE5NzZxQnRHRnJDVVJMT2VaZVJvRnkvaFVickJMU1BIYWJHNEg5WE1ybzlIWW9RS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 陈兴蜀, 张帅, 童浩, 等.基于布尔矩阵和MapReduce的FP-Growth算法[J].华南理工大学学报 (自然科学版) , 2014 (1) :135-141.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Improved frequent pattern mining algorithm based on FP-tree">
+
+                                <b>[5]</b> WEI F, XIANG L.Improved frequent pattern mining algorithm based on FP-tree[EB/OL].[2017-11-11].http://pos.sissa.it/cgi-bin/reader/conf.cgi?confid=264, id.37.2015.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HLGX201602005&amp;v=MDM0NzlCTFNITWRyRzRIOWZNclk5RllZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 马月坤, 刘鹏飞, 张振友, 等.改进的FP-Growth算法及其分布式并行实现[J].哈尔滨理工大学学报, 2016, 21 (2) :20-27.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDDJ201608003&amp;v=MjUzMTJGeS9oVWJyQlBTblBaTEc0SDlmTXA0OUZaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 方向, 张功萱.基于Spark的PFP-Growth并行算法优化实现[J].现代电子技术, 2016, 39 (8) :9-13.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=YYKJ201602009&amp;v=MjAwNTNZOUZiWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9oVWJyQlBEVEFaTEc0SDlmTXI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 宁慧, 王素红, 崔立刚, 等.基于改进的 FP-tree 最大频繁模式挖掘算法[J].应用科技, 2016, 43 (2) :37-43.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201602004&amp;v=MTg2MTQ5RllJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJCTHo3QmJiRzRIOWZNclk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 程广, 王晓峰.基于MapReduce的并行关联规则增量更新算法[J].计算机工程, 2016, 42 (2) :21-25.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Balanced parallel FP-Growth with MapReduce">
+
+                                <b>[10]</b> ZHOU L, ZHONG Z, CHANG J, et al.Balanced parallel FP-Growth with MapReduce[C]//Proceedings of Information Computing and Telecommunications.Washington D.C., USA:IEEE Press, 2011:243-246.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Improved balanced parallel FP-Growth with MapReduce">
+
+                                <b>[11]</b> YANG Q, DU F, ZHU X, et al.Improved balanced parallel FP-Growth with MapReduce[C]//Proceedings of 2016 Joint International Conference on Artificial Intelligence and Computer Engineering and International Conference on Network and Communication Security.Lancaster, USA:Destech Publications, 2016:1-5.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201801022&amp;v=MjY0MzZxQnRHRnJDVVJMT2VaZVJvRnkvaFVickJMejdTWkxHNEg5bk1ybzlIWm9RS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 厍向阳, 张玲.基于Hadoop的FP-Growth关联规则并行改进算法[J].计算机应用研究, 2018, 35 (1) :1-6.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Parallel FP-Growth on PC Cluster">
+
+                                <b>[13]</b> PRAMUDIONO I, KITSUREGAWA M.Parallel FP-Growth on PC cluster[C]//Proceedings of Pacific-Asia Conference on Advances in Knowledge Discovery and Data Mining.Berlin, Germany:Springer, 2003:467-473.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A parallel algorithm for mining constrained frequent patterns using MapReduce">
+
+                                <b>[14]</b> YAN X, ZHANG J, XUN Y, et al.A parallel algorithm for mining constrained frequent patterns using MapReduce[J].Soft Computing, 2015, 21 (9) :1-13.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WXYJ201504034&amp;v=MjIyMDJYU1pMRzRIOVRNcTQ5R1lJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJCTWo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 施亮, 钱雪忠.基于Hadoop的并行FP-Growth算法的研究与实现[J].微电子学与计算机, 2015, 32 (4) :150-154.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Frequent itemset ming dataset repository">
+
+                                <b>[16]</b> Frequent itemset ming dataset repository [EB/OL].[2017-11-11].http://fimi.ua.ac.be/data.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201903006" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201903006&amp;v=MDY3NzhyQkx6N0JiYkc0SDlqTXJJOUZZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9oVWI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="1" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

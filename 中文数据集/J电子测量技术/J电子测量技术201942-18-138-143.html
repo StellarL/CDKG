@@ -1,0 +1,915 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637135587958537500%26DBCODE%3dCJFD%26TABLEName%3dCJFDTEMP%26FileName%3dDZCL201918024%26RESULT%3d1%26SIGN%3d9l95BXjrkzACpGBFxYbR%252fJ4p3Xk%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZCL201918024&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZCL201918024&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201918024&amp;v=Mjg3ODU3cWZadVp0RnluZ1ZMM0FJVGZJWXJHNEg5ak5wNDlIWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#33" data-title="&lt;b&gt;0 引  言&lt;/b&gt; "><b>0 引  言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="&lt;b&gt;1 立体匹配算法描述&lt;/b&gt; "><b>1 立体匹配算法描述</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#43" data-title="&lt;b&gt;1.1 改进的左右像素点匹配代价算法描述&lt;/b&gt;"><b>1.1 改进的左右像素点匹配代价算法描述</b></a></li>
+                                                <li><a href="#60" data-title="&lt;b&gt;1.2 匹配代价的全局聚合&lt;/b&gt;"><b>1.2 匹配代价的全局聚合</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#69" data-title="&lt;b&gt;2 可行驶区域分割算法描述&lt;/b&gt; "><b>2 可行驶区域分割算法描述</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#70" data-title="&lt;b&gt;2.1 可行驶区域剖面映射&lt;/b&gt;"><b>2.1 可行驶区域剖面映射</b></a></li>
+                                                <li><a href="#74" data-title="&lt;b&gt;2.2 最优路径点集估计&lt;/b&gt;"><b>2.2 最优路径点集估计</b></a></li>
+                                                <li><a href="#83" data-title="&lt;b&gt;2.3 模型参数求解&lt;/b&gt;"><b>2.3 模型参数求解</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#98" data-title="&lt;b&gt;3 实验结果与分析&lt;/b&gt; "><b>3 实验结果与分析</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#108" data-title="&lt;b&gt;4 结  论&lt;/b&gt; "><b>4 结  论</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#39" data-title="图1 局部立体匹配流程">图1 局部立体匹配流程</a></li>
+                                                <li><a href="#59" data-title="图2 不同匹配代价算法比较">图2 不同匹配代价算法比较</a></li>
+                                                <li><a href="#66" data-title="图3 基于一维扫描线的动态规划代价聚合">图3 基于一维扫描线的动态规划代价聚合</a></li>
+                                                <li><a href="#68" data-title="图4 左右图像对计算视差图">图4 左右图像对计算视差图</a></li>
+                                                <li><a href="#72" data-title="图5 V差异映射计算方法">图5 V差异映射计算方法</a></li>
+                                                <li><a href="#78" data-title="图6 三维点云">图6 三维点云</a></li>
+                                                <li><a href="#82" data-title="图7 最优路径点集估计">图7 最优路径点集估计</a></li>
+                                                <li><a href="#88" data-title="图8 抛物线轨迹拟合">图8 抛物线轨迹拟合</a></li>
+                                                <li><a href="#97" data-title="图9 可行驶区域分割结果(左:滤波前右:滤波后)">图9 可行驶区域分割结果(左:滤波前右:滤波后)</a></li>
+                                                <li><a href="#100" data-title="图10 BJUT-IV自动驾驶平台和双目传感器">图10 BJUT-IV自动驾驶平台和双目传感器</a></li>
+                                                <li><a href="#102" data-title="图11 立体匹配算法精度比较">图11 立体匹配算法精度比较</a></li>
+                                                <li><a href="#103" data-title="&lt;b&gt;表1 立体匹配算法运行时间比较(ms&lt;/b&gt;)"><b>表1 立体匹配算法运行时间比较(ms</b>)</a></li>
+                                                <li><a href="#106" data-title="&lt;b&gt;表2 可行驶区域分割算法性能&lt;/b&gt;(%)"><b>表2 可行驶区域分割算法性能</b>(%)</a></li>
+                                                <li><a href="#107" data-title="图12 几种典型驾驶场景的分割效果">图12 几种典型驾驶场景的分割效果</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="127">
+
+
+                                    <a id="bibliography_1" title=" 郭春钊,山部尚孝,三田诚一.基于立体视觉平面单应性的智能车辆可行驶道路边界检测[J].自动化学报,2013,39(4):371-380." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MOTO201304008&amp;v=MjkyNzF0RnluZ1ZMM0FLQ0xmWWJHNEg5TE1xNDlGYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVo=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         郭春钊,山部尚孝,三田诚一.基于立体视觉平面单应性的智能车辆可行驶道路边界检测[J].自动化学报,2013,39(4):371-380.
+                                    </a>
+                                </li>
+                                <li id="129">
+
+
+                                    <a id="bibliography_2" title=" KUHNL T,KUMMERT F,FRITSCH J.Monocular road segmentation using slow feature analysis[C].In:Proceedings of the 2011 IEEE Intelligent Vehicles Symposium.Baden-Baden,Germany:IEEE,2011.800-806." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Monocular Road Segmentation using Slow Feature Analysis">
+                                        <b>[2]</b>
+                                         KUHNL T,KUMMERT F,FRITSCH J.Monocular road segmentation using slow feature analysis[C].In:Proceedings of the 2011 IEEE Intelligent Vehicles Symposium.Baden-Baden,Germany:IEEE,2011.800-806.
+                                    </a>
+                                </li>
+                                <li id="131">
+
+
+                                    <a id="bibliography_3" title=" 龚建伟,叶春兰,姜岩,等.多层感知器自监督在线学习非结构化道路识别[J].北京理工大学学报,2014,34(3):261-266." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJLG201403009&amp;v=MDI2OTF0RnluZ1ZMM0FKeWZIYWJHNEg5WE1ySTlGYllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVo=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         龚建伟,叶春兰,姜岩,等.多层感知器自监督在线学习非结构化道路识别[J].北京理工大学学报,2014,34(3):261-266.
+                                    </a>
+                                </li>
+                                <li id="133">
+
+
+                                    <a id="bibliography_4" title=" 王晓彬,马戎,付维平.基于支持向量机的非结构化道路检测[J].科学技术与工程,2011,11(36):9106-9109." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KXJS201136041&amp;v=MDczMTRuZ1ZMM0FMalhCZmJHNEg5RFBxWTlCWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         王晓彬,马戎,付维平.基于支持向量机的非结构化道路检测[J].科学技术与工程,2011,11(36):9106-9109.
+                                    </a>
+                                </li>
+                                <li id="135">
+
+
+                                    <a id="bibliography_5" title=" KUTHIRUMMAL S,DAS A,SAMARASEKERA S.A graph traversal based algorithm for obstacle detection using lidar or stereo[C].2011 IEEE/RSJ International Conference Intelligent Robots and Systems.Beijing,China:IEEE,2011:3874-3880." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=&amp;quot;A graph traversal based algorithm for obstacle detection using lidar or stereo,&amp;quot;">
+                                        <b>[5]</b>
+                                         KUTHIRUMMAL S,DAS A,SAMARASEKERA S.A graph traversal based algorithm for obstacle detection using lidar or stereo[C].2011 IEEE/RSJ International Conference Intelligent Robots and Systems.Beijing,China:IEEE,2011:3874-3880.
+                                    </a>
+                                </li>
+                                <li id="137">
+
+
+                                    <a id="bibliography_6" title=" 赵凯,朱愿,王任栋.基于均值高程图的城市环境三维LiDAR点云地面分割方法[J].军事交通学院学报,2018,20(9):80-84." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSTO201809020&amp;v=MzEyNjRZYkc0SDluTXBvOUhaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5nVkwzQUx6N2Y=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         赵凯,朱愿,王任栋.基于均值高程图的城市环境三维LiDAR点云地面分割方法[J].军事交通学院学报,2018,20(9):80-84.
+                                    </a>
+                                </li>
+                                <li id="139">
+
+
+                                    <a id="bibliography_7" title=" HU Z,UCHIMURA K.U-V-disparity:an efficient algorithm for stereovision based scene analysis[C] IEEE Proceedings.Intelligent Vehicles Symposium,IEEE,2005:48-54." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=U V disparity:an efficient algorithm for stereovision based scene analysis">
+                                        <b>[7]</b>
+                                         HU Z,UCHIMURA K.U-V-disparity:an efficient algorithm for stereovision based scene analysis[C] IEEE Proceedings.Intelligent Vehicles Symposium,IEEE,2005:48-54.
+                                    </a>
+                                </li>
+                                <li id="141">
+
+
+                                    <a id="bibliography_8" title=" ZHANG M,LIU P,ZHAO X,et al.An obstacle detection algorithm based on UV disparity map analysis[C]//IEEE International Conference on Information Theory &amp;amp; Information Security,IEEE,2011." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=An obstacle detection algorithm based on U-V disparity map analysis">
+                                        <b>[8]</b>
+                                         ZHANG M,LIU P,ZHAO X,et al.An obstacle detection algorithm based on UV disparity map analysis[C]//IEEE International Conference on Information Theory &amp;amp; Information Security,IEEE,2011.
+                                    </a>
+                                </li>
+                                <li id="143">
+
+
+                                    <a id="bibliography_9" title=" 张欢,安利,张强,等.SGBM算法与BM算法分析研究[J].测绘与空间地理信息,2016,39(10):214-216." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DBCH201610063&amp;v=MzE3MzZWTDNBSVMvSVpyRzRIOWZOcjQ5RFo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5bmc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         张欢,安利,张强,等.SGBM算法与BM算法分析研究[J].测绘与空间地理信息,2016,39(10):214-216.
+                                    </a>
+                                </li>
+                                <li id="145">
+
+
+                                    <a id="bibliography_10" title=" 王云峰,吴炜,余小亮,等.基于自适应权重AD-Census变换的双目立体匹配[J].工程科学与技术,2018,50(4):153-160." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SCLH201804020&amp;v=MjYwNzJPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5bmdWTDNBTmk3SFpyRzRIOW5NcTQ5SFpJUUtESDg0dlI0VDZqNTQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         王云峰,吴炜,余小亮,等.基于自适应权重AD-Census变换的双目立体匹配[J].工程科学与技术,2018,50(4):153-160.
+                                    </a>
+                                </li>
+                                <li id="147">
+
+
+                                    <a id="bibliography_11" title=" 闫利,王芮,刘华,等.基于改进代价计算和自适应引导滤波的立体匹配[J].光学学报,2018,38(11):257-267." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GXXB201811030&amp;v=MjM4NTlHRnJDVVI3cWZadVp0RnluZ1ZMM0FJalhUYkxHNEg5bk5ybzlHWklRS0RIODR2UjRUNmo1NE8zenFxQnQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         闫利,王芮,刘华,等.基于改进代价计算和自适应引导滤波的立体匹配[J].光学学报,2018,38(11):257-267.
+                                    </a>
+                                </li>
+                                <li id="149">
+
+
+                                    <a id="bibliography_12" title=" ZHOU X,BOULANGER P.Radiometric invariant stereo matching based on relative gradients[C].2012 19th IEEE International Conference on Image Processing.Orlando,USA:IEEE,2012:2989-2992." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Radiometric invariant stereo matching based onrelative gradients">
+                                        <b>[12]</b>
+                                         ZHOU X,BOULANGER P.Radiometric invariant stereo matching based on relative gradients[C].2012 19th IEEE International Conference on Image Processing.Orlando,USA:IEEE,2012:2989-2992.
+                                    </a>
+                                </li>
+                                <li id="151">
+
+
+                                    <a id="bibliography_13" title=" MEI X,SUN X,ZHOU M,et al.On building an accurate stereo matching system on graphics hardware[C]//IEEE International Conference on Computer Vision Workshops.Barcelona:IEEE,2012:467-474." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=H Wang.On building an accurate stereo matching system on graphics hardware">
+                                        <b>[13]</b>
+                                         MEI X,SUN X,ZHOU M,et al.On building an accurate stereo matching system on graphics hardware[C]//IEEE International Conference on Computer Vision Workshops.Barcelona:IEEE,2012:467-474.
+                                    </a>
+                                </li>
+                                <li id="153">
+
+
+                                    <a id="bibliography_14" title=" HIRSCHM H.Stereo processing by semiglobal matching and mutual information[J].IEEE Transactions on Pattern Analysis and Machine Intelligence,2008,30(2):328-341." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Stereo Processing by Semiglobal Matching and Mutual Information">
+                                        <b>[14]</b>
+                                         HIRSCHM H.Stereo processing by semiglobal matching and mutual information[J].IEEE Transactions on Pattern Analysis and Machine Intelligence,2008,30(2):328-341.
+                                    </a>
+                                </li>
+                                <li id="155">
+
+
+                                    <a id="bibliography_15" title=" LABAYRADE R,AUBERT D,TAREL J P.Real time obstacle detection in stereovision on non flat road geometry through v-disparity representation[C].Intelligent Vehicle Symposium,2002.IEEE,2002(2):646-651." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Real time obstacle detection in stereo vision on non flat rode geometry through &amp;quot;V-disparity&amp;quot; representation">
+                                        <b>[15]</b>
+                                         LABAYRADE R,AUBERT D,TAREL J P.Real time obstacle detection in stereovision on non flat road geometry through v-disparity representation[C].Intelligent Vehicle Symposium,2002.IEEE,2002(2):646-651.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=DZCL" target="_blank">电子测量技术</a>
+                2019,42(18),138-143 DOI:10.19651/j.cnki.emt.1902905            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于双目视觉的可行驶区域分割方法</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%AE%B5%E5%BB%BA%E6%B0%91&amp;code=06297908&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">段建民</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%AE%A1%E8%B6%8A&amp;code=40803644&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">管越</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BA%84%E5%8D%9A%E9%98%B3&amp;code=39839604&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">庄博阳</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8C%97%E4%BA%AC%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%83%A8&amp;code=0034856&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北京工业大学信息学部</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>为提高自动驾驶背景下视觉环境感知任务的鲁棒性,提出了一种基于双目视觉和可行驶区域剖面建模方法的非结构化可行驶区域分割算法。为改善视差计算的鲁棒性,以半全局块匹配(SGBM)算法框架为基础,改进其代价计算步骤提出了一种融合相对梯度和AD-Census变换的匹配代价计算方法,经过代价聚合求得视差图。区域分割过程先统计视差图的垂直方向差异直方图,以此作为数据源提出一种描述可行驶区域剖面的抛物线模型,采用动态规划算法和随机采样一致性算法(RANSAC)对模型参数求解过程进行全局优化,经后处理过程实现可行驶区域的分割。通过KITTI数据集和实车采集数据验证,算法达到了19.8 fps的速度和92%以上的分割准确率。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">自动驾驶;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8F%8C%E7%9B%AE%E8%A7%86%E8%A7%89&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">双目视觉;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%8E%AF%E5%A2%83%E6%84%9F%E7%9F%A5&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">环境感知;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%AB%8B%E4%BD%93%E5%8C%B9%E9%85%8D&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">立体匹配;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8F%AF%E8%A1%8C%E9%A9%B6%E5%8C%BA%E5%9F%9F%E5%88%86%E5%89%B2&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">可行驶区域分割;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    段建民,博士,教授,研究方向为车辆环境信息融合与自动驾驶技术等。;
+                                </span>
+                                <span>
+                                    管越,硕士研究生,主要研究方向为面向自动驾驶背景,基于视觉的车辆环境感知技术。E-mail:1358279517@qq.com;
+                                </span>
+                                <span>
+                                    庄博阳,硕士研究生,研究方向为计算机视觉、模式识别等。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2019-04-03</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>北京市属高等学校人才强教计划项目(038000543117004);</span>
+                                <span>北京市教委基金项目(JJ002790200802)资助;</span>
+                    </p>
+            </div>
+                    <h1><b>Passable area segmentation method based on binocular vision</b></h1>
+                    <h2>
+                    <span>Duan Jianmin</span>
+                    <span>Guan Yue</span>
+                    <span>Zhuang Boyang</span>
+            </h2>
+                    <h2>
+                    <span>Faculty of Information Technology, Beijing University of Technology</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>In order to improve the robustness of the visual environment aware task of autopilot, This paper proposes an unstructured passable region segmentation method based on binocular vision and passable region profile modeling. In order to improve the robustness of the disparity calculation, based on the SGBM algorithm framework, the cost calculation step is improved. A matching cost calculation method based on the fusion gradient and AD-Census transform is proposed. The disparity map is obtained through the cost aggregation process. The V-disparity of the disparity map is firstly calculated in the process of segmentation. The parabola model describing the cross-section of the passable region is proposed. The dynamic programming algorithm and the RANSAC algorithm are used to optimize the global solution of the model parameters, and the post-processing process can be used. Division of the area. Through the KITTI dataset and real vehicle acquisition data verification, the algorithm achieves a speed of 19.8 fps and a segmentation accuracy of more than 92%.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=autopilot&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">autopilot;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=binocular%20vision&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">binocular vision;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=environmental%20awareness&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">environmental awareness;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=stereo%20matching&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">stereo matching;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=passable%20region%20segmentation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">passable region segmentation;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2019-04-03</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="33" name="33" class="anchor-tag"><b>0 引  言</b></h3>
+                <div class="p1">
+                    <p id="34">随着自动驾驶和先进辅助驾驶系统(advanced driver assistant system, ADAS)硬件平台的不断完善,车辆环境感知算法研究也取得了显著进展,但可行驶区域分割和道路检测依旧是制约智能车辆感知效率和精度的关键问题之一<citation id="157" type="reference"><link href="127" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="35">文献<citation id="165" type="reference"><link href="129" rel="bibliography" /><link href="131" rel="bibliography" /><link href="133" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>基于单目图像进行检测,通过构建车辆环境的低阶特征集合,训练分类器实现可行驶区域进行分割,但普遍存在实时性差,鲁棒性差的问题。郭春钊<citation id="158" type="reference"><link href="127" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>等提出一种基于立体视觉平面单应性的可行驶道路边界检测算法,根据立体视觉平面单应性建立隐马尔可夫模型(hidden markov model, HMM), 应用Viterbi算法建立状态序列观测概率函数来寻找道路和非道路边界的最优状态序列。Kuthirummal等<citation id="159" type="reference"><link href="135" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>在立体视觉基础上提出一种空间离散的栅格模型,基于高度先验知识对重建后的空间点云归类、分割,该方法类似于激光雷达点云分割<citation id="160" type="reference"><link href="137" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>具有一定的实时性,但需要精确的相机标定和三维重建过程。Hu等<citation id="161" type="reference"><link href="139" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>通过对立体视觉三维重建过程推导首次提出“UV-Disparity”(水平-垂直方向差异映射)。文献<citation id="162" type="reference">[<a class="sup">8</a>]</citation>在“UV-Disparity”基础上提出一种障碍物检测算法,将空间中的目标抽象成几种典型平面并通过视差映射至二维图像上,建立障碍物模型来描述环境要素。通过分析不同的分割方法得出:基于双目立体视觉的方法较之传统单目方法在分割算法的时间复杂度和应对图像尺度变化、车辆动态情况下有更高的鲁棒性。但是相较于单目视觉方法,立体视觉的视差计算精度和时间复杂度是一个矛盾体。传统的SGBM匹配算法是以互信息为基础的,其左右像素的相似度量计算是基于像素灰度定义的,文献<citation id="163" type="reference">[<a class="sup">9</a>]</citation>对其进行了详细描述。基于像素灰度度量(AD)在图像纹理丰富区域有着较好的匹配效果但单纯的AD变换对图像噪声和光照变化很敏感<citation id="164" type="reference"><link href="145" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>,虽然AD-Census代价计算方式在一定程度上改善了噪声和光照敏感的问题,但是面对强曝光和弱纹理环境时,匹配效果仍不理想。</p>
+                </div>
+                <div class="p1">
+                    <p id="36">为解决双目视觉可行驶区域分割过程的立体匹配、道路平面掩模计算步骤存在的问题,本文在SGBM算法框架基础上,采用融合相对梯度和AD-Census代价改进了原匹配代价计算步骤,弥补了在强曝光和弱纹理环境下的匹配精度。依托UV差异映射理论提出了一种描述可行驶区域剖面的抛物线模型。通过分析可行驶区域掩模点云的分布规律,设计能量评价函数,通过动态规划求解全局路径点的最优估计集合。模型求解阶段使用RANSAC算法优化参数,提高了分割过程的鲁棒性,后滤波过程进一步提高了分割准确率。</p>
+                </div>
+                <h3 id="37" name="37" class="anchor-tag"><b>1 立体匹配算法描述</b></h3>
+                <div class="p1">
+                    <p id="38">现阶段所形成的立体匹配理论框架按照代价计算和聚合方式将匹配算法分为局部算法和全局算法,其中局部立体匹配算法是利用固定或自适应窗口<citation id="166" type="reference"><link href="147" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>结合窗口中心像素邻域信息进行代价计算和聚合过程。虽在精度性能上相较全局匹配算法有一定的差距,但算法较好地平衡了精度和实时性的矛盾。局部立体匹配算法流程如下:</p>
+                </div>
+                <div class="area_img" id="39">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201918024_039.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 局部立体匹配流程" src="Detail/GetImg?filename=images/DZCL201918024_039.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 局部立体匹配流程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201918024_039.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="40">其中预处理阶段首先利用opencv标定工具计算每个摄像机的内外参矩阵,通过立体校正对左右图像进行极线约束。消除畸变后的两幅图像严格地行对应,使得两幅图像的对极线恰好在同一水平线上有利于减小窗口计算范围,提高匹配精度。然后使用式(1)对行对齐的左右图像逐像素进行亮度归一化处理,减小亮度差异,增强纹理。</p>
+                </div>
+                <div class="p1">
+                    <p id="41" class="code-formula">
+                        <mathml id="41"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ι</mi><msub><mrow></mrow><mi>c</mi></msub><mo>=</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mrow><mi>Ι</mi><mo>∈</mo><mi>Ν</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></munder><mo stretchy="false">(</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>max</mi></mrow></mstyle><mrow><mi>Ι</mi><mo>∈</mo><mi>Ν</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></munder><mo stretchy="false">(</mo><mi>Ι</mi><msub><mrow></mrow><mi>c</mi></msub><mo>-</mo><mover accent="true"><mi>Ι</mi><mo>¯</mo></mover><mo>,</mo><mo>-</mo><mi>Ι</mi><msub><mrow></mrow><mrow><mi>c</mi><mi>a</mi><mi>p</mi></mrow></msub><mo stretchy="false">)</mo><mo>,</mo><mi>Ι</mi><msub><mrow></mrow><mrow><mi>c</mi><mi>a</mi><mi>p</mi></mrow></msub><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="42">式中:<i>N</i><sub><i>p</i></sub>是构造的一个5×5窗口;<i>I</i><sub><i>c</i></sub>是窗口的中心像素;<mathml id="111"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi>Ι</mi><mo>¯</mo></mover></math></mathml>是窗口邻域内的期望;<i>I</i><sub><i>cap</i></sub>是一个正数范围。</p>
+                </div>
+                <h4 class="anchor-tag" id="43" name="43"><b>1.1 改进的左右像素点匹配代价算法描述</b></h4>
+                <div class="p1">
+                    <p id="44">匹配代价是计算左图像素点<i>p</i><sub><i>l</i></sub>(<i>x</i>,<i>y</i>)在右图对应视差为<i>d</i>的像素点<i>p</i><sub><i>r</i></sub>(<i>x</i>,<i>y</i>)的相似性度量。可用一个<i>r</i>×<i>c</i>×<i>d</i>的三维矩阵表示,其中<i>r</i>和<i>c</i>表示图像的行列,<i>d</i>表示左右像素点视差计算范围。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">为了克服车辆运动过程环境光照剧烈变化对立体匹配造成的影响,引入相对梯度<citation id="167" type="reference"><link href="149" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>代价与AD-Census代价进行加权融合得到最终的匹配代价,其中相对梯度代价定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="46" class="code-formula">
+                        <mathml id="46"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>R</mi><mo>∇</mo><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mo>∇</mo><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mrow><mo>∇</mo><msub><mrow></mrow><mrow><mi>max</mi></mrow></msub><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>+</mo><mn>1</mn></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="47">式中:<i>R</i>∇(<i>x</i>,<i>y</i>)表示像素<i>p</i>(<i>x</i>,<i>y</i>)的相对梯度;∇(<i>x</i>,<i>y</i>)表示像素<i>p</i>(<i>x</i>,<i>y</i>)的绝对梯度;∇<sub>max</sub>(<i>x</i>,<i>y</i>)表示以像素<i>p</i>(<i>x</i>,<i>y</i>)为中心的<i>n</i>×<i>n</i>匹配窗口内像素梯度最大值。基于相对梯度模型,以左图像素<i>p</i>(<i>x</i>,<i>y</i>)和右图中视差为<i>d</i>的像素分别求得其相对梯度,以左右相对梯度绝对值之差构造匹配代价如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="48" class="code-formula">
+                        <mathml id="48"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><msub><mrow></mrow><mrow><mi>R</mi><mi>G</mi></mrow></msub><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>|</mo><mrow><mi>R</mi><mo>∇</mo><msub><mrow></mrow><mi>L</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>-</mo><mi>R</mi><mo>∇</mo><msub><mrow></mrow><mi>R</mi></msub><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>x</mi><mo>-</mo><mi>d</mi><mo stretchy="false">)</mo><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>|</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="49">式中:<i>C</i><sub><i>RG</i></sub>(<i>p</i>,<i>d</i>)为相对梯度代价;<i>R</i>∇<sub><i>L</i></sub>(<i>x</i>,<i>y</i>)为左图像素点<i>p</i>的相对梯度;<i>R</i>∇<sub><i>R</i></sub>((<i>x</i>-<i>d</i>),<i>y</i>)为右图与<i>p</i>点视差为<i>d</i>的像素相对梯度值。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">AD代价是左右图像的像素灰度绝对值之差,计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="51" class="code-formula">
+                        <mathml id="51"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><msub><mrow></mrow><mrow><mi>A</mi><mi>D</mi></mrow></msub><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>|</mo><mrow><mi>Ι</mi><msub><mrow></mrow><mi>L</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>-</mo><mi>Ι</mi><msub><mrow></mrow><mi>R</mi></msub><mo stretchy="false">(</mo><mo stretchy="false">(</mo><mi>x</mi><mo>-</mo><mi>d</mi><mo stretchy="false">)</mo><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>|</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="52">Census变换是将匹配窗口中心像素灰度值与其邻域内像素点比较,二值化成二进制码流的过程。利用Hamming距离计算两个像素点的相似性测度为:</p>
+                </div>
+                <div class="p1">
+                    <p id="53" class="code-formula">
+                        <mathml id="53"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>C</mi><mi>Τ</mi><mi>g</mi><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mo>=</mo><munder><mstyle mathsize="140%" displaystyle="true"><mo>⊗</mo></mstyle><mrow><mi>q</mi><mo>∈</mo><mi>Ν</mi><mi>p</mi></mrow></munder><mi>ξ</mi><mo stretchy="false">(</mo><mi>Ι</mi><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mo>,</mo><mi>Ι</mi><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mi>C</mi><msub><mrow></mrow><mrow><mi>c</mi><mi>e</mi><mi>n</mi><mi>s</mi><mi>u</mi><mi>s</mi></mrow></msub><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>Η</mtext><mtext>a</mtext><mtext>m</mtext><mtext>m</mtext><mtext>i</mtext><mtext>n</mtext><mtext>g</mtext></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="54">(<i>CTg</i><sub><i>L</i></sub>(<i>x</i>,<i>y</i>),<i>CTg</i><sub><i>R</i></sub>((<i>x</i>-<i>d</i>),<i>y</i>))      (6)</p>
+                </div>
+                <div class="p1">
+                    <p id="55">其中式(5)表示的是Census变换过程,<i>p</i>是窗口中心像素, <i>q</i>属于<i>p</i>的领域,<i>ξ</i>()函数是一个二值化函数,<i>I</i>(<i>p</i>)表示像素<i>p</i>的灰度值。式(6)中<i>CTg</i><sub><i>L</i></sub>和<i>CTg</i><sub><i>R</i></sub>函数分别是计算左图像素点<i>p</i>(<i>x</i>,<i>y</i>)与其对应视差为<i>d</i>的右图像素点Census变换值。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">以上分别定义了相对梯度代价、AD代价和Census代价,最终的视差为<i>d</i>的像素点<i>p</i>(<i>x</i>,<i>y</i>)匹配总代价为三者加权和,表示为:</p>
+                </div>
+                <div class="p1">
+                    <p id="57" class="code-formula">
+                        <mathml id="57"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>C</mi><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>=</mo><mn>3</mn><mo>-</mo><mrow><mi>exp</mi></mrow><mrow><mo>[</mo><mrow><mfrac><mrow><mo>-</mo><mi>C</mi><msub><mrow></mrow><mrow><mi>A</mi><mi>D</mi></mrow></msub><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mrow><mi>λ</mi><msub><mrow></mrow><mn>1</mn></msub></mrow></mfrac></mrow><mo>]</mo></mrow><mo>-</mo></mtd></mtr><mtr><mtd><mrow><mi>exp</mi></mrow><mrow><mo>[</mo><mrow><mfrac><mrow><mo>-</mo><mi>C</mi><msub><mrow></mrow><mrow><mi>c</mi><mi>e</mi><mi>n</mi><mi>s</mi><mi>u</mi><mi>s</mi></mrow></msub><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mrow><mi>λ</mi><msub><mrow></mrow><mn>2</mn></msub></mrow></mfrac></mrow><mo>]</mo></mrow><mo>-</mo><mrow><mi>exp</mi></mrow><mrow><mo>[</mo><mrow><mfrac><mrow><mo>-</mo><mi>C</mi><msub><mrow></mrow><mrow><mi>R</mi><mi>G</mi></mrow></msub><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow><mrow><mi>λ</mi><msub><mrow></mrow><mn>3</mn></msub></mrow></mfrac></mrow><mo>]</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>7</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="58">式中:<i>λ</i><sub>1</sub>、<i>λ</i><sub>2</sub>、<i>λ</i><sub>3</sub>分别为三个像素点匹配代价计算部分的正则化参数,用来控制求解代价的取值权重和范围。为了验证改进后的代价计算效果,使用Middlebury数据集的Tsukuba图像对分别测试不同代价情况下的视差计算效果如下:</p>
+                </div>
+                <div class="area_img" id="59">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201918024_059.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 不同匹配代价算法比较" src="Detail/GetImg?filename=images/DZCL201918024_059.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 不同匹配代价算法比较  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201918024_059.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="60" name="60"><b>1.2 匹配代价的全局聚合</b></h4>
+                <div class="p1">
+                    <p id="61">代价计算步骤得到的像素点视差是离散的,代价聚合过程本质上就是一个滤波过程,将离散的视差平滑聚合。通过代价聚合可以减少异常点的影响,提高信噪比(signal noise ratio,SNR)进而提高匹配精度<citation id="168" type="reference"><link href="151" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>。半全局立体匹配<citation id="169" type="reference"><link href="153" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>算法的思路是建立一个全局能量函数<i>E</i>(<i>d</i>), 将视差计算转换为全局能量函数最优化求解问题。定义全局能量函数如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="62" class="code-formula">
+                        <mathml id="62"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>E</mi><mo stretchy="false">(</mo><mi>d</mi><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mi>p</mi></munder><mo stretchy="false">(</mo></mstyle><mi>C</mi><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>+</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>q</mi><mo>∈</mo><mi>Ν</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></munder><mi>p</mi></mstyle><msub><mrow></mrow><mn>1</mn></msub><mi>Τ</mi><mo stretchy="false">[</mo><mrow><mo>|</mo><mrow><mi>d</mi><msub><mrow></mrow><mi>p</mi></msub><mo>-</mo><mi>d</mi><msub><mrow></mrow><mi>q</mi></msub></mrow><mo>|</mo></mrow><mo>=</mo><mn>1</mn><mo stretchy="false">]</mo><mo>+</mo></mtd></mtr><mtr><mtd><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>q</mi><mo>∈</mo><mi>Ν</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></munder><mi>p</mi></mstyle><msub><mrow></mrow><mn>2</mn></msub><mi>Τ</mi><mo stretchy="false">[</mo><mrow><mo>|</mo><mrow><mi>d</mi><msub><mrow></mrow><mi>p</mi></msub><mo>-</mo><mi>d</mi><msub><mrow></mrow><mi>q</mi></msub></mrow><mo>|</mo></mrow><mo>&gt;</mo><mn>1</mn><mo stretchy="false">]</mo><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>8</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="63">式中:<i>E</i>(<i>d</i>)表示所有像素匹配代价总和;<i>C</i>(<i>p</i>,<i>d</i>)表示视差为<i>d</i>的像素点<i>p</i>(<i>x</i>,<i>y</i>)的匹配代价,由式(7)计算得到;<i>p</i><sub>1</sub>、<i>p</i><sub>2</sub>为惩罚系数;<i>p</i>、<i>q</i>为图像像素点,且<i>q</i>包含于<i>p</i>的邻域<i>N</i><sub><i>p</i></sub>中;函数<i>T</i>是一个判断真值函数。由于在一个二维图像内最优化求解能量函<i>E</i>(<i>d</i>)是一个NP(non-deterministic polynomial)完全问题,复杂度极高。为了实现复杂度降维,在n条(本文n=3) 一维扫描线上采用DP方法累加匹配代价,将各方向匹配代价求和得到某像素点匹配总代价。定义<i>L</i><sub><i>r</i></sub>(<i>p</i>,<i>d</i>)为沿<i>r</i>方向上一条聚合路径上点<i>p</i>对应视差为<i>d</i>的匹配代价,<i>S</i>(<i>p</i>,<i>d</i>)为最小成本的一维代价路径之和:</p>
+                </div>
+                <div class="p1">
+                    <p id="64" class="code-formula">
+                        <mathml id="64"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mtable><mtr><mtd columnalign="left"><mi>L</mi><msub><mrow></mrow><mi>r</mi></msub><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>=</mo><mi>C</mi><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>+</mo><mi>min</mi><mo stretchy="false">[</mo><mi>L</mi><msub><mrow></mrow><mi>r</mi></msub><mo stretchy="false">(</mo><mi>p</mi><mo>-</mo><mi>r</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>,</mo></mtd></mtr><mtr><mtd columnalign="left"><mi>L</mi><msub><mrow></mrow><mi>r</mi></msub><mo stretchy="false">(</mo><mi>p</mi><mo>-</mo><mi>r</mi><mo>,</mo><mi>d</mi><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><mi>p</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mi>L</mi><msub><mrow></mrow><mi>r</mi></msub><mo stretchy="false">(</mo><mi>p</mi><mo>-</mo><mi>r</mi><mo>,</mo><mi>d</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><mi>p</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo></mtd></mtr><mtr><mtd columnalign="left"><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mi>i</mi></munder><mi>L</mi><msub><mrow></mrow><mi>r</mi></msub><mo stretchy="false">(</mo><mi>p</mi><mo>-</mo><mi>r</mi><mo>,</mo><mi>i</mi><mo stretchy="false">)</mo><mo>+</mo><mi>p</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">]</mo><mo>-</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mi>k</mi></munder><mi>L</mi><msub><mrow></mrow><mi>r</mi></msub><mo stretchy="false">(</mo><mi>p</mi><mo>-</mo><mi>r</mi><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mtd></mtr></mtable><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>9</mn><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mi>S</mi><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mi>r</mi></munder><mi>L</mi></mstyle><msub><mrow></mrow><mi>r</mi></msub><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>0</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="65">通过匹配代价计算和代价聚合过程得到总的匹配代价后,利用WTA(winner-take-all)策略选择最小代价对应视差值为该像素最终视差。</p>
+                </div>
+                <div class="area_img" id="66">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201918024_066.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 基于一维扫描线的动态规划代价聚合" src="Detail/GetImg?filename=images/DZCL201918024_066.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 基于一维扫描线的动态规划代价聚合  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201918024_066.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="67">经过代价计算和聚合后,对视差计算结果进行最后的精化处理:亚像素插值计算、左右一致性检测、误匹配点处理等得到最终的视差图。使用kitti stereo数据集中乡村非结构化道路数据进行测试见图4。</p>
+                </div>
+                <div class="area_img" id="68">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201918024_068.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 左右图像对计算视差图" src="Detail/GetImg?filename=images/DZCL201918024_068.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 左右图像对计算视差图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201918024_068.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="69" name="69" class="anchor-tag"><b>2 可行驶区域分割算法描述</b></h3>
+                <h4 class="anchor-tag" id="70" name="70"><b>2.1 可行驶区域剖面映射</b></h4>
+                <div class="p1">
+                    <p id="71">立体匹配过程将左、右摄相机采集的仅包含二维RGB像素信息的视频帧序列转换为能够表达空间三维深度信息的视差图。对视差图进行二次处理,经过统计各行列像素视差分布变换得到”U-V disparity<citation id="170" type="reference"><link href="139" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>”(水平-垂直方向差异映射)。UV差异映射被广泛应用于立体视觉中,协助检测障碍物和可行驶区域。UV差异映射的具体变换方式如下:通过计算视差图的每个水平行直方图来创建V差异映射。同理,计算视差图的每个垂直列直方图来创建U差异映射。如图5所示,V差异映射可以用一个二维笛卡尔坐标系表示,其横轴<i>d</i>是左右相机视差范围,纵轴<i>v</i>是视差图的行坐标。值<i>L</i>(<i>v</i>,<i>d</i>)表示在视差图中,索引(<i>v</i>,<i>d</i>)位置的像素点个数累加。</p>
+                </div>
+                <div class="area_img" id="72">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201918024_072.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 V差异映射计算方法" src="Detail/GetImg?filename=images/DZCL201918024_072.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 V差异映射计算方法  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201918024_072.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="73">文献<citation id="171" type="reference">[<a class="sup">15</a>]</citation>通过推导三维重建过程、分析三维点云的二维投影特点提出:平面道路在V差异映射图上的投影可以用直线模型<i>d</i>=<i>f</i>(<i>v</i>)=<i>α</i><sub>0</sub>+<i>α</i><sub>1</sub><i>v</i>来描述,模型参数<i>α</i>=[<i>α</i><sub>0</sub>,<i>α</i><sub>1</sub>]<sup>T</sup>可以通过一些线性模式检测器求解,如HT(霍夫变换)等。直线模型假设地面平坦,在道路驾驶环境下的鲁棒性较差。因此本文假设道路剖面非平坦,提出抛物线模型<i>d</i>=<i>f</i>(<i>v</i>)=<i>ω</i><sub>0</sub><i>v</i><sup>2</sup>+<i>ω</i><sub>1</sub><i>v</i>+<i>ω</i><sub>2</sub>,其中<i>ω</i>=[<i>ω</i><sub>0</sub>,<i>ω</i><sub>1</sub>,<i>ω</i><sub>2</sub>]<sup>T</sup>参数通过动态规划算法(DP)和RANSAC算法求解。求解得到模型后,便可最优化的估计可行驶区域。</p>
+                </div>
+                <h4 class="anchor-tag" id="74" name="74"><b>2.2 最优路径点集估计</b></h4>
+                <div class="p1">
+                    <p id="75">非平坦道路模型是通过对V差异映射进行曲线拟合的方式求解。但未处理过的V差异映射数据包含大量的噪声点、错误匹配点、障碍物点,因此无法直接拟合得到最优的模型参数。本文提出的数据优化方法是,设计路径点能量评价函数,以动态规划方法(DP)在V差异映射数据集合中最小化能量函数<i>E</i>,通过此方法能够求得模型拟合的全局最优路径点集合。</p>
+                </div>
+                <div class="p1">
+                    <p id="76">通过双目逆变换原理可以将二维像平面视差为<i>d</i>的像素点<i>p</i>(<i>x</i>,<i>y</i>)投影到三维世界坐标系下,重建三维点云。如图6所示,若将可行驶区域近似描述成一个平面,其侧视图中可行驶区域平面包含的点数量大于其他环境要素对应的近似平面,表现在V差异映射中即为像素灰度值最大的点包含于可行驶区域平面内。由此,定义能量函数如式(11)所示,能量函数包含数据项<i>E</i><sub><i>data</i></sub>和平滑项<i>E</i><sub><i>smooth</i></sub>。<i>E</i><sub><i>data</i></sub>即为V差异映射的灰度值,加入<i>E</i><sub><i>smooth</i></sub>为了保证规划的平面更加平滑。</p>
+                </div>
+                <div class="p1">
+                    <p id="77"><i>E</i>=<i>E</i><sub><i>data</i></sub>+<i>E</i><sub><i>smooth</i></sub>      (11)</p>
+                </div>
+                <div class="area_img" id="78">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201918024_078.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 三维点云" src="Detail/GetImg?filename=images/DZCL201918024_078.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 三维点云  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201918024_078.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="79">式(11)求解过程从<i>d</i>=<i>d</i><sub>max</sub>开始,迭代到<i>d</i>=0。在初始迭代中<i>E</i><sub><i>smooth</i></sub>=0,<i>E</i><sub><i>data</i></sub>=-<i>L</i>(<i>v</i>,<i>d</i><sub>max</sub>) 每次迭代过程,<i>E</i><sub><i>data</i></sub>=-<i>L</i>(<i>v</i>,<i>d</i><sub>max</sub>)的值来源于前一个周期的最优路径值的和。整个最优化过程可以用式(12)描述。</p>
+                </div>
+                <div class="p1">
+                    <p id="80" class="code-formula">
+                        <mathml id="80"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mtable><mtr><mtd columnalign="left"><mi>E</mi><mo stretchy="false">(</mo><msub><mrow></mrow><mi>v</mi></msub><mo>=</mo><mo>-</mo><mi>L</mi><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo><mo>+</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mi>τ</mi></munder><mo stretchy="false">[</mo><mi>E</mi><mo stretchy="false">(</mo><msub><mrow></mrow><mi>v</mi></msub><mo>-</mo><mi>λ</mi><mi>τ</mi><mo stretchy="false">]</mo></mtd></mtr><mtr><mtd columnalign="left"><mtext>s</mtext><mo>.</mo><mtext>t</mtext><mo>.</mo><mspace width="0.25em" /><mi>τ</mi><mo>∈</mo><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo stretchy="false">]</mo></mtd></mtr></mtable><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>2</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="81">在迭代过程中,需建立一个与V差异映射同尺寸的缓存集合,用以回溯求解规划的最优路径索引。在回溯求解的每一个步进阶段,选择此阶段能量最小的点作为最优路径点,最优路径点索引保存在<i>L</i><sub><i>path</i></sub>=[<i>v</i>,<i>d</i>]<sup>T</sup>∈ <sup><i>k</i></sup><sup>×2</sup>中。其中<i>v</i>=[<i>v</i><sub>0</sub>,<i>v</i><sub>1</sub>,…,<i>v</i><sub><i>k</i></sub><sub>-1</sub>]<sup>T</sup>为行索引向量,<i>d</i>=[<i>d</i><sub>0</sub>,<i>d</i><sub>1</sub>,…,<i>d</i><sub><i>k</i></sub><sub>-1</sub>]<sup>T</sup>为列索引向量。如图7所示:图7(a)绘制的是V差异映射的全部数据点,图7(b)绿色轨迹是通过动态规划计算的全局最优的可行驶区域点集。图中可以直观地看出图7(b)相较于未优化之前减少了数据量,并且能够显著提高拟合精度。</p>
+                </div>
+                <div class="area_img" id="82">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201918024_082.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 最优路径点集估计" src="Detail/GetImg?filename=images/DZCL201918024_082.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 最优路径点集估计  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201918024_082.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="83" name="83"><b>2.3 模型参数求解</b></h4>
+                <div class="p1">
+                    <p id="84">模型求解过程需要对上一个步骤优化得到的最优路径点集合进行曲线拟合,求解抛物线模型参数<i>ω</i>=[<i>ω</i><sub>0</sub>,<i>ω</i><sub>1</sub>,<i>ω</i><sub>2</sub>]<sup>T</sup>。常规方法使用LSF(最小二乘法)来拟合抛物线求解模型参数。</p>
+                </div>
+                <div class="p1">
+                    <p id="85">图8(a)绿色轨迹是上一步骤最优化估计的可行驶区域剖面映射,图8(b)是采用最小二乘法拟合的结果。如图中黄色拟合轨迹所示,可见异常值和离群点严重影响了最小二乘拟合的精度,进而导致可行驶区域出现过分割和欠分割。因此本文采用RANSAC对最小二乘求得的参数解进行随机优化迭代。整个过程可以描述为迭代求解式(13)的过程。</p>
+                </div>
+                <div class="p1">
+                    <p id="86" class="code-formula">
+                        <mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ω</mi><mo>=</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mtext>a</mtext><mtext>r</mtext><mtext>g</mtext><mtext>m</mtext><mtext>i</mtext><mtext>n</mtext></mrow></mstyle><mi>ω</mi></munder><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></munderover><mo stretchy="false">(</mo></mstyle><mi>d</mi><msub><mrow></mrow><mi>j</mi></msub><mo>-</mo><mo stretchy="false">(</mo><mi>ω</mi><msub><mrow></mrow><mn>0</mn></msub><mi>v</mi><msubsup><mrow></mrow><mi>j</mi><mn>2</mn></msubsup><mo>+</mo><mi>ω</mi><msub><mrow></mrow><mn>1</mn></msub><mi>v</mi><msub><mrow></mrow><mi>j</mi></msub><mo>+</mo><mi>ω</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow><msup><mrow></mrow><mn>2</mn></msup><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>3</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="87">式中:<i>ω</i>=[<i>ω</i><sub>0</sub>,<i>ω</i><sub>1</sub>,<i>ω</i><sub>2</sub>]<sup>T</sup>为抛物线参数,整个RANSAC优化计算过程伪代码如下:</p>
+                </div>
+                <div class="area_img" id="88">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201918024_088.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图8 抛物线轨迹拟合" src="Detail/GetImg?filename=images/DZCL201918024_088.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图8 抛物线轨迹拟合  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201918024_088.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="89">
+                    <p class="img_tit"> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="89" border="1"><tr><td><br />RANSAC 估算模型参数</td></tr><tr><td><br />Input:最优路径点集合<i>L</i><sub><i>path</i></sub>=[<i>v</i>,<i>d</i>]<sup>T</sup>∈ <sup><i>k</i>×2</sup><br />Output:最优模型参数<i>ω</i>=[<i>ω</i><sub>0</sub>,<i>ω</i><sub>1</sub>,<i>ω</i><sub>2</sub>]<sup>T</sup><br />do<br />1)随机选择<i>n</i>个初始点[<i>v</i><sub><i>i</i></sub>,<i>d</i><sub><i>i</i></sub>]<sup>T</sup>;<br />2)使用LSF拟合抛物线,使用式13求解参数<i>ω</i>;<br />3)确定内部点和离群点数量<i>n</i><sub><i>i</i></sub>和<i>n</i><sub><i>o</i></sub>;<br />4)从<i>L</i><sub><i>path</i></sub>=[<i>v</i>,<i>d</i>]<sup>T</sup>∈ <sup><i>k</i>×2</sup>中剔除离群点;<br />while <math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mi>n</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mrow><mi>n</mi><msub><mrow></mrow><mi>i</mi></msub><mo>+</mo><mi>n</mi><msub><mrow></mrow><mi>o</mi></msub></mrow></mfrac><mo>&lt;</mo><mi>ε</mi></mrow></math><br />5)使用清洗后数据点拟合抛物线求解参数;</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="90">RANSAC算法通过模型假设和随机优化过程提高了参数求解的鲁棒性,因此对驾驶环境中图像存在的动态性和立体匹配精度浮动有更好的适应性。</p>
+                </div>
+                <div class="p1">
+                    <p id="91">确定模型参数后,对视差图进行可行驶区域和不可行驶区域分割,将分割结果以G通道和R通道掩模形式显示在左相机图像中。视差图中像素<i>I</i><sub><i>disp</i></sub>(<i>u</i>,<i>v</i>)的状态判别式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="92" class="code-formula">
+                        <mathml id="92"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mrow><mo>|</mo><mrow><mi>Ι</mi><msub><mrow></mrow><mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>p</mi></mrow></msub><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>-</mo><mi>f</mi><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><mo>|</mo></mrow><mo>&lt;</mo><mi>ε</mi><mo>&amp;</mo><mi>f</mi><msup><mrow></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>≤</mo><mi>v</mi><mo>≤</mo><mi>v</mi><msub><mrow></mrow><mrow><mi>max</mi></mrow></msub></mtd><mtd columnalign="left"><mi>Ι</mi><msub><mrow></mrow><mrow><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi></mrow></msub><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mn>5</mn><mn>5</mn></mtd></mtr><mtr><mtd columnalign="left"><mi>o</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>r</mi><mi>s</mi></mtd><mtd columnalign="left"><mi>Ι</mi><msub><mrow></mrow><mrow><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi></mrow></msub><mo stretchy="false">(</mo><mi>R</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mn>5</mn><mn>5</mn></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>4</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="93">式中:<i>ε</i>是可行驶区域分割阈值(本文<i>ε</i>=10);<i>f</i><sup>-1</sup>(0)是抛物线模型<i>f</i>(<i>v</i>)的反函数;<i>I</i><sub><i>left</i></sub>(<i>G</i>)表示左相机图像的G通道值;<i>I</i><sub><i>disp</i></sub>(<i>u</i>,<i>v</i>)表示视差图像素灰度值。</p>
+                </div>
+                <div class="p1">
+                    <p id="94">由于立体匹配过程中左右图像遮挡区域像素在视差精化阶段被判定为无视差点,无视差像素会导致分割结果掩模出现不连续、空洞区域,因此需要对分割区域掩模滤波。本文采用窗口滤波,建立<i>n</i>×<i>n</i>滤波窗口,窗口中心像素的局部分割状态以窗口全局分割状态代替,其数学表达式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="95" class="code-formula">
+                        <mathml id="95"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ι</mi><msub><mrow></mrow><mi>G</mi></msub><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mo>=</mo><mn>2</mn><mn>5</mn><mn>5</mn><mo>×</mo><munder><mstyle mathsize="140%" displaystyle="true"><mi>ξ</mi></mstyle><mrow><mi>q</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>Ν</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></munder><mo stretchy="false">[</mo><mfrac><mrow><mstyle displaystyle="true"><mo>∑</mo><mi>Μ</mi></mstyle><mo stretchy="false">(</mo><mi>q</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><msup><mrow></mrow><mn>2</mn></msup></mrow></mfrac><mo>&gt;</mo><mi>μ</mi><mo stretchy="false">]</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>5</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="96">式中:窗口中心像素<i>p</i>的分割状态,取决于其窗口邻域判别结果;<i>ξ</i>是一个二值化函数;<i>M</i>是式(14)判别表达式;<i>q</i><sub><i>i</i></sub>属于<i>p</i>的领域<i>N</i><sub><i>p</i></sub>,对一个滤波窗口内可行驶区域点进行累加,若可行驶区域点在整个窗口内占比大于阈值<i>μ</i>,则表示整个窗口为可行驶状态,窗口中心像素状态以窗口全局状态重新标注。</p>
+                </div>
+                <div class="area_img" id="97">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201918024_097.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图9 可行驶区域分割结果(左:滤波前右:滤波后)" src="Detail/GetImg?filename=images/DZCL201918024_097.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图9 可行驶区域分割结果(左:滤波前右:滤波后)  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201918024_097.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="98" name="98" class="anchor-tag"><b>3 实验结果与分析</b></h3>
+                <div class="p1">
+                    <p id="99">为了验证改进匹配代价的SGBM立体匹配算法和可行驶区域分割算法在自动驾驶场景下的鲁棒性,分别采用KITTI stereo自动驾驶数据集和自建数据集进行测试。其中自建数据集通过车载双目台架进行数据采集,双目台架使用两个基线长度0.40 m的AVT Stingray F-046C工业相机搭建。硬件平台采用Intel(R)Core(TM)i5-4590 CPU@3.3 GHz、8 GB内存、Windows 10(64bit)操作系统,基于C++在Visual Studio 2015集成开发环境下搭建应用程序。</p>
+                </div>
+                <div class="area_img" id="100">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201918024_100.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图10 BJUT-IV自动驾驶平台和双目传感器" src="Detail/GetImg?filename=images/DZCL201918024_100.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图10 BJUT-IV自动驾驶平台和双目传感器  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201918024_100.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="101">本文设计的实验一,将改进匹配代价计算的SGBM算法与实时系统中常用的BM算法以及未改进前的SGBM算法进行了比较。由图11可见,改进后的算法相较于前两种算法对弱纹理区域的匹配有较好的改善。为了验证匹配算法在CPU运算环境下的处理速度,分别使用Kitti stereo数据集和自建数据集在两种分辨率下进行实验。由表1可见,本文提出的立体匹配算法在提高匹配精度的同时所耗时间相较未改进前的SGBM算法并未出现较大增加。在Kitti stereo数据集分辨率下匹配算法达到了12.7 fps的速度;在自建数据集分辨率下匹配算法达到了29.3 fps的速度。</p>
+                </div>
+                <div class="area_img" id="102">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201918024_102.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图11 立体匹配算法精度比较" src="Detail/GetImg?filename=images/DZCL201918024_102.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图11 立体匹配算法精度比较  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201918024_102.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="103">
+                    <p class="img_tit"><b>表1 立体匹配算法运行时间比较(ms</b>) <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="103" border="1"><tr><td><br />数据集</td><td>BM</td><td>SGBM</td><td>所提方法</td></tr><tr><td><br />Kitti stereo</td><td>27.515</td><td>77.130</td><td>78.629</td></tr><tr><td><br />Our Data set</td><td>14.31</td><td>33.52</td><td>34.16</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="104">本文设计的实验二验证在不同数据集中分割算法的性能(包含立体匹配耗时)。分割准确度评价指标采用Pixel Accuracy(PA,像素精度)和Mean intersection over Union(MIoU,均交并比)。由表2可见,在两种分辨率下分割准确度达到92%以上且在640*480分辨率下算法达到了19.8fps的速度,能够满足中、低速驾驶要求。</p>
+                </div>
+                <div class="p1">
+                    <p id="105">最后,本文给出了一些典型驾驶环境的分割效果,其中包含结构化和非结构化驾驶环境,并且驾驶场景存在障碍物、道路标志、树木阴影、强曝光区域等干扰,分割效果表明所提算法在应对不同的干扰情况下依然稳健,具有很强的鲁棒性。效果图如图12所示。</p>
+                </div>
+                <div class="area_img" id="106">
+                    <p class="img_tit"><b>表2 可行驶区域分割算法性能</b>(%) <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="106" border="1"><tr><td><br />数据集</td><td>PA</td><td>MIoU</td><td>Time(ms)</td></tr><tr><td><br />Kitti stereo</td><td>95.58</td><td>92.62</td><td>104.5</td></tr><tr><td><br />Our Data set</td><td>95.60</td><td>92.84</td><td>50.4</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note">注:kitti stereo分辨率1242*375;自建数据集分辨率640*480</p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="107">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201918024_107.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图12 几种典型驾驶场景的分割效果" src="Detail/GetImg?filename=images/DZCL201918024_107.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图12 几种典型驾驶场景的分割效果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201918024_107.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="108" name="108" class="anchor-tag"><b>4 结  论</b></h3>
+                <div class="p1">
+                    <p id="109">针对自动驾驶或辅助驾驶的特定环境下,单目或双目视觉感知任务受车辆动态、环境光照不均匀、强曝光等因素影响,导致感知算法鲁棒性降低的问题,本文基于一种CPU运算平台下能够实现实时立体匹配的算法框架,改进了匹配代价计算环节以适应驾驶环境。立体匹配过程计算得到视差图后统计V差异映射,以可行驶区域剖面不平坦为假设提出一种抛物线描述模型。采用动态规划算法估计全局最优路径点集合。模型参数求解引入随机采样一致性算法对拟合模型进行随机优化,提高了分割算法的鲁棒性。实验结果表明算法运行速度能满足中低速驾驶要求,同时具有较高的分割准确率。</p>
+                </div>
+                <div class="p1">
+                    <p id="110">后续工作可将可行驶或不可行驶区域掩模设置为ROI(感兴趣区域),在可行驶区域进行车道线检测和道路导引标志识别,在非可行驶区域进行障碍物检测识别。此法能够去除非目标区域的干扰显著提高检测精度。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="127">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MOTO201304008&amp;v=MDM3NDVSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5nVkwzQUtDTGZZYkc0SDlMTXE0OUZiSVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 郭春钊,山部尚孝,三田诚一.基于立体视觉平面单应性的智能车辆可行驶道路边界检测[J].自动化学报,2013,39(4):371-380.
+                            </a>
+                        </p>
+                        <p id="129">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Monocular Road Segmentation using Slow Feature Analysis">
+
+                                <b>[2]</b> KUHNL T,KUMMERT F,FRITSCH J.Monocular road segmentation using slow feature analysis[C].In:Proceedings of the 2011 IEEE Intelligent Vehicles Symposium.Baden-Baden,Germany:IEEE,2011.800-806.
+                            </a>
+                        </p>
+                        <p id="131">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJLG201403009&amp;v=MjA2MTZxQnRHRnJDVVI3cWZadVp0RnluZ1ZMM0FKeWZIYWJHNEg5WE1ySTlGYllRS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 龚建伟,叶春兰,姜岩,等.多层感知器自监督在线学习非结构化道路识别[J].北京理工大学学报,2014,34(3):261-266.
+                            </a>
+                        </p>
+                        <p id="133">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KXJS201136041&amp;v=MjkyMjhIOURQcVk5QlpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5bmdWTDNBTGpYQmZiRzQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 王晓彬,马戎,付维平.基于支持向量机的非结构化道路检测[J].科学技术与工程,2011,11(36):9106-9109.
+                            </a>
+                        </p>
+                        <p id="135">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=&amp;quot;A graph traversal based algorithm for obstacle detection using lidar or stereo,&amp;quot;">
+
+                                <b>[5]</b> KUTHIRUMMAL S,DAS A,SAMARASEKERA S.A graph traversal based algorithm for obstacle detection using lidar or stereo[C].2011 IEEE/RSJ International Conference Intelligent Robots and Systems.Beijing,China:IEEE,2011:3874-3880.
+                            </a>
+                        </p>
+                        <p id="137">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSTO201809020&amp;v=MjI4ODBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5bmdWTDNBTHo3ZlliRzRIOW5NcG85SFpJUUs=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 赵凯,朱愿,王任栋.基于均值高程图的城市环境三维LiDAR点云地面分割方法[J].军事交通学院学报,2018,20(9):80-84.
+                            </a>
+                        </p>
+                        <p id="139">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=U V disparity:an efficient algorithm for stereovision based scene analysis">
+
+                                <b>[7]</b> HU Z,UCHIMURA K.U-V-disparity:an efficient algorithm for stereovision based scene analysis[C] IEEE Proceedings.Intelligent Vehicles Symposium,IEEE,2005:48-54.
+                            </a>
+                        </p>
+                        <p id="141">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=An obstacle detection algorithm based on U-V disparity map analysis">
+
+                                <b>[8]</b> ZHANG M,LIU P,ZHAO X,et al.An obstacle detection algorithm based on UV disparity map analysis[C]//IEEE International Conference on Information Theory &amp; Information Security,IEEE,2011.
+                            </a>
+                        </p>
+                        <p id="143">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DBCH201610063&amp;v=MzA5MzR6cXFCdEdGckNVUjdxZlp1WnRGeW5nVkwzQUlTL0lackc0SDlmTnI0OURaNFFLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 张欢,安利,张强,等.SGBM算法与BM算法分析研究[J].测绘与空间地理信息,2016,39(10):214-216.
+                            </a>
+                        </p>
+                        <p id="145">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SCLH201804020&amp;v=MTIwMThRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnluZ1ZMM0FOaTdIWnJHNEg5bk1xNDlIWkk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 王云峰,吴炜,余小亮,等.基于自适应权重AD-Census变换的双目立体匹配[J].工程科学与技术,2018,50(4):153-160.
+                            </a>
+                        </p>
+                        <p id="147">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GXXB201811030&amp;v=MjE1Mjl1WnRGeW5nVkwzQUlqWFRiTEc0SDluTnJvOUdaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlo=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 闫利,王芮,刘华,等.基于改进代价计算和自适应引导滤波的立体匹配[J].光学学报,2018,38(11):257-267.
+                            </a>
+                        </p>
+                        <p id="149">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Radiometric invariant stereo matching based onrelative gradients">
+
+                                <b>[12]</b> ZHOU X,BOULANGER P.Radiometric invariant stereo matching based on relative gradients[C].2012 19th IEEE International Conference on Image Processing.Orlando,USA:IEEE,2012:2989-2992.
+                            </a>
+                        </p>
+                        <p id="151">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=H Wang.On building an accurate stereo matching system on graphics hardware">
+
+                                <b>[13]</b> MEI X,SUN X,ZHOU M,et al.On building an accurate stereo matching system on graphics hardware[C]//IEEE International Conference on Computer Vision Workshops.Barcelona:IEEE,2012:467-474.
+                            </a>
+                        </p>
+                        <p id="153">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Stereo Processing by Semiglobal Matching and Mutual Information">
+
+                                <b>[14]</b> HIRSCHM H.Stereo processing by semiglobal matching and mutual information[J].IEEE Transactions on Pattern Analysis and Machine Intelligence,2008,30(2):328-341.
+                            </a>
+                        </p>
+                        <p id="155">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Real time obstacle detection in stereo vision on non flat rode geometry through &amp;quot;V-disparity&amp;quot; representation">
+
+                                <b>[15]</b> LABAYRADE R,AUBERT D,TAREL J P.Real time obstacle detection in stereovision on non flat road geometry through v-disparity representation[C].Intelligent Vehicle Symposium,2002.IEEE,2002(2):646-651.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="DZCL201918024" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201918024&amp;v=Mjg3ODU3cWZadVp0RnluZ1ZMM0FJVGZJWXJHNEg5ak5wNDlIWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="0" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=NLcKG8I1SJUaVFrQ0iGpF2klAT0OsmHRaVSZ1rKb5xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

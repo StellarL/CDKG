@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637131451034561250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dMSSB201906003%26RESULT%3d1%26SIGN%3dk%252feGMsZhLrP%252bOT8FwVxBA0ZJ21k%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=MSSB201906003&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=MSSB201906003&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MSSB201906003&amp;v=MDMwODlqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSbkZ5emhVN3JOS0Q3WWJMRzRIOWpNcVk5Rlo0UUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#87" data-title="1 基本概念 ">1 基本概念</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#101" data-title="2 基于邻域相似的网络粒化 ">2 基于邻域相似的网络粒化</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#106" data-title="&lt;b&gt;2.1&lt;/b&gt; 节点相似性的计算"><b>2.1</b> 节点相似性的计算</a></li>
+                                                <li><a href="#110" data-title="&lt;b&gt;2.2&lt;/b&gt; 基于邻域相似的粒化算法"><b>2.2</b> 基于邻域相似的粒化算法</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#172" data-title="3 基于邻域相似的层次粒化的网络表示学习方法 ">3 基于邻域相似的层次粒化的网络表示学习方法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#175" data-title="&lt;b&gt;3.1&lt;/b&gt; 算法步骤"><b>3.1</b> 算法步骤</a></li>
+                                                <li><a href="#192" data-title="&lt;b&gt;3.2 GCN&lt;/b&gt;模型描述"><b>3.2 GCN</b>模型描述</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#209" data-title="4 实验及结果分析 ">4 实验及结果分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#211" data-title="&lt;b&gt;4.1&lt;/b&gt; 实验准备"><b>4.1</b> 实验准备</a></li>
+                                                <li><a href="#220" data-title="&lt;b&gt;4.2&lt;/b&gt; 节点分类"><b>4.2</b> 节点分类</a></li>
+                                                <li><a href="#229" data-title="&lt;b&gt;4.3&lt;/b&gt; 链接预测"><b>4.3</b> 链接预测</a></li>
+                                                <li><a href="#235" data-title="&lt;b&gt;4.4&lt;/b&gt; 不同邻域相似性度量对比"><b>4.4</b> 不同邻域相似性度量对比</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#249" data-title="5 结 束 语 ">5 结 束 语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#105" data-title="图1 匹配和粒化">图1 匹配和粒化</a></li>
+                                                <li><a href="#109" data-title="&lt;b&gt;表1 邻域相似性度量方法&lt;/b&gt;"><b>表1 邻域相似性度量方法</b></a></li>
+                                                <li><a href="#174" data-title="图2 HGNS流程图">图2 HGNS流程图</a></li>
+                                                <li><a href="#217" data-title="&lt;b&gt;表2 网络数据集&lt;/b&gt;"><b>表2 网络数据集</b></a></li>
+                                                <li><a href="#224" data-title="&lt;b&gt;表3 各算法在Citeseer数据集上的节点分类性能&lt;/b&gt;"><b>表3 各算法在Citeseer数据集上的节点分类性能</b></a></li>
+                                                <li><a href="#225" data-title="&lt;b&gt;表4 各算法在WiKi数据集上的节点分类性能&lt;/b&gt;"><b>表4 各算法在WiKi数据集上的节点分类性能</b></a></li>
+                                                <li><a href="#226" data-title="&lt;b&gt;表5 各算法在Flicker数据集上的节点分类性能&lt;/b&gt;"><b>表5 各算法在Flicker数据集上的节点分类性能</b></a></li>
+                                                <li><a href="#227" data-title="&lt;b&gt;表6 各算法在BlogCatalog数据集上的节点分类性能&lt;/b&gt;"><b>表6 各算法在BlogCatalog数据集上的节点分类性能</b></a></li>
+                                                <li><a href="#233" data-title="&lt;b&gt;表7 各算法在4个数据集上的AUC值&lt;/b&gt;"><b>表7 各算法在4个数据集上的AUC值</b></a></li>
+                                                <li><a href="#306" data-title="图3 节点分类任务中不同度量方法的F1结果">图3 节点分类任务中不同度量方法的F1结果</a></li>
+                                                <li><a href="#307" data-title="图4 链接预测任务中不同度量方法的AUC结果">图4 链接预测任务中不同度量方法的AUC结果</a></li>
+                                                <li><a href="#308" data-title="图5 不同度量方法的粒化速度">图5 不同度量方法的粒化速度</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="309">
+
+
+                                    <a id="bibliography_1" title=" SHEIKH N T, KEFATO Z T, MONTRESOR A.Semi-supervised Heterogeneous Information Network Embedding for Node Classification Using 1D-CNN[C/OL].[2019-02-25].http://disi.unitn.it/～montreso/pubs/papers/snams18b.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Semi-supervised Heterogeneous Information Network Embedding for Node Classification Using 1D-CNN[C/OL]">
+                                        <b>[1]</b>
+                                         SHEIKH N T, KEFATO Z T, MONTRESOR A.Semi-supervised Heterogeneous Information Network Embedding for Node Classification Using 1D-CNN[C/OL].[2019-02-25].http://disi.unitn.it/～montreso/pubs/papers/snams18b.pdf.
+                                    </a>
+                                </li>
+                                <li id="311">
+
+
+                                    <a id="bibliography_2" title=" XU G L, WANG X K, WANG Y, et al.Edge-Nodes Representation Neural Machine for Link Prediction.Algorithms, 2019, 12 (1) .DOI:10.3390/a12010012." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Edge-Nodes Representation Neural Machine for Link Prediction">
+                                        <b>[2]</b>
+                                         XU G L, WANG X K, WANG Y, et al.Edge-Nodes Representation Neural Machine for Link Prediction.Algorithms, 2019, 12 (1) .DOI:10.3390/a12010012.
+                                    </a>
+                                </li>
+                                <li id="313">
+
+
+                                    <a id="bibliography_3" title=" BHATIA V, RANI R.A Distributed Overlapping Community Detection Model for Large Graphs Using Autoencoder.Future Generation Computer Systems, 2019, 94:16-26." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJESAF5FE78491289FE004294C5446378F84&amp;v=MDY1OTJJRnBtYUJ1SFlmT0dRbGZDcGJRMzVORmh3THkveGEwPU5pZk9mY0xPRzZlNXFJZEJiZW9OQkhWUHVoWVQ3ajEwVEF6bnFCWXplcldjTTdLYkNPTnZGU2lXV3I3Sg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         BHATIA V, RANI R.A Distributed Overlapping Community Detection Model for Large Graphs Using Autoencoder.Future Generation Computer Systems, 2019, 94:16-26.
+                                    </a>
+                                </li>
+                                <li id="315">
+
+
+                                    <a id="bibliography_4" title=" 涂存超, 杨成, 刘知远, 等.网络表示学习综述.中国科学 (信息科学) , 2017, 47 (8) :980-996. (TU C C, YANG C, LIU Z Y, et al.Network Representation Learning:An Overview.Scientia Sinica Informationis, 2017, 47 (8) :980-996.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=PZKX201708003&amp;v=MTA0NTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm5GeXpoVTdyTk5UZkFkckc0SDliTXA0OUZaNFE=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         涂存超, 杨成, 刘知远, 等.网络表示学习综述.中国科学 (信息科学) , 2017, 47 (8) :980-996. (TU C C, YANG C, LIU Z Y, et al.Network Representation Learning:An Overview.Scientia Sinica Informationis, 2017, 47 (8) :980-996.) 
+                                    </a>
+                                </li>
+                                <li id="317">
+
+
+                                    <a id="bibliography_5" title=" MEYER-BR&#214;TZ F, SCHIEBEL E, BRECHT L.Experimental Eva-luation of Parameter Settings in Calculation of Hybrid Similarities:Effects of First- and Second-Order Similarity, Edge Cutting, and Weighting Factors.Scientometrics, 2017, 111 (3) :1307-1325." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD7872C493F6E45F1E0F991789803DC8E9&amp;v=MTQ3MjZTd0dkTy9xNFpHRXUxNkNIbFB6bU1UbkRaMFNYanFwUm8xZXNiblRjK1dDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMzVORmh3THkveGEwPU5qN0Jhcg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         MEYER-BR&#214;TZ F, SCHIEBEL E, BRECHT L.Experimental Eva-luation of Parameter Settings in Calculation of Hybrid Similarities:Effects of First- and Second-Order Similarity, Edge Cutting, and Weighting Factors.Scientometrics, 2017, 111 (3) :1307-1325.
+                                    </a>
+                                </li>
+                                <li id="319">
+
+
+                                    <a id="bibliography_6" title=" ZHANG H G, KONIUSZ P.Power Normalizing Second-Order Similarity Network for Few-Shot Learning[C/OL].[2019-02-25].https://arxiv.org/pdf/1811.04167.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Power Normalizing Second-Order Similarity Network for Few-Shot Learning[C/OL]">
+                                        <b>[6]</b>
+                                         ZHANG H G, KONIUSZ P.Power Normalizing Second-Order Similarity Network for Few-Shot Learning[C/OL].[2019-02-25].https://arxiv.org/pdf/1811.04167.pdf.
+                                    </a>
+                                </li>
+                                <li id="321">
+
+
+                                    <a id="bibliography_7" title=" SONG G F.The Role of Structure and Content in Perception of Vi-sual Similarity between Web Pages.International Journal of Human-Computer Interaction, 2011, 27 (8) :793-816." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=STJD&amp;filename=STJD120604072814&amp;v=MjMxMDVqbkJhcks2SHRmTXE0OUNadU1PQ0JNOHp4VVNtRGQ5U0g3bjN4RTlmYnZuS3JpZlp1OXVGQ3ZzVTd2TUlGc1JO&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         SONG G F.The Role of Structure and Content in Perception of Vi-sual Similarity between Web Pages.International Journal of Human-Computer Interaction, 2011, 27 (8) :793-816.
+                                    </a>
+                                </li>
+                                <li id="323">
+
+
+                                    <a id="bibliography_8" title=" ZHANG J P, DING X Y, YANG J.Revealing the Role of Node Similarity and Community Merging in Community Detection.Know-ledge Based Systems, 2019, 165:407-419." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES7C82911F2047967E22125F3A224F493D&amp;v=MDY2MDBZZk9HUWxmQ3BiUTM1TkZod0x5L3hhMD1OaWZPZmJUTEZ0UEZybzR6WnVzTEMzVS95R01SNkQ1L1RRbmgzUkEzZmNTUVRMbnJDT052RlNpV1dyN0pJRnBtYUJ1SA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         ZHANG J P, DING X Y, YANG J.Revealing the Role of Node Similarity and Community Merging in Community Detection.Know-ledge Based Systems, 2019, 165:407-419.
+                                    </a>
+                                </li>
+                                <li id="325">
+
+
+                                    <a id="bibliography_9" title=" HAJIZADEH R, AGHAGOLZADEH A, EZOJI M.Mutual Neighbors and Diagonal Loading-Based Sparse Locally Linear Embedding.Applied Artificial Intelligence, 2018, 32 (5) :496-514." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=STJD&amp;filename=STJD447B7BD5FB5B56CD2A9D1B009F20C45D&amp;v=MjY2ODZlOEdhUEwzZnRBRXBrS2Zuay92R0lSbXpZSlNRM2lyQnREZTdMblFiL3JDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMzVORmh3THkveGEwPU5qbkJhcg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         HAJIZADEH R, AGHAGOLZADEH A, EZOJI M.Mutual Neighbors and Diagonal Loading-Based Sparse Locally Linear Embedding.Applied Artificial Intelligence, 2018, 32 (5) :496-514.
+                                    </a>
+                                </li>
+                                <li id="327">
+
+
+                                    <a id="bibliography_10" title=" MA M H, DENG T Q, WANG N, et al.Semi-supervised Rough Fuzzy Laplacian Eigenmaps for Dimensionality Reduction.International Journal of Machine Learning and Cybernetics, 2019, 10 (2) :397-411." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Semi-supervised Rough Fuzzy Laplacian Eigenmaps for Dimensionality Reduction">
+                                        <b>[10]</b>
+                                         MA M H, DENG T Q, WANG N, et al.Semi-supervised Rough Fuzzy Laplacian Eigenmaps for Dimensionality Reduction.International Journal of Machine Learning and Cybernetics, 2019, 10 (2) :397-411.
+                                    </a>
+                                </li>
+                                <li id="329">
+
+
+                                    <a id="bibliography_11" title=" PEROZZI B, AL-RFOU R, SKIENA S.Deepwalk:Online Lear-ning of Social Representations // Proc of the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM, 2014:701-710." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep Walk:online learning of social representations">
+                                        <b>[11]</b>
+                                         PEROZZI B, AL-RFOU R, SKIENA S.Deepwalk:Online Lear-ning of Social Representations // Proc of the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM, 2014:701-710.
+                                    </a>
+                                </li>
+                                <li id="331">
+
+
+                                    <a id="bibliography_12" title=" BRAŽINSKAWS A, HAVRYLOV S, TITOV I.Embedding Words as Distributions with a Bayesian Skip-Gram Model // Proc of the 27th International Conference on Computational Linguistics.Stroudsburg, USA:ACL, 2018:1775-1789." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Embedding Words as Distributions with a Bayesian Skip-Gram Model">
+                                        <b>[12]</b>
+                                         BRAŽINSKAWS A, HAVRYLOV S, TITOV I.Embedding Words as Distributions with a Bayesian Skip-Gram Model // Proc of the 27th International Conference on Computational Linguistics.Stroudsburg, USA:ACL, 2018:1775-1789.
+                                    </a>
+                                </li>
+                                <li id="333">
+
+
+                                    <a id="bibliography_13" title=" TANG J, QU M, WANG M Z, et al.LINE:Large-Scale Information Network Embedding // Proc of the 24th International Confe-rence on World Wide Web.New York, USA:ACM, 2015:1067-1077." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Line:Large-scale information network embedding">
+                                        <b>[13]</b>
+                                         TANG J, QU M, WANG M Z, et al.LINE:Large-Scale Information Network Embedding // Proc of the 24th International Confe-rence on World Wide Web.New York, USA:ACM, 2015:1067-1077.
+                                    </a>
+                                </li>
+                                <li id="335">
+
+
+                                    <a id="bibliography_14" title=" CAO S S, LU W, XU Q K.GraRep:Learning Graph Representations with Global Structural Information // Proc of the 24th ACM Internatio-nal Conference on Information and Knowledge Management.New York, USA:ACM, 2015:891-900." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=GraRep:Learning graph representations with global structural information">
+                                        <b>[14]</b>
+                                         CAO S S, LU W, XU Q K.GraRep:Learning Graph Representations with Global Structural Information // Proc of the 24th ACM Internatio-nal Conference on Information and Knowledge Management.New York, USA:ACM, 2015:891-900.
+                                    </a>
+                                </li>
+                                <li id="337">
+
+
+                                    <a id="bibliography_15" title=" GROVER A, LESKOVEC J.Node2vec:Scalable Feature Learning for Networks // Proc of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM, 2016:855-864." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Node2vec:Scalable Feature Learning for Networks">
+                                        <b>[15]</b>
+                                         GROVER A, LESKOVEC J.Node2vec:Scalable Feature Learning for Networks // Proc of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM, 2016:855-864.
+                                    </a>
+                                </li>
+                                <li id="339">
+
+
+                                    <a id="bibliography_16" title=" CAO S S, LU W, XU Q K.Deep Neural Networks for Learning Graph Representations // Proc of the 30th AAAI Conference on Artificial Intelligence.Palo Alto, USA:AAAI, 2016:1145-1152." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep Neural Networks for Learning Graph Representations">
+                                        <b>[16]</b>
+                                         CAO S S, LU W, XU Q K.Deep Neural Networks for Learning Graph Representations // Proc of the 30th AAAI Conference on Artificial Intelligence.Palo Alto, USA:AAAI, 2016:1145-1152.
+                                    </a>
+                                </li>
+                                <li id="341">
+
+
+                                    <a id="bibliography_17" title=" FAN X N, ZHANG S W, ZHANG S Y, et al.Prediction of lncRNA-Disease Associations by Integrating Diverse Heterogeneous Information Sources with RWR Algorithm and Positive Pointwise Mutual Information.BMC Bioinformatics, 2019, 20 (1) :871-883." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Prediction of lncRNA-Disease Associations by Integrating Diverse Heterogeneous Information Sources with RWR Algorithm and Positive Pointwise Mutual Information">
+                                        <b>[17]</b>
+                                         FAN X N, ZHANG S W, ZHANG S Y, et al.Prediction of lncRNA-Disease Associations by Integrating Diverse Heterogeneous Information Sources with RWR Algorithm and Positive Pointwise Mutual Information.BMC Bioinformatics, 2019, 20 (1) :871-883.
+                                    </a>
+                                </li>
+                                <li id="343">
+
+
+                                    <a id="bibliography_18" title=" VINCENT P, LAROCHELLE H, LAJOIE I, et al.Stacked Denoising Autoencoders:Learning Useful Representations in a Deep Network with a Local Denoising Criterion.Journal of Machine Learning Research, 2010, 11:3371-3408." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Stacked denoising autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion">
+                                        <b>[18]</b>
+                                         VINCENT P, LAROCHELLE H, LAJOIE I, et al.Stacked Denoising Autoencoders:Learning Useful Representations in a Deep Network with a Local Denoising Criterion.Journal of Machine Learning Research, 2010, 11:3371-3408.
+                                    </a>
+                                </li>
+                                <li id="345">
+
+
+                                    <a id="bibliography_19" title=" KIPF T N, WELLING M.Semi-supervised Classification with Graph Convolutional Networks[C/OL].[2019-02-25].https://arxiv.org/pdf/1609.02907.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Semi-supervised Classification with Graph Convolutional Networks[C/OL]">
+                                        <b>[19]</b>
+                                         KIPF T N, WELLING M.Semi-supervised Classification with Graph Convolutional Networks[C/OL].[2019-02-25].https://arxiv.org/pdf/1609.02907.pdf.
+                                    </a>
+                                </li>
+                                <li id="347">
+
+
+                                    <a id="bibliography_20" title=" HAMILTON W L, YING R, LESKOVEC J.Inductive Representation Learning on Large Graphs[C/OL].[2019-02-25].https://arxiv.org/pdf/1706.02216.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Inductive Representation Learning on Large Graphs[C/OL]">
+                                        <b>[20]</b>
+                                         HAMILTON W L, YING R, LESKOVEC J.Inductive Representation Learning on Large Graphs[C/OL].[2019-02-25].https://arxiv.org/pdf/1706.02216.pdf.
+                                    </a>
+                                </li>
+                                <li id="349">
+
+
+                                    <a id="bibliography_21" title=" WANG H W, WANG J, WANG J L, et al.GraphGAN:Graph Representation Learning with Generative Adversarial Nets[C/OL].[2019-02-25].https://arxiv.org/pdf/1711.08267.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=GraphGAN:Graph Representation Learning with Generative Adversarial Nets[C/OL]">
+                                        <b>[21]</b>
+                                         WANG H W, WANG J, WANG J L, et al.GraphGAN:Graph Representation Learning with Generative Adversarial Nets[C/OL].[2019-02-25].https://arxiv.org/pdf/1711.08267.pdf.
+                                    </a>
+                                </li>
+                                <li id="351">
+
+
+                                    <a id="bibliography_22" title=" 赵姝, 赵晖, 陈洁, 等.基于社团结构的多粒度结构洞占据者发现及分析.智能系统学报, 2016, 11 (3) :343-351. (ZHAO S, ZHAO H, CHEN J, et al.Recognition and Analysis of Structural Hole Spanner in Multi-granularity Based on Community Structure.CAAI Transactions on Intelligent Systems, 2016, 11 (3) :343-351.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZNXT201603009&amp;v=MTYxNjlqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSbkZ5emhVN3JOUHlQVGVyRzRIOWZNckk5RmJZUUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[22]</b>
+                                         赵姝, 赵晖, 陈洁, 等.基于社团结构的多粒度结构洞占据者发现及分析.智能系统学报, 2016, 11 (3) :343-351. (ZHAO S, ZHAO H, CHEN J, et al.Recognition and Analysis of Structural Hole Spanner in Multi-granularity Based on Community Structure.CAAI Transactions on Intelligent Systems, 2016, 11 (3) :343-351.) 
+                                    </a>
+                                </li>
+                                <li id="353">
+
+
+                                    <a id="bibliography_23" title=" 张燕平, 张铃, 吴涛.不同粒度世界的描述法——商空间法.计算机学报, 2004, 27 (3) :328-333. (ZHANG Y P, ZHANG L, WU T.The Representation of Different Granular Worlds:A Quotient Space.Chinese Journal of Compu-ters, 2004, 27 (3) :328-333.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX200403005&amp;v=MzA1MTJPM3pxcUJ0R0ZyQ1VSTE9lWmVSbkZ5emhVN3JOTHo3QmRyRzRIdFhNckk5RllZUUtESDg0dlI0VDZqNTQ=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[23]</b>
+                                         张燕平, 张铃, 吴涛.不同粒度世界的描述法——商空间法.计算机学报, 2004, 27 (3) :328-333. (ZHANG Y P, ZHANG L, WU T.The Representation of Different Granular Worlds:A Quotient Space.Chinese Journal of Compu-ters, 2004, 27 (3) :328-333.) 
+                                    </a>
+                                </li>
+                                <li id="355">
+
+
+                                    <a id="bibliography_24" title=" 赵姝, 柯望, 陈洁, 等.基于聚类粒化的社团发现算法.计算机应用, 2014, 34 (10) :2812-2815. (ZHAO S, KE W, CHEN J, et al.Community Detection Algorithm Based on Clustering Granulation.Journal of Computer Applications, 2014, 34 (10) :2812-2815.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201410011&amp;v=MTk4OTA1NE8zenFxQnRHRnJDVVJMT2VaZVJuRnl6aFU3ck5MejdCZDdHNEg5WE5yNDlFWllRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[24]</b>
+                                         赵姝, 柯望, 陈洁, 等.基于聚类粒化的社团发现算法.计算机应用, 2014, 34 (10) :2812-2815. (ZHAO S, KE W, CHEN J, et al.Community Detection Algorithm Based on Clustering Granulation.Journal of Computer Applications, 2014, 34 (10) :2812-2815.) 
+                                    </a>
+                                </li>
+                                <li id="357">
+
+
+                                    <a id="bibliography_25" title=" SARKAR P, CHAKRABARTI D, BICKEL P.The Consistency of Common Neighbors for Link Prediction in Stochastic Blockmodels // Proc of the 28th International Conference on Neural Information Processing Systems.Cambridge, USA:The MIT Press, 2015, II:3016-3024." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The Consistency of Common Neighbors for Link Prediction in Stochastic Blockmodels">
+                                        <b>[25]</b>
+                                         SARKAR P, CHAKRABARTI D, BICKEL P.The Consistency of Common Neighbors for Link Prediction in Stochastic Blockmodels // Proc of the 28th International Conference on Neural Information Processing Systems.Cambridge, USA:The MIT Press, 2015, II:3016-3024.
+                                    </a>
+                                </li>
+                                <li id="359">
+
+
+                                    <a id="bibliography_26" title=" BAG S, KUMAR S K, TIWARI M K.An Efficient Recommendation Generation Using Relevant Jaccard Similarity.Information Sciences, 2019, 483:53-64." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES408375A434D06BB1DF1C37C41E14C000&amp;v=Mjg1NjhDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMzVORmh3THkveGEwPU5pZk9mYmU0RnRMTHF2NUJaKzk3REhwTHZSZG5uRDRPUzNpUnFCTkFlTGJuUmJxZg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[26]</b>
+                                         BAG S, KUMAR S K, TIWARI M K.An Efficient Recommendation Generation Using Relevant Jaccard Similarity.Information Sciences, 2019, 483:53-64.
+                                    </a>
+                                </li>
+                                <li id="361">
+
+
+                                    <a id="bibliography_27" title=" HAMERS L, HEMERYCK Y, HERWEYERS G, et al.Similarity Measures in Scientometric Research:The Jaccard Index Versus Salton′s Cosine Formula.Information Processing and Management, 1989, 25 (3) :315-318." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Similarity measures in scientometric research. The Jaccard index versus Salton&amp;#39;s cosine formula">
+                                        <b>[27]</b>
+                                         HAMERS L, HEMERYCK Y, HERWEYERS G, et al.Similarity Measures in Scientometric Research:The Jaccard Index Versus Salton′s Cosine Formula.Information Processing and Management, 1989, 25 (3) :315-318.
+                                    </a>
+                                </li>
+                                <li id="363">
+
+
+                                    <a id="bibliography_28" title=" ADAMIC L A, LENTO T M, ADAR E, et al.Information Evolution in Social Networks // Proc of the 9th ACM International Conference on Web Search and Data Mining.New York, USA:ACM, 2016:473-482." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Information Evolution in Social Networks">
+                                        <b>[28]</b>
+                                         ADAMIC L A, LENTO T M, ADAR E, et al.Information Evolution in Social Networks // Proc of the 9th ACM International Conference on Web Search and Data Mining.New York, USA:ACM, 2016:473-482.
+                                    </a>
+                                </li>
+                                <li id="365">
+
+
+                                    <a id="bibliography_29" title=" MCCALLUM A K, NIGAM K, RENNIE J, et al.Automating the Construction of Internet Portals with Machine Learning.Information Retrieval, 2000, 3 (2) :127-163." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00002488885&amp;v=MzAyMjdLWTNrNXpCZGg0ajk5U1hxUnJ4b3hjTUg3UjdxZWJ1ZHRGQ0hsVjd2SUpWcz1OajdCYXJPNEh0SE9xNGROYk9N&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[29]</b>
+                                         MCCALLUM A K, NIGAM K, RENNIE J, et al.Automating the Construction of Internet Portals with Machine Learning.Information Retrieval, 2000, 3 (2) :127-163.
+                                    </a>
+                                </li>
+                                <li id="367">
+
+
+                                    <a id="bibliography_30" title=" GAO H C, HUANG H.Self-paced Network Embedding // Proc of the 24th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM, 2018:1406-1415." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Self-paced Network Embedding">
+                                        <b>[30]</b>
+                                         GAO H C, HUANG H.Self-paced Network Embedding // Proc of the 24th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM, 2018:1406-1415.
+                                    </a>
+                                </li>
+                                <li id="369">
+
+
+                                    <a id="bibliography_31" title=" WU W, LI B, CHEN L, et al.Efficient Attributed Network Embedding via Recursive Randomized Hashing // Proc of the 27th International Joint Conference on Artificial Intelligence.Hackensack, USA:World Scientific, 2018:2861-2867." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient Attributed Network Embedding via Recursive Randomized Hashing">
+                                        <b>[31]</b>
+                                         WU W, LI B, CHEN L, et al.Efficient Attributed Network Embedding via Recursive Randomized Hashing // Proc of the 27th International Joint Conference on Artificial Intelligence.Hackensack, USA:World Scientific, 2018:2861-2867.
+                                    </a>
+                                </li>
+                                <li id="371">
+
+
+                                    <a id="bibliography_32" title=" TANG L, LIU H.Relational Learning via Latent Social Dimensions // Proc of the 15th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM, 2009:817-826." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Relational learning via latent social dimensions">
+                                        <b>[32]</b>
+                                         TANG L, LIU H.Relational Learning via Latent Social Dimensions // Proc of the 15th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM, 2009:817-826.
+                                    </a>
+                                </li>
+                                <li id="373">
+
+
+                                    <a id="bibliography_33" title=" FAWCETT T.An Introduction to ROC Analysis.Pattern Recognition Letters, 2006, 27 (8) :861-874." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13012300414852&amp;v=MTg2NDF0RE9ySTlGWU9vTEJIazdvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMYklKRm9VYnhjPU5pZk9mYks3SA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[33]</b>
+                                         FAWCETT T.An Introduction to ROC Analysis.Pattern Recognition Letters, 2006, 27 (8) :861-874.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=MSSB" target="_blank">模式识别与人工智能</a>
+                2019,32(06),504-514 DOI:10.16451/j.cnki.issn1003-6059.201906003            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于邻域相似的层次粒化的网络表示学习方法</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%92%B1%E5%B3%B0&amp;code=23431235&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">钱峰</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E8%95%BE&amp;code=22026002&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张蕾</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%B5%B5%E5%A7%9D&amp;code=06141079&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">赵姝</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%88%E6%B4%81&amp;code=06134281&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陈洁</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E7%87%95%E5%B9%B3&amp;code=06139274&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张燕平</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%88%98%E5%B3%B0&amp;code=06141691&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">刘峰</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%AE%89%E5%BE%BD%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&amp;code=0062694&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">安徽大学计算机科学与技术学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E9%93%9C%E9%99%B5%E5%AD%A6%E9%99%A2%E6%95%B0%E5%AD%A6%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2&amp;code=0132844&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">铜陵学院数学与计算机学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>捕获更多的结构特征给网络表示学习方法带来较高的复杂度.基于分层递阶思想, 文中提出基于邻域相似的层次粒化的网络表示学习方法, 降低已有网络表示学习方法的复杂度.首先利用节点邻域相似性将网络逐步压缩至粗粒度的表示空间中.然后利用已有的网络表示学习方法学习粗粒的特征表示.最后利用图卷积网络将已学习的粗粒特征逐步细化为原始网络的节点表示.在多个数据集上的实验表明, 文中方法可以快速有效大幅压缩网络, 降低算法的运行时间.针对节点分类和链接预测任务, 当粒化层次较低时, 文中方法可以较大幅度提升原有算法的性能.</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%BD%91%E7%BB%9C%E8%A1%A8%E7%A4%BA%E5%AD%A6%E4%B9%A0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">网络表示学习;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%88%86%E5%B1%82%E9%80%92%E9%98%B6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">分层递阶;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%B1%82%E6%AC%A1%E7%B2%92%E5%8C%96&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">层次粒化;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%9B%BE%E5%8D%B7%E7%A7%AF%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">图卷积网络;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    钱峰, 硕士, 讲师, 主要研究方向为数据挖掘、网络表示学习.E-mail:leslie_chin@163.com.;
+                                </span>
+                                <span>
+                                    张蕾, 硕士, 讲师, 主要研究方向为数据挖掘、网络表示学习.E-mail:penguinzl@qq.com.;
+                                </span>
+                                <span>
+                                    *赵姝 (通讯作者) , 博士, 教授, 主要研究方向为机器学习、社交网络、粒计算.E-mail:zhaoshuzs2002@hotmail.com.;
+                                </span>
+                                <span>
+                                    陈洁, 博士, 副教授, 主要研究方向为智能计算、机器学习、三支决策.E-mail:chenjie200398@163.com.;
+                                </span>
+                                <span>
+                                    张燕平, 博士, 教授, 主要研究方向为粒计算、机器学习、商空间理论.E-mail:zhangyp2@gmail.com.;
+                                </span>
+                                <span>
+                                    刘峰, 硕士, 讲师, 主要研究方向为粒计算、商空间理论.E-mail:91051@ahu.edu.cn.;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2019-05-10</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家重点研究与发展项目 (No.2017YFB1401903);</span>
+                                <span>国家自然科学基金项目 (No.61876001, 61602003, 61673020);</span>
+                                <span>安徽省自然科学基金项目 (No.1508085MF113, 1708085QF156) 资助;</span>
+                    </p>
+            </div>
+                    <h1><b>Network Representation Learning Method Based on Hierarchical Granulation Using Neighborhood Similarity</b></h1>
+                    <h2>
+                    <span>QIAN Feng</span>
+                    <span>ZHANG Lei</span>
+                    <span>ZHAO Shu</span>
+                    <span>CHEN Jie</span>
+                    <span>ZHANG Yanping</span>
+                    <span>LIU Feng</span>
+            </h2>
+                    <h2>
+                    <span>School of Computer Science and Technology, Anhui University</span>
+                    <span>School of Mathematics and Computer Science, Tongling University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>The acquisition of structural features brings higher complexity to network representation learning. Based on the idea of hierarchy, an effective method is proposed to reduce the complexity of existing network representation learning methods. The network is gradually compressed into a coarse-grained representation space via node neighborhood similarity. And the coarse-grained feature representation is learned by the existing network representation learning methods. Finally, the learned coarse-grained features are gradually refined into the node representation of the original network using the graph convolution network model. Experimental results on several datasets show that the proposed method compresses the network efficiently and quickly, and the running time of the existing algorithms is greatly reduced. For the task of node classification and link prediction, the proposed method can greatly improve the performance of the original algorithm while the granularity level is low.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Network%20Representation%20Learning&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Network Representation Learning;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Hierarchy&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Hierarchy;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Hierarchical%20Granulation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Hierarchical Granulation;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Graph%20Convolution%20Network&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Graph Convolution Network;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                            <b>Author：</b>
+                                                        <span>
+                                    QIAN Feng, master, lecturer. His research interests include data mining and network representation learning.;
+                                </span>
+                                <span>
+                                    ZHANG Lei, master, lecturer. Her research interests include data mining and network representation learning.;
+                                </span>
+                                <span>
+                                    ZHAO Shu ( Corresponding author) , Ph.D., professor. Her research interests include machine learning, social network and granular computing.;
+                                </span>
+                                <span>
+                                    CHEN Jie, Ph.D., associate professor. Her research interests include intelligent computing, machine learning and three-way decision.;
+                                </span>
+                                <span>
+                                    ZHANG Yanping, Ph. D., professor. Her research interests include granular computing, machine learning and quotient space theory.;
+                                </span>
+                                <span>
+                                    LIU Feng, master, lecturer. His research interests include granular computing and quotient space theory.;
+                                </span>
+                    </p>
+                                    <p><b>Received：</b> 2019-05-10</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>Supported by National Key Research and Development Program of China (No.2017YFB1401903);</span>
+                                <span>National Natural Science Foundation of China (No.61876001, 61602003, 61673020);</span>
+                                <span>Natural Science Foundation of Anhui Province (No.1508085MF113, 1708085QF156);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <div class="p1">
+                    <p id="82">真实世界的网络通常是具有统计特征的复杂网络, 根据统计特征 (度分布、聚集系数、中介中心性) 可分为小世界、无标度、社团化等不同类型.研究人员通常将网络抽象成图结构, 利用矩阵存储网络的结构信息, 通过不同的网络分析任务 (节点分类<citation id="375" type="reference"><link href="309" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>、链接预测<citation id="376" type="reference"><link href="311" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>、社团发现<citation id="377" type="reference"><link href="313" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>) 挖掘网络中隐藏信息, 更深层次地了解网络和理解网络的演化机理.现实场景中提取的网络数据普遍具有高维和稀疏的特性, 使多数网络分析方法在实际应用中遇到许多瓶颈.</p>
+                </div>
+                <div class="p1">
+                    <p id="83">网络表示学习 (Network Representation Learning, NRL) <citation id="378" type="reference"><link href="315" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>是解决网络数据高维和稀疏问题的常用手段, 基本思想是:通过学习将网络中节点的高维特征使用低维、稠密、实值的向量重新表示, 学习到的节点特征表示需要保留原有网络中的局部相似性 (一阶相似性<citation id="379" type="reference"><link href="317" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>、二阶相似性<citation id="380" type="reference"><link href="319" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>) 和结构相似性 (角色结构相似<citation id="381" type="reference"><link href="321" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>、社团内相似<citation id="382" type="reference"><link href="323" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>) .早先的网络表示学习方法大都基于机器学习中的降维技术, 如局部线性嵌入 (Locally Linear Embedding) <citation id="383" type="reference"><link href="325" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>、拉普拉斯特征映射 (Laplacian Eigenmaps) <citation id="384" type="reference"><link href="327" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>.</p>
+                </div>
+                <div class="p1">
+                    <p id="84">近年来, 深度学习技术成功引入网络表示学习中, 研究人员陆续提出许多网络表示学习方法.Perozzi等<citation id="385" type="reference"><link href="329" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>提出DeepWalk, 利用固定长度的随机游走, 将节点的一次游走路径视为“句子”, 所有节点经过多次游走获取的“句子”组合成“文档”.生成的“文档”利用Skip-Gram模型<citation id="386" type="reference"><link href="331" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>进行节点特征学习.Tang等<citation id="387" type="reference"><link href="333" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>提出LINE (Large-Scale Information Net-work Embedding) , 设置两个不同的目标函数, 即节点的一阶相似性和二阶相似性, 基于这两个目标函数, 通过神经网络学习得到节点的两种特征向量, 拼接它们获得最终的节点特征表示.Cao等<citation id="388" type="reference"><link href="335" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>提出GraRep (Graph Representations) , 通过网络的邻接矩阵定义一阶概率转移矩阵, 并利用提升矩阵的幂获取网络节点高阶的特征.Grover等<sup></sup><citation id="389" type="reference"><link href="337" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>提出Node2Vec (Node to Vector) , 通过改进DeepWalk的游走策略, 使用有偏的随机游走获取节点的特征表示.Cao等<citation id="390" type="reference"><link href="339" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>提出DNGR (Deep Neural Graph Representa-tions) , 采用随机冲浪 (Random Surfing) 策略获取网络的高阶结构信息, 再将这些结构信息转换成PPMI (Positive Pointwise Mutual Information) <citation id="391" type="reference"><link href="341" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>矩阵, 最后通过堆栈去噪自编码器 (Stacked Denoising Autoencoder) <citation id="392" type="reference"><link href="343" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>进行节点特征学习.Kipf等<citation id="393" type="reference"><link href="345" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>提出图卷积网络 (Graph Convolution Network, GCN) , 通过聚合中心节点的一阶邻居的信息, 得到中心节点的单独表示, 通过叠加<i>k</i>层网络, 使中心节点整合<i>k</i>阶邻居信息.Hamilton等<citation id="394" type="reference"><link href="347" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>提出GraphSAGE (Graph Sample and Aggregate) , 引入采样技术, 统一对固定数量的邻居进行采样.邻居是由固定长度的随机游走产生, 得到一个包含中心节点和它的邻居节点的子图, 通过子图的卷积缓解计算和内存压力.Wang等<citation id="395" type="reference"><link href="349" rel="bibliography" /><sup>[<a class="sup">21</a>]</sup></citation>提出GraphGAN (Graph Representation Learning with Gene-rative Adversarial Nets) , 利用生成器 (Generator) 和判别器 (Discriminator) 在一个极大极小游戏中进行对抗训练, 学习到的模型可以用于刻画节点的特征.上述方法通过设计不同的目标函数, 结合深度学习技术学习节点的特征表示.学习的节点特征能保留更多的网络结构信息, 不同程度地提高下游网络分析任务的性能.</p>
+                </div>
+                <div class="p1">
+                    <p id="85">但是, 多数方法普遍存在时间复杂度较高的问题.1) 获取不同的网络结构信息需要设计不同目标函数, 通过神经网络分别或联合训练它们.较低的学习率和足够的训练次数对模型参数的优化至关重要, 但是耗时也成倍增长, 而且使用更深的神经网络使算法的复杂度呈指数级增长.2) 多数方法使用网络的邻接矩阵或变种矩阵作为输入, 在处理较大网络时对内存的要求较高, 当网络节点数较多时, 在普通配置的机器上无法利用模型学习特征表示.3) 基于随机游走的方法虽然不需要输入矩阵, 但是若要保留更高阶的结构信息, 就需要设计有偏的游走方式.例如, Node2Vec在开始游走前需要针对网络中的每条边计算转移概率, 相同的问题对于边密集网络同样存在.</p>
+                </div>
+                <div class="p1">
+                    <p id="86">为了解决上述问题, 本文从商空间分层递阶<citation id="396" type="reference"><link href="351" rel="bibliography" /><link href="353" rel="bibliography" /><link href="355" rel="bibliography" /><sup>[<a class="sup">22</a>,<a class="sup">23</a>,<a class="sup">24</a>]</sup></citation>的角度出发, 提出基于邻域相似性的分层粒化 (Hierarchical Granulation Based on Neighborhood Simi-larity, HGNS) 网络表示学习方法.首先通过邻域相似性逐步粒化网络空间, 构造一个有序的分层粒度结构.再利用已有的网络表示学习方法学习最粗粒度的网络表示.对特征由粗到细地进行细化, 最终得到最细粒度的网络节点特征表示.</p>
+                </div>
+                <h3 id="87" name="87" class="anchor-tag">1 基本概念</h3>
+                <div class="p1">
+                    <p id="88">本节描述算法中使用的基本概念.</p>
+                </div>
+                <div class="p1">
+                    <p id="89"><b>定义1</b>网络 设网络<i>G</i>= (<i>V</i>, <i>E</i>) , <i>V</i>表示网络中的节点集合, <i>E</i>表示网络中边的集合.</p>
+                </div>
+                <div class="p1">
+                    <p id="90" class="code-formula">
+                        <mathml id="90"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>e</mi><mo>=</mo><mo stretchy="false">{</mo><mo stretchy="false"> (</mo><mi>u</mi><mo>, </mo><mi>v</mi><mo stretchy="false">) </mo><mo stretchy="false">|</mo><mi>u</mi><mo>∈</mo><mi>V</mi><mo>, </mo><mi>v</mi><mo>∈</mo><mi>V</mi><mo stretchy="false">}</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="91">表示网络中一条边 (关系) , <i>w</i> (<i>u</i>, <i>v</i>) =<i>w</i> (<i>v</i>, <i>u</i>) 表示边的权重, <i>u</i>、<i>v</i>分别表示两个不同节点.<mathml id="92"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>n</mi><mo>=</mo><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo></mrow></math></mathml>表示网络中节点的数量, <mathml id="93"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>m</mi><mo>=</mo><mo stretchy="false">|</mo><mi>E</mi><mo stretchy="false">|</mo></mrow></math></mathml>表示网络中边的数量.节点<i>u</i>的度</p>
+                </div>
+                <div class="p1">
+                    <p id="94" class="code-formula">
+                        <mathml id="94"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><mo stretchy="false"> (</mo><mi>u</mi><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></munder><mi>w</mi></mstyle><mo stretchy="false"> (</mo><mi>u</mi><mo>, </mo><mi>v</mi><mo stretchy="false">) </mo><mo>.</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="95">节点<i>v</i>的邻居集合</p>
+                </div>
+                <div class="p1">
+                    <p id="96" class="code-formula">
+                        <mathml id="96"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Γ</mi><mo stretchy="false"> (</mo><mi>v</mi><mo stretchy="false">) </mo><mo>=</mo><mo stretchy="false">{</mo><mi>u</mi><mo stretchy="false">|</mo><mo stretchy="false"> (</mo><mi>v</mi><mo>, </mo><mi>u</mi><mo stretchy="false">) </mo><mo>∈</mo><mi>E</mi><mspace width="0.25em" /><mtext>o</mtext><mtext>r</mtext><mspace width="0.25em" /><mo stretchy="false"> (</mo><mi>u</mi><mo>, </mo><mi>v</mi><mo stretchy="false">) </mo><mo>∈</mo><mi>E</mi><mo stretchy="false">}</mo><mo>.</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="97"><b>定义2</b> 网络中的粒化与分层 给定<i>G</i>, 视<i>G</i>中的每个节点为一个基本粒.使用粒度衡量粒的大小 (粗细) .基本粒是最细粒度的粒.粒化是指将多个粒组合为一个更粗粒度的粒操作, 粒化分层的目的是递归增大给定网络中的粒的粒度, 即通过减少节点和边的数量, 网络<i>G</i>递归缩减为一系列较粗粒度的网络<i>G</i><sup> (0) </sup>, <i>G</i><sup> (1) </sup>, …, <i>G</i><sup> (<i>k</i>) </sup>, </p>
+                </div>
+                <div class="p1">
+                    <p id="98" class="code-formula">
+                        <mathml id="98"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false">|</mo><mi>V</mi><msup><mrow></mrow><mrow><mo stretchy="false"> (</mo><mn>0</mn><mo stretchy="false">) </mo></mrow></msup><mo stretchy="false">|</mo><mo>&gt;</mo><mo stretchy="false">|</mo><mi>V</mi><msup><mrow></mrow><mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></msup><mo stretchy="false">|</mo><mo>&gt;</mo><mo>⋯</mo><mo>&gt;</mo><mo stretchy="false">|</mo><mi>V</mi><msup><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>k</mi><mo stretchy="false">) </mo></mrow></msup><mo stretchy="false">|</mo><mo>, </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="99"><i>k</i>表示粒化层数, <i>G</i><sup> (0) </sup>表示最细粒度的结构 (<i>G</i>的粒视角) , <i>G</i><sup> (<i>k</i>) </sup>表示最粗粒度的结构, <i>V</i><sup> (<i>i</i>) </sup>表示第<i>i</i>层的粒集合, 粒化可以通过多种方式实现.</p>
+                </div>
+                <div class="p1">
+                    <p id="100"><b>定义3</b> 网络表示学习<citation id="397" type="reference"><link href="315" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation> 给定<i>G</i>, 网络表示学习的任务是找到与网络结构一致的<i>G</i>的低维向量表示, 即对于给定的网络<i>G</i>, 网络表示学习的目标是学习函数<i>f</i>∶<b><i>v</i></b><sub><i>i</i></sub>■<b><i>z</i></b><sub><i>i</i></sub>∈<b>R</b><sup><i>d</i></sup>, 将每个节点映射到一个<i>d</i>维向量, 其中<i>d</i>≪<i>n</i>.节点表示应保留网络的基本结构信息.因此, 在位置距离相似性方面彼此接近的节点应该具有相似的表示.这种表示应是紧凑、连续的, 因为这有助于更好地执行机器学习算法.</p>
+                </div>
+                <h3 id="101" name="101" class="anchor-tag">2 基于邻域相似的网络粒化</h3>
+                <div class="p1">
+                    <p id="102">本节介绍HGNS的第一个阶段, 包含两个主要部分.1) 匹配.利用节点相似性函数, 计算网络中每个节点与其邻居节点间的相似度值, 获取最匹配的节点索引.2) 粒化.对所有相互匹配的一对节点进行粒化操作, 包括节点粒化和边粒化, 构造下一层粗粒度的网络结构.</p>
+                </div>
+                <div class="p1">
+                    <p id="103">如图1所示, 在匹配阶段, 首先依序遍历<i>G</i><sup> (<i>i</i>) </sup>中的每个节点.在遍历过程中, 通过邻域相似性函数, 计算节点与其邻居节点间的相似性值, 其中值最高的邻居节点索引存入匹配表<i>matching</i>中对应的位置.在粒化阶段, 利用匹配表<i>matching</i>对相互匹配的节点进行粒化操作, 并重新计算粒化后的边权, 构造粗粒度的网络结构.需要说明的是, 所有不同粒度的网络皆保存两张表<i>index</i>和<i>successors</i>, 其中:<i>index</i>保存节点的索引信息, 由0开始顺序编号;<i>successors</i>表的长度与上一层网络中节点数量保持一致, 用于保存上一层中每个节点粒化后对应的当前层中的节点索引.</p>
+                </div>
+                <div class="p1">
+                    <p id="104">以图1为例, <i>G</i><sup> (<i>i</i>) </sup>中索引为0和3的节点是互匹配节点, 在<i>G</i><sup> (<i>i</i>+1) </sup>中合并成索引为0的新节点, 信息保存至它们在<i>G</i><sup> (<i>i</i>+1) </sup>的<i>successors</i>表中对应的位置.<i>successors</i>表用于第四阶段的特征投影.通过<i>successors</i>表将当前层的粒特征表示投影到下一层中, 如<i>G</i><sup> (<i>i</i>+1) </sup>中索引为0的粒特征表示用于初始化<i>G</i><sup> (<i>i</i>) </sup>中索引为0和3的粒特征表示.</p>
+                </div>
+                <div class="area_img" id="105">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/MSSB201906003_105.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 匹配和粒化" src="Detail/GetImg?filename=images/MSSB201906003_105.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 匹配和粒化  <a class="btn-zoomin" href="Detail/GetImg?filename=images/MSSB201906003_105.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig.1 Matching and granulation</p>
+
+                </div>
+                <h4 class="anchor-tag" id="106" name="106"><b>2.1</b> 节点相似性的计算</h4>
+                <div class="p1">
+                    <p id="107">若节点之间的相似性仅基于网络结构时, 称为结构相似性.通常, 结构相似性度量可分为基于局部的方法和基于全局信息的方法.基于全局信息的方法利用网络中所有可用的信息, 可以提供比基于局部信息的方法更高的精度.然而, 对于大规模网络而言, 全局相似性的计算非常耗时和不可行.局部的方法仅使用邻居节点的信息, 速度较快, 但与全局度量相比, 精度较低.度量两个节点的相似性可量化节点之间的公共特征.</p>
+                </div>
+                <div class="p1">
+                    <p id="108">本文挑选4个具有代表性的基于邻域 (共同邻居) 相似性的度量方法定义节点相似性函数, 共同邻居可客观反映两个节点之间的二阶相似性, 通常共享邻居越多的两个节点越相似.表1汇总4种不同的邻域相似性度量指标的信息.</p>
+                </div>
+                <div class="area_img" id="109">
+                    <p class="img_tit"><b>表1 邻域相似性度量方法</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 1 Neighborhood similarity measures</p>
+                    <p class="img_note"></p>
+                    <table id="109" border="1"><tr><td><br />名称</td><td>计算公式</td></tr><tr><td><br />共同邻居<br /> (Common Neighbors, CN) <sup>[25]</sup></td><td><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><msubsup><mrow></mrow><mrow><mi>u</mi><mo>, </mo><mi>v</mi></mrow><mrow><mtext>C</mtext><mtext>Ν</mtext></mrow></msubsup><mo>=</mo><mo stretchy="false">|</mo><mi>Γ</mi><mo stretchy="false"> (</mo><mi>u</mi><mo stretchy="false">) </mo><mstyle displaystyle="true"><mo>∩</mo><mi>Γ</mi></mstyle><mo stretchy="false"> (</mo><mi>v</mi><mo stretchy="false">) </mo><mo stretchy="false">|</mo></mrow></math></td></tr><tr><td><br /><i>Jaccard</i> (<i>Jac</i>) <sup>[26]</sup></td><td><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><msubsup><mrow></mrow><mrow><mi>u</mi><mo>, </mo><mi>v</mi></mrow><mrow><mtext>J</mtext><mtext>a</mtext><mtext>c</mtext></mrow></msubsup><mo>=</mo><mfrac><mrow><mo stretchy="false">|</mo><mi>Γ</mi><mo stretchy="false"> (</mo><mi>u</mi><mo stretchy="false">) </mo><mstyle displaystyle="true"><mo>∩</mo><mi>Γ</mi></mstyle><mo stretchy="false"> (</mo><mi>v</mi><mo stretchy="false">) </mo><mo stretchy="false">|</mo></mrow><mrow><mo stretchy="false">|</mo><mi>Γ</mi><mo stretchy="false"> (</mo><mi>u</mi><mo stretchy="false">) </mo><mstyle displaystyle="true"><mo>∪</mo><mi>Γ</mi></mstyle><mo stretchy="false"> (</mo><mi>v</mi><mo stretchy="false">) </mo><mo stretchy="false">|</mo></mrow></mfrac></mrow></math></td></tr><tr><td><br /><i>Salton</i> (<i>Sal</i>) <sup>[27]</sup></td><td><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><msubsup><mrow></mrow><mrow><mi>u</mi><mo>, </mo><mi>v</mi></mrow><mrow><mtext>S</mtext><mtext>a</mtext><mtext>l</mtext></mrow></msubsup><mo>=</mo><mfrac><mrow><mo stretchy="false">|</mo><mi>Γ</mi><mo stretchy="false"> (</mo><mi>u</mi><mo stretchy="false">) </mo><mstyle displaystyle="true"><mo>∩</mo><mi>Γ</mi></mstyle><mo stretchy="false"> (</mo><mi>v</mi><mo stretchy="false">) </mo><mo stretchy="false">|</mo></mrow><mrow><msqrt><mrow><mi>d</mi><mo stretchy="false"> (</mo><mi>u</mi><mo stretchy="false">) </mo><mo>⋅</mo><mi>d</mi><mo stretchy="false"> (</mo><mi>v</mi><mo stretchy="false">) </mo></mrow></msqrt></mrow></mfrac></mrow></math></td></tr><tr><td><br /><i>Adamic</i>-<i>Adar</i> (<i>AA</i>) <sup>[28]</sup></td><td><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><msubsup><mrow></mrow><mrow><mi>u</mi><mo>, </mo><mi>v</mi></mrow><mrow><mtext>A</mtext><mtext>A</mtext></mrow></msubsup><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>z</mi><mo>∈</mo><mi>Γ</mi><mo stretchy="false"> (</mo><mi>u</mi><mo stretchy="false">) </mo><mstyle displaystyle="true"><mo>∩</mo><mi>Γ</mi></mstyle><mo stretchy="false"> (</mo><mi>v</mi><mo stretchy="false">) </mo></mrow></munder><mrow><mfrac><mn>1</mn><mrow><mi>log</mi><mo stretchy="false"> (</mo><mi>d</mi><mo stretchy="false"> (</mo><mi>z</mi><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow></mfrac></mrow></mstyle></mrow></math></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="110" name="110"><b>2.2</b> 基于邻域相似的粒化算法</h4>
+                <div class="p1">
+                    <p id="111">本节给出基于邻域相似性的网络粒化方法详细的算法描述.包括匹配<i>matching</i> () 和粒化<i>coarser</i> () , 并分析算法的主要步骤和复杂性.</p>
+                </div>
+                <div class="p1">
+                    <p id="112"><b>算法1</b> 最相似边匹配 <i>matching</i> () .</p>
+                </div>
+                <div class="area_img" id="303">
+                                <img alt="" src="Detail/GetImg?filename=images/MSSB201906003_30300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="130">算法第1行通过相关函数读取网络的节点邻接表, 获取所有节点的邻居节点信息.第2行初始化节点匹配表<i>matching</i>, 需要说明的是, <i>matching</i>表的索引号必须与节点编号对应, 初始<i>matching</i>表中每个节点对应位置的数据是各自的节点索引号.第5行使用变量<i>best</i>_<i>similarity</i>保存每趟遍历中相似性的最大值.第8行调用<i>similarity</i> () 函数计算当前节点与邻居的相似性值.第9～13行将计算结果为最大值的两个节点进行相互匹配.算法1的最大时间复杂度是<mathml id="131"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ο</mi><mo stretchy="false"> (</mo><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo><msup><mrow></mrow><mn>2</mn></msup><mo stretchy="false">) </mo><mo>.</mo></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="132">匹配阶段结束后, 再通过算法1得到的匹配表<i>matching</i>对网络进行粒化操作, 得到更粗粒度的下一层网络结构.</p>
+                </div>
+                <div class="p1">
+                    <p id="133"><b>算法2</b> 网络粒化<i>coarser</i> () </p>
+                </div>
+                <div class="area_img" id="304">
+                                <img alt="" src="Detail/GetImg?filename=images/MSSB201906003_30400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="304">
+                                <img alt="" src="Detail/GetImg?filename=images/MSSB201906003_30401.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="168">算法2第1行根据<i>matching</i>表构造粗粒度网络中的节点 (节点粒化) .第2～12行时间复杂度为<mathml id="169"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ο</mi><mo stretchy="false"> (</mo><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo><mo stretchy="false">) </mo></mrow></math></mathml>.再根据已获取的粗粒度节点 (下一层中节点) , 通过遍历累加边权值 (边粒化) , 第13～23行的时间复杂度是<mathml id="170"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ο</mi><mo stretchy="false"> (</mo><mo stretchy="false">|</mo><mi>E</mi><mo stretchy="false">|</mo><mo stretchy="false">) </mo></mrow></math></mathml>.第24行添加粗粒度网络的边.第25行添加粗粒度网络的边权.第26～29行处理粗粒度网络的<i>successors</i>表和<i>index</i>表, 时间复杂度为<mathml id="171"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ο</mi><mo stretchy="false"> (</mo><mo stretchy="false">|</mo><mi>V</mi><mo stretchy="false">|</mo><mo stretchy="false">) </mo><mo>.</mo></mrow></math></mathml></p>
+                </div>
+                <h3 id="172" name="172" class="anchor-tag">3 基于邻域相似的层次粒化的网络表示学习方法</h3>
+                <div class="p1">
+                    <p id="173">HGNS依赖如下4个阶段.1) 基于给定的相似性函数匹配网络中的相邻节点 (算法1) , 再逐一合并相互匹配的节点, 合并后节点的边权需要相应的处理, 得到较粗粒度的网络结构 (算法2) .迭代上述过程, 最终输出一个有序的网络分层粒度空间结构.2) 在最粗粒度网络空间结构中, 利用现有的网络表示学习方法获取最粗粒度空间中节点的特征表示.3) 构建一个单层的GCN模型<citation id="398" type="reference"><link href="345" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>, 利用已获取的粗粒度网络特征表示和拓扑结构, 对GCN模型进行训练, 优化权重参数.4) 通过特征映射, 利用优化后的GCN模型将粗粒度的节点特征由粗到细、局部到全体映射到原始网络 (最细粒度) 空间中, 最终获得原始网络中的节点特征表示.具体细节见算法3.</p>
+                </div>
+                <div class="area_img" id="174">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/MSSB201906003_174.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 HGNS流程图" src="Detail/GetImg?filename=images/MSSB201906003_174.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 HGNS流程图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/MSSB201906003_174.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig.2 Flow chart of HGNS</p>
+
+                </div>
+                <h4 class="anchor-tag" id="175" name="175"><b>3.1</b> 算法步骤</h4>
+                <div class="p1">
+                    <p id="176"><b>算法3</b> HGNS</p>
+                </div>
+                <div class="area_img" id="305">
+                                <img alt="" src="Detail/GetImg?filename=images/MSSB201906003_30500.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="190">第1～3行通过循环调用<i>matching</i>和<i>coarser</i>, 生成由细到粗的层次结构.第4行载入设定的网络表示学习方法, 以最粗粒度的网络作为输入, 获取粗粒度网络的节点特征表示结果.第5行对GCN进行建模.第6行将已知的粗粒度网络的结构信息和特征表示送入GCN模型, 训练模型参数, GCN的时间复杂度是<mathml id="191"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ο</mi><mo stretchy="false"> (</mo><mo stretchy="false">|</mo><mi>E</mi><mo stretchy="false">|</mo><mi>d</mi><mo stretchy="false">) </mo></mrow></math></mathml>.第7～9行通过循环依序将各个分层结构信息由粗到细送入GCN模型, 进行特征细化.其中, 第8行通过算法2中生成的<i>successors</i>表完成网络特征的映射过程.</p>
+                </div>
+                <h4 class="anchor-tag" id="192" name="192"><b>3.2 GCN</b>模型描述</h4>
+                <div class="p1">
+                    <p id="193">HGNS利用GCN模型<citation id="399" type="reference"><link href="345" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>对节点特征由粗粒度向细粒度细化.本节对HGNS中的GCN模型进行阐述.</p>
+                </div>
+                <div class="p1">
+                    <p id="194">假设输入网络中有<i>N</i>个节点, 节点的特征维度为<i>d</i>.使用关系矩阵<b><i>A</i></b>∈<b>R</b><sup><i>N</i>×<i>N</i></sup>保存拓扑结构, 特征矩阵<b><i>Z</i></b>∈<b>R</b><sup><i>N</i>×<i>d</i></sup>保存节点特征.其中<b><i>z</i></b><sub><i>i</i></sub>表示矩阵<b><i>Z</i></b>的第<i>i</i>行, 对应于节点<i>i</i>的特征向量表示.</p>
+                </div>
+                <div class="p1">
+                    <p id="195">GCN模型由输入层、卷积层和全连接层组成, 其中卷积层的层数为一层.GCN模型的输入是矩阵<b><i>A</i></b>和<b><i>Z</i></b>, 输出是新的向量矩阵<mathml id="196"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">Ζ</mi></mstyle><mo>︿</mo></mover><mo>∈</mo><mi mathvariant="bold">R</mi><msup><mrow></mrow><mrow><mi>Ν</mi><mo>×</mo><mi>d</mi></mrow></msup></mrow></math></mathml>.GCN模型结构定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="197"><mathml id="198"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">Ζ</mi></mstyle><mo>︿</mo></mover><mo>=</mo><mi>G</mi><mi>C</mi><mi>Ν</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">A</mi><mo>, </mo><mi mathvariant="bold-italic">Ζ</mi><mo>, </mo><mi>Θ</mi><mo stretchy="false">) </mo><mo>=</mo><mi>f</mi><mo stretchy="false"> (</mo><mover accent="true"><mi mathvariant="bold-italic">D</mi><mo>˜</mo></mover><msup><mrow></mrow><mrow><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mover accent="true"><mi mathvariant="bold-italic">A</mi><mo>˜</mo></mover><mover accent="true"><mi mathvariant="bold-italic">D</mi><mo>˜</mo></mover><msup><mrow></mrow><mrow><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mi mathvariant="bold-italic">Ζ</mi><mi mathvariant="bold-italic">W</mi><mo stretchy="false">) </mo></mrow></math></mathml>,      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="199">其中, <mathml id="200"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi mathvariant="bold-italic">D</mi><mo>˜</mo></mover><msup><mrow></mrow><mrow><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mover accent="true"><mi mathvariant="bold-italic">A</mi><mo>˜</mo></mover><mover accent="true"><mi mathvariant="bold-italic">D</mi><mo>˜</mo></mover><msup><mrow></mrow><mrow><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup></mrow></math></mathml>为卷积滤波器, <mathml id="201"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi mathvariant="bold-italic">A</mi><mo>˜</mo></mover><mo>=</mo><mi mathvariant="bold-italic">A</mi><mo>+</mo><mi mathvariant="bold-italic">Ι</mi><msub><mrow></mrow><mi>Ν</mi></msub><mo>, </mo><mi mathvariant="bold-italic">Ι</mi><msub><mrow></mrow><mi>Ν</mi></msub></mrow></math></mathml>为<b><i>N</i></b>维的单位矩阵, <mathml id="202"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi>D</mi><mo>˜</mo></mover><msub><mrow></mrow><mrow><mi>i</mi><mi>i</mi></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mover accent="true"><mi>A</mi><mo>˜</mo></mover></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>, </mo><mi mathvariant="bold-italic">W</mi></mrow></math></mathml>为权重矩阵, <i>f</i> (·) 为线性激活函数, 可选用RELU函数.</p>
+                </div>
+                <div class="p1">
+                    <p id="203">通过GCN模型可以自然聚合结构信息和节点特征, 该过程由两步组成:1) 对中心节点及其邻居根据节点度的不同权重进行平均;2) 将平均特征向量馈送到全连接层, 输出新的特征向量.</p>
+                </div>
+                <div class="p1">
+                    <p id="204"><mathml id="205"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi mathvariant="bold-italic">D</mi><mo>˜</mo></mover><msup><mrow></mrow><mrow><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mover accent="true"><mi mathvariant="bold-italic">A</mi><mo>˜</mo></mover><mover accent="true"><mi mathvariant="bold-italic">D</mi><mo>˜</mo></mover><msup><mrow></mrow><mrow><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mi mathvariant="bold-italic">Ζ</mi><mo>=</mo><mi>m</mi><mi>e</mi><mi>a</mi><mi>n</mi><mo stretchy="false"> (</mo><mi>z</mi><msub><mrow></mrow><mi>i</mi></msub><mo>+</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>j</mi><mo>∈</mo><mi>Γ</mi><mo stretchy="false"> (</mo><mi>i</mi><mo stretchy="false">) </mo></mrow></munder><mi>z</mi></mstyle><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo></mrow></math></mathml>.      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="206">使用特征重构误差训练GCN模型, 计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="207"><mathml id="208"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>L</mi><msub><mrow></mrow><mrow><mtext>G</mtext><mtext>C</mtext><mtext>Ν</mtext></mrow></msub><mo>=</mo><mrow><mrow><mo>|</mo><mrow><mi mathvariant="bold-italic">Ζ</mi><mo>-</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">Ζ</mi></mstyle><mo>︿</mo></mover></mrow><mo>|</mo></mrow></mrow><msubsup><mrow></mrow><mtext>F</mtext><mn>2</mn></msubsup></mrow></math></mathml>.      (3) </p>
+                </div>
+                <h3 id="209" name="209" class="anchor-tag">4 实验及结果分析</h3>
+                <div class="p1">
+                    <p id="210">在4个公开数据集上利用节点分类和链接预测任务验证HGNS的有效性.实验环境为:Windows10操作系统、Intel i7-4790 3.6 GHz CPU、8 GB内存.基于Python语言和TensorFlow实现HGNS.</p>
+                </div>
+                <h4 class="anchor-tag" id="211" name="211"><b>4.1</b> 实验准备</h4>
+                <div class="p1">
+                    <p id="212">实验使用4个公开数据集:社交网络、引文网络、生物医学网络等, 详细信息见表2.</p>
+                </div>
+                <div class="p1">
+                    <p id="213">Citeseer数据集<citation id="400" type="reference"><link href="365" rel="bibliography" /><sup>[<a class="sup">29</a>]</sup></citation>为一个引文网络, 包含3 312篇出版物、4 536条边及6个类别, 每个类别表示出版物的细分领域.</p>
+                </div>
+                <div class="p1">
+                    <p id="214">Wiki数据集<citation id="401" type="reference"><link href="367" rel="bibliography" /><sup>[<a class="sup">30</a>]</sup></citation>为维基百科数据库中单词的共现网络, 包含4 777个节点、92 295条边、40个表示词性的节点标签.</p>
+                </div>
+                <div class="p1">
+                    <p id="215">Flicker数据集<citation id="402" type="reference"><link href="369" rel="bibliography" /><sup>[<a class="sup">31</a>]</sup></citation>为一个社交网络, 包含7 575个用户、239 738条边、9个类别, 每个类别表示用户的兴趣.</p>
+                </div>
+                <div class="p1">
+                    <p id="216">BlogCatalog数据集<citation id="403" type="reference"><link href="371" rel="bibliography" /><sup>[<a class="sup">32</a>]</sup></citation>为来自BlogCatalog网站的社交网络.节点是博主, 边缘是博主之间的友谊关系, 有10 312个节点, 333 983条边.根据博主的兴趣分为39个类别.</p>
+                </div>
+                <div class="area_img" id="217">
+                    <p class="img_tit"><b>表2 网络数据集</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 2 Network datasets</p>
+                    <p class="img_note"></p>
+                    <table id="217" border="1"><tr><td>名称</td><td>节点数</td><td>边数</td><td>类别数</td><td>密度</td><td>聚集系数</td></tr><tr><td><br />Citeseer</td><td>3312</td><td>4536</td><td>6</td><td>0.0008</td><td>0.243</td></tr><tr><td><br />WIKI</td><td>4777</td><td>92295</td><td>40</td><td>0.0081</td><td>0.539</td></tr><tr><td><br />Flicker</td><td>7575</td><td>239738</td><td>9</td><td>0.0084</td><td>0.330</td></tr><tr><td><br />BlogCatalog</td><td>10312</td><td>333983</td><td>39</td><td>0.0063</td><td>0.476</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="218">为了验证HGNS的性能, 选择3种经典的网络表示学习算法:DeepWalk, LINE, GraRep.将这3种算法分别用于粗粒特征的学习, 然后对比使用HGNS和不使用HGNS学习的表示在不同任务中的表现.</p>
+                </div>
+                <div class="p1">
+                    <p id="219">在实验中, 对于DeepWalk, 将窗口大小设为10, 游走长度设为80, 游走次数设为10.对于GraRep, 最大矩阵转移步数<i>k</i>=4.对于LINE, 将负样本数设为5.对于HGNS, 为了评价不同粒化层数对HGNS的影响, 将粒化层数<i>l</i>从1设到4, 分别进行节点表示学习.为了公平对比, 所有算法学习的节点表示维度都设为128.</p>
+                </div>
+                <h4 class="anchor-tag" id="220" name="220"><b>4.2</b> 节点分类</h4>
+                <div class="p1">
+                    <p id="221">节点分类是测评网络表示性能的方法之一.本文使用Logistic回归分类器进行节点分类.首先使用所有节点训练网络表示方法获得节点特征表示, 然后将特征表示输入分类器实现节点分类.</p>
+                </div>
+                <div class="p1">
+                    <p id="222">为了全面评估这些网络表示方法, 随机选择20%、60%、80%节点分别训练分类器.在其余节点上评估分类器的性能.为了衡量分类性能, 采用Micro-F1<citation id="404" type="reference"><link href="367" rel="bibliography" /><sup>[<a class="sup">30</a>]</sup></citation>和Macro-F1<citation id="405" type="reference"><link href="367" rel="bibliography" /><sup>[<a class="sup">30</a>]</sup></citation>作为测评指标, 指标值越大, 分类性能越好.所有的分类实验重复10次, 计算平均值.表3～表6分别展示在Citeseer、WiKi、Flicker、BlogCatalog数据集上的节点分类Micro-F1和Macro-F1的均值.其中, 斜体数字表示不同算法在不同分层中性能最好的结果, 黑体数字表示所有结果中性能最优的.</p>
+                </div>
+                <div class="p1">
+                    <p id="223">由表3～表6可得:1) 针对DeepWalk、LINE、GraRep, 利用HGNS可大幅降低算法的运行时间, 随着粒化层数的增加, 效果更加明显.当网络粒化层数仅为一层时, 在Citeseer数据集上, 相比原始算法, HGNS将算法的运行时间分别压缩44.69%、-3.53%和77.20%.这里需要说明的是, 对于LINE, 算法运行时间稍微提升3.53%, 这是因为LINE对于相似性的表示采用基于链接的负采样优化算法.对于边稀疏的数据集, 当粒化层数为一层时, HGNS的优化效果未得以体现.在WiKi数据集上, HGNS将算法的运行时间分别压缩47.66%、32.59%和78.82%.在Flicker数据集上, HGNS将算法运行时间分别压缩39.80%、38.68%和72.25%.在BlogCatalog数据集上, HGNS将算法运行时间分别压缩35.59%、34.95%和63.20%.可以看出, 对于较高时间复杂度的算法, HGNS的优势较明显.2) 在多数情况下, 当粒化层数较低时, 利用HGNS可提升算法性能, 特别是在粒化层数为一层时, 优势明显.随着粒化层数的增加, 性能优势迅速减小.</p>
+                </div>
+                <div class="area_img" id="224">
+                    <p class="img_tit"><b>表3 各算法在Citeseer数据集上的节点分类性能</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 3 Node classification performance of different algorithms on Citeseer dataset</p>
+                    <p class="img_note"></p>
+                    <table id="224" border="1"><tr><td rowspan="2"><br />对比<br />算法</td><td colspan="3"><br />Micro-F1</td><td colspan="3"><br />Macro-F1</td><td rowspan="2">运行<br />时间/s</td></tr><tr><td><br />20%</td><td>60%</td><td>80%</td><td><br />20%</td><td>60%</td><td>80%</td></tr><tr><td>DeepWalk</td><td>0.529</td><td>0.566</td><td>0.571</td><td>0.476</td><td>0.512</td><td>0.515</td><td>17.79</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=1) </td><td><b>0.601</b></td><td><b>0.621</b></td><td><b>0.627</b></td><td>0.520</td><td><b>0.544</b></td><td>0.543</td><td>9.84</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=2) </td><td>0.600</td><td>0.612</td><td>0.615</td><td><i>0</i>.<i>527</i></td><td>0.532</td><td>0.541</td><td>5.67</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=3) </td><td>0.589</td><td>0.613</td><td>0.616</td><td>0.520</td><td><b>0.544</b></td><td><b>0.546</b></td><td>3.63</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=4) </td><td>0.592</td><td>0.605</td><td>0.624</td><td>0.521</td><td>0.528</td><td>0.544</td><td>2.29</td></tr><tr><td><br />LINE</td><td>0.308</td><td>0.356</td><td>0.360</td><td>0.233</td><td>0.292</td><td>0.297</td><td>64.28</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=1) </td><td>0.466</td><td>0.538</td><td>0.556</td><td>0.403</td><td>0.473</td><td>0.491</td><td>66.55</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=2) </td><td>0.502</td><td><i>0</i>.<i>593</i></td><td><i>0</i>.<i>596</i></td><td>0.443</td><td><i>0</i>.<i>534</i></td><td><i>0</i>.<i>541</i></td><td>62.77</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=3) </td><td>0.477</td><td>0.560</td><td>0.583</td><td>0.403</td><td>0.494</td><td>0.517</td><td>61.99</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=4) </td><td><i>0</i>.<i>517</i></td><td>0.568</td><td>0.586</td><td><i>0</i>.<i>451</i></td><td>0.510</td><td>0.525</td><td>62.46</td></tr><tr><td><br />GraRep</td><td>0.532</td><td>0.553</td><td>0.557</td><td>0.478</td><td>0.493</td><td>0.492</td><td>114.72</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=1) </td><td>0.589</td><td>0.604</td><td>0.603</td><td>0.516</td><td>0.532</td><td>0.529</td><td>26.16</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=2) </td><td><i>0</i>.<i>598</i></td><td><i>0</i>.<i>605</i></td><td>0.609</td><td><b>0.528</b></td><td><i>0</i>.<i>534</i></td><td><i>0</i>.<i>536</i></td><td>8.58</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=3) </td><td>0.586</td><td>0.603</td><td>0.607</td><td>0.509</td><td>0.533</td><td>0.531</td><td>3.42</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=4) </td><td>0.585</td><td>0.602</td><td><i>0</i>.<i>611</i></td><td>0.508</td><td>0.521</td><td>0.523</td><td>2.14</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="225">
+                    <p class="img_tit"><b>表4 各算法在WiKi数据集上的节点分类性能</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 4 Node classification performance of different algorithms on WiKi dataset</p>
+                    <p class="img_note"></p>
+                    <table id="225" border="1"><tr><td rowspan="2"><br />对比<br />算法</td><td colspan="3"><br />Micro-F1</td><td colspan="3"><br />Macro-F1</td><td rowspan="2">运行<br />时间/s</td></tr><tr><td><br />20%</td><td>60%</td><td>80%</td><td><br />20%</td><td>60%</td><td>80%</td></tr><tr><td>DeepWalk</td><td>0.427</td><td>0.460</td><td>0.471</td><td>0.076</td><td><i>0</i>.<i>095</i></td><td><i>0</i>.<i>101</i></td><td>32.86</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=1) </td><td><i>0</i>.<i>483</i></td><td><b>0.510</b></td><td><b>0.538</b></td><td><i>0</i>.<i>078</i></td><td>0.091</td><td>0.096</td><td>17.20</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=2) </td><td>0.470</td><td>0.484</td><td>0.501</td><td>0.063</td><td>0.075</td><td>0.073</td><td>10.93</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=3) </td><td>0.448</td><td>0.455</td><td>0.444</td><td>0.041</td><td>0.047</td><td>0.048</td><td>7.09</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=4) </td><td>0.445</td><td>0.448</td><td>0.450</td><td>0.041</td><td>0.039</td><td>0.038</td><td>4.70</td></tr><tr><td><br />LINE</td><td>0.450</td><td>0.467</td><td>0.477</td><td><i>0</i>.<i>079</i></td><td><i>0</i>.<i>086</i></td><td><i>0</i>.<i>088</i></td><td>143.63</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=1) </td><td><b>0.493</b></td><td><i>0</i>.<i>506</i></td><td><i>0</i>.<i>509</i></td><td>0.072</td><td>0.081</td><td>0.082</td><td>96.82</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=2) </td><td>0.453</td><td>0.458</td><td>0.464</td><td>0.044</td><td>0.051</td><td>0.052</td><td>83.84</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=3) </td><td>0.447</td><td>0.448</td><td>0.446</td><td>0.039</td><td>0.041</td><td>0.041</td><td>76.48</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=4) </td><td>0.446</td><td>0.442</td><td>0.437</td><td>0.037</td><td>0.037</td><td>0.036</td><td>71.62</td></tr><tr><td><br />GraRep</td><td>0.474</td><td><i>0</i>.<i>505</i></td><td><i>0</i>.<i>514</i></td><td><b>0.096</b></td><td><b>0.106</b></td><td><b>0.111</b></td><td>363.44</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=1) </td><td><i>0</i>.<i>488</i></td><td><i>0</i>.<i>505</i></td><td>0.502</td><td>0.075</td><td>0.086</td><td>0.087</td><td>76.96</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=2) </td><td>0.469</td><td>0.486</td><td>0.487</td><td>0.057</td><td>0.067</td><td>0.070</td><td>19.28</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=3) </td><td>0.443</td><td>0.443</td><td>0.438</td><td>0.037</td><td>0.036</td><td>0.036</td><td>5.35</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=4) </td><td>0.440</td><td>0.442</td><td>0.445</td><td>0.036</td><td>0.038</td><td>0.038</td><td>1.61</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="226">
+                    <p class="img_tit"><b>表5 各算法在Flicker数据集上的节点分类性能</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 5 Node classification performance of different algorithms on Flicker dataset</p>
+                    <p class="img_note"></p>
+                    <table id="226" border="1"><tr><td rowspan="2"><br />对比<br />算法</td><td colspan="3"><br />Micro-F1</td><td colspan="3"><br />Macro-F1</td><td rowspan="2">运行<br />时间/s</td></tr><tr><td><br />20%</td><td>60%</td><td>80%</td><td><br />20%</td><td>60%</td><td>80%</td></tr><tr><td>DeepWalk</td><td>0.428</td><td>0.466</td><td>0.463</td><td>0.419</td><td>0.457</td><td>0.452</td><td>55.61</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=1) </td><td><i>0</i>.<i>535</i></td><td><i>0</i>.<i>560</i></td><td><i>0</i>.<i>568</i></td><td><i>0</i>.<i>519</i></td><td><i>0</i>.<i>549</i></td><td><i>0</i>.<i>554</i></td><td>33.48</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=2) </td><td>0.488</td><td>0.519</td><td>0.525</td><td>0.460</td><td>0.495</td><td>0.500</td><td>23.82</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=3) </td><td>0.321</td><td>0.367</td><td>0.366</td><td>0.248</td><td>0.289</td><td>0.289</td><td>17.87</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=4) </td><td>0.126</td><td>0.196</td><td>0.206</td><td>0.039</td><td>0.101</td><td>0.113</td><td>14.37</td></tr><tr><td><br />LINE</td><td>0.490</td><td>0.542</td><td>0.532</td><td>0.480</td><td>0.534</td><td>0.523</td><td>344.20</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=1) </td><td><b>0.554</b></td><td><i>0</i>.<i>593</i></td><td><i>0</i>.<i>596</i></td><td><b>0.534</b></td><td><b>0.581</b></td><td><i>0</i>.<i>581</i></td><td>211.07</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=2) </td><td>0.517</td><td>0.548</td><td>0.567</td><td>0.487</td><td>0.523</td><td>0.543</td><td>128.31</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=3) </td><td>0.363</td><td>0.436</td><td>0.439</td><td>0.324</td><td>0.382</td><td>0.386</td><td>97.52</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=4) </td><td>0.119</td><td>0.217</td><td>0.219</td><td>0.027</td><td>0.136</td><td>0.151</td><td>80.82</td></tr><tr><td><br />GraRep</td><td>0.541</td><td>0.581</td><td>0.593</td><td><i>0</i>.<i>528</i></td><td>0.572</td><td>0.581</td><td>1277.67</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=1) </td><td><i>0</i>.<i>548</i></td><td><b>0.594</b></td><td><b>0.600</b></td><td><i>0</i>.<i>528</i></td><td><i>0</i>.<i>580</i></td><td><b>0.585</b></td><td>354.52</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=2) </td><td>0.472</td><td>0.522</td><td>0.546</td><td>0.436</td><td>0.495</td><td>0.519</td><td>141.27</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=3) </td><td>0.347</td><td>0.389</td><td>0.394</td><td>0.275</td><td>0.323</td><td>0.332</td><td>74.78</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=4) </td><td>0.141</td><td>0.247</td><td>0.264</td><td>0.064</td><td>0.174</td><td>0.179</td><td>50.80</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="227">
+                    <p class="img_tit"><b>表6 各算法在BlogCatalog数据集上的节点分类性能</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 6 Node classification performance of different algorithms on BlogCatalog dataset</p>
+                    <p class="img_note"></p>
+                    <table id="227" border="1"><tr><td rowspan="2"><br />对比<br />算法</td><td colspan="3"><br />Micro-F1</td><td colspan="3"><br />Macro-F1</td><td rowspan="2">运行<br />时间/s</td></tr><tr><td><br />20%</td><td>60%</td><td>80%</td><td><br />20%</td><td>60%</td><td>80%</td></tr><tr><td>DeepWalk</td><td>0.311</td><td>0.340</td><td>0.344</td><td>0.171</td><td>0.200</td><td>0.204</td><td>87.67</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=1) </td><td><i>0</i>.<i>416</i></td><td><i>0</i>.<i>443</i></td><td><i>0</i>.<i>445</i></td><td><i>0</i>.<i>221</i></td><td><b>0.259</b></td><td><i>0</i>.<i>263</i></td><td>56.47</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=2) </td><td>0.384</td><td>0.406</td><td>0.404</td><td>0.180</td><td>0.213</td><td>0.214</td><td>49.59</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=3) </td><td>0.226</td><td>0.266</td><td>0.277</td><td>0.057</td><td>0.078</td><td>0.084</td><td>37.63</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=4) </td><td>0.201</td><td>0.211</td><td>0.210</td><td>0.043</td><td>0.049</td><td>0.050</td><td>33.53</td></tr><tr><td><br />LINE</td><td>0.331</td><td>0.361</td><td>0.371</td><td>0.182</td><td>0.206</td><td>0.218</td><td>582.00</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=1) </td><td><i>0</i>.<i>392</i></td><td><i>0</i>.<i>422</i></td><td><i>0</i>.<i>429</i></td><td><i>0</i>.<i>187</i></td><td><i>0</i>.<i>229</i></td><td><i>0</i>.<i>235</i></td><td>378.61</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=2) </td><td>0.345</td><td>0.371</td><td>0.377</td><td>0.133</td><td>0.164</td><td>0.173</td><td>229.10</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=3) </td><td>0.268</td><td>0.293</td><td>0.306</td><td>0.083</td><td>0.098</td><td>0.105</td><td>154.40</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=4) </td><td>0.183</td><td>0.200</td><td>0.202</td><td>0.032</td><td>0.042</td><td>0.045</td><td>114.58</td></tr><tr><td><br />GraRep</td><td>0.379</td><td>0.397</td><td>0.407</td><td>0.215</td><td>0.233</td><td>0.241</td><td>3161.55</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=1) </td><td><b>0.430</b></td><td><b>0.447</b></td><td><b>0.452</b></td><td><b>0.231</b></td><td><i>0</i>.<i>254</i></td><td><b>0.265</b></td><td>1163.50</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=2) </td><td>0.352</td><td>0.381</td><td>0.393</td><td>0.143</td><td>0.178</td><td>0.193</td><td>621.83</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=3) </td><td>0.224</td><td>0.249</td><td>0.255</td><td>0.057</td><td>0.068</td><td>0.068</td><td>440.38</td></tr><tr><td><br />HGNS<br /> (<i>l</i>=4) </td><td>0.197</td><td>0.209</td><td>0.211</td><td>0.041</td><td>0.048</td><td>0.049</td><td>348.12</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="228">综合而言, 针对节点分类任务, 在粒化层数较低时, 利用HGNS不仅可以大幅降低原有算法的运行时间, 还可以帮助算法提升自身性能.</p>
+                </div>
+                <h4 class="anchor-tag" id="229" name="229"><b>4.3</b> 链接预测</h4>
+                <div class="p1">
+                    <p id="230">链接预测是网络分析中的另一项典型任务.本文使用Logistic回归模型预测两个给定节点之间是否有边的概率.根据余弦相似性计算节点之间的相似性得分</p>
+                </div>
+                <div class="p1">
+                    <p id="231" class="code-formula">
+                        <mathml id="231"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>s</mi><mi>i</mi><mi>m</mi><mo stretchy="false"> (</mo><mi>i</mi><mo>, </mo><mi>j</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">z</mi><msub><mrow></mrow><mi>i</mi></msub><mo>⋅</mo><mi mathvariant="bold-italic">z</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo></mrow><mrow><mrow><mo>|</mo><mrow><mi mathvariant="bold-italic">z</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mo>|</mo></mrow><msub><mrow></mrow><mn>2</mn></msub><mo>⋅</mo><mrow><mo>|</mo><mrow><mi mathvariant="bold-italic">z</mi><msub><mrow></mrow><mi>j</mi></msub></mrow><mo>|</mo></mrow><msub><mrow></mrow><mn>2</mn></msub></mrow></mfrac><mo>, </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="232">其中<b><i>z</i></b><sub><i>i</i></sub>和<b><i>z</i></b><sub><i>j</i></sub>分别是节点<i>i</i>和节点<i>j</i>的特征表示.下面通过链接预测任务展现不同网络表示学习方法的链接预测能力.针对Citeseer、WiKi、Flickr、BlogCatalog数据集, 随机删除数据集中20%的边作为测试集, 将被移除链接中的节点对视为正样本.随机采样相同数量的未连接的节点对作为负样本.正样本和负样本形成平衡数据集.使用剩余的边学习网络特征表示.使用曲线下面积 (Area under Curve, AUC) <citation id="406" type="reference"><link href="373" rel="bibliography" /><sup>[<a class="sup">33</a>]</sup></citation>评估链路预测的性能.同样, HGNS的粒化层数为1～4, 观察不同层数对算法性能的影响, 结果如表7所示, 表中, 斜体数字表示不同算法在不同分层中性能最好的结果, 黑体数字表示在所有结果中性能最优.</p>
+                </div>
+                <div class="area_img" id="233">
+                    <p class="img_tit"><b>表7 各算法在4个数据集上的AUC值</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 7 AUC values of different algorithms on 4 datasets</p>
+                    <p class="img_note"></p>
+                    <table id="233" border="1"><tr><td><br />对比算法</td><td>Citeseer</td><td>WiKi</td><td>Flicker</td><td>BlogCatalog</td></tr><tr><td><br />DeepWalk</td><td>0.677</td><td>0.625</td><td>0.631</td><td>0.627</td></tr><tr><td><br />HGNS (<i>l</i>=1) </td><td><b>0.868</b></td><td>0.734</td><td>0.767</td><td>0.782</td></tr><tr><td><br />HGNS (<i>l</i>=2) </td><td>0.832</td><td><i>0</i>.<i>797</i></td><td><i>0</i>.<i>856</i></td><td><i>0</i>.<i>860</i></td></tr><tr><td><br />HGNS (<i>l</i>=3) </td><td>0.810</td><td>0.557</td><td>0.764</td><td>0.787</td></tr><tr><td><br />HGNS (<i>l</i>=4) </td><td>0.778</td><td>0.713</td><td>0.521</td><td>0.595</td></tr><tr><td><br />LINE</td><td>0.699</td><td>0.597</td><td>0.658</td><td>0.752</td></tr><tr><td><br />HGNS (<i>l</i>=1) </td><td><i>0</i>.<i>773</i></td><td>0.573</td><td>0.741</td><td>0.733</td></tr><tr><td><br />HGNS (<i>l</i>=2) </td><td>0.732</td><td><i>0</i>.<i>808</i></td><td><b>0.862</b></td><td><b>0.873</b></td></tr><tr><td><br />HGNS (<i>l</i>=3) </td><td>0.750</td><td>0.695</td><td>0.806</td><td>0.834</td></tr><tr><td><br />HGNS (<i>l</i>=4) </td><td>0.758</td><td>0.676</td><td>0.577</td><td>0.605</td></tr><tr><td><br />GraRep</td><td>0.807</td><td>0.628</td><td>0.737</td><td>0.746</td></tr><tr><td><br />HGNS (<i>l</i>=1) </td><td>0.791</td><td><b>0.811</b></td><td><i>0</i>.<i>853</i></td><td><i>0</i>.<i>858</i></td></tr><tr><td><br />HGNS (<i>l</i>=2) </td><td><i>0</i>.<i>810</i></td><td>0.772</td><td>0.831</td><td>0.851</td></tr><tr><td><br />HGNS (<i>l</i>=3) </td><td>0.784</td><td>0.669</td><td>0.568</td><td>0.568</td></tr><tr><td><br />HGNS (<i>l</i>=4) </td><td>0.799</td><td>0.765</td><td>0.720</td><td>0.646</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="234">以AUC为评价指标, 在绝大多数情况下, 相比原始算法, 通过HGNS得到的结果更好, 特别是粒化层数较低时, 算法性能的提升效果更显著.以<i>l</i>=2为例:DeepWalk、LINE、GraRep在Citeseer数据集上分别提升22.9%、4.72%和0.37%;在WiKi数据集上分别提升27.52%、35.34%和22.93%;在Flicker数据集上分别提升35.66%、31%和12.75%;在BlogCatalog数据集上分别提升37.16%、16.09%和14.08%.这充分表明HGNS的有效性.不过, 同样的现象也出现在链接预测任务中, 即大部分最优的结果出现在粒化层数较低的时候.</p>
+                </div>
+                <h4 class="anchor-tag" id="235" name="235"><b>4.4</b> 不同邻域相似性度量对比</h4>
+                <div class="p1">
+                    <p id="236">HGNS能够结合不同的节点相似性度量方法.本节基于Citeseer、WiKi、Flickr、BlogCatalog数据集, 利用节点分类和链接预测任务, 测试不同邻域相似性度量结果对HGNS性能的影响.对于相同的数据集, 分别选择CN<citation id="407" type="reference"><link href="357" rel="bibliography" /><sup>[<a class="sup">25</a>]</sup></citation>、Jac<citation id="408" type="reference"><link href="359" rel="bibliography" /><sup>[<a class="sup">26</a>]</sup></citation>、Sal<citation id="409" type="reference"><link href="361" rel="bibliography" /><sup>[<a class="sup">27</a>]</sup></citation>、AA<citation id="410" type="reference"><link href="363" rel="bibliography" /><sup>[<a class="sup">28</a>]</sup></citation>.针对节点分类任务, 选取DeepWalk学习节点的特征表示, 随机抽样数据集中50%标记节点训练Logistic分类器, 得出Macro-F1和Micro-F1.针对链接预测任务, 随机删除数据集中10%的边作为测试集, 选取GraRep学习节点的特征表示, 得出AUC值.所有指标结果都是在重复10次实验后计算的平均值.由于篇幅限制, 这里仅展示粒化层数为2层下的各评价指标的实验结果, 具体如图3和图4所示.</p>
+                </div>
+                <div class="area_img" id="306">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/MSSB201906003_30600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 节点分类任务中不同度量方法的F1结果" src="Detail/GetImg?filename=images/MSSB201906003_30600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 节点分类任务中不同度量方法的F1结果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/MSSB201906003_30600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig.3 F1 results of different metrics for node classification</p>
+
+                </div>
+                <div class="area_img" id="307">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/MSSB201906003_30700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 链接预测任务中不同度量方法的AUC结果" src="Detail/GetImg?filename=images/MSSB201906003_30700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 链接预测任务中不同度量方法的AUC结果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/MSSB201906003_30700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig.4 AUC results of different metrics in links prediction</p>
+
+                </div>
+                <div class="p1">
+                    <p id="241">实验结果表明, 在HGNS中, 不同的相似性度量对结果影响不大.综合来看:针对节点分类任务, CN和Jac表现较佳;针对链接预测任务, Sal和AA表现较佳.</p>
+                </div>
+                <div class="p1">
+                    <p id="242">下面针对Citeseer、WiKi、Flickr、BlogCatalog数据集, 将网络的粒化层数设置为10层, 通过使用CN、Jac、Sal和AA这4个邻域相似性度量方法, 以最细粒度的层次中节点和边的数量为衡量基准, 观察不同层次中节点和边与基准间的比值, 考查4种度量方法在粒化速度上的差异, 结果如图5所示.</p>
+                </div>
+                <div class="area_img" id="308">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/MSSB201906003_30800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 不同度量方法的粒化速度" src="Detail/GetImg?filename=images/MSSB201906003_30800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 不同度量方法的粒化速度  <a class="btn-zoomin" href="Detail/GetImg?filename=images/MSSB201906003_30800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig.5 Granulation speed of different metrics</p>
+
+                </div>
+                <div class="p1">
+                    <p id="248">实验结果表明, 4种度量方法在粒化速度上差异不大, 其中Sal速度相对稍快.可以看到, 在粒化层次大于4层后, 所有方法的粒化速度急剧下降, 意味着不同层次间的粒度差异变小.若在更粗的层次上学习粒的特征, 进行特征细化时会让类似的特征重复聚合, 最终导致节点的特征过于相似.因此, HGNS的粒化层次不宜设置过高, 否则会对最终表示造成较大影响.</p>
+                </div>
+                <h3 id="249" name="249" class="anchor-tag">5 结 束 语</h3>
+                <div class="p1">
+                    <p id="250">近年来, 网络表示学习引起各个领域的广泛关注, 但多数方法复杂度很高.针对此问题, 本文提出多粒度网络表示学习方法 (HGNS) .采用由细到粗的粒化分层策略, 首先将网络映射到一个较粗粒度的空间中, 再利用现有方法在粗粒度空间中学习这些粒的特征表示, 最后通过由粗到细地逐层投影, 将粗粒度空间中的粒特征映射到细粒度空间的粒中, 获得网络中所有节点的特征表示.实验表明, HGNS在计算精度、内存占用及运行时间等性能上均优于DeepWalk、LINE和GraRep, 适用于分析大规模的网络.今后将在细化阶段引入更丰富的GCN变种模型和网络的属性特征, 进一步提升算法性能.</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+                        <h3 class="anchor-tag">作者图片</h3>
+                <div class="anchor-wrap">
+                        <p>
+                                    <div class="anchor-box">
+                                        <span class="anchor-a"><image id="297" type="formula" href="images/MSSB201906003_29700.jpg" display="inline" placement="inline"><alt></alt></image></span>
+                                        <span class="anchor-a">钱峰</span>
+                                    </div>
+                                    <div class="anchor-box">
+                                        <span class="anchor-a"><image id="298" type="formula" href="images/MSSB201906003_29800.jpg" display="inline" placement="inline"><alt></alt></image></span>
+                                        <span class="anchor-a">张蕾</span>
+                                    </div>
+                                    <div class="anchor-box">
+                                        <span class="anchor-a"><image id="299" type="formula" href="images/MSSB201906003_29900.jpg" display="inline" placement="inline"><alt></alt></image></span>
+                                        <span class="anchor-a">赵姝</span>
+                                    </div>
+                                    <div class="anchor-box">
+                                        <span class="anchor-a"><image id="300" type="formula" href="images/MSSB201906003_30000.jpg" display="inline" placement="inline"><alt></alt></image></span>
+                                        <span class="anchor-a">陈洁</span>
+                                    </div>
+                                    <div class="anchor-box">
+                                        <span class="anchor-a"><image id="301" type="formula" href="images/MSSB201906003_30100.jpg" display="inline" placement="inline"><alt></alt></image></span>
+                                        <span class="anchor-a">张燕平</span>
+                                    </div>
+                                    <div class="anchor-box">
+                                        <span class="anchor-a"><image id="302" type="formula" href="images/MSSB201906003_30200.jpg" display="inline" placement="inline"><alt></alt></image></span>
+                                        <span class="anchor-a">刘峰</span>
+                                    </div>
+                        </p>
+                </div>
+
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="309">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Semi-supervised Heterogeneous Information Network Embedding for Node Classification Using 1D-CNN[C/OL]">
+
+                                <b>[1]</b> SHEIKH N T, KEFATO Z T, MONTRESOR A.Semi-supervised Heterogeneous Information Network Embedding for Node Classification Using 1D-CNN[C/OL].[2019-02-25].http://disi.unitn.it/～montreso/pubs/papers/snams18b.pdf.
+                            </a>
+                        </p>
+                        <p id="311">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Edge-Nodes Representation Neural Machine for Link Prediction">
+
+                                <b>[2]</b> XU G L, WANG X K, WANG Y, et al.Edge-Nodes Representation Neural Machine for Link Prediction.Algorithms, 2019, 12 (1) .DOI:10.3390/a12010012.
+                            </a>
+                        </p>
+                        <p id="313">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJESAF5FE78491289FE004294C5446378F84&amp;v=MjQwNTZNN0tiQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TkZod0x5L3hhMD1OaWZPZmNMT0c2ZTVxSWRCYmVvTkJIVlB1aFlUN2oxMFRBem5xQll6ZXJXYw==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> BHATIA V, RANI R.A Distributed Overlapping Community Detection Model for Large Graphs Using Autoencoder.Future Generation Computer Systems, 2019, 94:16-26.
+                            </a>
+                        </p>
+                        <p id="315">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=PZKX201708003&amp;v=MzAzNDllUm5GeXpoVTdyTk5UZkFkckc0SDliTXA0OUZaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVo=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 涂存超, 杨成, 刘知远, 等.网络表示学习综述.中国科学 (信息科学) , 2017, 47 (8) :980-996. (TU C C, YANG C, LIU Z Y, et al.Network Representation Learning:An Overview.Scientia Sinica Informationis, 2017, 47 (8) :980-996.) 
+                            </a>
+                        </p>
+                        <p id="317">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD7872C493F6E45F1E0F991789803DC8E9&amp;v=MjU2MzZJRnBtYUJ1SFlmT0dRbGZDcGJRMzVORmh3THkveGEwPU5qN0JhclN3R2RPL3E0WkdFdTE2Q0hsUHptTVRuRFowU1hqcXBSbzFlc2JuVGMrV0NPTnZGU2lXV3I3Sg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> MEYER-BRÖTZ F, SCHIEBEL E, BRECHT L.Experimental Eva-luation of Parameter Settings in Calculation of Hybrid Similarities:Effects of First- and Second-Order Similarity, Edge Cutting, and Weighting Factors.Scientometrics, 2017, 111 (3) :1307-1325.
+                            </a>
+                        </p>
+                        <p id="319">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Power Normalizing Second-Order Similarity Network for Few-Shot Learning[C/OL]">
+
+                                <b>[6]</b> ZHANG H G, KONIUSZ P.Power Normalizing Second-Order Similarity Network for Few-Shot Learning[C/OL].[2019-02-25].https://arxiv.org/pdf/1811.04167.pdf.
+                            </a>
+                        </p>
+                        <p id="321">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=STJD&amp;filename=STJD120604072814&amp;v=MzA0ODF1TU9DQk04enhVU21EZDlTSDduM3hFOWZidm5LcmlmWnU5dUZDdnNVN3ZNSUZzUk5qbkJhcks2SHRmTXE0OUNa&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> SONG G F.The Role of Structure and Content in Perception of Vi-sual Similarity between Web Pages.International Journal of Human-Computer Interaction, 2011, 27 (8) :793-816.
+                            </a>
+                        </p>
+                        <p id="323">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES7C82911F2047967E22125F3A224F493D&amp;v=MjYxNDdMQzNVL3lHTVI2RDUvVFFuaDNSQTNmY1NRVExuckNPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU5GaHdMeS94YTA9TmlmT2ZiVExGdFBGcm80elp1cw==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> ZHANG J P, DING X Y, YANG J.Revealing the Role of Node Similarity and Community Merging in Community Detection.Know-ledge Based Systems, 2019, 165:407-419.
+                            </a>
+                        </p>
+                        <p id="325">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=STJD&amp;filename=STJD447B7BD5FB5B56CD2A9D1B009F20C45D&amp;v=MTI0MzBQTDNmdEFFcGtLZm5rL3ZHSVJtellKU1EzaXJCdERlN0xuUWIvckNPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU5GaHdMeS94YTA9TmpuQmFyZThHYQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> HAJIZADEH R, AGHAGOLZADEH A, EZOJI M.Mutual Neighbors and Diagonal Loading-Based Sparse Locally Linear Embedding.Applied Artificial Intelligence, 2018, 32 (5) :496-514.
+                            </a>
+                        </p>
+                        <p id="327">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Semi-supervised Rough Fuzzy Laplacian Eigenmaps for Dimensionality Reduction">
+
+                                <b>[10]</b> MA M H, DENG T Q, WANG N, et al.Semi-supervised Rough Fuzzy Laplacian Eigenmaps for Dimensionality Reduction.International Journal of Machine Learning and Cybernetics, 2019, 10 (2) :397-411.
+                            </a>
+                        </p>
+                        <p id="329">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep Walk:online learning of social representations">
+
+                                <b>[11]</b> PEROZZI B, AL-RFOU R, SKIENA S.Deepwalk:Online Lear-ning of Social Representations // Proc of the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM, 2014:701-710.
+                            </a>
+                        </p>
+                        <p id="331">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Embedding Words as Distributions with a Bayesian Skip-Gram Model">
+
+                                <b>[12]</b> BRAŽINSKAWS A, HAVRYLOV S, TITOV I.Embedding Words as Distributions with a Bayesian Skip-Gram Model // Proc of the 27th International Conference on Computational Linguistics.Stroudsburg, USA:ACL, 2018:1775-1789.
+                            </a>
+                        </p>
+                        <p id="333">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Line:Large-scale information network embedding">
+
+                                <b>[13]</b> TANG J, QU M, WANG M Z, et al.LINE:Large-Scale Information Network Embedding // Proc of the 24th International Confe-rence on World Wide Web.New York, USA:ACM, 2015:1067-1077.
+                            </a>
+                        </p>
+                        <p id="335">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=GraRep:Learning graph representations with global structural information">
+
+                                <b>[14]</b> CAO S S, LU W, XU Q K.GraRep:Learning Graph Representations with Global Structural Information // Proc of the 24th ACM Internatio-nal Conference on Information and Knowledge Management.New York, USA:ACM, 2015:891-900.
+                            </a>
+                        </p>
+                        <p id="337">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Node2vec:Scalable Feature Learning for Networks">
+
+                                <b>[15]</b> GROVER A, LESKOVEC J.Node2vec:Scalable Feature Learning for Networks // Proc of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM, 2016:855-864.
+                            </a>
+                        </p>
+                        <p id="339">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep Neural Networks for Learning Graph Representations">
+
+                                <b>[16]</b> CAO S S, LU W, XU Q K.Deep Neural Networks for Learning Graph Representations // Proc of the 30th AAAI Conference on Artificial Intelligence.Palo Alto, USA:AAAI, 2016:1145-1152.
+                            </a>
+                        </p>
+                        <p id="341">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Prediction of lncRNA-Disease Associations by Integrating Diverse Heterogeneous Information Sources with RWR Algorithm and Positive Pointwise Mutual Information">
+
+                                <b>[17]</b> FAN X N, ZHANG S W, ZHANG S Y, et al.Prediction of lncRNA-Disease Associations by Integrating Diverse Heterogeneous Information Sources with RWR Algorithm and Positive Pointwise Mutual Information.BMC Bioinformatics, 2019, 20 (1) :871-883.
+                            </a>
+                        </p>
+                        <p id="343">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Stacked denoising autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion">
+
+                                <b>[18]</b> VINCENT P, LAROCHELLE H, LAJOIE I, et al.Stacked Denoising Autoencoders:Learning Useful Representations in a Deep Network with a Local Denoising Criterion.Journal of Machine Learning Research, 2010, 11:3371-3408.
+                            </a>
+                        </p>
+                        <p id="345">
+                            <a id="bibliography_19" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Semi-supervised Classification with Graph Convolutional Networks[C/OL]">
+
+                                <b>[19]</b> KIPF T N, WELLING M.Semi-supervised Classification with Graph Convolutional Networks[C/OL].[2019-02-25].https://arxiv.org/pdf/1609.02907.pdf.
+                            </a>
+                        </p>
+                        <p id="347">
+                            <a id="bibliography_20" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Inductive Representation Learning on Large Graphs[C/OL]">
+
+                                <b>[20]</b> HAMILTON W L, YING R, LESKOVEC J.Inductive Representation Learning on Large Graphs[C/OL].[2019-02-25].https://arxiv.org/pdf/1706.02216.pdf.
+                            </a>
+                        </p>
+                        <p id="349">
+                            <a id="bibliography_21" target="_blank" href="http://scholar.cnki.net/result.aspx?q=GraphGAN:Graph Representation Learning with Generative Adversarial Nets[C/OL]">
+
+                                <b>[21]</b> WANG H W, WANG J, WANG J L, et al.GraphGAN:Graph Representation Learning with Generative Adversarial Nets[C/OL].[2019-02-25].https://arxiv.org/pdf/1711.08267.pdf.
+                            </a>
+                        </p>
+                        <p id="351">
+                            <a id="bibliography_22" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZNXT201603009&amp;v=MDczODRlckc0SDlmTXJJOUZiWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm5GeXpoVTdyTlB5UFQ=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[22]</b> 赵姝, 赵晖, 陈洁, 等.基于社团结构的多粒度结构洞占据者发现及分析.智能系统学报, 2016, 11 (3) :343-351. (ZHAO S, ZHAO H, CHEN J, et al.Recognition and Analysis of Structural Hole Spanner in Multi-granularity Based on Community Structure.CAAI Transactions on Intelligent Systems, 2016, 11 (3) :343-351.) 
+                            </a>
+                        </p>
+                        <p id="353">
+                            <a id="bibliography_23" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX200403005&amp;v=MzIyNjZPZVplUm5GeXpoVTdyTkx6N0Jkckc0SHRYTXJJOUZZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkw=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[23]</b> 张燕平, 张铃, 吴涛.不同粒度世界的描述法——商空间法.计算机学报, 2004, 27 (3) :328-333. (ZHANG Y P, ZHANG L, WU T.The Representation of Different Granular Worlds:A Quotient Space.Chinese Journal of Compu-ters, 2004, 27 (3) :328-333.) 
+                            </a>
+                        </p>
+                        <p id="355">
+                            <a id="bibliography_24" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201410011&amp;v=MDM2MzVxcUJ0R0ZyQ1VSTE9lWmVSbkZ5emhVN3JOTHo3QmQ3RzRIOVhOcjQ5RVpZUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[24]</b> 赵姝, 柯望, 陈洁, 等.基于聚类粒化的社团发现算法.计算机应用, 2014, 34 (10) :2812-2815. (ZHAO S, KE W, CHEN J, et al.Community Detection Algorithm Based on Clustering Granulation.Journal of Computer Applications, 2014, 34 (10) :2812-2815.) 
+                            </a>
+                        </p>
+                        <p id="357">
+                            <a id="bibliography_25" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The Consistency of Common Neighbors for Link Prediction in Stochastic Blockmodels">
+
+                                <b>[25]</b> SARKAR P, CHAKRABARTI D, BICKEL P.The Consistency of Common Neighbors for Link Prediction in Stochastic Blockmodels // Proc of the 28th International Conference on Neural Information Processing Systems.Cambridge, USA:The MIT Press, 2015, II:3016-3024.
+                            </a>
+                        </p>
+                        <p id="359">
+                            <a id="bibliography_26" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES408375A434D06BB1DF1C37C41E14C000&amp;v=MDQyNjlCTkFlTGJuUmJxZkNPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU5GaHdMeS94YTA9TmlmT2ZiZTRGdExMcXY1QlorOTdESHBMdlJkbm5ENE9TM2lScQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[26]</b> BAG S, KUMAR S K, TIWARI M K.An Efficient Recommendation Generation Using Relevant Jaccard Similarity.Information Sciences, 2019, 483:53-64.
+                            </a>
+                        </p>
+                        <p id="361">
+                            <a id="bibliography_27" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Similarity measures in scientometric research. The Jaccard index versus Salton&amp;#39;s cosine formula">
+
+                                <b>[27]</b> HAMERS L, HEMERYCK Y, HERWEYERS G, et al.Similarity Measures in Scientometric Research:The Jaccard Index Versus Salton′s Cosine Formula.Information Processing and Management, 1989, 25 (3) :315-318.
+                            </a>
+                        </p>
+                        <p id="363">
+                            <a id="bibliography_28" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Information Evolution in Social Networks">
+
+                                <b>[28]</b> ADAMIC L A, LENTO T M, ADAR E, et al.Information Evolution in Social Networks // Proc of the 9th ACM International Conference on Web Search and Data Mining.New York, USA:ACM, 2016:473-482.
+                            </a>
+                        </p>
+                        <p id="365">
+                            <a id="bibliography_29" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00002488885&amp;v=MTc4Njk0ZE5iT01LWTNrNXpCZGg0ajk5U1hxUnJ4b3hjTUg3UjdxZWJ1ZHRGQ0hsVjd2SUpWcz1OajdCYXJPNEh0SE9x&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[29]</b> MCCALLUM A K, NIGAM K, RENNIE J, et al.Automating the Construction of Internet Portals with Machine Learning.Information Retrieval, 2000, 3 (2) :127-163.
+                            </a>
+                        </p>
+                        <p id="367">
+                            <a id="bibliography_30" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Self-paced Network Embedding">
+
+                                <b>[30]</b> GAO H C, HUANG H.Self-paced Network Embedding // Proc of the 24th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM, 2018:1406-1415.
+                            </a>
+                        </p>
+                        <p id="369">
+                            <a id="bibliography_31" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient Attributed Network Embedding via Recursive Randomized Hashing">
+
+                                <b>[31]</b> WU W, LI B, CHEN L, et al.Efficient Attributed Network Embedding via Recursive Randomized Hashing // Proc of the 27th International Joint Conference on Artificial Intelligence.Hackensack, USA:World Scientific, 2018:2861-2867.
+                            </a>
+                        </p>
+                        <p id="371">
+                            <a id="bibliography_32" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Relational learning via latent social dimensions">
+
+                                <b>[32]</b> TANG L, LIU H.Relational Learning via Latent Social Dimensions // Proc of the 15th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM, 2009:817-826.
+                            </a>
+                        </p>
+                        <p id="373">
+                            <a id="bibliography_33" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13012300414852&amp;v=MTI0MDlIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMYklKRm9VYnhjPU5pZk9mYks3SHRET3JJOUZZT29MQkhrN29CTVQ2VDRQUQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[33]</b> FAWCETT T.An Introduction to ROC Analysis.Pattern Recognition Letters, 2006, 27 (8) :861-874.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="MSSB201906003" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MSSB201906003&amp;v=MDMwODlqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSbkZ5emhVN3JOS0Q3WWJMRzRIOWpNcVk5Rlo0UUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDY3Z0JzaWFrTHVRSmVlNjhWcnBYcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

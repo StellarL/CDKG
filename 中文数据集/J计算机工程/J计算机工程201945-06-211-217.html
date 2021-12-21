@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130386182020000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201906034%26RESULT%3d1%26SIGN%3d3C4Zm0uTGz0%252ftATdXK8MS7DiIxE%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201906034&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201906034&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201906034&amp;v=MDc5NTMzenFxQnRHRnJDVVJMT2VaZVJvRnlubFZMdkJMejdCYmJHNEg5ak1xWTlHWUlRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#57" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#61" data-title="1 相关工作 ">1 相关工作</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#66" data-title="2 基于词对建模的句子对齐 ">2 基于词对建模的句子对齐</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#68" data-title="2.1 问题描述">2.1 问题描述</a></li>
+                                                <li><a href="#75" data-title="2.2 基于词对建模的句子对齐神经网络模型">2.2 基于词对建模的句子对齐神经网络模型</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#120" data-title="3 实验与结果分析 ">3 实验与结果分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#122" data-title="3.1 实验设置">3.1 实验设置</a></li>
+                                                <li><a href="#143" data-title="3.2 结果分析">3.2 结果分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#170" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#70" data-title="&lt;b&gt;图1 句对对齐示例&lt;/b&gt;"><b>图1 句对对齐示例</b></a></li>
+                                                <li><a href="#77" data-title="&lt;b&gt;图2 基于词对建模的句子对齐神经网络模型&lt;/b&gt;"><b>图2 基于词对建模的句子对齐神经网络模型</b></a></li>
+                                                <li><a href="#97" data-title="&lt;b&gt;图3 Bi-RNN编码过程&lt;/b&gt;"><b>图3 Bi-RNN编码过程</b></a></li>
+                                                <li><a href="#102" data-title="&lt;b&gt;图4 GRN模型&lt;/b&gt;"><b>图4 GRN模型</b></a></li>
+                                                <li><a href="#126" data-title="&lt;b&gt;表1 数据集设置&lt;/b&gt;"><b>表1 数据集设置</b></a></li>
+                                                <li><a href="#146" data-title="&lt;b&gt;表2 Bi-RNN模型的性能评估&lt;/b&gt;"><b>表2 Bi-RNN模型的性能评估</b></a></li>
+                                                <li><a href="#147" data-title="&lt;b&gt;表3 Bi-RNN+GRN模型的性能评估&lt;/b&gt;"><b>表3 Bi-RNN+GRN模型的性能评估</b></a></li>
+                                                <li><a href="#153" data-title="&lt;b&gt;表4 在非单调对齐文本上的性能比较&lt;/b&gt;"><b>表4 在非单调对齐文本上的性能比较</b></a></li>
+                                                <li><a href="#160" data-title="&lt;b&gt;表5 在单调文本上的性能比较&lt;/b&gt;"><b>表5 在单调文本上的性能比较</b></a></li>
+                                                <li><a href="#165" data-title="图5 深度神经网络预测句子对齐的对比实例">图5 深度神经网络预测句子对齐的对比实例</a></li>
+                                                <li><a href="#169" data-title="&lt;b&gt;表6 2种模型的句子对齐性能&lt;i&gt;F&lt;/i&gt;1值&lt;/b&gt;"><b>表6 2种模型的句子对齐性能<i>F</i>1值</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="5">
+
+
+                                    <a id="bibliography_1" title=" DEVLIN J, ZBIB R, HUANG Zhongqiang, et al.Fast and robust neural network joint models for statistical machine translation[C]//Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics.Baltimore, USA:[s.n.], 2014:1370-1380." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Fast and Robust Neural Network Joint Models for Statistical Machine Translation">
+                                        <b>[1]</b>
+                                         DEVLIN J, ZBIB R, HUANG Zhongqiang, et al.Fast and robust neural network joint models for statistical machine translation[C]//Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics.Baltimore, USA:[s.n.], 2014:1370-1380.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_2" title=" VOGEL S, TRIBBLE A.Improving statistical machine translation for a speech-to-speech translation task[C]//Proceedings of the 7th International Conference on Spoken Language Processing.Denver, USA:[s.n.], 2002:1901-1904." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Improving statistical machine translation for a speech-to-speech translation task">
+                                        <b>[2]</b>
+                                         VOGEL S, TRIBBLE A.Improving statistical machine translation for a speech-to-speech translation task[C]//Proceedings of the 7th International Conference on Spoken Language Processing.Denver, USA:[s.n.], 2002:1901-1904.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_3" title=" KRAAIJ W, NIE Jianyun, SIMARD M.Embedding web-based statistical translation models in cross-language information retrieval[J].Computational Linguistics, 2003, 29 (3) :381-419." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJBK&amp;filename=SJBK15090500000180&amp;v=MTczMTl3WmVadUh5am1VTG5JSVY0VGJocz1OaWZKWmJLOUh0ak1xbzlGWk9zUERYUTVvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbg==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         KRAAIJ W, NIE Jianyun, SIMARD M.Embedding web-based statistical translation models in cross-language information retrieval[J].Computational Linguistics, 2003, 29 (3) :381-419.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_4" title=" NIE Jianyun, SIMARD M, ISABELLE P, et al.Cross-language information retrieval based on parallel texts and automatic mining of parallel texts from the web[C]//Proceedings of the 22nd Annual International ACM SIGIR Conference on Research and Development in Information Retrieval.New York, USA:ACM Press, 1999:74-81." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Cross-Language Information Retrieval Based on Parallel Texts and Automatic:Mining Parallel Texts from the Web">
+                                        <b>[4]</b>
+                                         NIE Jianyun, SIMARD M, ISABELLE P, et al.Cross-language information retrieval based on parallel texts and automatic mining of parallel texts from the web[C]//Proceedings of the 22nd Annual International ACM SIGIR Conference on Research and Development in Information Retrieval.New York, USA:ACM Press, 1999:74-81.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_5" title=" KLAVANS J, TZOUKCRMANN E.The BICORD system:combining lexical information from bilingual corpora and machine readable dictionaries[J].Computational Linguistics, 1990, 62 (4) :174-179." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The BICORD system:combining lexical information from bilingual corpora and machine readable dictionaries">
+                                        <b>[5]</b>
+                                         KLAVANS J, TZOUKCRMANN E.The BICORD system:combining lexical information from bilingual corpora and machine readable dictionaries[J].Computational Linguistics, 1990, 62 (4) :174-179.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_6" title=" 张霞, 昝红英, 张恩展.汉英句子对齐长度计算方法的研究[J].计算机工程与设计, 2009, 30 (18) :4356-4358." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SJSJ200918066&amp;v=MDg3NDZPZVplUm9GeW5sVkx2Qk5pZllaTEc0SHRqTnA0OURZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkw=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         张霞, 昝红英, 张恩展.汉英句子对齐长度计算方法的研究[J].计算机工程与设计, 2009, 30 (18) :4356-4358.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_7" title=" GALE W A, CHURCHK W.A program for aligning sentences in bilingual corpora[J].Computational Linguistics, 1993, 19 (1) :75-102." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A program for aligning sentences in bilingual corpora">
+                                        <b>[7]</b>
+                                         GALE W A, CHURCHK W.A program for aligning sentences in bilingual corpora[J].Computational Linguistics, 1993, 19 (1) :75-102.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_8" title=" BROWN P F, LAI J C, MERCERR L.Aligning sentences in parallel corpora[C]//Proceedings of the 29th Annual Meeting of the Association for Computational Linguistics.New York, USA:ACM Press, 1991:169-176." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Aligning sentences in parallel corpora">
+                                        <b>[8]</b>
+                                         BROWN P F, LAI J C, MERCERR L.Aligning sentences in parallel corpora[C]//Proceedings of the 29th Annual Meeting of the Association for Computational Linguistics.New York, USA:ACM Press, 1991:169-176.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_9" title=" KAY M, ROSCHEISEN M.Text-translation alignment[J].Computational Linguistics, 1993, 19 (1) :121-142." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Text-translation alignment">
+                                        <b>[9]</b>
+                                         KAY M, ROSCHEISEN M.Text-translation alignment[J].Computational Linguistics, 1993, 19 (1) :121-142.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_10" title=" 刘昕, 周明, 朱胜火, 等.基于自动抽取词汇信息的双语句子对齐[J].计算机学报, 1998, 21 (增刊) :151-158." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX1998S1027&amp;v=MTg4MTMzenFxQnRHRnJDVVJMT2VaZVJvRnlubFZMdkJMejdCZHJLeEY5bXZybzlIWTRRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         刘昕, 周明, 朱胜火, 等.基于自动抽取词汇信息的双语句子对齐[J].计算机学报, 1998, 21 (增刊) :151-158.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_11" title=" 李维刚, 刘挺, 张宇, 等.基于长度和位置信息的双语句子对齐方法[J].哈尔滨工业大学学报, 2006, 38 (5) :689-692." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HEBX200605006&amp;v=MjE0NzBSb0Z5bmxWTHZCTFNqSmRyRzRIdGZNcW85RllvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmU=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         李维刚, 刘挺, 张宇, 等.基于长度和位置信息的双语句子对齐方法[J].哈尔滨工业大学学报, 2006, 38 (5) :689-692.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_12" title=" MOORE R C.Fast and accurate sentence alignment of bilingual corpora[C]//Proceedings of the Association for Machine Translation in the Americas on Machine Translation.Berlin, Germany:Springer, 2002:135-144." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Fast and accurate sentence alignment of bilingual corpora">
+                                        <b>[12]</b>
+                                         MOORE R C.Fast and accurate sentence alignment of bilingual corpora[C]//Proceedings of the Association for Machine Translation in the Americas on Machine Translation.Berlin, Germany:Springer, 2002:135-144.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_13" title=" GREGOIRE F, LANGLAIS P.A deep neural network approach to parallel sentence extraction[EB/OL].[2018-03-28].https://arxiv.org/abs/1709.09783." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A deep neural network approach to parallel sentence extraction">
+                                        <b>[13]</b>
+                                         GREGOIRE F, LANGLAIS P.A deep neural network approach to parallel sentence extraction[EB/OL].[2018-03-28].https://arxiv.org/abs/1709.09783.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_14" title=" BROWN P F, PIETRA S A D, PIETRA V J D, et al.The mathematics of statistical machine translation:parameter estimation[J].Computational Linguistics, 1993, 19 (2) :263-311." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The mathematics of statistical machine translation: parameter estimation">
+                                        <b>[14]</b>
+                                         BROWN P F, PIETRA S A D, PIETRA V J D, et al.The mathematics of statistical machine translation:parameter estimation[J].Computational Linguistics, 1993, 19 (2) :263-311.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_15" title=" BRAUNE F, FRASER A.Improved unsupervised sentence alignment for symmetrical and asymmetrical parallel corpora[C]//Proceedings of the 23rd Inter-national Conference on Computational Linguistics.New York, USA:ACM Press, 2010:81-89." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Improved unsupervised sentence alignment for symmetrical and asymmetrical parallel corpora">
+                                        <b>[15]</b>
+                                         BRAUNE F, FRASER A.Improved unsupervised sentence alignment for symmetrical and asymmetrical parallel corpora[C]//Proceedings of the 23rd Inter-national Conference on Computational Linguistics.New York, USA:ACM Press, 2010:81-89.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_16" title=" MA Xiaoyi.Champollion:a robust parallel text sentence aligner[C]//Proceedings of International Conference on Language Resources and Evaluation.Genoa, Italy:[s.n.], 2006:489-492." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Champollion:A Robust Parallel Text Sentence Aligner">
+                                        <b>[16]</b>
+                                         MA Xiaoyi.Champollion:a robust parallel text sentence aligner[C]//Proceedings of International Conference on Language Resources and Evaluation.Genoa, Italy:[s.n.], 2006:489-492.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_17" title=" LI Peng, SUN Maosong, XUE Ping.Fast-champollion:a fast and robust sentence alignment algorithm[C]//Proceedings of International Conference on Computa-tional Linguistics.New York, USA:ACM Press, 2010:710-718." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Fast-champollion:a fast and robust sentence alignment algorithm">
+                                        <b>[17]</b>
+                                         LI Peng, SUN Maosong, XUE Ping.Fast-champollion:a fast and robust sentence alignment algorithm[C]//Proceedings of International Conference on Computa-tional Linguistics.New York, USA:ACM Press, 2010:710-718.
+                                    </a>
+                                </li>
+                                <li id="39">
+
+
+                                    <a id="bibliography_18" title=" QUAN Xiaojun, KIT C, SONG Yan.Non-monotonic sentence alignment via semisupervised learning[C]//Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics.New York, USA:ACM Press, 2013:622-630." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Non-Monotonic Sentence Alignment via Semisupervised Learning">
+                                        <b>[18]</b>
+                                         QUAN Xiaojun, KIT C, SONG Yan.Non-monotonic sentence alignment via semisupervised learning[C]//Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics.New York, USA:ACM Press, 2013:622-630.
+                                    </a>
+                                </li>
+                                <li id="41">
+
+
+                                    <a id="bibliography_19" title=" M&#218;JDRICZA-MAYDT E, KRKEL-QU H, RIEZLER S, et al.High-precision sentence alignment by bootstrapping from wood standard annotations[J].Prague Bulletin of Mathematical Linguistics, 2013, 99 (1) :5-16." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJDG&amp;filename=SJDG13052200049008&amp;v=MDYzNzJaZVp1SHlqbVVMbklJVjRUYmhzPU5pZlBhYks3SHRUT3JZOUZaTzhHREh3eG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1udw==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[19]</b>
+                                         M&#218;JDRICZA-MAYDT E, KRKEL-QU H, RIEZLER S, et al.High-precision sentence alignment by bootstrapping from wood standard annotations[J].Prague Bulletin of Mathematical Linguistics, 2013, 99 (1) :5-16.
+                                    </a>
+                                </li>
+                                <li id="43">
+
+
+                                    <a id="bibliography_20" title=" GROVER J, MITRA P.Bilingual word embeddings with bucketed CNN for parallel sentence extraction[C]//Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics-Student Research Workshop.Vancouver, Canada:[s.n.], 2017:11-16." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Bilingual word embeddings with bucketed CNN for parallel sentence extraction">
+                                        <b>[20]</b>
+                                         GROVER J, MITRA P.Bilingual word embeddings with bucketed CNN for parallel sentence extraction[C]//Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics-Student Research Workshop.Vancouver, Canada:[s.n.], 2017:11-16.
+                                    </a>
+                                </li>
+                                <li id="45">
+
+
+                                    <a id="bibliography_21" title=" SUTSKEVER I, SALAKHUTDINOV R, TENENBAUMJ B.Modelling relational data using bayesian clustered tensor factorization[C]//Proceedings of Advances in Neural Information Processing Systems.[S.l.]:Neural Information Processing Systems Foundation, Inc., 2009:1821-1828." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Modelling relational data using Bayesian clustered tensor factorization">
+                                        <b>[21]</b>
+                                         SUTSKEVER I, SALAKHUTDINOV R, TENENBAUMJ B.Modelling relational data using bayesian clustered tensor factorization[C]//Proceedings of Advances in Neural Information Processing Systems.[S.l.]:Neural Information Processing Systems Foundation, Inc., 2009:1821-1828.
+                                    </a>
+                                </li>
+                                <li id="47">
+
+
+                                    <a id="bibliography_22" title=" JENATTON R, LE ROUX N, BORDES A, et al.A latent factor model for highly multi-relational data[C]//Proceedings of International Conference on Neural Information Processing Systems.[S.l.]:Neural Information Processing Systems Foundation, Inc., 2012:3167-3175." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A latent factor model for highly multirelational data">
+                                        <b>[22]</b>
+                                         JENATTON R, LE ROUX N, BORDES A, et al.A latent factor model for highly multi-relational data[C]//Proceedings of International Conference on Neural Information Processing Systems.[S.l.]:Neural Information Processing Systems Foundation, Inc., 2012:3167-3175.
+                                    </a>
+                                </li>
+                                <li id="49">
+
+
+                                    <a id="bibliography_23" title=" COLLOBERT R, WESTON J.A unified architecture for natural language processing:deep neural networks with multitask learning[C]//Proceedings of the 25th International Conference on Machine Learning.New York, USA:ACM Press, 2008:160-167." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A unified architecture for natural language processing:Deep neural networks with multitask learning">
+                                        <b>[23]</b>
+                                         COLLOBERT R, WESTON J.A unified architecture for natural language processing:deep neural networks with multitask learning[C]//Proceedings of the 25th International Conference on Machine Learning.New York, USA:ACM Press, 2008:160-167.
+                                    </a>
+                                </li>
+                                <li id="51">
+
+
+                                    <a id="bibliography_24" title=" CHEN Jifan, ZHANG Qi, LIU Pengfei, et al.Implicit discourse relation detection via a deep architecture with gated relevance network[C]//Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics.New York, USA:ACM Press, 2016:1726-1735." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Implicit Discourse Relation Detection via a Deep Architecture with Gated Relevance Network">
+                                        <b>[24]</b>
+                                         CHEN Jifan, ZHANG Qi, LIU Pengfei, et al.Implicit discourse relation detection via a deep architecture with gated relevance network[C]//Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics.New York, USA:ACM Press, 2016:1726-1735.
+                                    </a>
+                                </li>
+                                <li id="53">
+
+
+                                    <a id="bibliography_25" title=" SOCHER R, CER D.Bilingual word embeddings for phrase based machine translation[C]//Proceedings of 2013 Conference on Empirical Methods in Natural Language Processing.Seattle, USA:[s.n.], 2013:1393-1398." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Bilingual word embeddings for phrase-based machine translation">
+                                        <b>[25]</b>
+                                         SOCHER R, CER D.Bilingual word embeddings for phrase based machine translation[C]//Proceedings of 2013 Conference on Empirical Methods in Natural Language Processing.Seattle, USA:[s.n.], 2013:1393-1398.
+                                    </a>
+                                </li>
+                                <li id="55">
+
+
+                                    <a id="bibliography_26" title=" ZEILER M D.ADADELTA:an adaptive learning rate method[EB/OL].[2018-03-28].https://arxiv.org/abs/1212.5701." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=ADADELTA:an adaptive learning rate method">
+                                        <b>[26]</b>
+                                         ZEILER M D.ADADELTA:an adaptive learning rate method[EB/OL].[2018-03-28].https://arxiv.org/abs/1212.5701.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(06),211-217 DOI:10.19678/j.issn.1000-3428.0051060            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于词对建模的句子对齐研究</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E4%B8%81%E9%A2%96&amp;code=24458318&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">丁颖</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%8E%E5%86%9B%E8%BE%89&amp;code=09886805&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">李军辉</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%91%A8%E5%9B%BD%E6%A0%8B&amp;code=13898054&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">周国栋</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E8%8B%8F%E5%B7%9E%E5%A4%A7%E5%AD%A6%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=0240077&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">苏州大学自然语言处理实验室</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>句子对齐是将源文本中的句子映射到目标文本中对应翻译的过程。在神经网络的框架下, 基于相互对齐的源端和目标端句子中包含大量相互对齐的单词, 提出一种句子对齐方法。使用门关联网络捕获源端句子和目标端句子词对之间的语义关系, 并通过语义关系来确定源端句子和目标端句子是否对齐。对非单调文本进行对齐评估, 结果表明, 该方法<i>F</i>1值达到93.8%, 有效提高了句子对齐的准确率。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8F%A5%E5%AD%90%E5%AF%B9%E9%BD%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">句子对齐;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%8D%E5%AF%B9&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">词对;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">双向循环神经网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%97%A8%E5%85%B3%E8%81%94%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">门关联网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%AD%E4%B9%89%E5%85%B3%E7%B3%BB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">语义关系;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    丁颖 (1994—) , 女, 硕士, 主研方向为机器翻译;;
+                                </span>
+                                <span>
+                                    李军辉, 副教授、博士;;
+                                </span>
+                                <span>
+                                    周国栋, 教授、博士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-04-02</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金 (61401295);</span>
+                    </p>
+            </div>
+                    <h1><b>Research on Sentence Alignment Based on Modeling Word Pairs</b></h1>
+                    <h2>
+                    <span>DING Ying</span>
+                    <span>LI Junhui</span>
+                    <span>ZHOU Guodong</span>
+            </h2>
+                    <h2>
+                    <span>Natural Language Processing Lab, Soochow University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Sentence alignment is a process mapping sentences in the source text to their counterparts in the target text.Within the framework of neural network, this paper proposes a sentence alignment method, on the basis that the aligned source sentence and target sentence pair contains a large number of aligned words.The Gated Relevance Network (GRN) is used to capture the semantic interaction between the source sentence and the target sentence pair, and the semantic interaction is used to determine whether the source sentence and the target sentence are aligned.The alignment evaluation of non-monotonic text shows that the <i>F</i>1 value of the method reaches 93.8%, which effectively improves the accuracy of sentence alignment.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=sentence%20alignment&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">sentence alignment;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=word%20pairs&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">word pairs;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Bidirectional%20Recurrent%20Neural%20Network%20(Bi-RNN)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Bidirectional Recurrent Neural Network (Bi-RNN) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Gated%20Relevance%20Network%20(GRN)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Gated Relevance Network (GRN) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=semantic%20interaction&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">semantic interaction;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-04-02</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="57" name="57" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="58">平行语料包含着不同语言之间的相互对照信息, 为学术研究提供了丰富的语言学知识。自然语言处理领域中的一些应用, 如机器翻译<citation id="173" type="reference"><link href="5" rel="bibliography" /><link href="7" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>]</sup></citation>、跨语言信息检索<citation id="174" type="reference"><link href="9" rel="bibliography" /><link href="11" rel="bibliography" /><sup>[<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>、词义消歧以及双语词典构建<citation id="172" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>等, 都需要大规模的平行语料支持。但是, 目前平行语料库的规模有限, 尤其对于低资源的领域, 平行语料的需求更为急迫。随着越来越多的以不同语言呈现相同信息的文档供研究使用, 使自动抽取平行句对、扩大平行语料库规模成为可能。句子对齐任务就是从给定的双语文档中找到互为翻译的句对。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">早期句子对齐任务主要基于浅层信息特征, 例如根据2个句子之间的长度信息<citation id="178" type="reference"><link href="15" rel="bibliography" /><link href="17" rel="bibliography" /><link href="19" rel="bibliography" /><sup>[<a class="sup">6</a>,<a class="sup">7</a>,<a class="sup">8</a>]</sup></citation>、双语词汇信息<citation id="179" type="reference"><link href="21" rel="bibliography" /><link href="23" rel="bibliography" /><sup>[<a class="sup">9</a>,<a class="sup">10</a>]</sup></citation>等。基于句子长度信息的对齐方法适用于同语系的语言对, 在印欧语言上对齐效果较好, 但对于不同语系的语言对, 如中英语言对, 其对齐性能大幅下降。基于双语词汇的对齐方法能充分地利用双语句对中的词汇知识, 从而提高句子对齐的性能。此外, 也有一些方法将两者结合起来, 或者添加其他特征信息<citation id="175" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>、启发式策略等。文献<citation id="176" type="reference">[<a class="sup">12</a>]</citation>提出一种基于句子长度和自动派生词典的多次搜索方法。随着深度学习的发展, 神经网络在句子对齐任务中取得显著的效果。文献<citation id="177" type="reference">[<a class="sup">13</a>]</citation>在不使用任何特定特征时, 仅采用双向循环神经网络 (Bidirectional Recurrent Neural Network, Bi-RNN) 取得较好的句子对齐结果。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">然而基于深度学习的神经网络模型仅将源端句子和目标端句子分别表示为一个固定长度的向量, 不可避免地会丢失许多有用信息, 特别是词语级的信息。另一方面, 基于非深度学习的词对齐模型通常根据互相对齐的句子包含大量互相对齐的词, 使用双语词典捕获2个句子包含的互为翻译的词, 进一步判断这2个句子的对齐关系。这说明捕获互为翻译的词对在句子对齐任务中起着非常重要的作用。为此, 本文提出使用门关联网络 (Gated Relevance Network, GRN) 计算源端句子和目标端句子词对间语义关系的方法, 对2个句子包含的词对进行建模。通过Bi-RNN编码句子, 为每个词获取表示向量 (即隐藏状态) , 该表示向量包含其上下文信息。使用GRN捕获词对之间的语义关系, 并利用词对之间的语义关系进一步判断2个句子是否对齐。</p>
+                </div>
+                <h3 id="61" name="61" class="anchor-tag">1 相关工作</h3>
+                <div class="p1">
+                    <p id="62">早期的句子对齐研究主要是基于启发式策略, 例如, 文献<citation id="180" type="reference">[<a class="sup">6</a>]</citation>提出的基于句子长度统计的方法, 它的一个基本假设是较长句子的译文较长, 较短的句子的译文较短, 并根据2个句子的长度差异为每个句对分配对齐的概率分数, 然后用动态编程找到最佳对齐结果。</p>
+                </div>
+                <div class="p1">
+                    <p id="63">随着机器翻译领域的自动构建双语词典技术的成熟, 句子对齐研究转向基于词典的方法, 例如, 文献<citation id="181" type="reference">[<a class="sup">12</a>]</citation>采用基于句子长度和自动派生词典结合的方法进行句子对齐, 并提出3个步骤寻找最终对齐。输入的双语文本首先采用基于句子长度方法抽取双语文本中1-1平行句对, 用于训练IBM1模型<citation id="182" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>以获得一个自动派生的双语词典, 再通过基于词对应的方法建立更加精确的对齐。为了抽取出双语文本中1-多/多-1的句对, 文献<citation id="183" type="reference">[<a class="sup">15</a>]</citation>首先用Moore对齐模型找到最小、最有可能的句子对齐关系, 即1-0/0-1和1-1, 然后将它们合并为1-多/多-1再进行判断, 从而找出最优对齐结果。文献<citation id="184" type="reference">[<a class="sup">16</a>]</citation>一种基于词汇的句子对齐方法Champollion, 用于对潜在噪音的非同源语系的双语平行文本进行有效对齐。该方法通过在双语词典中出现的单词翻译对来计算2个句对的相似性, 并且为频率较低的单词翻译对赋予较高的权重, 用动态规划算法产生最终对齐。随后, 为了在不降低其性能的情况下提升算法运行速度, 文献<citation id="185" type="reference">[<a class="sup">17</a>]</citation>提出Fast-Champollion, 采用基于长度和词典的方法, 将输入的双语文本切分成更小的文本片段, 再使用Champollion进行逐一对齐。</p>
+                </div>
+                <div class="p1">
+                    <p id="64">文献<citation id="186" type="reference">[<a class="sup">18</a>]</citation>提出一种半监督学习方法。该方法通过现有的对齐技术获得初始对齐方式, 以确保双语句子的一致性。然后, 根据在一种语言中具有高度亲和力的句子在其对应关系中往往具有类似的相关性, 定义了单语一致性。通过将单语和双语一致性纳入比对评分来得出最佳比对。文献<citation id="187" type="reference">[<a class="sup">19</a>]</citation>采用最先进的句子对齐工具自动生成大量的机器对齐, 使用这些对齐句对来引导具有长度特征、位置特征、相似特征和序列特征的判别学习器。大量的机器对齐数据和判别学习器的组合提高了句子对齐的精度。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">随着深度学习在自然语言处理领域的广泛应用, 文献<citation id="188" type="reference">[<a class="sup">13</a>]</citation>用深度学习方法进行句子对齐, 通过使用Bi-RNN将句子编码成固定大小的表示向量, 并将表示向量输入到全连接层, 估计句子互为翻译的概率。文献<citation id="189" type="reference">[<a class="sup">20</a>]</citation>首先获得句子对之间的相似度矩阵, 然后将相似度矩阵动态地组合成一个固定维数的矩阵, 并使用卷积神经网络 (Convolutional Neural Network, CNN) 将句子分类为对齐或不对齐。</p>
+                </div>
+                <h3 id="66" name="66" class="anchor-tag">2 基于词对建模的句子对齐</h3>
+                <div class="p1">
+                    <p id="67">本文将句子对齐任务视为一个二分类问题, 提出使用Bi-RNN和GRN的句子对齐方法。</p>
+                </div>
+                <h4 class="anchor-tag" id="68" name="68">2.1 问题描述</h4>
+                <div class="p1">
+                    <p id="69">句子对齐任务以一组双语文本, 即源端文本<i>S</i>={<i>s</i><sup>1</sup>, <i>s</i><sup>2</sup>, …, <i>s</i><sup><i>M</i></sup>}和目标端文本<i>T</i> ={<i>t</i><sup>1</sup>, <i>t</i><sup>2</sup>, …, <i>t</i><sup><i>N</i></sup>}作为输入, 其中, <i>M</i>为源端文本句子的个数, <i>N</i>为目标端文本句子的个数, 输出它们之间的句子对应关系。与以往输入文本的单调性假设不同, 本文方法允许源端文本<i>S</i>和目标端文本<i>T</i>之间存在任意交叉句对的情况, 也称为非单调文本句子对齐。图1 (a) 为没有交叉对齐句对的单调对齐示例, 图1 (b) 为具有交叉对齐句对的非单调对齐示例。</p>
+                </div>
+                <div class="area_img" id="70">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906034_070.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 句对对齐示例" src="Detail/GetImg?filename=images/JSJC201906034_070.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 句对对齐示例</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906034_070.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="71">对于单调对齐的文本或者只存在极短距离的交叉对齐文本, 使用动态规划算法能够直接找到文本中1-1、1-0/0-1、1-多/多-1和多-多对齐。然而, 对于非单调对齐的情况, 找到文本中1-多/多-1和多-多对齐不仅要合并连续的多个句子, 还要合并不连续的多个句子进行判断, 实际操作复杂。因此, 就非单调对齐文本而言, 本文假设源端文本中的每个句子只与目标端文本中的1个或0个句子对齐, 而不考虑其他对齐情况。</p>
+                </div>
+                <div class="p1">
+                    <p id="72">本文将句子对齐任务看作二分类问题, 即给定候选句对 (<i>s</i>, <i>t</i>) , 使用二分类器确定这2个句子是否对齐。在训练过程中, 本文使用包含<i>L</i>个平行句对的平行语料{ (<i>s</i><sup><i>i</i></sup>, <i>t</i><sup><i>i</i></sup>) |1≤<i>i</i>≤<i>L</i>}。其中每个平行句对 (<i>s</i><sup><i>i</i></sup>, <i>t</i><sup><i>i</i></sup>) 作为训练集中的正例。同样, 本文选择<i>L</i>个不平行句对作为训练集的负例, 即对每个源端句子<i>s</i><sup><i>i</i></sup>, 随机在目标端中选择一个句子<i>t</i><sup><i>k</i></sup> (<i>k</i>≠<i>i</i>) 与<i>s</i><sup><i>i</i></sup>组成一组负例 (<i>s</i><sup><i>i</i></sup>, <i>t</i><sup><i>k</i></sup>) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="73">为了得到源端和目标端句子之间的对齐关系, 首先, 获取对齐概率矩阵<b><i>F</i></b>, 该矩阵表示源端句子<i>S</i>和目标端句子<i>T</i>的对齐关系, <b><i>F</i></b>⊂<i>S</i>×<i>T</i>。其中, <i>F</i><sub><i>ij</i></sub>表示源端文本<i>S</i>中第<i>i</i>个句子<i>s</i><sup><i>i</i></sup>和目标端文本<i>T</i>中第<i>j</i>个句子<i>t</i><sup><i>j</i></sup>的对齐概率。定义一个对齐函数<b><i>A</i></b>:<b><i>F</i></b>→<b><i>A</i></b>产生最终对齐关系。<b><i>A</i></b>表示<i>S</i>和<i>T</i>的对齐矩阵, 若<i>s</i><sup><i>i</i></sup>和<i>t</i><sup><i>j</i></sup>对齐, 则<i>A</i><sub><i>ij</i></sub>=1, 否则<i>A</i><sub><i>ij</i></sub>=0。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">通过实验, 可以得到2个句子间的对齐关系, 即句子对齐的概率矩阵<b><i>F</i></b>, 但是该对齐关系中存在1-多/多-1的现象, 因此设计对齐函数<b><i>A</i></b>来获得最佳对齐结果, 从而将对齐关系转换为1-1或1-0/0-1。根据2个句子语义越相近, 对齐概率越高的事实, 本文采用贪心算法获得最优结果。选择对齐矩阵<b><i>F</i></b>中最高概率值对应的源端和目标端句子生成对齐关系, 继而将候选对齐关系中和该源端与目标端有关的对齐全部删除, 重复迭代这一过程生成最终对齐结果。</p>
+                </div>
+                <h4 class="anchor-tag" id="75" name="75">2.2 基于词对建模的句子对齐神经网络模型</h4>
+                <div class="p1">
+                    <p id="76">图2给出基于词对建模的句子对齐神经网络模型<i>Bi</i>-<i>RNN</i>+<i>GRN</i>。</p>
+                </div>
+                <div class="area_img" id="77">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906034_077.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 基于词对建模的句子对齐神经网络模型" src="Detail/GetImg?filename=images/JSJC201906034_077.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 基于词对建模的句子对齐神经网络模型</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906034_077.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="78">模型共分为5层:</p>
+                </div>
+                <div class="p1">
+                    <p id="79">1) 词向量 (Embedding) 层用于获得每个单词的向量表示。</p>
+                </div>
+                <div class="p1">
+                    <p id="80">2) Bi-RNN层用于对句子进行上下文建模。</p>
+                </div>
+                <div class="p1">
+                    <p id="81">3) GRN层用于计算每个词对的相似性分数。</p>
+                </div>
+                <div class="p1">
+                    <p id="82">4) 最大池化 (Max Pooling) 层用于选择最具信息量的相似性分数。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">5) 多层感知器 (Multi-layer Perceptron, MLP) 层用于句子分类, 其中, 1表示句子对齐, 0表示不对齐。</p>
+                </div>
+                <h4 class="anchor-tag" id="84" name="84">2.2.1 词向量层</h4>
+                <div class="p1">
+                    <p id="85">在词向量层, 输入的2个句子<i>s</i> = (<b><i>s</i></b><sub>1</sub>, <b><i>s</i></b><sub>2</sub>, …, <b><i>s</i></b><sub><i>m</i></sub>) 和 <i>t</i>= (<b><i>t</i></b><sub>1</sub>, <b><i>t</i></b><sub>2</sub>, …, <b><i>t</i></b><sub><i>n</i></sub>) 中的所有单词都被映射到固定大小的向量上, 其中, <i>m</i>表示源端句子中单词的个数, <i>n</i>表示目标端句子中单词的个数。同时, 为了克服数据稀疏问题, 将所有低频词作为未登录词映射到特殊的词向量UNK上。与传统的one-hot向量表示相比, 词义相似的单词往往具有相似的向量表示。</p>
+                </div>
+                <h4 class="anchor-tag" id="86" name="86">2.2.2 Bi-RNN层</h4>
+                <div class="p1">
+                    <p id="87">本文只定义源端句子s的<i>Bi</i>-<i>RNN</i>编码方式, 目标端句子t的编码方式与其一致。通过<i>Bi</i>-<i>RNN</i>来对源端句子进行编码, 分别获得其隐藏层状态的前向序列矩阵<mathml id="88"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false"> (</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>→</mo></mrow></mover><msub><mrow></mrow><mn>1</mn></msub><mo>, </mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>→</mo></mrow></mover><msub><mrow></mrow><mn>2</mn></msub><mo>, </mo><mo>⋯</mo><mo>, </mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>→</mo></mrow></mover><msub><mrow></mrow><mi>m</mi></msub><mo stretchy="false">) </mo></mrow></math></mathml>和后向序列矩阵<mathml id="89"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false"> (</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>←</mo></mrow></mover><msub><mrow></mrow><mn>1</mn></msub><mo>, </mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>←</mo></mrow></mover><msub><mrow></mrow><mn>2</mn></msub><mo>, </mo><mo>⋯</mo><mo>, </mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>←</mo></mrow></mover><msub><mrow></mrow><mi>m</mi></msub><mo stretchy="false">) </mo></mrow></math></mathml>。则源端句子中单词<b><i>s</i></b><sub><i>j</i></sub>的隐藏层向量<b><i>h</i></b><sub><i>j</i></sub>为向量<mathml id="90"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>→</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub></mrow></math></mathml>和<mathml id="91"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>←</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub></mrow></math></mathml>的拼接。</p>
+                </div>
+                <div class="p1">
+                    <p id="92">图3为<i>Bi</i>-<i>RNN</i>编码过程。本文采用门控循环单元 (<i>Gated Recurrent Unit</i>, <i>GRU</i>) 网络学习长距离的依赖关系。在位置j处, 前向隐藏层状态<mathml id="93"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>→</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub></mrow></math></mathml>通过以下等式更新:</p>
+                </div>
+                <div class="area_img" id="94">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JSJC201906034_09400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="95">其中, σ是<i>sigmoid</i>激活函数, <b><i>s</i></b><sub><i>j</i></sub>是第<i>j</i>个单词的词向量, <b><i>W</i></b><sub><i>z</i></sub>、<b><i>W</i></b><sub><i>r</i></sub>、<b><i>W</i></b>是模型参数矩阵, ·表示矩阵乘法,  表示逐元素相乘。类似地, 可以获得后向隐藏层状态<mathml id="96"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>←</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub></mrow></math></mathml>。</p>
+                </div>
+                <div class="area_img" id="97">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906034_097.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 Bi-RNN编码过程" src="Detail/GetImg?filename=images/JSJC201906034_097.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 Bi-RNN编码过程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906034_097.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="98">Bi-RNN使得每个单词的隐藏层状态均考虑到了整个句子的信息。这是因为, 每个单词通过前向神经网络考虑到了前面的文本信息, 同时通过后向神经网络融合了单词后面的信息。本文使用相同的Bi-RNN来编码源端句子和目标端句子。</p>
+                </div>
+                <h4 class="anchor-tag" id="99" name="99">2.2.3 GRN层</h4>
+                <div class="p1">
+                    <p id="100">词对特征在自然语言处理中已有广泛研究, 并且现有的基于特征的句子对齐方法表明, 词对特征有助于提升句子对齐的性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="101">给定一个源端句子<i>s</i>= (<b><i>s</i></b><sub>1</sub>, <b><i>s</i></b><sub>2</sub>, …, <b><i>s</i></b><sub><i>m</i></sub>) 和一个目标端句子<i>t</i>= (<b><i>t</i></b><sub>1</sub>, <b><i>t</i></b><sub>2</sub>, …, <b><i>t</i></b><sub><i>n</i></sub>) , 以及其Bi-RNN层的输出 (<b><i>h</i></b><sub><i>s</i></sub><sub>1</sub>, <b><i>h</i></b><sub><i>s</i></sub><sub>2</sub>, …, <b><i>h</i></b><sub><i>sm</i></sub>) 和 (<b><i>h</i></b><sub><i>t</i></sub><sub>1</sub>, <b><i>h</i></b><sub><i>t</i></sub><sub>2</sub>, …, <b><i>h</i></b><sub><i>tn</i></sub>) , 根据 (<b><i>h</i></b><sub><i>si</i></sub>, <b><i>h</i></b><sub><i>tj</i></sub>) 计算每个词对 (<b><i>s</i></b><sub><i>i</i></sub>, <b><i>t</i></b><sub><i>j</i></sub>) 的相似度分数。虽然存在多种衡量其相似性的方法, 例如余弦距离、双线性模型<citation id="192" type="reference"><link href="45" rel="bibliography" /><link href="47" rel="bibliography" /><sup>[<a class="sup">21</a>,<a class="sup">22</a>]</sup></citation>和单层神经网络<citation id="190" type="reference"><link href="49" rel="bibliography" /><sup>[<a class="sup">23</a>]</sup></citation>等, 但这些方法只关注2个向量间某一方面的相似程度, 而不能同时捕获2个向量之间多种相似关系。文献<citation id="191" type="reference">[<a class="sup">24</a>]</citation>提出用GRN融合词对间线性和非线性相似关系, 并成功应用于篇章关系分析任务。因此, 本文使用GRN对词对进行建模, 用以捕获2种语言中词与词之间的语义对等关系, 其结构如图4所示。</p>
+                </div>
+                <div class="area_img" id="102">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906034_102.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 GRN模型" src="Detail/GetImg?filename=images/JSJC201906034_102.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 GRN模型</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906034_102.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="103">对输入的2个中英文句子, 分别经过Bi-RNN编码, 得到其隐藏层状态 (<b><i>h</i></b><sub><i>s</i>1</sub>, <b><i>h</i></b><sub><i>s</i>2</sub>, …, <b><i>h</i></b><sub><i>sm</i></sub>) 和 (<b><i>h</i></b><sub><i>t</i>1</sub>, <b><i>h</i></b><sub><i>t</i>2</sub>, …, <b><i>h</i></b><sub><i>tn</i></sub>) , 如图4上部分 (Bidirectional GRU) 所示。接着, 对于其中任意词对 (<b><i>s</i></b><sub><i>i</i></sub>, <b><i>t</i></b><sub><i>j</i></sub>) 以及对应的隐藏状态 (<b><i>h</i></b><sub><i>si</i></sub>, <b><i>h</i></b><sub><i>tj</i></sub>) , 通过门机制将双线性模型 (Bilinear Model) 和单层神经网络 (Single Layer Network) 相结合, 从而得到词对 (<b><i>s</i></b><sub><i>i</i></sub>, <b><i>t</i></b><sub><i>j</i></sub>) 的相似度值, 如图4下部分所示。相似度值计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="104" class="code-formula">
+                        <mathml id="104"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>r</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mrow><mi>s</mi><mi>i</mi></mrow></msub><mo>, </mo><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mrow><mi>t</mi><mi>j</mi></mrow></msub><mo stretchy="false">) </mo><mo>=</mo></mtd></mtr><mtr><mtd><mi mathvariant="bold-italic">U</mi><mo stretchy="false"> (</mo><mi>g</mi><mo>˚</mo><mspace width="0.25em" /><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mrow><mi>s</mi><mi>i</mi></mrow></msub><mi>Μ</mi><msup><mrow></mrow><mrow><mo stretchy="false">[</mo><mn>1</mn><mo>:</mo><mi>r</mi><mo stretchy="false">]</mo></mrow></msup><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mrow><mi>t</mi><mi>j</mi></mrow></msub><mo>+</mo><mo stretchy="false"> (</mo><mn>1</mn><mo>-</mo><mi>g</mi><mo stretchy="false">) </mo><mo>˚</mo><mspace width="0.25em" /><mi>f</mi><mrow><mo> (</mo><mrow><mi mathvariant="bold-italic">V</mi><mrow><mo>[</mo><mrow><mtable><mtr><mtd columnalign="left"><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mrow><mi>s</mi><mi>i</mi></mrow></msub></mtd></mtr><mtr><mtd columnalign="left"><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mrow><mi>t</mi><mi>j</mi></mrow></msub></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow><mo>) </mo></mrow><mo>+</mo><mi mathvariant="bold-italic">b</mi><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>5</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="105">其中, <b><i>U</i></b>∈<image href="images/JSJC201906034_106.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>r</i></sup>, <b><i>M</i></b><sup>[1:<i>r</i>]</sup>∈<image href="images/JSJC201906034_107.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>r</i>×<i>d</i>×<i>d</i></sup>, <b><i>V</i></b>∈<image href="images/JSJC201906034_108.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>r</i>×2<i>d</i></sup>, <b><i>b</i></b>∈<image href="images/JSJC201906034_109.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>r</i></sup>是模型参数, <i>r</i>为双线性模型的计算次数, <i>d</i>为单词隐藏状态维度, <i>f</i>是标准非线性逐元素相乘函数。</p>
+                </div>
+                <div class="p1">
+                    <p id="110">式 (5) 的第1项是一个双线性模型, 它能够有效地将2个向量<b><i>h</i></b><sub><i>si</i></sub>和<b><i>h</i></b><sub><i>tj</i></sub>之间的强线性相互结合, 但是缺乏处理非线性间相互作用的能力;第2项是一个捕获2个向量之间非线性相互作用的单层神经网络, 但该网络以牺牲其线性间相互作用为代价。因此, 通过门机制融合2种相似度能够获得更有用、更复杂的语义信息。<i>g</i>为将词与词之间的线性和非线性语义交互整合的门, 定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="111" class="code-formula">
+                        <mathml id="111"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>g</mi><mo>=</mo><mi>σ</mi><mrow><mo> (</mo><mrow><mi mathvariant="bold-italic">W</mi><msub><mrow></mrow><mi>g</mi></msub><mrow><mo>[</mo><mrow><mtable><mtr><mtd columnalign="left"><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mrow><mi>s</mi><mi>i</mi></mrow></msub></mtd></mtr><mtr><mtd columnalign="left"><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mrow><mi>t</mi><mi>j</mi></mrow></msub></mtd></mtr></mtable></mrow><mo>]</mo></mrow><mo>+</mo><mi mathvariant="bold-italic">b</mi><msub><mrow></mrow><mi>g</mi></msub></mrow><mo>) </mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="112">其中, <b><i>W</i></b><sub><i>g</i></sub>∈<image href="images/JSJC201906034_113.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>r</i>×2<i>d</i></sup>, <b><i>b</i></b><sub><i>g</i></sub>∈<image href="images/JSJC201906034_114.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>r</i></sup>是模型参数, <i>σ</i>是sigmoid函数。</p>
+                </div>
+                <div class="p1">
+                    <p id="115">GRN通过门机制将线性和非线性结合的方式, 计算2个句子词对间的对等关系, 从而获得一个<i>m</i>×<i>n</i>的相似性分数矩阵, 充分考虑了2种语言单词词对间复杂的语义关系。</p>
+                </div>
+                <h4 class="anchor-tag" id="116" name="116">2.2.4 最大池化层</h4>
+                <div class="p1">
+                    <p id="117">2个句子之间的关系往往是由一些强烈的语义相互作用决定的。因此, 本文采用最大池化策略来划分由<i>GRN</i>产生的大小为m×n的相似性分数矩阵。通过设置大小为p<sub>1</sub>×p<sub>2</sub>的最大池化, 即对相似性分数矩阵中每个p<sub>1</sub>×p<sub>2</sub>块取其最大值, 从而得到大小为 (m/p<sub>1</sub>) × (n/p<sub>2</sub>) 的最具信息量的相似性分数矩阵。</p>
+                </div>
+                <h4 class="anchor-tag" id="118" name="118">2.2.5 <i>MLP</i>层</h4>
+                <div class="p1">
+                    <p id="119"><i>MLP</i>层由2个隐藏层和1个输出层组成。<i>GRN</i>层的输出经过最大池化层被进一步重塑为一个一维向量<b><i>v</i></b><sub><i>g</i></sub>, 然后输入到2个全连接隐藏层以获得更加抽象的表示, 并最终连接到输出层。就句子对齐任务而言, 输出层使用sigmoid激活函数获得2个句子是否对齐的概率<i>ρ</i>。若<i>ρ</i>&gt;0.5, 则输出<i>y</i>=1表示句子对齐, 反之, <i>y</i>=0表示句子不对齐。</p>
+                </div>
+                <h3 id="120" name="120" class="anchor-tag">3 实验与结果分析</h3>
+                <div class="p1">
+                    <p id="121">本节使用中/英非单调平行文本评估<i>Bi</i>-<i>RNN</i>+<i>GRN</i>方法在提取平行句对上的性能。</p>
+                </div>
+                <h4 class="anchor-tag" id="122" name="122">3.1 实验设置</h4>
+                <h4 class="anchor-tag" id="123" name="123">3.1.1 数据集</h4>
+                <div class="p1">
+                    <p id="124">数据集包括训练集、开发集和测试集。训练集是中英平行语料库<i>LDC</i>2003<i>E</i>14、<i>LDC</i>2004<i>T</i>07、<i>LDC</i>2005<i>T</i>06和<i>LDC</i>2005<i>T</i>10, 其中保留了文档边界, 包含61 948篇文档和1 230 000个平行句对。以1 230 000个平行句对作为句子对齐训练的正例, 并且按照2.1节所描述的方法获得同样大小的负例。在实验中, 每1 000次迭代保存一次模型, 并使用<i>NIST</i>02作为开发集保存性能最优的模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="125">测试集包括<i>NIST</i>03/04/05。由于测试集全为平行句对, 即只包含1-1对齐, 为了保证测试集中包括1-1、1-0/0-1类型的句子对齐关系和文档的非单调性, 本文随机删除源端和目标端文本中的一些句子, 并按照文档级别打乱句子顺序。表1为实验数据集的具体情况, 其中1-1表示一个源端句子和一个目标端句子对齐, 1-0/0-1表示源端句子或目标端句子没有对应的对齐句子。此外, 本实验限制句子的最大长度为50, 对于测试集中长度大于50的句子, 删掉句子中的停用词来尽可能保证句子长度在50之内。</p>
+                </div>
+                <div class="area_img" id="126">
+                    <p class="img_tit"><b>表1 数据集设置</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="126" border="1"><tr><td><br />数据集</td><td>中文句子数</td><td>英文句子数</td><td>1-1</td><td>1-0/0-1</td></tr><tr><td><br />NIST02</td><td>788</td><td>818</td><td>734</td><td>138</td></tr><tr><td><br />NIST03</td><td>829</td><td>859</td><td>772</td><td>144</td></tr><tr><td><br />NIST04</td><td>1 698</td><td>1 728</td><td>1 640</td><td>146</td></tr><tr><td><br />NIST05</td><td>992</td><td>1 022</td><td>937</td><td>140</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="127" name="127">3.1.2 词向量</h4>
+                <div class="p1">
+                    <p id="128">根据中英文训练语料, 选择词频最高的前30 000个单词作为源端词表和目标端词表, 其分别占总词汇量的98.4%和99.0%。所有未包括在词表中的单词, 被映射为固定的UNK标记。不同于随机初始化词向量, 本文使用文献<citation id="193" type="reference">[<a class="sup">25</a>]</citation>提供的维度为50的中英双语词向量, 并且在训练过程中更新词向量。</p>
+                </div>
+                <h4 class="anchor-tag" id="129" name="129">3.1.3 模型参数</h4>
+                <div class="p1">
+                    <p id="130">为了有效地训练神经网络, 源端和目标端的句子最大长度设置为50, Bi-RNN的隐藏层大小为150。GRN输出大小为50×50的相似性分数矩阵, 并为该矩阵设置大小为3×3的最大化池。在训练中, 批处理大小为80。除词向量以外的所有模型参数, 随机初始化为[-0.1, 0.1]的均匀分布。此外, 使用AdaDelta<citation id="194" type="reference"><link href="55" rel="bibliography" /><sup>[<a class="sup">26</a>]</sup></citation>优化模型参数。</p>
+                </div>
+                <h4 class="anchor-tag" id="131" name="131">3.1.4 模型训练</h4>
+                <div class="p1">
+                    <p id="132">给定训练的句对 (<i>S</i>, <i>T</i>) ={<i>s</i><sup><i>i</i></sup>, <i>t</i><sup><i>i</i></sup>|1≤<i>i</i>≤2<i>L</i>}及其对应标签<i>Y</i>={<i>y</i><sup><i>i</i></sup>}, 训练目标是最小化预测结果<mathml id="133"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false">{</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>Y</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><mo stretchy="false">}</mo></mrow></math></mathml>与真实标签的交叉熵, 定义为:</p>
+                </div>
+                <div class="p1">
+                    <p id="134"><i>Loss</i> (<i>S</i>, <i>T</i>;<mathml id="135"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Y</mi><mo>, </mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>Y</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><mo stretchy="false">) </mo><mo>=</mo><mo>-</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>2</mn><mi>L</mi></mrow></munderover><mrow><mi>lg</mi></mrow></mstyle><mo stretchy="false"> (</mo><mi>p</mi><mo stretchy="false"> (</mo><mi>y</mi><mo>=</mo><mi>y</mi><msup><mrow></mrow><mi>i</mi></msup><mrow><mo>|</mo><mrow><mi>s</mi><msup><mrow></mrow><mi>i</mi></msup><mo>, </mo><mi>t</mi><msup><mrow></mrow><mi>i</mi></msup><mo stretchy="false">) </mo></mrow></mrow><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>7</mn><mo stretchy="false">) </mo></mrow></math></mathml></p>
+                </div>
+                <h4 class="anchor-tag" id="136" name="136">3.1.5 评估指标</h4>
+                <div class="p1">
+                    <p id="137">为了评估模型的性能, 本文采用<i>P</i>、<i>R</i>、<i>F</i>1值作为实验的评估指标。精度 (<i>P</i>) 是所有预测为对齐的句对中真正对齐的句对所占的比例。召回率 (<i>R</i>) 是数据集中所有对齐句对中预测真正正确的句对所占的比例。<i>F</i>1值是精度和召回率的调和平均值。</p>
+                </div>
+                <h4 class="anchor-tag" id="138" name="138">3.1.6 基准系统</h4>
+                <div class="p1">
+                    <p id="139">Bi-RNN:使用Bi-RNN对源端句子和目标端句子进行编码, 然后将编码后的隐藏层状态进行平均得到句子级别的向量表示。最后将2个句子级别的向量表示进行拼接后输入到MLP层进行分类。</p>
+                </div>
+                <div class="p1">
+                    <p id="140">Moore<citation id="195" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>:基于句子长度和自动派生的双语词典的句子对齐工具, 下载地址为:https://www.dssz.com/905003.html。</p>
+                </div>
+                <div class="p1">
+                    <p id="141">Champollion<citation id="196" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>:基于词典的句子对齐工具, 下载地址为:https://sourceforge.net/projects/champol lion/。</p>
+                </div>
+                <div class="p1">
+                    <p id="142">Gargantua<citation id="197" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>:用于对称和非对称平行语料库的无监督句子对齐工具, 下载地址为:https://source forge.net/projects/gargantua/。</p>
+                </div>
+                <h4 class="anchor-tag" id="143" name="143">3.2 结果分析</h4>
+                <h4 class="anchor-tag" id="144" name="144">3.2.1 基于词对建模方法的实验结果</h4>
+                <div class="p1">
+                    <p id="145">表2、表3分别给出Bi-RNN模型和Bi-RNN+GRN模型在测试语料上的句子对齐性能, 其中:Micro用来衡量每个测试集中1-1和1-0/0-1的整体性能;All用来表示整个测试集NIST03/04/05上的总体性能。</p>
+                </div>
+                <div class="area_img" id="146">
+                    <p class="img_tit"><b>表2 Bi-RNN模型的性能评估</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note">%</p>
+                    <table id="146" border="1"><tr><td rowspan="2"><br />数据集</td><td colspan="3"><br />1-0/0-1</td><td colspan="3"><br />1-1</td><td colspan="3"><br />Micro</td></tr><tr><td><br /><i>P</i></td><td><i>R</i></td><td><i>F</i>1</td><td><br /><i>P</i></td><td><i>R</i></td><td><i>F</i>1</td><td><br /><i>P</i></td><td><i>R</i></td><td><i>F</i>1</td></tr><tr><td><br />NIST02</td><td>35.2</td><td>22.5</td><td>27.4</td><td>59.6</td><td>61.6</td><td>60.6</td><td>57.0</td><td>55.4</td><td>56.2</td></tr><tr><td><br />NIST03</td><td>38.1</td><td>31.3</td><td>34.4</td><td>60.3</td><td>61.3</td><td>60.8</td><td>57.4</td><td>56.6</td><td>57.0</td></tr><tr><td><br />NIST04</td><td>15.7</td><td>18.5</td><td>17.0</td><td>51.4</td><td>51.0</td><td>51.2</td><td>48.0</td><td>48.4</td><td>48.2</td></tr><tr><td><br />NIST05</td><td>25.4</td><td>22.1</td><td>23.7</td><td>57.2</td><td>57.7</td><td>57.5</td><td>53.6</td><td>53.1</td><td>53.5</td></tr><tr><td><br />All</td><td>25.0</td><td>24.0</td><td>24.5</td><td>55.1</td><td>55.3</td><td>55.2</td><td>51.8</td><td>51.7</td><td>51.8</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="147">
+                    <p class="img_tit"><b>表3 Bi-RNN+GRN模型的性能评估</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note">%</p>
+                    <table id="147" border="1"><tr><td rowspan="2"><br />数据集</td><td colspan="3"><br />1-0/0-1</td><td colspan="3"><br />1-1</td><td colspan="3"><br />Micro</td></tr><tr><td><br /><i>P</i></td><td><i>R</i></td><td><i>F</i>1</td><td><br /><i>P</i></td><td><i>R</i></td><td><i>F</i>1</td><td><br /><i>P</i></td><td><i>R</i></td><td><i>F</i>1</td></tr><tr><td><br />NIST02</td><td>84.0</td><td>60.9</td><td>70.6</td><td>93.9</td><td>96.3</td><td>95.1</td><td>92.7</td><td>90.7</td><td>91.7</td></tr><tr><td><br />NIST03</td><td>95.5</td><td>74.3</td><td>83.6</td><td>96.2</td><td>98.2</td><td>97.2</td><td>96.1</td><td>94.4</td><td>95.3</td></tr><tr><td><br />NIST04</td><td>67.6</td><td>65.8</td><td>66.7</td><td>96.1</td><td>96.2</td><td>96.2</td><td>93.8</td><td>93.7</td><td>93.8</td></tr><tr><td><br />NIST05</td><td>82.7</td><td>65.0</td><td>72.8</td><td>94.4</td><td>95.9</td><td>95.2</td><td>93.2</td><td>91.9</td><td>92.6</td></tr><tr><td><br />All</td><td>80.1</td><td>68.4</td><td>74.1</td><td>95.7</td><td>96.6</td><td>96.1</td><td>94.2</td><td>93.4</td><td>93.8</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="148">从表2、表3可以得出结论:</p>
+                </div>
+                <div class="p1">
+                    <p id="149">1) 单独使用Bi-RNN模型, 将句子编码后的隐藏层状态平均以获得一个句子的向量表示, 在测试集上获得的总体性能Micro-<i>F</i>1值为51.8%。这表明, 将一个句子只表示为一个向量, 并不能够较好地捕获句子内部的单词信息。进而, 仅通过2个句子的向量并不能较好地判断它们是否互为翻译。</p>
+                </div>
+                <div class="p1">
+                    <p id="150">2) 使用GRN能够显著地提高句子对齐的性能。在所有测试集上, Bi-RNN+GRN模型的<i>F</i>1值比Bi-RNN模型高约40%, 这说明词与词之间的相互关系是判断句子是否对齐的重要因素。同时, 这也表明GRN能够较好地捕获词对之间的语义关系信息, 为判断句子对齐提供有力支撑。</p>
+                </div>
+                <h4 class="anchor-tag" id="151" name="151">3.2.2 与现有工具对比的实验结果</h4>
+                <div class="p1">
+                    <p id="152">为了评价Bi-RNN+GRN模型在处理非单调对齐文本上的性能, 表4给出在自然语言处理应用中较流行的句子对齐工具Moore、Champollion和Gargantua在测试集NIST03/04/05上的总体性能。</p>
+                </div>
+                <div class="area_img" id="153">
+                    <p class="img_tit"><b>表4 在非单调对齐文本上的性能比较</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note">%</p>
+                    <table id="153" border="1"><tr><td rowspan="2"><br />工具</td><td colspan="3"><br />1-0/0-1</td><td colspan="3"><br />1-1</td><td colspan="3"><br />Micro</td></tr><tr><td><br /><i>P</i></td><td><i>R</i></td><td><i>F</i>1</td><td><br /><i>P</i></td><td><i>R</i></td><td><i>F</i>1</td><td><br /><i>P</i></td><td><i>R</i></td><td><i>F</i>1</td></tr><tr><td>Bi-RNN+GRN</td><td>80.1</td><td>68.4</td><td>74.1</td><td>95.7</td><td>96.6</td><td>96.1</td><td>94.2</td><td>93.4</td><td>93.8</td></tr><tr><td><br />Moore</td><td>6.2</td><td>64.6</td><td>11.3</td><td>26.1</td><td>10.3</td><td>14.7</td><td>10.7</td><td>16.4</td><td>13.0</td></tr><tr><td><br />Champollion</td><td>7.3</td><td>45.7</td><td>12.6</td><td>32.6</td><td>21.7</td><td>26.1</td><td>18.8</td><td>24.4</td><td>21.3</td></tr><tr><td><br />Gargantua</td><td>6.6</td><td>33.3</td><td>11.0</td><td>16.8</td><td>12.4</td><td>14.3</td><td>12.0</td><td>14.8</td><td>13.2</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="154">从表4可以看出:</p>
+                </div>
+                <div class="p1">
+                    <p id="155">1) Moore和Gargantua是基于句子长度和自动派生词典的对齐工具, Champollion是基于外部提供的双语词典的对齐工具, 它们同样借助词对信息来判断句子对齐, 但在处理非单调文本对齐上性能却很低, 总体性能最高的Micro-<i>F</i>1值只有21.3%。</p>
+                </div>
+                <div class="p1">
+                    <p id="156">2) Bi-RNN+GRN模型在非单调文本上的对齐性能Micro-<i>F</i>1值为93.8%, 远高于其他3种工具的性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="157">上述分析表明本文模型Bi-RNN+GRN结构在处理非单调对齐的语料实验效果非常显著, 与其他工具相比, 本文模型能灵活适应多种不同的情况下的句子对齐。</p>
+                </div>
+                <h4 class="anchor-tag" id="158" name="158">3.2.3 单调文本上句子对齐的实验结果</h4>
+                <div class="p1">
+                    <p id="159">上述实验都是基于非单调文本。为了比较本文模型与现有句子对齐工具在单调文本上的对齐性能, 本文使用表1中的数据集NIST03/04/05进行评估, 数据集中的句子未打乱顺序。需要指出的是, Bi-RNN+GRN模型计算同一篇章内任意2个句子之间的互为翻译的概率为对齐概率<b><i>F</i></b>, 进而得到对齐矩阵<b><i>A</i></b>。因此, 本文模型与文本的单调性无关。表5给出了单调文本上多个模型工具的性能对比。</p>
+                </div>
+                <div class="area_img" id="160">
+                    <p class="img_tit"><b>表5 在单调文本上的性能比较</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note">%</p>
+                    <table id="160" border="1"><tr><td rowspan="2"><br />工具</td><td colspan="3"><br />1-0/0-1</td><td colspan="3"><br />1-1</td><td colspan="3"><br />Micro</td></tr><tr><td><br /><i>P</i></td><td><i>R</i></td><td><i>F</i>1</td><td><br /><i>P</i></td><td><i>R</i></td><td><i>F</i>1</td><td><br /><i>P</i></td><td><i>R</i></td><td><i>F</i>1</td></tr><tr><td><br />Bi-RNN+GRN</td><td>80.1</td><td>68.4</td><td>74.1</td><td>95.7</td><td>96.6</td><td>96.1</td><td>94.2</td><td>93.4</td><td>93.8</td></tr><tr><td><br />Moore</td><td>53.8</td><td>89.3</td><td>67.1</td><td>98.8</td><td>94.6</td><td>96.6</td><td>90.6</td><td>94.0</td><td>92.3</td></tr><tr><td><br />Champollion</td><td>32.7</td><td>59.5</td><td>42.2</td><td>91.1</td><td>86.3</td><td>88.7</td><td>79.6</td><td>83.3</td><td>81.4</td></tr><tr><td><br />Gargantua</td><td>43.5</td><td>79.8</td><td>56.3</td><td>97.0</td><td>91.9</td><td>94.4</td><td>86.4</td><td>90.5</td><td>88.4</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="161">表5可以看出, 得益于1-0/0-1上的对齐性能, 虽然Bi-RNN+GRN在1-1上的对齐性能与Moore接近, 总体性能仍高于Moore, 同时也明显高于Champollion和Gargantua。结合表4和表5可以发现, Bi-RNN+GRN模型同时适用于单调和非单调对齐文本, 但其他工具仅适合于单调文本。</p>
+                </div>
+                <h4 class="anchor-tag" id="162" name="162">3.2.4 实例分析</h4>
+                <div class="p1">
+                    <p id="163">3.2.1节的实验结果表明, 与Bi-RNN模型相比, Bi-RNN+GRN模型考虑了词与词之间的相似关系, 能够从中挖掘出更丰富的词对语义信息, 从而通过对词对相似度进行建模来提高句子对齐的性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="164">以相同的源端句子与不同的目标端句子为例, 图5显示了Bi-RNN模型和Bi-RNN+GRN模型对2个测试样例的预测对齐概率。其中, 上方样例源端和目标端句子不对齐, 下方样例对齐。从图5可以看出, Bi-RNN模型对2个样例都给以高概率预测它们之间是对齐的。特别是对上方样例, Bi-RNN模型预测的对齐概率几乎接近100%, 与事实不符。而Bi-RNN+GRN模型则给出了与Bi-RNN模型相反的预测结果:上方样例的对齐概率极低而下方样例的对齐概率极高。同时, 从下方样例中可以发现 (评审, review) , (获奖, winning) , (作品, entries) , (5, 5th) , (周年, anniversary) , (出版, published) , (集纳, compiled) , (香港, Hong Kong) 等许多1-1的同义词对, 表明GRN具有表达词对间语义信息交互的能力。</p>
+                </div>
+                <div class="area_img" id="165">
+                    <p class="img_tit">图5 深度神经网络预测句子对齐的对比实例 <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="165" border="1"><tr><td><br />源端</td><td>经 评审 后 的 获奖 作品 则 集纳, 于 香港 回归 5 周年 纪念日 出版 发行 。</td></tr><tr><td><br />目标端</td><td>it is learned that the radio station had also duped other celebrities in the past such as celine dion on April fools’ day.</td></tr><tr><td><br />预测概率</td><td>Bi-RNN:0.998 649 018 265<br />Bi-RNN+GRN:0.014 190 965</td></tr><tr><td><br />源端</td><td>经 评审 后 的 获奖 作品 则 集纳, 于 香港 回归 5 周年 纪念日 出版 发行 。</td></tr><tr><td><br />目标端</td><td>the winning entries after the review will be compiled to be published on the 5th anniversary of Hong Kong’s return to China.</td></tr><tr><td><br />预测概率</td><td>Bi-RNN:0.977 286 165 39<br />Bi-RNN+GRN:0.995 186 75</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="167" name="167">3.2.5 句长分析</h4>
+                <div class="p1">
+                    <p id="168">表6显示了在不同长度的句对上, Bi-RNN和Bi-RNN+GRN模型的对齐结果。可以看出, Bi-RNN+GRN模型在所有不同长度的句子上的对齐性能都明显优于Bi-RNN模型。另外, 对于长度超过50的句对, Bi-RNN+GRN模型的性能明显下降, 其原因主要是Bi-RNN+GRN模型对测试句子的最大长度有限制, 如本文实验最大长度设置为50。因此, 对于长度超过50的句子, 本文通过去除句子中的停用词使得句子长度缩减至50以内, 这不可避免地造成了对原句信息的部分丢失。</p>
+                </div>
+                <div class="area_img" id="169">
+                    <p class="img_tit"><b>表6 2种模型的句子对齐性能<i>F</i>1值</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note">%</p>
+                    <table id="169" border="1"><tr><td rowspan="2"><br />模型</td><td colspan="6"><br />句子长度</td></tr><tr><td><br /> (0, 10]</td><td> (10, 20]</td><td> (20, 30]</td><td> (30, 40]</td><td> (40, 50]</td><td> (50, 100]</td></tr><tr><td><br />Bi-RNN<br />模型</td><td>50.1</td><td>56.0</td><td>60.7</td><td>56.6</td><td>61.1</td><td>59.3</td></tr><tr><td><br />Bi-RNN+<br />GRN模型</td><td>91.1</td><td>94.0</td><td>98.4</td><td>98.6</td><td>96.9</td><td>74.7</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h3 id="170" name="170" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="171">本文通过对源语言和目标语言的词对建模方法进行句子对齐。该模型采用Bi-RNN编码整个句子, 使句子中每个单词的向量表示都包含其上下文信息, 同时利用GRN捕获词与词之间的线性和非线性语义交互信息。实验结果表明, 词对间的相互关系能够为判断句对是否对齐提供重要的依据, 而GRN能够较准确地捕获词对间语义信息。与现有的工具受限于单调文本不同, 本文模型与文本的单调性无关。下一步将改进Bi-RNN+GRN模型, 使模型不受限于测试句子长度, 同时将其应用于其他任务, 例如优化机器翻译训练语料。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="5">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Fast and Robust Neural Network Joint Models for Statistical Machine Translation">
+
+                                <b>[1]</b> DEVLIN J, ZBIB R, HUANG Zhongqiang, et al.Fast and robust neural network joint models for statistical machine translation[C]//Proceedings of the 52nd Annual Meeting of the Association for Computational Linguistics.Baltimore, USA:[s.n.], 2014:1370-1380.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Improving statistical machine translation for a speech-to-speech translation task">
+
+                                <b>[2]</b> VOGEL S, TRIBBLE A.Improving statistical machine translation for a speech-to-speech translation task[C]//Proceedings of the 7th International Conference on Spoken Language Processing.Denver, USA:[s.n.], 2002:1901-1904.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJBK&amp;filename=SJBK15090500000180&amp;v=MTE3MTZEWFE1b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTG5JSVY0VGJocz1OaWZKWmJLOUh0ak1xbzlGWk9zUA==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> KRAAIJ W, NIE Jianyun, SIMARD M.Embedding web-based statistical translation models in cross-language information retrieval[J].Computational Linguistics, 2003, 29 (3) :381-419.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Cross-Language Information Retrieval Based on Parallel Texts and Automatic:Mining Parallel Texts from the Web">
+
+                                <b>[4]</b> NIE Jianyun, SIMARD M, ISABELLE P, et al.Cross-language information retrieval based on parallel texts and automatic mining of parallel texts from the web[C]//Proceedings of the 22nd Annual International ACM SIGIR Conference on Research and Development in Information Retrieval.New York, USA:ACM Press, 1999:74-81.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The BICORD system:combining lexical information from bilingual corpora and machine readable dictionaries">
+
+                                <b>[5]</b> KLAVANS J, TZOUKCRMANN E.The BICORD system:combining lexical information from bilingual corpora and machine readable dictionaries[J].Computational Linguistics, 1990, 62 (4) :174-179.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SJSJ200918066&amp;v=MjA5ODVMT2VaZVJvRnlubFZMdkJOaWZZWkxHNEh0ak5wNDlEWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 张霞, 昝红英, 张恩展.汉英句子对齐长度计算方法的研究[J].计算机工程与设计, 2009, 30 (18) :4356-4358.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A program for aligning sentences in bilingual corpora">
+
+                                <b>[7]</b> GALE W A, CHURCHK W.A program for aligning sentences in bilingual corpora[J].Computational Linguistics, 1993, 19 (1) :75-102.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Aligning sentences in parallel corpora">
+
+                                <b>[8]</b> BROWN P F, LAI J C, MERCERR L.Aligning sentences in parallel corpora[C]//Proceedings of the 29th Annual Meeting of the Association for Computational Linguistics.New York, USA:ACM Press, 1991:169-176.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Text-translation alignment">
+
+                                <b>[9]</b> KAY M, ROSCHEISEN M.Text-translation alignment[J].Computational Linguistics, 1993, 19 (1) :121-142.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX1998S1027&amp;v=MjA2ODZPZVplUm9GeW5sVkx2Qkx6N0Jkckt4RjltdnJvOUhZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkw=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 刘昕, 周明, 朱胜火, 等.基于自动抽取词汇信息的双语句子对齐[J].计算机学报, 1998, 21 (增刊) :151-158.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HEBX200605006&amp;v=MDU2NjlqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5bmxWTHZCTFNqSmRyRzRIdGZNcW85RllvUUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 李维刚, 刘挺, 张宇, 等.基于长度和位置信息的双语句子对齐方法[J].哈尔滨工业大学学报, 2006, 38 (5) :689-692.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Fast and accurate sentence alignment of bilingual corpora">
+
+                                <b>[12]</b> MOORE R C.Fast and accurate sentence alignment of bilingual corpora[C]//Proceedings of the Association for Machine Translation in the Americas on Machine Translation.Berlin, Germany:Springer, 2002:135-144.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A deep neural network approach to parallel sentence extraction">
+
+                                <b>[13]</b> GREGOIRE F, LANGLAIS P.A deep neural network approach to parallel sentence extraction[EB/OL].[2018-03-28].https://arxiv.org/abs/1709.09783.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The mathematics of statistical machine translation: parameter estimation">
+
+                                <b>[14]</b> BROWN P F, PIETRA S A D, PIETRA V J D, et al.The mathematics of statistical machine translation:parameter estimation[J].Computational Linguistics, 1993, 19 (2) :263-311.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Improved unsupervised sentence alignment for symmetrical and asymmetrical parallel corpora">
+
+                                <b>[15]</b> BRAUNE F, FRASER A.Improved unsupervised sentence alignment for symmetrical and asymmetrical parallel corpora[C]//Proceedings of the 23rd Inter-national Conference on Computational Linguistics.New York, USA:ACM Press, 2010:81-89.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Champollion:A Robust Parallel Text Sentence Aligner">
+
+                                <b>[16]</b> MA Xiaoyi.Champollion:a robust parallel text sentence aligner[C]//Proceedings of International Conference on Language Resources and Evaluation.Genoa, Italy:[s.n.], 2006:489-492.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Fast-champollion:a fast and robust sentence alignment algorithm">
+
+                                <b>[17]</b> LI Peng, SUN Maosong, XUE Ping.Fast-champollion:a fast and robust sentence alignment algorithm[C]//Proceedings of International Conference on Computa-tional Linguistics.New York, USA:ACM Press, 2010:710-718.
+                            </a>
+                        </p>
+                        <p id="39">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Non-Monotonic Sentence Alignment via Semisupervised Learning">
+
+                                <b>[18]</b> QUAN Xiaojun, KIT C, SONG Yan.Non-monotonic sentence alignment via semisupervised learning[C]//Proceedings of the 51st Annual Meeting of the Association for Computational Linguistics.New York, USA:ACM Press, 2013:622-630.
+                            </a>
+                        </p>
+                        <p id="41">
+                            <a id="bibliography_19" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJDG&amp;filename=SJDG13052200049008&amp;v=MTMzMjVocz1OaWZQYWJLN0h0VE9yWTlGWk84R0RId3hvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMbklJVjRUYg==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[19]</b> MÚJDRICZA-MAYDT E, KRKEL-QU H, RIEZLER S, et al.High-precision sentence alignment by bootstrapping from wood standard annotations[J].Prague Bulletin of Mathematical Linguistics, 2013, 99 (1) :5-16.
+                            </a>
+                        </p>
+                        <p id="43">
+                            <a id="bibliography_20" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Bilingual word embeddings with bucketed CNN for parallel sentence extraction">
+
+                                <b>[20]</b> GROVER J, MITRA P.Bilingual word embeddings with bucketed CNN for parallel sentence extraction[C]//Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics-Student Research Workshop.Vancouver, Canada:[s.n.], 2017:11-16.
+                            </a>
+                        </p>
+                        <p id="45">
+                            <a id="bibliography_21" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Modelling relational data using Bayesian clustered tensor factorization">
+
+                                <b>[21]</b> SUTSKEVER I, SALAKHUTDINOV R, TENENBAUMJ B.Modelling relational data using bayesian clustered tensor factorization[C]//Proceedings of Advances in Neural Information Processing Systems.[S.l.]:Neural Information Processing Systems Foundation, Inc., 2009:1821-1828.
+                            </a>
+                        </p>
+                        <p id="47">
+                            <a id="bibliography_22" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A latent factor model for highly multirelational data">
+
+                                <b>[22]</b> JENATTON R, LE ROUX N, BORDES A, et al.A latent factor model for highly multi-relational data[C]//Proceedings of International Conference on Neural Information Processing Systems.[S.l.]:Neural Information Processing Systems Foundation, Inc., 2012:3167-3175.
+                            </a>
+                        </p>
+                        <p id="49">
+                            <a id="bibliography_23" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A unified architecture for natural language processing:Deep neural networks with multitask learning">
+
+                                <b>[23]</b> COLLOBERT R, WESTON J.A unified architecture for natural language processing:deep neural networks with multitask learning[C]//Proceedings of the 25th International Conference on Machine Learning.New York, USA:ACM Press, 2008:160-167.
+                            </a>
+                        </p>
+                        <p id="51">
+                            <a id="bibliography_24" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Implicit Discourse Relation Detection via a Deep Architecture with Gated Relevance Network">
+
+                                <b>[24]</b> CHEN Jifan, ZHANG Qi, LIU Pengfei, et al.Implicit discourse relation detection via a deep architecture with gated relevance network[C]//Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics.New York, USA:ACM Press, 2016:1726-1735.
+                            </a>
+                        </p>
+                        <p id="53">
+                            <a id="bibliography_25" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Bilingual word embeddings for phrase-based machine translation">
+
+                                <b>[25]</b> SOCHER R, CER D.Bilingual word embeddings for phrase based machine translation[C]//Proceedings of 2013 Conference on Empirical Methods in Natural Language Processing.Seattle, USA:[s.n.], 2013:1393-1398.
+                            </a>
+                        </p>
+                        <p id="55">
+                            <a id="bibliography_26" target="_blank" href="http://scholar.cnki.net/result.aspx?q=ADADELTA:an adaptive learning rate method">
+
+                                <b>[26]</b> ZEILER M D.ADADELTA:an adaptive learning rate method[EB/OL].[2018-03-28].https://arxiv.org/abs/1212.5701.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201906034" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201906034&amp;v=MDc5NTMzenFxQnRHRnJDVVJMT2VaZVJvRnlubFZMdkJMejdCYmJHNEg5ak1xWTlHWUlRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

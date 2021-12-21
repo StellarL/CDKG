@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637129918662957500%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201907019%26RESULT%3d1%26SIGN%3d%252bly0T2OsJPwDQMAngRfZKSGI0gw%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201907019&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201907019&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201907019&amp;v=MzAwODlqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDamxWYnJQTHo3QmJiRzRIOWpNcUk5RWJZUUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#35" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="1 分层译码算法 ">1 分层译码算法</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#61" data-title="2 高吞吐量译码架构设计 ">2 高吞吐量译码架构设计</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#74" data-title="3 译码器设计与实现 ">3 译码器设计与实现</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#76" data-title="3.1 译码器总体架构">3.1 译码器总体架构</a></li>
+                                                <li><a href="#79" data-title="3.2 接收信道信息模块">3.2 接收信道信息模块</a></li>
+                                                <li><a href="#82" data-title="3.3 信息存储模块">3.3 信息存储模块</a></li>
+                                                <li><a href="#84" data-title="3.4 校验信息处理单元模块">3.4 校验信息处理单元模块</a></li>
+                                                <li><a href="#87" data-title="3.5 硬判决单元">3.5 硬判决单元</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#89" data-title="4 译码器性能 ">4 译码器性能</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#93" data-title="5 结束语 ">5 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#66" data-title="&lt;b&gt;图1&lt;/b&gt; (&lt;b&gt;2 304, 1 152) QC-LDPC码校验矩阵&lt;i&gt;H&lt;/i&gt;&lt;/b&gt;"><b>图1</b> (<b>2 304, 1 152) QC-LDPC码校验矩阵<i>H</i></b></a></li>
+                                                <li><a href="#68" data-title="&lt;b&gt;图2 修正偏移量后的QC-LDPC码校验矩阵&lt;i&gt;H&lt;/i&gt;&lt;/b&gt;"><b>图2 修正偏移量后的QC-LDPC码校验矩阵<i>H</i></b></a></li>
+                                                <li><a href="#70" data-title="&lt;b&gt;图3 不同分层之间消息传递路径示意图&lt;/b&gt;"><b>图3 不同分层之间消息传递路径示意图</b></a></li>
+                                                <li><a href="#72" data-title="&lt;b&gt;图4 改进后的消息传递路径示意图&lt;/b&gt;"><b>图4 改进后的消息传递路径示意图</b></a></li>
+                                                <li><a href="#78" data-title="&lt;b&gt;图5 高吞吐量的QC-LDPC码译码器框架&lt;/b&gt;"><b>图5 高吞吐量的QC-LDPC码译码器框架</b></a></li>
+                                                <li><a href="#81" data-title="&lt;b&gt;图6 接收信道信息模块初始化过程&lt;/b&gt;"><b>图6 接收信道信息模块初始化过程</b></a></li>
+                                                <li><a href="#86" data-title="&lt;b&gt;图7 CNU模块3级流水线结构框图&lt;/b&gt;"><b>图7 CNU模块3级流水线结构框图</b></a></li>
+                                                <li><a href="#91" data-title="&lt;b&gt;表1 译码器性能比较&lt;/b&gt;"><b>表1 译码器性能比较</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="106">
+
+
+                                    <a id="bibliography_1" title=" GALLAGER R G.Low-density parity-check codes[J].IRE Transactions on Information Theory, 1962, 8 (1) :21-28." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Low-Density Parity-Check Codes">
+                                        <b>[1]</b>
+                                         GALLAGER R G.Low-density parity-check codes[J].IRE Transactions on Information Theory, 1962, 8 (1) :21-28.
+                                    </a>
+                                </li>
+                                <li id="108">
+
+
+                                    <a id="bibliography_2" title=" 郭琨, 黑勇, 周玉梅, 等.一种应用于不可分层LDPC码的并行分层译码算法[J].电子与信息学报, 2010, 32 (8) :1965-1960." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZYX201008035&amp;v=MDQ3NjFIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRkNqbFZiclBJVGZTZHJHNEg5SE1wNDlHWVlRS0Q=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         郭琨, 黑勇, 周玉梅, 等.一种应用于不可分层LDPC码的并行分层译码算法[J].电子与信息学报, 2010, 32 (8) :1965-1960.
+                                    </a>
+                                </li>
+                                <li id="110">
+
+
+                                    <a id="bibliography_3" title=" KOU Y, LIN S, FOSSORIER M P C.Low-density parity-check codes based on finite geometries:a rediscovery and new results[J].IEEE Transactions on Information Theory, 2001, 47 (7) :2711-2736." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Low-density parity-check codes based on finite geometries: A rediscovery and new results">
+                                        <b>[3]</b>
+                                         KOU Y, LIN S, FOSSORIER M P C.Low-density parity-check codes based on finite geometries:a rediscovery and new results[J].IEEE Transactions on Information Theory, 2001, 47 (7) :2711-2736.
+                                    </a>
+                                </li>
+                                <li id="112">
+
+
+                                    <a id="bibliography_4" title=" MANSOUR M M.A turbo-decoding message-passing algorithm for sparse parity-check matrix codes[J].IEEE Transactions on Signal Processing, 2006, 54 (11) :4376-4392." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A turbo-decoding message-passing algorithm for sparse parity-check matrix codes">
+                                        <b>[4]</b>
+                                         MANSOUR M M.A turbo-decoding message-passing algorithm for sparse parity-check matrix codes[J].IEEE Transactions on Signal Processing, 2006, 54 (11) :4376-4392.
+                                    </a>
+                                </li>
+                                <li id="114">
+
+
+                                    <a id="bibliography_5" title=" DARABIHA A, CARNSONE A C, KSCHISCHANG F R.Block-interlaced LDPC decoders with reduced interconnect complexity[J].IEEE Transactions on Circuits and Systems II:Express Briefs, 2008, 55 (1) :74-78." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Block-interlaced LDPC decoders with reduced interconnect complexity">
+                                        <b>[5]</b>
+                                         DARABIHA A, CARNSONE A C, KSCHISCHANG F R.Block-interlaced LDPC decoders with reduced interconnect complexity[J].IEEE Transactions on Circuits and Systems II:Express Briefs, 2008, 55 (1) :74-78.
+                                    </a>
+                                </li>
+                                <li id="116">
+
+
+                                    <a id="bibliography_6" title=" WANG Fei, ZHANG Peng, LIU Changyin.FPGA imple-mentation of a novel multi-rate QC-LDPC encoder for DTMB standard[J].Applied Mechanics and Materials, 2013, 397-400:2024-2027." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJTT&amp;filename=SJTT13121200045775&amp;v=MDE4MjF5am1VTGpMSUY0U2J4VT1OaWZmZXJLN0g5UE5yWTlGWk84S0MzczhvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SA==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         WANG Fei, ZHANG Peng, LIU Changyin.FPGA imple-mentation of a novel multi-rate QC-LDPC encoder for DTMB standard[J].Applied Mechanics and Materials, 2013, 397-400:2024-2027.
+                                    </a>
+                                </li>
+                                <li id="118">
+
+
+                                    <a id="bibliography_7" title=" FENG Wei, WANG Yanmin, LIN Dengsheng, et al.When mmWave communications meet network densification:a scalable interference coordination perspective[J].IEEE Journal on Selected Areas in Communications, 2017, 35 (7) :1459-1471." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=&amp;quot;When mm Wave communications meet network densification:a scalable interference coordination perspective&amp;quot;">
+                                        <b>[7]</b>
+                                         FENG Wei, WANG Yanmin, LIN Dengsheng, et al.When mmWave communications meet network densification:a scalable interference coordination perspective[J].IEEE Journal on Selected Areas in Communications, 2017, 35 (7) :1459-1471.
+                                    </a>
+                                </li>
+                                <li id="120">
+
+
+                                    <a id="bibliography_8" title=" QIU Lipeng, CHEN Xiaopeng, ZHOU Lin, et al.FPGA implementation of reed-solomon codes based on visible light wireless communication system[C]//Proceedings of International Symposium on Advances in Electrical, Electronics and Computer Engineering.Paris, France:Atlantis Press, 2016:234-237." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=FPGA implementation of reed-solomon codes based on visible light wireless communication system">
+                                        <b>[8]</b>
+                                         QIU Lipeng, CHEN Xiaopeng, ZHOU Lin, et al.FPGA implementation of reed-solomon codes based on visible light wireless communication system[C]//Proceedings of International Symposium on Advances in Electrical, Electronics and Computer Engineering.Paris, France:Atlantis Press, 2016:234-237.
+                                    </a>
+                                </li>
+                                <li id="122">
+
+
+                                    <a id="bibliography_9" title=" SUN Yang, CAVALLARO J R.VISL architecture for layered decoding of QC-LDPC codes with high circulant weight[J].IEEE Transactions on Very Large Scale Integration Systems, 2013, 21 (10) :1960-1964." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=VLSI Architecture for Layered Decoding of QC-LDPC Codes With High Circulant Weight">
+                                        <b>[9]</b>
+                                         SUN Yang, CAVALLARO J R.VISL architecture for layered decoding of QC-LDPC codes with high circulant weight[J].IEEE Transactions on Very Large Scale Integration Systems, 2013, 21 (10) :1960-1964.
+                                    </a>
+                                </li>
+                                <li id="124">
+
+
+                                    <a id="bibliography_10" title=" HAILES P, XU Lei, MAUNDER R G, et al.A survey of FPGA-based LDPC decoders[J].IEEE Communications Survey and Tutorials, 2016, 18 (2) :1098-1122." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A survey of FPGA-based LDPC decoders">
+                                        <b>[10]</b>
+                                         HAILES P, XU Lei, MAUNDER R G, et al.A survey of FPGA-based LDPC decoders[J].IEEE Communications Survey and Tutorials, 2016, 18 (2) :1098-1122.
+                                    </a>
+                                </li>
+                                <li id="126">
+
+
+                                    <a id="bibliography_11" title=" 云飞龙, 杜锋, 朱宏鹏, 等.一种高吞吐量QC-LDPC码译码器的FPGA实现[C]//第七届中国卫星导航学术年会论文集.北京:[出版者不详], 2016:16-20." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=IPFD&amp;filename=WXDH201605002013&amp;v=MTkxMTJmYnZuS3JpZlp1OXVGQ3ZpVUwvSUpsc1RNalhQWnJHNEg5Zk1xbzlGWnVzT0R4TTh6eFVTbURkOVNIN24zeEU5&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         云飞龙, 杜锋, 朱宏鹏, 等.一种高吞吐量QC-LDPC码译码器的FPGA实现[C]//第七届中国卫星导航学术年会论文集.北京:[出版者不详], 2016:16-20.
+                                    </a>
+                                </li>
+                                <li id="128">
+
+
+                                    <a id="bibliography_12" title=" 云飞龙, 朱宏鹏, 吕晶, 等.一种基于奇偶并行译码架构的高吞吐量译码器设计[J].通信技术, 2016, 49 (3) :264-269." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=TXJS201603003&amp;v=MjA1MzNJOUZaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ2psVmJyUE1UWEJmYkc0SDlmTXI=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         云飞龙, 朱宏鹏, 吕晶, 等.一种基于奇偶并行译码架构的高吞吐量译码器设计[J].通信技术, 2016, 49 (3) :264-269.
+                                    </a>
+                                </li>
+                                <li id="130">
+
+
+                                    <a id="bibliography_13" title=" CHUNG S Y, RICHARDSON T J.Analysis of sum product decoding of low-density parity-check codes using a Gaussian approximation[J].IEEE Transactions on Information Theory, 2001, 47 (2) :657-670." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Analysis of sum-product decoding of low-density parity-check codes using a Gaussian approximation">
+                                        <b>[13]</b>
+                                         CHUNG S Y, RICHARDSON T J.Analysis of sum product decoding of low-density parity-check codes using a Gaussian approximation[J].IEEE Transactions on Information Theory, 2001, 47 (2) :657-670.
+                                    </a>
+                                </li>
+                                <li id="132">
+
+
+                                    <a id="bibliography_14" title=" HARIRI A A A, MONTEIRO F, SI&#201;LER L, et al.Configurable and high-throughput architectures for quasicyclic low-density parity-check codes[C]//Proceedings of International Conference on Electronics, Circuits and Systems.Washington D.C., USA:IEEE Press, 2014:790-793." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Configurable and high-throughput architectures for quasicyclic low-density parity-check codes">
+                                        <b>[14]</b>
+                                         HARIRI A A A, MONTEIRO F, SI&#201;LER L, et al.Configurable and high-throughput architectures for quasicyclic low-density parity-check codes[C]//Proceedings of International Conference on Electronics, Circuits and Systems.Washington D.C., USA:IEEE Press, 2014:790-793.
+                                    </a>
+                                </li>
+                                <li id="134">
+
+
+                                    <a id="bibliography_15" title=" MAHDI A, PALIOURAS V.A low complexity-high throughput QC-LDPC encoder[J].IEEE Transactions on Signal Processing, 2014, 62 (10) :2696-2708." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A low complexity-high throughput QC-LDPC encoder">
+                                        <b>[15]</b>
+                                         MAHDI A, PALIOURAS V.A low complexity-high throughput QC-LDPC encoder[J].IEEE Transactions on Signal Processing, 2014, 62 (10) :2696-2708.
+                                    </a>
+                                </li>
+                                <li id="136">
+
+
+                                    <a id="bibliography_16" title=" DING Hong, YANG Shuai, LUO Wu, et al.Design and implementation for high speed LDPC decoder with layered decoding[C]//Proceedings of International Conference on Communications and Mobile Computing.Washington D.C., USA:IEEE Computer Society, 2009:156-160." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Design and implementation for high speed LDPC decoder with layered decoding">
+                                        <b>[16]</b>
+                                         DING Hong, YANG Shuai, LUO Wu, et al.Design and implementation for high speed LDPC decoder with layered decoding[C]//Proceedings of International Conference on Communications and Mobile Computing.Washington D.C., USA:IEEE Computer Society, 2009:156-160.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(07),121-125+133 DOI:10.19678/j.issn.1000-3428.0050741            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>高吞吐量QC-LDPC码分层译码设计</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BE%90%E6%96%8C&amp;code=37593438&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">徐斌</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%B4%BA%E7%8E%89%E6%88%90&amp;code=31336068&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">贺玉成</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8D%8E%E4%BE%A8%E5%A4%A7%E5%AD%A6%E5%8E%A6%E9%97%A8%E5%B8%82%E7%A7%BB%E5%8A%A8%E5%A4%9A%E5%AA%92%E4%BD%93%E9%80%9A%E4%BF%A1%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=0124305&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">华侨大学厦门市移动多媒体通信重点实验室</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对低密度奇偶校验译码器吞吐量较低、存储资源消耗较多的问题, 提出一种QC-LDPC码分层译码算法。利用接收信道模块初始化似然比信息, 并结合存储校验信息和后验信息给出基于分层最小和的节点自更新译码算法, 根据后验信息符号位对译码器进行判决。仿真结果表明, 改进译码器资源消耗相对于传统译码器减少20%, 当迭代次数为10时, 吞吐量可达516.8 Mb/s。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%BD%8E%E5%AD%98%E5%82%A8%E9%87%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">低存储量;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%B9%B6%E8%A1%8C%E5%88%86%E5%B1%82&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">并行分层;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%AB%98%E5%90%9E%E5%90%90%E9%87%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">高吞吐量;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%A0%A1%E9%AA%8C%E8%8A%82%E7%82%B9%E8%87%AA%E6%9B%B4%E6%96%B0%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">校验节点自更新算法;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%91%E7%A0%81%E5%99%A8&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">译码器;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    徐斌 (1993—) , 男, 硕士研究生, 主研方向为信道编码;;
+                                </span>
+                                <span>
+                                    贺玉成, 教授、博士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-03-12</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>福建省自然科学基金 (2014J05076, 2014J01243, 2015J01262);</span>
+                    </p>
+            </div>
+                    <h1><b>High Throughput Layered Decoding Design of QC-LDPC Codes</b></h1>
+                    <h2>
+                    <span>XU Bin</span>
+                    <span>HE Yucheng</span>
+            </h2>
+                    <h2>
+                    <span>Xiamen Key Laboratory of Mobile Multimedia Communications, Huaqiao University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>To address the low throughput and high storage resource consumption of the low density parity-check decoder, this paper proposes a layered decoding algorithm of QC-LDPC codes.The algorithm uses the receiving channel module to initialize the likelihood ratio information.Then the storage check information and posteriori information are combined to generate a node self-updating decoding algorithm based on the layered minimum sum.The decoder is judged based on the sign bit of posterior information.Simulation results show that the storage resources of the improved decoder are saved by 20% compared with the traditional decoder.When the number of iterations is 10, the throughput can reach 516.8 Mb/s.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=low%20storage&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">low storage;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=parallel%20layered&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">parallel layered;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=high%20throughput&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">high throughput;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=check%20nodes%20automatic%20update%20algorithm&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">check nodes automatic update algorithm;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=decoder&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">decoder;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-03-12</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="35" name="35" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="36">低密度奇偶校验码 (Low Density Parity-check Codes, LDPC) 是线性分组码, 其译码简单、性能接近容量限<citation id="138" type="reference"><link href="106" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。文献<citation id="139" type="reference">[<a class="sup">2</a>,<a class="sup">3</a>,<a class="sup">4</a>]</citation>通过分层译码算法构造LDPC译码器, 使其无需存储变量节点信息, 降低了存储资源耗费, 且译码收敛速度比最小和 (Min-Sum, MS) 算法快。文献<citation id="140" type="reference">[<a class="sup">5</a>,<a class="sup">6</a>]</citation>提出一种双修正型最小和积译码算法, 该算法译码复杂度较低, 但吞吐量有一定的损失。文献<citation id="141" type="reference">[<a class="sup">7</a>,<a class="sup">8</a>]</citation>提出的交替译码框架, 能在同一时刻同时更新一帧校验消息和一帧变量消息, 两帧交替更新, 提高了吞吐量, 但需消耗较多的存储资源。本文在分层MS译码算法的基础上, 提出校验节点自更新译码算法, 并采用一种新的QC-LDPC码分层译码器结构, 以降低存储资源消耗和提高吞吐量。</p>
+                </div>
+                <h3 id="37" name="37" class="anchor-tag">1 分层译码算法</h3>
+                <div class="p1">
+                    <p id="38">QC-LDPC码具有准循环特性, 其校验矩阵可表示为分块矩阵<citation id="142" type="reference"><link href="122" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="39" class="code-formula">
+                        <mathml id="39"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">Η</mi><mo>=</mo><mrow><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mi mathvariant="bold-italic">Q</mi><mo stretchy="false"> (</mo><mi>p</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>1</mn></mrow></msub><mo stretchy="false">) </mo></mtd><mtd><mi mathvariant="bold-italic">Q</mi><mo stretchy="false"> (</mo><mi>p</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub><mo stretchy="false">) </mo></mtd><mtd><mo>⋯</mo></mtd><mtd><mi mathvariant="bold-italic">Q</mi><mo stretchy="false"> (</mo><mi>p</mi><msub><mrow></mrow><mrow><mn>1</mn><mi>t</mi></mrow></msub><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi mathvariant="bold-italic">Q</mi><mo stretchy="false"> (</mo><mi>p</mi><msub><mrow></mrow><mrow><mn>2</mn><mn>1</mn></mrow></msub><mo stretchy="false">) </mo></mtd><mtd><mi mathvariant="bold-italic">Q</mi><mo stretchy="false"> (</mo><mi>p</mi><msub><mrow></mrow><mrow><mn>2</mn><mn>2</mn></mrow></msub><mo stretchy="false">) </mo></mtd><mtd><mo>⋯</mo></mtd><mtd><mi mathvariant="bold-italic">Q</mi><mo stretchy="false"> (</mo><mi>p</mi><msub><mrow></mrow><mrow><mn>2</mn><mi>t</mi></mrow></msub><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><mi mathvariant="bold-italic">Q</mi><mo stretchy="false"> (</mo><mi>p</mi><msub><mrow></mrow><mrow><mi>s</mi><mn>1</mn></mrow></msub><mo stretchy="false">) </mo></mtd><mtd><mi mathvariant="bold-italic">Q</mi><mo stretchy="false"> (</mo><mi>p</mi><msub><mrow></mrow><mrow><mi>s</mi><mn>2</mn></mrow></msub><mo stretchy="false">) </mo></mtd><mtd><mo>⋯</mo></mtd><mtd><mi mathvariant="bold-italic">Q</mi><mo stretchy="false"> (</mo><mi>p</mi><msub><mrow></mrow><mrow><mi>s</mi><mi>t</mi></mrow></msub><mo stretchy="false">) </mo></mtd></mtr></mtable></mrow><mo>]</mo></mrow></mrow><msub><mrow></mrow><mrow><mi>s</mi><mi>B</mi><mo>×</mo><mi>t</mi><mi>B</mi></mrow></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="40">其中, <i>B</i>表示分块矩阵<b><i>Q</i></b> (<i>p</i><sub><i>ij</i></sub>) 的阶数, 0≤<i>p</i><sub><i>ij</i></sub>≤<i>B</i>, <i>i</i>=1, 2, …, <i>s</i>, <i>j</i>=1, 2, …, <i>j</i>。当<i>p</i><sub><i>ij</i></sub>=0时, <b><i>Q</i></b> (<i>p</i><sub><i>ij</i></sub>) 表示一个<i>B</i>阶全零矩阵;当1≤<i>p</i><sub><i>ij</i></sub>≤<i>B</i>时, <b><i>Q</i></b> (<i>p</i><sub><i>ij</i></sub>) 表示<i>B</i>阶单位矩阵<b><i>I</i></b><sub><i>B</i></sub>循环右移<i>p</i><sub><i>i</i>, <i>j</i></sub>位后得到的矩阵, 特别地, <b><i>Q</i></b> (<i>B</i>) =<b><i>I</i></b><sub><i>B</i></sub>。因此, 每个子块列重最大为1。<b><i>H</i></b>是一个<i>sB</i>×<i>tB</i>矩阵, 列重最大为<i>s</i>, 码长为<i>n</i>=<i>tB</i>, 设计码率为<i>R</i>= (<i>t</i>-<i>s</i>) /<i>t</i>。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">根据每个子块的列重量分布, 可校验矩阵<b><i>H</i></b>按上述分块形式划分为<i>s</i>层, 每层对应<i>B</i>个校验节点<i>c</i><sub><i>i</i>, <i>h</i></sub> (<i>i</i>=1, 2, …, <i>s</i>, <i>h</i>=1, 2, …, <i>B</i>) 。令<b><i>x</i></b>= (<b><i>x</i></b><sub>1</sub>, <b><i>x</i></b><sub>2</sub>, …, <b><i>x</i></b><sub><i>t</i></sub>) 表示一个码字, <b><i>x</i></b><sub><i>j</i></sub>= (<i>x</i><sub><i>j</i>, 1</sub>, <i>x</i><sub><i>j</i>, 2</sub>, …, <i>x</i><sub><i>j</i>, <i>B</i></sub>) 表示由<i>B</i>个变量节点<i>x</i><sub><i>jl</i></sub> (<i>j</i>=1, 2, …, <i>t</i>, <i>l</i>=1, 2, …, <i>B</i>) 构成的子码。根据分层方式, 可推得各个节点的相邻校验节点集为:</p>
+                </div>
+                <div class="p1">
+                    <p id="42"><i>c</i><sub><i>i</i>, <i>h</i></sub>={<i>x</i><sub><i>j</i>, <i>l</i></sub>:<i>j</i>=1, 2, …, <i>t</i>;  <i>p</i><sub><i>ij</i></sub>&gt;0;<i>l</i>= (<i>p</i><sub><i>ij</i></sub>+<i>h</i>-1) mod <i>B</i>+1}      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="44">第<i>i</i>层对应<i>B</i>个校验方程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="45"><b><i>Q</i></b> (<i>p</i><sub><i>i</i>1</sub>) <b><i>x</i></b><sup>T</sup><sub>1</sub>+<b><i>Q</i></b> (<i>p</i><sub><i>i</i>2</sub>) <b><i>x</i></b><sup>T</sup><sub>2</sub>+…+<i>Q</i> (<i>p</i><sub><i>it</i></sub>) <b><i>x</i></b><sup>T</sup><sub><i>t</i></sub>=<b>0</b><sub><i>B</i>×1</sub>      (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="46">其中, 码字<b><i>x</i></b>的每个变量节点每层只出现在一个校验方程中。</p>
+                </div>
+                <div class="p1">
+                    <p id="47">分层最小和算法<citation id="143" type="reference"><link href="124" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>描述如下:基于第一层子方程组, 更新校验消息, 然后把校验消息代入到变量节点中更新变量消息。当完成第一层的变量消息更新后, 代入下一个分层校验消息和更新变量消息。每一层消息更新过程使用上一层发送的变量信息和初始校验信息。当所有分层都完成消息更新后, 一轮迭代译码更新完成。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">分层最小和算法的特点是利用后验信息和校验信息来表示变量信息, 使变量信息无需储存, 降低了资源的消耗。但是分层最小和算法仍需要存储大量的校验信息以及后验信息, 且后验信息值的范围随着迭代次数的增加会慢慢变大, 需要花费更多比特去储存才能得到合理的性能。为减少存储资源的消耗, 提出校验节点自更新方法, 该方法基于分层最小和算法, 将后验信息融合到校验信息中, 避免了后验信息的储存, 从而减少译码器资源的开销。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">在第<i>k</i>≥1次迭代中, 令<i>q</i><mathml id="50"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow><mi>k</mi></msubsup></mrow></math></mathml>表示第i层的变量节点<b><i>x</i></b><sub><i>j</i></sub>接收的更新校验信息, <i>γ</i><mathml id="51"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow><mi>k</mi></msubsup></mrow></math></mathml>是变量节点<b><i>x</i></b><sub><i>j</i></sub>从第<i>i</i>层发往第<i>i</i>+1层的更新变量信息, <i>γ</i><sup><i>k</i></sup>是第<i>k</i>次迭代更新的后验概率信息, <i>i</i>指层序号, <i>n</i><sub><i>i</i></sub>指与第<i>i</i>层校验节点相连的变量节点, <i>n</i><sub><i>i</i>′</sub>∈<i>N</i> (<i>i</i>) ＼<i>n</i><sub><i>i</i></sub>是指除<i>n</i><sub><i>i</i></sub>外, 与第<i>i</i>层校验节点相邻的变量节点的集合, <i>λ</i><sub><i>i</i></sub>指信道信息初始值, <i>α</i>表示校正因子, 一般取<i>α</i>=0.75, 便于硬件实现。校验节点自更新译码算法的具体步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="52"><b>步骤1</b> LDPC码初始化。初始化结果为:</p>
+                </div>
+                <div class="p1">
+                    <p id="53"><i>γ</i><sup>0</sup>=<i>λ</i><sub><i>i</i></sub>      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="54"><i>r</i><mathml id="55"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>i</mi><mn>0</mn></msubsup></mrow></math></mathml>=0      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="56"><b>步骤2</b> LDPC码迭代过程 (第<i>k</i>次迭代, 第<i>i</i>层更新) 包括分层更新和译码判决, 具体分析如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="57">1) 分层更新计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="58" class="code-formula">
+                        <mathml id="58"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>q</mi><msubsup><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow><mi>k</mi></msubsup><mo>=</mo><mi>γ</mi><msup><mrow></mrow><mn>0</mn></msup><mo>+</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>c</mi><msub><mrow></mrow><msup><mi>i</mi><mo>′</mo></msup></msub><mo>∈</mo><mi>m</mi><mo stretchy="false"> (</mo><mi>v</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo>, </mo><msup><mi>i</mi><mo>′</mo></msup><mo>&gt;</mo><mi>i</mi></mrow></munder><mi>r</mi></mstyle><msubsup><mrow></mrow><mi>i</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msubsup><mo>+</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>c</mi><msub><mrow></mrow><msup><mi>i</mi><mo>′</mo></msup></msub><mo>∈</mo><mi>m</mi><mo stretchy="false"> (</mo><mi>v</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo>, </mo><msup><mi>i</mi><mo>′</mo></msup><mo>&lt;</mo><mi>i</mi></mrow></munder><mi>r</mi></mstyle><msubsup><mrow></mrow><mi>i</mi><mi>k</mi></msubsup><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>r</mi><msubsup><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow><mi>k</mi></msubsup><mo>=</mo><mi>α</mi><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><mi>v</mi><msub><mrow></mrow><mi>j</mi></msub><mo>∈</mo><mi>Ν</mi><mo stretchy="false"> (</mo><mi>c</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>\</mo><mi>v</mi><msub><mrow></mrow><mi>j</mi></msub></mrow></munder><mrow><mi>sgn</mi></mrow></mstyle><mo stretchy="false"> (</mo><mi>q</mi><msubsup><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow><mi>k</mi></msubsup><mo stretchy="false">) </mo><mo>×</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mrow><mi>v</mi><msub><mrow></mrow><mi>j</mi></msub><mo>∈</mo><mi>Ν</mi><mo stretchy="false"> (</mo><mi>c</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>\</mo><mi>v</mi><msub><mrow></mrow><mi>j</mi></msub></mrow></munder><mo stretchy="false"> (</mo><mrow><mo>|</mo><mrow><mi>q</mi><msubsup><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow><mi>k</mi></msubsup></mrow><mo>|</mo></mrow><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>7</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>γ</mi><msup><mrow></mrow><mi>k</mi></msup><mo>=</mo><mi>γ</mi><msup><mrow></mrow><mn>0</mn></msup><mo>+</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mtext>c</mtext><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>m</mi><mo stretchy="false"> (</mo><mi>v</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo></mrow></munder><mi>r</mi></mstyle><msubsup><mrow></mrow><mi>i</mi><mi>k</mi></msubsup><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>8</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="59">2) 译码判决。设译码码字<b><i>c</i></b>={<i>c</i><sub>1</sub>, <i>c</i><sub>2</sub>, …, <i>c</i><sub><i>t</i></sub>}, 若<i>γ</i><sup><i>k</i></sup>&lt;0, 则<i>c</i><sub><i>m</i></sub>=1;否则<i>c</i><sub><i>m</i></sub>=0。</p>
+                </div>
+                <div class="p1">
+                    <p id="60"><b>步骤3</b> 校验结果。若译码序列满足<b><i>c</i></b>×<b><i>H</i></b><sup>T</sup>=<b>0</b>或者译码次数已经达到最大迭代次数, 则停止译码;否则重新执行步骤2。</p>
+                </div>
+                <h3 id="61" name="61" class="anchor-tag">2 高吞吐量译码架构设计</h3>
+                <div class="p1">
+                    <p id="62">译码器的最大吞吐量表达式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="63" class="code-formula">
+                        <mathml id="63"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><mo>=</mo><mfrac><mrow><mi>f</mi><mo>×</mo><mi>Ν</mi><mo>×</mo><mi>R</mi></mrow><mrow><mi>C</mi><mo>×</mo><mi>Ι</mi><msub><mrow></mrow><mrow><mi>max</mi></mrow></msub></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>9</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="64">其中, <i>f</i>是工作频率, 单位是Hz, <i>N</i>是码长, 单位是bit, <i>R</i>是指码率, <i>C</i>是译码器每次迭代所花费的时钟周期数, 单位是s, <i>I</i><sub>max</sub>是最大迭代次数, <i>T</i>是吞吐量, 单位是bit·s<sup>-1</sup>·Hz<sup>-1</sup>。由于长码相对于短码性能更加优越, 因此在设计过程中, 一般采用长码。为提高吞吐量, 采用并行更新的方式更新数据, 但会增加输入输出的延迟, 导致译码过程不同步。在这段时间内, 译码模块处于等待状态无法更新, 使得吞吐量变低。 式 (9) 中分母实际应该为 (<i>C</i>×<i>I</i><sub>max</sub>+<i>D</i>) , 因为<i>D</i>为额外时钟延迟, 所以达不到最大吞吐量。本文提出一种新的译码器结构, 通过改进输入、译码、输出3个模块, 可最大化减少<i>D</i>值, 实现3个模块的连续工作, 使译码器可达到最高吞吐量。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">根据文献<citation id="144" type="reference">[<a class="sup">11</a>]</citation>, 针对1/2码率的 (2 304, 1 152) QC-LDPC码, 如图1所示, 2 304为码长, 1 152为信息位长度, 每个子矩阵大小为96×96, 每个数字代表单位矩阵偏移量, 空白的地方表示零矩阵。实现连续译码的过程是:在输入过程中, 1个时钟周期输入2位信息, 传输1帧信息需要1 152个时钟周期, 传输2帧信息需要2 304个周期。在输出过程中, 1帧信息总长度为1 152位, 1个时钟周期输出1位信息, 输出2帧信息则需要2 304个时钟周期。在译码过程中, 2帧信息并行更新, 每次迭代更新要96个时钟周期, 将<i>I</i><sub>max</sub>和每次迭代更新所消耗的时钟数相乘, 结果为消耗的时钟<i>m</i>。当<i>I</i><sub>max</sub>取校验矩阵行数的值时, 时钟<i>m</i>值就是信息位长度1 152, 即译码消耗了1 152个时钟周期。输入和输出采用的是双倍频率时钟周期, 其耗费2 304个双倍频率时钟周期, 译码采用单倍频率时钟周期, 其耗费1 152个单倍频率时钟周期, 2 304个双倍频率时钟周期在时间上等同于1 152个单倍频率时钟周期, 即输入、输出、译码这3个过程所花费一样的时钟周期数, 因此可实现连续译码。</p>
+                </div>
+                <div class="area_img" id="66">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907019_066.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 (2 304, 1 152) QC-LDPC码校验矩阵H" src="Detail/GetImg?filename=images/JSJC201907019_066.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1</b> (<b>2 304, 1 152) QC-LDPC码校验矩阵<i>H</i></b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907019_066.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="67">如果要完成上述译码框架, 那么矩阵某一列的偏移量相邻2个数值之差要比每一分层更新所消耗时钟周期数大, 否则无法完成一次完整的迭代。笔者采用修正偏移量的方法解决该问题。修正偏移量后的矩阵如图2所示。</p>
+                </div>
+                <div class="area_img" id="68">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907019_068.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 修正偏移量后的QC-LDPC码校验矩阵H" src="Detail/GetImg?filename=images/JSJC201907019_068.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 修正偏移量后的QC-LDPC码校验矩阵<i>H</i></b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907019_068.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="69">以修正偏移量后的检验矩阵<b><i>H</i></b>的第一列为例, 在译码过程中消息传递路径如图3所示, 可以看出, 每行消息更新完成后传给偏移量偏小的行, 而偏移量最小的一行传递给偏移量最大的一行, 即73→48→33→27→12→73。</p>
+                </div>
+                <div class="area_img" id="70">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907019_070.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 不同分层之间消息传递路径示意图" src="Detail/GetImg?filename=images/JSJC201907019_070.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 不同分层之间消息传递路径示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907019_070.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="71">为增加吞吐量, 根据文献<citation id="145" type="reference">[<a class="sup">12</a>]</citation>, 将原始框架拆分成3份, 拆分后的消息传递路径如图4所示, 在相同时刻译码器可更新3个变量信息, 减少译码所花费的时间, 增加吞吐量, 但该框架的译码器存在一个问题, 那就是原先的子矩阵对应一个RAM, 而一个子矩阵变成3个矩阵之后, 相当于只需花费1个RAM的存储资源变成了花费3个RAM的存储资源, 因此增加了RAM的资源消耗, 这种框架是以增加存储资源的消耗为代价来达到提高吞吐量的目的。</p>
+                </div>
+                <div class="area_img" id="72">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907019_072.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 改进后的消息传递路径示意图" src="Detail/GetImg?filename=images/JSJC201907019_072.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 改进后的消息传递路径示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907019_072.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="73">为减少RAM资源消耗, 且能够在相同时间更新3个变量信息, 需要把相同偏移量所对应的变量信息的值储存到相同RAM中, 为了满足这一条件, 必须保证校验矩阵中同一列的偏移量模3结果相同, 才能使得并行更新的3个数据位于RAM相同地址。</p>
+                </div>
+                <h3 id="74" name="74" class="anchor-tag">3 译码器设计与实现</h3>
+                <div class="p1">
+                    <p id="75">本文选择CCSDS标准的 (2 304, 1 152) LDPC码来设计部分并行分层译码器, 该译码器的主要特点是:采用流水线设计方法, 能够有效增加解码器的工作频率。</p>
+                </div>
+                <h4 class="anchor-tag" id="76" name="76">3.1 译码器总体架构</h4>
+                <div class="p1">
+                    <p id="77">译码器设计采用校验节点自更新算法, 提出高吞吐率的QC-LDPC码译码器框架, 该框架支持部分并行分层译码, 如图5所示。本文方法由接收信道信息、信息存储器、校验信息处理、硬判决以及迭代译码控制等主要部分组成。迭代译码控制模块是译码器的核心, 各个子模块之间通过不同的时序进行控制, 每个存储器的读写地址、使能信号由地址生成器提供, 且初始化信息、外信息也是由不同的时序控制。</p>
+                </div>
+                <div class="area_img" id="78">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907019_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 高吞吐量的QC-LDPC码译码器框架" src="Detail/GetImg?filename=images/JSJC201907019_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 高吞吐量的QC-LDPC码译码器框架</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907019_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="79" name="79">3.2 接收信道信息模块</h4>
+                <div class="p1">
+                    <p id="80">接收信道信息模块是对信道似然比信息进行初始化, 初始化为接收到量化过后的译码信息。在接收信道信息模块中, 对信道似然比信息存储器的写入顺序操作与子矩阵偏移量大小有关系, 令偏移量为16, 似然比信息储存器对应的初始化操作如图6所示, 0地址存入的值是偏移量对应第16个已更新校验信息的数据, 1地址存入的值是对应第17个已更新校验信息的数据, 2地址存入的值对应第18个已更新校验信息的数据。地址按顺序存入相应的数据, 不一样的偏移量对应不一样的接收信道信息模块, 共96个不一样的偏移量, 对应96个接收信道信息板块。</p>
+                </div>
+                <div class="area_img" id="81">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907019_081.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 接收信道信息模块初始化过程" src="Detail/GetImg?filename=images/JSJC201907019_081.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 接收信道信息模块初始化过程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907019_081.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="82" name="82">3.3 信息存储模块</h4>
+                <div class="p1">
+                    <p id="83">信息储存模块包括校验信息和后验信息这2个储存模块, 校验矩阵<b><i>H</i></b>被分成12个分层, 且每个分层有一个专门的校验节点单元 (Check Node Unit, CNU) , 后验信息储存模块存储后验概率信息, 校验信息储存模块存储校验节点信息。每层的非零子矩阵对应一个后验信息储存模块和一个校验信息储存模块。在分层译码过程中, 每一个后验信息存储模块向CNU输出一个后验信息, 并从其他分层CNU中获取一个新的后验信息。同时, 每个校验信息储存模块向CNU输出校验信息, 并且从同一层CNU得到新的校验信息。本文采用单端口同时进行读写操作。因为校验矩阵<b><i>H</i></b>中有96个非零子矩阵, 所以后验信息储存模块和校验信息储存模块包含了96个单端口存储单元。</p>
+                </div>
+                <h4 class="anchor-tag" id="84" name="84">3.4 校验信息处理单元模块</h4>
+                <div class="p1">
+                    <p id="85">校验信息处理单元模块是校验节点自更新算法中的核心单元, 对于校验信息的更新来说, 每一层采用一个CNU去执行一系列的功能, 主要包括加法、比较等, CNU成为最长的延迟路径。在新的译码算法中, 每个CNU需要对比8个信息, 找出其中的最小值、次小值及各自的地址。因此, 对比装置成了CNU中最关键的元素。2输入的比较器包含一个加法器和一个复用器, 3输入的比较器包含3个加法器、5个复用器和一些基础逻辑门。一个8输入的比较器是由多个2输入和3输入比较器构成。为减少关键路径延迟和提高工作频率, CNU被分割成3级流水寄存器。CNU的3级流水线结构如图7所示。由式 (6) 可知, 在第1级中, 第一个加法器组将初始信道信息、前一次迭代得到的校验信息和本次迭代得到的校验信息相加得到VTC信息<i>q</i><sub>1</sub>～<i>q</i><sub>8</sub>。由式 (7) 可知, 在第2级中, 将第1级得到的VTC信息进行符号分离、比较选取最小值等操作, 重新合并端口的最小值与符号, 得到新的校验信息<i>r</i><sub>1</sub>～<i>r</i><sub>8</sub>。由式 (8) 可知, 在第3级中, 加法器将初始信道信息与第2级得到的校验信息<i>r</i><sub><i>i</i></sub>相加, 得到新的后验概率信息<i>APP</i>_<i>new</i>。</p>
+                </div>
+                <div class="area_img" id="86">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907019_086.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 CNU模块3级流水线结构框图" src="Detail/GetImg?filename=images/JSJC201907019_086.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图7 CNU模块3级流水线结构框图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907019_086.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="87" name="87">3.5 硬判决单元</h4>
+                <div class="p1">
+                    <p id="88">LDPC译码器输出比特位由后验信息的符号位决定。在传统分层译码中<citation id="146" type="reference"><link href="130" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>, 变量节点一般更新到最底层才开始进行硬判决。而部分并行分层译码却使用一种不同的方法来进行更新, 会使每一个分层在每次迭代过程中产生一个后验概率信息, 并且不同的分层之间同时工作。以修正偏移量后的校验矩阵的第1列为例, 第4层CNU从第13行开始更新, 第9层CNU从第1行开始更新, 第12层CNU从第81行开始更新, 根据修正偏移量后的校验矩阵, 分别对应第74行、第13行、第28行。第1列后验概率信息传递的路径是从第4层到第12层、第12层到第9层、第9层到第4层。在每次迭代结束之后, 第13列最后的后验概率信息储存在第12层, 第28列最后的后验概率信息储存在第4层, 第74列最后的后验信息储存在第9层。因此, 第1列的硬判决比特储存在3个不同分层的存储器中。</p>
+                </div>
+                <h3 id="89" name="89" class="anchor-tag">4 译码器性能</h3>
+                <div class="p1">
+                    <p id="90">在译码器硬件实现中, 文献<citation id="147" type="reference">[<a class="sup">14</a>,<a class="sup">15</a>,<a class="sup">16</a>]</citation>以及本文提出的译码器均采用altera公司StratixIV系列的EP4SGX530, 由QuartusⅡ10.0综合后, 本文提出译码器的最高工作频率可达308.2 MHz。根据式 (9) 译码器吞吐量的计算, 当最大迭代次数为10时, 译码器的吞吐量为516.8 Mb/s。本文提出的译码器和其他译码器之间性能比较如表1所示。</p>
+                </div>
+                <div class="area_img" id="91">
+                    <p class="img_tit"><b>表1 译码器性能比较</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="91" border="1"><tr><td>性能指标</td><td>文献[14]<br />算法</td><td>文献[15]<br />算法</td><td>文献[16]<br />算法</td><td>本文算法</td></tr><tr><td>码长</td><td>12 288</td><td>2 304</td><td>8 176</td><td>8 192</td></tr><tr><td><br />码率</td><td>1/2</td><td>1/2</td><td>7/8</td><td>1/2</td></tr><tr><td><br />工作频率/MHz</td><td>152.5</td><td>167.2</td><td>201.7</td><td>308.2</td></tr><tr><td><br />吞吐量/ (Mb·s<sup>-1</sup>) </td><td>211.6</td><td>268.3</td><td>288.9</td><td>516.8</td></tr><tr><td><br />迭代次数</td><td>10</td><td>8</td><td>8</td><td>10</td></tr><tr><td><br />资源消耗 (LUTs) </td><td>49 423</td><td>18 149</td><td>26 259</td><td>8 125</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="92">由表1可以看出, 与文献<citation id="148" type="reference">[<a class="sup">14</a>,<a class="sup">15</a>,<a class="sup">16</a>]</citation>译码器相比, 本文译码器吞吐量较大, 且消耗的存储资源较小。因此, 本文译码器同时具有高效、复杂度低、吞吐量高、收敛速度快等性能, 有效解决了吞吐量与资源消耗的矛盾。</p>
+                </div>
+                <h3 id="93" name="93" class="anchor-tag">5 结束语</h3>
+                <div class="p1">
+                    <p id="94">基于分层MS译码算法, 本文提出一种高吞吐量、低存储量译码器, 实现了 (2 304, 1 152) LDPC码。通过修正偏移量提高译码器的吞吐量。同时, 将后验信息和变量信息融合到校验信息中, 从而减少译码器的存储资源消耗。仿真结果显示, 该译码器吞吐量较大, 且收敛速度较快。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="106">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Low-Density Parity-Check Codes">
+
+                                <b>[1]</b> GALLAGER R G.Low-density parity-check codes[J].IRE Transactions on Information Theory, 1962, 8 (1) :21-28.
+                            </a>
+                        </p>
+                        <p id="108">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZYX201008035&amp;v=Mjk4NzdiclBJVGZTZHJHNEg5SE1wNDlHWVlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRkNqbFY=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 郭琨, 黑勇, 周玉梅, 等.一种应用于不可分层LDPC码的并行分层译码算法[J].电子与信息学报, 2010, 32 (8) :1965-1960.
+                            </a>
+                        </p>
+                        <p id="110">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Low-density parity-check codes based on finite geometries: A rediscovery and new results">
+
+                                <b>[3]</b> KOU Y, LIN S, FOSSORIER M P C.Low-density parity-check codes based on finite geometries:a rediscovery and new results[J].IEEE Transactions on Information Theory, 2001, 47 (7) :2711-2736.
+                            </a>
+                        </p>
+                        <p id="112">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A turbo-decoding message-passing algorithm for sparse parity-check matrix codes">
+
+                                <b>[4]</b> MANSOUR M M.A turbo-decoding message-passing algorithm for sparse parity-check matrix codes[J].IEEE Transactions on Signal Processing, 2006, 54 (11) :4376-4392.
+                            </a>
+                        </p>
+                        <p id="114">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Block-interlaced LDPC decoders with reduced interconnect complexity">
+
+                                <b>[5]</b> DARABIHA A, CARNSONE A C, KSCHISCHANG F R.Block-interlaced LDPC decoders with reduced interconnect complexity[J].IEEE Transactions on Circuits and Systems II:Express Briefs, 2008, 55 (1) :74-78.
+                            </a>
+                        </p>
+                        <p id="116">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJTT&amp;filename=SJTT13121200045775&amp;v=MTM5OThqTElGNFNieFU9TmlmZmVySzdIOVBOclk5RlpPOEtDM3M4b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTA==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> WANG Fei, ZHANG Peng, LIU Changyin.FPGA imple-mentation of a novel multi-rate QC-LDPC encoder for DTMB standard[J].Applied Mechanics and Materials, 2013, 397-400:2024-2027.
+                            </a>
+                        </p>
+                        <p id="118">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=&amp;quot;When mm Wave communications meet network densification:a scalable interference coordination perspective&amp;quot;">
+
+                                <b>[7]</b> FENG Wei, WANG Yanmin, LIN Dengsheng, et al.When mmWave communications meet network densification:a scalable interference coordination perspective[J].IEEE Journal on Selected Areas in Communications, 2017, 35 (7) :1459-1471.
+                            </a>
+                        </p>
+                        <p id="120">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=FPGA implementation of reed-solomon codes based on visible light wireless communication system">
+
+                                <b>[8]</b> QIU Lipeng, CHEN Xiaopeng, ZHOU Lin, et al.FPGA implementation of reed-solomon codes based on visible light wireless communication system[C]//Proceedings of International Symposium on Advances in Electrical, Electronics and Computer Engineering.Paris, France:Atlantis Press, 2016:234-237.
+                            </a>
+                        </p>
+                        <p id="122">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=VLSI Architecture for Layered Decoding of QC-LDPC Codes With High Circulant Weight">
+
+                                <b>[9]</b> SUN Yang, CAVALLARO J R.VISL architecture for layered decoding of QC-LDPC codes with high circulant weight[J].IEEE Transactions on Very Large Scale Integration Systems, 2013, 21 (10) :1960-1964.
+                            </a>
+                        </p>
+                        <p id="124">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A survey of FPGA-based LDPC decoders">
+
+                                <b>[10]</b> HAILES P, XU Lei, MAUNDER R G, et al.A survey of FPGA-based LDPC decoders[J].IEEE Communications Survey and Tutorials, 2016, 18 (2) :1098-1122.
+                            </a>
+                        </p>
+                        <p id="126">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=IPFD&amp;filename=WXDH201605002013&amp;v=MTM2OThYUFpyRzRIOWZNcW85Rlp1c09EeE04enhVU21EZDlTSDduM3hFOWZidm5LcmlmWnU5dUZDdmlVTC9JSmxzVE1q&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 云飞龙, 杜锋, 朱宏鹏, 等.一种高吞吐量QC-LDPC码译码器的FPGA实现[C]//第七届中国卫星导航学术年会论文集.北京:[出版者不详], 2016:16-20.
+                            </a>
+                        </p>
+                        <p id="128">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=TXJS201603003&amp;v=MTI2MDJYQmZiRzRIOWZNckk5Rlo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDamxWYnJQTVQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 云飞龙, 朱宏鹏, 吕晶, 等.一种基于奇偶并行译码架构的高吞吐量译码器设计[J].通信技术, 2016, 49 (3) :264-269.
+                            </a>
+                        </p>
+                        <p id="130">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Analysis of sum-product decoding of low-density parity-check codes using a Gaussian approximation">
+
+                                <b>[13]</b> CHUNG S Y, RICHARDSON T J.Analysis of sum product decoding of low-density parity-check codes using a Gaussian approximation[J].IEEE Transactions on Information Theory, 2001, 47 (2) :657-670.
+                            </a>
+                        </p>
+                        <p id="132">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Configurable and high-throughput architectures for quasicyclic low-density parity-check codes">
+
+                                <b>[14]</b> HARIRI A A A, MONTEIRO F, SIÉLER L, et al.Configurable and high-throughput architectures for quasicyclic low-density parity-check codes[C]//Proceedings of International Conference on Electronics, Circuits and Systems.Washington D.C., USA:IEEE Press, 2014:790-793.
+                            </a>
+                        </p>
+                        <p id="134">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A low complexity-high throughput QC-LDPC encoder">
+
+                                <b>[15]</b> MAHDI A, PALIOURAS V.A low complexity-high throughput QC-LDPC encoder[J].IEEE Transactions on Signal Processing, 2014, 62 (10) :2696-2708.
+                            </a>
+                        </p>
+                        <p id="136">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Design and implementation for high speed LDPC decoder with layered decoding">
+
+                                <b>[16]</b> DING Hong, YANG Shuai, LUO Wu, et al.Design and implementation for high speed LDPC decoder with layered decoding[C]//Proceedings of International Conference on Communications and Mobile Computing.Washington D.C., USA:IEEE Computer Society, 2009:156-160.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201907019" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201907019&amp;v=MzAwODlqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDamxWYnJQTHo3QmJiRzRIOWpNcUk5RWJZUUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

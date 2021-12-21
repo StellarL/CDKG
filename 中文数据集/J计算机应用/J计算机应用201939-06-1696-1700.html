@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637136757146065000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJY201906025%26RESULT%3d1%26SIGN%3dOQ8cvWfxFGr%252bHyBKJGAwnz1bpcA%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201906025&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201906025&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201906025&amp;v=MDkwNTZWNy9KTHo3QmQ3RzRIOWpNcVk5SFlZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5RGw=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#35" data-title="0 引言 ">0 引言</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#40" data-title="1 司法文书领域知识模型 ">1 司法文书领域知识模型</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#44" data-title="2 基于LDM的司法文书自动化知识抽取 ">2 基于LDM的司法文书自动化知识抽取</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#51" data-title="3 基于Graph LSTM的司法文书分类 ">3 基于Graph LSTM的司法文书分类</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#52" data-title="3.1 LSTM&lt;b&gt;模型&lt;/b&gt;">3.1 LSTM<b>模型</b></a></li>
+                                                <li><a href="#67" data-title="3.2 &lt;b&gt;基于&lt;/b&gt;Graph LSTM&lt;b&gt;的司法文书表示和分类&lt;/b&gt;">3.2 <b>基于</b>Graph LSTM<b>的司法文书表示和分类</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#77" data-title="4 实验验证与分析 ">4 实验验证与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#78" data-title="4.1 &lt;b&gt;数据集&lt;/b&gt;">4.1 <b>数据集</b></a></li>
+                                                <li><a href="#80" data-title="4.2 &lt;b&gt;对比的算法&lt;/b&gt;">4.2 <b>对比的算法</b></a></li>
+                                                <li><a href="#88" data-title="4.3 &lt;b&gt;模型参数和训练&lt;/b&gt;">4.3 <b>模型参数和训练</b></a></li>
+                                                <li><a href="#90" data-title="4.4 &lt;b&gt;结果分析&lt;/b&gt;">4.4 <b>结果分析</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#100" data-title="5 结语 ">5 结语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#43" data-title="图1 交通肇事罪的司法文书领域知识模型">图1 交通肇事罪的司法文书领域知识模型</a></li>
+                                                <li><a href="#73" data-title="图2 &lt;i&gt;Graph LSTM&lt;/i&gt;处理客观方面的知识">图2 <i>Graph LSTM</i>处理客观方面的知识</a></li>
+                                                <li><a href="#76" data-title="图3 司法文书分类过程">图3 司法文书分类过程</a></li>
+                                                <li><a href="#94" data-title="&lt;b&gt;表&lt;/b&gt;1 &lt;b&gt;不同方法的实验结果&lt;/b&gt;"><b>表</b>1 <b>不同方法的实验结果</b></a></li>
+                                                <li><a href="#96" data-title="图4 不同数据规模下的分类效果">图4 不同数据规模下的分类效果</a></li>
+                                                <li><a href="#98" data-title="图5 Graph LSTM分类效果随训练迭代次数变化的趋势">图5 Graph LSTM分类效果随训练迭代次数变化的趋势</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="118">
+
+
+                                    <a id="bibliography_1" title="马建刚.检察实务中的大数据[M].北京:中国检察出版社, 2017:17-23. (MA J G.Procuratorial Big Data[M].Beijing:China Procurational Press, 2017:17-23.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787510219306000&amp;v=MDA1NjBaZVp2RnlublU3ZklKRjRWWEZxekdiYTVIdFBOcG94Rll1c1BEQk04enhVU21EZDlTSDduM3hFOWZidm5Lcmlm&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                        马建刚.检察实务中的大数据[M].北京:中国检察出版社, 2017:17-23. (MA J G.Procuratorial Big Data[M].Beijing:China Procurational Press, 2017:17-23.) 
+                                    </a>
+                                </li>
+                                <li id="120">
+
+
+                                    <a id="bibliography_2" title="BOELLA G, CARO L D, HUMPHREYS L, et al.Eunomos, a legal document and knowledge management system for the Web to provide relevant, reliable and up-to-date information on the law[J].Artificial Intelligence and Law, 2016, 24 (3) :245-283." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Eunomos,a legal document and knowledge management system for the Web to provide relevant,reliable and up-to-date information on the law">
+                                        <b>[2]</b>
+                                        BOELLA G, CARO L D, HUMPHREYS L, et al.Eunomos, a legal document and knowledge management system for the Web to provide relevant, reliable and up-to-date information on the law[J].Artificial Intelligence and Law, 2016, 24 (3) :245-283.
+                                    </a>
+                                </li>
+                                <li id="122">
+
+
+                                    <a id="bibliography_3" title="JING L P, HUANG H K, SHI H B.Improved feature selection approach TF-IDF in text mining[C]//Proceedings of the 2003 International Conference on Machine Learning and Cybernetics.Piscataway, NJ:IEEE, 2003:944-946." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Improved feature selection approach TF-IDF in text mining">
+                                        <b>[3]</b>
+                                        JING L P, HUANG H K, SHI H B.Improved feature selection approach TF-IDF in text mining[C]//Proceedings of the 2003 International Conference on Machine Learning and Cybernetics.Piscataway, NJ:IEEE, 2003:944-946.
+                                    </a>
+                                </li>
+                                <li id="124">
+
+
+                                    <a id="bibliography_4" title="GALGANI F, COMPTON P, HOFFMANN A.LEXA:building knowledge bases for automatic legal citation classification[J].Expert Systems with Applications, 2015, 42 (17/18) :6391-6407." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES7020C9A37D58E13774EFD52F52322A49&amp;v=MDQ5MThDV05MNldDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZCckxVMDV0cGh6TGk3d0trPU5pZk9mYlM0SE5HL3B2NUdZNThLQkFrNHpCRVU3a29MUEhyZzJoYzNlcg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                        GALGANI F, COMPTON P, HOFFMANN A.LEXA:building knowledge bases for automatic legal citation classification[J].Expert Systems with Applications, 2015, 42 (17/18) :6391-6407.
+                                    </a>
+                                </li>
+                                <li id="126">
+
+
+                                    <a id="bibliography_5" title="HAMMOUDA K M, KAMEL M S.Phrase-based document similarity based on an index graph model[C]//Proceedings of the 2002IEEE International Conference on Data Mining.Washington, DC:IEEE Computer Society, 2002:203-210." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Phrase-Based Document Similarity Based on an Index Graph Model">
+                                        <b>[5]</b>
+                                        HAMMOUDA K M, KAMEL M S.Phrase-based document similarity based on an index graph model[C]//Proceedings of the 2002IEEE International Conference on Data Mining.Washington, DC:IEEE Computer Society, 2002:203-210.
+                                    </a>
+                                </li>
+                                <li id="128">
+
+
+                                    <a id="bibliography_6" title="BLEI D M, NG A Y, JORDAN M I, et al.Latent Dirichlet allocation[J].Journal of Machine Learning Research, 2003, 3 (4/5) :993-1022." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Latent Dirichlet allocation">
+                                        <b>[6]</b>
+                                        BLEI D M, NG A Y, JORDAN M I, et al.Latent Dirichlet allocation[J].Journal of Machine Learning Research, 2003, 3 (4/5) :993-1022.
+                                    </a>
+                                </li>
+                                <li id="130">
+
+
+                                    <a id="bibliography_7" title="ROITBLAT H L, KERSHAW A, OOT P.Document categorization in legal electronic discovery:computer classification vs.manual review[J].Journal of the American Society for Information Science and Technology, 2010, 61 (1) :70-80." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Document categorization in legal electronic discovery: Computer classification vs. manual review">
+                                        <b>[7]</b>
+                                        ROITBLAT H L, KERSHAW A, OOT P.Document categorization in legal electronic discovery:computer classification vs.manual review[J].Journal of the American Society for Information Science and Technology, 2010, 61 (1) :70-80.
+                                    </a>
+                                </li>
+                                <li id="132">
+
+
+                                    <a id="bibliography_8" title="NOORTWIJK K V, NOORTWIJK K C.Automatic document classification in integrated legal content collections[C]//ICAIL 2017:Proceedings of the 16th International Conference on Artificial Intelligence and Law.New York:ACM, 2017:129-134." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Automatic document classification in integrated legal content collections">
+                                        <b>[8]</b>
+                                        NOORTWIJK K V, NOORTWIJK K C.Automatic document classification in integrated legal content collections[C]//ICAIL 2017:Proceedings of the 16th International Conference on Artificial Intelligence and Law.New York:ACM, 2017:129-134.
+                                    </a>
+                                </li>
+                                <li id="134">
+
+
+                                    <a id="bibliography_9" title="SULEA O, ZAMPIERI M, MALMASI S, et al.Exploring the use of text classification in the legal domain[C]//ASAIL 2017:Proceedings of the Second Workshop on Automated Detection, Extraction and Analysis of Semantic Information in Legal Texts.New York:ACM, 2017:419-424." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Exploring the use of text classification in the legal domain">
+                                        <b>[9]</b>
+                                        SULEA O, ZAMPIERI M, MALMASI S, et al.Exploring the use of text classification in the legal domain[C]//ASAIL 2017:Proceedings of the Second Workshop on Automated Detection, Extraction and Analysis of Semantic Information in Legal Texts.New York:ACM, 2017:419-424.
+                                    </a>
+                                </li>
+                                <li id="136">
+
+
+                                    <a id="bibliography_10" title="SARIC F, DALBELO BASIC B, MOENS M F, et al.Multi-label classification of croatian legal documents using Euro Voc thesaurus[C]//SPLe T 2014:Proceedings of the 2014 Workshop on Semantic Processing of Legal Texts.Reykjavik:European Language Resources Association, 2014:716-723." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Multi-label classification of croatian legal documents using Euro Voc thesaurus">
+                                        <b>[10]</b>
+                                        SARIC F, DALBELO BASIC B, MOENS M F, et al.Multi-label classification of croatian legal documents using Euro Voc thesaurus[C]//SPLe T 2014:Proceedings of the 2014 Workshop on Semantic Processing of Legal Texts.Reykjavik:European Language Resources Association, 2014:716-723.
+                                    </a>
+                                </li>
+                                <li id="138">
+
+
+                                    <a id="bibliography_11" title="BAJWA I S, KARIM F, NAEEM M A, et al.A semi supervised approach for catchphrase classification in legal text documents[J].Journal of Computers, 2017, 12 (5) :451-461." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A semi-supervised approach for catchphrase classification in legal text documents">
+                                        <b>[11]</b>
+                                        BAJWA I S, KARIM F, NAEEM M A, et al.A semi supervised approach for catchphrase classification in legal text documents[J].Journal of Computers, 2017, 12 (5) :451-461.
+                                    </a>
+                                </li>
+                                <li id="140">
+
+
+                                    <a id="bibliography_12" title="SILVESTRO L D, SPAMPINATO D, TORRISI A.Automatic classification of legal textual documents using C4.5[EB/OL].[2018-10-15].http://www.ittig.cnr.it/Ricerca/Testi/Spampinato-Di_Silvestro-Torrisi2009.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Automatic classification of legal textual documents using C4.5">
+                                        <b>[12]</b>
+                                        SILVESTRO L D, SPAMPINATO D, TORRISI A.Automatic classification of legal textual documents using C4.5[EB/OL].[2018-10-15].http://www.ittig.cnr.it/Ricerca/Testi/Spampinato-Di_Silvestro-Torrisi2009.pdf.
+                                    </a>
+                                </li>
+                                <li id="142">
+
+
+                                    <a id="bibliography_13" title="NALLAPATI R, MANNING C D.Legal docket-entry classification:where machine learning stumbles[C]//EMNLP 2008:Proceedings of the 2008 Conference on Empirical Methods in Natural Language Processing.Stroudsburg, PA:Association for Computational Linguistics, 2008:438-446." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Legal docket-entry classification:where machine learning stumbles">
+                                        <b>[13]</b>
+                                        NALLAPATI R, MANNING C D.Legal docket-entry classification:where machine learning stumbles[C]//EMNLP 2008:Proceedings of the 2008 Conference on Empirical Methods in Natural Language Processing.Stroudsburg, PA:Association for Computational Linguistics, 2008:438-446.
+                                    </a>
+                                </li>
+                                <li id="144">
+
+
+                                    <a id="bibliography_14" title="马建刚, 张鹏, 马应龙.基于知识块摘要和词转移距离的高效司法文档分类[J].计算机应用, 2019, 39 (5) :1293-1298. (MA J G, ZHANG P, MA Y L.Efficient judicial document classification based on knowledge block summarization and word mover&#39;s distance[J].Journal of Computer Applications, 2019, 39 (5) :1293-1298.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201905009&amp;v=MDA4MjJDVVI3cWZadVpzRnlEbFY3L0pMejdCZDdHNEg5ak1xbzlGYllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                        马建刚, 张鹏, 马应龙.基于知识块摘要和词转移距离的高效司法文档分类[J].计算机应用, 2019, 39 (5) :1293-1298. (MA J G, ZHANG P, MA Y L.Efficient judicial document classification based on knowledge block summarization and word mover&#39;s distance[J].Journal of Computer Applications, 2019, 39 (5) :1293-1298.) 
+                                    </a>
+                                </li>
+                                <li id="146">
+
+
+                                    <a id="bibliography_15" title="PENG N, POON H, QUIRK C, et al.Cross-sentence n-ary relation extraction with graph LSTMs[C]//Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics.Stroudsburg, PA:Association for Computational Linguistics, 2017:101-115." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Cross-sentence n-ary relation extraction with graph LSTMs">
+                                        <b>[15]</b>
+                                        PENG N, POON H, QUIRK C, et al.Cross-sentence n-ary relation extraction with graph LSTMs[C]//Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics.Stroudsburg, PA:Association for Computational Linguistics, 2017:101-115.
+                                    </a>
+                                </li>
+                                <li id="148">
+
+
+                                    <a id="bibliography_16" title="SUN J J.Jieba Chinese word segmentation tool[EB/OL].[2018-10-15].https://github.com/fxsjy/jieba." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Jieba Chinese word segmentation tool[CP/OL]">
+                                        <b>[16]</b>
+                                        SUN J J.Jieba Chinese word segmentation tool[EB/OL].[2018-10-15].https://github.com/fxsjy/jieba.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+    <div class="head-tag">   
+            <p>
+               <b> 网络首发时间: 2019-01-29 10:11</b>
+            </p>     
+    </div>
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJY" target="_blank">计算机应用</a>
+                2019,39(06),1696-1700 DOI:10.11772/j.issn.1001-9081.2018109193            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>语义驱动的司法文档学习分类方法</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%A9%AC%E5%BB%BA%E5%88%9A&amp;code=41746643&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">马建刚</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%A9%AC%E5%BA%94%E9%BE%99&amp;code=11222374&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">马应龙</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%A4%A7%E5%AD%A6%E6%B3%95%E5%AD%A6%E9%99%A2&amp;code=0198015&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中国人民大学法学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%9B%BD%E5%AE%B6%E6%A3%80%E5%AF%9F%E5%AE%98%E5%AD%A6%E9%99%A2&amp;code=0123880&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">国家检察官学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%B2%B3%E5%8D%97%E7%9C%81%E4%BA%BA%E6%B0%91%E6%A3%80%E5%AF%9F%E9%99%A2&amp;code=0554931&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">河南省人民检察院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8D%8E%E5%8C%97%E7%94%B5%E5%8A%9B%E5%A4%A7%E5%AD%A6%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0049177&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">华北电力大学控制与计算机工程学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>基于海量的司法文书进行的高效司法文档分类有助于目前的司法智能化应用, 如类案推送、文书检索、判决预测和量刑辅助等。面向通用领域的文本分类方法因没有考虑司法领域文本的复杂结构和知识语义, 导致司法文本分类的效能很低。针对该问题提出了一种语义驱动的方法来学习和分类司法文书。首先, 提出并构建了面向司法领域的领域知识模型以清晰表达文档级语义;然后, 基于该模型对司法文档进行相应的领域知识抽取;最后, 利用图长短期记忆模型 (Graph LSTM) 对司法文书进行训练和分类。实验结果表明该方法在准确率和召回率方面明显优于常用的长短期记忆 (LSTM) 模型、多类别逻辑回归和支持向量机等方法。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8F%B8%E6%B3%95%E5%A4%A7%E6%95%B0%E6%8D%AE&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">司法大数据;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%A2%86%E5%9F%9F%E7%9F%A5%E8%AF%86%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">领域知识模型;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">文本分类;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%99%BA%E6%85%A7%E6%A3%80%E5%8A%A1&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">智慧检务;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%9B%BE%E9%95%BF%E7%9F%AD%E6%9C%9F%E8%AE%B0%E5%BF%86%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">图长短期记忆模型;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    *马建刚 (1977—) , 男, 河南郑州人, 高级工程师, 博士, CCF高级会员, 主要研究方向:大数据、智慧检务、智慧司法;704362432@qq.com;
+                                </span>
+                                <span>
+                                    马应龙 (1976—) , 男, 陕西咸阳人, 教授, 博士, CCF高级会员, 主要研究方向:大数据、知识工程。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-11-15</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家重点研发计划项目 (2018YFC0831404, 2018YFC0830605);</span>
+                                <span>中国博士后科学基金资助项目 (2016M591317);</span>
+                    </p>
+            </div>
+                    <h1><b>Semantic-driven learning and classification method of judicial documents</b></h1>
+                    <h2>
+                    <span>MA Jiangang</span>
+                    <span>MA Yinglong</span>
+            </h2>
+                    <h2>
+                    <span>Law School, Renmin University of China</span>
+                    <span>National Prosecutors College of P.R.C.</span>
+                    <span>The People's Procuratorate of Henan Province</span>
+                    <span>School of Control and Computer Engineering, North China Electric Power University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Efficient document classification techniques based on large-scale judicial documents are crucial to current judicial intelligent application, such as similar case pushing, legal document retrieval, judgment prediction and sentencing assistance. The general-domain-oriented document classification methods are lack of efficiency because they do not consider the complex structure and knowledge semantics of judicial documents. To solve this problem, a semantic-driven method was proposed to learn and classify judicial documents. Firstly, a domain knowledge model oriented to judicial domain was proposed and constructed to express the document-level semantics clearly. Then, domain knowledge was extracted from the judicial documents based on the model. Finally, the judicial documents were trained and classified by using Graph Long Short-Term Memory (Graph LSTM) model. The experimental results show that, the proposed method is superior to Long Short-Term Memory (LSTM) model, Multinomial Logistic Regression (MLR) and Support Vector Machine (SVM) in accuracy and recall.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=judicial%20big%20data&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">judicial big data;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=domain%20knowledge%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">domain knowledge model;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=text%20categorization&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">text categorization;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=smart%20procuratorate&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">smart procuratorate;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Graph%20Long%20Short-Term%20Memory%20(Graph%20LSTM)%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Graph Long Short-Term Memory (Graph LSTM) model;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                            <b>Author：</b>
+                                                        <span>
+                                    MA Jiangang, born in 1977, Ph. D. , senior engineer. His research interests include big data, smart procuratorate, smart judiciary. ;
+                                </span>
+                                <span>
+                                    MA Yinglong, born in 1976, Ph. D. , professor. His research interests include big data, knowledge engineering.;
+                                </span>
+                    </p>
+                                    <p><b>Received：</b> 2018-11-15</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>partially supported by the National Key R&amp;D Program of China (2018YFC0831404, 2018YFC0830605);</span>
+                                <span>the Postdoctoral Science Foundation of China (2016M591317);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="35" name="35" class="anchor-tag">0 引言</h3>
+                <div class="p1">
+                    <p id="36">司法机关通过多年的信息化建设应用已经积累了海量的司法文书, 如最高检察院检察信息公开网2016年一年就发布起诉书779 478份, 最高法院的中国裁判文书网已发布判决书4 677万份 (截止2018年6月) , 为开展司法智能化建设应用 (如智慧法院、智慧检务<citation id="150" type="reference"><link href="118" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>) 提供了数据基础。基于海量的司法文书进行高效的司法文档分类对目前的司法智能化应用极富价值, 如类案推送、文书检索、判决预测和量刑辅助等。</p>
+                </div>
+                <div class="p1">
+                    <p id="37">由于司法文档本身的复杂结构司法文档分类是一项具有挑战性的任务<citation id="151" type="reference"><link href="120" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>。文本自动分类在自然语言处理领域是经典的问题。常用的传统文本分类方法有词频-逆文档频率 (Term Frequency-Inverse Document Frequency, TF-IDF) <citation id="152" type="reference"><link href="122" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>、词袋 (Bag Of Words, BOW) 模型<citation id="153" type="reference"><link href="124" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>、向量空间模型 (Vector Space Model, VSM) <citation id="154" type="reference"><link href="126" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>、LDA (Latent Dirichlet Allocation) 主题模型<citation id="155" type="reference"><link href="128" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>等;然而, 这些方法往往由于其文本表示通常是高维度高稀疏而导致特征表达能力很弱, 针对司法文本的分类结果并不理想。许多研究基于机器学习方法的分类器来分类司法文档<citation id="158" type="reference"><link href="130" rel="bibliography" /><link href="132" rel="bibliography" /><sup>[<a class="sup">7</a>,<a class="sup">8</a>]</sup></citation>, 如<i>K</i>最近邻 (<i>K</i>-Nearest Neighbors, <i>K</i>NN) 、支持向量机 (Support Vector Machine, SVM) <citation id="159" type="reference"><link href="134" rel="bibliography" /><link href="136" rel="bibliography" /><sup>[<a class="sup">9</a>,<a class="sup">10</a>]</sup></citation>、最大熵<citation id="156" type="reference"><link href="138" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>、决策树<citation id="157" type="reference"><link href="140" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>等。</p>
+                </div>
+                <div class="p1">
+                    <p id="38">面向司法领域的文本分类方法需要考虑特定司法领域文本的复杂结构和知识语义以提高司法文本分类的效能<citation id="160" type="reference"><link href="142" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>。司法文书的文本分类应用对分类准确率有着极高的要求, 且司法领域文本数量大、文本结构复杂。马建刚等<citation id="161" type="reference"><link href="144" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>结合司法文档语义背景知识提出了一种基于知识块摘要和词转移距离的高效司法文档分类方法, 针对词转移距离模型在处理短文本时具有更好效能的特点, 抽取司法文档的核心知识块摘要, 进而将针对司法文档的分类转换成针对司法文档知识块摘要的分类, 提高了分类的效能;然而, 文献<citation id="162" type="reference">[<a class="sup">14</a>]</citation>中对于确定从司法文档所抽取的知识块摘要中哪些属于对分类至关重要的核心知识块摘要还需要领域专家人工干预和确认, 在一定程度上降低了司法文档分类的自动化程度、增加了相应的人工成本开销。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">针对上述问题, 本文提出了一种语义驱动的深度学习方法来进行司法文本分类。首先, 针对具体司法领域构建对应的司法领域知识本体以清晰表达文档级语义;然后, 基于领域本体检测司法文档中是否存在与领域知识本体中的术语对应或相似的知识信息, 为每一个司法文档生成对应的向量模型;接着, 利用图长短期记忆 (Graph Long Short-Term Memory, Graph LSTM) 模型<citation id="163" type="reference"><link href="146" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>对司法文书进行训练和分类;最后, 通过实验验证了所提方法的有效性。实验结果表明, 该方法要显著优于常用的长短期记忆模型、多类别的逻辑回归模型和支持向量机方法。本文方法与文献<citation id="164" type="reference">[<a class="sup">14</a>]</citation>方法虽然都利用了领域背景知识, 但处理方法上有以下不同:1) 本文方法利用领域本体生成司法文档对应的向量表示而不用获取知识块摘要;2) 在领域知识本体构建后, 本文方法的司法文档分类后续过程皆可以自动化进行, 无需领域专家进一步人工干预;最后, 本文方法利用Graph LSTM深度学习模型进行司法文档自动化分类。</p>
+                </div>
+                <h3 id="40" name="40" class="anchor-tag">1 司法文书领域知识模型</h3>
+                <div class="p1">
+                    <p id="41">一个司法文书包含大量信息, 但文档中不同部分的信息对分析司法文档的价值是不一样的。因此, 构造一个司法文书领域的知识模型对分析司法文书有很大帮助。基于犯罪构成理论构建司法文书领域知识模型, 模型包含犯罪构成的四要件, 即:主体、客体、主观方面、客观方面。客观方面又包括危害行为和危害结果, 同时还包括文书基本信息 (如文号) 和判决结果信息。本文以交通肇事罪为例建立了司法文书领域知识模型 (Legal Document Model, LDM) , 如图1所示。交通肇事罪的判决书主要包括文档基本信息、主体、客观方面、判决结果等部分。其中文档基本信息包括判决书文号、审判机关、公诉机关、审判员和审判日期等信息。主体和客观方面这两个概念来自刑法中的犯罪构成要件。主体指被告人的信息, 包括姓名、职业、年龄、出生日期、是否有前科、是否累犯等信息。交通肇事罪的客观方面会涉及机动车辆类型、危害行为和危害结果等, 危害行为包括醉酒驾驶、追逐竞驶等, 危害结果则包括人员伤亡、财产损失等。交通肇事罪的判决结果的主刑包括拘役、有期徒刑等。</p>
+                </div>
+                <div class="p1">
+                    <p id="42">本文的司法文书知识模型基于半自动化方式进行构建。首先, 采用爬虫技术爬取司法权威机构支持建立的在线司法文档数据, 根据页面分析爬取其中的司法分类元数据。本文选择从法信在线类案检索系统 (http://www.faxin.cn/index.aspx) 作为页面爬取的数据源。法信是由最高人民法院支持维护的一个司法文档检索系统, 其司法分类系统按照罪名进行分类, 每个罪名包含一些更细的子分类, 因此具有权威性。其次, 根据爬取的页面框架抽取出相关的分类术语。最后, 通过具有事司法领域10年以上工作经验的司法业务专家审核, 最终以半自动化的方式构建司法文书领域知识模型。</p>
+                </div>
+                <div class="area_img" id="43">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201906025_043.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 交通肇事罪的司法文书领域知识模型" src="Detail/GetImg?filename=images/JSJY201906025_043.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 交通肇事罪的司法文书领域知识模型  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201906025_043.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 1 Legal document domain knowledge model of traffic accident case</p>
+
+                </div>
+                <h3 id="44" name="44" class="anchor-tag">2 基于LDM的司法文书自动化知识抽取</h3>
+                <div class="p1">
+                    <p id="45">自动化知识抽取包括两部分:一是抽取出客观方面部分, 这部分内容主要决定了案件的判决结果。二是抽取出司法文书中的判决结果部分, 并标准化判决结果, 依此为司法文书分类, 获得可供实验用的带标签的数据集。对每一个司法文书, 使用一个可扩展标记语言 (eXtensible Markup Language, XML) 文件来保存抽取得到的知识, XML文件的树结构取自于LDM的结构, 并与之完全相同。XML文件中的各元素所存储的正是一个司法文书中与LDM的各节点相关的信息, 如在图1所示的LDM中, 客观方面分支下存有一个酒驾节点, 若在一个判决书中检测到犯罪嫌疑人存在酒驾行为, 那么在与该判决书对应的XML文件中代表酒驾的元素的值将被设置为1;若未检测到, 将被设置为0。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">本文采用基于词语相似度匹配和规则的方法来抽取客观方面部分的知识。需要抽取的知识由LDM确定, 不同罪名对应的LDM不同。从图1所示的LDM中可以看到, 客观方面中存在两种需要抽取的知识:一是定性的知识, 如酒驾、追逐竞驶, 只有两种结果, 在XML文件中用0代表没有, 用1代表有;二是定量的知识, 如死亡人数、重伤人数, 这种知识需要提取具体的数字。对于定性的知识, 首先将判决书分词, 然后使用编辑距离判断判决书中的各词与代表待抽取知识的词是否相似, 若检测到存在这样一个相似的词, 则将XML文件中该元素的值设置为1, 否则为0。编辑距离是一种计算词语相似度的算法, 计算式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="47" class="code-formula">
+                        <mathml id="47"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>l</mi><mi>e</mi><mi>v</mi><msub><mrow></mrow><mrow><mi>a</mi><mo>, </mo><mi>b</mi></mrow></msub><mo stretchy="false"> (</mo><mi>i</mi><mo>, </mo><mspace width="0.25em" /><mi>j</mi><mo stretchy="false">) </mo><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mo>{</mo><mtable columnalign="left"><mtr><mtd><mi>max</mi><mo stretchy="false"> (</mo><mi>i</mi><mo>, </mo><mspace width="0.25em" /><mi>j</mi><mo stretchy="false">) </mo><mo>, </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mi>min</mi><mo stretchy="false"> (</mo><mi>i</mi><mo>, </mo><mspace width="0.25em" /><mi>j</mi><mo stretchy="false">) </mo><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>min</mi><mo stretchy="false">{</mo><mi>l</mi><mi>e</mi><mi>v</mi><msub><mrow></mrow><mrow><mi>a</mi><mo>, </mo><mi>b</mi></mrow></msub><mo stretchy="false"> (</mo><mi>i</mi><mo>-</mo><mn>1</mn><mo>, </mo><mspace width="0.25em" /><mi>j</mi><mo stretchy="false">) </mo><mo>+</mo><mn>1</mn><mo>, </mo><mi>l</mi><mi>e</mi><mi>v</mi><msub><mrow></mrow><mrow><mi>a</mi><mo>, </mo><mi>b</mi></mrow></msub><mo stretchy="false"> (</mo><mi>i</mi><mo>, </mo><mspace width="0.25em" /><mi>j</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mo>+</mo><mn>1</mn><mo>, </mo></mtd></mtr><mtr><mtd><mtext> </mtext><mtext> </mtext><mi>l</mi><mi>e</mi><mi>v</mi><msub><mrow></mrow><mrow><mi>a</mi><mo>, </mo><mi>b</mi></mrow></msub><mo stretchy="false"> (</mo><mi>i</mi><mo>-</mo><mn>1</mn><mo>, </mo><mspace width="0.25em" /><mi>j</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mo>+</mo><mn>1</mn><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>a</mi><msub><mrow></mrow><mi>i</mi></msub><mo>≠</mo><mi>b</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo></mrow></msub><mo stretchy="false">}</mo><mo>, </mo><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mtext>其</mtext><mtext>他</mtext></mtd></mtr></mtable></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="48">例如在抽取酒驾时, 如果判决书中存在“喝酒”“酒驾”“醉酒驾驶”等词语时, 那么通过编辑距离就能将这些词语判定为酒驾的相似词, 就能判定犯罪嫌疑人存在酒驾行为, 并在XML文件中将对应元素的值设置为1, 这种做法, 也是基于判决书中可能存在的用词不规范以及自然语言的多样性考虑的。对于定量的知识, 则采用基于规则的方法抽取, 如死亡人数, 会利用“死亡*人”这一规则在判决书中寻找符合的句子, 其中“*”代表死亡人数, 若能找到, 则将“*”的值填入XML文件的元素中;若无法找到, 则填入0, 代表无人死亡。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">同样的, 本文采用基于规则的方法抽取审判结果。在司法文档中, 审判结果具有固定的用语和结构, 即被告人+姓名+犯+罪名+判处+判决结果。利用这个规则, 很容易就能提取出判决结果。本文所抽取的审判结果主要是主刑部分, 这样就能得到形如“有期徒刑五年六个月”的判决结果部分。这里的“五年六个月”中的五和六在文档中是汉字而不是阿拉伯数字, 审判结果的标准化指的是将汉字转化为阿拉伯数字, 同时将月转换为年, 即将“五年六个月”转化为5.5年。这样做是为了方便根据刑期对司法文档进行分类。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">对于一个保存了抽取所得知识的XML文件来说, 可以很容易地使用一个向量来表示整个XML的重要信息, 如XML中含有<i>n</i>个元素, 那么可以用一个<i>n</i>维的向量来代表这个XML文件, 向量的每一个分量表示XML文件的一个元素值。这个向量可以被认为是保存了一个判决书的关键特征, 基于此向量, 可以作进一步的研究, 如分类、聚类等。这种做法简单明了, 不足的是会丢失XML的结构信息。</p>
+                </div>
+                <h3 id="51" name="51" class="anchor-tag">3 基于Graph LSTM的司法文书分类</h3>
+                <h4 class="anchor-tag" id="52" name="52">3.1 LSTM<b>模型</b></h4>
+                <div class="p1">
+                    <p id="53">LSTM是一种循环神经网络 (Recurrent Neural Network, RNN) 的变体, 主要用于序列建模, 其使用门机制处理信息, 解决了RNN学习过程中的梯度消失问题, 从而有效地学习到长距离依赖信息。在LSTM网络内部, 存在三种门:输入门、遗忘门和输出门。此外, 相较于普通RNN模型, LSTM内部除了状态<b><i>h</i></b>之外还有单元状态<b><i>c</i></b>。LSTM用两个门来控制单元状态<b><i>c</i></b>的内容:一个是遗忘门, 它决定了上一时刻的单元状态<b><i>c</i></b><sub><i>t</i>-1</sub>有多少保留到当前时刻<b><i>c</i></b><sub><i>t</i></sub>;另一个是输入门, 它决定了当前时刻网络的输入<b><i>x</i></b><sub><i>t</i></sub>有多少保存到单元状态<b><i>c</i></b><sub><i>t</i></sub>。LSTM用输出门来控制单元状态<b><i>c</i></b><sub><i>t</i></sub>有多少输出到LSTM的当前的输出值<b><i>h</i></b><sub><i>t</i></sub>。遗忘门公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="54"><b><i>f</i></b><sub><i>t</i></sub>=<i>σ</i> (<b><i>W</i></b><sub><i>f</i></sub>·[<b><i>h</i></b><sub><i>t</i>-1</sub>, <b><i>x</i></b><sub><i>t</i></sub>]+<b><i>b</i></b><sub><i>f</i></sub>)      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="55">式中:<b><i>W</i></b><sub><i>f</i></sub>是遗忘门的权重矩阵;<b><i>b</i></b><sub><i>f</i></sub>是偏置项;<i>σ</i>是sigmoid函数, 在输入门和输出门的公式中符号意义与之类似。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">输入门公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="57"><b><i>i</i></b><sub><i>t</i></sub>=<i>σ</i> (<b><i>W</i></b><sub><i>i</i></sub>·[<b><i>h</i></b><sub><i>t</i>-1</sub>, <b><i>x</i></b><sub><i>t</i></sub>]+<b><i>b</i></b><sub><i>i</i></sub>)      (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="58">输出门公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="59"><b><i>o</i></b><sub><i>t</i></sub>=<i>σ</i> (<b><i>W</i></b><sub><i>o</i></sub>·[<b><i>h</i></b><sub><i>t</i>-1</sub>, <b><i>x</i></b><sub><i>t</i></sub>]+<b><i>b</i></b><sub><i>o</i></sub>)      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="60"><mathml id="61"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mrow><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mi>t</mi></msub></mrow></mstyle><mo>∼</mo></mover></mrow></math></mathml>用于描述当前输入的单元状态, 它是根据上一次的输出和本次输入来计算的:</p>
+                </div>
+                <div class="p1">
+                    <p id="62" class="code-formula">
+                        <mathml id="62"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mrow><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mi>t</mi></msub></mrow></mstyle><mo>∼</mo></mover><mo>=</mo><mrow><mi>tanh</mi></mrow><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">W</mi><msub><mrow></mrow><mi>c</mi></msub><mo>⋅</mo><mo stretchy="false">[</mo><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>, </mo><mi mathvariant="bold-italic">x</mi><msub><mrow></mrow><mi>t</mi></msub><mo stretchy="false">]</mo><mo>+</mo><mi mathvariant="bold-italic">b</mi><msub><mrow></mrow><mi>c</mi></msub><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>5</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="63">当前时刻的单元状态<b><i>c</i></b><sub><i>t</i></sub>是由上一次的单元状态按元素乘以遗忘门, 再用当前输入的单元状态按元素乘以输入门, 再将两个积加和产生的:</p>
+                </div>
+                <div class="p1">
+                    <p id="64" class="code-formula">
+                        <mathml id="64"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mi>t</mi></msub><mo>=</mo><mi mathvariant="bold-italic">f</mi><msub><mrow></mrow><mi>t</mi></msub><mo>˚</mo><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mi mathvariant="bold-italic">i</mi><msub><mrow></mrow><mi>t</mi></msub><mo>°</mo><mover><mstyle mathsize="140%" displaystyle="true"><mrow><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mi>t</mi></msub></mrow></mstyle><mo>∼</mo></mover><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="65">LSTM最终的输出, 是由输出门和单元状态共同确定的:</p>
+                </div>
+                <div class="p1">
+                    <p id="66"><b><i>h</i></b><sub><i>t</i></sub>=<b><i>o</i></b><sub><i>t</i></sub>。tanh (<b><i>c</i></b><sub><i>t</i></sub>)      (7) </p>
+                </div>
+                <h4 class="anchor-tag" id="67" name="67">3.2 <b>基于</b>Graph LSTM<b>的司法文书表示和分类</b></h4>
+                <h4 class="anchor-tag" id="68" name="68">3.2.1 <i>Graph LSTM</i></h4>
+                <div class="p1">
+                    <p id="69"><i>Graph LSTM</i>是一种使用<i>LSTM</i>对图类型的数据进行编码的方式, 通常来说这里的图指的是有向无环图, 对于无向图和带环的图, 可以通过拆分的方法将其转换为有向无环图。在<i>Graph LSTM</i>中, 一个节点的向量表示是通过其子节点的向量表示学习得来的, 具体而言, 若一个节点<i>q</i>拥有<i>n</i>个子节点, 则将这<i>n</i>个子节点视为一个序列, 然后通过LSTM进行序列建模, 即将<i>n</i>个子节点的向量表示输入到一个LSTM中, 最终LSTM的输出即为<i>q</i>的向量表示。对图中所有节点做如此递归的操作, 最终可得到整个图的向量表示。除无子节点的节点之外, 每个节点都有一个与之相对应的LSTM, 即不同节点的LSTM参数不共享。</p>
+                </div>
+                <h4 class="anchor-tag" id="70" name="70">3.2.2 司法文书表示和分类</h4>
+                <div class="p1">
+                    <p id="71">对一份判决书进行基于<i>LDM</i>的自动化知识抽取后可以得到一个<i>XML</i>文件。以图1所示的交通肇事罪为例, 得到的<i>XML</i>文件包括两部分:一是客观方面部分;二是审判结果部分。其中:客观方面部分经过<i>Graph LSTM</i>处理, 得到一个向量表示, 被认为是判决书所描述案情的高级特征;审判结果部分中主刑的刑期, 则被用来当作分类的标准, 即分类结果。希望本文的模型能对一个判决书中的案情, 也就是案件的客观方面部分进行分类, 得出相应的结果, 即刑期。</p>
+                </div>
+                <div class="p1">
+                    <p id="72">具体而言, <i>Graph LSTM</i>对<i>XML</i>中客观方面的处理如图2所示。</p>
+                </div>
+                <div class="area_img" id="73">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201906025_073.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 Graph LSTM处理客观方面的知识" src="Detail/GetImg?filename=images/JSJY201906025_073.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 <i>Graph LSTM</i>处理客观方面的知识  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201906025_073.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"><i>Fig</i>. 2 <i>Processing knowledge of objective aspect with Graph LSTM</i></p>
+
+                </div>
+                <div class="p1">
+                    <p id="74">图2展示了<i>Graph LSTM</i>对<i>XML</i>信息处理的部分内容, 生成的<i>XML</i>文件是树结构, 树是一种简单意义上的图, 所以也可使用<i>Graph LSTM</i>对其处理。图中空心小圆代表叶子节点, <i>XML</i>中属于同一个父节点的叶子节点组成了一组序列信息, 将这组序列信息输入到一个<i>LSTM</i>中, 即可得到其父节点的表示, 如图2中, <b><i>h</i></b><sub>人员伤亡</sub>代表“人员伤亡”节点的表示, 是由“死亡人数”“重伤人数”节点的信息经由一个LSTM生成的, 而“人员伤亡”“财产损失”等节点的表示又能生成节点“危害结果”的表示, 按这种方式即可递归地得到客观方面的表示, 即<b><i>h</i></b><sub>客观方面</sub>, 最后即可通过softmax层完成分类, 目标函数是负对数似然函数。</p>
+                </div>
+                <div class="p1">
+                    <p id="75">对于一个未经审判的案件, 给出其情节, 也就是判决书的客观方面部分, 训练好的模型可以对其自动分类, 即给出其刑期, 或者推送类似情节的已判决案件, 以供司法人员参考, 具体分类过程如图3所示。其中多层感知机 (Multi-Layer Perceptron, MLP) 是为了增强模型的特征表达能力。</p>
+                </div>
+                <div class="area_img" id="76">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201906025_076.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 司法文书分类过程" src="Detail/GetImg?filename=images/JSJY201906025_076.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 司法文书分类过程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201906025_076.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 3 Judicial document classification process</p>
+
+                </div>
+                <h3 id="77" name="77" class="anchor-tag">4 实验验证与分析</h3>
+                <h4 class="anchor-tag" id="78" name="78">4.1 <b>数据集</b></h4>
+                <div class="p1">
+                    <p id="79">实验所用数据集为交通肇事罪判决书, 来源于中国裁判文书网 (<i>http</i>://<i>wenshu</i>.<i>court</i>.<i>gov</i>.<i>cn</i>/) , 共10 000份, 使用其中的80%作为训练集, 10%作为验证集, 10%作为测试集, 数据集的划分是通过随机选择实现的。如前文所说, 根据判决结果中主刑的刑期进行分类, 具体而言, 根据最高人民法院《关于审理交通肇事刑事案件具体应用法律若干问题的解释》中的规定将其刑期划分为4个区间, 即:0到6个月, 6个月以上到3年, 3年以上到7年, 以及7年以上。</p>
+                </div>
+                <h4 class="anchor-tag" id="80" name="80">4.2 <b>对比的算法</b></h4>
+                <div class="p1">
+                    <p id="81">将本文提出的<i>LDM</i>+<i>Graph LSTM</i>模型与多个算法进行了比较, 包括传统的机器学习方法和基于深度学习的算法, 传统方法有多类别逻辑回归 (<i>Multinomial Logistic Regression</i>, <i>MLR</i>) 和<i>SVM</i>, 深度学习方法有普通的<i>LSTM</i>。</p>
+                </div>
+                <h4 class="anchor-tag" id="82" name="82">4.2.1  多类别逻辑回归</h4>
+                <div class="p1">
+                    <p id="83">多类别的逻辑回归无法处理图数据结构, 一种方法是使用一个n维向量 (n-<i>vector</i>) 作为特征, 该向量来自于经知识提取之后得到的<i>XML</i>文件, 具体可见第2章节所述。在本实验中, 根据交通肇事罪的<i>LDM</i>, <i>n</i>取30。另一种方法是使用经典的TF-IDF方法, 对于一篇判决书, 首先去除审判结果部分, 然后将剩余文本的TF-IDF向量作为特征输入到多类别逻辑回归中。</p>
+                </div>
+                <h4 class="anchor-tag" id="84" name="84">4.2.2 SVM</h4>
+                <div class="p1">
+                    <p id="85">与多类别逻辑回归相同, 基于<i>SVM</i>的方法的输入也是两种, 即<i>n</i>维向量和TF-IDF向量。</p>
+                </div>
+                <h4 class="anchor-tag" id="86" name="86">4.2.3 普通LSTM</h4>
+                <div class="p1">
+                    <p id="87">普通<i>LSTM</i>对去掉审判结果之后的剩余文本进行序列建模。首先, 对文本进行分词等预处理, 得到一组词;然后, 将所有词按顺序输入到一个<i>LSTM</i>中, 得到文本的向量表示, 继而通过<i>SoftMax</i>函数进行分类。词由词向量表示, 词向量使用的是<i>Word</i>2<i>Vec</i>, 在整个数据集上训练得到, 维度为200。</p>
+                </div>
+                <h4 class="anchor-tag" id="88" name="88">4.3 <b>模型参数和训练</b></h4>
+                <div class="p1">
+                    <p id="89">使用<i>JIEBA</i><citation id="165" type="reference"><link href="148" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>分词作为分词工具, 在实验中, <i>Graph LSTM</i>中各<i>LSTM</i>的隐藏层单元数设置为50, 并且使用带动量的随机梯度下降法优化目标函数, 批处理的大小为64, 学习率设为0.01, 动量大小为0.9。</p>
+                </div>
+                <h4 class="anchor-tag" id="90" name="90">4.4 <b>结果分析</b></h4>
+                <div class="p1">
+                    <p id="91">实验中使用准确率、召回率和<i>F</i>值作为指标衡量分类效果, 其中, <i>F</i>值为准确率和召回率的调和平均值, <i>F</i>值= 准确率*召回率*2/ (准确率+召回率) 。在各数据集上不同方法的实验结果如表1所示, 表中的<i>Graph LSTM</i>代表本文使用的基于<i>LDM</i>和<i>Graph LSTM</i>的模型。实验结果表明, 相较其他方法, 本文的模型在准确率和召回率上都得到了最好的结果。</p>
+                </div>
+                <div class="p1">
+                    <p id="92">对于基于传统机器学习的文本分类方法来说, 影响分类效果的因素除了分类方法之外, 特征的选择也是很重要的。从表1中可以看到, 对于多类别的逻辑回归和<i>SVM</i>这两种方法, 使用经过基于<i>LDM</i>的知识提取得到的<i>n</i>维向量作为特征比使用TF-IDF特征能显著地提高分类效果, 这证明了经知识提取之后的特征能有效地表达案件情节。</p>
+                </div>
+                <div class="p1">
+                    <p id="93">本文模型的分类效果相较于上述使用了<i>n</i>维向量作为特征的两种方法也有很大提升, 原因是经过提取所得的知识具有特定结构, 而<i>n</i>维向量丢失了这种结构信息, 但Graph LSTM能较好地考虑结构信息, 因此其分类效果更好。</p>
+                </div>
+                <div class="area_img" id="94">
+                    <p class="img_tit"><b>表</b>1 <b>不同方法的实验结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Tab. 1 Experimental results of different methods </p>
+                    <p class="img_note"> %</p>
+                    <table id="94" border="1"><tr><td><br />分类算法</td><td>准确率</td><td>召回率</td><td>F值</td></tr><tr><td><br />MLR+<i>n</i>-vector</td><td>78.7</td><td>90.1</td><td>84.0</td></tr><tr><td><br />MLR+TF-IDF</td><td>74.2</td><td>85.3</td><td>79.4</td></tr><tr><td><br />SVM+<i>n</i>-vector</td><td>80.6</td><td>95.2</td><td>87.3</td></tr><tr><td><br />SVM+TF-IDF</td><td>76.8</td><td>86.7</td><td>81.5</td></tr><tr><td><br />LSTM</td><td>77.3</td><td>82.9</td><td>80.0</td></tr><tr><td><br />Graph LSTM</td><td>94.1</td><td>96.2</td><td>95.1</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="95">本文还通过实验探索了数据集的规模大小对Graph LSTM分类效果的影响, 并与传统机器学习方法对比, 结果如图4所示。由图4可以看出, 在样本数量较少的情况下, Graph LSTM受限于数据集规模, 分类效果不如传统的机器学习方法;当逐渐增大数据集规模后, Graph LSTM的分类效果迅速提升, 在数据集规模达到6 000份之后, 分类效果不再提升, 这也是深度学习模型的常见现象。而SVM的分类效果始终变化不大, 也就是说, SVM对数据集规模并不敏感。</p>
+                </div>
+                <div class="area_img" id="96">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201906025_096.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 不同数据规模下的分类效果" src="Detail/GetImg?filename=images/JSJY201906025_096.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 不同数据规模下的分类效果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201906025_096.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 4 Classification results under different data scales</p>
+
+                </div>
+                <div class="p1">
+                    <p id="97">图5展示了Graph LSTM模型在训练中分类效果随迭代次数的变化趋势。</p>
+                </div>
+                <div class="area_img" id="98">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201906025_098.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 Graph LSTM分类效果随训练迭代次数变化的趋势" src="Detail/GetImg?filename=images/JSJY201906025_098.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 Graph LSTM分类效果随训练迭代次数变化的趋势  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201906025_098.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 5 Trend of Graph LSTM classification effect with number of training iterations</p>
+
+                </div>
+                <div class="p1">
+                    <p id="99">由图5可以看出, 在刚开始, 该模型效果越来越好, 在整个数据集上完成了7次迭代之后, 模型的分类效果达到最好, 之后效果逐渐变差。这是因为随着迭代次数的增加, Graph LSTM模型在训练集上出现了过拟合的现象, 导致了性能下降。因此, 在适当的时候应提前终止模型的训练, 避免过拟合。</p>
+                </div>
+                <h3 id="100" name="100" class="anchor-tag">5 结语</h3>
+                <div class="p1">
+                    <p id="101">本文针对司法文书的相似性分析、实现类案推送为司法人员提供智能辅助办案服务的应用场景, 提出了一种语义驱动的司法文档学习分类方法。该方法使用司法领域知识构建了基于领域知识的模型<i>LDM</i>;基于<i>LDM</i>使用结合词语相似度和规则的自动化方法从原始司法文件中提取结构化的知识, 并保存到<i>XML</i>文件中;将抽取得到的知识作为原始文本的高级语义特征, 并使用<i>Graph LSTM</i>进行分类, 相比传统分类方法, 显著地提高了分类的效果。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="118">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787510219306000&amp;v=MDE5NjNuS3JpZlplWnZGeW5uVTdmSUpGNFZYRnF6R2JhNUh0UE5wb3hGWXVzUERCTTh6eFVTbURkOVNIN24zeEU5ZmJ2&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b>马建刚.检察实务中的大数据[M].北京:中国检察出版社, 2017:17-23. (MA J G.Procuratorial Big Data[M].Beijing:China Procurational Press, 2017:17-23.) 
+                            </a>
+                        </p>
+                        <p id="120">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Eunomos,a legal document and knowledge management system for the Web to provide relevant,reliable and up-to-date information on the law">
+
+                                <b>[2]</b>BOELLA G, CARO L D, HUMPHREYS L, et al.Eunomos, a legal document and knowledge management system for the Web to provide relevant, reliable and up-to-date information on the law[J].Artificial Intelligence and Law, 2016, 24 (3) :245-283.
+                            </a>
+                        </p>
+                        <p id="122">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Improved feature selection approach TF-IDF in text mining">
+
+                                <b>[3]</b>JING L P, HUANG H K, SHI H B.Improved feature selection approach TF-IDF in text mining[C]//Proceedings of the 2003 International Conference on Machine Learning and Cybernetics.Piscataway, NJ:IEEE, 2003:944-946.
+                            </a>
+                        </p>
+                        <p id="124">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES7020C9A37D58E13774EFD52F52322A49&amp;v=MDA5OTFHUWxmQnJMVTA1dHBoekxpN3dLaz1OaWZPZmJTNEhORy9wdjVHWTU4S0JBazR6QkVVN2tvTFBIcmcyaGMzZXJDV05MNldDT052RlNpV1dyN0pJRnBtYUJ1SFlmTw==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b>GALGANI F, COMPTON P, HOFFMANN A.LEXA:building knowledge bases for automatic legal citation classification[J].Expert Systems with Applications, 2015, 42 (17/18) :6391-6407.
+                            </a>
+                        </p>
+                        <p id="126">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Phrase-Based Document Similarity Based on an Index Graph Model">
+
+                                <b>[5]</b>HAMMOUDA K M, KAMEL M S.Phrase-based document similarity based on an index graph model[C]//Proceedings of the 2002IEEE International Conference on Data Mining.Washington, DC:IEEE Computer Society, 2002:203-210.
+                            </a>
+                        </p>
+                        <p id="128">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Latent Dirichlet allocation">
+
+                                <b>[6]</b>BLEI D M, NG A Y, JORDAN M I, et al.Latent Dirichlet allocation[J].Journal of Machine Learning Research, 2003, 3 (4/5) :993-1022.
+                            </a>
+                        </p>
+                        <p id="130">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Document categorization in legal electronic discovery: Computer classification vs. manual review">
+
+                                <b>[7]</b>ROITBLAT H L, KERSHAW A, OOT P.Document categorization in legal electronic discovery:computer classification vs.manual review[J].Journal of the American Society for Information Science and Technology, 2010, 61 (1) :70-80.
+                            </a>
+                        </p>
+                        <p id="132">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Automatic document classification in integrated legal content collections">
+
+                                <b>[8]</b>NOORTWIJK K V, NOORTWIJK K C.Automatic document classification in integrated legal content collections[C]//ICAIL 2017:Proceedings of the 16th International Conference on Artificial Intelligence and Law.New York:ACM, 2017:129-134.
+                            </a>
+                        </p>
+                        <p id="134">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Exploring the use of text classification in the legal domain">
+
+                                <b>[9]</b>SULEA O, ZAMPIERI M, MALMASI S, et al.Exploring the use of text classification in the legal domain[C]//ASAIL 2017:Proceedings of the Second Workshop on Automated Detection, Extraction and Analysis of Semantic Information in Legal Texts.New York:ACM, 2017:419-424.
+                            </a>
+                        </p>
+                        <p id="136">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Multi-label classification of croatian legal documents using Euro Voc thesaurus">
+
+                                <b>[10]</b>SARIC F, DALBELO BASIC B, MOENS M F, et al.Multi-label classification of croatian legal documents using Euro Voc thesaurus[C]//SPLe T 2014:Proceedings of the 2014 Workshop on Semantic Processing of Legal Texts.Reykjavik:European Language Resources Association, 2014:716-723.
+                            </a>
+                        </p>
+                        <p id="138">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A semi-supervised approach for catchphrase classification in legal text documents">
+
+                                <b>[11]</b>BAJWA I S, KARIM F, NAEEM M A, et al.A semi supervised approach for catchphrase classification in legal text documents[J].Journal of Computers, 2017, 12 (5) :451-461.
+                            </a>
+                        </p>
+                        <p id="140">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Automatic classification of legal textual documents using C4.5">
+
+                                <b>[12]</b>SILVESTRO L D, SPAMPINATO D, TORRISI A.Automatic classification of legal textual documents using C4.5[EB/OL].[2018-10-15].http://www.ittig.cnr.it/Ricerca/Testi/Spampinato-Di_Silvestro-Torrisi2009.pdf.
+                            </a>
+                        </p>
+                        <p id="142">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Legal docket-entry classification:where machine learning stumbles">
+
+                                <b>[13]</b>NALLAPATI R, MANNING C D.Legal docket-entry classification:where machine learning stumbles[C]//EMNLP 2008:Proceedings of the 2008 Conference on Empirical Methods in Natural Language Processing.Stroudsburg, PA:Association for Computational Linguistics, 2008:438-446.
+                            </a>
+                        </p>
+                        <p id="144">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201905009&amp;v=MDc2MTVsVjcvSkx6N0JkN0c0SDlqTXFvOUZiWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeUQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b>马建刚, 张鹏, 马应龙.基于知识块摘要和词转移距离的高效司法文档分类[J].计算机应用, 2019, 39 (5) :1293-1298. (MA J G, ZHANG P, MA Y L.Efficient judicial document classification based on knowledge block summarization and word mover's distance[J].Journal of Computer Applications, 2019, 39 (5) :1293-1298.) 
+                            </a>
+                        </p>
+                        <p id="146">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Cross-sentence n-ary relation extraction with graph LSTMs">
+
+                                <b>[15]</b>PENG N, POON H, QUIRK C, et al.Cross-sentence n-ary relation extraction with graph LSTMs[C]//Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics.Stroudsburg, PA:Association for Computational Linguistics, 2017:101-115.
+                            </a>
+                        </p>
+                        <p id="148">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Jieba Chinese word segmentation tool[CP/OL]">
+
+                                <b>[16]</b>SUN J J.Jieba Chinese word segmentation tool[EB/OL].[2018-10-15].https://github.com/fxsjy/jieba.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJY201906025" />
+        <input id="dpi" type="hidden" value="400" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201906025&amp;v=MDkwNTZWNy9KTHo3QmQ3RzRIOWpNcVk5SFlZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5RGw=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637136757311690000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJY201906026%26RESULT%3d1%26SIGN%3drMfMbxX1do%252b6qcx0Acbyw79EbZk%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201906026&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201906026&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201906026&amp;v=MDU2MTA1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlEbFY3elBMejdCZDdHNEg5ak1xWTlIWW9RS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#41" data-title="0 引言 ">0 引言</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#47" data-title="1 相关工作 ">1 相关工作</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#51" data-title="2 Word2Vec模型描述 ">2 Word2Vec模型描述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#62" data-title="3 通过Word2Vec对snippet的扩展 ">3 通过Word2Vec对snippet的扩展</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#65" data-title="3.1 &lt;i&gt;Top&lt;/i&gt;N&lt;b&gt;扩展&lt;/b&gt;">3.1 <i>Top</i>N<b>扩展</b></a></li>
+                                                <li><a href="#71" data-title="3.2 &lt;b&gt;基于词频的权重修正&lt;/b&gt;">3.2 <b>基于词频的权重修正</b></a></li>
+                                                <li><a href="#81" data-title="3.3 &lt;b&gt;处理流程&lt;/b&gt;">3.3 <b>处理流程</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#90" data-title="4 实验与结果分析 ">4 实验与结果分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#91" data-title="4.1 &lt;b&gt;数据集&lt;/b&gt;">4.1 <b>数据集</b></a></li>
+                                                <li><a href="#95" data-title="4.2 &lt;b&gt;评价指标&lt;/b&gt;">4.2 <b>评价指标</b></a></li>
+                                                <li><a href="#104" data-title="4.3 &lt;b&gt;实验策略&lt;/b&gt;">4.3 <b>实验策略</b></a></li>
+                                                <li><a href="#111" data-title="4.4 Top&lt;i&gt;N&lt;/i&gt;&lt;b&gt;的确定&lt;/b&gt;">4.4 Top<i>N</i><b>的确定</b></a></li>
+                                                <li><a href="#114" data-title="4.5 &lt;b&gt;聚类算法确定&lt;/b&gt;">4.5 <b>聚类算法确定</b></a></li>
+                                                <li><a href="#119" data-title="4.6 &lt;b&gt;结果分析&lt;/b&gt;">4.6 <b>结果分析</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#126" data-title="5 结语 ">5 结语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#54" data-title="图1 Word2Vec 模型结构">图1 Word2Vec 模型结构</a></li>
+                                                <li><a href="#113" data-title="图2 不同&lt;i&gt;Top&lt;/i&gt;N下的性能">图2 不同<i>Top</i>N下的性能</a></li>
+                                                <li><a href="#121" data-title="&lt;b&gt;表&lt;/b&gt;1 &lt;b&gt;不同方法的&lt;/b&gt;&lt;i&gt;NMI&lt;/i&gt;&lt;b&gt;和&lt;/b&gt;&lt;i&gt;ACC&lt;/i&gt;&lt;b&gt;比较&lt;/b&gt;"><b>表</b>1 <b>不同方法的</b><i>NMI</i><b>和</b><i>ACC</i><b>比较</b></a></li>
+                                                <li><a href="#122" data-title="图3 &lt;i&gt;ODP&lt;/i&gt;239数据集上不同方法的性能对比">图3 <i>ODP</i>239数据集上不同方法的性能对比</a></li>
+                                                <li><a href="#123" data-title="图4 &lt;i&gt;SearchSnippets&lt;/i&gt;数据集上不同方法的性能对比">图4 <i>SearchSnippets</i>数据集上不同方法的性能对比</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="152">
+
+
+                                    <a id="bibliography_1" title="CARPINETO C, OSINSKI S, ROMANO G, et al.A survey of Web clustering engines[J].ACM Computing Surveys, 2009, 41 (3) :Article No.17." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000017697&amp;v=MjA2NjhhUlU9TmlmSVk3SzdIdGpOcjQ5RlpPb0lDblUrb0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadEZpbmxVcjNJS0Y0UQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                        CARPINETO C, OSINSKI S, ROMANO G, et al.A survey of Web clustering engines[J].ACM Computing Surveys, 2009, 41 (3) :Article No.17.
+                                    </a>
+                                </li>
+                                <li id="154">
+
+
+                                    <a id="bibliography_2" title="CARPINETO C, ROMANO G.Optimal meta search results clustering[C]//Proceeding of the 33rd International ACM SIGIR Conference on Research and Development in Information Retrieval.New York:ACM, 2010:170-177." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Optimal meta search results clustering">
+                                        <b>[2]</b>
+                                        CARPINETO C, ROMANO G.Optimal meta search results clustering[C]//Proceeding of the 33rd International ACM SIGIR Conference on Research and Development in Information Retrieval.New York:ACM, 2010:170-177.
+                                    </a>
+                                </li>
+                                <li id="156">
+
+
+                                    <a id="bibliography_3" title="PHAN X H, NGUYEN L M, HORIGUCHI S.Learning to classify short and sparse text&amp;amp;Web with hidden topics from large-scale data collections[C]//WWW 2008:Proceedings of the 17th International Conference on World Wide Web.New York:ACM, 2008:91-100." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning to classify short and sparse text&amp;amp;web with hidden topics from large-scale data collections">
+                                        <b>[3]</b>
+                                        PHAN X H, NGUYEN L M, HORIGUCHI S.Learning to classify short and sparse text&amp;amp;Web with hidden topics from large-scale data collections[C]//WWW 2008:Proceedings of the 17th International Conference on World Wide Web.New York:ACM, 2008:91-100.
+                                    </a>
+                                </li>
+                                <li id="158">
+
+
+                                    <a id="bibliography_4" title="BOLLEGALA D, MATSUO Y, ISHIZUKA M.Measuring semantic similarity between words using Web search engines[C]//Proceedings of the 16th International Conference on World Wide Web.New York:ACM, 2007:757-766." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Measuring Semantic Similarity between Words Using Web Search Engines">
+                                        <b>[4]</b>
+                                        BOLLEGALA D, MATSUO Y, ISHIZUKA M.Measuring semantic similarity between words using Web search engines[C]//Proceedings of the 16th International Conference on World Wide Web.New York:ACM, 2007:757-766.
+                                    </a>
+                                </li>
+                                <li id="160">
+
+
+                                    <a id="bibliography_5" title="HOTHO A, STAAB S, STUMME G.Ontologies improve text document clustering[C]//ICDM 2003:Proceedings of the Third IEEEInternational Conference on Data Mining.Washington, DC:IEEEComputer Society, 2003:541-544." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Ontology Improves Text Documents Clustering">
+                                        <b>[5]</b>
+                                        HOTHO A, STAAB S, STUMME G.Ontologies improve text document clustering[C]//ICDM 2003:Proceedings of the Third IEEEInternational Conference on Data Mining.Washington, DC:IEEEComputer Society, 2003:541-544.
+                                    </a>
+                                </li>
+                                <li id="162">
+
+
+                                    <a id="bibliography_6" title="BANERJEE S, RAMANATHAN K, GUPTA A.Clustering short texts using Wikipedia[C]//Proceedings of the 30th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval.New York:ACM, 2007:787-788." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Clustering Short Texts UsingWikipedia">
+                                        <b>[6]</b>
+                                        BANERJEE S, RAMANATHAN K, GUPTA A.Clustering short texts using Wikipedia[C]//Proceedings of the 30th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval.New York:ACM, 2007:787-788.
+                                    </a>
+                                </li>
+                                <li id="164">
+
+
+                                    <a id="bibliography_7" >
+                                        <b>[7]</b>
+                                    BENGIO Y, DUCHARME R, VINCENT P, et al.A neural probabilistic language model[J].Journal of Machine Learning Research, 2003, 3 (6) :1137-1155.</a>
+                                </li>
+                                <li id="166">
+
+
+                                    <a id="bibliography_8" title="MNIH A, HINTON G E.Three new graphical models for statistical language modelling[C]//Proceedings of the Twenty-Fourth International Conference on Machine Learning.New York, ACM:2007:641-648." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Three new graphical models for statistical language modelling">
+                                        <b>[8]</b>
+                                        MNIH A, HINTON G E.Three new graphical models for statistical language modelling[C]//Proceedings of the Twenty-Fourth International Conference on Machine Learning.New York, ACM:2007:641-648.
+                                    </a>
+                                </li>
+                                <li id="168">
+
+
+                                    <a id="bibliography_9" title="MIKOLOV T.Statistical language models based on neural networks[D].Brno:Brno University of Technology, 2012:26-43." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Statistical language models based on neural networks">
+                                        <b>[9]</b>
+                                        MIKOLOV T.Statistical language models based on neural networks[D].Brno:Brno University of Technology, 2012:26-43.
+                                    </a>
+                                </li>
+                                <li id="170">
+
+
+                                    <a id="bibliography_10" title="COLLOBERT R, WESTON J, BOTTOU L, et al.Natural language processing (almost) from scratch[J].Journal of Machine Learning Research, 2011, 12 (7) :2493-2537." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Natural language processing (almost) from scratch">
+                                        <b>[10]</b>
+                                        COLLOBERT R, WESTON J, BOTTOU L, et al.Natural language processing (almost) from scratch[J].Journal of Machine Learning Research, 2011, 12 (7) :2493-2537.
+                                    </a>
+                                </li>
+                                <li id="172">
+
+
+                                    <a id="bibliography_11" title="SOCHER R, PENNINGTON J, HUANG E H, et al.Semi-supervised recursive autoencoders for predicting sentiment distributions[C]//Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing.Stroudsburg, PA:Association for Computational Linguistics, 2011:151-161." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Semi-supervised recursive autoencoders for predicting sentiment distributions">
+                                        <b>[11]</b>
+                                        SOCHER R, PENNINGTON J, HUANG E H, et al.Semi-supervised recursive autoencoders for predicting sentiment distributions[C]//Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing.Stroudsburg, PA:Association for Computational Linguistics, 2011:151-161.
+                                    </a>
+                                </li>
+                                <li id="174">
+
+
+                                    <a id="bibliography_12" title="GHOSH S, CHARKRABORTY P, COHN E, et al.Characterizing diseases from unstructured text:a vocabulary driven Word2Vec approach[C]//Proceedings of the 25th ACM International Conference on Information and Knowledge Management.New York:ACM, 2016:1129-1138." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Characterizing diseases from unstructured text a vocabulary driven Word2Vec approach">
+                                        <b>[12]</b>
+                                        GHOSH S, CHARKRABORTY P, COHN E, et al.Characterizing diseases from unstructured text:a vocabulary driven Word2Vec approach[C]//Proceedings of the 25th ACM International Conference on Information and Knowledge Management.New York:ACM, 2016:1129-1138.
+                                    </a>
+                                </li>
+                                <li id="176">
+
+
+                                    <a id="bibliography_13" title="MIKOLOV T, CHEN K, CORRADO G, et al.Efficient estimation of word representations in vector space[EB/OL].[2018-08-16].http://www.surdeanu.info/mihai/teaching/ista555-spring15/readings/mikolov2013.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+                                        <b>[13]</b>
+                                        MIKOLOV T, CHEN K, CORRADO G, et al.Efficient estimation of word representations in vector space[EB/OL].[2018-08-16].http://www.surdeanu.info/mihai/teaching/ista555-spring15/readings/mikolov2013.pdf.
+                                    </a>
+                                </li>
+                                <li id="178">
+
+
+                                    <a id="bibliography_14" title="MIKOLOV T, SUTSKEVER I, CHEN K, et al.Distributed representations of words and phrases and their compositionality[C]//Proceedings of the 26th International Conference on Neural Information Processing Systems.North Miami Beach, FL:Curran Associates Inc., 2013:3111-3119." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Distributed representations of words and phrases and their compositionality">
+                                        <b>[14]</b>
+                                        MIKOLOV T, SUTSKEVER I, CHEN K, et al.Distributed representations of words and phrases and their compositionality[C]//Proceedings of the 26th International Conference on Neural Information Processing Systems.North Miami Beach, FL:Curran Associates Inc., 2013:3111-3119.
+                                    </a>
+                                </li>
+                                <li id="180">
+
+
+                                    <a id="bibliography_15" title="MIKOLOV T, YIH W, ZWEIG G.Linguistic regularities in continuous space word representations[C]//Proceedings of the 2013Conference of the North American Chapter of the Association of Computational Linguistics.Stroudsburg, PA:Association for Computational Linguistics, 2013:746-751." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Linguistic Regularities in Continuous Space Word Representations">
+                                        <b>[15]</b>
+                                        MIKOLOV T, YIH W, ZWEIG G.Linguistic regularities in continuous space word representations[C]//Proceedings of the 2013Conference of the North American Chapter of the Association of Computational Linguistics.Stroudsburg, PA:Association for Computational Linguistics, 2013:746-751.
+                                    </a>
+                                </li>
+                                <li id="182">
+
+
+                                    <a id="bibliography_16" title="GABRILOVICH E, MARKOVITCH S.Computing semantic relatedness using Wikipedia-based explicit semantic analysis[C]//Proceedings of the 20th International Joint Conference on Artificial Intelligence.San Francisco, CA:Morgan Kaufmann Publishers Inc., 2007:1606-1611." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Computing semantic related-ness using Wikipedia-based explicit semantic analysis">
+                                        <b>[16]</b>
+                                        GABRILOVICH E, MARKOVITCH S.Computing semantic relatedness using Wikipedia-based explicit semantic analysis[C]//Proceedings of the 20th International Joint Conference on Artificial Intelligence.San Francisco, CA:Morgan Kaufmann Publishers Inc., 2007:1606-1611.
+                                    </a>
+                                </li>
+                                <li id="184">
+
+
+                                    <a id="bibliography_17" title="XU W, LIU X, GONG Y H.Document clustering based on nonnegative matrix factorization[C]//Proceedings of the 26th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval.New York:ACM, 2003:267-273." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Document clustering based onnon-negative matrix factorization">
+                                        <b>[17]</b>
+                                        XU W, LIU X, GONG Y H.Document clustering based on nonnegative matrix factorization[C]//Proceedings of the 26th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval.New York:ACM, 2003:267-273.
+                                    </a>
+                                </li>
+                                <li id="186">
+
+
+                                    <a id="bibliography_18" title="PAPADIMITRIOU C H, STEIGLITZ K.Combinatorial Optimization:Algorithms and Complexity[M].New York:Courier Dover Publications, 1998:248-254." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Combinatorial Optimization:Algorithms and Complexity">
+                                        <b>[18]</b>
+                                        PAPADIMITRIOU C H, STEIGLITZ K.Combinatorial Optimization:Algorithms and Complexity[M].New York:Courier Dover Publications, 1998:248-254.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+    <div class="head-tag">   
+            <p>
+               <b> 网络首发时间: 2019-01-29 10:10</b>
+            </p>     
+    </div>
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJY" target="_blank">计算机应用</a>
+                2019,39(06),1701-1706 DOI:10.11772/j.issn.1001-9081.2018102106            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于Word</b>2<b>Vec模型特征扩展的Web搜索结果聚类性能的改进</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%A8%E6%A5%A0&amp;code=09692829&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">杨楠</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%8E%E4%BA%9A%E5%B9%B3&amp;code=09690433&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">李亚平</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%99%A2&amp;code=0198015&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中国人民大学信息学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>对于用户泛化和模糊的查询, 将Web搜索引擎返回的列表内容聚类处理, 便于用户有效查找感兴趣的内容。由于返回的列表由称为片段 (snippet) 的短文本组成, 而传统的单词频率-逆文档频率 (TF-IDF) 特征选择模型不能适用于稀疏的短文本, 使得聚类性能下降。一个有效的方法就是通过一个外部的知识库对短文本进行扩展。受到基于神经网络词表示方法的启发, 提出了通过词嵌入技术的Word2Vec模型对短文本扩展, 即采用Word2Vec模型的Top<i>N</i>个最相似的单词用于对片段 (snippet) 的扩展, 扩展文档使得TF-IDF模型特征选择得到聚类性能的提高。同时考虑到通用性单词造成的噪声引入, 对扩展文档的TF-IDF矩阵进行了词频权重修正。实验在两个公开数据集ODP239和SearchSnippets上完成, 将所提方法和纯snippet无扩展的方法、基于Wordnet的特征扩展方法和基于Wikipedia的特征扩展方法进行了对比。实验结果表明, 所提方法在聚类性能方面优于对比方法。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%89%B9%E5%BE%81%E6%89%A9%E5%B1%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">特征扩展;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%89%87%E6%AE%B5&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">片段;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%8D%E5%B5%8C%E5%85%A5%E6%8A%80%E6%9C%AF&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">词嵌入技术;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E8%81%9A%E7%B1%BB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">搜索结果聚类;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    杨楠 (1962—) , 男, 辽宁辽阳人, 副教授, 博士, CCF会员, 主要研究方向:数据挖掘、Web挖掘、机器学习;;
+                                </span>
+                                <span>
+                                    *李亚平 (1976—) , 女, 河北石家庄人, 讲师, 博士研究生, CCF会员, 主要研究方向:统计学习、数据分析。liyp@ ruc. edu. cn;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-10-19</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金资助项目 (61773385);</span>
+                    </p>
+            </div>
+                    <h1><b>Improvement of Web search result clustering performance based on Word</b>2<b>Vec model feature extension</b></h1>
+                    <h2>
+                    <span>YANG Nan</span>
+                    <span>LI Yaping</span>
+            </h2>
+                    <h2>
+                    <span>School of Information, Renmin University of China</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Aiming at generalized or fuzzy queries, the content of the returned list of Web search engines is clustered to help users to find the desired information quickly. Generaly, the returned list consists of short texts called snippets carring few information which traditional Term Frequency-Inverse Document Frequency (TF-IDF) feature selection model is not suitable for, so the clustering performance is very low. An effective way to solve this problem is to extend snippets according to a external knowledge base. Inspired by neural network based word presenting method, a new snippet extension approach based on Word2 Vec model was proposed. In the model, Top<i>N</i> similar words in Word2 Vec model were used to extend snippets and the extended text was able to improve the clustering performance of TF-IDF feature selection. Meanwhile, in order to reduce the impact of noise caused by some common used terms, the term frequency weight in TF-IDF matrix of the extended text was modified. The experiments were conducted on two open datasets OPD239 and SearchSnippets to compare the proposed method with pure snippets, Wordnet based and Wikipedia based feature extensions. The experimental results show that the proposed method outperforms other comparative methods significantly in term of clustering effect.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=feature%20extension&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">feature extension;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=snippet&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">snippet;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=word%20embedding%20technology&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">word embedding technology;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=search%20result%20clustering&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">search result clustering;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                            <b>Author：</b>
+                                                        <span>
+                                    YANG Nan, born in 1962, Ph. D. , associate professor. His research interests include data mining, Web mining, machine learning. ;
+                                </span>
+                                <span>
+                                    LI Yaping, born in 1967, Ph. D. candidate, lecturer. Her research interests include statistic learning, data analysis.;
+                                </span>
+                    </p>
+                                    <p><b>Received：</b> 2018-10-19</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>partially supported by the National Natural Science Foundation of China (61773385);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="41" name="41" class="anchor-tag">0 引言</h3>
+                <div class="p1">
+                    <p id="42">用户通常使用Web搜索引擎在网络上查询所需的信息, 而搜索引擎返回的结果列表由一些称为片段 (snippet) 的信息组成。一个片段通常包含URL、题目和描述网页的短文本。片段中的文本内容, 是关于网页的简单描述, 一般包含查询关键词。然而, 传统搜索引擎反馈的结果面临两个问题<citation id="188" type="reference"><link href="152" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>:首先, 搜索结果符合用户各种需要的效率不高;其次, 它无法指出哪条结果与用户查询内容最相关。这是因为查询关键词内容通常是几个词, 缺少上下文, 在这种情况下通常匹配的结果较为模糊。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">一个有效的解决方法是针对网络搜索返回的结果列表按照主题聚类, 从而有助于用户快速找到相关的结果。聚类方法把主题相似的结果片段聚集起来, 以更紧凑的形式呈现给用户, 同时方便用户按主题进行浏览。这种方法称为搜索结果聚类 (Search Results Clustering, SRC) <citation id="189" type="reference"><link href="152" rel="bibliography" /><link href="154" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>]</sup></citation>, 它们按照主题形成片段组, 并用主题来命名各组。用户如果对这个主题感兴趣, 只需要查看相关主题的群组即可。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">但由于片段中的短文本长度较短, 单词的共现度低, 存在数据稀疏问题, 缺少充足的上下文信息进行相似度度量, 使得传统的特征选择方法不能得到良好的聚类结果<citation id="190" type="reference"><link href="156" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。为了克服短文本的数据稀疏缺陷, 研究人员主要采用两种方法来扩展短文本片段:一种方法是使用搜索引擎结果扩展短文本片段<citation id="191" type="reference"><link href="158" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>。对于某个短文本, 通过统计搜索引擎的返回结果计算相似得分, 其缺点是多次访问搜索引擎过于耗时, 不利于实时查询。另一种方法是利用在离线知识数据库, 例如本体对短文本片段进行扩展。基于Wordnet的短文本扩展方法<citation id="192" type="reference"><link href="160" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>, 文本特征的扩展采用来自本体的概念, 可以解决多义词 (synonyms) 问题, 同时概念化有利于文档识别。例如, 包含特征“beef”的文档与包含特征“pork”的文档不存在关联关系。而作为两者的通用概念“meat”作为特征添加到扩展特征之中, 使得两个文档关联起来。文献<citation id="193" type="reference">[<a class="sup">5</a>]</citation>提出了三个扩展策略:特征加入概念、概念替换和仅采用概念的方法。最后结论是, 三种方法均可改进聚类性能, 加入概念的方法效果好一些。但是, Wordnet没有包含一些专有名词, 使得该方法在应用中受到限制。将Wikipedia作为外部知识源扩展短文本片段<citation id="194" type="reference"><link href="162" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>的方法可解决这一问题, Wikipedia可以提供百科全书式的知识扩展。snippet文档采用Wikipedia的概念进行扩展。先下载Wikipedia的文章, 除去模板和Wikipedia描述部分, 去停词, 再去除少于50个词的文章, 建立Wikipedia文章索引机制。用片段的两个部分 (标题和描述短文) 去检索数据库, 取返回的前10个概念用于特征扩展, 该方法取得了较好的效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">近些年来出现的神经网络和表示学习方法, 也为解决数据稀疏问题提供了新的思路, 并且已经出现了许多模型用于表达词向量。词向量在神经网络模型中表示为一个实数向量。利用向量距离表示词向量之间的距离。研究者利用预先训练好的集合, 快速完成在自然语言处理方面的任务。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">受到词向量表示方法的启发, 本文提出了基于Word2Vec模型扩充搜索短文本片段的方法, 从而获得片段之间恰当的距离表达, 适用于短文本片段的聚类。首先提取片段中的单词, 在训练好的模型中, 寻找和它距离接近的若干个单词, 进行片段扩充。对于扩充后的单词, 依然采用传统的单词频率-逆文档频率 (Term Frequency-Inverse Document Frequency, TF-IDF) 特征选择方法计算文本单词特征矩阵。然后, 考虑到每个单词的通用程度, 通过对词频单词特征进行加权修正, 最后采用传统的聚类方法对该矩阵聚类计算。通过实验确定了词汇扩充合理的窗口尺寸, 并获得了稳定而快速的聚类效果。在两个公开数据集上进行了大量实验, 实验结果表明, 本文方法在聚类性能方面优于其他方法。</p>
+                </div>
+                <h3 id="47" name="47" class="anchor-tag">1 相关工作</h3>
+                <div class="p1">
+                    <p id="48">搜索结果聚类是对搜索引擎的返回结果进行聚类处理, 以主题分组的形式展现给用户, 可以帮助用户快速发现相关主题内容。这种方法把数据按照语义分组, 同一组中的语义和主题结果相近。由于搜索结果片段中包含的信息较少, 影响了聚类效果。研究人员针对稀疏数据集上解决该问题语做了相关研究。一种是对于每个短文本片段, 再次利用搜索引擎搜索, 统计返回的结果, 来扩展和丰富上下文<citation id="195" type="reference"><link href="158" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>;其缺点是反复进行查询耗时间, 不适合实时的应用。另一种方法利用离线知识库, 例如Wordnet<citation id="196" type="reference"><link href="160" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>、Wikipedia<citation id="197" type="reference"><link href="162" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>作为外部知识源, 来进行上下文扩充。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">神经网络方法在解决数据稀疏问题上提供了新的思路, 并且出现了许多用于词表示的神经网络模型<citation id="203" type="reference"><link href="164" rel="bibliography" /><link href="166" rel="bibliography" /><link href="168" rel="bibliography" /><link href="170" rel="bibliography" /><sup>[<a class="sup">7</a>,<a class="sup">8</a>,<a class="sup">9</a>,<a class="sup">10</a>]</sup></citation>。Mnih等<citation id="198" type="reference"><link href="166" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>提出了一种称为词嵌入 (Word Embedding) 的单词向量表示方法。这使得能够通过两个单词的嵌入向量之间的距离来度量词的语义相关性。神经网络方法利用预先训练好的嵌入词, 在许多自然语言处理中展现了较好的性能。例如, Mikolov<citation id="199" type="reference"><link href="168" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>使用循环神经网络方法建立语言模型, Socher等<citation id="200" type="reference"><link href="172" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>提出用递归的神经网络方法来分析短语和句子的敏感性, Ghosh等<citation id="201" type="reference"><link href="174" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>使用半监督递归的自动编码预测句子的敏感性, Mikolov等<citation id="202" type="reference"><link href="176" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>提出的段落检测方法也用到了递归神经网络。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">目前一些基于神经网络模型的方法, 例如Word2Vec 和 Doc2Vec用于分析文本语料<citation id="204" type="reference"><link href="174" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>。这些方法一旦训练完成, 可以很容易用来分析新的文本语义和结构。这对于自动化分类法的建立是很有效的。经典的Word2Vec方法是无监督, 并且不需要领域知识的。Word2Vec使用神经网络模型对每个单词学习其向量表示, 能够在低维连续向量空间得到单词的表示方法, 同时利用文本语料库的上下文关系, 使得语义相近的词在空间距离更接近。</p>
+                </div>
+                <h3 id="51" name="51" class="anchor-tag">2 Word2Vec模型描述</h3>
+                <div class="p1">
+                    <p id="52">文献<citation id="205" type="reference">[<a class="sup">13</a>,<a class="sup">14</a>,<a class="sup">15</a>]</citation>中介绍了一种新的词向量学习方法, Google公司在2013年开放了Word2Vec用于训练词向量的软件工具, 它能够将词语表达为向量形式。</p>
+                </div>
+                <div class="p1">
+                    <p id="53">Word2Vec模型包含两种词向量学习结构模型:Skip-Gram模型和连续词袋 (Continuous Bag Of Words, CBOW) 模型。这两种结构都包含一个输入层、映射层和输出层。当确定词<i>w</i>上下文单词的个数<i>n</i>时, Skip-Gram模型就对当前词的上下文进行预测;而CBOW模型利用上下文词汇, 预测当前词。图1是这两个模型结构的描述。</p>
+                </div>
+                <div class="area_img" id="54">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201906026_054.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 Word2Vec 模型结构" src="Detail/GetImg?filename=images/JSJY201906026_054.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 Word2Vec 模型结构  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201906026_054.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 1 Word2Vec model structure</p>
+
+                </div>
+                <div class="p1">
+                    <p id="55">Skip-Gram模型根据当前词预测上下文, 给定词序列<b><i>W</i></b>= (<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, …, <i>w</i><sub><i>M</i></sub>) , 模型最大化平均对数概率为:</p>
+                </div>
+                <div class="p1">
+                    <p id="56" class="code-formula">
+                        <mathml id="56"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">l</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">W</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mn>1</mn><mi>Μ</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi>Μ</mi></munderover><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mo>-</mo><mi>L</mi><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>L</mi></mrow></munder><mrow><mi>log</mi></mrow></mstyle></mrow></mstyle><mspace width="0.25em" /><mi>p</mi><mo stretchy="false"> (</mo><mi>w</mi><msub><mrow></mrow><mrow><mi>m</mi><mo>+</mo><mi>i</mi></mrow></msub><mo>/</mo><mi>w</mi><msub><mrow></mrow><mi>m</mi></msub><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="57">其中<i>L</i>为上下文窗口的大小。</p>
+                </div>
+                <div class="p1">
+                    <p id="58">CBOW模型通过划定窗口中的词预测目标词, 当给定词序列<b><i>W</i></b>= (<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, …, <i>w</i><sub><i>M</i></sub>) , 模型最大化平均对数概率为:</p>
+                </div>
+                <div class="p1">
+                    <p id="59" class="code-formula">
+                        <mathml id="59"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>l</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">W</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mn>1</mn><mi>Μ</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mi>L</mi></mrow><mrow><mi>Μ</mi><mo>-</mo><mi>L</mi></mrow></munderover><mrow><mi>log</mi></mrow></mstyle><mspace width="0.25em" /><mi>p</mi><mo stretchy="false"> (</mo><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub><mo>/</mo><mi>w</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>-</mo><mi>L</mi></mrow></msub><mo>, </mo><mi>w</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>-</mo><mi>L</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>w</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mi>L</mi></mrow></msub><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="60">其中<i>L</i>为上下文窗口的大小。</p>
+                </div>
+                <div class="p1">
+                    <p id="61">文献<citation id="206" type="reference">[<a class="sup">15</a>]</citation>中还展示了这个模型语义关系的向量操作, 例如:Vector (柏林) -Vector (德国) + Vector (法国) = Vector (巴黎) 。这表明这种词向量表达在一定程度上可以体现语义相关性。</p>
+                </div>
+                <h3 id="62" name="62" class="anchor-tag">3 通过Word2Vec对snippet的扩展</h3>
+                <div class="p1">
+                    <p id="63">传统的空间向量模型 (<i>Space Vector Model</i>, <i>SVM</i>) 和<i>TF</i>-<i>IDF</i>特征选择模型是聚类算法中用于文本的表示方法。即每个<i>snippet</i>可以通过一个在文本中出现的<i>term</i>的向量来表示。每个<i>term</i>的权值可以是该<i>term</i>在文档中出现的频率。由于<i>snippet</i>是短文本, 其中许多<i>term</i>的出现形式为, 不论重要程度, 在文档中仅出现一次。由于<i>term</i>的稀疏性, 使得传统的<i>TF</i>-<i>IDF</i>模型缺少统计基础, 无法适用于短文本聚类。前面提到了很多相关的技术解决短文本稀疏的问题, 如基于搜索引擎、<i>Wordnet</i>、<i>Wikipedia</i>的短文本扩展等。本文中, 引入神经网络和表示学习的词嵌入技术来对短文本进行扩展。<i>Word</i>2<i>Vec</i>是一个从文本中学习词嵌入的高度可扩展的预测模型, 属于大规模神经网络语言模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="64">使用训练后的<i>Word</i>2<i>Vec</i>模型库扩展<i>snippet</i>特征。<i>Word</i>2<i>Vec</i>基于分布式假设, 即在相同文本中出现的单词其语义可能很相近, 大部分这样的嵌入单词具有相同上下文。单词嵌入技术具有捕捉语义规则和模式的能力。例如, <i>Cabrilovich</i>等<citation id="207" type="reference"><link href="182" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>提出了加权向量来表示文本语义相关度的方法。因此, 本文提出基于<i>Word</i>2<i>Vec</i>模型可以丰富<i>snippet</i>的内容, 加大相关单词的权重和改进语义识别的能力。</p>
+                </div>
+                <h4 class="anchor-tag" id="65" name="65">3.1 <i>Top</i>N<b>扩展</b></h4>
+                <div class="p1">
+                    <p id="66">文本中每个词被扩展为一组语义关联的单词组, 可以使得短文本中原来没有共现关系的单词之间建立联系。例如, “<i>car</i>”和“<i>vehicle</i>”之间没有共现关系, 虽然语义相近, 但共现为0。在<i>Word</i>2<i>Vec</i>模型中, 采用前10个单词的扩展集:</p>
+                </div>
+                <div class="p1">
+                    <p id="67"><i>Top</i>10 (“<i>car</i>”) ={ "<i>cars</i>", "<i>vehicle</i>", "<i>vehicles</i>", "<i>mx</i>5", "<i>motorbike</i>", "<i>automobile</i>", "<i>auto</i>", "<i>bodyshop</i>", "<i>citroen</i>", "<i>opel</i>"}</p>
+                </div>
+                <div class="p1">
+                    <p id="68"><i>Top</i>10 (“<i>vehicle</i>”) ={"<i>vehicles</i>", "<i>car</i>", "<i>automobile</i>", "<i>cars</i>", "<i>bodyshop</i>", "<i>auto</i>", "<i>truck</i>", "<i>usedcar</i>", "<i>warranty</i>", "<i>mx</i>5"}</p>
+                </div>
+                <div class="p1">
+                    <p id="69">可以看出增大了两个单词的共现程度。因而, 以语义关联的单词组扩充了文本内容, 加大语义相关文档之间的单词共现的机会, 因而提高聚类的性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="70">从每个<i>snippet</i>的文本可以得到单词的集合, 可以通过训练后的<i>Word</i>2<i>Vec</i>模型中的单词库来扩展<i>snippet</i>的内容。本文的扩展方法是, 寻找每个<i>term</i>在<i>Word</i>2<i>Vec</i>库中语义最相近的<i>Top</i>N单词实现对<i>snippet</i>的扩展。设一个<i>snippet</i>是由若干个<i>term</i>组成, 即<i>V</i><sub>snip</sub>={<i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, …, <i>t</i><sub><i>l</i></sub>} 。针对每个<i>t</i><sub><i>i</i></sub>进行Word2Vec模型下的扩展, 得到对应一组扩展单词集合<i>V</i><sub>tn</sub>={<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, …, <i>w</i><sub><i>n</i></sub>}。将该集合<i>V</i><sub>snip</sub>和<i>V</i><sub>tn</sub>合并, 就得到该snippet的扩展集。</p>
+                </div>
+                <h4 class="anchor-tag" id="71" name="71">3.2 <b>基于词频的权重修正</b></h4>
+                <div class="p1">
+                    <p id="72">但是, 简单的扩充没有考虑单词的通用程度, 会将许多通用单词扩充到文档之中, 例如一些较为通用单词, 如 “<i>time</i>”“<i>link</i>”“<i>include</i>”等扩充到文档中, 无形中引入了噪声信息, 反而会降低聚类性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="73">因此, 针对由<i>Word</i>2<i>Vec</i>扩展之后形成的扩展单词集合, 为了防止通用单词对聚类结果精度的下降的影响, 本文采取了词频权重的方法, 抑制通用词的作用, 降低噪声的影响。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">设扩充之后的文本经过<i>TF</i>-<i>IDF</i>特征选择处理, 保留的<i>term</i>形成的字典集合为<i>V</i>={<i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, …, <i>t</i><sub><i>m</i></sub>}。而词频库为针对文档集的词频统计数据库, 其中每个表项由〈<i>t</i>, <i>count</i>〉组成。对于集合<i>V</i>中的每个<i>t</i>的频率权值由以下式 (3) 计算:</p>
+                </div>
+                <div class="p1">
+                    <p id="75" class="code-formula">
+                        <mathml id="75"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>w</mi><mi>f</mi><mo>=</mo><mn>1</mn><mo>-</mo><mfrac><mrow><mi>log</mi><mo stretchy="false"> (</mo><mi>c</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>t</mi><mo stretchy="false">[</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">]</mo><mo stretchy="false">) </mo></mrow><mrow><mi>log</mi><mo stretchy="false"> (</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo>_</mo><mi>c</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>t</mi><mo stretchy="false">}</mo><mo stretchy="false">) </mo></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="76">其中:<i>count</i>[<i>t</i><sub><i>i</i></sub>]表示<i>t</i><sub><i>i</i></sub>的词频;<i>max</i>_<i>count</i>=max{<i>count</i>[<i>t</i><sub><i>i</i></sub>], <i>i</i>∈1, 2, …, <i>m</i>}表示最大词频。</p>
+                </div>
+                <div class="p1">
+                    <p id="77">设经过TF-IDF特征选择处理后的特征矩阵为{<i>w</i><sub><i>i</i>, <i>j</i></sub>}是一个<i>n</i>×<i>m</i>的矩阵, 其中, <i>n</i>为文本的数量, <i>m</i>为单词数量 (特征数量) , 矩阵项的TF-IDF权值为<i>w</i><sub><i>i</i>, <i>j</i></sub>。设一个单词<i>t</i><sub><i>i</i></sub>在文档集中的词频为<i>wf</i><sub><i>i</i></sub>, 在测试集的文档频率为<i>df</i><sub><i>i</i></sub>, 对于矩阵中每一个项<i>w</i><sub><i>i</i>, <i>j</i></sub>乘以<i>wf</i><sub><i>i</i></sub>和<i>df</i><sub><i>i</i></sub>予以修正, 新的权值为<i>w</i>′<sub><i>i</i>, <i>j</i></sub>:</p>
+                </div>
+                <div class="p1">
+                    <p id="78"><i>w</i>′<sub><i>i</i>, <i>j</i></sub>=<i>w</i><sub><i>i</i>, <i>j</i></sub>×<i>wf</i><sub><i>i</i>, <i>j</i></sub>×<i>df</i><sub><i>i</i></sub>      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="79">最后对矩阵进行正则化, 遵循以下公式:</p>
+                </div>
+                <div class="p1">
+                    <p id="80" class="code-formula">
+                        <mathml id="80"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">A</mi><mo stretchy="false">∥</mo><mo>=</mo><mo stretchy="false">[</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>, </mo><mspace width="0.25em" /><mi>j</mi></mrow></munder><mtext>a</mtext></mstyle><mtext>b</mtext><mtext>s</mtext><mo stretchy="false"> (</mo><mi>a</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub><mo stretchy="false">) </mo><msup><mrow></mrow><mn>2</mn></msup><mo stretchy="false">]</mo><msup><mrow></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>5</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <h4 class="anchor-tag" id="81" name="81">3.3 <b>处理流程</b></h4>
+                <div class="p1">
+                    <p id="82">对于测试集合中的<i>n</i>个文档, 每个文档都要经过如下7个步骤 (本文方法处理流程) 的处理:</p>
+                </div>
+                <div class="p1">
+                    <p id="83">步骤1 将原始的文档的title和snippet分解为单词的集合, 经过小写处理, 过滤非英文字符、过短的单词、数字和标点符号, 再过滤停词, 形成新的单词 (term) 的集合。</p>
+                </div>
+                <div class="p1">
+                    <p id="84">步骤2 对单词集合进行扩展, 每个单词查找Word2Vec模型库, 返回最相关的Top<i>N</i>个单词形成一个返回清单。</p>
+                </div>
+                <div class="p1">
+                    <p id="85">步骤3 对返回清单中的单词进行处理, 过滤非英文字符、过短的单词、数字和标点符号, 再过滤停词, 形成扩展单词集合。</p>
+                </div>
+                <div class="p1">
+                    <p id="86">步骤4 将原始单词集合和扩展单词集合合并为新的单词集合, 作为新方法的扩展集。</p>
+                </div>
+                <div class="p1">
+                    <p id="87">步骤5 采用IF-IDF特征选择方法, 建立文档-单词权值矩阵。</p>
+                </div>
+                <div class="p1">
+                    <p id="88">步骤6 采用3.2节的权值修正方法进行权值的修正, 最后归一化处理。</p>
+                </div>
+                <div class="p1">
+                    <p id="89">步骤7 对该矩阵进行聚类运算, 统计运行结果, 计算性能评价指标。</p>
+                </div>
+                <h3 id="90" name="90" class="anchor-tag">4 实验与结果分析</h3>
+                <h4 class="anchor-tag" id="91" name="91">4.1 <b>数据集</b></h4>
+                <div class="p1">
+                    <p id="92">为了评测本文方法, 使用了两个公开的数据集:<i>ODP</i>239和<i>SearchSnippets</i>。<i>ODP</i>239是从<i>ODP</i> (<i>Open Directory Project</i>) 中抽取的一个子集, 一共14个大主题, 其中包含239个子主题, 每个子主题约100个文档, 一共包含25 580个文档。每个文档含4项:<i>ID</i>、<i>URL</i>、<i>title</i>和<i>snippet</i>。在实验中, 仅抽取<i>title</i>和<i>snippet</i>用于文本聚类, 平均每个文档含23.63个单词。<i>SearchSnippets</i>是<i>Phan</i>等<citation id="208" type="reference"><link href="156" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>收集的8个不同的主题从<i>Web</i>搜索结果中选择的数据集, 包含10 060个文档的训练集和2 280个文档的测试集, 平均每个文档长度约18.07个单词。在实验中选用训练集和测试合并构成12 340个文档。</p>
+                </div>
+                <div class="p1">
+                    <p id="93"><i>Word</i>2<i>Vec</i>模型训练集采用了<i>ODP</i>项目下载的<i>dump</i>数据, 其中包含<i>ODP</i>全部信息, 共1 938 099个文档。经过对该下载数据的处理和文档中单词的预处理, 以及<i>Word</i>2<i>Vec</i>模型的训练, 得到<i>ODP</i>文档库下的<i>Word</i>2<i>Vec</i>模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="94">另外, 词频统计模型也是在<i>ODP</i>下载数据的基础上, 统计每个单词出现的频率, 形成词频统计数据。</p>
+                </div>
+                <h4 class="anchor-tag" id="95" name="95">4.2 <b>评价指标</b></h4>
+                <div class="p1">
+                    <p id="96">为实现本文方法和其他方法的比较, 选择了两个评价指标:标准化互信息 (<i>Normalized Mutual Information</i>, <i>NMI</i>) 和<i>ACCuracy</i> (<i>ACC</i>) <citation id="209" type="reference"><link href="184" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>来测试聚类结果的性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="97"><i>NMI</i>指标是标记集合<b><i>Y</i></b>和聚类集合<b><i>C</i></b>之间的标准化互信息, 通常用于评价聚类结果, 定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="98" class="code-formula">
+                        <mathml id="98"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ν</mi><mi>Μ</mi><mi>Ι</mi><mo>=</mo><mi>Μ</mi><mi>Ι</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">X</mi><mo>, </mo><mi mathvariant="bold-italic">Y</mi><mo stretchy="false">) </mo><mo>/</mo><msqrt><mrow><mi>Η</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">X</mi><mo stretchy="false">) </mo><mi>Η</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">Y</mi><mo stretchy="false">) </mo></mrow></msqrt><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="99">其中:<i>MI</i> (<b><i>X</i></b>, <b><i>Y</i></b>) 表示<b><i>X</i></b>和<b><i>Y</i></b>之间的互信息;<i>H</i> (·) 表示熵;<mathml id="100"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msqrt><mrow><mi>Η</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">X</mi><mo stretchy="false">) </mo><mi>Η</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">Y</mi><mo stretchy="false">) </mo></mrow></msqrt></mrow></math></mathml>是为了互信息的结果标准化为[0, 1]内的值。</p>
+                </div>
+                <div class="p1">
+                    <p id="101"><i>ACC</i>指标是评价聚类的准确程度, 当给定一个文本<i>text</i><sub><i>i</i></sub>, 且<i>c</i><sub><i>i</i></sub>和<i>y</i><sub><i>i</i></sub>是聚类的标签和数据集提供的标签, <i>ACC</i>指标的定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="102" class="code-formula">
+                        <mathml id="102"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>A</mi><mi>C</mi><mi>C</mi><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>δ</mi></mstyle><mo stretchy="false"> (</mo><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>m</mi><mi>a</mi><mi>p</mi><mo stretchy="false"> (</mo><mi>c</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo stretchy="false">) </mo><mo>/</mo><mi>n</mi><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>7</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="103">其中:<i>n</i>是全体文本的数量;<i>δ</i> (<i>x</i>, <i>y</i>) 是指示函数, 当<i>x</i>=<i>y</i>, 取值为1, 否则为0;<i>map</i> (<i>c</i><sub><i>i</i></sub>) 是排列映射函数, 通过Hungarian算法<citation id="210" type="reference"><link href="186" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>实现每个聚类标签到文本标签的映射。</p>
+                </div>
+                <h4 class="anchor-tag" id="104" name="104">4.3 <b>实验策略</b></h4>
+                <div class="p1">
+                    <p id="105">传统的测试策略是直接将全体数据集的文档和标签作为输入数据进行一次聚类测试。经过实验发现, 一次数据集的测试, 可能会由于某些与聚类无关的单词的分布, 造成对聚类结果的影响。例如, 假设三个主题是“<i>business</i>”“<i>sport</i>”“<i>shopping</i>”的文档集合的聚类过程中, 可能由于某些单词的分布, 例如“<i>link</i>”“<i>time</i>”“<i>site</i>”等和主题无关单词的分布, 巧合地与某个主题分布近似, 会造成该主题聚类结果好的假象。</p>
+                </div>
+                <div class="p1">
+                    <p id="106">本文的观点是仅凭数据集的一次聚类, 不能公正地反映算法的性能, 因此, 在借鉴交叉验证方法的基础上, 提出采用成组测试的策略, 通过对原始数据集重复随机抽样形成一组测试子集的方法。每个方法需要对该组测试子集中的每个测试子集运行聚类算法, 用一组子集结果的平均值作为测试结果。</p>
+                </div>
+                <div class="p1">
+                    <p id="107">设定主题数目 (聚类簇数目) 为一个测试条件, 针对每种测试条件抽取10个测试子集构成测试组。每个测试组对应一个主题数量。从3到8分别产生6个测试组, 命名为<i>group</i> (<i>i</i>) , 其中<i>i</i>表示主题的个数。每个测试组的产生是重复以下步骤10次, 每组产生10个测试子集:</p>
+                </div>
+                <div class="p1">
+                    <p id="108">1) 从原始数据集的主题中随机选择<i>i</i>个主题;</p>
+                </div>
+                <div class="p1">
+                    <p id="109">2) 针对每个主题, 在原始数据集对应的主题下随机选择10个snippet形成文档。</p>
+                </div>
+                <div class="p1">
+                    <p id="110">最终, 按照主题的数量从3到8一共产生了6个测试组, 即<i>group</i> (3) 到<i>group</i> (8) 。</p>
+                </div>
+                <h4 class="anchor-tag" id="111" name="111">4.4 Top<i>N</i><b>的确定</b></h4>
+                <div class="p1">
+                    <p id="112"><i>Top</i>N表示通过<i>Word</i>2<i>Vec</i>扩展词的数量。通过大量的实验, 针对不同的数据集, 改变<i>Top</i>N的值, 得到如图2所示的运行结果。其中<i>NA</i>_<i>NMI</i>和<i>NA</i>_<i>ACC</i>是没有扩展的文本聚类性能, 而<i>Top</i>N_<i>NMI</i>和<i>Top</i>N_<i>ACC</i>是不同<i>Top</i>N下的聚类性能。从图2中可知, 实验取<i>Top</i>N=50, 即如果某个单词属于<i>Word</i>2<i>Vec</i>字库, 则扩展至少到50个单词。</p>
+                </div>
+                <div class="area_img" id="113">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201906026_113.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 不同TopN下的性能" src="Detail/GetImg?filename=images/JSJY201906026_113.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 不同<i>Top</i>N下的性能  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201906026_113.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"><i>Fig</i>. 2 <i>Performance under different Top</i>N</p>
+
+                </div>
+                <h4 class="anchor-tag" id="114" name="114">4.5 <b>聚类算法确定</b></h4>
+                <div class="p1">
+                    <p id="115">为了实验比较的公平性, 不同方法产生的文本特征矩阵都在统一的聚类算法平台下进行测试。经过反复比较, 选择了聚类性能较好的聚类工具<i>cluto</i>, <i>cluto</i>是明尼苏达大学开发的一个用于高维数据聚类分析的软件包, 具有以下优点:相比其他聚类方法, 具有较好的聚类性能;聚类结果的确定性, 同一数据集下多次运行后的结果是相同的, 每次运行一次即可得到结果。而K-<i>means</i>算法每次运行结果不同, 因此, 采用K-<i>means</i>聚类, 通常需要多次运行结果取平均值的方法;<i>cluto</i>比K-<i>means</i>的运行时间短。</p>
+                </div>
+                <div class="p1">
+                    <p id="116"><i>cluto</i>聚类算法中, 相似度计算采用<i>cosine</i>, 聚类方法采用<i>rb</i> (<i>repeated bisections</i>) 。<i>cluto</i>将聚类问题以优化过程实现, 其中准则函数<i>I</i>1选择以下优化函数:</p>
+                </div>
+                <div class="p1">
+                    <p id="117" class="code-formula">
+                        <mathml id="117"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mtext>m</mtext><mtext>a</mtext><mtext>x</mtext><mtext>i</mtext><mtext>m</mtext><mtext>i</mtext><mtext>z</mtext><mtext>e</mtext><mspace width="0.25em" /><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow></mstyle><mo stretchy="false"> (</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi mathvariant="bold-italic">v</mi><mo>, </mo><mi mathvariant="bold-italic">u</mi><mo>∈</mo><mi>S</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></munder><mi>s</mi></mstyle><mi>i</mi><mi>m</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">v</mi><mo>, </mo><mi mathvariant="bold-italic">u</mi><mo stretchy="false">) </mo><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>8</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="118">实验中, 将本文方法和其他方法进行了对比实验。其中NA (Native) 表示没有扩展的纯snippet的基本方法, WN表示基于Wordnet扩展方法, WK表示基于Wikipedia扩展的方法, WE表示通过Word2Vec模型直接扩展的方法, WEF表示经过Word2Vec扩展和词频修正结合的方法。</p>
+                </div>
+                <h4 class="anchor-tag" id="119" name="119">4.6 <b>结果分析</b></h4>
+                <div class="p1">
+                    <p id="120">对所有的测试组分别运行了<i>cluto</i>算法, 实验结果如表1中所示。图3给出了在数据集<i>ODP</i>239下测试结果<i>NMI</i>和<i>ACC</i>的对比结果, 图4给出了在数据集<i>SearchSnippets</i>下测试结果<i>NMI</i>和<i>ACC</i>的对比结果。</p>
+                </div>
+                <div class="area_img" id="121">
+                    <p class="img_tit"><b>表</b>1 <b>不同方法的</b><i>NMI</i><b>和</b><i>ACC</i><b>比较</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><i>Tab</i>. 1 <i>Comparison of NMI and ACC of different methods</i></p>
+                    <p class="img_note"></p>
+                    <table id="121" border="1"><tr><td rowspan="2"><br />方法</td><td colspan="2"><br /><i>ODP</i>239/%</td><td rowspan="2"></td><td colspan="2"><br /><i>SearchSnippets</i>/%</td></tr><tr><td><br /><i>NMI</i></td><td><i>ACC</i></td><td><br /><i>NMI</i></td><td><i>ACC</i></td></tr><tr><td><i>NA</i></td><td>51±10.22</td><td>57±8.26</td><td></td><td>28±6.02</td><td>40±5.30</td></tr><tr><td><br /><i>WN</i></td><td>59±10.53</td><td>64±10.53</td><td></td><td>27±5.93</td><td>41±4.63</td></tr><tr><td><br /><i>WK</i></td><td>55±12.33</td><td>67±9.73</td><td></td><td>27±3.87</td><td>45±3.50</td></tr><tr><td><br /><i>WE</i></td><td>71±11.48</td><td>75±10.73</td><td></td><td>46±8.53</td><td>54±9.00</td></tr><tr><td><br /><i>WEF</i></td><td>74±10.57</td><td>81±8.87</td><td></td><td>54±10.60</td><td>63±8.87</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="122">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201906026_122.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 ODP239数据集上不同方法的性能对比" src="Detail/GetImg?filename=images/JSJY201906026_122.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 <i>ODP</i>239数据集上不同方法的性能对比  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201906026_122.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"><i>Fig</i>. 3 <i>Performance comparison of different methods on</i><i>ODP</i>239 <i>dataset</i></p>
+
+                </div>
+                <div class="area_img" id="123">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201906026_123.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 SearchSnippets数据集上不同方法的性能对比" src="Detail/GetImg?filename=images/JSJY201906026_123.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 <i>SearchSnippets</i>数据集上不同方法的性能对比  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201906026_123.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"><i>Fig</i>. 4 <i>Performance comparison of different methods on</i><i>SearchSnippets dataset</i></p>
+
+                </div>
+                <div class="p1">
+                    <p id="124">通过对表1和图3～4的实验结果进行分析可以得出, 以<i>NA</i>方法的聚类性能为基础, <i>WN</i>和<i>WK</i>性能表现差得不多, 均比<i>NA</i>优一些;而<i>WE</i>和<i>WEF</i>的性能要比其他对比方法有很大程度的提高, 且<i>WEF</i>的性能最优, 表明本文方法具有一定的提高聚类性能的效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="125">得到上述结果的原因分析是:本体<i>Wordnet</i>以单词为主, 缺少专有名词, 扩展的范围有限, 而<i>Wikipedia</i>虽然包含相关的信息, 但<i>Wikipedia</i>不是一个字典, 不如<i>Wordnet</i>的单词中的内容丰富, 扩展依然受限;但是, <i>Word</i>2<i>Vec</i>模型并不是关于单词的知识本体, 而是提供单词之间语义关联程度的向量模型库, 只要单词库包含的词 (缩写也不例外) , 模型库都会提供该单词语义相关的其他单词的集合。因此, 从扩大文档之间的单词共现率角度分析, <i>Word</i>2<i>Vec</i>的效果会好一些。</p>
+                </div>
+                <h3 id="126" name="126" class="anchor-tag">5 结语</h3>
+                <div class="p1">
+                    <p id="127"><i>Web</i>搜索引擎是目前用户在<i>Web</i>上查询相关信息的标准平台。而针对用户提交的查询关键词, 搜索引擎将回送给用户一个与查询相关度排序后的结果列表。当用户提交的查询是宽领域或模糊概念时, 用户无法从大量的返回结果中快速找到查询的信息。解决该问题的一个有效方法是采用文本聚类技术将相似主题的文档聚集在一起, 而使得结果的输出以更为紧凑的形式展现出来, 用户可以在主题的分组形式下浏览结果集合。但是, 搜索引擎返回的结果列表主要是由称为<i>snippet</i>的短文本组成, 而<i>snippet</i>携带很少量的信息, 使得传统的<i>TF</i>-<i>IDF</i>模型下的聚类结果的效果很差。解决这一问题的有效方法是采用外部的文本库或语料库对<i>snippet</i>的信息进行扩展。有两种对<i>snippet</i>的扩展方法:一种是再次使用搜索引擎的扩展技术, 另一种是使用外部文本数据库。近年来, 神经网络和表示学习技术引起了人们的注意, 许多词表示学习的神经模型被提出用来解决数据稀疏问题。受到基于<i>Word</i>2<i>Vec</i>模型启发, 本文提出了一个扩展<i>snippet</i>的方法, 采用模型下<i>Top</i>N个最相似度的词用于对<i>snippet</i>的扩展, 并且考虑了词频权重选择, 降低由于通用词的扩展而引入的噪声的影响。</p>
+                </div>
+                <div class="p1">
+                    <p id="128">为了验证本文方法的有效性, 在2个公开数据集下进行了大量的实验, 包括模型训练和词频的统计。实验结果的分析表明, 本文方法相比基准测试方法在性能上有很大的提高。尽管本文方法是有效的, 但是扩展方法依旧显得过于简单, 另外仅通过词频过虑噪声数据的方法还不完善。因此, 我们未来的工作将集中在<i>Word</i>2<i>Vec</i>模型下扩展方法的深入研究, 同时可以考虑结合词性标注 (<i>Part Of Speech</i>, <i>POS</i>) 、实体识别和本体等内容的结合, 进一步提高聚类的性能。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="152">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000017697&amp;v=Mjc4MTZZN0s3SHRqTnI0OUZaT29JQ25VK29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnRGaW5sVXIzSUtGNFFhUlU9TmlmSQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b>CARPINETO C, OSINSKI S, ROMANO G, et al.A survey of Web clustering engines[J].ACM Computing Surveys, 2009, 41 (3) :Article No.17.
+                            </a>
+                        </p>
+                        <p id="154">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Optimal meta search results clustering">
+
+                                <b>[2]</b>CARPINETO C, ROMANO G.Optimal meta search results clustering[C]//Proceeding of the 33rd International ACM SIGIR Conference on Research and Development in Information Retrieval.New York:ACM, 2010:170-177.
+                            </a>
+                        </p>
+                        <p id="156">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning to classify short and sparse text&amp;amp;web with hidden topics from large-scale data collections">
+
+                                <b>[3]</b>PHAN X H, NGUYEN L M, HORIGUCHI S.Learning to classify short and sparse text&amp;Web with hidden topics from large-scale data collections[C]//WWW 2008:Proceedings of the 17th International Conference on World Wide Web.New York:ACM, 2008:91-100.
+                            </a>
+                        </p>
+                        <p id="158">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Measuring Semantic Similarity between Words Using Web Search Engines">
+
+                                <b>[4]</b>BOLLEGALA D, MATSUO Y, ISHIZUKA M.Measuring semantic similarity between words using Web search engines[C]//Proceedings of the 16th International Conference on World Wide Web.New York:ACM, 2007:757-766.
+                            </a>
+                        </p>
+                        <p id="160">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Ontology Improves Text Documents Clustering">
+
+                                <b>[5]</b>HOTHO A, STAAB S, STUMME G.Ontologies improve text document clustering[C]//ICDM 2003:Proceedings of the Third IEEEInternational Conference on Data Mining.Washington, DC:IEEEComputer Society, 2003:541-544.
+                            </a>
+                        </p>
+                        <p id="162">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Clustering Short Texts UsingWikipedia">
+
+                                <b>[6]</b>BANERJEE S, RAMANATHAN K, GUPTA A.Clustering short texts using Wikipedia[C]//Proceedings of the 30th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval.New York:ACM, 2007:787-788.
+                            </a>
+                        </p>
+                        <p id="164">
+                            <a id="bibliography_7" >
+                                    <b>[7]</b>
+                                BENGIO Y, DUCHARME R, VINCENT P, et al.A neural probabilistic language model[J].Journal of Machine Learning Research, 2003, 3 (6) :1137-1155.
+                            </a>
+                        </p>
+                        <p id="166">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Three new graphical models for statistical language modelling">
+
+                                <b>[8]</b>MNIH A, HINTON G E.Three new graphical models for statistical language modelling[C]//Proceedings of the Twenty-Fourth International Conference on Machine Learning.New York, ACM:2007:641-648.
+                            </a>
+                        </p>
+                        <p id="168">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Statistical language models based on neural networks">
+
+                                <b>[9]</b>MIKOLOV T.Statistical language models based on neural networks[D].Brno:Brno University of Technology, 2012:26-43.
+                            </a>
+                        </p>
+                        <p id="170">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Natural language processing (almost) from scratch">
+
+                                <b>[10]</b>COLLOBERT R, WESTON J, BOTTOU L, et al.Natural language processing (almost) from scratch[J].Journal of Machine Learning Research, 2011, 12 (7) :2493-2537.
+                            </a>
+                        </p>
+                        <p id="172">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Semi-supervised recursive autoencoders for predicting sentiment distributions">
+
+                                <b>[11]</b>SOCHER R, PENNINGTON J, HUANG E H, et al.Semi-supervised recursive autoencoders for predicting sentiment distributions[C]//Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing.Stroudsburg, PA:Association for Computational Linguistics, 2011:151-161.
+                            </a>
+                        </p>
+                        <p id="174">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Characterizing diseases from unstructured text a vocabulary driven Word2Vec approach">
+
+                                <b>[12]</b>GHOSH S, CHARKRABORTY P, COHN E, et al.Characterizing diseases from unstructured text:a vocabulary driven Word2Vec approach[C]//Proceedings of the 25th ACM International Conference on Information and Knowledge Management.New York:ACM, 2016:1129-1138.
+                            </a>
+                        </p>
+                        <p id="176">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+
+                                <b>[13]</b>MIKOLOV T, CHEN K, CORRADO G, et al.Efficient estimation of word representations in vector space[EB/OL].[2018-08-16].http://www.surdeanu.info/mihai/teaching/ista555-spring15/readings/mikolov2013.pdf.
+                            </a>
+                        </p>
+                        <p id="178">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Distributed representations of words and phrases and their compositionality">
+
+                                <b>[14]</b>MIKOLOV T, SUTSKEVER I, CHEN K, et al.Distributed representations of words and phrases and their compositionality[C]//Proceedings of the 26th International Conference on Neural Information Processing Systems.North Miami Beach, FL:Curran Associates Inc., 2013:3111-3119.
+                            </a>
+                        </p>
+                        <p id="180">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Linguistic Regularities in Continuous Space Word Representations">
+
+                                <b>[15]</b>MIKOLOV T, YIH W, ZWEIG G.Linguistic regularities in continuous space word representations[C]//Proceedings of the 2013Conference of the North American Chapter of the Association of Computational Linguistics.Stroudsburg, PA:Association for Computational Linguistics, 2013:746-751.
+                            </a>
+                        </p>
+                        <p id="182">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Computing semantic related-ness using Wikipedia-based explicit semantic analysis">
+
+                                <b>[16]</b>GABRILOVICH E, MARKOVITCH S.Computing semantic relatedness using Wikipedia-based explicit semantic analysis[C]//Proceedings of the 20th International Joint Conference on Artificial Intelligence.San Francisco, CA:Morgan Kaufmann Publishers Inc., 2007:1606-1611.
+                            </a>
+                        </p>
+                        <p id="184">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Document clustering based onnon-negative matrix factorization">
+
+                                <b>[17]</b>XU W, LIU X, GONG Y H.Document clustering based on nonnegative matrix factorization[C]//Proceedings of the 26th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval.New York:ACM, 2003:267-273.
+                            </a>
+                        </p>
+                        <p id="186">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Combinatorial Optimization:Algorithms and Complexity">
+
+                                <b>[18]</b>PAPADIMITRIOU C H, STEIGLITZ K.Combinatorial Optimization:Algorithms and Complexity[M].New York:Courier Dover Publications, 1998:248-254.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJY201906026" />
+        <input id="dpi" type="hidden" value="400" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201906026&amp;v=MDU2MTA1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlEbFY3elBMejdCZDdHNEg5ak1xWTlIWW9RS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

@@ -1,0 +1,1503 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637127117386082500%26DBCODE%3dCJFD%26TABLEName%3dCJFDTEMP%26FileName%3dJFYZ201911012%26RESULT%3d1%26SIGN%3dfgKLwC452UC2Inp2WrD54OiHPBA%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JFYZ201911012&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JFYZ201911012&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201911012&amp;v=Mjk0NDNVUkxPZVplUnNGeXptV3J2Qkx5dlNkTEc0SDlqTnJvOUVab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#96" data-title="&lt;b&gt;1 相关工作&lt;/b&gt; "><b>1 相关工作</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#101" data-title="&lt;b&gt;2 跨视角判别词典嵌入&lt;/b&gt; "><b>2 跨视角判别词典嵌入</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#102" data-title="&lt;b&gt;2.1 词典学习&lt;/b&gt;"><b>2.1 词典学习</b></a></li>
+                                                <li><a href="#107" data-title="&lt;b&gt;2.2 跨视角判别词典嵌入模型&lt;/b&gt;"><b>2.2 跨视角判别词典嵌入模型</b></a></li>
+                                                <li><a href="#138" data-title="&lt;b&gt;2.3 模型优化&lt;/b&gt;"><b>2.3 模型优化</b></a></li>
+                                                <li><a href="#182" data-title="&lt;b&gt;2.4 在行人再识别中的应用&lt;/b&gt;"><b>2.4 在行人再识别中的应用</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#189" data-title="&lt;b&gt;3 实  验&lt;/b&gt; "><b>3 实  验</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#191" data-title="&lt;b&gt;3.1 实验设置&lt;/b&gt;"><b>3.1 实验设置</b></a></li>
+                                                <li><a href="#205" data-title="&lt;b&gt;3.2 与文献公开的结果对比&lt;/b&gt;"><b>3.2 与文献公开的结果对比</b></a></li>
+                                                <li><a href="#217" data-title="&lt;b&gt;3.3 采用相同特征描述子时算法性能比较&lt;/b&gt;"><b>3.3 采用相同特征描述子时算法性能比较</b></a></li>
+                                                <li><a href="#221" data-title="&lt;b&gt;3.4 算法分析&lt;/b&gt;"><b>3.4 算法分析</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#235" data-title="&lt;b&gt;4 结束语&lt;/b&gt; "><b>4 结束语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#127" data-title="图1 困难/中等/容易匹配集划分示意">图1 困难/中等/容易匹配集划分示意</a></li>
+                                                <li><a href="#137" data-title="图2 二维空间中样本自适应权重分配示例">图2 二维空间中样本自适应权重分配示例</a></li>
+                                                <li><a href="#198" data-title="图3 VIPeR,GRID,3DPeS数据集中部分行人图像">图3 VIPeR,GRID,3DPeS数据集中部分行人图像</a></li>
+                                                <li><a href="#210" data-title="&lt;b&gt;表1 CDDM与其他算法在VIPeR数据集上匹配率对比&lt;/b&gt;"><b>表1 CDDM与其他算法在VIPeR数据集上匹配率对比</b></a></li>
+                                                <li><a href="#211" data-title="图4 不同算法在VIPeR数据集上的CMC曲线">图4 不同算法在VIPeR数据集上的CMC曲线</a></li>
+                                                <li><a href="#213" data-title="&lt;b&gt;表2 CDDM与其他算法在GRID数据集上匹配率对比&lt;/b&gt;"><b>表2 CDDM与其他算法在GRID数据集上匹配率对比</b></a></li>
+                                                <li><a href="#214" data-title="图5 不同算法在GRID数据集上的CMC曲线">图5 不同算法在GRID数据集上的CMC曲线</a></li>
+                                                <li><a href="#216" data-title="&lt;b&gt;表3 CDDM与其他算法在3DPeS数据集上匹配率对比&lt;/b&gt;"><b>表3 CDDM与其他算法在3DPeS数据集上匹配率对比</b></a></li>
+                                                <li><a href="#220" data-title="图6 采用相同特征描述子时CDDM与其他算法的性能对比">图6 采用相同特征描述子时CDDM与其他算法的性能对比</a></li>
+                                                <li><a href="#229" data-title="图7 词典基向量数&lt;i&gt;m&lt;/i&gt;对rank-1匹配率的影响">图7 词典基向量数<i>m</i>对rank-1匹配率的影响</a></li>
+                                                <li><a href="#230" data-title="图8 特征描述子性能对比">图8 特征描述子性能对比</a></li>
+                                                <li><a href="#231" data-title="&lt;b&gt;表4 CDDM与CDDI匹配率对比&lt;/b&gt;"><b>表4 CDDM与CDDI匹配率对比</b></a></li>
+                                                <li><a href="#234" data-title="图9 rank-1匹配率对比">图9 rank-1匹配率对比</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+                                    <dd class="subnode">
+                                        <h6>
+                                            <a href="#a_footnote">注释</a>
+
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="319">
+
+
+                                    <a id="bibliography_1" title="Gong Shaogang,Cristani M,Yan Shuicheng,et al.Person Re-identification[M].Berlin:Springer,2014" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Person Re-identification">
+                                        <b>[1]</b>
+                                        Gong Shaogang,Cristani M,Yan Shuicheng,et al.Person Re-identification[M].Berlin:Springer,2014
+                                    </a>
+                                </li>
+                                <li id="321">
+
+
+                                    <a id="bibliography_2" title="Huang Jipeng,Shi Yinghuan,Gao Yang.Multi-scale faster-RCNN algorithm for small object detection[J].Journal of Computer Research and Development,2019,56(2):319- 327 (in Chinese)(黄继鹏,史颖欢,高阳.面向小目标的多尺度Faster-RCNN检测算法[J].计算机研究与发展,2019,56(2):319- 327)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201902008&amp;v=MzAzMzMzenFxQnRHRnJDVVJMT2VaZVJzRnl6bVdydkJMeXZTZExHNEg5ak1yWTlGYklRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                        Huang Jipeng,Shi Yinghuan,Gao Yang.Multi-scale faster-RCNN algorithm for small object detection[J].Journal of Computer Research and Development,2019,56(2):319- 327 (in Chinese)(黄继鹏,史颖欢,高阳.面向小目标的多尺度Faster-RCNN检测算法[J].计算机研究与发展,2019,56(2):319- 327)
+                                    </a>
+                                </li>
+                                <li id="323">
+
+
+                                    <a id="bibliography_3" title="Chen Change Loy,Xiang Tao,Gong Shaogang.Multi-camera activity correlation analysis[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2009:1988- 1995" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Multi-camera activity correlation analysis">
+                                        <b>[3]</b>
+                                        Chen Change Loy,Xiang Tao,Gong Shaogang.Multi-camera activity correlation analysis[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2009:1988- 1995
+                                    </a>
+                                </li>
+                                <li id="325">
+
+
+                                    <a id="bibliography_4" title="Zheng Liang,Yang Yi,Hauptmann A G.Person re-identification:Past,present and future[J].arXiv preprint,arXiv:1610.02984,2016" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Person re-identification:Past present and future">
+                                        <b>[4]</b>
+                                        Zheng Liang,Yang Yi,Hauptmann A G.Person re-identification:Past,present and future[J].arXiv preprint,arXiv:1610.02984,2016
+                                    </a>
+                                </li>
+                                <li id="327">
+
+
+                                    <a id="bibliography_5" title="Guo Yiluan,Cheung N M.Efficient and deep person re-identification using multi-level similarity[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2018:2335- 2344" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient and deep person re-identification using multi-level similarity">
+                                        <b>[5]</b>
+                                        Guo Yiluan,Cheung N M.Efficient and deep person re-identification using multi-level similarity[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2018:2335- 2344
+                                    </a>
+                                </li>
+                                <li id="329">
+
+
+                                    <a id="bibliography_6" title="Liao Shengcai,Hu Yang,Zhu Xiangyu,et al.Person re-identification by local maximal occurrence representation and metric learning[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2015:2197- 2206" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Person re-identification by local maximal occurrence representation and metric learning">
+                                        <b>[6]</b>
+                                        Liao Shengcai,Hu Yang,Zhu Xiangyu,et al.Person re-identification by local maximal occurrence representation and metric learning[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2015:2197- 2206
+                                    </a>
+                                </li>
+                                <li id="331">
+
+
+                                    <a id="bibliography_7" title="Zhao Haiyu,Tian Maoqing,Sun Shuyang,et al.Spindle Net:Person re-identification with human body region guided feature decomposition and fusion[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2017:1077- 1085" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Spindle net:Person re-identification with human body region guided feature decomposition and fusion">
+                                        <b>[7]</b>
+                                        Zhao Haiyu,Tian Maoqing,Sun Shuyang,et al.Spindle Net:Person re-identification with human body region guided feature decomposition and fusion[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2017:1077- 1085
+                                    </a>
+                                </li>
+                                <li id="333">
+
+
+                                    <a id="bibliography_8" title="Zhong Zhun,Zheng Liang,Zheng Zhedong,et al.Camera style adaptation for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2018:5157- 5166" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Camera Style Adaptation for Person Re-identification">
+                                        <b>[8]</b>
+                                        Zhong Zhun,Zheng Liang,Zheng Zhedong,et al.Camera style adaptation for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2018:5157- 5166
+                                    </a>
+                                </li>
+                                <li id="335">
+
+
+                                    <a id="bibliography_9" title="Yang Yang,Yang Jimei,Yan Junjie,et al.Salient color names for person re-identification[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2014:536- 551" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Salient Color Names for Person Re-Identification">
+                                        <b>[9]</b>
+                                        Yang Yang,Yang Jimei,Yan Junjie,et al.Salient color names for person re-identification[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2014:536- 551
+                                    </a>
+                                </li>
+                                <li id="337">
+
+
+                                    <a id="bibliography_10" title="Lisanti G,Masi I,Bagdanov A D,et al.Person re-identification by iterative re-weighted sparse ranking[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence,2015,37(8):1629- 1642" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Person re-identification by iterative re-weighted sparse ranking">
+                                        <b>[10]</b>
+                                        Lisanti G,Masi I,Bagdanov A D,et al.Person re-identification by iterative re-weighted sparse ranking[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence,2015,37(8):1629- 1642
+                                    </a>
+                                </li>
+                                <li id="339">
+
+
+                                    <a id="bibliography_11" title="Zhang Li,Xiang Tao,Gong Shaogang.Learning a discriminative null space for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1239- 1248" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning a discriminative null space for person re-identification">
+                                        <b>[11]</b>
+                                        Zhang Li,Xiang Tao,Gong Shaogang.Learning a discriminative null space for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1239- 1248
+                                    </a>
+                                </li>
+                                <li id="341">
+
+
+                                    <a id="bibliography_12" title="Wang Jing,Wang Zheng,Liang Chao,et al.Equidistance constrained metric learning for person re-identification[J].Pattern Recognition,2018,74:38- 51" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJESEC497DB3A5586205A4A4B241D7FA6EC6&amp;v=MDc3MDlsZkNwYlEzNU5waHdMdTJ4S0U9TmlmT2ZjYkxHdGpMMi8xR0ZlNEtCSG83enhOaTdrNTVPbjNtcldZeUQ4T1NNTW1aQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                        Wang Jing,Wang Zheng,Liang Chao,et al.Equidistance constrained metric learning for person re-identification[J].Pattern Recognition,2018,74:38- 51
+                                    </a>
+                                </li>
+                                <li id="343">
+
+
+                                    <a id="bibliography_13" title="Paisitkriangkrai S,Wu Lin,Shen Chunhua,et al.Structured learning of metric ensembles with application to person re-identification[J].Computer Vision and Image Understanding,2017,156:51- 65" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES7E39697E821FF90B14B1BFC75C9EFD9F&amp;v=MTQwMjBxeGRHY01maU1iUHBDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMzVOcGh3THUyeEtFPU5pZk9mYlROSGRqS3BvZ3diT2tPZWdvd3oyUVM3azE4T2dtUg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                        Paisitkriangkrai S,Wu Lin,Shen Chunhua,et al.Structured learning of metric ensembles with application to person re-identification[J].Computer Vision and Image Understanding,2017,156:51- 65
+                                    </a>
+                                </li>
+                                <li id="345">
+
+
+                                    <a id="bibliography_14" title="Srikrishna K,Yang Li,Richard J R.Person re-identification with discriminatively trained viewpoint invariant dictionaries[C] //Proc of IEEE Int Conf on Computer Vision.Piscataway,NJ:IEEE,2015:4516- 4524" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Person Re-Identification with Discriminatively Trained Viewpoint Invariant Dictionaries">
+                                        <b>[14]</b>
+                                        Srikrishna K,Yang Li,Richard J R.Person re-identification with discriminatively trained viewpoint invariant dictionaries[C] //Proc of IEEE Int Conf on Computer Vision.Piscataway,NJ:IEEE,2015:4516- 4524
+                                    </a>
+                                </li>
+                                <li id="347">
+
+
+                                    <a id="bibliography_15" title="Yang Yang,Lei Zhen,Zhang Shifeng,et al.Metric embedded discriminative vocabulary learning for high-level person representation[C] //Proc of the 30th AAAI Conf on Artificial Intelligence.Menlo Park,CA:AAAI Press,2016:3648- 3654" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Metric embedded discriminative vocabulary learn ing for high-level person representation[C/OL]">
+                                        <b>[15]</b>
+                                        Yang Yang,Lei Zhen,Zhang Shifeng,et al.Metric embedded discriminative vocabulary learning for high-level person representation[C] //Proc of the 30th AAAI Conf on Artificial Intelligence.Menlo Park,CA:AAAI Press,2016:3648- 3654
+                                    </a>
+                                </li>
+                                <li id="349">
+
+
+                                    <a id="bibliography_16" title="Matsukawa T,Okabe T,Suzuki E,et al.Hierarchical gaussian descriptor for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1363- 1372" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Hierarchical Gaussian descriptor for person re-identification">
+                                        <b>[16]</b>
+                                        Matsukawa T,Okabe T,Suzuki E,et al.Hierarchical gaussian descriptor for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1363- 1372
+                                    </a>
+                                </li>
+                                <li id="351">
+
+
+                                    <a id="bibliography_17" title="Zhao Rui,Ouyang Wanli,Wang Xiaogang.Learning mid-level filters for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2014:144- 151" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning mid-level filters for person re-identification">
+                                        <b>[17]</b>
+                                        Zhao Rui,Ouyang Wanli,Wang Xiaogang.Learning mid-level filters for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2014:144- 151
+                                    </a>
+                                </li>
+                                <li id="353">
+
+
+                                    <a id="bibliography_18" title="Ma Bingpeng,Su Yu,Jurie F.Covariance descriptor based on bio-inspired features for person re-identification and face verification[J].Image and Vision Computing,2014,32(6):379- 390" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14061600129508&amp;v=MDMzNjlSZEdlcnFRVE1ud1plWnVIeWptVUwzSUpGMGRiaHM9TmlmT2ZiSzhIdGZOcVk5Rlpla0dDWHd4b0JNVDZUNFBRSC9pcg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[18]</b>
+                                        Ma Bingpeng,Su Yu,Jurie F.Covariance descriptor based on bio-inspired features for person re-identification and face verification[J].Image and Vision Computing,2014,32(6):379- 390
+                                    </a>
+                                </li>
+                                <li id="355">
+
+
+                                    <a id="bibliography_19" title="Mignon A,Jurie F.PCCA:A new approach for distance learning from sparse pairwise constraints[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2012:2666- 2672" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Pcca:A new approach for distance learning from sparse pairwise constraints">
+                                        <b>[19]</b>
+                                        Mignon A,Jurie F.PCCA:A new approach for distance learning from sparse pairwise constraints[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2012:2666- 2672
+                                    </a>
+                                </li>
+                                <li id="357">
+
+
+                                    <a id="bibliography_20" title="Liao Shengcai,Li Stan Z.Efficient PSD constrained asymmetric metric learning for person re-identification[C] //Proc of Int Conf on Computer Vision.Piscataway,NJ:IEEE,2015:3685- 3693" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient PSD constrained asymmetric metric learning for person re-identification">
+                                        <b>[20]</b>
+                                        Liao Shengcai,Li Stan Z.Efficient PSD constrained asymmetric metric learning for person re-identification[C] //Proc of Int Conf on Computer Vision.Piscataway,NJ:IEEE,2015:3685- 3693
+                                    </a>
+                                </li>
+                                <li id="359">
+
+
+                                    <a id="bibliography_21" title="Zheng Weishi,Gong Shaoang,Xiang Tao.Re-identification by relative distance comparison[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence,2013,35(3):653- 668" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Reidentification by Relative Distance Comparison">
+                                        <b>[21]</b>
+                                        Zheng Weishi,Gong Shaoang,Xiang Tao.Re-identification by relative distance comparison[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence,2013,35(3):653- 668
+                                    </a>
+                                </li>
+                                <li id="361">
+
+
+                                    <a id="bibliography_22" title="You Jinjie,Wu Ancong,Li Xiang,et al.Top-Push video-based person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1345- 1353" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Top-Push Video-Based Person Re-identification">
+                                        <b>[22]</b>
+                                        You Jinjie,Wu Ancong,Li Xiang,et al.Top-Push video-based person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1345- 1353
+                                    </a>
+                                </li>
+                                <li id="363">
+
+
+                                    <a id="bibliography_23" title="K&#246;estinger M,Hirzer M,Wohlhart P,et al.Large scale metric learning from equivalence constraints[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2012:2288- 2295" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Large scale metric learning from equivalence constraints">
+                                        <b>[23]</b>
+                                        K&#246;estinger M,Hirzer M,Wohlhart P,et al.Large scale metric learning from equivalence constraints[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2012:2288- 2295
+                                    </a>
+                                </li>
+                                <li id="365">
+
+
+                                    <a id="bibliography_24" title="Sumit S,Patel V M,Nasrabadi N M,et al.Joint sparse representation for robust multimodal biometrics recognition[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence,2014,36(1):113- 126" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Joint sparse representation for robust multimodal biometrics recognition">
+                                        <b>[24]</b>
+                                        Sumit S,Patel V M,Nasrabadi N M,et al.Joint sparse representation for robust multimodal biometrics recognition[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence,2014,36(1):113- 126
+                                    </a>
+                                </li>
+                                <li id="367">
+
+
+                                    <a id="bibliography_25" title="Liu Xiao,Song Mingli,Tao Dacheng,et al.Semi-supervised coupled dictionary learning for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2014:3550- 3557" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Semi-supervised coupled dictionary learning for person re-identification">
+                                        <b>[25]</b>
+                                        Liu Xiao,Song Mingli,Tao Dacheng,et al.Semi-supervised coupled dictionary learning for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2014:3550- 3557
+                                    </a>
+                                </li>
+                                <li id="369">
+
+
+                                    <a id="bibliography_26" title="Prates R,Schwartz W R.Kernel cross-view collaborative representation based classification for person re-identification[J].Journal of Visual Communication and Image Representation,2019,58:304- 315" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES92559D0A7ADF0BD46211F3C5042C0A48&amp;v=MzE3NjlENThQbnlScVJJeGU4R1VOTDZYQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TnBod0x1MnhLRT1OaWZPZmJxNkc5VEYyNDgwWTVwN2VueEx1eElWNg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[26]</b>
+                                        Prates R,Schwartz W R.Kernel cross-view collaborative representation based classification for person re-identification[J].Journal of Visual Communication and Image Representation,2019,58:304- 315
+                                    </a>
+                                </li>
+                                <li id="371">
+
+
+                                    <a id="bibliography_27" title="Zhang Ying,Li Baohua,Lu Huchuan,et al.Sample-specific SVM learning for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1278- 1287" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Sample-specific Svm Learning for Person Re-identification">
+                                        <b>[27]</b>
+                                        Zhang Ying,Li Baohua,Lu Huchuan,et al.Sample-specific SVM learning for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1278- 1287
+                                    </a>
+                                </li>
+                                <li id="373">
+
+
+                                    <a id="bibliography_28" title="Kodirov E,Xiang Tao,Fu Zhenyong,et al.Person re-identification by unsupervised ℓ_1 graph learning[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2016:178- 195" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Person Re-Identification by Unsupervised L1 Graph Learning">
+                                        <b>[28]</b>
+                                        Kodirov E,Xiang Tao,Fu Zhenyong,et al.Person re-identification by unsupervised ℓ_1 graph learning[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2016:178- 195
+                                    </a>
+                                </li>
+                                <li id="375">
+
+
+                                    <a id="bibliography_29" title="Lu Jiwen,Zhou Xiuzhuang,Yap-Pen T,et al.Neighborhood repulsed metric learning for kinship verification[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence,2014,36(2):331- 45" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Neighborhood Repulsed Metric Learning for Kinship Verification">
+                                        <b>[29]</b>
+                                        Lu Jiwen,Zhou Xiuzhuang,Yap-Pen T,et al.Neighborhood repulsed metric learning for kinship verification[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence,2014,36(2):331- 45
+                                    </a>
+                                </li>
+                                <li id="377">
+
+
+                                    <a id="bibliography_30" title="Gray D,Tao H.Viewpoint invariant pedestrian recognition with an ensemble of localized features[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2008:262- 275" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Viewpoint Invariant Pedestrian Recogni-tion with an Ensemble of Localized Features">
+                                        <b>[30]</b>
+                                        Gray D,Tao H.Viewpoint invariant pedestrian recognition with an ensemble of localized features[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2008:262- 275
+                                    </a>
+                                </li>
+                                <li id="379">
+
+
+                                    <a id="bibliography_31" title="Baltieri D,Vezzani R,Cucchiara R.3DPes:3D people dataset for surveillance and forensics[C] //Proc of the 2011 Joint ACM Workshop on Human Gesture and Behavior Understanding.New York:ACM,2011:59- 64" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=3dpes:3d people dataset for surveillance and forensics">
+                                        <b>[31]</b>
+                                        Baltieri D,Vezzani R,Cucchiara R.3DPes:3D people dataset for surveillance and forensics[C] //Proc of the 2011 Joint ACM Workshop on Human Gesture and Behavior Understanding.New York:ACM,2011:59- 64
+                                    </a>
+                                </li>
+                                <li id="381">
+
+
+                                    <a id="bibliography_32" title="Dong Husheng,Lu Ping,Zhong Shan,et al.Person re-identification by enhanced local maximal occurrence representation and generalized similarity metric learning[J].Neurocomputing,2018,307:25- 37" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES45BE672946B8BDD91D7D19A264BEB7D7&amp;v=MDgwMjh1eDhTbmpnSlNYYVRyaFF4QzhmbVFzNllDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMzVOcGh3THUyeEtFPU5pZk9mYmU5YktUS3FJMU1ZTzE5QkE1Tg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[32]</b>
+                                        Dong Husheng,Lu Ping,Zhong Shan,et al.Person re-identification by enhanced local maximal occurrence representation and generalized similarity metric learning[J].Neurocomputing,2018,307:25- 37
+                                    </a>
+                                </li>
+                                <li id="383">
+
+
+                                    <a id="bibliography_33" title="He Kaiming,Zhang Xiangyu,Ren Shaoqing,et al.Deep residual learning for image recognition[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:770- 778" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep residual learning for image recognition">
+                                        <b>[33]</b>
+                                        He Kaiming,Zhang Xiangyu,Ren Shaoqing,et al.Deep residual learning for image recognition[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:770- 778
+                                    </a>
+                                </li>
+                                <li id="385">
+
+
+                                    <a id="bibliography_34" title="Chen Dapeng,Yuan Zejian,Chen Badong,et al.Similarity learning with spatial constraints for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1268- 1277" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Similarity Learning with Spatial Constraints for Person Re-identification">
+                                        <b>[34]</b>
+                                        Chen Dapeng,Yuan Zejian,Chen Badong,et al.Similarity learning with spatial constraints for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1268- 1277
+                                    </a>
+                                </li>
+                                <li id="387">
+
+
+                                    <a id="bibliography_35" title="Bai Song,Bai Xiang,Tian Qi.Scalable person re-identification on supervised smoothed manifold[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2017:2530- 2539" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Scalable Person Re-Identification on Supervised Smoothed Manifold">
+                                        <b>[35]</b>
+                                        Bai Song,Bai Xiang,Tian Qi.Scalable person re-identification on supervised smoothed manifold[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2017:2530- 2539
+                                    </a>
+                                </li>
+                                <li id="389">
+
+
+                                    <a id="bibliography_36" title="Chen Yingcong,Zhu Xiatian,Zheng Weishi,et al.Person re-identification by camera correlation aware feature augmentation[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence,2018,40(2):392- 408" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Person re-identification by camera correlation aware feature augmentation">
+                                        <b>[36]</b>
+                                        Chen Yingcong,Zhu Xiatian,Zheng Weishi,et al.Person re-identification by camera correlation aware feature augmentation[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence,2018,40(2):392- 408
+                                    </a>
+                                </li>
+                                <li id="391">
+
+
+                                    <a id="bibliography_37" title="Yang Yang,Wen Longyin,Lyu Siwei,et al.Unsupervised learning of multi-level descriptors for person re-identification[C] //Proc of the 31st AAAI Conf on Artificial Intelligence.Menlo Park,CA:AAAI,2017:4306- 4312" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Unsupervised learning of multi-level descriptors for person re-identification">
+                                        <b>[37]</b>
+                                        Yang Yang,Wen Longyin,Lyu Siwei,et al.Unsupervised learning of multi-level descriptors for person re-identification[C] //Proc of the 31st AAAI Conf on Artificial Intelligence.Menlo Park,CA:AAAI,2017:4306- 4312
+                                    </a>
+                                </li>
+                                <li id="393">
+
+
+                                    <a id="bibliography_38" title="Ali T M F,Chaudhuri S.Maximum margin metric learning over discriminative nullspace for person re-identification[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2018:122- 138" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Maximum margin metric learning over discriminative nullspace for person re-identification">
+                                        <b>[38]</b>
+                                        Ali T M F,Chaudhuri S.Maximum margin metric learning over discriminative nullspace for person re-identification[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2018:122- 138
+                                    </a>
+                                </li>
+                                <li id="395">
+
+
+                                    <a id="bibliography_39" title="Xiong Fei,Gou Mengran,Camps O,et al.Person re-identification using kernel-based metric learning methods[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2014:1- 16" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Person reidentification using kernel-based metric learning methods">
+                                        <b>[39]</b>
+                                        Xiong Fei,Gou Mengran,Camps O,et al.Person re-identification using kernel-based metric learning methods[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2014:1- 16
+                                    </a>
+                                </li>
+                                <li id="397">
+
+
+                                    <a id="bibliography_40" title="Wang Jiayun,Zhou Sanping,Wang Jinjun,et al.Deep ranking model by large adaptive margin learning for person re-identification[J].Pattern Recognition,2018,74:241- 252" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJESD28F68EEC66F98197E4F05DD2D030DAC&amp;v=MjEwMDI4VW56c0xTSHFXMkJCQmViR1VNY3ZzQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TnBod0x1MnhLRT1OaWZPZmNlNkZxZktwL293RiswSmVuVXh6aA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[40]</b>
+                                        Wang Jiayun,Zhou Sanping,Wang Jinjun,et al.Deep ranking model by large adaptive margin learning for person re-identification[J].Pattern Recognition,2018,74:241- 252
+                                    </a>
+                                </li>
+                                <li id="399">
+
+
+                                    <a id="bibliography_41" title="Xiao Tong,Li Hongsheng,Ouyang Wanli,et al.Learning deep feature representations with domain guided dropout for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1249- 1258" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning Deep Feature Representations with Domain Guided Dropout for Person Re-identification">
+                                        <b>[41]</b>
+                                        Xiao Tong,Li Hongsheng,Ouyang Wanli,et al.Learning deep feature representations with domain guided dropout for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1249- 1258
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JFYZ" target="_blank">计算机研究与发展</a>
+                2019,56(11),2424-2437 DOI:10.7544/issn1000-1239.2019.20180740            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于跨视角判别词典嵌入的行人再识别</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%86%E8%90%8D&amp;code=10757496&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陆萍</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%91%A3%E8%99%8E%E8%83%9C&amp;code=10700658&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">董虎胜</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%92%9F%E7%8F%8A&amp;code=24399165&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">钟珊</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%BE%9A%E5%A3%B0%E8%93%89&amp;code=34165307&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">龚声蓉</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E8%8B%8F%E5%B7%9E%E7%BB%8F%E8%B4%B8%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&amp;code=0262405&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">苏州经贸学院信息技术学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%B5%99%E6%B1%9F%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&amp;code=0157820&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">浙江大学计算机科学与技术学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%B8%B8%E7%86%9F%E7%90%86%E5%B7%A5%E5%AD%A6%E9%99%A2&amp;code=0192280&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">常熟理工学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>行人再识别是指在具有不重叠视域的摄像机监控网络中根据行人外观进行身份关联的任务.由于在视频监控系统中具有广泛的应用前景,受到了计算机视觉与机器学习领域的广泛关注.当前的行人再识别研究主要关注从行人图像中提取判别性的特征描述子或学习距离度量.然而不同摄像机视角下行人的外观常常存在很大差异,同一摄像机下还会有行人外观相近的情况,这使得特征描述子或距离度量的表达能力受到了很大的影响.为了增强它们的表达能力并提升行人再识别的准确率,提出了一种基于跨视角判别性词典嵌入的行人再识别算法.在该算法中不仅学习了跨视角的词典还同时联合学习了一个距离度量矩阵,从而将两者的优势结合起来.该算法模型有效地挖掘了不同视角下词典表达的内在联系与距离约束,从而能够使用学习到的表达能力更强的特征在嵌入子空间中进行行人再识别.为了避免不均衡训练样本带来的度量矩阵偏差问题,在度量矩阵的学习中还引入了自适应的权重分配策略.在模型优化上,采用了高效的交替优化方法来求解词典与距离度量等模型参数.在VIPeR,GRID,3DPeS等数据集上的实验结果表明本文算法取得了非常优秀的行人再识别性能.</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%A1%8C%E4%BA%BA%E5%86%8D%E8%AF%86%E5%88%AB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">行人再识别;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%89%B9%E5%BE%81%E8%A1%A8%E8%BE%BE&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">特征表达;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%8D%E5%85%B8%E5%AD%A6%E4%B9%A0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">词典学习;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%B7%9D%E7%A6%BB%E5%BA%A6%E9%87%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">距离度量;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%9D%83%E9%87%8D%E5%88%86%E9%85%8D&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">权重分配;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    *董虎胜（hsdong2012@gmail.com);
+                                </span>
+                                <span>
+                                    陆萍,plu2015@QQ.com;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-11-01</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金项目（61170124,61272258,61702055）;</span>
+                                <span>江苏省自然科学基金项目（BK20151260）;</span>
+                                <span>江苏省高等院校国内高级访问学者计划项目（2018GRFX052）;</span>
+                                <span>江苏省高校青蓝工程骨干教师培养对象（2019年）;</span>
+                    </p>
+            </div>
+                    <h1><b>Person Re-identification by Cross-View Discriminative Dictionary Learning with Metric Embedding</b></h1>
+                    <h2>
+                    <span>Lu Ping</span>
+                    <span>Dong Husheng</span>
+                    <span>Zhong Shan</span>
+                    <span>Gong Shengrong</span>
+            </h2>
+                    <h2>
+                    <span>School of Information Technology, Suzhou Institute of Trade and Commerce</span>
+                    <span>School of Computer Science and Technology, Zhejiang University</span>
+                    <span>Changshu Institute of Technology</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>The task of person re-identification is to associate individuals who have been observed over disjoint camera views.Due to its value in applications of video surveillance, person re-identification has drawn great attention from computer vision and machine learning communities.To address this problem, current literature mainly focuses on extracting discriminative features or learning distance metrics from pedestrian images.However, the representation power of learned features or metrics might be limited, because a person's appearance usually undergoes large variations in different camera views, and many passers-by may take similar visual appearances in public spaces.In order to overcome these challenges and improve the person re-identification accuracies, we propose an effective re-identification method called cross-view discriminative dictionary learning with metric embedding.Different from traditional dictionary learning or metric learning approaches, the cross-view dictionary and distance metric are jointly learned in our model, thus their strengths can be combined. The proposed model not only captures the intrinsic relationships of representation coefficients, but also explores the distance constraints in different camera views. As a result, the re-identification can be performed with much more powerful representations in a discriminative subspace.To address the bias brought by unbalanced training samples in the metric learning phase, an automatic weighting strategy of training pairs is introduced.We devise an efficient optimization algorithm to solve the proposed model, in which the representation coefficients, dictionary, and metric are optimized alternately. Experimental results on three public benchmark datasets including VIPeR, GRID, and 3 DPeS, show that the proposed method achieves remarkable performance compared with existing approaches as well as published results.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=person%20re-identification&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">person re-identification;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=feature%20representation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">feature representation;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=dictionary%20learning&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">dictionary learning;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=distance%20metric&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">distance metric;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=weight%20assignment&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">weight assignment;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                            <b>Author：</b>
+                                                        <span>
+                                    Lu Ping,born in 1979.Master,associate professor.Her main research interests include digital image processing and pattern recognition.<image id="461" type="formula" href="images/JFYZ201911012_46100.jpg" display="inline" placement="inline"><alt></alt></image>;
+                                </span>
+                                <span>
+                                    Dong Husheng,born in 1981.PhD,lecturer.His main research interests include computer vision,image and video processing,and machine learning.<image id="463" type="formula" href="images/JFYZ201911012_46300.jpg" display="inline" placement="inline"><alt></alt></image>;
+                                </span>
+                                <span>
+                                    Zhong Shan,born in 1983.PhD,lecturer.Her main research interests include machine learning and deep learning.<image id="464" type="formula" href="images/JFYZ201911012_46400.jpg" display="inline" placement="inline"><alt></alt></image>;
+                                </span>
+                                <span>
+                                    Gong Shengrong,born in 1966.PhD,professor,and PhD supervisor in the School of Computer Science&amp;amp;Technology,Soochow University.His main research interests include image and video processing,pattern recognition,and computer vision.<image id="465" type="formula" href="images/JFYZ201911012_46500.jpg" display="inline" placement="inline"><alt></alt></image>;
+                                </span>
+                    </p>
+                                    <p><b>Received：</b> 2018-11-01</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>supported by the National Natural Science Foundation of China(61170124,61272258,61702055);</span>
+                                <span>the Natural Science Foundation of Jiangsu Province of China(BK20151260);</span>
+                                <span>the Senior Visiting Scholars Program of Jiangsu Province(2018GRFX052);</span>
+                                <span>the Backbone Teachers of Qinglan Project of Jiangsu Province(2019);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <div class="p1">
+                    <p id="91">在具有不重叠视域的摄像机监控网络中,根据行人表观信息进行跨摄像机身份关联的工作也被称为行人再识别<citation id="401" type="reference"><link href="319" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>,它是实现对特定目标的检索<citation id="402" type="reference"><link href="321" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>、持续跟踪<citation id="403" type="reference"><link href="323" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>和行为分析等智能视频监控应用的一项关键技术.由于受到光照、视角、姿态与遮挡等因素的影响,同一行人在不同摄像机拍摄的画面中可能会呈现出很大的外观差异,这给行人再识别带来了相当大的困难.由于在智能视频监控中具有广阔的应用前景,行人再识别引起了计算机视觉与机器学习领域广泛的关注并开展了大量的研究<citation id="404" type="reference"><link href="325" rel="bibliography" /><link href="327" rel="bibliography" /><link href="329" rel="bibliography" /><sup>[<a class="sup">4</a>,<a class="sup">5</a>,<a class="sup">6</a>]</sup></citation>.</p>
+                </div>
+                <div class="p1">
+                    <p id="92">目前对行人再识别的研究可分为传统方法与基于深度学习的方法两大类.其中深度学习方法需要有大量标注的训练数据,因此在大型数据集上通常能够取得比较优秀的性能<citation id="405" type="reference"><link href="331" rel="bibliography" /><link href="333" rel="bibliography" /><sup>[<a class="sup">7</a>,<a class="sup">8</a>]</sup></citation>.但在较小的数据集上,深度学习模型极易发生过拟合问题,在性能上仍弱于传统的方法.本文工作主要关注小数据集上的行人再识别问题,且归属于传统方法类别.应用传统方法的行人再识别工作主要从特征描述子设计与度量学习算法两个方面来开展.</p>
+                </div>
+                <div class="p1">
+                    <p id="93">为了从行人图像中获取具有判别性的表观信息,研究人员设计了一系列用于行人图像匹配的特征描述子,如局部最大出现特征<citation id="406" type="reference"><link href="329" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>(local maximal occurrence, LOMO)、显著颜色名称<citation id="407" type="reference"><link href="335" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>(salient color names, SCN)、条状加权直方图<citation id="408" type="reference"><link href="337" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>(weighted histograms of overlapping stripes, WHOS)等,它们有力地促进了行人再识别研究的进展.但是由于不同摄像机下行人外观常常会存在很大的差异,同一摄像机下还会有行人外观相近的情况,以及特征描述子在语意上的模糊性等原因,使得特征描述子的表达能力受到了一定的限制.</p>
+                </div>
+                <div class="p1">
+                    <p id="94">直接在原始特征表达空间中进行行人再识别的准确率通常都比较低,通过学习度量矩阵将它们投影到更具判别性的子空间中通常能够带来比较显著的性能提升<citation id="409" type="reference"><link href="339" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>.度量学习旨在从训练数据中学习到某一特定的投影空间,使得具有相同标签的行人图像在该嵌入子空间中距离被收缩,而具有不同标签的图像之间的距离被拉大<citation id="410" type="reference"><link href="341" rel="bibliography" /><link href="343" rel="bibliography" /><sup>[<a class="sup">12</a>,<a class="sup">13</a>]</sup></citation>.尽管度量学习方法能够获得更为优秀的匹配效果,它们仍然会受到特征表达能力的影响.</p>
+                </div>
+                <div class="p1">
+                    <p id="95">针对行人外观描述子与距离度量表达能力受限的问题,本文提出了一种基于跨视角判别词典嵌入(cross-view discriminative dictionary learning with metric embedding, CDDM)的行人再识别匹配模型.在该模型中通过学习跨视角的判别词典将原始特征表达为过完备基(over-complete basis)的组合系数向量,从而获得比原始特征描述子更为鲁棒的表达.但与文献<citation id="411" type="reference">[<a class="sup">14</a>,<a class="sup">15</a>]</citation>等仅学习词典表达的方法不同,本文方法还利用了训练样本及标签中蕴含的距离约束信息,在学习判别词典的同时联合学习了一个度量矩阵来进行子空间嵌入,这样就可以在更具判别性的子空间中进行行人相似度的匹配.针对不同摄像机下行人图像正负样本对数量严重不均衡引起的度量偏差问题,本文还设计了样本对自适应权重分配策略.在VIPeR,GRID,3DPeS数据集上的实验结果验证了本文算法的有效性.</p>
+                </div>
+                <h3 id="96" name="96" class="anchor-tag"><b>1 相关工作</b></h3>
+                <div class="p1">
+                    <p id="97">在行人再识别的研究工作中,特征设计受到关注相对较早.为了抑制各种引起行人外观变化的因素,在行人再识别特征描述子的设计中大多使用了颜色、纹理与形状等信息.在Liao等人<citation id="412" type="reference"><link href="329" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>设计的LOMO描述子中,从滑动窗口中提取了联合HSV直方图和尺度不变局部三值模式(scale invariant local ternary pattern, SILTP),并运用最大池化(max pooling)操作来增强描述子的抗视角变化能力.Matsukawa等人<citation id="413" type="reference"><link href="349" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>使用层次化的高斯模型来表达图像的颜色信息,设计了高斯化高斯(Gaussian of Gaussian, GOG)描述子.Yang等人<citation id="414" type="reference"><link href="335" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>从像素概率分布的角度提出了显著颜色名称SCN特征.Zhao等人<citation id="415" type="reference"><link href="351" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>通过学习最具有判别性的中层滤波器特征来表达行人图像外观.Ma等人<citation id="416" type="reference"><link href="353" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>设计了使用协方差描述的生物启发特征(bio-inspired features, BIF).</p>
+                </div>
+                <div class="p1">
+                    <p id="98">在获得行人图像的特征描述子之后,度量学习能够利用训练数据的标签信息,根据特定的距离约束来学习获得更有效的距离计算模型,取得更高的行人再识别准确率.Mignon等人<citation id="417" type="reference"><link href="355" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>设计了成对约束元件分析(pairwise constrained component analysis, PCCA)算法从高维样本中学习投影子空间;Liao等人<citation id="418" type="reference"><link href="357" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>提出了对训练样本采用不对称加权策略的度量学习方法.Zheng等人<citation id="419" type="reference"><link href="359" rel="bibliography" /><sup>[<a class="sup">21</a>]</sup></citation>提出了概率相对距离比较模型(probabilistic relative distance comparison, PRDC),You等人<citation id="420" type="reference"><link href="361" rel="bibliography" /><sup>[<a class="sup">22</a>]</sup></citation>在引入更严格的最近负样本约束后设计了“顶推”(top push)学习模型.利用贝叶斯准则,Köestinger等人<citation id="421" type="reference"><link href="363" rel="bibliography" /><sup>[<a class="sup">23</a>]</sup></citation>提出了具有闭合形式解的简单直接度量(keep it simple and straightforward metric, KISSME)学习方法.Liao等人<citation id="422" type="reference"><link href="329" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>对KISSME加以改进后提出了联合学习度量矩阵与投影子空间的跨视角二次判别分析(cross-view quadratic discriminant analysis, XQDA)方法.</p>
+                </div>
+                <div class="p1">
+                    <p id="99">从训练数据中学习判别性词典能够将原始特征表达为更鲁棒的组合系数向量,实现对原始特征的变换<citation id="423" type="reference"><link href="365" rel="bibliography" /><sup>[<a class="sup">24</a>]</sup></citation>.在文献<citation id="424" type="reference">[<a class="sup">25</a>]</citation>中,Liu等人通过学习跨视角的半监督耦合词典来匹配行人图像.Prates等人<citation id="425" type="reference"><link href="369" rel="bibliography" /><sup>[<a class="sup">26</a>]</sup></citation>通过学习核化的跨视角词典,使用协同表达向量来对行人图像进行匹配.Zhang等人<citation id="426" type="reference"><link href="371" rel="bibliography" /><sup>[<a class="sup">27</a>]</sup></citation>为每个行人学习了支持向量机(support vector machine, SVM)的判别向量,并进一步创建最小二乘半耦合词典.Srikrishna等人<citation id="427" type="reference"><link href="345" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>通过对相互关联的稀疏编码施加判别约束来解决行人图像因视角变化引起的差异.Kodirov等人<citation id="428" type="reference"><link href="373" rel="bibliography" /><sup>[<a class="sup">28</a>]</sup></citation>通过引入<i>L</i><sub>1</sub>范数的拉普拉斯图正则项来进行无监督的行人再识别.</p>
+                </div>
+                <div class="p1">
+                    <p id="100">与上述工作不同,本文方法采用了联合学习度量矩阵与判别词典的策略.在学习模型中充分挖掘了不同视角下词典表达的内在联系与距离约束,把度量学习与词典学习的优势结合起来进行行人再识别.</p>
+                </div>
+                <h3 id="101" name="101" class="anchor-tag"><b>2 跨视角判别词典嵌入</b></h3>
+                <h4 class="anchor-tag" id="102" name="102"><b>2.1 词典学习</b></h4>
+                <div class="p1">
+                    <p id="103">设<i><b>X</b></i>∈R<sup><i>d</i></sup><sup>×</sup><sup><i>n</i></sup>为含有<i>n</i>个训练样本的特征矩阵,其每列<i><b>x</b></i><sup><i>i</i></sup>∈R<sup><i>d</i></sup>为从第<i>i</i>张图像中提取的外观特征.词典学习的主要目的是从训练数据中学习获得一个由过完备基组成的词典<i><b>D</b></i>=(<i><b>d</b></i><sup>1</sup>,<i><b>d</b></i><sup>2</sup>,…,<i><b>d</b></i><sup><i>m</i></sup>)∈R<sup><i>d</i></sup><sup>×</sup><sup><i>m</i></sup>,使用该词典能够将原始<i>d</i>维特征空间中的样本投影到由<i><b>D</b></i>的各列张成的一个<i>m</i>维子空间S=<i>span</i>{<i><b>d</b></i><sup>1</sup>,<i><b>d</b></i><sup>2</sup>,…,<i><b>d</b></i><sup><i>m</i></sup>}中.这样就能够以比较低的维度表达出原始信息,使得学习任务简化,模型的复杂度得以降低.学习词典<i><b>D</b></i>的模型表示为</p>
+                </div>
+                <div class="area_img" id="466">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JFYZ201911012_46600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="106">其中,<mathml id="237"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>|</mo><mo>⋅</mo><mo>|</mo></mrow><msub><mrow></mrow><mtext>F</mtext></msub></mrow></math></mathml>为矩阵的<i>Frobenius</i>范数;<i><b>Z</b></i>=(<i><b>z</b></i><sup>1</sup>,<i><b>z</b></i><sup>2</sup>,…,<i><b>z</b></i><sup><i>n</i></sup>)∈R<sup><i>m</i></sup><sup>×</sup><sup><i>n</i></sup>被称为系数矩阵,也就是各训练样本在新的维空间中的表达;<i><b>d</b></i><sup><i>i</i></sup>指代词典<i><b>D</b></i>的第<i>i</i>列,式中对它们施加单位长度约束旨在使获得的词典具有更好的紧凑性;<i>Ω</i>(<i><b>Z</b></i>)为对<i><b>Z</b></i>的正则项,常用的正则函数有<i>Ω</i>(<i><b>Z</b></i>)=<mathml id="238"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle></mrow></math></mathml><mathml id="239"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>|</mo><mrow><mi mathvariant="bold-italic">z</mi><msup><mrow></mrow><mi>i</mi></msup></mrow><mo>|</mo></mrow><msub><mrow></mrow><mn>1</mn></msub></mrow></math></mathml>或<mathml id="240"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ω</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">Ζ</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>|</mo><mi mathvariant="bold-italic">Ζ</mi><mo>|</mo></mrow><msubsup><mrow></mrow><mtext>F</mtext><mn>2</mn></msubsup></mrow></math></mathml>,前者能够获得稀疏的表达向量但运算代价相对较高,后者求解较为容易但不具有稀疏性.由于行人再识别使用的特征描述子维度远高于训练样本数,使用稀疏表达难以捕捉到具有巨大差异的跨摄像机特征向量数据的内在相关性,因此在本文中选用了<mathml id="241"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ω</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">Ζ</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>|</mo><mi mathvariant="bold-italic">Ζ</mi><mo>|</mo></mrow><msubsup><mrow></mrow><mtext>F</mtext><mn>2</mn></msubsup></mrow></math></mathml>正则项.由于<i><b>Z</b></i>为<i><b>X</b></i>在新特征空间中的投影,因此可以使用学习到的词典<i><b>D</b></i>实现对<i><b>X</b></i>的重建,也就是<i><b>X</b></i>≈<i><b>DZ</b></i>.</p>
+                </div>
+                <h4 class="anchor-tag" id="107" name="107"><b>2.2 跨视角判别词典嵌入模型</b></h4>
+                <div class="p1">
+                    <p id="108">在行人再识别中,需要对不同摄像机下捕捉到的行人图像进行相似度匹配.但采用式(1)学习到的词典无法捕捉不同视角下数据的内在结构,针对该问题,在本文方法中为每个摄像机视角分别学习了词典表达.设<i><b>X</b></i><sub>p</sub>∈R<sup><i>d</i></sup><sup>×</sup><sup><i>n</i></sup>与<i><b>X</b></i><sub>g</sub>∈R<sup><i>d</i></sup><sup>×</sup><sup><i>n</i></sup>分别为训练集中检测集(probe set)与匹配集(gallery set)的特征矩阵;<i><b>Y</b></i>∈R<sup><i>n</i></sup><sup>×</sup><sup><i>n</i></sup>为它们之间的匹配标签矩阵;<i><b>D</b></i>∈R<sup><i>d</i></sup><sup>×</sup><sup><i>m</i></sup>为对应的判别词典;可以建立的跨视角判别词典学习模型为</p>
+                </div>
+                <div class="area_img" id="467">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JFYZ201911012_46700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="111">其中,<i>λ</i><sub>1</sub>为调节系数;<i><b>Z</b></i><sub>p</sub>∈R<sup><i>m</i></sup><sup>×</sup><sup><i>n</i></sup>和<i><b>Z</b></i><sub>g</sub>∈R<sup><i>m</i></sup><sup>×</sup><sup><i>n</i></sup>分别指代<i><b>X</b></i><sub>p</sub>与<i><b>X</b></i><sub>g</sub>在使用词典<i><b>D</b></i>表达时的组合系数向量,也就是变换后的特征表达.式(2)的前2项表达了学习词典对原始特征数据的重建误差,后2项为正则项,用来抑制模型的过拟合风险.</p>
+                </div>
+                <div class="p1">
+                    <p id="112">尽管式(2)能够描述跨视角行人图像数据的内在结构,但是对训练数据与标签中蕴含的距离约束信息却未能有效利用.在行人再识别中,我们希望不同摄像机视角下正确匹配图像(正样本对)之间距离应尽可能的小,而错误匹配图像(负样本对)间的距离要尽可能的大,从而在正、负样本之间建立起一个距离间隔.这样就可以在给定某一检索图像后,达到将正确匹配图像从所有待匹配图像中识别出来的目标.为此,本文引入的约束损失函数为</p>
+                </div>
+                <div class="p1">
+                    <p id="113"><i>ψ</i><sub><i><b>M</b></i></sub>(<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>,<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>)=[<i>y</i><sub><i>ij</i></sub>(<i>d</i><sub><i><b>M</b></i></sub>(<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>,<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>)-<i>μ</i>)]<sub>+</sub>,(3)</p>
+                </div>
+                <div class="p1">
+                    <p id="114">其中,[·]<sub>+</sub>为铰链损失(hinge loss)函数,即[<i>x</i>]<sub>+</sub>=max(0,<i>x</i>);<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>与<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>分别指代<i><b>Z</b></i><sub>p</sub>和<i><b>Z</b></i><sub>g</sub>的第<i>i</i>,<i>j</i>列;<i>y</i><sub><i>ij</i></sub>取自匹配标签矩阵<i><b>Y</b></i>,若<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>与<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>正确匹配则<i>y</i><sub><i>ij</i></sub>=1,否则<i>y</i><sub><i>ij</i></sub>=-1;<i>μ</i>为一个正的常数,用作为判断阈值;<i>d</i><sub><i><b>M</b></i></sub>(<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>,<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>)为标准的马氏距离函数,定义为</p>
+                </div>
+                <div class="p1">
+                    <p id="115"><i>d</i><sub><i><b>M</b></i></sub>(<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>,<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>)=(<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>-<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>)<sup>T</sup><i><b>M</b></i>(<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>-<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>),(4)</p>
+                </div>
+                <div class="p1">
+                    <p id="116">其中<i><b>M</b></i>为待求解的距离度量矩阵,其半正定性(<i><b>M</b></i>⪰0)保证了<i>d</i><sub><i><b>M</b></i></sub>能够满足距离所需的三角不等式与非负性.对<i><b>M</b></i>可进一步作Cholesky分解得<i><b>M</b></i>=<i><b>W</b></i><sup>T</sup><i><b>W</b></i>,因此式(3)等价于:</p>
+                </div>
+                <div class="p1">
+                    <p id="117"><mathml id="242"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ψ</mi><msub><mrow></mrow><mi mathvariant="bold-italic">W</mi></msub><mo stretchy="false">(</mo><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>p</mtext><mi>i</mi></msubsup><mo>,</mo><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>g</mtext><mi>j</mi></msubsup><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">[</mo><mi>y</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">(</mo><mrow><mo>|</mo><mrow><mi mathvariant="bold-italic">W</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>p</mtext><mi>i</mi></msubsup><mo>-</mo><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>g</mtext><mi>j</mi></msubsup><mo stretchy="false">)</mo></mrow><mo>|</mo></mrow><msubsup><mrow></mrow><mn>2</mn><mn>2</mn></msubsup><mo>-</mo><mi>μ</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><msub><mrow></mrow><mo>+</mo></msub></mrow></math></mathml>.(5)</p>
+                </div>
+                <div class="p1">
+                    <p id="118">在行人再识别中,由于不同摄像机下错误匹配行人图像的数量远多于正确匹配图像,这会使得学习到的度量矩阵倾向于将所有行人图像对判定为错误匹配,引起度量偏差问题<citation id="429" type="reference"><link href="357" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>.为了解决该问题,可以采用从训练样本邻域学习度量矩阵的方案<citation id="430" type="reference"><link href="375" rel="bibliography" /><sup>[<a class="sup">29</a>]</sup></citation>,通过减少容易识别的负样本对在模型中的贡献度来抑制数据不平衡问题.由此可以把整个训练集上的损失函数表达为</p>
+                </div>
+                <div class="p1">
+                    <p id="119"><mathml id="243"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mtext>L</mtext><msub><mrow></mrow><mi mathvariant="bold-italic">W</mi></msub><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>β</mi></mstyle></mrow></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>ψ</mi><msub><mrow></mrow><mi mathvariant="bold-italic">W</mi></msub><mo stretchy="false">(</mo><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>p</mtext><mi>i</mi></msubsup><mo>,</mo><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>g</mtext><mi>j</mi></msubsup><mo stretchy="false">)</mo></mrow></math></mathml>,(6)</p>
+                </div>
+                <div class="p1">
+                    <p id="120">其中<i>β</i><sub><i>ij</i></sub>为样本对(<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>,<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>)的贡献权重,通过设置<i>β</i><sub><i>ij</i></sub>的取值即可实现从样本邻域学习的目标.</p>
+                </div>
+                <div class="p1">
+                    <p id="121">为了合理地分配<i>β</i><sub><i>ij</i></sub>的权重值,对每个变换后的特征表达<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>,首先计算新特征空间中待匹配集<mathml id="244"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mrow><mo>{</mo><mrow><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>g</mtext><mi>j</mi></msubsup></mrow><mo>}</mo></mrow></mrow><msubsup><mrow></mrow><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup></mrow></math></mathml>内所有样本与其之间的距离,然后将<mathml id="245"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mrow><mo>{</mo><mrow><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>g</mtext><mi>j</mi></msubsup></mrow><mo>}</mo></mrow></mrow><msubsup><mrow></mrow><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup></mrow></math></mathml>划分为3个组:</p>
+                </div>
+                <div class="p1">
+                    <p id="122">X<sub>h</sub>={<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>|R<sub><i>i</i></sub>(<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>)&lt;R<sub><i>i</i></sub>(<i><b>z</b></i><sup>+</sup><sub>g</sub>)},</p>
+                </div>
+                <div class="p1">
+                    <p id="123">X<sub>m</sub>={<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>|R<sub><i>i</i></sub>(<i><b>z</b></i><sup>+</sup><sub>g</sub>)&lt;R<sub><i>i</i></sub>(<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>)≤<i>n</i>/2},</p>
+                </div>
+                <div class="p1">
+                    <p id="124">X<sub>e</sub>={<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>|R<sub><i>i</i></sub>(<i><b>z</b></i><sup>+</sup><sub>g</sub>)&gt;<i>n</i>/2},(7)</p>
+                </div>
+                <div class="p1">
+                    <p id="125">其中:R<sub><i>i</i></sub>(<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>)指的是<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>的排序列表中<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>的排序位置(rank);R<sub><i>i</i></sub>(<i><b>z</b></i><sup>+</sup><sub>g</sub>)指代与<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>正确匹配的图像<i><b>z</b></i><sup>+</sup><sub>g</sub>所在的位置;X<sub>h</sub>,X<sub>m</sub>,X<sub>e</sub>分别指代<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>的困难匹配集(hard set)、中等匹配集(medium set)与容易匹配集(easy set).</p>
+                </div>
+                <div class="p1">
+                    <p id="126">图1给出了X<sub>h</sub>,X<sub>m</sub>,X<sub>e</sub>的划分图示,由图1可知X<sub>h</sub>包含了那些排在正确匹配图像<i><b>z</b></i><sup>+</sup><sub>g</sub>之前的负样本,它们通常与检索图像具有接近的外观,但却具有不同的标签,因此是训练时需要着重处理的对象.</p>
+                </div>
+                <div class="area_img" id="127">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201911012_127.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 困难/中等/容易匹配集划分示意" src="Detail/GetImg?filename=images/JFYZ201911012_127.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 困难/中等/容易匹配集划分示意  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201911012_127.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 1 Partition of the hard/medium/easy sets</p>
+
+                </div>
+                <div class="p1">
+                    <p id="128">中等匹配集X<sub>m</sub>指代在前1/2排序列表中排在<i><b>z</b></i><sup>+</sup><sub>g</sub>之后的那些负样本,它们对模型训练的贡献一般,只需要赋予比较低的权重即可.容易匹配集X<sub>e</sub>包含的都是非常容易区分的错误匹配图像,对训练模型没有帮助,权重可以置0.在根据式(7)划分X<sub>h</sub>,X<sub>m</sub>,X<sub>e</sub>时,若<i><b>z</b></i><sup>+</sup><sub>g</sub>位于后1/2排序列表时,可以忽略X<sub>m</sub>,将<i><b>z</b></i><sup>+</sup><sub>g</sub>前的样本划分为X<sub>h</sub>,而后面的样本划分为X<sub>e</sub>.</p>
+                </div>
+                <div class="p1">
+                    <p id="129">根据分析,本文采用的训练样本对自适应加权方案为:若<i>y</i><sub><i>ij</i></sub>=1即为正确匹配时,取<i>β</i><sub><i>ij</i></sub>=1/<i>N</i><sup>+</sup>,这里<i>N</i><sup>+</sup>为训练集中正样本对的数量;若<i>y</i><sub><i>ij</i></sub>=-1,<i>β</i><sub><i>ij</i></sub>取值为</p>
+                </div>
+                <div class="area_img" id="468">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JFYZ201911012_46800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="132">其中<i>N</i><sup>-</sup>为训练集中负样本对的数量.从式(8)可知对于每个检索图像<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>,与其接近且难以区分的负样本会被赋予较大的权重,而那些容易被识别出的负样本将会被赋予较低的权重或直接丢弃.图2给出了按式(7)与式(8)进行自适应权值分配的示例,图2中“<i><b>x</b></i>”指代检索样本,“3”为正确匹配样本,其余为错误匹配样本,数字标记了它们的排序次序.从图2中可知错误匹配样本的权值得到了有效的抑制.在将此方案应用于行人再识别中的距离度量学习时,正负样本对的贡献度能够基本上得到均衡,从而避免度量偏差问题.</p>
+                </div>
+                <div class="p1">
+                    <p id="133">根据式(2)与式(6),可以将本文提出的联合学习跨视角判别词典与度量嵌入的模型表达为</p>
+                </div>
+                <div class="area_img" id="469">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JFYZ201911012_46900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="136">其中<i><b>Z</b></i><sub>p</sub>=(<i><b>z</b></i><sup>1</sup><sub>p</sub>,…,<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>,…,<i><b>z</b></i><sup><i>n</i></sup><sub>p</sub>),<i><b>Z</b></i><sub>g</sub>=(<i><b>z</b></i><sup>1</sup><sub>g</sub>,…,<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>,…,<i><b>z</b></i><sup><i>n</i></sup><sub>g</sub>)即<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>与<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>分别为<i><b>Z</b></i><sub>p</sub>与<i><b>Z</b></i><sub>g</sub>的第<i>i</i>,<i>j</i>列.</p>
+                </div>
+                <div class="area_img" id="137">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201911012_137.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 二维空间中样本自适应权重分配示例" src="Detail/GetImg?filename=images/JFYZ201911012_137.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 二维空间中样本自适应权重分配示例  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201911012_137.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 2 Illustration of the adaptive weight assignment in 2-dimensional space</p>
+
+                </div>
+                <h4 class="anchor-tag" id="138" name="138"><b>2.3 模型优化</b></h4>
+                <div class="p1">
+                    <p id="139">在式(9)所示的模型中需要同时优化<i><b>D</b></i>,<i><b>Z</b></i><sub>p</sub>,<i><b>Z</b></i><sub>g</sub>,<i><b>W</b></i>这4个相互耦合的参数,模型并非关于所有参数联合凸,因此无法对它们同时进行优化.但该模型中各项均为二次项或max函数,在固定其他参数仅优化某一变量时为凸模型,故本文采用交替优化的方法来求解各模型参数.</p>
+                </div>
+                <h4 class="anchor-tag" id="140" name="140">1) 更新<i><b>Z</b></i><sub>p</sub></h4>
+                <div class="p1">
+                    <p id="141">在固定<i><b>D</b></i>,<i><b>Z</b></i><sub>g</sub>,<i><b>W</b></i>,仅对<i><b>Z</b></i><sub>p</sub>进行优化时,由于式(9)需要根据<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>与<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>来计算距离约束损失函数,所以这里采用逐列求取<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>的方法来优化<i><b>Z</b></i><sub>p</sub>.此时,仅优化<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>的目标函数为</p>
+                </div>
+                <div class="area_img" id="470">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JFYZ201911012_47000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="144">为简化表达,式(10)中略去了<i><b>x</b></i><sup><i>i</i></sup><sub>p</sub>与<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>的上标<i>i</i>.对式(10)求解可获得<i><b>z</b></i><sub>p</sub>闭合形式的解表达式为</p>
+                </div>
+                <div class="p1">
+                    <p id="145" class="code-formula">
+                        <mathml id="145"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>p</mtext><mo>*</mo></msubsup><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="bold-italic">D</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mi mathvariant="bold-italic">D</mi><mo>+</mo><mi>λ</mi><msub><mrow></mrow><mn>1</mn></msub><mi mathvariant="bold-italic">Ι</mi><mo>+</mo><mi>λ</mi><msub><mrow></mrow><mn>0</mn></msub><mi mathvariant="bold-italic">W</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mi mathvariant="bold-italic">W</mi><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>β</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>δ</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">)</mo><msup><mrow></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>×</mo></mtd></mtr><mtr><mtd><mo stretchy="false">(</mo><mi mathvariant="bold-italic">D</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mi mathvariant="bold-italic">x</mi><msub><mrow></mrow><mtext>p</mtext></msub><mo>+</mo><mi>λ</mi><msub><mrow></mrow><mn>0</mn></msub><mi mathvariant="bold-italic">W</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mi mathvariant="bold-italic">W</mi><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>β</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>δ</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>g</mtext><mi>j</mi></msubsup><mo stretchy="false">)</mo><mo>,</mo><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>1</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="146">其中,<i><b>I</b></i>为单位矩阵;<i>δ</i><sub><i>ij</i></sub>=<i>I</i>(<i>ψ</i><sub><i><b>W</b></i></sub>(<i><b>z</b></i><sub>p</sub>,<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>))为示性函数,若<i>ψ</i><sub><i><b>W</b></i></sub>(<i><b>z</b></i><sub>p</sub>,<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>)&gt;0则定义<i>δ</i><sub><i>ij</i></sub>=<i>y</i><sub><i>ij</i></sub>,否则<i>δ</i><sub><i>ij</i></sub>=0.</p>
+                </div>
+                <h4 class="anchor-tag" id="147" name="147">2) 更新<i><b>Z</b></i><sub>g</sub></h4>
+                <div class="p1">
+                    <p id="148">与优化<i><b>Z</b></i><sub>p</sub>类似,在对式(9)固定<i><b>D</b></i>,<i><b>Z</b></i><sub>p</sub>,<i><b>W</b></i>,对<i><b>Z</b></i><sub>g</sub>进行优化时也需要采取逐列优化<i><b>z</b></i><sub>g</sub>的方式,最终可以获得的解表达式为</p>
+                </div>
+                <div class="p1">
+                    <p id="149" class="code-formula">
+                        <mathml id="149"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>g</mtext><mo>*</mo></msubsup><mo>=</mo><mo stretchy="false">(</mo><mi mathvariant="bold-italic">D</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mi mathvariant="bold-italic">D</mi><mo>+</mo><mi>λ</mi><msub><mrow></mrow><mn>1</mn></msub><mi mathvariant="bold-italic">Ι</mi><mo>+</mo><mi>λ</mi><msub><mrow></mrow><mn>0</mn></msub><mi mathvariant="bold-italic">W</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mi mathvariant="bold-italic">W</mi><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>β</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><mi>δ</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">)</mo><msup><mrow></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>×</mo></mtd></mtr><mtr><mtd><mo stretchy="false">(</mo><mi mathvariant="bold-italic">D</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mi mathvariant="bold-italic">x</mi><msub><mrow></mrow><mtext>g</mtext></msub><mo>+</mo><mi>λ</mi><msub><mrow></mrow><mn>0</mn></msub><mi mathvariant="bold-italic">W</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mi mathvariant="bold-italic">W</mi><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>β</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>δ</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>p</mtext><mi>i</mi></msubsup><mo stretchy="false">)</mo><mo>,</mo><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>2</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="150">其中,<i>δ</i><sub><i>ij</i></sub>=<i>I</i>(<i>ψ</i><sub><i><b>W</b></i></sub>(<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>,<i><b>z</b></i><sub>g</sub>)).</p>
+                </div>
+                <h4 class="anchor-tag" id="151" name="151">3) 更新<i><b>D</b></i></h4>
+                <div class="p1">
+                    <p id="152">在固定<i><b>Z</b></i><sub>p</sub>,<i><b>Z</b></i><sub>g</sub>,<i><b>W</b></i>对式(9)仅考虑<i><b>D</b></i>的优化时,等价于二次规划问题:</p>
+                </div>
+                <div class="area_img" id="471">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JFYZ201911012_47100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="155">为简化求解,这里令<i><b>X</b></i>=(<i><b>X</b></i><sub>p</sub>,<i><b>X</b></i><sub>g</sub>)表示检索集特征矩阵与匹配集特征矩阵的拼合矩阵;类似地,令<i><b>Z</b></i>=(<i><b>Z</b></i><sub>p</sub>,<i><b>Z</b></i><sub>g</sub>)为学习到的系数矩阵的拼合.对式(13)应用拉格朗日对偶方法可以解得:</p>
+                </div>
+                <div class="p1">
+                    <p id="156"><i><b>D</b></i>=<i><b>XZ</b></i><sup>T</sup>(<i><b>ZZ</b></i><sup>T</sup>+<i>Λ</i><sup>*</sup>)<sup>-1</sup>,(14)</p>
+                </div>
+                <div class="p1">
+                    <p id="157">其中,<i>Λ</i><sup>*</sup>为由最优对偶变量组成的一个对角矩阵.在实际运算时<i><b>ZZ</b></i><sup>T</sup>+<i>Λ</i><sup>*</sup>可能会出现奇异的情况,此时可以进行适当的正则平滑或取伪逆.</p>
+                </div>
+                <h4 class="anchor-tag" id="158" name="158">4) 更新<i><b>W</b></i></h4>
+                <div class="p1">
+                    <p id="159">在固定<i><b>Z</b></i><sub>p</sub>,<i><b>Z</b></i><sub>g</sub>,<i><b>D</b></i>时,式(6)关于<i><b>W</b></i>的优化目标等价于:</p>
+                </div>
+                <div class="p1">
+                    <p id="160"><mathml id="247"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mi mathvariant="bold-italic">W</mi></munder><mspace width="0.25em" /><mi>Γ</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">W</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>λ</mi><msub><mrow></mrow><mn>0</mn></msub></mrow><mn>2</mn></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>β</mi></mstyle></mrow></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>ψ</mi><msub><mrow></mrow><mi mathvariant="bold-italic">W</mi></msub><mo stretchy="false">(</mo><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>p</mtext><mi>i</mi></msubsup><mo>,</mo><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mtext>g</mtext><mi>j</mi></msubsup><mo stretchy="false">)</mo><mo>+</mo><mfrac><mrow><mi>λ</mi><msub><mrow></mrow><mn>2</mn></msub></mrow><mn>2</mn></mfrac><mrow><mo>|</mo><mi mathvariant="bold-italic">W</mi><mo>|</mo></mrow><msubsup><mrow></mrow><mtext>F</mtext><mn>2</mn></msubsup></mrow></math></mathml>.(15)</p>
+                </div>
+                <div class="p1">
+                    <p id="161">对式(15)计算关于<i><b>W</b></i>的导数:</p>
+                </div>
+                <div class="p1">
+                    <p id="162"><mathml id="248"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mo>∂</mo><mi>Γ</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">W</mi><mo stretchy="false">)</mo></mrow><mrow><mo>∂</mo><mi mathvariant="bold-italic">W</mi></mrow></mfrac><mo>=</mo><mi>λ</mi><msub><mrow></mrow><mn>0</mn></msub><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>β</mi></mstyle></mrow></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>δ</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi mathvariant="bold-italic">W</mi><mi mathvariant="bold-italic">C</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>+</mo><mi>λ</mi><msub><mrow></mrow><mn>2</mn></msub><mi mathvariant="bold-italic">W</mi></mrow></math></mathml>,(16)</p>
+                </div>
+                <div class="p1">
+                    <p id="163">其中,<i><b>C</b></i><sub><i>ij</i></sub>=(<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>-<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>)(<i><b>z</b></i><sup><i>i</i></sup><sub>p</sub>-<i><b>z</b></i><sup><i>j</i></sup><sub>g</sub>)<sup>T</sup>.</p>
+                </div>
+                <div class="p1">
+                    <p id="164">但是如果直接采用式(16)计算<mathml id="249"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mo>∂</mo><mi>Γ</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">W</mi><mo stretchy="false">)</mo></mrow><mrow><mo>∂</mo><mi mathvariant="bold-italic">W</mi></mrow></mfrac></mrow></math></mathml>需要计算大量外积矩阵<i><b>C</b></i><sub><i>ij</i></sub>,必然会带来巨大的运算开销.为了降低运算代价和提高计算性能,可以进一步将式(16)表达为矩阵运算形式:</p>
+                </div>
+                <div class="p1">
+                    <p id="165" class="code-formula">
+                        <mathml id="165"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mfrac><mrow><mo>∂</mo><mi>Γ</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">W</mi><mo stretchy="false">)</mo></mrow><mrow><mo>∂</mo><mi mathvariant="bold-italic">W</mi></mrow></mfrac><mo>=</mo><mi>λ</mi><msub><mrow></mrow><mn>0</mn></msub><mi mathvariant="bold-italic">W</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">Ζ</mi><msub><mrow></mrow><mtext>p</mtext></msub><mi mathvariant="bold-italic">R</mi><mi mathvariant="bold-italic">Ζ</mi><msubsup><mrow></mrow><mtext>p</mtext><mtext>Τ</mtext></msubsup><mo>-</mo><mi mathvariant="bold-italic">Ζ</mi><msub><mrow></mrow><mtext>p</mtext></msub><mi mathvariant="bold-italic">Η</mi><mi mathvariant="bold-italic">Ζ</mi><msubsup><mrow></mrow><mtext>g</mtext><mtext>Τ</mtext></msubsup><mo>-</mo></mtd></mtr><mtr><mtd><mi mathvariant="bold-italic">Ζ</mi><msub><mrow></mrow><mtext>g</mtext></msub><mi mathvariant="bold-italic">Η</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mi mathvariant="bold-italic">Ζ</mi><msubsup><mrow></mrow><mtext>p</mtext><mtext>Τ</mtext></msubsup><mo>+</mo><mi mathvariant="bold-italic">Ζ</mi><msub><mrow></mrow><mtext>g</mtext></msub><mi mathvariant="bold-italic">R</mi><mi mathvariant="bold-italic">Ζ</mi><msubsup><mrow></mrow><mtext>g</mtext><mtext>Τ</mtext></msubsup><mo stretchy="false">)</mo><mo>+</mo><mi>λ</mi><msub><mrow></mrow><mn>2</mn></msub><mi mathvariant="bold-italic">W</mi><mo>,</mo><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>7</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="166">其中,<i><b>R</b></i>=<i>diag</i>(<mathml id="250"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mi>i</mi></munder><mi>β</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>δ</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></math></mathml>,∀<i>j</i>)是一个对角矩阵,它的主对角元素是以<i>β</i><sub><i>ij</i></sub><i>δ</i><sub><i>ij</i></sub>为元素的矩阵的行和;<i><b>H</b></i>=<i>diag</i>(<mathml id="251"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mi>j</mi></munder><mi>β</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>δ</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></math></mathml>,∀<i>i</i>)是以<i>β</i><sub><i>ij</i></sub><i>δ</i><sub><i>ij</i></sub>为元素的矩阵列和组成的对角阵.显然,采用式(17)计算梯度能够显著降低运算量.在获得<mathml id="252"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mo>∂</mo><mi>Γ</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">W</mi><mo stretchy="false">)</mo></mrow><mrow><mo>∂</mo><mi mathvariant="bold-italic">W</mi></mrow></mfrac></mrow></math></mathml>后,可以采用梯度下降方法更新<i><b>W</b></i>,在第<i>t</i>步迭代中的计算式为<mathml id="253"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">W</mi><msup><mrow></mrow><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mi mathvariant="bold-italic">W</mi><msup><mrow></mrow><mi>t</mi></msup><mo>-</mo></mrow><mi>η</mi><mfrac><mrow><mo>∂</mo><mi>Γ</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">W</mi><mo stretchy="false">)</mo></mrow><mrow><mo>∂</mo><mi mathvariant="bold-italic">W</mi></mrow></mfrac><mo>,</mo><mi>η</mi></mrow></math></mathml>为更新步长.</p>
+                </div>
+                <div class="p1">
+                    <p id="167">最终,本文提出的联合学习跨视角判别词典与嵌入矩阵的算法模型可以被描述为算法1所示的流程框架,本文将其称为跨视角判别词典嵌入(cross-view discriminative dictionary learning with metric embedding, CDDM)算法.</p>
+                </div>
+                <div class="p1">
+                    <p id="168"><b>算法1</b>. 跨视角判别词典嵌入(CDDM)算法.</p>
+                </div>
+                <div class="p1">
+                    <p id="169">输入:训练集特征矩阵<i><b>X</b></i><sub>p</sub>,<i><b>X</b></i><sub>g</sub>,标签矩阵<i><b>Y</b></i>,参数<i>λ</i><sub>0</sub>,<i>λ</i><sub>1</sub>,<i>λ</i><sub>2</sub>;</p>
+                </div>
+                <div class="p1">
+                    <p id="170">初始化:根据式(2)获得初始的<mathml id="254"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">D</mi><mo>,</mo><mi mathvariant="bold-italic">Ζ</mi><msub><mrow></mrow><mtext>p</mtext></msub><mo>,</mo><mi mathvariant="bold-italic">Ζ</mi><msub><mrow></mrow><mtext>g</mtext></msub><mo>,</mo><mi mathvariant="bold-italic">W</mi><mo>=</mo><mi mathvariant="bold-italic">Ι</mi><mo>,</mo><mi>μ</mi><mo>=</mo><mi>E</mi><mrow><mo>[</mo><mrow><mi>d</mi><msub><mrow></mrow><mi mathvariant="bold-italic">Ι</mi></msub><mo stretchy="false">(</mo><mi mathvariant="bold-italic">z</mi><msub><mrow></mrow><mtext>p</mtext></msub><mo>,</mo><mi mathvariant="bold-italic">z</mi><msub><mrow></mrow><mtext>g</mtext></msub><mo stretchy="false">)</mo></mrow><mo>]</mo></mrow><mo>;</mo></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="171">① for <i>t</i>=1,2,…,<i>T</i> do</p>
+                </div>
+                <div class="p1">
+                    <p id="172">②  根据式(4)(7)(8)计算<i>β</i><sub><i>ij</i></sub>;</p>
+                </div>
+                <div class="p1">
+                    <p id="173">③  根据式(11)更新<i><b>Z</b></i><sub>p</sub>;</p>
+                </div>
+                <div class="p1">
+                    <p id="174">④  根据式(12)更新<i><b>Z</b></i><sub>g</sub>;</p>
+                </div>
+                <div class="p1">
+                    <p id="175">⑤  根据式(14)更新<i><b>D</b></i>;</p>
+                </div>
+                <div class="p1">
+                    <p id="176">⑥  while不收敛do</p>
+                </div>
+                <div class="p1">
+                    <p id="177">⑦  根据式(17)计算<mathml id="255"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mo>∂</mo><mi>Γ</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">W</mi><mo stretchy="false">)</mo></mrow><mrow><mo>∂</mo><mi mathvariant="bold-italic">W</mi></mrow></mfrac><mo>;</mo></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="178" class="code-formula">
+                        <mathml id="178"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>⑧</mi><mspace width="0.25em" /><mtext> </mtext><mtext> </mtext><mspace width="0.25em" /><mi mathvariant="bold-italic">W</mi><msup><mrow></mrow><mrow><mi>t</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>←</mo><mi mathvariant="bold-italic">W</mi><msup><mrow></mrow><mi>t</mi></msup><mo>-</mo><mi>η</mi><mfrac><mrow><mo>∂</mo><mi>Γ</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">W</mi><mo stretchy="false">)</mo></mrow><mrow><mo>∂</mo><mi mathvariant="bold-italic">W</mi></mrow></mfrac><mo>;</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="179">⑨  end while</p>
+                </div>
+                <div class="p1">
+                    <p id="180">⑩ end for</p>
+                </div>
+                <div class="p1">
+                    <p id="181">输出:<i><b>D</b></i><sup>*</sup>=<i><b>D</b></i><sup><i>t</i></sup>,<i><b>Z</b></i><sup>*</sup><sub>p</sub>=<i><b>Z</b></i><sup><i>t</i></sup><sub>p</sub>,<i><b>Z</b></i><sup>*</sup><sub>g</sub>=<i><b>Z</b></i><sup><i>t</i></sup><sub>g</sub>,<i><b>W</b></i><sup>*</sup>=<i><b>W</b></i><sup><i>t</i></sup>.</p>
+                </div>
+                <h4 class="anchor-tag" id="182" name="182"><b>2.4 在行人再识别中的应用</b></h4>
+                <div class="p1">
+                    <p id="183">在完成跨视角判别词典嵌入算法模型的训练后,假设待测试的检索图像特征表达为<i><b>x</b></i><sub>pt</sub>,待匹配图像集的特征为<i><b>x</b></i><mathml id="256"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mtext>g</mtext><mtext>t</mtext></mrow><mi>i</mi></msubsup></mrow></math></mathml>(<i>i</i>=1,2,…,<i>N</i>),则实施行人再识别的过程为:</p>
+                </div>
+                <div class="p1">
+                    <p id="184">1) 对于每个匹配集特征<i><b>x</b></i><mathml id="257"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mtext>g</mtext><mtext>t</mtext></mrow><mi>i</mi></msubsup></mrow></math></mathml>,根据获得的判别词典<i><b>D</b></i>计算的系数表达向量<i><b>z</b></i><mathml id="258"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mtext>g</mtext><mtext>t</mtext></mrow><mi>i</mi></msubsup></mrow></math></mathml>为</p>
+                </div>
+                <div class="p1">
+                    <p id="185"><mathml id="259"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mrow><mtext>g</mtext><mtext>t</mtext></mrow><mi>i</mi></msubsup><mo>=</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>arg</mi><mspace width="0.25em" /><mi>min</mi></mrow></mstyle><mi mathvariant="bold-italic">z</mi></munder><mrow><mo>|</mo><mrow><mi mathvariant="bold-italic">x</mi><msubsup><mrow></mrow><mrow><mtext>g</mtext><mtext>t</mtext></mrow><mi>i</mi></msubsup><mo>-</mo><mi mathvariant="bold-italic">D</mi><mi mathvariant="bold-italic">z</mi></mrow><mo>|</mo></mrow><msubsup><mrow></mrow><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mi>λ</mi><msub><mrow></mrow><mn>1</mn></msub><mrow><mo>|</mo><mi mathvariant="bold-italic">z</mi><mo>|</mo></mrow><msubsup><mrow></mrow><mn>2</mn><mn>2</mn></msubsup></mrow></math></mathml>.(18)</p>
+                </div>
+                <div class="p1">
+                    <p id="186">2) 采用类似过程1)的方法根据式(18)获得<i><b>x</b></i><sub>pt</sub>的系数表达<i><b>z</b></i><sub>pt</sub>.</p>
+                </div>
+                <div class="p1">
+                    <p id="187">3) 对<i><b>z</b></i><sub>pt</sub>与<i><b>z</b></i><mathml id="260"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mtext>g</mtext><mtext>t</mtext></mrow><mi>i</mi></msubsup></mrow></math></mathml>(<i>i</i>=1,2,…,<i>N</i>)根据<mathml id="261"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">d</mi><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>|</mo><mrow><mi mathvariant="bold-italic">W</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">z</mi><msub><mrow></mrow><mrow><mtext>p</mtext><mtext>t</mtext></mrow></msub><mo>-</mo><mi mathvariant="bold-italic">z</mi><msubsup><mrow></mrow><mrow><mtext>g</mtext><mtext>t</mtext></mrow><mi>i</mi></msubsup><mo stretchy="false">)</mo></mrow><mo>|</mo></mrow><msub><mrow></mrow><mn>2</mn></msub></mrow></math></mathml>进行距离计算.</p>
+                </div>
+                <div class="p1">
+                    <p id="188">4) 对距离向量<i><b>d</b></i>排序,获得各匹配图像按距离升序排序的列表.</p>
+                </div>
+                <h3 id="189" name="189" class="anchor-tag"><b>3 实  验</b></h3>
+                <div class="p1">
+                    <p id="190">本节对提出的跨视角判别词典嵌入算法CDDM在VIPeR,GRID,3DPeS这3个常用的行人识别数据集上进行了性能测试,并对实验结果进行了比较和分析.</p>
+                </div>
+                <h4 class="anchor-tag" id="191" name="191"><b>3.1 实验设置</b></h4>
+                <h4 class="anchor-tag" id="192" name="192">1) 数据集</h4>
+                <div class="p1">
+                    <p id="193">实验使用3个数据集:</p>
+                </div>
+                <div class="p1">
+                    <p id="194">① VIPeR<citation id="431" type="reference"><link href="377" rel="bibliography" /><sup>[<a class="sup">30</a>]</sup></citation>是最早公开的专门用于检测行人再识别算法性能的数据集,在行人再识别的研究中应用最为广泛.该数据集中包含有从2个不重叠摄像机视角下拍摄的632个行人,每个行人在各摄像机下均只有1张图像,因此该数据集共有1 264张图像.这些行人图像已经被统一为128×48的像素大小,他们在不同视角下的外观差异主要来自于强烈的光照变化、姿态与视角差异.</p>
+                </div>
+                <div class="p1">
+                    <p id="195">② GRID数据集<citation id="432" type="reference"><link href="323" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>由安装在地铁站中的8台摄像机拍摄获得,行人图像被组织到了检索集Probe与匹配集Gallery 2个目录下.其中有250个行人在2个目录下各有1张图片,Gallery目录下还有775个行人在Probe下没有正确匹配的图像.由于存在干扰图像和强烈的光照视角变化,以及摄像机视角数多达8个,在GRID数据集上的行人再识别工作相当困难.</p>
+                </div>
+                <div class="p1">
+                    <p id="196">③ 3DPeS数据集<citation id="433" type="reference"><link href="379" rel="bibliography" /><sup>[<a class="sup">31</a>]</sup></citation>中包含有从8个摄像机视角下拍摄的192个行人,每个行人的图像数为2～26张不等.由于3DPeS在采集时持续了数天中不同的时间段,因此该数据集中的图像存在强烈的光照变化,另外行人在不同摄像机下的姿态差异也比较大.</p>
+                </div>
+                <div class="p1">
+                    <p id="197">图3给出了从上述3个数据集中随机选取的部分行人图像示例,每一列的2张图像取自于同一行人在不同摄像机下的视频画面.</p>
+                </div>
+                <div class="area_img" id="198">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201911012_198.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 VIPeR,GRID,3DPeS数据集中部分行人图像" src="Detail/GetImg?filename=images/JFYZ201911012_198.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 VIPeR,GRID,3DPeS数据集中部分行人图像  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201911012_198.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 3 Example images from VIPeR, GRID, and 3DPeS</p>
+
+                </div>
+                <h4 class="anchor-tag" id="199" name="199">2) 特征提取</h4>
+                <div class="p1">
+                    <p id="200">实验中采用了文献<citation id="434" type="reference">[<a class="sup">32</a>]</citation>中改进后的局部最大出现特征和使用深度残差网络<citation id="435" type="reference"><link href="383" rel="bibliography" /><sup>[<a class="sup">33</a>]</sup></citation>(deep residual net, ResNet)提取的深度特征来表达行人图像.在文献<citation id="436" type="reference">[<a class="sup">32</a>]</citation>设计的特征描述子中融合了从密集网格提取的LOMO<citation id="437" type="reference"><link href="329" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>描述子与从图像前景两层水平条空间中提取的LOMO变体,其中使用的基本特征有联合HSV与RGB颜色直方图、局部三值模式(local ternary pattern, LTP)和显著颜色名称SCN特征.该描述子中从密集网格提取的特征能够比较好地捕捉图像的细节,从水平条中提取的特征能够更好地刻画图像的整体外观,两者的融合赋予了描述子“由粗到细”的行人外观表达能力.在使用深度残差网络提取图像特征时,使用了在ImageNet上训练好的152层的ResNet-152网络,提取的特征为2 048维.</p>
+                </div>
+                <h4 class="anchor-tag" id="201" name="201">3) 参数设置</h4>
+                <div class="p1">
+                    <p id="202">实验中模型的超参数通过交叉验证获得,具体设置为<i>λ</i><sub>0</sub>=1,<i>λ</i><sub>1</sub>=0.2,<i>λ</i><sub>2</sub>=0.1.在使用梯度下降更新<i><b>W</b></i>时,学习率<i>η</i>的初始值设为0.01;在迭代中若目标函数值下降则对<i>η</i>扩大1.2倍,否则对<i>η</i>乘上0.9的收缩因子.在选择词典基的数量时取<i>m</i>=200,关于基数量的选择将在3.4节中作进一步的讨论.</p>
+                </div>
+                <h4 class="anchor-tag" id="203" name="203">4) 评价方案与指标</h4>
+                <div class="p1">
+                    <p id="204">实验中对各数据集均采用了单张-单张(single-shot vs single-shot)的匹配测试方案,由于在3DPeS中每个行人的图像数不等,因此与文献<citation id="438" type="reference">[<a class="sup">34</a>]</citation>中的方法相同,对每个行人随机选择一张图像用于检索,剩余图像均作为匹配集.在评价指标上选择了在行人再识别研究中应用最为广泛的累积匹配特征(cumulative matching characteristic, CMC)曲线,它反映了在前个匹配集图像中发现正确匹配的概率.为了便于和文献公开的方法作性能对比,在表格中仅选择了CMC曲线部分排序位置(rank)上的匹配精度.为了获得更具有鲁棒性的实验结果,在每个数据集上都进行了10次随机的训练集/测试集划分,取它们的平均CMC作为最终实验数据.</p>
+                </div>
+                <h4 class="anchor-tag" id="205" name="205"><b>3.2 与文献公开的结果对比</b></h4>
+                <div class="p1">
+                    <p id="206">实验中首先把本文CDDM算法在各个数据集上取得的行人再识别结果与文献中公开的数值进行了对比.</p>
+                </div>
+                <div class="p1">
+                    <p id="207">在VIPeR数据集上进行行人再识别时采用了当前应用最为广泛的等量划分方案,数据集中632个行人被划分为2组,每组316个行人.其中一组作为训练集,另一组作为测试集.实验对比的方法包含有监督平滑流形<citation id="439" type="reference"><link href="387" rel="bibliography" /><sup>[<a class="sup">35</a>]</sup></citation>(supervised smoothed mani-fold, SSM)方法、空间约束相似度学习<sup>34]</sup>(spatial constrained similarity learning on polynomial feature map, SCSP)算法、零空间Foley-Sammon变换<citation id="440" type="reference"><link href="339" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>(null Foley-Sammon transform, NFST)、度量组合<citation id="441" type="reference"><link href="343" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>(metric ensemble, ME)、摄像机相关性已知的特征扩增<citation id="442" type="reference"><link href="389" rel="bibliography" /><sup>[<a class="sup">36</a>]</sup></citation>(camera correlation aware feature augmentation, CRAFT)、加权线性编码<citation id="443" type="reference"><link href="391" rel="bibliography" /><sup>[<a class="sup">37</a>]</sup></citation>(weighted linear coding, WLC)、基于核化跨视角协同表达分类<citation id="444" type="reference"><link href="369" rel="bibliography" /><sup>[<a class="sup">26</a>]</sup></citation>(kernel cross-view collaborative representation based classification, KX-CRC)、基于加速近邻梯度的度量学习<citation id="445" type="reference"><link href="357" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>(metric learning by accelerated proximal gradient, MLAPG)、XQDA<citation id="446" type="reference"><link href="329" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>、GOG<citation id="447" type="reference"><link href="349" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>、深度多层相似度<citation id="448" type="reference"><link href="327" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>(deep multi-level similarity, DMS)和SpindleNet<citation id="449" type="reference"><link href="331" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>等.</p>
+                </div>
+                <div class="p1">
+                    <p id="208">表1与图4<citation id="318" type="note"><link href="3" rel="footnote" /><sup>①</sup></citation>给出了CDDM算法及其他算法在VIPeR数据集上的行人再识别结果对比.从对比结果可以看出CDDM在性能上明显优于其他方法.特别是在rank-1上,CDDM取得了60.93%的正确匹配率,也是唯一达到60%匹配率的方法.和此前SpindelNet取得的最优结果53.80%相比,CDDM比其高出了7.13%,这充分展现了CDDM优异的性能.在其他的各个rank上,CDDM也表现出显著的性能优势.在对比方法中,SpindelNet,CRAFT,DMS都是基于深度学习模型的方法,但是在VIPeR数据集上由于样本相对较少,无法完全发挥它们的性能,虽然它们在rank-1上都达到50%以上的匹配率,但整体性能仍相对较弱.在对比方法中SSM,SCSP,NFST,MLAPG,XQDA等均为度量学习算法,KX-CRC与WLC为基于词典学习的方法,与它们相比,CDDM联合学习了判别词典与度量矩阵,能够同时利用两者的优势,因此具有更强的匹配性能.</p>
+                </div>
+                <div class="p1">
+                    <p id="209">在GRID数据集上,实验中将在Probe与Gallery目录下都有图像的250人均分为2组.其中一组作为训练集,另一组和Gallery目录下的775张干扰图像作为测试集.在该数据集上本文CDDM算法与样本独立的SVM<citation id="450" type="reference"><link href="371" rel="bibliography" /><sup>[<a class="sup">27</a>]</sup></citation>(sample specific SVM, SSSVM),NK3ML<citation id="451" type="reference"><link href="393" rel="bibliography" /><sup>[<a class="sup">38</a>]</sup></citation>(nullspace kernel maximum margin metric learning)等其他文献中公开的结果对比如表2和图5所示.从表2可知,CDDM再次取得了最优的结果.在rank-1上CDDM取得的正确匹配率达到了28.20%,比此前最优的NK3ML和SSM高出了1%,在其他rank上CDDM也取得了更为优秀的再识别性能.这说明CDDM能够较好地应对GRID数据集中复杂的视角变化与光照等干扰.</p>
+                </div>
+                <div class="area_img" id="210">
+                    <p class="img_tit"><b>表1 CDDM与其他算法在VIPeR数据集上匹配率对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 1 Performance Comparison of CDDM with State-of- the-Art Algorithms on VIPeR</b></p>
+                    <p class="img_note"> %</p>
+                    <table id="210" border="1"><tr><td><br />Method</td><td>rank-1</td><td>rank-5</td><td>rank-10</td><td>rank-20</td><td>Reference</td></tr><tr><td><br />CDDM</td><td>60.93</td><td>86.68</td><td>93.89</td><td>98.35</td><td>Ours</td></tr><tr><td><br />SpindelNet</td><td>53.80</td><td>74.10</td><td>83.20</td><td>92.10</td><td>Ref [7]</td></tr><tr><td><br />SSM</td><td>53.73</td><td></td><td>91.49</td><td>96.08</td><td>Ref [35]</td></tr><tr><td><br />SCSP</td><td>53.54</td><td>82.59</td><td>91.49</td><td>96.65</td><td>Ref [34]</td></tr><tr><td><br />KX-CRC</td><td>51.40</td><td>81.20</td><td>89.70</td><td>95.60</td><td>Ref [26]</td></tr><tr><td><br />WLC</td><td>51.40</td><td>76.40</td><td>84.80</td><td></td><td>Ref [37]</td></tr><tr><td><br />NFST</td><td>51.17</td><td>82.09</td><td>90.51</td><td>95.52</td><td>Ref [11]</td></tr><tr><td><br />CRAFT</td><td>50.28</td><td>79.97</td><td>89.56</td><td>95.51</td><td>Ref [36]</td></tr><tr><td><br />DMS</td><td>50.10</td><td>73.10</td><td>84.35</td><td></td><td>Ref [5]</td></tr><tr><td><br />GOG</td><td>49.72</td><td>79.72</td><td>88.67</td><td>94.53</td><td>Ref [16]</td></tr><tr><td><br />ME</td><td>45.90</td><td>77.50</td><td>88.90</td><td>95.80</td><td>Ref [13]</td></tr><tr><td><br />MLAPG</td><td>40.73</td><td>69.96</td><td>82.34</td><td>92.37</td><td>Ref [20]</td></tr><tr><td><br />XQDA</td><td>40.00</td><td>68.13</td><td>80.51</td><td>91.08</td><td>Ref [6]</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="211">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201911012_211.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 不同算法在VIPeR数据集上的CMC曲线" src="Detail/GetImg?filename=images/JFYZ201911012_211.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 不同算法在VIPeR数据集上的CMC曲线  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201911012_211.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 4 CMC curves of different algorithms on 
+ VIPeR dataset</p>
+
+                </div>
+                <div class="p1">
+                    <p id="212">在3DPeS数据集上实验时采用了与文献<citation id="452" type="reference">[<a class="sup">34</a>]</citation>相同的数据集分割方案,从该数据集随机选择96人作为训练集,剩余96人作为测试集.对于每个行人,随机选择一张图像来创建匹配集,剩余图像均用于检索.在该数据集上与本文CDDM算法进行对比的方法有核化局部Fisher线性判别<citation id="453" type="reference"><link href="395" rel="bibliography" /><sup>[<a class="sup">39</a>]</sup></citation>(kernel local Fisher discriminant analysis, KLFDA)、深度排序大间隔度量学习<citation id="454" type="reference"><link href="397" rel="bibliography" /><sup>[<a class="sup">40</a>]</sup></citation>(deep ranking by large adaptive margin learning, DRLAML)、域引导丢弃方法<citation id="455" type="reference"><link href="399" rel="bibliography" /><sup>[<a class="sup">41</a>]</sup></citation>(domain guided dropout, DGD)、SpindelNet、SCSP和ME.表3列出了这些算法在rank1,5,10,20上取得的累积匹配正确率.</p>
+                </div>
+                <div class="area_img" id="213">
+                    <p class="img_tit"><b>表2 CDDM与其他算法在GRID数据集上匹配率对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 2 Performance Comparison of CDDM with State-of- the-Art Algorithms on GRID</b></p>
+                    <p class="img_note">%</p>
+                    <table id="213" border="1"><tr><td><br />Method</td><td>rank-1</td><td>rank-5</td><td>rank-10</td><td>rank-20</td><td>Reference</td></tr><tr><td><br />CDDM</td><td>28.20</td><td>52.40</td><td>64.00</td><td>74.10</td><td>Ours</td></tr><tr><td><br />NK3ML</td><td>27.20</td><td></td><td>60.96</td><td>71.04</td><td>Ref [38]</td></tr><tr><td><br />SSM</td><td>27.20</td><td></td><td>61.12</td><td>70.56</td><td>Ref [35]</td></tr><tr><td><br />KX-CRC</td><td>26.90</td><td>45.70</td><td>57.50</td><td>70.20</td><td>Ref [26]</td></tr><tr><td><br />CRAFT</td><td>26.00</td><td>50.60</td><td>62.50</td><td>73.30</td><td>Ref [36]</td></tr><tr><td><br />GOG</td><td>24.72</td><td>46.96</td><td>58.40</td><td>68.96</td><td>Ref [16]</td></tr><tr><td><br />SCSP</td><td>24.24</td><td>44.56</td><td>54.08</td><td>65.20</td><td>Ref [34]</td></tr><tr><td><br />SSSVM</td><td>22.40</td><td>40.40</td><td>51.28</td><td>61.20</td><td>Ref [35]</td></tr><tr><td><br />MLAPG</td><td>16.64</td><td>33.12</td><td>41.20</td><td>52.96</td><td>Ref [20]</td></tr><tr><td><br />XQDA</td><td>16.56</td><td>33.84</td><td>41.84</td><td>52.40</td><td>Ref [6]</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="214">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201911012_214.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 不同算法在GRID数据集上的CMC曲线" src="Detail/GetImg?filename=images/JFYZ201911012_214.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 不同算法在GRID数据集上的CMC曲线  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201911012_214.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 5 CMC curves of different algorithms on 
+ GRID dataset</p>
+
+                </div>
+                <div class="p1">
+                    <p id="215">从表3中的数据可以看出与其他方法相比,本文CDDM算法取得的匹配结果依然领先于其他方法.在rank-1上CDDM的匹配率为65.57%,比排在第2名的SpindelNet高出了3.47%,在其他rank上也均优于各对比方法.尽管基于深度学习方法的SpindelNet,DGD,DRLAML在该数据集上的识别性能比其他方法有所提升,但仍弱于本文CDDM算法.与SCSP,ME,KLFDA等度量学习方法相比,CDDM也具有明显的性能优势.</p>
+                </div>
+                <div class="area_img" id="216">
+                    <p class="img_tit"><b>表3 CDDM与其他算法在3DPeS数据集上匹配率对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 3 Performance Comparison of CDDM with State-of- the-Art Algorithms on 3DPeS</b></p>
+                    <p class="img_note"> %</p>
+                    <table id="216" border="1"><tr><td><br />Method</td><td>rank-1</td><td>rank-5</td><td>rank-10</td><td>rank-20</td><td>Reference</td></tr><tr><td><br />CDDM</td><td>65.57</td><td>84.53</td><td>91.60</td><td>96.24</td><td>Ours</td></tr><tr><td><br />SpindelNet</td><td>62.10</td><td>83.40</td><td>90.50</td><td>95.70</td><td>Ref [7]</td></tr><tr><td><br />DRLAML</td><td>58.30</td><td>74.00</td><td></td><td>88.50</td><td>Ref [40]</td></tr><tr><td><br />SCSP</td><td>57.29</td><td>78.97</td><td>86.02</td><td>91.51</td><td>Ref [34]</td></tr><tr><td><br />DGD</td><td>55.20</td><td>76.40</td><td>84.90</td><td>91.90</td><td>Ref [41]</td></tr><tr><td><br />ME</td><td>53.33</td><td>76.79</td><td>84.95</td><td>92.78</td><td>Ref [13]</td></tr><tr><td><br />KLFDA</td><td>54.02</td><td>77.74</td><td>85.90</td><td>92.38</td><td>Ref [39]</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="217" name="217"><b>3.3 采用相同特征描述子时算法性能比较</b></h4>
+                <div class="p1">
+                    <p id="218">在3.2节的行人再识别结果数据对比中,尽管各算法模型均采用了相同的数据集划分方案,但是各模型的结构与使用的特征描述子各不相同,因此性能对比中必然存在一定的不公平性.特别是对于SpindelNet<citation id="456" type="reference"><link href="331" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>等基于深度学习的方法,尽管已经取得比较优异的性能,但是受到数据集中样本数量较少的限制,它们的性能难以得到完全发挥.为了进一步对CDDM算法的性能进行分析,本节对CDDM与其他可获得源码的算法在采用相同特征时的再识别性能进行了测试.实验中对比的方法有SSSVM,MLAPG,XQDA,KLFDA,NFST,KX-CRC,其中SSSVM和KX-CRC为学习判别词典的方法,其余为度量学习方法.</p>
+                </div>
+                <div class="p1">
+                    <p id="219">采用本文使用的特征描述子,在3个数据集上各算法取得的CMC曲线及rank-1匹配率如图6所示.从图6可以看出本文CDDM算法在3个数据集上均取得了优于其他算法的匹配性能.在VIPeR数据集上,CDDM的rank-1匹配率为60.93%,排在第2名的是XQDA,其正确匹配率为58.72%,比CDDM弱了2.21%.在GRID与3DPeS数据集上,排在第2名的方法分别是NFST和XQDA.与它们相比,CDDM分别具有1.08%和3.33%的rank-1性能优势.综合各方法在3个数据集上的再识别性能可以发现,在使用相同特征描述子时,尽管各方法在不同数据集上的性能会存在差异,但是本文CDDM由于同时学习了判别词典与度量矩阵,始终表现出最优的行人再识别性能.该实验充分说明了联合学习判别词典与度量矩阵所带来的优势.</p>
+                </div>
+                <div class="area_img" id="220">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201911012_220.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 采用相同特征描述子时CDDM与其他算法的性能对比" src="Detail/GetImg?filename=images/JFYZ201911012_220.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 采用相同特征描述子时CDDM与其他算法的性能对比  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201911012_220.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 6 Performance comparison of CDDM with other algorithms using the same feature representation</p>
+
+                </div>
+                <h4 class="anchor-tag" id="221" name="221"><b>3.4 算法分析</b></h4>
+                <div class="p1">
+                    <p id="222">在本文提出的CDDM算法中,学习的判别词典中基向量的数量、样本对权重的分配、使用的特征描述子等均会给算法的最终性能带来很大的影响,在本节实验中对它们分别进行了分析.</p>
+                </div>
+                <h4 class="anchor-tag" id="223" name="223">1) 词典基向量数量对算法性能的影响</h4>
+                <div class="p1">
+                    <p id="224">图7给出了在VIPeR,GRID,3DPeS数据集上,采用本文CDDM算法进行行人再识别时不同的词典基向量数量对rank-1正确匹配率的影响.从图7可以看出,随着词典基向量数量的增长,各数据集上的rank-1匹配率均呈上升趋势;但在词典数达到200后,各匹配率基本上保持稳定.因此,本文选择了200作为词典基向量数.</p>
+                </div>
+                <h4 class="anchor-tag" id="225" name="225">2) 联合学习判别词典与距离度量的作用</h4>
+                <div class="p1">
+                    <p id="226">在本文CDDM算法中联合学习了判别词典与度量矩阵,为了验证联合学习度量矩阵所带来的性能提升,实验中将算法1中的投影矩阵设置为单位矩阵进行了实验(下面标记为CDDI),并与CDDM作了对比.表4给出了它们在不同数据集上的实验结果,从表4数据可知联合学习判别词典与度量矩阵时,CDDM的匹配性能显著优于CDDI.在VIPeR,GRID,3DPeS上,CDDM的rank-1匹配率比CDDI分别高出了7.13%,4.88%,5.15%,说明联合学习度量矩阵更有助于发现数据的内在结构,获得的投影子空间比使用欧氏距离具有更优的判别性.</p>
+                </div>
+                <h4 class="anchor-tag" id="227" name="227">3) 融合深度特征与手工特征带来的性能提升</h4>
+                <div class="p1">
+                    <p id="228">本文实验中使用了手工设计的特征描述子(标记为HCFeat)与ResNet152学习到的深度特征表达(标记为DeepFeat),图8给出了它们在融合使用(标记为ConFeat)与独立使用时获得的CMC曲线.从图8可以发现2种特征融合后取得的匹配性能显著优于分开独立使用时的结果,本文认为这主要是因为它们捕获了具有互补性的图像低层外观与高层语意信息.</p>
+                </div>
+                <div class="area_img" id="229">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201911012_229.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 词典基向量数m对rank-1匹配率的影响" src="Detail/GetImg?filename=images/JFYZ201911012_229.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 词典基向量数<i>m</i>对rank-1匹配率的影响  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201911012_229.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 7 Influence of the number of bases for dictionary learning on rank-1 matching rate</p>
+
+                </div>
+                <div class="area_img" id="230">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201911012_230.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图8 特征描述子性能对比" src="Detail/GetImg?filename=images/JFYZ201911012_230.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图8 特征描述子性能对比  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201911012_230.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 8 Performance comparison of feature descriptors</p>
+
+                </div>
+                <div class="area_img" id="231">
+                    <p class="img_tit"><b>表4 CDDM与CDDI匹配率对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 4 Matching Rate Comparison of CDDM with CDDI</b></p>
+                    <p class="img_note">%</p>
+                    <table id="231" border="1"><tr><td>Dataset</td><td>Method</td><td>rank-1</td><td>rank-5</td><td>rank-10</td><td>rank-20</td></tr><tr><td rowspan="2"><br />VIPeR</td><td><br />CDDM</td><td>60.93</td><td>86.68</td><td>93.89</td><td>98.35</td></tr><tr><td><br />CDDI</td><td>53.80</td><td>81.96</td><td>91.77</td><td>97.47</td></tr><tr><td rowspan="2"><br />GRID</td><td><br />CDDM</td><td>28.20</td><td>52.40</td><td>64.00</td><td>74.10</td></tr><tr><td><br />CDDI</td><td>23.32</td><td>47.68</td><td>61.12</td><td>70.80</td></tr><tr><td rowspan="2"><br />3DPeS</td><td><br />CDDM</td><td>65.57</td><td>84.53</td><td>91.60</td><td>96.24</td></tr><tr><td><br />CDDI</td><td>60.42</td><td>82.41</td><td>89.20</td><td>95.04</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="232" name="232">4) 样本对的权重分配对算法性能的影响</h4>
+                <div class="p1">
+                    <p id="233">为了降低不均衡训练样本带来的度量偏差问题,本文采用了自适应的样本对权重分配策略.为了考查样本对权重分配对算法性能的影响,实验中对所有样本对在不考虑权重(设置式(8)中<i>β</i><sub><i>ij</i></sub>=1)时的匹配性能与使用式(8)权重分配方案取得的结果进行性能对比.图9给出了这2种情况下在各数据集上的rank-1匹配率.从图9可以发现,使用了自动权重分配策略比不考虑权重分别带来了7.07%,3.68%,8.66%的性能提升,说明本文权重分配策略对训练样本数量不平衡引起的度量偏差问题具有良好的抑制作用.</p>
+                </div>
+                <div class="area_img" id="234">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201911012_234.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图9 rank-1匹配率对比" src="Detail/GetImg?filename=images/JFYZ201911012_234.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图9 rank-1匹配率对比  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201911012_234.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 9 Comparison of rank-1 matching rate</p>
+
+                </div>
+                <h3 id="235" name="235" class="anchor-tag"><b>4 结束语</b></h3>
+                <div class="p1">
+                    <p id="236">本文提出了一种跨视角判别词典嵌入的行人再识别算法,该算法中通过交替迭代优化的方式联合学习了跨视角的判别性词典和嵌入子空间,从而将词典表达与度量学习的优势结合了起来.为了降低在学习距离度量时由于正负样本对数量不均衡带来的度量偏差问题,在算法中还引入了对训练样本自适应赋予权重的策略.在3个广泛使用的行人再识别数据集上的实验结果表明,本文方法取得了优秀的跨视角行人再识别性能.由于当前的工作主要关注于小数集上的行人再识别,在后续的工作中将尝试基于深度学习模型学习判别词典,并应用到更接近现实场景的大型数据集上.</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="319">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Person Re-identification">
+
+                                <b>[1]</b>Gong Shaogang,Cristani M,Yan Shuicheng,et al.Person Re-identification[M].Berlin:Springer,2014
+                            </a>
+                        </p>
+                        <p id="321">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201902008&amp;v=MjQyMDg2ajU0TzN6cXFCdEdGckNVUkxPZVplUnNGeXptV3J2Qkx5dlNkTEc0SDlqTXJZOUZiSVFLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b>Huang Jipeng,Shi Yinghuan,Gao Yang.Multi-scale faster-RCNN algorithm for small object detection[J].Journal of Computer Research and Development,2019,56(2):319- 327 (in Chinese)(黄继鹏,史颖欢,高阳.面向小目标的多尺度Faster-RCNN检测算法[J].计算机研究与发展,2019,56(2):319- 327)
+                            </a>
+                        </p>
+                        <p id="323">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Multi-camera activity correlation analysis">
+
+                                <b>[3]</b>Chen Change Loy,Xiang Tao,Gong Shaogang.Multi-camera activity correlation analysis[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2009:1988- 1995
+                            </a>
+                        </p>
+                        <p id="325">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Person re-identification:Past present and future">
+
+                                <b>[4]</b>Zheng Liang,Yang Yi,Hauptmann A G.Person re-identification:Past,present and future[J].arXiv preprint,arXiv:1610.02984,2016
+                            </a>
+                        </p>
+                        <p id="327">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient and deep person re-identification using multi-level similarity">
+
+                                <b>[5]</b>Guo Yiluan,Cheung N M.Efficient and deep person re-identification using multi-level similarity[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2018:2335- 2344
+                            </a>
+                        </p>
+                        <p id="329">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Person re-identification by local maximal occurrence representation and metric learning">
+
+                                <b>[6]</b>Liao Shengcai,Hu Yang,Zhu Xiangyu,et al.Person re-identification by local maximal occurrence representation and metric learning[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2015:2197- 2206
+                            </a>
+                        </p>
+                        <p id="331">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Spindle net:Person re-identification with human body region guided feature decomposition and fusion">
+
+                                <b>[7]</b>Zhao Haiyu,Tian Maoqing,Sun Shuyang,et al.Spindle Net:Person re-identification with human body region guided feature decomposition and fusion[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2017:1077- 1085
+                            </a>
+                        </p>
+                        <p id="333">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Camera Style Adaptation for Person Re-identification">
+
+                                <b>[8]</b>Zhong Zhun,Zheng Liang,Zheng Zhedong,et al.Camera style adaptation for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2018:5157- 5166
+                            </a>
+                        </p>
+                        <p id="335">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Salient Color Names for Person Re-Identification">
+
+                                <b>[9]</b>Yang Yang,Yang Jimei,Yan Junjie,et al.Salient color names for person re-identification[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2014:536- 551
+                            </a>
+                        </p>
+                        <p id="337">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Person re-identification by iterative re-weighted sparse ranking">
+
+                                <b>[10]</b>Lisanti G,Masi I,Bagdanov A D,et al.Person re-identification by iterative re-weighted sparse ranking[J].IEEE Transactions on Pattern Analysis &amp; Machine Intelligence,2015,37(8):1629- 1642
+                            </a>
+                        </p>
+                        <p id="339">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning a discriminative null space for person re-identification">
+
+                                <b>[11]</b>Zhang Li,Xiang Tao,Gong Shaogang.Learning a discriminative null space for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1239- 1248
+                            </a>
+                        </p>
+                        <p id="341">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJESEC497DB3A5586205A4A4B241D7FA6EC6&amp;v=MDc1NTJHdGpMMi8xR0ZlNEtCSG83enhOaTdrNTVPbjNtcldZeUQ4T1NNTW1aQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TnBod0x1MnhLRT1OaWZPZmNiTA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b>Wang Jing,Wang Zheng,Liang Chao,et al.Equidistance constrained metric learning for person re-identification[J].Pattern Recognition,2018,74:38- 51
+                            </a>
+                        </p>
+                        <p id="343">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES7E39697E821FF90B14B1BFC75C9EFD9F&amp;v=MzE4OTRwbWFCdUhZZk9HUWxmQ3BiUTM1TnBod0x1MnhLRT1OaWZPZmJUTkhkaktwb2d3Yk9rT2Vnb3d6MlFTN2sxOE9nbVJxeGRHY01maU1iUHBDT052RlNpV1dyN0pJRg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b>Paisitkriangkrai S,Wu Lin,Shen Chunhua,et al.Structured learning of metric ensembles with application to person re-identification[J].Computer Vision and Image Understanding,2017,156:51- 65
+                            </a>
+                        </p>
+                        <p id="345">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Person Re-Identification with Discriminatively Trained Viewpoint Invariant Dictionaries">
+
+                                <b>[14]</b>Srikrishna K,Yang Li,Richard J R.Person re-identification with discriminatively trained viewpoint invariant dictionaries[C] //Proc of IEEE Int Conf on Computer Vision.Piscataway,NJ:IEEE,2015:4516- 4524
+                            </a>
+                        </p>
+                        <p id="347">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Metric embedded discriminative vocabulary learn ing for high-level person representation[C/OL]">
+
+                                <b>[15]</b>Yang Yang,Lei Zhen,Zhang Shifeng,et al.Metric embedded discriminative vocabulary learning for high-level person representation[C] //Proc of the 30th AAAI Conf on Artificial Intelligence.Menlo Park,CA:AAAI Press,2016:3648- 3654
+                            </a>
+                        </p>
+                        <p id="349">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Hierarchical Gaussian descriptor for person re-identification">
+
+                                <b>[16]</b>Matsukawa T,Okabe T,Suzuki E,et al.Hierarchical gaussian descriptor for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1363- 1372
+                            </a>
+                        </p>
+                        <p id="351">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning mid-level filters for person re-identification">
+
+                                <b>[17]</b>Zhao Rui,Ouyang Wanli,Wang Xiaogang.Learning mid-level filters for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2014:144- 151
+                            </a>
+                        </p>
+                        <p id="353">
+                            <a id="bibliography_18" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14061600129508&amp;v=Mjg0OTk4SHRmTnFZOUZaZWtHQ1h3eG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUwzSUpGMGRiaHM9TmlmT2ZiSw==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[18]</b>Ma Bingpeng,Su Yu,Jurie F.Covariance descriptor based on bio-inspired features for person re-identification and face verification[J].Image and Vision Computing,2014,32(6):379- 390
+                            </a>
+                        </p>
+                        <p id="355">
+                            <a id="bibliography_19" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Pcca:A new approach for distance learning from sparse pairwise constraints">
+
+                                <b>[19]</b>Mignon A,Jurie F.PCCA:A new approach for distance learning from sparse pairwise constraints[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2012:2666- 2672
+                            </a>
+                        </p>
+                        <p id="357">
+                            <a id="bibliography_20" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient PSD constrained asymmetric metric learning for person re-identification">
+
+                                <b>[20]</b>Liao Shengcai,Li Stan Z.Efficient PSD constrained asymmetric metric learning for person re-identification[C] //Proc of Int Conf on Computer Vision.Piscataway,NJ:IEEE,2015:3685- 3693
+                            </a>
+                        </p>
+                        <p id="359">
+                            <a id="bibliography_21" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Reidentification by Relative Distance Comparison">
+
+                                <b>[21]</b>Zheng Weishi,Gong Shaoang,Xiang Tao.Re-identification by relative distance comparison[J].IEEE Transactions on Pattern Analysis &amp; Machine Intelligence,2013,35(3):653- 668
+                            </a>
+                        </p>
+                        <p id="361">
+                            <a id="bibliography_22" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Top-Push Video-Based Person Re-identification">
+
+                                <b>[22]</b>You Jinjie,Wu Ancong,Li Xiang,et al.Top-Push video-based person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1345- 1353
+                            </a>
+                        </p>
+                        <p id="363">
+                            <a id="bibliography_23" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Large scale metric learning from equivalence constraints">
+
+                                <b>[23]</b>Köestinger M,Hirzer M,Wohlhart P,et al.Large scale metric learning from equivalence constraints[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2012:2288- 2295
+                            </a>
+                        </p>
+                        <p id="365">
+                            <a id="bibliography_24" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Joint sparse representation for robust multimodal biometrics recognition">
+
+                                <b>[24]</b>Sumit S,Patel V M,Nasrabadi N M,et al.Joint sparse representation for robust multimodal biometrics recognition[J].IEEE Transactions on Pattern Analysis &amp; Machine Intelligence,2014,36(1):113- 126
+                            </a>
+                        </p>
+                        <p id="367">
+                            <a id="bibliography_25" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Semi-supervised coupled dictionary learning for person re-identification">
+
+                                <b>[25]</b>Liu Xiao,Song Mingli,Tao Dacheng,et al.Semi-supervised coupled dictionary learning for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2014:3550- 3557
+                            </a>
+                        </p>
+                        <p id="369">
+                            <a id="bibliography_26" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES92559D0A7ADF0BD46211F3C5042C0A48&amp;v=MzE3NTZZNXA3ZW54THV4SVY2RDU4UG55UnFSSXhlOEdVTkw2WENPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU5waHdMdTJ4S0U9TmlmT2ZicTZHOVRGMjQ4MA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[26]</b>Prates R,Schwartz W R.Kernel cross-view collaborative representation based classification for person re-identification[J].Journal of Visual Communication and Image Representation,2019,58:304- 315
+                            </a>
+                        </p>
+                        <p id="371">
+                            <a id="bibliography_27" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Sample-specific Svm Learning for Person Re-identification">
+
+                                <b>[27]</b>Zhang Ying,Li Baohua,Lu Huchuan,et al.Sample-specific SVM learning for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1278- 1287
+                            </a>
+                        </p>
+                        <p id="373">
+                            <a id="bibliography_28" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Person Re-Identification by Unsupervised L1 Graph Learning">
+
+                                <b>[28]</b>Kodirov E,Xiang Tao,Fu Zhenyong,et al.Person re-identification by unsupervised ℓ_1 graph learning[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2016:178- 195
+                            </a>
+                        </p>
+                        <p id="375">
+                            <a id="bibliography_29" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Neighborhood Repulsed Metric Learning for Kinship Verification">
+
+                                <b>[29]</b>Lu Jiwen,Zhou Xiuzhuang,Yap-Pen T,et al.Neighborhood repulsed metric learning for kinship verification[J].IEEE Transactions on Pattern Analysis &amp; Machine Intelligence,2014,36(2):331- 45
+                            </a>
+                        </p>
+                        <p id="377">
+                            <a id="bibliography_30" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Viewpoint Invariant Pedestrian Recogni-tion with an Ensemble of Localized Features">
+
+                                <b>[30]</b>Gray D,Tao H.Viewpoint invariant pedestrian recognition with an ensemble of localized features[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2008:262- 275
+                            </a>
+                        </p>
+                        <p id="379">
+                            <a id="bibliography_31" target="_blank" href="http://scholar.cnki.net/result.aspx?q=3dpes:3d people dataset for surveillance and forensics">
+
+                                <b>[31]</b>Baltieri D,Vezzani R,Cucchiara R.3DPes:3D people dataset for surveillance and forensics[C] //Proc of the 2011 Joint ACM Workshop on Human Gesture and Behavior Understanding.New York:ACM,2011:59- 64
+                            </a>
+                        </p>
+                        <p id="381">
+                            <a id="bibliography_32" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES45BE672946B8BDD91D7D19A264BEB7D7&amp;v=MTAzMDliZTliS1RLcUkxTVlPMTlCQTVOdXg4U25qZ0pTWGFUcmhReEM4Zm1RczZZQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TnBod0x1MnhLRT1OaWZPZg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[32]</b>Dong Husheng,Lu Ping,Zhong Shan,et al.Person re-identification by enhanced local maximal occurrence representation and generalized similarity metric learning[J].Neurocomputing,2018,307:25- 37
+                            </a>
+                        </p>
+                        <p id="383">
+                            <a id="bibliography_33" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep residual learning for image recognition">
+
+                                <b>[33]</b>He Kaiming,Zhang Xiangyu,Ren Shaoqing,et al.Deep residual learning for image recognition[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:770- 778
+                            </a>
+                        </p>
+                        <p id="385">
+                            <a id="bibliography_34" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Similarity Learning with Spatial Constraints for Person Re-identification">
+
+                                <b>[34]</b>Chen Dapeng,Yuan Zejian,Chen Badong,et al.Similarity learning with spatial constraints for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1268- 1277
+                            </a>
+                        </p>
+                        <p id="387">
+                            <a id="bibliography_35" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Scalable Person Re-Identification on Supervised Smoothed Manifold">
+
+                                <b>[35]</b>Bai Song,Bai Xiang,Tian Qi.Scalable person re-identification on supervised smoothed manifold[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2017:2530- 2539
+                            </a>
+                        </p>
+                        <p id="389">
+                            <a id="bibliography_36" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Person re-identification by camera correlation aware feature augmentation">
+
+                                <b>[36]</b>Chen Yingcong,Zhu Xiatian,Zheng Weishi,et al.Person re-identification by camera correlation aware feature augmentation[J].IEEE Transactions on Pattern Analysis &amp; Machine Intelligence,2018,40(2):392- 408
+                            </a>
+                        </p>
+                        <p id="391">
+                            <a id="bibliography_37" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Unsupervised learning of multi-level descriptors for person re-identification">
+
+                                <b>[37]</b>Yang Yang,Wen Longyin,Lyu Siwei,et al.Unsupervised learning of multi-level descriptors for person re-identification[C] //Proc of the 31st AAAI Conf on Artificial Intelligence.Menlo Park,CA:AAAI,2017:4306- 4312
+                            </a>
+                        </p>
+                        <p id="393">
+                            <a id="bibliography_38" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Maximum margin metric learning over discriminative nullspace for person re-identification">
+
+                                <b>[38]</b>Ali T M F,Chaudhuri S.Maximum margin metric learning over discriminative nullspace for person re-identification[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2018:122- 138
+                            </a>
+                        </p>
+                        <p id="395">
+                            <a id="bibliography_39" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Person reidentification using kernel-based metric learning methods">
+
+                                <b>[39]</b>Xiong Fei,Gou Mengran,Camps O,et al.Person re-identification using kernel-based metric learning methods[C] //Proc of European Conf on Computer Vision.Berlin:Springer,2014:1- 16
+                            </a>
+                        </p>
+                        <p id="397">
+                            <a id="bibliography_40" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJESD28F68EEC66F98197E4F05DD2D030DAC&amp;v=MjY4NDZmQ3BiUTM1TnBod0x1MnhLRT1OaWZPZmNlNkZxZktwL293RiswSmVuVXh6aDhVbnpzTFNIcVcyQkJCZWJHVU1jdnNDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[40]</b>Wang Jiayun,Zhou Sanping,Wang Jinjun,et al.Deep ranking model by large adaptive margin learning for person re-identification[J].Pattern Recognition,2018,74:241- 252
+                            </a>
+                        </p>
+                        <p id="399">
+                            <a id="bibliography_41" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning Deep Feature Representations with Domain Guided Dropout for Person Re-identification">
+
+                                <b>[41]</b>Xiao Tong,Li Hongsheng,Ouyang Wanli,et al.Learning deep feature representations with domain guided dropout for person re-identification[C] //Proc of IEEE Conf on Computer Vision and Pattern Recognition.Piscataway,NJ:IEEE,2016:1249- 1258
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+            <div class="reference anchor-tag" id="a_footnote">
+ <h3>注释</h3>
+                    <p>
+                        <span id="3" href="javascript:void(0)">
+                            <b>1</b> 由于表1中部分方法未公开代码或CMC,因此未能全部绘制.
+                        </span>
+                    </p>
+            </div>
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JFYZ201911012" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201911012&amp;v=Mjk0NDNVUkxPZVplUnNGeXptV3J2Qkx5dlNkTEc0SDlqTnJvOUVab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9EZVdhSmVzalhqVk43aUNlaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=NLcKG8I1SJUaVFrQ0iGpF2klAT0OsmHRaVSZ1rKb5xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

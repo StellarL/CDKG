@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637126202973521250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201910033%26RESULT%3d1%26SIGN%3dQJe2LpVZV48lS%252fw4zQXOkYQ7P5o%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201910033&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201910033&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201910033&amp;v=MTYyMjR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0RnkzaFU3L0JMejdCYmJHNEg5ak5yNDlHWjRRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#46" data-title="1 相关研究 ">1 相关研究</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#47" data-title="1.1 LeaderRank算法">1.1 LeaderRank算法</a></li>
+                                                <li><a href="#53" data-title="1.2 加权LeaderRank算法">1.2 加权LeaderRank算法</a></li>
+                                                <li><a href="#60" data-title="1.3 其他相关算法">1.3 其他相关算法</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#64" data-title="2 改进的加权LeaderRank算法 ">2 改进的加权LeaderRank算法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#87" data-title="2.1 链入链出因子">2.1 链入链出因子</a></li>
+                                                <li><a href="#94" data-title="2.2 主题相关度因子">2.2 主题相关度因子</a></li>
+                                                <li><a href="#116" data-title="2.3 时间衰减度因子">2.3 时间衰减度因子</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#122" data-title="3 实验结果与分析 ">3 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#123" data-title="3.1 实验数据集">3.1 实验数据集</a></li>
+                                                <li><a href="#128" data-title="3.2 实验环境和度量标准">3.2 实验环境和度量标准</a></li>
+                                                <li><a href="#143" data-title="3.3 结果分析">3.3 结果分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#161" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#51" data-title="&lt;b&gt;图1 LeaderRank算法的网络结构&lt;/b&gt;"><b>图1 LeaderRank算法的网络结构</b></a></li>
+                                                <li><a href="#125" data-title="&lt;b&gt;表1 数据集信息&lt;/b&gt;"><b>表1 数据集信息</b></a></li>
+                                                <li><a href="#126" data-title="&lt;b&gt;表2 数据集属性信息&lt;/b&gt;"><b>表2 数据集属性信息</b></a></li>
+                                                <li><a href="#147" data-title="&lt;b&gt;图2 分配系数与精确率的关系&lt;/b&gt;"><b>图2 分配系数与精确率的关系</b></a></li>
+                                                <li><a href="#150" data-title="&lt;b&gt;表3 不同参数下的精确率对比&lt;/b&gt;"><b>表3 不同参数下的精确率对比</b></a></li>
+                                                <li><a href="#153" data-title="&lt;b&gt;图3 3种算法的精确率对比&lt;/b&gt;"><b>图3 3种算法的精确率对比</b></a></li>
+                                                <li><a href="#157" data-title="&lt;b&gt;图4 3种算法的点击率对比&lt;/b&gt;"><b>图4 3种算法的点击率对比</b></a></li>
+                                                <li><a href="#160" data-title="&lt;b&gt;图5 3种算法的NDCG结果对比&lt;/b&gt;"><b>图5 3种算法的NDCG结果对比</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" BRIN S,PAGE L.Reprint of:the anatomy of a large-scale hypertextual Web search engine[J].Computer Networks,2012,56(18):3825-3833." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011300560306&amp;v=MjQ2NjFNbndaZVp1SHlqbVVMeklKVm9VYWhzPU5pZk9mYks3SHRETnJJOUZZZTBQRDN3L29CTVQ2VDRQUUgvaXJSZEdlcnFRVA==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         BRIN S,PAGE L.Reprint of:the anatomy of a large-scale hypertextual Web search engine[J].Computer Networks,2012,56(18):3825-3833.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 高琪,张永平.PageRank算法中主题漂移的研究[J].微计算机信息,2010,26(9):117-119." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJSJ201009049&amp;v=MDk4ODJDVVJMT2VaZVJ0RnkzaFU3L0JNaWZZWkxHNEg5SE1wbzlCYllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         高琪,张永平.PageRank算法中主题漂移的研究[J].微计算机信息,2010,26(9):117-119.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" L&#220; Linyuan,ZHANG Yicheng,YEUNG C,et al.Leaders in social networks,the delicious case[J].PLoS One,2011,6(6):1-9." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Leaders inSocial Networks,the Delicious Case">
+                                        <b>[3]</b>
+                                         L&#220; Linyuan,ZHANG Yicheng,YEUNG C,et al.Leaders in social networks,the delicious case[J].PLoS One,2011,6(6):1-9.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" LI Qian,ZHOU Tao,L&#220; Linyuan,et al.Identifying influential spreaders by weighted LeaderRank[J].Physica A:Statistical Mechanics and Its Applications,2014,404(24):47-55." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14032300082141&amp;v=MjkzOTFGWk9NTkRYZzRvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMeklKVm9VYWhzPU5pZk9mYks4SHRMT3JJOQ==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         LI Qian,ZHOU Tao,L&#220; Linyuan,et al.Identifying influential spreaders by weighted LeaderRank[J].Physica A:Statistical Mechanics and Its Applications,2014,404(24):47-55.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" 韩忠明,陈炎,刘雯,等.社会网络节点影响力分析研究[J].软件学报,2017,28(1):84-104." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201701005&amp;v=MDg2NTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVTcvQk55ZlRiTEc0SDliTXJvOUZZWVE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         韩忠明,陈炎,刘雯,等.社会网络节点影响力分析研究[J].软件学报,2017,28(1):84-104.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 刘建国,任卓明,郭强,等.复杂网络中节点重要性排序的研究进展[J].物理学报,2013,62(17):1-10." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WLXB201317001&amp;v=MTgzODFIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0RnkzaFU3L0JNaUhUYkxHNEg5TE5xSTlGWllRS0Q=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         刘建国,任卓明,郭强,等.复杂网络中节点重要性排序的研究进展[J].物理学报,2013,62(17):1-10.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 王旭阳,任国盛.基于用户行为与页面分析的改进PageRank算法[J].计算机工程,2016,42(2):164-168." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201602030&amp;v=MTMwNDg2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVTcvQkx6N0JiYkc0SDlmTXJZOUdaSVFLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         王旭阳,任国盛.基于用户行为与页面分析的改进PageRank算法[J].计算机工程,2016,42(2):164-168.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 平宇,向阳,张波,等.基于MapReduce的并行PageRank算法实现[J].计算机工程,2014,40(2):31-34." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201402007&amp;v=MTQyMzc0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hVNy9CTHo3QmJiRzRIOVhNclk5Rlk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         平宇,向阳,张波,等.基于MapReduce的并行PageRank算法实现[J].计算机工程,2014,40(2):31-34.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" 王冲,纪仙慧.基于用户反馈与链接关系的网页排序改进算法[J].计算机工程与设计,2016,37(5):1166-1170." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SJSJ201605010&amp;v=MzI0OTJPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hVNy9CTmlmWVpMRzRIOWZNcW85RVpJUUtESDg0dlI0VDZqNTQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         王冲,纪仙慧.基于用户反馈与链接关系的网页排序改进算法[J].计算机工程与设计,2016,37(5):1166-1170.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" SONG Kaisong,WANG Daling,FENG Shi,et al.Detecting opinion leader dynamically in Chinese news comments[C]//Proceedings of International Conference on Web-Age Information Management.Berlin,Germany:Springer,2011:197-209." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Detecting Opinion Leader Dynamically in Chinese News Comments">
+                                        <b>[10]</b>
+                                         SONG Kaisong,WANG Daling,FENG Shi,et al.Detecting opinion leader dynamically in Chinese news comments[C]//Proceedings of International Conference on Web-Age Information Management.Berlin,Germany:Springer,2011:197-209.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" WENG Jianshu,LIM E P,JIANG Jing,et al.Twitterrank:finding topic-sensitive influential twitterers[C]//Proceedings of the 3rd ACM International Conference on Web Search and Data Mining.New York,USA:ACM Press,2010:261-270." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=TwitterRank:Finding Topicsensitive Influential Twitterers">
+                                        <b>[11]</b>
+                                         WENG Jianshu,LIM E P,JIANG Jing,et al.Twitterrank:finding topic-sensitive influential twitterers[C]//Proceedings of the 3rd ACM International Conference on Web Search and Data Mining.New York,USA:ACM Press,2010:261-270.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 周斌,高凯,曹一家,等.基于电气LeaderRank算法的电网节点重要度评估方法[P].中国:CN105117849A.2015-12-02." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SCPD&amp;filename=CN105117849A&amp;v=MjkyMzlQRDMxTHh4WVQ2em9PUzNmbXBXRmFlN0tWVEx1ZFplUnVFaXpsVTdZPUppTzZIcmE1SDliRXE0WTBDKzQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         周斌,高凯,曹一家,等.基于电气LeaderRank算法的电网节点重要度评估方法[P].中国:CN105117849A.2015-12-02.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 申琳.基于多属性的社交网络关键节点挖掘方法[J].西安:西安电子科技大学,2017." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017298048.nh&amp;v=MDg2NzJPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hVNy9CVkYyNkdiR3hGdEhJcDVFYlBJUUtESDg0dlI0VDZqNTQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         申琳.基于多属性的社交网络关键节点挖掘方法[J].西安:西安电子科技大学,2017.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" ZHANG Zhenhao,JIANG Guoping,SONG Yurong,et al.An improved weighted leaderrank algorithm for identifying influential spreaders in complex networks[C]//Proceedings of Computational Science and Engineering and Embedded and Ubiquitous Computing.Washington D.C.,USA:IEEE Computer Society,2017:748-751." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=An improved weighted leaderrank algorithm for identifying influential spreaders in complex networks">
+                                        <b>[14]</b>
+                                         ZHANG Zhenhao,JIANG Guoping,SONG Yurong,et al.An improved weighted leaderrank algorithm for identifying influential spreaders in complex networks[C]//Proceedings of Computational Science and Engineering and Embedded and Ubiquitous Computing.Washington D.C.,USA:IEEE Computer Society,2017:748-751.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" BAKSHY E,HOFMAN J M,MASON W A,et al.Everyone’s an influencer:quantifying influence on Twitter[C]//Proceedings of the 4th ACM International Conference on Web Search and Data Mining.New York,USA:ACM Press,2015:65-74." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Everyone&amp;#39;&amp;#39;s an influencer:quantifying influence on twitter">
+                                        <b>[15]</b>
+                                         BAKSHY E,HOFMAN J M,MASON W A,et al.Everyone’s an influencer:quantifying influence on Twitter[C]//Proceedings of the 4th ACM International Conference on Web Search and Data Mining.New York,USA:ACM Press,2015:65-74.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" TYAGI N,SHARMA S.Weighted PageRank algorithm based on number of visits of links of Web page[J].Inter-national Journal of Soft Computing and Engineering,2012,2(3):441-446." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Weighted PageRank algorithm based on number of visits of links of Web page">
+                                        <b>[16]</b>
+                                         TYAGI N,SHARMA S.Weighted PageRank algorithm based on number of visits of links of Web page[J].Inter-national Journal of Soft Computing and Engineering,2012,2(3):441-446.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" 段松青,吴斌,王柏.TTRank:基于倾向性转变的用户影响力排序[J].计算机研究与发展,2014,51(10):2225-2238." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201410010&amp;v=MDE3MjBGckNVUkxPZVplUnRGeTNoVTcvQkx5dlNkTEc0SDlYTnI0OUVaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                         段松青,吴斌,王柏.TTRank:基于倾向性转变的用户影响力排序[J].计算机研究与发展,2014,51(10):2225-2238.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_18" title=" PENNINGTON J,SOCHER R,MANNING C.Glove:global vectors for word representation[EB/OL].[2018-09-01].https://nlp.stanford.edu/pubs/glove.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Glo Ve:Global Vectors for Word Representation[C/OL]">
+                                        <b>[18]</b>
+                                         PENNINGTON J,SOCHER R,MANNING C.Glove:global vectors for word representation[EB/OL].[2018-09-01].https://nlp.stanford.edu/pubs/glove.pdf.
+                                    </a>
+                                </li>
+                                <li id="39">
+
+
+                                    <a id="bibliography_19" title=" MONDOL A,GUPTA R,DAS S,et al.An insight into Newton’s cooling law using fractional calculus[J].Journal of Applied Physics,2018,123(6):1-8." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=An insight into Newton&amp;#39;&amp;#39;s cooling law using fractional calculus">
+                                        <b>[19]</b>
+                                         MONDOL A,GUPTA R,DAS S,et al.An insight into Newton’s cooling law using fractional calculus[J].Journal of Applied Physics,2018,123(6):1-8.
+                                    </a>
+                                </li>
+                                <li id="41">
+
+
+                                    <a id="bibliography_20" title=" 贾伟洋.基于群组用户画像的农业信息化推荐算法研究[D].咸阳:西北农林科技大学,2017." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017073739.nh&amp;v=MDI5MTZxQnRHRnJDVVJMT2VaZVJ0RnkzaFU3L0JWRjI2R2JPL0hkYlBwcEViUElRS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[20]</b>
+                                         贾伟洋.基于群组用户画像的农业信息化推荐算法研究[D].咸阳:西北农林科技大学,2017.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(10),196-202 DOI:10.19678/j.issn.1000-3428.0052591            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于加权LeaderRank的用户社交网络排序算法</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%AD%99%E8%BF%9E&amp;code=40562749&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">孙连</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%8E%E4%B9%A6%E7%90%B4&amp;code=10209032&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">李书琴</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%88%98%E6%96%8C&amp;code=09121718&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">刘斌</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E8%A5%BF%E5%8C%97%E5%86%9C%E6%9E%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0088638&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">西北农林科技大学信息工程学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对加权LeaderRank算法存在的权值均分、主题漂移等问题,提出一种用户社交网络排序算法。结合GloVe模型、余弦相似度计算方法和牛顿冷却定律,通过引入链入链出因子、主题相关度因子和时间衰减度因子,改善加权LeaderRank算法的不足。实验结果表明,与加权LeaderRank算法相比,该算法的精确率、点击率和NDCG值分别提高7.80%、6.73%和4.75%,可有效提高排序质量。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8A%A0%E6%9D%83LeaderRank%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">加权LeaderRank算法;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%93%BE%E5%85%A5%E9%93%BE%E5%87%BA%E5%9B%A0%E5%AD%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">链入链出因子;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%B8%BB%E9%A2%98%E7%9B%B8%E5%85%B3%E5%BA%A6%E5%9B%A0%E5%AD%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">主题相关度因子;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%97%B6%E9%97%B4%E8%A1%B0%E5%87%8F%E5%BA%A6%E5%9B%A0%E5%AD%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">时间衰减度因子;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=GloVe%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">GloVe模型;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    孙连(1993—),女,硕士研究生,主研方向为智能信息系统;E-mail:slsunlian@gmail.com;
+                                </span>
+                                <span>
+                                    李书琴,教授、博士生导师;;
+                                </span>
+                                <span>
+                                    刘斌,副教授。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-09-07</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>中国博士后科学基金(2017M613216);</span>
+                                <span>陕西省自然科学基金面上项目(2017JM6059);</span>
+                                <span>陕西省博士后基金(2016BSHEDZZ121);</span>
+                                <span>陕西省重点研发计划(2017GY-197);</span>
+                    </p>
+            </div>
+                    <h1><b>User Social Network Ranking Algorithm Based on Weighted LeaderRank</b></h1>
+                    <h2>
+                    <span>SUN Lian</span>
+                    <span>LI Shuqin</span>
+                    <span>LIU Bin</span>
+            </h2>
+                    <h2>
+                    <span>College of Information Engineering,Northwest A&amp; F University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>To address the problems of the average weight distribution and topic drift in the weighted LeaderRank algorithm,a user social network sorting algorithm is proposed.Integrating the GloVe model,cosine similarity calculation method and Newton's law of cooling,introduce the link-in and link-out factor,the topic relevance factor and the time attenuation factor to the weighted LeaderRank algorithm to improve its disadvantages.Experimental results show that compared with the weighted LeaderRank algorithm,the precision,the click rate and the NDCG value of the proposed algorithm is increased by 7.80%,6.73% and 4.75% respectively.The sorting quality can be improved effectively.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=weighted%20LeaderRank%20algorithm&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">weighted LeaderRank algorithm;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=link-in%20and%20link-out%20factors&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">link-in and link-out factors;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=topic%20relevance%20factor&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">topic relevance factor;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=time%20attenuation%20factor&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">time attenuation factor;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=GloVe%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">GloVe model;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-09-07</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="43" name="43" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="44">随着互联网的飞速发展,各种新型社交平台不断涌现,人们在社交平台中扮演着不同的角色,从而形成了复杂的用户社交网络。随着社交网络中的用户数量越来越大,如何根据输入信息快速准确地搜索到复杂网络中的用户,是当前研究面临的一个重要问题。基于网页链接结构的PageRank算法<citation id="175" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>在Google中的成功应用,证明了该算法的研究和应用价值。然而,随着对PageRank算法的研究逐步深入,该算法存在的不足,如排序结果不唯一、主题漂移等<citation id="176" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>,也逐渐显现。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">针对PageRank算法存在的问题,许多国内外专家对其进行改进。文献<citation id="177" type="reference">[<a class="sup">3</a>]</citation>针对PageRank算法在网络节点排序过程中可能出现排序结果不唯一的问题,提出LeaderRank算法,在复杂有向网络中加入一个Ground节点,使复杂有向网络构成强连通图。由于LeaderRank算法排序结果唯一且对网络噪音有更好的容忍性,因此其在复杂网络节点排序中有较大优势。文献<citation id="178" type="reference">[<a class="sup">4</a>]</citation>以LeaderRank算法为基础提出加权LeaderRank算法,使网络中的其他节点可以从Ground节点中获取部分权值。与LeaderRank算法相比,加权LeaderRank算法的排序结果更加准确且具有更好的鲁棒性。但是,这2种算法并没有解决主题漂移和LeaderRank值(LR值)均分等问题。为此,本文在加权LeaderRank算法的基础上,提出一种用户社交网络排序算法。引入链入链出权重因子,为链出因子分配较大的权值,以弥补原始算法中权值均分的问题。利用主题相关度因子,以减少权值在无关用户上的扩散。借鉴牛顿冷却定律的思想,引入时间衰减度因子,减弱用户兴趣转移带来的影响。</p>
+                </div>
+                <h3 id="46" name="46" class="anchor-tag">1 相关研究</h3>
+                <h4 class="anchor-tag" id="47" name="47">1.1 LeaderRank算法</h4>
+                <div class="p1">
+                    <p id="48">LeaderRank算法的思想是在已知有向网络<i>G</i>(<i>N</i>,<i>M</i>)中添加一个公共节点,得到具有<i>N</i>+1个节点的有向网络<i>G</i>(<i>N</i>+1,<i>M</i>+2<i>N</i>)。由于公共节点与网络中的其他节点存在双向连接,因此<i>G</i>构成了一个强连通图,且图中所有节点的出度和入度均大于0,避免在复杂网络中出现孤立节点,以保证算法的收敛性。LeaderRank算法的网络结构如图1所示。LR值的计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="49" class="code-formula">
+                        <mathml id="49"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>L</mi><mi>R</mi><msub><mrow></mrow><mi>u</mi></msub><mo>=</mo><mi>L</mi><mi>R</mi><msub><mrow></mrow><mi>u</mi></msub><mo stretchy="false">(</mo><mi>t</mi><msub><mrow></mrow><mi>c</mi></msub><mo stretchy="false">)</mo><mo>+</mo><mfrac><mrow><mi>L</mi><mi>R</mi><msub><mrow></mrow><mi>g</mi></msub><mo stretchy="false">(</mo><mi>t</mi><msub><mrow></mrow><mi>c</mi></msub><mo stretchy="false">)</mo></mrow><mi>Ν</mi></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mi>L</mi><mi>R</mi><msub><mrow></mrow><mi>u</mi></msub><mo stretchy="false">(</mo><mi>t</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>v</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>Ν</mi><mo>+</mo><mn>1</mn></mrow></munderover><mrow></mrow></mstyle><mfrac><mrow><mi>a</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>u</mi></mrow></msub></mrow><mrow><mi>k</mi><msubsup><mrow></mrow><mi>v</mi><mrow><mtext>o</mtext><mtext>u</mtext><mtext>t</mtext></mrow></msubsup></mrow></mfrac><mi>L</mi><mi>R</mi><msub><mrow></mrow><mi>v</mi></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="50">其中,<i>LR</i><sub><i>u</i></sub>表示节点<i>u</i>的LR值,<i>LR</i><sub><i>g</i></sub>表示公共节点<i>g</i>的LR值,<i>t</i><sub><i>c</i></sub>为<i>LR</i><sub><i>u</i></sub>收敛的时刻,<i>N</i>为网络中除去公共节点后的节点个数,<i>a</i><sub><i>vu</i></sub>为网络中节点<i>v</i>到节点<i>u</i>的权值初始值,当节点<i>v</i>和节点<i>u</i>存在边时,<i>a</i><sub><i>vu</i></sub>取值为1,否则<i>a</i><sub><i>vu</i></sub>取值为0,<i>k</i><mathml id="163"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>v</mi><mrow><mtext>o</mtext><mtext>u</mtext><mtext>t</mtext></mrow></msubsup></mrow></math></mathml>表示节点v的出度。</p>
+                </div>
+                <div class="area_img" id="51">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910033_051.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 LeaderRank算法的网络结构" src="Detail/GetImg?filename=images/JSJC201910033_051.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 LeaderRank算法的网络结构</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910033_051.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="52">LeaderRank算法的计算结果可以收敛到一个稳定的数值,尤其适用于大型复杂有向网络,可解决复杂网络节点中排序结果不唯一的问题,提高排序的准确性和抗噪声能力<citation id="179" type="reference"><link href="11" rel="bibliography" /><link href="13" rel="bibliography" /><sup>[<a class="sup">5</a>,<a class="sup">6</a>]</sup></citation>。</p>
+                </div>
+                <h4 class="anchor-tag" id="53" name="53">1.2 加权LeaderRank算法</h4>
+                <div class="p1">
+                    <p id="54">在加权LeaderRank算法中,考虑到网络中节点本身的结构特性,每个节点都有各自的特点,因此,允许节点从公共节点中获取一部分权值,以偏置随机游走算法代替标准随机游走算法。加权LeaderRank算法的计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="55" class="code-formula">
+                        <mathml id="55"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>s</mi><msub><mrow></mrow><mi>u</mi></msub><mo stretchy="false">(</mo><mi>t</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>v</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>Ν</mi><mo>+</mo><mn>1</mn></mrow></munderover><mrow></mrow></mstyle><mfrac><mrow><mi>w</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>u</mi></mrow></msub></mrow><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>l</mi><mrow><mi>Ν</mi><mo>+</mo><mn>1</mn></mrow></munderover><mi>w</mi></mstyle><msub><mrow></mrow><mrow><mi>v</mi><mi>l</mi></mrow></msub></mrow></mfrac><mi>s</mi><msub><mrow></mrow><mi>v</mi></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="56" class="code-formula">
+                        <mathml id="56"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>w</mi><msub><mrow></mrow><mrow><mi>j</mi><mi>i</mi></mrow></msub><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mrow><mo stretchy="false">(</mo><mi>k</mi><msubsup><mrow></mrow><mi>i</mi><mrow><mtext>i</mtext><mtext>n</mtext></mrow></msubsup><mo stretchy="false">)</mo></mrow><msup><mrow></mrow><mi>α</mi></msup><mo>,</mo><mspace width="0.25em" /><mi>j</mi><mo>→</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo>=</mo><mi>g</mi></mtd></mtr><mtr><mtd columnalign="left"><mn>1</mn><mo>,</mo><mspace width="0.25em" /><mi>j</mi><mo>→</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo>≠</mo><mi>g</mi></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn><mo>,</mo><mspace width="0.25em" /><mi>j</mi><menclose notation="updiagonalstrike"><mo>→</mo></menclose><mtext> </mtext><mi>i</mi></mtd></mtr></mtable><mspace width="0.25em" /></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="57">其中,<i>w</i><sub><i>vu</i></sub>表示节点之间边的权值,<i>g</i>为添加的公共节点,<i>α</i>为一个可调节参数,<i>k</i><mathml id="164"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>i</mi><mrow><mtext>i</mtext><mtext>n</mtext></mrow></msubsup></mrow></math></mathml>表示节点i的入度,j→i表示节点j存在到节点i的边,j→/ i表示节点j不存在到节点i的边。</p>
+                </div>
+                <div class="p1">
+                    <p id="58">由式(3)和式(4)可知,当<i>Ground</i>节点存在指向i节点的边时,其权值与节点i的入度有关。因此,不同的节点从<i>Ground</i>节点获取到的权值是不同的,在迭代计算过程中,节点的入度越多,从<i>Ground</i>节点获取的权值就越大。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">加权<i>LeaderRank</i>算法的每个节点从<i>Ground</i>节点获得的权值不同,可提高算法的准确率,使其具有更好的鲁棒性。</p>
+                </div>
+                <h4 class="anchor-tag" id="60" name="60">1.3 其他相关算法</h4>
+                <div class="p1">
+                    <p id="61">文献<citation id="180" type="reference">[<a class="sup">7</a>]</citation>根据网页被检索后的点击次数,对PageRank值进行迭代修正,提高网页的精确率。文献<citation id="181" type="reference">[<a class="sup">8</a>]</citation>提出一种基于MapReduce框架的并行算法,具有较快的执行速度。由于用户易受作弊网页的干扰,文献<citation id="182" type="reference">[<a class="sup">9</a>]</citation>通过分析用户搜索行为,获取链接点击量、页面停留时间等反馈信息,以提高算法的准确率和鲁棒性。文献<citation id="183" type="reference">[<a class="sup">10</a>]</citation>通过分析用户之间的情感倾向、评论隐含关系、评论的时间衰减等因素,基于PageRank算法对用户进行排名,以挖掘网络中的意见领袖,但该算法不能保证在快速变化的网络中的收敛性。文献<citation id="184" type="reference">[<a class="sup">11</a>]</citation>构建一幅TwitterRank好友关系图,并且在PageRank算法的基础上提出TwitterRank算法。</p>
+                </div>
+                <div class="p1">
+                    <p id="62">基于电气LeaderRank算法的电网节点重要度评估方法根据负荷和负荷量的重要程度,按照不同比例分配网络中所有节点的LR值。文献<citation id="185" type="reference">[<a class="sup">12</a>]</citation>考虑到用户情感倾向以及恶意注册的问题,对LeaderRank算法进行改进,用微博中“赞”的个数来表示用户的情感倾向,通过添加时间衰减函数,减弱恶意注册用户的影响。与LeaderRank算法相比,该算法在一定程度上提高了算法的准确性,且具有较强的抗干扰能力,但其考虑的情况较为单一。文献<citation id="186" type="reference">[<a class="sup">13</a>]</citation>基于LeaderRank算法和加权LeaderRank算法,对节点进行聚类计算,以获得网络边的权值。文献<citation id="187" type="reference">[<a class="sup">14</a>]</citation>通过实验对大量的Twitter数据进行分析,发现有影响力的用户在各种话题中起重要作用。</p>
+                </div>
+                <div class="p1">
+                    <p id="63">综上所述,LeaderRank算法和加权LeaderRank算法在复杂网络节点排序中所起的作用越来越重要。但是,这2种算法仅考虑Ground节点对其他节点的影响,未考虑节点之间的相互影响,对于PageRank算法存在的一些问题,如网页权值平均分配、偏向旧网页等,LeaderRank算法和加权LeaderRank算法仍未能解决。</p>
+                </div>
+                <h3 id="64" name="64" class="anchor-tag">2 改进的加权LeaderRank算法</h3>
+                <div class="p1">
+                    <p id="65">考虑到用户与用户之间存在关注与被关注的关系,本文假设用户所关注的人比用户的粉丝更重要,引入链入链出因子。采用深度学习模型GloVe对查询句子与用户的帖子进行向量化表示,并计算向量化后数据的余弦相似度,从而得到主题相关度因子。由于用户可能存在兴趣转移的情况,因此引入时间衰减度因子减弱用户旧帖的影响力。基于此,本文提出WTLR(LeaderRank based on Weighted and Topic)算法,其具体的计算过程如式(5)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="66" class="code-formula">
+                        <mathml id="66"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>L</mi><mi>R</mi><msub><mrow></mrow><mi>u</mi></msub><mo stretchy="false">(</mo><mi>t</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>v</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>Ν</mi><mo>+</mo><mn>1</mn></mrow></munderover><mrow></mrow></mstyle><mfrac><mrow><mi>W</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>v</mi></mrow></msub></mrow><mrow><mi>k</mi><msubsup><mrow></mrow><mi>v</mi><mrow><mtext>o</mtext><mtext>u</mtext><mtext>t</mtext></mrow></msubsup></mrow></mfrac><mi>L</mi><mi>R</mi><msub><mrow></mrow><mi>v</mi></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>+</mo><mfrac><mrow><mi>w</mi><msub><mrow></mrow><mrow><mi>g</mi><mi>u</mi></mrow></msub></mrow><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>Ν</mi><mo>+</mo><mn>1</mn></mrow></munderover><mi>w</mi></mstyle><msub><mrow></mrow><mrow><mi>g</mi><mi>l</mi></mrow></msub></mrow></mfrac><mi>L</mi><mi>R</mi><msub><mrow></mrow><mi>g</mi></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="67">其中,<i>k</i><mathml id="165"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>v</mi><mrow><mtext>o</mtext><mtext>u</mtext><mtext>t</mtext></mrow></msubsup></mrow></math></mathml>为用户节点v的出度,<mathml id="166"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mi>w</mi><msub><mrow></mrow><mrow><mi>g</mi><mi>u</mi></mrow></msub></mrow><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>Ν</mi><mo>+</mo><mn>1</mn></mrow></munderover><mi>w</mi></mstyle><msub><mrow></mrow><mrow><mi>g</mi><mi>l</mi></mrow></msub></mrow></mfrac><mi>L</mi><mi>R</mi><msub><mrow></mrow><mi>g</mi></msub><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math></mathml>为Ground节点分配给用户节点<i>u</i>的权值。</p>
+                </div>
+                <div class="p1">
+                    <p id="68">在迭代计算之前,通过分析得到加权LeaderRank算法的初始概率转移矩阵<i><b>P</b></i>,如式(6)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="69" class="code-formula">
+                        <mathml id="69"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">Ρ</mi><mo>=</mo><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mi>W</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>1</mn></mrow></msub></mtd><mtd><mi>W</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><mi>W</mi><msub><mrow></mrow><mrow><mn>1</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mi>W</mi><msub><mrow></mrow><mrow><mn>2</mn><mn>1</mn></mrow></msub></mtd><mtd><mi>W</mi><msub><mrow></mrow><mrow><mn>2</mn><mn>2</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><mi>W</mi><msub><mrow></mrow><mrow><mn>2</mn><mi>n</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><mi>W</mi><msub><mrow></mrow><mrow><mi>n</mi><mn>1</mn></mrow></msub></mtd><mtd><mi>W</mi><msub><mrow></mrow><mrow><mi>n</mi><mn>2</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><mi>W</mi><msub><mrow></mrow><mrow><mi>n</mi><mi>n</mi></mrow></msub></mtd></mtr></mtable></mrow><mo>]</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="70">其中,矩阵<i><b>P</b></i>中的第<i>i</i>行第<i>j</i>列的元素<i>W</i><sub><i>ij</i></sub>表示由节点<i>i</i>转移到节点<i>j</i>的概率。</p>
+                </div>
+                <div class="p1">
+                    <p id="71">通过引入链入链出因子、主题相关度因子和时间衰减度因子,重新计算概率转移矩阵。在迭代过程中,为相关性较大的用户分配较高的权值,给相关性较小的用户分配较低的权值,最终使用户获得一个较为合理的权重。本文通过线性拟合的方法得到改进的矩阵元素<i>W</i><sub><i>ij</i></sub>,计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="72"><i>W</i><sub><i>ij</i></sub>=<i>αw</i><sub><i>v</i></sub><sub>,</sub><sub><i>u</i></sub>+<i>βTSim</i>(<i>u</i>)+<i>γθ</i><sub><i>u</i></sub>(<i>t</i>)      (7)</p>
+                </div>
+                <div class="p1">
+                    <p id="73">其中,<i>u</i>和<i>v</i>为用户节点,<i>w</i><sub><i>v</i></sub><sub>,</sub><sub><i>u</i></sub>为用户节点的链入链出因子,<i>TSim</i>(<i>u</i>)为主题相关度因子,<i>θ</i><sub><i>u</i></sub>(<i>t</i>)为时间衰减度因子。3个特征因子的权重之和为1,通过多次实验调节权重,以确定最合理的组合方式。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">WTLR算法的具体步骤如算法1所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="75"><b>算法1</b> WTLR算法</p>
+                </div>
+                <div class="area_img" id="193">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201910033_19300.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="193">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201910033_19301.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="87" name="87">2.1 链入链出因子</h4>
+                <div class="p1">
+                    <p id="88">本文借鉴基于链接结构的PageRank算法<citation id="188" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>,引入链入链出因子,其主要思想是用户节点的入链和出链越多,节点越重要,且节点的链出因子比链入因子更重要。</p>
+                </div>
+                <div class="p1">
+                    <p id="89">在复杂有向网络中,一部分用户具有较高的话语权,这些用户即为影响力较高的用户。影响力较高的用户在排序过程中应该有更为核心的排序位置,起到关键的作用,这就要求节点有较多的入链和出链。然而,原始的LeaderRank算法和加权LeaderRank算法都是基于节点的正向链接均分节点的LR值,这会使得一些节点,如僵尸节点,分配到较多的LR值,导致结果中出现不相关的用户,引起主题漂移,从而降低排序结果的准确率。因此,在计算用户节点的LR值时,要考虑用户节点的入链数目和出链数目,同时依据重要程度分配LR值,使影响力高的用户有较靠前的排名。</p>
+                </div>
+                <div class="p1">
+                    <p id="90">本文假设用户节点链出因子的重要性高于链入因子,即用户所关注的人比用户的粉丝更重要。当用户所关注的人和用户的粉丝同时发布帖子时,通常用户更倾向于查看所关注的人的帖子。因此,本文在分配链入链出因子时,为链出因子分配较大的权值,实验结果表明,当分配系数<i>μ</i>取0.7时效果最好。链入链出因子<i>w</i><sub><i>v</i></sub><sub>,</sub><sub><i>u</i></sub>的计算过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="91"><i>w</i><sub><i>v</i></sub><sub>,</sub><sub><i>u</i></sub>=<i>μw</i><mathml id="167"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>v</mi><mo>,</mo><mi>u</mi></mrow><mrow><mtext>o</mtext><mtext>u</mtext><mtext>t</mtext></mrow></msubsup></mrow></math></mathml>+(1-<i>μ</i>)<i>w</i><mathml id="168"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>v</mi><mo>,</mo><mi>u</mi></mrow><mrow><mtext>i</mtext><mtext>n</mtext></mrow></msubsup></mrow></math></mathml>      (8)</p>
+                </div>
+                <div class="p1">
+                    <p id="92" class="code-formula">
+                        <mathml id="92"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>w</mi><msubsup><mrow></mrow><mrow><mi>v</mi><mo>,</mo><mi>u</mi></mrow><mrow><mtext>i</mtext><mtext>n</mtext></mrow></msubsup><mo>=</mo><mfrac><mrow><mi>Ι</mi><msub><mrow></mrow><mi>u</mi></msub></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>p</mi><mo>=</mo><mi>B</mi><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></munder><mi>Ι</mi></mstyle><msub><mrow></mrow><mi>p</mi></msub></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>9</mn><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mi>w</mi><msubsup><mrow></mrow><mrow><mi>v</mi><mo>,</mo><mi>u</mi></mrow><mrow><mtext>o</mtext><mtext>u</mtext><mtext>t</mtext></mrow></msubsup><mo>=</mo><mfrac><mrow><mi>Ο</mi><msub><mrow></mrow><mi>u</mi></msub></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>p</mi><mo>=</mo><mi>B</mi><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></munder><mi>Ο</mi></mstyle><msub><mrow></mrow><mi>p</mi></msub></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>0</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="93">其中,w<mathml id="169"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>v</mi><mo>,</mo><mi>u</mi></mrow><mrow><mtext>i</mtext><mtext>n</mtext></mrow></msubsup></mrow></math></mathml>为链入因子,w<mathml id="170"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>v</mi><mo>,</mo><mi>u</mi></mrow><mrow><mtext>o</mtext><mtext>u</mtext><mtext>t</mtext></mrow></msubsup></mrow></math></mathml>为链出因子,I<sub>u</sub>和O<sub>u</sub>分别表示用户节点u的入链和出链,B(v)为用户节点v的粉丝集合,I<sub>p</sub>、O<sub>p</sub>分别表示用户节点v的粉丝的入链和出链。</p>
+                </div>
+                <h4 class="anchor-tag" id="94" name="94">2.2 主题相关度因子</h4>
+                <div class="p1">
+                    <p id="95">目前,基于加权LeaderRank的改进算法仅考虑主题用户节点的链入链出关系,这是不全面的。用户影响力排序模型<citation id="189" type="reference"><link href="33" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>根据论坛中帖子回复者的倾向性或情感转变程度决定发帖者对回复者的影响程度,能较好地度量用户的影响力。本文利用搜索句子与用户帖子计算主题相关度,以分配用户节点的LR值。由于每个用户发表的帖子数量不等,内容也不同,因此帖子与搜索句子的内容相关性越大,用户与搜索句子的相关性也越大。</p>
+                </div>
+                <h4 class="anchor-tag" id="96" name="96">2.2.1 文本向量化表示</h4>
+                <div class="p1">
+                    <p id="97">文献<citation id="190" type="reference">[<a class="sup">17</a>]</citation>提出的GloVe模型是一种基于全局的对数双线性回归模型。该模型分析Skip-gram模型能够挖掘词与词之间线性关系的原因,结合全局矩阵分解和局部上下文窗口方法的优点,只对词共现矩阵的非零元素进行训练,避免在大型语料库中对整个稀疏矩阵或单个上下文窗口进行训练。</p>
+                </div>
+                <div class="p1">
+                    <p id="98">GloVe模型采用规定大小的窗口来统计单词出现的次数,构成共现矩阵<i><b>X</b></i>。矩阵元素<i>X</i><sub><i>ij</i></sub>表示单词<i>j</i>与单词<i>i</i>在同一个窗口中出现的次数。矩阵<i><b>X</b></i>的元素与词向量的关系如式(11)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="99"><mathml id="171"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">w</mi><msubsup><mrow></mrow><mi>i</mi><mtext>Τ</mtext></msubsup><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">w</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub><mo>+</mo><mi>b</mi><msub><mrow></mrow><mi>i</mi></msub><mo>+</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>b</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub><mo>=</mo><mtext>l</mtext><mtext>b</mtext></mrow></math></mathml>X<sub>ij</sub>      (11)</p>
+                </div>
+                <div class="p1">
+                    <p id="100">其中,<i><b>w</b></i><sub><i>i</i></sub>和<mathml id="172"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">w</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub></mrow></math></mathml>是单词i和单词j的词向量,b<sub>i</sub>和<mathml id="173"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>b</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub></mrow></math></mathml>为对应的偏差项。根据词的出现频率越高则权重越大的原则,在代价函数中添加权重项,得到损失函数如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="101"><mathml id="174"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>J</mi><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>,</mo><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>V</mi></munderover><mi>f</mi></mstyle><mo stretchy="false">(</mo><mi>X</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi mathvariant="bold-italic">w</mi><msubsup><mrow></mrow><mi>i</mi><mtext>Τ</mtext></msubsup><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">w</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub><mo>+</mo><mi>b</mi><msub><mrow></mrow><mi>i</mi></msub><mo>+</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>b</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub><mo>-</mo><mtext>l</mtext><mtext>b</mtext></mrow></math></mathml>X<sub>ij</sub>)<sup>2</sup>      (12)</p>
+                </div>
+                <div class="p1">
+                    <p id="102">其中,f(X<sub>ij</sub>)为权重函数。由于f(X<sub>ij</sub>)为非减函数,且当词频过高时,权重不能过大,因此需通过实验确定权重函数,具体如式(13)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="103" class="code-formula">
+                        <mathml id="103"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mrow><mrow><mo>(</mo><mrow><mfrac><mi>x</mi><mrow><mi>x</mi><msub><mrow></mrow><mrow><mi>max</mi></mrow></msub></mrow></mfrac></mrow><mo>)</mo></mrow></mrow><msup><mrow></mrow><mrow><mn>0</mn><mo>.</mo><mn>7</mn><mn>5</mn></mrow></msup><mo>,</mo><mi>x</mi><mo>&lt;</mo><mi>x</mi><msub><mrow></mrow><mrow><mi>max</mi></mrow></msub></mtd></mtr><mtr><mtd columnalign="left"><mn>1</mn><mo>,</mo><mi>x</mi><mo>≥</mo><mi>x</mi><msub><mrow></mrow><mrow><mi>max</mi></mrow></msub></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>3</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="104"><i>GloVe</i>模型与传统的<i>One</i>-<i>hot</i>表示方法不同,其使用连续的向量值表示单词,使进行相似度计算的2个词汇不存在完全孤立的情况,有效消除词汇鸿沟的现象。</p>
+                </div>
+                <div class="p1">
+                    <p id="105">本文利用<i>GloVe</i>模型生成用户节点网络中用户每篇帖子的向量表示,如式(14)、式(15)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="106"><i><b>T</b></i><sub><i>i</i></sub>={<i><b>t</b></i><sub><i>i</i></sub><sub>1</sub>,<i><b>t</b></i><sub><i>i</i></sub><sub>2</sub>,…,<i><b>t</b></i><sub><i>ik</i></sub>,…,<i><b>t</b></i><sub><i>iM</i></sub>},<i>i</i>∈(1,<i>N</i>)      (14)</p>
+                </div>
+                <div class="p1">
+                    <p id="107"><i><b>W</b></i><sub><i>i</i></sub>(<i>j</i>)={<i><b>w</b></i><sub><i>j</i></sub><sub>1</sub>,<i><b>w</b></i><sub><i>j</i></sub><sub>2</sub>,…,<i><b>w</b></i><sub><i>jl</i></sub>,…,<i><b>w</b></i><sub><i>jn</i></sub>},<i>j</i>∈(1,<i>M</i>)      (15)</p>
+                </div>
+                <div class="p1">
+                    <p id="108">其中,<i><b>T</b></i><sub><i>i</i></sub>为第<i>i</i>篇帖子的词向量表示,由<i>M</i>个词的向量组成,<i><b>W</b></i><sub><i>i</i></sub>(<i>j</i>)为第<i>i</i>篇帖子的第<i>j</i>个词向量,由<i>n</i>维向量组成。实验结果证明,当对短文本进行向量化表示时,采用词向量相加取平均值的方法较为有效。因此,本文所得贴子的向量<i><b>T</b></i><sub><i>i</i></sub>可表示为如下形式:</p>
+                </div>
+                <div class="p1">
+                    <p id="109" class="code-formula">
+                        <mathml id="109"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">Τ</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mfrac><mn>1</mn><mi>Μ</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>x</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mi mathvariant="bold-italic">W</mi></mstyle><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>6</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <h4 class="anchor-tag" id="110" name="110">2.2.2 主题相关度计算</h4>
+                <div class="p1">
+                    <p id="111">计算文本相似度的方法有很多,如余弦相似度、欧氏距离、Jaccard相似性系数、Manhattan距离等,其中最常用的是余弦相似度和欧氏距离的计算方法。余弦相似度可以有效规避个体相同认知中不同程度的差异表现。虽然该方法在本质上与欧氏距离相同,但在没有归一化的情况下,欧氏距离多用于需要从维度的大小中体现差异性的情况,而余弦相似度用于分析用户兴趣的相似度和差异,因此,余弦相似度更适合本文的计算。</p>
+                </div>
+                <div class="p1">
+                    <p id="112">本文采用余弦相似度计算查询句子与用户帖子的相似度,计算过程如式(17)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="113" class="code-formula">
+                        <mathml id="113"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ι</mi><mi>D</mi><mi>S</mi><mi>i</mi><mi>m</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi mathvariant="bold-italic">t</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>k</mi></mrow></msub><mo>×</mo><mi mathvariant="bold-italic">s</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>k</mi></mrow></msub></mrow><mrow><msqrt><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi mathvariant="bold-italic">t</mi></mstyle><msubsup><mrow></mrow><mrow><mi>i</mi><mi>k</mi></mrow><mn>2</mn></msubsup></mrow></msqrt><mo>×</mo><msqrt><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi mathvariant="bold-italic">s</mi></mstyle><msubsup><mrow></mrow><mrow><mi>i</mi><mi>k</mi></mrow><mn>2</mn></msubsup></mrow></msqrt></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>7</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="114">其中,<i>IDSim</i><sub><i>i</i></sub>表示查询句子与帖子的相似度值,<i><b>t</b></i><sub><i>ik</i></sub>和<i><b>s</b></i><sub><i>ik</i></sub>分别表示帖子和查询句子的第<i>k</i>维向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="115">主题相关度因子的值由帖子与查询句子的相似度值决定。由于每个用户可以发表多篇帖子,本文将用户发表的所有帖子与查询句子进行相似度计算,最后取均值作为该用户与查询句子的相似度值。上述方法可有效减少LR值在无关用户上的扩散,在很大程度上抑制主题漂移的问题。</p>
+                </div>
+                <h4 class="anchor-tag" id="116" name="116">2.3 时间衰减度因子</h4>
+                <div class="p1">
+                    <p id="117">用户节点LR值的大小主要由用户节点所链接的数目以及用户所发布的帖子决定,用户的链接数目以及帖子数目越多,该用户节点的LR值就越大。实际上,随着时间的推移,用户所发表的帖子的时效性降低,导致难以发现新的有影响力的用户,在这种情况下,加权LeaderRank算法不能很好地满足实际的查询需求。文献<citation id="191" type="reference">[<a class="sup">9</a>]</citation>为解决排序偏向旧网页的问题,引入时间相关度因子对网页进行补偿,取得了较好的排序效果。本文引入牛顿冷却定律<citation id="192" type="reference"><link href="37" rel="bibliography" /><link href="39" rel="bibliography" /><sup>[<a class="sup">18</a>,<a class="sup">19</a>]</sup></citation>,并将其作为时间因子使新用户上浮,以解决排序偏向老用户的问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="118">牛顿冷却定律是指当物体温度高于环境温度时,其向周围媒介传递热量,使自身温度冷却。牛顿冷却定律没有考虑物体的性质,不是一个物性方程,它是关于抽象物体的温度随时间单纯下降的一个数学微分方程,如式(18)所示。牛顿莱布尼茨公式可以通过求不定积分来计算函数的定积分,根据物体表面热流密度公式以及牛顿莱布尼茨公式求解定积分,可以得到时间衰减度,如式(19)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="119" class="code-formula">
+                        <mathml id="119"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mfrac><mrow><mtext>d</mtext><msup><mi>Τ</mi><mo>′</mo></msup><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mrow><mtext>d</mtext><mi>t</mi></mrow></mfrac><mo>=</mo><mo>-</mo><mi>β</mi><mo stretchy="false">(</mo><mi>Τ</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>-</mo><mi>Τ</mi><msub><mrow></mrow><mi>h</mi></msub><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>8</mn><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mi>θ</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>θ</mi><msup><mrow></mrow><mo>*</mo></msup><mtext>e</mtext><msup><mrow></mrow><mrow><mo>-</mo><mo stretchy="false">(</mo><mi>t</mi><mo>-</mo><mi>t</mi><msub><mrow></mrow><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></msup><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>9</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="120">其中,负号代表降温过程,<i>β</i>为传导系数,<i>t</i><sub>0</sub>为用户最近一次发布帖子的时间,<i>T</i>(<i>t</i>)为物体表面温度,在<i>t</i><sub>0</sub>时,物体表面温度为<i>T</i><sub>0</sub>,<i>T</i><sub><i>h</i></sub>为物体表面附近的气体温度,<i>θ</i>(<i>t</i>)为时间衰减度因子,<i>θ</i><sup>*</sup>为衰减系数。</p>
+                </div>
+                <div class="p1">
+                    <p id="121">从式(19)可以看出,用户节点的LR值从用户最后一次发表帖子的时间开始衰减,最后趋于稳定。本文结合时间衰减度因子,可有效抑制僵尸用户,使新用户上浮,提高排序准确率。</p>
+                </div>
+                <h3 id="122" name="122" class="anchor-tag">3 实验结果与分析</h3>
+                <h4 class="anchor-tag" id="123" name="123">3.1 实验数据集</h4>
+                <div class="p1">
+                    <p id="124">为验证WTLR算法的性能,本文采用UCI官网收集的microblogPCU数据集作为实验数据集。通过对数据集进行处理,去除乱码信息,得到的数据集规模如表1所示,数据集的属性信息如表2所示。</p>
+                </div>
+                <div class="area_img" id="125">
+                    <p class="img_tit"><b>表1 数据集信息</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="125" border="1"><tr><td>数据类别</td><td>数量</td><td>数据规模/kb</td></tr><tr><td>用户</td><td> 781</td><td>154</td></tr><tr><td><br />用户关系</td><td>142 367</td><td>11 550</td></tr><tr><td><br />微博</td><td>23 964</td><td>5 966</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="126">
+                    <p class="img_tit"><b>表2 数据集属性信息</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="126" border="1"><tr><td><br />表名</td><td>属性</td></tr><tr><td><br />微博用户</td><td>用户ID、姓名、性别、等级、备注、邮政编码、关注人数、被关注人数、关注与被关注比例、注释标签</td></tr><tr><td><br />用户微博</td><td>微博ID、发布时间、发布用户的ID、转发数量、评论数量</td></tr><tr><td><br />关注-被关注</td><td>关注者名称、关注者ID、被关注者名称、被关注者ID</td></tr><tr><td><br />微博</td><td>微博ID、收集时间、内容、图片、发布链接</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="127">在得到的数据集中,本文选取其中70%的数据作为训练集,30%的数据作为测试集。在训练集和测试集的基础上构造本文所需数据集。选取用户的关注关系及用户的ID信息构造微博用户网络,便于WTLR算法进行迭代计算。利用用户所发表的微博帖子构造帖子数据集,并使用GloVe模型生成短文本词向量。</p>
+                </div>
+                <h4 class="anchor-tag" id="128" name="128">3.2 实验环境和度量标准</h4>
+                <div class="p1">
+                    <p id="129">本文实验环境为Windows7操作系统,利用MyEclipse作为IDE工具,采用MySQL5.6数据库管理系统,开发环境为JDK1.8,Python2.7,使用Java语言运行LeaderRank算法、加权LeaderRank算法和WTLR算法并进行对比实验。</p>
+                </div>
+                <div class="p1">
+                    <p id="130">在结果分析时,本文采用排序领域常用的精确率(Precision)、点击率(Click Rate)以及归一化折现累积增益(Normalized Discounted Cumulative Gain,NDCG)作为算法的等级质量评价指标,并将对比结果通过Python进行可视化展示。</p>
+                </div>
+                <h4 class="anchor-tag" id="131" name="131">1)精确率</h4>
+                <div class="p1">
+                    <p id="132">精确率取决于检索语言的专指性和检索策略能否准确表达用户真正的情报需求,可用来衡量系统检索信息的能力,是一项常用的评价排序算法的重要指标。精确率的计算如式(20)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="133" class="code-formula">
+                        <mathml id="133"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ρ</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>@</mo><mi>Ν</mi><mo>=</mo><mfrac><mn>1</mn><mi>Q</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>q</mi><mo>=</mo><mn>1</mn></mrow><mi>Q</mi></munderover><mrow><mfrac><mrow><mi>R</mi><msub><mrow></mrow><mi>q</mi></msub><mstyle displaystyle="true"><mo>∩</mo><mi>Τ</mi></mstyle><msub><mrow></mrow><mi>q</mi></msub></mrow><mrow><mi>R</mi><msub><mrow></mrow><mi>q</mi></msub></mrow></mfrac></mrow></mstyle><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mn>0</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="134">其中,<i>N</i>表示查询列表长度,<i>Q</i>表示查询次数,<i>R</i><sub><i>q</i></sub>是查询列表所查询的<i>N</i>个用户集合,<i>T</i><sub><i>q</i></sub>为符合查询情况的用户集合,<i>R</i><sub><i>q</i></sub>∩<i>T</i><sub><i>q</i></sub>是查询列表中正确的查询结果集合。</p>
+                </div>
+                <h4 class="anchor-tag" id="135" name="135">2)点击率</h4>
+                <div class="p1">
+                    <p id="136">通过统计用户对网页的点击率可以知道用户对排序结果是否满意。一般网页中最多显示10条查询记录。统计结果表明,用户一般对前3页的内容较感兴趣。因此,本文采用点击率作为衡量用户满意度的评价指标,设置查询列表长度<i>T</i><sub>total</sub>为30,则点击率的计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="137" class="code-formula">
+                        <mathml id="137"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><mi>l</mi><mi>i</mi><mi>c</mi><mi>k</mi><mi>R</mi><mi>a</mi><mi>t</mi><mi>e</mi><mo>@</mo><mi>Τ</mi><msub><mrow></mrow><mrow><mtext>t</mtext><mtext>o</mtext><mtext>t</mtext><mtext>a</mtext><mtext>l</mtext></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mi>Q</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>q</mi><mo>=</mo><mn>1</mn></mrow><mi>Q</mi></munderover><mrow><mfrac><mrow><mi>Ν</mi><msub><mrow></mrow><mrow><mtext>c</mtext><mtext>r</mtext></mrow></msub></mrow><mrow><mi>Τ</mi><msub><mrow></mrow><mrow><mtext>t</mtext><mtext>o</mtext><mtext>t</mtext><mtext>a</mtext><mtext>l</mtext></mrow></msub></mrow></mfrac></mrow></mstyle><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mn>1</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="138">其中,<i>N</i><sub>cr</sub>表示用户点击的查询结果个数,<i>Q</i>表示查询次数。通过<i>Q</i>次查询求平均值,获得最终点击率。</p>
+                </div>
+                <h4 class="anchor-tag" id="139" name="139">3)归一化折现累积增益</h4>
+                <div class="p1">
+                    <p id="140">NDCG中包含增益(Gain)和折扣(Discount)的计算,既可满足查询句子与列表的相关性,又可保证整体结果的质量,它是搜索引擎排序算法的常用指标。NDCG的计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="141" class="code-formula">
+                        <mathml id="141"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>Ν</mi><mi>D</mi><mi>C</mi><mi>G</mi><msub><mrow></mrow><mi>p</mi></msub><mo>@</mo><mi>Ν</mi><mo>=</mo><mfrac><mrow><mi>D</mi><mi>C</mi><mi>G</mi><msub><mrow></mrow><mi>p</mi></msub></mrow><mrow><mi>Ι</mi><mi>D</mi><mi>C</mi><mi>G</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mn>2</mn><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mi>D</mi><mi>C</mi><mi>G</mi><msub><mrow></mrow><mi>p</mi></msub><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>p</mi></munderover><mrow></mrow></mstyle></mrow><mtext> </mtext><mrow><mfrac><mrow><mn>2</mn><msup><mrow></mrow><mrow><mi>r</mi><mi>e</mi><mi>l</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><mtext>l</mtext><mtext>b</mtext><mo stretchy="false">(</mo><mi>i</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mn>3</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="142">其中,<i>p</i>为文档在查询列表中的排序位置,<i>rel</i><sub><i>i</i></sub>为处在该位置文档的等级相关性,<i>IDCG</i><sub><i>p</i></sub>为排序结果按相关性排序之后能得到的最大折现累计增益(<i>DCG</i>)值。</p>
+                </div>
+                <h4 class="anchor-tag" id="143" name="143">3.3 结果分析</h4>
+                <div class="p1">
+                    <p id="144">本文从以下5个方面对算法的结果进行分析:</p>
+                </div>
+                <h4 class="anchor-tag" id="145" name="145">1)分配系数<i>μ</i></h4>
+                <div class="p1">
+                    <p id="146">为使算法达到最佳效果,本文以控制变量的形式得出结果,找到合适的分配系数,结果如图2所示。由图2可知,当0&lt;<i>μ</i>&lt;0.7时,精确率呈上升趋势;当0.7&lt;<i>μ</i>&lt;1时,精确率呈下降趋势;当<i>μ</i>值取0.7时,精确率最高。</p>
+                </div>
+                <div class="area_img" id="147">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910033_147.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 分配系数与精确率的关系" src="Detail/GetImg?filename=images/JSJC201910033_147.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 分配系数与精确率的关系</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910033_147.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="148" name="148">2)算法参数调节</h4>
+                <div class="p1">
+                    <p id="149">为确保算法的排序效果最佳,本文利用十折交叉验证方法进行参数调节,选择查询列表的Top-<i>N</i>个值作为评价指标,<i>N</i>值分别取25、50、75、100。通过<i>α</i>、<i>β</i>、<i>r</i>取不同的值来观察精确率排序,结果如表3所示。由表3可知,当<i>β</i>取值大于0.5时,算法的精确率明显上升。综合考虑偏向旧用户的问题以及链入链出因素可以得出,当<i>α</i>、<i>β</i>、<i>r</i>的取值分别为0.26、0.63和0.11时,实验效果最佳。</p>
+                </div>
+                <div class="area_img" id="150">
+                    <p class="img_tit"><b>表3 不同参数下的精确率对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="150" border="1"><tr><td colspan="3"><br />参数</td><td colspan="4"><br />精确率/%</td></tr><tr><td><br /><i>α</i></td><td><i>β</i></td><td><i>r</i></td><td><br /><i>Precision</i>@25</td><td><i>Precision</i>@50</td><td><i>Precision</i>@75</td><td><i>Precision</i>@100</td></tr><tr><td><br />0.70</td><td>0.10</td><td>0.10</td><td>17.32</td><td>19.78</td><td>23.35</td><td>25.83</td></tr><tr><td><br />0.30</td><td>0.20</td><td>0.30</td><td>15.85</td><td>18.72</td><td>22.35</td><td>24.28</td></tr><tr><td><br />0.10</td><td>0.50</td><td>0.30</td><td>56.47</td><td>62.56</td><td>65.36</td><td>72.46</td></tr><tr><td><br />0.14</td><td>0.55</td><td>0.31</td><td>59.36</td><td>63.47</td><td>68.36</td><td>73.57</td></tr><tr><td><br />0.27</td><td>0.60</td><td>0.23</td><td>62.34</td><td>65.67</td><td>72.57</td><td>79.86</td></tr><tr><td><br />0.26</td><td>0.63</td><td>0.11</td><td>63.07</td><td>67.43</td><td>74.23</td><td>83.08</td></tr><tr><td><br />0.22</td><td>0.65</td><td>0.13</td><td>59.36</td><td>63.47</td><td>68.36</td><td>73.57</td></tr><tr><td><br />0.24</td><td>0.64</td><td>0.12</td><td>58.34</td><td>62.34</td><td>66.45</td><td>71.97</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="151" name="151">3)精确率对比</h4>
+                <div class="p1">
+                    <p id="152">为验证WTLR算法的准确性,本文将WTLR算法与LeaderRank算法、加权LeaderRank算法进行对比。采用3.1节的实验数据集,并选择4种不同的用户查询方式,即查询句子与主题相关、较相关、相关性不大、不相关,得到3种算法的精确率对比,结果如图3所示。</p>
+                </div>
+                <div class="area_img" id="153">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910033_153.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 3种算法的精确率对比" src="Detail/GetImg?filename=images/JSJC201910033_153.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 3种算法的精确率对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910033_153.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="154">由图3可知,在同样的环境和精确率评价标准下,WTLR算法的精确率较LeaderRank算法和加权LeaderRank算法分别提高10.75%和7.80%,算法精确率有明显提升,检索到相关用户的能力增强。可以得出,WTLR算法能够提高排序结果的精确率,进而改善排序算法的质量。</p>
+                </div>
+                <h4 class="anchor-tag" id="155" name="155">4)点击率对比</h4>
+                <div class="p1">
+                    <p id="156">3种算法在点击率指标上的对比结果如图4所示。从图4中可以看出,WRLR算法的点击率较LeaderRank算法和加权LeaderRank算法分别提升8.97%和6.73%。这是因为WTLR算法重新定义了用户节点网络中的转移概率,使算法在概率转移过程中对主题相关等因素进行考虑,从而改善排序效果。</p>
+                </div>
+                <div class="area_img" id="157">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910033_157.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 3种算法的点击率对比" src="Detail/GetImg?filename=images/JSJC201910033_157.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 3种算法的点击率对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910033_157.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="158" name="158">5)NDCG对比</h4>
+                <div class="p1">
+                    <p id="159">将WTLR算法与加权LeaderRank算法、LeaderRank算法进行对比实验,测试出查询列表数目不同时的NDCG值,结果如图5所示。由图5可以看出,3种算法的变化曲线大致相同,WTLR算法在<i>N</i>=44时取得最大值,而加权LeaderRank算法和LeaderRank算法则分别在<i>N</i>为51和56时得到最大值。此外,WTLR算法的NDGG值较加权LeaderRank算法和LeaderRank算法分别提高4.75%和7.31%。由此可知,WTLR算法在排序结构和主题相关方面有较好的结果。</p>
+                </div>
+                <div class="area_img" id="160">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910033_160.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 3种算法的NDCG结果对比" src="Detail/GetImg?filename=images/JSJC201910033_160.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 3种算法的NDCG结果对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910033_160.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="161" name="161" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="162">本文提出一种用户社交网络排序算法,将链入链出因子、主题相关度因子和时间衰减度因子整合到加权LeaderRank算法中,以解决权值均分和主题漂移的问题。实验结果表明,与加权LeaderRank算法相比,该算法的排序质量提高。下一步将研究该算法在由用户与帖子构成的异构网络中的应用,以提高异构网络中节点排序的准确性,改善排序效果。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011300560306&amp;v=MzA2NDZud1plWnVIeWptVUx6SUpWb1VhaHM9TmlmT2ZiSzdIdEROckk5RlllMFBEM3cvb0JNVDZUNFBRSC9pclJkR2VycVFUTQ==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> BRIN S,PAGE L.Reprint of:the anatomy of a large-scale hypertextual Web search engine[J].Computer Networks,2012,56(18):3825-3833.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJSJ201009049&amp;v=MTg0MjFpZllaTEc0SDlITXBvOUJiWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVTcvQk0=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 高琪,张永平.PageRank算法中主题漂移的研究[J].微计算机信息,2010,26(9):117-119.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Leaders inSocial Networks,the Delicious Case">
+
+                                <b>[3]</b> LÜ Linyuan,ZHANG Yicheng,YEUNG C,et al.Leaders in social networks,the delicious case[J].PLoS One,2011,6(6):1-9.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14032300082141&amp;v=MTkyMDVUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTHpJSlZvVWFocz1OaWZPZmJLOEh0TE9ySTlGWk9NTkRYZzRvQk1UNg==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> LI Qian,ZHOU Tao,LÜ Linyuan,et al.Identifying influential spreaders by weighted LeaderRank[J].Physica A:Statistical Mechanics and Its Applications,2014,404(24):47-55.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201701005&amp;v=MDMxMDFyQ1VSTE9lWmVSdEZ5M2hVNy9CTnlmVGJMRzRIOWJNcm85RllZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 韩忠明,陈炎,刘雯,等.社会网络节点影响力分析研究[J].软件学报,2017,28(1):84-104.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WLXB201317001&amp;v=MTQ1NzVoVTcvQk1pSFRiTEc0SDlMTnFJOUZaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTM=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 刘建国,任卓明,郭强,等.复杂网络中节点重要性排序的研究进展[J].物理学报,2013,62(17):1-10.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201602030&amp;v=MTM2NTZxQnRHRnJDVVJMT2VaZVJ0RnkzaFU3L0JMejdCYmJHNEg5Zk1yWTlHWklRS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 王旭阳,任国盛.基于用户行为与页面分析的改进PageRank算法[J].计算机工程,2016,42(2):164-168.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201402007&amp;v=MzIyNDFIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0RnkzaFU3L0JMejdCYmJHNEg5WE1yWTlGWTRRS0Q=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 平宇,向阳,张波,等.基于MapReduce的并行PageRank算法实现[J].计算机工程,2014,40(2):31-34.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SJSJ201605010&amp;v=MjIzNjNVUkxPZVplUnRGeTNoVTcvQk5pZllaTEc0SDlmTXFvOUVaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 王冲,纪仙慧.基于用户反馈与链接关系的网页排序改进算法[J].计算机工程与设计,2016,37(5):1166-1170.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Detecting Opinion Leader Dynamically in Chinese News Comments">
+
+                                <b>[10]</b> SONG Kaisong,WANG Daling,FENG Shi,et al.Detecting opinion leader dynamically in Chinese news comments[C]//Proceedings of International Conference on Web-Age Information Management.Berlin,Germany:Springer,2011:197-209.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=TwitterRank:Finding Topicsensitive Influential Twitterers">
+
+                                <b>[11]</b> WENG Jianshu,LIM E P,JIANG Jing,et al.Twitterrank:finding topic-sensitive influential twitterers[C]//Proceedings of the 3rd ACM International Conference on Web Search and Data Mining.New York,USA:ACM Press,2010:261-270.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SCPD&amp;filename=CN105117849A&amp;v=MTExMTcrNFBEMzFMeHhZVDZ6b09TM2ZtcFdGYWU3S1ZUTHVkWmVSdUVpemxVN1k9SmlPNkhyYTVIOWJFcTRZMEM=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 周斌,高凯,曹一家,等.基于电气LeaderRank算法的电网节点重要度评估方法[P].中国:CN105117849A.2015-12-02.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017298048.nh&amp;v=MjQ2OTZxQnRHRnJDVVJMT2VaZVJ0RnkzaFU3L0JWRjI2R2JHeEZ0SElwNUViUElRS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 申琳.基于多属性的社交网络关键节点挖掘方法[J].西安:西安电子科技大学,2017.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=An improved weighted leaderrank algorithm for identifying influential spreaders in complex networks">
+
+                                <b>[14]</b> ZHANG Zhenhao,JIANG Guoping,SONG Yurong,et al.An improved weighted leaderrank algorithm for identifying influential spreaders in complex networks[C]//Proceedings of Computational Science and Engineering and Embedded and Ubiquitous Computing.Washington D.C.,USA:IEEE Computer Society,2017:748-751.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Everyone&amp;#39;&amp;#39;s an influencer:quantifying influence on twitter">
+
+                                <b>[15]</b> BAKSHY E,HOFMAN J M,MASON W A,et al.Everyone’s an influencer:quantifying influence on Twitter[C]//Proceedings of the 4th ACM International Conference on Web Search and Data Mining.New York,USA:ACM Press,2015:65-74.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Weighted PageRank algorithm based on number of visits of links of Web page">
+
+                                <b>[16]</b> TYAGI N,SHARMA S.Weighted PageRank algorithm based on number of visits of links of Web page[J].Inter-national Journal of Soft Computing and Engineering,2012,2(3):441-446.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201410010&amp;v=MzA0NjFyQ1VSTE9lWmVSdEZ5M2hVNy9CTHl2U2RMRzRIOVhOcjQ5RVpJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b> 段松青,吴斌,王柏.TTRank:基于倾向性转变的用户影响力排序[J].计算机研究与发展,2014,51(10):2225-2238.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Glo Ve:Global Vectors for Word Representation[C/OL]">
+
+                                <b>[18]</b> PENNINGTON J,SOCHER R,MANNING C.Glove:global vectors for word representation[EB/OL].[2018-09-01].https://nlp.stanford.edu/pubs/glove.pdf.
+                            </a>
+                        </p>
+                        <p id="39">
+                            <a id="bibliography_19" target="_blank" href="http://scholar.cnki.net/result.aspx?q=An insight into Newton&amp;#39;&amp;#39;s cooling law using fractional calculus">
+
+                                <b>[19]</b> MONDOL A,GUPTA R,DAS S,et al.An insight into Newton’s cooling law using fractional calculus[J].Journal of Applied Physics,2018,123(6):1-8.
+                            </a>
+                        </p>
+                        <p id="41">
+                            <a id="bibliography_20" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017073739.nh&amp;v=MzAyNTZQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVTcvQlZGMjZHYk8vSGRiUHBwRWI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[20]</b> 贾伟洋.基于群组用户画像的农业信息化推荐算法研究[D].咸阳:西北农林科技大学,2017.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201910033" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201910033&amp;v=MTYyMjR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0RnkzaFU3L0JMejdCYmJHNEg5ak5yNDlHWjRRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZhcFFuenlHQ1M1YXBTYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

@@ -1,0 +1,959 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637135667100100000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dDZCL201914032%26RESULT%3d1%26SIGN%3drhSCkjU0es1N%252bVahF3hX9zLN%252fPE%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZCL201914032&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZCL201914032&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201914032&amp;v=MzA0MzJxNDlHWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl2aFdyM0tJVGZJWXJHNEg5ak4=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="&lt;b&gt;0 引  言&lt;/b&gt; "><b>0 引  言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#40" data-title="&lt;b&gt;1 Camshift算法的基本介绍&lt;/b&gt; "><b>1 Camshift算法的基本介绍</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#60" data-title="&lt;b&gt;2 多特征提取和动态特征融合方法&lt;/b&gt; "><b>2 多特征提取和动态特征融合方法</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#61" data-title="&lt;b&gt;2.1 颜色特征直方图&lt;/b&gt;"><b>2.1 颜色特征直方图</b></a></li>
+                                                <li><a href="#72" data-title="&lt;b&gt;2.2 LBP纹理直方图&lt;/b&gt;"><b>2.2 LBP纹理直方图</b></a></li>
+                                                <li><a href="#83" data-title="&lt;b&gt;2.3 边缘直方图&lt;/b&gt;"><b>2.3 边缘直方图</b></a></li>
+                                                <li><a href="#89" data-title="&lt;b&gt;2.4 目标跟踪的相似度&lt;/b&gt;"><b>2.4 目标跟踪的相似度</b></a></li>
+                                                <li><a href="#94" data-title="&lt;b&gt;2.5 多特征自适应融合方法&lt;/b&gt;"><b>2.5 多特征自适应融合方法</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#106" data-title="&lt;b&gt;3 平均背景减除法&lt;/b&gt; "><b>3 平均背景减除法</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#118" data-title="&lt;b&gt;4 基于改进的Camshift算法仿真实验和结果分析&lt;/b&gt; "><b>4 基于改进的Camshift算法仿真实验和结果分析</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#139" data-title="&lt;b&gt;5 结  论&lt;/b&gt; "><b>5 结  论</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#58" data-title="图1 Camshift算法流程">图1 Camshift算法流程</a></li>
+                                                <li><a href="#70" data-title="图2 frame1图像">图2 frame1图像</a></li>
+                                                <li><a href="#71" data-title="图3 目标区域的H分量颜色特征直方图">图3 目标区域的H分量颜色特征直方图</a></li>
+                                                <li><a href="#81" data-title="图4 基本的LBP算组示意">图4 基本的LBP算组示意</a></li>
+                                                <li><a href="#82" data-title="图5 目标区域的LBP特征直方图">图5 目标区域的LBP特征直方图</a></li>
+                                                <li><a href="#88" data-title="图6 目标区域的边缘特征直方图">图6 目标区域的边缘特征直方图</a></li>
+                                                <li><a href="#108" data-title="图7 frame3融合概率分布">图7 frame3融合概率分布</a></li>
+                                                <li><a href="#115" data-title="图8 frame3的前景">图8 frame3的前景</a></li>
+                                                <li><a href="#117" data-title="图9 frame3改进后的融合概率分布">图9 frame3改进后的融合概率分布</a></li>
+                                                <li><a href="#121" data-title="图10 传统的Camshift 算法跟踪效果">图10 传统的Camshift 算法跟踪效果</a></li>
+                                                <li><a href="#122" data-title="图11 多特征融合的Camshift 算法跟踪效果">图11 多特征融合的Camshift 算法跟踪效果</a></li>
+                                                <li><a href="#126" data-title="图12 本文算法跟踪效果">图12 本文算法跟踪效果</a></li>
+                                                <li><a href="#128" data-title="图13 传统的Camshift 算法跟踪效果">图13 传统的Camshift 算法跟踪效果</a></li>
+                                                <li><a href="#130" data-title="图14 多特征融合的Camshift 算法跟踪效果">图14 多特征融合的Camshift 算法跟踪效果</a></li>
+                                                <li><a href="#132" data-title="图15 本文算法跟踪效果">图15 本文算法跟踪效果</a></li>
+                                                <li><a href="#135" data-title="图16 传统的Camshift 算法跟踪效果">图16 传统的Camshift 算法跟踪效果</a></li>
+                                                <li><a href="#136" data-title="图17 多特征融合的Camshift 算法跟踪效果">图17 多特征融合的Camshift 算法跟踪效果</a></li>
+                                                <li><a href="#138" data-title="图18 本文算法跟踪效果">图18 本文算法跟踪效果</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" YILMAZ A, JAVED O, SHAH M.Object tracking:A survey[J].ACM Computing Surveys, 2006, 38 (4) :1-45." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000017656&amp;v=MTEyMjl0ak5yNDlGWk9vSUNuay9vQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0RmlubFVyeklJMW9kYUJjPU5pZklZN0s3SA==&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         YILMAZ A, JAVED O, SHAH M.Object tracking:A survey[J].ACM Computing Surveys, 2006, 38 (4) :1-45.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 唐鹏, 盛鹏, 等.复杂场景下基于条件随机场的视觉目标跟踪[J].光学学报, 2010, 30 (6) :1721-1728." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GXXB201006038&amp;v=MjU2MTJGeXZoV3IzTklqWFRiTEc0SDlITXFZOUdiSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         唐鹏, 盛鹏, 等.复杂场景下基于条件随机场的视觉目标跟踪[J].光学学报, 2010, 30 (6) :1721-1728.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 刘少华, 张茂军, 熊志辉.一种鲁棒高效的视频运动目标检测与跟踪算法[J].自动化学报, 2009, 35 (8) :1055-1062." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MOTO200908006&amp;v=MzA3MTR2aFdyM05LQ0xmWWJHNEh0ak1wNDlGWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         刘少华, 张茂军, 熊志辉.一种鲁棒高效的视频运动目标检测与跟踪算法[J].自动化学报, 2009, 35 (8) :1055-1062.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" 杨杰, 张翔.视频目标检测和跟踪及其应用[M].上海:上海交通大学出版社, 2012." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787313082343001&amp;v=MDAyNDZubVU3ek1LVndSWEZxekdiQzVIZEhFcll4Qlorc1BEUk04enhVU21EZDlTSDduM3hFOWZidm5LcmlmWmVadkZ5&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         杨杰, 张翔.视频目标检测和跟踪及其应用[M].上海:上海交通大学出版社, 2012.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" BRADSKI G R.Computer vision face tracking for use in a perceptual user interface[C].IEEE Workshop on Apolication of Computer Vision, 1998:2014-219." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Computer vision face tracking as a component of a perceptual user interface">
+                                        <b>[5]</b>
+                                         BRADSKI G R.Computer vision face tracking for use in a perceptual user interface[C].IEEE Workshop on Apolication of Computer Vision, 1998:2014-219.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" ZHU Y, XU B.A robust object tracking method combining shape descriptor and adaptive background camshift[C].International Conference on Natural Compution, IEEE, 2015:930-933." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A robust object tracking method combining shape descriptor and adaptive background camshift">
+                                        <b>[6]</b>
+                                         ZHU Y, XU B.A robust object tracking method combining shape descriptor and adaptive background camshift[C].International Conference on Natural Compution, IEEE, 2015:930-933.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" YANG X, FEI S M, LI G, et al.Improved meanshift tracking algorithm based on comolicated feature fusion[J].Control and Decision, 2014, 29 (7) :1297-1300." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KZYC201407024&amp;v=MjY5MTMzenFxQnRHRnJDVVI3cWZadVp0Rnl2aFdyM05MamZTYmJHNEg5WE1xSTlIWUlRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         YANG X, FEI S M, LI G, et al.Improved meanshift tracking algorithm based on comolicated feature fusion[J].Control and Decision, 2014, 29 (7) :1297-1300.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 徐一鸣, 陆观, 顾菊平.基于N-LBP纹理与色度信息的Camshift跟踪算法[J].计算机科学, 2015, 42 (6) :313-316." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJA201506067&amp;v=Mjk0MjY0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5dmhXcjNOTHo3QmI3RzRIOVRNcVk5RFk0UUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         徐一鸣, 陆观, 顾菊平.基于N-LBP纹理与色度信息的Camshift跟踪算法[J].计算机科学, 2015, 42 (6) :313-316.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" 赵文倩, 匡逊君, 李明富.基于改进的Camshift 运动目标跟踪算法的研究[J].信息技术, 2012 (7) :165-169." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HDZJ201207047&amp;v=Mjc1MTE0TzN6cXFCdEdGckNVUjdxZlp1WnRGeXZoV3IzTkxTblJaTEc0SDlQTXFJOUJZNFFLREg4NHZSNFQ2ajU=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         赵文倩, 匡逊君, 李明富.基于改进的Camshift 运动目标跟踪算法的研究[J].信息技术, 2012 (7) :165-169.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" 刘俊.运动目标的检测与跟踪算法研究[D].武汉:武汉科技大学, 2011." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1011199270.nh&amp;v=MjY5MjZxZlp1WnRGeXZoV3IzTlZGMjZIN0t4RjlQTHI1RWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         刘俊.运动目标的检测与跟踪算法研究[D].武汉:武汉科技大学, 2011.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" HAN Z, ZHANG R, WEN L, et, al.Moving object tracking method based on improved camshift algorithm[C].International Conference on Industrial Informatics-Computing Technology, Intelligent Technology, Industrial Information Integration.IEEE, 2016:91-95." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Moving Object Tracking Method Based o n Improved Camshift Algorithm">
+                                        <b>[11]</b>
+                                         HAN Z, ZHANG R, WEN L, et, al.Moving object tracking method based on improved camshift algorithm[C].International Conference on Industrial Informatics-Computing Technology, Intelligent Technology, Industrial Information Integration.IEEE, 2016:91-95.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" COMANICIUD, RAMESHV, MEER P.Kernel-based object tracking[J].IEEE Transactions on Pattern Analysis and Machine Intelligence, 2003, 25 (5) :546-577." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Kernel-Based Object Tracking">
+                                        <b>[12]</b>
+                                         COMANICIUD, RAMESHV, MEER P.Kernel-based object tracking[J].IEEE Transactions on Pattern Analysis and Machine Intelligence, 2003, 25 (5) :546-577.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" ALLEN J G, XU RYD, JIN J S.Object tracking using Camshift algorithm and multiple quantized feature spaces[D].Sydnery:University of Sydney, 2006." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Object tracking using Camshift algorithm and multiple quantized feature spaces">
+                                        <b>[13]</b>
+                                         ALLEN J G, XU RYD, JIN J S.Object tracking using Camshift algorithm and multiple quantized feature spaces[D].Sydnery:University of Sydney, 2006.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 卫建华, 王亚峰, 廉继红, 等.基于Camshift实现Android平台下的目标追踪[J].国外电子测量技术, 2018, 4 (12) :135-138." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=GWCL201810031&amp;v=MzI0MjFIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl2aFdyM05JanJJWXJHNEg5bk5yNDlHWllRS0Q=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         卫建华, 王亚峰, 廉继红, 等.基于Camshift实现Android平台下的目标追踪[J].国外电子测量技术, 2018, 4 (12) :135-138.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 袁国武, 丁海燕, 周浩, 等.结合局部纹理和色度的运动目标检测方法[J].电子测量技术, 2012, 35 (12) :55-59." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201212017&amp;v=MDEzMDU3cWZadVp0Rnl2aFdyM05JVGZJWXJHNEg5UE5yWTlFWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         袁国武, 丁海燕, 周浩, 等.结合局部纹理和色度的运动目标检测方法[J].电子测量技术, 2012, 35 (12) :55-59.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" 彭同胜, 刘小燕, 龚军辉, 等.基于颜色匹配和改进LBP 的胶囊内镜视频缩减[J].电子测量与仪器学报, 2016, 30 (9) :1379-1388." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZIY201609015&amp;v=MDEzMTN5dmhXcjNOSVRmQ2Q3RzRIOWZNcG85RVlZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         彭同胜, 刘小燕, 龚军辉, 等.基于颜色匹配和改进LBP 的胶囊内镜视频缩减[J].电子测量与仪器学报, 2016, 30 (9) :1379-1388.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" 张良, 郑世宝, 杨华.一种特征融合的带宽自适应MeanShift 跟踪算法[J].电视技术, 2012, 36 (5) :118-121." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DSSS201205037&amp;v=MjEyNjBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5dmhXcjNOSVQ3WWZiRzRIOVBNcW85R1k0UUs=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                         张良, 郑世宝, 杨华.一种特征融合的带宽自适应MeanShift 跟踪算法[J].电视技术, 2012, 36 (5) :118-121.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=DZCL" target="_blank">电子测量技术</a>
+                2019,42(14),105-111 DOI:10.19651/j.cnki.emt.1902678            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于改进的Camshift算法的室内小车跟踪</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%83%AD%E4%B8%96%E5%87%AF&amp;code=41162583&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">郭世凯</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%AD%99%E9%91%AB&amp;code=09543009&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">孙鑫</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E6%9C%BA%E7%94%B5%E5%B7%A5%E7%A8%8B%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AD%A6%E9%99%A2&amp;code=0017580&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海大学机电工程与自动化学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>传统的Camshift算法是以颜色直方图为特征进行跟踪, 在目标具有特殊颜色的简单背景环境中跟踪效果较好, 但是当目标受到相似颜色干扰或者环境背景噪声太多时, 算法的跟踪效果变差。为此提出了一种结合背景减除法的自适应多特征融合的改进Camshift算法。首先基于相似度的衡量标准分别确定颜色特征, LBP纹理特征以及边缘特征对跟踪结果的贡献度大小, 并按照贡献度的大小动态分配融合权重;然后以不同的权重比建立联合直方图, 用来克服单一颜色直方图的跟踪缺陷;最后在再结合平均背景减除法, 用来去除复杂背景中噪声的干扰。实验证明, 本算法能够实现室内不同环境干扰下小车的准确跟踪。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Camshift&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Camshift;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%A4%9A%E7%89%B9%E5%BE%81&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">多特征;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%9B%B8%E4%BC%BC%E5%BA%A6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">相似度;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%81%94%E5%90%88%E7%9B%B4%E6%96%B9%E5%9B%BE&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">联合直方图;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%83%8C%E6%99%AF%E5%87%8F%E9%99%A4%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">背景减除法;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    郭世凯, 硕士研究生, 研究方向为机器人控制系统。E-amil:1151604567@qq.comE-amil:1151604567@qq.com;
+                                </span>
+                                <span>
+                                    孙鑫, 副教授, 硕士生导师, 博士, 研究方向为数字水印、模式识别、智能控制。E-amil:123690152@qq.com;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2019-02-09</p>
+
+            </div>
+                    <h1><b>Indoor car tracking based on improved Camshift algorithm</b></h1>
+                    <h2>
+                    <span>Guo Shikai</span>
+                    <span>Sun Xin</span>
+            </h2>
+                    <h2>
+                    <span>College of Mechatronic Engineering and Automation, Shanghai University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Traditional Camshift algorithm bases on the color histogram. It can track the target well under the monochromatic background or the environment with special color. However, this algorithm will be less effective when the target blends in a similar color or the background is interfered by excessive noise. Therefore, an improved Camshift algorithm based on background subtraction and adaptive multi-feature fusion is proposed in this paper. First, the contribution of color feature, LBP texture feature and edge feature of the tracking result is calculated based on similarity measure, and the fusion weight is dynamically allocated according to the contribution weights of each feature. Then, a joint histogram with different weight ratios is graphed to substitute the defective single color histogram. Finally, the average background subtraction method is used to remove the intereference of the noise in complex scenarios. Experiments show that this algorithm can track the car accurately under different indoor environmental disturbances.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Camshift&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Camshift;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=multi-feature&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">multi-feature;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=similarity&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">similarity;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=joint%20histogram&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">joint histogram;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=background%20subtraction&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">background subtraction;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2019-02-09</p>
+                            </div>
+
+
+        <!--brief start-->
+                        <h3 id="37" name="37" class="anchor-tag"><b>0 引  言</b></h3>
+                <div class="p1">
+                    <p id="38">视频跟踪是机器视觉领域最为重要的技术之一, 近些年来被广泛地用于目标定位、视频监控、自动驾驶、人机交互等多个领域<citation id="143" type="reference"><link href="3" rel="bibliography" /><link href="5" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>]</sup></citation>, 其最终的目的是在存有噪声干扰, 目标被遮挡, 快速移动等复杂的环境下定位到目标并进行实时跟踪。随着计算机视觉领域地快速发展, 涌现出了大量的视频跟踪算法, 主要分为基于外在特征的, 局部区域的以及目标轮廓的3种类型跟踪算法<citation id="141" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。其中基于目标外在特征的跟踪方法应用最多, 它的主要处理思路是首先提取目标的外在特征信息, 主要包含颜色、轮廓、特征点<citation id="142" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>等特征, 然后依次对视频序列图像进行区域的特征匹配, 寻找最相似的区域, 从而获取每一帧图像的目标位置, 最后将每一帧图像定位结果依次连接起来, 就完成了对视频中目标的连续跟踪。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">传统的的Camshift (continuously adaptive meanShift) <citation id="144" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>算法是以颜色直方图为特征进行跟踪。由于算法框架的简洁性以及能够自适应改变跟踪区域的大小, 在目标跟踪领域得到了广泛的应用。但是算法仅利用单一颜色特征进行连续跟踪, 当环境中出现相似的颜色的干扰或者背景变得复杂时, 跟踪的效果就会受到一定的影响。针对这种情况, 很多学者引入了特征融合的思路, 如文献<citation id="145" type="reference">[<a class="sup">6</a>]</citation>将目标的Hu特征和本身的颜色特征相融合, 文献<citation id="149" type="reference">[<a class="sup">7</a>,<a class="sup">8</a>]</citation>分别将Gabor小波纹理特征和颜色特征融合征融合, 以及改进的N-LBP和颜色特征相融合等, 都能一定程度上克服环境中出现相似颜色的干扰, 但是在针对背景复杂, 如背景太亮, 或者跟踪物体变小导致特征提取不明显的场合时, 跟踪效果依然很差。为此, 很多学者提出了在传统跟踪算法的基础上结合背景检测处理或者位置预测的方法, 如文献<citation id="146" type="reference">[<a class="sup">9</a>]</citation>中将背景差分法与Camshift算法相融合, 文献<citation id="147" type="reference">[<a class="sup">10</a>]</citation>在跟踪的基础上结合了卡尔曼预测, 以及文献<citation id="148" type="reference">[<a class="sup">11</a>]</citation>结合帧间差分法去除背景干扰, 都基本上提高了复杂背景干扰下目标的准确跟踪能力。本文结合以上改进思路, 提出了在传统Camshift算法框架下, 动态融合目标本身的H分量颜色特征, LBP纹理特征以及边缘特征, 并且设计了基于特征贡献程度的动态权重分配公式, 同时结合了平均背景减除法的思路, 实现了小车在室内各种干扰条件下的准确跟踪。</p>
+                </div>
+                <h3 id="40" name="40" class="anchor-tag"><b>1 Camshift算法的基本介绍</b></h3>
+                <div class="p1">
+                    <p id="41">Camshift算法框架的核心是Meanshift算法<citation id="150" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>, 其主要原理是对采集到的连续视频帧图像做Meanshift运算。首先求取目标的颜色特征直方图, 根据颜色特征直方图计算出图像的颜色概率分布图, 然后分别根据颜色概率分布图计算零阶矩, 一阶矩, 最后根据求出的零阶矩, 一阶矩确定图像的质心位置 (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>) 和方向角<i>θ</i>, 并将这一帧搜索结果 (这一帧的目标质心和搜索窗的大小) 作为下一帧图像的初始化搜索窗口, 连续迭代下去, 实现视频中目标的连续跟踪。Camshift算法的基本求解过程可总结如下<citation id="151" type="reference"><link href="27" rel="bibliography" /><link href="29" rel="bibliography" /><sup>[<a class="sup">13</a>,<a class="sup">14</a>]</sup></citation>:</p>
+                </div>
+                <div class="p1">
+                    <p id="42">1) 读取RGB图像的一帧, 并将RGB图像转化为HSV色彩空间图像<i>I</i> (<i>x</i>, <i>y</i>) , 并提取其H分量特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">2) 手工框定图像中的目标区域, 求出该目标区域的H分量特征直方图<i>h</i><sub><i>b</i></sub>, 再根据<i>h</i><sub><i>b</i></sub>求出该帧图像的颜色概率分布图。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">3) 针对颜色概率分布图, 分别求出零阶矩<i>M</i><sub>00</sub>, 一阶矩<i>M</i><sub>10</sub>, <i>M</i><sub>01</sub>, 计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="45"><mathml id="46"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Μ</mi><msub><mrow></mrow><mrow><mn>0</mn><mn>0</mn></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mi>x</mi></munder><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mi>y</mi></munder><mi>Ι</mi></mstyle></mrow></mstyle><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><mi>y</mi><mo stretchy="false">) </mo></mrow></math></mathml>      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="47"><mathml id="48"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Μ</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>0</mn></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mi>x</mi></munder><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mi>y</mi></munder><mi>x</mi></mstyle></mrow></mstyle><mi>Ι</mi><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><mi>y</mi><mo stretchy="false">) </mo></mrow></math></mathml>      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="49"><mathml id="50"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Μ</mi><msub><mrow></mrow><mrow><mn>0</mn><mn>1</mn></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mi>x</mi></munder><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mi>y</mi></munder><mi>y</mi></mstyle></mrow></mstyle><mi>Ι</mi><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><mi>y</mi><mo stretchy="false">) </mo></mrow></math></mathml>      (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="51">计算目标的质心, 计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="52"><mathml id="53"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false"> (</mo><mi>x</mi><msub><mrow></mrow><mi>c</mi></msub><mo>, </mo><mi>y</mi><msub><mrow></mrow><mi>c</mi></msub><mo stretchy="false">) </mo><mo>=</mo><mrow><mo> (</mo><mrow><mfrac><mrow><mi>Μ</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>0</mn></mrow></msub></mrow><mrow><mi>Μ</mi><msub><mrow></mrow><mrow><mn>0</mn><mn>0</mn></mrow></msub></mrow></mfrac><mo>, </mo><mfrac><mrow><mi>Μ</mi><msub><mrow></mrow><mrow><mn>0</mn><mn>1</mn></mrow></msub></mrow><mrow><mi>Μ</mi><msub><mrow></mrow><mrow><mn>0</mn><mn>0</mn></mrow></msub></mrow></mfrac></mrow><mo>) </mo></mrow></mrow></math></mathml>      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="54">计算新的搜索框口大小:</p>
+                </div>
+                <div class="p1">
+                    <p id="55">宽度<mathml id="56"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>s</mi><mo>=</mo><msqrt><mrow><mi>Μ</mi><msub><mrow></mrow><mrow><mn>0</mn><mn>0</mn></mrow></msub><mo>/</mo><mn>2</mn><mn>5</mn><mn>6</mn></mrow></msqrt></mrow></math></mathml>, 长度为1.2 s。</p>
+                </div>
+                <div class="p1">
+                    <p id="57">4) 将搜索窗口的中心从位置 (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>) 移动到新的质心位置 (<i>x</i><sub><i>c</i></sub>, <i>y</i><sub><i>c</i></sub>) , 如果移动距离大于给定的阈值, 则跳到步骤2) 重新执行, 如果移动的距离小于给定的阈值, 则表明此时的候选区域即为目标区域。同时跳到步骤1) , 并将上一帧的目标区域作为新的搜索框口, 依次重复执行, 直到所有帧图像遍历完。Camshift算法的基本流程如图1所示。</p>
+                </div>
+                <div class="area_img" id="58">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_058.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 Camshift算法流程" src="Detail/GetImg?filename=images/DZCL201914032_058.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 Camshift算法流程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_058.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="59">传统的Camshift算法针在目标具有特殊颜色的简单背景环境中跟踪效果较好, 但是当目标受到相似颜色干扰或者环境背景噪声太多时, 算法的跟踪效果变差, 本文跟踪的目标是室内小车, 且室内环境一般较为复杂, 而且当小车移动较远时, 由于物体变小, 颜色信息容易丢失, 所以本文提出动态融合颜色特征, LBP纹理特征以及边缘特征的方法, 并且设计了基于特征贡献程度的动态权重分配公式;同时针对室内背景干扰过大, 采用平均背景减除法, 滤除室内地板背景的干扰, 来提高目标跟踪的准确性。</p>
+                </div>
+                <h3 id="60" name="60" class="anchor-tag"><b>2 多特征提取和动态特征融合方法</b></h3>
+                <h4 class="anchor-tag" id="61" name="61"><b>2.1 颜色特征直方图</b></h4>
+                <div class="p1">
+                    <p id="62">普通采集的图像属于RGB色彩空间图像, 但是RGB颜色空间容易受室内光线和环境的变化而影响, 常用的处理方法是将RGB图像转化为HSV空间图像, 因为HSV颜色空间是由H (色彩) , S (纯度) , V (亮度) 组合而成, 所以更能体现出具体的颜色信息, 而且不易受光照的影响, 我们提取H分量特征来做特征直方图。</p>
+                </div>
+                <div class="p1">
+                    <p id="63">首先需要将RGB空间转化为HSV空间, 设max为<i>r</i>、<i>g</i>和<i>b</i>中的最大者, min为最小者。对应的HSV空间中的 (<i>h</i>, <i>s</i>, <i>v</i>) 值为:</p>
+                </div>
+                <div class="area_img" id="64">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/DZCL201914032_06400.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="area_img" id="66">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/DZCL201914032_06600.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="68"><i>v</i>=max (7) </p>
+                </div>
+                <div class="p1">
+                    <p id="69">式中:<i>h</i>在0°～360°, <i>s</i>在0～100%, <i>v</i>在0～max。当求取了H分量图像以后, 需要对H分量图像做直方图统计, 即求取原图像的H分量直方图。直方图就是对图像中每一个像素值的统计, 横坐标代表像素的值, 纵坐标代表对应像素值的个数, 本文对目标小车进行H分量直方图统计, 采集第一帧小车图像如图2所示。<i>h</i>的值在0°～360°之间分布, 我们将其分成60个小区间, 即60个<i>bin</i>, 所以每个<i>bin</i>的范围是0°～6°, 对小车目标图像的H分量图进行统计, 即计算颜色落在每个小区间内的像素数量, 统计完后进行直方图归一化, 所谓归一化就是对应纵坐标值除以总的像素个数, 得到的对应的H分量直方图如图3所示。</p>
+                </div>
+                <div class="area_img" id="70">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_070.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 frame1图像" src="Detail/GetImg?filename=images/DZCL201914032_070.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 frame1图像  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_070.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="71">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_071.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 目标区域的H分量颜色特征直方图" src="Detail/GetImg?filename=images/DZCL201914032_071.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 目标区域的H分量颜色特征直方图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_071.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="72" name="72"><b>2.2 LBP纹理直方图</b></h4>
+                <div class="p1">
+                    <p id="73">LBP纹理特征又称为局部二值模式, 是描述图像局部纹理特征算子, 具有旋转不变性和灰度平移不变性等特点<citation id="152" type="reference"><link href="31" rel="bibliography" /><link href="33" rel="bibliography" /><sup>[<a class="sup">15</a>,<a class="sup">16</a>]</sup></citation>, 所以近年来被广泛应用于物体识别和人脸检测。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">LBP的计算原理如下:取灰度图像中任意一个像素为中心, 将它的灰度值作为阈值, 再取半径圆形区域内所有的像素值与阈值进行比较, 将比较的结果建立一个有关中心阈值的二进制图, 在按照一定顺序进行编码得到像素的LBP码值。假设某一像素值为<i>x</i><sub>0</sub>, 则这一像素的LBP码值计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="75"><mathml id="76"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>L</mi><mi>B</mi><mi>Ρ</mi><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>m</mi></munderover><mi>s</mi></mstyle><mo stretchy="false"> (</mo><mi>g</mi><mo stretchy="false"> (</mo><mi>x</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>-</mo><mi>g</mi><mo stretchy="false"> (</mo><mi>x</mi><msub><mrow></mrow><mn>0</mn></msub><mo stretchy="false">) </mo><mo stretchy="false">) </mo><mn>2</mn><msup><mrow></mrow><mi>i</mi></msup></mrow></math></mathml>      (8) </p>
+                </div>
+                <div class="p1">
+                    <p id="77">式中:<i>i</i>表示圆形区域内的像素坐标号, <i>m</i>表示整个领域内的像素总个数, <i>g</i> (<i>x</i><sub><i>i</i></sub>) 表示像素<i>x</i><sub><i>i</i></sub>的灰度值, <i>s</i> (<i>x</i>) 表示一个二值函数, 此处<i>s</i> (<i>x</i>) 的公式如下:</p>
+                </div>
+                <div class="area_img" id="78">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/DZCL201914032_07800.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="80">图4给出了一个3×3的LBP算子, 计算得到如右图所示的LBP码值图。将中心阈值25分别与周围8个灰度值进行比较, 得到中心点的LBP值为:<i>LBP</i><sub> (8, 1) </sub>= (01111010) =122。遍历灰度图象的每一个像素即可得到原图像的LBP特征图。对图2中的目标小车区域采用如上所述的LBP特征算子求取目标的LBP特征图像, 对求取的目标LBP特征图像进行直方图统计, 并进行归一化, 设置直方图<i>bin</i>的数目为90, 图5就是求出目标的LBP特征直方图。</p>
+                </div>
+                <div class="area_img" id="81">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_081.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 基本的LBP算组示意" src="Detail/GetImg?filename=images/DZCL201914032_081.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 基本的LBP算组示意  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_081.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="82">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_082.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 目标区域的LBP特征直方图" src="Detail/GetImg?filename=images/DZCL201914032_082.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 目标区域的LBP特征直方图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_082.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="83" name="83"><b>2.3 边缘直方图</b></h4>
+                <div class="p1">
+                    <p id="84">边缘图像是对原始图像提取边缘后的图像, 边缘可以理解为图像性区域与另一个属性区域的交接处, 也即图像区域突变的地方, 图像的边缘区域包含着图像的丰富信息。边缘特征直方图是对边缘点的边缘方向的一种分布统计, 计算简单, 鲁棒性较好, 能够有效的应对光照变化和背景颜色变化的干扰<citation id="153" type="reference"><link href="35" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="85">图像边缘特征直方图的求解基本步骤可总结如下:1) 先将输入的RGB图像转化为对应的灰度图像。2) 对灰度图像进行边缘检测算子运算, 如Canny算子, 得到边缘图。3) 用<i>sobel</i>算子求取灰度图像<i>I</i> (<i>x</i>, <i>y</i>) 的方向梯度d<i>x</i>, d<i>y</i>。4) 计算图像<i>I</i> (<i>x</i>, <i>y</i>) 中各个像素点的边缘方向<mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>t</mi><mi>h</mi><mi>e</mi><mi>t</mi><mi>a</mi><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><mi>y</mi><mo stretchy="false">) </mo><mo>=</mo><mrow><mi>arctan</mi></mrow><mrow><mo> (</mo><mrow><mfrac><mrow><mtext>d</mtext><mi>y</mi></mrow><mrow><mtext>d</mtext><mi>x</mi></mrow></mfrac></mrow><mo>) </mo></mrow></mrow></math></mathml>。5) 将边缘方向值进行量化, 从-90°～90°量化到0°～180°。6) 将边缘方向<i>theta</i>进行直方图统计并进行归一化即可得到原图像的边缘特征直方图。</p>
+                </div>
+                <div class="p1">
+                    <p id="87">对图2中的目标小车区域采用上面所述的求取边缘直方图的思想, 其中选取Canny算子作为本实验的边缘检测算子, 将直方图的<i>bin</i>设置为64, 得到的小车边缘特征直方图如图6所示。</p>
+                </div>
+                <div class="area_img" id="88">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_088.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 目标区域的边缘特征直方图" src="Detail/GetImg?filename=images/DZCL201914032_088.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 目标区域的边缘特征直方图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_088.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="89" name="89"><b>2.4 目标跟踪的相似度</b></h4>
+                <div class="p1">
+                    <p id="90">衡量两幅图像的相似度通常是计算两幅图像的直方图相似度大小来确定的, 而计算直方图的相似度大小通常采用巴氏系数法。巴氏系数通常在几何上代表两个向量夹角的余弦值, 在0～1范围内。假设在一帧图像中待匹配的直方图向量为<i>p</i><sub><i>f</i></sub>, <i>f</i>∈{<i>color</i>, <i>texture</i>, <i>edge</i>}, 目标的直方图向量为<i>q</i><sub><i>f</i></sub>, <i>f</i>∈{<i>color</i>, <i>texture</i>, <i>edge</i>}, 那么待匹配区域与目标区域的相似度可以定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="91"><mathml id="92"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><msub><mrow></mrow><mi>f</mi></msub><mo stretchy="false"> (</mo><mi>q</mi><msub><mrow></mrow><mi>f</mi></msub><mo>, </mo><mi>p</mi><msub><mrow></mrow><mi>f</mi></msub><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><msqrt><mrow><mi>q</mi><msub><mrow></mrow><mi>f</mi></msub><mo stretchy="false"> (</mo><mi>u</mi><mo stretchy="false">) </mo><mi>p</mi><msub><mrow></mrow><mi>f</mi></msub><mo stretchy="false"> (</mo><mi>u</mi><mo stretchy="false">) </mo></mrow></msqrt></mrow></mstyle><mo>, </mo><mi>f</mi><mo>∈</mo><mo stretchy="false">{</mo><mi>c</mi><mi>o</mi><mi>l</mi><mi>o</mi><mi>r</mi><mo>, </mo><mi>t</mi><mi>e</mi><mi>x</mi><mi>t</mi><mi>u</mi><mi>r</mi><mi>e</mi><mo>, </mo><mi>e</mi><mi>d</mi><mi>g</mi><mi>e</mi><mo stretchy="false">}</mo></mrow></math></mathml>      (10) </p>
+                </div>
+                <div class="p1">
+                    <p id="93">由以上公式可得, 待匹配区域与目标区域的巴氏系数越大, 则目标与候选区域就越相似, 反之巴氏系数越小, 则目标与候选区域就越不相似。</p>
+                </div>
+                <h4 class="anchor-tag" id="94" name="94"><b>2.5 多特征自适应融合方法</b></h4>
+                <div class="p1">
+                    <p id="95">本文采取的融合思路是根据3个特征的贡献程度来动态分配各自权值的比重, 即遵循的原则是:目标特征越明显, 权值的贡献程度越大, 目标特征越低, 权值的贡献程度越小。假设第<i>n</i>-1帧图像在H分量特征, LBP纹理特征以及边缘特征下跟踪结果的矩形直方图分别为<i>q</i><sub> (<i>n</i>-1) <i>h</i>, </sub><i>q</i><sub> (<i>n</i>-1) <i>lbp</i></sub>, <i>q</i><sub> (<i>n</i>-1) <i>wen</i></sub>, 小车的原始目标矩形直方图为<i>p</i><sub><i>goal</i></sub>, 则按照2.4节节定义的巴氏系数计算方法, 计算出3个特征的相似度分别为<i>p</i><sub> (<i>n</i>-1) <sub><i>h</i></sub></sub><i>p</i><sub> (<i>n</i>-1) <i>lbp</i></sub>, <i>p</i><sub> (<i>n</i>-1) <i>wen</i></sub>, 定义权值分配公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="96"><mathml id="97"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>w</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo stretchy="false">) </mo><mi>h</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>p</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>h</mi></mrow></msub></mrow><mrow><mi>p</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>h</mi></mrow></msub><mo>+</mo><mi>p</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>l</mi><mi>b</mi><mi>p</mi></mrow></msub><mo>+</mo><mi>p</mi><msub><mrow></mrow><mo stretchy="false"> (</mo></msub><mrow><msub><mrow></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></msub></mrow><msub><mrow></mrow><mrow><mi>w</mi><mi>e</mi><mi>n</mi></mrow></msub></mrow></mfrac></mrow></math></mathml>      (11) </p>
+                </div>
+                <div class="p1">
+                    <p id="98"><mathml id="99"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>w</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo stretchy="false">) </mo><mi>l</mi><mi>b</mi><mi>p</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>p</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>l</mi><mi>b</mi><mi>p</mi></mrow></msub></mrow><mrow><mi>p</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>h</mi></mrow></msub><mo>+</mo><mi>p</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>l</mi><mi>b</mi><mi>p</mi></mrow></msub><mo>+</mo><mi>p</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>w</mi><mi>e</mi><mi>n</mi></mrow></msub></mrow></mfrac></mrow></math></mathml>      (12) </p>
+                </div>
+                <div class="p1">
+                    <p id="100"><mathml id="101"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>w</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo stretchy="false">) </mo><mi>e</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>p</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>e</mi></mrow></msub></mrow><mrow><mi>p</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>h</mi></mrow></msub><mo>+</mo><mi>p</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>l</mi><mi>b</mi><mi>p</mi></mrow></msub><mo>+</mo><mi>p</mi><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>e</mi></mrow></msub></mrow></mfrac></mrow></math></mathml>      (13) </p>
+                </div>
+                <div class="p1">
+                    <p id="102">式中:<i>w</i><sub> (<i>n</i>) <i>h</i></sub>, <i>w</i><sub> (<i>n</i>) <i>lbp</i></sub>, <i>w</i><sub> (<i>n</i>) <i>e</i></sub>分别表示第<i>n</i>帧图像的H分量特征权值、LBP特征权值以及边缘特征权值。以上3个权值之和为1, 同时满足目标特征越明显, 权值的贡献程度越大, 目标特征越低, 权值贡献程度越小的规则;而且每一帧图像的权值取值都是动态变化的, 都是基于上一帧图像的各自相似度大小来动态分配的。</p>
+                </div>
+                <div class="p1">
+                    <p id="103">所以可以假设第<i>n</i>帧图像的颜色特征概率分布图为<i>M</i><sub> (<i>n</i>) <i>h</i></sub>, LBP纹理特征概率分布图为<i>M</i><sub> (<i>n</i>) <i>lbp</i></sub>, 边缘特征概率分布图为<i>M</i><sub> (<i>n</i>) <i>e</i></sub>, 其中每个特征的概率分布图是根据2.1节, 2.2节, 2.3节的各自特征的目标直方图求取而来的。所示可以设计第<i>n</i>帧图像的融合的概率分布图<i>M</i><sub> (<i>n</i>) <i>con</i></sub>的计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="104"><i>M</i><sub> (<i>n</i>) <i>con</i></sub>=<i>w</i><sub> (<i>n</i>) <i>h</i></sub><i>M</i><sub> (<i>n</i>) <i>h</i></sub>+<i>w</i><sub> (<i>n</i>) <i>lbp</i></sub><i>M</i><sub> (<i>n</i>) <i>lbp</i></sub>+<i>w</i><sub> (<i>n</i>) <i>e</i></sub><i>M</i><sub> (<i>n</i>) <i>e</i></sub> (14) </p>
+                </div>
+                <div class="p1">
+                    <p id="105">式中:<i>w</i><sub> (<i>n</i>) <i>h</i></sub>, <i>w</i><sub> (<i>n</i>) <i>lbp</i></sub>, <i>w</i><sub> (<i>n</i>) <i>e</i></sub>就是公式 (11) ～ (13) 中求出来的第<i>n</i>帧图像的H分量特征权值, LBP特征权值以及边缘特征权值。</p>
+                </div>
+                <h3 id="106" name="106" class="anchor-tag"><b>3 平均背景减除法</b></h3>
+                <div class="p1">
+                    <p id="107">根据以上方法求取室内环境的融合概率分布 (如图7所示) , 图7显示的第三帧的概率分布图。</p>
+                </div>
+                <div class="area_img" id="108">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_108.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 frame3融合概率分布" src="Detail/GetImg?filename=images/DZCL201914032_108.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 frame3融合概率分布  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_108.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="109">图7显示的概率分布图中可以看出环境中的背景干扰太大, 噪声太多, 所以需要适当的去除。因为本文跟踪环境的是室内静态环境, 即环境中只认为小车是动态运动的, 而其他物体是静止的, 所以我们就可以采用背景减除法的思想对环境进行去噪, 减除背景的干扰。首先需要对提取的小车视频帧图像进行背景建模, 即建立一张通用的背景图像, 采用的是平均背景建模法, 计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="110"><mathml id="111"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ι</mi><msub><mrow></mrow><mrow><mi>a</mi><mi>v</mi><mi>g</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mi>f</mi><mi>r</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>s</mi></mrow></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>f</mi><mi>r</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi>s</mi></mrow></munderover><mi>Ι</mi></mstyle><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><mi>y</mi><mo stretchy="false">) </mo></mrow></math></mathml>      (15) </p>
+                </div>
+                <div class="p1">
+                    <p id="112">式中:<i>I</i><sub><i>avg</i></sub>表示的是求取的背景图像;<i>frames</i>表示的是采集视频的总共帧数;<i>I</i><sub><i>i</i></sub> (<i>x</i>, <i>y</i>) 表示第视频中的第<i>i</i>帧图像。然后对求取视频中每一帧的前景图, 即去除背景之后的图像, 其计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="113"><i>T</i><sub><i>i</i></sub>=<i>I</i><sub><i>i</i></sub>-<i>I</i><sub><i>avg</i></sub> (16) </p>
+                </div>
+                <div class="p1">
+                    <p id="114">式中:<i>T</i><sub><i>i</i></sub>即为求取的第<i>i</i>帧前景图;<i>I</i><sub><i>i</i></sub>表示视频中第<i>i</i>帧图像;<i>I</i><sub><i>avg</i></sub>是就是上面公式求出来的背景图像。按照上述背景减除法的思路求取视频中第三帧的前景图如图8所示。</p>
+                </div>
+                <div class="area_img" id="115">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_115.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图8 frame3的前景" src="Detail/GetImg?filename=images/DZCL201914032_115.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图8 frame3的前景  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_115.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="116">图8显示的前景图基本去除了背景的干扰, 将得到的前景图与图7的融合概率图进行图像矩阵点乘运算, 就可以得到去除背景干扰的的融合概率图, 如图9所示。</p>
+                </div>
+                <div class="area_img" id="117">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_117.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图9 frame3改进后的融合概率分布" src="Detail/GetImg?filename=images/DZCL201914032_117.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图9 frame3改进后的融合概率分布  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_117.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="118" name="118" class="anchor-tag"><b>4 基于改进的Camshift算法仿真实验和结果分析</b></h3>
+                <div class="p1">
+                    <p id="119">本文实验采用MATLAB 2014开发平台, 运用MATLAB中常见的图像处理库函数编写的软件平台, 视频图像采用手机录像实时采集, 分辨率为720×1 080。为了证明本文改进的Camshift算法的有效性, 分别设置了3种不同的实验条件, 同时采用本文的改进算法与传统的Camshift算法以及不加背景减除法的多特征Camshift算法做比对分析。</p>
+                </div>
+                <div class="p1">
+                    <p id="120">场景1:第1种场景是室内简单的场景, 环境较为单一, 手工标注的第1帧区域为小车车身的特殊蓝色木块, 分别运行传统的Camshift算法, 多特征融合的Camshift算法以及背景减除法的多特征融合的Camshift算法, 运行的部分帧图像如图10和图11所示。</p>
+                </div>
+                <div class="area_img" id="121">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_121.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图10 传统的Camshift 算法跟踪效果" src="Detail/GetImg?filename=images/DZCL201914032_121.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图10 传统的Camshift 算法跟踪效果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_121.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="122">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_122.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图11 多特征融合的Camshift 算法跟踪效果" src="Detail/GetImg?filename=images/DZCL201914032_122.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图11 多特征融合的Camshift 算法跟踪效果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_122.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="123">图10是传统的Camshift跟踪效果图。近距离第45帧跟踪的效果较好, 到了第143帧时, 跟踪框明显变形, 跟踪效果较差, 等到了第192帧时, 物体基本跟踪失败, 跟踪框变的很大。从图10的运行效果来看, 随着小车运动距离变大, 识别的物体越来越小, 即颜色信息越来越弱, 导致跟踪后期完全丢失。</p>
+                </div>
+                <div class="p1">
+                    <p id="124">图11是多特征融合的Camshift算法, 近距离的第45帧图10一样, 跟踪效果很好, 第143帧时跟踪效果较优, 第192帧跟踪框变形。可以看出融合了纹理和边缘特征, 一定程度上能提高跟踪效果, 但是当物体较远时, 特征不明显导致跟踪的效果变差的问题仍然存在。</p>
+                </div>
+                <div class="p1">
+                    <p id="125">图12是本文提出的结合背景减除法的跟踪算法, 可以看出4帧图像跟踪效果都较好, 而且跟踪框基本都会随着物体的变小而变小, 所以基本实现了预期的跟踪效果。</p>
+                </div>
+                <div class="area_img" id="126">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_126.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图12 本文算法跟踪效果" src="Detail/GetImg?filename=images/DZCL201914032_126.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图12 本文算法跟踪效果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_126.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="127">场景2:在跟踪场景中添加颜色干扰的障碍物信息, 手工标注跟踪的目标为特殊的蓝色木块, 分别运行3个算法, 运行的部分帧图像如下图13所示。</p>
+                </div>
+                <div class="area_img" id="128">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_128.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图13 传统的Camshift 算法跟踪效果" src="Detail/GetImg?filename=images/DZCL201914032_128.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图13 传统的Camshift 算法跟踪效果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_128.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="129">从图13中可以看出传统的Camshift算法在跟踪颜色明显的木块时, 第3帧中跟踪效果较好, 在第37帧中设置了蓝色物体作为干扰, 跟踪框变的很大, 并且包含蓝色障碍物在内, 说明单特征跟踪不能很好的抵制颜色的干扰。图14中显示的多特征融合的跟踪效果在第37帧中能够有效的避免颜色的干扰, 但是第73帧时跟踪基本失败, 可以看出随着物体变小, 本身特征变少, 加上周围环境的干扰, 就会影响跟踪的效果。</p>
+                </div>
+                <div class="area_img" id="130">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_130.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图14 多特征融合的Camshift 算法跟踪效果" src="Detail/GetImg?filename=images/DZCL201914032_130.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图14 多特征融合的Camshift 算法跟踪效果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_130.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="131">图15显示的是本文的算法, 从近到远基本都实现了跟踪的效果, 基本可以肯定去除背景法能够抑制周围环境的干扰。</p>
+                </div>
+                <div class="area_img" id="132">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_132.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图15 本文算法跟踪效果" src="Detail/GetImg?filename=images/DZCL201914032_132.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图15 本文算法跟踪效果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_132.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="133">场景3:场景3和场景2基本差不多, 只是手工框定的目标变成了小车整个车身, 不在是特殊的颜色区域。</p>
+                </div>
+                <div class="p1">
+                    <p id="134">图16和图17的运行效果图, 除了近距离的第3帧跟踪基本实现, 后面几帧跟踪都失败, 可以看出, 如果手工框定的目标的区域的特征和周围环境很相似 (图中车身的颜色和地板相似度很高) , 其跟踪效果基本失败, 所以跟踪算法中滤除环境信息的干扰就很重要。</p>
+                </div>
+                <div class="area_img" id="135">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_135.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图16 传统的Camshift 算法跟踪效果" src="Detail/GetImg?filename=images/DZCL201914032_135.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图16 传统的Camshift 算法跟踪效果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_135.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="136">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_136.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图17 多特征融合的Camshift 算法跟踪效果" src="Detail/GetImg?filename=images/DZCL201914032_136.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图17 多特征融合的Camshift 算法跟踪效果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_136.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="137">图18是本文算法的运行效果图, 可以看出所有帧图像的跟踪效果都基本实现, 所以滤除周围相关环境的干扰能明显地提高Camshift算法的跟踪性能。</p>
+                </div>
+                <div class="area_img" id="138">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201914032_138.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图18 本文算法跟踪效果" src="Detail/GetImg?filename=images/DZCL201914032_138.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图18 本文算法跟踪效果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201914032_138.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="139" name="139" class="anchor-tag"><b>5 结  论</b></h3>
+                <div class="p1">
+                    <p id="140">传统的Camshift算法应用到室内小车定位跟踪时, 由于室内环境的复杂性, 造成定位效果性能不好, 本文以一般室内环境作为实验场景, 提出了一种结合背景减除法的自适应多特征融合的改进Camshift算法。首先基于相似度的衡量标准分别确定颜色特征, LBP纹理特征以及边缘特征对跟踪结果的贡献度大小, 并按照贡献度的大小动态分配融合权重, 然后以不同的权重比建立联合直方图, 用来克服单一颜色直方图的跟踪缺陷;结合平均背景减除法的思想, 用来去除复杂背景中噪声的干扰。3种不同的实验环境证明, 本文提出的算法不仅优于传统的Camshift算法跟踪效果, 而且能够实现室内不同环境干扰下小车的准确跟踪, 具有很好的工程实用性。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000017656&amp;v=MDk5MDZud1plWnRGaW5sVXJ6SUkxb2RhQmM9TmlmSVk3SzdIdGpOcjQ5RlpPb0lDbmsvb0JNVDZUNFBRSC9pclJkR2VycVFUTQ==&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> YILMAZ A, JAVED O, SHAH M.Object tracking:A survey[J].ACM Computing Surveys, 2006, 38 (4) :1-45.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GXXB201006038&amp;v=MTU2NzdJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5dmhXcjNOSWpYVGJMRzRIOUhNcVk5R2I=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 唐鹏, 盛鹏, 等.复杂场景下基于条件随机场的视觉目标跟踪[J].光学学报, 2010, 30 (6) :1721-1728.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MOTO200908006&amp;v=MTAyNjViRzRIdGpNcDQ5RllvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5dmhXcjNOS0NMZlk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 刘少华, 张茂军, 熊志辉.一种鲁棒高效的视频运动目标检测与跟踪算法[J].自动化学报, 2009, 35 (8) :1055-1062.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787313082343001&amp;v=Mjk1MDNSWEZxekdiQzVIZEhFcll4Qlorc1BEUk04enhVU21EZDlTSDduM3hFOWZidm5LcmlmWmVadkZ5bm1VN3pNS1Z3&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 杨杰, 张翔.视频目标检测和跟踪及其应用[M].上海:上海交通大学出版社, 2012.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Computer vision face tracking as a component of a perceptual user interface">
+
+                                <b>[5]</b> BRADSKI G R.Computer vision face tracking for use in a perceptual user interface[C].IEEE Workshop on Apolication of Computer Vision, 1998:2014-219.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A robust object tracking method combining shape descriptor and adaptive background camshift">
+
+                                <b>[6]</b> ZHU Y, XU B.A robust object tracking method combining shape descriptor and adaptive background camshift[C].International Conference on Natural Compution, IEEE, 2015:930-933.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KZYC201407024&amp;v=MjY4OTBYTXFJOUhZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeXZoV3IzTkxqZlNiYkc0SDk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> YANG X, FEI S M, LI G, et al.Improved meanshift tracking algorithm based on comolicated feature fusion[J].Control and Decision, 2014, 29 (7) :1297-1300.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJA201506067&amp;v=MjExNTdCdEdGckNVUjdxZlp1WnRGeXZoV3IzTkx6N0JiN0c0SDlUTXFZOURZNFFLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 徐一鸣, 陆观, 顾菊平.基于N-LBP纹理与色度信息的Camshift跟踪算法[J].计算机科学, 2015, 42 (6) :313-316.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HDZJ201207047&amp;v=MDA3MjRaTEc0SDlQTXFJOUJZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeXZoV3IzTkxTblI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 赵文倩, 匡逊君, 李明富.基于改进的Camshift 运动目标跟踪算法的研究[J].信息技术, 2012 (7) :165-169.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1011199270.nh&amp;v=MDAzNzRFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5dmhXcjNOVkYyNkg3S3hGOVBMcjU=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 刘俊.运动目标的检测与跟踪算法研究[D].武汉:武汉科技大学, 2011.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Moving Object Tracking Method Based o n Improved Camshift Algorithm">
+
+                                <b>[11]</b> HAN Z, ZHANG R, WEN L, et, al.Moving object tracking method based on improved camshift algorithm[C].International Conference on Industrial Informatics-Computing Technology, Intelligent Technology, Industrial Information Integration.IEEE, 2016:91-95.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Kernel-Based Object Tracking">
+
+                                <b>[12]</b> COMANICIUD, RAMESHV, MEER P.Kernel-based object tracking[J].IEEE Transactions on Pattern Analysis and Machine Intelligence, 2003, 25 (5) :546-577.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Object tracking using Camshift algorithm and multiple quantized feature spaces">
+
+                                <b>[13]</b> ALLEN J G, XU RYD, JIN J S.Object tracking using Camshift algorithm and multiple quantized feature spaces[D].Sydnery:University of Sydney, 2006.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=GWCL201810031&amp;v=MDU0ODY0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5dmhXcjNOSWpySVlyRzRIOW5OcjQ5R1pZUUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 卫建华, 王亚峰, 廉继红, 等.基于Camshift实现Android平台下的目标追踪[J].国外电子测量技术, 2018, 4 (12) :135-138.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201212017&amp;v=MTI3MDBGckNVUjdxZlp1WnRGeXZoV3IzTklUZklZckc0SDlQTnJZOUVZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 袁国武, 丁海燕, 周浩, 等.结合局部纹理和色度的运动目标检测方法[J].电子测量技术, 2012, 35 (12) :55-59.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZIY201609015&amp;v=MzIxOTMzenFxQnRHRnJDVVI3cWZadVp0Rnl2aFdyM05JVGZDZDdHNEg5Zk1wbzlFWVlRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> 彭同胜, 刘小燕, 龚军辉, 等.基于颜色匹配和改进LBP 的胶囊内镜视频缩减[J].电子测量与仪器学报, 2016, 30 (9) :1379-1388.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DSSS201205037&amp;v=MzE4NjFUN1lmYkc0SDlQTXFvOUdZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeXZoV3IzTkk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b> 张良, 郑世宝, 杨华.一种特征融合的带宽自适应MeanShift 跟踪算法[J].电视技术, 2012, 36 (5) :118-121.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="DZCL201914032" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201914032&amp;v=MzA0MzJxNDlHWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl2aFdyM0tJVGZJWXJHNEg5ak4=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekd3QkxsbWVobFYrZnFaTmhSdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=NLcKG8I1SJUaVFrQ0iGpF2klAT0OsmHRaVSZ1rKb5xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

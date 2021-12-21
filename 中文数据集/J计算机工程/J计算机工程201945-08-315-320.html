@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637129056078868750%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201908051%26RESULT%3d1%26SIGN%3dtWY9dRBX0KgPe06mjQEclOZi92I%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201908051&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201908051&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201908051&amp;v=Mjc3MTNDam1VcjdQTHo3QmJiRzRIOWpNcDQ5QVpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScUY=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#47" data-title="1 相关研究 ">1 相关研究</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#52" data-title="2 实验语料构建 ">2 实验语料构建</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#54" data-title="2.1 数据预处理">2.1 数据预处理</a></li>
+                                                <li><a href="#57" data-title="2.2 语料的命名实体标注规范">2.2 语料的命名实体标注规范</a></li>
+                                                <li><a href="#61" data-title="2.3 评价词与评价对象的联合标注">2.3 评价词与评价对象的联合标注</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#65" data-title="3 识别隐性评价对象的模型 ">3 识别隐性评价对象的模型</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#70" data-title="3.1 BiLSTM与BiGRU模型">3.1 BiLSTM与BiGRU模型</a></li>
+                                                <li><a href="#78" data-title="3.2 BiLSTM+CRF模型与BiGRU+CRF模型">3.2 BiLSTM+CRF模型与BiGRU+CRF模型</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#92" data-title="4 实验结果与分析 ">4 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#93" data-title="4.1 实验数据准备">4.1 实验数据准备</a></li>
+                                                <li><a href="#103" data-title="4.2 模型构建与训练">4.2 模型构建与训练</a></li>
+                                                <li><a href="#108" data-title="4.3 结果分析">4.3 结果分析</a></li>
+                                                <li><a href="#112" data-title="4.4 模型优化">4.4 模型优化</a></li>
+                                                <li><a href="#118" data-title="4.5 模型使用">4.5 模型使用</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#120" data-title="5 结束语 ">5 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#59" data-title="&lt;b&gt;表1 餐饮外卖命名部分实体标注规则&lt;/b&gt;"><b>表1 餐饮外卖命名部分实体标注规则</b></a></li>
+                                                <li><a href="#68" data-title="&lt;b&gt;图1 神经单元示意图&lt;/b&gt;"><b>图1 神经单元示意图</b></a></li>
+                                                <li><a href="#72" data-title="&lt;b&gt;图2 BiLSTM与BiGRU示意图&lt;/b&gt;"><b>图2 BiLSTM与BiGRU示意图</b></a></li>
+                                                <li><a href="#80" data-title="&lt;b&gt;图3 BiLSTM/BiGRU+CRF模型结构&lt;/b&gt;"><b>图3 BiLSTM/BiGRU+CRF模型结构</b></a></li>
+                                                <li><a href="#106" data-title="&lt;b&gt;表2 3种模型的参数设置&lt;/b&gt;"><b>表2 3种模型的参数设置</b></a></li>
+                                                <li><a href="#110" data-title="&lt;b&gt;表3 3种模型的实验评估结果&lt;/b&gt;"><b>表3 3种模型的实验评估结果</b></a></li>
+                                                <li><a href="#116" data-title="&lt;b&gt;表4 2种模型的参数调节示例&lt;/b&gt;"><b>表4 2种模型的参数调节示例</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="140">
+
+
+                                    <a id="bibliography_1" title=" SCHOUTEN K, BOER N D, LAM T, et al.Semantics-driven implicit aspect detection in consumer reviews[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2015:109-110." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Semantics-driven implicit aspect detection in consumer reviews">
+                                        <b>[1]</b>
+                                         SCHOUTEN K, BOER N D, LAM T, et al.Semantics-driven implicit aspect detection in consumer reviews[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2015:109-110.
+                                    </a>
+                                </li>
+                                <li id="142">
+
+
+                                    <a id="bibliography_2" title=" XU Hua, ZHANG Fan, WANG Wei.Implicit feature identification in Chinese reviews using explicit topic mining model[J].Knowledge-Based Systems, 2015, 76:166-175." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14123100020766&amp;v=MDE4OTBqbVVMdkxJRjBWYXhVPU5pZk9mYks4SDlQUHJvOUZaT2tQQzNvL29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         XU Hua, ZHANG Fan, WANG Wei.Implicit feature identification in Chinese reviews using explicit topic mining model[J].Knowledge-Based Systems, 2015, 76:166-175.
+                                    </a>
+                                </li>
+                                <li id="144">
+
+
+                                    <a id="bibliography_3" title=" 江腾蛟, 万常选, 刘德喜, 等.基于语义分析的评价对象-情感词对抽取[J].计算机学报, 2017, 40 (3) :617-633." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201703006&amp;v=MjY3NTBScUZDam1VcjdQTHo3QmRyRzRIOWJNckk5RllvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmU=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         江腾蛟, 万常选, 刘德喜, 等.基于语义分析的评价对象-情感词对抽取[J].计算机学报, 2017, 40 (3) :617-633.
+                                    </a>
+                                </li>
+                                <li id="146">
+
+
+                                    <a id="bibliography_4" title=" ZHANG Fan, XU Hua, BAI Xiaoli.On the need of hierarchical emotion classification:detecting the implicit feature using constrained topic model[J].Intelligent Data Analysis, 2017, 21 (6) :1393-1406." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=On the need of hierarchical emotion classification:detecting the implicit feature using constrained topic model">
+                                        <b>[4]</b>
+                                         ZHANG Fan, XU Hua, BAI Xiaoli.On the need of hierarchical emotion classification:detecting the implicit feature using constrained topic model[J].Intelligent Data Analysis, 2017, 21 (6) :1393-1406.
+                                    </a>
+                                </li>
+                                <li id="148">
+
+
+                                    <a id="bibliography_5" title=" 彭云, 万常选, 江腾蛟, 等.基于语义约束LDA的商品特征和情感词提取[J].软件学报, 2017, 28 (3) :676-693." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201703013&amp;v=MTgzMzdCdEdGckNVUkxPZVplUnFGQ2ptVXI3UE55ZlRiTEc0SDliTXJJOUVaNFFLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         彭云, 万常选, 江腾蛟, 等.基于语义约束LDA的商品特征和情感词提取[J].软件学报, 2017, 28 (3) :676-693.
+                                    </a>
+                                </li>
+                                <li id="150">
+
+
+                                    <a id="bibliography_6" title=" 仇光, 郑淼, 张晖, 等.基于正则化主题建模的隐式产品属性抽取[J].浙江大学学报 (工学版) , 2011, 45 (2) :288-294." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZDZC201102016&amp;v=MDUzNzh0R0ZyQ1VSTE9lWmVScUZDam1VcjdQUHluUmJiRzRIOURNclk5RVlvUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         仇光, 郑淼, 张晖, 等.基于正则化主题建模的隐式产品属性抽取[J].浙江大学学报 (工学版) , 2011, 45 (2) :288-294.
+                                    </a>
+                                </li>
+                                <li id="152">
+
+
+                                    <a id="bibliography_7" title=" 杜嘉忠, 徐健, 刘颖.网络商品评论的特征-情感词本体构建与情感分析方法研究[J].数据分析与知识发现, 2014, 30 (5) :74-82." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201405010&amp;v=MjE5OTdCdEdGckNVUkxPZVplUnFGQ2ptVXI3UFBTbmZmN0c0SDlYTXFvOUVaSVFLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         杜嘉忠, 徐健, 刘颖.网络商品评论的特征-情感词本体构建与情感分析方法研究[J].数据分析与知识发现, 2014, 30 (5) :74-82.
+                                    </a>
+                                </li>
+                                <li id="154">
+
+
+                                    <a id="bibliography_8" title=" CRUZ I, GELBUKH A, SIDOROV G.Implicit aspect indicator extraction for aspect-based opinion mining[J].International Journal of Computational Linguistics and Applications, 2014, 5 (2) :135-152." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Implicit aspect indicator extraction for aspect-based opinion mining">
+                                        <b>[8]</b>
+                                         CRUZ I, GELBUKH A, SIDOROV G.Implicit aspect indicator extraction for aspect-based opinion mining[J].International Journal of Computational Linguistics and Applications, 2014, 5 (2) :135-152.
+                                    </a>
+                                </li>
+                                <li id="156">
+
+
+                                    <a id="bibliography_9" title=" SCHOUTEN K, FRASINCAR F.Implicit feature extraction for sentiment analysis in consumer reviews[C]//Proceedings of International Conference on Applications of Natural Language to Data Bases/Information Systems.Berlin, Germany:Springer, 2014:228-231." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Implicit feature extraction for sentiment analysis in consumer reviews">
+                                        <b>[9]</b>
+                                         SCHOUTEN K, FRASINCAR F.Implicit feature extraction for sentiment analysis in consumer reviews[C]//Proceedings of International Conference on Applications of Natural Language to Data Bases/Information Systems.Berlin, Germany:Springer, 2014:228-231.
+                                    </a>
+                                </li>
+                                <li id="158">
+
+
+                                    <a id="bibliography_10" title=" SONDHI P, SONDHI P, ZHAI Chengxiang.Generative feature language models for mining implicit features from customer reviews[C]//Proceedings of ACM International Conference on Information and Knowledge Management.New York, USA:ACM Press, 2016:929-938." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Generative feature language models for mining implicit features from customer reviews">
+                                        <b>[10]</b>
+                                         SONDHI P, SONDHI P, ZHAI Chengxiang.Generative feature language models for mining implicit features from customer reviews[C]//Proceedings of ACM International Conference on Information and Knowledge Management.New York, USA:ACM Press, 2016:929-938.
+                                    </a>
+                                </li>
+                                <li id="160">
+
+
+                                    <a id="bibliography_11" title=" PORIA S, CAMBRIA E, GELBUKH A.Aspect extraction for opinion mining with a deep convolutional neural network[J].Knowledge-Based Systems, 2016, 108:42-49." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Aspect Extraction For Opinion Mining With A Deep Convolutional Neural Ne twork">
+                                        <b>[11]</b>
+                                         PORIA S, CAMBRIA E, GELBUKH A.Aspect extraction for opinion mining with a deep convolutional neural network[J].Knowledge-Based Systems, 2016, 108:42-49.
+                                    </a>
+                                </li>
+                                <li id="162">
+
+
+                                    <a id="bibliography_12" title=" CHEN Huanyuan, CHEN Hsinhsi.Implicit polarity and implicit aspect recognition in opinion mining[C]//Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics.[S.l.]:Association for Computational Linguistics, 2016:20-25." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Implicit polarity and implicit aspect recognition in opinion mining">
+                                        <b>[12]</b>
+                                         CHEN Huanyuan, CHEN Hsinhsi.Implicit polarity and implicit aspect recognition in opinion mining[C]//Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics.[S.l.]:Association for Computational Linguistics, 2016:20-25.
+                                    </a>
+                                </li>
+                                <li id="164">
+
+
+                                    <a id="bibliography_13" title=" KIM Y.Convolutional neural networks for sentence classification[EB/OL].[2018-06-01].https://arxiv.org/pdf/1408.5882.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Convolutional neural networks for sentence classification">
+                                        <b>[13]</b>
+                                         KIM Y.Convolutional neural networks for sentence classification[EB/OL].[2018-06-01].https://arxiv.org/pdf/1408.5882.pdf.
+                                    </a>
+                                </li>
+                                <li id="166">
+
+
+                                    <a id="bibliography_14" title=" FENG Jinzhan, CAI Shuqin, MA Xiaomeng.Enhanced sentiment labeling and implicit aspect identification by integration of deep convolution neural network and sequential algorithm[J].Cluster Computing, 2018 (1) :1-19." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Enhanced sentiment labeling and implicit aspect identification by integration of deep convolution neural network and sequential algorithm">
+                                        <b>[14]</b>
+                                         FENG Jinzhan, CAI Shuqin, MA Xiaomeng.Enhanced sentiment labeling and implicit aspect identification by integration of deep convolution neural network and sequential algorithm[J].Cluster Computing, 2018 (1) :1-19.
+                                    </a>
+                                </li>
+                                <li id="168">
+
+
+                                    <a id="bibliography_15" title=" BENGIO Y, SIMARD P, FRASCONI P.Learning long-term dependencies with gradient descent is difficult[J].IEEE Transactions on Neural Networks, 1994, 5 (2) :157-166." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning long-term dependencies with gradient descent is difficult">
+                                        <b>[15]</b>
+                                         BENGIO Y, SIMARD P, FRASCONI P.Learning long-term dependencies with gradient descent is difficult[J].IEEE Transactions on Neural Networks, 1994, 5 (2) :157-166.
+                                    </a>
+                                </li>
+                                <li id="170">
+
+
+                                    <a id="bibliography_16" title=" HOCHREITER S, SCHMIDHUBER J.Long short-term memory[J].Neural Computation, 1997, 9 (8) :1735-1780." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJBK&amp;filename=SJBK15090500014198&amp;v=MDcwOTJEWFV4b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTHZMSUYwVmF4VT1OaWZKWmJLOUh0ak1xbzlGWk9vTA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         HOCHREITER S, SCHMIDHUBER J.Long short-term memory[J].Neural Computation, 1997, 9 (8) :1735-1780.
+                                    </a>
+                                </li>
+                                <li id="172">
+
+
+                                    <a id="bibliography_17" title=" CHUNG J, GULCEHRE C, CHO K, et al.Empirical evaluation of gated recurrent neural networks on sequence modeling[EB/OL].[2018-06-01].https://arxiv.org/pdf/1412.3555v1.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Empirical evaluation of gated recurrent neural networks on sequence modeling">
+                                        <b>[17]</b>
+                                         CHUNG J, GULCEHRE C, CHO K, et al.Empirical evaluation of gated recurrent neural networks on sequence modeling[EB/OL].[2018-06-01].https://arxiv.org/pdf/1412.3555v1.pdf.
+                                    </a>
+                                </li>
+                                <li id="174">
+
+
+                                    <a id="bibliography_18" title=" MIKOLOV T, CHEN K, CORRADO G, et al.Efficient estima-tion of word representations in vector space[EB/OL].[2018-06-01].https://arxiv.org/pdf/1301.3781.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+                                        <b>[18]</b>
+                                         MIKOLOV T, CHEN K, CORRADO G, et al.Efficient estima-tion of word representations in vector space[EB/OL].[2018-06-01].https://arxiv.org/pdf/1301.3781.pdf.
+                                    </a>
+                                </li>
+                                <li id="176">
+
+
+                                    <a id="bibliography_19" title=" RANA R.Gated recurrent unitfor emotion classification from noisy speech[EB/OL].[2018-06-01].https://arxiv.org/pdf/1612.07778.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Gated recurrent unitfor emotion classification from noisy speech">
+                                        <b>[19]</b>
+                                         RANA R.Gated recurrent unitfor emotion classification from noisy speech[EB/OL].[2018-06-01].https://arxiv.org/pdf/1612.07778.pdf.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(08),315-320 DOI:10.19678/j.issn.1000-3428.0051831            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于深度学习的隐性评价对象识别方法</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E4%BB%81%E6%AD%A6&amp;code=07540687&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王仁武</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E6%96%87%E6%85%A7&amp;code=39577935&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张文慧</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8D%8E%E4%B8%9C%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E7%BB%8F%E6%B5%8E%E4%B8%8E%E7%AE%A1%E7%90%86%E5%AD%A6%E9%83%A8%E4%BF%A1%E6%81%AF%E7%AE%A1%E7%90%86%E7%B3%BB&amp;code=0092795&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">华东师范大学经济与管理学部信息管理系</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>在线评论文本具有口语化的特点, 其评价词缺少对应的评价对象, 影响了细粒度情感分析的效果。为此, 提出一种利用深度学习自动识别评价对象的方法。设计研究领域的文本序列标注规范, 在对评论语料分词后, 进行评价词与评价对象的命名实体标注, 得到单词序列、词性序列和标注序列。将单词序列、词性序列转为神经网络语言模型的词向量, 并用循环神经网络进行训练, 采用条件随机场 (CRF) 输出评价对象标签, 得到缺失的评价对象。实验结果表明, 与单一CRF模型相比, BiLSTM+CRF模型和BiGRU+CRF模型的识别效果较好, BiGRU+CRF模型的<i>F</i>1值最高可达0.84。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%9A%90%E6%80%A7%E8%AF%84%E4%BB%B7%E5%AF%B9%E8%B1%A1&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">隐性评价对象;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%9A%90%E6%80%A7%E7%89%B9%E5%BE%81&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">隐性特征;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">深度学习;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">循环神经网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%9D%A1%E4%BB%B6%E9%9A%8F%E6%9C%BA%E5%9C%BA&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">条件随机场;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%91%BD%E5%90%8D%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">命名实体识别;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    王仁武 (1968—) , 男, 副教授、博士, 主研方向为数据分析、数据挖掘;E-mail: rwwang@ infor. ecnu. edu. cn;
+                                </span>
+                                <span>
+                                    张文慧, 硕士研究生。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-06-15</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家社会科学基金“基于数据驱动的图书馆资源发现系统平台研究” (16BTQ026);</span>
+                    </p>
+            </div>
+                    <h1><b>Implicit Evaluation Object Recognition Method Based on Deep Learning</b></h1>
+                    <h2>
+                    <span>WANG Renwu</span>
+                    <span>ZHANG Wenhui</span>
+            </h2>
+                    <h2>
+                    <span>Department of Information Management, Faculty of Economics and Management, East China Normal University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Online review text has the characteristics of colloquialism, and its evaluation words lack corresponding evaluation objects, which affects the effect of fine-grained sentiment analysis.Therefore, a method of automatic identification of evaluation objects based on deep learning is proposed.The specification of text sequence annotation in the research field is designed, the Named Entity Recognition (NER) of the evaluation word, as well as the evaluation object after the comment word segmentation is annotated, and the word sequence, the word part sequence and the tagging sequence are achieved.Transfer the word sequence and the word part sequence to the word vectors of the neural network language model, and train them with Recurrent Neural Network (RNN) .Conditional Random Field (CRF) is used to output the tag of the evaluation object, and the evaluation object is achieved as well.Experimental results show that compared with single CRF model, BiLSTM+CRF model and BiGRU+CRF model have better recognition effects and the <i>F</i>1 value of BiGRU+CRF model can reach up to 0.84.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=implicit%20evaluation%20object&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">implicit evaluation object;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=implicit%20feature&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">implicit feature;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=deep%20learning&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">deep learning;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Recurrent%20Neural%20Network%20(RNN)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Recurrent Neural Network (RNN) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Conditional%20Random%20Field%20(CRF)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Conditional Random Field (CRF) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Named%20Entity%20Recognition%20(NER)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Named Entity Recognition (NER) ;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-06-15</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="43" name="43" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="44">网络上的在线评论越来越得到企事业单位和个人的重视, 通过这些评论, 客户可以获得产品的评估信息并将其应用于采购行为。同时, 商家可以及时获得反馈, 以提高产品和服务质量。因此, 对在线评论的情感分析 (或意见挖掘、观点挖掘) 的需求变得越来越迫切, 该技术吸引了研究人员的广泛关注。情感分析方法可分为粗粒度的分析方法和细粒度的分析方法。粗粒度的方法针对整个句子或段落的情感极性进行分析, 而细粒度的方法要解决单词或短语的情感极性问题, 目前使用较多的是粗粒度的分析方法。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">本文采用循环神经网络 (Recurrent Neural Network, RNN) 来获取评论中的隐性特征, 其在文本理解和知识推断方面表现较好。对于细粒度情感分析, 首先要识别评论文本中体现用户观点的领域实体与属性, 即评价对象 (或称特征词) 。由于具有短文本特征, 多数评论文本较简短且使用口语化的语言, 且未表明评价对象, 因此需通过上下文关系认知发现并补齐。在使用神经网络模型进行情感分析时, 需要向神经网络提供经过人工标注的语料。例如, 要识别图片中的猫, 只需标注图片是否为猫即可, 无需给出猫的胡须、耳朵、眼睛等特征, 然后利用神经网络调节联结权重, 通过输入数据 (图片) 与调节后权重的矢量乘积, 产生图中是否是猫的预测。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">本文对隐性评价对象的识别同样基于对评论文本的人工序列标注, 在此基础上利用循环神经网络来推断隐性的评价对象。</p>
+                </div>
+                <h3 id="47" name="47" class="anchor-tag">1 相关研究</h3>
+                <div class="p1">
+                    <p id="48">获取&lt;评价对象, 评价词&gt;对是细粒度情感分析的基础。评价对象也称为特征词, 是评论文本描述的实体或属性, 评价词也称为意见词、评价词、情感词或观点词。细粒度情感分析一般分为:检测评价对象, 对评价对象进行情感打分或分类2个步骤<citation id="178" type="reference"><link href="140" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。例如, 在餐饮外卖领域, 实体的评价对象可以是食品、服务、配送、价格等, 这些实体的属性可以是食品的口味、服务的满意度、配送的速度等。评价对象可以是显性的, 也可以是隐性的。隐性评价对象的识别较困难, 不同领域有不同的用词习惯。同样的评价词也可能用来描述不同的评价对象。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">对于隐性评价对象或隐性特征的检测、识别、抽取的方法较多, 常用的有混合规则<citation id="179" type="reference"><link href="142" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>、隐语义模型<citation id="180" type="reference"><link href="144" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>、主题模型<citation id="185" type="reference"><link href="146" rel="bibliography" /><link href="148" rel="bibliography" /><link href="150" rel="bibliography" /><sup>[<a class="sup">4</a>,<a class="sup">5</a>,<a class="sup">6</a>]</sup></citation>等。文献<citation id="181" type="reference">[<a class="sup">7</a>]</citation>通过建立网络商品评论的特征-情感词本体及其多元组[部件, 属性, 副词, 情感词]来识别隐性特征。例如, “手机很卡”的特征-情感词多元组为[操作系统, 流畅度, NULL, 卡], “卡”用来描述操作系统的流畅度, 即利用本体概念的相互关系, 映射得到隐性特征。文献<citation id="182" type="reference">[<a class="sup">8</a>]</citation>利用命名实体识别 (Named Entity Recognition, NER) 的标注方法人工标注出评论文本中的单词或短语是否为隐性特征, 隐性特征标注为I, 其余的标注为O, 例如, “This phone is sleek and very affordable.”这句评论标注为 (‘sleek’, I) 、 (‘affordable’, I) , 其余标注为O。然后应用条件随机场 (Conditional Random Field, CRF) 来进行机器学习, 实验结果证明该方法比朴素贝叶斯等方法更优越。文献<citation id="183" type="reference">[<a class="sup">9</a>]</citation>对概念词单独出现而无特征词时的隐性特征选择方法进行改进, 其通过已人工标注的隐性特征与概念词的共现, 根据文本中单词的选择来预测隐性特征。文献<citation id="184" type="reference">[<a class="sup">10</a>]</citation>提出一种特征语言生成模型, 基于无监督统计学习, 使用期望最大化算法自动优化参数, 以有效挖掘隐性特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">近年来, 已有研究者将深度学习应用于情感分析领域, 在商品评论的属性抽取上也有一些尝试, 但针对隐性属性的研究较少。文献<citation id="186" type="reference">[<a class="sup">11</a>]</citation>提出一个7层卷积网络, 把预先训练的词向量与词性向量连接起来作为深度学习的输入, 从而预测一个单词是否为隐性属性, 为了提高识别的准确度, 该方法引入语言规则, 改善其抽取效果。该方法虽然提出了抽取隐性属性的目标, 但并没有给出其在隐性属性上的表现。文献<citation id="187" type="reference">[<a class="sup">12</a>]</citation>基于周边短句的显性属性与显性观点, 构建了一个隐性属性、隐性观点的双隐识别语料。该方法将文献<citation id="188" type="reference">[<a class="sup">13</a>]</citation>的卷积神经网络应用于隐性属性和隐性观点的抽取, 在T41-test数据集上取得了较好的隐性属性识别结果。文献<citation id="189" type="reference">[<a class="sup">14</a>]</citation>提出一种将深度卷积神经网络与顺序算法相结合来对句子中的单词进行标注的方法, 在获得情感标签后, 构造[特征, 情感开关, 情感强度, 情感词]的四元组。例如, 在“4天充一次电, 真的很耐用”这句话中, 识别出“耐用”是情感标签, 构造的四元组为[无, 无, 很, 耐用], 因为四元组中特征这一项为无, 所以情感词“耐用”对应的特征为隐性特征, 然后通过统计学习的概率计算法, 得到“耐用”对应的隐性特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">在上述分析中, 文献<citation id="190" type="reference">[<a class="sup">8</a>]</citation>尽管应用了人工标注的方法, 但是只限于识别一个评价词是否为隐性特征, 并没有给出具体对应的特征。文献<citation id="191" type="reference">[<a class="sup">14</a>]</citation>应用深度学习识别情感标签, 其对应的评价对象则通过构造四元组和统计学习获得。其他基于规则、概念词共现、主题等的方法都是无监督方法, 可靠性难以保证。本文方法不同于已有的研究, 通过设计有语义关系的标签体系构建含有隐性特征的实验语料, 利用循环神经网络进行训练, 使用CRF预测文本序列标签的分类结果, 以提高隐性评价对象识别的准确性。</p>
+                </div>
+                <h3 id="52" name="52" class="anchor-tag">2 实验语料构建</h3>
+                <div class="p1">
+                    <p id="53">本文针对餐饮外卖领域进行细粒度情感分析。国家信息中心发布的《中国共享经济发展年度报告 (2018) 》显示, 中国已有近四成网民使用网络外卖服务, 美团外卖用户数超2.5亿, 占据62%的国内市场份额。对餐饮外卖领域的数据进行分析具有重要意义。</p>
+                </div>
+                <h4 class="anchor-tag" id="54" name="54">2.1 数据预处理</h4>
+                <div class="p1">
+                    <p id="55">本文以美团外卖的在线评论数据作为语料来源, 采集2017年3月—2018年3月上海部分地区的在线评论数据。因网络评论中加入了大量的网络语言、图片和表情符号等无法利用的信息, 需进行清洗, 去除无效的评论后得到有效评论数据9 718条。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">由于本文研究的是词向量而非字向量, 因此首先要对评论文本进行分词。商业领域的分词需要应用行业或领域词典, 例如本文针对餐饮外卖领域, 其词典包含各类菜品, 以及与之相关的口味、外观、评价的情感词等。</p>
+                </div>
+                <h4 class="anchor-tag" id="57" name="57">2.2 语料的命名实体标注规范</h4>
+                <div class="p1">
+                    <p id="58">本文使用Bakeoff-3评测中所采用的BIO2标注集。由于在特定领域中所要标注的实体类型各有差异, 因此在对餐饮外卖领域进行命名实体标注时, 制定了一系列标注规则, 其部分标注规则如表1所示。</p>
+                </div>
+                <div class="area_img" id="59">
+                    <p class="img_tit"><b>表1 餐饮外卖命名部分实体标注规则</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="59" border="1"><tr><td>标签</td><td>标签含义</td><td>标注标签</td><td>标注范围</td></tr><tr><td>F</td><td>Food&amp;Drinks, 饮食</td><td>无</td><td>菜品、主食、酒水等</td></tr><tr><td><br />FF</td><td>Food Item, 菜品</td><td>B-FF、I-FF</td><td>各类菜品与主食等</td></tr><tr><td><br />FFT</td><td>Food Taste, 菜品味道</td><td>B-FFT、I-FFT</td><td>好吃、甜咸、滋味等</td></tr><tr><td><br />FFQ</td><td>Food Quality, 菜品质量</td><td>B-FFQ、I-FFQ</td><td>营养、色泽、香气等</td></tr><tr><td><br />FFS</td><td>Food Quality, 菜品分量</td><td>B-FFS、I-FFS</td><td>菜量、饭量、多、少等</td></tr><tr><td><br />FI</td><td>Ingrediants, 配料</td><td>B-FI、I-FI</td><td>姜、葱、辣椒、花椒等</td></tr><tr><td><br />FD</td><td>Drink, 饮料</td><td>B-FD、I-FD</td><td>奶茶、可乐、酸梅汤等</td></tr><tr><td><br />D</td><td>Delivery, 配送</td><td>无</td><td>配送、送餐有关内容</td></tr><tr><td><br />DF</td><td>Delivery Food, 送餐</td><td>B-DF、I-DF</td><td>送餐、送到等</td></tr><tr><td><br />DP</td><td>Delivery Personnel, 配送人员</td><td>B-DP、I-DP</td><td>送餐员、外卖小哥等</td></tr><tr><td><br />DS</td><td>Delivery Speed, 配送速度</td><td>B-DS、I-DS</td><td>速度、快、满等</td></tr><tr><td><br />S</td><td>Service, 服务</td><td>无</td><td>服务有关的内容</td></tr><tr><td><br />SA</td><td>Service Attitude, 服务态度</td><td>B-SA、I-SA</td><td>态度、素质等</td></tr><tr><td><br />SR</td><td>Service Return, 退货</td><td>B-SR、I-SR</td><td>退或、退钱等</td></tr><tr><td><br />B-SS</td><td>Customer Service, 客服</td><td>B-SS、I-SS</td><td>客服人员等</td></tr><tr><td><br />P</td><td>Price, 价格</td><td>无</td><td>价格、优惠有关等</td></tr><tr><td><br />PF</td><td>Food Price, 饮食价格</td><td>B-PF、I-PF</td><td>菜品、饮料价格等</td></tr><tr><td><br />PD</td><td>Delivery Price, 配送价格</td><td>B-PD、I-PD</td><td>配送、服务价格等</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="60">表1给出的实体类型标注规则属于评价对象的范畴, 对于评价词同样需要设置一个标签:B-EW。评价标签如需组合, 则将B换成I即可。将不属于上述标签范围的内容标注为O。</p>
+                </div>
+                <h4 class="anchor-tag" id="61" name="61">2.3 评价词与评价对象的联合标注</h4>
+                <div class="p1">
+                    <p id="62">在有了标注规范后, 就可对语料预处理后的评论数据进行人工标注。常规的标注方法将每个词标注为词/词性/标注标签3个部分。例如:好吃/a/B-EW, 表示单词“好吃”是形容词, 也是评价词, B表示一个独立的标签或一个组合标签的开始。本文为了识别隐性的评价对象, 需在评价词的B-EW标注后加上其所对应的评价对象的标注标签。例如, 对于“菜品好吃, 价格又不贵”, 标注为“菜品/n/B-FF 好吃/a/B-EW|B-FFT , /x/O 价格/n/B-FP 又/uj/O 不贵/a/B-EW|B-PF”, 这里的评价词“好吃”“不贵”对应的评价对象已知, 分别为“菜品”“价格”, 即为显性评价对象。尽管“好吃”对应的更准确的评价对象是“菜品味道”, 但在中文语境中不会产生混淆, 因此本文不做严格区分。对于“好吃, 又不贵”这种在评论文本中常见且口语化的评论语句, 因缺少评价对象, 其为隐性特征, 因此“好吃”标注为好吃/a/B-EW|B-FFT, “不贵”标注为不贵/a/B-EW|B-PF。无论是显性评价对象, 还是隐性评价对象, 在评价词上除了标注其为评价词之外, 还需标注其所对应的特征 (或隐性特征) 的标签。</p>
+                </div>
+                <div class="p1">
+                    <p id="63">本文标注方法符合联结主义思想的要求, 尽管不需要详细的特征工程, 但仍然要标注出神经网络学习所需的目标, 即给出缺少评价对象的评价词所对应的评价对象, 以便神经网络通过权重调节自主学习评价词对应的评价对象, 当遇到类似的评价词时, 就能够较准确地预测出该评价词的评价对象。</p>
+                </div>
+                <div class="p1">
+                    <p id="64">由于人工标注难免有错误和不一致的地方, 因此在标注完成后, 必须做好标注质量管理。较好的解决办法是使用具有质量控制功能或者有标注质量检查程序的标注系统来进行实验。</p>
+                </div>
+                <h3 id="65" name="65" class="anchor-tag">3 识别隐性评价对象的模型</h3>
+                <div class="p1">
+                    <p id="66">本文使用深度学习的双向循环神经网络 (Bidirectional Recurrent Neural Network, BiRNN) 进行实验, 神经元分别采用长短期记忆网络 (Long Short-Term Memory, LSTM) 和门限循环单元 (Gated Recurrent Unit, GRU) , 即分别使用双向LSTM (Bidirectional LSTM, BiLSTM) 和双向GRU (Bidirectional GRU, BiGRU) 学习经过人工标注的中文在线评论文本的单词序列、词性序列, 输出使用CRF进行控制。对比实验在同样的语料上使用单一的CRF模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="67">图1给出传统的BP神经网络、RNN、LSTM和GRU神经单元输入输出过程的示意图。</p>
+                </div>
+                <div class="area_img" id="68">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201908051_068.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 神经单元示意图" src="Detail/GetImg?filename=images/JSJC201908051_068.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 神经单元示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201908051_068.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="69">图1 (a) 表示BP神经网络的示意图, 同层的神经元之间没有联系, 即<i>h</i><sup> (<i>t</i>) </sup>与<i>h</i><sup> (<i>t</i>-1) </sup>没有关系。图1 (b) 表示RNN, 其带有循环连接的前馈神经网络的修正, 同层的神经元之间有交互, 即<i>h</i><sup> (<i>t</i>) </sup>由<i>x</i><sup> (<i>t</i>) </sup>和在<i>t</i>-1位置的隐藏状态<i>h</i><sup> (<i>t</i>-1) </sup>共同决定。图1 (c) 给出LSTM神经单元的基本结构, 其为RNN的改进<citation id="193" type="reference"><link href="168" rel="bibliography" /><link href="170" rel="bibliography" /><sup>[<a class="sup">15</a>,<a class="sup">16</a>]</sup></citation>。图1 (d) 给出GRU神经单元的基本结构<citation id="192" type="reference"><link href="172" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>, 其为RNN的另一种优化形式。</p>
+                </div>
+                <h4 class="anchor-tag" id="70" name="70">3.1 BiLSTM与BiGRU模型</h4>
+                <div class="p1">
+                    <p id="71">单个LSTM或GRU的主要缺点是仅利用一个单词前文的语义关系, 而对于NER、分词 (POS) 等文本序列任务建模, 获取后文的信息也非常重要。为了解决这个问题, 本文使用BiLSTM或BiGRU进行文本序列分析, 如图2所示。</p>
+                </div>
+                <div class="area_img" id="72">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201908051_072.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 BiLSTM与BiGRU示意图" src="Detail/GetImg?filename=images/JSJC201908051_072.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 BiLSTM与BiGRU示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201908051_072.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="73">BiLSTM或BiGRU可以在2个方向上处理数据, 输出层从2个单独的隐藏层中接收结果。对于给定的文本句子sentence <i>S</i>, <i>S</i>={<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, …, <i>w</i><sub><i>n</i></sub>}包含<i>n</i>个单词<i>w</i>, 通过BiLSTM或BiGRU计算2个表示:</p>
+                </div>
+                <div class="p1">
+                    <p id="74">1) 前向LSTM或前向GRU, 记作Forward LSTM或Forward GRU, 即图2中右边单词的上下文关系。</p>
+                </div>
+                <div class="p1">
+                    <p id="75">2) 后向LSTM或后向GRU, 记作Backward LSTM或Backward GRU, 即图2中左边单词的上下文关系。</p>
+                </div>
+                <div class="p1">
+                    <p id="76">然后对每个单词计算其表示值, 即将Forward LSTM/GRU与Backward LSTM/GRU合并起来。</p>
+                </div>
+                <div class="p1">
+                    <p id="77">在图2中, 输出层是一个全连接层, 对于文本序列分类预测可使用Softmax来分类。本文采用性能较优的CRF来进行序列标签预测。</p>
+                </div>
+                <h4 class="anchor-tag" id="78" name="78">3.2 BiLSTM+CRF模型与BiGRU+CRF模型</h4>
+                <div class="p1">
+                    <p id="79">BiLSTM或BiGRU结合CRF的模型如图3所示。在图3中, 模型的最后一层使用CRF主要是由于CRF在判断文本序列中单词的类型时, 能充分考虑标注值之间的关系, 得到准确深的标注预测结果。</p>
+                </div>
+                <div class="area_img" id="80">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201908051_080.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 BiLSTM/BiGRU+CRF模型结构" src="Detail/GetImg?filename=images/JSJC201908051_080.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 BiLSTM/BiGRU+CRF模型结构</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201908051_080.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="81">BiLSTM+CRF或BiGRU+CRF模型的具体说明如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="82">1) 模型的第1层是输入层, 输入句中单词的词向量和词性的词向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">2) 模型的第2层是BiLSTM或BiGRU层, 其处理过程分为7个步骤。</p>
+                </div>
+                <div class="p1">
+                    <p id="84"> (1) 将一个句子中各词的词向量序列作为BiLSTM或BiGRU各时间步的输入。</p>
+                </div>
+                <div class="p1">
+                    <p id="85"> (2) 输出RNN正向的隐状态序列。</p>
+                </div>
+                <div class="p1">
+                    <p id="86"> (3) 输出RNN反向的隐状态序列。</p>
+                </div>
+                <div class="p1">
+                    <p id="87"> (4) 将正向与反向各位置输出的隐状态序列按位置拼接, 得到完整的隐状态序列。</p>
+                </div>
+                <div class="p1">
+                    <p id="88"> (5) 设置dropout去除输入数据的某些维度以缓解过拟合现象。</p>
+                </div>
+                <div class="p1">
+                    <p id="89"> (6) 将隐状态向量从<i>m</i>维映射到<i>k</i>维, <i>k</i>为标注集的标签数, 得到自动提取的句子特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="90"> (7) 计算单词分类到<i>k</i>个标签的打分值。</p>
+                </div>
+                <div class="p1">
+                    <p id="91">3) 模型的第3层是CRF层, CRF层的主要任务是进行句子级的序列标注预测, 连接连续输出层的行表示。CRF层将BiRNN输出的状态转换矩阵作为参数, 即可有效地使用过去和未来的标注标签来预测当前标签。</p>
+                </div>
+                <h3 id="92" name="92" class="anchor-tag">4 实验结果与分析</h3>
+                <h4 class="anchor-tag" id="93" name="93">4.1 实验数据准备</h4>
+                <div class="p1">
+                    <p id="94">在使用LSTM与GRU神经网络时, 需要将标注好的文本序列数据中的单词序列、词性序列转换成词向量格式。目前常用的Word2vec<citation id="194" type="reference"><link href="174" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>是Google公司在2013年开放的一款用于训练词向量的软件工具。本文将单词与词性转换成词向量, 而将NER标签转换成one-hot向量, 具体分为3个处理步骤。</p>
+                </div>
+                <div class="p1">
+                    <p id="95">1) 提取原始语料的评论单词、词性与NER标签 (对于评价词为联合标签) , 建立以句子为单位存储的列表格式, 实现评论单词、词性与NER标签一一对应。例如, 对于标注好的一条评论语句:“太/d/O 失望/v/B-EW|B-DF , /x/O 差/a/B-EW|B-DF , /x/O 完全/ad/O 送错/v/B-EW|B-DF , /x/O 差评/n/B-EW|B-DF”, 转换成单词列表、词性列表、NER评价词列表、NER评价对象列表, 格式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="96">[‘太’, ‘失望’, ‘, ’, ‘差’, ‘, ’, ‘完全’, ‘送错’, ‘, ’, ‘差评’]</p>
+                </div>
+                <div class="p1">
+                    <p id="97">[‘d’, ‘v’, ‘x’, ‘a’, ‘x’, ‘ad’, ‘v’, ‘x’, ‘n’]</p>
+                </div>
+                <div class="p1">
+                    <p id="98">[‘O’, ‘B-EW’, ‘O’, ‘B-EW’, ‘O’, ‘O’, ‘B-EW’, ‘O’, ‘B-EW’]</p>
+                </div>
+                <div class="p1">
+                    <p id="99">[‘O’, ‘B-DF’, ‘O’, ‘B-DF’, ‘O’, ‘O’, ‘B-DF’, ‘O’, ‘B-DF’]</p>
+                </div>
+                <div class="p1">
+                    <p id="100">进一步构建评论单词、词性和NER标签的字典, 字典的key/value分别为单词、词性和NER标签及其对应的索引值。</p>
+                </div>
+                <div class="p1">
+                    <p id="101">2) 为评论单词、词性创建词向量, 本实验采用200维的词向量, 即一个单词或词性由200维的向量表示。为NER标签创建one-hot向量, 本文对于评价对象的NER标签除了表1设计的标签外, 再加“PAD”与“UNK”2个标签。“PAD”一般用于序列长度不满足要求, 在序列后需要进行填充的序列长度。“UNK”用于未知的内容。one-hot向量的含义是一个向量中只有一个值是1, 该值即为热值 (hot value) , 其他都为0。在机器学习中, 多分类问题的one-hot通过转变目标变量获得多分类标签值。</p>
+                </div>
+                <div class="p1">
+                    <p id="102">3) 划分训练集和测试集, 本文实验训练数据占70%, 测试数据占30%。</p>
+                </div>
+                <h4 class="anchor-tag" id="103" name="103">4.2 模型构建与训练</h4>
+                <div class="p1">
+                    <p id="104">本文使用python编程, 在深度学习框架keras下, 后端使用tensorflow, 电脑配备GPU的NVIDIA Geforce 940MX显卡。实验中RNN模型的最后一层使用keras-contrib中带的CRF模块。单一的CRF模型使用python支持的pycrfsuite套件。</p>
+                </div>
+                <div class="p1">
+                    <p id="105">本文将BiGRU+CRF模型、BiLSTM+CRF模型和单一的CRF模型进行对比, 各模型参数设置如表2所示。本文使用的词向量根据实验语料生成, 经过多次实验选择200维的词向量。如果语料较多, 则选择更大维度的词向量, 从而更好地捕捉词语之间的语义关系。由此可知, 与领域词典类似, 领域 (或行业) 预编译的词向量有助于深度学习的文本处理技术的应用。</p>
+                </div>
+                <div class="area_img" id="106">
+                    <p class="img_tit"><b>表2 3种模型的参数设置</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="106" border="1"><tr><td>参数</td><td>BiGRU+CRF <br />模型 </td><td>BiLSTM+CRF<br />模型</td><td>CRF<br />模型</td></tr><tr><td>词向量维度</td><td>200</td><td>200</td><td>无</td></tr><tr><td><br />窗口大小</td><td>20</td><td>20</td><td>20</td></tr><tr><td><br />隐藏层神经元大小</td><td>300</td><td>300</td><td>无</td></tr><tr><td>损失函数</td><td>sparse_categorical_<br />crossentropy</td><td>sparse_categorical_<br />crossentropy</td><td>自带</td></tr><tr><td>优化器</td><td>adam</td><td>adam</td><td>无</td></tr><tr><td><br />学习率</td><td>0.001</td><td>0.001</td><td>无</td></tr><tr><td><br />迭代次数</td><td>30</td><td>20</td><td>300</td></tr><tr><td><br />DROPOUTRATE</td><td>0.3</td><td>0.3</td><td>无</td></tr><tr><td><br />训练集 ∶测试集</td><td>7∶3</td><td>7∶3</td><td>7∶3</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="107">在实验过程中, 首先将单词序列和词性序列作为输入, 评价词标签作为输出来训练网络, 同时采用机器学习中集成学习Boosting的思想, 将错误预测的样本加大权重再投入训练, 不断提高评价词标签的识别效果。然后将识别好的评价词标签构成的序列与原单词序列、词性序列一起作为输入, 评价对象标签序列作为输出, 训练最终的网络模型。</p>
+                </div>
+                <h4 class="anchor-tag" id="108" name="108">4.3 结果分析</h4>
+                <div class="p1">
+                    <p id="109">尽管序列标注的分类预测是一个多分类问题, 但在NER识别过程中, 其更关注有意义标签的分类正确性, 而非所有分类标签的正确性。因此, 本文没有利用keras框架自带的模型评估功能, 而重新设计评估函数来衡量模型的精确率、召回率和<i>F</i>1值, 即不考虑标签O, 只考虑标签B、I构成的标签的评估。3种模型的评估结果如表3所示。</p>
+                </div>
+                <div class="area_img" id="110">
+                    <p class="img_tit"><b>表3 3种模型的实验评估结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="110" border="1"><tr><td><br />模型</td><td>精确率</td><td>召回率</td><td><i>F</i>1值</td><td>单次迭代时间/s</td></tr><tr><td><br />BiLSTM+CRF</td><td>0.81</td><td>0.80</td><td>0.79</td><td>230</td></tr><tr><td><br />BiGRU+CRF</td><td>0.85</td><td>0.83</td><td>0.84</td><td>180</td></tr><tr><td><br />单一CRF</td><td>0.75</td><td>0.77</td><td>0.76</td><td>&lt;1</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="111">由表3可知, 在序列标注的NER识别过程中, 使用CRF进行输出预测取得了较好的效果, 其原因是CRF能够有效捕捉和利用输出结果, 即NER的标签之间的上下文关系。同时, BiGRU+CRF模型的效果比BiLSTM+CRF模型好。文献<citation id="195" type="reference">[<a class="sup">19</a>]</citation>也证明在语料较少的应用场景下, GRU的效果更好, 而LSTM在语料足够多的情况下更有优势。</p>
+                </div>
+                <h4 class="anchor-tag" id="112" name="112">4.4 模型优化</h4>
+                <div class="p1">
+                    <p id="113">模型的质量取决于2个方面:</p>
+                </div>
+                <div class="p1">
+                    <p id="114">1) 训练数据的质量。GIGO (Garbage In, Garbage Out) , 输入的是无用信息, 那么输出的也是无用信息, 而对训练语料的质量控制在第3节已有详细阐述。</p>
+                </div>
+                <div class="p1">
+                    <p id="115">2) 模型算法的质量。影响模型算法质量的因素有很多, 在深度神经网络训练中, 其主要受参数调节的影响。本文根据表4来调节参数, 尝试改变模型构建过程中涉及的变量和参数, 以期找到最佳的组合。</p>
+                </div>
+                <div class="area_img" id="116">
+                    <p class="img_tit"><b>表4 2种模型的参数调节示例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="116" border="1"><tr><td>变量 (默认参数值) </td><td>修改值1</td><td>修改值2</td><td>修改值3</td><td>修改值4</td></tr><tr><td><br />词向量维度 (200) </td><td>100</td><td>150</td><td>250</td><td>300</td></tr><tr><td><br />优化器 (Adam) </td><td>Adagrad</td><td>Adadelta</td><td>RMsprop</td><td>nAdam</td></tr><tr><td><br />损失函数 (scc) </td><td>mse</td><td>mas</td><td>mape</td><td>msle</td></tr><tr><td><br />窗口大小 (20) </td><td>5</td><td>10</td><td>15</td><td>20</td></tr><tr><td><br />迭代次数 (10) </td><td>5</td><td>15</td><td>20</td><td>25</td></tr><tr><td><br />DROPOUTRATE (0.30) </td><td>0.20</td><td>0.25</td><td>0.35</td><td>0.40</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="117">本文主要通过手工改变参数进行训练模型, 记录并比较评估指标, 来获得较优的参数组合。经过多次实验得出, 当参数为表4中的默认值时效果较好。</p>
+                </div>
+                <h4 class="anchor-tag" id="118" name="118">4.5 模型使用</h4>
+                <div class="p1">
+                    <p id="119">本文使用训练好的模型来识别评论语句中的评价对象 (包括隐性评价对象) , 其步骤与训练模型相似。首先通过中文分词提取要识别预测的评论单词和对应词性;然后将其转换成单词列表、词性列表, 并进一步转换为词向量格式;再将转换好的词向量输入给训练好的模型进行识别;最后将识别好的评价对象与单词序列、词性序列一一对应后, 格式化输出。</p>
+                </div>
+                <h3 id="120" name="120" class="anchor-tag">5 结束语</h3>
+                <div class="p1">
+                    <p id="121">本文提出一种面向细粒度情感分析的隐性评价对象识别方法。在评论文本大量缺失评价对象的情况下, 采用人工智能联结主义思想, 将隐性评价对象标注在文本序列上。利用深度神经网络BiLSTM和BiGRU捕捉人类在标注语料时赋予语料的隐性特征, 并综合学习语料上下文的语义关系, 利用CRF在序列标签上的预测能力, 提高模型的输出效果。实验结果表明, 与单一CRF模型相比, BiLSTM+CRF模型和BiGRU+CRF模型的识别效果较好。下一步将增加语料量, 提高组合标签的预测准确率, 同时引入注意力机制等深度学习技术, 改善模型的质量与实际应用效果。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="140">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Semantics-driven implicit aspect detection in consumer reviews">
+
+                                <b>[1]</b> SCHOUTEN K, BOER N D, LAM T, et al.Semantics-driven implicit aspect detection in consumer reviews[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2015:109-110.
+                            </a>
+                        </p>
+                        <p id="142">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14123100020766&amp;v=MjYwMzgwVmF4VT1OaWZPZmJLOEg5UFBybzlGWk9rUEMzby9vQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMdkxJRg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> XU Hua, ZHANG Fan, WANG Wei.Implicit feature identification in Chinese reviews using explicit topic mining model[J].Knowledge-Based Systems, 2015, 76:166-175.
+                            </a>
+                        </p>
+                        <p id="144">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201703006&amp;v=MjIyMzdCdEdGckNVUkxPZVplUnFGQ2ptVXI3UEx6N0Jkckc0SDliTXJJOUZZb1FLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 江腾蛟, 万常选, 刘德喜, 等.基于语义分析的评价对象-情感词对抽取[J].计算机学报, 2017, 40 (3) :617-633.
+                            </a>
+                        </p>
+                        <p id="146">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=On the need of hierarchical emotion classification:detecting the implicit feature using constrained topic model">
+
+                                <b>[4]</b> ZHANG Fan, XU Hua, BAI Xiaoli.On the need of hierarchical emotion classification:detecting the implicit feature using constrained topic model[J].Intelligent Data Analysis, 2017, 21 (6) :1393-1406.
+                            </a>
+                        </p>
+                        <p id="148">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201703013&amp;v=MjkyNjdlWmVScUZDam1VcjdQTnlmVGJMRzRIOWJNckk5RVo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE8=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 彭云, 万常选, 江腾蛟, 等.基于语义约束LDA的商品特征和情感词提取[J].软件学报, 2017, 28 (3) :676-693.
+                            </a>
+                        </p>
+                        <p id="150">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZDZC201102016&amp;v=MzIyMjViRzRIOURNclk5RVlvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScUZDam1VcjdQUHluUmI=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 仇光, 郑淼, 张晖, 等.基于正则化主题建模的隐式产品属性抽取[J].浙江大学学报 (工学版) , 2011, 45 (2) :288-294.
+                            </a>
+                        </p>
+                        <p id="152">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201405010&amp;v=MDAzNDZPZVplUnFGQ2ptVXI3UFBTbmZmN0c0SDlYTXFvOUVaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkw=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 杜嘉忠, 徐健, 刘颖.网络商品评论的特征-情感词本体构建与情感分析方法研究[J].数据分析与知识发现, 2014, 30 (5) :74-82.
+                            </a>
+                        </p>
+                        <p id="154">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Implicit aspect indicator extraction for aspect-based opinion mining">
+
+                                <b>[8]</b> CRUZ I, GELBUKH A, SIDOROV G.Implicit aspect indicator extraction for aspect-based opinion mining[J].International Journal of Computational Linguistics and Applications, 2014, 5 (2) :135-152.
+                            </a>
+                        </p>
+                        <p id="156">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Implicit feature extraction for sentiment analysis in consumer reviews">
+
+                                <b>[9]</b> SCHOUTEN K, FRASINCAR F.Implicit feature extraction for sentiment analysis in consumer reviews[C]//Proceedings of International Conference on Applications of Natural Language to Data Bases/Information Systems.Berlin, Germany:Springer, 2014:228-231.
+                            </a>
+                        </p>
+                        <p id="158">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Generative feature language models for mining implicit features from customer reviews">
+
+                                <b>[10]</b> SONDHI P, SONDHI P, ZHAI Chengxiang.Generative feature language models for mining implicit features from customer reviews[C]//Proceedings of ACM International Conference on Information and Knowledge Management.New York, USA:ACM Press, 2016:929-938.
+                            </a>
+                        </p>
+                        <p id="160">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Aspect Extraction For Opinion Mining With A Deep Convolutional Neural Ne twork">
+
+                                <b>[11]</b> PORIA S, CAMBRIA E, GELBUKH A.Aspect extraction for opinion mining with a deep convolutional neural network[J].Knowledge-Based Systems, 2016, 108:42-49.
+                            </a>
+                        </p>
+                        <p id="162">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Implicit polarity and implicit aspect recognition in opinion mining">
+
+                                <b>[12]</b> CHEN Huanyuan, CHEN Hsinhsi.Implicit polarity and implicit aspect recognition in opinion mining[C]//Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics.[S.l.]:Association for Computational Linguistics, 2016:20-25.
+                            </a>
+                        </p>
+                        <p id="164">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Convolutional neural networks for sentence classification">
+
+                                <b>[13]</b> KIM Y.Convolutional neural networks for sentence classification[EB/OL].[2018-06-01].https://arxiv.org/pdf/1408.5882.pdf.
+                            </a>
+                        </p>
+                        <p id="166">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Enhanced sentiment labeling and implicit aspect identification by integration of deep convolution neural network and sequential algorithm">
+
+                                <b>[14]</b> FENG Jinzhan, CAI Shuqin, MA Xiaomeng.Enhanced sentiment labeling and implicit aspect identification by integration of deep convolution neural network and sequential algorithm[J].Cluster Computing, 2018 (1) :1-19.
+                            </a>
+                        </p>
+                        <p id="168">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning long-term dependencies with gradient descent is difficult">
+
+                                <b>[15]</b> BENGIO Y, SIMARD P, FRASCONI P.Learning long-term dependencies with gradient descent is difficult[J].IEEE Transactions on Neural Networks, 1994, 5 (2) :157-166.
+                            </a>
+                        </p>
+                        <p id="170">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJBK&amp;filename=SJBK15090500014198&amp;v=MDEyMDd1SHlqbVVMdkxJRjBWYXhVPU5pZkpaYks5SHRqTXFvOUZaT29MRFhVeG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> HOCHREITER S, SCHMIDHUBER J.Long short-term memory[J].Neural Computation, 1997, 9 (8) :1735-1780.
+                            </a>
+                        </p>
+                        <p id="172">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Empirical evaluation of gated recurrent neural networks on sequence modeling">
+
+                                <b>[17]</b> CHUNG J, GULCEHRE C, CHO K, et al.Empirical evaluation of gated recurrent neural networks on sequence modeling[EB/OL].[2018-06-01].https://arxiv.org/pdf/1412.3555v1.pdf.
+                            </a>
+                        </p>
+                        <p id="174">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+
+                                <b>[18]</b> MIKOLOV T, CHEN K, CORRADO G, et al.Efficient estima-tion of word representations in vector space[EB/OL].[2018-06-01].https://arxiv.org/pdf/1301.3781.pdf.
+                            </a>
+                        </p>
+                        <p id="176">
+                            <a id="bibliography_19" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Gated recurrent unitfor emotion classification from noisy speech">
+
+                                <b>[19]</b> RANA R.Gated recurrent unitfor emotion classification from noisy speech[EB/OL].[2018-06-01].https://arxiv.org/pdf/1612.07778.pdf.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201908051" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201908051&amp;v=Mjc3MTNDam1VcjdQTHo3QmJiRzRIOWpNcDQ5QVpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScUY=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYyTTc5ZU1kSFJvVW1uVU9FL1g5cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

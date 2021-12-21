@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637135744011221250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJYRJ201905047%26RESULT%3d1%26SIGN%3diG%252fn3Wbxof%252bLPe%252bHzI%252biQIetMbk%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201905047&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201905047&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201905047&amp;v=MDYwNzc0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5emtWTDNPTHpUWlpMRzRIOWpNcW85Qlk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#35" data-title="&lt;b&gt;0 引 言&lt;/b&gt; "><b>0 引 言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#39" data-title="&lt;b&gt;1 相关工作&lt;/b&gt; "><b>1 相关工作</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#40" data-title="&lt;b&gt;1.1 词向量&lt;/b&gt;"><b>1.1 词向量</b></a></li>
+                                                <li><a href="#49" data-title="&lt;b&gt;1.2 BILSTM神经网络&lt;/b&gt;"><b>1.2 BILSTM神经网络</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#52" data-title="&lt;b&gt;2 基于BILSTM_CRF的实体抽取&lt;/b&gt; "><b>2 基于BILSTM_CRF的实体抽取</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#54" data-title="&lt;b&gt;2.1 模型架构&lt;/b&gt;"><b>2.1 模型架构</b></a></li>
+                                                <li><a href="#66" data-title="&lt;b&gt;2.2 模型训练&lt;/b&gt;"><b>2.2 模型训练</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#111" data-title="&lt;b&gt;3 实验及分析&lt;/b&gt; "><b>3 实验及分析</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#112" data-title="&lt;b&gt;3.1 实验准备&lt;/b&gt;"><b>3.1 实验准备</b></a></li>
+                                                <li><a href="#124" data-title="&lt;b&gt;3.2 评价指标&lt;/b&gt;"><b>3.2 评价指标</b></a></li>
+                                                <li><a href="#132" data-title="&lt;b&gt;3.3 实验结果与分析&lt;/b&gt;"><b>3.3 实验结果与分析</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#147" data-title="&lt;b&gt;4 结 语&lt;/b&gt; "><b>4 结 语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#43" data-title="图1 神经网络语言模型">图1 神经网络语言模型</a></li>
+                                                <li><a href="#51" data-title="图2 双向长短时记忆网络">图2 双向长短时记忆网络</a></li>
+                                                <li><a href="#56" data-title="图3 BILSTM_CRF模型架构">图3 BILSTM_CRF模型架构</a></li>
+                                                <li><a href="#90" data-title="图4 神经网络反向优化流程">图4 神经网络反向优化流程</a></li>
+                                                <li><a href="#115" data-title="&lt;b&gt;表1 软硬件配置表&lt;/b&gt;"><b>表1 软硬件配置表</b></a></li>
+                                                <li><a href="#118" data-title="&lt;b&gt;表2 语料数据统计表&lt;/b&gt;"><b>表2 语料数据统计表</b></a></li>
+                                                <li><a href="#134" data-title="图5 CRF特征模板">图5 CRF特征模板</a></li>
+                                                <li><a href="#137" data-title="&lt;b&gt;表3 不同模型对比表&lt;/b&gt;"><b>表3 不同模型对比表</b></a></li>
+                                                <li><a href="#142" data-title="图6 不同维度词向量实验对比">图6 不同维度词向量实验对比</a></li>
+                                                <li><a href="#145" data-title="图7 &lt;i&gt;F&lt;/i&gt;1值均值随隐含层节点数目变化">图7 <i>F</i>1值均值随隐含层节点数目变化</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" 杜泽宇, 杨燕, 贺樑.基于中文知识图谱的电商领域问答系统[J].计算机应用与软件, 2017, 34 (5) :153-159." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201705027&amp;v=MjAyMTVrVkwzT0x6VFpaTEc0SDliTXFvOUhZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeXo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         杜泽宇, 杨燕, 贺樑.基于中文知识图谱的电商领域问答系统[J].计算机应用与软件, 2017, 34 (5) :153-159.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 翟社平, 郭琳, 高山, 等.一种采用贝叶斯推理的知识图谱补全方法[J].小型微型计算机系统, 2018, 39 (5) :995-999." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XXWX201805023&amp;v=MDg2ODNVUjdxZlp1WnRGeXprVkwzT1BUWGNkckc0SDluTXFvOUhaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         翟社平, 郭琳, 高山, 等.一种采用贝叶斯推理的知识图谱补全方法[J].小型微型计算机系统, 2018, 39 (5) :995-999.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 张海楠, 伍大勇, 刘悦, 等.基于深度神经网络的中文命名实体识别[J].中文信息学报, 2017, 31 (4) :28-35." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201704004&amp;v=MDgyMTN5emtWTDNPS0NqWWZiRzRIOWJNcTQ5RllJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         张海楠, 伍大勇, 刘悦, 等.基于深度神经网络的中文命名实体识别[J].中文信息学报, 2017, 31 (4) :28-35.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" Grishman R.The NYU system for MU-C6 or where&#39;s the syntax?[C]//Message Understanding Conference, Columbia, Maryland, USA, 2014:13-31." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The NYU system for MU-C6 or where&amp;#39;&amp;#39;s the syntax?">
+                                        <b>[4]</b>
+                                         Grishman R.The NYU system for MU-C6 or where&#39;s the syntax?[C]//Message Understanding Conference, Columbia, Maryland, USA, 2014:13-31.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" Brin S.Extracting Patterns and Relations from the World Wide Web[M]//The World Wide Web and Databases.Springer Berlin Heidelberg, 2016:172-183." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Extracting patterns and relations from the World-Wide Web">
+                                        <b>[5]</b>
+                                         Brin S.Extracting Patterns and Relations from the World Wide Web[M]//The World Wide Web and Databases.Springer Berlin Heidelberg, 2016:172-183.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 韩霞, 黄德根.基于半监督隐马尔科夫模型的汉语词性标注研究[J].小型微型计算机系统, 2015, 36 (12) :2813-2816." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XXWX201512039&amp;v=MjM5OTJGeXprVkwzT1BUWGNkckc0SDlUTnJZOUdiWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         韩霞, 黄德根.基于半监督隐马尔科夫模型的汉语词性标注研究[J].小型微型计算机系统, 2015, 36 (12) :2813-2816.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 张小龙, 刘书炘, 刘满华.基于级联支持向量机融合多特征的人脸检测[J].计算机应用与软件, 2016, 33 (4) :151-154, 207." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201604037&amp;v=MjU4MjR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl6a1ZMM09MelRaWkxHNEg5Zk1xNDlHWTRRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         张小龙, 刘书炘, 刘满华.基于级联支持向量机融合多特征的人脸检测[J].计算机应用与软件, 2016, 33 (4) :151-154, 207.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 何炎祥, 罗楚威, 胡彬尧.基于CRF和规则相结合的地理命名实体识别方法[J].计算机应用与软件, 2015, 32 (1) :179-185." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201501047&amp;v=MDU2MDFIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl6a1ZMM09MelRaWkxHNEg5VE1ybzlCWTRRS0Q=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         何炎祥, 罗楚威, 胡彬尧.基于CRF和规则相结合的地理命名实体识别方法[J].计算机应用与软件, 2015, 32 (1) :179-185.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" Zhang J.RNN-BLSTM Based Multi-Pitch Estimation[C]//INTERSPEECH, Germany:Inter-speech, 2016:1785-1789." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=RNN-BLSTM Based Multi-Pitch Estimation">
+                                        <b>[9]</b>
+                                         Zhang J.RNN-BLSTM Based Multi-Pitch Estimation[C]//INTERSPEECH, Germany:Inter-speech, 2016:1785-1789.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" 冯多, 林政, 付鹏, 等.基于卷积神经网络的中文微博情感分类[J].计算机应用与软件, 2017, 34 (4) :157-164." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201704027&amp;v=MjMzOTJGeXprVkwzT0x6VFpaTEc0SDliTXE0OUhZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         冯多, 林政, 付鹏, 等.基于卷积神经网络的中文微博情感分类[J].计算机应用与软件, 2017, 34 (4) :157-164.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" Graves A, Mohamed A R, Hinton G.Speech recognition with deep recurrent neural networks[C]//IEEE International Conference on Acoustics, Speech and Signal Processing.IEEE, 2013:6645-6649." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Speech recognition with deep recurrent neural networks">
+                                        <b>[11]</b>
+                                         Graves A, Mohamed A R, Hinton G.Speech recognition with deep recurrent neural networks[C]//IEEE International Conference on Acoustics, Speech and Signal Processing.IEEE, 2013:6645-6649.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 谢志宁.中文命名实体识别算法研究[D].杭州:浙江大学, 2017." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017119488.nh&amp;v=MTU3NTlHRnJDVVI3cWZadVp0Rnl6a1ZMM09WRjI2R2JLNUY5WEVwNUViUElRS0RIODR2UjRUNmo1NE8zenFxQnQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         谢志宁.中文命名实体识别算法研究[D].杭州:浙江大学, 2017.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" Bengio Y, Duchme R.A neural probabilistic language model[J].Journal of Machine Le-arning Research, 2003, 3 (6) :1137-1155." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A Neural Probabilistic Language Model">
+                                        <b>[13]</b>
+                                         Bengio Y, Duchme R.A neural probabilistic language model[J].Journal of Machine Le-arning Research, 2003, 3 (6) :1137-1155.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 王蕾.基于神经网络的中文命名实体识别研究[D].南京:南京师范大学, 2017." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017285182.nh&amp;v=MDI2NzA1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl6a1ZMM09WRjI2R2JHd0c5REVyWkViUElRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         王蕾.基于神经网络的中文命名实体识别研究[D].南京:南京师范大学, 2017.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 冯艳红, 于红, 孙庚, 等.基于BLSTM的命名实体识别方法[J].计算机科学, 2018, 45 (2) :261-268." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJA201802047&amp;v=MjY0Mjg2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeXprVkwzT0x6N0JiN0c0SDluTXJZOUJZNFFLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         冯艳红, 于红, 孙庚, 等.基于BLSTM的命名实体识别方法[J].计算机科学, 2018, 45 (2) :261-268.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" 李航.统计学习方法[M].北京:清华大学出版社, 2012." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787302275954001&amp;v=MjgwMjdKSjF3U1hGcXpHYkM0SE5QTHFvWkFZT3NQRFJNOHp4VVNtRGQ5U0g3bjN4RTlmYnZuS3JpZlplWnZGeW5tVTd2&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         李航.统计学习方法[M].北京:清华大学出版社, 2012.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JYRJ" target="_blank">计算机应用与软件</a>
+                2019,36(05),269-274+280 DOI:10.3969/j.issn.1000-386x.2019.05.046            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于BILSTM_CRF的知识图谱实体抽取方法</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%BF%9F%E7%A4%BE%E5%B9%B3&amp;code=39111806&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">翟社平</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%AE%B5%E5%AE%8F%E5%AE%87&amp;code=39157702&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">段宏宇</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%8E%E5%85%86%E5%85%86&amp;code=39117540&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">李兆兆</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E8%A5%BF%E5%AE%89%E9%82%AE%E7%94%B5%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2&amp;code=1698419&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">西安邮电大学计算机学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E9%99%95%E8%A5%BF%E7%9C%81%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E6%99%BA%E8%83%BD%E5%A4%84%E7%90%86%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陕西省网络数据分析与智能处理重点实验室</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对传统知识图谱实体抽取方法需要大量人工特征和专家知识的问题, 提出一种基于BILSTM<sub>C</sub>RF模型的神经网络结构实体抽取方法。它既能使用双向长短时记忆网络BILSTM (Bidirectional Long Short-Term Memory) 提取文本信息的特征, 又可利用条件随机场CRF (Conditional Random Fields) 衡量序列标注的联系。该方法对输入的文本进行建模, 把句子中的每个词转换为词向量;利用BILSTM处理分布式向量得到句子特征;使用CRF标注并抽取实体, 得到最终结果。实验结果表明, 该方法的准确率和召回率更高, F1值提升约8%, 具有更强的适用性。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">知识图谱;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%AE%9E%E4%BD%93%E6%8A%BD%E5%8F%96&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">实体抽取;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">神经网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%8D%E5%90%91%E9%87%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">词向量;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=BILSTM%3Csub%3EC%3C%2Fsub%3ERF%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">BILSTM<sub>C</sub>RF模型;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    翟社平, 副教授, 主研领域:语义网, 知识图谱。;
+                                </span>
+                                <span>
+                                    段宏宇, 硕士生。;
+                                </span>
+                                <span>
+                                    李兆兆, 硕士生。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-10-01</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>工业和信息化部通信软科学项目 (2018-R-26);</span>
+                                <span>陕西省自然科学基金资助项目 (2012JM8044);</span>
+                                <span>陕西省社会科学基金资助项目 (2016N008);</span>
+                                <span>陕西省教育厅科学研究计划资助项目 (12JK0733);</span>
+                                <span>西安邮电大学研究生创新基金项目 (CXL2016-13);</span>
+                    </p>
+            </div>
+                    <h1><b>KNOWLEDGE GRAPH ENTITY EXTRACTION BASED ON BILSTM_CRF</b></h1>
+                    <h2>
+                    <span>Zhai Sheping</span>
+                    <span>Duan Hongyu</span>
+                    <span>Li Zhaozhao</span>
+            </h2>
+                    <h2>
+                    <span>School of Computer Science and Technology, Xi'an University of Posts and Telecommunications</span>
+                    <span>Shaanxi Key Laboratory of Network Data Analysis and Intelligent Processing</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>In order to solve the problem that traditional knowledge atlas entity extraction method needed a lot of artificial features and expert knowledge, we proposed a neural network entity extraction method based on BILSTM<sub>C</sub>RF model. It could use bidirectional long short-term memory (BILSTM) to extract the features of text information, and use conditional random fields (CRF) to measure the association of sequence labeling. In this method, the input text was modeled, and every word in the sentence was transformed into a word embedding. The distributed vectors were processed by BILSTM to get sentence features. And the CRF tagging and entity extraction were used to get the final results. The experimental results show that the proposed method has higher accuracy and recall rate, and the value of F1 is increased by about 8%, which has better applicability.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Knowledge%20graph&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Knowledge graph;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Entity%20extraction&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Entity extraction;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Neural%20network&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Neural network;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Word%20embedding&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Word embedding;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=BILSTM%3Csub%3EC%3C%2Fsub%3ERF%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">BILSTM<sub>C</sub>RF model;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-10-01</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="35" name="35" class="anchor-tag"><b>0 引 言</b></h3>
+                <div class="p1">
+                    <p id="36">知识图谱是一种包括众多实体及其关系的语义网络, 实现了语义表述和智能连接, 是人工智能领域的重要构成技术。目前, 知识图谱已经在电商搜索、知识库问答以及知识管理等领域得到深层应用<citation id="150" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。实体抽取, 也称命名实体学习或命名实体识别, 是知识图谱构建中最为重要和关键的部分, 实现了从文本数据中抽取出实体信息<citation id="151" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>。高精准度的实体抽取很大程度上保障了所构建知识图谱的高适用性。</p>
+                </div>
+                <div class="p1">
+                    <p id="37">早期使用基于规则的方法实现实体抽取, 通过领域专家和语言学者手工制定有效规则, 将文本与规则进行匹配识别出实体<citation id="152" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。比如, 在中文系统中, 人名的下文用词可以是“吃”、“同学”等, 而单位组织名的尾部可以是“集团”、“学校”等, 利用这些规则, 可以将人名、地点名、组织名等实体抽取出来。传统采用制定规则的实体识别方法有:Grishman开发的Proteus系统<citation id="153" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>、Black开发的FACILE系统<citation id="154" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>等。然而, 基于规则的方法构建过程中往往需要大量的语言学知识, 而且费时费力、可移植性不好。之后, 知识图谱实体抽取任务被部分机器学习算法解决。机器学习使用大量的实验语料训练学习, 得到最终的标注模型, 完成对实体的词性标注识别。常应用到实体识别任务中的模型包括隐马尔科夫模型HMM<citation id="155" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>、支持向量机模型SVM<citation id="156" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>、条件随机场模型CRF<citation id="157" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>等。目前比较流行的是条件随机场模型, 通过人工定义特征模板, 利用上下文标注信息发掘命名实体。这种利用人工特征的方法取得了很好的识别效果, 但人工制定特征代价较昂贵, 不同领域的特征不尽相同, 导致识别方法不通用, 工作量大。伴随着计算机硬件能力的提高、文本单词向量化表示的广泛应用, 神经网络模型在处理实体抽取任务方面表现出更高的效率, 例如循环神经网络<citation id="158" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>、卷积神经网络<citation id="159" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>以及长短时记忆网络<citation id="160" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>。使用神经网络提取文本特征不再依赖人工特征和领域知识, 减少了人工特征提取所需代价, 有效地提高了系统效率。</p>
+                </div>
+                <div class="p1">
+                    <p id="38">本文对中文领域的命名实体进行识别, 结合双向长短时记忆网络以及条件随机场模型, 自动提取句子特征, 提高实体抽取效率。</p>
+                </div>
+                <h3 id="39" name="39" class="anchor-tag"><b>1 相关工作</b></h3>
+                <h4 class="anchor-tag" id="40" name="40"><b>1.1 词向量</b></h4>
+                <div class="p1">
+                    <p id="41">在传统的实体抽取方法中, 单词采用0和1组成的稀疏向量表示, 向量中某一分量的值为1, 其余分量的值为0、1的位置表示该词在词典中的编号<citation id="161" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>。这种方法可以完成一部分实体抽取任务, 但存在缺点, 一是词典规模通常比较大, 维度高, 容易造成维度灾难和数据稀疏问题;二是采用稀疏向量, 导致前后单词彼此独立, 无法得到两个词的关联信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="42">为了计算词本身之间的语义相似度, 深度学习利用低维、稠密的实值向量标识单词, 称词向量。词向量包含了文本的语义信息, 采用欧式距离或余弦夹角等方法来衡量两个向量词之间的距离, 发掘两个词的关系。Bengio<citation id="162" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>在2003年提出了一种基于深度学习的语言模型, 如图1所示。</p>
+                </div>
+                <div class="area_img" id="43">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201905047_043.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 神经网络语言模型" src="Detail/GetImg?filename=images/JYRJ201905047_043.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 神经网络语言模型  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201905047_043.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="44">该方法引入词向量来构建概率模型, 公式表示如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="45" class="code-formula">
+                        <mathml id="45"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>p</mi><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo><mo>=</mo><mi>p</mi><mo stretchy="false"> (</mo><mi>w</mi><mo stretchy="false">) </mo><mo>=</mo><mi>p</mi><mo stretchy="false"> (</mo><mi>w</mi><msub><mrow></mrow><mn>1</mn></msub><mo>, </mo><mi>w</mi><msub><mrow></mrow><mn>2</mn></msub><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>w</mi><msub><mrow></mrow><mi>Τ</mi></msub><mo stretchy="false">) </mo><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mstyle displaystyle="true"><munderover><mo>∏</mo><mrow><mi>t</mi><mo>=</mo><mn>1</mn></mrow><mi>Τ</mi></munderover><mi>p</mi></mstyle><mo stretchy="false"> (</mo><mi>w</mi><msub><mrow></mrow><mi>t</mi></msub><mo stretchy="false">|</mo><mtext>c</mtext><mtext>o</mtext><mtext>n</mtext><mtext>t</mtext><mtext>e</mtext><mtext>x</mtext><mtext>t</mtext><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="46">context为单词<i>w</i><sub><i>t</i></sub>的上下文, 通过深度学习方法来实现概率语言模型。类似于传统n-gram概率模型, 利用前<i>n</i>-1个词<i>w</i><sub><i>t</i>-<i>n</i>+1</sub>、…、<i>w</i><sub><i>t</i>-2</sub>、<i>w</i><sub><i>t</i>-1</sub>来推测下一个词<i>w</i><sub><i>t</i></sub>出现的概率。输入向量<i>x</i>由前<i>n</i>-1个词<i>w</i><sub><i>t</i>-<i>n</i>+1</sub>、…、<i>w</i><sub><i>t</i>-2</sub>、<i>w</i><sub><i>t</i>-1</sub>的词向量连接组成, 中间隐藏层引入tanh函数去线性化, 输出层获得隐藏层的结果后利用Softmax函数归一化处理, 得到概率值<mathml id="47"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ρ</mi><mo stretchy="false"> (</mo><mi>w</mi><msub><mrow></mrow><mi>t</mi></msub><mo stretchy="false">|</mo><mtext>c</mtext><mtext>o</mtext><mtext>n</mtext><mtext>t</mtext><mtext>e</mtext><mtext>x</mtext><mtext>t</mtext><mo stretchy="false">) </mo></mrow></math></mathml>, 最后应用极大似然估计进行训练, 得到单词<i>w</i><sub><i>t</i></sub>的词向量<b><i>C</i></b> (<i>w</i><sub><i>t</i></sub>) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">除了上述用于训练词向量的模型方法外, 目前常用Google开源的词向量训练框架Word2vec生成词向量<citation id="163" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>。Word2vec采用向量相似度表示某种隐含的语义关系, 使用向量空间的向量运算简化文本内容处理。</p>
+                </div>
+                <h4 class="anchor-tag" id="49" name="49"><b>1.2 BILSTM神经网络</b></h4>
+                <div class="p1">
+                    <p id="50">实体抽取是典型的文本序列标注问题, RNN网络能够有效地利用数据的序列信息, 并具有一定的记忆功能, 是一种有效地解决序列标注任务的神经网络, 但其无法很好地处理长距离依赖问题, LSTM引入门限制机制对历史信息进行过滤, 有效地解决了这个问题。由于LSTM只是利用当前词的上文信息, 而在实体抽取处理中, 对当前词的识别同样需要下文信息, 双向长短时记忆网络模型BILSTM结构能同时包含文本上下文信息<citation id="164" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>, 原理如图2所示。在BILSTM模型中, 包含前向和后向两个LSTM层, 连接着同一个输出层。由于训练序列的前向和后向LSTM层组成了BILSTM网络结构, 所以在实体抽取中, BILSTM模型能兼顾上下文信息, 自动提取句子特征, 获得更好的结果。</p>
+                </div>
+                <div class="area_img" id="51">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201905047_051.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 双向长短时记忆网络" src="Detail/GetImg?filename=images/JYRJ201905047_051.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 双向长短时记忆网络  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201905047_051.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="52" name="52" class="anchor-tag"><b>2 基于BILSTM_CRF的实体抽取</b></h3>
+                <div class="p1">
+                    <p id="53">传统实体抽取方法CRF模型需要大量的人工特征, 现有的BLSTM神经网络模型对每个单词标注的过程是独立的分类, 不能直接利用上文标签信息, 导致预测出的标签序列可能是错误的, 影响实体抽取效果。本文用BILSTM_CRF模型完成实体抽取任务, 通过BILSTM网络学习特征, 避免人工提取特征的复杂性, 利用CRF层考虑前后句子的标签信息, 使实体标注抽取不再是对每个单词独立的分类, 实体抽取更为准确、高效。</p>
+                </div>
+                <h4 class="anchor-tag" id="54" name="54"><b>2.1 模型架构</b></h4>
+                <div class="p1">
+                    <p id="55">本文提出的实体抽取BILSTM_CRF模型分为三层, 首先是输入层, 其次是隐含层, 最后是标注层, 模型架构如图3所示。</p>
+                </div>
+                <div class="area_img" id="56">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201905047_056.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 BILSTM_CRF模型架构" src="Detail/GetImg?filename=images/JYRJ201905047_056.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 BILSTM_CRF模型架构  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201905047_056.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="57">look-up是输入层, 主要负责将窗口的词进行向量化映射, 使用训练好的词向量矩阵将输入窗口的每个词<i>x</i><sub><i>i</i></sub>映射为分布式向量<b><i>x</i></b><sub><i>i</i></sub>, <b><i>x</i></b><sub><i>i</i></sub>∈<b><i>R</i></b><sup><i>d</i></sup>, <i>d</i>是向量的维度。为防止出现过拟合状况, 设置dropout参数。</p>
+                </div>
+                <div class="p1">
+                    <p id="58">BILSTM是隐含层, 实现自动获得句子特征。将look-up输出的字向量序列 (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, …, <i>x</i><sub><i>n</i></sub>) 作为双向LSTM网络每个时间点的初始输入值。在BILSTM网络层中, 输入向量序列的顺序序列作为前向LSTM层的输入, 逆序序列则作为后向LSTM层的输入。在<i>t</i>时刻, 模型将正向LSTM输出的隐状态序列<mathml id="59"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false"> (</mo><mover accent="true"><mrow><mi>h</mi><msub><mrow></mrow><mn>1</mn></msub></mrow><mo stretchy="true">→</mo></mover><mo>, </mo><mover accent="true"><mrow><mi>h</mi><msub><mrow></mrow><mn>2</mn></msub></mrow><mo stretchy="true">→</mo></mover><mo>, </mo><mo>⋯</mo><mo>, </mo><mover accent="true"><mrow><mi>h</mi><msub><mrow></mrow><mi>n</mi></msub></mrow><mo stretchy="true">→</mo></mover><mo stretchy="false">) </mo></mrow></math></mathml>与反向LSTM输出的隐状态序列<mathml id="60"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false"> (</mo><mover accent="true"><mrow><mi>h</mi><msub><mrow></mrow><mn>1</mn></msub></mrow><mo stretchy="true">←</mo></mover><mo>, </mo><mover accent="true"><mrow><mi>h</mi><msub><mrow></mrow><mn>2</mn></msub></mrow><mo stretchy="true">←</mo></mover><mo>, </mo><mo>⋯</mo><mo>, </mo><mover accent="true"><mrow><mi>h</mi><msub><mrow></mrow><mi>n</mi></msub></mrow><mo stretchy="true">←</mo></mover><mo stretchy="false">) </mo></mrow></math></mathml>进行按位置拼接<mathml id="61"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>h</mi><msub><mrow></mrow><mi>t</mi></msub><mo>=</mo><mo stretchy="false">[</mo><mover accent="true"><mrow><mi>h</mi><msub><mrow></mrow><mi>t</mi></msub></mrow><mo stretchy="true">→</mo></mover></mrow></math></mathml>;<mathml id="62"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mrow><mi>h</mi><msub><mrow></mrow><mi>t</mi></msub></mrow><mo stretchy="true">←</mo></mover><mo stretchy="false">]</mo><mo>∈</mo><mi>R</mi><msup><mrow></mrow><mi>m</mi></msup></mrow></math></mathml>, 得到完整的隐状态序列 (<i>h</i><sub>1</sub>, <i>h</i><sub>2</sub>, …, <i>h</i><sub><i>n</i></sub>) ∈<i>R</i><sup><i>n</i>×<i>m</i></sup>, <i>m</i>是隐状态向量维度。为了自动提取句子特征, 在隐含层中接入一个线性变换层, 把之前得到的隐状态序列从<i>m</i>维映射到<i>k</i>维, <i>k</i>代表标注集中所有的标签数, 将结果记作矩阵<b><i>P</i></b>= (<i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>, …, <i>p</i><sub><i>n</i></sub>) ∈<i>R</i><sup><i>n</i>×<i>k</i></sup>, 把<b><i>p</i></b><sub><i>i</i></sub>∈<i>R</i><sup><i>k</i></sup>的每一位<i>P</i><sub><i>ij</i></sub>项都视作将字<i>x</i><sub><i>i</i></sub>分类到第<i>j</i>个标签的打分值。这时对输出结果进行归一化处理, 表示只对每个位置独立分类, 并没有使用上下文已标记过的信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="63">CRF是标注层, 也叫逻辑回归层, 进行语句序列标注。CRF层引入一个状态转移矩阵<b><i>M</i></b>, 矩阵<b><i>M</i></b>的每个元素<i>M</i><sub><i>i</i>, <i>j</i></sub>表示从<i>i</i>变化到<i>j</i>的可能性, 实现利用此前标注过的信息对一个新的位置进行标注。如果记一个标签序列为<i>y</i>= (<i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, …, <i>y</i><sub><i>n</i></sub>) , 对于句子<i>x</i>, 模型预测标签等于<i>y</i>的打分为score (<i>x</i>, <i>y</i>) =<mathml id="64"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo stretchy="false"> (</mo></mstyle><mi>Μ</mi><msub><mrow></mrow><mrow><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub><mi>y</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></msub><mo>+</mo><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></msub><mo stretchy="false">) </mo></mrow></math></mathml>, 可以看出打分结果由两部分组成, 一部分分值是由LSTM的输出<i>p</i><sub><i>i</i></sub>决定, 另外一部分则取决于CRF的变化矩阵<b><i>M</i></b>, 最终使用Softmax函数进行归一化处理, 得到结果<i>P</i> (<i>y</i>|<i>x</i>) =<mathml id="65"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mi>exp</mi><mo stretchy="false"> (</mo><mtext>s</mtext><mtext>c</mtext><mtext>o</mtext><mtext>r</mtext><mtext>e</mtext><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><mi>y</mi><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><msup><mi>y</mi><mo>′</mo></msup></munder><mtext>e</mtext></mstyle><mtext>x</mtext><mtext>p</mtext><mo stretchy="false"> (</mo><mtext>s</mtext><mtext>c</mtext><mtext>o</mtext><mtext>r</mtext><mtext>e</mtext><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><msup><mi>y</mi><mo>′</mo></msup><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow></mfrac></mrow></math></mathml>。</p>
+                </div>
+                <h4 class="anchor-tag" id="66" name="66"><b>2.2 模型训练</b></h4>
+                <h4 class="anchor-tag" id="67" name="67"><b>2.2.1 前向神经网络</b></h4>
+                <div class="p1">
+                    <p id="68">模型通过前向神经网络将输入的特征向量经过层层推导得到最后的输出, 并通过这些输出解决实体抽取任务。本实验实体抽取模型的输入层是大小为<i>n</i>·<i>V</i>的窗口词向量, <i>n</i>代表窗口的规模, <i>V</i>指词向量的维度。向量化的字符作为隐含层的输入数据, 隐含层得到的结果则是标注层的特征。标注层表示的是输入层的字符为每个分类的可能性。网络架构的前向神经网络函数如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="69"><i>h</i>=<i>W</i> (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>) +<i>b</i><sup>1</sup>      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="70"><i>a</i>=<i>f</i> (<i>h</i>)      (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="71"><i>z</i>=<i>g</i> (<i>U</i><sup>T</sup>+<i>b</i><sup>2</sup>)      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="72">式中:向量 (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>) 是输入层的词向量组, <i>h</i>代表输入词向量通过线性变换得到的特征向量, <i>a</i>为隐含变换层的输出结果, <i>f</i>是去线性化的激活函数, 采用双曲正切函数<mathml id="73"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><msub><mrow></mrow><mi>x</mi></msub></mrow></mfrac><mrow><mi>tanh</mi></mrow><mi>x</mi><mo>=</mo><mn>1</mn><mo>-</mo><mrow><mi>tanh</mi></mrow><msup><mrow></mrow><mn>2</mn></msup><mi>x</mi></mrow></math></mathml>, 输出区间在 (-1, 1) 之间, 整个函数是以0为中心。<i>f</i>和<i>g</i>指的是网络模型函数, <i>W</i>、<i>U</i>代表模型设计参数, <i>b</i>是用来去线性化的标量值, <i>z</i>表示最后分类的概率值。</p>
+                </div>
+                <h4 class="anchor-tag" id="74" name="74"><b>2.2.2 损失函数</b></h4>
+                <div class="p1">
+                    <p id="75">在前向神经网络的逻辑回归层, 常使用Softmax函数计算一种状态序列<i>y</i>∈<i>Y</i><sub><i>X</i></sub>的概率。针对单个样本的损失函数, 应用极大似然估计来定义:</p>
+                </div>
+                <div class="p1">
+                    <p id="76"><i>l</i> (<i>x</i>, <i>y</i>) =-log (<i>p</i> (<i>y</i>|<i>x</i>) )      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="77">模型进行训练时, 这种基于单样本梯度参数更新方法不仅造成模型训练速度慢的问题, 还容易带来优化波动现象, 本文引入批量样本的梯度进行参数更新, 定义模型的损失函数为:</p>
+                </div>
+                <div class="p1">
+                    <p id="78" class="code-formula">
+                        <mathml id="78"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>L</mi><mo stretchy="false"> (</mo><mi>X</mi><mo>, </mo><mi>Y</mi><mo stretchy="false">) </mo><mo>=</mo><mo>-</mo><mrow><mi>log</mi></mrow><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><mi>y</mi><mo stretchy="false">) </mo><mo>∈</mo><mo stretchy="false"> (</mo><mi>X</mi><mo>, </mo><mi>Y</mi><mo stretchy="false">) </mo></mrow></munder><mrow></mrow></mstyle><mi>p</mi><mo stretchy="false"> (</mo><mi>y</mi><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">) </mo><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><mi>y</mi><mo stretchy="false">) </mo><mo>∈</mo><mo stretchy="false"> (</mo><mi>X</mi><mo>, </mo><mi>Y</mi><mo stretchy="false">) </mo></mrow></munder><mi>l</mi></mstyle><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><mi>y</mi><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="79">式中:<i>X</i>、<i>Y</i>为批量训练样本, 大小为batch。</p>
+                </div>
+                <h4 class="anchor-tag" id="80" name="80"><b>2.2.3 参数优化</b></h4>
+                <div class="p1">
+                    <p id="81">参数优化是神经网络模型训练的核心任务, 利用反向传播算法可以计算损失函数对每个参数的梯度, 并结合学习率更新参数, 从而提高训练模型的质量。传统梯度下降法每次都采用相同的学习速率<i>η</i>来更新所有的参数<i>θ</i><sub><i>i</i></sub>, 即:</p>
+                </div>
+                <div class="p1">
+                    <p id="82"><i>g</i><sub><i>t</i>, <i>i</i></sub>=ᐁ<sub><i>i</i></sub><i>L</i> (<i>θ</i>)      (7) </p>
+                </div>
+                <div class="p1">
+                    <p id="83"><i>θ</i><sub><i>t</i>+1, <i>i</i></sub>=<i>θ</i><sub><i>t</i>, <i>i</i></sub>-<i>η</i>·<i>g</i><sub><i>t</i>, <i>i</i></sub>      (8) </p>
+                </div>
+                <div class="p1">
+                    <p id="84">这种采用固定学习速率的方法难以适用于稀疏梯度, 而Adagrad方法可以实现为各个参数动态地分配不同的学习率。在利用Adagrad方法进行模型参数的更新时, 对样本较少的特征进行较大幅度的参数调整, 对频繁的特征进行微调, 通过这种方式实现对学习率进行一定的约束, 其形式化定义公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="85"><mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>θ</mi><msub><mrow></mrow><mrow><mi>t</mi><mo>+</mo><mn>1</mn><mo>, </mo><mi>i</mi></mrow></msub><mo>=</mo><mi>θ</mi><msub><mrow></mrow><mrow><mi>t</mi><mo>, </mo><mi>i</mi></mrow></msub><mo>-</mo><mfrac><mi>η</mi><mrow><msqrt><mrow><mi>G</mi><msub><mrow></mrow><mrow><mi>t</mi><mo>, </mo><mi>i</mi><mi>i</mi></mrow></msub><mo>+</mo><mi>φ</mi></mrow></msqrt></mrow></mfrac><mo>⋅</mo><mi>g</mi><msub><mrow></mrow><mrow><mi>t</mi><mo>, </mo><mi>i</mi></mrow></msub></mrow></math></mathml>      (9) </p>
+                </div>
+                <div class="p1">
+                    <p id="87">式中:<i>φ</i>用来防止分母为零项, <b><i>G</i></b><sub><i>t</i></sub>∈<b><i>R</i></b><sup><i>nn</i></sup>是一个对角矩阵, 矩阵中的元素<i>G</i><sub><i>t</i>, <i>ii</i></sub>表示每个参数<i>θ</i><sub><i>i</i></sub>从最初状态到<i>t</i>时刻所有梯度平方的求和。在<i>t</i>时刻, 学习速率在对应参数<i>θ</i><sub><i>i</i></sub>的前一时刻梯度基础上被更改, 观察式 (9) 发现, 当<i>θ</i><sub><i>i</i></sub>的梯度<i>g</i><sub><i>i</i></sub>持续较小时, 对参数进行大幅度调动, 而参数已经接近最优, 仅仅需要微调。</p>
+                </div>
+                <h4 class="anchor-tag" id="88" name="88"><b>2.2.4 训练算法</b></h4>
+                <div class="p1">
+                    <p id="89">图4展示了利用反向传播算法优化网络模型的过程。反向传播是一个重复反馈的过程。首先采用较小单位训练数据, 通过前向传播算法得到神经网络的预测结果, 然后利用损失函数计算预测值和真实值之间的差距, 最后用反向传播更新模型参数的取值, 模型训练算法如算法1所示。</p>
+                </div>
+                <div class="area_img" id="90">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201905047_090.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 神经网络反向优化流程" src="Detail/GetImg?filename=images/JYRJ201905047_090.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 神经网络反向优化流程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201905047_090.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="91"><b>算法1</b> BILSTM_CRF模型训练</p>
+                </div>
+                <div class="area_img" id="166">
+                                <img alt="" src="Detail/GetImg?filename=images/JYRJ201905047_16600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="111" name="111" class="anchor-tag"><b>3 实验及分析</b></h3>
+                <h4 class="anchor-tag" id="112" name="112"><b>3.1 实验准备</b></h4>
+                <h4 class="anchor-tag" id="113" name="113"><b>3.1.1 环境准备</b></h4>
+                <div class="p1">
+                    <p id="114">为了解决CPU训练模型需要消耗较长时间的问题, 本实验用NVIDIA GeForce GTX 1060显卡对模型进行训练, 使用该型号GPU训练时间缩短为小时级别, 实验需要配置的软硬件如表1所示。</p>
+                </div>
+                <div class="area_img" id="115">
+                    <p class="img_tit"><b>表1 软硬件配置表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="115" border="1"><tr><td><br /></td><td>项目</td><td>环境</td></tr><tr><td rowspan="3"><br />硬件</td><td><br />GPU</td><td>GTX 1060</td></tr><tr><td><br />内存</td><td>8 GB</td></tr><tr><td><br />硬盘</td><td>500 GB</td></tr><tr><td rowspan="3"><br />软件</td><td><br />操作系统</td><td>Ubuntu 16.04</td></tr><tr><td><br />Python版本</td><td>Python 2.7</td></tr><tr><td><br />TensorFlow版本</td><td>TensorFlow 1.7</td></tr><tr><td colspan="3"><br /></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="116" name="116"><b>3.1.2 语料准备</b></h4>
+                <div class="p1">
+                    <p id="117">实验使用2014年1月人民日报语料库样本, 其中训练语料占实验样本的80%, 剩余作为实验测试语料, 分别对样本中的人物姓名 (PER) 、地点名 (LOC) 和组织机构名 (ORG) 进行识别, 具体的数据统计如表2所示。</p>
+                </div>
+                <div class="area_img" id="118">
+                    <p class="img_tit"><b>表2 语料数据统计表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="118" border="1"><tr><td><br />语料</td><td>训练集</td><td>测试集</td><td>所有实体</td></tr><tr><td><br />人名</td><td>7 100</td><td>1 776</td><td>8 876</td></tr><tr><td><br />地名</td><td>2 870</td><td>717</td><td>3 587</td></tr><tr><td><br />组织名</td><td>3 540</td><td>987</td><td>4 437</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="119">监督训练方式主要标注模型包括BIO、BIEO、BIESO等, 本文利用的模式是BIO, B代表命名实体首字, I代表实体中间, O代表非实体。因此, B-PER、I-PER分别表示人名首字、人名非首字, B-LOC、I-LOC表示地点名首字、地点名非首字, B-ORG、I-ORG指组织名首字、组织名非首字, O代表非命名实体。</p>
+                </div>
+                <h4 class="anchor-tag" id="120" name="120"><b>3.1.3 词向量</b></h4>
+                <div class="p1">
+                    <p id="121">实体标注抽取实验需要一个初始词向量, 相对于直接随机初始化词向量, 使用大量非标注样本语料训练词向量效率更高。本实验词向量训练工具用谷歌开源word2vec语言模型CBOW。设置CBOW模型参数:词向量的维度大小为100、200和300维;滑动窗口大小为5;训练迭代次数100;设置学习速率0.05等。</p>
+                </div>
+                <h4 class="anchor-tag" id="122" name="122"><b>3.1.4 神经网络</b></h4>
+                <div class="p1">
+                    <p id="123">谷歌开源的TensorFlow计算框架能够很好地支持深度学习的各种算法, 本文利用TensorFlow框架来训练BILSTM_CRF实体抽取模型, 具体的参数设置为:神经网络层数2;隐含层节点数300;最大梯度值5;学习速率0.02;过拟合参数0.6;批量样本大小128等。</p>
+                </div>
+                <h4 class="anchor-tag" id="124" name="124"><b>3.2 评价指标</b></h4>
+                <div class="p1">
+                    <p id="125">本实验使用准确率P (Precision) 、召回率又叫查全率R (Recall) 以及F1值对模型的性能进行评价<citation id="165" type="reference"><link href="33" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>。3个评价指标的公式定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="126"><mathml id="127"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ρ</mi><mo>=</mo><mfrac><mrow><mtext>正</mtext><mtext>确</mtext><mtext>识</mtext><mtext>别</mtext><mtext>的</mtext><mtext>实</mtext><mtext>体</mtext><mtext>个</mtext><mtext>数</mtext></mrow><mrow><mtext>实</mtext><mtext>体</mtext><mtext>总</mtext><mtext>数</mtext></mrow></mfrac></mrow></math></mathml>      (10) </p>
+                </div>
+                <div class="p1">
+                    <p id="128"><mathml id="129"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>R</mi><mo>=</mo><mfrac><mrow><mtext>正</mtext><mtext>确</mtext><mtext>识</mtext><mtext>别</mtext><mtext>的</mtext><mtext>实</mtext><mtext>体</mtext><mtext>个</mtext><mtext>数</mtext></mrow><mrow><mtext>识</mtext><mtext>别</mtext><mtext>出</mtext><mtext>的</mtext><mtext>实</mtext><mtext>体</mtext><mtext>总</mtext><mtext>数</mtext></mrow></mfrac></mrow></math></mathml>      (11) </p>
+                </div>
+                <div class="p1">
+                    <p id="130"><mathml id="131"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>F</mi><mn>1</mn><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mi>Ρ</mi><mo>×</mo><mi>R</mi></mrow><mrow><mi>Ρ</mi><mo>+</mo><mi>R</mi></mrow></mfrac></mrow></math></mathml>      (12) </p>
+                </div>
+                <h4 class="anchor-tag" id="132" name="132"><b>3.3 实验结果与分析</b></h4>
+                <div class="p1">
+                    <p id="133"> (1) 实验采用传统条件随机场CRF模型、双向长短时记忆网络BILSTM模型, 混合方法LSTM_CRF模型作为对比实验。传统的CRF方法利用实验语料人工设计特征模板, 而不是用词向量表示字符, 模板设计如图5所示。</p>
+                </div>
+                <div class="area_img" id="134">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201905047_134.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 CRF特征模板" src="Detail/GetImg?filename=images/JYRJ201905047_134.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 CRF特征模板  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201905047_134.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="135">每个模板特征用%[row, col]标记实验数据, row、col表示距离目标数据的行、列长度。“U01:%x[-1, 0]”指基于当前观测<i>X</i><sub><i>t</i></sub>, 考虑前一个观测<i>X</i><sub><i>t</i>-1</sub>的第<i>X</i><mathml id="136"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow><mrow><mo stretchy="false"> (</mo><mn>0</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>个特征以及当前状态<i>Y</i><sub><i>t</i></sub>。条件随机场方法根据这些特征模板和标注标签训练生成特征选择模型, 接着对测试语料的词汇进行识别, 计算出词汇为某一类命名实体的概率。通过实验, 四种模型的性能对比如表3所示。</p>
+                </div>
+                <div class="area_img" id="137">
+                    <p class="img_tit"><b>表3 不同模型对比表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="137" border="1"><tr><td><br />模型类别</td><td>实体总数</td><td><i>P</i>/%</td><td><i>R</i>/%</td><td><i>F</i>1/%</td></tr><tr><td><br />CRF</td><td>16 900</td><td>89.50</td><td>75.88</td><td>82.13</td></tr><tr><td><br />BILSTM</td><td>16 900</td><td>88.21</td><td>74.23</td><td>80.62</td></tr><tr><td><br />LSTM_CRF</td><td>16 900</td><td>90.58</td><td>80.34</td><td>85.15</td></tr><tr><td><br />BILSTM_CRF</td><td>16 900</td><td>94.15</td><td>86.63</td><td>90.23</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="138">BILSTM在所有测试模型中<i>F</i>1值最低, 神经网络模型结构较为复杂, 需要大量的训练语料, 而本实验语料库较小, 模型得不到充分训练, 性能受到影响;其次, BILSTM对建模的状态是相互独立的, 不能有效利用上下已经标注过的序列信息, 影响抽取效率。</p>
+                </div>
+                <div class="p1">
+                    <p id="139">混合模型LSTM_CRF比其中两种单一模型<i>F</i>1值高, 识别效果较好, 但因LSTM网络只能提取序列标注模型的上文信息特征, 无法利用下文信息特征, 抽取模型未达到最好效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="140">观察表3可以发现, 相比于其他三种模型方法, 基于BILSTM_CRF模型的实体抽取方法有更高的准确性和查全率, 其中<i>F</i>1值相比传统CRF模型提高约8%, 表明基于BILSTM_CRF的方法较其他方法具有较大优势。BILSTM_CRF结合预训练向量, 使用BILSTM选取最优特征工程, 利用CRF句子级别的标签信息优化BILSTM结构, 结合两者获得更佳的识别效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="141"> (2) 通过word2vec工具生成不同维度的向量对BILSTM_CRF模型的实体抽取效率也有影响, 实验训练100、200以及300维度的向量分别进行对比, 对于每一组实验, 均循环5次并求平均值, 结果如图6所示。</p>
+                </div>
+                <div class="area_img" id="142">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201905047_142.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 不同维度词向量实验对比" src="Detail/GetImg?filename=images/JYRJ201905047_142.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 不同维度词向量实验对比  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201905047_142.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="143">由图6可以发现, 实体抽取实验所得的准确率、召回率以及<i>F</i>1值在词嵌入向量维度为200最高, 模型获得最佳性能。维度过低, 获取的特征不完整, 出现欠拟合情况;维度太高, 语料中的噪声容易被捕获, 产生过拟合状况。</p>
+                </div>
+                <div class="p1">
+                    <p id="144"> (3) 在BILSTM_CRF模型中, 网络结构复杂度和模型误差大小受隐含层节点数目量的影响。实验训练包含不同隐含层节点数量的模型作对比, 每种参数设置都执行5次, 计算求得<i>F</i>1值平均值。图7说明了<i>F</i>1均值随着隐含层节点数目的变化。</p>
+                </div>
+                <div class="area_img" id="145">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201905047_145.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 F1值均值随隐含层节点数目变化" src="Detail/GetImg?filename=images/JYRJ201905047_145.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 <i>F</i>1值均值随隐含层节点数目变化  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201905047_145.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="146">由图7可知, <i>F</i>1值均值随着节点数量的增加而提高, 在节点数量为300时达到一个最高值, 随后又呈现出递减趋势。在隐含层节点数目是300时, 模型获得最好实体抽取效果。分析原因是隐含层节点太少时, 模型得不到充分训练, 性能较差;节点数过多, 又容易造成模型过度拟合和浪费训练时间等问题, 影响实验效率。</p>
+                </div>
+                <h3 id="147" name="147" class="anchor-tag"><b>4 结 语</b></h3>
+                <div class="p1">
+                    <p id="148">针对目前知识图谱实体抽取方法依赖大量人工特征和领域专家的问题, 提出了一种结合双向长短时记忆网络和条件随机场模型的实体抽取方法。该方法融入了词语的上下文信息, 把词的分布式表示引入到特征提取, 充分利用词语标签的前后联系, 识别效果得到进一步提高。实验结果表明, 基于BILSTM_CRF模型的实体抽取方法与传统方法相比, <i>F</i>1测度值更高, 有更好的实体识别效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="149">本文实体抽取模型训练需要大量标注语料, 但在一些领域并没有海量的标注数据, 所以基于所提方法引入迁移学习, 使用少量的标注数据进行实体抽取将是以后研究的重点。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201705027&amp;v=MDQwODRaTEc0SDliTXFvOUhZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeXprVkwzT0x6VFo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 杜泽宇, 杨燕, 贺樑.基于中文知识图谱的电商领域问答系统[J].计算机应用与软件, 2017, 34 (5) :153-159.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XXWX201805023&amp;v=MTAwNzVrVkwzT1BUWGNkckc0SDluTXFvOUhaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeXo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 翟社平, 郭琳, 高山, 等.一种采用贝叶斯推理的知识图谱补全方法[J].小型微型计算机系统, 2018, 39 (5) :995-999.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201704004&amp;v=MTg3ODZHNEg5Yk1xNDlGWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl6a1ZMM09LQ2pZZmI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 张海楠, 伍大勇, 刘悦, 等.基于深度神经网络的中文命名实体识别[J].中文信息学报, 2017, 31 (4) :28-35.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The NYU system for MU-C6 or where&amp;#39;&amp;#39;s the syntax?">
+
+                                <b>[4]</b> Grishman R.The NYU system for MU-C6 or where's the syntax?[C]//Message Understanding Conference, Columbia, Maryland, USA, 2014:13-31.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Extracting patterns and relations from the World-Wide Web">
+
+                                <b>[5]</b> Brin S.Extracting Patterns and Relations from the World Wide Web[M]//The World Wide Web and Databases.Springer Berlin Heidelberg, 2016:172-183.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XXWX201512039&amp;v=MTU0OThRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl6a1ZMM09QVFhjZHJHNEg5VE5yWTlHYlk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 韩霞, 黄德根.基于半监督隐马尔科夫模型的汉语词性标注研究[J].小型微型计算机系统, 2015, 36 (12) :2813-2816.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201604037&amp;v=MjQ5NzBmTXE0OUdZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeXprVkwzT0x6VFpaTEc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 张小龙, 刘书炘, 刘满华.基于级联支持向量机融合多特征的人脸检测[J].计算机应用与软件, 2016, 33 (4) :151-154, 207.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201501047&amp;v=MDYyODdmWnVadEZ5emtWTDNPTHpUWlpMRzRIOVRNcm85Qlk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3E=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 何炎祥, 罗楚威, 胡彬尧.基于CRF和规则相结合的地理命名实体识别方法[J].计算机应用与软件, 2015, 32 (1) :179-185.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=RNN-BLSTM Based Multi-Pitch Estimation">
+
+                                <b>[9]</b> Zhang J.RNN-BLSTM Based Multi-Pitch Estimation[C]//INTERSPEECH, Germany:Inter-speech, 2016:1785-1789.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201704027&amp;v=MjM4NDdUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl6a1ZMM09MelRaWkxHNEg5Yk1xNDlIWTRRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 冯多, 林政, 付鹏, 等.基于卷积神经网络的中文微博情感分类[J].计算机应用与软件, 2017, 34 (4) :157-164.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Speech recognition with deep recurrent neural networks">
+
+                                <b>[11]</b> Graves A, Mohamed A R, Hinton G.Speech recognition with deep recurrent neural networks[C]//IEEE International Conference on Acoustics, Speech and Signal Processing.IEEE, 2013:6645-6649.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017119488.nh&amp;v=MzI2MDR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl6a1ZMM09WRjI2R2JLNUY5WEVwNUViUElRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 谢志宁.中文命名实体识别算法研究[D].杭州:浙江大学, 2017.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A Neural Probabilistic Language Model">
+
+                                <b>[13]</b> Bengio Y, Duchme R.A neural probabilistic language model[J].Journal of Machine Le-arning Research, 2003, 3 (6) :1137-1155.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017285182.nh&amp;v=MDA1MDM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5emtWTDNPVkYyNkdiR3dHOURFclpFYlBJUUtESDg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 王蕾.基于神经网络的中文命名实体识别研究[D].南京:南京师范大学, 2017.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJA201802047&amp;v=MjEyMjFyQ1VSN3FmWnVadEZ5emtWTDNPTHo3QmI3RzRIOW5Nclk5Qlk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 冯艳红, 于红, 孙庚, 等.基于BLSTM的命名实体识别方法[J].计算机科学, 2018, 45 (2) :261-268.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787302275954001&amp;v=MjI2NjM0SE5QTHFvWkFZT3NQRFJNOHp4VVNtRGQ5U0g3bjN4RTlmYnZuS3JpZlplWnZGeW5tVTd2Skoxd1NYRnF6R2JD&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> 李航.统计学习方法[M].北京:清华大学出版社, 2012.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JYRJ201905047" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201905047&amp;v=MDYwNzc0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5emtWTDNPTHpUWlpMRzRIOWpNcW85Qlk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

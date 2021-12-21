@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637135753643096250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJYRJ201904022%26RESULT%3d1%26SIGN%3d%252boAOwgWdAPMAyl3dVPv%252bADzTLbQ%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201904022&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201904022&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201904022&amp;v=MjQxMDZxZlp1WnRGeXptVUxySkx6VFpaTEc0SDlqTXE0OUhab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#33" data-title="&lt;b&gt;0 引 言&lt;/b&gt; "><b>0 引 言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#36" data-title="&lt;b&gt;1 Netty简介与优化&lt;/b&gt; "><b>1 Netty简介与优化</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#37" data-title="&lt;b&gt;1.1 Netty介绍&lt;/b&gt;"><b>1.1 Netty介绍</b></a></li>
+                                                <li><a href="#39" data-title="&lt;b&gt;1.2 Netty优化设计&lt;/b&gt;"><b>1.2 Netty优化设计</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#41" data-title="&lt;b&gt;2 系统设计&lt;/b&gt; "><b>2 系统设计</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#42" data-title="&lt;b&gt;2.1 协议设计&lt;/b&gt;"><b>2.1 协议设计</b></a></li>
+                                                <li><a href="#54" data-title="&lt;b&gt;2.2 服务器设计&lt;/b&gt;"><b>2.2 服务器设计</b></a></li>
+                                                <li><a href="#98" data-title="&lt;b&gt;2.3 业务处理线程池设计&lt;/b&gt;"><b>2.3 业务处理线程池设计</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#105" data-title="&lt;b&gt;3 测试结果&lt;/b&gt; "><b>3 测试结果</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#112" data-title="&lt;b&gt;4 结 语&lt;/b&gt; "><b>4 结 语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#44" data-title="图1 协议图">图1 协议图</a></li>
+                                                <li><a href="#56" data-title="图2 通信系统功能模块图">图2 通信系统功能模块图</a></li>
+                                                <li><a href="#104" data-title="图3 Netty的NIO线程池与自定义线程池交互流程图">图3 Netty的NIO线程池与自定义线程池交互流程图</a></li>
+                                                <li><a href="#108" data-title="图4 平均响应时间比较">图4 平均响应时间比较</a></li>
+                                                <li><a href="#110" data-title="图5 平均响应吞吐量比较">图5 平均响应吞吐量比较</a></li>
+                                                <li><a href="#111" data-title="图6 连接统计图">图6 连接统计图</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="128">
+
+
+                                    <a id="bibliography_1" title=" 韦乐平. 物联网的特征、发展策略和挑战[J].现代电信科技, 2011, 27 (4) :1-5." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDDX201104002&amp;v=MTk5MTVtVUxySlBTblBkckc0SDlETXE0OUZab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeXo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         韦乐平. 物联网的特征、发展策略和挑战[J].现代电信科技, 2011, 27 (4) :1-5.
+                                    </a>
+                                </li>
+                                <li id="130">
+
+
+                                    <a id="bibliography_2" title=" Liu L, Zhou Y, Tian L, et al.Interference Aware CoMP for Macrocell-Based Heterogeneous Ultra Dense Cellular Networks[C]//2018 IEEE International Conference on Communications (ICC) . IEEE, 2018: 1-6." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Interference Aware CoMP for Macrocell-Based Heterogeneous Ultra Dense Cellular Networks">
+                                        <b>[2]</b>
+                                         Liu L, Zhou Y, Tian L, et al.Interference Aware CoMP for Macrocell-Based Heterogeneous Ultra Dense Cellular Networks[C]//2018 IEEE International Conference on Communications (ICC) . IEEE, 2018: 1-6.
+                                    </a>
+                                </li>
+                                <li id="132">
+
+
+                                    <a id="bibliography_3" title=" Liu Z, Zhou Y, Han X, et al.Energy efficiency of CoMP-based cellular networks with guaranteed coverage[C]//Wireless Communications and NETWORKING Conference. IEEE, 2013:2034-2039." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Energy efficiency of CoMP-based cellular networks with guaranteed coverage">
+                                        <b>[3]</b>
+                                         Liu Z, Zhou Y, Han X, et al.Energy efficiency of CoMP-based cellular networks with guaranteed coverage[C]//Wireless Communications and NETWORKING Conference. IEEE, 2013:2034-2039.
+                                    </a>
+                                </li>
+                                <li id="134">
+
+
+                                    <a id="bibliography_4" title=" Zhou Y, Liu H, Pan Z, et al. Cooperative Multicast with Location Aware Distributed Mobile Relay Selection: Performance Analysis and Optimized Design[J].IEEE Transactions on Vehicular Technology, 2017, 66 (9) : 8291-8302." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Cooperative multicast with location aware distributed mobile relay selection:Performance analysis and optimized design">
+                                        <b>[4]</b>
+                                         Zhou Y, Liu H, Pan Z, et al. Cooperative Multicast with Location Aware Distributed Mobile Relay Selection: Performance Analysis and Optimized Design[J].IEEE Transactions on Vehicular Technology, 2017, 66 (9) : 8291-8302.
+                                    </a>
+                                </li>
+                                <li id="136">
+
+
+                                    <a id="bibliography_5" title=" 蔡谊.基于MINA框架的网络管理软件设计[J].通信技术, 2013, 46 (3) :115-117." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=TXJS201303037&amp;v=MDc5NDg2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeXptVUxySk1UWEJmYkc0SDlMTXJJOUdZNFFLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         蔡谊.基于MINA框架的网络管理软件设计[J].通信技术, 2013, 46 (3) :115-117.
+                                    </a>
+                                </li>
+                                <li id="138">
+
+
+                                    <a id="bibliography_6" title=" 罗文韬. 大型电商网站服务系统关键改进的研究和实现[D]. 北京:中国科学院大学工程管理与信息技术学院, 2016." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016121515.nh&amp;v=MTEyNzBadEZ5em1VTHJKVkYyNkdMSzZIOVROcXBFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         罗文韬. 大型电商网站服务系统关键改进的研究和实现[D]. 北京:中国科学院大学工程管理与信息技术学院, 2016.
+                                    </a>
+                                </li>
+                                <li id="140">
+
+
+                                    <a id="bibliography_7" title=" 汪佳文, 王书培, 徐立波, 等. 基于权重轮询负载均衡算法的优化[J]. 计算机系统应用, 2018, 27 (4) :138-144." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XTYY201804021&amp;v=MDgwMjBGckNVUjdxZlp1WnRGeXptVUxySlBUblNkN0c0SDluTXE0OUhaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         汪佳文, 王书培, 徐立波, 等. 基于权重轮询负载均衡算法的优化[J]. 计算机系统应用, 2018, 27 (4) :138-144.
+                                    </a>
+                                </li>
+                                <li id="142">
+
+
+                                    <a id="bibliography_8" title=" 魏莹.基于Netty框架的智能终端与服务器通信的研究[D].西安:西安电子科技大学, 2017:19." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017276057.nh&amp;v=MjQ5MzdCdEdGckNVUjdxZlp1WnRGeXptVUxySlZGMjZHYkcvR05ISnFKRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         魏莹.基于Netty框架的智能终端与服务器通信的研究[D].西安:西安电子科技大学, 2017:19.
+                                    </a>
+                                </li>
+                                <li id="144">
+
+
+                                    <a id="bibliography_9" title=" 李林锋.Netty权威指南[M].电子工业出版社, 2015:60-63." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787121258015000&amp;v=MTgyMDVEZDlTSDduM3hFOWZidm5LcmlmWmVadkZ5bm1VN3ZMSTFzVlhGcXpHYks2SDlQSnA0OUVZZXNQREJNOHp4VVNt&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         李林锋.Netty权威指南[M].电子工业出版社, 2015:60-63.
+                                    </a>
+                                </li>
+                                <li id="146">
+
+
+                                    <a id="bibliography_10" title=" Monet D G, Reid I N, Kirkpatrick J D, et al. New Neighbors from 2MASS: Activity and Kinematics at the Bottom of the Main Sequence[J]. Astronomical Journal, 2000, 120 (2) :1085-1099." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=New Neighbors from 2MASS: Activity and Kinematics at the Bottom of the Main Sequence">
+                                        <b>[10]</b>
+                                         Monet D G, Reid I N, Kirkpatrick J D, et al. New Neighbors from 2MASS: Activity and Kinematics at the Bottom of the Main Sequence[J]. Astronomical Journal, 2000, 120 (2) :1085-1099.
+                                    </a>
+                                </li>
+                                <li id="148">
+
+
+                                    <a id="bibliography_11" title=" 韩宏峰, 冯石, 罗羿隆.基于Java与Python的面向对象编程的基本特征研究[J].软件工程, 2017, 20 (8) :1-3." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGGC201708001&amp;v=MjEwODM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5em1VTHJKUHlyTWJiRzRIOWJNcDQ5RlpZUUtESDg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         韩宏峰, 冯石, 罗羿隆.基于Java与Python的面向对象编程的基本特征研究[J].软件工程, 2017, 20 (8) :1-3.
+                                    </a>
+                                </li>
+                                <li id="150">
+
+
+                                    <a id="bibliography_12" title=" 龚鹏, 曾兴斌.基于Netty框架的数据通讯服务系统的设计[J].无线通信技术, 2016, 25 (1) :46-49." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WYWT201601010&amp;v=MzE0OTN5em1VTHJKTWpUY2VyRzRIOWZNcm85RVpJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         龚鹏, 曾兴斌.基于Netty框架的数据通讯服务系统的设计[J].无线通信技术, 2016, 25 (1) :46-49.
+                                    </a>
+                                </li>
+                                <li id="152">
+
+
+                                    <a id="bibliography_13" title=" Pyarali I, Spivak M, Cytron R, et al.Evaluatingand optimizing thread pool strategies forreal-time CORBA[J].ACM SIGPLAN Notices, 2001, 36 (8) :214-222." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000002380&amp;v=MjU0ODBaZVp0RmlubFVyeklKRjBYYnhNPU5pZklZN0s3SHRqTnI0OUZaT3NORDNRNW9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1udw==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         Pyarali I, Spivak M, Cytron R, et al.Evaluatingand optimizing thread pool strategies forreal-time CORBA[J].ACM SIGPLAN Notices, 2001, 36 (8) :214-222.
+                                    </a>
+                                </li>
+                                <li id="154">
+
+
+                                    <a id="bibliography_14" title=" 吉利, 潘林云, 刘姚.线程池技术在网络服务器中的应用[J].计算机技术与发展, 2017, 27 (7) :149-151." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJFZ201708031&amp;v=MzIxMDVMRzRIOWJNcDQ5R1pZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5em1VTHJKTWlmTmQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         吉利, 潘林云, 刘姚.线程池技术在网络服务器中的应用[J].计算机技术与发展, 2017, 27 (7) :149-151.
+                                    </a>
+                                </li>
+                                <li id="156">
+
+
+                                    <a id="bibliography_15" title=" Peierls T, Goetz B, Bloch J, et al.Java Concurrency in Practice[M]. Addison-Wesley, 2006:1171-1177." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Java Concurrency in Practice">
+                                        <b>[15]</b>
+                                         Peierls T, Goetz B, Bloch J, et al.Java Concurrency in Practice[M]. Addison-Wesley, 2006:1171-1177.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JYRJ" target="_blank">计算机应用与软件</a>
+                2019,36(04),135-139 DOI:10.3969/j.issn.1000-386x.2019.04.021            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于Netty的IoT终端通信服务系统设计</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%A1%BE%E6%8C%AF%E5%BE%B7&amp;code=41483474&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">顾振德</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%88%98%E5%AD%90%E8%BE%B0&amp;code=32199509&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">刘子辰</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%BE%99%E9%9A%86&amp;code=36764410&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">龙隆</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%89%9F%E6%9E%97%E5%AE%8F&amp;code=41483476&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">牟林宏</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E9%87%8D%E5%BA%86%E9%82%AE%E7%94%B5%E5%A4%A7%E5%AD%A6%E9%80%9A%E4%BF%A1%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0174747&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">重庆邮电大学通信与信息工程学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E7%A7%BB%E5%8A%A8%E8%AE%A1%E7%AE%97%E4%B8%8E%E6%96%B0%E5%9E%8B%E7%BB%88%E7%AB%AF%E5%8C%97%E4%BA%AC%E5%B8%82%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4(%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E8%AE%A1%E7%AE%97%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E6%89%80)&amp;code=0142480&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">移动计算与新型终端北京市重点实验室(中国科学院计算技术研究所)</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>IoT终端高并发连接通信服务系统, 造成服务器数据交互NIO线程数飙升, 导致服务器宕机。对此分析异步非堵塞Netty框架, 提出一种通信服务系统的设计方案。方案包含优化Netty设计, 提出自定义通信协议, 并结合自定义线程池进行数据接收、session管理、异常处理, 日志记录, 数据发送等主要模块的设计。经大于2 000并发测试表明, 该方案的系统平均响应时间较Java NIO和Netty实现方案缩短了97%和95%, 吞吐量提高了54%和33.2%。测试证明该设计具有较高的稳定性、可靠性以及高并发处理能力。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Netty&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Netty;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%AB%98%E5%B9%B6%E5%8F%91&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">高并发;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%87%AA%E5%AE%9A%E4%B9%89%E7%BA%BF%E7%A8%8B%E6%B1%A0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">自定义线程池;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Java%20NIO&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Java NIO;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%90%9E%E5%90%90%E9%87%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">吞吐量;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    顾振德, 硕士生, 主研领域:网络通信。;
+                                </span>
+                                <span>
+                                    刘子辰, 博士生。;
+                                </span>
+                                <span>
+                                    龙隆, 博士生。;
+                                </span>
+                                <span>
+                                    牟林宏, 硕士生。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-10-23</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家科技重大专项基金项目 (2016ZX03002010-003);</span>
+                    </p>
+            </div>
+                    <h1><b>DESIGN OF IOT TERMINAL COMMUNICATION SERVICE SYSTEM BASED ON NETTY</b></h1>
+                    <h2>
+                    <span>Gu Zhende</span>
+                    <span>Liu Zichen</span>
+                    <span>Long Long</span>
+                    <span>Mou Linhong</span>
+            </h2>
+                    <h2>
+                    <span>School of Communication and Information Engineering, Chongqing University of Posts and Telecommunications</span>
+                    <span>Beijing Key Laboratory of Mobile Computing and Pervasive Device ( Institute of Computing Technology, Chinese Academy of Sciences)</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>The high concurrency of IoT terminal communication service system connections leads to the soaring number of NIO threads in server data interaction, which eventually leads to server downtime. To solve this problem, we analyzed the asynchronous non-blocking Netty framework and proposed a design scheme of communication service system. The design scheme included optimizing Netty design, putting forward self-defined communication protocol and system design which was divided into data receiving, session management, exception handling, log recording, data sending and other main modules, combining with the custom thread pool. The concurrent tests over 2 000 show that the average response time of the design scheme is 97% and 95% shorter than that of Java NIO and Netty scheme, and the throughput is increased by 54% and 33.2%. The test proves that the system has high stability, reliability and concurrent processing ability.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Netty&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Netty;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=High%20concurrent&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">High concurrent;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Custom%20thread%20pool&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Custom thread pool;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Java%20NIO&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Java NIO;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Throughput&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Throughput;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-10-23</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="33" name="33" class="anchor-tag"><b>0 引 言</b></h3>
+                <div class="p1">
+                    <p id="34">传统的IoT系统由三部分构成:传感器、网络传输、数据交互平台<citation id="158" type="reference"><link href="128" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。传感器技术已经取得了长足发展, 市场上存在各种类型设备, 网络传输的部署和应用都日趋成熟<citation id="162" type="reference"><link href="130" rel="bibliography" /><link href="132" rel="bibliography" /><link href="134" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>。随着IoT的发展, 终端的应用规模都在百万级别, 终端向服务器并发地发送数据请求在某一时刻急剧增加, 如何在短时间内提高服务器并发处理能力是数据通信服务系统开发面临的一个急需解决的问题<citation id="159" type="reference"><link href="136" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>。传统的数据通信服务系统采用Java原生NIO技术方式实现, 如果直接基于NIO类库和API编程, 会降低开发效率, 同时出现epoll bug, 导致Selector空轮询, 最终使CPU的占用率达到100%。罗文韬<citation id="160" type="reference"><link href="138" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>采用异步处理和基于事件驱动的机制来提高服务器高并发处理的效率。汪佳文等<citation id="161" type="reference"><link href="140" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>提出一种动态负载均衡算法, 并结合优化的Pick-K算法方案实现高并发传输。</p>
+                </div>
+                <div class="p1">
+                    <p id="35">本文提出一种基于Netty的通信服务系统的设计方案。该方案借助Netty的异步非堵塞、事件驱动等性能构建高性能网络通信程序<citation id="163" type="reference"><link href="142" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>, 并通过结合自定义功能模块设计和自定义线程池进一步提高服务系统的并发处理能力。</p>
+                </div>
+                <h3 id="36" name="36" class="anchor-tag"><b>1 Netty简介与优化</b></h3>
+                <h4 class="anchor-tag" id="37" name="37"><b>1.1 Netty介绍</b></h4>
+                <div class="p1">
+                    <p id="38">Netty是业界NIO框架中最流行的框架, 它的健壮性、可扩展性、可定制性都是首屈一指的<citation id="164" type="reference"><link href="144" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>, 可进行如TCP、UDP套接字服务器的开发。本系统因终端与服务器之间的数据通信要求实时性, 因此终端与服务系统建立TCP长连接实现。基于Netty实现终端通信服务系统, 可以不用过多关注连接的建立、数据的编解码等底层通信的实现, 进而能够更好地关注业务模块的实现, 极大地简化了网络编程。</p>
+                </div>
+                <h4 class="anchor-tag" id="39" name="39"><b>1.2 Netty优化设计</b></h4>
+                <div class="p1">
+                    <p id="40">长链接需要维护每个链路自己消息接收和发送的缓冲区, 而JDK原生NIO类库<citation id="165" type="reference"><link href="146" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>无法动态扩容, 从而给服务器带来沉重的内存负担。Netty提供的ByteBuf支持容量的动态调整, 选择AdaptiveRecByteBufAllocatorv在创建服务端时候指定RecvByteBufAllocator, 缓冲区的大小设置为消息的平均大小, 避免额外的内存浪费。TCP层面的接收和发送缓冲区的大小设置, 对于长连接设置为32 K。每个长连接就是一个会话, 每个会话都有心跳等数据结构, 给通信服务器带来沉重GC (Garbage Collection) 压力, 同时消耗大量的内存<citation id="166" type="reference"><link href="148" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>。本系统在设计通信服务端的时候采用ByteBuffer内存池技术来解决上述问题。</p>
+                </div>
+                <h3 id="41" name="41" class="anchor-tag"><b>2 系统设计</b></h3>
+                <h4 class="anchor-tag" id="42" name="42"><b>2.1 协议设计</b></h4>
+                <div class="p1">
+                    <p id="43">终端向服务器发送的数据是一连串的字节数据, 为了让服务器识别这些字节数组, 制定特殊的协议格式, 服务器响应终端也要通过该协议。图1为协议的设计。</p>
+                </div>
+                <div class="area_img" id="44">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201904022_044.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 协议图" src="Detail/GetImg?filename=images/JYRJ201904022_044.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 协议图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201904022_044.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="45">8个字节的终端序列号, 2个字节的消息体长度和1个字节的协议版本, 最后是消息体<citation id="167" type="reference"><link href="150" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>。消息体设计代码如下:</p>
+                </div>
+                <div class="area_img" id="172">
+                                <img alt="" src="Detail/GetImg?filename=images/JYRJ201904022_17200.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="53">serialNumber为终端的序列号, 每一个终端将有唯一的序列号;version表示协议的版本号;contentLength为消息体的长度;content表示消息体, 消息体包含终端运行的各种参数等。</p>
+                </div>
+                <h4 class="anchor-tag" id="54" name="54"><b>2.2 服务器设计</b></h4>
+                <div class="p1">
+                    <p id="55">服务器设计划分为6模块, 分别是异常处理、日志记录、数据接收、业务处理、数据发送、session管理等模块。异常处理模块主要负责捕获IoT通信服务系统自身的异常, 以及客户端的异常, 从而提高系统的稳定性。处理异常日志记录模块主要满足性能测试和维护工作需要, 设置输出内容, 输出到控制台和文件等。数据接收模块首先对客户端的连接IP进行过滤, 验证客户端的合法性。其次根据自定义通信协议解码接收的数据, 对解码后的数据进行解密, 验证数据的有效性和封装数据。同时添加空闲超时处理逻辑, 设计失效时间为180 s, 若服务器180 s没有接受到数据包, 则及时关闭超时的客户端连接。业务处理模块实现具体的业务逻辑, 将来自客户端的数据分类存储到MYSQL数据库中, 实现数据的持久化。数据发送模块主要负责将来自业务处理模块的数据进行处理并下发到终端, 对数据加密, 根据协议对发送数据编码, 之后发送出去。session管理模块在终端连接服务器时将session信息进行保存, 从而管理和操作连接, 定时清除非活跃的连接, 释放内存, 减轻服务器连接压力。终端通信服务系统的功能模块如图2所示。</p>
+                </div>
+                <div class="area_img" id="56">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201904022_056.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 通信系统功能模块图" src="Detail/GetImg?filename=images/JYRJ201904022_056.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 通信系统功能模块图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201904022_056.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="57">利用Netty框架构建服务器的大致流程:</p>
+                </div>
+                <div class="p1">
+                    <p id="58">1) 配置服务器的NIO线程组。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">//该线程组用于处理服务器接收终端的连接;</p>
+                </div>
+                <div class="p1">
+                    <p id="60">master=isLinux () new EpollEventLoopGroup (DEFAULT_THREAD_NUM, threadFactory) </p>
+                </div>
+                <div class="p1">
+                    <p id="61">:new NioEventLoopGroup</p>
+                </div>
+                <div class="p1">
+                    <p id="62"> (DEFAULT_THREAD_NUM, threadFactory) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="63">//该线程组用于处理来自中端的网络读写;</p>
+                </div>
+                <div class="p1">
+                    <p id="64">worker=isLinux () new EpollEventLoopGroup</p>
+                </div>
+                <div class="p1">
+                    <p id="65"> (DEFAULT_THREAD_NUM, threadFactory) </p>
+                </div>
+                <div class="p1">
+                    <p id="66">:new NioEventLoopGroup</p>
+                </div>
+                <div class="p1">
+                    <p id="67"> (DEFAULT_THREAD_NUM, threadFactory) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="68">2) 创建 ServerBootstrap对象, 传递master、work两个线程池。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">bootstrap=new ServerBootstrap () ;</p>
+                </div>
+                <div class="p1">
+                    <p id="70">3) 调用ServerBootstrap类的childHandler方法传入接口实现类处理具体的业务, 绑定I O事件的处理类, 监听端口IP地址, 处理网络IO事件。</p>
+                </div>
+                <div class="p1">
+                    <p id="71">bootstrap.group (master, worker) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="72">bootstrap.channel (serverChannelcls) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="73">bootstrap.localAddress (ipaddress, port) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="74">bootstrap.childHandler (handler) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="75">网络IO事件处理类的部分关键代码块:</p>
+                </div>
+                <div class="p1">
+                    <p id="76">@Override</p>
+                </div>
+                <div class="p1">
+                    <p id="77">protected void initChannel (SocketChannel channel) throws Exception {</p>
+                </div>
+                <div class="p1">
+                    <p id="78">//IP过滤, 对黑名单中IP拒绝连接</p>
+                </div>
+                <div class="p1">
+                    <p id="79">channel.pipeline () .addLast (filter) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="80">//数据解码</p>
+                </div>
+                <div class="p1">
+                    <p id="81">channel.pipeline () .addLast (getProtocolFrameDecoder () ) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="82">//数据编码</p>
+                </div>
+                <div class="p1">
+                    <p id="83">channel.pipeline () .addLast (protocalFrameDecrypt) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="84">//数据解密</p>
+                </div>
+                <div class="p1">
+                    <p id="85">channel.pipeline () .addLast (protocalFrameEncoder) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="86">//数据加密</p>
+                </div>
+                <div class="p1">
+                    <p id="87">channel.pipeline () .addLast (protocalFrameEncrypt) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="88">//添加空闲超时的工具, 关闭超时连接, 删除</p>
+                </div>
+                <div class="p1">
+                    <p id="89">channel.pipeline () .addLast (messageProcessofEventLoopGroup, new IdleStateHandler (180, 0, 0) ) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="90">//具体业务处理</p>
+                </div>
+                <div class="p1">
+                    <p id="91">channel.pipeline () .addLast (messageProcessofEventLoopGroup, messageProcessor) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="92">//异常处理</p>
+                </div>
+                <div class="p1">
+                    <p id="93">channel.pipeline () .addLast (messageProcessofEventLoopGroup, exceptionHandler) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="94">}</p>
+                </div>
+                <div class="p1">
+                    <p id="95">4) 使用创建的ServerBootstrap对象绑定, 开始监听, 用于异步操作的回调通知。</p>
+                </div>
+                <div class="p1">
+                    <p id="96">ChannelFuture f=bootstrap.bind () .sync () ;</p>
+                </div>
+                <div class="p1">
+                    <p id="97">经过以上操作, 服务系统成功启动, 等待终端的连接请求, 服务器接收到终端的数据后, 将从过滤IP模块开始传递数据并处理。</p>
+                </div>
+                <h4 class="anchor-tag" id="98" name="98"><b>2.3 业务处理线程池设计</b></h4>
+                <div class="p1">
+                    <p id="99">业务处理需要访问数据库, 如果直接使用Netty的worker线程进行业务处理, 可能会因不确定的执行时间导致线程被阻塞, 最终导致服务器宕机。因此采用自定义业务线程池来处理比较耗时的业务逻辑, 进而提高通信系统性能。ThreadPoolExecutor类从JDK1.5开始被提供自定义线程池<citation id="168" type="reference"><link href="152" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>。newFixedThreadPool可创建固定大小的线程池和可控控制线程最大并发数, 当线程池中的线程数达到其设定的核心线程大小时, 新创建的线程会在无界队列中等待<citation id="169" type="reference"><link href="154" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>。当线程池中的某个线程执行失败时新创建的线程会替代执行剩下任务。当线程池中创建的线程调用shutdown函数时会退出线程池<citation id="170" type="reference"><link href="154" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>。线程池最大尺寸不要超过系统资源限制, 算法公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="100"><mathml id="101"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ν</mi><msub><mrow></mrow><mi>s</mi></msub><mo>=</mo><mi>Ν</mi><msub><mrow></mrow><mi>i</mi></msub><mo>×</mo><mi>Ν</mi><msub><mrow></mrow><mi>j</mi></msub><mo>×</mo><mrow><mo> (</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mi>Τ</mi><mi>C</mi></mfrac></mrow><mo>) </mo></mrow></mrow></math></mathml>      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="102">式中:<i>N</i><sub><i>s</i></sub>为线程的设置数;<i>N</i><sub><i>i</i></sub>为CPU核心数;<i>N</i><sub><i>j</i></sub>为预期CPU核心利用率;<i>T</i>/<i>C</i>为任务等待的时间与执行时间的比值<citation id="171" type="reference"><link href="156" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="103">IoT终端与服务器通信的数据交互主要包括数据的解析、访问缓存数据库、入库MYSQL数据库、发送数据的预处理等操作。其中数据的编解码、加解密等执行时间短操作交由NIO线程执行, 而耗时比较长的业务处理交由自定义线程池执行完成, 具体执行流程如图3所示。</p>
+                </div>
+                <div class="area_img" id="104">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201904022_104.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 Netty的NIO线程池与自定义线程池交互流程图" src="Detail/GetImg?filename=images/JYRJ201904022_104.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 Netty的NIO线程池与自定义线程池交互流程图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201904022_104.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="105" name="105" class="anchor-tag"><b>3 测试结果</b></h3>
+                <div class="p1">
+                    <p id="106">采用开源压力测试工具Jmeter模拟IoT终端进行通信系统性能测试, 从服务系统平均响应时间、系统IO吞吐量2个方面进行数据分析。因条件有限, 性能测试在网络带宽100 MB/S的局域网中执行, 服务器CPU四核Intel (R) Core (TM) i5-3210M CPU @2.50 GHz内存8 GB, 操作系统centos-release-7-5.1804.e17.centos.2.x86_64。</p>
+                </div>
+                <div class="p1">
+                    <p id="107">模拟IoT终端每2秒发送一个180字节的实时数据, 由图4可知, 当并发数小于1 600时, 采用Netty框架结合自定义线程池方案并没有较大的优势, 因为调用本地方法会有一定的系统开销。当并发数量达到2 400时, 采用Netty框架结合自定义线程池方案优势较为明显。基于Java NIO的实现方案因系统消耗资源较大导致响应时间过长, 同时基于Netty的实现方案因业务操作性能开销比较大, 阻塞了I/O线程, 导致响应时间过长。采用Netty框架结合自定义线程池方案系统平均响应时间仍在100 ms以下, 且未达到瓶颈。较Java NIO和Netty实现方案平均响应时间缩短了97%和95%。</p>
+                </div>
+                <div class="area_img" id="108">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201904022_108.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 平均响应时间比较" src="Detail/GetImg?filename=images/JYRJ201904022_108.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 平均响应时间比较  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201904022_108.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="109">在吞吐量方面, 由图5可知, 当并发达到1 200时, 基于Java NIO的实现方案平均吞吐量达到最高值, 随着并发数请求数增大, 服务器出现异常吞吐量下降。当并发数达到2 000和2 400时, 采用Netty框架结合自定义线程池方案比基于Netty框架平均吞吐量增加了16.7%和33.2%。实验证明, 当4 000并发连接系统时, 系统仍然稳定运行, 如图6所示。这说明采用Netty框架结合自定义线程池方案符合IoT终端通信服务系统处理高并发的设计要求。</p>
+                </div>
+                <div class="area_img" id="110">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201904022_110.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 平均响应吞吐量比较" src="Detail/GetImg?filename=images/JYRJ201904022_110.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 平均响应吞吐量比较  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201904022_110.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="111">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201904022_111.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 连接统计图" src="Detail/GetImg?filename=images/JYRJ201904022_111.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 连接统计图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201904022_111.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="112" name="112" class="anchor-tag"><b>4 结 语</b></h3>
+                <div class="p1">
+                    <p id="113">本文介绍了IoT移动终端与服务器数据交互系统, 基于Netty框架和Java的ThreadPoolExecutor结合的设计方案, 重点研究设计通信系统编解码、加解密等模块, 提出一种自定义线程池处理耗时业务的设计方案。经验证采用Netty框架结合自定义线程池可提高系统的高并发处理能力。该设计已成功应用于某企业通信系统当中, 并且与30 000多台IoT终端进行数据交互, 未出现数据交互不稳定情况, 且系统运行效果良好。实践证明, 该设计是一种可参考的通信设计方案。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="128">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDDX201104002&amp;v=MDEyMDc0SDlETXE0OUZab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeXptVUxySlBTblBkckc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 韦乐平. 物联网的特征、发展策略和挑战[J].现代电信科技, 2011, 27 (4) :1-5.
+                            </a>
+                        </p>
+                        <p id="130">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Interference Aware CoMP for Macrocell-Based Heterogeneous Ultra Dense Cellular Networks">
+
+                                <b>[2]</b> Liu L, Zhou Y, Tian L, et al.Interference Aware CoMP for Macrocell-Based Heterogeneous Ultra Dense Cellular Networks[C]//2018 IEEE International Conference on Communications (ICC) . IEEE, 2018: 1-6.
+                            </a>
+                        </p>
+                        <p id="132">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Energy efficiency of CoMP-based cellular networks with guaranteed coverage">
+
+                                <b>[3]</b> Liu Z, Zhou Y, Han X, et al.Energy efficiency of CoMP-based cellular networks with guaranteed coverage[C]//Wireless Communications and NETWORKING Conference. IEEE, 2013:2034-2039.
+                            </a>
+                        </p>
+                        <p id="134">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Cooperative multicast with location aware distributed mobile relay selection:Performance analysis and optimized design">
+
+                                <b>[4]</b> Zhou Y, Liu H, Pan Z, et al. Cooperative Multicast with Location Aware Distributed Mobile Relay Selection: Performance Analysis and Optimized Design[J].IEEE Transactions on Vehicular Technology, 2017, 66 (9) : 8291-8302.
+                            </a>
+                        </p>
+                        <p id="136">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=TXJS201303037&amp;v=MTcwMDFIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl6bVVMckpNVFhCZmJHNEg5TE1ySTlHWTRRS0Q=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 蔡谊.基于MINA框架的网络管理软件设计[J].通信技术, 2013, 46 (3) :115-117.
+                            </a>
+                        </p>
+                        <p id="138">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016121515.nh&amp;v=MjIzMjM2R0xLNkg5VE5xcEViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl6bVVMckpWRjI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 罗文韬. 大型电商网站服务系统关键改进的研究和实现[D]. 北京:中国科学院大学工程管理与信息技术学院, 2016.
+                            </a>
+                        </p>
+                        <p id="140">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XTYY201804021&amp;v=MDU0MTBuTXE0OUhaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeXptVUxySlBUblNkN0c0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 汪佳文, 王书培, 徐立波, 等. 基于权重轮询负载均衡算法的优化[J]. 计算机系统应用, 2018, 27 (4) :138-144.
+                            </a>
+                        </p>
+                        <p id="142">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017276057.nh&amp;v=Mjk4NTJPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5em1VTHJKVkYyNkdiRy9HTkhKcUpFYlBJUUtESDg0dlI0VDZqNTQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 魏莹.基于Netty框架的智能终端与服务器通信的研究[D].西安:西安电子科技大学, 2017:19.
+                            </a>
+                        </p>
+                        <p id="144">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787121258015000&amp;v=MDgxMzlKcDQ5RVllc1BEQk04enhVU21EZDlTSDduM3hFOWZidm5LcmlmWmVadkZ5bm1VN3ZMSTFzVlhGcXpHYks2SDlQ&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 李林锋.Netty权威指南[M].电子工业出版社, 2015:60-63.
+                            </a>
+                        </p>
+                        <p id="146">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=New Neighbors from 2MASS: Activity and Kinematics at the Bottom of the Main Sequence">
+
+                                <b>[10]</b> Monet D G, Reid I N, Kirkpatrick J D, et al. New Neighbors from 2MASS: Activity and Kinematics at the Bottom of the Main Sequence[J]. Astronomical Journal, 2000, 120 (2) :1085-1099.
+                            </a>
+                        </p>
+                        <p id="148">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGGC201708001&amp;v=MTY2NjRSN3FmWnVadEZ5em1VTHJKUHlyTWJiRzRIOWJNcDQ5RlpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 韩宏峰, 冯石, 罗羿隆.基于Java与Python的面向对象编程的基本特征研究[J].软件工程, 2017, 20 (8) :1-3.
+                            </a>
+                        </p>
+                        <p id="150">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WYWT201601010&amp;v=MTM3MTJPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5em1VTHJKTWpUY2VyRzRIOWZNcm85RVpJUUtESDg0dlI0VDZqNTQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 龚鹏, 曾兴斌.基于Netty框架的数据通讯服务系统的设计[J].无线通信技术, 2016, 25 (1) :46-49.
+                            </a>
+                        </p>
+                        <p id="152">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000002380&amp;v=MTk1MTlJWTdLN0h0ak5yNDlGWk9zTkQzUTVvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0RmlubFVyeklKRjBYYnhNPU5pZg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> Pyarali I, Spivak M, Cytron R, et al.Evaluatingand optimizing thread pool strategies forreal-time CORBA[J].ACM SIGPLAN Notices, 2001, 36 (8) :214-222.
+                            </a>
+                        </p>
+                        <p id="154">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJFZ201708031&amp;v=Mjk3ODdUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl6bVVMckpNaWZOZExHNEg5Yk1wNDlHWllRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 吉利, 潘林云, 刘姚.线程池技术在网络服务器中的应用[J].计算机技术与发展, 2017, 27 (7) :149-151.
+                            </a>
+                        </p>
+                        <p id="156">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Java Concurrency in Practice">
+
+                                <b>[15]</b> Peierls T, Goetz B, Bloch J, et al.Java Concurrency in Practice[M]. Addison-Wesley, 2006:1171-1177.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JYRJ201904022" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201904022&amp;v=MjQxMDZxZlp1WnRGeXptVUxySkx6VFpaTEc0SDlqTXE0OUhab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ291S0FIT2hubWNrWXI0QkNHMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="2" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

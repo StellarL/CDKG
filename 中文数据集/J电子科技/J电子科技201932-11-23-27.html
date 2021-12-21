@@ -1,0 +1,829 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2fKXReader%2fDetail%3fTIMESTAMP%3d637139162856201250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dDZKK201911006%26RESULT%3d1%26SIGN%3dsjciTaU0QtyQfYK3qLKjmYTAMs0%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZKK201911006&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZKK201911006&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201911006&amp;v=Mjg4OTh0R0ZyQ1VSN3FmWnVacEZ5M2tWcnJNSVRmQVpiRzRIOWpOcm85RllvUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#40" data-title="&lt;b&gt;1 跟踪算法原理分析&lt;/b&gt; "><b>1 跟踪算法原理分析</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#41" data-title="&lt;b&gt;1.1&lt;/b&gt; Camshift&lt;b&gt;算法&lt;/b&gt;"><b>1.1</b> Camshift<b>算法</b></a></li>
+                                                <li><a href="#51" data-title="&lt;b&gt;1.2&lt;/b&gt; Kalman&lt;b&gt;滤波&lt;/b&gt;"><b>1.2</b> Kalman<b>滤波</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#63" data-title="&lt;b&gt;2 算法的改进&lt;/b&gt; "><b>2 算法的改进</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#83" data-title="&lt;b&gt;3 实验结果与分析&lt;/b&gt; "><b>3 实验结果与分析</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#92" data-title="&lt;b&gt;4 结束语&lt;/b&gt; "><b>4 结束语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#65" data-title="图1 跟踪框图">图1 跟踪框图</a></li>
+                                                <li><a href="#78" data-title="图2 流程图">图2 流程图</a></li>
+                                                <li><a href="#79" data-title="图3 质心图">图3 质心图</a></li>
+                                                <li><a href="#88" data-title="图4 改进组合算法结果对比(目标遮挡)
+">图4 改进组合算法结果对比(目标遮挡)
+</a></li>
+                                                <li><a href="#89" data-title="图5 改进组合算法结果对比(目标丢失)
+">图5 改进组合算法结果对比(目标丢失)
+</a></li>
+                                                <li><a href="#90" data-title="图6 改进组合算法结果对比(目标靠近)
+">图6 改进组合算法结果对比(目标靠近)
+</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" Liu Zheng,Jing Guohui.AGV(automatic guided vehicle)for dense storage area:CN 10390994 A[P].2014." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=AGV(automatic guided vehicle)for dense storage area">
+                                        <b>[1]</b>
+                                         Liu Zheng,Jing Guohui.AGV(automatic guided vehicle)for dense storage area:CN 10390994 A[P].2014.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 储珺,杜立辉,汪凌峰,等.基于局部背景感知的目标跟踪[J].自动化学报,2012,38(6):1985-1995.Chu Jun,Du Lihui,WangLinfeng,etal.Localbackground-aware target tracking[J].Journal of automation,2012,38(6):1985-1995." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MOTO201212013&amp;v=Mjc4NzE0TzN6cXFCdEdGckNVUjdxZlp1WnBGeTNrVnJyTUtDTGZZYkc0SDlQTnJZOUVaNFFLREg4NHZSNFQ2ajU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         储珺,杜立辉,汪凌峰,等.基于局部背景感知的目标跟踪[J].自动化学报,2012,38(6):1985-1995.Chu Jun,Du Lihui,WangLinfeng,etal.Localbackground-aware target tracking[J].Journal of automation,2012,38(6):1985-1995.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 刘紫燕,唐虎,冯亮.基于FPGA的机器视觉技术视频跟踪系统实现[J].电子科技,2018,31(9):41-44,49.Liu Ziyan,Tang Hu,Feng Liang.Realization of video tracking system for machine vision technology based on FPGA[J].Electronic Science and Technology,2018,31(9):41-44,49." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201809012&amp;v=MDg2MzZWcnJNSVRmQVpiRzRIOW5NcG85RVpvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZ5M2s=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         刘紫燕,唐虎,冯亮.基于FPGA的机器视觉技术视频跟踪系统实现[J].电子科技,2018,31(9):41-44,49.Liu Ziyan,Tang Hu,Feng Liang.Realization of video tracking system for machine vision technology based on FPGA[J].Electronic Science and Technology,2018,31(9):41-44,49.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" 邸男,朱明.一种复杂背景下的实时目标跟踪算法[J].中国图象图形学报,2009,13(9):1758-1765.Di Nan,Zhu Ming.An algorithm for real-time tracting target in complex environment[J].Chinese Journal of Image and Graphics,2009,13(9):1758-1765." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGTB200809020&amp;v=MjEzMzh0R0ZyQ1VSN3FmWnVacEZ5M2tWcnJNUHlyZmJMRzRIdG5NcG85SFpJUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         邸男,朱明.一种复杂背景下的实时目标跟踪算法[J].中国图象图形学报,2009,13(9):1758-1765.Di Nan,Zhu Ming.An algorithm for real-time tracting target in complex environment[J].Chinese Journal of Image and Graphics,2009,13(9):1758-1765.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" Fashing M,Tomasi C.Mean shift is a bound optimization[J].IEEE Transactions on Pattern Analysis and Machine Intelligence,2005,27(3):47l-474." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Mean Shift Is a Bound Optimization">
+                                        <b>[5]</b>
+                                         Fashing M,Tomasi C.Mean shift is a bound optimization[J].IEEE Transactions on Pattern Analysis and Machine Intelligence,2005,27(3):47l-474.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" Bradski G R.Computervision face tracking for use in a perceptual userintefface[J].Intel Technology Journal,1998,2(2):l-15." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Computer vision face tracking for use in perceptual user interface">
+                                        <b>[6]</b>
+                                         Bradski G R.Computervision face tracking for use in a perceptual userintefface[J].Intel Technology Journal,1998,2(2):l-15.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" Bradski G R.Real-time face and object tracking as a component of a perceptual user interface[C].Princeton:Proceeding of IEEE Workshop on Applications of Computer Vision,1998." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Computer vision face tracking as a component of a perceptual user interface">
+                                        <b>[7]</b>
+                                         Bradski G R.Real-time face and object tracking as a component of a perceptual user interface[C].Princeton:Proceeding of IEEE Workshop on Applications of Computer Vision,1998.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" Bradski Deilamni M J,Asli R N.Moving object tracking based on Mean-shift algorithm and feature fusion[C].Tehran:International Symposium on Artificial Intelligence and Signal Processing,2011." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Moving object tracking based on mean shift algorithm and features fusion">
+                                        <b>[8]</b>
+                                         Bradski Deilamni M J,Asli R N.Moving object tracking based on Mean-shift algorithm and feature fusion[C].Tehran:International Symposium on Artificial Intelligence and Signal Processing,2011.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" Motamed C.Motion detection and tracking using belief indicators for an automatic visual-surveillance system[J].Image and Vision Computing,2006,24(11):1192-1201." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13012201349506&amp;v=MTE3MjNUNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0RmlubFVyaklKVjhSYnhZPU5pZk9mYks3SHRET3JZOUVaKzhHQ1h3L29CTQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         Motamed C.Motion detection and tracking using belief indicators for an automatic visual-surveillance system[J].Image and Vision Computing,2006,24(11):1192-1201.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" Li J,Zhang J,Zhou Z,et al.Object tracking using improved Camshift with SURF method[C].Beijing:International Workshop on Open-source Software for Scientific Computation,2012." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Object tracking using improved Camshift with SURF method">
+                                        <b>[10]</b>
+                                         Li J,Zhang J,Zhou Z,et al.Object tracking using improved Camshift with SURF method[C].Beijing:International Workshop on Open-source Software for Scientific Computation,2012.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" Zulkifley M A,Mustafa M M,Hussain A.On improving Camshift performance through colour constancy approach[C].Kuala Lumpur:2012 International Conference on Computer &amp;amp; Information Science,IEEE,2012." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=On improving camshift performance through colour constancy approach">
+                                        <b>[11]</b>
+                                         Zulkifley M A,Mustafa M M,Hussain A.On improving Camshift performance through colour constancy approach[C].Kuala Lumpur:2012 International Conference on Computer &amp;amp; Information Science,IEEE,2012.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 陈戈珩,杨林.基于Camshift/Kalman运动目标跟踪算法[J].长春工业大学学报,2017,38(3):256-259.Chen Geheng,Yang Lin.A moving target tracking algorithm based on Camshift/Kalman filtering[J].Journal of Changchun University of Technology,2017,38(3):256-259." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JLGX201703008&amp;v=Mjg4NzQ5RmJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZ5M2tWcnJNTHlITWRyRzRIOWJNckk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         陈戈珩,杨林.基于Camshift/Kalman运动目标跟踪算法[J].长春工业大学学报,2017,38(3):256-259.Chen Geheng,Yang Lin.A moving target tracking algorithm based on Camshift/Kalman filtering[J].Journal of Changchun University of Technology,2017,38(3):256-259.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 翟卫欣,程承旗.基于Kalman滤波的Camshift运动跟踪算法[J].北京大学学报(自然科学版),2015,51(5):799-804.Zhai Weixin,Cheng Chenqi.A Camshift motion tracking algorithm based on Kalmanfilter[J].Journal of Peking University(Natural Science Edition),2015,51(5):799-804." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJDZ201505003&amp;v=MDQxNzA1NE8zenFxQnRHRnJDVVI3cWZadVpwRnkza1Zyck1KeWZQZExHNEg5VE1xbzlGWjRRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         翟卫欣,程承旗.基于Kalman滤波的Camshift运动跟踪算法[J].北京大学学报(自然科学版),2015,51(5):799-804.Zhai Weixin,Cheng Chenqi.A Camshift motion tracking algorithm based on Kalmanfilter[J].Journal of Peking University(Natural Science Edition),2015,51(5):799-804.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 李盈盈,李菲菲,陈虬.基于改进HOG共生概率特征的行人检测算法[J].电子科技,2018,31(9):4-8.Li Yingying,Li Feifei,Chen Qiu.Pedestrian detection algorithm using co-occurrence probability feature based on improved HOG[J].Electronic Science and Technology,2018,31(9):4-8." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201809003&amp;v=MDY2NTlNSVRmQVpiRzRIOW5NcG85Rlo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZ5M2tWcnI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         李盈盈,李菲菲,陈虬.基于改进HOG共生概率特征的行人检测算法[J].电子科技,2018,31(9):4-8.Li Yingying,Li Feifei,Chen Qiu.Pedestrian detection algorithm using co-occurrence probability feature based on improved HOG[J].Electronic Science and Technology,2018,31(9):4-8.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 田谨,应捷.基于Gabor滤波和稀疏表示的信号灯类型识别[J].电子科技,2018,31(9):50-52,67.Tian Jin,Ying Jie.Traffic light detection and recognition based on gabor and sparse representation[J].Electronic Science and Technology,2018,31(9):50-52,67." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201809014&amp;v=MDc5NjNVUjdxZlp1WnBGeTNrVnJyTUlUZkFaYkc0SDluTXBvOUVZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         田谨,应捷.基于Gabor滤波和稀疏表示的信号灯类型识别[J].电子科技,2018,31(9):50-52,67.Tian Jin,Ying Jie.Traffic light detection and recognition based on gabor and sparse representation[J].Electronic Science and Technology,2018,31(9):50-52,67.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" Karavasilis V,Nikou C,Likas A.Visual tracking using the Earth mover’s distance between Gaussian mixtures and Kalman filtering[J].Image and Vision Computing,2011,29(4):295-305." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13012201348818&amp;v=MjI1ODlZOUVaKzhIQkgweG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnRGaW5sVXJqSUpWOFJieFk9TmlmT2ZiSzdIdERPcg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         Karavasilis V,Nikou C,Likas A.Visual tracking using the Earth mover’s distance between Gaussian mixtures and Kalman filtering[J].Image and Vision Computing,2011,29(4):295-305.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" Mazinan A H,Amir-Latifi A.Applying mean shift,motion information and Kalman filtering approaches to object tracking[J].ISA Transactions,2012,51(5):485- 497." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011601432251&amp;v=MDE1NDVlWnRGaW5sVXJqSUpWOFJieFk9TmlmT2ZiSzdIdEROcVk5RVlPZ05Ebms0b0JNVDZUNFBRSC9pclJkR2VycVFUTW53Wg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                         Mazinan A H,Amir-Latifi A.Applying mean shift,motion information and Kalman filtering approaches to object tracking[J].ISA Transactions,2012,51(5):485- 497.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+    <div class="head-tag">   
+            <p>
+               <b> 网络首发时间: 2018-12-29 14:50</b>
+            </p>     
+    </div>
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=DZKK" target="_blank">电子科技</a>
+                2019,32(11),23-27 DOI:10.16180/j.cnki.issn1007-7820.2019.11.005            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>智能工厂下的</b>AGV<b>多目标跟踪</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%A8%E6%A0%87&amp;code=39555488&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">杨标</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%88%98%E7%BF%94&amp;code=10705708&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">刘翔</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%B1%A4%E6%98%BE&amp;code=40416927&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">汤显</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%88%E4%BF%8A%E5%BB%B7&amp;code=40990405&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陈俊廷</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E5%B7%A5%E7%A8%8B%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6%E7%94%B5%E5%AD%90%E7%94%B5%E6%B0%94%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0202052&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海工程技术大学电子电气工程学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对物流仓库下AGV跟踪过程中出现的同类物体辨别、遮挡、丢失问题,文中提出一种融合了背景建模的Camshift算法和卡尔曼滤波组合的多目标跟踪方法来解决以上问题。由于物流AGV具有同一颜色,借助Camshift基于颜色跟踪的特性,可实现对特定物流小车的跟踪。借助Kalman滤波加入运动信息,利用目标的动态信息,设法去掉噪声的影响解决同种颜色下AGV的识别、遮挡以及丢失等问题。实验表明,提出的算法能区别出同类的AGV小车,并可实现实时追踪。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=AGV&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">AGV;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%83%8C%E6%99%AF%E5%BB%BA%E6%A8%A1&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">背景建模;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">目标检测;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%9B%AE%E6%A0%87%E8%B7%9F%E8%B8%AA&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">目标跟踪;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Camshift%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Camshift算法;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Kalman%E6%BB%A4%E6%B3%A2&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Kalman滤波;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    杨标(1991-),男,硕士研究生。研究方向:辅助驾驶。;
+                                </span>
+                                <span>
+                                    刘翔(1972-),男,博士,副教授。研究方向:计算机视觉、机器智能。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-11-15</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家重点研发计划(2016YFC0801304);</span>
+                                <span>上海市科委地方能力建设项目(15590501300);</span>
+                    </p>
+            </div>
+                    <h1><b>AGV Multi-target Tracking Under Smart Factory</b></h1>
+                    <h2>
+                    <span>YANG Biao</span>
+                    <span>LIU Xiang</span>
+                    <span>TANG Xian</span>
+                    <span>CHEN Junting</span>
+            </h2>
+                    <h2>
+                    <span>School of Electronic and Electrical Engineering,Shanghai University of Engineering Science</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Aiming at identifying, occluding and losing similar objects in AGV tracking under logistics warehouse, the study proposed a multi-target tracking method which combined background modeling with Kalman filter. Because logistics AGV has the same color, the proposed method tracked a specific logistics car with the help of Camshift's color tracking feature. At the same time, Kalman filter was used to add motion information and make use of dynamic information of target. To solve the problems of AGV recognition, occlusion and loss under the same color, the influence of noise was removed. Experiment showed that this algorithm could distinguish similar AGV cars and track them in real time.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=AGV&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">AGV;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=background%20modeling&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">background modeling;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=object%20detection&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">object detection;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=target%20tracking&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">target tracking;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Camshift%20algorithm&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Camshift algorithm;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Kalman%20filtering&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Kalman filtering;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-11-15</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>The National Key Research and Development Program of China(2016YFC0801304);</span>
+                                <span>Shanghai Science and Technology Commission Local Capacity Building Project(15590501300);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <div class="p1">
+                    <p id="37">随着工业现代化的发展,越来越多的柔性化生产线、自动化物流系统应用到各个行业,对智能工厂中AGV(Automatic Guided Vehicle)的发展起到了极大的促进作用<citation id="101" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。因此,在安全监控以及运动检测等方面通过对智能工厂中运动的AGV进行有效识别与跟踪具有较大的应用前景<citation id="102" type="reference"><link href="5" rel="bibliography" /><link href="7" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>]</sup></citation>。通过摄像头对AGV进行实时的跟踪,不仅可以获取AGV运动的状态信息以及运动轨迹,还可以为智能小车纵队提供数据分析,优化智能工厂中AGV的分工,解放生产力,提高工厂的工作效率。</p>
+                </div>
+                <div class="p1">
+                    <p id="38">针对物流仓库中多目标AGV跟踪检测问题主要难点有以下方面<citation id="103" type="reference"><link href="9" rel="bibliography" /><link href="11" rel="bibliography" /><sup>[<a class="sup">4</a>,<a class="sup">5</a>]</sup></citation>:(1)在目标跟踪过程中,需要解决相同颜色下AGV的互相干扰;(2)当目标被遮挡或者跟踪瞬间丢失时,需继续跟踪;(3)跟踪过程中能稳定地获得目标的运动信息。为解决上面的技术难点,选取的跟踪算法中,Mean Shift算法以迭代收敛速度快、无需参数的匹配特性被广泛应用到目标跟踪领域。但是,Mean Shift算法也有缺点,例如在跟踪过程中缺乏必要的模型更新,其固定不变的核函数影响了跟踪的精确度,尤其在目标存在明显尺度变化时,会导致定位不准确,从而造成目标的丢失。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">因此,为了克服跟踪过程中的目标丢失以及遮挡等问题,Bradski在Mean Shift算法基础上提出了Camshift算法<citation id="105" type="reference"><link href="13" rel="bibliography" /><link href="15" rel="bibliography" /><link href="17" rel="bibliography" /><sup>[<a class="sup">6</a>,<a class="sup">7</a>,<a class="sup">8</a>]</sup></citation>。该算法运行效率高、计算量小且容易实现,尤其在背景颜色单一的情况下,算法跟踪效果很好,可以快速解决一般情况下单目标变形和遮挡问题。但是该算法对光线敏感,当面临相同颜色的运动物体时,其跟踪的鲁棒性较差,容易丢失目标。因此,本文提出一种改进的Camshift算法。在跟踪过程中,将Kalman滤波加入到运动预测中,利用Kalman滤波预测的运动信息,提高目标跟踪的精确度<citation id="104" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>,解决相同颜色下的AGV目标干扰,克服跟踪过程中的遮挡和丢失问题。</p>
+                </div>
+                <h3 id="40" name="40" class="anchor-tag"><b>1 跟踪算法原理分析</b></h3>
+                <h4 class="anchor-tag" id="41" name="41"><b>1.1</b> Camshift<b>算法</b></h4>
+                <div class="p1">
+                    <p id="42">Camshift算法是基于颜色概率信息进行的跟踪,其核心是运用目标概率直方图的特性识别运动目标。其算法实现过程如下:(1)预知运动目标区域;(2)对图像的颜色直方图模型进行反向投影获得颜色概率分布;(3)运行Mean Shift算法获得窗口的质心和大小;(4)根据上一帧的结果重新调整搜索窗口的位置和大小。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">设(<i>x</i>,<i>y</i>)是反向投影图中(<i>x</i>,<i>y</i>)处的像素值,(<i>x</i>,<i>y</i>)为搜索窗口中的像素位置,分别计算:零阶矩</p>
+                </div>
+                <div class="p1">
+                    <p id="44"><mathml id="94"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Μ</mi><msub><mrow></mrow><mrow><mn>0</mn><mn>0</mn></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mi>x</mi></munder><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mi>y</mi></munder><mi>Ι</mi></mstyle></mrow></mstyle><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math></mathml>      (1)</p>
+                </div>
+                <div class="p1">
+                    <p id="45">一阶矩为</p>
+                </div>
+                <div class="p1">
+                    <p id="46"><mathml id="95"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Μ</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>0</mn></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mi>x</mi></munder><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mi>y</mi></munder><mi>x</mi></mstyle></mrow></mstyle><mi>Ι</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mi>Μ</mi><msub><mrow></mrow><mrow><mn>0</mn><mn>1</mn></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mi>x</mi></munder><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mi>y</mi></munder><mi>y</mi></mstyle></mrow></mstyle><mi>Ι</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></math></mathml>      (2)</p>
+                </div>
+                <div class="p1">
+                    <p id="47">搜索窗的质心</p>
+                </div>
+                <div class="p1">
+                    <p id="48"><i>X</i><sub><i>c</i></sub>=<i>M</i><sub>10</sub>/<i>M</i><sub>00</sub>,<i>Y</i><sub><i>c</i></sub>=<i>M</i><sub>01</sub>/<i>M</i><sub>00</sub>      (3)</p>
+                </div>
+                <div class="p1">
+                    <p id="49">搜索窗口的长度为1.2 s,由于零阶矩反映目标在图像中的面积,反向投影图是最大值为255的离散的灰度图像。由此,得到搜索窗口宽度<i>s</i>。</p>
+                </div>
+                <div class="p1">
+                    <p id="50"><mathml id="96"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>s</mi><mo>=</mo><mn>2</mn><msqrt><mrow><mi>Μ</mi><msub><mrow></mrow><mrow><mn>0</mn><mn>0</mn></mrow></msub><mo>/</mo><mn>2</mn><mn>5</mn><mn>6</mn></mrow></msqrt></mrow></math></mathml>      (4)</p>
+                </div>
+                <h4 class="anchor-tag" id="51" name="51"><b>1.2</b> Kalman<b>滤波</b></h4>
+                <div class="p1">
+                    <p id="52">本文对AGV跟踪中,利用Kalman滤波预测某一帧图像中目标质心在下一帧可能出现的位置。鉴于相邻两帧图像的时间间隔较短,且工厂中AGV运动幅度不会有很大变化。因此,可将AGV近似为匀速运动。</p>
+                </div>
+                <div class="p1">
+                    <p id="53">定义AGV运动状态向量<i><b>X</b></i><sub><i>k</i></sub>=(<i>x</i><sub>1</sub><sub><i>x</i></sub>,<i>y</i><sub>1</sub><sub><i>k</i></sub>,<i>x</i><sub><i>vx</i></sub>,<i>y</i><sub><i>vk</i></sub>),观测状态向量<i><b>Y</b></i><sub><i>k</i></sub>=(<i>x</i><sub><i>tx</i></sub>,<i>y</i><sub><i>tk</i></sub>,<i>x</i><sub><i>vx</i></sub>,<i>y</i><sub><i>vk</i></sub>),<i>x</i><sub>1</sub><sub><i>x</i></sub>,<i>y</i><sub>1</sub><sub><i>k</i></sub>,表示图中运动目标的质心位置,<i>x</i><sub><i>vx</i></sub>,<i>y</i><sub><i>vk</i></sub>表示运动目标的速度,定义状态转移矩阵<i><b>A</b></i><sub><i>k</i></sub>和观测矩阵<i><b>H</b></i><sub><i>k</i></sub>如下</p>
+                </div>
+                <div class="area_img" id="54">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/DZKK201911006_05400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="56">算法具体推导公式如下</p>
+                </div>
+                <div class="p1">
+                    <p id="57"><i><b>X</b></i><sub><i>k</i></sub>=<i><b>A</b></i><sub><i>k</i></sub><sub>,</sub><sub><i>k</i></sub><sub>-1</sub><i><b>X</b></i><sub><i>k</i></sub><sub>-1</sub>      (6)</p>
+                </div>
+                <div class="p1">
+                    <p id="58"><i><b>X</b></i><sub><i>k</i></sub>=<i><b>X</b></i><sub><i>k</i></sub><sub>,</sub><sub><i>k</i></sub><sub>-1</sub>+<i><b>K</b></i><sub><i>k</i></sub>[<i><b>Y</b></i><sub><i>k</i></sub>-<i><b>H</b></i><sub><i>k</i></sub><i><b>X</b></i><sub><i>k</i></sub><sub>,</sub><sub><i>k</i></sub><sub>-1</sub>]      (7)</p>
+                </div>
+                <div class="p1">
+                    <p id="59"><i><b>K</b></i><sub><i>k</i></sub>=<i><b>P</b></i><sub><i>k</i></sub><sub>,</sub><sub><i>k</i></sub><sub>-1</sub><i><b>H</b></i><sup>T</sup><sub><i>k</i></sub>(<i><b>H</b></i><sub><i>k</i></sub><i>P</i><sub><i>k</i></sub><sub>,</sub><sub><i>k</i></sub><sub>-1</sub><i><b>H</b></i><sup>T</sup><sub><i>k</i></sub>+<i><b>R</b></i>)      (8)</p>
+                </div>
+                <div class="p1">
+                    <p id="60"><i><b>P</b></i><sub><i>k</i></sub><sub>,</sub><sub><i>k</i></sub><sub>-1</sub>=<i><b>A</b></i><sub><i>k</i></sub><sub>,</sub><sub><i>k</i></sub><sub>-1</sub><i><b>P</b></i><sub><i>k</i></sub><sub>-1</sub><i><b>A</b></i><sup>T</sup><sub><i>k</i></sub><sub>,</sub><sub><i>k</i></sub><sub>-1</sub>+<i><b>Q</b></i>       (9)</p>
+                </div>
+                <div class="p1">
+                    <p id="61"><i><b>P</b></i><sub><i>k</i></sub>=<i><b>P</b></i><sub><i>k</i></sub><sub>,</sub><sub><i>k</i></sub><sub>-1</sub>(<i><b>I</b></i><b>-</b><i><b>K</b></i><sub><i>k</i></sub><i><b>H</b></i><sub><i>k</i></sub>)      (10)</p>
+                </div>
+                <div class="p1">
+                    <p id="62">其中,<i><b>X</b></i><sub><i>k</i></sub><sub>,</sub><sub><i>k</i></sub><sub>-1</sub>为状态的预测值,<i><b>X</b></i><sub><i>k</i></sub>为<i><b>X</b></i><sub><i>k</i></sub><sub>,</sub><sub><i>k</i></sub><sub>-1</sub>的修正值,<i><b>X</b></i><sub><i>k</i></sub>为Kalman的滤波增益矩阵,<i><b>P</b></i><sub><i>k</i></sub><sub>,</sub><sub><i>k</i></sub><sub>-1</sub>为<i><b>X</b></i><sub><i>k</i></sub><sub>,</sub><sub><i>k</i></sub><sub>-1</sub>的协方差矩阵,<i><b>P</b></i><sub><i>k</i></sub>为<i><b>X</b></i><sub><i>k</i></sub>的协方差矩阵,<i><b>R</b></i>和<i><b>Q</b></i>代表协方差矩阵。</p>
+                </div>
+                <h3 id="63" name="63" class="anchor-tag"><b>2 算法的改进</b></h3>
+                <div class="p1">
+                    <p id="64">针对Camshift算法跟踪过程中存在的问题,很多国内外专家学者从不同方面都进行过相关研究。Li<citation id="106" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>提出一种将Camshift算法与Surf算法相结合的方法对运动目标进行跟踪;Zulkifley<citation id="107" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>则利用颜色恒常原理,在已有的基础上提高Camshift算法的跟踪性能。陈戈珩<citation id="108" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>和翟卫欣<citation id="109" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>也提出一种Camshift算法融合Kalman滤波的算法。但是,该算法在选取目标进行跟踪的过程中,具有以下问题:(1)运动目标颜色特征明显,相互之间不存在颜色干扰现象;(2)目标所处环境相对简单;(3)解决的只是遮挡以及运动过程中目标丢失等相关问题。实际应用中,智能物流仓库下AGV几乎具有相同的颜色特征。因此,对于智能物流工厂下AGV多目标跟踪过程中存在的目标遮挡、相似颜色下的干扰以及目标丢失等问题,本文提出一种基于Camshift算法的kalman滤波颜色概率模型的跟踪算法<citation id="110" type="reference"><link href="29" rel="bibliography" /><link href="31" rel="bibliography" /><sup>[<a class="sup">14</a>,<a class="sup">15</a>]</sup></citation>:在跟踪时通过提取跟踪物体的颜色分布,然后用Kalman滤波预测下一帧目标图像质心出现的位置,通过不断更新搜索窗口的中心位置进行搜索匹配,从而实现对运动物体进行鲁棒性的跟踪。其算法跟踪框图如图1所示。</p>
+                </div>
+                <div class="area_img" id="65">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201911006_065.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 跟踪框图" src="Detail/GetImg?filename=images/DZKK201911006_065.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 跟踪框图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201911006_065.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 1. Tracking block diagram</p>
+
+                </div>
+                <div class="p1">
+                    <p id="66">在跟踪过程中,改进的Camshift算法可以对目标的搜索窗口进行自适应的调整。当目标丢失后,自适应扩大窗口尺寸进行二次寻找,同时借助Kalman滤波对运动目标的状态进行估计,利用Kalman滤波的预测值代替Camshift算法计算出的目标位置作为观测值去更新Kalman滤波,进而不断修正Camshift的预测目标质心,获得更精确的目标位置,提高搜索窗口位置的精确度。对于目标的颜色干扰的判断,本文用<i>α</i>来判断是否出现颜色干扰,<i>β</i>来表示是否出现遮挡,<i>r</i>(<i>k</i>)为滤波器残差,计算式如下</p>
+                </div>
+                <div class="p1">
+                    <p id="67"><i>α</i>=<i>R</i><sub>ect_now</sub>/<i>R</i><sub>ect_pre</sub>      (11)</p>
+                </div>
+                <div class="p1">
+                    <p id="68"><i>β</i>=<i>R</i><sub>ect_now</sub>/<i>R</i><sub>ect_ini</sub>      (12)</p>
+                </div>
+                <div class="p1">
+                    <p id="69"><mathml id="97"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>r</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo><mo>=</mo><msqrt><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo><mo>-</mo><mi>x</mi><mo stretchy="false">(</mo><mover accent="true"><mi>k</mi><mo>˙</mo></mover><mo stretchy="false">)</mo><mo stretchy="false">)</mo><msup><mrow></mrow><mn>2</mn></msup><mo>+</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo><mo>-</mo><mi>y</mi><mo stretchy="false">(</mo><mover accent="true"><mi>k</mi><mo>˙</mo></mover><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></msqrt></mrow></math></mathml>      (13)</p>
+                </div>
+                <div class="p1">
+                    <p id="70">其中,<i>R</i><sub>ect_now</sub>是通过Camshift算法得到的目标区域大小,<i>R</i><sub>ect_pre</sub>是上一帧搜索框的大小,<i>R</i><sub>ect_ini</sub>是初始搜索窗口的大小。<i>x</i>(<i>k</i>),<i>y</i>(<i>k</i>)和<mathml id="98"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>x</mi><mo stretchy="false">(</mo><mover accent="true"><mi>k</mi><mo>˙</mo></mover><mo stretchy="false">)</mo><mspace width="0.25em" /><mo>,</mo><mi>y</mi><mo stretchy="false">(</mo><mover accent="true"><mi>k</mi><mo>˙</mo></mover><mo stretchy="false">)</mo></mrow></math></mathml>分别表示目标质心的观测值和预测值。当α&gt;2时,认为背景中存在大面积相似颜色干扰;当r(k)&gt;10且β&lt;0.3时,则认为目标被严重遮挡。</p>
+                </div>
+                <div class="p1">
+                    <p id="71">为判断目标何时出现遮挡以及被遮挡的程度,将<i>Bhattacharyya</i>距离d(y)用于衡量两个直方图之间的相似程度。一方面,d(y)值越小越表示两个直方图越匹配,另一方面<i>Camshift</i>跟踪算法计算得到的目标面积是当前目标的大小。因此,本文可以通过<i>Bhattacharyya</i>距离以及<i>Camshift</i>跟踪算法计算得到的目标窗口大小判断目标何时被遮挡以及被遮挡的程度。</p>
+                </div>
+                <div class="p1">
+                    <p id="72">(1)判断目标何时被遮挡。定义<i>Bhattacharyya</i>系数为</p>
+                </div>
+                <div class="p1">
+                    <p id="73"><mathml id="99"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ρ</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>ρ</mi><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>u</mi><mi>m</mi></munderover><mrow><msqrt><mrow><mi>p</mi><msub><mrow></mrow><mi>u</mi></msub><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mi>q</mi><msub><mrow></mrow><mi>u</mi></msub></mrow></msqrt></mrow></mstyle></mrow></math></mathml>      (14)</p>
+                </div>
+                <div class="p1">
+                    <p id="74">式中,<i>p</i><sub><i>u</i></sub> (<i>y</i>)为目标模型的颜色直方图,<i>q</i><sub><i>u</i></sub> (<i>y</i>)为跟踪图像中当前目标子图的颜色直方图。</p>
+                </div>
+                <div class="p1">
+                    <p id="75">Bhattacharyya距离<i>d</i>(<i>y</i>)为</p>
+                </div>
+                <div class="p1">
+                    <p id="76"><mathml id="100"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><msqrt><mrow><mn>1</mn><mo>-</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>u</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><msqrt><mrow><mi>p</mi><msub><mrow></mrow><mi>u</mi></msub><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mi>q</mi><msub><mrow></mrow><mi>u</mi></msub></mrow></msqrt></mrow></mstyle></mrow></msqrt></mrow></math></mathml>      (15)</p>
+                </div>
+                <div class="p1">
+                    <p id="77">设定阈值<i>T</i><sub><i>b</i></sub>,如果满足<i>d</i>(<i>y</i>)&lt;<i>T</i><sub><i>b</i></sub>,则说明目标没有被遮挡。如果满足<i>d</i>(<i>y</i>) ≥<i>T</i><sub><i>b</i></sub>,则说明目标开始被遮挡。本文中<i>T</i><sub><i>b</i></sub>取0.4,改进算法流程图如图2所示,质心图如图3所示。</p>
+                </div>
+                <div class="area_img" id="78">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201911006_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 流程图" src="Detail/GetImg?filename=images/DZKK201911006_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 流程图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201911006_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 2. Flow chart</p>
+
+                </div>
+                <div class="area_img" id="79">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201911006_079.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 质心图" src="Detail/GetImg?filename=images/DZKK201911006_079.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 质心图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201911006_079.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 3. Centroid diagram</p>
+
+                </div>
+                <div class="p1">
+                    <p id="80">通过以上的分析,改进的Camshift算法融合Kalman滤波,可以看成是一种线性的拟合,其表达式为</p>
+                </div>
+                <div class="p1">
+                    <p id="81"><i>X</i><sub><i>k</i></sub><sub>+1</sub>=(1-<i>ω</i>)<i>X</i><sub><i>k</i></sub><sub>+1,</sub><sub><i>k</i></sub>+<i>ωY</i>       (16)</p>
+                </div>
+                <div class="p1">
+                    <p id="82"><i>X</i><sub><i>k</i></sub><sub>+1</sub>是对运动目标最终位置的预测,<i>Y</i>代表Camshift算法预测,<i>ω</i>表示Kalman滤波当前时刻与Camshift前一时刻的非线性相关函数。由于<i>ω</i>值在(0,1)之间,<i>ω</i>值越大,则把Kalman预测值作为Camshift的跟踪目标的质心;<i>ω</i>值越小,则将Camshift的预测值作为目标车辆跟踪质心。</p>
+                </div>
+                <h3 id="83" name="83" class="anchor-tag"><b>3 实验结果与分析</b></h3>
+                <div class="p1">
+                    <p id="84">本次实验算法在Intel Core(TM)i5处理器,Windows 7计算机上运行,搭建VS2017 和OpenCV3.4开发平台。重点对算法的鲁棒性和实时性进行检测跟踪,其中包括遮挡、丢失以及目标之间颜色的干扰等。</p>
+                </div>
+                <div class="p1">
+                    <p id="85"><b>3.1 实验结果对比分析</b></p>
+                </div>
+                <div class="p1">
+                    <p id="86">为了验证改进算法的性能,设计了两组对比实验。第一个是改进前的目标轮廓信息,第二个是改进后的跟踪目标轮廓信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="87">改进后的Camshift算法通过设置Camshift搜索窗口的阈值,判断是否存在相似颜色干扰的问题。如果当前的搜索窗口范围超过阈值,则确定存在颜色干扰,目标轮廓将被提取<citation id="111" type="reference"><link href="33" rel="bibliography" /><link href="35" rel="bibliography" /><sup>[<a class="sup">16</a>,<a class="sup">17</a>]</sup></citation>。如图6所示,当两辆AGV互相靠近有颜色干扰时,改进前AGV会出现连通现象,使得跟踪不能连续。对于遮挡问题,改进前CamShift算法对于遮挡和非遮挡同样处理,如图4所示,当出现遮挡时,图4(c)中不能进行完整的跟踪,而改进后的算法如图4(e)所示,能够进行完整的跟踪。因此,改进后的CamShift算法结合了Kalman预测器,可以有效判断目标何时开始被遮挡以及被遮挡的程度,适当地扩大目标的搜索窗口。利用 Kalman 的预测值来确定搜索窗口的位置可保证目标再次出现时能够很快地被捕捉到。如图5所示,当出现遮挡和丢失时,如图4(e)所示的改进后的算法能进行完整跟踪,而改进前的方法则在跟踪过程中出现跟踪丢失情况。</p>
+                </div>
+                <div class="area_img" id="88">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201911006_088.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 改进组合算法结果对比(目标遮挡)" src="Detail/GetImg?filename=images/DZKK201911006_088.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 改进组合算法结果对比(目标遮挡)
+  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201911006_088.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 4. Comparing the results of the improved combination algorithm 
+(target occlusion)
+</p>
+                                <p class="img_note">(a)原图(b)前景(c)跟踪效果
+(d)改进后前景(e)改进后效果</p>
+                                <p class="img_note">(a)Original image (b)Prospect (c)Tracking effect 
+(d)Prospects for improvement (e)Improved effect</p>
+
+                </div>
+                <div class="area_img" id="89">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201911006_089.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 改进组合算法结果对比(目标丢失)" src="Detail/GetImg?filename=images/DZKK201911006_089.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 改进组合算法结果对比(目标丢失)
+  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201911006_089.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 5. Comparisons of the results of improved combinatorial 
+algorithms (target loss)
+</p>
+                                <p class="img_note">(a)原图(b)前景(c)跟踪效果(d)改进后前景(e)改进后效果</p>
+                                <p class="img_note">(a)Original image (b)Prospect (c)Tracking effect
+(d)Prospects for improvement (e)Improved effect</p>
+
+                </div>
+                <div class="area_img" id="90">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201911006_090.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 改进组合算法结果对比(目标靠近)" src="Detail/GetImg?filename=images/DZKK201911006_090.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 改进组合算法结果对比(目标靠近)
+  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201911006_090.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 6. Comparisons of the results of improved combinatorial 
+algorithms (Target close)
+</p>
+                                <p class="img_note">(a)原图(b)前景(c)跟踪效果(d)改进后前景
+(e)改进后效果</p>
+                                <p class="img_note">(a)Original image (b)Prospect (c)Tracking effect 
+(d)Prospects for improvement (e)Improved effect</p>
+
+                </div>
+                <div class="p1">
+                    <p id="91">通过对比可以发现在对AGV跟踪的过程中,通过融入Kalman滤波引入物体运动信息对运动目标的估计,可以提高跟踪的精度,并能克服目标的瞬间丢失和目标遮挡以及相互之间的干扰。</p>
+                </div>
+                <h3 id="92" name="92" class="anchor-tag"><b>4 结束语</b></h3>
+                <div class="p1">
+                    <p id="93">本文针对智能物流仓库下多AGV跟踪过程中出现的目标丢失、背景干扰以及相互颜色之间的干扰等问题,提出一种改进的Camshift结合Kalman滤波跟踪的算法来实现对目标稳定连续的跟踪。然而本文方法研发过程中仅考虑了单摄像头的多目标跟踪,未来将针对全局的智能物流工厂下多目标跟踪进行更深入的研究。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=AGV(automatic guided vehicle)for dense storage area">
+
+                                <b>[1]</b> Liu Zheng,Jing Guohui.AGV(automatic guided vehicle)for dense storage area:CN 10390994 A[P].2014.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MOTO201212013&amp;v=MDY1ODhadVpwRnkza1Zyck1LQ0xmWWJHNEg5UE5yWTlFWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 储珺,杜立辉,汪凌峰,等.基于局部背景感知的目标跟踪[J].自动化学报,2012,38(6):1985-1995.Chu Jun,Du Lihui,WangLinfeng,etal.Localbackground-aware target tracking[J].Journal of automation,2012,38(6):1985-1995.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201809012&amp;v=MTk3ODU3cWZadVpwRnkza1Zyck1JVGZBWmJHNEg5bk1wbzlFWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 刘紫燕,唐虎,冯亮.基于FPGA的机器视觉技术视频跟踪系统实现[J].电子科技,2018,31(9):41-44,49.Liu Ziyan,Tang Hu,Feng Liang.Realization of video tracking system for machine vision technology based on FPGA[J].Electronic Science and Technology,2018,31(9):41-44,49.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGTB200809020&amp;v=MjE3Mjl0bk1wbzlIWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnkza1Zyck1QeXJmYkxHNEg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 邸男,朱明.一种复杂背景下的实时目标跟踪算法[J].中国图象图形学报,2009,13(9):1758-1765.Di Nan,Zhu Ming.An algorithm for real-time tracting target in complex environment[J].Chinese Journal of Image and Graphics,2009,13(9):1758-1765.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Mean Shift Is a Bound Optimization">
+
+                                <b>[5]</b> Fashing M,Tomasi C.Mean shift is a bound optimization[J].IEEE Transactions on Pattern Analysis and Machine Intelligence,2005,27(3):47l-474.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Computer vision face tracking for use in perceptual user interface">
+
+                                <b>[6]</b> Bradski G R.Computervision face tracking for use in a perceptual userintefface[J].Intel Technology Journal,1998,2(2):l-15.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Computer vision face tracking as a component of a perceptual user interface">
+
+                                <b>[7]</b> Bradski G R.Real-time face and object tracking as a component of a perceptual user interface[C].Princeton:Proceeding of IEEE Workshop on Applications of Computer Vision,1998.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Moving object tracking based on mean shift algorithm and features fusion">
+
+                                <b>[8]</b> Bradski Deilamni M J,Asli R N.Moving object tracking based on Mean-shift algorithm and feature fusion[C].Tehran:International Symposium on Artificial Intelligence and Signal Processing,2011.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13012201349506&amp;v=MTk2NjJET3JZOUVaKzhHQ1h3L29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnRGaW5sVXJqSUpWOFJieFk9TmlmT2ZiSzdIdA==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> Motamed C.Motion detection and tracking using belief indicators for an automatic visual-surveillance system[J].Image and Vision Computing,2006,24(11):1192-1201.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Object tracking using improved Camshift with SURF method">
+
+                                <b>[10]</b> Li J,Zhang J,Zhou Z,et al.Object tracking using improved Camshift with SURF method[C].Beijing:International Workshop on Open-source Software for Scientific Computation,2012.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=On improving camshift performance through colour constancy approach">
+
+                                <b>[11]</b> Zulkifley M A,Mustafa M M,Hussain A.On improving Camshift performance through colour constancy approach[C].Kuala Lumpur:2012 International Conference on Computer &amp; Information Science,IEEE,2012.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JLGX201703008&amp;v=MDYzMDBMeUhNZHJHNEg5Yk1ySTlGYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnkza1Zyck0=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 陈戈珩,杨林.基于Camshift/Kalman运动目标跟踪算法[J].长春工业大学学报,2017,38(3):256-259.Chen Geheng,Yang Lin.A moving target tracking algorithm based on Camshift/Kalman filtering[J].Journal of Changchun University of Technology,2017,38(3):256-259.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJDZ201505003&amp;v=MTUyMDdUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnkza1Zyck1KeWZQZExHNEg5VE1xbzlGWjRRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 翟卫欣,程承旗.基于Kalman滤波的Camshift运动跟踪算法[J].北京大学学报(自然科学版),2015,51(5):799-804.Zhai Weixin,Cheng Chenqi.A Camshift motion tracking algorithm based on Kalmanfilter[J].Journal of Peking University(Natural Science Edition),2015,51(5):799-804.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201809003&amp;v=MDc1NzNvOUZaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeTNrVnJyTUlUZkFaYkc0SDluTXA=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 李盈盈,李菲菲,陈虬.基于改进HOG共生概率特征的行人检测算法[J].电子科技,2018,31(9):4-8.Li Yingying,Li Feifei,Chen Qiu.Pedestrian detection algorithm using co-occurrence probability feature based on improved HOG[J].Electronic Science and Technology,2018,31(9):4-8.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201809014&amp;v=MTYzMzQ5RVlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZ5M2tWcnJNSVRmQVpiRzRIOW5NcG8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 田谨,应捷.基于Gabor滤波和稀疏表示的信号灯类型识别[J].电子科技,2018,31(9):50-52,67.Tian Jin,Ying Jie.Traffic light detection and recognition based on gabor and sparse representation[J].Electronic Science and Technology,2018,31(9):50-52,67.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13012201348818&amp;v=MTc4MDRVcmpJSlY4UmJ4WT1OaWZPZmJLN0h0RE9yWTlFWis4SEJIMHhvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0RmlubA==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> Karavasilis V,Nikou C,Likas A.Visual tracking using the Earth mover’s distance between Gaussian mixtures and Kalman filtering[J].Image and Vision Computing,2011,29(4):295-305.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011601432251&amp;v=MjMyOThxUVRNbndaZVp0RmlubFVyaklKVjhSYnhZPU5pZk9mYks3SHRETnFZOUVZT2dORG5rNG9CTVQ2VDRQUUgvaXJSZEdlcg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b> Mazinan A H,Amir-Latifi A.Applying mean shift,motion information and Kalman filtering approaches to object tracking[J].ISA Transactions,2012,51(5):485- 497.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="DZKK201911006" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201911006&amp;v=Mjg4OTh0R0ZyQ1VSN3FmWnVacEZ5M2tWcnJNSVRmQVpiRzRIOWpOcm85RllvUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEl2ZXMzNXJlUkZjWFB4bHhwYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="0" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=P0ea_aWnQfx5aXr8bS4u3GGmKX_ORbqAf_1HJ_4Trvg1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=vAscMyvIPP9NePnbGPkqJ0A5tHOvnzl65tGuRDsf9xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

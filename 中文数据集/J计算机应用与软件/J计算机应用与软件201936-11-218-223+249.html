@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637134081599631250%26DBCODE%3dCJFD%26TABLEName%3dCJFDTEMP%26FileName%3dJYRJ201911036%26RESULT%3d1%26SIGN%3dUsgaxsnbSZN7z09i5ndo%252f6kR%252bY8%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201911036&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201911036&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201911036&amp;v=MDcxNjR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVZ1RnkvaFZMN0tMelRaWkxHNEg5ak5ybzlHWW9RS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#49" data-title="&lt;b&gt;0 引 言&lt;/b&gt; "><b>0 引 言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#52" data-title="&lt;b&gt;1 相关工作&lt;/b&gt; "><b>1 相关工作</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#57" data-title="&lt;b&gt;2 方 法&lt;/b&gt; "><b>2 方 法</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#58" data-title="&lt;b&gt;2.1 迁移学习&lt;/b&gt;"><b>2.1 迁移学习</b></a></li>
+                                                <li><a href="#68" data-title="&lt;b&gt;2.2 数据增强&lt;/b&gt;"><b>2.2 数据增强</b></a></li>
+                                                <li><a href="#72" data-title="&lt;b&gt;2.3 UNET&lt;/b&gt;"><b>2.3 UNET</b></a></li>
+                                                <li><a href="#97" data-title="&lt;b&gt;2.4 损失函数与成本函数&lt;/b&gt;"><b>2.4 损失函数与成本函数</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#114" data-title="&lt;b&gt;3 实证分析&lt;/b&gt; "><b>3 实证分析</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#118" data-title="&lt;b&gt;3.1 淋巴结病灶部位分割&lt;/b&gt;"><b>3.1 淋巴结病灶部位分割</b></a></li>
+                                                <li><a href="#125" data-title="&lt;b&gt;3.2 淋巴结良恶性分类&lt;/b&gt;"><b>3.2 淋巴结良恶性分类</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#133" data-title="&lt;b&gt;4 结 语&lt;/b&gt; "><b>4 结 语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#120" data-title="图1 NHReLU Dice系数和损失函数">图1 NHReLU Dice系数和损失函数</a></li>
+                                                <li><a href="#122" data-title="图2 NHSeLU Dice系数和损失函数">图2 NHSeLU Dice系数和损失函数</a></li>
+                                                <li><a href="#124" data-title="图3 淋巴结病灶分割">图3 淋巴结病灶分割</a></li>
+                                                <li><a href="#128" data-title="图4 ResNet50各指标值">图4 ResNet50各指标值</a></li>
+                                                <li><a href="#129" data-title="图5 DenseNet161各指标值">图5 DenseNet161各指标值</a></li>
+                                                <li><a href="#131" data-title="图6 ResNet50与DenseNet161准确率和AUC比较">图6 ResNet50与DenseNet161准确率和AUC比较</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="158">
+
+
+                                    <a id="bibliography_1" >
+                                        <b>[1]</b>
+                                     Chen H,Ni D,Qin J,et al.Standard plane localization in fetal ultrasound via domain transferred deep neural networks[J].IEEE Journal of Biomedical and Health Informatics,2015,19(5):1627-1636.</a>
+                                </li>
+                                <li id="160">
+
+
+                                    <a id="bibliography_2" title=" Ni D,Yang X,Chen X,et al,Standard plane localization in ultrasound by radial component model and selective search[J].Ultrasound in Medicine &amp;amp; Biology,2014,40(11):2728-2742." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14110700226826&amp;v=MzEyNDRRSC9pclJkR2VycVFUTW53WmVadUh5am1VYi9JSjFvVGF4QT1OaWZPZmJLOEg5RE1xSTlGWnVrSkJINC9vQk1UNlQ0UA==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         Ni D,Yang X,Chen X,et al,Standard plane localization in ultrasound by radial component model and selective search[J].Ultrasound in Medicine &amp;amp; Biology,2014,40(11):2728-2742.
+                                    </a>
+                                </li>
+                                <li id="162">
+
+
+                                    <a id="bibliography_3" >
+                                        <b>[3]</b>
+                                     Szegedy C,Liu W,Jia Y,et al.Going deeper with convolutions[C]// 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR).IEEE,2015.</a>
+                                </li>
+                                <li id="164">
+
+
+                                    <a id="bibliography_4" title=" Sermanet P,Eigen D,Zhang X,et al.Overfeat:Integrated recognition,localization and detection using convolutional networks[EB].arXiv:1312.6229,2013." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Overfeat:Integrated recognition,localization and detection using convolutional networks[EB]">
+                                        <b>[4]</b>
+                                         Sermanet P,Eigen D,Zhang X,et al.Overfeat:Integrated recognition,localization and detection using convolutional networks[EB].arXiv:1312.6229,2013.
+                                    </a>
+                                </li>
+                                <li id="166">
+
+
+                                    <a id="bibliography_5" >
+                                        <b>[5]</b>
+                                     He K,Zhang X,Ren S,et al.Delving deep into rectifiers:surpassing human-level performance on ImageNet classification[C]// 2015 IEEE International Conference on Computer Vision (ICCV),2015.</a>
+                                </li>
+                                <li id="168">
+
+
+                                    <a id="bibliography_6" title=" Sinclair M,Baumgartner C F,Matthew J,et al.Human-level performance on automatic head biometrics in fetal ultrasound using fully convolutional neural networks[EB].arXiv:1804.09102,2018." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Human-level performance on automatic head biometrics in fetal ultrasound using fully convolutional neural networks[EB]">
+                                        <b>[6]</b>
+                                         Sinclair M,Baumgartner C F,Matthew J,et al.Human-level performance on automatic head biometrics in fetal ultrasound using fully convolutional neural networks[EB].arXiv:1804.09102,2018.
+                                    </a>
+                                </li>
+                                <li id="170">
+
+
+                                    <a id="bibliography_7" title=" Ronneberger O,Fischer P,Brox T.Unet:Convolutional networks for biomedical image segmentation[C]// International Conference on Medical Image Computing and Computer-Assisted Intervention.Springer,2015:234-241." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=U-net:Convolutional networks for biomedical image segmentation">
+                                        <b>[7]</b>
+                                         Ronneberger O,Fischer P,Brox T.Unet:Convolutional networks for biomedical image segmentation[C]// International Conference on Medical Image Computing and Computer-Assisted Intervention.Springer,2015:234-241.
+                                    </a>
+                                </li>
+                                <li id="172">
+
+
+                                    <a id="bibliography_8" title=" Yang X,Yu L,Wu L,et al.Fine-grained recurrent neural networks for automatic prostate segmentation in ultrasound images[EB].arXiv:1612.01655,2016." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Fine-grained recurrent neural networks for automatic prostate segmentation in ultrasound images[EB]">
+                                        <b>[8]</b>
+                                         Yang X,Yu L,Wu L,et al.Fine-grained recurrent neural networks for automatic prostate segmentation in ultrasound images[EB].arXiv:1612.01655,2016.
+                                    </a>
+                                </li>
+                                <li id="174">
+
+
+                                    <a id="bibliography_9" title=" Cheng P M,Malhi H S.Transfer learning with convolutional neural networks for classification of abdominal ultrasound images[J].Journal of Digital Imaging,2017,30(2):234-243." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Transfer learning with convolutional neural networks for classification of abdominal ultrasound images">
+                                        <b>[9]</b>
+                                         Cheng P M,Malhi H S.Transfer learning with convolutional neural networks for classification of abdominal ultrasound images[J].Journal of Digital Imaging,2017,30(2):234-243.
+                                    </a>
+                                </li>
+                                <li id="176">
+
+
+                                    <a id="bibliography_10" title=" Chen H,Zheng Y,Park J H,et al.Iterative multi-domain regularized deep learning for anatomical structure detection and segmentation from ultrasound images[C]// International Conference on Medical Image Computing and Computer-Assisted Intervention.Springer,Cham,2016:487-495." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Iterative multi-domain regularized deep learning for anatomical structure detection and segmentation from ultrasound images">
+                                        <b>[10]</b>
+                                         Chen H,Zheng Y,Park J H,et al.Iterative multi-domain regularized deep learning for anatomical structure detection and segmentation from ultrasound images[C]// International Conference on Medical Image Computing and Computer-Assisted Intervention.Springer,Cham,2016:487-495.
+                                    </a>
+                                </li>
+                                <li id="178">
+
+
+                                    <a id="bibliography_11" title=" He K,Zhang X,Ren S,et al.Identity mappings in deep residual networks[EB].arXiv:1603.05027v3,2016." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Identity mappings in deep residual networks[EB]">
+                                        <b>[11]</b>
+                                         He K,Zhang X,Ren S,et al.Identity mappings in deep residual networks[EB].arXiv:1603.05027v3,2016.
+                                    </a>
+                                </li>
+                                <li id="180">
+
+
+                                    <a id="bibliography_12" title=" Baumgartner C F,Kamnitsas K,Matthew J,et al.Real-time standard scan plane detection and localisation in fetal ultrasound using fully convolutional neural networks[C]// International Conference on Medical Image Computing and Computer-Assisted Intervention.Springer,2016:203-211." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Real-Time Standard Scan Plane Detection and Localisation in Fetal Ultrasound Using Fully Convolutional Neural Networks">
+                                        <b>[12]</b>
+                                         Baumgartner C F,Kamnitsas K,Matthew J,et al.Real-time standard scan plane detection and localisation in fetal ultrasound using fully convolutional neural networks[C]// International Conference on Medical Image Computing and Computer-Assisted Intervention.Springer,2016:203-211.
+                                    </a>
+                                </li>
+                                <li id="182">
+
+
+                                    <a id="bibliography_13" title=" Huang G,Chen D,Li T,et al.Multi-scale dense networks for resource efficient image classification[EB].arXiv:1703.09844,2017." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Multi-scale dense networks for resource efficient image classification[EB]">
+                                        <b>[13]</b>
+                                         Huang G,Chen D,Li T,et al.Multi-scale dense networks for resource efficient image classification[EB].arXiv:1703.09844,2017.
+                                    </a>
+                                </li>
+                                <li id="184">
+
+
+                                    <a id="bibliography_14" title=" Ding J,Li A,Hu Z,et al.Accurate pulmonary nodule detection in computed tomography images using deep convolutional neural networks[C]// International Conference on Medical Image Computing and Computer-Assisted Intervention.Springer,2017:559-567." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Accurate pulmonary nodule detection in computed tomography images using deep convolutional neural networks">
+                                        <b>[14]</b>
+                                         Ding J,Li A,Hu Z,et al.Accurate pulmonary nodule detection in computed tomography images using deep convolutional neural networks[C]// International Conference on Medical Image Computing and Computer-Assisted Intervention.Springer,2017:559-567.
+                                    </a>
+                                </li>
+                                <li id="186">
+
+
+                                    <a id="bibliography_15" title=" Milletari F,Ahmadi S A,Kroll C,et al.Hough-CNN:Deep learning for segmentation of deep brain regions in MRI and ultrasound[J].Computer Vision and Image Understanding,2017,164:92-102." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES625ED92CC5B3468D6383B50BC1122689&amp;v=MTEzNzhwbWFCdUhZZk9HUWxmQ3BiUTM1ZGhodzd5NHdhbz1OaWZPZmJXNkc2UzRwbzAyRis1OUQzZy94MklWNlRkK09ucmkzbUUwZUxDV1E3S1dDT052RlNpV1dyN0pJRg==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         Milletari F,Ahmadi S A,Kroll C,et al.Hough-CNN:Deep learning for segmentation of deep brain regions in MRI and ultrasound[J].Computer Vision and Image Understanding,2017,164:92-102.
+                                    </a>
+                                </li>
+                                <li id="188">
+
+
+                                    <a id="bibliography_16" title=" Li Y.Segmentation of medical ultrasound images using convolutional neural networks with noisy activating functions[OL].http://cs229.stanford.edu/proj2016/report/Li-Segmentation Of Medical UltrasoundImages Using Convolutional Neural Networks With Noisy Activating Functions-report.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Segmentation of medical ultrasound images using convolutional neural networks with noisy activating functions[OL]">
+                                        <b>[16]</b>
+                                         Li Y.Segmentation of medical ultrasound images using convolutional neural networks with noisy activating functions[OL].http://cs229.stanford.edu/proj2016/report/Li-Segmentation Of Medical UltrasoundImages Using Convolutional Neural Networks With Noisy Activating Functions-report.pdf.
+                                    </a>
+                                </li>
+                                <li id="190">
+
+
+                                    <a id="bibliography_17" title=" Gulcehre C,Moczulski M,Denil M,et al.Noisy activation functions[C]// Proceedings of the 33rd International Conference on International Conference on Machine Learning-Volume 48,2016:3059-3068." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Noisy activation functions">
+                                        <b>[17]</b>
+                                         Gulcehre C,Moczulski M,Denil M,et al.Noisy activation functions[C]// Proceedings of the 33rd International Conference on International Conference on Machine Learning-Volume 48,2016:3059-3068.
+                                    </a>
+                                </li>
+                                <li id="192">
+
+
+                                    <a id="bibliography_18" title=" Xie S,Girshick R,Dollar P,et al.Aggregated residual transformations for deep neural networks[C]//2017 IEEE Conference on Computer Vision and Pattern Recognition(CVPR),2016." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Aggregated Residual Transformations for Deep Neural Networks">
+                                        <b>[18]</b>
+                                         Xie S,Girshick R,Dollar P,et al.Aggregated residual transformations for deep neural networks[C]//2017 IEEE Conference on Computer Vision and Pattern Recognition(CVPR),2016.
+                                    </a>
+                                </li>
+                                <li id="194">
+
+
+                                    <a id="bibliography_19" title=" Huang G,Liu Z,Laurens V D M,et al.Densely connected convolutional networks[EB].arXiv:1608.06993,2016." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Densely connected convolutional networks[EB]">
+                                        <b>[19]</b>
+                                         Huang G,Liu Z,Laurens V D M,et al.Densely connected convolutional networks[EB].arXiv:1608.06993,2016.
+                                    </a>
+                                </li>
+                                <li id="196">
+
+
+                                    <a id="bibliography_20" title=" Chen Y,Li J,Xiao H,et al.Dual path networks[C]// Proceedings of the 31st International Conference on Neural Information Processing Systems,2017:4470-4478." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Dual path networks">
+                                        <b>[20]</b>
+                                         Chen Y,Li J,Xiao H,et al.Dual path networks[C]// Proceedings of the 31st International Conference on Neural Information Processing Systems,2017:4470-4478.
+                                    </a>
+                                </li>
+                                <li id="198">
+
+
+                                    <a id="bibliography_21" title=" Li Y,Ping W.Cancer Metastasis Detection With Neural Conditional Random Field[EB].arXiv:1806.07064,2018." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Cancer Metastasis Detection With Neural Conditional Random Field[EB]">
+                                        <b>[21]</b>
+                                         Li Y,Ping W.Cancer Metastasis Detection With Neural Conditional Random Field[EB].arXiv:1806.07064,2018.
+                                    </a>
+                                </li>
+                                <li id="200">
+
+
+                                    <a id="bibliography_22" title=" Chen H,Ni D,Qin J,et al.Standard Plane Localization in Fetal Ultrasound via Domain Transferred Deep Neural Networks[J].IEEE Journal of Biomedical and Health Informatics,2015,19(5):1627-1636." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Standard plane localization in fetal ultrasound via domain transferred deep neural networks">
+                                        <b>[22]</b>
+                                         Chen H,Ni D,Qin J,et al.Standard Plane Localization in Fetal Ultrasound via Domain Transferred Deep Neural Networks[J].IEEE Journal of Biomedical and Health Informatics,2015,19(5):1627-1636.
+                                    </a>
+                                </li>
+                                <li id="202">
+
+
+                                    <a id="bibliography_23" title=" Kermany D S,Goldbaum M,Cai W,et al.Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep Learning[J].Cell,2018,172(5):1122-1131.e9." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES50930390119CE9E5141BCCC0599EF667&amp;v=MTcyNjZwbWFCdUhZZk9HUWxmQ3BiUTM1ZGhodzd5NHdhbz1OaWZPZmJhNEY5TE1ySVpGWmVvR2Z3a3d1aE1TN2o0UE93eVJyQmM4Y01maVE3eVlDT052RlNpV1dyN0pJRg==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[23]</b>
+                                         Kermany D S,Goldbaum M,Cai W,et al.Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep Learning[J].Cell,2018,172(5):1122-1131.e9.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JYRJ" target="_blank">计算机应用与软件</a>
+                2019,36(11),218-223+249 DOI:10.3969/j.issn.1000-386x.2019.11.035            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于深度学习的肺癌患者颈部淋巴结良恶性辅助超声诊断</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%AE%AB%E9%9C%9E&amp;code=32668500&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">宫霞</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%90%B4%E5%8D%AB%E5%8D%8E&amp;code=08596537&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">吴卫华</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E6%96%87%E6%B6%9B&amp;code=39763698&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张文涛</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E9%9B%B7&amp;code=43235602&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王雷</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%88%E6%B4%81&amp;code=29530731&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陈洁</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E5%B8%82%E8%83%B8%E7%A7%91%E5%8C%BB%E9%99%A2&amp;code=0255214&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海市胸科医院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E9%99%84%E5%B1%9E%E8%83%B8%E7%A7%91%E5%8C%BB%E9%99%A2&amp;code=1051518&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海交通大学附属胸科医院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A6&amp;code=0069758&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">南京大学</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>深度学习技术辅助超声影像诊断可以提高检测的精度和效率。提出一种用于超声图像分割的改进UNet卷积网络。该网络将噪声激励函数NHReLU和NHSeLU代替ReLU噪声激励函数,对成本函数增加权重参数。通过在两个尺度上预测,很好地处理了超声图像中标注区域尺寸变化的问题,提高对淋巴结超声图像分割效果。使用VGG、ResNet和DenseNet等网络预测淋巴结病灶区域的良恶性。实验表明,分割网络性能优异,Dice系数达到0.90,模型能够很好防止过拟合。在小样本下预测良恶性各指标都得到提高,为深度学习技术应用于超声图像检测提供了新方法。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">深度学习;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%99%AA%E5%A3%B0%E6%BF%80%E5%8A%B1%E5%87%BD%E6%95%B0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">噪声激励函数;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8C%BB%E7%96%97%E5%BD%B1%E5%83%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">医疗影像;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    宫霞，硕士，主研领域:腹部、浅表器官、血管等超声诊断。;
+                                </span>
+                                <span>
+                                    吴卫华，主任医师。;
+                                </span>
+                                <span>
+                                    张文涛，硕士生。;
+                                </span>
+                                <span>
+                                    王雷，硕士。;
+                                </span>
+                                <span>
+                                    陈洁，博士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2019-02-21</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金青年科学基金项目(81700422);</span>
+                                <span>上海交通大学医学院科技处技术转移推广项目(ZT201826);</span>
+                    </p>
+            </div>
+                    <h1><b>ASSISTED ULTRASOUND DIAGNOSIS OF BENIGN AND MALIGNANT CERVICAL LYMPH NODES IN LUNG CANCER PATIENTS BASED ON DEEP LEARNING</b></h1>
+                    <h2>
+                    <span>Gong Xia</span>
+                    <span>Wu Weihua</span>
+                    <span>Zhang Wentao</span>
+                    <span>Wang Lei</span>
+                    <span>Chen Jie</span>
+            </h2>
+                    <h2>
+                    <span>Shanghai Chest Hospital</span>
+                    <span>Chest Hospital Affiliated to Shanghai Jiao Tong University</span>
+                    <span>Nanjing University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Applying deep learning to assist ultrasound image diagnosis can improve the accuracy and efficiency of detection. Therefore, this paper proposes a modified UNet convolutional neural network for ultrasound image segment. The noisy activation functions that called Rectified Linear Unit(ReLU) was replaced by Noisy Hard Rectified Linear Unit(NHReLU) and Noisy Hard Scaled Exponential Linear Unit(NHSeLU) in this network. It also added weight parameter to cost function. By predicting on two scales, the problem of dimension change of labeled area in ultrasound image was well handled, and the segmentation effect of lymph node ultrasound image was improved. We used VGG, ResNet and DenseNet to predict the benign and malignant lesions in lymph node lesions. Experiments show that the performance of the segmentation network is excellent, and the Dice coefficient reaches 0.90. The model can prevent over-fitting, and the prediction of benign and malignant indicators are improved under small samples. It provides a new method for the application of deep learning technology in ultrasound image detection.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Deep%20learning&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Deep learning;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Noisy%20activation%20function&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Noisy activation function;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Medical%20image&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Medical image;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2019-02-21</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="49" name="49" class="anchor-tag"><b>0 引 言</b></h3>
+                <div class="p1">
+                    <p id="50">颈部尤其是锁骨上淋巴结转移是肺癌重要的转移形式,有无淋巴结的转移直接关联到肺癌的分期、手术方式以及预后等,故对其鉴别诊断非常关键。由于超声成像设备成本低、便携性、无创伤和无辐射等优点,在现代医学检测中有着广泛的应用。传统的医学影像分析基于医生对于获取图像进行主观评估,比较耗时,分析医疗影像精度取决于操作者的经验,评估结果往往具有很大的主观性<citation id="207" type="reference"><link href="158" rel="bibliography" /><link href="160" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>]</sup></citation>。近年来发展起来的计算机辅助区分肺癌转移性淋巴结病变和良性病变具有重要的临床应用前景,深度学习技术应用于图像检测取得了长足发展,在分类<citation id="204" type="reference"><link href="162" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>、分割和目标检测<citation id="205" type="reference"><link href="164" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>等领域,精度都优于人类<citation id="206" type="reference"><link href="166" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>。因此,将深度学习应用于超声图像分析具有强大的理论基础支撑。把深度学习技术应用于医疗影像(CT、MRI和PET)检测,通过大量标注好的数据,训练影像分析模型,极大提高了医生的诊断效率和准确性。超声图像分辨率较CT、MRI低,图像存在大量伪影和噪声,深度学习技术应用于超声图像分析发展空间大,具有重要的理论意义和实际应用价值。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">目前常见的应用于超声图像分割的深度学习模型FCN(Fully Convolutional Networks)<citation id="208" type="reference"><link href="168" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>、UNet<citation id="209" type="reference"><link href="170" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>等,取得了一定研究成果,但将噪声激励函数应用于网络结构中,改进网络性能值得深入研究。当数据量小的时候,通常采用传统机器学习方法,而深度学习模型需要大量的数据来训练,否则模型会出现过拟合。如何使模型在处理小样本时保持良恶性分类的高准确率,也是研究的难点。</p>
+                </div>
+                <h3 id="52" name="52" class="anchor-tag"><b>1 相关工作</b></h3>
+                <div class="p1">
+                    <p id="53">超声图像应用越来越广泛,但基于深度学习技术分析超声图像较其他医疗影像更难,原因如下:超声图像中含有固有的斑点噪声,而且图像为2D。国内外学者采用卷积神经网络对医学影像的分割大都处理前列腺<citation id="210" type="reference"><link href="172" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>、腹部<citation id="211" type="reference"><link href="174" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>、心脏<citation id="212" type="reference"><link href="176" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>和脐静脉<citation id="213" type="reference"><link href="178" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>的超声图像;Baumgartner等<citation id="214" type="reference"><link href="180" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>提出了一种实时系统,该系统能对临床手持式2D超声图像进行12种常用标准扫描平面的检测。Huang等<citation id="215" type="reference"><link href="182" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>提出了Multi-Scale DenseNet (MSDNet);Ding等<citation id="216" type="reference"><link href="184" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>对Faster R-CNN改进,提出了DCNNs;Milletari等<citation id="217" type="reference"><link href="186" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>提出了一个激励函数<i>PReLU</i>:</p>
+                </div>
+                <div class="area_img" id="54">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JYRJ201911036_05400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="56">文献<citation id="222" type="reference">[<a class="sup">16</a>,<a class="sup">17</a>]</citation>采用与UNet相似的CNN,使用能改进网络性能的噪声激励函数。关于ResNet不同变体及改进,何恺明等<citation id="218" type="reference"><link href="192" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>提出的ResNeXt,ResNeXt结构可以在不增加参数复杂度的前提下提高准确率,同时还减少了超参数的数量。文献<citation id="219" type="reference">[<a class="sup">19</a>]</citation>提出一种称为DenseNet的新架构,不同于ResNet将输出与输入相加,形成一个残差结构,DenseNet将输出与输入相并联,实现每一层都能直接得到之前所有层的输出,ResNet将输出与输入相加,形成一个残差结构,而DenseNet却是将输出与输入相并联,实现每一层都能直接得到之前所有层的输出。文献<citation id="220" type="reference">[<a class="sup">20</a>]</citation>结合残差网络与DenseNet两者优点,提出了一类全新的双通道网络结构Dual Path Networks(DPNs),该网络结构后面加上mean-max pooling层可以提高准确率。文献<citation id="221" type="reference">[<a class="sup">21</a>]</citation>提出一种神经条件随机场(Neural Conditional Random Field,NCRF)深度学习框架,通过一个直接位于CNN特征提取器上方的全连接CRF,来考虑相邻图像块之间的空间关联。</p>
+                </div>
+                <h3 id="57" name="57" class="anchor-tag"><b>2 方 法</b></h3>
+                <h4 class="anchor-tag" id="58" name="58"><b>2.1 迁移学习</b></h4>
+                <div class="p1">
+                    <p id="59">迁移学习技术,指在已有图像数据集上预训练例如VGGNet模型参数作为初始化参数,然后使用标注好的超声图像数据集,大大加快网络的训练速度。同时有效避免训练数据量不足带来的过拟合现象,改善了深度网络识别超声图像结果。一种更精细的方法是利用在大型数据集上预先训练的网络(通常是在ImageNet数据集上训练的),这样的网络将已经学习了对大多数计算机视觉问题有用的特性,利用这些特性将使我们比任何只依赖于可用数据的方法获得更好的精确性。文献<citation id="223" type="reference">[<a class="sup">22</a>]</citation>提出了一种转移学习策略,将训练好的基础CNN底层知识从大量的自然图像数据库转移到任务特定的CNN。文献<citation id="224" type="reference">[<a class="sup">23</a>]</citation>建立了一个基于深度学习框架的诊断工具,用于筛选具有常见可治疗性致盲视网膜疾病的患者,框架利用迁移学习,训练神经网络与传统方法的数据的一小部分,标注数据集达到了11万。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">本文采用了两种迁移学习方式,一是使用预训练卷积神经网络的瓶颈特征(bottleneck features)预测淋巴结的良恶性;二是对预训练的卷积神经网络的顶层做微调(fine tuning),从而预测淋巴结良恶性。</p>
+                </div>
+                <h4 class="anchor-tag" id="61" name="61">(1)利用预训练卷积神经网络的瓶颈特征预测淋巴结的良恶性</h4>
+                <div class="p1">
+                    <p id="62">在全连接层之前的最后一个激活映射的输出即为bottleneck features,对于预训练好的VGG16模型,首先去除其全连接层,然后冻结(Frozen)VGG16所有层,在训练过程中冻结层的参数不再发生变化,最后连接上自定义的网络结构,需要自定义针对自己分类问题的全连接层。其中,运行VGG16是非常昂贵的,可以把bottleneck features存储成离线状态,而不是将自定义的网络结构直接添加到一个冻结的卷积基础之上并运行整个系统。在训练自定义网络结构的参数时,将其加载为输入,从而只需要计算这个自定义的小的网络结构即可,节省了大量的计算资源。</p>
+                </div>
+                <h4 class="anchor-tag" id="63" name="63">(2) 对预训练的卷积神经网络的顶层做微调预测淋巴结良恶性</h4>
+                <div class="p1">
+                    <p id="64">对于预训练好的VGG16模型,首先去除其全连接层,然后冻结(Frozen)VGG16除最后一个卷积块的所有层(冻结部分层,与利用bottleneck features方式冻结所有层以区别),最后连接上自定义的含全连接层的网络结构。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">为了进行微调,所有的层都应该从经过适当训练的权重开始。例如,不应该在预先训练的卷积基础上,在一个随机初始化的全连接的网络上训练。这是因为由随机初始化的权重触发的大梯度更新会破坏卷积基础上的学习权重。因此首先要训练顶级分类器,然后才开始在它旁边微调卷积的权重。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">为了防止过拟合,可以选择只对最后一个或几个卷积块进行微调,而不是整个网络,因为整个网络将具有非常大的熵容量,所以存在过度拟合的强烈倾向。由低级卷积块学到的特征比那些发现的更一般,所以保持最初几个块固定是明智的,并且只对最后一个块进行微调。</p>
+                </div>
+                <div class="p1">
+                    <p id="67">微调应该以非常慢的学习速度进行,通常使用SGD优化器,而不是像rms这样的自适应学习速率优化器。这是为了确保更新的大小保持在非常小的范围内,这样就不会破坏以前学到的特性。</p>
+                </div>
+                <h4 class="anchor-tag" id="68" name="68"><b>2.2 数据增强</b></h4>
+                <div class="p1">
+                    <p id="69">数据增强(Data Augmentation)是在收集数据准备微调深度学习模型时,经常会遇到某些分类数据严重不足的情况,为了防止过拟合,在对预训练的网络模型参数进行微调之前,采用的一种技术。当一个模型在太少样例的训练集上训练时,学习到的模型不能泛化到新数据时,即当模型开始使用不相关的特性进行预测时,过拟合就会发生。因此,数据增强是从上下左右四个方向、对感兴趣区域(Region of Interest,ROI)的图像进行水平翻转和垂直翻转等6种变换,扩大数据集规模,这样我们的模型就不会看到完全相同的图像,有助于防止过拟合,并有助于模型的泛化。</p>
+                </div>
+                <div class="p1">
+                    <p id="70">数据增强是一种很好的对抗过拟合的方法,但这还不够,因为我们的增强样本仍然高度相关。对过拟合的主要关注是模型的熵容量——模型被允许存储多少信息。一个可以存储大量信息的模型可以通过利用更多的特征来更加准确预测,但是它也更有可能开始存储无关的特征。与此同时,一个只能存储一些特征的模型将不得不关注数据中最重要的特征,而这些特征更有可能是真正相关的,并能更好地泛化。</p>
+                </div>
+                <div class="p1">
+                    <p id="71">有不同的调节熵容量的方法。最主要的是选择模型中参数的数量,也就是层的数量和每个层的大小。另一种方法是使用权重正则化,如L1或L2正则化,它能使模型权重来取更小的值。在构建卷积网络结构的过程中,插入Dropout层还有助于减少过度拟合,防止一层一层地重复出现相同的模式,从而以一种类似于数据增强的方式进行操作(Dropout和Data Augmentation都倾向于破坏数据中出现的随机相关性)。</p>
+                </div>
+                <h4 class="anchor-tag" id="72" name="72"><b>2.3 UNET</b></h4>
+                <div class="p1">
+                    <p id="73">UNet网络利用了神经网络内在的多尺度特性,浅层输出保存了空域细节信息,深层输出保存了相对抽象的语义信息,利用底层信息补充高层信息,适用于医学图像分割、自然图像生成,在医学图像分割比RPN和FCN网络有更好的分割精确度。UNet模型左侧为一个下采样过程,分4组卷积操作进行;右侧的上采样过程使用的是4组反卷积,每次上采样将图片扩展为原来的2倍, 然后将对应层的图片(特征图)进行剪裁和复制,然后concat到上卷积的结果上。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">本文提出了一种改进UNet卷积网络,卷积块采用了inception block,网络将噪声激励函数NHReLU和NHSeLU (Noisy Hard SeLU function)代替ReLU和NReLU(Noisy Rectified Linear Unit functions)噪声激励函数。UNet网络在两个尺度上预测输出,而不是只在上采样最后层输出,这样很好地处理了超声图像中标注区域尺寸变化的问题,提高对淋巴结超声图像分割效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="75">噪声激励函数为:</p>
+                </div>
+                <div class="p1">
+                    <p id="76"><i>f</i>(<i>x</i>)=<i>h</i>(<i>x</i>+<i>c</i>×<i>ξ</i>)      (2)</p>
+                </div>
+                <div class="p1">
+                    <p id="77">式中:<i>c</i>是超参;<i>h</i>(<i>x</i>)是激励函数<i>v</i>(<i>x</i>)对应的硬激励函数;<i>ξ</i>是从正态分布中采样的噪声。硬饱和噪声激励函数为:</p>
+                </div>
+                <div class="area_img" id="78">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JYRJ201911036_07800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <h4 class="anchor-tag" id="80" name="80">(1) 有学习率的噪声激励函数。</h4>
+                <div class="p1">
+                    <p id="81"><i>d</i>(<i>x</i>)=<i>sign</i>(<i>x</i>)      (4)</p>
+                </div>
+                <div class="p1">
+                    <p id="82"><i>Δ</i>=<i>h</i>(<i>x</i>)-<i>x</i>      (5)</p>
+                </div>
+                <div class="p1">
+                    <p id="83">根据是否使用半正态噪声的标记,分为:</p>
+                </div>
+                <div class="p1">
+                    <p id="84">① 不使用半正态噪声的标记(half normal=False):</p>
+                </div>
+                <div class="p1">
+                    <p id="85"><i>δ</i>(<i>x</i>)=<i>c</i>×(<i>v</i>(<i>p</i>×(<i>h</i>(<i>x</i>)-<i>x</i>))-0.5)<sup>2</sup>=</p>
+                </div>
+                <div class="p1">
+                    <p id="86"><i>c</i>×(<i>v</i>(<i>p</i>×<i>Δ</i>)-0.5)<sup>2</sup>      (6)</p>
+                </div>
+                <div class="p1">
+                    <p id="87"><i>f</i>(<i>x</i>)=<i>α</i>×<i>h</i>(<i>x</i>)+1-<i>α</i>×<i>x</i>-<i>d</i>(<i>x</i>)×<i>δ</i>(<i>x</i>)×<i>ξ</i>      (7)</p>
+                </div>
+                <div class="p1">
+                    <p id="88">② 使用半正态噪声的标记(half normal=True):</p>
+                </div>
+                <div class="p1">
+                    <p id="89"><i>f</i>(<i>x</i>)=<i>α</i>×<i>h</i>(<i>x</i>)+1-<i>α</i>×<i>x</i>-<i>d</i>(<i>x</i>)×<i>δ</i>(<i>x</i>)×‖<i>ξ</i>‖      (8)</p>
+                </div>
+                <div class="p1">
+                    <p id="90"><i>φ</i>(<i>x</i>,<i>ξ</i>)=<i>αh</i>(<i>x</i>)+(1-<i>α</i>)<i>u</i>(<i>x</i>)+<i>d</i>(<i>x</i>)<i>σ</i>(<i>x</i>)<i>ξ</i>      (9)</p>
+                </div>
+                <h4 class="anchor-tag" id="91" name="91">(2) 噪声注入到输入的噪声激励函数。</h4>
+                <h4 class="anchor-tag" id="92" name="92">① 不使用半正态噪声的标记(half normal=False):</h4>
+                <div class="p1">
+                    <p id="93" class="code-formula">
+                        <mathml id="93"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>δ</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left"><mtr><mtd><mi>c</mi><mo>×</mo><mi>s</mi><mi>o</mi><mi>f</mi><mi>t</mi><mi>p</mi><mi>u</mi><mi>s</mi><mrow><mo>(</mo><mrow><mi>p</mi><mo>×</mo><mfrac><mrow><mo stretchy="false">∥</mo><mi>Δ</mi><mo stretchy="false">∥</mo></mrow><mrow><mo stretchy="false">∥</mo><mi>ξ</mi><mo stretchy="false">∥</mo></mrow></mfrac></mrow><mo>)</mo></mrow><mtext> </mtext><mi>α</mi><mo>&gt;</mo><mn>1</mn><mo>.</mo><mn>0</mn></mtd></mtr><mtr><mtd><mo>-</mo><mi>c</mi><mo>×</mo><mi>s</mi><mi>o</mi><mi>f</mi><mi>t</mi><mi>p</mi><mi>u</mi><mi>s</mi><mrow><mo>(</mo><mrow><mi>p</mi><mo>×</mo><mfrac><mrow><mo stretchy="false">∥</mo><mi>Δ</mi><mo stretchy="false">∥</mo></mrow><mrow><mo stretchy="false">∥</mo><mi>ξ</mi><mo stretchy="false">∥</mo></mrow></mfrac></mrow><mo>)</mo></mrow><mtext> </mtext><mtext>其</mtext><mtext>他</mtext></mtd></mtr></mtable></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>0</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="94"><i>f</i>(<i>x</i>)=<i>h</i>(<i>x</i>+<i>δ</i>(<i>x</i>)×<i>ξ</i>)      (11)</p>
+                </div>
+                <h4 class="anchor-tag" id="95" name="95">② 使用半正态噪声的标记(half normal=True):</h4>
+                <div class="p1">
+                    <p id="96"><i>f</i>(<i>x</i>)=<i>h</i>(<i>x</i>+<i>δ</i>(<i>x</i>)×‖<i>ξ</i>‖)      (12)</p>
+                </div>
+                <h4 class="anchor-tag" id="97" name="97"><b>2.4 损失函数与成本函数</b></h4>
+                <div class="p1">
+                    <p id="98">二分类问题中loss的定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="99" class="code-formula">
+                        <mathml id="99"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><mi>E</mi><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left"><mtr><mtd><mo>-</mo><mi>log</mi><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo><mtext> </mtext><mi>y</mi><mo>=</mo><mn>1</mn></mtd></mtr><mtr><mtd><mo>-</mo><mi>log</mi><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>p</mi><mo stretchy="false">)</mo><mtext> </mtext><mtext>其</mtext><mtext>他</mtext></mtd></mtr></mtable></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>3</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="100">式中:<i>p</i>∈[0,1]代表样本属于1的概率;<i>y</i>代表标签。为了表示方便,定义<i>p</i><sub><i>t</i></sub>如下:</p>
+                </div>
+                <div class="area_img" id="101">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JYRJ201911036_10100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <h4 class="anchor-tag" id="103" name="103">① 平衡交叉熵(Balanced Cross Entropy):</h4>
+                <div class="p1">
+                    <p id="104"><i>CE</i>(<i>p</i><sub><i>t</i></sub>)=-<i>α</i>log(<i>p</i><sub><i>t</i></sub>)      (15)</p>
+                </div>
+                <h4 class="anchor-tag" id="105" name="105">② Focal Loss:</h4>
+                <div class="p1">
+                    <p id="106"><i>FL</i>(<i>p</i><sub><i>t</i></sub>)=-(1-<i>p</i><sub><i>t</i></sub>)<sup><i>γ</i></sup>log(<i>p</i><sub><i>t</i></sub>)      (16)</p>
+                </div>
+                <div class="p1">
+                    <p id="107">我们使用了<i>α</i>变种的Focal Loss,形式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="108"><i>FL</i>(<i>p</i><sub><i>t</i></sub>)=-<i>α</i><sub><i>t</i></sub>(1-<i>p</i><sub><i>t</i></sub>)<sup><i>γ</i></sup>log(<i>p</i><sub><i>t</i></sub>)      (17)</p>
+                </div>
+                <div class="p1">
+                    <p id="109">Focal Loss函数是对标准交叉熵损失函数的改进,通过增加难分类样本的权重,使得模型在训练时更专注于难分类的样本。</p>
+                </div>
+                <div class="p1">
+                    <p id="110">计算成本函数公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="111"><i>J</i>=<mathml id="135"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mn>1</mn><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mi>ω</mi></mstyle><msup><mrow></mrow><mi>i</mi></msup></mrow></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mi>ω</mi></mstyle><msup><mrow></mrow><mi>i</mi></msup><mi>L</mi><mo stretchy="false">(</mo><mover accent="true"><mi>y</mi><mo>^</mo></mover><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo>,</mo><mi>y</mi><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup><mo stretchy="false">)</mo></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="112" class="code-formula">
+                        <mathml id="112"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ω</mi><msup><mrow></mrow><mi>i</mi></msup><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left"><mtr><mtd><mn>1</mn><mtext> </mtext><mtext>样</mtext><mtext>本</mtext><mtext>中</mtext><mtext>含</mtext><mtext>良</mtext><mtext>恶</mtext><mtext>性</mtext></mtd></mtr><mtr><mtd><mn>5</mn><mn>0</mn><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mtext>其</mtext><mtext>他</mtext></mtd></mtr></mtable></mrow></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="113">式中:<i>ω</i><sup><i>i</i></sup>为权重,当预测样本不是良恶性,那么该权重为50,减少了误差。</p>
+                </div>
+                <h3 id="114" name="114" class="anchor-tag"><b>3 实证分析</b></h3>
+                <div class="p1">
+                    <p id="115">本研究采集上海市胸科医院超声科360例肺癌患者的420幅淋巴结超声图像,其中男性190例,淋巴结230幅,女性170例,淋巴结190幅。所有淋巴结均进行针吸细胞学及细针穿刺活检检查,所有超声诊断结果均与病理结果相对照。采集的颈部淋巴结超声图像数据是二值图像,将淋巴结超声图像数据集分为训练集、验证集和测试集,每幅图像均由专门超声医生扫描并标注出病变细胞的长径、短径和良恶性。</p>
+                </div>
+                <div class="p1">
+                    <p id="116">使用开源图像标注工具Labelme和VGG Image Annotator重新标注并提取了每个淋巴结的mask用于训练。由于恶性占多数,即存在数据不均衡问题,因此针对每一个类别使用数据增强方法扩充训练数据。增强后的数据有两组,分别进行训练和验证。第一组数据(共3 000张)随机抽样2 000张作为训练集,其余作为验证集,期间重新生成多组训练样本和验证样本,以测试网络性能。第二组数据(5 000张)随机抽样3 000张作为训练集,其余作为验证集。</p>
+                </div>
+                <div class="p1">
+                    <p id="117">数据增强的方法是旋转90度(可以小于90度)、随机水平移动幅度0.2(相较于原来图片宽度)、随机垂直移动幅度0.2、剪切强度0.2(逆时针剪切)、随机缩放幅度0.2,随机通道偏移0.2、随机水平翻转、随机竖直翻转。采用Borderline-SMOTE2(Synthetic Minority Oversampling Technique),即合成少数类过采样技术,对少数类样本进行分析并根据少数类样本人工合成新样本添加到数据集中。噪声激励函数中添加的噪声为0.05,噪声标准差为0.5。</p>
+                </div>
+                <h4 class="anchor-tag" id="118" name="118"><b>3.1 淋巴结病灶部位分割</b></h4>
+                <div class="p1">
+                    <p id="119">用来训练的图像、UNet下采样和上采样卷积层指标明确,使用戴斯系数(Dice Coefficient)来评估图像分割结果和原标签数据的相似程度。采用ReLU的 Dice系数为0.85,采用NHReLU和SeLU的Dice系数都为0.86。NHReLU的Dice系数和损失函数如图1所示。</p>
+                </div>
+                <div class="area_img" id="120">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201911036_120.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 NHReLU Dice系数和损失函数" src="Detail/GetImg?filename=images/JYRJ201911036_120.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 NHReLU Dice系数和损失函数  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201911036_120.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="121">通过实验我们得出,模型采用NHSeLU噪声激励函数较ReLU、SeLU和NHReLU分割效果好,Dice系数达0.9。采用NHSeLU的 Dice系数和损失函数如图2所示。</p>
+                </div>
+                <div class="area_img" id="122">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201911036_122.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 NHSeLU Dice系数和损失函数" src="Detail/GetImg?filename=images/JYRJ201911036_122.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 NHSeLU Dice系数和损失函数  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201911036_122.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="123">采用NHSeLU激励函数的UNet模型对淋巴结病灶分割如图3所示,模型标出((b)、(d))的病灶区域基本与人工标注((a)、(c))的一致。</p>
+                </div>
+                <div class="area_img" id="124">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201911036_124.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 淋巴结病灶分割" src="Detail/GetImg?filename=images/JYRJ201911036_124.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 淋巴结病灶分割  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201911036_124.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="125" name="125"><b>3.2 淋巴结良恶性分类</b></h4>
+                <div class="p1">
+                    <p id="126">ResNet50实验结果(增强3 000样本):灵敏性、特异性和准确性分别为86.7%、82.8%和84%,AUC为0.848。DenseNet161实验结果(增强3 000样本):灵敏性、特异性和准确性分别为92%、80%和86.5%,AUC为0.861。</p>
+                </div>
+                <div class="p1">
+                    <p id="127">ResNet50实验结果(增强5 000样本):灵敏性、特异性和准确性分别为92%、86%和89%,AUC为0.89,如图4所示。DenseNet161实验结果(增强5 000样本):灵敏性、特异性和准确性分别为93%,88%和90%,AUC为0.90,如图5所示。</p>
+                </div>
+                <div class="area_img" id="128">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201911036_128.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 ResNet50各指标值" src="Detail/GetImg?filename=images/JYRJ201911036_128.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 ResNet50各指标值  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201911036_128.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="129">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201911036_129.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 DenseNet161各指标值" src="Detail/GetImg?filename=images/JYRJ201911036_129.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 DenseNet161各指标值  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201911036_129.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="130">ResNet50与DenseNet161(增强5 000样本)准确率和AUC比较,如图6所示。可以看出,DenseNet161优于ResNet50网络。实验表明训练的准确率和戴斯系数较验证集上的高,主要是数据量不够,今后应该进一步增加样本量,避免模型过拟合。</p>
+                </div>
+                <div class="area_img" id="131">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201911036_131.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 ResNet50与DenseNet161准确率和AUC比较" src="Detail/GetImg?filename=images/JYRJ201911036_131.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 ResNet50与DenseNet161准确率和AUC比较  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201911036_131.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="132">实验结果表明,该网络能够实现肺癌患者颈部淋巴结超声图像快速、准确分割,分割结果的灵敏性、特异性和准确性最高分别为93%、88%和90%,AUC为0.90。这些量化指标将对区分肺癌患者转移性淋巴结与良性淋巴结鉴别提供极大帮助,同时也验证了模型的有效性。文献<citation id="225" type="reference">[<a class="sup">20</a>]</citation>使用mean-max pooling 层来提高准确率,但该方法并未对本文实验准确率有提高,这一点也值得进一步研究。</p>
+                </div>
+                <h3 id="133" name="133" class="anchor-tag"><b>4 结 语</b></h3>
+                <div class="p1">
+                    <p id="134">本文基于UNet网络分割超声图像,引入了多种噪声激励函数改进了网络的性能,提高了戴斯系数;使用VGG、ResNet和DenseNet等网络预测淋巴结病灶区域的良恶性;采用迁移学习、数据增强和损失函数,防止网络的过拟合,提高了小样本下预测良恶性的准确率、灵敏度和特异性。今后值得进一步研究的方向有两点:(1) 为了提升模型的泛化能力,增加时间的多样性,应利用生成对抗网络(GAN),从随机噪声中产生新的正样本,学习生成新形态的样本;(2) 本文的深度学习模型对良恶性分类采用单一网络进行预测,并未采用模型融合技术,因此,检测采用多种模型融合,分别预测病变部位良恶性的概率,根据模型间权重比例得出最终概率的方法值得深入研究。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="158">
+                            <a id="bibliography_1" >
+                                    <b>[1]</b>
+                                 Chen H,Ni D,Qin J,et al.Standard plane localization in fetal ultrasound via domain transferred deep neural networks[J].IEEE Journal of Biomedical and Health Informatics,2015,19(5):1627-1636.
+                            </a>
+                        </p>
+                        <p id="160">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14110700226826&amp;v=MzA3Mjkxb1RheEE9TmlmT2ZiSzhIOURNcUk5Rlp1a0pCSDQvb0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VYi9JSg==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> Ni D,Yang X,Chen X,et al,Standard plane localization in ultrasound by radial component model and selective search[J].Ultrasound in Medicine &amp; Biology,2014,40(11):2728-2742.
+                            </a>
+                        </p>
+                        <p id="162">
+                            <a id="bibliography_3" >
+                                    <b>[3]</b>
+                                 Szegedy C,Liu W,Jia Y,et al.Going deeper with convolutions[C]// 2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR).IEEE,2015.
+                            </a>
+                        </p>
+                        <p id="164">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Overfeat:Integrated recognition,localization and detection using convolutional networks[EB]">
+
+                                <b>[4]</b> Sermanet P,Eigen D,Zhang X,et al.Overfeat:Integrated recognition,localization and detection using convolutional networks[EB].arXiv:1312.6229,2013.
+                            </a>
+                        </p>
+                        <p id="166">
+                            <a id="bibliography_5" >
+                                    <b>[5]</b>
+                                 He K,Zhang X,Ren S,et al.Delving deep into rectifiers:surpassing human-level performance on ImageNet classification[C]// 2015 IEEE International Conference on Computer Vision (ICCV),2015.
+                            </a>
+                        </p>
+                        <p id="168">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Human-level performance on automatic head biometrics in fetal ultrasound using fully convolutional neural networks[EB]">
+
+                                <b>[6]</b> Sinclair M,Baumgartner C F,Matthew J,et al.Human-level performance on automatic head biometrics in fetal ultrasound using fully convolutional neural networks[EB].arXiv:1804.09102,2018.
+                            </a>
+                        </p>
+                        <p id="170">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=U-net:Convolutional networks for biomedical image segmentation">
+
+                                <b>[7]</b> Ronneberger O,Fischer P,Brox T.Unet:Convolutional networks for biomedical image segmentation[C]// International Conference on Medical Image Computing and Computer-Assisted Intervention.Springer,2015:234-241.
+                            </a>
+                        </p>
+                        <p id="172">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Fine-grained recurrent neural networks for automatic prostate segmentation in ultrasound images[EB]">
+
+                                <b>[8]</b> Yang X,Yu L,Wu L,et al.Fine-grained recurrent neural networks for automatic prostate segmentation in ultrasound images[EB].arXiv:1612.01655,2016.
+                            </a>
+                        </p>
+                        <p id="174">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Transfer learning with convolutional neural networks for classification of abdominal ultrasound images">
+
+                                <b>[9]</b> Cheng P M,Malhi H S.Transfer learning with convolutional neural networks for classification of abdominal ultrasound images[J].Journal of Digital Imaging,2017,30(2):234-243.
+                            </a>
+                        </p>
+                        <p id="176">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Iterative multi-domain regularized deep learning for anatomical structure detection and segmentation from ultrasound images">
+
+                                <b>[10]</b> Chen H,Zheng Y,Park J H,et al.Iterative multi-domain regularized deep learning for anatomical structure detection and segmentation from ultrasound images[C]// International Conference on Medical Image Computing and Computer-Assisted Intervention.Springer,Cham,2016:487-495.
+                            </a>
+                        </p>
+                        <p id="178">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Identity mappings in deep residual networks[EB]">
+
+                                <b>[11]</b> He K,Zhang X,Ren S,et al.Identity mappings in deep residual networks[EB].arXiv:1603.05027v3,2016.
+                            </a>
+                        </p>
+                        <p id="180">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Real-Time Standard Scan Plane Detection and Localisation in Fetal Ultrasound Using Fully Convolutional Neural Networks">
+
+                                <b>[12]</b> Baumgartner C F,Kamnitsas K,Matthew J,et al.Real-time standard scan plane detection and localisation in fetal ultrasound using fully convolutional neural networks[C]// International Conference on Medical Image Computing and Computer-Assisted Intervention.Springer,2016:203-211.
+                            </a>
+                        </p>
+                        <p id="182">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Multi-scale dense networks for resource efficient image classification[EB]">
+
+                                <b>[13]</b> Huang G,Chen D,Li T,et al.Multi-scale dense networks for resource efficient image classification[EB].arXiv:1703.09844,2017.
+                            </a>
+                        </p>
+                        <p id="184">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Accurate pulmonary nodule detection in computed tomography images using deep convolutional neural networks">
+
+                                <b>[14]</b> Ding J,Li A,Hu Z,et al.Accurate pulmonary nodule detection in computed tomography images using deep convolutional neural networks[C]// International Conference on Medical Image Computing and Computer-Assisted Intervention.Springer,2017:559-567.
+                            </a>
+                        </p>
+                        <p id="186">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES625ED92CC5B3468D6383B50BC1122689&amp;v=MDg0MzRwbWFCdUhZZk9HUWxmQ3BiUTM1ZGhodzd5NHdhbz1OaWZPZmJXNkc2UzRwbzAyRis1OUQzZy94MklWNlRkK09ucmkzbUUwZUxDV1E3S1dDT052RlNpV1dyN0pJRg==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> Milletari F,Ahmadi S A,Kroll C,et al.Hough-CNN:Deep learning for segmentation of deep brain regions in MRI and ultrasound[J].Computer Vision and Image Understanding,2017,164:92-102.
+                            </a>
+                        </p>
+                        <p id="188">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Segmentation of medical ultrasound images using convolutional neural networks with noisy activating functions[OL]">
+
+                                <b>[16]</b> Li Y.Segmentation of medical ultrasound images using convolutional neural networks with noisy activating functions[OL].http://cs229.stanford.edu/proj2016/report/Li-Segmentation Of Medical UltrasoundImages Using Convolutional Neural Networks With Noisy Activating Functions-report.pdf.
+                            </a>
+                        </p>
+                        <p id="190">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Noisy activation functions">
+
+                                <b>[17]</b> Gulcehre C,Moczulski M,Denil M,et al.Noisy activation functions[C]// Proceedings of the 33rd International Conference on International Conference on Machine Learning-Volume 48,2016:3059-3068.
+                            </a>
+                        </p>
+                        <p id="192">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Aggregated Residual Transformations for Deep Neural Networks">
+
+                                <b>[18]</b> Xie S,Girshick R,Dollar P,et al.Aggregated residual transformations for deep neural networks[C]//2017 IEEE Conference on Computer Vision and Pattern Recognition(CVPR),2016.
+                            </a>
+                        </p>
+                        <p id="194">
+                            <a id="bibliography_19" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Densely connected convolutional networks[EB]">
+
+                                <b>[19]</b> Huang G,Liu Z,Laurens V D M,et al.Densely connected convolutional networks[EB].arXiv:1608.06993,2016.
+                            </a>
+                        </p>
+                        <p id="196">
+                            <a id="bibliography_20" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Dual path networks">
+
+                                <b>[20]</b> Chen Y,Li J,Xiao H,et al.Dual path networks[C]// Proceedings of the 31st International Conference on Neural Information Processing Systems,2017:4470-4478.
+                            </a>
+                        </p>
+                        <p id="198">
+                            <a id="bibliography_21" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Cancer Metastasis Detection With Neural Conditional Random Field[EB]">
+
+                                <b>[21]</b> Li Y,Ping W.Cancer Metastasis Detection With Neural Conditional Random Field[EB].arXiv:1806.07064,2018.
+                            </a>
+                        </p>
+                        <p id="200">
+                            <a id="bibliography_22" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Standard plane localization in fetal ultrasound via domain transferred deep neural networks">
+
+                                <b>[22]</b> Chen H,Ni D,Qin J,et al.Standard Plane Localization in Fetal Ultrasound via Domain Transferred Deep Neural Networks[J].IEEE Journal of Biomedical and Health Informatics,2015,19(5):1627-1636.
+                            </a>
+                        </p>
+                        <p id="202">
+                            <a id="bibliography_23" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES50930390119CE9E5141BCCC0599EF667&amp;v=MzA2ODRDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMzVkaGh3N3k0d2FvPU5pZk9mYmE0RjlMTXJJWkZaZW9HZndrd3VoTVM3ajRQT3d5UnJCYzhjTWZpUTd5WQ==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[23]</b> Kermany D S,Goldbaum M,Cai W,et al.Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep Learning[J].Cell,2018,172(5):1122-1131.e9.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JYRJ201911036" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201911036&amp;v=MDcxNjR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVZ1RnkvaFZMN0tMelRaWkxHNEg5ak5ybzlHWW9RS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="0" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

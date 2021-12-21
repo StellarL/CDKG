@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637136397137940000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJYRJ201903038%26RESULT%3d1%26SIGN%3dDfCo6G9RFhfPJaZnaFWUZBqXFFM%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201903038&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201903038&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201903038&amp;v=MDAyNjdUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRmlEbFY3N0FMelRaWkxHNEg5ak1ySTlHYklRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#33" data-title="&lt;b&gt;0 引 言&lt;/b&gt; "><b>0 引 言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#42" data-title="&lt;b&gt;1 序列标注模型框架&lt;/b&gt; "><b>1 序列标注模型框架</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#46" data-title="&lt;b&gt;2 CRF评价对象抽取模型&lt;/b&gt; "><b>2 CRF评价对象抽取模型</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#47" data-title="&lt;b&gt;2.1 CRF模型&lt;/b&gt;"><b>2.1 CRF模型</b></a></li>
+                                                <li><a href="#53" data-title="&lt;b&gt;2.2 特征选择&lt;/b&gt;"><b>2.2 特征选择</b></a></li>
+                                                <li><a href="#58" data-title="&lt;b&gt;2.3 模板定义&lt;/b&gt;"><b>2.3 模板定义</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#61" data-title="&lt;b&gt;3 模型设计&lt;/b&gt; "><b>3 模型设计</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#62" data-title="&lt;b&gt;3.1 词向量训练&lt;/b&gt;"><b>3.1 词向量训练</b></a></li>
+                                                <li><a href="#81" data-title="&lt;b&gt;3.2 注意力机制&lt;/b&gt;"><b>3.2 注意力机制</b></a></li>
+                                                <li><a href="#94" data-title="&lt;b&gt;3.3 LSTM-CRF-Attention模型&lt;/b&gt;"><b>3.3 LSTM-CRF-Attention模型</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#127" data-title="&lt;b&gt;4 实验和结果分析&lt;/b&gt; "><b>4 实验和结果分析</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#128" data-title="&lt;b&gt;4.1 实验数据集&lt;/b&gt;"><b>4.1 实验数据集</b></a></li>
+                                                <li><a href="#132" data-title="&lt;b&gt;4.2 评价方法&lt;/b&gt;"><b>4.2 评价方法</b></a></li>
+                                                <li><a href="#162" data-title="&lt;b&gt;4.3 实验结果&lt;/b&gt;"><b>4.3 实验结果</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#173" data-title="&lt;b&gt;5 结 语&lt;/b&gt; "><b>5 结 语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#35" data-title="&lt;b&gt;表1 评论示例表&lt;/b&gt;"><b>表1 评论示例表</b></a></li>
+                                                <li><a href="#44" data-title="图1 序列标注系统框架图">图1 序列标注系统框架图</a></li>
+                                                <li><a href="#57" data-title="&lt;b&gt;表2 特征表示示例&lt;/b&gt;"><b>表2 特征表示示例</b></a></li>
+                                                <li><a href="#60" data-title="&lt;b&gt;表3 模板形式示例&lt;/b&gt;"><b>表3 模板形式示例</b></a></li>
+                                                <li><a href="#97" data-title="图2 LSTM-CRF-Attention模型结构图">图2 LSTM-CRF-Attention模型结构图</a></li>
+                                                <li><a href="#131" data-title="&lt;b&gt;表4 实验数据统计表&lt;/b&gt;"><b>表4 实验数据统计表</b></a></li>
+                                                <li><a href="#166" data-title="&lt;b&gt;表5 LSTM-CRF-Attention预训练词向量实验结果表&lt;/b&gt;"><b>表5 LSTM-CRF-Attention预训练词向量实验结果表</b></a></li>
+                                                <li><a href="#169" data-title="&lt;b&gt;表6 评价对象抽取NLPCC2012数据集对比实验结果表&lt;/b&gt;"><b>表6 评价对象抽取NLPCC2012数据集对比实验结果表</b></a></li>
+                                                <li><a href="#170" data-title="&lt;b&gt;表7 评价对象抽取NLPCC2013数据集对比实验结果表&lt;/b&gt;"><b>表7 评价对象抽取NLPCC2013数据集对比实验结果表</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" Liu K, Xu L, Zhao J. Co-extracting opinion targets and opinion words from online reviews based on the word alignment model[J]. IEEE Transactions on Knowledge and Engineering, 2015, 27 (3) : 646-650." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Co-extracting opinion targets and opinion words from online reviews based on the word alignment model">
+                                        <b>[1]</b>
+                                         Liu K, Xu L, Zhao J. Co-extracting opinion targets and opinion words from online reviews based on the word alignment model[J]. IEEE Transactions on Knowledge and Engineering, 2015, 27 (3) : 646-650.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" Zhou X, Wan X, Xiao J. Collective opinion target extraction in Chinese microblogs[J]. Chemosphere, 2013, 73 (4) : 532-542." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Collective opinion target extraction in Chinese microblogs">
+                                        <b>[2]</b>
+                                         Zhou X, Wan X, Xiao J. Collective opinion target extraction in Chinese microblogs[J]. Chemosphere, 2013, 73 (4) : 532-542.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" Min Q, Zhang J. Opinion target extraction in Chinese microblog posts based on candidate classification[C]//2017 4th International Conference on Information Science and Control Engineering, 2017: 514-519." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Opinion target extraction in Chinese microblog posts based on candidate classification">
+                                        <b>[3]</b>
+                                         Min Q, Zhang J. Opinion target extraction in Chinese microblog posts based on candidate classification[C]//2017 4th International Conference on Information Science and Control Engineering, 2017: 514-519.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" Qiu G, Liu B, Bu J, et al. Opinion word expansion and target extraction through double propagation[J]. Association for Computational Linguistics, 2011, 37 (1) : 9-27." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Opinion Word Expansion and Target Extraction through Double Propagation">
+                                        <b>[4]</b>
+                                         Qiu G, Liu B, Bu J, et al. Opinion word expansion and target extraction through double propagation[J]. Association for Computational Linguistics, 2011, 37 (1) : 9-27.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" Toh Z, Wang W. DLIREC: aspect term extraction and term polarity classification system[C]//Proceedings of the 8th International Workshop on Semantic Evaluation (SemEval 2014) , Dublin, Ireland, August 23-24, 2014: 235-240." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=DLIREC:Aspect Term Extraction and Term Polarity Classification System">
+                                        <b>[5]</b>
+                                         Toh Z, Wang W. DLIREC: aspect term extraction and term polarity classification system[C]//Proceedings of the 8th International Workshop on Semantic Evaluation (SemEval 2014) , Dublin, Ireland, August 23-24, 2014: 235-240.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 蒋润, 顾春华, 阮彤. 基于Tri-training 的评价单元识别[J]. 计算机应用, 2014, 34 (4) : 1099-1104." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201404041&amp;v=MDY1NzVxcUJ0R0ZyQ1VSN3FmWnVac0ZpRGxWNzdBTHo3QmQ3RzRIOVhNcTQ5QlpZUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         蒋润, 顾春华, 阮彤. 基于Tri-training 的评价单元识别[J]. 计算机应用, 2014, 34 (4) : 1099-1104.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 郑敏洁, 雷志城, 廖祥文, 等. 基于层叠CRFs的中文句子评价对象抽取[J]. 中文信息学报, 2013, 27 (3) : 69-76." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201303010&amp;v=MjA0NzZaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGaURsVjc3QUtDallmYkc0SDlMTXJJOUU=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         郑敏洁, 雷志城, 廖祥文, 等. 基于层叠CRFs的中文句子评价对象抽取[J]. 中文信息学报, 2013, 27 (3) : 69-76.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" Zhou X, Wan X, Xiao J. CLOpinionMiner: opinion target extraction in a cross-language scenario[J]. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 2015, 23 (4) : 619-630." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=CLOpinionMiner: opinion target extraction in a cross-language scenario">
+                                        <b>[8]</b>
+                                         Zhou X, Wan X, Xiao J. CLOpinionMiner: opinion target extraction in a cross-language scenario[J]. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 2015, 23 (4) : 619-630.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" Poria S, Cambria E, Gelbukh A. Aspect extraction for opinion mining with a deep convolutional neural network[J]. Knowledge-Based Systems, 2016, 108 (C) : 42-49." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Aspect extraction for opinion mining with a deep convolutional neural network">
+                                        <b>[9]</b>
+                                         Poria S, Cambria E, Gelbukh A. Aspect extraction for opinion mining with a deep convolutional neural network[J]. Knowledge-Based Systems, 2016, 108 (C) : 42-49.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" Jebbara S, Cimiano P. Improving opinion-target extraction with character-level word embeddings[C]//Proceedings of the First Workshop on Subword and Character Level Models in NLP, September 7, 2017: 159-167." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Improving opinion-target extraction with character-level word embeddings">
+                                        <b>[10]</b>
+                                         Jebbara S, Cimiano P. Improving opinion-target extraction with character-level word embeddings[C]//Proceedings of the First Workshop on Subword and Character Level Models in NLP, September 7, 2017: 159-167.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" Ding Y, Yu J, Jiang J. Recurrent neural networks with auxiliary labels for cross-domain opinion target extraction[C]//Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence, 2017: 3436-3442." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Recurrent neural networks with auxiliary labels for cross-domain opinion target extraction">
+                                        <b>[11]</b>
+                                         Ding Y, Yu J, Jiang J. Recurrent neural networks with auxiliary labels for cross-domain opinion target extraction[C]//Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence, 2017: 3436-3442.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" Ma X, Hovy E. End-to-end sequence labeling via bi-directional LSTM-CNNs-CRF[C]//Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics, Berlin, Germany, August 7-12, 2016: 1064-1074." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=End-to-end sequence labeling via bi-directional LSTM-CNNs-CRF">
+                                        <b>[12]</b>
+                                         Ma X, Hovy E. End-to-end sequence labeling via bi-directional LSTM-CNNs-CRF[C]//Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics, Berlin, Germany, August 7-12, 2016: 1064-1074.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" Lafferty J D, McCallum A, Pereira F C N. Conditional random fields: probabilistic models for segmenting and labeling sequence data[C]//Proceedings of the Eighteenth International Conference on Machine Learning, 2001: 282-289." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Conditional random fields: probabilistic models for segmenting and labeling sequence data">
+                                        <b>[13]</b>
+                                         Lafferty J D, McCallum A, Pereira F C N. Conditional random fields: probabilistic models for segmenting and labeling sequence data[C]//Proceedings of the Eighteenth International Conference on Machine Learning, 2001: 282-289.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" Mnih V, Heess N, Graves A, et al. Recurrent models of visual attention[C]//Proceedings of the 27th International Conference on Neural Information Processing Systems, Montreal, Canada, December 08-13, 2014: 2204-2212." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Recurrent models of visual attention">
+                                        <b>[14]</b>
+                                         Mnih V, Heess N, Graves A, et al. Recurrent models of visual attention[C]//Proceedings of the 27th International Conference on Neural Information Processing Systems, Montreal, Canada, December 08-13, 2014: 2204-2212.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" Ma Y, Peng H, Cambria E. Targeted aspect-based sentiment analysis via embedding commonsense knowledge into an attentive LSTM[C]//Association for the Advancement of Artificial Intelligence, 2018." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Targeted aspect-based sentiment analysis via embedding commonsense knowledge into an attentive LSTM">
+                                        <b>[15]</b>
+                                         Ma Y, Peng H, Cambria E. Targeted aspect-based sentiment analysis via embedding commonsense knowledge into an attentive LSTM[C]//Association for the Advancement of Artificial Intelligence, 2018.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JYRJ" target="_blank">计算机应用与软件</a>
+                2019,36(03),202-209 DOI:10.3969/j.issn.1000-386x.2019.03.037            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于注意力机制的循环神经网络评价对象抽取模型</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%A8%E5%96%84%E8%89%AF&amp;code=41287804&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">杨善良</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%AD%99%E5%90%AF&amp;code=41287805&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">孙启</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%B1%B1%E4%B8%9C%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&amp;code=0245633&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">山东理工大学计算机科学与技术学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%9B%BD%E4%BC%A0%E5%AA%92%E5%A4%A7%E5%AD%A6%E4%BC%A0%E5%AA%92%E7%A7%91%E5%AD%A6%E7%A0%94%E7%A9%B6%E6%89%80&amp;code=0246303&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中国传媒大学传媒科学研究所</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对评论文本中评价对象的抽取任务, 需要设计特征模板, 而抽取结果往往受特征模板影响大的问题, 提出一种端到端的神经网络评价对象抽取模型。分析条件随机场CRF在评价对象抽取任务中的特征模板设计;使用词向量嵌入模型在语义空间表示词语, 并分析注意力机制在神经网络模型中的作用;将条件随机场模型与循环神经网络模型LSTM相结合, 形成基于注意力机制的LSTM-CRF-Attention模型。在NLPCC2012和NLPCC2013两个数据集上进行实验, 该模型的F值比CRF模型分别提高8.15%和11.03%。实验结果也同时验证词向量具备表示词语特征的能力, 注意力机制能够有效提高神经网络模型中的评价对象抽取效果。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">注意力机制;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">神经网络模型;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%9D%A1%E4%BB%B6%E9%9A%8F%E6%9C%BA%E5%9C%BA&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">条件随机场;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%84%E4%BB%B7%E5%AF%B9%E8%B1%A1%E6%8A%BD%E5%8F%96&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">评价对象抽取;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    杨善良, 博士生, 主研领域:机器学习, 情感分析。;
+                                </span>
+                                <span>
+                                    孙启, 博士生。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-09-13</p>
+
+            </div>
+                    <h1><b>EVALUATION OBJECT EXTRACTION MODEL OF RECURRENT NEURAL NETWORK BASED ON ATTENTION MECHANISM</b></h1>
+                    <h2>
+                    <span>Yang Shanliang</span>
+                    <span>Sun Qi</span>
+            </h2>
+                    <h2>
+                    <span>College of Computer Science and Technology, Shandong University of Technology</span>
+                    <span>Institute of Media Science, Communication University of China</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Aiming at the problem that feature templates were needed to extract evaluation objects from comment texts, and the extraction results were often greatly affected by feature templates, we proposed an end-to-end neural network evaluation object extraction model. We analyzed the feature template design of conditional random field in the evaluation object extraction task. Then we used the word vector embedding model to represent words in the semantic space, and analyzed the role of attention mechanism in the neural network model. Combining the conditional random field model with the cyclic neural network model LSTM, the LSTM-CRF-Attention model was formed. Experiments on NLPCC2012 and NLPCC2013 show that the F value of the proposed model is 8.15% and 11.03% higher than that of CRF model respectively. The experimental results also verify that word vectors have the ability to represent word features. Attention mechanism can effectively improve the extraction effect of evaluation objects in the neural network model.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Attention%20mechanism&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Attention mechanism;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Neural%20network%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Neural network model;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Conditional%20random%20field&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Conditional random field;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Evaluation%20object%20extraction&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Evaluation object extraction;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-09-13</p>
+                            </div>
+
+
+        <!--brief start-->
+                        <h3 id="33" name="33" class="anchor-tag"><b>0 引 言</b></h3>
+                <div class="p1">
+                    <p id="34">评价对象是评论文本中的评价主体, 评论文本内容集中反映了对该主体的情感态度。评价对象抽取任务就是从评论文本中抽取出评价对象, 但是评价对象在评论文本中的表现形式多样, 抽取过程面临诸多挑战。首先, 评论文本中通常包含显式和隐式评价对象, 对于显式评价对象容易从文本中直接抽取, 然而隐式评价对象往往不出现在评论文本中, 需要通过上下文进行推理, 完成抽取任务相对困难。其次, 显式评价对象通常是一个短语, 由一个或多个词语组成, 确定评价对象的边界非常困难。下面以“中美贸易战”话题的相关评论为例进行说明, 评论示例如表1所示。评论1中并没有评价对象出现, 但是在该话题语境下其评价对象是“美国发动贸易战”这件事;评论2的第二句中有显式评价对象“美国”, 是一个名词, 抽取该评价对象较为容易;评论3中的评价对象是“中美和平发展”, 该评价对象是一个名词短语, 可以看作由“中美”、“和平”和“发展”等三个词语组成。</p>
+                </div>
+                <div class="area_img" id="35">
+                    <p class="img_tit"><b>表1 评论示例表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="35" border="1"><tr><td><br />评论编号</td><td>评论示例</td></tr><tr><td><br />评论1</td><td>来而不往非礼也!</td></tr><tr><td><br />评论2</td><td>多行不义必自毙。奉劝美国不要搬起石头砸自己的脚!</td></tr><tr><td><br />评论3</td><td>中美和平发展才是两国人民的殷切期望。</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="36">本文重点研究显式评价对象抽取任务, 解决评价对象由多个词语组成时所面临的困难。提出一种端到端的神经网络模型, 减少手动设计特征模板的工作, 同时提高网络评价文本中评价对象抽取准确率。本文把显式评价对象抽取任务看做序列标注问题, 将文本序列映射到评价对象序列, 标注的标签为该字符是否属于评价对象。采用IOB序列标注模式, B-term代表当前字符是评价对象的开始, I-term代表当前字符包含在评价对象字符串序列中, O-term代表当前字符不属于评价对象。IOB标注模式在标注出目标字符串的同时也给出了评价对象的边界, B-Term为起始边界, 最后一个I-term为终止边界。显示评价对象的标注示例如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="37">评论数据:“中美和平发展才是两国人民的殷切期望。”</p>
+                </div>
+                <div class="p1">
+                    <p id="38">标注数据:“B I I I I I O O O O O O O O O O O O”</p>
+                </div>
+                <div class="p1">
+                    <p id="39">随着网络评论数据的增多, 以及评论数据的可获取性增强, 评价对象抽取任务已经成为情感分析中的研究热点之一。Liu等<citation id="175" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>将评价词语和评价对象之间的对应关系作为词语对齐的依据, 使用词对齐算法从网络评论中抽取评价对象和评价词语。Zhou等<citation id="176" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>使用集成算法抽取中文微博评论中的评价对象。首先使用对称条件概率SCP指标切分微博话题标签字符串, 提取粘性值最高的字符作为候选评价对象;然后根据规则条件和词语长度限制提取语句中的候选评价对象;最后使用基于图的标签传播算法对候选评价对象排序, 选择排名最高的候选评价对象作为最终抽取结果。Min等<citation id="177" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>首先根据句法和语义特征抽取候选评价对象, 然后基于语句间的相似度计算设计出迭代程序对候选评价对象排序并确定抽取结果。Qiu等<citation id="178" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>利用评价对象和情感词语之间的关联关系, 使用双向传播算法抽取评价对象并扩展情感词语。</p>
+                </div>
+                <div class="p1">
+                    <p id="40">隐马尔科夫模型和条件随机场模型是解决序列标注问题的常用方法。条件随机场模型在评价对象抽取任务上已经取得了许多成果。例如, 文献<citation id="179" type="reference">[<a class="sup">5</a>]</citation>使用条件随机场CRF抽取评价对象, 然后使用线性分类器对评价对象的情感倾向性进行分类。蒋润等<citation id="180" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>提出一种基于协同训练机制的评价对象抽取算法, 使用支持向量机、最大熵、条件随机场三种模型组成评价对象候选集分类器。郑敏洁等<citation id="181" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>提出层叠条件随机场算法抽取句子中的评价对象, 解决复合评价对象和未登录评价对象的问题。层叠条件随机场模型首先在底层条件随机场提取候选评价对象, 然后对噪声进行过滤, 补充未登录评价对象, 合并复合评价对象, 在高层条件随机场输出最终评价对象。Zhou等<citation id="182" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>为解决不同语言之间标注数据不平衡问题, 提出跨语言评价对象抽取模型。首先根据英文标注数据集生成汉语训练数据, 然后使用条件随机场模型抽取评价对象, 并通过使用大量未标注汉语评论数据联合训练, 以提升条件随机场模型的抽取效果。虽然条件随机场模型在评价对象抽取上取得了不错的效果, 但是需要手工设计特征模板, 抽取结果受特征模板的影响。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">深度学习技术已经在图像处理、语音识别、人脸识别、自然语言处理等多个领域取得了显著成果。神经网络模型的特征表示能力和非线性拟合能力在评价对象抽取任务中同样能够发挥作用。在这方面已经取得了一些研究成果, 例如, 文献<citation id="183" type="reference">[<a class="sup">9</a>]</citation>使用卷积神经网络完成评价对象抽取任务。文献<citation id="184" type="reference">[<a class="sup">10</a>]</citation>使用循环神经网络设计评价对象抽取模型。Ding等<citation id="185" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>针对跨领域评价对象抽取问题, 使用基于规则的非监督方法生成辅助标签, 然后使用循环神经网络模型学习隐藏表达形式, 以提高跨领域评价对象抽取效果。还有研究者把循环神经网络和条件随机场结合在一起, 利用神经网络的特征自动抽取能力和条件随机场的序列预测能力提高序列标注任务的准确率。目前LSTM、CNN等神经网络和CRF结合的模型多应用在序列标注、命名实体识别等任务上。例如, 文献<citation id="186" type="reference">[<a class="sup">12</a>]</citation>结合使用双向LSTM、CNN和CRF提出新的模型框架, 解决序列标注问题。首先使用CNN对单词字符编码, 形成单词向量, 然后经过双向LSTM网络层处理后得到词语编码, 最后应用CRF标注词语标签。本文将评价对象抽取任务作为序列标注问题解决, 所以可以结合神经网络模型和条件概率模型来解决评价对象抽取问题, 同时提高评价对象抽取效果。本文提出一种端到端的神经网络模型LSTM-Attention-CRF, 在模型训练过程中不需要专门设计特征模板, 序列预测过程中能够利用条件随机场的序列标注能力。</p>
+                </div>
+                <h3 id="42" name="42" class="anchor-tag"><b>1 序列标注模型框架</b></h3>
+                <div class="p1">
+                    <p id="43">评价对象抽取任务的目标是提取评论文本中的评价词语或短语, 可以把评价对象抽取任务转化为序列标注问题, 根据评论文本序列数据标注每个字符对应的IOB标签。序列标注系统的框架结构如图1所示, 包含模型训练、模型评估和模型应用三个部分。第一部分是模型训练阶段, 在这个阶段需要标注训练数据集, 并设计序列标注模型, 对模型进行训练使目标函数最小化;第二部分是模型测试评估阶段, 把训练好的模型在测试数据上进行验证, 评价模型效果;第三部分是模型的实际应用阶段, 将评估结果最优的模型放在实际应用数据集上使用。</p>
+                </div>
+                <div class="area_img" id="44">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201903038_044.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 序列标注系统框架图" src="Detail/GetImg?filename=images/JYRJ201903038_044.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 序列标注系统框架图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201903038_044.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="45">序列标注模型主要包括隐马尔科夫模型HMM、最大熵马尔科夫模型MEMM、条件随机场模型CRF (Conditional Random Field) 等。本文主要对序列标注模型进行研究, 结合条件随机场模型和神经网络模型的优势, 在减少特征模板设计工作的同时提高评价对象抽取的准确率。</p>
+                </div>
+                <h3 id="46" name="46" class="anchor-tag"><b>2 CRF评价对象抽取模型</b></h3>
+                <h4 class="anchor-tag" id="47" name="47"><b>2.1 CRF模型</b></h4>
+                <div class="p1">
+                    <p id="48">CRF模型是由John D. Lafferty等提出的一种无向图模型<citation id="187" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>, 在隐马尔科夫模型的基础上发展而来, 避免了严格的独立性假设问题。CRF模型经常用于序列数据标注问题, 在给定输入随机变量序列的情况下计算输出随机变量序列的概率分布, 在中文命名实体识别、词性标注等任务上取得了非常好的效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">条件随机场的参数化表达形式中定义了状态特征函数、状态转移特征函数和预测序列的条件概率公式。假设输入观测序列<i>x</i>, 标注序列<i>y</i>的条件概率计算式表示为:</p>
+                </div>
+                <div class="p1">
+                    <p id="50" class="code-formula">
+                        <mathml id="50"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>p</mi><mo stretchy="false"> (</mo><mi>y</mi><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mn>1</mn><mrow><mi>Ζ</mi><mo stretchy="false"> (</mo><mi>x</mi><mo stretchy="false">) </mo></mrow></mfrac><mrow><mi>exp</mi></mrow><mrow><mo> (</mo><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>, </mo><mi>k</mi></mrow></munder><mi>λ</mi></mstyle><msub><mrow></mrow><mi>k</mi></msub><mi>t</mi><msub><mrow></mrow><mi>k</mi></msub><mo stretchy="false"> (</mo><mi>y</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>, </mo><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>x</mi><mo>, </mo><mi>i</mi><mo stretchy="false">) </mo><mo>+</mo></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mtext> </mtext><mtext> </mtext></mrow><mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>, </mo><mi>l</mi></mrow></munder><mi>u</mi></mstyle><msub><mrow></mrow><mi>l</mi></msub><mi>s</mi><msub><mrow></mrow><mi>l</mi></msub><mo stretchy="false"> (</mo><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>x</mi><mo>, </mo><mi>i</mi><mo stretchy="false">) </mo></mrow><mo>) </mo></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="51" class="code-formula">
+                        <mathml id="51"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>Ζ</mi><mo stretchy="false"> (</mo><mi>x</mi><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mi>y</mi></munder><mrow><mi>exp</mi></mrow></mstyle><mrow><mo> (</mo><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>, </mo><mi>k</mi></mrow></munder><mi>λ</mi></mstyle><msub><mrow></mrow><mi>k</mi></msub><mi>t</mi><msub><mrow></mrow><mi>k</mi></msub><mo stretchy="false"> (</mo><mi>y</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>, </mo><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>x</mi><mo>, </mo><mi>i</mi><mo stretchy="false">) </mo><mo>+</mo></mrow></mrow></mtd></mtr><mtr><mtd><mrow><mtext> </mtext><mtext> </mtext></mrow><mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>, </mo><mi>l</mi></mrow></munder><mi>u</mi></mstyle><msub><mrow></mrow><mi>l</mi></msub><mi>s</mi><msub><mrow></mrow><mi>l</mi></msub><mo stretchy="false"> (</mo><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>x</mi><mo>, </mo><mi>i</mi><mo stretchy="false">) </mo></mrow><mo>) </mo></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="52">式中:<i>Z</i> (<i>x</i>) 是归一化因子;<i>t</i><sub><i>k</i></sub>为状态转移特征函数, 计算当前位置和前一个位置的特征;<i>s</i><sub><i>l</i></sub>是状态特征函数, 计算当前位置特征, 特征函数的取值为1或者0, 当满足特征条件时取值为1, 当不满足特征条件时取值为0;<i>λ</i><sub><i>k</i></sub>和<i>u</i><sub><i>l</i></sub>是对应的特征函数权重。</p>
+                </div>
+                <h4 class="anchor-tag" id="53" name="53"><b>2.2 特征选择</b></h4>
+                <div class="p1">
+                    <p id="54">特征选择是使用条件随机场进行评价对象抽取的第一步, 选择与评价对象相关的特征对CRF模型准确率起到关键作用。这里选择词语、词性、依存句法关系等作为模型特征。将这些特征组合起来作为条件随机场模型的输入信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">词语本身是评论文本的组成部分, 能够直接反映评价对象信息。词性作为词语在句子中表达的重要语法信息, 对评价对象抽取有重要影响。评价对象多为名词、名词短语、动词等, 评价词语多为形容词, 所以词性为名词、动词、形容词的词语对抽取评价对象有参考价值。依存句法分析是分析语句的语法成分以及词语之间的依存关系, 可以用树形结构进行表示。依存关系包括“主谓关系”、“动宾关系”、“定中关系”等。这里将当前节点与父节点之间的依存关系作为条件随机场模型的特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">使用本文引言中的示例:“中美和平发展才是两国人民的殷切期望。”给出其特征表示, 具体信息如表2所示。其中评价对象为“中美和平发展”, 是一个名词短语, 包含两个名词和一个动词。</p>
+                </div>
+                <div class="area_img" id="57">
+                    <p class="img_tit"><b>表2 特征表示示例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="57" border="1"><tr><td>词语</td><td>词性</td><td>依存关系</td><td>标注标签</td></tr><tr><td><br />中美</td><td>n</td><td>定中关系</td><td>B</td></tr><tr><td><br />和平</td><td>n</td><td>主谓关系</td><td>I</td></tr><tr><td><br />发展</td><td>v</td><td>核心关系</td><td>I</td></tr><tr><td><br />才是</td><td>nh</td><td>定中关系</td><td>O</td></tr><tr><td><br />两国人民</td><td>nz</td><td>定中关系</td><td>O</td></tr><tr><td><br />的</td><td>u</td><td>右附加关系</td><td>O</td></tr><tr><td><br />殷切</td><td>a</td><td>状中结构</td><td>O</td></tr><tr><td><br />期望</td><td>v</td><td>动宾关系</td><td>O</td></tr><tr><td><br />。</td><td>wp</td><td>标点符号</td><td>O</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="58" name="58"><b>2.3 模板定义</b></h4>
+                <div class="p1">
+                    <p id="59">模板是对特征函数的定义, 反映了上下文依赖关系和特征组合形式。模板通过设置窗口大小反映上下文依赖距离, 通过定义当前位置特征反映当前位置与前后位置之间的关系。这里使用的特征模板定义如表3所示。</p>
+                </div>
+                <div class="area_img" id="60">
+                    <p class="img_tit"><b>表3 模板形式示例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="60" border="1"><tr><td><br />模板形式</td><td>模板含义</td></tr><tr><td><br />U00:%x[-2, 0]</td><td>当前词语前面隔一个词</td></tr><tr><td><br />U01:%x[-1, 0]</td><td>当前词语前一个词</td></tr><tr><td><br />U02:%x[0, 0]</td><td>当前词语</td></tr><tr><td><br />U03:%x[1, 0]</td><td>当前词语后一个词</td></tr><tr><td><br />U04:%x[2, 0]</td><td>当前词语后面隔一个词</td></tr><tr><td><br />U05:%x[-1, 0]/%x[0, 0]</td><td>当前词语与其前一个词的组合</td></tr><tr><td><br />U06:%x[0, 0]/%x[1, 0]</td><td>当前词语与其后一个词的组合</td></tr><tr><td><br />U07:%x[-2, 0]/%x[0, 0]</td><td>当前词语与其前面隔一个词的组合</td></tr><tr><td><br />U08:%x[0, 0]/%x[2, 0]</td><td>当前词语与其后面隔一个词的组合</td></tr><tr><td><br />U09:%x[-2, 0]/%x[-1, 0]/%x[0, 0]</td><td>当前词语与其前两个词的组合</td></tr><tr><td><br />U10:%x[-1, 0]/%x[0, 0]/%x[1, 0]</td><td>当前词语与其前个词和后个词的组合</td></tr><tr><td><br />U11:%x[0, 0]/%x[1, 0]/%x[2, 0]</td><td>当前词语与其后两个词的组合</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h3 id="61" name="61" class="anchor-tag"><b>3 模型设计</b></h3>
+                <h4 class="anchor-tag" id="62" name="62"><b>3.1 词向量训练</b></h4>
+                <div class="p1">
+                    <p id="63">CBOW和Skip-gram是最为经典的词嵌入模型。CBOW通过当前词语的上下文预测当前词语, Skip-gram则通过当前词语预测其上下文词语。两者都属于神经网络语言模型, 通过训练模型参数得到最优的词语向量。经过词嵌入模型得到词语在语义空间上的表达。</p>
+                </div>
+                <div class="p1">
+                    <p id="64">CBOW模型根据词语的上下文来预测当前词语, 模型结构包括输入层、投影层和输出层。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">输入层是词语<i>w</i><sub><i>i</i></sub>的上下文, 取窗口宽度为<i>c</i>, 上下文词语序列表示为context (<i>w</i><sub><i>i</i></sub>) =[<i>w</i><sub><i>i</i>-<i>c</i></sub>, <i>w</i><sub><i>i</i>-<i>c</i>+1</sub>, …, <i>w</i><sub><i>i</i>+<i>c</i>-1</sub>, <i>w</i><sub><i>i</i>+<i>c</i></sub>], 序列长度为2<i>c</i>。这里<i>w</i><sub><i>i</i></sub>∈<i>R</i><sup><i>m</i></sup>, <i>m</i>代表词向量的维度。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">投影层将上下文词向量累加求和, 求和计算如下所示:</p>
+                </div>
+                <div class="p1">
+                    <p id="67"><mathml id="68"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>w</mi><msub><mrow></mrow><mrow><mtext>s</mtext><mtext>u</mtext><mtext>m</mtext></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>w</mi><msub><mrow></mrow><mi>j</mi></msub><mo>∈</mo><mtext>c</mtext><mtext>o</mtext><mtext>n</mtext><mtext>t</mtext><mtext>e</mtext><mtext>x</mtext><mtext>t</mtext><mo stretchy="false"> (</mo><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo></mrow></munder><mi>w</mi></mstyle><msub><mrow></mrow><mi>j</mi></msub></mrow></math></mathml>      (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="69">输出层为一颗二叉树, 根据训练语料中词语构建出来的Huffman树, 使用Hierarchical softmax计算最后的概率<i>p</i> (<i>w</i><sub><i>i</i></sub>|context (<i>w</i><sub><i>i</i></sub>) ) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="70">将对数似然函数作为CBOW模型的目标函数, 公式如下所示:</p>
+                </div>
+                <div class="p1">
+                    <p id="71"><mathml id="72"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>L</mi><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>C</mi></mrow></munder><mrow><mi>log</mi></mrow></mstyle><msub><mrow></mrow><mn>2</mn></msub><mi>p</mi><mo stretchy="false"> (</mo><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></math></mathml>context (<i>w</i><sub><i>i</i></sub>) )      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="73">式中:<i>C</i> 为训练样本中包含的词语, 在模型训练中利用Huffman树结构把最终目标预测转化成多个二分类概率相乘的形式。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">Skip-gram模型根据当前词语预测其上下文词语, 网络结构同样包括输入层、投影层和输出层。输入层为当前词语的词向量<i>w</i><sub><i>i</i></sub>, 投影层对<i>w</i><sub><i>i</i></sub>未作任何改变, 输出层与CBOW模型中相同, 同样是一颗Huffman树。输出层计算上下文词语条件概率值<i>p</i> (context (<i>w</i><sub><i>i</i></sub>) <i>w</i><sub><i>i</i></sub>) , 该概率值计算式表示为:</p>
+                </div>
+                <div class="p1">
+                    <p id="75"><i>p</i> (context (<i>w</i><sub><i>i</i></sub>) <mathml id="76"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><mi>u</mi><mo>∈</mo><mtext>c</mtext><mtext>o</mtext><mtext>n</mtext><mtext>t</mtext><mtext>e</mtext><mtext>x</mtext><mtext>t</mtext><mo stretchy="false"> (</mo><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo></mrow></munder><mi>p</mi></mstyle><mo stretchy="false"> (</mo><mi>u</mi></mrow></math></mathml><i>w</i><sub><i>i</i></sub>)      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="77">将对数似然函数作为Skip-gram模型的目标函数:</p>
+                </div>
+                <div class="p1">
+                    <p id="78"><mathml id="79"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>L</mi><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>C</mi></mrow></munder><mrow><mi>log</mi></mrow></mstyle><msub><mrow></mrow><mn>2</mn></msub><mi>p</mi><mo stretchy="false"> (</mo><mtext>c</mtext><mtext>o</mtext><mtext>n</mtext><mtext>t</mtext><mtext>e</mtext><mtext>x</mtext><mtext>t</mtext><mo stretchy="false"> (</mo><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo></mrow></math></mathml><i>w</i><sub><i>i</i></sub>)      (6) </p>
+                </div>
+                <div class="p1">
+                    <p id="80">式中:<i>C</i>为训练样本中包含的词语。模型训练同样使用到Huffman树结构, 只是对每个上下文词语进行层次二分类预测, 最后将多个上下文词语的预测概率相乘。</p>
+                </div>
+                <h4 class="anchor-tag" id="81" name="81"><b>3.2 注意力机制</b></h4>
+                <div class="p1">
+                    <p id="82">神经网络中的注意力机制是受到人类视觉选择性注意力机制的启发而产生的。人类视觉在处理图像数据时根据需要将注意力集中在图像的某一部分, 筛选出最有价值的信息。同样在神经网络模型中, 输入数据的各个部分对模型计算结果的重要程度不同, 所以采用注意力机制增加重要数据的权重, 同时降低噪声数据的权重。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">注意力机制最早被应用在图像处理领域, 2014年Mnih等<citation id="188" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>基于注意力机制设计了新的循环神经网络模型结构, 能够自适应地从图像中选择区域序列, 只处理选中的图像区域。神经网络注意力机制在情感分析领域也得到了应用。例如Ma等<citation id="189" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>提出使用外部知识解决评价对象情感倾向判断问题, 首先使用LSTM对输入语句进行编码, 然后对评价对象使用自注意力机制, 最后使用多分类器进行情感倾向性分类。</p>
+                </div>
+                <div class="p1">
+                    <p id="84">在神经网络模型中加入注意力机制的关键步骤就是设计合理的权重计算公式。注意力机制的原理可以解释为计算源数据与目标数据之间的关联程度, 关联程度越强的源数据权重值越大, 反之源数据的权重值越小。这里将源数据记作<i>m</i><sub><i>s</i></sub>, 将目标数据记作<i>m</i><sub><i>t</i></sub>, 权重计算式表示为:</p>
+                </div>
+                <div class="p1">
+                    <p id="85"><mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>a</mi><msub><mrow></mrow><mi>t</mi></msub><mo>=</mo><mfrac><mrow><mi>exp</mi><mo stretchy="false"> (</mo><mi>f</mi><mo stretchy="false"> (</mo><mi>m</mi><msub><mrow></mrow><mi>t</mi></msub><mo>, </mo><mi>m</mi><msub><mrow></mrow><mi>s</mi></msub><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>s</mi><mo>∈</mo><mi>S</mi></mrow></munder><mtext>e</mtext></mstyle><mtext>x</mtext><mtext>p</mtext><mo stretchy="false"> (</mo><mi>f</mi><mo stretchy="false"> (</mo><mi>m</mi><msub><mrow></mrow><mi>t</mi></msub><mo>, </mo><mi>m</mi><msub><mrow></mrow><mi>s</mi></msub><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow></mfrac></mrow></math></mathml>      (7) </p>
+                </div>
+                <div class="p1">
+                    <p id="87">式中:分母是归一化因子, 所有源数据与目标数据函数值的总和。将式 (7) 以softmax函数对源数据和目标数据之间的关联函数值归一化, 求得源数据在对应目标数据上的概率分布。函数<i>f</i> (<i>m</i><sub><i>t</i></sub>, <i>m</i><sub><i>s</i></sub>) 的计算方法有多种, 包括点乘、矩阵相乘、连接和感知器等。以下为源数据和目标数据之间关联函数的几个示例:</p>
+                </div>
+                <div class="area_img" id="88">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JYRJ201903038_08800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="90">自注意力机制 (Self Attention Mechanism) 是注意力机制的一种特殊情况, 其源数据和目标数据相同, 计算同一个样本数据中每个元素的重要程度。在评价对象抽取任务中, 则是计算语句中每个词语与其他所有词语之间的依赖关系。假设有序列数据<i>m</i><sub><i>t</i></sub> (<i>m</i><sub><i>t</i>1</sub>, <i>m</i><sub><i>t</i>2</sub>, …, <i>m</i><sub><i>tn</i></sub>) , 那么自注意力机制计算式表示为:</p>
+                </div>
+                <div class="p1">
+                    <p id="91"><mathml id="92"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>a</mi><msub><mrow></mrow><mrow><mi>t</mi><mi>i</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>exp</mi><mo stretchy="false"> (</mo><mi>f</mi><mo stretchy="false"> (</mo><mi>m</mi><msub><mrow></mrow><mrow><mi>t</mi><mi>i</mi></mrow></msub><mo>, </mo><mi>m</mi><msub><mrow></mrow><mrow><mi>t</mi><mi>i</mi></mrow></msub><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mtext>e</mtext></mstyle><mtext>x</mtext><mtext>p</mtext><mo stretchy="false"> (</mo><mi>f</mi><mo stretchy="false"> (</mo><mi>m</mi><msub><mrow></mrow><mrow><mi>t</mi><mi>i</mi></mrow></msub><mo>, </mo><mi>m</mi><msub><mrow></mrow><mrow><mi>t</mi><mi>i</mi></mrow></msub><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow></mfrac></mrow></math></mathml>      (9) </p>
+                </div>
+                <div class="p1">
+                    <p id="93">通过softmax公式得到权重值, 该权重值反映了数据元素的重要程度, 把序列数据<i>m</i><sub><i>t</i></sub>与对应的权重相乘得到自注意力机制处理结果。</p>
+                </div>
+                <h4 class="anchor-tag" id="94" name="94"><b>3.3 LSTM-CRF-Attention模型</b></h4>
+                <div class="p1">
+                    <p id="95">LSTM循环神经网络适用于处理序列数据, 把对序列标注重要的信息存储在记忆单元中, 但是在标注过程中无法使用上下文依赖信息, 会出现大量非法标注问题。例如正确标签是“OBIIO”的情况下, 会给出“OIIIO”的非法标注结果, 三个元素都是中间元素, 明显不符合标注规则。条件随机场模型计算概率最大的标注序列, 能够根据特征函数给出合理的标注结果, 包含非法标注的标注序列的特征转移函数<i>tk</i> (<i>y</i><sub><i>i</i>-1</sub>, <i>y</i><sub><i>i</i></sub>, <i>x</i>, <i>i</i>) 的函数值为0, 从而降低了标注序列的条件概率<i>p</i> (<i>y</i>|<i>x</i>) , 能够在标注结果中尽可能避免非法标注的出现。但是条件随机场需要大量特征, 以及手动设置特征模板, 特征和特征模板对标注结果有较大影响。为了避免非法标注问题和减少手动设置特征模板的工作, 将循环神经网络和条件随机场模型进行融合, 提出LSTM-CRF-Attention评价对象抽取模型, 利用循环神经网络的特征表示能力和条件随机场的序列标注能力, 有效提高模型效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="96">LSTM-CRF-Attention的模型结构如图2所示。模型包括输入层、循环网络层、隐藏层、注意力层和标注层。输入层是词向量, 每个词语映射到一个词向量, 词向量初始化方法可以采用随机方式或者词嵌入训练方式;循环网络层为LSTM循环神经网络;隐藏层是LSTM网络中每个处理单元的输出结果;注意力层采用自注意力机制, 自动学习序列元素在评价对象抽取中的权重;标注层采用条件随机场序列标注模型, 输出每个词语位置对应的标签。</p>
+                </div>
+                <div class="area_img" id="97">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201903038_097.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 LSTM-CRF-Attention模型结构图" src="Detail/GetImg?filename=images/JYRJ201903038_097.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 LSTM-CRF-Attention模型结构图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201903038_097.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="98">循环神经网络的计算方法如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="99"><b><i>h</i></b><sub><i>t</i></sub>=<i>o</i><sub><i>t</i></sub>·tanh (<i>c</i><sub><i>t</i></sub>)      (10) </p>
+                </div>
+                <div class="p1">
+                    <p id="100"><i>o</i><sub><i>t</i></sub>=<i>σ</i> (<i>W</i><sub><i>o</i></sub>·[<i>h</i><sub><i>t</i>-1</sub>;<i>w</i><sub><i>t</i></sub>]+<i>b</i><sub><i>o</i></sub>)      (11) </p>
+                </div>
+                <div class="p1">
+                    <p id="101"><i>c</i><sub><i>t</i></sub>=<i>i</i><sub><i>t</i></sub>·<i>g</i><sub><i>t</i></sub>+<i>f</i><sub><i>t</i></sub>·<i>c</i><sub><i>t</i>-1</sub>      (12) </p>
+                </div>
+                <div class="p1">
+                    <p id="102"><i>i</i><sub><i>t</i></sub>=<i>σ</i> (<i>W</i><sub><i>i</i></sub>·[<i>h</i><sub><i>t</i>-1</sub>;<i>w</i><sub><i>t</i></sub>]+<i>b</i><sub><i>i</i></sub>)      (13) </p>
+                </div>
+                <div class="p1">
+                    <p id="103"><i>f</i><sub><i>t</i></sub>=<i>σ</i> (<i>W</i><sub><i>f</i></sub>·[<i>h</i><sub><i>t</i>-1</sub>;<i>w</i><sub><i>t</i></sub>]+<i>b</i><sub><i>f</i></sub>)      (14) </p>
+                </div>
+                <div class="p1">
+                    <p id="104"><i>g</i><sub><i>t</i></sub>=tanh (<i>W</i><sub><i>g</i></sub>·[<i>h</i><sub><i>t</i>-1</sub>;<i>w</i><sub><i>t</i></sub>]+<i>b</i><sub><i>g</i></sub>)      (15) </p>
+                </div>
+                <div class="p1">
+                    <p id="105">式中:<i>i</i><sub><i>t</i></sub>、<i>ot</i>、<i>f</i><sub><i>t</i></sub>、<i>c</i><sub><i>t</i></sub>分别是LSTM网络的输入门、输出门、遗忘门和记忆存储单元;<b><i>h</i></b><sub><i>t</i></sub>是LSTM神经网络单元的输出向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="106">注意力层计算评论文本中每个元素的权值, 通过增加重要元素的权重来提高评价对象信息的表示能力。这里使用自注意力机制计算注意力层, 由隐藏层<i>h</i>计算权重<i>a</i>, 然后得到注意力层输出值<i>m</i>, 计算方法如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="107"><mathml id="108"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>a</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mi>exp</mi><mo stretchy="false"> (</mo><mi>h</mi><msub><mrow></mrow><mi>i</mi></msub><mi>h</mi><msubsup><mrow></mrow><mi>i</mi><mtext>Τ</mtext></msubsup><mo stretchy="false">) </mo></mrow><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mtext>e</mtext></mstyle><mtext>x</mtext><mtext>p</mtext><mo stretchy="false"> (</mo><mi>h</mi><msub><mrow></mrow><mi>i</mi></msub><mi>h</mi><msubsup><mrow></mrow><mi>i</mi><mtext>Τ</mtext></msubsup><mo stretchy="false">) </mo></mrow></mfrac></mrow></math></mathml>      (16) </p>
+                </div>
+                <div class="p1">
+                    <p id="109"><i>m</i><sub><i>i</i></sub>=<i>a</i><sub><i>i</i></sub><i>h</i><sub><i>i</i></sub>      (17) </p>
+                </div>
+                <div class="p1">
+                    <p id="110">标注层根据注意力层输出的特征向量进行序列标注。首先根据注意力层计算标签分值矩阵<b><i>P</i></b> (<i>p</i><sub><i>ij</i></sub>) , <i>p</i><sub><i>ij</i></sub>表示第<i>i</i>个词语标记为第<i>j</i>个标签的分值, 分值矩阵计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="111"><i>p</i><sub><i>ij</i></sub>=<i>soft</i>max (<b><i>m</i></b><sub><i>i</i></sub>·<i>w</i><sub><i>j</i></sub>+<b><i>b</i></b><sub><i>j</i></sub>)      (18) </p>
+                </div>
+                <div class="p1">
+                    <p id="112">式中:<b><i>m</i></b><sub><i>i</i></sub>为注意力层输出向量;<i>w</i><sub><i>j</i></sub>为权重值;<b><i>b</i></b><sub><i>j</i></sub>为偏置向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="113">然后计算标注序列的分值, 输出分值最大的标注序列。假设标注序列为<i>y</i> (<i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, …, <i>y</i><sub><i>n</i></sub>) , 那么该标注序列的分值为score (<i>y</i>) , 计算方法如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="114">score<mathml id="115"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false"> (</mo><mi>y</mi><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mi>A</mi></mstyle><msub><mrow></mrow><mrow><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>y</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></msub><mo>+</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>p</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></msub></mrow></math></mathml>      (19) </p>
+                </div>
+                <div class="p1">
+                    <p id="116">式中:<b><i>A</i></b>为状态转移矩阵, 其元素值<i>A</i><sub><i>ij</i></sub>表示从第<i>i</i>个标签转移到第<i>j</i>个标签的概率;<i>p</i><sub><i>i</i>, <i>yi</i></sub>是第<i>i</i>个词语标记为标签<i>y</i><sub><i>i</i></sub>的分值。此处的状态转移矩阵由训练数据学习得到, 由状态O转移到状态I的概率越小越能够避免出现非法标注序列“OI”, 所以可以手动设置<i>A</i><sub>O, I</sub>的值为0。</p>
+                </div>
+                <div class="p1">
+                    <p id="117">计算每个可能标注序列的概率值<i>p</i> (<i>y</i>) , 计算方法如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="118"><mathml id="119"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><mo stretchy="false"> (</mo><mi>y</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mi>exp</mi><mo stretchy="false"> (</mo><mtext>s</mtext><mtext>c</mtext><mtext>o</mtext><mtext>r</mtext><mtext>e</mtext><mo stretchy="false"> (</mo><mi>y</mi><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>y</mi><mo>∈</mo><mi>Y</mi></mrow></munder><mtext>e</mtext></mstyle><mtext>x</mtext><mtext>p</mtext><mo stretchy="false"> (</mo><mtext>s</mtext><mtext>c</mtext><mtext>o</mtext><mtext>r</mtext><mtext>e</mtext><mo stretchy="false"> (</mo><mi>y</mi><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow></mfrac></mrow></math></mathml>      (20) </p>
+                </div>
+                <div class="p1">
+                    <p id="120">式中:<i>Y</i>表示所有可能标注序列的集合。</p>
+                </div>
+                <div class="p1">
+                    <p id="121">训练LSTM-Attention-CRF模型时使用最大化对数似然函数, 即模型的目标函数为:</p>
+                </div>
+                <div class="p1">
+                    <p id="122"><mathml id="123"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>L</mi><mo>=</mo><mrow><mi>log</mi></mrow><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false"> (</mo><mi>p</mi><mo stretchy="false"> (</mo><mi>y</mi><mo stretchy="false">) </mo><mo stretchy="false">) </mo><mo>=</mo><mtext>s</mtext><mtext>c</mtext><mtext>o</mtext><mtext>r</mtext><mtext>e</mtext><mo stretchy="false"> (</mo><mi>y</mi><mo stretchy="false">) </mo><mo>-</mo><mrow><mi>log</mi></mrow><msub><mrow></mrow><mn>2</mn></msub><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>y</mi><mo>∈</mo><mi>Y</mi></mrow></munder><mrow><mi>exp</mi></mrow></mstyle><mo stretchy="false"> (</mo><mtext>s</mtext><mtext>c</mtext><mtext>o</mtext><mtext>r</mtext><mtext>e</mtext><mo stretchy="false"> (</mo><mi>y</mi><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow></math></mathml>      (21) </p>
+                </div>
+                <div class="p1">
+                    <p id="124">使用所提出模型预测标注序列时, 选择概率最大的标注序列为:</p>
+                </div>
+                <div class="p1">
+                    <p id="125"><mathml id="126"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>t</mi><mi>a</mi><mi>g</mi><mo>=</mo><mrow><mi>arg</mi></mrow><mspace width="0.25em" /><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>max</mi></mrow></mstyle><mrow><mi>y</mi><mo>∈</mo><mi>Y</mi></mrow></munder><mi>p</mi><mo stretchy="false"> (</mo><mi>y</mi><mo stretchy="false">) </mo></mrow></math></mathml>      (22) </p>
+                </div>
+                <h3 id="127" name="127" class="anchor-tag"><b>4 实验和结果分析</b></h3>
+                <h4 class="anchor-tag" id="128" name="128"><b>4.1 实验数据集</b></h4>
+                <div class="p1">
+                    <p id="129">本文中使用NLPCC2012和NLPCC2013两个数据集。NLPCC2012数据集是计算机学会举办的第一届自然语言处理和中文计算会议中的技术评测数据集, 数据来自于腾讯微博, 包含20个话题, 共有2 023条微博数据, 使用XML格式文件存储。NLPCC2013数据集是第二届自然语言处理和中文计算会议评测数据集, 同样是腾讯微博数据, 存储格式相同, 只是数据内容不同, 包含10个话题, 共有899条微博。</p>
+                </div>
+                <div class="p1">
+                    <p id="130">数据集的统计分析结果如表4所示。NLPCC2012数据集中包含3 416个句子, 2 353个评价对象, 句子平均字数为24.39;NLPCC2013数据集中包含1 873个句子, 1 677个评价对象, 句子平均字数为32.24。</p>
+                </div>
+                <div class="area_img" id="131">
+                    <p class="img_tit"><b>表4 实验数据统计表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="131" border="1"><tr><td>数据集</td><td>句子数</td><td>每句平均字数</td><td>评价对象数</td></tr><tr><td><br />NLPCC2012</td><td>3 416</td><td>24.39</td><td>2 353</td></tr><tr><td><br />NLPCC2013</td><td>1 873</td><td>32.24</td><td>1 677</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="132" name="132"><b>4.2 评价方法</b></h4>
+                <div class="p1">
+                    <p id="133">在评价对象抽取实验中使用准确率 (precision) 、召回率 (recall) 、F值 (F-measure) 等作为评价指标。准确率反映了抽取信息的准确性, 召回率反映了抽取信息的完整性, F值是衡量信息抽取模型的综合性指标。由于信息抽取任务是对字符串的处理, 抽取信息结果在不完全覆盖正确结果的情况下也具有一定价值。所以这里引用NLPCC评测大纲中的评价方法, 将评价指标计算方法分为严格评价和宽松评价两种。</p>
+                </div>
+                <h4 class="anchor-tag" id="134" name="134"><b>4.2.1</b> 严格评价</h4>
+                <div class="p1">
+                    <p id="135">严格评价方法是当抽取出的字符串与正确的字符串完全相同时, 信息抽取结果才算正确。在严格评价方法下, 各指标的计算公式表示为:</p>
+                </div>
+                <div class="p1">
+                    <p id="136"><mathml id="137"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>=</mo><mfrac><mrow><mi>s</mi><mi>y</mi><mi>s</mi><mi>t</mi><mi>e</mi><mi>m</mi><mo>_</mo><mi>c</mi><mi>o</mi><mi>r</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>t</mi></mrow><mrow><mi>s</mi><mi>y</mi><mi>s</mi><mi>t</mi><mi>e</mi><mi>m</mi><mo>_</mo><mi>p</mi><mi>r</mi><mi>o</mi><mi>p</mi><mi>o</mi><mi>s</mi><mi>e</mi><mi>d</mi></mrow></mfrac></mrow></math></mathml>      (23) </p>
+                </div>
+                <div class="p1">
+                    <p id="138"><mathml id="139"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>r</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi><mo>=</mo><mfrac><mrow><mi>s</mi><mi>y</mi><mi>s</mi><mi>t</mi><mi>e</mi><mi>m</mi><mo>_</mo><mi>c</mi><mi>o</mi><mi>r</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>t</mi></mrow><mrow><mi>g</mi><mi>o</mi><mi>l</mi><mi>d</mi><mo>_</mo><mi>t</mi><mi>a</mi><mi>b</mi><mi>e</mi><mi>l</mi></mrow></mfrac></mrow></math></mathml>      (24) </p>
+                </div>
+                <div class="p1">
+                    <p id="140"><mathml id="141"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>F</mi><mo>-</mo><mi>m</mi><mi>e</mi><mi>a</mi><mi>s</mi><mi>u</mi><mi>r</mi><mi>e</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⋅</mo><mi>p</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>⋅</mo><mi>r</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>+</mo><mi>r</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow></mfrac></mrow></math></mathml>      (25) </p>
+                </div>
+                <div class="p1">
+                    <p id="142">式中:<i>system</i>_<i>correct</i>是系统抽取结果中正确的数量;<i>system</i>_<i>proposed</i>是系统抽取结果的总数量;<i>gold</i>_<i>tabel</i>是测试数据中标注出的信息数量。</p>
+                </div>
+                <h4 class="anchor-tag" id="143" name="143"><b>4.2.2</b> 宽松评价</h4>
+                <div class="p1">
+                    <p id="144">宽松评价按照抽取信息的覆盖率计算各项指标。抽取信息结果覆盖率是指系统给出的结果与测试数据中的字符串重合程度, 使用如下公式计算:</p>
+                </div>
+                <div class="p1">
+                    <p id="145"><mathml id="146"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>c</mi><mo stretchy="false"> (</mo><mi>s</mi><mo>, </mo><msup><mi>s</mi><mo>′</mo></msup><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mrow><mo>|</mo><mrow><mi>s</mi><mstyle displaystyle="true"><mo>∩</mo><msup><mi>s</mi><mo>′</mo></msup></mstyle></mrow><mo>|</mo></mrow></mrow><mrow><mrow><mo>|</mo><msup><mi>s</mi><mo>′</mo></msup><mo>|</mo></mrow></mrow></mfrac></mrow></math></mathml>      (26) </p>
+                </div>
+                <div class="p1">
+                    <p id="147">式中:<i>s</i>是标准数据中的信息字符串, <i>s</i>′是系统抽取结果中对应的字符串。计算操作符<mathml id="148"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>|</mo><mo>*</mo><mo>|</mo></mrow></mrow></math></mathml>表示字符串长度, 交集运算表示两个字符串重合的部分。</p>
+                </div>
+                <div class="p1">
+                    <p id="149">设定标准数据集合为<i>R</i>, 系统输出结果集合为<i>R</i>′, 则测试覆盖率可以定义为:</p>
+                </div>
+                <div class="p1">
+                    <p id="150"><mathml id="151"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><mo stretchy="false"> (</mo><mi>R</mi><mo>, </mo><msup><mi>R</mi><mo>′</mo></msup><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>s</mi><mo>∈</mo><mi>R</mi></mrow></munder><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><msup><mi>s</mi><mo>′</mo></msup><mo>∈</mo><msup><mi>R</mi><mo>′</mo></msup></mrow></munder><mi>c</mi></mstyle></mrow></mstyle><mo stretchy="false"> (</mo><mi>s</mi><mo>, </mo><msup><mi>s</mi><mo>′</mo></msup><mo stretchy="false">) </mo></mrow></math></mathml>      (27) </p>
+                </div>
+                <div class="p1">
+                    <p id="152">在宽松评价方法下, 各项评价指标的计算式表示为:</p>
+                </div>
+                <div class="p1">
+                    <p id="153"><mathml id="154"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>=</mo><mfrac><mrow><mi>C</mi><mo stretchy="false"> (</mo><mi>R</mi><mo>, </mo><msup><mi>R</mi><mo>′</mo></msup><mo stretchy="false">) </mo></mrow><mrow><mrow><mo>|</mo><msup><mi>R</mi><mo>′</mo></msup><mo>|</mo></mrow></mrow></mfrac></mrow></math></mathml>      (28) </p>
+                </div>
+                <div class="p1">
+                    <p id="155"><mathml id="156"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>r</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi><mo>=</mo><mfrac><mrow><mi>C</mi><mo stretchy="false"> (</mo><mi>R</mi><mo>, </mo><msup><mi>R</mi><mo>′</mo></msup><mo stretchy="false">) </mo></mrow><mrow><mrow><mo>|</mo><mi>R</mi><mo>|</mo></mrow></mrow></mfrac></mrow></math></mathml>      (29) </p>
+                </div>
+                <div class="p1">
+                    <p id="157"><mathml id="158"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>F</mi><mo>-</mo><mi>m</mi><mi>e</mi><mi>a</mi><mi>s</mi><mi>u</mi><mi>r</mi><mi>e</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⋅</mo><mi>p</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>⋅</mo><mi>r</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow><mrow><mi>p</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>+</mo><mi>r</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow></mfrac></mrow></math></mathml>      (30) </p>
+                </div>
+                <div class="p1">
+                    <p id="159">式中:<mathml id="160"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>|</mo><mi>R</mi><mo>|</mo></mrow></mrow></math></mathml>和<mathml id="161"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>|</mo><msup><mi>R</mi><mo>′</mo></msup><mo>|</mo></mrow></mrow></math></mathml>分别表示标准数据和系统输出结果集合中的评价对象数量。</p>
+                </div>
+                <h4 class="anchor-tag" id="162" name="162"><b>4.3 实验结果</b></h4>
+                <h4 class="anchor-tag" id="163" name="163"><b>4.3.1</b> 词向量训练对实验结果的影响</h4>
+                <div class="p1">
+                    <p id="164">经过预训练得到的词向量, 不仅能够加快神经网络模型的收敛速度, 而且能够提高模型预测性能。这里使用CBOW、Skip-gram等词向量训练模型, 得到语义空间词向量。然后在NLPCC2012和NLPCC2013数据集上进行实验, 以分析词向量对神经网络模型训练结果的影响, 以及不同词向量预训练模型的作用。实验中均使用词语特征作为模型输入数据, 首先对语料进行分词, 然后根据分词结果预训练词向量, 最后使用训练好的词向量训练模型参数并进行模型测试。</p>
+                </div>
+                <div class="p1">
+                    <p id="165">LSTM-CRF-Attention模型的词向量预训练实验结果如表5所示。在NLPCC2012数据集的实验结果中, Skip-gram词向量严格评价F值为55.05%, 比随机词向量测试结果提高3.72%;CBOW词向量严格评价F值为53.59%, 比随机词向量测试结果提高2.26%, 但是低于Skip-gram词向量测试结果。在NLPCC2013数据的实验结果中, Skip-gram词向量严格评价F值为57.05%, 比随机词向量测试结果提高4.22%;CBOW词向量严格评价F值为54.26%, 比随机词向量测试结果提高1.24%, 但是低于Skip-gram词向量测试结果。从上述分析可以看出, 对于LSTM-CRF-Attention模型, 在两个数据集上, Skip-gram和CBOW词向量都能提高评价对象抽取效果, 但是Skip-gram词向量训练模型起到更大的作用, 优于CBOW词向量模型。</p>
+                </div>
+                <div class="area_img" id="166">
+                    <p class="img_tit"><b>表5 LSTM-CRF-Attention预训练词向量实验结果表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="166" border="1"><tr><td rowspan="2"><br />数据集</td><td colspan="3"><br />严格评价</td><td colspan="3">宽松评价</td></tr><tr><td><br />准确率</td><td>召回率</td><td>F值</td><td>准确率</td><td>召回率</td><td>F值</td></tr><tr><td><br />NLPCC2012</td><td>0.457 0</td><td>0.585 5</td><td>0.513 3</td><td>0.474 6</td><td>0.608 0</td><td>0.533 1</td></tr><tr><td><br />NLPCC2012+<br />CBOW</td><td>0.501 0</td><td>0.576 1</td><td>0.535 9</td><td>0.521 9</td><td>0.600 1</td><td>0.558 3</td></tr><tr><td><br />NLPCC2012+<br />Skip-gram</td><td>0.546 1</td><td>0.555 0</td><td>0.550 5</td><td>0.566 4</td><td>0.575 7</td><td>0.571 0</td></tr><tr><td><br />NLPCC2013</td><td>0.543 0</td><td>0.518 0</td><td>0.530 2</td><td>0.588 1</td><td>0.561 1</td><td>0.574 3</td></tr><tr><td><br />NLPCC2013+<br />CBOW</td><td>0.522 8</td><td>0.563 9</td><td>0.542 6</td><td>0.553 8</td><td>0.597 4</td><td>0.574 8</td></tr><tr><td><br />NLPCC2013+<br />Skip-gram</td><td>0.574 3</td><td>0.570 5</td><td>0.572 4</td><td>0.612 9</td><td>0.608 8</td><td>0.610 8</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="167" name="167"><b>4.3.2</b> 模型对比实验</h4>
+                <div class="p1">
+                    <p id="168">使用CRF模型为基准模型, 对比分析LSTM-CRF模型、LSTM-CRF-Attention模型的效果, LSTM-CRF模型是去掉注意力机制部分的神经网络标注模型。LSTM-CRF和LSTM-CRF-Attention模型的结果是采用词向量预训练后的实验结果。CRF实验结果为“词语+词性+依存关系”特征组合的实验结果。实验结果评价指标如表6和表7所示。</p>
+                </div>
+                <div class="area_img" id="169">
+                    <p class="img_tit"><b>表6 评价对象抽取NLPCC2012数据集对比实验结果表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="169" border="1"><tr><td rowspan="2"><br />数据集</td><td colspan="3"><br />严格评价</td><td colspan="3">宽松评价</td></tr><tr><td>准确率</td><td>召回率</td><td>F值</td><td>准确率</td><td>召回率</td><td>F值</td></tr><tr><td>CRF</td><td>0.552 4</td><td>0.407 5</td><td>0.469 0</td><td>0.577 0</td><td>0.425 6</td><td>0.489 9</td></tr><tr><td><br />LSTM-CRF</td><td>0.579 2</td><td>0.522 2</td><td>0.549 3</td><td>0.598 1</td><td>0.539 2</td><td>0.567 1</td></tr><tr><td><br />LSTM-CRF-<br />Attention</td><td>0.546 1</td><td>0.555 0</td><td>0.550 5</td><td>0.566 4</td><td>0.575 7</td><td>0.571 0</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="170">
+                    <p class="img_tit"><b>表7 评价对象抽取NLPCC2013数据集对比实验结果表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="170" border="1"><tr><td rowspan="2"><br />数据集</td><td colspan="3"><br />严格评价</td><td colspan="3">宽松评价</td></tr><tr><td>准确率</td><td>召回率</td><td>F值</td><td>准确率</td><td>召回率</td><td>F值</td></tr><tr><td>CRF</td><td>0.544 6</td><td>0.401 3</td><td>0.462 1</td><td>0.591 5</td><td>0.435 8</td><td>0.501 8</td></tr><tr><td><br />LSTM-CRF</td><td>0.590 9</td><td>0.554 1</td><td>0.571 9</td><td>0.627 6</td><td>0.588 5</td><td>0.607 4</td></tr><tr><td><br />LSTM-CRF-<br />Attention</td><td>0.574 3</td><td>0.570 5</td><td>0.572 4</td><td>0.612 9</td><td>0.608 8</td><td>0.610 8</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="171">可以看出, LSTM-CRF-Attention神经网络模型在评价对象抽取任务中取得最好结果。在NLPCC2012数据集上, LSTM-CRF-Attention模型的严格评价F值达到55.05%, 比CRF特征组合模型提高8.15%;宽松评价F值达到57.1%, 比CRF特征组合模型提高8.11%。LSTM-CRF模型的评价指标也比CRF特征组合模型有明显提高, 略低于LSTM-CRF-Attention模型。在NLPCC2013数据集上, LSTM-CRF-Attention模型的严格评价F值达到57.24%, 比CRF特征组合模型提高11.03%;宽松评价指标F值达到61.08%, 比CRF特征组合模型提高10.9%。LSTM-CRF模型的评价指标比CRF特征组合模型有明显提高, 略低于LSTM-CRF-Attention模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="172">从对比实验数据来看, 条件随机场与神经网络模型相融合能够大幅提高评价对象抽取模型的效果。LSTM-CRF模型的评价指标均高于CRF特征组合模型, 同时在神经网络模型中加入注意力机制后, LSTM-CRF-Attention模型效果得到进一步提高。</p>
+                </div>
+                <h3 id="173" name="173" class="anchor-tag"><b>5 结 语</b></h3>
+                <div class="p1">
+                    <p id="174">本文基于注意力机制提出LSTM-CRF-Attention神经网络评价对象抽取模型, 该模型在评价对象抽取效果上取得了较大提升。使用CBOW和Skip-gram词向量嵌入模型对语料进行预训练, 有效提高了模型的准确率。注意力机制在神经网络模型中发挥出了重要作用, 增加自注意力权重计算能够让模型更准确地提取评价对象信息。在未来的研究中, 可以将词性、依赖关系等语义信息融入到神经网络模型中, 能够进一步提升模型的信息抽取能力。实验数据为NLPCC测评数据集, 数据规模仍然有限, 需要在大规模数据集上进一步验证模型的适用性, 充分发挥神经网络模型在大数据处理中的优势。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Co-extracting opinion targets and opinion words from online reviews based on the word alignment model">
+
+                                <b>[1]</b> Liu K, Xu L, Zhao J. Co-extracting opinion targets and opinion words from online reviews based on the word alignment model[J]. IEEE Transactions on Knowledge and Engineering, 2015, 27 (3) : 646-650.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Collective opinion target extraction in Chinese microblogs">
+
+                                <b>[2]</b> Zhou X, Wan X, Xiao J. Collective opinion target extraction in Chinese microblogs[J]. Chemosphere, 2013, 73 (4) : 532-542.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Opinion target extraction in Chinese microblog posts based on candidate classification">
+
+                                <b>[3]</b> Min Q, Zhang J. Opinion target extraction in Chinese microblog posts based on candidate classification[C]//2017 4th International Conference on Information Science and Control Engineering, 2017: 514-519.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Opinion Word Expansion and Target Extraction through Double Propagation">
+
+                                <b>[4]</b> Qiu G, Liu B, Bu J, et al. Opinion word expansion and target extraction through double propagation[J]. Association for Computational Linguistics, 2011, 37 (1) : 9-27.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=DLIREC:Aspect Term Extraction and Term Polarity Classification System">
+
+                                <b>[5]</b> Toh Z, Wang W. DLIREC: aspect term extraction and term polarity classification system[C]//Proceedings of the 8th International Workshop on Semantic Evaluation (SemEval 2014) , Dublin, Ireland, August 23-24, 2014: 235-240.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201404041&amp;v=MDEyMzVxcUJ0R0ZyQ1VSN3FmWnVac0ZpRGxWNzdBTHo3QmQ3RzRIOVhNcTQ5QlpZUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 蒋润, 顾春华, 阮彤. 基于Tri-training 的评价单元识别[J]. 计算机应用, 2014, 34 (4) : 1099-1104.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201303010&amp;v=MDU1NzREbFY3N0FLQ2pZZmJHNEg5TE1ySTlFWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRmk=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 郑敏洁, 雷志城, 廖祥文, 等. 基于层叠CRFs的中文句子评价对象抽取[J]. 中文信息学报, 2013, 27 (3) : 69-76.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=CLOpinionMiner: opinion target extraction in a cross-language scenario">
+
+                                <b>[8]</b> Zhou X, Wan X, Xiao J. CLOpinionMiner: opinion target extraction in a cross-language scenario[J]. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 2015, 23 (4) : 619-630.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Aspect extraction for opinion mining with a deep convolutional neural network">
+
+                                <b>[9]</b> Poria S, Cambria E, Gelbukh A. Aspect extraction for opinion mining with a deep convolutional neural network[J]. Knowledge-Based Systems, 2016, 108 (C) : 42-49.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Improving opinion-target extraction with character-level word embeddings">
+
+                                <b>[10]</b> Jebbara S, Cimiano P. Improving opinion-target extraction with character-level word embeddings[C]//Proceedings of the First Workshop on Subword and Character Level Models in NLP, September 7, 2017: 159-167.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Recurrent neural networks with auxiliary labels for cross-domain opinion target extraction">
+
+                                <b>[11]</b> Ding Y, Yu J, Jiang J. Recurrent neural networks with auxiliary labels for cross-domain opinion target extraction[C]//Proceedings of the Thirty-First AAAI Conference on Artificial Intelligence, 2017: 3436-3442.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=End-to-end sequence labeling via bi-directional LSTM-CNNs-CRF">
+
+                                <b>[12]</b> Ma X, Hovy E. End-to-end sequence labeling via bi-directional LSTM-CNNs-CRF[C]//Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics, Berlin, Germany, August 7-12, 2016: 1064-1074.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Conditional random fields: probabilistic models for segmenting and labeling sequence data">
+
+                                <b>[13]</b> Lafferty J D, McCallum A, Pereira F C N. Conditional random fields: probabilistic models for segmenting and labeling sequence data[C]//Proceedings of the Eighteenth International Conference on Machine Learning, 2001: 282-289.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Recurrent models of visual attention">
+
+                                <b>[14]</b> Mnih V, Heess N, Graves A, et al. Recurrent models of visual attention[C]//Proceedings of the 27th International Conference on Neural Information Processing Systems, Montreal, Canada, December 08-13, 2014: 2204-2212.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Targeted aspect-based sentiment analysis via embedding commonsense knowledge into an attentive LSTM">
+
+                                <b>[15]</b> Ma Y, Peng H, Cambria E. Targeted aspect-based sentiment analysis via embedding commonsense knowledge into an attentive LSTM[C]//Association for the Advancement of Artificial Intelligence, 2018.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JYRJ201903038" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201903038&amp;v=MDAyNjdUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRmlEbFY3N0FMelRaWkxHNEg5ak1ySTlHYklRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1VWdqSmZRZ2l1bjJRM2RRZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

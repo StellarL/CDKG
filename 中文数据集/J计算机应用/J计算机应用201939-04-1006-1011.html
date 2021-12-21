@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637136775574658750%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJY201904013%26RESULT%3d1%26SIGN%3dWikHpGnC1jw0oNHwc6u0ipdg%252fNQ%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201904013&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201904013&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201904013&amp;v=MjUxNjM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5RGdWN3ZLTHo3QmQ3RzRIOWpNcTQ5RVo0UUtESDg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#49" data-title="0 引言 ">0 引言</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#57" data-title="1 环境模型 ">1 环境模型</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#60" data-title="2 传统A算法 ">2 传统A算法</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#70" data-title="3 本文算法 ">3 本文算法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#71" data-title="3.1 &lt;b&gt;障碍搜索方式的改进&lt;/b&gt;">3.1 <b>障碍搜索方式的改进</b></a></li>
+                                                <li><a href="#88" data-title="3.2 &lt;b&gt;启发函数的改进&lt;/b&gt;">3.2 <b>启发函数的改进</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#109" data-title="4 实验与结果分析 ">4 实验与结果分析</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#121" data-title="5 结语 ">5 结语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#59" data-title="图1 实验环境模型">图1 实验环境模型</a></li>
+                                                <li><a href="#66" data-title="图2 传统A算法寻路计算过程示例">图2 传统A算法寻路计算过程示例</a></li>
+                                                <li><a href="#78" data-title="图3 不同类型矩阵搜索障碍获取的规划路径图">图3 不同类型矩阵搜索障碍获取的规划路径图</a></li>
+                                                <li><a href="#81" data-title="&lt;b&gt;表&lt;/b&gt;1 &lt;b&gt;不同类型邻域矩阵搜索障碍的路径规划效率&lt;/b&gt;"><b>表</b>1 <b>不同类型邻域矩阵搜索障碍的路径规划效率</b></a></li>
+                                                <li><a href="#84" data-title="图4 不同大小邻域矩阵搜索障碍获得的规划路径">图4 不同大小邻域矩阵搜索障碍获得的规划路径</a></li>
+                                                <li><a href="#86" data-title="图5 路径长度、搜索时间与邻域尺寸的关系">图5 路径长度、搜索时间与邻域尺寸的关系</a></li>
+                                                <li><a href="#99" data-title="图6 距离函数的几何意义">图6 距离函数的几何意义</a></li>
+                                                <li><a href="#102" data-title="图7 角度表达式的几何意义">图7 角度表达式的几何意义</a></li>
+                                                <li><a href="#112" data-title="图8 改进算法前后的定性效果对比">图8 改进算法前后的定性效果对比</a></li>
+                                                <li><a href="#116" data-title="&lt;b&gt;表&lt;/b&gt;2 &lt;b&gt;改进&lt;/b&gt;A&lt;b&gt;算法的定量性能&lt;/b&gt;"><b>表</b>2 <b>改进</b>A<b>算法的定量性能</b></a></li>
+                                                <li><a href="#117" data-title="图9 不同改进算法路径安全性改进效果对比">图9 不同改进算法路径安全性改进效果对比</a></li>
+                                                <li><a href="#118" data-title="&lt;b&gt;表&lt;/b&gt;3 &lt;b&gt;不同&lt;/b&gt;A&lt;b&gt;算法的效率对比&lt;/b&gt;"><b>表</b>3 <b>不同</b>A<b>算法的效率对比</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="148">
+
+
+                                    <a id="bibliography_1" title="王丽苹.机器人技术变迁及产业发展战略研究[D].天津, 天津大学, 2016:1. (WANG L P.The study of development strategy and technological change of robot industry[D].Tianjin:Tianjin University, 2016:1.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017134318.nh&amp;v=MjEyMjFyQ1VSN3FmWnVac0Z5RGdWN3ZLVkYyNkdiSzdHdExOcDVFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                        王丽苹.机器人技术变迁及产业发展战略研究[D].天津, 天津大学, 2016:1. (WANG L P.The study of development strategy and technological change of robot industry[D].Tianjin:Tianjin University, 2016:1.) 
+                                    </a>
+                                </li>
+                                <li id="150">
+
+
+                                    <a id="bibliography_2" title="康凯.基于机器视觉的移动机器人定位与三维地图重建方法研究[D].哈尔滨:哈尔滨工业大学, 2017:1-2. (KANG K.Research on localization and mapping of mobile robot based on machine vision[D].Harbin:Harbin Institute of Technology, 2017:1-2.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017739684.nh&amp;v=MTkzMjk5ZkVxNUViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlEZ1Y3dktWRjI2R2JTN0Y=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                        康凯.基于机器视觉的移动机器人定位与三维地图重建方法研究[D].哈尔滨:哈尔滨工业大学, 2017:1-2. (KANG K.Research on localization and mapping of mobile robot based on machine vision[D].Harbin:Harbin Institute of Technology, 2017:1-2.) 
+                                    </a>
+                                </li>
+                                <li id="152">
+
+
+                                    <a id="bibliography_3" title="JEDDISARAVI K, ALOTAPPEH R J, PIMEMTA L C A, et al.Multi-objective approach for robot motion planning in search tasks[J].Applied Intelligence, 2016, 45 (2) :305-321." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=&amp;quot;Multi-objective approach for robot motion planning in search asks.&amp;quot;">
+                                        <b>[3]</b>
+                                        JEDDISARAVI K, ALOTAPPEH R J, PIMEMTA L C A, et al.Multi-objective approach for robot motion planning in search tasks[J].Applied Intelligence, 2016, 45 (2) :305-321.
+                                    </a>
+                                </li>
+                                <li id="154">
+
+
+                                    <a id="bibliography_4" title="彭利民.基于广度优先搜索的虚拟网络映射算法[J].四川大学学报 (工程科学版) , 2015, 47 (2) :117-122. (PENG L M.Virtual network embedding algorithm based on breadth-first search[J].Journal of Sichuan University (Engineering Science Edition) , 2015, 47 (2) :117-122.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SCLH201502018&amp;v=MDg4NjNVUjdxZlp1WnNGeURnVjd2S05pN0hackc0SDlUTXJZOUViSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                        彭利民.基于广度优先搜索的虚拟网络映射算法[J].四川大学学报 (工程科学版) , 2015, 47 (2) :117-122. (PENG L M.Virtual network embedding algorithm based on breadth-first search[J].Journal of Sichuan University (Engineering Science Edition) , 2015, 47 (2) :117-122.) 
+                                    </a>
+                                </li>
+                                <li id="156">
+
+
+                                    <a id="bibliography_5" title="刘艳丽, 樊晓平, 张恒.基于启发式搜索的移动机器人主动定位[J].机器人, 2012, 34 (5) :590-595. (LIU Y L, FAN X P, ZHANG H.Heuristic search assisted active localization for mobile robot[J].Robot, 2012, 34 (5) :590-595.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JQRR201205013&amp;v=MTQ4MTlLTHp6WmZMRzRIOVBNcW85RVo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5RGdWN3Y=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                        刘艳丽, 樊晓平, 张恒.基于启发式搜索的移动机器人主动定位[J].机器人, 2012, 34 (5) :590-595. (LIU Y L, FAN X P, ZHANG H.Heuristic search assisted active localization for mobile robot[J].Robot, 2012, 34 (5) :590-595.) 
+                                    </a>
+                                </li>
+                                <li id="158">
+
+
+                                    <a id="bibliography_6" title="房佳, 杜震洪, 张丰, 等.应用于城市道路网的启发式深度优先有向搜索算法[J].浙江大学学报 (理学版) , 2013, 40 (4) :469-474. (FANG J, DU Z H, ZHANG F, et al.Heuristic depthfirst directional algorithm for shortest path searching in traffic networks[J].Journal of Zhejiang University (Science Edition) , 2013, 40 (4) :469-474.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HZDX201304020&amp;v=MTYzNjdmWnVac0Z5RGdWN3ZLTFRmUGRyRzRIOUxNcTQ5SFpJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3E=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                        房佳, 杜震洪, 张丰, 等.应用于城市道路网的启发式深度优先有向搜索算法[J].浙江大学学报 (理学版) , 2013, 40 (4) :469-474. (FANG J, DU Z H, ZHANG F, et al.Heuristic depthfirst directional algorithm for shortest path searching in traffic networks[J].Journal of Zhejiang University (Science Edition) , 2013, 40 (4) :469-474.) 
+                                    </a>
+                                </li>
+                                <li id="160">
+
+
+                                    <a id="bibliography_7" title="BURNS E, LEMONS S, ZHOU R, et al.Best-first heuristic search for multi-core machines[J].Journal of Artificial Intelligence Research, 2010, 39 (1) :689-743." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Best-first heuristic search for multicore machines">
+                                        <b>[7]</b>
+                                        BURNS E, LEMONS S, ZHOU R, et al.Best-first heuristic search for multi-core machines[J].Journal of Artificial Intelligence Research, 2010, 39 (1) :689-743.
+                                    </a>
+                                </li>
+                                <li id="162">
+
+
+                                    <a id="bibliography_8" title="FRANTISEK D, ANDREJ B.Path planning with modified a star algorithm for a mobile robot[J].Procardia Engineering, 2014, 96 (1) :59-69." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14123100035260&amp;v=MDk1MTk9TmlmT2ZiSzhIOVBQcm85RlpPZ0tEbm81b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadEZpbmxVcjNJS0ZzUWJoQQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                        FRANTISEK D, ANDREJ B.Path planning with modified a star algorithm for a mobile robot[J].Procardia Engineering, 2014, 96 (1) :59-69.
+                                    </a>
+                                </li>
+                                <li id="164">
+
+
+                                    <a id="bibliography_9" title="UTTENDORF S, EILERT B, OVERMEYER L.Combining a fuzzy inference system with an A&lt;sup&gt;*&lt;/sup&gt;algorithm for the automated generation of roadmaps for automated guided vehicles[J].at-Automatisierungstechnik, 2017, 65 (3) :189-197." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJDG&amp;filename=SJDG7D9A6ABE1664CB55C0BF8F22076E4EE5&amp;v=MTU5OTRVMDV0cGh6TDI3eEtvPU5pZlBhYlRNRjZESzN2MHdaZTBKQ0E5THloTmc2azBMUUFuZ3JoSXlmOGVRTU0rYUNPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkJyTA==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                        UTTENDORF S, EILERT B, OVERMEYER L.Combining a fuzzy inference system with an A&lt;sup&gt;*&lt;/sup&gt;algorithm for the automated generation of roadmaps for automated guided vehicles[J].at-Automatisierungstechnik, 2017, 65 (3) :189-197.
+                                    </a>
+                                </li>
+                                <li id="166">
+
+
+                                    <a id="bibliography_10" title="WODZINSKI M, KRZYZANOWSKA A.Sequential classification of palm gestures based on A&lt;sup&gt;*&lt;/sup&gt;algorithm and MLP neural network for quadrocopter control[J].Metrology and Measurement Systems, 2017, 24 (2) :265-276." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Sequential classification of palm gestures based on A*algorithm and MLP neural network for quadrocopter control">
+                                        <b>[10]</b>
+                                        WODZINSKI M, KRZYZANOWSKA A.Sequential classification of palm gestures based on A&lt;sup&gt;*&lt;/sup&gt;algorithm and MLP neural network for quadrocopter control[J].Metrology and Measurement Systems, 2017, 24 (2) :265-276.
+                                    </a>
+                                </li>
+                                <li id="168">
+
+
+                                    <a id="bibliography_11" title="张晓冉, 居鹤华.采用改进D&lt;sup&gt;*&lt;/sup&gt;Lite算法的自主移动机器人路径规划[J].计算机测量与控制, 2011, 19 (1) :155-157. (ZHANG X R, JU H H.Developed D&lt;sup&gt;*&lt;/sup&gt;Lite algorithm for path planning of autonomous mobile robots[J].Computer Measurement&amp;amp;Control, 2011, 19 (1) :155-157.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JZCK201101051&amp;v=MTg5MjM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5RGdWN3ZLTHpmSVpiRzRIOURNcm85QVpZUUtESDg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                        张晓冉, 居鹤华.采用改进D&lt;sup&gt;*&lt;/sup&gt;Lite算法的自主移动机器人路径规划[J].计算机测量与控制, 2011, 19 (1) :155-157. (ZHANG X R, JU H H.Developed D&lt;sup&gt;*&lt;/sup&gt;Lite algorithm for path planning of autonomous mobile robots[J].Computer Measurement&amp;amp;Control, 2011, 19 (1) :155-157.) 
+                                    </a>
+                                </li>
+                                <li id="170">
+
+
+                                    <a id="bibliography_12" title="徐美清, 孙晨亮.基于栅格地图的遗传算法路径规划[J].科技信息, 2011 (31) :76-77. (XU M Q, SUN C L.The occupancy grid map-building with neural network[J].Science&amp;amp;Technology Information, 2011 (31) :76-77.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KJXX201131059&amp;v=MTkwMjNUZHJHNEg5RFBybzlBYllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlEZ1Y3dktMaWY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                        徐美清, 孙晨亮.基于栅格地图的遗传算法路径规划[J].科技信息, 2011 (31) :76-77. (XU M Q, SUN C L.The occupancy grid map-building with neural network[J].Science&amp;amp;Technology Information, 2011 (31) :76-77.) 
+                                    </a>
+                                </li>
+                                <li id="172">
+
+
+                                    <a id="bibliography_13" title="李天旭, 陈广大.基于改进遗传算法的室内移动机器人路径规划[J].制造业自动化, 2015, 37 (20) :31-35. (LI T X, CHEN G D.Indoor mobile robot path planning based on improved genetic algorithm[J].Manufacturing Automation, 2015, 37 (20) :31-35.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JXGY201520010&amp;v=MDk5NjBMelhNZDdHNEg5VE9yNDlFWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlEZ1Y3dks=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                        李天旭, 陈广大.基于改进遗传算法的室内移动机器人路径规划[J].制造业自动化, 2015, 37 (20) :31-35. (LI T X, CHEN G D.Indoor mobile robot path planning based on improved genetic algorithm[J].Manufacturing Automation, 2015, 37 (20) :31-35.) 
+                                    </a>
+                                </li>
+                                <li id="174">
+
+
+                                    <a id="bibliography_14" title="王殿君.基于改进A&lt;sup&gt;*&lt;/sup&gt;算法的室内移动机器人路径规划[J].清华大学学报 (自然科学版) , 2012, 52 (8) :1085-1089. (WANG D J.Indoor mobile-robot path planning based on an improved A&lt;sup&gt;*&lt;/sup&gt;algorithm[J].Journal of Tsinghua University (Science and Technology) , 2012, 52 (8) :1085-1089.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QHXB201208013&amp;v=MjYxMDhIOVBNcDQ5RVo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5RGdWN3ZLTkNYVGJMRzQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                        王殿君.基于改进A&lt;sup&gt;*&lt;/sup&gt;算法的室内移动机器人路径规划[J].清华大学学报 (自然科学版) , 2012, 52 (8) :1085-1089. (WANG D J.Indoor mobile-robot path planning based on an improved A&lt;sup&gt;*&lt;/sup&gt;algorithm[J].Journal of Tsinghua University (Science and Technology) , 2012, 52 (8) :1085-1089.) 
+                                    </a>
+                                </li>
+                                <li id="176">
+
+
+                                    <a id="bibliography_15" title="辛煜, 梁华为, 杜明博, 等.一种可搜索无限个邻域的改进A&lt;sup&gt;*&lt;/sup&gt;算法[J].机器人, 2014, 36 (5) :627-633. (XIN Y, LIANG H W, DU M B, et al.An improved A&lt;sup&gt;*&lt;/sup&gt;algorithm for searching infinite neighborhoods[J].Robot, 2014, 36 (5) :627-633.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JQRR201405015&amp;v=MDgwODZxZlp1WnNGeURnVjd2S0x6elpmTEc0SDlYTXFvOUVZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                        辛煜, 梁华为, 杜明博, 等.一种可搜索无限个邻域的改进A&lt;sup&gt;*&lt;/sup&gt;算法[J].机器人, 2014, 36 (5) :627-633. (XIN Y, LIANG H W, DU M B, et al.An improved A&lt;sup&gt;*&lt;/sup&gt;algorithm for searching infinite neighborhoods[J].Robot, 2014, 36 (5) :627-633.) 
+                                    </a>
+                                </li>
+                                <li id="178">
+
+
+                                    <a id="bibliography_16" title="顾辰.改进的A&lt;sup&gt;*&lt;/sup&gt;算法在机器人路径规划中的应用[J].电子设计工程, 2014, 22 (19) :96-98, 102. (GU C.Application of improved A&lt;sup&gt;*&lt;/sup&gt;algorithm in robot path planning[J].Electronic Design Engineering, 2014, 22 (19) :96-98, 102.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GWDZ201419031&amp;v=MjgxNTZaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeURnVjd2S0lqclBkTEc0SDlYTnBvOUc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                        顾辰.改进的A&lt;sup&gt;*&lt;/sup&gt;算法在机器人路径规划中的应用[J].电子设计工程, 2014, 22 (19) :96-98, 102. (GU C.Application of improved A&lt;sup&gt;*&lt;/sup&gt;algorithm in robot path planning[J].Electronic Design Engineering, 2014, 22 (19) :96-98, 102.) 
+                                    </a>
+                                </li>
+                                <li id="180">
+
+
+                                    <a id="bibliography_17" title="BOTEA A, MULLER M, SCHAEFFER J.Near optimal hierarchical path-finding[J].Journal of Game Development, 2004, 1 (1) :7-28." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Near Optimal Hierarchical Path-finding">
+                                        <b>[17]</b>
+                                        BOTEA A, MULLER M, SCHAEFFER J.Near optimal hierarchical path-finding[J].Journal of Game Development, 2004, 1 (1) :7-28.
+                                    </a>
+                                </li>
+                                <li id="182">
+
+
+                                    <a id="bibliography_18" title="GOLDBERG A V, HARRELSON C.Computing the shortest path:A&lt;sup&gt;*&lt;/sup&gt;search meets graph theory[C]//Proceedings of the Sixteenth Annual ACM-SIAM Symposium on Discrete Algorithms.New York:ACM, 2005:156-165." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Computing the shortest path:A*search meets graph theory">
+                                        <b>[18]</b>
+                                        GOLDBERG A V, HARRELSON C.Computing the shortest path:A&lt;sup&gt;*&lt;/sup&gt;search meets graph theory[C]//Proceedings of the Sixteenth Annual ACM-SIAM Symposium on Discrete Algorithms.New York:ACM, 2005:156-165.
+                                    </a>
+                                </li>
+                                <li id="184">
+
+
+                                    <a id="bibliography_19" title="高民东, 张雅妮, 朱凌云.应用于机器人路径规划的双向时效A&lt;sup&gt;*&lt;/sup&gt;算法[J].计算机应用研究, 2019, 36 (3) :792-795, 800. (GAO M D, ZHANG Y N, ZHU L Y.Bidirectional time-efficient A&lt;sup&gt;*&lt;/sup&gt;algorithm for robot path planning[J].Application Research of Computers, 2019, 36 (3) :792-795, 800.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201903031&amp;v=MTI4MzFzRnlEZ1Y3dktMejdTWkxHNEg5ak1ySTlHWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[19]</b>
+                                        高民东, 张雅妮, 朱凌云.应用于机器人路径规划的双向时效A&lt;sup&gt;*&lt;/sup&gt;算法[J].计算机应用研究, 2019, 36 (3) :792-795, 800. (GAO M D, ZHANG Y N, ZHU L Y.Bidirectional time-efficient A&lt;sup&gt;*&lt;/sup&gt;algorithm for robot path planning[J].Application Research of Computers, 2019, 36 (3) :792-795, 800.) 
+                                    </a>
+                                </li>
+                                <li id="186">
+
+
+                                    <a id="bibliography_20" title="余翀, 邱其文.基于栅格地图的分层式机器人路径规划算法[J].中国科学院大学学报, 2013, 30 (4) :528-538, 546. (YU C, QIU Q W.Hierarchical robot path planning algorithm based on grid map[J].Journal of University of Chinese Academy of Sciences, 2013, 30 (4) :528-538, 546.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZKYB201304017&amp;v=MTM1MzlHRnJDVVI3cWZadVpzRnlEZ1Y3dktQeWJTYkxHNEg5TE1xNDlFWTRRS0RIODR2UjRUNmo1NE8zenFxQnQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[20]</b>
+                                        余翀, 邱其文.基于栅格地图的分层式机器人路径规划算法[J].中国科学院大学学报, 2013, 30 (4) :528-538, 546. (YU C, QIU Q W.Hierarchical robot path planning algorithm based on grid map[J].Journal of University of Chinese Academy of Sciences, 2013, 30 (4) :528-538, 546.) 
+                                    </a>
+                                </li>
+                                <li id="188">
+
+
+                                    <a id="bibliography_21" title="程向红, 祁艺.基于栅格法的室内指示路径规划算法[J].中国惯性技术学报, 2018, 26 (2) :236-240, 267. (CHENG XH, QI Y.Indoor indicator path planning algorithm based on grid method[J].Journal of Chinese Inertial Technology, 2018, 26 (2) :236-240, 267.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGXJ201802015&amp;v=MjY0OTA1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlEZ1Y3dktQeXJUWkxHNEg5bk1yWTlFWVlRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[21]</b>
+                                        程向红, 祁艺.基于栅格法的室内指示路径规划算法[J].中国惯性技术学报, 2018, 26 (2) :236-240, 267. (CHENG XH, QI Y.Indoor indicator path planning algorithm based on grid method[J].Journal of Chinese Inertial Technology, 2018, 26 (2) :236-240, 267.) 
+                                    </a>
+                                </li>
+                                <li id="190">
+
+
+                                    <a id="bibliography_22" title="朱爱斌, 刘洋洋, 何大勇, 等.解决路径规划局部极小问题的势场栅格法[J].机械设计与研究, 2017, 33 (5) :46-50. (ZHU A B, LIU Y Y, HE D Y, et al.An improved potential field-grid method for local minimization problem in path planning[J].Machine Design and Research, 2017, 33 (5) :46-50.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYY201705014&amp;v=MjYwNDc0SDliTXFvOUVZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeURnVjd2S0x6N1NkN0c=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[22]</b>
+                                        朱爱斌, 刘洋洋, 何大勇, 等.解决路径规划局部极小问题的势场栅格法[J].机械设计与研究, 2017, 33 (5) :46-50. (ZHU A B, LIU Y Y, HE D Y, et al.An improved potential field-grid method for local minimization problem in path planning[J].Machine Design and Research, 2017, 33 (5) :46-50.) 
+                                    </a>
+                                </li>
+                                <li id="192">
+
+
+                                    <a id="bibliography_23" title="PETER E, NILSSON J, RAHEAL B.A formal basis for the heuristic determination of minimum cost paths[J].ACM SIGART Bulletin, 1972, 4 (37) :28-29." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000058715&amp;v=MDUzMTRqTnI0OUZaTzRIQzMwOG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnRGaW5sVXIzSUtGc1FiaEE9TmlmSVk3SzdIdA==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[23]</b>
+                                        PETER E, NILSSON J, RAHEAL B.A formal basis for the heuristic determination of minimum cost paths[J].ACM SIGART Bulletin, 1972, 4 (37) :28-29.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+    <div class="head-tag">   
+            <p>
+               <b> 网络首发时间: 2018-11-26 13:42</b>
+            </p>     
+    </div>
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJY" target="_blank">计算机应用</a>
+                2019,39(04),1006-1011 DOI:10.11772/j.issn.1001-9081.2018091977            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm">改进A<sup>*</sup>算法在机器人室内路径规划中的应用</span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%88%E8%8B%A5%E7%94%B7&amp;code=41473323&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陈若男</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%96%87%E8%81%AA%E8%81%AA&amp;code=37849120&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">文聪聪</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BD%AD%E7%8E%B2&amp;code=33246634&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">彭玲</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%B0%A4%E6%89%BF%E5%A2%9E&amp;code=35663284&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">尤承增</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E9%81%A5%E6%84%9F%E4%B8%8E%E6%95%B0%E5%AD%97%E5%9C%B0%E7%90%83%E7%A0%94%E7%A9%B6%E6%89%80&amp;code=1698844&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中国科学院遥感与数字地球研究所</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%AD%A6%E8%B5%84%E6%BA%90%E4%B8%8E%E7%8E%AF%E5%A2%83%E5%AD%A6%E9%99%A2&amp;code=1698842&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中国科学院大学资源与环境学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>传统A<sup>*</sup>算法在面向机器人室内多U型障碍的特殊场景下规划路径时, 容易忽略机器人实际大小, 且计算时间较长。针对这个问题, 提出一种改进A<sup>*</sup>算法。首先引入邻域矩阵进行障碍搜索以提升路径安全性, 然后研究不同类型和尺寸的邻域矩阵对算法性能的影响, 最后结合角度信息和分区自适应距离信息对启发函数进行改进以提高计算效率。实验结果表明, 改进A<sup>*</sup>算法可以通过更改障碍搜索矩阵的尺寸来获得不同的安全间距, 以保证不同机器人在不同地图环境下的安全性;而且在复杂大环境中与传统A<sup>*</sup>算法相比寻路速度提高了28.07%, 搜索范围缩小了66.55%, 提高了机器人在遇到动态障碍时二次规划的灵敏性。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=A%3Csup%3E*%3C%2Fsup%3E%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">A<sup>*</sup>算法;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%AE%A4%E5%86%85%E8%B7%AF%E5%BE%84%E8%A7%84%E5%88%92&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">室内路径规划;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%A7%BB%E5%8A%A8%E6%9C%BA%E5%99%A8%E4%BA%BA&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">移动机器人;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%90%AF%E5%8F%91%E5%87%BD%E6%95%B0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">启发函数;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    陈若男 (1996—) , 女, 浙江温州人, 硕士研究生, 主要研究方向:人工智能、室内外定位导航;;
+                                </span>
+                                <span>
+                                    文聪聪 (1994—) , 男, 山西临汾人, 博士研究生, 主要研究方向:机器视觉、室内外定位导航;;
+                                </span>
+                                <span>
+                                    *彭玲 (1965—) , 女, 湖北武汉人, 研究员, 博士, 主要研究方向:遥感影像智能学习、智慧城市时空大数据脉动分析、室内外定位导航;电子邮箱pengling@radi.ac.cn;
+                                </span>
+                                <span>
+                                    尤承增 (1993—) , 男, 山东枣庄人, 硕士研究生, 主要研究方向:室内外定位导航、可见光定位。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-09-25</p>
+
+            </div>
+                    <h1>Application of improved A<sup>*</sup> algorithm in indoor path planning for mobile robot</h1>
+                    <h2>
+                    <span>CHEN Ruonan</span>
+                    <span>WEN Congcong</span>
+                    <span>PENG Ling</span>
+                    <span>YOU Chengzeng</span>
+            </h2>
+                    <h2>
+                    <span>Institute of Remote Sensing and Digital Earth, Chinese Academy of Sciences</span>
+                    <span>College of Resources and Environment, University of Chinese Academy of Sciences</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>For indoor path planning for mobile robot in particular scenario with multiple U-shape obstacles, traditional A<sup>*</sup> algorithm has some problems such as ignoring the actual size of robot and long computational time. An improved A<sup>*</sup> algorithm was proposed to solve these problems. Firstly, a neighborhood matrix was introduced to perform obstacle search, improving path safety. Then, the effects of different types and sizes of neighborhood matrices on the performance of the algorithm were studied and summarized. Finally, heuristic function was improved by combining the angle information and the distance information (calculated in different expressions when situation changes) to improve the calculation efficiency. The experimental results show that the proposed algorithm can obtain different safety spacing by changing the size of obstacle search matrix to ensure the safety of different types of robots in different environments. Moreover, in the complex environment, compared with traditional A<sup>*</sup> algorithm, path planning speed is improved by 28.07%, and search range is narrowed by 66.55%, so as to improve the sensitivity of the secondary planning of robot when encountering dynamic obstacles.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=A%3Csup%3E*%3C%2Fsup%3E%20algorithm&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">A<sup>*</sup> algorithm;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=indoor%20path%20planning&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">indoor path planning;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=mobile%20robot&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">mobile robot;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=heuristic%20function&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">heuristic function;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                            <b>Author：</b>
+                                                        <span>
+                                    CHEN Ruonan, born in 1996, M. S. candidate. Her research interests include artificial intelligence, indoor and outdoor positioning and navigation.;
+                                </span>
+                                <span>
+                                    WEN Congcong, born in 1994, Ph. D. candidate. His research interests include machine vision, indoor and outdoor positioning and navigation.;
+                                </span>
+                                <span>
+                                    PENG Ling, born in 1965, Ph. D. , research fellow. Her research interests include intelligent learning of remote sensing image, spatial and temporal big data pulsation analysis of smart-city, indoor and outdoor positioning and navigation.;
+                                </span>
+                                <span>
+                                    YOU Chengzeng, born in 1993, M. S. candidate. His research interests include indoor and outdoor positioning and navigation, visible light positioning.;
+                                </span>
+                    </p>
+                                    <p><b>Received：</b> 2018-09-25</p>
+                            </div>
+
+
+        <!--brief start-->
+                        <h3 id="49" name="49" class="anchor-tag">0 引言</h3>
+                <div class="p1">
+                    <p id="50">这些年, 受机器人带来的影响, 人们的生活生产方式发生了革命性的转变。机器人产业在市场需求以及国家政策扶持下, 得到了迅速发展<citation id="194" type="reference"><link href="148" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>, 被广泛应用到工业、服务业、安防, 甚至医疗等领域中, 对机器人要求也从原来的单一化和机械化向智能化和人性化的需求转变<citation id="195" type="reference"><link href="150" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>, 激发了社会各界人士对机器人的研究兴趣。其中, 路径规划是机器人智能化的关键技术, 是指移动机器人按照某一性能指标搜索一条从起始状态到目标状态的最优或次最优的无碰撞路径<citation id="196" type="reference"><link href="152" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">基于栅格法地图, 常用的路径规划算法<citation id="197" type="reference"><link href="154" rel="bibliography" /><link href="156" rel="bibliography" /><link href="158" rel="bibliography" /><link href="160" rel="bibliography" /><sup>[<a class="sup">4</a>,<a class="sup">5</a>,<a class="sup">6</a>,<a class="sup">7</a>]</sup></citation>有Dijkstra算法、最佳优先算法、启发式搜索算法。Dijkstra算法是典型的广度优先算法, 优点在于总是可以找到最优化路径;但搜索效率低, 难以满足快速规划路径的需求。最佳优先算法BFS (Best-First-Search) 与Dijkstra算法最大的差异是以与目标节点之间的距离作为评估, 这种算法能够快速引导向目标节点搜索, 大幅度提高算法搜索效率;但往往不能获取合理的最短路径。A<sup>*</sup>算法<citation id="198" type="reference"><link href="162" rel="bibliography" /><link href="164" rel="bibliography" /><link href="166" rel="bibliography" /><sup>[<a class="sup">8</a>,<a class="sup">9</a>,<a class="sup">10</a>]</sup></citation>是结合上述两种算法优势提出的一种启发式搜索算法。它利用启发信息来引导搜索方向, 从而减小搜索范围, 提高搜索效率。</p>
+                </div>
+                <div class="p1">
+                    <p id="52">继A<sup>*</sup>算法之后, 还有诸多新算法的提出, 如D<sup>*</sup>算法 (又称动态A<sup>*</sup>算法) <citation id="199" type="reference"><link href="168" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>, 该算法遇到动态环境时无需重新规划, 但是针对环境复杂的大区域地图, 存储量会激增, 且动态障碍频繁出现时仍要重新规划。还有诸多智能生物算法, 如遗传算法模拟进化论观点, 执行效率较高;缺点在于占用存储空间大, 个体编码方式和初始种群的确定难度高<citation id="200" type="reference"><link href="170" rel="bibliography" /><link href="172" rel="bibliography" /><sup>[<a class="sup">12</a>,<a class="sup">13</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="53">因此, A<sup>*</sup>作为经典算法, 以其实用性至今被广泛应用, 并且对不同场景具有很强的扩展性和适应性。研究学者们针对不同应用场景, 作出不同改进。在移动机器人路径规划方面, 王殿君<citation id="201" type="reference"><link href="174" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>解决了传统A<sup>*</sup>算法路径包含过多冗余点的问题, 并得到拐点处的最小转折角度, 明确机器人转向;辛煜等<citation id="202" type="reference"><link href="176" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>提出无限邻域的A<sup>*</sup>算法思想解决了运动方向被限定为π/4的倍数问题, 但搜索速度会降低;顾辰<citation id="203" type="reference"><link href="178" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>通过采用优先级的子节点生成策略来避免了生成穿过障碍物栅格顶点的路径, 但路径依然存在较大安全问题;Botea等<citation id="204" type="reference"><link href="180" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>提出了HPA<sup>*</sup> (Hierarchical Path-finding A<sup>*</sup>) 算法, 该算法通过减少搜索空间来提高速度, 但往往不能获取最优路径;Goldberg等<citation id="205" type="reference"><link href="182" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>通过提高启发函数的准确度来提高效率, 但空间复杂度高;高民东等<citation id="206" type="reference"><link href="184" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>提出了一种双向时效A<sup>*</sup>算法寻找路径, 并采用多近邻栅格距离计算方案, 以达到提高效率、平滑路径的效果, 但不适合大尺寸复杂地图。从以上分析可看出, 虽然不少研究人员针对A<sup>*</sup>算法进行了改进, 但仍未能很好地解决以下问题:忽略了机器人大小而造成的安全性问题;多U型障碍的室内环境中算法效率不高的问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="54">为解决上述问题, 本文主要对传统A<sup>*</sup>算法进行两方面的改进:</p>
+                </div>
+                <div class="p1">
+                    <p id="55">1) 采用邻域矩阵的方式来进行障碍搜索, 以此达到通过选择矩阵大小来适应机器人实际大小的目的, 解决传统A<sup>*</sup>算法规划路径过于紧贴障碍物的问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">2) 设计新启发函数, 以分区加权方式来表达距离信息, 以叉积距离来表达角度信息, 提高大地图复杂环境下的算法效率, 缩短遇到动态障碍再次规划耗费的时间。</p>
+                </div>
+                <h3 id="57" name="57" class="anchor-tag">1 环境模型</h3>
+                <div class="p1">
+                    <p id="58">路径规划依赖地图, 常见的地图构建方法有可视图法、拓扑图法、栅格法。其中栅格法简洁有效, 易于维护, 应用广泛<citation id="207" type="reference"><link href="186" rel="bibliography" /><link href="188" rel="bibliography" /><link href="190" rel="bibliography" /><sup>[<a class="sup">20</a>,<a class="sup">21</a>,<a class="sup">22</a>]</sup></citation>, 所以, 本文采用栅格法来建立移动机器人工作环境静态二维地图, 以存储机器人工作环境的基本情况, 并在此基础上进行全局路径规划工作。通常室内环境由于被分割成多个相邻空间, 并散落分布家居等障碍物, 存在多个U型类障碍。为保证本文算法的可靠性和稳定性, 将多个U型障碍和简单矩形障碍拼接, 构建了比真实室内场景复杂度更高的模拟环境, 地图尺寸为600×600像素, 如图1所示。图1中:深灰色区域为障碍, 浅灰区域为自由可通行区域, 黑色圆点为起点, 白色原点为终点。</p>
+                </div>
+                <div class="area_img" id="59">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201904013_059.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 实验环境模型" src="Detail/GetImg?filename=images/JSJY201904013_059.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 实验环境模型  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201904013_059.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 1 Model of experimental environment</p>
+
+                </div>
+                <h3 id="60" name="60" class="anchor-tag">2 传统A<sup>*</sup>算法</h3>
+                <div class="p1">
+                    <p id="61">A<sup>*</sup>算法是一种典型的启发式搜索算法, 其结合了Dijkstra和BFS两种算法各自的优势, 在保证搜索效率的同时, 可以得到最优的路径规划<citation id="208" type="reference"><link href="192" rel="bibliography" /><sup>[<a class="sup">23</a>]</sup></citation>。传统A<sup>*</sup>算法的核心思想体现在综合考虑了起始点到当前节点的真实代价和当前节点到终点的估计代价, 因此可以引导搜索方向。</p>
+                </div>
+                <div class="p1">
+                    <p id="62">代价计算方式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="63"><i>f</i> (<i>n</i>) =<i>g</i> (<i>n</i>) +<i>h</i> (<i>n</i>)      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="64">其中: <i>f</i> (<i>n</i>) 为经过当前节点<i>n</i>的全局评估代价值;<i>g</i> (<i>n</i>) 为起始节点到当前节点<i>n</i>的真实代价值;<i>h</i> (<i>n</i>) 为当前节点<i>n</i>到目标节点的代价估计。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">基本规划路径思路是以起点为第一个计算点, 计算其八邻域中每个节点的代价值<i>f</i> (<i>n</i>) , 若某个节点被占用即为障碍物则不入栈。然后取其中<i>f</i> (<i>n</i>) 值最小的节点作为下一个计算点, 并存储其父节点, 直到搜索到终点, 最后从终点追溯其父节点获取规划路径。图2为传统A<sup>*</sup>算法寻路的计算过程示例 (此处假定障碍物顶点不可穿越) 。</p>
+                </div>
+                <div class="area_img" id="66">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201904013_066.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 传统A*算法寻路计算过程示例" src="Detail/GetImg?filename=images/JSJY201904013_066.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 传统A<sup>*</sup>算法寻路计算过程示例  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201904013_066.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 2 Path-finding process with traditional A<sup>*</sup> algorithm</p>
+
+                </div>
+                <div class="p1">
+                    <p id="67">在上述计算路径过程中, 忽略了机器人实际大小, 将其看作质点, 只有障碍物所占用的节点不可通行, 其相邻节点均在可通行范围内, 所以最终获取的路径将会如图2所示, 紧贴障碍物, 此类规划路径不适合机器人运动, 容易发生碰撞。</p>
+                </div>
+                <div class="p1">
+                    <p id="68">另外, 在评价函数中, 启发函数<i>h</i> (<i>n</i>) 对A<sup>*</sup>算法起主要影响作用:<i>h</i> (<i>n</i>) 估值越小, A<sup>*</sup>算法需要计算的节点就越多, 此时算法效率就会降低, 逐步趋近Dijkstra算法;但如果<i>h</i> (<i>n</i>) 估值很大, 甚至远大于<i>g</i> (<i>n</i>) , 此时<i>g</i> (<i>n</i>) 的作用便会失效, 逐步趋于BFS算法, 只追求速度无法获取合理路径。因此在设计启发函数时, <i>h</i> (<i>n</i>) 和<i>g</i> (<i>n</i>) 必须要单位相对一致, 保证两者对<i>f</i> (<i>n</i>) 的贡献相对平等。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">本文针对传统A<sup>*</sup>算法忽略物体本身大小问题, 提出一种面向机器人的障碍邻域搜索方法。同时, 针对室内环境, 构建新的启发函数, 提高遇到动态障碍时再次规划的敏锐度。</p>
+                </div>
+                <h3 id="70" name="70" class="anchor-tag">3 本文算法</h3>
+                <h4 class="anchor-tag" id="71" name="71">3.1 <b>障碍搜索方式的改进</b></h4>
+                <div class="p1">
+                    <p id="72">本文提出一种基于邻域矩阵的障碍搜索方式, 在实际应用中, 需要根据机器人自身尺寸及地图分辨率选择合适尺寸的搜索矩阵, 来确定路径与障碍物的间距, 保证机器人运行过程中的安全问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="73">邻域矩阵搜索对路径规划的影响主要与类型和尺寸有关, 本文将通过实验分析这两方面对路径产生的具体影响。</p>
+                </div>
+                <h4 class="anchor-tag" id="74" name="74">3.1.1 邻域矩阵类型选择</h4>
+                <div class="p1">
+                    <p id="75">本文中邻域搜索矩阵是指以矩阵中1的个数命名的。以12邻域搜索矩阵 (<b><i>S</i></b><sub>12</sub>) 为例, 判断当前节点是否可通行的依据是:矩阵中心点 (3, 3) 对应当前节点, 此时标识为1的位置对应节点若均为自由节点 (非障碍) , 则认为当前节点可通行;反之认为不可通行。根据邻域搜索方向分布可分为十字搜索和米字搜索两类。两者的区别是后者搜索矩阵四个顶点上值也为1。</p>
+                </div>
+                <div class="p1">
+                    <p id="76" class="code-formula">
+                        <mathml id="76"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">S</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub><mo>=</mo><mrow><mo>[</mo><mrow><mtable><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr></mtable></mrow><mo>]</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="77">基于前文构建的地图环境, 分别对两类搜索矩阵进行测试, 图3是两类方法规划路径的对比。表1是两类方法规划效率的对比, 以搜索范围、搜索时间、路径长度为评价标准。其中搜索范围是指搜索过程中所涉及计算的节点栅格总数, 搜索时间是指搜索总过程耗费的时长, 路径长度是指从起点到终点规划路径的栅格节点总数。</p>
+                </div>
+                <div class="area_img" id="78">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201904013_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 不同类型矩阵搜索障碍获取的规划路径图" src="Detail/GetImg?filename=images/JSJY201904013_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 不同类型矩阵搜索障碍获取的规划路径图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201904013_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 3 Path planning graphs obtained by searching obstacles with different types of matrices</p>
+
+                </div>
+                <div class="p1">
+                    <p id="79">图3表明在矩阵大小相同的情况下, 两种搜索方式获取的路径与障碍物的最小间隔一致且不影响基本路径走势。从定性角度分析, 两种方法的搜索范围 (深灰色区域) 差距不明显。</p>
+                </div>
+                <div class="p1">
+                    <p id="80">表1定量地对比了相同间隔时, 不同搜索矩阵类型对算法效率和规划路径的影响。表1中间隔为路径与障碍物间的空闲节点数, 根据实验对比可知:在三组实验中, 从搜索效率分析只有间隔为1个节点时, 米字搜索范围比十字搜索少42个节点, 略占优势, 但由于米字搜索中每一单元格都比十字多四个节点的计算量, 因此即使搜索范围较小, 耗费的总搜索时间却依然相对更长。且随着间隔的扩大, 米字搜索对搜索范围的缩小能力逐渐弱于十字搜索。从路径角度分析, 米字搜索法获取的路径始终比十字搜索要长。总的来看, 十字障碍搜索法比米字效率更高, 规划路径更优, 因此采用十字障碍搜索邻域。</p>
+                </div>
+                <div class="area_img" id="81">
+                                            <p class="img_tit">
+                                                <b>表</b>1 <b>不同类型邻域矩阵搜索障碍的路径规划效率</b>
+                                                    <br />
+                                                Tab. 1 Efficiency of path planning when searching obstacles with different matrices
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201904013_08100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/JSJY201904013_08100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201904013_08100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表1 不同类型邻域矩阵搜索障碍的路径规划效率" src="Detail/GetImg?filename=images/JSJY201904013_08100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+                                <p class="img_note">注:变化量=米字搜索相关指标-十字搜索相关指标。</p>
+
+                </div>
+                <h4 class="anchor-tag" id="82" name="82">3.1.2 邻域矩阵大小的选择</h4>
+                <div class="p1">
+                    <p id="83">在确定十字障碍搜索法后, 需要选取合适邻域矩阵的大小, 矩阵大小决定了障碍物与路径之间的间隔, 对计算效率也有相应影响。图4为邻域变化与路径、障碍间隔大小间的关系。随着邻域的增大, 规划路径与障碍物的最小间隔增大, 如在传统<i>A</i><sup>*</sup>算法中, 规划路径紧贴障碍物, 即忽略了机器人大小。而利用36邻域搜索障碍得到的路径与障碍物间保有明显的间隔, 从而大幅降低了移动机器人在执行命令时的碰撞概率。</p>
+                </div>
+                <div class="area_img" id="84">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201904013_084.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 不同大小邻域矩阵搜索障碍获得的规划路径" src="Detail/GetImg?filename=images/JSJY201904013_084.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 不同大小邻域矩阵搜索障碍获得的规划路径  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201904013_084.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"><i>Fig</i>. 4 <i>Path planning graphs obtained by searching obstacles with</i><i>different sizes of matrices</i></p>
+
+                </div>
+                <div class="p1">
+                    <p id="85">从另一方面考虑, 随着邻域的增大, 可达到与建图时“障碍膨胀”相同的效果, 所以搜索邻域越大, 认为是不可通行的节点数就会增加, 相应地减少了需要计算的节点, 总体上会提高规划速度。与此同时, 为了远绕障碍, 规划的路径长度会有所增加。图5量化了路径长度、搜索时间与邻域变化的关系, 可看出邻域增大对算法确实有双向影响, 一方面提高搜索效率, 但另一方面却会使路径长度增加。</p>
+                </div>
+                <div class="area_img" id="86">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201904013_086.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 路径长度、搜索时间与邻域尺寸的关系" src="Detail/GetImg?filename=images/JSJY201904013_086.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 路径长度、搜索时间与邻域尺寸的关系  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201904013_086.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"><i>Fig</i>. 5 <i>Relationship between path length</i>, <i>searching time and</i><i>neighborhood matrix size</i></p>
+
+                </div>
+                <div class="p1">
+                    <p id="87">在应用中, 需要结合机器人的尺寸以及室内地图的分辨率, 计算出安全间隔对应的栅格数, 然后选择一个能满足安全性前提且路径较短的邻域矩阵。由于障碍搜索的改进方式侧重路径的安全性与最优性, 效率的提升是下一步启发函数的侧重点, 所以在选择矩阵时, 路径长度短比搜索时间短优先级高。</p>
+                </div>
+                <h4 class="anchor-tag" id="88" name="88">3.2 <b>启发函数的改进</b></h4>
+                <div class="p1">
+                    <p id="89">结合距离信息和角度信息本文设计的新启发函数如下:</p>
+                </div>
+                <div class="area_img" id="147">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JSJY201904013_14700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="92">其中:</p>
+                </div>
+                <div class="p1">
+                    <p id="93" class="code-formula">
+                        <mathml id="93"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>X</mi><msub><mrow></mrow><mn>1</mn></msub><mo>=</mo><mrow><mo>|</mo><mrow><mi>n</mi><mo>.</mo><mi>x</mi><mo>-</mo><mi>g</mi><mi>o</mi><mi>a</mi><mi>l</mi><mo>.</mo><mi>x</mi></mrow><mo>|</mo></mrow></mtd></mtr><mtr><mtd><mi>X</mi><msub><mrow></mrow><mn>2</mn></msub><mo>=</mo><mrow><mo>|</mo><mrow><mi>s</mi><mi>t</mi><mi>a</mi><mi>r</mi><mi>t</mi><mo>.</mo><mi>x</mi><mo>-</mo><mi>g</mi><mi>o</mi><mi>a</mi><mi>l</mi><mo>.</mo><mi>x</mi></mrow><mo>|</mo></mrow></mtd></mtr><mtr><mtd><mi>Y</mi><msub><mrow></mrow><mn>1</mn></msub><mo>=</mo><mrow><mo>|</mo><mrow><mi>n</mi><mo>.</mo><mi>y</mi><mo>-</mo><mi>g</mi><mi>o</mi><mi>a</mi><mi>l</mi><mo>.</mo><mi>y</mi></mrow><mo>|</mo></mrow></mtd></mtr><mtr><mtd><mi>Y</mi><msub><mrow></mrow><mn>2</mn></msub><mo>=</mo><mrow><mo>|</mo><mrow><mi>s</mi><mi>t</mi><mi>a</mi><mi>r</mi><mi>t</mi><mo>.</mo><mi>y</mi><mo>-</mo><mi>g</mi><mi>o</mi><mi>a</mi><mi>l</mi><mo>.</mo><mi>y</mi></mrow><mo>|</mo></mrow></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="94"><i>n</i>为当前计算节点;<i>start</i>为起始节点;<i>goal</i>为目标节点;<i>x</i>、 <i>y</i>分别是节点行列号; <i>p</i>、<i>q</i>、<i>w</i>是权值。</p>
+                </div>
+                <h4 class="anchor-tag" id="95" name="95">3.2.1 距离信息表达</h4>
+                <div class="p1">
+                    <p id="96">常用的距离估算方式有曼哈顿距离、切比雪夫距离、欧几里得距离。曼哈顿距离是标准A<sup>*</sup>的启发函数, 以<i>X</i>、<i>Y</i>方向上的距离差的绝对值之和作为估计距离, 意味着只允许向上下左右四个格网运动;切比雪夫距离取<i>X</i>、<i>Y</i>方向距离差中较大的为距离估算值, 即允许对角线运动, 且对角线运动和水平垂直运动的代价一致;欧几里得距离则是最常见的两点一线距离计算方式, 可用于沿任意角度移动的情况, 其比前两种距离都短, 在有障碍的情况下这种计算方式和实际距离会有较大差距。因为欧几里得距离和切比雪夫距离在障碍复杂环境下与真实代价的偏差较大, 所以本文选择在多障碍环境下距离估计更准的曼哈顿距离更为合适。</p>
+                </div>
+                <div class="p1">
+                    <p id="97">为避免邻域中代价相同而造成的路径不确定性和抖动现象, 将坐标差加权后再求和。通过设置十组权值比{1∶9, 2∶8, …, 9∶1}进行路径搜索, 最后确定权值比6∶10效率最高, 即<i>p</i>=6, <i>q</i>=10。</p>
+                </div>
+                <div class="p1">
+                    <p id="98">而分区加权是为了起到一定的方向引导作用。分区加权对引导作用的体现如图6所示, 以终点为坐标原点, 以<i>X</i>=<i>Y</i>作为分割线, 左下方区域中当前点到终点在<i>X</i>方向距离差大于在<i>Y</i>方向距离差, 此时定义<i>Y</i><sub>1</sub>的权重为大系数, 由于在选择计算点时优先选择代价小的节点, 故将会引导搜索方向朝<i>Y</i><sub>1</sub>小的方向前进 (箭头标识) , 同理分割线右上方的区域则会朝<i>X</i><sub>1</sub>小的方向前进 (箭头标识) , 从而引导搜索方向朝起止最短连线靠近。分析起止线左偏的情况同样适用。</p>
+                </div>
+                <div class="area_img" id="99">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201904013_099.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 距离函数的几何意义" src="Detail/GetImg?filename=images/JSJY201904013_099.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 距离函数的几何意义  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201904013_099.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 6 Geometric meaning of distance function</p>
+
+                </div>
+                <h4 class="anchor-tag" id="100" name="100">3.2.2 角度信息表达</h4>
+                <div class="p1">
+                    <p id="101">在式 (3) 中还加入了角度信息, 它是两个向量叉积结果的模, 这两个向量分别是起点到终点的向量和当前点到终点的向量。</p>
+                </div>
+                <div class="area_img" id="102">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201904013_102.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 角度表达式的几何意义" src="Detail/GetImg?filename=images/JSJY201904013_102.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 角度表达式的几何意义  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201904013_102.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"><i>Fig</i>. 7 <i>Geometric meaning of function of angle</i></p>
+
+                </div>
+                <div class="p1">
+                    <p id="103" class="code-formula">
+                        <mathml id="103"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>c</mi><mi>r</mi><mi>o</mi><mi>s</mi><mi>s</mi><mo>=</mo><mrow><mo>|</mo><mrow><mi mathvariant="bold-italic">A</mi><mi mathvariant="bold-italic">B</mi></mrow><mo>|</mo></mrow><mo>*</mo><mrow><mo>|</mo><mrow><mi mathvariant="bold-italic">C</mi><mi mathvariant="bold-italic">B</mi></mrow><mo>|</mo></mrow><mo>*</mo><mrow><mi>sin</mi></mrow><mspace width="0.25em" /><mi>θ</mi><mo>=</mo><mrow><mo>|</mo><mrow><mi mathvariant="bold-italic">A</mi><mi mathvariant="bold-italic">B</mi></mrow><mo>|</mo></mrow><mo>*</mo><mrow><mo>|</mo><mrow><mi mathvariant="bold-italic">C</mi><mi mathvariant="bold-italic">D</mi></mrow><mo>|</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>4</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="104">其中:角度信息表达<i>cross</i>是依据叉积计算获取的;通常情况下起止点距离|<b><i>AB</i></b>|是常量;而|<b><i>CD</i></b>|是随着两向量夹角变化而变化的量, 当两者平行时|<b><i>CD</i></b>|达最小值, 当两者垂直时|<b><i>CD</i></b>|达最大值, 它很好地以距离的形式反映了两者间的角度关系。因此, 在启发函数中加入角度信息变量<i>cross</i>可诱导A<sup>*</sup>算法偏向拓展分布在起始点到目标点连线附近的节点。</p>
+                </div>
+                <div class="p1">
+                    <p id="105">此外, 因为<i>cross</i>的量纲是距离的平方, 前文提及过, <i>g</i> (<i>n</i>) 和<i>h</i> (<i>n</i>) 必须要保持量纲平衡, 不然可能会导致<i>g</i> (<i>n</i>) 或<i>h</i> (<i>n</i>) 的失效。本该对<i>cross</i>作开方然后叠加到<i>h</i> (<i>n</i>) 中, 考虑到开方对计算机而言是高复杂度的计算方式, 所以选择乘上系数<i>m</i>来达到近似开方的效果。<mathml id="106"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>m</mi><mo>*</mo><mi>c</mi><mi>r</mi><mi>o</mi><mi>s</mi><mi>s</mi><mo>=</mo><msqrt><mrow><mi>c</mi><mi>r</mi><mi>o</mi><mi>s</mi><mi>s</mi></mrow></msqrt></mrow></math></mathml>, 即<mathml id="107"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>m</mi><mo>=</mo><mn>1</mn><mo>/</mo><msqrt><mrow><mi>c</mi><mi>r</mi><mi>o</mi><mi>s</mi><mi>s</mi></mrow></msqrt></mrow></math></mathml>本文实验地图为600×600像素, 故本文实验<i>cross</i><sub>max</sub>=360 000经计算预估<i>m</i>≈0.001 7。由于<i>m</i>是递减函数, 随着<i>L</i>增大而缩小。且<i>cross</i>最大值位于100 000～1 000 000, 根据单调递减函数特性, 可知对应<i>m</i>阈值为[0.001, 0.003]。</p>
+                </div>
+                <div class="p1">
+                    <p id="108">但由于式 (3) 中距离信息中进行了加权操作, 为了保持角度信息和距离信息贡献量一致, 取距离权值6, 10的平均值8对角度信息进行操作, 即<i>w</i>=8*<i>m</i>。故<i>w</i>预估值为0.013 6, 阈值为[0.008, 0.024]。通过二分法, 进行实验, 最终确定<i>w</i>为0.014, 与预估值相近。</p>
+                </div>
+                <h3 id="109" name="109" class="anchor-tag">4 实验与结果分析</h3>
+                <div class="p1">
+                    <p id="110">为了验证本文算法的可行性和有效性, 基于<i>Matlab</i>2017<i>a</i>环境进行仿真实验。将本文算法与传统<i>A</i><sup>*</sup>算法、双向时效<i>A</i><sup>*</sup>算法<citation id="209" type="reference"><link href="184" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>以及提升安全性的文献<citation id="210" type="reference">[<a class="sup">16</a>]</citation>算法进行对比, 分析定性和定量结果。实验中本文算法的障碍搜索方式采用12邻域十字搜索矩阵 (<b><i>S</i></b><sub>12</sub>) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="111">图8是本文算法与传统A<sup>*</sup>算法路径效果的定性对比:传统A<sup>*</sup>算法路径紧贴障碍物, 规划搜索范围大;改进其障碍搜索方式后, 路径与障碍物间有了安全间隔 (浅灰色区域) , 且搜索范围 (深灰色区域) 有所缩减, 主要缩减量体现在靠近障碍物的区域。在此基础上, 进一步改良启发函数后获取的路径, 在无障时基本走两点间最短直线, 在遇障时以小短折线形式绕过障碍, 与原先随机转向相比, 更加契合人类思维。与此同时, 发现搜索范围明显缩小了, 表明新启发函数的导向能力更强。</p>
+                </div>
+                <div class="area_img" id="112">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201904013_112.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图8 改进算法前后的定性效果对比" src="Detail/GetImg?filename=images/JSJY201904013_112.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图8 改进算法前后的定性效果对比  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201904013_112.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 8 Comparison of path planning results before and after improvement</p>
+
+                </div>
+                <div class="p1">
+                    <p id="113">表2是算法改进前后规划效率的定量对比。与传统A<sup>*</sup>算法相比, 本文路径长度增加了6.63%, 这主要消耗在保证路径安全性上 (增加了6.16%) , 是为了避开障碍物才产生的路径长度增加效应。除此项性能降低外, 搜索栅格范围缩小66.55%, 体现了本文算法搜索方向聚拢效果增强;操作总次数减少了37.93%, 体现出搜索方向的引导效果好, 减少了需要比较计算的节点数;搜索耗费时间降低了28.07%。</p>
+                </div>
+                <div class="p1">
+                    <p id="114">本文算法最大的特点是保证了路径安全性, 目前A<sup>*</sup>优化算法中少有研究考虑路径安全性问题, 而这对机器人导航来说这至关重要。文献<citation id="211" type="reference">[<a class="sup">16</a>]</citation>提出了一种采用优先级的子节点生成策略来避免路径穿过障碍物栅格顶点, 效果如图9 (b) 所示。该算法得到的路径所在栅格依然与障碍物为相邻单元格, 并无间隔。在实际应用中, 真实地图的分辨率往往远小于机器人的实际体积, 因此依然存在很大的安全隐患。且文献<citation id="212" type="reference">[<a class="sup">16</a>]</citation>提出的优先级策略从一定程度上加大了一些计算量:当前点<i>N</i>的上下左右为一级节点, 对角线为二级节点。二级节点是否扩展除了要判断其自身是否为障碍物外, 还需要考虑相邻一级节点是否为障碍物。而本文算法不仅能够保证路径整体与障碍物间有空闲单元格 (如图9 (c) ) , 还减少了算法的扩展节点。此外, 间格的多少可以通过改变障碍邻域搜索矩阵大小来控制。因此可以满足不同机器人尺寸和不同栅格地图分辨率的应用需求。</p>
+                </div>
+                <div class="p1">
+                    <p id="115">此外, 本文算法的效率在复杂大地图环境下有一定的优势。文献<citation id="213" type="reference">[<a class="sup">19</a>]</citation>提出了一种双向时效A<sup>*</sup>算法, 并采用多近邻栅格距离计算方案, 以达到提高效率、平滑路径的效果。表3是双向时效A<sup>*</sup>算法和本文算法分别与传统A<sup>*</sup>算法效率对比的结果。文献<citation id="214" type="reference">[<a class="sup">19</a>]</citation>中设立了5个实验场景 (表3中的实验1～5) , 分析表3可知该算法相对传统A<sup>*</sup>算法, 计算效率显著提高, 但也有一定的局限性。首先对比实验1～3, 发现该算法对椭圆障碍的搜索效率远大于对矩形障碍。对比实验3和4, 发现随着地图尺寸增大, 算法效率提升效果降低。说明该算法的高效率特性需要建立在一定的前提下, 对障碍类型和地图尺寸有一定的要求。</p>
+                </div>
+                <div class="area_img" id="116">
+                    <p class="img_tit"><b>表</b>2 <b>改进</b>A<sup>*</sup><b>算法的定量性能</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Tab. 2 Performance of traditional A<sup>*</sup> algorithm and proposed improved A<sup>*</sup> algorithm</p>
+                    <p class="img_note"></p>
+                    <table id="116" border="1"><tr><td><br />算法</td><td>路径长度</td><td>进栈次数</td><td>出栈次数</td><td>总操作次数</td><td>搜索范围</td><td>搜索时间/s</td></tr><tr><td><br />传统A<sup>*</sup>算法</td><td>211</td><td>11 333</td><td>11 814</td><td>23 147</td><td>9 723</td><td>1.117 992</td></tr><tr><td><br />本文算法 (仅优化障碍搜索) </td><td>224</td><td>9 862</td><td>10 082</td><td>19 944</td><td>7 957</td><td>0.963 896</td></tr><tr><td><br />本文算法 (优化障碍搜索+启发函数) </td><td>225</td><td>6 891</td><td>7 475</td><td>14 366</td><td>3 252</td><td>0.804 187</td></tr><tr><td><br />本文算法 (优化障碍搜索+启发函数) 比<br />传统A<sup>*</sup>算法性能改变比例</td><td>6.63%</td><td>-39.19%</td><td>-36.72%</td><td>-37.93%</td><td>-66.55%</td><td>-28.07%</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="117">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201904013_117.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图9 不同改进算法路径安全性改进效果对比" src="Detail/GetImg?filename=images/JSJY201904013_117.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图9 不同改进算法路径安全性改进效果对比  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201904013_117.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 9 Comparison of path security among different improved A<sup>*</sup> algorithms</p>
+
+                </div>
+                <div class="area_img" id="118">
+                    <p class="img_tit"><b>表</b>3 <b>不同</b>A<sup>*</sup><b>算法的效率对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Tab. 3 Performance of different A<sup>*</sup> algorithms</p>
+                    <p class="img_note"></p>
+                    <table id="118" border="1"><tr><td>算法</td><td>实验<br />序号</td><td>地图大小 (单元格) </td><td>障碍物组成</td><td>复杂度</td><td>与传统A<sup>*</sup>算法<br />相比的速度提升/%</td></tr><tr><td rowspan="5"><br />双向时效A<sup>*</sup>算法<sup>[19]</sup></td><td>1</td><td>100×100</td><td>1个矩形</td><td>低</td><td>76.85</td></tr><tr><td><br />2</td><td>100×100</td><td>2个矩形</td><td>低</td><td>52.79</td></tr><tr><td><br />3</td><td>100×100</td><td>1大椭圆+2小椭圆</td><td>低</td><td>93.90</td></tr><tr><td><br />4</td><td>500×500</td><td>1大椭圆+2小椭圆</td><td>低</td><td>64.39</td></tr><tr><td><br />5</td><td>500×500</td><td>1个矩形+2个椭圆</td><td>中低</td><td>36.11</td></tr><tr><td><br />本文算法</td><td><br />6</td><td>600×600</td><td>复杂化室内环境 (图8) </td><td>高</td><td>28.07</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="119">在实验5中, 以大地图和中等复杂程度的障碍物为实验环境, 文献<citation id="215" type="reference">[<a class="sup">19</a>]</citation>算法计算速度比传统A<sup>*</sup>算法提高36.11%。而本文以600×600的大地图和高复杂程度的障碍为实验环境 (图8) , 较传统A<sup>*</sup>算法, 效率提高28.07%。因此, 而文献<citation id="216" type="reference">[<a class="sup">19</a>]</citation>算法在简单小地图环境里表现突出, 而本文算法更合适复杂大地图的应用场景。</p>
+                </div>
+                <div class="p1">
+                    <p id="120">综合评价, 本文算法虽然在路径长度上有所牺牲, 但保证了路径的安全性, 能够在一定程度上避免机器人运行过程中发生碰撞;与此同时, 算法的效率得到了提升, 适用于室内多U型障碍的应用场景, 使得机器人在遇到动态障碍时再次规划实时性更好。</p>
+                </div>
+                <h3 id="121" name="121" class="anchor-tag">5 结语</h3>
+                <div class="p1">
+                    <p id="122">本文针对传统<i>A</i><sup>*</sup>算法在室内机器人路径规划应用中的问题进行改进:首先, 采用十字多邻域矩阵搜索障碍解决原先忽略机器人大小造成的安全性问题;然后, 设计新启发函数, 引入分区加权距离信息和角度信息, 提高复杂多<i>U</i>型障碍的室内环境下的搜索效率, 以缩短遇到动态障碍再次规划所耗费的时间。仿真实验结果表明:本文算法可通过选择不同尺寸的搜索矩阵来自定义路径与障碍物的间距, 方便地解决了不同尺寸机器人安全路径的问题;且在复杂大环境下计算效率得到提高, 使得遇到动态障碍时再次规划的灵敏度提升。下一步工作将会考虑删除路径中的冗余节点, 以进一步提高机器人运行效率。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="148">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017134318.nh&amp;v=MDE2NTMzenFxQnRHRnJDVVI3cWZadVpzRnlEZ1Y3dktWRjI2R2JLN0d0TE5wNUViUElRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b>王丽苹.机器人技术变迁及产业发展战略研究[D].天津, 天津大学, 2016:1. (WANG L P.The study of development strategy and technological change of robot industry[D].Tianjin:Tianjin University, 2016:1.) 
+                            </a>
+                        </p>
+                        <p id="150">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017739684.nh&amp;v=MDAxNTE0TzN6cXFCdEdGckNVUjdxZlp1WnNGeURnVjd2S1ZGMjZHYlM3RjlmRXE1RWJQSVFLREg4NHZSNFQ2ajU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b>康凯.基于机器视觉的移动机器人定位与三维地图重建方法研究[D].哈尔滨:哈尔滨工业大学, 2017:1-2. (KANG K.Research on localization and mapping of mobile robot based on machine vision[D].Harbin:Harbin Institute of Technology, 2017:1-2.) 
+                            </a>
+                        </p>
+                        <p id="152">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=&amp;quot;Multi-objective approach for robot motion planning in search asks.&amp;quot;">
+
+                                <b>[3]</b>JEDDISARAVI K, ALOTAPPEH R J, PIMEMTA L C A, et al.Multi-objective approach for robot motion planning in search tasks[J].Applied Intelligence, 2016, 45 (2) :305-321.
+                            </a>
+                        </p>
+                        <p id="154">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SCLH201502018&amp;v=MDA1NTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeURnVjd2S05pN0hackc0SDlUTXJZOUViSVE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b>彭利民.基于广度优先搜索的虚拟网络映射算法[J].四川大学学报 (工程科学版) , 2015, 47 (2) :117-122. (PENG L M.Virtual network embedding algorithm based on breadth-first search[J].Journal of Sichuan University (Engineering Science Edition) , 2015, 47 (2) :117-122.) 
+                            </a>
+                        </p>
+                        <p id="156">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JQRR201205013&amp;v=MjE1OTlLTHp6WmZMRzRIOVBNcW85RVo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5RGdWN3Y=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b>刘艳丽, 樊晓平, 张恒.基于启发式搜索的移动机器人主动定位[J].机器人, 2012, 34 (5) :590-595. (LIU Y L, FAN X P, ZHANG H.Heuristic search assisted active localization for mobile robot[J].Robot, 2012, 34 (5) :590-595.) 
+                            </a>
+                        </p>
+                        <p id="158">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HZDX201304020&amp;v=MDkyMzc3dktMVGZQZHJHNEg5TE1xNDlIWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlEZ1Y=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b>房佳, 杜震洪, 张丰, 等.应用于城市道路网的启发式深度优先有向搜索算法[J].浙江大学学报 (理学版) , 2013, 40 (4) :469-474. (FANG J, DU Z H, ZHANG F, et al.Heuristic depthfirst directional algorithm for shortest path searching in traffic networks[J].Journal of Zhejiang University (Science Edition) , 2013, 40 (4) :469-474.) 
+                            </a>
+                        </p>
+                        <p id="160">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Best-first heuristic search for multicore machines">
+
+                                <b>[7]</b>BURNS E, LEMONS S, ZHOU R, et al.Best-first heuristic search for multi-core machines[J].Journal of Artificial Intelligence Research, 2010, 39 (1) :689-743.
+                            </a>
+                        </p>
+                        <p id="162">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14123100035260&amp;v=MTY1MzM5UFBybzlGWk9nS0RubzVvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0RmlubFVyM0lLRnNRYmhBPU5pZk9mYks4SA==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b>FRANTISEK D, ANDREJ B.Path planning with modified a star algorithm for a mobile robot[J].Procardia Engineering, 2014, 96 (1) :59-69.
+                            </a>
+                        </p>
+                        <p id="164">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJDG&amp;filename=SJDG7D9A6ABE1664CB55C0BF8F22076E4EE5&amp;v=Mjc4NzJ4S289TmlmUGFiVE1GNkRLM3Ywd1plMEpDQTlMeWhOZzZrMExRQW5ncmhJeWY4ZVFNTSthQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQnJMVTA1dHBoekwyNw==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b>UTTENDORF S, EILERT B, OVERMEYER L.Combining a fuzzy inference system with an A<sup>*</sup>algorithm for the automated generation of roadmaps for automated guided vehicles[J].at-Automatisierungstechnik, 2017, 65 (3) :189-197.
+                            </a>
+                        </p>
+                        <p id="166">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Sequential classification of palm gestures based on A*algorithm and MLP neural network for quadrocopter control">
+
+                                <b>[10]</b>WODZINSKI M, KRZYZANOWSKA A.Sequential classification of palm gestures based on A<sup>*</sup>algorithm and MLP neural network for quadrocopter control[J].Metrology and Measurement Systems, 2017, 24 (2) :265-276.
+                            </a>
+                        </p>
+                        <p id="168">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JZCK201101051&amp;v=MTM0NTFNcm85QVpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5RGdWN3ZLTHpmSVpiRzRIOUQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b>张晓冉, 居鹤华.采用改进D<sup>*</sup>Lite算法的自主移动机器人路径规划[J].计算机测量与控制, 2011, 19 (1) :155-157. (ZHANG X R, JU H H.Developed D<sup>*</sup>Lite algorithm for path planning of autonomous mobile robots[J].Computer Measurement&amp;Control, 2011, 19 (1) :155-157.) 
+                            </a>
+                        </p>
+                        <p id="170">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KJXX201131059&amp;v=MTY5MTZWN3ZLTGlmVGRyRzRIOURQcm85QWJZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5RGc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b>徐美清, 孙晨亮.基于栅格地图的遗传算法路径规划[J].科技信息, 2011 (31) :76-77. (XU M Q, SUN C L.The occupancy grid map-building with neural network[J].Science&amp;Technology Information, 2011 (31) :76-77.) 
+                            </a>
+                        </p>
+                        <p id="172">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JXGY201520010&amp;v=MTk3ODl1WnNGeURnVjd2S0x6WE1kN0c0SDlUT3I0OUVaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b>李天旭, 陈广大.基于改进遗传算法的室内移动机器人路径规划[J].制造业自动化, 2015, 37 (20) :31-35. (LI T X, CHEN G D.Indoor mobile robot path planning based on improved genetic algorithm[J].Manufacturing Automation, 2015, 37 (20) :31-35.) 
+                            </a>
+                        </p>
+                        <p id="174">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QHXB201208013&amp;v=MTEyMjRiTEc0SDlQTXA0OUVaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeURnVjd2S05DWFQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b>王殿君.基于改进A<sup>*</sup>算法的室内移动机器人路径规划[J].清华大学学报 (自然科学版) , 2012, 52 (8) :1085-1089. (WANG D J.Indoor mobile-robot path planning based on an improved A<sup>*</sup>algorithm[J].Journal of Tsinghua University (Science and Technology) , 2012, 52 (8) :1085-1089.) 
+                            </a>
+                        </p>
+                        <p id="176">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JQRR201405015&amp;v=MzE4NzZZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeURnVjd2S0x6elpmTEc0SDlYTXFvOUU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b>辛煜, 梁华为, 杜明博, 等.一种可搜索无限个邻域的改进A<sup>*</sup>算法[J].机器人, 2014, 36 (5) :627-633. (XIN Y, LIANG H W, DU M B, et al.An improved A<sup>*</sup>algorithm for searching infinite neighborhoods[J].Robot, 2014, 36 (5) :627-633.) 
+                            </a>
+                        </p>
+                        <p id="178">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GWDZ201419031&amp;v=MTYwNzN5RGdWN3ZLSWpyUGRMRzRIOVhOcG85R1pZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Y=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b>顾辰.改进的A<sup>*</sup>算法在机器人路径规划中的应用[J].电子设计工程, 2014, 22 (19) :96-98, 102. (GU C.Application of improved A<sup>*</sup>algorithm in robot path planning[J].Electronic Design Engineering, 2014, 22 (19) :96-98, 102.) 
+                            </a>
+                        </p>
+                        <p id="180">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Near Optimal Hierarchical Path-finding">
+
+                                <b>[17]</b>BOTEA A, MULLER M, SCHAEFFER J.Near optimal hierarchical path-finding[J].Journal of Game Development, 2004, 1 (1) :7-28.
+                            </a>
+                        </p>
+                        <p id="182">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Computing the shortest path:A*search meets graph theory">
+
+                                <b>[18]</b>GOLDBERG A V, HARRELSON C.Computing the shortest path:A<sup>*</sup>search meets graph theory[C]//Proceedings of the Sixteenth Annual ACM-SIAM Symposium on Discrete Algorithms.New York:ACM, 2005:156-165.
+                            </a>
+                        </p>
+                        <p id="184">
+                            <a id="bibliography_19" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201903031&amp;v=MTIxNzFzRnlEZ1Y3dktMejdTWkxHNEg5ak1ySTlHWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[19]</b>高民东, 张雅妮, 朱凌云.应用于机器人路径规划的双向时效A<sup>*</sup>算法[J].计算机应用研究, 2019, 36 (3) :792-795, 800. (GAO M D, ZHANG Y N, ZHU L Y.Bidirectional time-efficient A<sup>*</sup>algorithm for robot path planning[J].Application Research of Computers, 2019, 36 (3) :792-795, 800.) 
+                            </a>
+                        </p>
+                        <p id="186">
+                            <a id="bibliography_20" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZKYB201304017&amp;v=MzEwNDI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeURnVjd2S1B5YlNiTEc0SDlMTXE0OUVZNFFLREg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[20]</b>余翀, 邱其文.基于栅格地图的分层式机器人路径规划算法[J].中国科学院大学学报, 2013, 30 (4) :528-538, 546. (YU C, QIU Q W.Hierarchical robot path planning algorithm based on grid map[J].Journal of University of Chinese Academy of Sciences, 2013, 30 (4) :528-538, 546.) 
+                            </a>
+                        </p>
+                        <p id="188">
+                            <a id="bibliography_21" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGXJ201802015&amp;v=MTY0MDVSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeURnVjd2S1B5clRaTEc0SDluTXJZOUVZWVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[21]</b>程向红, 祁艺.基于栅格法的室内指示路径规划算法[J].中国惯性技术学报, 2018, 26 (2) :236-240, 267. (CHENG XH, QI Y.Indoor indicator path planning algorithm based on grid method[J].Journal of Chinese Inertial Technology, 2018, 26 (2) :236-240, 267.) 
+                            </a>
+                        </p>
+                        <p id="190">
+                            <a id="bibliography_22" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYY201705014&amp;v=MjI1MDBMejdTZDdHNEg5Yk1xbzlFWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlEZ1Y3dks=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[22]</b>朱爱斌, 刘洋洋, 何大勇, 等.解决路径规划局部极小问题的势场栅格法[J].机械设计与研究, 2017, 33 (5) :46-50. (ZHU A B, LIU Y Y, HE D Y, et al.An improved potential field-grid method for local minimization problem in path planning[J].Machine Design and Research, 2017, 33 (5) :46-50.) 
+                            </a>
+                        </p>
+                        <p id="192">
+                            <a id="bibliography_23" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000058715&amp;v=MDA3ODZkR2VycVFUTW53WmVadEZpbmxVcjNJS0ZzUWJoQT1OaWZJWTdLN0h0ak5yNDlGWk80SEMzMDhvQk1UNlQ0UFFIL2lyUg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[23]</b>PETER E, NILSSON J, RAHEAL B.A formal basis for the heuristic determination of minimum cost paths[J].ACM SIGART Bulletin, 1972, 4 (37) :28-29.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJY201904013" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201904013&amp;v=MjUxNjM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5RGdWN3ZLTHo3QmQ3RzRIOWpNcTQ5RVo0UUtESDg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="3" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

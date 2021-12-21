@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130533966436250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201905048%26RESULT%3d1%26SIGN%3d2Dbi7jg18qy72HB7ekRZk5%252bOyNw%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201905048&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201905048&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201905048&amp;v=MDM0NzVtVWIvUEx6N0JiYkc0SDlqTXFvOUJiSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTM=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#33" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#38" data-title="1 停车数据准备 ">1 停车数据准备</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#39" data-title="1.1 停车点提取">1.1 停车点提取</a></li>
+                                                <li><a href="#47" data-title="1.2 后续点提取">1.2 后续点提取</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#56" data-title="2 停车点聚类 ">2 停车点聚类</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#131" data-title="3 路口确认 ">3 路口确认</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#139" data-title="4 实验结果与分析 ">4 实验结果与分析</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#148" data-title="5 结束语 ">5 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#46" data-title="&lt;b&gt;图1 停车点分布示意图&lt;/b&gt;"><b>图1 停车点分布示意图</b></a></li>
+                                                <li><a href="#51" data-title="&lt;b&gt;图2 后续点分布示意图&lt;/b&gt;"><b>图2 后续点分布示意图</b></a></li>
+                                                <li><a href="#63" data-title="&lt;b&gt;图3 可达组示意图&lt;/b&gt;"><b>图3 可达组示意图</b></a></li>
+                                                <li><a href="#66" data-title="&lt;b&gt;图4 参照点选择示意图&lt;/b&gt;"><b>图4 参照点选择示意图</b></a></li>
+                                                <li><a href="#71" data-title="&lt;b&gt;图5 3倍&lt;i&gt;eps&lt;/i&gt;领域与参照点示意图&lt;/b&gt;"><b>图5 3倍<i>eps</i>领域与参照点示意图</b></a></li>
+                                                <li><a href="#133" data-title="&lt;b&gt;图6 聚类结果示意图&lt;/b&gt;"><b>图6 聚类结果示意图</b></a></li>
+                                                <li><a href="#142" data-title="&lt;b&gt;图7 算法聚类结果的时间对比&lt;/b&gt;"><b>图7 算法聚类结果的时间对比</b></a></li>
+                                                <li><a href="#144" data-title="&lt;b&gt;图8 聚类结果对比&lt;/b&gt;"><b>图8 聚类结果对比</b></a></li>
+                                                <li><a href="#147" data-title="&lt;b&gt;图9 路口检测结果示意图&lt;/b&gt;"><b>图9 路口检测结果示意图</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" BIAGIONI J, ERIKSSON J.Inferring road maps from Transportations Research Record global positioning system traces[J].Journal of Transportations Research Board, 2012, 2291 (1) :61-71." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Inferring road maps from Transportations Research Record global positioning system traces">
+                                        <b>[1]</b>
+                                         BIAGIONI J, ERIKSSON J.Inferring road maps from Transportations Research Record global positioning system traces[J].Journal of Transportations Research Board, 2012, 2291 (1) :61-71.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" SHI Wenhuan, SHEN Shuhan, LIU Yuncai.Automatic generation of road network map from massive GPS vehicle trajectories[C]//Proceedings of the 12th International IEEE Conference on Intelligent Transportation Systems.Washington D.C., USA:IEEE Press, 2009:1-6." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Automatic generation of road network map from massive GPS,vehicle trajectories">
+                                        <b>[2]</b>
+                                         SHI Wenhuan, SHEN Shuhan, LIU Yuncai.Automatic generation of road network map from massive GPS vehicle trajectories[C]//Proceedings of the 12th International IEEE Conference on Intelligent Transportation Systems.Washington D.C., USA:IEEE Press, 2009:1-6.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" KARAGIORGOU S, PFOSER D.On vehicle tracking data-based road network generation[C]//Proceedings of the 20th International Conference on Advances in Geographic Information Systems.New York, USA:ACM Press, 2012:89-98." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=On vehicle tracking data-based road network generation">
+                                        <b>[3]</b>
+                                         KARAGIORGOU S, PFOSER D.On vehicle tracking data-based road network generation[C]//Proceedings of the 20th International Conference on Advances in Geographic Information Systems.New York, USA:ACM Press, 2012:89-98.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" VLAHOGIANNI E I, KARLAFTIS M G, GOLIAS J C.Optimized and meta-optimized neural networks for short-term traffic flow prediction:a genetic approach[J].Transportation Research Part C:Emerging Technologies, 2005, 13 (3) :211-234." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501418690&amp;v=Mjk2OTFRVE1ud1plWnVIeWptVUxuSUpWMFdhaFU9TmlmT2ZiSzdIdEROcW85RVlPb0hDblU1b0JNVDZUNFBRSC9pclJkR2VycQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         VLAHOGIANNI E I, KARLAFTIS M G, GOLIAS J C.Optimized and meta-optimized neural networks for short-term traffic flow prediction:a genetic approach[J].Transportation Research Part C:Emerging Technologies, 2005, 13 (3) :211-234.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" SYBERFELDT A, PERSSON L.Using heuristic search for initiating the genetic population in simulation-based optimization of vehicle routing problems[C]//Proceedings of IEEE ISC’09.Washington D.C., USA:IEEE Press, 2009:524-536." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Using heuristic search for initiating the genetic population in simulation-based optimization of vehicle routing problems">
+                                        <b>[5]</b>
+                                         SYBERFELDT A, PERSSON L.Using heuristic search for initiating the genetic population in simulation-based optimization of vehicle routing problems[C]//Proceedings of IEEE ISC’09.Washington D.C., USA:IEEE Press, 2009:524-536.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 巩现勇, 李靖涵.一种道路路口和拐点的识别与重要性度量方法[J].测绘与空间地理信息, 2018, 41 (2) :5-9." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DBCH201802002&amp;v=MjI4NDdlWmVSb0Z5M21VYi9QSVMvSVpyRzRIOW5Nclk5RlpvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE8=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         巩现勇, 李靖涵.一种道路路口和拐点的识别与重要性度量方法[J].测绘与空间地理信息, 2018, 41 (2) :5-9.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 王美玲, 潘允辉.基于GIS与约束条件下的最优路径规划研究 [J].北京理工大学学报, 2016, 36 (8) :851-856." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJLG201608014&amp;v=MDY0NDR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkzbVViL1BKeWZIYWJHNEg5Zk1wNDlFWUlRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         王美玲, 潘允辉.基于GIS与约束条件下的最优路径规划研究 [J].北京理工大学学报, 2016, 36 (8) :851-856.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" ZOURLIDOU S, SESTER M.Intersection detection based on qualitative spatial reasoning on stopping point clusters[C]//Proceedings of International Conference on Remote Sensing and Spatial Information Sciences.Washington D.C., USA:IEEE Press, 2016:12-19." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Intersection detection based on qualitative spatial reasoning on stopping point clusters">
+                                        <b>[8]</b>
+                                         ZOURLIDOU S, SESTER M.Intersection detection based on qualitative spatial reasoning on stopping point clusters[C]//Proceedings of International Conference on Remote Sensing and Spatial Information Sciences.Washington D.C., USA:IEEE Press, 2016:12-19.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" 谭祥爽, 王静.基于浮动车数据的路口探测方法[J].地理与地理信息科学, 2015, 31 (5) :34-38." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DLGT201505008&amp;v=MDc4NDdlWmVSb0Z5M21VYi9QSVNITWVyRzRIOVRNcW85RmJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE8=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         谭祥爽, 王静.基于浮动车数据的路口探测方法[J].地理与地理信息科学, 2015, 31 (5) :34-38.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" WANG Jing, WANG Chaoliang.Automatic intersection and traffic rule detection by mining motor-vehicle GPS trajectories[C]//Proceedings of International Conference on Computers, Environment and Urban Systems.Washington D.C., USA:IEEE Press, 2017:19-29." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Automatic intersection and traffic rule detection by mining motor-vehicle GPS trajectories">
+                                        <b>[10]</b>
+                                         WANG Jing, WANG Chaoliang.Automatic intersection and traffic rule detection by mining motor-vehicle GPS trajectories[C]//Proceedings of International Conference on Computers, Environment and Urban Systems.Washington D.C., USA:IEEE Press, 2017:19-29.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" WANG Jing, RUI Xiaoping, SONG Xiaofeng.A novel approach for generating routable road maps from vehicle GPS traces[J].International Journal of Geographical Information Science, 2015, 29 (1) :69-91." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=STJD&amp;filename=STJD15030900000698&amp;v=MTY2NzVGWk9zUENuVXhvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMbklKVjBXYWhVPU5qbkJhcks5SHRMTXBvOQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         WANG Jing, RUI Xiaoping, SONG Xiaofeng.A novel approach for generating routable road maps from vehicle GPS traces[J].International Journal of Geographical Information Science, 2015, 29 (1) :69-91.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" XIE Xingzhe, PHILIPS W, VEELAERT P.Road network inference from GPS traces using DTW algorithm[C]//Proceedings of the 17th IEEE International Conference on Intelligent Transportation Systems.Washington D.C., USA:IEEE Press, 2014:906-911." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Road network inference from GPS traces using DTW algorithm">
+                                        <b>[12]</b>
+                                         XIE Xingzhe, PHILIPS W, VEELAERT P.Road network inference from GPS traces using DTW algorithm[C]//Proceedings of the 17th IEEE International Conference on Intelligent Transportation Systems.Washington D.C., USA:IEEE Press, 2014:906-911.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" FATHI A, KRUMM J.Detecting road intersections from GPS traces[C]//Proceedings of International Conference on Geographic Information Science.Berlin, Germany:Springer, 2010:56-69." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Detecting road intersections from GPS traces">
+                                        <b>[13]</b>
+                                         FATHI A, KRUMM J.Detecting road intersections from GPS traces[C]//Proceedings of International Conference on Geographic Information Science.Berlin, Germany:Springer, 2010:56-69.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" XIE Xingzhi, LIAO Wenzhi, AGHAJAN H, et al.A novel approach for detecting intersections from GPS traces[C]//Proceedings of IEEE International Geoscience and Remote Sensing Symposium.Washington D.C., USA:IEEE Press, 2016:1816-1819." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A novel approach for detecting intersections from gps traces">
+                                        <b>[14]</b>
+                                         XIE Xingzhi, LIAO Wenzhi, AGHAJAN H, et al.A novel approach for detecting intersections from GPS traces[C]//Proceedings of IEEE International Geoscience and Remote Sensing Symposium.Washington D.C., USA:IEEE Press, 2016:1816-1819.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" KUMAR M, RAMA A, REDDY M.A fast DBSCAN clustering algorithm by accelerating neighbor searching using groups method[J].Pattern Recognition, 2016, 58:39-48." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJESE01FA2E23ECD15AF3C1585F01B53B6D5&amp;v=MzA5MzU4dm1BUW1UNTRRSHFVckJOSGZMSG1RODZhQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TjVod2J1OXdLOD1OaWZPZmNhNEg2ZTlyZnBIWjU1OGVIMA==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         KUMAR M, RAMA A, REDDY M.A fast DBSCAN clustering algorithm by accelerating neighbor searching using groups method[J].Pattern Recognition, 2016, 58:39-48.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(05),291-297 DOI:10.19678/j.issn.1000-3428.0052124            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于稀疏采样GPS轨迹数据的路口识别方法</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%88%E4%BA%9A%E7%8E%B2&amp;code=17509340&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陈亚玲</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%8C%83%E5%A4%AA%E5%8D%8E&amp;code=09210321&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">范太华</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E8%A5%BF%E5%8D%97%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&amp;code=0189969&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">西南科技大学计算机科学与技术学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>目前的路口识别算法多数在密集采样的全球定位系统 (GPS) 轨迹数据基础上, 采用车辆行驶方向转变作为依据进行路口识别。但稀疏采样的GPS轨迹数据由于采样时间间隔较长, 无法准确模拟出车辆行驶方向。为此, 针对交叉路口容易发生停车现象的特点, 提出一种GPS轨迹数据的路口识别方法。从稀疏采样的GPS轨迹数据中提取出行驶轨迹的停车点及其后续点作为研究对象, 依据改进GDBSCAN算法对提取出的停车点进行聚类, 判断停车事件发生的热区。运用提取出的后续点对热区进行连通性计算, 并根据连通性确定是否存在路口。实验结果表明, 该路口识别方法具有较好的识别能力, 且与DBSCAN算法相比, 聚类速度明显提高。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%A8%80%E7%96%8F%E9%87%87%E6%A0%B7&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">稀疏采样;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%87%BA%E7%A7%9F%E8%BD%A6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">出租车;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%85%A8%E7%90%83%E5%AE%9A%E4%BD%8D%E7%B3%BB%E7%BB%9F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">全球定位系统;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%BD%A8%E8%BF%B9%E6%95%B0%E6%8D%AE&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">轨迹数据;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%81%9C%E8%BD%A6%E7%82%B9&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">停车点;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%B7%AF%E5%8F%A3%E8%AF%86%E5%88%AB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">路口识别;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    陈亚玲 (1993—) , 女, 硕士研究生, 主研方向为数据挖掘、智慧交通;;
+                                </span>
+                                <span>
+                                    范太华, 副教授。E-mail: fan939@ 126. com;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-07-16</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>教育部人文社科基金“基于社交网络的涉核舆情挖掘关键技术研究” (17YJCZH260);</span>
+                    </p>
+            </div>
+                    <h1><b>Intersection Identification Method Based on Sparse Sampling GPS Trajectory Data</b></h1>
+                    <h2>
+                    <span>CHEN Yaling</span>
+                    <span>FAN Taihua</span>
+            </h2>
+                    <h2>
+                    <span>School of Computer Science and Technology, Southwest University of Science and Technology</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Most of the current intersection identification algorithms are based on densely sampled Global Positioning System (GPS) trajectory data, using the direction of vehicle travel as the basis for intersection identification.However, the sparsely sampled GPS trajectory data cannot accurately simulate the direction of travel of the vehicle due to the increase of sampling time.Therefore, this paper proposes an intersection identification method for sparsely sampled GPS trajectory data.It extracts the parking point and its subsequent points of the driving track are extracted from the sparsely sampled GPS trajectory data as the research object, and clusters the extracted parking points are clustered according to the improved GDBSCAN algorithm to determine the hot zone where the parking event occurs.This paper uses the extracted subseguent points are to calculate the connectivity of the hot zone, and determined the connectivity according to the connectivity.Experimental results show that the intersection identification method has better recognition ability, and the clustering speed is significantly improved compared with the DBSCAN algorithm.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=sparse%20sampling&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">sparse sampling;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=taxi&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">taxi;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Global%20Positioning%20System%20(GPS)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Global Positioning System (GPS) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=trajectory%20data&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">trajectory data;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=parking%20spot&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">parking spot;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=intersection%20identification&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">intersection identification;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-07-16</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="33" name="33" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="34">随着智慧城市概念的提出, 城市交通系统得到了更多的关注与发展, 越来越多的研究者开始对城市交通进行研究。由于全球定位系统 (Global Positioning System, GPS) 设备在过去几十年中的应用越来越广泛, 从各种道路使用者 (例如车辆驾驶员、骑车者和行人) 处获得地理数据变得更加容易。这种丰富的GPS轨迹数据推动了自动推断路线图的发展<citation id="150" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。根据GPS轨迹自动推断路线图可以更新现有地图<citation id="151" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>, 快速地绘制未开发的地理区域 (例如发展中国家) <citation id="152" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>, 并提供交通密度信息<citation id="153" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>, 尤其是路径规划和优化都需要提取道路拓扑<citation id="154" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>, 即交叉路口及其连通性。</p>
+                </div>
+                <div class="p1">
+                    <p id="35">目前存在的方法大多采用地理信息系统 (Geographic Information System, GIS) 数据或GPS数据进行路口识别。利用GIS数据进行路口识别的方法基本相同, 普遍采用从已有地图中下载的道路信息, 结合GIS软件提取出道路的交叉点, 交叉点即为路口潜在点, 然后通过阈值条件对路口进行筛选<citation id="163" type="reference"><link href="13" rel="bibliography" /><link href="15" rel="bibliography" /><sup>[<a class="sup">6</a>,<a class="sup">7</a>]</sup></citation>。多数研究人员结合速度阈值和移动方向的变化检测来自GPS轨迹的转弯样本。文献<citation id="155" type="reference">[<a class="sup">8</a>]</citation>通过对停车点和车辆行驶方向来识别路口, 该方法首先对检测出的停车点进行聚类, 然后根据各个簇中车辆行驶方向确定最靠近路口的停车点, 并结合多个方向的停车点确定路口位置和区域, 使用凝聚层次聚类方法将转弯样本聚类为相交节点。文献<citation id="156" type="reference">[<a class="sup">9</a>]</citation>根据曲率的变化提取出位于车辆航迹线的转弯线段部分, 采用网格将城区覆盖范围网格化, 统计位于每个单元格内的弯曲航迹曲线的数目, 计算网格密度值作为网格的属性值, 筛选密度值大于阈值的单元作为路口。文献<citation id="157" type="reference">[<a class="sup">10</a>]</citation>根据文献<citation id="158" type="reference">[<a class="sup">9</a>]</citation>原理来识别停车点。文献<citation id="159" type="reference">[<a class="sup">11</a>]</citation>通过检测车辆移动方向的改变来提取GPS轨迹线中存在的迹线交叉, 收敛或发散的地方称为冲突点, 冲突点密度较高的区域则被认为是路口。文献<citation id="160" type="reference">[<a class="sup">12</a>]</citation>检测道路使用者在固定距离上改变它们的移动方向的转折点, 并且使用类似于凝聚层次聚类方法的贪婪算法将转折点聚类成交叉点候选者。此外, 还有一些其他的方法, 如:文献<citation id="161" type="reference">[<a class="sup">13</a>]</citation>设计一个局部形状描述器来描述一个点周围的GPS轨迹分布, 然后利用真实路面的描述数据训练出一个划分路口点和非路口点的分类器;文献<citation id="162" type="reference">[<a class="sup">14</a>]</citation>根据不同车辆轨迹的汇合和分离提取出汇合点和分离点来进行路口检测。</p>
+                </div>
+                <div class="p1">
+                    <p id="36">以上方法多数采用车辆行驶方向的转变来确定路口, 但对于稀疏采样的GPS轨迹数据, 由于采样时间间隔较长, GPS点之间的距离较大, 模拟出的车辆行驶路线与真实的车辆行驶路线存在较大的差距。因此, 通过模拟路线进行路口检测意义不大。而文献<citation id="164" type="reference">[<a class="sup">11</a>]</citation>提出的方法则需要将整条轨迹中的GPS点遍历一次, 这一操作需要消耗大量的时间, 在数据量较大时不适用。</p>
+                </div>
+                <div class="p1">
+                    <p id="37">目前在路口识别方面的研究中, 多数采用的是密集采样的GPS数据, 较少发现针对稀疏采样数据的方法。因此, 本文根据交叉路口更容易发生停车现象这一特点, 提取出行驶轨迹中的停车点作为研究对象, 提出一种针对稀疏采样的GPS数据进行识别的方法, 并在UCI数据集上进行了实验验证。</p>
+                </div>
+                <h3 id="38" name="38" class="anchor-tag">1 停车数据准备</h3>
+                <h4 class="anchor-tag" id="39" name="39">1.1 停车点提取</h4>
+                <div class="p1">
+                    <p id="40">使用停车事件来检测交叉路口是基于车辆在路口比在其他区域更容易发生停车现象这一假设, 所以本文假设在交叉路口位置可以观察到停车事件群。由于GPS采样设备是在固定的时间间隔<i>t</i>进行一次数据采集, 因此可以根据车辆2个时间点的前后位置计算出车辆行驶距离<i>s</i>, 从而计算出车辆的行驶速度<i>v</i>=<i>s</i>/<i>t</i>。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">在稀疏采样的GPS轨迹数据中, 2个GPS数据点的时间间隔较长, 如果严格按照车辆行驶速度为零这一条件进行停车点检测, 那么很大一部分停车时间较短的点会被忽略。经过调查研究发现, 车辆起步后的极短时间内车速会达到5 km/h以上, 因此, 本文将车辆行驶速度不大于5 km/h的2个位置点之间视为发生了停车事件, 这2个位置点由于距离非常近可以任选其中一点作为停车点。</p>
+                </div>
+                <div class="p1">
+                    <p id="42">由于交通灯的原因, 车辆在路口会出现排队现象, 而队伍前后的车辆停车时间将出现较大差异。因此, 为避免重复提取车辆在同一路口的停车点, 以及排除因乘客到站所出现的停车现象, 特增加以下规则:</p>
+                </div>
+                <div class="p1">
+                    <p id="43">1) 若车辆轨迹中连续出现多个停车点, 则提取第1个停车点, 舍弃其他停车点。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">2) 若停车点出现在车辆轨迹的末尾, 则该处停车视为车辆由于到达目的地出现的停车现象, 不进行提取。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">按以上规则提取出的停车点如图1所示。</p>
+                </div>
+                <div class="area_img" id="46">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905048_046.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 停车点分布示意图" src="Detail/GetImg?filename=images/JSJC201905048_046.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 停车点分布示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905048_046.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="47" name="47">1.2 后续点提取</h4>
+                <div class="p1">
+                    <p id="48">由于GPS数据采样时间间隔较长, 通过模拟车辆行驶轨迹来确定车辆行驶方向存在较大误差。为了确定车辆出现停车现象后的行驶方向, 本文从车辆行驶轨迹中提取出停车点后的第1个点作为车辆的后续点, 通过后续点的位置来确定停车事件群之间的车辆来往情况。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">由于GPS采样时间间隔较长及车辆行驶速度的差异, 使得车辆后续点在地图上较为分散, 并且其中存在了2种较为极端的情况。车辆在路口会出现排队现象, 因此其停车点后车速会出现极大的差距, 距离路口较近的车辆车速提升较快, 而排在较远的车辆会在一定时间内维持较小的车速。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">后续点分布如图2所示。其中, +点为停车点, △点为后续点。</p>
+                </div>
+                <div class="area_img" id="51">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905048_051.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 后续点分布示意图" src="Detail/GetImg?filename=images/JSJC201905048_051.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 后续点分布示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905048_051.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="52">如图2 (a) 所示, 绝大多数点距离该后续点所属停车事件簇距离过近, 无法预测接下来所要行驶的位置。为了使后续点能与停车点拉开差距, 提取出轨迹中出现停车现象后最先出现的与停车点距离大于阈值<i>distance</i>的点作为后续点。另一方面, 针对那些车速较快的车辆, 它们在停车点后会很快驶离该停车点附近可能存在的路口范围, 因此必须对此类轨迹作出相应的处理, 本文采用模拟出其较短时间 (小于该车辆GPS采集间隔<i>t</i>) 所处位置来处理这种情况, 在较短时间内, 可以将车辆看作匀速行驶, 而其所行驶的距离则与时间成正比。由此, 根据式 (1) , 转换得到式 (2) 、式 (3) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="53" class="code-formula">
+                        <mathml id="53"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mfrac><mrow><mo stretchy="false"> (</mo><mi>a</mi><mi>l</mi><mi>t</mi><mo>, </mo><mi>l</mi><mi>o</mi><mi>n</mi><mi>g</mi><mo stretchy="false">) </mo><mo>-</mo><mo stretchy="false"> (</mo><mi>a</mi><mi>l</mi><mi>t</mi><msub><mrow></mrow><mn>0</mn></msub><mo>, </mo><mi>l</mi><mi>o</mi><mi>n</mi><mi>g</mi><msub><mrow></mrow><mn>0</mn></msub><mo stretchy="false">) </mo></mrow><mrow><mo stretchy="false"> (</mo><mi>a</mi><mi>l</mi><mi>t</mi><msub><mrow></mrow><mi>t</mi></msub><mo>, </mo><mi>l</mi><mi>o</mi><mi>n</mi><mi>g</mi><msub><mrow></mrow><mi>t</mi></msub><mo stretchy="false">) </mo><mo>-</mo><mo stretchy="false"> (</mo><mi>a</mi><mi>l</mi><mi>t</mi><msub><mrow></mrow><mn>0</mn></msub><mo>, </mo><mi>l</mi><mi>o</mi><mi>n</mi><mi>g</mi><msub><mrow></mrow><mn>0</mn></msub><mo stretchy="false">) </mo></mrow></mfrac><mo>=</mo><mfrac><mi>t</mi><mi>Τ</mi></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>a</mi><mi>l</mi><mi>t</mi><mo>=</mo><mfrac><mi>t</mi><mi>Τ</mi></mfrac><mo stretchy="false"> (</mo><mi>a</mi><mi>l</mi><mi>t</mi><msub><mrow></mrow><mi>t</mi></msub><mo>-</mo><mi>a</mi><mi>l</mi><mi>t</mi><msub><mrow></mrow><mn>0</mn></msub><mo stretchy="false">) </mo><mo>+</mo><mi>a</mi><mi>l</mi><mi>t</mi><msub><mrow></mrow><mn>0</mn></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>l</mi><mi>o</mi><mi>n</mi><mi>g</mi><mo>=</mo><mfrac><mi>t</mi><mi>Τ</mi></mfrac><mo stretchy="false"> (</mo><mi>l</mi><mi>o</mi><mi>n</mi><mi>g</mi><msub><mrow></mrow><mi>t</mi></msub><mo>-</mo><mi>l</mi><mi>o</mi><mi>n</mi><mi>g</mi><msub><mrow></mrow><mn>0</mn></msub><mo stretchy="false">) </mo><mo>+</mo><mi>l</mi><mi>o</mi><mi>n</mi><mi>g</mi><msub><mrow></mrow><mn>0</mn></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="54">其中, (<i>alt</i>, <i>long</i>) 为停车点后行驶时间不大于<i>t</i>的目标坐标点, (<i>alt</i><sub>0</sub>, <i>long</i><sub>0</sub>) 为检测出停车点坐标, (<i>alt</i><sub><i>t</i></sub>, <i>long</i><sub><i>t</i></sub>) 为停车点后最临近车辆坐标, <i>T</i>为GPS数据采样时间间距。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">如图2 (b) 所示, 处理后的后续点有一部分偏离了道路, 但其对最后检测路口结果影响不大。</p>
+                </div>
+                <h3 id="56" name="56" class="anchor-tag">2 停车点聚类</h3>
+                <div class="p1">
+                    <p id="57">由图1可以看出, 车辆的停车事件并不只是在路口附近才发生, 而是在道路的各个阶段都有发生的可能, 只是认为停车点在路口附近会显得比其他地区更加密集。而道路其他位置的停车点对于此研究来说应该当作噪声点来处理, 因此, 需要采用一种能够排除掉这些噪声点的聚类算法, 而不是将它们聚类到任何的簇中去。</p>
+                </div>
+                <div class="p1">
+                    <p id="58">基于分组的G-DBSCAN算法是基于传统DBSCAN (Density-based Spatial Clustering of Applications with Noise) 算法在聚类之前先对数据按照某个特性进行分组的一种算法, 能大幅地缩小聚类过程中的搜索范围<citation id="165" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>。G-DBSCAN算法虽然缩小了聚类过程中的搜索范围, 但当数据量较大时, 分组过程依然会花费很长一段时间。根据GPS数据位置固定这一特点, 本文在G-DBSCAN算法基础上进行改进, 通过加快分组速度, 从而提高整个算法的速度。为便于理解, 以下对其中涉及到的一些术语进行说明:</p>
+                </div>
+                <div class="p1">
+                    <p id="59">1) <i>eps</i>:对于数据集<i>D</i>中的任意样本<i>xj</i>, 以<i>xj</i>为圆心, ∈为半径的空间即为∈-邻域。为方便书写, 本文中将∈记作<i>eps</i>;</p>
+                </div>
+                <div class="p1">
+                    <p id="60">2) <i>s</i>:分组过程中产生的组, 记作<i>s</i>;</p>
+                </div>
+                <div class="p1">
+                    <p id="61">3) <i>s</i>_<i>m</i>:组<i>s</i>创建时所包含的第1个点称作<i>master</i>点, 记作<i>s</i>_<i>m</i>;</p>
+                </div>
+                <div class="p1">
+                    <p id="62">4) <i>s</i>_{<i>rec</i>}:如图3所示, 假设点<i>x</i><sub>1</sub>属于组<i>s</i><sub>1</sub>, 点<i>x</i><sub>2</sub>属于组<i>s</i><sub>2</sub>, 若要<i>x</i><sub>1</sub>与<i>x</i><sub>2</sub>可达, 则<i>s</i><sub>1</sub>_<i>m</i>与<i>s</i><sub>2</sub>_<i>m</i>距离不大于3×<i>eps</i>, 而<i>s</i><sub>1</sub>与<i>s</i><sub>2</sub>互为对方的可达组, 记作<i>s</i>_{<i>rec</i>}。</p>
+                </div>
+                <div class="area_img" id="63">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905048_063.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 可达组示意图" src="Detail/GetImg?filename=images/JSJC201905048_063.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 可达组示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905048_063.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="64">在GDBSCAN算法中, 分组过程中为点<i>x</i>分组时需要计算<i>x</i>与每个已存在组的<i>maste</i>r点的距离, 这将会耗费大量时间。如果能在与<i>master</i>点计算距离前先将距离该点非常远的组排除在外, 则可以减少大量的距离计算。根据此思想, 本文提出采用参照点的方法来排除距离较远的点, 而每组的<i>master</i>点与参照点的距离不需要多次计算。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">参照点的选择需要根据实际数据来确定。以本文数据为例, 图4中阴影部分为停车点密集区域, 该地区分组时存在的组也必然会较其他区域密集。因此, 在选取参照点时, 需要在每次排除时尽可能多地排除掉阴影部分的组, 所以图4中三角形点不是一个很好的点, 以它为参照点计算出的圆环会包含许多密集区域的组。而图4中圆点和五角星形就可以较好地处理这种情况。因此, 选取参照点时, 应尽量避免选择密集区域内的点。由参照点作为条件将原G-DBSCAN算法中分组条件进行转换得到定义1。</p>
+                </div>
+                <div class="area_img" id="66">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905048_066.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 参照点选择示意图" src="Detail/GetImg?filename=images/JSJC201905048_066.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 参照点选择示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905048_066.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="67"><b>定义1</b> 分组依据。若点<i>x</i>从属于组<i>s</i>或<i>s</i>_{<i>rec</i>}, 当且仅当<i>s</i>满足‖<i>d</i> (<i>s</i>_<i>m</i>, <i>p</i>) -<i>d</i> (<i>x</i>, <i>p</i>) ‖≤3×<i>eps</i>, 其中, <i>s</i>_<i>m</i>为该组的<i>master</i>点, <i>p</i>为用户选取的参照点。</p>
+                </div>
+                <div class="p1">
+                    <p id="68"><b>证明</b> 假设<i>x</i>的3×<i>eps</i>邻域边界上离参照点<i>p</i>最远的点为<i>B</i>, 最近的点为<i>A</i>, 则<i>x</i>的3×<i>eps</i>邻域内的所有点<i>p</i>′满足:</p>
+                </div>
+                <div class="p1">
+                    <p id="69"><i>d</i> (<i>A</i>, <i>p</i>) ≤<i>d</i> (<i>p</i>′, <i>p</i>) ≤<i>d</i> (<i>B</i>, <i>p</i>) </p>
+                </div>
+                <div class="p1">
+                    <p id="70">如图5所示, 最远点<i>B</i>与最近点<i>A</i>必存在于参照点<i>p</i>与点<i>x</i>的连接线及其延长线上。</p>
+                </div>
+                <div class="area_img" id="71">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905048_071.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 3倍eps领域与参照点示意图" src="Detail/GetImg?filename=images/JSJC201905048_071.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 3倍<i>eps</i>领域与参照点示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905048_071.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="72"><i>d</i> (<i>x</i>, <i>p</i>) -3×<i>eps</i>≤<i>d</i> (<i>p</i>′, <i>p</i>) ≤<i>d</i> (<i>x</i>, <i>p</i>) +3×<i>eps</i></p>
+                </div>
+                <div class="p1">
+                    <p id="73">由基于分组的DBSCAN算法可知, 若点<i>p</i>从属于组<i>s</i>或<i>s</i>_{<i>rec</i>}, 当且仅当组<i>s</i>满足<i>d</i> (<i>x</i>, <i>s</i>_<i>m</i>) ≤3×<i>eps</i>, 即<i>s</i>_<i>m</i>处于<i>x</i>的3×<i>eps</i>邻域内。若点<i>p</i>从属于组<i>s</i>或<i>s</i>_{<i>rec</i>}, <i>s</i>_<i>m</i>满足条件:</p>
+                </div>
+                <div class="p1">
+                    <p id="74"><i>d</i> (<i>x</i>, <i>p</i>) -3×<i>eps</i>≤<i>d</i> (<i>s</i>_<i>m</i>, <i>p</i>) ≤<i>d</i> (<i>x</i>, <i>p</i>) +3×<i>eps</i>⇒</p>
+                </div>
+                <div class="p1">
+                    <p id="75">-3×<i>eps</i>≤<i>d</i> (<i>s</i>_<i>m</i>, <i>p</i>) -<i>d</i> (<i>x</i>, <i>p</i>) ≤3×<i>eps</i>⇒</p>
+                </div>
+                <div class="p1">
+                    <p id="76">‖<i>d</i> (<i>s</i>_<i>m</i>, <i>p</i>) -<i>d</i> (<i>x</i>, <i>p</i>) ‖≤3×<i>eps</i></p>
+                </div>
+                <div class="p1">
+                    <p id="77">根据定义1所述条件, 在每一个组创建时计算出该组的<i>master</i>点与参照点位置。而在为点<i>x</i>分组前, 可以根据<i>x</i>与参照点距离与各组<i>master</i>点与参照点间距离来排除距离较远的组, 减少了不必要的距离计算。算法流程如算法1所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="78"><b>算法1</b> 改进分组算法<i>Group</i> (<i>D</i>, <i>eps</i>) </p>
+                </div>
+                <div class="area_img" id="167">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201905048_16700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="109">分组后的G-DBSCAN算法的聚类过程类似于传统的DBSCAN算法, 但其在聚类时的搜索范围不再是所有点集, 而是该点所在组以及其所在组的邻接组所有点的集合。算法流程如算法2所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="110"><b>算法2</b> 分组后聚类Imp-DBSCAN (<i>S</i>, <i>eps</i>, <i>MinPts</i>) </p>
+                </div>
+                <div class="area_img" id="166">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201905048_16600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="166">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201905048_16601.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="131" name="131" class="anchor-tag">3 路口确认</h3>
+                <div class="p1">
+                    <p id="132">经过第1.2节中对停车点的聚类, 使停车点成为一个一个的小集合, 而那些包含较少停车点的停车事件集被当作噪声点排除。如图6所示的4号簇所示, 并不是所有聚类所形成的簇都聚集在路口附近, 这些簇所在地可能是一个类似于临时停车点这样一些地方, 因此, 聚类结果并不能作为最终判断该地区是否存在路口的依据。要准确地推断出路口, 还需要更进一步的工作, 这也是提取出后续点的原因。</p>
+                </div>
+                <div class="area_img" id="133">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905048_133.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 聚类结果示意图" src="Detail/GetImg?filename=images/JSJC201905048_133.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 聚类结果示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905048_133.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="134">由于提取出的是车辆在发生停车事件后具有一定距离的位置作为其后续点, 因此可以假设这些后续点大多分布在该停车事件集所在路口附近, 且已到达可能存在的路口的另一条分支。如图6中1号簇出发的车辆, 后续点将会到达2号簇和3号簇所在位置。因此, 本文通过检查各个簇之间的车辆来往情况来确定簇与簇之间存在的路口。</p>
+                </div>
+                <div class="p1">
+                    <p id="135">路口确认方法如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="136">1) 计算各个簇的中心点。虽然车辆的GPS定位与道路之间存在偏差, 但显然这种偏差是满足高斯分布的。因此, 对簇中各个停车点分别计算其经度和纬度的平均值作为其中心点是可行的。</p>
+                </div>
+                <div class="p1">
+                    <p id="137">2) 对第1.2节中聚类得到的簇进行车辆来往计算。计算车辆后续点与其他簇中心的距离, 当然也包括该后续点对应的停车点所在簇。因为只能保证大多数车辆离开了其停车事件所在簇, 仍然有一小部分车辆由于其停车点距离路口较远, 并不能保证其在给定范围内的到达点能通过该路口到达另外一个分支。计算出后续点与其他路口距离后, 将距离最近的簇和该后续点对应的簇之间的连通度加一, 表示这2个簇之间的车辆往来又多了一次。</p>
+                </div>
+                <div class="p1">
+                    <p id="138">3) 根据簇与簇之间的车辆来往情况, 推测出路口。由于在后续点的选取上做了限定, 后续点始终会聚集在可能存在的路口附近, 那么认为离后续点最近的簇也存在于该路口附近。因此, 在这一步中求出连通度较大的簇之间的中心点作为路口的中心点。</p>
+                </div>
+                <h3 id="139" name="139" class="anchor-tag">4 实验结果与分析</h3>
+                <div class="p1">
+                    <p id="140">本文采用标准数据集对实验进行验证。该数据中GPS设备每15 s进行一次数据采样, 采样的时间间隔过长, 传统的路口识别算法不再适用。</p>
+                </div>
+                <div class="p1">
+                    <p id="141">在实验中将轨迹中的部分停车点提取出来, 进行聚类算法的对比分析。如图7所示, 改进后的聚类算法在原G-DBSCAN基础上进一步提高了聚类速度。在数据量较低时, 几种聚类算法的速度相差不大。但随着数据量的增加, 分组聚类起到的作用也越来越大, G-DBSCAN算法的聚类速度会高于DBSCAN算法, 而本文改进的算法快于前2种算法。</p>
+                </div>
+                <div class="area_img" id="142">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905048_142.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 算法聚类结果的时间对比" src="Detail/GetImg?filename=images/JSJC201905048_142.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图7 算法聚类结果的时间对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905048_142.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="143">如图8 (a) ～图8 (c) 所示, 改进的DBSCAN算法对停车点的聚类结果与前2种算法相差不大。图中最下面的一条线代表的是先采用k-means进行分组, 后采用DBSCAN算法进行聚类的算法。本文改进的算法相对于较慢。但由于k-means算法需要人工输入<i>k</i>值, 且在数据量非常大时<i>k</i>值的确定是一件比较困难的事。在本文的实验中, 采取的是根据其他算法聚类结果的组数来确定<i>k</i>值的方法, 但效果并不是很好。如图8 (d) 所示, 此方法会将一些簇划分为多个簇, 其原因在于在分组时, 分组结果与预先选择的<i>k</i>个中心点具有很大的联系。经过时间和聚类结果的对比, 本文改进的GDBSCAN算法具有很好的聚类效果。</p>
+                </div>
+                <div class="area_img" id="144">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905048_144.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图8 聚类结果对比" src="Detail/GetImg?filename=images/JSJC201905048_144.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图8 聚类结果对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905048_144.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="145">如图9 (a) 所示, 在路口识别部分, 本文算法能很好地识别出停车事件发生较为频繁的路口。图9 (b) 为图9 (a) 中2号路口的放大图, 可以看出该地区有2个距离非常近的路口。实验结果表明, 本文算法对这样比较接近的2个路口也具有很好的识别能力。</p>
+                </div>
+                <div class="p1">
+                    <p id="146">为了排除道路设计不合理, 或者停车场等为非路口的停车时间群, 本文采用将具有车辆来往情况作为依据来判定簇与簇之间是否存在路口。图9 (c) 是该地区的局部放大图, 该处是一个3条道路的交叉口, 但根据查阅地图知道, 这3条道路均为单向行驶道路, 其允许车辆的行驶方向如图9 (c) 中箭头所示。因此, 在C道路上并没有出现停车事件群, 而A、B 2条道路也没有车辆来往, 所以按照本文算法并没有检测出该处存在的路口。</p>
+                </div>
+                <div class="area_img" id="147">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905048_147.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图9 路口检测结果示意图" src="Detail/GetImg?filename=images/JSJC201905048_147.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图9 路口检测结果示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905048_147.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="148" name="148" class="anchor-tag">5 结束语</h3>
+                <div class="p1">
+                    <p id="149">本文针对目前道路路口识别普遍采用车辆行驶方向转变作为依据, 以及稀疏采样的GPS轨迹数据由于采样时间间隔长而无法准确模拟出车辆行驶方向的特点, 提出一种新的路口识别方法。根据GPS数据特点对G-DBSCAN算法进行改进, 在聚类结果改变较小的基础上较大程度地提高了聚类速度。但本文路口识别算法对于停车事件发生较少的路口识别能力不高, 且识别出的路口与真实路口位置上存在一定的差距, 这将是下一步研究的重点内容。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Inferring road maps from Transportations Research Record global positioning system traces">
+
+                                <b>[1]</b> BIAGIONI J, ERIKSSON J.Inferring road maps from Transportations Research Record global positioning system traces[J].Journal of Transportations Research Board, 2012, 2291 (1) :61-71.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Automatic generation of road network map from massive GPS,vehicle trajectories">
+
+                                <b>[2]</b> SHI Wenhuan, SHEN Shuhan, LIU Yuncai.Automatic generation of road network map from massive GPS vehicle trajectories[C]//Proceedings of the 12th International IEEE Conference on Intelligent Transportation Systems.Washington D.C., USA:IEEE Press, 2009:1-6.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=On vehicle tracking data-based road network generation">
+
+                                <b>[3]</b> KARAGIORGOU S, PFOSER D.On vehicle tracking data-based road network generation[C]//Proceedings of the 20th International Conference on Advances in Geographic Information Systems.New York, USA:ACM Press, 2012:89-98.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501418690&amp;v=MDMxODdJSlYwV2FoVT1OaWZPZmJLN0h0RE5xbzlFWU9vSENuVTVvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMbg==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> VLAHOGIANNI E I, KARLAFTIS M G, GOLIAS J C.Optimized and meta-optimized neural networks for short-term traffic flow prediction:a genetic approach[J].Transportation Research Part C:Emerging Technologies, 2005, 13 (3) :211-234.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Using heuristic search for initiating the genetic population in simulation-based optimization of vehicle routing problems">
+
+                                <b>[5]</b> SYBERFELDT A, PERSSON L.Using heuristic search for initiating the genetic population in simulation-based optimization of vehicle routing problems[C]//Proceedings of IEEE ISC’09.Washington D.C., USA:IEEE Press, 2009:524-536.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DBCH201802002&amp;v=MDYzNzdvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5M21VYi9QSVMvSVpyRzRIOW5Nclk5Rlo=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 巩现勇, 李靖涵.一种道路路口和拐点的识别与重要性度量方法[J].测绘与空间地理信息, 2018, 41 (2) :5-9.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJLG201608014&amp;v=MzA1NTBmTXA0OUVZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTNtVWIvUEp5ZkhhYkc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 王美玲, 潘允辉.基于GIS与约束条件下的最优路径规划研究 [J].北京理工大学学报, 2016, 36 (8) :851-856.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Intersection detection based on qualitative spatial reasoning on stopping point clusters">
+
+                                <b>[8]</b> ZOURLIDOU S, SESTER M.Intersection detection based on qualitative spatial reasoning on stopping point clusters[C]//Proceedings of International Conference on Remote Sensing and Spatial Information Sciences.Washington D.C., USA:IEEE Press, 2016:12-19.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DLGT201505008&amp;v=MDA5MTFNcW85RmJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5M21VYi9QSVNITWVyRzRIOVQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 谭祥爽, 王静.基于浮动车数据的路口探测方法[J].地理与地理信息科学, 2015, 31 (5) :34-38.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Automatic intersection and traffic rule detection by mining motor-vehicle GPS trajectories">
+
+                                <b>[10]</b> WANG Jing, WANG Chaoliang.Automatic intersection and traffic rule detection by mining motor-vehicle GPS trajectories[C]//Proceedings of International Conference on Computers, Environment and Urban Systems.Washington D.C., USA:IEEE Press, 2017:19-29.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=STJD&amp;filename=STJD15030900000698&amp;v=MDM5ODdRVE1ud1plWnVIeWptVUxuSUpWMFdhaFU9TmpuQmFySzlIdExNcG85RlpPc1BDblV4b0JNVDZUNFBRSC9pclJkR2VycQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> WANG Jing, RUI Xiaoping, SONG Xiaofeng.A novel approach for generating routable road maps from vehicle GPS traces[J].International Journal of Geographical Information Science, 2015, 29 (1) :69-91.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Road network inference from GPS traces using DTW algorithm">
+
+                                <b>[12]</b> XIE Xingzhe, PHILIPS W, VEELAERT P.Road network inference from GPS traces using DTW algorithm[C]//Proceedings of the 17th IEEE International Conference on Intelligent Transportation Systems.Washington D.C., USA:IEEE Press, 2014:906-911.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Detecting road intersections from GPS traces">
+
+                                <b>[13]</b> FATHI A, KRUMM J.Detecting road intersections from GPS traces[C]//Proceedings of International Conference on Geographic Information Science.Berlin, Germany:Springer, 2010:56-69.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A novel approach for detecting intersections from gps traces">
+
+                                <b>[14]</b> XIE Xingzhi, LIAO Wenzhi, AGHAJAN H, et al.A novel approach for detecting intersections from GPS traces[C]//Proceedings of IEEE International Geoscience and Remote Sensing Symposium.Washington D.C., USA:IEEE Press, 2016:1816-1819.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJESE01FA2E23ECD15AF3C1585F01B53B6D5&amp;v=MDkxOTJ3YnU5d0s4PU5pZk9mY2E0SDZlOXJmcEhaNTU4ZUgwOHZtQVFtVDU0UUhxVXJCTkhmTEhtUTg2YUNPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU41aA==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> KUMAR M, RAMA A, REDDY M.A fast DBSCAN clustering algorithm by accelerating neighbor searching using groups method[J].Pattern Recognition, 2016, 58:39-48.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201905048" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201905048&amp;v=MDM0NzVtVWIvUEx6N0JiYkc0SDlqTXFvOUJiSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTM=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

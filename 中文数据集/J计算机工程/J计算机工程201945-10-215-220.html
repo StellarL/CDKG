@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637126203068677500%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201910036%26RESULT%3d1%26SIGN%3dV2iHCMziLPCKWjlKlQwxI2MtB7c%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201910036&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201910036&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201910036&amp;v=MTY5ODc0SDlqTnI0OUdZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVUwzTUx6N0JiYkc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#39" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="1 传统协同过滤算法 ">1 传统协同过滤算法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#49" data-title="1)余弦相似度:">1)余弦相似度:</a></li>
+                                                <li><a href="#51" data-title="2)皮尔逊相关系数:">2)皮尔逊相关系数:</a></li>
+                                                <li><a href="#53" data-title="3)修正的余弦相似度:">3)修正的余弦相似度:</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#60" data-title="2 &lt;i&gt;ONU&lt;/i&gt;-&lt;i&gt;CF&lt;/i&gt;推荐算法 ">2 <i>ONU</i>-<i>CF</i>推荐算法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#61" data-title="2.1 本体语义相似度">2.1 本体语义相似度</a></li>
+                                                <li><a href="#71" data-title="2.2 用户属性相似度计算">2.2 用户属性相似度计算</a></li>
+                                                <li><a href="#80" data-title="2.3 项目长尾效应">2.3 项目长尾效应</a></li>
+                                                <li><a href="#88" data-title="2.4 算法描述">2.4 算法描述</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#99" data-title="3 实验结果及分析 ">3 实验结果及分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#100" data-title="3.1 实验数据">3.1 实验数据</a></li>
+                                                <li><a href="#102" data-title="3.2 度量标准">3.2 度量标准</a></li>
+                                                <li><a href="#116" data-title="3.3 实验对比分析">3.3 实验对比分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#131" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#45" data-title="&lt;b&gt;图1 基于用户的协同过滤算法推荐过程&lt;/b&gt;"><b>图1 基于用户的协同过滤算法推荐过程</b></a></li>
+                                                <li><a href="#47" data-title="&lt;b&gt;表1 用户-项目评分矩阵&lt;/b&gt;"><b>表1 用户-项目评分矩阵</b></a></li>
+                                                <li><a href="#63" data-title="&lt;b&gt;图2 以树为主体的图结构&lt;/b&gt;"><b>图2 以树为主体的图结构</b></a></li>
+                                                <li><a href="#66" data-title="&lt;b&gt;图3 电影流派子树&lt;/b&gt;"><b>图3 电影流派子树</b></a></li>
+                                                <li><a href="#82" data-title="&lt;b&gt;图4 MovieLens 1M数据集的长尾现象&lt;/b&gt;"><b>图4 MovieLens 1M数据集的长尾现象</b></a></li>
+                                                <li><a href="#120" data-title="&lt;b&gt;图5 本文算法不同&lt;/b&gt;&lt;i&gt;&lt;b&gt;α&lt;/b&gt;&lt;/i&gt;&lt;b&gt;取值的MAE值&lt;/b&gt;"><b>图5 本文算法不同</b><i><b>α</b></i><b>取值的MAE值</b></a></li>
+                                                <li><a href="#123" data-title="&lt;b&gt;图6 4种算法TOP-&lt;/b&gt;&lt;i&gt;&lt;b&gt;N&lt;/b&gt;&lt;/i&gt;&lt;b&gt;的MAE值对比&lt;/b&gt;"><b>图6 4种算法TOP-</b><i><b>N</b></i><b>的MAE值对比</b></a></li>
+                                                <li><a href="#127" data-title="&lt;b&gt;表2 4种算法的准确率、召回率与综合测度对比&lt;/b&gt;"><b>表2 4种算法的准确率、召回率与综合测度对比</b></a></li>
+                                                <li><a href="#130" data-title="&lt;b&gt;图7 4种算法的新颖度对比&lt;/b&gt;"><b>图7 4种算法的新颖度对比</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="5">
+
+
+                                    <a id="bibliography_1" title=" SCHAFER J B,FRANKOWSKI D,HERLOCKER J,et al.Collaborative filtering recommender systems[M]//BRUSILOVSKY P,KOBSA A,NEJDL W.The adaptive Web.Berlin,Germany:Springer,2007:291-324." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Collaborative Filtering Recom-mender Systems">
+                                        <b>[1]</b>
+                                         SCHAFER J B,FRANKOWSKI D,HERLOCKER J,et al.Collaborative filtering recommender systems[M]//BRUSILOVSKY P,KOBSA A,NEJDL W.The adaptive Web.Berlin,Germany:Springer,2007:291-324.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_2" title=" ADOMAVICIUS G,TUZHILIN A.Toward the next generation of recommender systems:a survey of the state-of-the-art and possible extensions[J].IEEE Transactions on Knowledge and Data Engineering,2005,17(6):734-749." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Toward the next generation of recommender systems: A survey of the state-of-the-art and possible extensions">
+                                        <b>[2]</b>
+                                         ADOMAVICIUS G,TUZHILIN A.Toward the next generation of recommender systems:a survey of the state-of-the-art and possible extensions[J].IEEE Transactions on Knowledge and Data Engineering,2005,17(6):734-749.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_3" title=" 林耀进,胡学钢,李慧宗.基于用户群体影响的协同过滤算法[J].情报学报,2013,32(3):299-305." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QBXB201303010&amp;v=MDkwMjI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVUwzTU5DL1RiTEc0SDlMTXJJOUVaSVFLREg=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         林耀进,胡学钢,李慧宗.基于用户群体影响的协同过滤算法[J].情报学报,2013,32(3):299-305.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_4" title=" 于金明,孟军,吴秋峰.基于改进相似性度量的项目协同过滤推荐算法[J].计算机应用,2017,37(5):1387-1391." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201705030&amp;v=MTY0ODBGckNVUkxPZVplUnRGeTNoVUwzTUx6N0JkN0c0SDliTXFvOUdaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         于金明,孟军,吴秋峰.基于改进相似性度量的项目协同过滤推荐算法[J].计算机应用,2017,37(5):1387-1391.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_5" title=" RABAHALLAH K,MAHDAOUI L,AZOUAOU F.MOOCs recommender system using ontology and memory-based collaborative filtering[C]//Proceedings of International Conference on Enterprise Information Systems.Funchal,Portugal:SCITE Press,2018:635-641." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=MOOCs recommender system using ontology and memory-based collaborative filtering">
+                                        <b>[5]</b>
+                                         RABAHALLAH K,MAHDAOUI L,AZOUAOU F.MOOCs recommender system using ontology and memory-based collaborative filtering[C]//Proceedings of International Conference on Enterprise Information Systems.Funchal,Portugal:SCITE Press,2018:635-641.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_6" title=" 王阳,钟勇,李振东,等.融合语义相似度与矩阵分解的评分预测算法[J].计算机应用,2017,37(增刊):287-291." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY2017S1067&amp;v=Mjc1OTQzaFVMM01MejdCZDdHNEg5YXZybzlEWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0Rnk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         王阳,钟勇,李振东,等.融合语义相似度与矩阵分解的评分预测算法[J].计算机应用,2017,37(增刊):287-291.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_7" title=" 罗辛,欧阳元新,熊璋,等.通过相似度支持度优化基于K近邻的协同过滤算法[J].计算机学报,2010,33(8):1437-1445." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201008014&amp;v=MjMxODFIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0RnkzaFVMM01MejdCZHJHNEg5SE1wNDlFWUlRS0Q=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         罗辛,欧阳元新,熊璋,等.通过相似度支持度优化基于K近邻的协同过滤算法[J].计算机学报,2010,33(8):1437-1445.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_8" title=" ZHANG Xuewang,JIANG Xun.Collaborative filtering algorithm based on user attribute item dependency[C]//Proceedings of the 9th International Conference on Communication Software and Networks.Washington D.C.,USA:IEEE Press,2017:1426-1431." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Collaborative filtering algorithm based on user attribute item dependency">
+                                        <b>[8]</b>
+                                         ZHANG Xuewang,JIANG Xun.Collaborative filtering algorithm based on user attribute item dependency[C]//Proceedings of the 9th International Conference on Communication Software and Networks.Washington D.C.,USA:IEEE Press,2017:1426-1431.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_9" title=" 印桂生,张亚楠,董红斌,等.一种由长尾分布约束的推荐方法[J].计算机研究与发展,2013,50(9):1814-1824." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201309004&amp;v=MDM4MjVMT2VaZVJ0RnkzaFVMM01MeXZTZExHNEg5TE1wbzlGWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         印桂生,张亚楠,董红斌,等.一种由长尾分布约束的推荐方法[J].计算机研究与发展,2013,50(9):1814-1824.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_10" title=" 冯媛媛,王晓东,姚宇.电子商务中长尾物品推荐方法[J].计算机应用,2015,35(增刊):151-154." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY2015S2041&amp;v=MTM0ODhaZVJ0RnkzaFVMM01MejdCZDdHNEg5U3ZyWTlCWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2U=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         冯媛媛,王晓东,姚宇.电子商务中长尾物品推荐方法[J].计算机应用,2015,35(增刊):151-154.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_11" title=" 吴正洋,汤庸,方家轩,等.一种基于本体语义相似度的协同过滤推荐方法[J].计算机科学,2015,42(9):204-207." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJA201509040&amp;v=Mjc2MThRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0RnkzaFVMM01MejdCYjdHNEg5VE1wbzlCWkk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         吴正洋,汤庸,方家轩,等.一种基于本体语义相似度的协同过滤推荐方法[J].计算机科学,2015,42(9):204-207.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_12" title=" 赵文涛,王春春,成亚飞,等.基于用户多属性与兴趣的协同过滤算法[J].计算机应用研究,2016,33(12):3630-3633." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201612026&amp;v=MTQ2OTgzTUx6N1NaTEc0SDlmTnJZOUhZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVUw=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         赵文涛,王春春,成亚飞,等.基于用户多属性与兴趣的协同过滤算法[J].计算机应用研究,2016,33(12):3630-3633.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_13" title=" 刘宏哲,须德.基于本体的语义相似度和相关度计算研究综述[J].计算机科学,2012,39(2):8-13." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJA201202002&amp;v=MjkyMjNCYjdHNEg5UE1yWTlGWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0RnkzaFVMM01Mejc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         刘宏哲,须德.基于本体的语义相似度和相关度计算研究综述[J].计算机科学,2012,39(2):8-13.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_14" title=" YIN Hongzhi,CUI Bin,LI Jing,et al.Challenging the long tail recommendation[J].Proceedings of the VLDB Endowment,2012,5(9):896-907." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Challenging the long tail recommendation">
+                                        <b>[14]</b>
+                                         YIN Hongzhi,CUI Bin,LI Jing,et al.Challenging the long tail recommendation[J].Proceedings of the VLDB Endowment,2012,5(9):896-907.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_15" title=" 王光,张杰民,董帅含,等.基于内容的加权粒度序列推荐算法[J].计算机工程与科学,2018,40(3):564-570." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJK201803026&amp;v=MTMyODY0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hVTDNNTHo3QlpiRzRIOW5Nckk5SFlvUUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         王光,张杰民,董帅含,等.基于内容的加权粒度序列推荐算法[J].计算机工程与科学,2018,40(3):564-570.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_16" title=" 于洪,李俊华.一种解决新项目冷启动问题的推荐算法[J].软件学报,2015,26(6):1395-1408." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201506009&amp;v=MzE0Nzh0R0ZyQ1VSTE9lWmVSdEZ5M2hVTDNNTnlmVGJMRzRIOVRNcVk5RmJZUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         于洪,李俊华.一种解决新项目冷启动问题的推荐算法[J].软件学报,2015,26(6):1395-1408.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_17" title=" 韩亚楠,曹菡,刘亮亮.基于评分矩阵填充与用户兴趣的协同过滤推荐算法[J].计算机工程,2016,42(1):36-40." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201601007&amp;v=MjA1NTlHRnJDVVJMT2VaZVJ0RnkzaFVMM01MejdCYmJHNEg5Zk1ybzlGWTRRS0RIODR2UjRUNmo1NE8zenFxQnQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                         韩亚楠,曹菡,刘亮亮.基于评分矩阵填充与用户兴趣的协同过滤推荐算法[J].计算机工程,2016,42(1):36-40.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(10),215-220 DOI:10.19678/j.issn.1000-3428.0052499            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>融合本体语义与用户属性的协同过滤算法</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E5%85%89&amp;code=21995803&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王光</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%A7%9C%E4%B8%BD&amp;code=24160248&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">姜丽</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%91%A3%E5%B8%85%E5%90%AB&amp;code=35552601&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">董帅含</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%8E%E4%B8%B0&amp;code=42929496&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">李丰</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E8%BE%BD%E5%AE%81%E5%B7%A5%E7%A8%8B%E6%8A%80%E6%9C%AF%E5%A4%A7%E5%AD%A6%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2&amp;code=0034851&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">辽宁工程技术大学软件学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>传统协同过滤推荐算法在处理海量数据时存在数据稀疏性和项目长尾效应,导致推荐精度较低。针对该问题,结合本体语义和用户属性,提出一种改进的协同过滤算法。利用本体计算项目之间的语义相似度,构建项目相似度矩阵,同时引入用户属性计算用户相似度矩阵。通过融合本体语义和用户属性形成用户-项目评分矩阵,并对该矩阵的预测评分进行加权处理,生成TOP-<i>N</i>推荐结果。实验结果表明,相比传统皮尔逊相似度计算协同过滤算法、基于本体语义的协同过滤算法和基于评分矩阵填充与用户兴趣的协同过滤算法,该算法的平均绝对误差较低,准确率较高,综合性能及新颖度较优。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A4&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">协同过滤;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%9C%AC%E4%BD%93%E8%AF%AD%E4%B9%89&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">本体语义;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%94%A8%E6%88%B7%E5%B1%9E%E6%80%A7&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">用户属性;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%9B%B8%E4%BC%BC%E5%BA%A6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">相似度;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%95%BF%E5%B0%BE%E6%95%88%E5%BA%94&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">长尾效应;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    王光(1979—),男,副教授、硕士,主研方向为智能数据处理、数据挖掘、自然语言处理;;
+                                </span>
+                                <span>
+                                    *姜丽(通信作者),硕士研究生;;
+                                </span>
+                                <span>
+                                    董帅含,硕士研究生;;
+                                </span>
+                                <span>
+                                    李丰,学士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-08-27</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金(71371091);国家自然科学基金青年科学基金(61401185);</span>
+                    </p>
+            </div>
+                    <h1><b>Collaborative Filtering Algorithm Combining Ontology Semantics and User Attribute</b></h1>
+                    <h2>
+                    <span>WANG Guang</span>
+                    <span>JIANG Li</span>
+                    <span>DONG Shuaihan</span>
+                    <span>LI Feng</span>
+            </h2>
+                    <h2>
+                    <span>School of Software,Liaoning Technical University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>When dealing with massive data,the traditional collaborative filtering recommendation algorithm has the data sparsity and the long tail effect of the items,resulting in low recommendation accuracy.Aiming at this problem,combining ontology semantics and user attributes,this paper proposes an improved collaborative filtering algorithm.The item similarity matrix is constructed by using ontology to calculate semantic similarity between items.User attributes are introduced to calculate user similarity matrix.The user-item scoring matrix is formed by integrating ontology semantics and user attributes,and the prediction score of the matrix is weighted to provide the TOP-<i>N</i> recommendation results.Experimental results show that compared with Pearson similarity calculation collaborative filtering algorithm,collaborative filtering algorithm based on ontology semantics,and collaborative filtering algorithm based on scoring matrix filling and user interest,the proposed algorithm has the lowest mean absolute error and the highest precision,and its integrity and novelty are superior.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=collaborative%20filtering&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">collaborative filtering;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=ontology%20semantics&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">ontology semantics;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=user%20attribute&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">user attribute;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=similarity&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">similarity;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=long%20tail%20effect&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">long tail effect;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-08-27</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="39" name="39" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="40">信息时代互联网的数据规模呈指数式增长,从信息匮乏到信息过载的快速转变导致数据的利用率降低。为了向用户提供个性化的推荐服务,提高数据的利用率,推荐系统应运而生,其作为有效解决信息过载问题的手段之一,可以帮助用户在极短的时间内获取其需要的信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">推荐系统的核心问题是推荐算法,其中协同过滤算法已被成功应用于邮件过滤系统<citation id="151" type="reference"><link href="5" rel="bibliography" /><link href="7" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>]</sup></citation>,其作为近年来推荐算法的研究热点之一,主要分为基于模型的协同过滤算法与基于记忆的协同过滤算法。基于模型的协同过滤算法是根据用户的历史相关信息训练一个推荐模型,利用该模型对用户的行为进行预测和推荐。基于记忆的协同过滤算法分为用户协同过滤<citation id="143" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>与项目协同过滤<citation id="144" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>,其核心思想为:通过历史用户与项目之间的关联信息(如点击、浏览、评分等),计算目标用户/项目与所有用户/项目之间的相似度,找到与目标用户相似的邻居,根据邻居用户对该项目的评分进行预测和推荐。协同过滤算法的优势在于共享他人经验,避免数据分析的不完全和不精准,有效利用其他相似用户的信息来进行推荐,加快个性化推荐的速度。但随着数据量的增大,传统的协同过滤算法存在数据稀疏和长尾项目较少被推荐等问题。针对评分数量较少的情况下,传统相似度计算不能准确衡量用户偏好的问题,研究人员做了大量工作,例如:文献<citation id="145" type="reference">[<a class="sup">5</a>]</citation>融合基于记忆的协同过滤算法和本体语义技术,提升了推荐的准确率;文献<citation id="146" type="reference">[<a class="sup">6</a>]</citation>提出一种将语义相似度与矩阵分解技术结合的评分预测算法,提高了协同过滤算法中稀疏矩阵预测评分的准确性;文献<citation id="147" type="reference">[<a class="sup">7</a>]</citation>通过改进协同过滤中近邻的相似度计算方法,提高了推荐的精度;文献<citation id="148" type="reference">[<a class="sup">8</a>]</citation>改进了相似度计算中用户属性的存在关系,提出了一种用户属性相似度方法,进一步提升了推荐的质量。对于长尾问题,研究人员通过对项目的流行度添加惩罚项予以缓解。文献<citation id="149" type="reference">[<a class="sup">9</a>]</citation>提出一种推荐方法,通过长尾分布约束由用户间相似关系计算的推荐权重。该算法从一定程度上缓解了项目的长尾效应。文献<citation id="150" type="reference">[<a class="sup">10</a>]</citation>将整个物品构成的集合分为头部和尾部2个部分,并对评分数目较少的尾部进行聚类。该算法一定程度上缓解了长尾项目的推荐问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="42">为了进一步提高推荐算法的准确率,解决长尾数据的有效推荐问题,文献<citation id="152" type="reference">[<a class="sup">11</a>]</citation>通过构建用户本体,运用本体语义相似度计算用户之间的相似度,提高了推荐的准确率。文献<citation id="153" type="reference">[<a class="sup">12</a>]</citation>运用组合进行推荐的方法,综合用户多属性相似度与隐性标签的用户兴趣相似度,有效缓解了矩阵稀疏性问题。在此基础上,本文提出一种融合本体语义与用户属性的协同过滤推荐算法ONU-CF。通过本体语义相似度算法计算项目之间的相似度,同时在计算用户之间的相似度时引入用户属性,即用户的兴趣度和用户在不同项目上评分的差异性,通过综合项目相似度与用户相似度,对项目的预测评分进行加权处理,生成TOP-<i>N</i>推荐。</p>
+                </div>
+                <h3 id="43" name="43" class="anchor-tag">1 传统协同过滤算法</h3>
+                <div class="p1">
+                    <p id="44">传统基于用户的协同过滤算法根据用户对项目的兴趣偏好,向目标用户推荐与其兴趣偏好相符合的个性化推荐项目,其具体过程为:首先在数据集中搜寻与当前用户有相似偏好的其他用户,作为当前的用户邻居集;其次通过用户邻居集中用户对项目的评分,预测当前用户对该项目的可能评分情形,进而通过迭代,直到预测出当前用户对于数据集中所有未评分项目的可能评分值;最后将预测出评分的项目,根据评分的高低进行排序,将评分最高的<i>N</i>个项目推荐给当前用户。基于用户的协同过滤算法推荐过程如图1所示。</p>
+                </div>
+                <div class="area_img" id="45">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910036_045.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 基于用户的协同过滤算法推荐过程" src="Detail/GetImg?filename=images/JSJC201910036_045.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 基于用户的协同过滤算法推荐过程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910036_045.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="46">在相似度计算过程中,使用用户-项目评分矩阵<i><b>R</b></i>来表示用户对项目的评分信息,如表1所示。其中,用户的集合为{<i>u</i><sub>1</sub>,<i>u</i><sub>2</sub>,…,<i>u</i><sub><i>m</i></sub>},项目的集合为{<i>i</i><sub>1</sub>,<i>i</i><sub>2</sub>,…,<i>i</i><sub><i>n</i></sub>},用户未对项目评分的值为0。</p>
+                </div>
+                <div class="area_img" id="47">
+                    <p class="img_tit"><b>表1 用户-项目评分矩阵</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="47" border="1"><tr><td rowspan="2"><br />用户</td><td colspan="5"><br />项目</td></tr><tr><td><i>i</i><sub>1</sub></td><td><i>i</i><sub>2</sub></td><td>…</td><td><i>i</i><sub><i>n</i>-1</sub></td><td><i>i</i><sub><i>n</i></sub></td></tr><tr><td><i>u</i><sub>1</sub></td><td>2</td><td>4</td><td>…</td><td>1</td><td>0</td></tr><tr><td><br /><i>u</i><sub>2</sub></td><td>1</td><td>0</td><td>…</td><td>2</td><td>4</td></tr><tr><td><br />︙</td><td>︙</td><td>︙</td><td></td><td>︙</td><td>︙</td></tr><tr><td><br /><i>u</i><sub><i>m</i>-1</sub></td><td>4</td><td>2</td><td>…</td><td>0</td><td>2</td></tr><tr><td><br /><i>u</i><sub><i>m</i></sub></td><td>0</td><td>3</td><td>…</td><td>1</td><td>0</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="48">用户之间的相似度,通常有余弦相似度、修正的余弦相似度以及皮尔逊相关系数等。</p>
+                </div>
+                <h4 class="anchor-tag" id="49" name="49">1)余弦相似度:</h4>
+                <div class="p1">
+                    <p id="50" class="code-formula">
+                        <mathml id="50"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>i</mi><mi>m</mi><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>Τ</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>v</mi></mrow></msub></mrow></munder><mi>r</mi></mstyle><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub><mi>r</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>i</mi></mrow></msub></mrow><mrow><msqrt><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>Τ</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>v</mi></mrow></msub></mrow></munder><mi>r</mi></mstyle><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub><msup><mrow></mrow><mn>2</mn></msup><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>Τ</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>v</mi></mrow></msub></mrow></munder><mi>r</mi></mstyle><msub><mrow></mrow><mrow><mi>v</mi><mi>i</mi></mrow></msub><msup><mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <h4 class="anchor-tag" id="51" name="51">2)皮尔逊相关系数:</h4>
+                <div class="p1">
+                    <p id="52" class="code-formula">
+                        <mathml id="52"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>i</mi><mi>m</mi><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>Τ</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>v</mi></mrow></msub></mrow></munder><mo stretchy="false">(</mo></mstyle><mi>r</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub><mo>-</mo><mover accent="true"><mrow><mi>r</mi><msub><mrow></mrow><mi>u</mi></msub></mrow><mo stretchy="true">¯</mo></mover><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>r</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>i</mi></mrow></msub><mo>-</mo><mover accent="true"><mrow><mi>r</mi><msub><mrow></mrow><mi>v</mi></msub></mrow><mo stretchy="true">¯</mo></mover><mo stretchy="false">)</mo></mrow><mrow><msqrt><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>Τ</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>v</mi></mrow></msub></mrow></munder><mrow><mo stretchy="false">(</mo><mi>r</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub><mo>-</mo><mover accent="true"><mrow><mi>r</mi><msub><mrow></mrow><mi>u</mi></msub></mrow><mo stretchy="true">¯</mo></mover><mo stretchy="false">)</mo></mrow></mstyle><msup><mrow></mrow><mn>2</mn></msup></mrow></msqrt><msqrt><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>Τ</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>v</mi></mrow></msub></mrow></munder><mrow><mo stretchy="false">(</mo><mi>r</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>i</mi></mrow></msub><mo>-</mo><mover accent="true"><mrow><mi>r</mi><msub><mrow></mrow><mi>v</mi></msub></mrow><mo stretchy="true">¯</mo></mover><mo stretchy="false">)</mo></mrow></mstyle><msup><mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <h4 class="anchor-tag" id="53" name="53">3)修正的余弦相似度:</h4>
+                <div class="p1">
+                    <p id="54" class="code-formula">
+                        <mathml id="54"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>i</mi><mi>m</mi><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>Τ</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>v</mi></mrow></msub></mrow></munder><mo stretchy="false">(</mo></mstyle><mi>r</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub><mo>-</mo><mover accent="true"><mrow><mi>r</mi><msub><mrow></mrow><mi>u</mi></msub></mrow><mo stretchy="true">¯</mo></mover><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>r</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>i</mi></mrow></msub><mo>-</mo><mover accent="true"><mrow><mi>r</mi><msub><mrow></mrow><mi>v</mi></msub></mrow><mo stretchy="true">¯</mo></mover><mo stretchy="false">)</mo></mrow><mrow><msqrt><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>Τ</mi><msub><mrow></mrow><mi>u</mi></msub></mrow></munder><mrow><mo stretchy="false">(</mo><mi>r</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub><mo>-</mo><mover accent="true"><mrow><mi>r</mi><msub><mrow></mrow><mi>u</mi></msub></mrow><mo stretchy="true">¯</mo></mover><mo stretchy="false">)</mo></mrow></mstyle><msup><mrow></mrow><mn>2</mn></msup></mrow></msqrt><msqrt><mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>Τ</mi><msub><mrow></mrow><mi>v</mi></msub></mrow></munder><mo stretchy="false">(</mo></mstyle><mi>r</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>i</mi></mrow></msub><mo>-</mo><mover accent="true"><mrow><mi>r</mi><msub><mrow></mrow><mi>v</mi></msub></mrow><mo stretchy="true">¯</mo></mover><mo stretchy="false">)</mo></mrow><msup><mrow></mrow><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="55">在式(1)～式(3)中,<i>r</i><sub><i>ij</i></sub>表示用户<i>i</i>对项目<i>j</i>的评分信息,<mathml id="133"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mrow><mi>r</mi><msub><mrow></mrow><mi>u</mi></msub></mrow><mo stretchy="true">¯</mo></mover></mrow></math></mathml>、<mathml id="134"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mrow><mi>r</mi><msub><mrow></mrow><mi>v</mi></msub></mrow><mo stretchy="true">¯</mo></mover></mrow></math></mathml>分别表示用户u和v的评分平均值,T<sub>u</sub> 、T<sub>v</sub>分别表示用户u和v的评分的项目集合,T<sub>uv</sub>表示用户u和v共同评分的项目集合。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">目标用户对项目的预测评分值计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="57" class="code-formula">
+                        <mathml id="57"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>r</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub><mo>=</mo><mover accent="true"><mrow><mi>r</mi><msub><mrow></mrow><mi>u</mi></msub></mrow><mo stretchy="true">¯</mo></mover><mo>+</mo><mfrac><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>v</mi><mo>∈</mo><mi>V</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></munder><mi>s</mi></mstyle><mi>i</mi><mi>m</mi><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo><mo stretchy="false">(</mo><mi>r</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>i</mi></mrow></msub><mo>-</mo><mover accent="true"><mrow><mi>r</mi><msub><mrow></mrow><mi>v</mi></msub></mrow><mo stretchy="true">¯</mo></mover><mo stretchy="false">)</mo></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>v</mi><mo>∈</mo><mi>V</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></munder><mrow><mrow><mo>|</mo><mrow><mi>s</mi><mi>i</mi><mi>m</mi><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><mo>|</mo></mrow></mrow></mstyle></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="58">其中,<mathml id="135"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>r</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub></mrow></math></mathml>表示目标用户u对项目i的预测评分,V(u)表示用户u的近邻集合。最终根据最近邻集合预测结果生成推荐列表。</p>
+                </div>
+                <h3 id="60" name="60" class="anchor-tag">2 <i>ONU</i>-<i>CF</i>推荐算法</h3>
+                <h4 class="anchor-tag" id="61" name="61">2.1 本体语义相似度</h4>
+                <div class="p1">
+                    <p id="62">本体的概念语义相似度是语义网的核心技术,是自然语言处理中的重点,近年来被广泛应用于信息检索、人工智能、推荐系统、知识工程等方面<citation id="154" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>。领域本体使用基于本体树或以树为主体的图结构的语义相似度计算方法,来描述类之间的语义关系,利用项目的类型及属性计算项目之间的语义相似度。而基于本体树或以树为主体的图结构的相似度计算方法,则根据本体的概念语义计算过程定义各不相同。基于本体树的计算方法主要考虑层次结构中上下位相连的关系,如WordNet中的“is a”关系。而在以树为主体的图结构计算过程中,除了将上下位关系作为主要链接概念节点外,还考虑概念节点中其他的少量类型关系,例如WordNet中的“part of”关系。利用WordNet名词概念,以树为主体的图结构示例如图2所示。</p>
+                </div>
+                <div class="area_img" id="63">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910036_063.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 以树为主体的图结构" src="Detail/GetImg?filename=images/JSJC201910036_063.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 以树为主体的图结构</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910036_063.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="64">本体语义相似度的计算方法按照原理划分可分为4种:基于语义距离的相似度计算方法,基于属性的相似度计算方法,基于信息内容的相似度计算方法以及混合相似度计算方法。在推荐系统中,基于属性的相似度计算方法应用较广泛。在计算项目相似度时,通过项目之间的属性和概念信息来识别或区分不同的项目,而不同项目之间公共属性越多,其语义相似度就越大。本文采用基于属性的相似度方法来计算推荐项目之间的相似度。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">本体知识通常由概念和其他语义信息的树形结构层次来组织,其中领域本体通常表示为特定域中的概念及其关系。本文参考Bouza根据OWL标准在苏黎世大学创建的电影领域本体MO(http://www.movieontology.org/),从语义层面上建模,提取电影之间的隐藏特征。在项目相似度计算过程中使用MO本体来模拟,采用基于本体树的结构来描述类之间的语义关系,计算基于本体语义的项目之间的相似度。基于本体树的方法可以包括整个领域本体,为了简单起见,本文只关注MO本体的流派子树。图3为流派树形结构的示例。</p>
+                </div>
+                <div class="area_img" id="66">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910036_066.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 电影流派子树" src="Detail/GetImg?filename=images/JSJC201910036_066.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 电影流派子树</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910036_066.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="67">树形结构开始于类型为Thing的电影节点,通过“is a”关系类型连接到不同流派分支(分别为动画、恐怖、浪漫、冒险、动作)。其次,通过电影之间的流派关系,将电影相互关联。根据电影之间的流派属性,通过二元Jaccard相似系数计算电影对之间的语义相似度,从而构建项目相似度矩阵。语义相似度计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="68"><i>Sim</i>(<i>x</i>,<i>y</i>)=<i>K</i><sub>11</sub>/(<i>K</i><sub>01</sub>+<i>K</i><sub>10</sub>+<i>K</i><sub>11</sub>)      (5)</p>
+                </div>
+                <div class="p1">
+                    <p id="69">其中,<i>K</i><sub>11</sub>表示电影<i>x</i>、<i>y</i>都具有流派的数量,<i>K</i><sub>01</sub>表示电影<i>x</i>不具有而电影<i>y</i>具有流派的数量,<i>K</i><sub>10</sub>表示电影<i>x</i>具有而<i>y</i>不具有流派的数量。</p>
+                </div>
+                <div class="p1">
+                    <p id="70">将电影表示为向量<i><b>V</b></i><sub><i>i</i></sub>=(<i>v</i><sub><i>i</i></sub><sub>,1</sub>,<i>v</i><sub><i>i</i></sub><sub>,2</sub>,…,<i>v</i><sub><i>i</i></sub><sub>,</sub><sub><i>g</i></sub>),其中,<i>g</i>表示电影流派的数量。当电影中存在流派属性<i>j</i>,则<i>v</i><sub><i>i</i></sub><sub>,</sub><sub><i>j</i></sub>=1,当电影与流派<i>j</i>无关联流派属性,则<i>v</i><sub><i>i</i></sub><sub>,</sub><sub><i>j</i></sub>=0。如图3所示,电影A(<i><b>v</b></i><sub>A</sub>=(1,0,0,0,0))与电影B(<i><b>v</b></i><sub>B</sub>=(1,1,0,0,0))都含流派Animation,故<i>K</i><sub>11</sub>=1;对于流派Thriller,电影A没有,而电影B有,故<i>K</i><sub>01</sub>=1;不存在电影A含有某电影流派,而电影B不含该流派的情形,故<i>K</i><sub>10</sub>=0。因此,电影A和B之间的相似度<i>Sim</i>(A,B)=1/(1+0+1)=0.5。</p>
+                </div>
+                <h4 class="anchor-tag" id="71" name="71">2.2 用户属性相似度计算</h4>
+                <div class="p1">
+                    <p id="72">推荐系统的重要意义是挖掘用户感兴趣的信息,提高信息的使用效率和价值,同时满足用户的需要。传统的相似度计算只考虑到项目的共同评分,忽略了不同用户对项目的偏好问题,针对这一问题,本文在相似度计算过程中,引入用户属性进行推荐。在本文中,用户属性分为用户兴趣度和用户差异性。</p>
+                </div>
+                <h4 class="anchor-tag" id="73" name="73">2.2.1 用户兴趣度相似度计算</h4>
+                <div class="p1">
+                    <p id="74">用户在某个项目的某个类别上评分越高,用户之间的相似性越高。考虑到用户针对不同类别评分的偏好,本文引入兴趣度因子。用户兴趣度向量<i><b>Interest</b></i><sub><i>u</i></sub>=(<i>I</i><sub><i>u</i></sub><sub>,1</sub>,<i>I</i><sub><i>u</i></sub><sub>,2</sub>,…,<i>I</i><sub><i>u</i></sub><sub>,</sub><sub><i>n</i></sub>),其中,<i>I</i><sub><i>u</i></sub><sub>,</sub><sub><i>i</i></sub>=<i>ω</i><sub><i>u</i></sub><sub>,</sub><sub><i>i</i></sub>/<i>ω</i><sub><i>u</i></sub>为用户<i>u</i>对项目<i>i</i>的兴趣度,<i>ω</i><sub><i>u</i></sub><sub>,</sub><sub><i>i</i></sub>为评分高于平均分的值,<i>ω</i><sub><i>u</i></sub>表示评分高于平均分的累加值,则2个用户的兴趣相似度计算如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="75"><i>Sim</i><sub>interest</sub>(<i>u</i>,<i>v</i>)=cos(<i><b>Interest</b></i><sub><i>u</i></sub>,<i><b>Interest</b></i><sub><i>v</i></sub>)      (6)</p>
+                </div>
+                <h4 class="anchor-tag" id="76" name="76">2.2.2 用户差异相似度计算</h4>
+                <div class="p1">
+                    <p id="77">本文在考虑用户之间兴趣因子的同时,还根据不同用户对项目的评分表现,将用户差异性因子引入到相似度计算中,其计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="78" class="code-formula">
+                        <mathml id="78"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>i</mi><mi>m</mi><msub><mrow></mrow><mrow><mi>r</mi><mo>,</mo><mi>j</mi></mrow></msub><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>Ι</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>v</mi></mrow></msub></mrow></munder><mrow><mfrac><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo>-</mo><mrow><mo>|</mo><mrow><mi>R</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub><mo>-</mo><mi>R</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>i</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo>-</mo><mi>m</mi><mi>i</mi><mi>n</mi></mrow></mfrac></mrow></mstyle></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>Ι</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>v</mi></mrow></msub></mrow></munder><mrow><mrow><mo>|</mo><mrow><mi>R</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub><mo>-</mo><mi>R</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>i</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow></mstyle><mo>+</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>j</mi><mo>∈</mo><mi>Ι</mi><msub><mrow></mrow><mi>u</mi></msub><mstyle displaystyle="true"><mo>∪</mo><mi>Ι</mi></mstyle><msub><mrow></mrow><mi>v</mi></msub><mo>-</mo><mi>Ι</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>v</mi></mrow></msub></mrow></munder><mrow><mrow><mo>|</mo><mrow><mi>R</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>j</mi></mrow></msub><mo>-</mo><mi>R</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>j</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow></mstyle></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="79">其中,<i>I</i><sub><i>uv</i></sub>表示用户<i>u</i>和用户<i>v</i>对项目的共同评分,<mathml id="136"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo>-</mo><mrow><mo>|</mo><mrow><mi>R</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub><mo>-</mo><mi>R</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>i</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo>-</mo><mi>m</mi><mi>i</mi><mi>n</mi></mrow></mfrac></mrow></math></mathml>表示用户u与v对项目i共同评分的误差值,I<sub>u</sub>∪I<sub>v</sub>-I<sub>uv</sub>表示用户对项目的评分与其共同评分的差值,<mathml id="137"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>|</mo><mrow><mi>R</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>j</mi></mrow></msub><mo>-</mo><mi>R</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>j</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow></math></mathml>用来衡量用户之间的差异性。<mathml id="138"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>|</mo><mrow><mi>R</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>j</mi></mrow></msub><mo>-</mo><mi>R</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>j</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow></math></mathml>的值越小,表示用户之间的相似度越高。本文通过引入用户之间的差异性,反映了共同和非共同项目集对推荐结果的影响,弥补了余弦、皮尔逊相关系数等只考虑用户对项目的共同评分问题。</p>
+                </div>
+                <h4 class="anchor-tag" id="80" name="80">2.3 项目长尾效应</h4>
+                <div class="p1">
+                    <p id="81">协同过滤算法可以根据历史信息挖掘用户的偏好,为用户提供个性化推荐。但随着数据量的不断扩大,一些算法很难保证推荐项目的新颖度。例如在电商领域,流行度、销量越高的产品被推荐的次数和比率越高,冷门的、销量低的产品被忽略。这个问题就是长尾问题<citation id="155" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>。数据量越大,长尾问题表现得越严重。MovieLens 1M数据集的长尾现象如图4所示。其中,<i>y</i>轴代表每个项目被评级的数量,<i>x</i>轴代表项目的等级。第一条垂线将前20%的项目按受欢迎程度分开,它吸引了更多的用户关注。第二条垂线将数据的尾部分为两部分,第一部分称之为项目的长尾效应,评分数量较少而不被关注。而传统的协同过滤算法根据历史评级信息进行推荐,在评分数量较少的情况下,会导致长尾项目很难被推荐。</p>
+                </div>
+                <div class="area_img" id="82">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910036_082.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 MovieLens 1M数据集的长尾现象" src="Detail/GetImg?filename=images/JSJC201910036_082.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 MovieLens 1M数据集的长尾现象</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910036_082.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="83">因此本文提出项目加权的方法,将系统偏好融入到不同的项目上,并通过综合用户和系统的偏好来产生推荐。除了评分偏好矩阵<i><b>R</b></i>,本文定义向量<i><b>W</b></i>表示系统对不同项目的偏好。<i>ω</i><sub><i>i</i></sub>表示系统对项目的偏好权重。为了解决长尾问题,本文通过加权的方式来平衡项目受欢迎度,设<i>ρ</i>(<i>i</i>)为项目<i>i</i>被评级的次数,则<i>ω</i><sub><i>i</i></sub>的取值如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="84" class="code-formula">
+                        <mathml id="84"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ω</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mi>ln</mi><mo stretchy="false">(</mo><mi>ρ</mi><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="85">为了综合系统偏好评分与预测评分,设<mathml id="139"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>p</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub></mrow></math></mathml>是用户对项目的预测评分,则项目的长尾问题可通过下式缓解:</p>
+                </div>
+                <div class="p1">
+                    <p id="86" class="code-formula">
+                        <mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub><mo>=</mo><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>α</mi><mo stretchy="false">)</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>p</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub><mo>+</mo><mi>α</mi><mi>ω</mi><msub><mrow></mrow><mi>i</mi></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>9</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="87">其中,α是平衡因子。α值越小,用户的偏好作用越大;反之,推荐结果更偏向于系统<i><b>W</b></i>向量的值。通过权重拟合系统与用户对项目的偏好,本文从一定程度上为流行度较高的项目增加惩罚项,推动冷门项目被推荐。</p>
+                </div>
+                <h4 class="anchor-tag" id="88" name="88">2.4 算法描述</h4>
+                <div class="p1">
+                    <p id="89">传统协同过滤算法依据用户的历史评分数据以及项目的评级数据,通过预测用户未评级的评分数据形成推荐列表,在相似度计算中,只考虑项目共同评分数据,而忽略了项目本身属性之间的的关系以及不同用户对项目评级之间的兴趣度与差异性。同时,在保证推荐准确度的前提下,缓解项目的长尾效应,一直是推荐算法的难题。本文提出ONU-CF推荐算法,其具体步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="90">1)输入项目集{<i>i</i><sub>1</sub>,<i>i</i><sub>2</sub>,…,<i>i</i><sub><i>n</i></sub>}和用户评分矩阵<i><b>R</b></i>={<i>r</i><sub><i>ij</i></sub>|1≤<i>i</i>≤<i>m</i>,1≤<i>j</i>≤<i>n</i>}。</p>
+                </div>
+                <div class="p1">
+                    <p id="91">2)提取{<i>i</i><sub>1</sub>,<i>i</i><sub>2</sub>,…,<i>i</i><sub><i>n</i></sub>}的属性信息,构造基于本体的电影流派子树,利用式(5)计算基于本体语义的项目相似度<i>Sim</i>(<i>x</i>,<i>y</i>),构建项目相似度矩阵。</p>
+                </div>
+                <div class="p1">
+                    <p id="92">3)根据加入用户属性的相似度计算方法,利用式(6)和式(7)计算引入兴趣度的用户相似度<i>Sim</i><sub>interest</sub>(<i>u</i>,<i>v</i>)以及用户针对不同项目的评分差异性相似度<i>Sim</i><sub><i>r</i></sub><sub>,</sub><sub><i>j</i></sub>(<i>u</i>,<i>v</i>),构建用户相似度矩阵。</p>
+                </div>
+                <div class="p1">
+                    <p id="93">4)预测目标用户对未知项目的评分,利用式(10)综合本体语义与用户属性的相似度<i>Sim</i>(<i>u</i>,<i>v</i>),考虑用户属性的兴趣度与差异性,利用式(11)改进用户<i>u</i>对项目<i>v</i><sub><i>i</i></sub>的预测评分。</p>
+                </div>
+                <div class="p1">
+                    <p id="94"><i>Sim</i>(<i>u</i>,<i>v</i>)=<i>Sim</i>(<i>x</i>,<i>y</i>)[<i>Sim</i><sub>interest</sub>(<i>u</i>,<i>v</i>)+<i>Sim</i><sub><i>r</i></sub><sub>,</sub><sub><i>j</i></sub>(<i>u</i>,<i>v</i>)]      (10)</p>
+                </div>
+                <div class="p1">
+                    <p id="95" class="code-formula">
+                        <mathml id="95"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>Ρ</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub><mo>=</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>R</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>u</mi></msub><mo>+</mo><mfrac><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>v</mi><mo>∈</mo><mi>Ν</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></munder><mo stretchy="false">[</mo></mstyle><mi>S</mi><mi>i</mi><mi>m</mi><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mrow><mo>(</mo><mrow><mi>R</mi><msub><mrow></mrow><mrow><mi>v</mi><mi>i</mi></mrow></msub><mo>-</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>R</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>v</mi></msub></mrow><mo>)</mo></mrow></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>v</mi><mo>∈</mo><mi>Ν</mi><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></munder><mrow><mrow><mo>|</mo><mrow><mi>S</mi><mi>i</mi><mi>m</mi><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow><mo>|</mo></mrow></mrow></mstyle></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>1</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="96">其中,<mathml id="140"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>Ρ</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mrow><mi>u</mi><mi>i</mi></mrow></msub></mrow></math></mathml>表示目标用户对项目的预测评分,<mathml id="141"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>R</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>u</mi></msub></mrow></math></mathml>、<mathml id="142"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>R</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>v</mi></msub></mrow></math></mathml>分别表示用户u和v评分的均值,R<sub>vi</sub>表示用户v对项目i的评分,N(u)表示用户u的近邻集合。</p>
+                </div>
+                <div class="p1">
+                    <p id="97">5)对用户-项目评分矩阵的预测评分进行加权处理,利用式(8)定义系统对项目的偏好向量,使用式(9)计算目标用户对项目的最终预测评分p<sub>ui</sub>。</p>
+                </div>
+                <div class="p1">
+                    <p id="98">6)构造推荐列表,为目标用户选择最近的K个邻居,根据<i>TOP</i>-N推荐策略,选择预测评分前N个项目作为推荐结果,推荐给用户。</p>
+                </div>
+                <h3 id="99" name="99" class="anchor-tag">3 实验结果及分析</h3>
+                <h4 class="anchor-tag" id="100" name="100">3.1 实验数据</h4>
+                <div class="p1">
+                    <p id="101">本文实验采用的数据集为美国明尼苏达州立大学GroupLens小组收集的MovieLens数据集(https://grouplens.org/datasets/movielens/)。该数据集包含71 567个用户对10 681部电影的100 004个评分,以及95 580个电影的标记信息。本文将该数据集的训练集与测试集划分为5组,分别进行实验。</p>
+                </div>
+                <h4 class="anchor-tag" id="102" name="102">3.2 度量标准</h4>
+                <div class="p1">
+                    <p id="103">本文采用平均绝对误差(Mean Absolute Error,MAE)来评价算法的预测精度,以准确率、召回率、综合测度(F1-score)<citation id="156" type="reference"><link href="33" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>来评估TOP-<i>N</i>推荐列表,最后验证算法的新颖度<citation id="157" type="reference"><link href="35" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="104">1)MAE通常用来衡量实际值与预测值之间的误差,其值越小,推荐效果越好。设预测用户的评分集合为{<i>p</i><sub>1</sub>,<i>p</i><sub>2</sub>,…,<i>p</i><sub><i>N</i></sub>},实际用户评分集为{<i>q</i><sub>1</sub>,<i>q</i><sub>2</sub>,…,<i>q</i><sub><i>N</i></sub>},则MAE的计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="106" class="code-formula">
+                        <mathml id="106"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Μ</mi><mi>A</mi><mi>E</mi><mo>=</mo><mfrac><mn>1</mn><mi>Ν</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mrow><mrow><mo>|</mo><mrow><mi>p</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mi>q</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mo>|</mo></mrow></mrow></mstyle><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>2</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="107">2)准确率为被推荐的项目列表占用户偏好项目的比重。召回率则是推荐的项目列表中,用户喜欢的项目占所有用户喜欢项目的比重。设<i>R</i>(<i>i</i>)是根据用户在训练集上的行为数据为目标用户推荐的<i>N</i>个项目列表,<i>T</i>(<i>i</i>)是在测试集上用户偏好的项目集合,则准确率和召回率的计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="109" class="code-formula">
+                        <mathml id="109"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>Ρ</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>U</mi></mrow></munder><mrow><mrow><mo>|</mo><mrow><mi>R</mi><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo><mstyle displaystyle="true"><mo>∩</mo><mi>Τ</mi></mstyle><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow><mo>|</mo></mrow></mrow></mstyle></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>U</mi></mrow></munder><mrow><mrow><mo>|</mo><mrow><mi>R</mi><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow><mo>|</mo></mrow></mrow></mstyle></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>3</mn><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mi>R</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>U</mi></mrow></munder><mrow><mrow><mo>|</mo><mrow><mi>R</mi><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo><mstyle displaystyle="true"><mo>∩</mo><mi>Τ</mi></mstyle><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow><mo>|</mo></mrow></mrow></mstyle></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>i</mi><mo>∈</mo><mi>U</mi></mrow></munder><mi>Τ</mi></mstyle><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>4</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="110">3)F1-score是为了解决准确率提高而召回率下降之间的矛盾提出的,其计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="111" class="code-formula">
+                        <mathml id="111"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>F</mi><mn>1</mn><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mi>Ρ</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>×</mo><mi>R</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow><mrow><mi>Ρ</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>+</mo><mi>R</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>5</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="112">4)新颖度表示推荐给目标用户的Top-<i>N</i> 推荐列表中包含的新项目个数与推荐列表中项目个数的比值,其计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="114"><i>Novelty</i>=<i>num</i>/<i>N</i>      (16)</p>
+                </div>
+                <div class="p1">
+                    <p id="115">其中,<i>num</i>表示Top-<i>N</i> 推荐列表中新项目的数量。</p>
+                </div>
+                <h4 class="anchor-tag" id="116" name="116">3.3 实验对比分析</h4>
+                <div class="p1">
+                    <p id="117">本文算法与传统皮尔逊相似度计算协同过滤算法(P-CF)、基于本体语义的协同过滤算法(OSS-CF)、基于评分矩阵填充与用户兴趣的协同过滤算法(SMUI-CF)<citation id="158" type="reference"><link href="37" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>进行实验对比,实验分为3个部分。</p>
+                </div>
+                <h4 class="anchor-tag" id="118" name="118">3.3.1 MAE值比较</h4>
+                <div class="p1">
+                    <p id="119">为保证推荐效果最佳,本文算法在处理长尾项目的推荐问题上,采用参数<i>α</i>调节系统与用户对项目的预测评分。实验观察MAE值随不同<i>α</i>、不同TOP-<i>N</i>的变化,结果如图5所示。</p>
+                </div>
+                <div class="area_img" id="120">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910036_120.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 本文算法不同α取值的MAE值" src="Detail/GetImg?filename=images/JSJC201910036_120.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 本文算法不同</b><i><b>α</b></i><b>取值的MAE值</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910036_120.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="121">由图5可知,在不同TOP-<i>N</i>的情况下,<i>α</i>对MAE值的影响基本相同,且当<i>α</i>=0.5时,MAE值最小,即推荐结果最准确。因此,在后续实验中,<i>α</i>设为0.5。</p>
+                </div>
+                <div class="p1">
+                    <p id="122">针对不同的TOP-<i>N</i>,各算法的MAE值如图6所示。</p>
+                </div>
+                <div class="area_img" id="123">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910036_123.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 4种算法TOP-N的MAE值对比" src="Detail/GetImg?filename=images/JSJC201910036_123.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 4种算法TOP-</b><i><b>N</b></i><b>的MAE值对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910036_123.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="124">由图6可知,4种算法的MAE值随邻居数量<i>N</i>的增加而减小,意味着各自的推荐精度在提升。其中,P-CF算法的MAE值最大;OSS-CF与SMUI-CF算法相比,在邻居数量增加到40时,推荐效果基本相等;当邻居数量接近90时,SMUI-CF算法效果相对较好。这表明随着邻居数量的增加,OSS-CF算法利用用户之间的本体关系,以及SMUI-CF算法在相似度计算中引入用户属性偏好,对推荐精度具有一定的影响。而本文算法融合了本体语义与用户属性进行推荐,因此MAE值最小,推荐效果相对其他3种算法,表现最好。</p>
+                </div>
+                <h4 class="anchor-tag" id="125" name="125">3.3.2 综合测度实验对比</h4>
+                <div class="p1">
+                    <p id="126">本文对比了4种算法在不同TOP-<i>N</i>情况下推荐的准确率、召回率以及综合测度,实验结果如表2所示。总体上看,本文算法由于项目之间采用本体之间的语义关系,比传统的基于近邻相似度的方法具有更好的预测精度。当<i>N</i>=30时,本文算法比OSS-CF、SMUI-CF算法的准确率分别提高0.201和0.188,提升效果明显。此时,其召回率分别提高0.147和0.030,F1-score提高了0.190和0.064。</p>
+                </div>
+                <div class="area_img" id="127">
+                    <p class="img_tit"><b>表2 4种算法的准确率、召回率与综合测度对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="127" border="1"><tr><td rowspan="3"><br />TOP-<i>N</i></td><td colspan="4"><br />准确率</td><td colspan="4">召回率</td><td colspan="4">F1-score</td></tr><tr><td colspan="4"><br /></td><td colspan="4"></td><td colspan="4"></td></tr><tr></tr><tr><td>10</td><td>0.104</td><td>0.455</td><td>0.500</td><td>0.651</td><td>0.040</td><td>0.113</td><td>0.211</td><td>0.216</td><td>0.058</td><td>0.181</td><td>0.297</td><td>0.324</td></tr><tr><td><br />20</td><td>0.112</td><td>0.461</td><td>0.513</td><td>0.701</td><td>0.046</td><td>0.128</td><td>0.223</td><td>0.225</td><td>0.065</td><td>0.200</td><td>0.312</td><td>0.341</td></tr><tr><td><br />30</td><td>0.120</td><td>0.507</td><td>0.520</td><td>0.708</td><td>0.050</td><td>0.135</td><td>0.252</td><td>0.282</td><td>0.071</td><td>0.213</td><td>0.339</td><td>0.403</td></tr><tr><td><br />40</td><td>0.125</td><td>0.510</td><td>0.524</td><td>0.710</td><td>0.066</td><td>0.141</td><td>0.271</td><td>0.288</td><td>0.086</td><td>0.221</td><td>0.357</td><td>0.410</td></tr><tr><td><br />50</td><td>0.131</td><td>0.522</td><td>0.530</td><td>0.712</td><td>0.071</td><td>0.150</td><td>0.301</td><td>0.314</td><td>0.092</td><td>0.233</td><td>0.384</td><td>0.436</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="128" name="128">3.3.3 新颖度对比</h4>
+                <div class="p1">
+                    <p id="129">4种算法的新颖度对比结果如图7所示。实验结果显示,P-CF算法因为没有考虑对长尾项目的推荐问题,新颖度几乎为0;OSS-CF算法新颖度随TOP-<i>N</i>的数量增加而下降,且其值偏低;SMUI-CF算法引入流行度权重的相似度计算方法,发挥了一定的作用。在<i>N</i>=20时,SMUI-CF算法与本文算法新颖度基本相等,但随着TOP-<i>N</i>数量的增加,本文算法新颖度呈上升趋势。当<i>N</i>=35时,本文算法的推荐列表中约24%的项目是长尾项目,有效提高了算法的新颖度。</p>
+                </div>
+                <div class="area_img" id="130">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910036_130.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 4种算法的新颖度对比" src="Detail/GetImg?filename=images/JSJC201910036_130.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图7 4种算法的新颖度对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910036_130.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="131" name="131" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="132">本文提出一种融合本体语义与用户属性的协同过滤算法,基于本体语义相似度计算项目属性相似度,融合用户属性的相似度计算方法,权衡系统与用户的偏好对长尾项目预测评分进行加权处理,生成TOP-<i>N</i>推荐列表。实验结果表明,相比P-CF、OSS-CF和SMUI-CF算法,本文算法能推荐给用户更接近其偏好的项目,且推荐的新颖度较高。但是在数据量不断增大的情况下,算法扩展性还有待进一步提升,这将是下一步要重点研究和解决的问题。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="5">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Collaborative Filtering Recom-mender Systems">
+
+                                <b>[1]</b> SCHAFER J B,FRANKOWSKI D,HERLOCKER J,et al.Collaborative filtering recommender systems[M]//BRUSILOVSKY P,KOBSA A,NEJDL W.The adaptive Web.Berlin,Germany:Springer,2007:291-324.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Toward the next generation of recommender systems: A survey of the state-of-the-art and possible extensions">
+
+                                <b>[2]</b> ADOMAVICIUS G,TUZHILIN A.Toward the next generation of recommender systems:a survey of the state-of-the-art and possible extensions[J].IEEE Transactions on Knowledge and Data Engineering,2005,17(6):734-749.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QBXB201303010&amp;v=MDg3OTMzenFxQnRHRnJDVVJMT2VaZVJ0RnkzaFVMM01OQy9UYkxHNEg5TE1ySTlFWklRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 林耀进,胡学钢,李慧宗.基于用户群体影响的协同过滤算法[J].情报学报,2013,32(3):299-305.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201705030&amp;v=MDAyMzJGeTNoVUwzTUx6N0JkN0c0SDliTXFvOUdaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 于金明,孟军,吴秋峰.基于改进相似性度量的项目协同过滤推荐算法[J].计算机应用,2017,37(5):1387-1391.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=MOOCs recommender system using ontology and memory-based collaborative filtering">
+
+                                <b>[5]</b> RABAHALLAH K,MAHDAOUI L,AZOUAOU F.MOOCs recommender system using ontology and memory-based collaborative filtering[C]//Proceedings of International Conference on Enterprise Information Systems.Funchal,Portugal:SCITE Press,2018:635-641.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY2017S1067&amp;v=MTgwMTc0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hVTDNNTHo3QmQ3RzRIOWF2cm85RFk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 王阳,钟勇,李振东,等.融合语义相似度与矩阵分解的评分预测算法[J].计算机应用,2017,37(增刊):287-291.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201008014&amp;v=Mjk5NDF6N0Jkckc0SDlITXA0OUVZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVUwzTUw=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 罗辛,欧阳元新,熊璋,等.通过相似度支持度优化基于K近邻的协同过滤算法[J].计算机学报,2010,33(8):1437-1445.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Collaborative filtering algorithm based on user attribute item dependency">
+
+                                <b>[8]</b> ZHANG Xuewang,JIANG Xun.Collaborative filtering algorithm based on user attribute item dependency[C]//Proceedings of the 9th International Conference on Communication Software and Networks.Washington D.C.,USA:IEEE Press,2017:1426-1431.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201309004&amp;v=MTc2NDc0SDlMTXBvOUZZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVUwzTUx5dlNkTEc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 印桂生,张亚楠,董红斌,等.一种由长尾分布约束的推荐方法[J].计算机研究与发展,2013,50(9):1814-1824.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY2015S2041&amp;v=MzA2NzQ5QlpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hVTDNNTHo3QmQ3RzRIOVN2clk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 冯媛媛,王晓东,姚宇.电子商务中长尾物品推荐方法[J].计算机应用,2015,35(增刊):151-154.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJA201509040&amp;v=MDUzNDZHNEg5VE1wbzlCWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0RnkzaFVMM01MejdCYjc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 吴正洋,汤庸,方家轩,等.一种基于本体语义相似度的协同过滤推荐方法[J].计算机科学,2015,42(9):204-207.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201612026&amp;v=MDA0OTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVUwzTUx6N1NaTEc0SDlmTnJZOUhZb1E=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 赵文涛,王春春,成亚飞,等.基于用户多属性与兴趣的协同过滤算法[J].计算机应用研究,2016,33(12):3630-3633.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJA201202002&amp;v=MzIxNzdvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hVTDNNTHo3QmI3RzRIOVBNclk5Rlo=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 刘宏哲,须德.基于本体的语义相似度和相关度计算研究综述[J].计算机科学,2012,39(2):8-13.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Challenging the long tail recommendation">
+
+                                <b>[14]</b> YIN Hongzhi,CUI Bin,LI Jing,et al.Challenging the long tail recommendation[J].Proceedings of the VLDB Endowment,2012,5(9):896-907.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJK201803026&amp;v=MjExNDVSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVUwzTUx6N0JaYkc0SDluTXJJOUhZb1FLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 王光,张杰民,董帅含,等.基于内容的加权粒度序列推荐算法[J].计算机工程与科学,2018,40(3):564-570.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201506009&amp;v=MDIyMTlNTnlmVGJMRzRIOVRNcVk5RmJZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hVTDM=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> 于洪,李俊华.一种解决新项目冷启动问题的推荐算法[J].软件学报,2015,26(6):1395-1408.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201601007&amp;v=MjQ3MDhaZVJ0RnkzaFVMM01MejdCYmJHNEg5Zk1ybzlGWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2U=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b> 韩亚楠,曹菡,刘亮亮.基于评分矩阵填充与用户兴趣的协同过滤推荐算法[J].计算机工程,2016,42(1):36-40.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201910036" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201910036&amp;v=MTY5ODc0SDlqTnI0OUdZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVUwzTUx6N0JiYkc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0ZyTnZtdlVVYXhBK3hEaz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

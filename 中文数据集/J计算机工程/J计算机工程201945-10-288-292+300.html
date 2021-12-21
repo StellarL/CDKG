@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637126237416021250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201910048%26RESULT%3d1%26SIGN%3dDTAhwhS6PkbjhDtVpVUXuYRBKlE%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201910048&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201910048&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201910048&amp;v=MjI1NDhaZVJ0Rnl6a1VMektMejdCYmJHNEg5ak5yNDlCYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2U=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#45" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#51" data-title="1 停用词范围 ">1 停用词范围</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#56" data-title="2 停用词抽取方法 ">2 停用词抽取方法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#58" data-title="2.1 文档频数法">2.1 文档频数法</a></li>
+                                                <li><a href="#64" data-title="2.2 词项频率法">2.2 词项频率法</a></li>
+                                                <li><a href="#72" data-title="2.3 信息熵法">2.3 信息熵法</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#79" data-title="3 语料统计与分析 ">3 语料统计与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#80" data-title="3.1 语料数据">3.1 语料数据</a></li>
+                                                <li><a href="#83" data-title="3.2 停用词抽取流程">3.2 停用词抽取流程</a></li>
+                                                <li><a href="#86" data-title="3.3 预处理">3.3 预处理</a></li>
+                                                <li><a href="#94" data-title="3.4 结果统计">3.4 结果统计</a></li>
+                                                <li><a href="#112" data-title="3.5 停用词过滤">3.5 停用词过滤</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#125" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#82" data-title="&lt;b&gt;表1 停用词抽取的实验语料分布情况&lt;/b&gt;"><b>表1 停用词抽取的实验语料分布情况</b></a></li>
+                                                <li><a href="#85" data-title="&lt;b&gt;图1 维吾尔语停用词抽取方法流程&lt;/b&gt;"><b>图1 维吾尔语停用词抽取方法流程</b></a></li>
+                                                <li><a href="#96" data-title="&lt;b&gt;表2 DF、TF和EN统计结果中的前30个词语&lt;/b&gt;"><b>表2 DF、TF和EN统计结果中的前30个词语</b></a></li>
+                                                <li><a href="#99" data-title="&lt;b&gt;图2 3种方法获取的停用词分布情况&lt;/b&gt;"><b>图2 3种方法获取的停用词分布情况</b></a></li>
+                                                <li><a href="#101" data-title="&lt;b&gt;表3 3种方法获取的候选词集的交集情况&lt;/b&gt;"><b>表3 3种方法获取的候选词集的交集情况</b></a></li>
+                                                <li><a href="#104" data-title="&lt;b&gt;表4 候选停用词词性分布&lt;/b&gt;"><b>表4 候选停用词词性分布</b></a></li>
+                                                <li><a href="#107" data-title="&lt;b&gt;表5&lt;/b&gt; 《&lt;b&gt;现代维吾尔语详解词典》的候选停用词分布情况&lt;/b&gt;"><b>表5</b> 《<b>现代维吾尔语详解词典》的候选停用词分布情况</b></a></li>
+                                                <li><a href="#123" data-title="&lt;b&gt;图3 3种方法的准确率对比&lt;/b&gt;"><b>图3 3种方法的准确率对比</b></a></li>
+                                                <li><a href="#124" data-title="&lt;b&gt;图4 本文方法获取的部分停用词&lt;/b&gt;"><b>图4 本文方法获取的部分停用词</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" WILBUR W J.The automatic identification of stop words[J].Journal of Information Science,1992,18(2):45-55." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The automatic identification of stop words">
+                                        <b>[1]</b>
+                                         WILBUR W J.The automatic identification of stop words[J].Journal of Information Science,1992,18(2):45-55.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" FOX C.Lexical analysis and stoplists[M]//Fox C.Information retrieval.New York,USA:ACM Press,1992:102-130." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Lexical analysis and stoplists">
+                                        <b>[2]</b>
+                                         FOX C.Lexical analysis and stoplists[M]//Fox C.Information retrieval.New York,USA:ACM Press,1992:102-130.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" HO T K.Stop word location and identification for adaptive text recognition[J].International Journal on Document Analysis and Recognition,2000,3(1):16-26." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00002619941&amp;v=MTA2MDdlYnVkdEZDdmxWNzdMSTF3PU5qN0Jhck80SHRIT3FZNU1iZThPWTNrNXpCZGg0ajk5U1hxUnJ4b3hjTUg3Ujdx&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         HO T K.Stop word location and identification for adaptive text recognition[J].International Journal on Document Analysis and Recognition,2000,3(1):16-26.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" VAN-RIJSBERGEN C J.Information retrieval[EB/OL].[2018-07-01].http://openlib.org/home/krichel/courses/ lis618/readings/rijsbergen79_infor_retriev.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Information retrieval">
+                                        <b>[4]</b>
+                                         VAN-RIJSBERGEN C J.Information retrieval[EB/OL].[2018-07-01].http://openlib.org/home/krichel/courses/ lis618/readings/rijsbergen79_infor_retriev.pdf.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" Onixtext retrieval toolkit stop word list 2[EB/OL].[2018-07-01].http://www.lextek.com/manuals/onix/stopw ords2.html." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Onixtext retrieval toolkit stop word list 2">
+                                        <b>[5]</b>
+                                         Onixtext retrieval toolkit stop word list 2[EB/OL].[2018-07-01].http://www.lextek.com/manuals/onix/stopw ords2.html.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" XPO6.Stop word list[EB/OL].[2018-07-01].http://xpo6.com/download-stop-word-list/." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=XPO6.Stop word list">
+                                        <b>[6]</b>
+                                         XPO6.Stop word list[EB/OL].[2018-07-01].http://xpo6.com/download-stop-word-list/.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" ZOU Feng,WANG Fulee,DENG Xiaotian,et al.Automatic construction of Chinese stop word list[C]//Proceedings of the 5th WSEAS International Conference on Applied Computer Science.New York,USA:ACM Press,2006:1009-1014." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Automatic Construction of Chinese Stop Word List">
+                                        <b>[7]</b>
+                                         ZOU Feng,WANG Fulee,DENG Xiaotian,et al.Automatic construction of Chinese stop word list[C]//Proceedings of the 5th WSEAS International Conference on Applied Computer Science.New York,USA:ACM Press,2006:1009-1014.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 顾益军,樊孝忠,王建华,等.中文停用词表的自动选取[J].北京理工大学学报,2005,25(4):337-340." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJLG200504014&amp;v=MTk3MDM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5emtVTHpLSnlmSGFiRzRIdFRNcTQ5RVlJUUtESDg=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         顾益军,樊孝忠,王建华,等.中文停用词表的自动选取[J].北京理工大学学报,2005,25(4):337-340.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" 马治涛.文本分类停用词处理和特征选择技术研究[D].西安:西安电子科技大学,2014." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015437320.nh&amp;v=MDIyNDI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeXprVUx6S1ZGMjZHN2U3R2RMT3I1RWJQSVFLREg=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         马治涛.文本分类停用词处理和特征选择技术研究[D].西安:西安电子科技大学,2014.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" 江兆中.基于语境和停用词驱动的中文自动分词研究[D].合肥:合肥工业大学,2010." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=2010245881.nh&amp;v=MjMyMDhaZVJ0Rnl6a1VMektWMTI2SHJHOEc5bkVycEViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2U=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         江兆中.基于语境和停用词驱动的中文自动分词研究[D].合肥:合肥工业大学,2010.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" 蒋斌.基于停用词处理的汉语语音检索方法[D].哈尔滨:哈尔滨工业大学,2008." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=2009229534.nh&amp;v=MTEyMjIyN0Y3RzZGOVRQcTVFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5emtVTHpLVjE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         蒋斌.基于停用词处理的汉语语音检索方法[D].哈尔滨:哈尔滨工业大学,2008.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 崔彩霞.停用词的选取对文本分类效果的影响研究[J].太原师范学院学报(自然科学版),2008,7(4):91-93." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SJYX200804027&amp;v=MDgwOTZVTHpLTmlmU2RyRzRIdG5NcTQ5SFk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5ems=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         崔彩霞.停用词的选取对文本分类效果的影响研究[J].太原师范学院学报(自然科学版),2008,7(4):91-93.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 巩政,关高娃.蒙古文停用词和英文停用词比较研究[J].中文信息学报,2011,25(4):35-38." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201104008&amp;v=MDY3NzBSdEZ5emtVTHpLS0NqWWZiRzRIOURNcTQ5RmJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmU=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         巩政,关高娃.蒙古文停用词和英文停用词比较研究[J].中文信息学报,2011,25(4):35-38.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 珠杰,李天瑞.藏文停用词选取与自动处理方法研究[J].中文信息学报,2015,29(2):125-132." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201502016&amp;v=MTcxMTdvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5emtVTHpLS0NqWWZiRzRIOVRNclk5RVk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         珠杰,李天瑞.藏文停用词选取与自动处理方法研究[J].中文信息学报,2015,29(2):125-132.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 珠杰.藏文信息处理中若干关键技术研究[D].成都:西南交通大学,2016." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CDFD&amp;filename=1017298566.nh&amp;v=Mjc4MjBGckNVUkxPZVplUnRGeXprVUx6S1ZGMjZHYkd4RnRUS3FaRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         珠杰.藏文信息处理中若干关键技术研究[D].成都:西南交通大学,2016.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" 田生伟,钟军,禹龙.维吾尔语多词领域术语的自动抽取[J].中文信息学报,2015,29(2):133-141." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201502017&amp;v=MzE5OTVFWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0Rnl6a1VMektLQ2pZZmJHNEg5VE1yWTk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         田生伟,钟军,禹龙.维吾尔语多词领域术语的自动抽取[J].中文信息学报,2015,29(2):133-141.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" 图尔妮萨古丽&#183;赛麦提.基于N-gram的维吾尔文文本分类研究与系统实现[D].乌鲁木齐:新疆大学,2014." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1014383784.nh&amp;v=MzIyNjNVUkxPZVplUnRGeXprVUx6S1ZGMjZHckN3SGRiRXE1RWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                         图尔妮萨古丽&#183;赛麦提.基于N-gram的维吾尔文文本分类研究与系统实现[D].乌鲁木齐:新疆大学,2014.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_18" title=" 艾海麦提江&#183;阿布来提,吐尔地&#183;托合提,艾斯卡尔&#183;艾木都拉.基于Naive Bayes的维吾尔文文本分类算法及其性能分析[J].计算机应用与软件,2012,29(12):27-29." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201212010&amp;v=MDQ5NjllUnRGeXprVUx6S0x6VFpaTEc0SDlQTnJZOUVaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVo=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[18]</b>
+                                         艾海麦提江&#183;阿布来提,吐尔地&#183;托合提,艾斯卡尔&#183;艾木都拉.基于Naive Bayes的维吾尔文文本分类算法及其性能分析[J].计算机应用与软件,2012,29(12):27-29.
+                                    </a>
+                                </li>
+                                <li id="39">
+
+
+                                    <a id="bibliography_19" >
+                                        <b>[19]</b>
+                                     新疆民语委.现代维吾尔语详解辞典[M].乌鲁木齐:新疆人民出版社,2011.</a>
+                                </li>
+                                <li id="41">
+
+
+                                    <a id="bibliography_20" title=" 阿力木江&#183;艾沙,吐尔根&#183;依布拉音,艾山&#183;吾买尔,等.基于机器学习的维吾尔文文本分类研究[J].计算机工程与应用,2012,48(5):110-112." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSGG201205034&amp;v=MTU5NzBQTXFvOUdZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeXprVUx6S0x6N01hYkc0SDk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[20]</b>
+                                         阿力木江&#183;艾沙,吐尔根&#183;依布拉音,艾山&#183;吾买尔,等.基于机器学习的维吾尔文文本分类研究[J].计算机工程与应用,2012,48(5):110-112.
+                                    </a>
+                                </li>
+                                <li id="43">
+
+
+                                    <a id="bibliography_21" title=" 阿力木江&#183;艾沙.基于Rapid Miner的维吾尔文文本预处理及分类实验设计[J].中国教育技术装备,2017(12):24-27." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZJJB201712009&amp;v=MDc2ODk5Yk5yWTlGYllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0Rnl6a1VMektQeWZCYkxHNEg=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[21]</b>
+                                         阿力木江&#183;艾沙.基于Rapid Miner的维吾尔文文本预处理及分类实验设计[J].中国教育技术装备,2017(12):24-27.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(10),288-292+300 DOI:10.19678/j.issn.1000-3428.0052123            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>维吾尔语停用词抽取方法研究</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%A1%9E%E9%BA%A6%E6%8F%90%C2%B7%E9%BA%A6%E9%BA%A6%E6%8F%90%E6%95%8F&amp;code=22182550&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">塞麦提·麦麦提敏</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%8F%B8%E9%A9%AC%E4%B9%89%C2%B7%E9%98%BF%E4%B8%8D%E9%83%BD%E7%83%AD%E4%BE%9D%E6%9C%A8&amp;code=09252467&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">司马义·阿不都热依木</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%96%B0%E7%96%86%E5%A4%A7%E5%AD%A6%E4%B8%AD%E5%9B%BD%E8%AF%AD%E8%A8%80%E5%AD%A6%E9%99%A2&amp;code=0181515&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">新疆大学中国语言学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%96%B0%E7%96%86%E6%B0%91%E6%B1%89%E8%AF%AD%E6%96%87%E7%BF%BB%E8%AF%91%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">新疆民汉语文翻译研究中心</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>为提高信息处理效率,文本信息检索系统通常将停用词作为噪音过滤掉,影响了文本处理的效果。针对该问题,提出一种应用于维吾尔语的停用词抽取方法。在分析维吾尔语停用词特点的基础上,采用文档频数、词项频率和信息熵的方法对大量语料进行统计,并分析候选停用词的词性分布情况。通过文本分类实验确定停用词阈值,结果表明,使用该方法进行停用词过滤后,文本分类的计算复杂度降低,分类准确率达到80.8%。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">信息检索;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%81%9C%E7%94%A8%E8%AF%8D&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">停用词;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%BB%B4%E5%90%BE%E5%B0%94%E8%AF%AD&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">维吾尔语;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">文本分类;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%AD%E6%96%99%E7%BB%9F%E8%AE%A1&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">语料统计;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    塞麦提·麦麦提敏(1980—),男,副教授、博士,主研方向为自然语言信息处理;;
+                                </span>
+                                <span>
+                                    司马义·阿不都热依木,讲师、博士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-07-16</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家社会科学基金(17XYY034);</span>
+                                <span>教育部人文社会科学研究青年项目(16XJJC740001);</span>
+                    </p>
+            </div>
+                    <h1><b>Research on Uyghur Stop Words Extraction Method</b></h1>
+                    <h2>
+                    <span>SAIMAITI Maimaitimin</span>
+                    <span>ESMAEL Abdurehim</span>
+            </h2>
+                    <h2>
+                    <span>Chinese Languages School,Xinjiang University</span>
+                    <span>Xinjiang Research Center for Chinese-Ethnic Languages Translation</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>In order to improve the efficiency of information processing,the text information retrieval system usually filters out the stop words as noise,which affects the effect of text processing.Aiming at this problem,a stop words extraction method in Uyghur language is proposed.On the basis of analyzing the characteristics of Uyghur stop words,the statistics on a large number of corpus is carried out by means of Document Frequency(DF),Term Frequency(TF) and Entropy(EN),and the part of speech distribution of candidate stop words is analyzed.The threshold of stop words is determined by text classification experiments.Experimental results show that after filtering stop words with the proposed method,the computational complexity of text classification is reduced,and the classification precision reaches 80.8%.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=information%20retrieval&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">information retrieval;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=stop%20words&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">stop words;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Uyghur&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Uyghur;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=text%20classification&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">text classification;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=corpus%20statistics&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">corpus statistics;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-07-16</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="45" name="45" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="46">停用词是指在文本中出现频率较高,但其语义信息对各种信息处理系统贡献较小的词语。例如,在维吾尔语搜索引擎中,大量文本被切分为词语索引,其中很多为连词、后置词、助动词等虚词,没有实际意义,也不包含领域特征信息,一般只起到语法作用,对文本自动分类的作用不大。因此,大多数信息系统需要引入停用词处理过程,以减少文本的无用特征,降低特征空间的维数,减少计算时间,提高文本处理的效率和精度。</p>
+                </div>
+                <div class="p1">
+                    <p id="47">国内外很多学者都非常重视停用词的识别和处理,且取得了较多研究成果。英文停用词的研究起步较早,文献<citation id="131" type="reference">[<a class="sup">1</a>,<a class="sup">2</a>,<a class="sup">3</a>]</citation>对停用词进行研究并提出多种处理方法。在公开发表的英语停用词表中,较著名的有:Brown语料库的停用词表(425词)<citation id="128" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>,Onix文本抽取工具包的停用词表(571词)<citation id="129" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>,XPO6停用词表(319词)<citation id="130" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>等。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">在中文停用词研究方面,文献<citation id="132" type="reference">[<a class="sup">7</a>]</citation>提出基于熵的停用词抽取方法,文献<citation id="133" type="reference">[<a class="sup">8</a>]</citation>依据联合熵选取停用词,文献<citation id="134" type="reference">[<a class="sup">9</a>]</citation>对传统的卡方检验方法进行改善。文献<citation id="136" type="reference">[<a class="sup">10</a>,<a class="sup">11</a>]</citation>研究了停用词在中文自动分词、语音检索、用户信息查询等方面的应用。文献<citation id="135" type="reference">[<a class="sup">12</a>]</citation>研究停用词选取对文本分类效果的影响,发现在停用词过滤后,特征集维数可缩减24.3%。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">在少数民族语言方面,文献<citation id="140" type="reference">[<a class="sup">13</a>,<a class="sup">14</a>,<a class="sup">15</a>]</citation>介绍蒙古文和藏文停用词处理的方法,但关于维吾尔语停用词处理的研究较少。文献<citation id="137" type="reference">[<a class="sup">16</a>]</citation>在实验中使用临时获取的810个停用词,但并没有具体分析停用词的抽取方法和来源。文献<citation id="138" type="reference">[<a class="sup">17</a>]</citation>建立了以虚词为主的维吾尔语停用词表(280词)。文献<citation id="139" type="reference">[<a class="sup">18</a>]</citation>列举出几个停用词,但都没有提出相应的提取方法。上述文献的停用词选取范围、抽取方法、抽取数量有所差别,但得出的结论均显示,停用词识别对提高应用系统准确率和降低计算复杂度具有积极意义。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">随着维吾尔语等少数民族语言信息检索技术的快速发展,确定维吾尔语停用词表变得至关重要。然而,至今还没有一个标准的维吾尔语停用词表可供使用。在这种情况下,本文基于停用词处理的相关研究,分析维吾尔语的停用词范围,提出停用词抽取方法并进行语料统计与分析,以确定维吾尔语的停用词表。</p>
+                </div>
+                <h3 id="51" name="51" class="anchor-tag">1 停用词范围</h3>
+                <div class="p1">
+                    <p id="52">为提高检索效率,在各类信息检索系统中,停用词常被作为“噪音”自动过滤掉。但是,不同语言的停用词范围有所不同,很难确定统一的停用词表。同一种语言在不同的应用系统中所使用的停用词也有差异。通常意义上讲,停用词可分2类:</p>
+                </div>
+                <div class="p1">
+                    <p id="53">1)绝对停用词,包含虚词、助动词等功能词。维吾尔语中的后置词、连词、语气词等在句子中没有实义,只表示语法意义,例如维语单词wɛ(和)、qatarliq(等等)、boyiʧɛ(按照)等。这类功能词在不同文本中出现的概率大致相同,对文本特征抽取没有帮助,一般可采取适当方法直接从词典中获取。</p>
+                </div>
+                <div class="p1">
+                    <p id="54">2)相对停用词,一般指在文本集合中出现频率较高,但对文本信息检索没有积极作用的非功能词。过滤这类词语,容易导致系统负担加重。维吾尔语中的某些代词、数词等的使用频率较高,使用范围较广,但其对关键信息提取没有帮助,反而会降低搜索效率。因此,通常需要移除这类词语,以提高信息检索性能。例如,bu(这)、u(他)、⌀z(自己)等代词,一般可采用统计方法获取。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">本文通过对维吾尔语的词典和语料进行统计和分析,逐步筛选确定停用词。</p>
+                </div>
+                <h3 id="56" name="56" class="anchor-tag">2 停用词抽取方法</h3>
+                <div class="p1">
+                    <p id="57">停用词抽取的常用统计方法有3种:文档频数法(Document Frequency,DF),词项频率法(Term Frequency,TF)和信息熵法(Entropy,EN)。</p>
+                </div>
+                <h4 class="anchor-tag" id="58" name="58">2.1 文档频数法</h4>
+                <div class="p1">
+                    <p id="59">文档频数是指在训练集合中包含某一单词的文本数,其为一个简单的评估函数。DF用于停用词抽取的理论假设是:当一个词在大量文本中出现时,这个词可能是停用词。在文本集中,一个词语<i>t</i><sub><i>i</i></sub>的文档频率计算如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="60" class="code-formula">
+                        <mathml id="60"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>D</mi><mi>F</mi><mo stretchy="false">(</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>p</mi></mstyle><mo stretchy="false">(</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>,</mo><mi>d</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="61">其中,<i>n</i>为文档总数,<i>p</i>(<i>t</i><sub><i>i</i></sub>,<i>d</i><sub><i>j</i></sub>)表示特征词<i>t</i><sub><i>i</i></sub>是否在文档<i>d</i><sub><i>j</i></sub>中出现,具体如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="62" class="code-formula">
+                        <mathml id="62"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><mrow><mo>(</mo><mrow><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>,</mo><mi>d</mi><msub><mrow></mrow><mi>j</mi></msub></mrow><mo>)</mo></mrow><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mn>1</mn><mo>,</mo><mspace width="0.25em" /><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>d</mi><msub><mrow></mrow><mi>j</mi></msub></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn><mo>,</mo><mspace width="0.25em" /><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∉</mo><mi>d</mi><msub><mrow></mrow><mi>j</mi></msub></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="63">DF的运算量较小,一般与训练语料集中的文本数量有关。将DF用于停用词抽取时,可根据DF值进行降序排序,将阈值前的词作为停用词。如果某个特征词语在某类文档中出现次数较多且具有区分功能,则去除这类特征词可能会降低抽取效果,因此不能仅依靠文档频数获取停用词,需结合其他方法使用。</p>
+                </div>
+                <h4 class="anchor-tag" id="64" name="64">2.2 词项频率法</h4>
+                <div class="p1">
+                    <p id="65">词项频率是指某个词项在文档中出现的频率,一般简称为词频。通过词频统计,可获得文本的词语特征向量。TF值为训练集合中各单词的出现频数。TF法是一个简单的评估函数,其理论假设是:当某一单词在训练集中出现频率很高时,可以成为停用词。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">在一般情况下,同一个单词在长文本中的词频会比在短文本中的词频高很多,因此要防止其对于长文本的不利影响,对每个文本中的词频特征向量作归一化处理,具体如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="67" class="code-formula">
+                        <mathml id="67"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>w</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>t</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>t</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="68">其中,<i>w</i><sub><i>ij</i></sub>为词语<i>w</i><sub><i>i</i></sub>在第<i>j</i>个文档中的比重,<i>t</i><sub><i>ij</i></sub>为词语频次。一个词语在所有文档中的总比重的计算过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="69" class="code-formula">
+                        <mathml id="69"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><mi>F</mi><mo stretchy="false">(</mo><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>m</mi></mrow></munder><mi>w</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="70">其中,<mathml id="127"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><mi>F</mi><mrow><mo>(</mo><mrow><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mo>)</mo></mrow></mrow></math></mathml>表示词语w<sub>i</sub>在所有文档中出现的比重,m为文档总数。</p>
+                </div>
+                <div class="p1">
+                    <p id="71">由于停用词在文本中出现的频次较高,可通过词频排序获取候选停用词。但是,只用这一种方法可能把一些频率高,而对文本分类有用的关键词也当作停用词,导致出现错误。</p>
+                </div>
+                <h4 class="anchor-tag" id="72" name="72">2.3 信息熵法</h4>
+                <div class="p1">
+                    <p id="73">熵是信息论中很重要的一个概念,通过信息熵可以度量信息的不确定性程度。熵值越大表示某一信息的不确定性越强。词语<i>w</i>在<i>n</i>个文本中的熵值<i>EN</i>(<i>w</i>)可用式(5)计算。</p>
+                </div>
+                <div class="p1">
+                    <p id="74" class="code-formula">
+                        <mathml id="74"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>E</mi><mi>Ν</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mi>ln</mi><mspace width="0.25em" /><mi>m</mi></mrow></mfrac><mspace width="0.25em" /><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>p</mi></mstyle><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>×</mo><mrow><mi>ln</mi></mrow><mspace width="0.25em" /><mi>p</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="75">其中:</p>
+                </div>
+                <div class="p1">
+                    <p id="76" class="code-formula">
+                        <mathml id="76"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>f</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>f</mi></mstyle><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="77">在式(6)中,<i>f</i><sub><i>i</i></sub>(<i>w</i>)为词语<i>w</i>在第<i>i</i>个文本中出现的词频,<i>n</i>为文本总数。在计算每个词的熵值之后,词语按照熵值进行升序排列,将阈值前的词作为停用词。</p>
+                </div>
+                <div class="p1">
+                    <p id="78">在停用词抽取方面,TF、DF、EN等方法各有优缺点。因此,需要通过实验来验证这些统计方法在停用词选取方面的合理性。</p>
+                </div>
+                <h3 id="79" name="79" class="anchor-tag">3 语料统计与分析</h3>
+                <h4 class="anchor-tag" id="80" name="80">3.1 语料数据</h4>
+                <div class="p1">
+                    <p id="81">本文实验语料来自新疆大学多领域平衡语料库,选用16个领域的1 408个文本(807 257词频),语料大小为11.3 MB。将90%的实验语料作为训练集,10%的语料作为测试集,具体分布情况如表1所示。</p>
+                </div>
+                <div class="area_img" id="82">
+                    <p class="img_tit"><b>表1 停用词抽取的实验语料分布情况</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="82" border="1"><tr><td>序号</td><td>领域</td><td>代码</td><td>文本数</td><td>训练集</td><td>测试集</td></tr><tr><td>1</td><td>法律</td><td>fl</td><td>150</td><td>135</td><td>15</td></tr><tr><td><br />2</td><td>健康</td><td>jk</td><td>130</td><td>117</td><td>13</td></tr><tr><td><br />3</td><td>交通</td><td>jt</td><td>50</td><td>45</td><td>5</td></tr><tr><td><br />4</td><td>教育</td><td>jy</td><td>129</td><td>116</td><td>13</td></tr><tr><td><br />5</td><td>经济</td><td>jj</td><td>150</td><td>135</td><td>15</td></tr><tr><td><br />6</td><td>旅游</td><td>ly</td><td>100</td><td>90</td><td>10</td></tr><tr><td><br />7</td><td>体育</td><td>ty</td><td>150</td><td>135</td><td>15</td></tr><tr><td><br />8</td><td>文学</td><td>wx</td><td>100</td><td>90</td><td>10</td></tr><tr><td><br />9</td><td>饮食</td><td>ys</td><td>100</td><td>90</td><td>10</td></tr><tr><td><br />10</td><td>人物</td><td>rw</td><td>50</td><td>45</td><td>5</td></tr><tr><td><br />11</td><td>文化</td><td>wh</td><td>50</td><td>45</td><td>5</td></tr><tr><td><br />12</td><td>政治</td><td>zz</td><td>50</td><td>45</td><td>5</td></tr><tr><td><br />13</td><td>军事</td><td>js</td><td>49</td><td>44</td><td>5</td></tr><tr><td><br />14</td><td>历史</td><td>ls</td><td>50</td><td>45</td><td>5</td></tr><tr><td><br />15</td><td>地理</td><td>dl</td><td>50</td><td>45</td><td>5</td></tr><tr><td><br />16</td><td>科技</td><td>kj</td><td>50</td><td>45</td><td>5</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="83" name="83">3.2 停用词抽取流程</h4>
+                <div class="p1">
+                    <p id="84">本文的停用词抽取流程如图1所示。首先对语料数据进行预处理,然后分别采用基于TF、DF、EN的方法和基于词典的方法获取2个候选词集并进行筛选,最终在文本分类实验的基础上确定停用词的数量。</p>
+                </div>
+                <div class="area_img" id="85">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910048_085.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 维吾尔语停用词抽取方法流程" src="Detail/GetImg?filename=images/JSJC201910048_085.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 维吾尔语停用词抽取方法流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910048_085.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="86" name="86">3.3 预处理</h4>
+                <div class="p1">
+                    <p id="87">在停用词抽取之前,所有文本首先要进行预处理,以减少数据噪声、改善文本表示质量。文本预处理主要分为3个步骤。</p>
+                </div>
+                <h4 class="anchor-tag" id="88" name="88">1)分词:</h4>
+                <div class="p1">
+                    <p id="89">维吾尔语是拼音文字,将词语之间的空格作为自然分割符进行分词。</p>
+                </div>
+                <h4 class="anchor-tag" id="90" name="90">2)特殊字符过滤:</h4>
+                <div class="p1">
+                    <p id="91">对文本中的所有非维吾尔语字符、标点符号、数学符号以及阿拉伯数字进行过滤。</p>
+                </div>
+                <h4 class="anchor-tag" id="92" name="92">3)词干提取:</h4>
+                <div class="p1">
+                    <p id="93">将由同一词干演变而来的不同词形进行还原,提取词干形式。本文在进行分词和词干提取以后,特征数量(词语数量)从75 781个减少到36 472个,即特征总数减少48.1%,说明词干提取可有效降低特征词语计算的复杂度。</p>
+                </div>
+                <h4 class="anchor-tag" id="94" name="94">3.4 结果统计</h4>
+                <div class="p1">
+                    <p id="95">在对文本进行预处理之后,分别采用TF、DF和EN方法进行统计,按照高频词降序排列、熵值升序排列,得到三万多条词语的统计数据。然后参照多数语言停用词表的收词情况<citation id="141" type="reference"><link href="11" rel="bibliography" /><link href="31" rel="bibliography" /><sup>[<a class="sup">5</a>,<a class="sup">15</a>]</sup></citation>,建立包含前500个词语的候选词集。表2给出3个候选词表中的前30个词语。</p>
+                </div>
+                <div class="area_img" id="96">
+                    <p class="img_tit"><b>表2 DF、TF和EN统计结果中的前30个词语</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="96" border="1"><tr><td><br />统计方法</td><td>候选停用词</td></tr><tr><td><br />DF</td><td><img src="images\JSJC201910048_145.jpg" /></td></tr><tr><td><br />TF</td><td><img src="images\JSJC201910048_146.jpg" /></td></tr><tr><td><br />EN</td><td><img src="images\JSJC201910048_147.jpg" /></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="97">由表2可知,在3种方法获取的候选词语中,大多数词语为功能词,且3种方法的候选词表有相同点,说明DF、TF、EN中排在前面的助动词、连词等词语可成为停用词,符合语言学规律。但是,madda(条款)、qanun(法律)等词语只出现在TF的词表中,这2个词语是名词,不能作为停用词;ʃinʤaŋ(新疆)、ʤuŋgo(中国)等词语只出现在EN的词表中,这些专有名词也不应成为停用词。综上所述,这3种方法各有优缺点,只用一种方法获取的停用词不可靠。因此,要将这3种方法相结合,并参考词语的词性信息,排除一些不能成为停用词的高频实词。</p>
+                </div>
+                <div class="p1">
+                    <p id="98">为进一步考察抽取方法的效率,对候选词语的分布和交叉情况进行分析。3种统计方法获取的词语集合在词序-词频空间上的分布情况如图2所示。</p>
+                </div>
+                <div class="area_img" id="99">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910048_099.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 3种方法获取的停用词分布情况" src="Detail/GetImg?filename=images/JSJC201910048_099.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 3种方法获取的停用词分布情况</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910048_099.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="100">从总体上看,TF、DF、EN的频率分布趋势基本相同,其中DF的频率分布相对分散,但总体上符合齐夫定律(Zipf’s law)。对这3种方法的结果集进行比较,结果如表3所示。</p>
+                </div>
+                <div class="area_img" id="101">
+                    <p class="img_tit"><b>表3 3种方法获取的候选词集的交集情况</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="101" border="1"><tr><td><br />集合</td><td>数量</td><td>比率/%</td></tr><tr><td><br />|TF∩DF|</td><td>446</td><td>89.2</td></tr><tr><td><br />|TF∩EF|</td><td>443</td><td>88.6</td></tr><tr><td><br />|DF∩EN|</td><td>452</td><td>90.4</td></tr><tr><td><br />|TF∩DF∩EN|</td><td>428</td><td>85.6</td></tr><tr><td><br />|TF△DN|</td><td>54</td><td>10.8</td></tr><tr><td><br />|TF△EN|</td><td>57</td><td>11.4</td></tr><tr><td><br />|DF△EN|</td><td>48</td><td>9.6</td></tr><tr><td><br />|TF△DF△EN|</td><td>72</td><td>14.4</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="102">从表3可以看出,3种方法获取的词语基本相似。在TF方法和DF方法获取的500个词语中有446个相同的词语,相似度达到89.2%。DF方法和EN方法有452个相同的词语,相似度达到90.4%,即DF方法和EN方法获取的词语基本相同,但顺序不同。从交集结果看,3种方法获取的词语具有85.5%的重复率,其中DF方法与EN方法的相似度最高。</p>
+                </div>
+                <div class="p1">
+                    <p id="103">为排除不能成为停用词的实词,需要对这些词集进行词性统计,结果如表4所示。</p>
+                </div>
+                <div class="area_img" id="104">
+                    <p class="img_tit"><b>表4 候选停用词词性分布</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="104" border="1"><tr><td>词性</td><td>DF方法</td><td>TF方法</td><td>EN方法</td><td>TF∩DF∩EN方法</td></tr><tr><td>动词</td><td>203</td><td>206</td><td>197</td><td>166</td></tr><tr><td><br />形容词</td><td>164</td><td>167</td><td>169</td><td>138</td></tr><tr><td><br />副词</td><td>45</td><td>42</td><td>49</td><td>32</td></tr><tr><td><br />代词</td><td>27</td><td>23</td><td>24</td><td>23</td></tr><tr><td><br />数词</td><td>14</td><td>14</td><td>15</td><td>15</td></tr><tr><td><br />助动词</td><td>8</td><td>9</td><td>9</td><td>8</td></tr><tr><td><br />虚词</td><td>39</td><td>39</td><td>37</td><td>46</td></tr><tr><td><br />候选停用词</td><td>88</td><td>85</td><td>85</td><td>92</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="105">从表4可以看出,DF、TF、EN这3种方法获取的词表中存在一定数量的动词、形容词和副词等,根据词性特点,上述词语不应成为停用词。因此,在确定停用词时,需要排除这些实词。剩下的代词、数词、助动词和虚词等高频词语可以成为停用词。根据3种方法的交集情况形成词集<i>A</i>,其中包括92个词语,占原词集的21.5%。</p>
+                </div>
+                <div class="p1">
+                    <p id="106">上述方法获取的词集<i>A</i>可能不包含符合停用词的词性要求但未排在前面的一部分功能词。因此,本文从《现代维吾尔语详解词典》<citation id="142" type="reference"><link href="39" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>中抽取出所有的代词、数词、助动词、连词、后置词、语气词,建立词表(共434个),并基于第3.1节的语料进行词频统计,结果如表5所示。</p>
+                </div>
+                <div class="area_img" id="107">
+                    <p class="img_tit"><b>表5</b> 《<b>现代维吾尔语详解词典》的候选停用词分布情况</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="107" border="1"><tr><td>分布项</td><td>词条数</td><td>频率区间</td><td>累计词频</td><td>累计频率/%</td><td>分布率/%</td></tr><tr><td>高频词</td><td>42</td><td>&gt;500</td><td>109 152</td><td>85.1</td><td>9.7</td></tr><tr><td><br />中频词</td><td>173</td><td>5～499</td><td>18 975</td><td>14.8</td><td>39.9</td></tr><tr><td><br />低频词</td><td>64</td><td>1～4</td><td>126</td><td>0.1</td><td>14.7</td></tr><tr><td><br />未出现词</td><td>155</td><td>0</td><td>0</td><td>0.0</td><td>35.7</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="108">从表5的统计数据可知,这些词语在文本中具有两头大中间小的分布特征。其中,使用频率高于500的词语有42个,其累计频率(覆盖率)为85.1%,中频词语共有173个,约占整个语料的14.1%,另有155个词语未在语料中出现。从停用词的性质看,低频词和未出现的词语不需要成为停用词。因此,在表5统计结果的基础上,建立包含高频词和中频词(共215个)的词集<i>B</i>。</p>
+                </div>
+                <div class="p1">
+                    <p id="109">词集<i>A</i>采用TF、DF、EN方法从语料中获取候选停用词集,代表了动态获取的相对停用词;词集<i>B</i>从《现代维吾尔语详解词典》中获取候选停用词,代表使用频率较高的绝对停用词。为了获得完整的停用词表,将词集<i>A</i>和词集<i>B</i>进行合并,具体如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="110" class="code-formula">
+                        <mathml id="110"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>A</mi><mstyle displaystyle="true"><mo>∪</mo><mi>B</mi></mstyle><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><mrow><mo>|</mo><mrow><mi>x</mi><mo>∈</mo><mi>A</mi><mtext>或</mtext><mi>x</mi><mo>∈</mo><mi>B</mi></mrow></mrow></mrow><mo>}</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="111">其中,<i>A</i>=92,<i>B</i>=215。通过式(7)获得包含279个词语的词表,但是还不能确定最佳停用词数量。为比较3种方法的有效性和阈值,需进行停用词过滤。</p>
+                </div>
+                <h4 class="anchor-tag" id="112" name="112">3.5 停用词过滤</h4>
+                <div class="p1">
+                    <p id="113">停用词过滤是特征提取不可缺少的步骤,其对特征计算的复杂度和准确率都有影响。本文利用文本分类方法获取停用词,从而确定获取停用词的阈值。</p>
+                </div>
+                <h4 class="anchor-tag" id="114" name="114">3.5.1 对特征计算复杂度的影响</h4>
+                <div class="p1">
+                    <p id="115">特征提取算法是信息检索系统的核心技术之一。降低特征空间的维数,提高文本分类的效率和准确率是改进该技术的关键。事实上,有些特征项(高频词语)对文本分类没有贡献。因此,可在保证准确率的条件下,过滤掉这些无用的特征项,适当降低文本向量空间的维数。</p>
+                </div>
+                <div class="p1">
+                    <p id="116">本文在3.4节的基础上,逐步增加需过滤的停用词并进行文本分类实验,以测试停用词过滤对文本分类的影响。结果表明,在对所有文本进行停用词过滤后,文本特征总量(词语数量)从122 214个减少到807 257个,停用词累计频次与总频次的比值降低了15.1%。停用词数量较少,但其使用频率较高。在文本分类中,去除这些高频而无用的停用词,可有效降低特征计算的复杂度。</p>
+                </div>
+                <h4 class="anchor-tag" id="117" name="117">3.5.2 对文本分类准确率的影响</h4>
+                <div class="p1">
+                    <p id="118">在文本特征抽取方面,分别选用DF、EN和卡方(Chi)方法<citation id="143" type="reference"><link href="37" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>进行文本特征提取。参考文献<citation id="144" type="reference">[<a class="sup">20</a>,<a class="sup">21</a>]</citation>的方法,使用Naive Bayes文本分类器进行实验,实验平台在Rapid Miner上搭建。测试时采用十折交叉验证法,即将实验语料的10%作为测试集。</p>
+                </div>
+                <div class="p1">
+                    <p id="119">在本文实验中,准确率是指机器分类的所有文本中与人工分类结果一致的文本比重,其计算公式如下:</p>
+                </div>
+                <div class="area_img" id="121">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JSJC201910048_12100.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="122">图3给出3种方法的准确率对比。由图3可知,3种方法的准确率有所区别,其中,基于卡方方法的文本分类器的效果较好,准确率可达80.8%,EN方法和DF方法的效果较差。当停用词数量达到200个后,3种方法的准确率均趋于平稳,说明文本分类系统的停用词数量可控制在200个左右。图4给出本文方法获取的部分停用词。</p>
+                </div>
+                <div class="area_img" id="123">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910048_123.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 3种方法的准确率对比" src="Detail/GetImg?filename=images/JSJC201910048_123.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 3种方法的准确率对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910048_123.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="124">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910048_124.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 本文方法获取的部分停用词" src="Detail/GetImg?filename=images/JSJC201910048_124.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 本文方法获取的部分停用词</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910048_124.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="125" name="125" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="126">本文提出一种维吾尔语停用词抽取方法,分别运用DF、TF、EN等统计方法和基于词典的词性分布统计方法抽取候选停用词表,经筛选后最终确定200个停用词。实验结果验证了该方法的有效性,停用词的过滤处理可降低特征计算的复杂度,提高文本分类的准确率。由于停用词过滤对不同应用系统的影响和要求不完全相同,下一步将针对该问题进行研究。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The automatic identification of stop words">
+
+                                <b>[1]</b> WILBUR W J.The automatic identification of stop words[J].Journal of Information Science,1992,18(2):45-55.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Lexical analysis and stoplists">
+
+                                <b>[2]</b> FOX C.Lexical analysis and stoplists[M]//Fox C.Information retrieval.New York,USA:ACM Press,1992:102-130.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00002619941&amp;v=MTQyMjVlOE9ZM2s1ekJkaDRqOTlTWHFScnhveGNNSDdSN3FlYnVkdEZDdmxWNzdMSTF3PU5qN0Jhck80SHRIT3FZNU1i&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> HO T K.Stop word location and identification for adaptive text recognition[J].International Journal on Document Analysis and Recognition,2000,3(1):16-26.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Information retrieval">
+
+                                <b>[4]</b> VAN-RIJSBERGEN C J.Information retrieval[EB/OL].[2018-07-01].http://openlib.org/home/krichel/courses/ lis618/readings/rijsbergen79_infor_retriev.pdf.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Onixtext retrieval toolkit stop word list 2">
+
+                                <b>[5]</b> Onixtext retrieval toolkit stop word list 2[EB/OL].[2018-07-01].http://www.lextek.com/manuals/onix/stopw ords2.html.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=XPO6.Stop word list">
+
+                                <b>[6]</b> XPO6.Stop word list[EB/OL].[2018-07-01].http://xpo6.com/download-stop-word-list/.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Automatic Construction of Chinese Stop Word List">
+
+                                <b>[7]</b> ZOU Feng,WANG Fulee,DENG Xiaotian,et al.Automatic construction of Chinese stop word list[C]//Proceedings of the 5th WSEAS International Conference on Applied Computer Science.New York,USA:ACM Press,2006:1009-1014.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJLG200504014&amp;v=Mjk0MjY0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5emtVTHpLSnlmSGFiRzRIdFRNcTQ5RVlJUUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 顾益军,樊孝忠,王建华,等.中文停用词表的自动选取[J].北京理工大学学报,2005,25(4):337-340.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015437320.nh&amp;v=MjE2NTdMektWRjI2RzdlN0dkTE9yNUViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0Rnl6a1U=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 马治涛.文本分类停用词处理和特征选择技术研究[D].西安:西安电子科技大学,2014.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=2010245881.nh&amp;v=MTI1OTZVTHpLVjEyNkhyRzhHOW5FcnBFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5ems=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 江兆中.基于语境和停用词驱动的中文自动分词研究[D].合肥:合肥工业大学,2010.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=2009229534.nh&amp;v=MDgxNjExMjdGN0c2RjlUUHE1RWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeXprVUx6S1Y=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 蒋斌.基于停用词处理的汉语语音检索方法[D].哈尔滨:哈尔滨工业大学,2008.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SJYX200804027&amp;v=MjczNDJDVVJMT2VaZVJ0Rnl6a1VMektOaWZTZHJHNEh0bk1xNDlIWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 崔彩霞.停用词的选取对文本分类效果的影响研究[J].太原师范学院学报(自然科学版),2008,7(4):91-93.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201104008&amp;v=MDYxMDZPZVplUnRGeXprVUx6S0tDallmYkc0SDlETXE0OUZiSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkw=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 巩政,关高娃.蒙古文停用词和英文停用词比较研究[J].中文信息学报,2011,25(4):35-38.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201502016&amp;v=MTIwODI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeXprVUx6S0tDallmYkc0SDlUTXJZOUVZb1FLREg=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 珠杰,李天瑞.藏文停用词选取与自动处理方法研究[J].中文信息学报,2015,29(2):125-132.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CDFD&amp;filename=1017298566.nh&amp;v=MzAxODBWRjI2R2JHeEZ0VEtxWkViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0Rnl6a1VMeks=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 珠杰.藏文信息处理中若干关键技术研究[D].成都:西南交通大学,2016.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201502017&amp;v=MDA3ODFDallmYkc0SDlUTXJZOUVZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeXprVUx6S0s=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> 田生伟,钟军,禹龙.维吾尔语多词领域术语的自动抽取[J].中文信息学报,2015,29(2):133-141.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1014383784.nh&amp;v=MjQ5Njd3SGRiRXE1RWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeXprVUx6S1ZGMjZHckM=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b> 图尔妮萨古丽·赛麦提.基于N-gram的维吾尔文文本分类研究与系统实现[D].乌鲁木齐:新疆大学,2014.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_18" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201212010&amp;v=MzA1MDg2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeXprVUx6S0x6VFpaTEc0SDlQTnJZOUVaSVFLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[18]</b> 艾海麦提江·阿布来提,吐尔地·托合提,艾斯卡尔·艾木都拉.基于Naive Bayes的维吾尔文文本分类算法及其性能分析[J].计算机应用与软件,2012,29(12):27-29.
+                            </a>
+                        </p>
+                        <p id="39">
+                            <a id="bibliography_19" >
+                                    <b>[19]</b>
+                                 新疆民语委.现代维吾尔语详解辞典[M].乌鲁木齐:新疆人民出版社,2011.
+                            </a>
+                        </p>
+                        <p id="41">
+                            <a id="bibliography_20" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSGG201205034&amp;v=MDY3MDRSTE9lWmVSdEZ5emtVTHpLTHo3TWFiRzRIOVBNcW85R1lJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[20]</b> 阿力木江·艾沙,吐尔根·依布拉音,艾山·吾买尔,等.基于机器学习的维吾尔文文本分类研究[J].计算机工程与应用,2012,48(5):110-112.
+                            </a>
+                        </p>
+                        <p id="43">
+                            <a id="bibliography_21" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZJJB201712009&amp;v=MjQ1MDVSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeXprVUx6S1B5ZkJiTEc0SDliTnJZOUZiWVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[21]</b> 阿力木江·艾沙.基于Rapid Miner的维吾尔文文本预处理及分类实验设计[J].中国教育技术装备,2017(12):24-27.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201910048" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201910048&amp;v=MjI1NDhaZVJ0Rnl6a1VMektMejdCYmJHNEg5ak5yNDlCYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2U=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpeVQ2VW9mRT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

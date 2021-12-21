@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637135592521096250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJYRJ201909018%26RESULT%3d1%26SIGN%3d%252fnmPYylBnL7pnfOFJZ1ymbNtHJs%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201909018&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201909018&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201909018&amp;v=MDAxMTRuaFZyL0xMelRaWkxHNEg5ak1wbzlFYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnk=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#35" data-title="&lt;b&gt;0 引 言&lt;/b&gt; "><b>0 引 言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#38" data-title="&lt;b&gt;1 相关工作&lt;/b&gt; "><b>1 相关工作</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="&lt;b&gt;2 情感词典的构建&lt;/b&gt; "><b>2 情感词典的构建</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#45" data-title="&lt;b&gt;2.1 微博文本的预处理&lt;/b&gt;"><b>2.1 微博文本的预处理</b></a></li>
+                                                <li><a href="#53" data-title="&lt;b&gt;2.2 构建多部情感词典&lt;/b&gt;"><b>2.2 构建多部情感词典</b></a></li>
+                                                <li><a href="#70" data-title="&lt;b&gt;2.3 微博领域情感词典的构建&lt;/b&gt;"><b>2.3 微博领域情感词典的构建</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#85" data-title="&lt;b&gt;3 微博文本规则集的情感分析&lt;/b&gt; "><b>3 微博文本规则集的情感分析</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#87" data-title="&lt;b&gt;3.1 句间分析规则&lt;/b&gt;"><b>3.1 句间分析规则</b></a></li>
+                                                <li><a href="#103" data-title="&lt;b&gt;3.2 句型分析规则&lt;/b&gt;"><b>3.2 句型分析规则</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#109" data-title="&lt;b&gt;4 微博综合情感计算&lt;/b&gt; "><b>4 微博综合情感计算</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#130" data-title="&lt;b&gt;5 微博情感分析实验&lt;/b&gt; "><b>5 微博情感分析实验</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#131" data-title="&lt;b&gt;5.1 实验方法&lt;/b&gt;"><b>5.1 实验方法</b></a></li>
+                                                <li><a href="#137" data-title="&lt;b&gt;5.2 实验数据&lt;/b&gt;"><b>5.2 实验数据</b></a></li>
+                                                <li><a href="#139" data-title="&lt;b&gt;5.3 实验性能评估指标&lt;/b&gt;"><b>5.3 实验性能评估指标</b></a></li>
+                                                <li><a href="#147" data-title="&lt;b&gt;5.4 实验分析与结果&lt;/b&gt;"><b>5.4 实验分析与结果</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#162" data-title="&lt;b&gt;6 结 语&lt;/b&gt; "><b>6 结 语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#42" data-title="图1 微博整体情感分析流程">图1 微博整体情感分析流程</a></li>
+                                                <li><a href="#57" data-title="&lt;b&gt;表1 基础情感词典示例&lt;/b&gt;"><b>表1 基础情感词典示例</b></a></li>
+                                                <li><a href="#60" data-title="&lt;b&gt;表2 否定词词典和双重否定词词典示例&lt;/b&gt;"><b>表2 否定词词典和双重否定词词典示例</b></a></li>
+                                                <li><a href="#63" data-title="&lt;b&gt;表3 程度副词词典示例&lt;/b&gt;"><b>表3 程度副词词典示例</b></a></li>
+                                                <li><a href="#66" data-title="&lt;b&gt;表4 关系连词词典示例&lt;/b&gt;"><b>表4 关系连词词典示例</b></a></li>
+                                                <li><a href="#69" data-title="&lt;b&gt;表5 表情符号词典示例&lt;/b&gt;"><b>表5 表情符号词典示例</b></a></li>
+                                                <li><a href="#84" data-title="&lt;b&gt;表6 微博新词词典示例&lt;/b&gt;"><b>表6 微博新词词典示例</b></a></li>
+                                                <li><a href="#154" data-title="&lt;b&gt;表7&lt;/b&gt; #&lt;b&gt;短视频整顿#实验结果&lt;/b&gt;"><b>表7</b> #<b>短视频整顿#实验结果</b></a></li>
+                                                <li><a href="#155" data-title="&lt;b&gt;表8&lt;/b&gt; #《&lt;b&gt;我不是药神》爆红引社会热议# 实验结果&lt;/b&gt;"><b>表8</b> #《<b>我不是药神》爆红引社会热议# 实验结果</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="173">
+
+
+                                    <a id="bibliography_1" title=" 杨立公,朱俭,汤世平.文本情感分析综述[J].计算机应用,2013,33(6):1574-1578,1607." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201306024&amp;v=MjA4MzFNcVk5SFlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5bmhWci9MTHo3QmQ3RzRIOUw=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         杨立公,朱俭,汤世平.文本情感分析综述[J].计算机应用,2013,33(6):1574-1578,1607.
+                                    </a>
+                                </li>
+                                <li id="175">
+
+
+                                    <a id="bibliography_2" title=" 朱嫣岚,闵锦,周雅倩,等.基于Hownet的词汇语义倾向计算[J].中文信息学报,2006,20(1):14-20." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS200601002&amp;v=MzIxMDFDallmYkc0SHRmTXJvOUZab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5oVnIvTEs=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         朱嫣岚,闵锦,周雅倩,等.基于Hownet的词汇语义倾向计算[J].中文信息学报,2006,20(1):14-20.
+                                    </a>
+                                </li>
+                                <li id="177">
+
+
+                                    <a id="bibliography_3" title=" Jose R,Chooralil V S.Prediction of election result by enhanced sentiment analysis on Twitter data using Word Sense Disambiguation[C]//International Conference on Control Communication&amp;amp;Computing India,2015:638-641." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Prediction of election result by enhanced sentiment analysis on Twitter data using Word Sense Disambiguation">
+                                        <b>[3]</b>
+                                         Jose R,Chooralil V S.Prediction of election result by enhanced sentiment analysis on Twitter data using Word Sense Disambiguation[C]//International Conference on Control Communication&amp;amp;Computing India,2015:638-641.
+                                    </a>
+                                </li>
+                                <li id="179">
+
+
+                                    <a id="bibliography_4" title=" Park S,Kim Y.Building thesaurus lexicon using dictionary-based approach for sentiment classification[C]//2016 IEEE 14th International Conference on Software Engineering Research,Management and Applications(SERA).IEEE,2016:39-44." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Building thesaurus lexicon using dictionary-based approach for sentiment classification">
+                                        <b>[4]</b>
+                                         Park S,Kim Y.Building thesaurus lexicon using dictionary-based approach for sentiment classification[C]//2016 IEEE 14th International Conference on Software Engineering Research,Management and Applications(SERA).IEEE,2016:39-44.
+                                    </a>
+                                </li>
+                                <li id="181">
+
+
+                                    <a id="bibliography_5" title=" 谢丽星,周明,孙茂松.基于层次结构的多策略中文微博情感分析和特征抽取[J].中文信息学报,2012,26(1):73-83." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201201012&amp;v=MjM3MTNvOUVab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5oVnIvTEtDallmYkc0SDlQTXI=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         谢丽星,周明,孙茂松.基于层次结构的多策略中文微博情感分析和特征抽取[J].中文信息学报,2012,26(1):73-83.
+                                    </a>
+                                </li>
+                                <li id="183">
+
+
+                                    <a id="bibliography_6" title=" 王志涛,於志文,郭斌,等.基于词典和规则集的中文微博情感分析[J].计算机工程与应用,2015,51(8):218-225." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSGG201508045&amp;v=MDU2MjU3cWZadVp0RnluaFZyL0xMejdNYWJHNEg5VE1wNDlCWVlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         王志涛,於志文,郭斌,等.基于词典和规则集的中文微博情感分析[J].计算机工程与应用,2015,51(8):218-225.
+                                    </a>
+                                </li>
+                                <li id="185">
+
+
+                                    <a id="bibliography_7" title=" Shahheidari S,Dong H,Bin Daud M N.Twitter senti-ment mining:A multi domain analysis[C]//Proceedings of the 2013 Seventh International Conference on Complex,Intelligent,and Software Intensive Systems.IEEE,2013:144-149." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Twitter sentiment mining:A multi domain analysis">
+                                        <b>[7]</b>
+                                         Shahheidari S,Dong H,Bin Daud M N.Twitter senti-ment mining:A multi domain analysis[C]//Proceedings of the 2013 Seventh International Conference on Complex,Intelligent,and Software Intensive Systems.IEEE,2013:144-149.
+                                    </a>
+                                </li>
+                                <li id="187">
+
+
+                                    <a id="bibliography_8" title=" 姜杰,夏睿.机器学习与语义规则融合的微博情感分类方法[J].北京大学学报(自然科学版),2017,53(2):247-254." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJDZ201702007&amp;v=MDg2OTZWci9MSnlmUGRMRzRIOWJNclk5Rlk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5bmg=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         姜杰,夏睿.机器学习与语义规则融合的微博情感分类方法[J].北京大学学报(自然科学版),2017,53(2):247-254.
+                                    </a>
+                                </li>
+                                <li id="189">
+
+
+                                    <a id="bibliography_9" title=" 赵天奇,姚海鹏,方超,等.语义规则与表情加权融合的微博情感分析方法[J].重庆邮电大学学报(自然科学版),2016,28(4):503-510." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=CASH201604010&amp;v=MjQxNTA1NE8zenFxQnRHRnJDVVI3cWZadVp0RnluaFZyL0xKaXpZWnJHNEg5Zk1xNDlFWklRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         赵天奇,姚海鹏,方超,等.语义规则与表情加权融合的微博情感分析方法[J].重庆邮电大学学报(自然科学版),2016,28(4):503-510.
+                                    </a>
+                                </li>
+                                <li id="191">
+
+
+                                    <a id="bibliography_10" title=" 陈国兰.基于情感词典与语义规则的微博情感分析[J].情报探索,2016,18(2):1-6." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QBTS201602001&amp;v=MTE5OTgvTE5DL2ZmYkc0SDlmTXJZOUZaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5oVnI=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         陈国兰.基于情感词典与语义规则的微博情感分析[J].情报探索,2016,18(2):1-6.
+                                    </a>
+                                </li>
+                                <li id="193">
+
+
+                                    <a id="bibliography_11" title=" Liu B.Sentiment Analysis and Opinion Mining[J].Synthesis Lectures on Human Language Technologies,2016,30(1):152-153." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Sentiment Analysis and Opinion Mining">
+                                        <b>[11]</b>
+                                         Liu B.Sentiment Analysis and Opinion Mining[J].Synthesis Lectures on Human Language Technologies,2016,30(1):152-153.
+                                    </a>
+                                </li>
+                                <li id="195">
+
+
+                                    <a id="bibliography_12" title=" Zou X,Yang J,Zhang J,et al.Microblog Sentiment Analysis with Weak Dependency Connections[J].Knowledge-Based Systems,2017,142:170-180." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJESAC25E72E8D0ED213E8EC3E4D10966938&amp;v=MzA4MDBRbGZCckxVMDV0dGh4Ynk2d0tzPU5pZk9mY0xMSE5TNXFJMHdiSjhQZVFnN3poVm00a29PU3dybTJCTTFjTFNTVExtWENPTnZGU2lXV3I3SklGcG1hQnVIWWZPRw==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         Zou X,Yang J,Zhang J,et al.Microblog Sentiment Analysis with Weak Dependency Connections[J].Knowledge-Based Systems,2017,142:170-180.
+                                    </a>
+                                </li>
+                                <li id="197">
+
+
+                                    <a id="bibliography_13" title=" Zhang S X,Wang Y,Zhang S Y,et al.Building associated semantic representation model for the ultra-short microblog text jumping in big data[J].Cluster Computing,2016,19(3):1399-1410." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Building associated semantic representation model for the ultra-short microblog text jumping in big data">
+                                        <b>[13]</b>
+                                         Zhang S X,Wang Y,Zhang S Y,et al.Building associated semantic representation model for the ultra-short microblog text jumping in big data[J].Cluster Computing,2016,19(3):1399-1410.
+                                    </a>
+                                </li>
+                                <li id="199">
+
+
+                                    <a id="bibliography_14" title=" Ouyang Y,Guo B,Zhang J,et al.SentiStory:multi-grained sentiment analysis and event summarization with crowdsourced social media data[J].Personal and Ubiquitous Computing,2017,21(1):97-111." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=SentiStory:Multi-grained sentiment analysis and event summarization with crowdsourced social media data">
+                                        <b>[14]</b>
+                                         Ouyang Y,Guo B,Zhang J,et al.SentiStory:multi-grained sentiment analysis and event summarization with crowdsourced social media data[J].Personal and Ubiquitous Computing,2017,21(1):97-111.
+                                    </a>
+                                </li>
+                                <li id="201">
+
+
+                                    <a id="bibliography_15" title=" Araque O,Corcuera-Platas I,S&#225;nchez-Rada,J.Fernando,et al.Enhancing deep learning sentiment analysis with ensemble techniques in social applications[J].Expert Systems with Applications,2017,77:236-246." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES07104490382CA0AD4218FCE456DAFEA1&amp;v=MTgxOTB1SFlmT0dRbGZCckxVMDV0dGh4Ynk2d0tzPU5pZk9mYk8vSDlISXE0WkZaK01OZncwNXZtSVg2RDUxUGd5WHFCY3pEY1BpTU11ZUNPTnZGU2lXV3I3SklGcG1hQg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         Araque O,Corcuera-Platas I,S&#225;nchez-Rada,J.Fernando,et al.Enhancing deep learning sentiment analysis with ensemble techniques in social applications[J].Expert Systems with Applications,2017,77:236-246.
+                                    </a>
+                                </li>
+                                <li id="203">
+
+
+                                    <a id="bibliography_16" title=" Zhang S X,Wei Z L,Wang Y,et al.Sentiment analysis of Chinese micro-blog text based on extended sentiment dictionary[J].Future Generation Computer Systems,2018,81:395-403." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES8056B0611541D6DAAFCC2AA4470453D7&amp;v=MDEyODhOaWZPZmJ1NEc5ZStyNGxFWmU0TERRZy91MmRpbkV3T1NnNlRxQll5ZWJhUlJzNllDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZCckxVMDV0dGh4Ynk2d0tzPQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         Zhang S X,Wei Z L,Wang Y,et al.Sentiment analysis of Chinese micro-blog text based on extended sentiment dictionary[J].Future Generation Computer Systems,2018,81:395-403.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JYRJ" target="_blank">计算机应用与软件</a>
+                2019,36(09),93-99 DOI:10.3969/j.issn.1000-386x.2019.09.017            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于多部情感词典和规则集的中文微博情感分析研究</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%90%B4%E6%9D%B0%E8%83%9C&amp;code=41963901&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">吴杰胜</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%86%E5%A5%8E&amp;code=06151360&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陆奎</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%AE%89%E5%BE%BD%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0167619&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">安徽理工大学计算机科学与工程学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>微博情感分析是对微博文本情感极性的判断并实现微博消息分类,可以对网络舆情进行及时有效的决策。做好微博情感分析的关键点是在原有的基础上更加准确地分析出每条微博文本的情感极性,因此以此为目标对微博进行情感分析。对情感词典进行改进与扩充,主要包括构造程度副词、否定词词典、微博领域词典等相关词典。同时将文本之间的语义规则集考虑到情感分析中,主要涵盖了句间分析规则和句型分析规则。多部情感词典和规则集相结合的方式实现了对微博的情感分析。实验结果证明了该方法对微博情感分析有一定的作用。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%BE%AE%E5%8D%9A&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">微博;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%83%85%E6%84%9F%E8%AF%8D%E5%85%B8&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">情感词典;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%A7%84%E5%88%99%E9%9B%86&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">规则集;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">情感分析;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    吴杰胜,硕士生,主研领域:自然语言处理,数据挖掘,情感分析。;
+                                </span>
+                                <span>
+                                    陆奎,教授。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2019-01-04</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金项目(51274011,61073101);</span>
+                    </p>
+            </div>
+                    <h1><b>CHINESE WEIBO SENTIMENT ANALYSIS BASED ON MULTIPLE SENTIMENT LEXICONS AND RULE SETS</b></h1>
+                    <h2>
+                    <span>Wu Jiesheng</span>
+                    <span>Lu Kui</span>
+            </h2>
+                    <h2>
+                    <span>College of Computer Science and Engineering, Anhui University of Science and Technology</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Weibo sentiment analysis is the judgment of the emotional polarity of Weibo text and realizes the classification of Weibo messages. This research can make timely and effective decision on network public opinion. The key point of doing a good analysis of Weibo sentiment is to analyze the emotional polarity of each Weibo text more accurately on the basis of the original. Therefore, this paper aimed to analyze the sentiment of Weibo. The Emotional Dictionary was improved and expanded. It mainly included related dictionaries such as constructive degree adverbs, negative word dictionaries and microblog domain dictionaries. The semantic rule sets between texts were considered in sentiment analysis, mainly covering inter-sentence analysis rules and sentence analysis rules. The combination of multiple emotional dictionaries and rule sets finally realized the sentiment analysis of Weibo. The experimental results show that this method has a certain effect on the analysis of Weibo sentiment.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Weibo&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Weibo;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Sentiment%20dictionary&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Sentiment dictionary;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Rule%20set&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Rule set;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Sentiment%20analysis&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Sentiment analysis;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2019-01-04</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="35" name="35" class="anchor-tag"><b>0 引 言</b></h3>
+                <div class="p1">
+                    <p id="36">微博是近些年来一个新生的适用于大众的社交媒体平台,随着移动互联网的普及,大众对微博的使用率越来越高,微博也得以快速发展。广大的用户群体都可以通过微博来发表自己对当前的一些热点话题的看法,所以他们每天都在提供海量且丰富的观点文本数据,而这些数据中包含着很多情感信息。如何充分挖掘情感信息并进行分析就是情感分析。情感分析在当今的研究很广泛,提取情感信息对社会发展起到一定的作用,而微博除了作为一个社交媒体平台之外,还具有其他特性,因此对微博的情感分析研究至关重要。</p>
+                </div>
+                <div class="p1">
+                    <p id="37">目前国内外都在对微博进行研究,但中文微博和英文微博的研究进展差距很大,英文微博的研究成熟度高于中文微博,而且中文微博与英文微博的特性几乎不同,因此如何能利用中文微博情感信息来进行研究分析是我们现在要做的工作。本文利用多部情感词典和中文语义规则集相结合的方式判断中文微博的情感极性。</p>
+                </div>
+                <h3 id="38" name="38" class="anchor-tag"><b>1 相关工作</b></h3>
+                <div class="p1">
+                    <p id="39">文献<citation id="205" type="reference">[<a class="sup">1</a>]</citation>中指出情感即文本作者的意见和观点,因此对情感的分析也可以理解为对意见的挖掘,文本意见挖掘属于数据挖掘的子类,主要是利用现有的计算机技术挖掘出蕴含在文本间的观点、情绪等元素。在当今可以通过构造相应的情感词典和利用机器学习算法来对微博文本进行情感分析、极性分类。构造情感词典来对微博进行情感分析出现比较早,而且它对微博文本这种细粒度的情感分析效果极佳。文献<citation id="206" type="reference">[<a class="sup">2</a>]</citation>就是在基础情感词典的基础上,构造了两种计算词汇语义的情感权值方法。文献<citation id="207" type="reference">[<a class="sup">3</a>]</citation>也在基础情感词典的基础上,构造了一种分类器,可以对文本语义之间的歧义进行消除,从而提高情感分析准确率。</p>
+                </div>
+                <div class="p1">
+                    <p id="40">基于机器学习的方法来进行情感分析,主要是通过选取一些特征来标注训练集和测试集,接着利用朴素贝叶斯、支持向量机等分类器进行情感分类。文献<citation id="208" type="reference">[<a class="sup">5</a>]</citation>利用支持向量机或朴素贝叶斯与支持向量机相结合的方法对微博进行情感分析。文献<citation id="209" type="reference">[<a class="sup">7</a>]</citation>首先构造微博语料库,再用朴素贝叶斯算法进行分类。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">总之,微博情感分析常用的两种方法都有一定的作用,但谁也不能做到更高的准确率,只能在这个基础上不断地加以改进方法提高准确性。基于情感词典的方法擅长处理细粒度的文本情感分析,因此本文主要也是利用情感词典,在此基础上加以改进,并结合文本之间的语义规则集来对微博进行情感分析,最后通过各个部分的情感权值加权求和得到微博的情感极性。微博的整体情感分析流程图如图1所示。</p>
+                </div>
+                <div class="area_img" id="42">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201909018_042.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 微博整体情感分析流程" src="Detail/GetImg?filename=images/JYRJ201909018_042.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 微博整体情感分析流程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201909018_042.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="43" name="43" class="anchor-tag"><b>2 情感词典的构建</b></h3>
+                <div class="p1">
+                    <p id="44">目前国外的情感词典《General Inquirer》完善度很高,但在国内还没有一部这样比较完善的词典,所以对微博来说,有一部完善的情感词典是很有必要的。现在国内使用常见的代表性情感词典有知网HowNet情感词典,台湾大学的正、负面情感词典和大连理工大学中文情感词典库等等。所以本文在此基础词典的基础上进行整合和优化,构建一个扩展的多部情感词典,同时还需要单独构建一个微博特定领域的情感词典来一起组成微博情感词典,从而进行微博情感分析。</p>
+                </div>
+                <h4 class="anchor-tag" id="45" name="45"><b>2.1 微博文本的预处理</b></h4>
+                <div class="p1">
+                    <p id="46">微博文本具有元素多样性、随意性、口语化等特点,所以需要进行预处理。预处理步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="47">1) 将网页中的链接、图片、视频、动画删除;将“@+用户名”删除;将“#话题#”删除。这些内容虽对微博情感分析有一定作用,但是影响不大,可以删除。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">2) 将文本中的繁体字、英文等其他语言都翻译成中文,这是为了后续工作的方便,可使用特定的工具来进行翻译。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">3) 保留微博文本中的表情符号。因为表情是情感状态的外在表现,与情感有关,可以参与情感权值计算。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">4) 分词,本文使用中科院ICTCLAS软件进行分词与词性标注。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">5) 删除停用词,比如助词“的”,代词“她”、“他”等之类的词。</p>
+                </div>
+                <div class="p1">
+                    <p id="52">在预处理完成之后,微博文本就是词语连接成串的形式,比如“我国运动员武大靖在短道速滑男子500米决赛中夺冠。”就会变为{我国,运动员,武,大靖,在,短道速滑,男子,500,米,决赛,中,夺冠 }。</p>
+                </div>
+                <h4 class="anchor-tag" id="53" name="53"><b>2.2 构建多部情感词典</b></h4>
+                <div class="p1">
+                    <p id="54">目前中文情感词典还没有完整成熟的情感词典,所以除了构造基础情感词典外,还有否定词词典和双重否定词词典、程度副词词典、关系连词词典、表情符号词典。</p>
+                </div>
+                <h4 class="anchor-tag" id="55" name="55"><b>2.2.1 基础情感词典</b></h4>
+                <div class="p1">
+                    <p id="56">基础情感词典是取自大连理工大学的中文情感词典库。这个词典库将情感词分成了五个强度和三类词。本文用数字1表示正面词,数字2表示反面词,0表示中性词且它的权值为0。示例如表1所示。</p>
+                </div>
+                <div class="area_img" id="57">
+                    <p class="img_tit"><b>表1 基础情感词典示例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="57" border="1"><tr><td><br />情感词</td><td>词性种类</td><td>权值</td><td>极性</td></tr><tr><td><br />绝望</td><td>形容词</td><td>9</td><td>2</td></tr><tr><td><br />瑞雪</td><td>名词</td><td>5</td><td>1</td></tr><tr><td><br />开心</td><td>形容词</td><td>5</td><td>1</td></tr><tr><td><br />数落</td><td>动词</td><td>0</td><td>0</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="58" name="58"><b>2.2.2 否定词词典和双重否定词词典</b></h4>
+                <div class="p1">
+                    <p id="59">否定词词典包括否定副词和反问词这两部分。文献<citation id="210" type="reference">[<a class="sup">10</a>]</citation>中指出否定副词和反问词修饰情感词时,都会改变词的情感极性,但反问词语气更强,而双重否定不会改变词的情感极性,但是语气会更加强烈。通过人工筛选共获取25个否定词,示例如表2所示。</p>
+                </div>
+                <div class="area_img" id="60">
+                    <p class="img_tit"><b>表2 否定词词典和双重否定词词典示例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="60" border="1"><tr><td><br />词语类型</td><td>词语</td><td>权值</td></tr><tr><td><br />否定词</td><td>不、没、无、否、……</td><td>-1</td></tr><tr><td><br />反问词</td><td>难道、难不成、岂、……</td><td>-2</td></tr><tr><td><br />双重否定词</td><td>不是不、绝非不、……</td><td>1</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="61" name="61"><b>2.2.3 程度副词词典</b></h4>
+                <div class="p1">
+                    <p id="62">程度副词词典来自于知网词典库。将这些词一共分为6个等级。等级分别是超、最、很、较、稍、欠。分别对这6个等级给予一定的权值,对所修饰的情感词的情感强度扩大一定的倍数。示例如表3所示。</p>
+                </div>
+                <div class="area_img" id="63">
+                    <p class="img_tit"><b>表3 程度副词词典示例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="63" border="1"><tr><td>等级</td><td>副词</td><td>权重倍数</td><td>个数</td></tr><tr><td><br />超</td><td>超、过度、忒、……</td><td>3</td><td>30</td></tr><tr><td><br />最</td><td>百分百、极度、过于、……</td><td>2.5</td><td>69</td></tr><tr><td><br />很</td><td>何等、不过、太、……</td><td>2</td><td>42</td></tr><tr><td><br />较</td><td>那么、大不了、更、……</td><td>1.5</td><td>37</td></tr><tr><td><br />稍</td><td>稍微、略微、稍稍、……</td><td>1</td><td>29</td></tr><tr><td><br />欠</td><td>不那么、弱、不甚、……</td><td>0.5</td><td>12</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="64" name="64"><b>2.2.4 关系连词词典</b></h4>
+                <div class="p1">
+                    <p id="65">关系连词主要有转折、让步、递进、因果、假设等关系,它们在句子与句子之间的连接起到作用。本文收集整理常用的一些词构建了一个关系连词词典,并赋予一定的权值,示例如表4所示。</p>
+                </div>
+                <div class="area_img" id="66">
+                    <p class="img_tit"><b>表4 关系连词词典示例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="66" border="1"><tr><td>词性</td><td>词语</td><td>权值</td><td>个数</td></tr><tr><td><br />转折</td><td>但是、然而、而、……</td><td>0.5</td><td>10</td></tr><tr><td><br />让步</td><td>虽然、尽管、即使、……</td><td>1.5</td><td>10</td></tr><tr><td><br />递进</td><td>甚至、并且、况且、……</td><td>2</td><td>9</td></tr><tr><td><br />因果</td><td>因此、所以、以便、……</td><td>1.5</td><td>14</td></tr><tr><td><br />假设</td><td>如果、倘若、若、……</td><td>1</td><td>12</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="67" name="67"><b>2.2.5 表情符号词典</b></h4>
+                <div class="p1">
+                    <p id="68">微博表情在微博文本中具有很强的情感倾向性,可以通过它去判断微博情感极性有一定的作用。本文通过微博抓取了一些频率使用比较高的部分表情构造表情词典,共计217个表情。示例如表5所示。</p>
+                </div>
+                <div class="area_img" id="69">
+                    <p class="img_tit"><b>表5 表情符号词典示例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="69" border="1"><tr><td><br />表情符号</td><td>权值</td><td>个数</td></tr><tr><td><br /><img src="images\JYRJ201909018_213.jpg" placement="inline" />……</td><td>2</td><td>33</td></tr><tr><td><br /><img src="images\JYRJ201909018_214.jpg" placement="inline" />……</td><td>1</td><td>42</td></tr><tr><td><br /><img src="images\JYRJ201909018_215.jpg" placement="inline" />……</td><td>0</td><td>77</td></tr><tr><td><br /><img src="images\JYRJ201909018_216.jpg" placement="inline" />……</td><td>-1</td><td>33</td></tr><tr><td><br /><img src="images\JYRJ201909018_217.jpg" placement="inline" />……</td><td>-2</td><td>32</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="70" name="70"><b>2.3 微博领域情感词典的构建</b></h4>
+                <div class="p1">
+                    <p id="71">由于基础的情感词典还不完整,对情感词的概括是有限的,所以还需要针对微博上一些特有的情感新词进行识别,从而对这些新词集合构建一个词典。首先要基于统计信息来识别新词,然后在新词中进行情感识别。</p>
+                </div>
+                <h4 class="anchor-tag" id="72" name="72"><b>2.3.1 基于统计信息的新词识别</b></h4>
+                <div class="p1">
+                    <p id="73">文献<citation id="211" type="reference">[<a class="sup">6</a>]</citation>中给出三个定义,分别称作字串频数、内部耦合度、邻字集信息熵,一个字串能否成词与这三个定义有关。微博文本是由一连串词语组成的文本,首先我们用一个长字串来表示微博文本,同时将一个新词的成词长度设定为一个值,本文设定为7。同时再考虑上面三个定义,它们每个都要设定一个参数阈值,如果有任何一个条件不满足,即超过阈值范围,则这个字串不是一个词。最后剩下的能构成的词语集合中,仍需要比对情感词典中的词语,若该词在已有的词典中找不到,即成为新词。</p>
+                </div>
+                <h4 class="anchor-tag" id="74" name="74"><b>2.3.2 新词情感分析与</b>PMI<b>算法改进</b></h4>
+                <div class="p1">
+                    <p id="75">通过以上方法能识别并挖掘出新词,但是对这些词的情感极性还需要继续识别,从而构建出一个微博特定领域的情感词典。首先根据以上方法识别出新词,按照词频进行统计并排序,按照从上到下的方式来筛选,筛选出情感极性较强而且词频比较高的词语作为种子词。然后对这些词的情感极性作出判断,紧接着利用PMI算法计算其他未知词与它们之间的语义相似度,最后计算未知新词的情感极性,方法如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="76">点互信息主要是可以计算词与词之间的相似度。两个词<i>w</i><sub>1</sub>和<i>w</i><sub>2</sub>之间的相似度计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="77"><mathml id="78"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ρ</mi><mi>Μ</mi><mi>Ι</mi><mo stretchy="false">(</mo><mi>w</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mi>w</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mrow><mi>log</mi></mrow><msub><mrow></mrow><mn>2</mn></msub><mfrac><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>w</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mi>w</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>w</mi><msub><mrow></mrow><mn>1</mn></msub><mo stretchy="false">)</mo><mo>×</mo><mi>p</mi><mo stretchy="false">(</mo><mi>w</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mfrac></mrow></math></mathml>      (1)</p>
+                </div>
+                <div class="p1">
+                    <p id="79">式中:<i>P</i>(<i>w</i><sub>1</sub>,<i>w</i><sub>2</sub>)表示<i>w</i><sub>1</sub>、<i>w</i><sub>2</sub>共同出现的概率,<i>p</i>(<i>w</i><sub>1</sub>)、<i>p</i>(<i>w</i><sub>2</sub>)分别表示<i>w</i><sub>1</sub>、<i>w</i><sub>2</sub>单独出现的概率。</p>
+                </div>
+                <div class="p1">
+                    <p id="80"><i>w</i><sub>1</sub>表示未知词,<i>w</i><sub>2</sub>表示种子词,若式(1)的计算结果较大即相似度高,则可知两个词情感极性相同,否则就不同。但仅仅计算一对词的语义相似度在微博情感分析中不具有说服力,所以本文在考虑这个的基础上,在词阈的范围内选取了30对正负面情感极性的种子词,同时考虑到使用频率高的表情元素,选取了5对正负面情感极性表情符号作为种子词,一起构成正面的情感词集合<i>W</i><sub><i>P</i></sub>和负面情感词集合<i>W</i><sub><i>N</i></sub>,用来考察多词之间的语义相似度。同时对PMI公式进行改进,得出新词<i>w</i>的情感极性判断的新公式:</p>
+                </div>
+                <div class="p1">
+                    <p id="81" class="code-formula">
+                        <mathml id="81"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>e</mi><mi>n</mi><mo>_</mo><mi>Ρ</mi><mi>Μ</mi><mi>Ι</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>w</mi><msub><mrow></mrow><mi>p</mi></msub><mo>∈</mo><mi>W</mi><msub><mrow></mrow><mi>Ρ</mi></msub></mrow></munder><mi>Ρ</mi></mstyle><mi>Μ</mi><mi>Ι</mi><mo stretchy="false">(</mo><mi>w</mi><mo>,</mo><mi>w</mi><msub><mrow></mrow><mi>p</mi></msub><mo stretchy="false">)</mo><mo>-</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>w</mi><msub><mrow></mrow><mi>n</mi></msub><mo>∈</mo><mi>W</mi><msub><mrow></mrow><mi>Ν</mi></msub></mrow></munder><mi>Ρ</mi></mstyle><mi>Μ</mi><mi>Ι</mi><mo stretchy="false">(</mo><mi>w</mi><mo>,</mo><mi>w</mi><msub><mrow></mrow><mi>n</mi></msub><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="82">式(2)的值如果大于0,则新词<i>w</i>的情感极性为正面;等于0,新词<i>w</i>的情感极性为中性;小于0,新词<i>w</i>的情感极性为负面。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">最后一起构建成微博特定领域的情感词典,本文识别并挖掘出2018年微博新词共计164个,将这些词分为4个级别,并赋予一定权值,示例如表6所示。</p>
+                </div>
+                <div class="area_img" id="84">
+                    <p class="img_tit"><b>表6 微博新词词典示例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="84" border="1"><tr><td><br />微博新词</td><td>权值</td><td>个数</td></tr><tr><td><br />真香、skr、锦鲤、……</td><td>2</td><td>18</td></tr><tr><td><br />官宣、佛系、确认过眼神、……</td><td>1</td><td>40</td></tr><tr><td><br />安排、凉凉、大猪蹄子、……</td><td>-1</td><td>65</td></tr><tr><td><br />坑爹、尼玛、中年油腻男、……</td><td>-2</td><td>41</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h3 id="85" name="85" class="anchor-tag"><b>3 微博文本规则集的情感分析</b></h3>
+                <div class="p1">
+                    <p id="86">微博文本也是普通文本,都是由汉字等其他元素构成的表达文本,而文本之间肯定存在着一些语法关系和语义规则,它们对文本的情感分析也有一定作用。</p>
+                </div>
+                <h4 class="anchor-tag" id="87" name="87"><b>3.1 句间分析规则</b></h4>
+                <div class="p1">
+                    <p id="88">一条微博文本可以通过标点符号划分成若干个复句,一条复句可以分成若干个分句,句间分析规则就是考虑分句与分句之间的关系,而句间关系主要有三类:转折、递进、假设。这里用<i>S</i>表示整个复句,<i>S</i><sub><i>i</i></sub>表示复句的各个分句。定义集合{<i>S</i><sub>1</sub>,<i>S</i><sub>2</sub>,…,<i>S</i><sub><i>i</i></sub>}为复句的分句集合,<i>R</i><sub><i>i</i></sub>表示句间规则对分句<i>S</i><sub><i>i</i></sub>的情感权值。</p>
+                </div>
+                <h4 class="anchor-tag" id="89" name="89"><b>3.1.1 转折关系规则</b></h4>
+                <div class="p1">
+                    <p id="90">转折关系中,基本都会实现前后的情感翻转作用,转折之前的分句情感会变弱,而主要突出后面分句的情感,后面分句与前面分句的情感极性相反。规则定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="91">1) 若复句<i>S</i>中只有单一的转折后接词出现(如“但”,“可是”,“却”等)在分句<i>S</i><sub><i>i</i></sub>中,则<i>S</i><sub><i>i</i></sub>之前的分句权值<i>R</i><sub><i>i</i></sub>都设为0,<i>S</i><sub><i>i</i></sub>之后的分句权值<i>R</i><sub><i>i</i></sub>都设为1。</p>
+                </div>
+                <div class="p1">
+                    <p id="92">2) 若复句<i>S</i>中只有单一的转折前接词出现(如“虽然”,“如”,“尽管”等)在分句<i>S</i><sub><i>i</i></sub>中,则<i>S</i><sub><i>i</i></sub>之前的分句权值<i>R</i><sub><i>i</i></sub>都设为1,<i>S</i><sub><i>i</i></sub>之后的分句权值<i>R</i><sub><i>i</i></sub>都设为0。</p>
+                </div>
+                <div class="p1">
+                    <p id="93">3) 若复句<i>S</i>中出现成对的转折连接词(如“虽然…但是…”等),且转折后接词出现在分句<i>S</i><sub><i>i</i></sub>中,则<i>S</i><sub><i>i</i></sub>之前的分句权值<i>R</i><sub><i>i</i></sub>都设为0,<i>S</i><sub><i>i</i></sub>之后的分句权值都<i>R</i><sub><i>i</i></sub>设为1。</p>
+                </div>
+                <h4 class="anchor-tag" id="94" name="94"><b>3.1.2 递进关系规则</b></h4>
+                <div class="p1">
+                    <p id="95">递进关系,顾名思义,在这个关系规则中,复句的每个分句根据从前到后的顺序逐渐增强情感。规则定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="96">若复句<i>S</i>中出现递进关系的连接词(如“更”,“更加”,“更重要的是”等),则分句的权值为:</p>
+                </div>
+                <div class="p1">
+                    <p id="97"><i>R</i><sub><i>i</i></sub>=1 <i>R</i><sub><i>i</i>+1</sub>=1.5 … <i>R</i><sub><i>j</i></sub>=1+0.5×(<i>j</i>-<i>i</i>)</p>
+                </div>
+                <h4 class="anchor-tag" id="98" name="98"><b>3.1.3 假设关系规则</b></h4>
+                <div class="p1">
+                    <p id="99">假设关系建立在现实情况中的一种设想,它表达的情感主要在假设复句的前半分句,而对后半分句的情感相对弱化一些。比如:如果A,那么B。则句子强调的是内容A。</p>
+                </div>
+                <div class="p1">
+                    <p id="100">1) 若复句<i>S</i>中未出现否定的假设连接词,但是出现假设关系的后接词(如“那么”),且假设后接词出现在分句<i>S</i><sub><i>i</i></sub>中,则<i>S</i><sub><i>i</i></sub>之前的分句权值<i>R</i><sub><i>i</i></sub>都设为1,<i>S</i><sub><i>i</i></sub>之后的分句权值<i>R</i><sub><i>i</i></sub>都设为0.5。</p>
+                </div>
+                <div class="p1">
+                    <p id="101">2) 若复句<i>S</i>中出现否定的假设连接词,而且假设后接词(如“那么”)出现在分句<i>S</i><sub><i>i</i></sub>中,则<i>S</i><sub><i>i</i></sub>之前的分句权值<i>R</i><sub><i>i</i></sub>都设为-1,<i>S</i><sub><i>i</i></sub>之后的分句权值<i>R</i><sub><i>i</i></sub>都设为-0.5。</p>
+                </div>
+                <div class="p1">
+                    <p id="102">上面描述的这三种句间关系都能影响到整个微博文本的情感极性,所以情感分析中要考虑到它们。至于其他的句间关系如因果、并列等,对情感分析的影响可以忽略不计。</p>
+                </div>
+                <h4 class="anchor-tag" id="103" name="103"><b>3.2 句型分析规则</b></h4>
+                <div class="p1">
+                    <p id="104">上一节所说的是复句的分句之间的关系,这一节说明的是复句的句型对整个文本的情感极性的影响。本文主要讨论陈述句、疑问句、反问句和感叹句这四类常见句型。它们常以“?”、“!”、“。”等标点符号结尾。一个文本用<i>D</i>来表示,则文本分割成各个分句即复句,用集合定义为{<i>D</i><sub>1</sub>,<i>D</i><sub>2</sub>,…,<i>D</i><sub><i>i</i></sub>,…,<i>D</i><sub><i>n</i></sub>}。复句用<i>D</i><sub><i>i</i></sub>来表示,定义<i>T</i><sub><i>i</i></sub>为句型规则对复句<i>D</i><sub><i>i</i></sub>的情感权值。具体的规则定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="105">1) 如果微博文本中有复句<i>D</i><sub><i>i</i></sub>以感叹号“!”结尾,则表示此复句为感叹句,它的权值<i>T</i><sub><i>i</i></sub>设为1.5。</p>
+                </div>
+                <div class="p1">
+                    <p id="106">2) 如果微博文本中有复句<i>D</i><sub><i>i</i></sub>以反问号“?”结尾且结尾处有反问标志词或者没有以反问号“?”结尾但有反问标志词,则表示此复句为反问句,它的权值<i>T</i><sub><i>i</i></sub>设为-1。</p>
+                </div>
+                <div class="p1">
+                    <p id="107">3) 如果微博文本中有复句<i>D</i><sub><i>i</i></sub>以反问号“?”结尾且结尾处无反问标志词,则表示此复句为疑问句,它的权值<i>T</i><sub><i>i</i></sub>设为0。</p>
+                </div>
+                <div class="p1">
+                    <p id="108">4) 如果微博文本中有复句<i>D</i><sub><i>i</i></sub>以句号“。”等其他标点符号结尾,则表示此复句为陈述句,它的权值<i>T</i><sub><i>i</i></sub>设为1。</p>
+                </div>
+                <h3 id="109" name="109" class="anchor-tag"><b>4 微博综合情感计算</b></h3>
+                <div class="p1">
+                    <p id="110">本文基于多部情感词典和规则集的微博情感分析,对微博从词到句进行整体综合情感计算。用<i>D</i>表示整个文本,文本中各个复句用<i>D</i><sub><i>i</i></sub>表示;S对应一个复句<i>S</i><sub><i>i</i></sub>表示复句中的各个分句;<i>E</i>表示情感权值,<i>R</i><sub><i>i</i></sub>表示分句的句间关系规则情感权值,<i>T</i><sub><i>i</i></sub>表示复句的句型关系规则情感权值,<i>sen</i><sub><i>i</i></sub>表示词典匹配得到的权值。</p>
+                </div>
+                <div class="p1">
+                    <p id="111">1) 词语情感值<i>E</i>(<i>W</i><sub><i>i</i></sub>)计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="112"><i>E</i>(<i>W</i><sub><i>i</i></sub>)=<i>N</i>×<i>A</i>×<i>sen</i><sub><i>i</i></sub>      (3)</p>
+                </div>
+                <div class="p1">
+                    <p id="113">式中:<i>N</i>表示情感词前对应的否定词或者双重否定词,<i>A</i>表示情感词前对应的程度副词,<i>sen</i><sub><i>i</i></sub>表示情感词与词典匹配得到的权值,<i>W</i><sub><i>i</i></sub>表示情感词语。</p>
+                </div>
+                <div class="p1">
+                    <p id="114">词语的情感权值计算不仅与它自身的权值有关,还与在其前面修饰的程度副词、否定词有关,所以在情感权值计算时要将它们考虑进去。</p>
+                </div>
+                <div class="p1">
+                    <p id="115">2) 分句情感值<i>E</i>(<i>S</i><sub><i>i</i></sub>)计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="116"><mathml id="117"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>E</mi><mo stretchy="false">(</mo><mi>S</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>E</mi></mstyle><mo stretchy="false">(</mo><mi>W</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo><mo>×</mo><mi>R</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></math></mathml>      (4)</p>
+                </div>
+                <div class="p1">
+                    <p id="118">3) 复句情感值<i>E</i>(<i>D</i><sub><i>i</i></sub>)计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="119"><mathml id="120"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>E</mi><mo stretchy="false">(</mo><mi>D</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>E</mi></mstyle><mo stretchy="false">(</mo><mi>S</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo><mo>×</mo><mi>Τ</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></math></mathml>      (5)</p>
+                </div>
+                <div class="p1">
+                    <p id="121">4) 文本情感值<i>E</i>的计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="122"><mathml id="123"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>E</mi><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>E</mi></mstyle><mo stretchy="false">(</mo><mi>D</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math></mathml>      (6)</p>
+                </div>
+                <div class="p1">
+                    <p id="124">5) 表情情感值<i>E</i><sub><i>m</i></sub>计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="125"><mathml id="126"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>E</mi><msub><mrow></mrow><mi>m</mi></msub><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>s</mi></mstyle><mi>e</mi><mi>n</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></math></mathml>      (7)</p>
+                </div>
+                <div class="p1">
+                    <p id="127">6) 微博情感值<i>E</i><sub>last</sub>计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="128"><i>E</i><sub>last</sub>=<i>m</i>×<i>E</i>+<i>n</i>×<i>E</i><sub><i>m</i></sub>      (8)</p>
+                </div>
+                <div class="p1">
+                    <p id="129">式(8)表示微博的最终情感值计算,<i>m</i>和<i>n</i>表示文本情感值和表情情感值在微博情感权值计算中所占分量的大小,本文根据文献<citation id="212" type="reference">[<a class="sup">9</a>]</citation>中分析分别设置为0.6和0.4,计算得出<i>E</i><sub>last</sub>的大小。如果<i>E</i><sub>last</sub>大于0,则表示此微博的情感倾向为正面的,如果<i>E</i><sub>last</sub>小于0,则表示此微博的情感倾向为负面的,如果<i>E</i><sub>last</sub>等于0,则表示此微博情感为中性的。</p>
+                </div>
+                <h3 id="130" name="130" class="anchor-tag"><b>5 微博情感分析实验</b></h3>
+                <h4 class="anchor-tag" id="131" name="131"><b>5.1 实验方法</b></h4>
+                <div class="p1">
+                    <p id="132">首先通过爬虫工具爬取了微博上两个相关的微博话题,然后对这些数据进行情感分析,具体的实验步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="133">1) 获取实验数据。利用爬虫软件爬取微博上比较两个热门话题“#短视频整顿#”和“#《我不是药神》爆红引社会热议#”的文本数据。</p>
+                </div>
+                <div class="p1">
+                    <p id="134">2) 情感极性的人工标注。获取数据的情感极性没有进行标注,采用人工方法对这两个话题进行标注。人工标注主要是通过统计抽取随机选择三名实验同学对这两个话题进行主观判断,标注情感极性,最后统计结果。</p>
+                </div>
+                <div class="p1">
+                    <p id="135">3) 预处理。根据上述对应的方法构建六部情感词典。</p>
+                </div>
+                <div class="p1">
+                    <p id="136">4) 话题情感分析。分别在一部基础情感词典、六部情感词典和基于六部情感词典与规则集的基础之上对这两个话题进行三组实验,得出微博的情感分析结果。</p>
+                </div>
+                <h4 class="anchor-tag" id="137" name="137"><b>5.2 实验数据</b></h4>
+                <div class="p1">
+                    <p id="138">本文通过爬虫软件爬取到关于两个微博话题的数据集,接着利用人工标注的方法,将这些文本进行情感极性标注,给出每条微博的情感权值并进行分类。共筛选出话题“#短视频整顿#”共计25 720条,其中正面数据18 634条,负面数据1 385条,中性数据5 701条;话题“#《我不是药神》爆红引社会热议#”共计17 695条,其中正面数据10 672条,负面数据2 856条,中性数据4 167条。判断标准是:微博情感权值大于0为正面,小于0为负面,等于0为中性。从筛选结果可知正面微博数据所占比例较大,负面微博数据和中性微博数据所占比例较小,且数据较少。</p>
+                </div>
+                <h4 class="anchor-tag" id="139" name="139"><b>5.3 实验性能评估指标</b></h4>
+                <div class="p1">
+                    <p id="140">本实验根据本文提出的微博情感分析方法对每一条微博文本进行情感分析,然后将在此方法下自动分析得出的结果与我们人工分类得出的结果进行比对,看情感分析的效果如何。采用以下三个指标进行分析,分别是正确率<i>P</i>、召回率<i>R</i>和综合度量<i>F</i>指标值,具体公式如下:</p>
+                </div>
+                <div class="area_img" id="141">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JYRJ201909018_14100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="area_img" id="143">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JYRJ201909018_14300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="145"><mathml id="146"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mi>Ρ</mi><mo>×</mo><mi>R</mi></mrow><mrow><mi>Ρ</mi><mo>+</mo><mi>R</mi></mrow></mfrac></mrow></math></mathml>      (11)</p>
+                </div>
+                <h4 class="anchor-tag" id="147" name="147"><b>5.4 实验分析与结果</b></h4>
+                <div class="p1">
+                    <p id="148">为了验证本文提出的方法具有更好的作用,还另外做了只基于一部情感词典和只基于六部情感词典的实验。将本文提出的方法实验结果与这两种方法得出的实验结果进行对比,利用性能评估指标对结果进行分析。</p>
+                </div>
+                <div class="p1">
+                    <p id="149">对两个话题分别做如下三组实验:</p>
+                </div>
+                <div class="p1">
+                    <p id="150">第一组实验:分别对话题“#短视频整顿#”和“#《我不是药神》爆红引社会热议#”采用基于一部基础情感词典的微博情感分析,并进行微博分类。</p>
+                </div>
+                <div class="p1">
+                    <p id="151">第二组实验:分别对话题“#短视频整顿#”和“#《我不是药神》爆红引社会热议#”采用基于六部基础情感词典的微博情感分析,并进行微博分类。</p>
+                </div>
+                <div class="p1">
+                    <p id="152">第三组实验:分别对话题“#短视频整顿#”和“#《我不是药神》爆红引社会热议#”采用基于六部基础情感词典和规则集的微博情感分析,并进行微博分类。</p>
+                </div>
+                <div class="p1">
+                    <p id="153">实验结果如表7和表8所示。</p>
+                </div>
+                <div class="area_img" id="154">
+                    <p class="img_tit"><b>表7</b> #<b>短视频整顿#实验结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="154" border="1"><tr><td><br />实验方法</td><td>类别</td><td><i>P</i></td><td><i>R</i></td><td><i>F</i></td></tr><tr><td rowspan="4"><br />一部基础<br />情感词典</td><td><br />正面</td><td>0.648</td><td>0.643</td><td>0.645</td></tr><tr><td><br />负面</td><td>0.625</td><td>0.598</td><td>0.611</td></tr><tr><td><br />中性</td><td>0.607</td><td>0.667</td><td>0.636</td></tr><tr><td><br />平均</td><td>0.627</td><td>0.636</td><td>0.631</td></tr><tr><td rowspan="4"><br />六部情<br />感词典</td><td><br />正面</td><td>0.782</td><td>0.778</td><td>0.780</td></tr><tr><td><br />负面</td><td>0.754</td><td>0.703</td><td>0.728</td></tr><tr><td><br />中性</td><td>0.736</td><td>0.795</td><td>0.764</td></tr><tr><td><br />平均</td><td>0.757</td><td>0.759</td><td>0.757</td></tr><tr><td rowspan="4"><br />六部情感<br />词典+<br />规则集</td><td><br />正面</td><td>0.849</td><td>0.843</td><td>0.846</td></tr><tr><td><br />负面</td><td>0.818</td><td>0.785</td><td>0.801</td></tr><tr><td><br />中性</td><td>0.797</td><td>0.853</td><td>0.824</td></tr><tr><td><br />平均</td><td>0.821</td><td>0.827</td><td>0.834</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="155">
+                    <p class="img_tit"><b>表8</b> #《<b>我不是药神》爆红引社会热议# 实验结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="155" border="1"><tr><td><br />实验方法</td><td>类别</td><td><i>P</i></td><td><i>R</i></td><td><i>F</i></td></tr><tr><td rowspan="4"><br />一部基础<br />情感词典</td><td><br />正面</td><td>0.657</td><td>0.651</td><td>0.654</td></tr><tr><td><br />负面</td><td>0.586</td><td>0.545</td><td>0.565</td></tr><tr><td><br />中性</td><td>0.546</td><td>0.594</td><td>0.569</td></tr><tr><td><br />平均</td><td>0.596</td><td>0.597</td><td>0.596</td></tr><tr><td rowspan="4"><br />六部情<br />感词典</td><td><br />正面</td><td>0.745</td><td>0.736</td><td>0.741</td></tr><tr><td><br />负面</td><td>0.671</td><td>0.619</td><td>0.645</td></tr><tr><td><br />中性</td><td>0.639</td><td>0.715</td><td>0.675</td></tr><tr><td><br />平均</td><td>0.685</td><td>0.690</td><td>0.687</td></tr><tr><td rowspan="4"><br />六部情感<br />词典+<br />规则集</td><td><br />正面</td><td>0.806</td><td>0.785</td><td>0.795</td></tr><tr><td><br />负面</td><td>0.733</td><td>0.653</td><td>0.691</td></tr><tr><td><br />中性</td><td>0.701</td><td>0.756</td><td>0.727</td></tr><tr><td><br />平均</td><td>0.747</td><td>0.731</td><td>0.738</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="156">通过表7和表8的数据,对实验结果进行如下分析:</p>
+                </div>
+                <div class="p1">
+                    <p id="157">1) 实验结果表明本文提出的方法提高了微博的情感分析的正确率。若只单纯靠一部基础情感词典,那么正确率是较低的,因为微博的特殊的文本包含了很多普通文本不具有的特性,所以要在原来的基础上扩建多部情感词典,提高词典的覆盖面,同时将文本语义规则集考虑进去,更有利于微博的情感分析。</p>
+                </div>
+                <div class="p1">
+                    <p id="158">2) 通过两个话题的实验结果可以看出,话题“#短视频整顿#”的正确率高于话题“#《我不是药神》爆红引发社会热议#”的正确率。这是因为前者所获取的正面数据居多,而且对后者话题中一些判断失误的微博文本进行分析发现这是一部关于电影反讽刺的话题,有网友发表微博就使用了一些反讽刺的表达。比如“电影中的药商真的好棒啊,竟然可以把药卖给病人,真的是好样的!”,这其中“好棒”“好样”都是正面情感词,但实际上是起到讽刺作用,是负面的微博,因此在后续对微博的情感分析中还可以继续对语义规则进行完善分析。</p>
+                </div>
+                <div class="p1">
+                    <p id="159">3) 通过表格中数据发现正确率和F值都是正面微博偏高,通过微博分析得知是由于正面、负面、中性数据分布不平衡造成的,因为这两个微博都是社会热点话题,众多网友持支持态度。</p>
+                </div>
+                <div class="p1">
+                    <p id="160">4) 通过对比F值可以发现在引入六部情感词典之后,F值相对于一部情感词典下有很大提高,这是因为在六部情感词典下,匹配微博文本的面更广,尤其加入了微博特定领域的情感词典,而且在加入规则集以后,F值又有了一定的提升。虽然F值总体上提高了,但还可以继续提高,因为实验预处理过程中有个分词过程,还有语义规则的分析过程,这两个过程的优劣程度都会影响最后结果。当然还有一些其他因素,比如一词多义现象等。</p>
+                </div>
+                <div class="p1">
+                    <p id="161">实验表明,本文提出的方法利用多部情感词典,并考虑文本语义规则集,对微博的情感分析效果有明显的提升,且在三个指标下,都验证了此方法对微博情感分析有效果。</p>
+                </div>
+                <h3 id="162" name="162" class="anchor-tag"><b>6 结 语</b></h3>
+                <div class="p1">
+                    <p id="163">基于词典的情感分析是已有的研究方法,本文在基于词典的基础上,构建了除基础情感词典之外的其他五部词典,这些词典范围更广,其中微博特定领域的情感词典构造至关重要,未来还需要继续不断完善这部词典。最后在六部词典的基础上,考虑文本之间的语义规则,因此提出一种基于多部情感词典和规则集的中文微博情感分析方法,通过实验验证了此方法具有很好的作用。</p>
+                </div>
+                <div class="p1">
+                    <p id="164">微博的情感分析研究还有很多可以改进之处,比如要考虑微博的点赞数、转发数和阅读数等。我们将继续改进方法,力争使中文微博情感分析更上一个台阶。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="173">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201306024&amp;v=MDI2MDY0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5bmhWci9MTHo3QmQ3RzRIOUxNcVk5SFlJUUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 杨立公,朱俭,汤世平.文本情感分析综述[J].计算机应用,2013,33(6):1574-1578,1607.
+                            </a>
+                        </p>
+                        <p id="175">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS200601002&amp;v=MTc1MTdyL0xLQ2pZZmJHNEh0Zk1ybzlGWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnluaFY=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 朱嫣岚,闵锦,周雅倩,等.基于Hownet的词汇语义倾向计算[J].中文信息学报,2006,20(1):14-20.
+                            </a>
+                        </p>
+                        <p id="177">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Prediction of election result by enhanced sentiment analysis on Twitter data using Word Sense Disambiguation">
+
+                                <b>[3]</b> Jose R,Chooralil V S.Prediction of election result by enhanced sentiment analysis on Twitter data using Word Sense Disambiguation[C]//International Conference on Control Communication&amp;Computing India,2015:638-641.
+                            </a>
+                        </p>
+                        <p id="179">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Building thesaurus lexicon using dictionary-based approach for sentiment classification">
+
+                                <b>[4]</b> Park S,Kim Y.Building thesaurus lexicon using dictionary-based approach for sentiment classification[C]//2016 IEEE 14th International Conference on Software Engineering Research,Management and Applications(SERA).IEEE,2016:39-44.
+                            </a>
+                        </p>
+                        <p id="181">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201201012&amp;v=MjU1NDdmWnVadEZ5bmhWci9MS0NqWWZiRzRIOVBNcm85RVpvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3E=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 谢丽星,周明,孙茂松.基于层次结构的多策略中文微博情感分析和特征抽取[J].中文信息学报,2012,26(1):73-83.
+                            </a>
+                        </p>
+                        <p id="183">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSGG201508045&amp;v=MjI5ODhIOVRNcDQ5QllZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5bmhWci9MTHo3TWFiRzQ=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 王志涛,於志文,郭斌,等.基于词典和规则集的中文微博情感分析[J].计算机工程与应用,2015,51(8):218-225.
+                            </a>
+                        </p>
+                        <p id="185">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Twitter sentiment mining:A multi domain analysis">
+
+                                <b>[7]</b> Shahheidari S,Dong H,Bin Daud M N.Twitter senti-ment mining:A multi domain analysis[C]//Proceedings of the 2013 Seventh International Conference on Complex,Intelligent,and Software Intensive Systems.IEEE,2013:144-149.
+                            </a>
+                        </p>
+                        <p id="187">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJDZ201702007&amp;v=MDAwNDU3cWZadVp0RnluaFZyL0xKeWZQZExHNEg5Yk1yWTlGWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 姜杰,夏睿.机器学习与语义规则融合的微博情感分类方法[J].北京大学学报(自然科学版),2017,53(2):247-254.
+                            </a>
+                        </p>
+                        <p id="189">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=CASH201604010&amp;v=MDk2NzlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5oVnIvTEppellackc0SDlmTXE0OUVaSVE=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 赵天奇,姚海鹏,方超,等.语义规则与表情加权融合的微博情感分析方法[J].重庆邮电大学学报(自然科学版),2016,28(4):503-510.
+                            </a>
+                        </p>
+                        <p id="191">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QBTS201602001&amp;v=MDUzMjNVUjdxZlp1WnRGeW5oVnIvTE5DL2ZmYkc0SDlmTXJZOUZaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 陈国兰.基于情感词典与语义规则的微博情感分析[J].情报探索,2016,18(2):1-6.
+                            </a>
+                        </p>
+                        <p id="193">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Sentiment Analysis and Opinion Mining">
+
+                                <b>[11]</b> Liu B.Sentiment Analysis and Opinion Mining[J].Synthesis Lectures on Human Language Technologies,2016,30(1):152-153.
+                            </a>
+                        </p>
+                        <p id="195">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJESAC25E72E8D0ED213E8EC3E4D10966938&amp;v=MjcwNDJ5NndLcz1OaWZPZmNMTEhOUzVxSTB3Yko4UGVRZzd6aFZtNGtvT1N3cm0yQk0xY0xTU1RMbVhDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZCckxVMDV0dGh4Yg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> Zou X,Yang J,Zhang J,et al.Microblog Sentiment Analysis with Weak Dependency Connections[J].Knowledge-Based Systems,2017,142:170-180.
+                            </a>
+                        </p>
+                        <p id="197">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Building associated semantic representation model for the ultra-short microblog text jumping in big data">
+
+                                <b>[13]</b> Zhang S X,Wang Y,Zhang S Y,et al.Building associated semantic representation model for the ultra-short microblog text jumping in big data[J].Cluster Computing,2016,19(3):1399-1410.
+                            </a>
+                        </p>
+                        <p id="199">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=SentiStory:Multi-grained sentiment analysis and event summarization with crowdsourced social media data">
+
+                                <b>[14]</b> Ouyang Y,Guo B,Zhang J,et al.SentiStory:multi-grained sentiment analysis and event summarization with crowdsourced social media data[J].Personal and Ubiquitous Computing,2017,21(1):97-111.
+                            </a>
+                        </p>
+                        <p id="201">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES07104490382CA0AD4218FCE456DAFEA1&amp;v=MDAzNjFieTZ3S3M9TmlmT2ZiTy9IOUhJcTRaRlorTU5mdzA1dm1JWDZENTFQZ3lYcUJjekRjUGlNTXVlQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQnJMVTA1dHRoeA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> Araque O,Corcuera-Platas I,Sánchez-Rada,J.Fernando,et al.Enhancing deep learning sentiment analysis with ensemble techniques in social applications[J].Expert Systems with Applications,2017,77:236-246.
+                            </a>
+                        </p>
+                        <p id="203">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES8056B0611541D6DAAFCC2AA4470453D7&amp;v=MTc0MzQ2WUNPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkJyTFUwNXR0aHhieTZ3S3M9TmlmT2ZidTRHOWUrcjRsRVplNExEUWcvdTJkaW5Fd09TZzZUcUJZeWViYVJScw==&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> Zhang S X,Wei Z L,Wang Y,et al.Sentiment analysis of Chinese micro-blog text based on extended sentiment dictionary[J].Future Generation Computer Systems,2018,81:395-403.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JYRJ201909018" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201909018&amp;v=MDAxMTRuaFZyL0xMelRaWkxHNEg5ak1wbzlFYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnk=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

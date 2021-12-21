@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637136450814502500%26DBCODE%3dCJFD%26TABLEName%3dCJFDTEMP%26FileName%3dJSJY201911042%26RESULT%3d1%26SIGN%3dKHMMgCIVaCo2SUcr5WkWT5Jf2R0%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201911042&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201911042&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201911042&amp;v=MDE1NzZab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeW5nVnIzUEx6N0JkN0c0SDlqTnJvOUI=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#45" data-title="0 引言 ">0 引言</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#51" data-title="1 提取凹凸特征点 ">1 提取凹凸特征点</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#64" data-title="2 特征点区域分割 ">2 特征点区域分割</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#81" data-title="3 基于SVD的区域配准 ">3 基于SVD的区域配准</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#82" data-title="3.1 &lt;i&gt;SVD&lt;/i&gt;&lt;b&gt;定理&lt;/b&gt;">3.1 <i>SVD</i><b>定理</b></a></li>
+                                                <li><a href="#99" data-title="3.2 &lt;b&gt;区域配准&lt;/b&gt;">3.2 <b>区域配准</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#128" data-title="4 实验与结果分析 ">4 实验与结果分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#130" data-title="4.1 &lt;b&gt;公共点云配准&lt;/b&gt;">4.1 <b>公共点云配准</b></a></li>
+                                                <li><a href="#137" data-title="4.2 &lt;b&gt;文物断裂面匹配&lt;/b&gt;">4.2 <b>文物断裂面匹配</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#147" data-title="5 结语 ">5 结语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#58" data-title="图1 体积积分不变量">图1 体积积分不变量</a></li>
+                                                <li><a href="#132" data-title="图2 待配准点云">图2 待配准点云</a></li>
+                                                <li><a href="#133" data-title="图3 公共点云的配准结果">图3 公共点云的配准结果</a></li>
+                                                <li><a href="#136" data-title="&lt;b&gt;表&lt;/b&gt;1 &lt;b&gt;五种算法的公共点云配准结果&lt;/b&gt;"><b>表</b>1 <b>五种算法的公共点云配准结果</b></a></li>
+                                                <li><a href="#139" data-title="图4 待匹配文物碎块">图4 待匹配文物碎块</a></li>
+                                                <li><a href="#140" data-title="&lt;b&gt;表&lt;/b&gt;2 &lt;b&gt;文物碎块的基本信息&lt;/b&gt;"><b>表</b>2 <b>文物碎块的基本信息</b></a></li>
+                                                <li><a href="#141" data-title="图5 文物碎块的匹配结果">图5 文物碎块的匹配结果</a></li>
+                                                <li><a href="#143" data-title="&lt;b&gt;表&lt;/b&gt;3 &lt;b&gt;五种算法的文物碎块匹配结果&lt;/b&gt;"><b>表</b>3 <b>五种算法的文物碎块匹配结果</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="201">
+
+
+                                    <a id="bibliography_1" title=" 郭延杰,白福忠,张铁英,等.基于 Radon 变换与灰度重心法的环形目标直径测量方法[J].激光与光电子学进展,2015,52(8):209-213.(GUO Y J,BAI F Z,ZHANG T Y,et al.Ring object diameter measuring method based on Radon transform and gray gravity algorithm[J].Laser and Optoelectronics Progress,2015,52(8):209-213.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JGDJ201508031&amp;v=MDM1NDRaTEc0SDlUTXA0OUdaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeW5nVnIzT0x5clA=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         郭延杰,白福忠,张铁英,等.基于 Radon 变换与灰度重心法的环形目标直径测量方法[J].激光与光电子学进展,2015,52(8):209-213.(GUO Y J,BAI F Z,ZHANG T Y,et al.Ring object diameter measuring method based on Radon transform and gray gravity algorithm[J].Laser and Optoelectronics Progress,2015,52(8):209-213.)
+                                    </a>
+                                </li>
+                                <li id="203">
+
+
+                                    <a id="bibliography_2" title=" 冯筠,陈雨,仝鑫龙,等.三维颅骨特征点的自动标定[J].光学精密工程,2014,22(5):1388-1394.(FENG J,CHEN Y,TONG X L,et al.Automatic feature point extraction for three-dimensional skull[J].Optics and Precision Engineering,2014,22(5):1388-1394.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GXJM201405037&amp;v=MjIyMjI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeW5nVnIzT0lqWEJZN0c0SDlYTXFvOUdZNFFLREg=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         冯筠,陈雨,仝鑫龙,等.三维颅骨特征点的自动标定[J].光学精密工程,2014,22(5):1388-1394.(FENG J,CHEN Y,TONG X L,et al.Automatic feature point extraction for three-dimensional skull[J].Optics and Precision Engineering,2014,22(5):1388-1394.)
+                                    </a>
+                                </li>
+                                <li id="205">
+
+
+                                    <a id="bibliography_3" title=" 张琮毅,魏子庄,徐昊文,等.尺度可变的快速全局点云配准方法[J].计算机学报,2019,42(9):1939-1952.(ZHANG Z Y,WEI Z Z,XU H W,et al.Scale variable fast global point cloud registration[J].Chinese Journal of Computers,2019,42(9) :1939-1952.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201909003&amp;v=MTU2MjY0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5bmdWcjNPTHo3QmRyRzRIOWpNcG85Rlo0UUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         张琮毅,魏子庄,徐昊文,等.尺度可变的快速全局点云配准方法[J].计算机学报,2019,42(9):1939-1952.(ZHANG Z Y,WEI Z Z,XU H W,et al.Scale variable fast global point cloud registration[J].Chinese Journal of Computers,2019,42(9) :1939-1952.)
+                                    </a>
+                                </li>
+                                <li id="207">
+
+
+                                    <a id="bibliography_4" title=" 蔺素珍,王栋娟,钟家让,等.利用曲率特征虚拟拼接青铜器小碎块的方法[J].西安电子科技大学学报(自然科学版),2016,43(6):141-146.(LIN S Z,WANG D J,ZHONG J R,et al.Approach to reassembling virtual small bronze fragments using the curvature feature[J].Journal of Xidian University (Natural Science),2016,43(6):141-146.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDKD201606025&amp;v=MjU0NTdZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5bmdWcjNPUFNuQWFyRzRIOWZNcVk5SFk=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         蔺素珍,王栋娟,钟家让,等.利用曲率特征虚拟拼接青铜器小碎块的方法[J].西安电子科技大学学报(自然科学版),2016,43(6):141-146.(LIN S Z,WANG D J,ZHONG J R,et al.Approach to reassembling virtual small bronze fragments using the curvature feature[J].Journal of Xidian University (Natural Science),2016,43(6):141-146.)
+                                    </a>
+                                </li>
+                                <li id="209">
+
+
+                                    <a id="bibliography_5" title=" BESL P J,MCKAY N D.A method for registration of 3-D shapes[J].IEEE Transactions on Pattern Analysis and Machine Intelligence,1992,14(2):239-256." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A method for registration of 3-D shapes">
+                                        <b>[5]</b>
+                                         BESL P J,MCKAY N D.A method for registration of 3-D shapes[J].IEEE Transactions on Pattern Analysis and Machine Intelligence,1992,14(2):239-256.
+                                    </a>
+                                </li>
+                                <li id="211">
+
+
+                                    <a id="bibliography_6" title=" DU S,LIU J,ZHANG C.Probability iterative closest point algorithm for m-D point set registration with noise[J].Neurocomputing,2015,157:187-198." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES828DE6D3978C3BC8350A21F7DDF1A4F4&amp;v=MjAzNzh5YkNPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkJyTFUwNXRwaHhiMjZ3cTQ9TmlmT2ZidTZGcVc1cWZ0R2Jld0hmMzlMdkI0UTd6OE1TbjZVcTJaQkQ3UGxRYw==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         DU S,LIU J,ZHANG C.Probability iterative closest point algorithm for m-D point set registration with noise[J].Neurocomputing,2015,157:187-198.
+                                    </a>
+                                </li>
+                                <li id="213">
+
+
+                                    <a id="bibliography_7" title=" LI S,LEE D.Fast Visual odometry using intensity-assisted iterative closest point[J].IEEE Robotics and Automation Letters,2016,1(2):992-999." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Fast visual odometry using intensity-assisted iterative closest point">
+                                        <b>[7]</b>
+                                         LI S,LEE D.Fast Visual odometry using intensity-assisted iterative closest point[J].IEEE Robotics and Automation Letters,2016,1(2):992-999.
+                                    </a>
+                                </li>
+                                <li id="215">
+
+
+                                    <a id="bibliography_8" title=" MARANI R,REN&#210; V,NITTI M,et al.A modified iterative closest point algorithm for 3D point cloud registration[J].Computer-Aided Civil and Infrastructure Engineering,2016,31(7):515-534." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJWD&amp;filename=SJWDCC73C9216E5D4653CAE013BAB9F7C133&amp;v=Mjc4OTAxRVlwNEtlSGcveWhWZ20wcDlTWHlRM1dBOEQ3WG5STG1jQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQnJMVTA1dHBoeGIyNndxND1OaWZjYXNETEdkSy9wbw==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         MARANI R,REN&#210; V,NITTI M,et al.A modified iterative closest point algorithm for 3D point cloud registration[J].Computer-Aided Civil and Infrastructure Engineering,2016,31(7):515-534.
+                                    </a>
+                                </li>
+                                <li id="217">
+
+
+                                    <a id="bibliography_9" title=" LAMINE TAZIR M,GOKHOOL T,CHECCHIN P,et al.CICP:Cluster iterative closest point for sparse-dense point cloud registration[J].Robotics and Autonomous Systems,2018,108:66-86." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES4D67C182ACA05BC8AC55126585020C2D&amp;v=MTIxOTZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkJyTFUwNXRwaHhiMjZ3cTQ9TmlmT2ZiZk1HTmEvcm9kSEZaaCtESGxMdkI1aW1UcDRTWDNrcVJvd2ViQ1VOcmpyQ09Odg==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         LAMINE TAZIR M,GOKHOOL T,CHECCHIN P,et al.CICP:Cluster iterative closest point for sparse-dense point cloud registration[J].Robotics and Autonomous Systems,2018,108:66-86.
+                                    </a>
+                                </li>
+                                <li id="219">
+
+
+                                    <a id="bibliography_10" title=" 邵红旭.低重叠率点云配准技术研究[D].哈尔滨:哈尔滨工程大学,2018:43-45.(SHAO H X.Research on point cloud registration technology with small overlap[D].Harbin:Harbin Engineering University,2018:43-45.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1018291872.nh&amp;v=MDU4NDM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5bmdWcjNPVkYyNkZyR3hIOW5MclpFYlBJUUtESDg=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         邵红旭.低重叠率点云配准技术研究[D].哈尔滨:哈尔滨工程大学,2018:43-45.(SHAO H X.Research on point cloud registration technology with small overlap[D].Harbin:Harbin Engineering University,2018:43-45.)
+                                    </a>
+                                </li>
+                                <li id="221">
+
+
+                                    <a id="bibliography_11" title=" XU H,CHEN G,WANG Z,et al.RGB-D-based pose estimation of workpieces with semantic segmentation and point cloud registration[J].Sensors,2019,19(8):No.1873." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=RGB-D-based pose estimation of workpieces with semantic segmentation and point cloud registration">
+                                        <b>[11]</b>
+                                         XU H,CHEN G,WANG Z,et al.RGB-D-based pose estimation of workpieces with semantic segmentation and point cloud registration[J].Sensors,2019,19(8):No.1873.
+                                    </a>
+                                </li>
+                                <li id="223">
+
+
+                                    <a id="bibliography_12" title=" DING J,LIU Q,SUN P.A robust registration algorithm of point clouds based on adaptive distance function for surface inspection[J].Measurement Science and Technology,2019,30(7):No.075003." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A robust registration algorithm of point clouds based on adaptive distance function for surface inspection">
+                                        <b>[12]</b>
+                                         DING J,LIU Q,SUN P.A robust registration algorithm of point clouds based on adaptive distance function for surface inspection[J].Measurement Science and Technology,2019,30(7):No.075003.
+                                    </a>
+                                </li>
+                                <li id="225">
+
+
+                                    <a id="bibliography_13" title=" WU M,WANG J.Registration of point cloud data for matching crushed sand particles[J].Powder Technology,2019,347:227-242." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Registration of point cloud data for matching crushed sand particles">
+                                        <b>[13]</b>
+                                         WU M,WANG J.Registration of point cloud data for matching crushed sand particles[J].Powder Technology,2019,347:227-242.
+                                    </a>
+                                </li>
+                                <li id="227">
+
+
+                                    <a id="bibliography_14" title=" LIU S,GAO D,WANG P,et al.A depth-based weighted point cloud registration for indoor scene[J].Sensors,2018,18(11):No.3608." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A depth-based weighted point cloud registration for indoor scene">
+                                        <b>[14]</b>
+                                         LIU S,GAO D,WANG P,et al.A depth-based weighted point cloud registration for indoor scene[J].Sensors,2018,18(11):No.3608.
+                                    </a>
+                                </li>
+                                <li id="229">
+
+
+                                    <a id="bibliography_15" title=" 王帅,孙华燕,郭惠超.适用于激光点云配准的重叠区域提取方法[J].红外与激光工程,2017,46(S1):137-142.(WANG S,SUN H Y,GUO H C.Overlapping region extraction method for laser point clouds registration[J].Infrared and Laser Engineering,2017,46(S1):137-142.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HWYJ2017S1024&amp;v=MDU0MTVIWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnluZ1ZyM09MVHJTWkxHNEg5YXZybzk=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         王帅,孙华燕,郭惠超.适用于激光点云配准的重叠区域提取方法[J].红外与激光工程,2017,46(S1):137-142.(WANG S,SUN H Y,GUO H C.Overlapping region extraction method for laser point clouds registration[J].Infrared and Laser Engineering,2017,46(S1):137-142.)
+                                    </a>
+                                </li>
+                                <li id="231">
+
+
+                                    <a id="bibliography_16" title=" 巢渊,戴敏,陈恺,等.基于广义反向粒子群与引力搜索混合算法的多阈值图像分割[J].光学精密工程,2015,23(3):879-886.(CHAO Y,DAI M,CHEN K,et al.Image segmentation of multilevel threshold using hybrid PSOGSA with generalized opposition-based learning[J].Optics and Precision Engineering,2015,23(3):879-886.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GXJM201503035&amp;v=MzEwOTJySTlHWVlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnluZ1ZyM09JalhCWTdHNEg5VE0=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         巢渊,戴敏,陈恺,等.基于广义反向粒子群与引力搜索混合算法的多阈值图像分割[J].光学精密工程,2015,23(3):879-886.(CHAO Y,DAI M,CHEN K,et al.Image segmentation of multilevel threshold using hybrid PSOGSA with generalized opposition-based learning[J].Optics and Precision Engineering,2015,23(3):879-886.)
+                                    </a>
+                                </li>
+                                <li id="233">
+
+
+                                    <a id="bibliography_17" title=" 夏棒,EMILION R,王惠文.Dirichlet 混合样本的 EM 算法与动态聚类算法比较[J].北京航空航天大学学报,2019,45(9):1805-1811.(XIA B,EMILION R,WANG H W.A comparison between EM algorithm and dynamical clustering for Dirichlet mixture samples[J].Journal of Beijing University of Aeronautics and Astronautics,2019,45(9):1805-1811.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJHK201909013&amp;v=MzIyMjNEWmJHNEg5ak1wbzlFWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnluZ1ZyM09KeWY=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                         夏棒,EMILION R,王惠文.Dirichlet 混合样本的 EM 算法与动态聚类算法比较[J].北京航空航天大学学报,2019,45(9):1805-1811.(XIA B,EMILION R,WANG H W.A comparison between EM algorithm and dynamical clustering for Dirichlet mixture samples[J].Journal of Beijing University of Aeronautics and Astronautics,2019,45(9):1805-1811.)
+                                    </a>
+                                </li>
+                                <li id="235">
+
+
+                                    <a id="bibliography_18" title=" WU Z,LEAHY R.An optimal graph theoretic approach to data clustering:theory and its application to image segmentation[J].IEEE Transactions on Pattern Analysis and Machine Intelligence,1993,15(11):1101-1113." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=An optimal graph theoretic approach to data clustering: theory and its application to image segmentation">
+                                        <b>[18]</b>
+                                         WU Z,LEAHY R.An optimal graph theoretic approach to data clustering:theory and its application to image segmentation[J].IEEE Transactions on Pattern Analysis and Machine Intelligence,1993,15(11):1101-1113.
+                                    </a>
+                                </li>
+                                <li id="237">
+
+
+                                    <a id="bibliography_19" title=" 朱丽品,刘晓宁,刘雄乐,等.加入迭代因子的层次化颅骨配准方法[J].中国图象图形学报,2017,22(4):523-531.(ZHU L P,LIU X N,LIU X L,et al.Hierarchical skull registration method with an iterative factor[J].Journal of Image and Graphics,2017,22(4):523-531.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGTB201704012&amp;v=MTIwNTdyM09QeXJmYkxHNEg5Yk1xNDlFWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnluZ1Y=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[19]</b>
+                                         朱丽品,刘晓宁,刘雄乐,等.加入迭代因子的层次化颅骨配准方法[J].中国图象图形学报,2017,22(4):523-531.(ZHU L P,LIU X N,LIU X L,et al.Hierarchical skull registration method with an iterative factor[J].Journal of Image and Graphics,2017,22(4):523-531.)
+                                    </a>
+                                </li>
+                                <li id="239">
+
+
+                                    <a id="bibliography_20" title=" 赵夫群,耿国华.基于特征点的秦俑断裂面匹配方法[J].激光与光电子学进展,2018,55(4):122-128.(ZHAO F Q,GENG G H.Fracture surface matching method for Terracotta based on feature points[J].Laser and Optoelectronics Progress,2018,55(4):122-128.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JGDJ201804018&amp;v=MTA0MTE0TzN6cXFCdEdGckNVUjdxZlp1WnNGeW5nVnIzT0x5clBaTEc0SDluTXE0OUViSVFLREg4NHZSNFQ2ajU=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[20]</b>
+                                         赵夫群,耿国华.基于特征点的秦俑断裂面匹配方法[J].激光与光电子学进展,2018,55(4):122-128.(ZHAO F Q,GENG G H.Fracture surface matching method for Terracotta based on feature points[J].Laser and Optoelectronics Progress,2018,55(4):122-128.)
+                                    </a>
+                                </li>
+                                <li id="241">
+
+
+                                    <a id="bibliography_21" title=" 李群辉,周明全,耿国华.破碎刚体三角网格模型的断裂面分割[J].计算机应用,2011,31(8):2204-2206,2216.(LI Q H,ZHOU M Q,GENG G H.Fractured surface segmentation of triangular mesh of fragments for solid reconstruction[J].Journal of Computer Applications,2011,31(8):2204-2206,2216.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201108052&amp;v=MzEyNjk5RE1wNDlBWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnluZ1ZyM09MejdCZDdHNEg=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[21]</b>
+                                         李群辉,周明全,耿国华.破碎刚体三角网格模型的断裂面分割[J].计算机应用,2011,31(8):2204-2206,2216.(LI Q H,ZHOU M Q,GENG G H.Fractured surface segmentation of triangular mesh of fragments for solid reconstruction[J].Journal of Computer Applications,2011,31(8):2204-2206,2216.)
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+    <div class="head-tag">   
+            <p>
+               <b> 网络首发时间: 2019-08-22 09:59</b>
+            </p>     
+    </div>
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJY" target="_blank">计算机应用</a>
+                2019,39(11),3355-3360 DOI:10.11772/j.issn.1001-9081.2019040727            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于区域分割的低覆盖点云配准算法</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%B1%A4%E6%85%A7&amp;code=42992767&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">汤慧</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%91%A8%E6%98%8E%E5%85%A8&amp;code=05966943&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">周明全</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%80%BF%E5%9B%BD%E5%8D%8E&amp;code=09145665&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">耿国华</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E8%A5%BF%E5%8C%97%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&amp;code=0125326&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">西北大学信息科学与技术学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E8%A5%BF%E5%AE%89%E8%B4%A2%E7%BB%8F%E5%A4%A7%E5%AD%A6%E5%AE%9E%E9%AA%8C%E5%AE%9E%E8%AE%AD%E6%95%99%E5%AD%A6%E4%B8%AD%E5%BF%83&amp;code=1704597&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">西安财经大学实验实训教学中心</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8C%97%E4%BA%AC%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&amp;code=0159173&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北京师范大学信息科学与技术学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对低覆盖点云配准的时间复杂度高、收敛速度缓慢以及对应点匹配易错等问题,提出一种基于区域分割的点云配准算法。首先,利用体积积分不变量计算点云上点的凹凸性,并提取凹凸特征点集;然后,采用基于混合流形谱聚类的分割算法对特征点集进行区域分割,并采用基于奇异值分解(SVD)的迭代最近点(ICP)算法对区域进行配准,从而实现点云的精确配准。实验结果表明,所提算法通过区域分割可以大幅提高点云区域的覆盖率,并且无需迭代即可计算刚体变换的最佳旋转矩阵,其配准精度比已有算法提高了10%以上,配准时间降低了20%以上。因此,所提算法是一种精度高、速度快的低覆盖点云配准算法。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%82%B9%E4%BA%91%E9%85%8D%E5%87%86&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">点云配准;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%BD%93%E7%A7%AF%E7%A7%AF%E5%88%86%E4%B8%8D%E5%8F%98%E9%87%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">体积积分不变量;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8C%BA%E5%9F%9F%E5%88%86%E5%89%B2&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">区域分割;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">奇异值分解;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%BF%AD%E4%BB%A3%E6%9C%80%E8%BF%91%E7%82%B9&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">迭代最近点;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    汤慧(1982—),女,山东聊城人,实验员,博士研究生,CCF会员,主要研究方向:图形图像处理;;
+                                </span>
+                                <span>
+                                    *周明全(1954—),男,陕西西安人,教授,博士生导师,硕士,主要研究方向:可视化、软件工程、中文信息处理,电子邮箱,mqzhou@nwu.edu.cn;
+                                </span>
+                                <span>
+                                    耿国华(1955—),女,山东莱西人,教授,博士生导师,博士,主要研究方向:图形图像处理、三维重建。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2019-04-28</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金资助项目(61673319,61731015);</span>
+                                <span>青岛市自主创新重大专项(2017-4-3-2-xcl);</span>
+                                <span>陕西省教育厅科研计划专项(19JK0842);</span>
+                    </p>
+            </div>
+                    <h1><b>Low coverage point cloud registration algorithm based on region segmentation</b></h1>
+                    <h2>
+                    <span>TANG Hui</span>
+                    <span>ZHOU Mingquan</span>
+                    <span>GENG Guohua</span>
+            </h2>
+                    <h2>
+                    <span>College of Information Science and Technology, Northwest University</span>
+                    <span>Experimental Training Teaching Center, Xi&apos;an University of Finance and Economics</span>
+                    <span>College of Information Science and Technology, Beijing Normal University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Aiming at the problems of high time complexity, slow convergence speed and error-prone matching of low coverage point cloud registration, a point cloud registration algorithm based on region segmentation was proposed. Firstly, the volume integral invariant was used to calculate the concavity and convexity of points on the point cloud, and then the concavity and convexity feature point sets were extracted. Secondly, the regions of the feature points were partitioned by the segmentation algorithm based on the mixed manifold spectral clustering, and the regions were registered by the Iterative Closest Point(ICP) algorithm based on Singular Value Decomposition(SVD), so that the accurate registration of point clouds could be achieved. The experimental results show that the proposed algorithm can greatly improve the coverage of point clouds by region segmentation, and the optimal rotation matrix of rigid body transformation can be calculated without iteration. The algorithm has the registration accuracy increased by more than 10% and the registration time reduced by more than 20%. Therefore, the proposed algorithm can achieve fast and accurate registration of point clouds with low coverage.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=point%20cloud%20registration&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">point cloud registration;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=volume%20integral%20invariant&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">volume integral invariant;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=area%20segmentation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">area segmentation;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Singular%20Value%20Decomposition(SVD)&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Singular Value Decomposition(SVD);</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Iterative%20Closest%20Point(ICP)&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Iterative Closest Point(ICP);</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                            <b>Author：</b>
+                                                        <span>
+                                    TANG Hui, born in 1982, Ph. D. candidate, experimentalist. Her research interests include graphics and image processing. ;
+                                </span>
+                                <span>
+                                    ZHOU Mingquan, born in 1954, M. S., professor. His research interests include computer visualization, software engineering, Chinese information processing. ;
+                                </span>
+                                <span>
+                                    GENG Guohua, born in 1955, Ph. D., professor. Her research interests include graphics and image processing, three-dimensional reconstruction.;
+                                </span>
+                    </p>
+                                    <p><b>Received：</b> 2019-04-28</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>supported by the National Natural Science Foundation of China(61673319,61731015);</span>
+                                <span>the Major Special Project of Independent Innovation in Qingdao(2017-4-3-2-xcl);</span>
+                                <span>the Special Project of Scientific Research Program of Shaanxi Education Department(19JK0842);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="45" name="45" class="anchor-tag">0 引言</h3>
+                <div class="p1">
+                    <p id="46">点云配准是点云数据处理的一个重要研究内容,是后续三维点云重建的技术基础。由于受环境和三维数据采集设备分辨率等多种因素的影响,在对实物数字化时采集到的每个点云数据往往只覆盖了实物模型表面的部分数据信息,而且还存在旋转和平移等刚体变换问题。因此,为了获取物体表面的完整点云数据信息,必须通过点云配准将不同角度的点云数据变换到同一坐标系下。</p>
+                </div>
+                <div class="p1">
+                    <p id="47">点云配准的算法有很较多,主要有重心重合法<citation id="243" type="reference"><link href="201" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>、标定点法<citation id="244" type="reference"><link href="203" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>以及特征提取法<citation id="245" type="reference"><link href="205" rel="bibliography" /><link href="207" rel="bibliography" /><sup>[<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>等。重心重合法通过将两个点云的重心重合来实现点云配准;标定点法是一种通过在物体表面贴上标定点并利用标定点进行点云配准的方法;特征提取法则是利用物体表面上的一些几何特征,如特征点、曲率、表面纹理以及边缘等,对特征进行提取和描述,通过确定特征之间的对应关系来实现点云配准。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">目前应用最广泛的点云配准算法是由Besl 等<citation id="246" type="reference"><link href="209" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>提出的迭代最近点(Iterative Closest Point, ICP)算法。ICP 算法计算简便直观、配准精度高,但对待配准点云的初始位置的依赖性较强,并要求两个点云之间存在一定的包含关系,因此在实际配准中容易陷入局部最优,导致配准效率不高。为了克服 ICP 算法的局限性,国内外学者对ICP 算法进行了改进研究,相继提出PICP(Probability ICP)算法<citation id="247" type="reference"><link href="211" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>、IAICP(Intensity-Assisted ICP)算法<citation id="248" type="reference"><link href="213" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>、MICP(Modified ICP)算法<citation id="249" type="reference"><link href="215" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>以及CICP(Cluster ICP)算法<citation id="250" type="reference"><link href="217" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>等多种改进的ICP算法。这些配准算法并不具有普适性,特别是对低覆盖率点云的配准效果不佳。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">对于低覆盖率的点云,邵红旭<citation id="251" type="reference"><link href="219" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>提出了一种基于重叠区域的改进ICP配准算法,提高了低覆盖点云的配准精度;Xu等<citation id="252" type="reference"><link href="221" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>采用结合颜色和深度信息的低覆盖点云配准算法实现了工业机器人的姿态估计; Ding等<citation id="253" type="reference"><link href="223" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>提出了一种基于自适应距离函数的点云配准算法,通过描述最短点-面距离实现低覆盖点云的配准; Wu等<citation id="254" type="reference"><link href="225" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>提出一种基于X射线断层扫描的点云配准算法,可以实现不同覆盖率的砂粒碎片的断裂面匹配;Liu等<citation id="255" type="reference"><link href="227" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>通过分析深度测量误差模型和权重函数实现了低覆盖点云的精确配准。虽然这些低覆盖点云配准算法在一定程度上提高了点云配准的精度,但是仍然存在算法耗时长、鲁棒性低等缺点。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">针对低覆盖点云配准的时间复杂度高、收敛速度缓慢、对应点匹配易错等问题,本文提出一种基于区域分割的点云配准算法。首先,采用体积积分不变量计算点的凹凸性,并提取凹凸特征点;然后,对特征点集进行区域分割,并将奇异值分解(Singular Value Decomposition, SVD)应用到ICP算法中,以此实现区域特征点集的配准。该算法无需迭代即可计算两个特征点集的刚体变换,具有较高的配准精度和配准速度。</p>
+                </div>
+                <h3 id="51" name="51" class="anchor-tag">1 提取凹凸特征点</h3>
+                <div class="p1">
+                    <p id="52">由于体积积分不变量可以稳定且多尺度地描述点云表面的凹凸程度<citation id="256" type="reference"><link href="219" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>,因此采用体积积分不变量可以判断其点的凹凸性,并提取凹的和凸的特征点。设<i>Q</i>代表一个单位球,<i><b>p</b></i>+<i>rQ</i>表示半径是<i>r</i>、中心是点<i><b>p</b></i>的球。那么体积积分不变量<i>V</i><sub><i>r</i></sub>(<i><b>p</b></i>)定义为</p>
+                </div>
+                <div class="p1">
+                    <p id="53"><i>V</i><sub><i>r</i></sub>(<i><b>p</b></i>)=∫<sub><i><b>p</b></i></sub><sub>+</sub><sub><i>rQ</i></sub><i>g</i>(<i>x</i>)<i>w</i>(<i><b>p</b></i>-<i>x</i>)d<i>x</i>      (1)</p>
+                </div>
+                <div class="p1">
+                    <p id="54">式中: <i>g</i>(<i>x</i>)表示特征函数,<i>w</i>(<i><b>p</b></i>-<i>x</i>)表示权重函数。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">将式(1)中的特征函数<i>g</i>(<i>x</i>)换成<i>I</i><sub><i>D</i></sub>(<i>x</i>),并令<i>w</i>(<i><b>p</b></i>-<i>x</i>)=1,则体积积分不变量<i>V</i><sub><i>r</i></sub>(<i><b>p</b></i>)的计算式转化为:</p>
+                </div>
+                <div class="p1">
+                    <p id="56"><i>V</i><sub><i>r</i></sub>(<i><b>p</b></i>)=∫<sub><i><b>p</b></i></sub><sub>+</sub><sub><i>rQ</i></sub><i>I</i><sub><i>D</i></sub>(<i>x</i>)d<i>x</i>      (2)</p>
+                </div>
+                <div class="p1">
+                    <p id="57">特征函数<i>I</i><sub><i>D</i></sub>(<i>x</i>)的含义为:当<i>x</i>在曲面外侧,<i>I</i><sub><i>D</i></sub>(<i>x</i>)=1;当<i>x</i>在曲面内侧,<i>I</i><sub><i>D</i></sub>(<i>x</i>)=0。<i>V</i><sub><i>r</i></sub>(<i><b>p</b></i>)的几何意义就是球<i><b>p</b></i>+<i>rQ</i>在曲面外侧的体积,如图1所示。</p>
+                </div>
+                <div class="area_img" id="58">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201911042_058.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 体积积分不变量" src="Detail/GetImg?filename=images/JSJY201911042_058.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 体积积分不变量  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201911042_058.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 1 Volume integral invariant</p>
+
+                </div>
+                <div class="p1">
+                    <p id="59">由图1可知,<i>V</i><sub><i>r</i></sub>(<i><b>p</b></i>)反映了曲面在<i><b>p</b></i>点处的凹凸程度。当<i>V</i><sub><i>r</i></sub>(<i><b>p</b></i>)=2π<i>r</i><sup>3</sup>/3 时,即<i>V</i><sub><i>r</i></sub>(<i><b>p</b></i>)是球体积的一半时,<i><b>p</b></i>在半径<i>r</i>邻域内为平面顶点。当半径<i>r</i>越大,<i>V</i><sub><i>r</i></sub>(<i><b>p</b></i>)越大,且<i><b>p</b></i>+<i>rQ</i>内部噪声与<i>V</i><sub><i>r</i></sub>(<i><b>p</b></i>)无关。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">顶点的凹凸程度采用点的体积积分不变量与球体积的比值来定义,定义式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="61" class="code-formula">
+                        <mathml id="61"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>c</mi><mi>h</mi><mi>a</mi><mi>r</mi><mi>V</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">p</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mi>V</mi><msub><mrow></mrow><mi>r</mi></msub><mo stretchy="false">(</mo><mi mathvariant="bold-italic">p</mi><mo stretchy="false">)</mo></mrow><mrow><mi>V</mi><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>=</mo><mfrac><mn>3</mn><mrow><mn>4</mn><mtext>π</mtext><mi>r</mi><msup><mrow></mrow><mn>3</mn></msup></mrow></mfrac><mrow><mstyle displaystyle="true"><mrow><mo>∫</mo><mrow></mrow></mrow></mstyle></mrow><msub><mrow></mrow><mrow><mi mathvariant="bold-italic">p</mi><mo>+</mo><mi>r</mi><mi>B</mi></mrow></msub><mn>1</mn><msub><mrow></mrow><mi>D</mi></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mtext>d</mtext><mi>x</mi><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="62">于是有,当<i>charV</i>(<i><b>p</b></i>)=0.5时,点<i><b>p</b></i>位于平坦面;当<i>charV</i>(<i><b>p</b></i>)&gt;0.5,点<i><b>p</b></i>位于凸面;<i>charV</i>(<i><b>p</b></i>)&lt;0.5,点<i><b>p</b></i>位于凹面。</p>
+                </div>
+                <div class="p1">
+                    <p id="63">本文提取的特征点即为以上计算的凹凸特征点。</p>
+                </div>
+                <h3 id="64" name="64" class="anchor-tag">2 特征点区域分割</h3>
+                <div class="p1">
+                    <p id="65">对于上述提取的凹凸特征点,采用一种基于混合流形谱聚类的分割算法<citation id="257" type="reference"><link href="229" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>对其进行区域分割。该算法通过对特征点构建邻接矩阵实现特征点向无向图中节点的转换,并将点的对应关系转换成无向图中的连线,从而将特征点的区域分割问题转换为谱空间的聚类问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">首先利用混合概率主成分分析(<i>Mixtures of Probabilistic Principal Component Analysis</i>, <i>MPPCA</i>)法<citation id="258" type="reference"><link href="231" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>提取特征点之间的几何关系,并构造邻接矩阵。<i>MPPCA</i>采用<i>M</i>个线性主成分分析(Principal Component Analysis, PCA)来描述点云结构,可以有效避免PCA对特征点集的类椭圆分布的要求,同时增强对复杂几何结构点云的分析能力。MPPCA利用最大期望(Expectation Maximization, EM)算法<citation id="259" type="reference"><link href="233" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>得到最优描述点云分布的<i>M</i>个线性主成分分析器和每个点<i><b>x</b></i><sub><i>i</i></sub>对应于<i>M</i>个线性主成分分析器的概率密度分布。</p>
+                </div>
+                <div class="p1">
+                    <p id="67">对于第<i>m</i>个线性主成分分析器,假设任意一个点<i><b>x</b></i><sub><i>i</i></sub>对应于一个降维后的点<i><b>y</b></i><sub><i>i</i></sub>, 计算式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="68"><i><b>x</b></i><sub><i>i</i></sub>=<i><b>V</b></i><sub><i>m</i></sub><i><b>y</b></i><sub><i>i</i></sub>+<i>μ</i><sub><i>m</i></sub>+<i>ε</i><sub><i>m</i></sub>      (4)</p>
+                </div>
+                <div class="p1">
+                    <p id="69">式中: <i><b>V</b></i><sub><i>m</i></sub>表示第<i>m</i>个主成分分析器的主子空间,<i>μ</i><sub><i>m</i></sub>表示分布于第<i>m</i>个分析器的所有点的均值;<i>ε</i><sub><i>m</i></sub>表示噪声。</p>
+                </div>
+                <div class="p1">
+                    <p id="70">假设<i><b>y</b></i><sub><i>i</i></sub>和<i>ε</i><sub><i>m</i></sub>均服从高斯分布,那么<i><b>x</b></i><sub><i>i</i></sub>关于<i>m</i>的条件概率为</p>
+                </div>
+                <div class="p1">
+                    <p id="71" class="code-formula">
+                        <mathml id="71"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">x</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mi>m</mi><mo stretchy="false">)</mo><mo>=</mo><mo stretchy="false">(</mo><mn>2</mn><mtext>π</mtext><mo stretchy="false">)</mo><msup><mrow></mrow><mrow><mo>-</mo><mfrac><mn>3</mn><mn>2</mn></mfrac></mrow></msup><mo stretchy="false">|</mo><mi mathvariant="bold-italic">U</mi><mo stretchy="false">|</mo><msup><mrow></mrow><mrow><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></msup><mrow><mi>exp</mi></mrow><mo stretchy="false">[</mo><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi mathvariant="bold-italic">Ζ</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mi mathvariant="bold-italic">U</mi><msup><mrow></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mi mathvariant="bold-italic">Ζ</mi><mo stretchy="false">]</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="72">式中:<i><b>Z</b></i>=<i><b>x</b></i><sub><i>i</i></sub>-<i>μ</i><sub><i>m</i></sub>,<i><b>U</b></i>=<i>σ</i><mathml id="149"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mn>2</mn></msubsup></mrow></math></mathml><i><b>I</b></i>+<i><b>V</b></i><sub><i>m</i></sub><i><b>V</b></i><sub><i>m</i></sub><sup>T</sup>。</p>
+                </div>
+                <div class="p1">
+                    <p id="73">目标函数<i>F</i><sub>MPPCA</sub>就是第<i>m</i>个主成分分析器上任意点<i><b>x</b></i><sub><i>i</i></sub>的最大似然估计,计算式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="74" class="code-formula">
+                        <mathml id="74"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>F</mi><msub><mrow></mrow><mrow><mtext>Μ</mtext><mtext>Ρ</mtext><mtext>Ρ</mtext><mtext>C</mtext><mtext>A</mtext></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mrow><mi>ln</mi></mrow></mstyle><mspace width="0.25em" /><mo stretchy="false">[</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi>Μ</mi></munderover><mi>π</mi></mstyle><msub><mrow></mrow><mi>m</mi></msub><mspace width="0.25em" /><mi>p</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">x</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mi>m</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="75">式中,<i>π</i><sub><i>m</i></sub>为各个主成分分析器的混合比例,<mathml id="150"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>π</mi><msub><mrow></mrow><mi>m</mi></msub><mo>≥</mo><mn>0</mn><mo>,</mo><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi>Μ</mi></munderover><mi>π</mi></mstyle><msub><mrow></mrow><mi>m</mi></msub><mo>=</mo><mn>1</mn><mo>。</mo></mrow></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="76">描述点云的最佳参数通过利用EM算法使目标函数<i>F</i><sub>MPPCA</sub>最大化来求解。将混合比例最大的主成分分析器作为点的所在流形,那么点<i>i</i>与点<i>j</i>之间的相似关系计算式为</p>
+                </div>
+                <div class="p1">
+                    <p id="77"><i>Sim</i><sub><i>ij</i></sub>=∏<i>svd</i>(<i><b>V</b></i><sub><i>mM</i></sub><sup>T</sup><i><b>V</b></i><sub><i>mij</i></sub>)      (7)</p>
+                </div>
+                <div class="p1">
+                    <p id="78">由此根据点之间的相似关系得到点云的邻接矩阵<i><b>W</b></i>。然后采用N-cut准则<citation id="260" type="reference"><link href="235" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>对点进行切割,切割的目标函数<i>F</i><sub>N-cut</sub>为:</p>
+                </div>
+                <div class="p1">
+                    <p id="79" class="code-formula">
+                        <mathml id="79"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>F</mi><msub><mrow></mrow><mrow><mtext>Ν</mtext><mo>-</mo><mtext>c</mtext><mtext>u</mtext><mtext>t</mtext></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mo stretchy="false">[</mo></mstyle><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>x</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>A</mi><msub><mrow></mrow><mi>l</mi></msub><mo>,</mo><mi>x</mi><msub><mrow></mrow><mi>j</mi></msub><mo>∈</mo><mover accent="true"><mi>A</mi><mo>¯</mo></mover><msub><mrow></mrow><mi>l</mi></msub></mrow></munder><mi>W</mi></mstyle><mo stretchy="false">(</mo><mi>i</mi><mo>,</mo><mspace width="0.25em" /><mi>j</mi><mo stretchy="false">)</mo><mo>/</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>x</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>A</mi><msub><mrow></mrow><mi>i</mi></msub><mo>,</mo><mi>x</mi><msub><mrow></mrow><mi>j</mi></msub><mo>∈</mo><mi>X</mi></mrow></munder><mi>W</mi></mstyle><mo stretchy="false">(</mo><mi>i</mi><mo>,</mo><mspace width="0.25em" /><mi>j</mi><mo stretchy="false">)</mo><mo stretchy="false">]</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="80">式中:<i>A</i><sub><i>l</i></sub>(<i>l</i>=1,2,…,<i>k</i>)为第<i>l</i>个分割区域,<mathml id="151"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi>A</mi><mo>¯</mo></mover></math></mathml><sub><i>l</i></sub>为<i>A</i><sub><i>l</i></sub>的补集。通过最小化<i>F</i><sub>N-cut</sub>即可实现特征点集的区域分割。</p>
+                </div>
+                <h3 id="81" name="81" class="anchor-tag">3 基于SVD的区域配准</h3>
+                <h4 class="anchor-tag" id="82" name="82">3.1 <i>SVD</i><b>定理</b></h4>
+                <div class="p1">
+                    <p id="83"><i>SVD</i>是一种应用非常广泛的矩阵分解方法,它比特征分解(<i>eigende composition</i>)等其他方法更加稳定,目前已经在数据压缩、去噪以及配准等方面获得了较为广泛的应用<citation id="261" type="reference"><link href="231" rel="bibliography" /><link href="233" rel="bibliography" /><sup>[<a class="sup">16</a>,<a class="sup">17</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="84">设矩阵<i><b>A</b></i>∈<b>R</b><mathml id="152"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>r</mi><mrow><mi>m</mi><mo>×</mo><mi>n</mi></mrow></msubsup></mrow></math></mathml>(<i>r</i>&gt;0),则存在<i>m</i> 阶正交矩阵<i><b>U</b></i>和<i>n</i>阶正交矩阵<i><b>V</b></i>,使得<image id="200" type="formula" href="images/JSJY201911042_20000.jpg" display="inline" placement="inline"><alt></alt></image>,其中<i>Σ</i>=diag(<i>σ</i><sub>1</sub>,<i>σ</i><sub>2</sub>,…,<i>σ</i><sub><i>r</i></sub>),<i>Σ</i>为矩阵<i><b>A</b></i>的全部非零奇异值,满足<i>σ</i><sub>1</sub>≥<i>σ</i><sub>2</sub>≥…≥<i>σ</i><sub><i>r</i></sub>&gt;0。<i><b>U</b></i> 的列向量(左奇异向量)是<i><b>AA</b></i><sup>T</sup>的特征向量,<i><b>V</b></i>的列向量(右奇异向量)是<i><b>A</b></i><sup>T</sup><i><b>A</b></i>的特征向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="87">SVD具有以下性质:</p>
+                </div>
+                <h4 class="anchor-tag" id="88" name="88">1)稳定性。</h4>
+                <div class="p1">
+                    <p id="89"><b>定理</b>1 设矩阵<i><b>A</b></i>,<i><b>B</b></i>∈<b>R</b><sup><i>m</i></sup><sup>×</sup><sup><i>n</i></sup>,<i><b>A</b></i>和<i><b>B</b></i>的SVD分别为<i>λ</i><sub>1</sub>≥<i>λ</i><sub>2</sub>≥…≥<i>λ</i><sub><i>p</i></sub>和<i>τ</i><sub>1</sub>≥<i>τ</i><sub>2</sub>≥…≥<i>τ</i><sub><i>p</i></sub>,其中<i>p</i>=min(<i>m</i>,<i>n</i>),则有|<i>λ</i><sub><i>i</i></sub>-<i>τ</i><sub><i>i</i></sub>|≤‖<i><b>A</b></i>-<i><b>B</b></i>‖<sub>2</sub>。</p>
+                </div>
+                <div class="p1">
+                    <p id="90">该定理表明当矩阵<i><b>A</b></i>有微小扰动时,扰动前后矩阵奇异值的变化不会大于扰动矩阵的2范数。这个性质表明,对于存在噪声干扰等情况的点云,通过SVD 后,点云的特征向量不会出现过大的变化。这一性质放宽了对点云预处理的要求, 并使点云配准结果的准确性得到了保证。</p>
+                </div>
+                <h4 class="anchor-tag" id="91" name="91">2)比例不变性。</h4>
+                <div class="p1">
+                    <p id="92"><b>定理</b>2 若矩阵<i><b>A</b></i>的奇异值为<i>σ</i><sub>1</sub>≥<i>σ</i><sub>2</sub>≥…≥<i>σ</i><sub><i>t</i></sub>≥0,矩阵<i>α</i><i><b>A</b></i>(<i>α</i>≠0)的奇异值为<i>σ</i><sub>1</sub>′≥<i>σ</i><sub>2</sub>′≥…≥<i>σ</i><sub><i>s</i></sub>′≥0,则有:</p>
+                </div>
+                <div class="p1">
+                    <p id="93">|<i>α</i>|(<i>σ</i><sub>1</sub>,<i>σ</i><sub>2</sub>,…,<i>σ</i><sub><i>s</i></sub>)=(<i>σ</i><sub>1</sub>′,<i>σ</i><sub>2</sub>′,…,<i>σ</i><sub><i>s</i></sub>′)      (9)</p>
+                </div>
+                <div class="p1">
+                    <p id="94">为了消除幅度大小对特征提取的影响,所进行的归一化处理不会从本质改变奇异值的相对大小。</p>
+                </div>
+                <h4 class="anchor-tag" id="95" name="95">3)旋转不变性。</h4>
+                <div class="p1">
+                    <p id="96"><b>定理</b>2 若<i><b>P</b></i>为酉矩阵,则矩阵<i><b>PA</b></i>的奇异值与矩阵<i><b>A</b></i>的奇异值相同。即:</p>
+                </div>
+                <div class="p1">
+                    <p id="97">|<i><b>AA</b></i><sup>H</sup>-<i>σ</i><mathml id="153"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>i</mi><mn>2</mn></msubsup></mrow></math></mathml><i><b>I</b></i>|=|<i><b>PA</b></i>(<i><b>PA</b></i>)<sup>H</sup>-<i>σ</i><mathml id="154"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>i</mi><mn>2</mn></msubsup></mrow></math></mathml><i><b>I</b></i>|=0      (10)</p>
+                </div>
+                <div class="p1">
+                    <p id="98">点云的奇异值特征向量不但具有正交变换、旋转、位移、镜像映射等代数和几何上的不变性,而且具有良好的稳定性和抗噪性,广泛应用于模式识别与图形图像分析中。对点云进行奇异值分解可以得到唯一、稳定的特征描述,降低特征空间的维数,同时提高抵抗干扰和噪声的能力。</p>
+                </div>
+                <h4 class="anchor-tag" id="99" name="99">3.2 <b>区域配准</b></h4>
+                <div class="p1">
+                    <p id="100">假设两个待配准的初始点云为<i><b>M</b></i>={<i><b>m</b></i><sub><i>i</i></sub>∈<b>R</b><sup>3</sup>|<i>i</i>=1,2,…,<i>N</i><sub><i>M</i></sub>}和<i><b>D</b></i>={<i><b>d</b></i><sub><i>i</i></sub>∈<b>R</b><sup>3</sup>|<i>i</i>=1,2,…,<i>N</i><sub><i>D</i></sub>},其中,<i>N</i><sub><i>M</i></sub>和<i>N</i><sub><i>D</i></sub>分别表示点云<i><b>M</b></i>和<i><b>D</b></i>包含的点的数目。首先利用第1章的特征点提取方法获得点云<i><b>M</b></i>和<i><b>D</b></i>的凹凸特征点集,假设分别为<i><b>A</b></i>={<i><b>a</b></i><sub><i>i</i></sub>∈<b>R</b><sup>3</sup>|<i>i</i>=1,2,…,<i>N</i><sub><i>A</i></sub>}和<i><b>B</b></i>={<i><b>b</b></i><sub><i>j</i></sub>∈<b>R</b><sup>3</sup>|<i>j</i>=1,2,…,<i>N</i><sub><i>B</i></sub>},其中<i>N</i><sub><i>A</i></sub>和<i>N</i><sub><i>B</i></sub>分别表示特征点集<i><b>A</b></i>和<i><b>B</b></i>包含的点的数目。然后利用第2章的区域分割算法对特征点集<i><b>A</b></i>和<i><b>B</b></i>进行区域分割,假设分割的区域分别为{<i><b>A</b></i><sub>1</sub>,<i><b>A</b></i><sub>2</sub>,…,<i><b>A</b></i><sub><i>s</i></sub>}和{<i><b>B</b></i><sub>1</sub>,<i><b>B</b></i><sub>2</sub>,…,<i><b>B</b></i><sub><i>t</i></sub>},<i>s</i>和<i>t</i>分别表示特征点集<i><b>A</b></i>和<i><b>B</b></i>划分的区域的数目。由于划分的区域的数目远远少于特征点的数目,因此接下来采用穷举法对每一对区域{<i><b>A</b></i><sub><i>p</i></sub>,<i><b>B</b></i><sub><i>q</i></sub>}进行配准,<i>p</i>=1,2,…,<i>s</i>,<i>q</i>=1,2,…,<i>t</i>。</p>
+                </div>
+                <div class="p1">
+                    <p id="101">对于待配准区域对{<i><b>A</b></i><sub><i>p</i></sub>,<i><b>B</b></i><sub><i>q</i></sub>},点<i><b>a</b></i><sub><i>pi</i></sub>∈<i><b>A</b></i><sub><i>p</i></sub>和<i><b>b</b></i><sub><i>qj</i></sub>∈<i><b>B</b></i><sub><i>q</i></sub>的相关性可表示为:</p>
+                </div>
+                <div class="p1">
+                    <p id="102"><i><b>b</b></i><sub><i>qj</i></sub>=<i><b>Ra</b></i><sub><i>pi</i></sub>+<i><b>t</b></i>      (11)</p>
+                </div>
+                <div class="p1">
+                    <p id="103">式中:<i><b>R</b></i>表示刚体变换的旋转矩阵,<i><b>t</b></i>表示刚体变换的平移矢量。</p>
+                </div>
+                <div class="p1">
+                    <p id="104">刚体变换(<i><b>R</b></i>,<i><b>t</b></i>)的求解可以转换为如下的最小化问题</p>
+                </div>
+                <div class="p1">
+                    <p id="105"><mathml id="155"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mrow><mo stretchy="false">(</mo><mi>R</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo><mo>∈</mo><mtext>S</mtext><mtext>E</mtext><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></munder><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">B</mi><msub><mrow></mrow><mi>q</mi></msub><mo>-</mo><mo stretchy="false">(</mo><mi mathvariant="bold-italic">R</mi><mi mathvariant="bold-italic">A</mi><msub><mrow></mrow><mi>p</mi></msub><mspace width="0.25em" /><mo>+</mo><mspace width="0.25em" /><mi mathvariant="bold-italic">t</mi></mrow></math></mathml>1)<sup>T</sup>‖<sub>F</sub> + <i>λΩ</i>(<i><b>R</b></i>)      (12)</p>
+                </div>
+                <div class="p1">
+                    <p id="106">式中,集合SE(3)是一个3D空间的欧几里德训练组,1=[1,1,…,1]<sup>T</sup>,‖·‖<sub>F</sub>是一个F范数,<i>Ω</i>(<i><b>R</b></i>)是惩罚函数,<i>λ</i>是惩罚系数。</p>
+                </div>
+                <div class="p1">
+                    <p id="107">由于平移矢量<i><b>t</b></i>可以通过点集的重心移动来求解,因此式(12)可以写成仅依赖于旋转矩阵<i><b>R</b></i>的形式:</p>
+                </div>
+                <div class="p1">
+                    <p id="108" class="code-formula">
+                        <mathml id="108"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mrow><mi>R</mi><mo>∈</mo><mtext>S</mtext><mtext>Ο</mtext><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></munder><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">B</mi><msub><mrow></mrow><msup><mi>q</mi><mo>′</mo></msup></msub><mo>-</mo><mi mathvariant="bold-italic">R</mi><mi mathvariant="bold-italic">A</mi><msub><mrow></mrow><msup><mi>p</mi><mo>′</mo></msup></msub><mo stretchy="false">∥</mo><msub><mrow></mrow><mtext>F</mtext></msub><mo>+</mo><mi>λ</mi><mi>Ω</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">R</mi><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>3</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="109">式中,<i><b>R</b></i>∈SO(3)是一个三维旋转组,<i><b>A</b></i><sub><i>p</i></sub>′和<i><b>B</b></i><sub><i>q</i></sub>′分别定义为:</p>
+                </div>
+                <div class="p1">
+                    <p id="110"><i><b>A</b></i><sub><i>p</i></sub>′=[<i><b>a</b></i><sub><i>p</i></sub><sub>1</sub>′,<i><b>a</b></i><sub><i>p</i></sub><sub>2</sub>′,…,<i><b>a</b></i><sub><i>pN</i></sub>′]=<i><b>A</b></i><sub><i>p</i></sub>′{<i><b>I</b></i><sub><i>pN</i></sub>-(1/<i>N</i>)11<sup>T</sup>}      (14)</p>
+                </div>
+                <div class="p1">
+                    <p id="112"><i><b>B</b></i><sub><i>q</i></sub>′=[<i><b>b</b></i><sub><i>q</i></sub><sub>1</sub>′,<i><b>b</b></i><sub><i>q</i></sub><sub>2</sub>′,…,<i><b>b</b></i><sub><i>qN</i></sub>′]=<i><b>B</b></i><sub><i>q</i></sub>′{<i><b>I</b></i><sub><i>qN</i></sub>-(1/<i>N</i>)11<sup>T</sup>}      (15)</p>
+                </div>
+                <div class="p1">
+                    <p id="114">式中,<i><b>I</b></i><sub><i>N</i></sub>是一个单元矩阵,<i><b>a</b></i><sub><i>pi</i></sub>′和<i><b>b</b></i><sub><i>qi</i></sub>′是在点集平移时分别从<i><b>a</b></i><sub><i>pi</i></sub>和<i><b>b</b></i><sub><i>qj</i></sub>中删减的3D点。</p>
+                </div>
+                <div class="p1">
+                    <p id="115">对于式(13),采用SVD法进行求解,于是有:</p>
+                </div>
+                <div class="p1">
+                    <p id="116" class="code-formula">
+                        <mathml id="116"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">B</mi><msub><mrow></mrow><msup><mi>q</mi><mo>′</mo></msup></msub><mi mathvariant="bold-italic">A</mi><msub><mrow></mrow><msup><mi>p</mi><mo>′</mo></msup></msub><msup><mrow></mrow><mtext>Τ</mtext></msup><mover><mstyle mathsize="140%" displaystyle="true"><mo>=</mo></mstyle><mrow><mtext>S</mtext><mtext>V</mtext><mtext>D</mtext></mrow></mover><mi mathvariant="bold-italic">U</mi><mi mathvariant="bold-italic">Σ</mi><mi mathvariant="bold-italic">V</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mo>∈</mo><mi mathvariant="bold">R</mi><msup><mrow></mrow><mrow><mn>3</mn><mo>×</mo><mn>3</mn></mrow></msup><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>6</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="117">式中,<i><b>U</b></i>∈<b>R</b><sup>3×3</sup>是一个左奇异矢量矩阵,<i>Σ</i>∈<b>R</b><sup>3×3</sup>是一个包含奇异值的对角矩阵,<i><b>V</b></i>∈<b>R</b><sup>3×3</sup>是一个右奇异矢量矩阵。于是可计算出:</p>
+                </div>
+                <div class="p1">
+                    <p id="118"><i><b>S</b></i>=diag(11|<i><b>VU</b></i><sup>T</sup>|)∈<b>R</b><sup>3×3</sup>      (17)</p>
+                </div>
+                <div class="p1">
+                    <p id="119">式中,<i><b>S</b></i>是一个用于在点集中含噪声时避免微小图像匹配的矩阵。</p>
+                </div>
+                <div class="p1">
+                    <p id="120">运用式(16),可以从式(13)中求得旋转矩阵<i><b>R</b></i>为:</p>
+                </div>
+                <div class="p1">
+                    <p id="121"><i><b>R</b></i>=<i><b>VSU</b></i><sup>T</sup>      (18)</p>
+                </div>
+                <div class="p1">
+                    <p id="122">因此,基于SVD的点云配准算法的基本步骤可描述如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="123">1)构建测量模式矩阵<i><b>A</b></i><sub><i>p</i></sub>=[<i><b>a</b></i><sub><i>p</i></sub><sub>1</sub>,<i><b>a</b></i><sub><i>p</i></sub><sub>2</sub>,…,<i><b>a</b></i><sub><i>pN</i></sub>],并通过平移将点集的重心对齐;</p>
+                </div>
+                <div class="p1">
+                    <p id="124">2)将SVD用于测量模式矩阵,即<mathml id="156"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">A</mi><msub><mrow></mrow><mi>p</mi></msub><mover><mstyle mathsize="140%" displaystyle="true"><mo>=</mo></mstyle><mrow><mtext>S</mtext><mtext>V</mtext><mtext>D</mtext></mrow></mover><mi mathvariant="bold-italic">U</mi><msub><mrow></mrow><mrow><mi>A</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></msub><mi mathvariant="bold-italic">Σ</mi><msub><mrow></mrow><mrow><mi>A</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></msub><mi mathvariant="bold-italic">V</mi><msub><mrow></mrow><mrow><mi>A</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></msub><msup><mrow></mrow><mtext>Τ</mtext></msup></mrow></math></mathml>,并计算旋转矩阵<i><b>R</b></i><sup>(</sup><sup><i>j</i></sup><sup>)</sup>=<i><b>V</b></i><sub><i>Ap</i></sub><i><b>U</b></i><sub><i>M</i></sub><sub><sup>(</sup></sub><sub><sup><i>j</i></sup></sub><sub><sup>)</sup></sub><sup>T</sup>;</p>
+                </div>
+                <div class="p1">
+                    <p id="125">3)创建旋转模式<mathml id="157"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi mathvariant="bold-italic">A</mi><mo>¯</mo></mover><msubsup><mrow></mrow><mi>p</mi><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><mi mathvariant="bold-italic">R</mi><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msup><msup><mrow></mrow><mtext>Τ</mtext></msup><mi mathvariant="bold-italic">A</mi><msub><mrow></mrow><mi>p</mi></msub><mo>≜</mo><mo stretchy="false">[</mo><mover accent="true"><mi mathvariant="bold-italic">a</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>p</mi><mn>1</mn></mrow></msub><mo>,</mo><mover accent="true"><mi mathvariant="bold-italic">a</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>p</mi><mn>2</mn></mrow></msub><mo>,</mo><mo>⋯</mo><mo>,</mo><mover accent="true"><mi mathvariant="bold-italic">a</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>p</mi><mi>Ν</mi></mrow></msub><mo stretchy="false">]</mo></mrow></math></mathml>,并根据<i><b>B</b></i><mathml id="158"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>q</mi><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msubsup></mrow></math></mathml>的最近点<mathml id="159"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi mathvariant="bold-italic">b</mi><mo>¯</mo></mover></math></mathml><sub><i>qj</i></sub>构建<mathml id="160"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi mathvariant="bold-italic">B</mi><mo>¯</mo></mover><msubsup><mrow></mrow><mi>q</mi><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>=</mo><mo stretchy="false">[</mo><mover accent="true"><mi mathvariant="bold-italic">b</mi><mo>¯</mo></mover><msubsup><mrow></mrow><mn>1</mn><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>,</mo><mover accent="true"><mi mathvariant="bold-italic">b</mi><mo>¯</mo></mover><msubsup><mrow></mrow><mn>2</mn><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>,</mo><mo>⋯</mo><mo>,</mo><mover accent="true"><mi mathvariant="bold-italic">b</mi><mo>¯</mo></mover><msubsup><mrow></mrow><mrow><mi>q</mi><mi>Ν</mi></mrow><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msubsup><mo stretchy="false">]</mo><mo>;</mo></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="126">4)计算配准误差<mathml id="161"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ε</mi><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mo stretchy="false">∥</mo><mover accent="true"><mi mathvariant="bold-italic">B</mi><mo>¯</mo></mover><msubsup><mrow></mrow><mi>q</mi><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msubsup><mo>-</mo><mover accent="true"><mi mathvariant="bold-italic">A</mi><mo>¯</mo></mover><msubsup><mrow></mrow><mi>p</mi><mrow><mo stretchy="false">(</mo><mi>j</mi><mo stretchy="false">)</mo></mrow></msubsup><mo stretchy="false">∥</mo><msub><mrow></mrow><mtext>F</mtext></msub></mrow></math></mathml>。若<i>ε</i><sup>(</sup><sup><i>j</i></sup><sup>)</sup>小于给定阈值则说明两个点云区域{<i><b>A</b></i><sub><i>p</i></sub>,<i><b>B</b></i><sub><i>q</i></sub>}配准成功,否则区域对{<i><b>A</b></i><sub><i>p</i></sub>,<i><b>B</b></i><sub><i>q</i></sub>}为不可配准的区域。</p>
+                </div>
+                <div class="p1">
+                    <p id="127">采用上述的特征点区域对配准方法,采用穷举法将区域集合{<i><b>A</b></i><sub>1</sub>,<i><b>A</b></i><sub>2</sub>,…,<i><b>A</b></i><sub><i>s</i></sub>}和{<i><b>B</b></i><sub>1</sub>,<i><b>B</b></i><sub>2</sub>,…,<i><b>B</b></i><sub><i>t</i></sub>}中区域进行两两配准即可实现初始点云点云<i><b>M</b></i>和<i><b>D</b></i>的最终配准。</p>
+                </div>
+                <h3 id="128" name="128" class="anchor-tag">4 实验与结果分析</h3>
+                <div class="p1">
+                    <p id="129">本文算法在<i>Visual studio</i> 2010环境下,<i>Intel Core i</i>7 3.33 <i>GHz</i>的<i>CPU</i>、16 <i>GB</i>内存的<i>Windows</i> 7 64位<i>PC</i>上进行了实现,并且应用到了不同覆盖率的公共点云数据模型<i>bunny</i>和<i>dragon</i>的配准,以及文物碎块点云数据模型的断裂面匹配中。实验所用数据均为采用三维激光扫描仪获取的点云数据模型或由三角网格数据模型转化的点云数据模型,模型均满足简单的三维刚体变换。</p>
+                </div>
+                <h4 class="anchor-tag" id="130" name="130">4.1 <b>公共点云配准</b></h4>
+                <div class="p1">
+                    <p id="131">待配准的三组公共点云数据模型分别如图2所示,每组点云的覆盖率均低于60%,并且第2组点云的覆盖率低于第1组,第3组点云的覆盖率又低于第2组。采用本文所提的基于区域分割的点云配准算法,首先提取点云的凹凸特征点,然后对特征点进行区域分割,最后对区域进行两两配准,从而实现点云模型的配准。公共点云的最终配准结果如图3所示,显然,该基于区域分割的点云配准算法可以实现公共点云的准确配准。</p>
+                </div>
+                <div class="area_img" id="132">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201911042_132.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 待配准点云" src="Detail/GetImg?filename=images/JSJY201911042_132.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 待配准点云  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201911042_132.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"><i>Fig</i>. 2 <i>Point clouds need to be registered</i></p>
+
+                </div>
+                <div class="area_img" id="133">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201911042_133.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 公共点云的配准结果" src="Detail/GetImg?filename=images/JSJY201911042_133.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 公共点云的配准结果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201911042_133.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"><i>Fig</i>. 3 <i>Registration results of public point clouds</i></p>
+
+                </div>
+                <div class="p1">
+                    <p id="134">为了进一步验证所提区域分割配准算法在配准精度和耗时等方面的性能,针对图2三组公共点云,再分别采用<i>ICP</i>算法、文献<citation id="262" type="reference">[<a class="sup">19</a>]</citation>算法、文献<citation id="263" type="reference">[<a class="sup">20</a>]</citation>算法和文献<citation id="264" type="reference">[<a class="sup">13</a>]</citation>算法进行配准,五种算法的配准结果如表1所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="135">从表1可见,该基于区域分割的配准算法最有最高的配准精度和最快的配准速度。与<i>ICP</i>算法相比,基于区域分割的配准算法的配准精度和速度分别提高了约35%和50%;与文献<citation id="265" type="reference">[<a class="sup">19</a>]</citation>算法相比,基于区域分割的配准算法的配准精度和速度分别提高了约25%和38%;与文献<citation id="266" type="reference">[<a class="sup">20</a>]</citation>算法相比,基于区域分割的配准算法的配准精度和速度分别提高了23%和35%;与文献<citation id="267" type="reference">[<a class="sup">13</a>]</citation>算法相比,基于区域分割的配准算法的配准精度和速度分别提高了约12%和22%。这是由于:<i>ICP</i> 算法对点云的初始相对位置要求较高,且要求待配准点云之间存在包含关系;文献<citation id="268" type="reference">[<a class="sup">19</a>]</citation>算法是一种基于迭代因子的点云配准算法,该迭代因子可以提高点云配准的迭代速度,但是不能提高低覆盖率点云的配准精度;文献<citation id="269" type="reference">[<a class="sup">20</a>]</citation>算法是一种基于内部形态描述子(<i>Intrinsic Shape Signature</i>, <i>ISS</i>)特征点的点云配准算法,该算法通过对点云上特征点的特征序列的匹配来实现点云配准,取得了较精确的匹配结果,但是对覆盖率低于60%的点云配准效果不佳;文献<citation id="270" type="reference">[<a class="sup">13</a>]</citation>算法是一种基于<i>X</i>射线断层扫描的点云配准算法,通过基于距离误差评价的<i>ICP</i> 算法实现了点云配准,但是该算法对密度较高点云的配准效果较好,对低覆盖点云配准效果不佳。而基于区域分割的配准算法通过区域分割有效避免了低覆盖区域对点云配准的影响,可以实现点云的快速精确配准。</p>
+                </div>
+                <div class="area_img" id="136">
+                                            <p class="img_tit">
+                                                <b>表</b>1 <b>五种算法的公共点云配准结果</b>
+                                                    <br />
+                                                <i>Tab</i>. 1 <i>Registration results for public point clouds by five algorithms</i>
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201911042_13600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/JSJY201911042_13600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201911042_13600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表1 五种算法的公共点云配准结果" src="Detail/GetImg?filename=images/JSJY201911042_13600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <h4 class="anchor-tag" id="137" name="137">4.2 <b>文物断裂面匹配</b></h4>
+                <div class="p1">
+                    <p id="138">本文基于区域分割的点云配准算法可以用于文物碎块点云数据模型的断裂面匹配,首先采用文献<citation id="271" type="reference">[<a class="sup">21</a>]</citation>算法提取碎块的断裂面,然后采用该配准算法将断裂面进行匹配。4组待匹配文物碎块如图4所示,碎块的点云数据大小、原始面数目和断裂面数目如表2所示,采用该基于区域分割的点云配准算法对碎块断裂面进行匹配的结果如图5所示。从图5可见,该点云配准算法可以实现文物碎块断裂面的有效配准。</p>
+                </div>
+                <div class="area_img" id="139">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201911042_139.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 待匹配文物碎块" src="Detail/GetImg?filename=images/JSJY201911042_139.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 待匹配文物碎块  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201911042_139.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"><i>Fig</i>. 4 <i>Blocks of cultural relics to be matched</i></p>
+
+                </div>
+                <div class="area_img" id="140">
+                    <p class="img_tit"><b>表</b>2 <b>文物碎块的基本信息</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><i>Tab</i>. 2 <i>Basic information of blocks of cultural relics</i></p>
+                    <p class="img_note"></p>
+                    <table id="140" border="1"><tr><td><br />碎块</td><td>点云大小<br />(左,右)</td><td>原始面<br />数目(左,右)</td><td>断裂面<br />数目(左,右)</td></tr><tr><td><br />第1组</td><td>(36 602,22 028)</td><td>(2, 2)</td><td>(3, 3)</td></tr><tr><td><br />第2组</td><td>(36 990,17 270)</td><td>(2, 2)</td><td>(4, 3)</td></tr><tr><td><br />第3组</td><td>(70 574,46 208)</td><td>(1, 2)</td><td>(2, 1)</td></tr><tr><td><br />第4组</td><td>(25 300,40 102)</td><td>(2, 2)</td><td>(4, 4)</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="141">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201911042_141.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 文物碎块的匹配结果" src="Detail/GetImg?filename=images/JSJY201911042_141.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 文物碎块的匹配结果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201911042_141.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"><i>Fig</i>. 5 <i>Blocks matching results of cultural relics</i></p>
+
+                </div>
+                <div class="p1">
+                    <p id="142">为了进一步验证所提配准算法在配准精度和耗时等方面的性能,针对图4所示的四组文物碎块数据模型,再分别采用<i>ICP</i>算法、文献<citation id="272" type="reference">[<a class="sup">19</a>]</citation>算法、文献<citation id="273" type="reference">[<a class="sup">20</a>]</citation>算法和文献<citation id="274" type="reference">[<a class="sup">13</a>]</citation>算法对其断裂面进行匹配,五种算法的匹配结果如表3所示。表3中的匹配误差是指可以正确匹配的两个断裂面的匹配误差,耗时是指可以正确匹配的两个断裂面的匹配耗时。</p>
+                </div>
+                <div class="area_img" id="143">
+                    <p class="img_tit"><b>表</b>3 <b>五种算法的文物碎块匹配结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><i>Tab</i>. 3 <i>Blocks matching results for cultural relics by five algorithms</i></p>
+                    <p class="img_note"></p>
+                    <table id="143" border="1"><tr><td><br />碎块</td><td>配准算法</td><td>匹配误差/<i>mm</i></td><td>耗时/<i>s</i></td></tr><tr><td rowspan="5"><br />第1组</td><td><br /><i>ICP</i>算法</td><td>0.032 5</td><td>8.3</td></tr><tr><td><br />文献[19]算法</td><td>0.030 7</td><td>6.9</td></tr><tr><td><br />文献[20]算法</td><td>0.028 7</td><td>6.5</td></tr><tr><td><br />文献[13]算法</td><td>0.025 4</td><td>5.6</td></tr><tr><td><br />区域分割配准算法</td><td>0.022 5</td><td>4.2</td></tr><tr><td rowspan="5"><br />第2组</td><td><br /><i>ICP</i>算法</td><td>0.032 2</td><td>8.2</td></tr><tr><td><br />文献[19]算法</td><td>0.030 3</td><td>6.7</td></tr><tr><td><br />文献[20]算法</td><td>0.028 1</td><td>6.2</td></tr><tr><td><br />文献[13]算法</td><td>0.024 9</td><td>5.4</td></tr><tr><td><br />区域分割配准算法</td><td>0.021 5</td><td>4.1</td></tr><tr><td rowspan="5"><br />第3组</td><td><br /><i>ICP</i>算法</td><td>0.031 6</td><td>7.6</td></tr><tr><td><br />文献[19]算法</td><td>0.021 1</td><td>6.1</td></tr><tr><td><br />文献[20]算法</td><td>0.019 2</td><td>5.8</td></tr><tr><td><br />文献[13]算法</td><td>0.018 7</td><td>4.8</td></tr><tr><td><br />区域分割配准算法</td><td>0.017 1</td><td>3.0</td></tr><tr><td rowspan="5"><br />第4组</td><td><br /><i>ICP</i>算法</td><td>0.032 8</td><td>8.5</td></tr><tr><td><br />文献[19]算法</td><td>0.030 9</td><td>7.0</td></tr><tr><td><br />文献[20]算法</td><td>0.028 9</td><td>6.7</td></tr><tr><td><br />文献[13]算法</td><td>0.025 4</td><td>5.7</td></tr><tr><td><br />区域分割配准算法</td><td>0.022 8</td><td>4.5</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="144">从表3可见,本文基于区域分割的点云配准算法最有最高的匹配精度和最快的匹配速度。与<i>ICP</i>算法相比,区域分割配准算法的匹配精度和速度分别提高了约35%和50%;与文献<citation id="275" type="reference">[<a class="sup">19</a>]</citation>算法相比,区域分割配准算法的匹配精度和速度分别提高了约24%和37%;与文献<citation id="276" type="reference">[<a class="sup">20</a>]</citation>算法相比,区域分割配准算法的匹配精度和速度分别提高了约22%和35%;与文献<citation id="277" type="reference">[<a class="sup">13</a>]</citation>算法相比,区域分割配准算法的匹配精度和速度分别提高了约13%和23%。</p>
+                </div>
+                <div class="p1">
+                    <p id="145">这是由于:<i>ICP</i> 算法对点云的初始相对位置要求较高,且要求待配准点云之间存在包含关系,因此对文物碎块断裂面的匹配效果不佳;文献<citation id="278" type="reference">[<a class="sup">19</a>]</citation>算法虽然可以通过动态调整迭代因子提高算法的收敛速度,但是对低覆点云的配准效果不佳,而文物碎块断裂面大多存在缺损,覆盖率较低,因此匹配误差较大;文献<citation id="279" type="reference">[<a class="sup">20</a>]</citation>算法通过提取<i>ISS</i>特征点的实现点云配准,但是由于是对文物碎块的整个断裂面进行特征点提取,因此对缺损文物的断裂面匹配效果不佳;文献<citation id="280" type="reference">[<a class="sup">13</a>]</citation>算法采用基于距离误差评价的<i>ICP</i> 算法实现了破损砂粒断裂面的匹配,但算法是非特征提取算法,不利于缺损文物碎块粗糙断裂面的匹配;而提出的基于区域分割的点云配准算法通过区域分割有效避免了低覆盖区域对断裂面匹配的影响,可以实现文物碎块断裂面的有效匹配。</p>
+                </div>
+                <div class="p1">
+                    <p id="146">综上,所提基于区域分割的点云配准算法不仅适用于公共点云数据模型的配准,而且对文物类刚体文物碎块的断裂面匹配效果良好。因此说,所提配准算法是一种快速、高精度的低覆盖率点云模型配准算法。</p>
+                </div>
+                <h3 id="147" name="147" class="anchor-tag">5 结语</h3>
+                <div class="p1">
+                    <p id="148">点云配准研究已久,其应用领域涉及工业设计、医学研究、颅面复原以及文物修复等诸多方面。本文针对低覆盖率的点云数据模型,提出一种基于区域分割的点云配准算法。该算法通过对点云模型上的特征点进行区域划分,不仅大幅降低了点云配准的规模,而且有效提高了配准区域的覆盖率,从而提高了点云配准的时间效率和配准精度。但是本文算法所用的数据模型均为低噪声的采样均匀的点云数据模型,算法并未考虑大量噪声对点云配准结果的影响。在今后的研究中,要进一步考虑噪声和点云密度对点云配准的影响,提出更加普适性的点云配准算法,以提高点云配准算法的应用范围。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="201">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JGDJ201508031&amp;v=MjI4NzdZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5bmdWcjNPTHlyUFpMRzRIOVRNcDQ5R1o=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 郭延杰,白福忠,张铁英,等.基于 Radon 变换与灰度重心法的环形目标直径测量方法[J].激光与光电子学进展,2015,52(8):209-213.(GUO Y J,BAI F Z,ZHANG T Y,et al.Ring object diameter measuring method based on Radon transform and gray gravity algorithm[J].Laser and Optoelectronics Progress,2015,52(8):209-213.)
+                            </a>
+                        </p>
+                        <p id="203">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GXJM201405037&amp;v=MjIwNjRSN3FmWnVac0Z5bmdWcjNPSWpYQlk3RzRIOVhNcW85R1k0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 冯筠,陈雨,仝鑫龙,等.三维颅骨特征点的自动标定[J].光学精密工程,2014,22(5):1388-1394.(FENG J,CHEN Y,TONG X L,et al.Automatic feature point extraction for three-dimensional skull[J].Optics and Precision Engineering,2014,22(5):1388-1394.)
+                            </a>
+                        </p>
+                        <p id="205">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201909003&amp;v=MDQwODF6N0Jkckc0SDlqTXBvOUZaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeW5nVnIzT0w=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 张琮毅,魏子庄,徐昊文,等.尺度可变的快速全局点云配准方法[J].计算机学报,2019,42(9):1939-1952.(ZHANG Z Y,WEI Z Z,XU H W,et al.Scale variable fast global point cloud registration[J].Chinese Journal of Computers,2019,42(9) :1939-1952.)
+                            </a>
+                        </p>
+                        <p id="207">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDKD201606025&amp;v=MDQ4NDRSN3FmWnVac0Z5bmdWcjNPUFNuQWFyRzRIOWZNcVk5SFlZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 蔺素珍,王栋娟,钟家让,等.利用曲率特征虚拟拼接青铜器小碎块的方法[J].西安电子科技大学学报(自然科学版),2016,43(6):141-146.(LIN S Z,WANG D J,ZHONG J R,et al.Approach to reassembling virtual small bronze fragments using the curvature feature[J].Journal of Xidian University (Natural Science),2016,43(6):141-146.)
+                            </a>
+                        </p>
+                        <p id="209">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A method for registration of 3-D shapes">
+
+                                <b>[5]</b> BESL P J,MCKAY N D.A method for registration of 3-D shapes[J].IEEE Transactions on Pattern Analysis and Machine Intelligence,1992,14(2):239-256.
+                            </a>
+                        </p>
+                        <p id="211">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES828DE6D3978C3BC8350A21F7DDF1A4F4&amp;v=MzAzMjNXV3I3SklGcG1hQnVIWWZPR1FsZkJyTFUwNXRwaHhiMjZ3cTQ9TmlmT2ZidTZGcVc1cWZ0R2Jld0hmMzlMdkI0UTd6OE1TbjZVcTJaQkQ3UGxRY3liQ09OdkZTaQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> DU S,LIU J,ZHANG C.Probability iterative closest point algorithm for m-D point set registration with noise[J].Neurocomputing,2015,157:187-198.
+                            </a>
+                        </p>
+                        <p id="213">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Fast visual odometry using intensity-assisted iterative closest point">
+
+                                <b>[7]</b> LI S,LEE D.Fast Visual odometry using intensity-assisted iterative closest point[J].IEEE Robotics and Automation Letters,2016,1(2):992-999.
+                            </a>
+                        </p>
+                        <p id="215">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJWD&amp;filename=SJWDCC73C9216E5D4653CAE013BAB9F7C133&amp;v=MjAxOTl2RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZCckxVMDV0cGh4YjI2d3E0PU5pZmNhc0RMR2RLL3BvMUVZcDRLZUhnL3loVmdtMHA5U1h5UTNXQThEN1huUkxtY0NPTg==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> MARANI R,RENÒ V,NITTI M,et al.A modified iterative closest point algorithm for 3D point cloud registration[J].Computer-Aided Civil and Infrastructure Engineering,2016,31(7):515-534.
+                            </a>
+                        </p>
+                        <p id="217">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES4D67C182ACA05BC8AC55126585020C2D&amp;v=MDg5OTFIWWZPR1FsZkJyTFUwNXRwaHhiMjZ3cTQ9TmlmT2ZiZk1HTmEvcm9kSEZaaCtESGxMdkI1aW1UcDRTWDNrcVJvd2ViQ1VOcmpyQ09OdkZTaVdXcjdKSUZwbWFCdQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> LAMINE TAZIR M,GOKHOOL T,CHECCHIN P,et al.CICP:Cluster iterative closest point for sparse-dense point cloud registration[J].Robotics and Autonomous Systems,2018,108:66-86.
+                            </a>
+                        </p>
+                        <p id="219">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1018291872.nh&amp;v=MDY1NzZxQnRHRnJDVVI3cWZadVpzRnluZ1ZyM09WRjI2RnJHeEg5bkxyWkViUElRS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 邵红旭.低重叠率点云配准技术研究[D].哈尔滨:哈尔滨工程大学,2018:43-45.(SHAO H X.Research on point cloud registration technology with small overlap[D].Harbin:Harbin Engineering University,2018:43-45.)
+                            </a>
+                        </p>
+                        <p id="221">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=RGB-D-based pose estimation of workpieces with semantic segmentation and point cloud registration">
+
+                                <b>[11]</b> XU H,CHEN G,WANG Z,et al.RGB-D-based pose estimation of workpieces with semantic segmentation and point cloud registration[J].Sensors,2019,19(8):No.1873.
+                            </a>
+                        </p>
+                        <p id="223">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A robust registration algorithm of point clouds based on adaptive distance function for surface inspection">
+
+                                <b>[12]</b> DING J,LIU Q,SUN P.A robust registration algorithm of point clouds based on adaptive distance function for surface inspection[J].Measurement Science and Technology,2019,30(7):No.075003.
+                            </a>
+                        </p>
+                        <p id="225">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Registration of point cloud data for matching crushed sand particles">
+
+                                <b>[13]</b> WU M,WANG J.Registration of point cloud data for matching crushed sand particles[J].Powder Technology,2019,347:227-242.
+                            </a>
+                        </p>
+                        <p id="227">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A depth-based weighted point cloud registration for indoor scene">
+
+                                <b>[14]</b> LIU S,GAO D,WANG P,et al.A depth-based weighted point cloud registration for indoor scene[J].Sensors,2018,18(11):No.3608.
+                            </a>
+                        </p>
+                        <p id="229">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HWYJ2017S1024&amp;v=MzA4NDk5YXZybzlIWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnluZ1ZyM09MVHJTWkxHNEg=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 王帅,孙华燕,郭惠超.适用于激光点云配准的重叠区域提取方法[J].红外与激光工程,2017,46(S1):137-142.(WANG S,SUN H Y,GUO H C.Overlapping region extraction method for laser point clouds registration[J].Infrared and Laser Engineering,2017,46(S1):137-142.)
+                            </a>
+                        </p>
+                        <p id="231">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GXJM201503035&amp;v=MzI3NTVnVnIzT0lqWEJZN0c0SDlUTXJJOUdZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeW4=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> 巢渊,戴敏,陈恺,等.基于广义反向粒子群与引力搜索混合算法的多阈值图像分割[J].光学精密工程,2015,23(3):879-886.(CHAO Y,DAI M,CHEN K,et al.Image segmentation of multilevel threshold using hybrid PSOGSA with generalized opposition-based learning[J].Optics and Precision Engineering,2015,23(3):879-886.)
+                            </a>
+                        </p>
+                        <p id="233">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJHK201909013&amp;v=MzE2NDlqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5bmdWcjNPSnlmRFpiRzRIOWpNcG85RVo0UUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b> 夏棒,EMILION R,王惠文.Dirichlet 混合样本的 EM 算法与动态聚类算法比较[J].北京航空航天大学学报,2019,45(9):1805-1811.(XIA B,EMILION R,WANG H W.A comparison between EM algorithm and dynamical clustering for Dirichlet mixture samples[J].Journal of Beijing University of Aeronautics and Astronautics,2019,45(9):1805-1811.)
+                            </a>
+                        </p>
+                        <p id="235">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=An optimal graph theoretic approach to data clustering: theory and its application to image segmentation">
+
+                                <b>[18]</b> WU Z,LEAHY R.An optimal graph theoretic approach to data clustering:theory and its application to image segmentation[J].IEEE Transactions on Pattern Analysis and Machine Intelligence,1993,15(11):1101-1113.
+                            </a>
+                        </p>
+                        <p id="237">
+                            <a id="bibliography_19" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGTB201704012&amp;v=MDY1MjBGckNVUjdxZlp1WnNGeW5nVnIzT1B5cmZiTEc0SDliTXE0OUVab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[19]</b> 朱丽品,刘晓宁,刘雄乐,等.加入迭代因子的层次化颅骨配准方法[J].中国图象图形学报,2017,22(4):523-531.(ZHU L P,LIU X N,LIU X L,et al.Hierarchical skull registration method with an iterative factor[J].Journal of Image and Graphics,2017,22(4):523-531.)
+                            </a>
+                        </p>
+                        <p id="239">
+                            <a id="bibliography_20" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JGDJ201804018&amp;v=MzA4NDZHNEg5bk1xNDlFYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnluZ1ZyM09MeXJQWkw=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[20]</b> 赵夫群,耿国华.基于特征点的秦俑断裂面匹配方法[J].激光与光电子学进展,2018,55(4):122-128.(ZHAO F Q,GENG G H.Fracture surface matching method for Terracotta based on feature points[J].Laser and Optoelectronics Progress,2018,55(4):122-128.)
+                            </a>
+                        </p>
+                        <p id="241">
+                            <a id="bibliography_21" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201108052&amp;v=MTIzNDJDVVI3cWZadVpzRnluZ1ZyM09MejdCZDdHNEg5RE1wNDlBWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[21]</b> 李群辉,周明全,耿国华.破碎刚体三角网格模型的断裂面分割[J].计算机应用,2011,31(8):2204-2206,2216.(LI Q H,ZHOU M Q,GENG G H.Fractured surface segmentation of triangular mesh of fragments for solid reconstruction[J].Journal of Computer Applications,2011,31(8):2204-2206,2216.)
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJY201911042" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201911042&amp;v=MDE1NzZab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeW5nVnIzUEx6N0JkN0c0SDlqTnJvOUI=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="0" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

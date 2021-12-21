@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637129739045613750%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSYY201904014%26RESULT%3d1%26SIGN%3d1ZC6bp9g8Cazh79QmutU9XifN1I%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSYY201904014&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSYY201904014&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYY201904014&amp;v=MjE3NjFyQ1VSTE9lWmVScEZ5L2xXcnpNTHo3U2Q3RzRIOWpNcTQ5RVlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#40" data-title="1 设计思路 ">1 设计思路</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#42" data-title="&lt;b&gt;1.1 系统架构&lt;/b&gt;"><b>1.1 系统架构</b></a></li>
+                                                <li><a href="#47" data-title="&lt;b&gt;1.2 控制系统通讯&lt;/b&gt;"><b>1.2 控制系统通讯</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#83" data-title="2 关键技术 ">2 关键技术</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#84" data-title="&lt;b&gt;2.1 机械臂初始位姿及六维力传感器初始力/力矩标定&lt;/b&gt;"><b>2.1 机械臂初始位姿及六维力传感器初始力/力矩标定</b></a></li>
+                                                <li><a href="#89" data-title="&lt;b&gt;2.2 待装配工件重力参数标定及外力/力矩分离算法&lt;/b&gt;"><b>2.2 待装配工件重力参数标定及外力/力矩分离算法</b></a></li>
+                                                <li><a href="#110" data-title="&lt;b&gt;2.3 机械臂位姿控制算法&lt;/b&gt;"><b>2.3 机械臂位姿控制算法</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#116" data-title="3 试验系统及试验结果分析 ">3 试验系统及试验结果分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#117" data-title="&lt;b&gt;3.1 试验系统搭建&lt;/b&gt;"><b>3.1 试验系统搭建</b></a></li>
+                                                <li><a href="#126" data-title="&lt;b&gt;3.2 结果分析&lt;/b&gt;"><b>3.2 结果分析</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#130" data-title="4 结 论 ">4 结 论</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#44" data-title="▲图1 控制系统框架">▲图1 控制系统框架</a></li>
+                                                <li><a href="#50" data-title="▲图2 客户端-服务器运行模式">▲图2 客户端-服务器运行模式</a></li>
+                                                <li><a href="#86" data-title="▲图3 机器人装配系统坐标系示意图">▲图3 机器人装配系统坐标系示意图</a></li>
+                                                <li><a href="#112" data-title="▲图4 所有平移运动方向和转动方向">▲图4 所有平移运动方向和转动方向</a></li>
+                                                <li><a href="#119" data-title="&lt;b&gt;表1 机器人参数表&lt;/b&gt;"><b>表1 机器人参数表</b></a></li>
+                                                <li><a href="#120" data-title="&lt;b&gt;表2 传感器参数表&lt;/b&gt;"><b>表2 传感器参数表</b></a></li>
+                                                <li><a href="#128" data-title="▲图5 力/力矩随时间的变化关系">▲图5 力/力矩随时间的变化关系</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="7">
+
+
+                                    <a id="bibliography_" title="[ 1 ] 邱铁成,张满,张立伟,等.机器人在卫星舱板装配中的应用研究[J].航天器环境工程,2012.29(5):579-585." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HTHJ201205028&amp;v=MDQxNzR6cXFCdEdGckNVUkxPZVplUnBGeS9sV3J6TUxUbkRaTEc0SDlQTXFvOUhiSVFLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        [ 1 ] 邱铁成,张满,张立伟,等.机器人在卫星舱板装配中的应用研究[J].航天器环境工程,2012.29(5):579-585.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_" title="[ 2 ] 黎田,胡晓雪,姚为,等.机器人在航天装备自动化装配中的应用研究[J].航空制造技术,2014.465(21):102-104." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HKGJ201421025&amp;v=MTA2NTMzenFxQnRHRnJDVVJMT2VaZVJwRnkvbFdyek1MU2JNWkxHNEg5WE9ybzlIWVlRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        [ 2 ] 黎田,胡晓雪,姚为,等.机器人在航天装备自动化装配中的应用研究[J].航空制造技术,2014.465(21):102-104.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_" title="[ 3 ] 张立建,胡瑞钦,易旺民.基于六维力传感器的工业机器人末端负载受力感知研究[J].自动化学报,2017.43(3):439-447." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MOTO201703011&amp;v=MDAxMjZHNEg5Yk1ySTlFWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRnkvbFdyek1LQ0xmWWI=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        [ 3 ] 张立建,胡瑞钦,易旺民.基于六维力传感器的工业机器人末端负载受力感知研究[J].自动化学报,2017.43(3):439-447.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_" title="[ 4 ] 胡瑞钦,张立建,孟少华,等.基于柔顺控制的航天器大部件机器人装配技术[J].机械工程学报,2018,54(11):85-93.." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=JXXB201811009&amp;v=MTc5NTZiWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGeS9sV3J6TUx6WFRiTEc0SDluTnJvOUY=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        [ 4 ] 胡瑞钦,张立建,孟少华,等.基于柔顺控制的航天器大部件机器人装配技术[J].机械工程学报,2018,54(11):85-93..
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_" title="[ 5 ] 张铁,刘文波.基于模糊控制的机器人柔顺装配研究[J].机械设计与研究,2013.29(3):62-65." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYY201303018&amp;v=MTU5NDNVUkxPZVplUnBGeS9sV3J6TUx6N1NkN0c0SDlMTXJJOUViSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        [ 5 ] 张铁,刘文波.基于模糊控制的机器人柔顺装配研究[J].机械设计与研究,2013.29(3):62-65.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_" title="[ 6 ] 颜丙聪.基于激光跟踪仪的某型号产品总装精测技术研究[D].哈尔滨:哈尔滨工业大学,2015." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015982012.nh&amp;v=MTcxMDU3cXdITkhOclpFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZ5L2xXcnpNVkYyNkc=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        [ 6 ] 颜丙聪.基于激光跟踪仪的某型号产品总装精测技术研究[D].哈尔滨:哈尔滨工业大学,2015.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_" title="[ 7 ] 白丰,张明路,张小俊,等.关于卫星机器人地面装配的目标快速识别方法[J].系统工程与电子技术,2017.39(5):1160-1168." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XTYD201705032&amp;v=MjE5NjFUblNhckc0SDliTXFvOUdab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGeS9sV3J6TVA=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        [ 7 ] 白丰,张明路,张小俊,等.关于卫星机器人地面装配的目标快速识别方法[J].系统工程与电子技术,2017.39(5):1160-1168.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_" title="[ 8 ] 孟少华,胡瑞钦,张立建,等.一种基于机器人的航天器大型部件自主装配方法[J].机器人,2018.40(1):81-88." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JQRR201801010&amp;v=MTc2MTE0TzN6cXFCdEdGckNVUkxPZVplUnBGeS9sV3J6TUx6elpmTEc0SDluTXJvOUVaSVFLREg4NHZSNFQ2ajU=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        [ 8 ] 孟少华,胡瑞钦,张立建,等.一种基于机器人的航天器大型部件自主装配方法[J].机器人,2018.40(1):81-88.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_" title="[ 9 ] 林远长,王锐,石珍,等.轻量化汽车焊接机器人视觉测量及焊接轨迹跟踪[J].机械设计与研究,2018.34(2):10-14." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=JSYY201802003&amp;v=MDg5NDU3RzRIOW5Nclk5Rlo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZ5L2xXcnpNTHo3U2Q=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        [ 9 ] 林远长,王锐,石珍,等.轻量化汽车焊接机器人视觉测量及焊接轨迹跟踪[J].机械设计与研究,2018.34(2):10-14.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_10" title=" AKELLA P,PESHKIN M,COLGATE E,et al.Cobots for the automobile assembly line[C]// IEEE International Conference on Robotics &amp;amp; Automation.IEEE,1999." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Cobots for the automobileassembly line">
+                                        <b>[10]</b>
+                                         AKELLA P,PESHKIN M,COLGATE E,et al.Cobots for the automobile assembly line[C]// IEEE International Conference on Robotics &amp;amp; Automation.IEEE,1999.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_11" title=" CHERUBINI A,PASSAMA R,CROSNIER A,et al.Collaborative manufacturing with physical human-robot interaction[J].Robotics and Computer-Integrated Manufacturing,2016.40:1-13." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES09E130338A1C18A46B58474208873F75&amp;v=MjQxMDZmT2ZiT3hhOURQcjR4R2JKb09mMzB4dmhJVm1EcDFUSGptcmhJOWNiV1hNNzJhQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TjlodzdpMnc2dz1OaQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         CHERUBINI A,PASSAMA R,CROSNIER A,et al.Collaborative manufacturing with physical human-robot interaction[J].Robotics and Computer-Integrated Manufacturing,2016.40:1-13.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_12" title=" BLEY H,REINHART G,SELIGER G,et al.Appropriate human involvement in assembly and disassembly[J].CIRP Annals-Manufacturing Technology,2004.53(2):487-509." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011701867691&amp;v=MjYwOTJaZVp1SHlqbVVMaklKMTRkYVJZPU5pZk9mYks3SHRETnFJOUViTzBJQ25VNG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1udw==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         BLEY H,REINHART G,SELIGER G,et al.Appropriate human involvement in assembly and disassembly[J].CIRP Annals-Manufacturing Technology,2004.53(2):487-509.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_13" title=" KR&#220;GER J,SURDILOVIC D.Robust control of force-coupled human-robot-interaction in assembly processes[J].CIRP Annals-Manufacturing Technology,2008.57(1):41-44." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011701866205&amp;v=MTMwNzJiTzBKRG53OG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxqSUoxNGRhUlk9TmlmT2ZiSzdIdEROcUk5RQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         KR&#220;GER J,SURDILOVIC D.Robust control of force-coupled human-robot-interaction in assembly processes[J].CIRP Annals-Manufacturing Technology,2008.57(1):41-44.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_14" title=" 林君健.基于力传感器的工业机器人主动柔顺装配系统研究[D].广州:华南理工大学,2013." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1013319416.nh&amp;v=MTEzNDhGOVhOcVpFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZ5L2xXcnpNVkYyNkhiQzU=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         林君健.基于力传感器的工业机器人主动柔顺装配系统研究[D].广州:华南理工大学,2013.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_15" title=" VOUGIOUKAS S.Bias estimation and gravity compensation for force-torque sensors[C]//Proceedings of 3rd WSEAS Symposium on Mathematical Methods and Computational Techniques in Electrical Engineering.Athens,Greece:WSEAS Press.2001:82-85." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Bias estimation and gravity compensation for force-torque sensors">
+                                        <b>[15]</b>
+                                         VOUGIOUKAS S.Bias estimation and gravity compensation for force-torque sensors[C]//Proceedings of 3rd WSEAS Symposium on Mathematical Methods and Computational Techniques in Electrical Engineering.Athens,Greece:WSEAS Press.2001:82-85.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSYY" target="_blank">机械设计与研究</a>
+                2019,35(04),47-52             </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>力觉交互控制的机械臂精密位姿控制技术</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E6%9D%B0%E9%B9%8F&amp;code=36757887&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王杰鹏</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%B0%A2%E6%B0%B8%E6%9D%83&amp;code=42779463&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">谢永权</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%AE%8B%E6%B6%9B&amp;code=42779464&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">宋涛</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E4%BA%8E%E5%8D%AB%E4%B8%9C&amp;code=32910248&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">于卫东</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%88%E6%A0%B9%E8%89%AF&amp;code=21736791&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陈根良</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E7%9A%93&amp;code=08572351&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王皓</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E4%B8%8A%E6%B5%B7%E5%B8%82%E5%A4%8D%E6%9D%82%E8%96%84%E6%9D%BF%E6%95%B0%E5%AD%97%E5%8C%96%E5%88%B6%E9%80%A0%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=0054402&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海交通大学上海市复杂薄板数字化制造重点实验室</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E6%9C%BA%E6%A2%B0%E7%B3%BB%E7%BB%9F%E4%B8%8E%E6%8C%AF%E5%8A%A8%E5%9B%BD%E5%AE%B6%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=0107003&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海交通大学机械系统与振动国家重点实验室</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E8%88%AA%E5%A4%A9%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E9%99%A2812%E6%89%80&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海航天技术研究院812所</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对卫星装配过程中关键零部件质量体积较大,不易装配的问题,提出了基于力觉交互控制的机械臂精密位姿控制技术,通过在机器人末端安装六维力/力矩传感器,实时获取机器人末端负载重力和末端所受外部作用力,并将负载重力和外部作用力解耦,进而实现外部作用力对机械臂末端位姿的精密控制。同时,对机器人辅助装配控制系统及其架构进行了介绍,并提出了一种简单可行的六维力传感器标定方法。试验结果表明:该技术可以实现机器人末端位置的精密控制,具有结构简单、计算量小、操作方便等特点。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%3Cb%3E%E5%8D%AB%E6%98%9F%3C%2Fb%3E&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank"><b>卫星</b>;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%3Cb%3E%E6%9C%BA%E5%99%A8%E4%BA%BA%3C%2Fb%3E&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank"><b>机器人</b>;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%3Cb%3E%E5%8A%9B%E8%A7%89%E4%BA%A4%E4%BA%92%3C%2Fb%3E&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank"><b>力觉交互</b>;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%3Cb%3E%E8%87%AA%E5%8A%A8%E5%8C%96%E8%A3%85%E9%85%8D%3C%2Fb%3E&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank"><b>自动化装配</b>;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    王杰鹏(1994-),男,硕士生;主要研究方向:机器人控制及机构设计,已发表论文2篇。E-mail: wangjiepeng@sjtu.edu.cn;;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-12-28</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家科技重大专项(2017ZX04005001);</span>
+                                <span>航天联合基金(USCAST2016-15)资助项目;</span>
+                    </p>
+            </div>
+                    <h1><b>A Precise Robot Control Technology for Satellite Assembly Based on Force Interaction Control</b></h1>
+                    <h2>
+                    <span>WANG Jiepeng</span>
+                    <span>XIE Yongquan</span>
+                    <span>SONG Tao</span>
+                    <span>YU Weidong</span>
+                    <span>CHEN Genliang</span>
+                    <span>WANG Hao</span>
+            </h2>
+                    <h2>
+                    <span>Shanghai Key Laboratory of Digital Manufacture for Thin-walled Structures, Shanghai Jiao Tong University</span>
+                    <span>State Key Laboratory of Mechanical System and Vibration, Shanghai Jiao Tong University</span>
+                    <span>No.812 Institute of SAST</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>In order to solve the problem that the key components of satellites are bulky and difficult to assemble, a precise position and pose control technology of robot based on force interactive control is proposed. By installing a six-dimensional force/torque sensor at the end of the robot, the load gravity and the external force on the end of the robot can be obtained in real time. By decoupling the load gravity and the external force, the position and pose of the end of the robot can be precisely controlled by the external force. Meanwhile, system overview of robot auxiliary assembly system and communication of control system are introduced. Besides, a new and simple calibration method of force sensor is proposed. The experiments show that this technique can achieve precise control of the terminal position and the control mode is simple. Compared with other methods, this method is simple in structure, small in computation and easy to operate.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=satellite&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">satellite;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=robot&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">robot;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=force%20sensor&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">force sensor;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=automation%20assembly&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">automation assembly;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-12-28</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <div class="p1">
+                    <p id="37">在卫星的装配过程中,工人需要对某些大质量、大体积的关键零部件进行装配。由于卫星产品主要属于单件生产模式,产品的多样化使得无法通过机器人示教的方式实现批量自动化装配。目前,这些大部件的装配还是主要依靠手工装配,或通过支架车完成辅助装配<citation id="144" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。手工装配存在的问题是无法稳定待装配部件,增加了装配过程中发生碰撞的风险;支架车辅助装配则无法根据装配位姿需求准确调节部件的位姿,且需要根据多样化的航天器进行定制,显著地增加了生产成本。现在,航天器产品的装配周期严重依赖于现场工人的操作经验,对装配质量有极大的影响,同时增加了部件发生碰撞的风险,这极大限制了卫星产能的提升。</p>
+                </div>
+                <div class="p1">
+                    <p id="38">为了保证装配质量与装配精度,提高装配效率,同时满足日益增长的卫星总装任务需求,将工业机器人应用于卫星等航天器产品的装配过程具有重要意义<citation id="145" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>,可以满足零件的定位精度要求,提高卫星的装配效率,减少现场工人的工作负担。在机器人装配过程中,需要在机器人末端安装六维力传感器,实时感知机器人末端所受外力。该外力主要由三部分组成:负载重力与外界环境接触力以及传感器自身误差<citation id="146" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。通过对传感器进行零点补偿,将负载重力和外界接触力进行解耦,可以实现外界接触力对机器人的力控制<citation id="147" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">近年来,许多学者开展了关于机器人<citation id="148" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>及六维力传感器在装配过程中的应用的相关研究,激光跟踪仪<citation id="149" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>和机器视觉<citation id="150" type="reference"><link href="19" rel="bibliography" /><link href="21" rel="bibliography" /><link href="23" rel="bibliography" /><sup>[<a class="sup">7</a>,<a class="sup">8</a>,<a class="sup">9</a>]</sup></citation>等方式也得到了应用。但是,这些系统相对比较复杂,对现场操作工人要求较高。因此,本文通过人机协作<citation id="151" type="reference"><link href="25" rel="bibliography" /><link href="27" rel="bibliography" /><sup>[<a class="sup">10</a>,<a class="sup">11</a>]</sup></citation>的方式,开发了力觉交互控制的机械臂精密位姿控制技术,由机器人负责平衡待装配工件负载,人手控制机器人的运动方向<citation id="152" type="reference"><link href="29" rel="bibliography" /><link href="31" rel="bibliography" /><sup>[<a class="sup">12</a>,<a class="sup">13</a>]</sup></citation>,用以实现卫星关键零部件高精度、高效率、接触力/力矩严格控制的装配。系统控制方式简单,操作便捷。同时,本文从系统架构设计,控制系统通讯,六维力传感器标定,机械臂控制算法等方面系统地介绍了项目解决方案。</p>
+                </div>
+                <h3 id="40" name="40" class="anchor-tag">1 设计思路</h3>
+                <div class="p1">
+                    <p id="41">本文通过人机协作的方式,实现了操作人员利用人手推动安装于机械臂末端的传感器和待装配工件之间的连接法兰进行运动,完成装配任务的功能。机械臂具有六个自由度的运动能力,其实现平动或转动由操作人员施加的力或力矩的大小和方向决定,同时机械臂运动速度亦可通过上位机进行控制,可以根据现场装配需要确定机械臂移动和转动的步长,机械臂携带待装配工件移动到装配位置附近过程中,采用较大步长,快速移动到待装配位置,然后采用较小步长,在待装配位置附近实现精确位姿调整。在该系统的辅助下,由机器人承担负载重量,操作人员只需控制机械臂末端运动的方向,可以轻松完成大质量零部件的精密装配。</p>
+                </div>
+                <h4 class="anchor-tag" id="42" name="42"><b>1.1 系统架构</b></h4>
+                <div class="p1">
+                    <p id="43">该系统的框架如图1所示,系统组成包括机械臂系统、六维力传感器、待装配工件、上位机及操作人员。</p>
+                </div>
+                <div class="area_img" id="44">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSYY201904014_044.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="▲图1 控制系统框架" src="Detail/GetImg?filename=images/JSYY201904014_044.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">▲图1 控制系统框架  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSYY201904014_044.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="45">操作人员在在连接法兰上施加推力/力矩,数据采集卡采集六维力传感器的力和力矩信息并传递给上位机进行数据综合处理,将操作人员施加的推力/力矩从与重力的耦合中分离出来,同时上位机判断操作人员施加的外力/力矩是否在设定的阈值范围内。如果在给定的范围内则发送位姿执行指令给机械臂控制器,使机械臂沿着力或力矩的方向执行相应的位姿运动;如果小于最小阈值或者大于最大阈值,则机械臂静止不动,同时会给操作人员不同的声音提示。通过设定最小阈值,可以避免因为操作人员手抖等原因造成误操作,保证操作的安全性,同时可以保证装配过程中零部件最大接触力小于该阈值。通过设定最大阈值,可以避免操作人员误操作产生过大操作作用力,保证安全性。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">为实现上述机器人辅助装配系统,首先需要解决控制系统的通讯问题,即机器人和力传感器与上位机的通讯问题,使上位机可以实时获取传感器与机器人的运行数据,从而使整个系统成为一个整体。此外,还需实现3个关键技术,分别为: ①机械臂初始位姿及六维力传感器初始力/力矩标定;②待装配零部件重力参数标定及外力/力矩分离算法;③机械臂位姿控制算法。在第2节将对上述关键技术逐一进行介绍。</p>
+                </div>
+                <h4 class="anchor-tag" id="47" name="47"><b>1.2 控制系统通讯</b></h4>
+                <div class="p1">
+                    <p id="48">对于1.1节所提出的机器人装配系统,控制系统通讯主要包含两个方面,即六维力传感器和上位机间的通讯,以及上位机和机械臂控制器间的通讯。对于六维力传感器和上位机间的通讯,其通讯方式较简单,通过串口直接连接上位机,通过编写C++程序,将数据采集卡采集的数据直接传递到上位机进行处理。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">对于上位机和机械臂控制器间的通讯则相对复杂,将重点展开加以介绍。本系统采用的是KUKA工业机器人,其和上位机间的通讯采用以太网进行连接,利用TCP/IP建立连接,通过KUKA控制系统插件KRL-XML实现通讯。Ethernet KRL-XML是一个可后载入的应用程序包,具有以下功能:①通过EKI交换数据;②接收外部系统的XML数据;③将XML数据发送给外部系统;④接收外部系统的二进制数据同时可将二进制数据发送给外部系统。此外,此应用程序包具有诸多特性:①可将机器人控制系统和外部系统作为客户端或服务器;②通过基于XML的配置文件配置连接;③通过提交解释器读取和写入数据;④从机器人解释器读取和写入数据;⑤通过外部系统发送Ping命令监控连接状态。本系统采用客户端-服务器运行模式,其示意图如图2所示,将上位机系统作为服务器,将机器人控制系统作为客户端。</p>
+                </div>
+                <div class="area_img" id="50">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSYY201904014_050.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="▲图2 客户端-服务器运行模式" src="Detail/GetImg?filename=images/JSYY201904014_050.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">▲图2 客户端-服务器运行模式  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSYY201904014_050.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="51">在建立连接前,需通过XML文件配置以太网连接。针对每个连接,需在机器人控制系统的目录定义配置文件(C:\\KRC\\ROBOTER\\Config\\User\\Common\\EthernetKRL)。在连接初始化时,系统将自动读入该配置文件,此配置文件将包含每个数据包传递数据的具体格式及内容。本系统的XML配置文件如下:</p>
+                </div>
+                <div class="area_img" id="154">
+                                <img alt="" src="Detail/GetImg?filename=images/JSYY201904014_15400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="154">
+                                <img alt="" src="Detail/GetImg?filename=images/JSYY201904014_15401.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="81">其中,在段落 &lt;EXTERNAL&gt; … &lt;/EXTERNAL&gt; 中定义外部系统的设置,其类型默认为服务器,IP为外部系统定义为服务器时的 IP 地址(TYPE = 服务器),如果 TYPE = 客户端,将忽略 IP 地址,PORT为外部系统定义为服务器时的端口号 (TYPE = 服务器);&lt;RECEIVE&gt; … &lt;/RECEIVE&gt;配置机器人控制系统接收的XML结构,Step为机器人平动时步长值,Atep为机器人转动时步长值,Max为机器人单轴最大运动速度,PRO为机器人程序执行速度;&lt;SEND&gt; … &lt;/SEND&gt;配置机器人控制系统发送的XML结构;其中结构LastPos为机器人当前实际位姿,分别赋值给<i>X</i>、<i>Y</i>、<i>Z</i>、<i>A</i>、<i>B</i>、<i>C</i>六个变量。</p>
+                </div>
+                <div class="p1">
+                    <p id="82">通过利用上位机发送对应XML格式的字符串给机器人控制系统,编写相应机器人程序解析此字符串实现机器人运动,同时将机器人的位姿转换为对应XML格式的字符串,实时反馈给上位机,利用上位机程序对其进行解析,得到机器人的实际位姿,以此完成上位机和机器臂控制器间的通讯。</p>
+                </div>
+                <h3 id="83" name="83" class="anchor-tag">2 关键技术</h3>
+                <h4 class="anchor-tag" id="84" name="84"><b>2.1 机械臂初始位姿及六维力传感器初始力/力矩标定</b></h4>
+                <div class="p1">
+                    <p id="85">六维力传感器安装在机器人末端,然后将待装配工件通过法兰安装在六维力传感器上。在操作者外力/力矩作用下,六维力传感器数据采集的数据是重力和外力/力矩的耦合值,传感器的自身误差值以及由于运动产生的惯性力。在装配过程中,由于手动操作,工件运行速度较慢,因此忽略工件的惯性。此外,对于传感器的自身误差值,即零点,可通过文献<citation id="153" type="reference">[<a class="sup">14</a>,<a class="sup">15</a>]</citation>中的方法进行补偿。本文不考虑传感器的初始误差的影响。机械臂初始位姿定义为:<i>P</i>=[<i>X</i>,<i>Y</i>,<i>Z</i>,<i>A</i>,<i>B</i>,<i>C</i>]=[525,0,900,0°,0°,0°];工具坐标系{<i>T</i>}=(<i>O</i><sub><i>t</i></sub>;<i>x</i><sub><i>t</i></sub>,<i>y</i><sub><i>t</i></sub>,<i>z</i><sub><i>t</i></sub>)的原点位于机器人末端法兰圆心处;全局参考坐标系{<i>S</i>}=(<i>O</i><sub><i>s</i></sub>;<i>x</i><sub><i>s</i></sub>,<i>y</i><sub><i>s</i></sub>,<i>z</i><sub><i>s</i></sub>)的坐标原点位于机器人安装底座底面圆心处。坐标系的位置示意图如图3所示,工具坐标系{<i>T</i>}相对于全局参考坐标系{<i>S</i>}的相对位置关系为<i>p</i>。</p>
+                </div>
+                <div class="area_img" id="86">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSYY201904014_086.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="▲图3 机器人装配系统坐标系示意图" src="Detail/GetImg?filename=images/JSYY201904014_086.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">▲图3 机器人装配系统坐标系示意图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSYY201904014_086.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="87">在当前位姿下,施加外力/力矩前,六维力传感器的数据理论上只有沿<i>y</i><sub><i>t</i></sub>轴负向的力分量、沿<i>x</i><sub><i>t</i></sub>轴和<i>z</i><sub><i>t</i></sub>轴的力矩分量,而其余的三个分量为0。由于机械臂在固定到地面时不能保证其参考坐标系的<i>y</i><sub><i>s</i></sub>轴严格与重力方向平行,因此当机械臂处于上述初始位姿时,理论上为0的三个分量值也有不为0的数值出现,因此需要对机械臂的初始位姿进行标定,使此三个数值尽可能接近0,以提高后续分离的外力/力矩的精度。</p>
+                </div>
+                <div class="p1">
+                    <p id="88">为实现上述标定过程,我们提出了一种简单易实施的标定方法。在机械臂末端连接一个5 kg的砝码,理论上在<i>y</i><sub><i>t</i></sub>轴负向的力分量为49 N(这里<i>g</i>=9.8 kg/s<sup>2</sup>),而在<i>x</i><sub><i>t</i></sub>轴和<i>z</i><sub><i>t</i></sub>轴的力分量为0,<i>y</i><sub><i>t</i></sub>轴负向的力矩分量为0。利用机械臂手持控制面板控制机械臂末端轻微转动,改变机械臂位姿<i>P</i>=[<i>X</i>,<i>Y</i>,<i>Z</i>,<i>A</i>,<i>B</i>,<i>C</i>]中<i>A</i>、<i>B</i>和<i>C</i>的值,使得六维力传感器的数值和理论上尽可能接近,以此得到新的机械臂初始位姿<i>P</i>=[<i>X</i>,<i>Y</i>,<i>Z</i>,<i>A</i>+Δ<i>A</i>,<i>B</i>+Δ<i>B</i>,<i>C</i>+Δ<i>C</i>],完成机械臂初始位姿及六维力传感器初始力/力矩标定。相比较于使用激光跟踪仪进行标定的方法,该方法可以适应现场机器人工作位置变化的场景,提升标定效率,而且便于现场操作工人使用。</p>
+                </div>
+                <h4 class="anchor-tag" id="89" name="89"><b>2.2 待装配工件重力参数标定及外力/力矩分离算法</b></h4>
+                <div class="p1">
+                    <p id="90">为实现外力/力矩分离,需知道待装配工件的质量参数(<i>mg</i>;<i>x</i><sub><i>p</i></sub>,<i>y</i><sub><i>p</i></sub>,<i>z</i><sub><i>p</i></sub>) ,其中<i>mg</i>为待装配工件的总重量,(<i>x</i><sub><i>p</i></sub>,<i>y</i><sub><i>p</i></sub>,<i>z</i><sub><i>p</i></sub>)为工件质心相对于工具坐标系{<i>T</i>}的位置。</p>
+                </div>
+                <div class="p1">
+                    <p id="91">当机械臂处于初始位姿,且不受外界作用力时,只有待装配工件重力作用于六维力传感器上,所以在<i>x</i>方向和<i>z</i>方向上的分力为0,在<i>y</i>方向上的分力矩为0,另外三个分量不为0,由此可得方程为:</p>
+                </div>
+                <div class="area_img" id="92">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JSYY201904014_09200.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="94">通过上述方程可解得<i>mg</i>,<i>x</i><sub><i>p</i></sub>及<i>z</i><sub><i>p</i></sub>的值。</p>
+                </div>
+                <div class="p1">
+                    <p id="95">利用上位机控制机械臂绕<i>z</i><sub><i>t</i></sub>轴旋转-90°,运动到位姿<i>P</i>=[<i>X</i>,<i>Y</i>,<i>Z</i>,<i>A</i>+Δ<i>A</i>,<i>B</i>+Δ<i>B</i>,<i>C</i>+Δ<i>C</i>-90°],此时可得另外一个方程:</p>
+                </div>
+                <div class="p1">
+                    <p id="96"><i>T</i>′<sub><i>zt</i></sub>=-<i>mgy</i><sub><i>p</i></sub>      (2)</p>
+                </div>
+                <div class="p1">
+                    <p id="97">利用此方程可解得<i>y</i><sub><i>p</i></sub>的值。通过上述过程即可完成待装配零部件重力参数的标定。</p>
+                </div>
+                <div class="p1">
+                    <p id="98">下面介绍在重力分量的耦合下,外力/力矩的分离算法。工具坐标系{<i>T</i>}相对于全局参考坐标系{<i>S</i>}的旋转矩阵为:</p>
+                </div>
+                <div class="area_img" id="99">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JSYY201904014_09900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="101">式中:<i>α</i>、<i>β</i>、<i>γ</i> 定义为工具坐标系{<i>T</i>}相对于全局参考坐标系{<i>S</i>}的卡尔丹角。根据此旋转矩阵,可得重力分量在工具坐标系下的值<i>F</i><sub><i>mg</i></sub>=[<i>F</i><mathml id="138"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>m</mi><mi>g</mi></mrow><mi>x</mi></msubsup></mrow></math></mathml>,<i>F</i><mathml id="139"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>m</mi><mi>g</mi></mrow><mi>y</mi></msubsup></mrow></math></mathml>,<i>F</i><mathml id="140"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>m</mi><mi>g</mi></mrow><mi>z</mi></msubsup></mrow></math></mathml>]<sup>T</sup>为</p>
+                </div>
+                <div class="area_img" id="102">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JSYY201904014_10200.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="104">在此重力分量的作用下,对六维力传感器施加的力矩为</p>
+                </div>
+                <div class="area_img" id="105">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JSYY201904014_10500.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="107">假设在当前机械臂的位姿情况下,六维力传感器的读数为<mathml id="141"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>(</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>F</mi></mstyle><mo>∼</mo></mover><msub><mrow></mrow><mrow><mi>x</mi><msub><mrow></mrow><mi>t</mi></msub></mrow></msub><mo>,</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>F</mi></mstyle><mo>∼</mo></mover><msub><mrow></mrow><mrow><mi>y</mi><msub><mrow></mrow><mi>t</mi></msub></mrow></msub><mo>,</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>F</mi></mstyle><mo>∼</mo></mover><msub><mrow></mrow><mrow><mi>z</mi><msub><mrow></mrow><mi>t</mi></msub></mrow></msub><mo>;</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>Τ</mi></mstyle><mo>∼</mo></mover><msub><mrow></mrow><mrow><mi>x</mi><msub><mrow></mrow><mi>t</mi></msub></mrow></msub><mo>,</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>Τ</mi></mstyle><mo>∼</mo></mover><msub><mrow></mrow><mrow><mi>y</mi><msub><mrow></mrow><mi>t</mi></msub></mrow></msub><mo>,</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>Τ</mi></mstyle><mo>∼</mo></mover><msub><mrow></mrow><mrow><mi>z</mi><msub><mrow></mrow><mi>t</mi></msub></mrow></msub></mrow><mo>)</mo></mrow></mrow></math></mathml>,则分离出的外力/力矩为</p>
+                </div>
+                <div class="area_img" id="108">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JSYY201904014_10800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <h4 class="anchor-tag" id="110" name="110"><b>2.3 机械臂位姿控制算法</b></h4>
+                <div class="p1">
+                    <p id="111">当上述分离出的外力/外力矩大小在给定的阈值范围(<i>F</i><sub>min</sub>,<i>F</i><sub>max</sub>)和(<i>T</i><sub>min</sub>,<i>T</i><sub>max</sub>)内时,则驱动机械臂运动。其控制策略按照外力/力矩的大小分为3种情况:①当至少一个外力在给定的阈值范围而三个外力矩都小于<i>T</i><sub>min</sub>时,则机械臂末端沿着该大于等于<i>F</i><sub>min</sub>的力的方向平移一个步长<i>S</i><sub><i>T</i></sub>,如果同时有多于一个力大于等于<i>F</i><sub>min</sub>,则沿着这几个力方向的对称轴线平移运动。如图4所示,在工作空间内,即所示正方形表面,共有26个平移方向。当<image id="155" type="formula" href="images/JSYY201904014_15500.jpg" display="inline" placement="inline"><alt></alt></image>&gt;<i>F</i><sub>min</sub>且<image id="156" type="formula" href="images/JSYY201904014_15600.jpg" display="inline" placement="inline"><alt></alt></image>&gt;<i>F</i><sub>min</sub>时,则沿着<i>X</i>轴和<i>Y</i>轴的对称轴线<i>P</i>1所示方向平移运动;②当至少有一个外力矩大于等于<i>T</i><sub>min</sub>时,则机械臂末端绕着该大于等于<i>T</i><sub>min</sub>的力矩的轴线旋转一个步长<i>S</i><sub><i>R</i></sub>,同理,如果同时有多于一个力矩大于等于<i>T</i><sub>min</sub>,则绕着这几个力矩轴线的对称轴线旋转运动;③如果所有外力和外力矩都小于相应的最小阈值,则机械臂停止运动。</p>
+                </div>
+                <div class="area_img" id="112">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSYY201904014_112.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="▲图4 所有平移运动方向和转动方向" src="Detail/GetImg?filename=images/JSYY201904014_112.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">▲图4 所有平移运动方向和转动方向  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSYY201904014_112.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="114">当机械臂末端待装配工件缓慢运动,与固定工件发生接触时,会对末端待装配工件施加与操作者的外力及外力矩方向相反的力和力矩,使得分离出来的外力及外力矩逐步减小,当小于给定的最小阈值时则机械臂停止运动。因此在这种控制策略下,只要最后阶段装配速度较慢,即可保证装配过程中接触力/力矩小于最小阈值<i>F</i><sub>min</sub>和<i>T</i><sub>min</sub>。</p>
+                </div>
+                <div class="p1">
+                    <p id="115">上述力/力矩的阈值<i>F</i><sub>min</sub>,<i>F</i><sub>max</sub>,<i>T</i><sub>min</sub>,<i>T</i><sub>max</sub>及机械臂运动步长<i>S</i><sub><i>T</i></sub>、<i>S</i><sub><i>R</i></sub>都可根据现场实际情况进行设定,同时力传感器的精度及机械臂本身的运动精度决定了装配过程的精度,因此只要力传感器的精度及机械臂本身的精度够高,则装配质量和效率即可完全符合现场实际生产要求。</p>
+                </div>
+                <h3 id="116" name="116" class="anchor-tag">3 试验系统及试验结果分析</h3>
+                <h4 class="anchor-tag" id="117" name="117"><b>3.1 试验系统搭建</b></h4>
+                <div class="p1">
+                    <p id="118">本试验采用的是库卡公司的机器人和ATI公司的六维力/力矩传感器。六维力/力矩传感器安装在机器人末端法兰上,传感器通过法兰和待装配工件连接,机器人装配系统实物如图3所示。本试验采用的机器人型号是KR 10 R900 WP,机器人参数如表1所示;传感器型号是ATI mini45-E,其参数如表2所示。</p>
+                </div>
+                <div class="area_img" id="119">
+                    <p class="img_tit"><b>表1 机器人参数表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="119" border="1"><tr><td><br />轴数</td><td>最大负载/kg</td><td>重复定位精度/mm</td><td>工作半径/mm</td></tr><tr><td><br />6</td><td>10</td><td>± 0.03</td><td>901.5</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="120">
+                    <p class="img_tit"><b>表2 传感器参数表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="120" border="1"><tr><td>力</td><td><i>F</i><sub><i>x</i></sub>/N</td><td><i>F</i><sub><i>y</i></sub>/N</td><td><i>F</i><sub><i>z</i></sub>/N</td><td><i>T</i><sub><i>x</i></sub>/(Nm)</td><td><i>T</i><sub><i>y</i></sub>/(Nm)</td><td><i>T</i><sub><i>z</i></sub>/(Nm)</td></tr><tr><td><br />测量范围</td><td>±580</td><td>±580</td><td>±1160</td><td>±20</td><td>±20</td><td>±20</td></tr><tr><td><br />分辨率</td><td>1/2</td><td>1/2</td><td>1/2</td><td>1/94</td><td>1/94</td><td>1/188</td></tr><tr><td><br />精度/%</td><td>1.75</td><td>1.25</td><td>1.00</td><td>1.25</td><td>1.75</td><td>1.00</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="121">在根据装配工况完成了机器人和传感器选型之后,我们进行了机器人装配系统的搭建:</p>
+                </div>
+                <div class="p1">
+                    <p id="122">①首先将力传感器安装在机器人末端,然后对机器人和传感器进行标定;</p>
+                </div>
+                <div class="p1">
+                    <p id="123">②将待装配工件通过法兰安装在传感器上;</p>
+                </div>
+                <div class="p1">
+                    <p id="124">③对待装配工件的质量参数进行标定,并进行重力补偿;</p>
+                </div>
+                <div class="p1">
+                    <p id="125">④操作人员推动传感器和待装配工件之间的连接法兰运动,完成装配任务;同时控制软件实时采集并记录装配过程力/力矩传感器数据。</p>
+                </div>
+                <h4 class="anchor-tag" id="126" name="126"><b>3.2 结果分析</b></h4>
+                <div class="p1">
+                    <p id="127">在装配过程中,首先对待装配工件进行质量参数标定,可知在工具坐标系{<i>T</i>}下,待装配工件质心的(<i>x</i>, <i>y</i>, <i>z</i>)坐标位于(0.109 4 m, 0.008 7 m, 0.057 5 m)处,重力为78.32 N。然后对待装配工件进行重力补偿,开始装配过程。装配过程中力和力矩随时间的变化如图5所示。根据现场工况及装配要求,装配过程中力和力矩大小的阈值范围分别为(5 N, 10 N)和(0.5 Nm, 1 Nm)。</p>
+                </div>
+                <div class="area_img" id="128">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSYY201904014_128.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="▲图5 力/力矩随时间的变化关系" src="Detail/GetImg?filename=images/JSYY201904014_128.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">▲图5 力/力矩随时间的变化关系  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSYY201904014_128.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="129">对上述试验数据进行分析可知,在时间段0 min～4 min,将待装配工件移动到装配位置,移动过程中,在<i>X</i>、<i>Y</i>、<i>Z</i>三个方向上力的变化如图5(a)(b)(c)所示,力矩的变化如图5(d)(e)(f)所示。由图可知,在工件移动过程中,作用在法兰上的推力均小于10 N,力矩均小于1 Nm。由此可见,操作人员可用较小的力控制工件的移动,极大减轻了操作人员的工作强度。时间段4 min～5 min为拧螺钉过程,由图可知在螺钉拧紧过程中,工件接触力和接触力矩分别小于最大接触力5 N和最大接触力矩0.5 Nm,符合装配要求。</p>
+                </div>
+                <h3 id="130" name="130" class="anchor-tag">4 结 论</h3>
+                <div class="p1">
+                    <p id="131">针对目前卫星装配过程中仍然以手动装配或者支架车辅助装配的现状,本文研究了基于力觉交互控制的机械臂精密位姿控制技术。通过人机协作的方式,由机器人承载待装配工件重力,操作人员控制待装配工件的运动方向,进而实现卫星大部件的精密装配。</p>
+                </div>
+                <div class="p1">
+                    <p id="132">(1)本文首先从项目整体的角度分析了机器人装配系统的架构,并对机器人装配系统最核心的控制系统部分进行了详细地介绍和分析,可以为搭建类似机器人装配系统提供参考;</p>
+                </div>
+                <div class="p1">
+                    <p id="133">(2)在该系统的基础上,我们利用砝码只有竖直向下的重力的特点,提出了一种简单可行的机械臂初始位姿及六维力传感器初始力/力矩标定方法;</p>
+                </div>
+                <div class="p1">
+                    <p id="134">(3)本文对待装配工件的质量参数进行标定,并提出了外力/力矩分离算法,将操作人员作用力用于对机器人的运动方向的控制;</p>
+                </div>
+                <div class="p1">
+                    <p id="135">(4)根据分离地外力和外力矩,提出机械臂位姿控制算法;</p>
+                </div>
+                <div class="p1">
+                    <p id="136">(5)最后通过试验,对本文所提出的控制算法进行了验证,可以满足现场的使用要求。</p>
+                </div>
+                <div class="p1">
+                    <p id="137">与现有的方法相比,本文所用的方法优势在于系统结构简单,计算速度快,操作人员易于使用。本文作者后续将在此论文工作基础上,就多机器人协同装配,基于制造服务总线和信息物理系统的人机协作以及数字孪生等前沿方向在卫星装配过程中的应用继续开展研究。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="7">
+                            <a id="bibliography_" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HTHJ201205028&amp;v=MTM0ODFyQ1VSTE9lWmVScEZ5L2xXcnpNTFRuRFpMRzRIOVBNcW85SGJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[]</b>[ 1 ] 邱铁成,张满,张立伟,等.机器人在卫星舱板装配中的应用研究[J].航天器环境工程,2012.29(5):579-585.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HKGJ201421025&amp;v=MTU1NDVMRzRIOVhPcm85SFlZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZ5L2xXcnpNTFNiTVo=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[]</b>[ 2 ] 黎田,胡晓雪,姚为,等.机器人在航天装备自动化装配中的应用研究[J].航空制造技术,2014.465(21):102-104.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MOTO201703011&amp;v=MDIzMTh0R0ZyQ1VSTE9lWmVScEZ5L2xXcnpNS0NMZlliRzRIOWJNckk5RVpZUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[]</b>[ 3 ] 张立建,胡瑞钦,易旺民.基于六维力传感器的工业机器人末端负载受力感知研究[J].自动化学报,2017.43(3):439-447.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_" target="_blank" href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=JXXB201811009&amp;v=MjQ0MzBuTnJvOUZiWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGeS9sV3J6TUx6WFRiTEc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[]</b>[ 4 ] 胡瑞钦,张立建,孟少华,等.基于柔顺控制的航天器大部件机器人装配技术[J].机械工程学报,2018,54(11):85-93..
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYY201303018&amp;v=MTIxMjk5TE1ySTlFYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRnkvbFdyek1MejdTZDdHNEg=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[]</b>[ 5 ] 张铁,刘文波.基于模糊控制的机器人柔顺装配研究[J].机械设计与研究,2013.29(3):62-65.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015982012.nh&amp;v=MzA0MDRSTE9lWmVScEZ5L2xXcnpNVkYyNkc3cXdITkhOclpFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[]</b>[ 6 ] 颜丙聪.基于激光跟踪仪的某型号产品总装精测技术研究[D].哈尔滨:哈尔滨工业大学,2015.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XTYD201705032&amp;v=MTA2NDdUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRnkvbFdyek1QVG5TYXJHNEg5Yk1xbzlHWm9RS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[]</b>[ 7 ] 白丰,张明路,张小俊,等.关于卫星机器人地面装配的目标快速识别方法[J].系统工程与电子技术,2017.39(5):1160-1168.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JQRR201801010&amp;v=MTA3Nzh0R0ZyQ1VSTE9lWmVScEZ5L2xXcnpNTHp6WmZMRzRIOW5Ncm85RVpJUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[]</b>[ 8 ] 孟少华,胡瑞钦,张立建,等.一种基于机器人的航天器大型部件自主装配方法[J].机器人,2018.40(1):81-88.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_" target="_blank" href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=JSYY201802003&amp;v=MDA0NjJDVVJMT2VaZVJwRnkvbFdyek1MejdTZDdHNEg5bk1yWTlGWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[]</b>[ 9 ] 林远长,王锐,石珍,等.轻量化汽车焊接机器人视觉测量及焊接轨迹跟踪[J].机械设计与研究,2018.34(2):10-14.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Cobots for the automobileassembly line">
+
+                                <b>[10]</b> AKELLA P,PESHKIN M,COLGATE E,et al.Cobots for the automobile assembly line[C]// IEEE International Conference on Robotics &amp; Automation.IEEE,1999.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES09E130338A1C18A46B58474208873F75&amp;v=MTcwMDJmQ3BiUTM1TjlodzdpMnc2dz1OaWZPZmJPeGE5RFByNHhHYkpvT2YzMHh2aElWbURwMVRIam1yaEk5Y2JXWE03MmFDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> CHERUBINI A,PASSAMA R,CROSNIER A,et al.Collaborative manufacturing with physical human-robot interaction[J].Robotics and Computer-Integrated Manufacturing,2016.40:1-13.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011701867691&amp;v=Mjg0NTNUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTGpJSjE0ZGFSWT1OaWZPZmJLN0h0RE5xSTlFYk8wSUNuVTRvQk1UNg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> BLEY H,REINHART G,SELIGER G,et al.Appropriate human involvement in assembly and disassembly[J].CIRP Annals-Manufacturing Technology,2004.53(2):487-509.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011701866205&amp;v=MDMxMjc9TmlmT2ZiSzdIdEROcUk5RWJPMEpEbnc4b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTGpJSjE0ZGFSWQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> KRÜGER J,SURDILOVIC D.Robust control of force-coupled human-robot-interaction in assembly processes[J].CIRP Annals-Manufacturing Technology,2008.57(1):41-44.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1013319416.nh&amp;v=MTU5NzViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRnkvbFdyek1WRjI2SGJDNUY5WE5xWkU=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 林君健.基于力传感器的工业机器人主动柔顺装配系统研究[D].广州:华南理工大学,2013.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Bias estimation and gravity compensation for force-torque sensors">
+
+                                <b>[15]</b> VOUGIOUKAS S.Bias estimation and gravity compensation for force-torque sensors[C]//Proceedings of 3rd WSEAS Symposium on Mathematical Methods and Computational Techniques in Electrical Engineering.Athens,Greece:WSEAS Press.2001:82-85.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSYY201904014" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYY201904014&amp;v=MjE3NjFyQ1VSTE9lWmVScEZ5L2xXcnpNTHo3U2Q3RzRIOWpNcTQ5RVlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYxdXRzaUFKN2lkNmcwbGtJdFg2QT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

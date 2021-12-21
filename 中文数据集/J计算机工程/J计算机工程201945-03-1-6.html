@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130624138400000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201903001%26RESULT%3d1%26SIGN%3d%252bRkgOGQbKIMqstBh7ts55dl5Wb4%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201903001&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201903001&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201903001&amp;v=MTI4MjRSTE9lWmVSb0Z5L2hVYnpBTHo3QmJiRzRIOWpNckk5RlpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#49" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#52" data-title="1 UBM算法 ">1 UBM算法</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#80" data-title="2 UBM分布式过程中存在的问题 ">2 UBM分布式过程中存在的问题</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#86" data-title="3 分布式UBM算法设计 ">3 分布式UBM算法设计</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#87" data-title="3.1 总体框架">3.1 总体框架</a></li>
+                                                <li><a href="#90" data-title="3.2 数据抽样与检验度参数&lt;i&gt;E&lt;/i&gt;估计">3.2 数据抽样与检验度参数<i>E</i>估计</a></li>
+                                                <li><a href="#98" data-title="3.3 吸引度&lt;i&gt;A&lt;/i&gt;求解">3.3 吸引度<i>A</i>求解</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#110" data-title="4 基于Spark的分布式UBM算法实现 ">4 基于Spark的分布式UBM算法实现</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#150" data-title="5 实验结果与分析 ">5 实验结果与分析</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#160" data-title="6 结束语 ">6 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#71" data-title="&lt;b&gt;图1 UBM的贝叶斯网络图模型&lt;/b&gt;"><b>图1 UBM的贝叶斯网络图模型</b></a></li>
+                                                <li><a href="#83" data-title="&lt;b&gt;图2 查询词query和&amp;lt;query, doc&amp;gt;频率分布情况&lt;/b&gt;"><b>图2 查询词query和&lt;query, doc&gt;频率分布情况</b></a></li>
+                                                <li><a href="#89" data-title="&lt;b&gt;图3 分布式UBM算法总体框架&lt;/b&gt;"><b>图3 分布式UBM算法总体框架</b></a></li>
+                                                <li><a href="#92" data-title="&lt;b&gt;图4 检验度&lt;i&gt;E&lt;/i&gt;的欧式距离与样本大小的关系&lt;/b&gt;"><b>图4 检验度<i>E</i>的欧式距离与样本大小的关系</b></a></li>
+                                                <li><a href="#155" data-title="&lt;b&gt;图5 2种算法困惑度对比&lt;/b&gt;"><b>图5 2种算法困惑度对比</b></a></li>
+                                                <li><a href="#156" data-title="&lt;b&gt;图6 2种算法似然函数值对比&lt;/b&gt;"><b>图6 2种算法似然函数值对比</b></a></li>
+                                                <li><a href="#158" data-title="&lt;b&gt;表1 算法运行环境&lt;/b&gt;"><b>表1 算法运行环境</b></a></li>
+                                                <li><a href="#159" data-title="&lt;b&gt;图7 2种算法在不同测试数据上的运行时间比较&lt;/b&gt;"><b>图7 2种算法在不同测试数据上的运行时间比较</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="5">
+
+
+                                    <a id="bibliography_1" title=" CHUKLIN A, MARKOV I, RIJKE M D.Click models for Web search[J].Synthesis Lectures on Information Concepts, Retrieval, and Services, 2015, 7 (3) :110-115." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Click models for web search">
+                                        <b>[1]</b>
+                                         CHUKLIN A, MARKOV I, RIJKE M D.Click models for Web search[J].Synthesis Lectures on Information Concepts, Retrieval, and Services, 2015, 7 (3) :110-115.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_2" title=" CRASWELL N, ZOETER O, TAYLOR M, et al.An experimental comparison of click position-bias models[C]//Proceedings of 2008 International Conference on Web Search and Data Mining.New York, USA:ACM Press, 2008:87-94." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=An experimental comparison of click position-bias models">
+                                        <b>[2]</b>
+                                         CRASWELL N, ZOETER O, TAYLOR M, et al.An experimental comparison of click position-bias models[C]//Proceedings of 2008 International Conference on Web Search and Data Mining.New York, USA:ACM Press, 2008:87-94.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_3" title=" DUPRET G E, PIWOWARSKI B.A user browsing model to predict search engine click data from past observations[C]//Proceedings of International ACM SIGIR Conference on Research and Development in Information Retrieval.New York, USA:ACM Press, 2008:331-338." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A user browsing model to predict search engine click data from past observations">
+                                        <b>[3]</b>
+                                         DUPRET G E, PIWOWARSKI B.A user browsing model to predict search engine click data from past observations[C]//Proceedings of International ACM SIGIR Conference on Research and Development in Information Retrieval.New York, USA:ACM Press, 2008:331-338.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_4" title=" GUO F, LIU C, WANG Y M.Efficient multiple-click models in Web search[C]//Proceedings of the 2nd ACM International Conference on Web Search and Data Mining.New York, USA:ACM Press, 2009:124-131." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient multiple-click models in web search">
+                                        <b>[4]</b>
+                                         GUO F, LIU C, WANG Y M.Efficient multiple-click models in Web search[C]//Proceedings of the 2nd ACM International Conference on Web Search and Data Mining.New York, USA:ACM Press, 2009:124-131.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_5" title=" GUO F, LIU C, KANNAN A, et al.Click chain model in Web search[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2009:11-20." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Click chain model in web search">
+                                        <b>[5]</b>
+                                         GUO F, LIU C, KANNAN A, et al.Click chain model in Web search[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2009:11-20.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_6" title=" CHAPELLE O, ZHANG Y.A dynamic Bayesian network click model for Web search ranking[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2009:1-10." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A dynamic bayesian network click model for web search ranking">
+                                        <b>[6]</b>
+                                         CHAPELLE O, ZHANG Y.A dynamic Bayesian network click model for Web search ranking[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2009:1-10.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_7" title=" SKIERA B, ECKERT J, HINZ O.An analysis of the importance of the long tail in search engine marketing[J].Electronic Commerce Research and Applications, 2010, 9 (6) :488-494." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011300318464&amp;v=Mjg2MzFPZmJLN0h0RE5ySTlGWitvSENIbzlvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMbklKMW9XYVJvPU5pZg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         SKIERA B, ECKERT J, HINZ O.An analysis of the importance of the long tail in search engine marketing[J].Electronic Commerce Research and Applications, 2010, 9 (6) :488-494.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_8" title=" DEMPSTER A P, LAIRD N M, RUBIN D B, et al.Maximum Likelihood from incomplete data via the EM algorithm[J].Journal of the Royal Statistical Society, 1977, 39 (1) :1-38." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Maximum likelihood from incomplete data via the EM algorithm">
+                                        <b>[8]</b>
+                                         DEMPSTER A P, LAIRD N M, RUBIN D B, et al.Maximum Likelihood from incomplete data via the EM algorithm[J].Journal of the Royal Statistical Society, 1977, 39 (1) :1-38.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_9" title=" ZAHARIA M, CHOWDHURY M, FRANKLIN M J, et al.Spark:cluster computing with working sets[C]//Proceedings of USENIX Conference on Hot Topics in Cloud Computing.San Diego, USA:USENIX Association, 2010:5-10." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Spark:Cluster Computing With Working Sets">
+                                        <b>[9]</b>
+                                         ZAHARIA M, CHOWDHURY M, FRANKLIN M J, et al.Spark:cluster computing with working sets[C]//Proceedings of USENIX Conference on Hot Topics in Cloud Computing.San Diego, USA:USENIX Association, 2010:5-10.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_10" title=" 王超, 刘奕群, 马少平.搜索引擎点击模型综述[J].智能系统学报, 2016, 11 (6) :711-718." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZNXT201606001&amp;v=MDgyMDhaZVJvRnkvaFViekFQeVBUZXJHNEg5Zk1xWTlGWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2U=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         王超, 刘奕群, 马少平.搜索引擎点击模型综述[J].智能系统学报, 2016, 11 (6) :711-718.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_11" title=" RICHARDSON M, DOMINOWSKA E, RAGNO R.Predicting clicks:estimating the click-through rate for new ads[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2007:521-530." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Predicting clicks:estimating the click-through rate for new ads">
+                                        <b>[11]</b>
+                                         RICHARDSON M, DOMINOWSKA E, RAGNO R.Predicting clicks:estimating the click-through rate for new ads[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2007:521-530.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_12" title=" 王爱平, 张功营, 刘方.EM算法研究与应用[J].计算机技术与发展, 2009, 19 (9) :108-110." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJFZ200909031&amp;v=MjkwNDc0SHRqTXBvOUdaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9oVWJ6QU1pZk5kTEc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         王爱平, 张功营, 刘方.EM算法研究与应用[J].计算机技术与发展, 2009, 19 (9) :108-110.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_13" title=" SHVACHKO K, KUANG H, RADIA S, et al.The Hadoop distributed file system[C]//Proceedings of 2010 IEEE Symposium on Mass Storage Systems and Technologies.Washington D.C., USA:IEEE Press, 2010:1-10." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The Hadoop Distributed File System">
+                                        <b>[13]</b>
+                                         SHVACHKO K, KUANG H, RADIA S, et al.The Hadoop distributed file system[C]//Proceedings of 2010 IEEE Symposium on Mass Storage Systems and Technologies.Washington D.C., USA:IEEE Press, 2010:1-10.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_14" title=" KARAU H, KONWINSKI A, WENDELL P, et al.Learning spark:lightning-fast big data analytics[M].[S.l.]:O’Reilly Media, Inc., 2015." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning spark:lightning-fast big data analytics">
+                                        <b>[14]</b>
+                                         KARAU H, KONWINSKI A, WENDELL P, et al.Learning spark:lightning-fast big data analytics[M].[S.l.]:O’Reilly Media, Inc., 2015.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_15" title=" FAROOK S, LAKSHMI G, TARAKESWARA B.Spark is superior to map reduce over big data[J].International Journal of Computer Applications, 2016, 133:13-16." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Spark is superior to Map Reduce over Big Data">
+                                        <b>[15]</b>
+                                         FAROOK S, LAKSHMI G, TARAKESWARA B.Spark is superior to map reduce over big data[J].International Journal of Computer Applications, 2016, 133:13-16.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_16" title=" KWON Y, BALAZINSKA M, HOWE B, et al.A study of skew in mapreduce applications[EB/OL].[2018-01-05].http://nuage.cs.washington.edu/pubs/opencirrus2011.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A study of skew in mapreduce applications">
+                                        <b>[16]</b>
+                                         KWON Y, BALAZINSKA M, HOWE B, et al.A study of skew in mapreduce applications[EB/OL].[2018-01-05].http://nuage.cs.washington.edu/pubs/opencirrus2011.pdf.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_17" title=" RANA N, DESHMUKH S.Shuffle performance in apache Spark[J].International Journal of Engineering Research and Technology, 2015, 4 (2) :177-180." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Shuffle Performance in Apache Spark">
+                                        <b>[17]</b>
+                                         RANA N, DESHMUKH S.Shuffle performance in apache Spark[J].International Journal of Engineering Research and Technology, 2015, 4 (2) :177-180.
+                                    </a>
+                                </li>
+                                <li id="39">
+
+
+                                    <a id="bibliography_18" title=" AKBARINIA R, LIROZ-GISTAU M, AGRAWAL D, et al.An efficient solution for processing skewed mapreduce jobs[J].Database and Expert Systems Applications, 2015, 9262:417-429." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=An efficient solution for processing skewed mapreduce jobs">
+                                        <b>[18]</b>
+                                         AKBARINIA R, LIROZ-GISTAU M, AGRAWAL D, et al.An efficient solution for processing skewed mapreduce jobs[J].Database and Expert Systems Applications, 2015, 9262:417-429.
+                                    </a>
+                                </li>
+                                <li id="41">
+
+
+                                    <a id="bibliography_19" title=" TANG Z, MA W, LI K, et al.A data skew oriented reduce placement algorithm based on sampling[J].IEEE Transactions on Cloud Computing, 2016, 15 (6) :13-16." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A data skew oriented reduce placement algorithm based on sampling">
+                                        <b>[19]</b>
+                                         TANG Z, MA W, LI K, et al.A data skew oriented reduce placement algorithm based on sampling[J].IEEE Transactions on Cloud Computing, 2016, 15 (6) :13-16.
+                                    </a>
+                                </li>
+                                <li id="43">
+
+
+                                    <a id="bibliography_20" title=" LIU G, ZHU X, WANG J, et al.SP-partitioner:a novel partition method to handle intermediate data skew in Spark streaming[J].Future Generation Computer Systems, 2017, 86:1054-1063." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=SP-partitioner:a novel partition method to handle intermediate data skew in Spark streaming">
+                                        <b>[20]</b>
+                                         LIU G, ZHU X, WANG J, et al.SP-partitioner:a novel partition method to handle intermediate data skew in Spark streaming[J].Future Generation Computer Systems, 2017, 86:1054-1063.
+                                    </a>
+                                </li>
+                                <li id="45">
+
+
+                                    <a id="bibliography_21" title=" DAVIDSON A, OR A.Optimizing shuffle performance in Spark[EB/OL].[2018-01-05].https://people.eecs.berkeley.edu/～kubitron/courses/cs262a-F13/projects/reports/project16_report.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Optimizing shuffle performance in Spark">
+                                        <b>[21]</b>
+                                         DAVIDSON A, OR A.Optimizing shuffle performance in Spark[EB/OL].[2018-01-05].https://people.eecs.berkeley.edu/～kubitron/courses/cs262a-F13/projects/reports/project16_report.pdf.
+                                    </a>
+                                </li>
+                                <li id="47">
+
+
+                                    <a id="bibliography_22" title=" BREIMAN L.Bagging predictors[J].Machine Learning, 1996, 24 (2) :123-140." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00001339482&amp;v=MTUyOTJJMVk9Tmo3QmFyTzRIdEhOckl4TVlPTU5ZM2s1ekJkaDRqOTlTWHFScnhveGNNSDdSN3FlYnVkdEZDN2xWTHZL&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[22]</b>
+                                         BREIMAN L.Bagging predictors[J].Machine Learning, 1996, 24 (2) :123-140.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(03),1-6 DOI:10.19678/j.issn.1000-3428.0050119            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>一种分布式用户浏览点击模型算法</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="javascript:;">张浩盛伦</a>
+                                <a href="javascript:;">李翀</a>
+                                <a href="javascript:;">柯勇</a>
+                                <a href="javascript:;">张士波</a>
+                </h2>
+                    <h2>
+
+                    <span>中国科学院计算机网络信息中心</span>
+                    <span>中国科学院大学</span>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>为从海量搜索点击日志中快速挖掘用户行为, 提出一种分布式用户浏览点击模型 (UBM) 算法。原始UBM算法求出的检验度参数<i>E</i>只与搜索结果文档所在排序位置以及上一文档的点击位置有关, 且非常稳定, 基于此特性, 将EM迭代求解转换为抽样估计检验度以求解吸引度的分布式UBM算法。在Spark数据平台上进行仿真, 结果表明, 与原始UBM算法相比, 该算法能够解决点击日志中存在的严重数据倾斜问题, 且运行效率较高。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%82%B9%E5%87%BB%E6%97%A5%E5%BF%97&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">点击日志;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%82%B9%E5%87%BB%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">点击模型;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%94%A8%E6%88%B7%E6%B5%8F%E8%A7%88%E7%82%B9%E5%87%BB%E6%A8%A1%E5%9E%8B%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">用户浏览点击模型算法;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">搜索引擎;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Spark%E5%B9%B3%E5%8F%B0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Spark平台;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    张浩盛伦 (1993—) , 男, 硕士研究生, 主研方向为点击模型、分布式计算;;
+                                </span>
+                                <span>
+                                    *李翀 (通信作者) , 副研究员、博士;;
+                                </span>
+                                <span>
+                                    柯勇, 高级工程师;;
+                                </span>
+                                <span>
+                                    张士波, 工程师。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-01-05</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>中国科学院信息化专项“中国科学院信息化评估” (Y647021189);</span>
+                    </p>
+            </div>
+                    <h1><b>A Distributed User Browse Click Model Algorithm</b></h1>
+                    <h2>
+                    <span>ZHANG Haoshenglun</span>
+                    <span>LI Chong</span>
+                    <span>KE Yong</span>
+                    <span>ZHANG Shibo</span>
+            </h2>
+                    <h2>
+                    <span>Computer Network Information Center, Chinese Academy of Sciences</span>
+                    <span>University of Chinese Academy of Sciences</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>A distributed User Browse Click Model (UBM) algorithm is proposed to quickly mine user behavior from massive search click logs.The validation parameter <i>E</i> derived from the original UBM algorithm is only related to the ranking position of the search results and the click position of the previous document, and is very stable.Based on this characteristic, the EM iteration solution is transformed into a distributed UBM algorithm which estimates the test degree by sampling to solve the attraction degree.Results of simulation on Spark data platform show that compared with the original UBM algorithm, the proposed algorithm can solve the serious data skew problem in click log, and has higher efficiency.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=click%20log&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">click log;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=click%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">click model;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=User%20Browse%20Click%20Model%20(UBM)%20algorithm&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">User Browse Click Model (UBM) algorithm;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=search%20engine&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">search engine;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Spark%20platform&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Spark platform;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-01-05</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="49" name="49" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="50">随着互联网技术的快速发展以及网络中海量数据的增加, 搜索引擎已经成为人们获取信息的重要工具。用户在搜索过程中会产生点击日志数据, 利用和分析点击日志数据对改进搜索效果、提升用户搜索体验具有重要的现实意义和商业价值。点击模型通过挖掘点击日志数据, 基于一些前提假设建立概率图模型, 从而对用户的搜索行为进行建模。点击模型分为基础模型和高级模型两类<citation id="162" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。基础模型主要考虑位置偏执, 其典型代表有PBM<citation id="163" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>、用户浏览点击模型 (User Browse Click Model, UBM) <citation id="164" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>、CM<citation id="165" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>、DCM<citation id="166" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>、CCM<citation id="167" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>和DBN<citation id="168" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>。其中, UBM在各大搜索引擎的用户点击日志方面效果最好<citation id="169" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。高级模型在基础模型的基础上引入更多假设和参数, 如搜索结果列表的样式、用户的停留时间、非顺序浏览假设等。对搜索引擎产生的海量用户点击日志数据进行分析, 结果表明, 点击日志数据服从长尾分布<citation id="170" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>。UBM模型通过EM算法<citation id="171" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>进行迭代以求解吸引度<i>A</i>和检验度<i>E</i>, 由于UBM的求解特性, 对其进行分布式实现会存在严重的数据倾斜问题, 从而影响算法的效率。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">使用公开的搜索引擎日志分析UBM求解的参数, 发现检验度<i>E</i>参数很少, 通常只有几十个, 且非常稳定。针对这一特性, 本文提出一种分布式的UBM算法, 并在主流的Spark<citation id="172" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>分布式数据处理平台上进行实现, 以验证该算法解决数据倾斜问题的能力。</p>
+                </div>
+                <h3 id="52" name="52" class="anchor-tag">1 UBM算法</h3>
+                <div class="p1">
+                    <p id="53">设用户在一次搜索会话 (session) 的过程中, 输入一个需要搜索的查询词query, 该查询词将提交给搜索引擎, 搜索引擎返回搜索结果页 (Search Engine Result Page, SERP) 。SERP包含<i>M</i>个搜索结果列表<i>U</i>=&lt;<i>u</i><sub>1</sub>, <i>u</i><sub>2</sub>, …, <i>u</i><sub><i>r</i></sub>, …, <i>u</i><sub><i>M</i></sub>&gt;, 在通常情况下, <i>M</i>为10。搜索引擎根据排序算法对文档doc按照重要性进行排序, 排序越靠前表示重要性越高。用户在SERP上寻找其需要的搜索结果时, 会对搜索结果文档doc依次进行检验。如果在检验完一个文档doc后, 用户被该文档所吸引, 则会点击并打开文档doc对应的URL链接, 对关联内容进行查阅。因此, 用户的一次搜索行为涉及4个操作:</p>
+                </div>
+                <div class="p1">
+                    <p id="54">1) 检验度<i>E</i>:用户是否对文档进行检验。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">2) 吸引度<i>A</i>:用户对文档检验完之后, 是否被文档所吸引。该操作同时表现为对词和文档的相关性进行查询。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">3) 点击度<i>C</i>:用户是否点击了文档。</p>
+                </div>
+                <div class="p1">
+                    <p id="57">4) 满意度<i>S</i>:用户是否对搜索结果文档满意。</p>
+                </div>
+                <div class="p1">
+                    <p id="58">在上述4个操作中, 只有点击度<i>C</i>是可观测变量, 其余3个变量是隐变量。点击模型使用贝叶斯的方法, 根据不同的使用场景提出相应的假设, 然后建立概率图模型以求解隐变量。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">点击模型一般都基于顺序浏览假设或检验假设<citation id="173" type="reference"><link href="23" rel="bibliography" /><link href="25" rel="bibliography" /><sup>[<a class="sup">10</a>,<a class="sup">11</a>]</sup></citation>。顺序浏览假设认为用户在浏览搜索结果列表时是从上往下浏览。检验假设内容为:用户是否会点击搜索列表中的第<i>r</i>个结果<i>u</i><sub><i>r</i></sub>, 只取决于该结果是否被检验 (<i>E</i><sub><i>r</i></sub>=1) 以及该结果是否被用户所吸引 (<i>A</i><sub><i>r</i></sub>=1) , 同时这2个变量相互独立。该假设数学表达式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="60"><i>C</i><sub><i>r</i></sub>=1→<i>E</i><sub><i>r</i></sub>=1, <i>A</i><sub><i>r</i></sub>=1      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="61"><i>E</i><sub><i>r</i></sub>=0→<i>C</i><sub><i>r</i></sub>=0      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="62"><i>A</i><sub><i>r</i></sub>=0→<i>C</i><sub><i>r</i></sub>=0      (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="63">根据检验假设, 一个搜索结果被点击的概率可以用式 (4) 表示。</p>
+                </div>
+                <div class="p1">
+                    <p id="64"><i>P</i> (<i>C</i><sub><i>r</i></sub>=1) =<i>P</i> (<i>E</i><sub><i>r</i></sub>=1) <i>P</i> (<i>A</i><sub><i>r</i></sub>=1)      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="65">UBM算法对顺序浏览假设和检验假设进行分析, 发现文档doc的检验不仅与文档所在排序位置<i>r</i>有关, 还与上一个文档的点击位置<i>r</i>′有关<citation id="174" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。因此, 可以得到UBM模型的假设为:</p>
+                </div>
+                <div class="p1">
+                    <p id="66"><i>P</i> (<i>E</i><sub><i>r</i></sub>=1|<i>C</i><sub>1, 2, …, <i>r</i>-1</sub>) =<i>γ</i><sub><i>rr</i>′</sub>      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="67">其中, <i>r</i>′用数学语言描述为:</p>
+                </div>
+                <div class="p1">
+                    <p id="68" class="code-formula">
+                        <mathml id="68"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mi>r</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>max</mi></mrow><mrow><mo>{</mo><mrow><mrow><mrow><mi>k</mi><mo>∈</mo><mo stretchy="false">{</mo><mn>0</mn><mo>, </mo><mn>1</mn><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>r</mi><mo>-</mo><mn>1</mn><mo stretchy="false">}</mo><mo stretchy="false">|</mo><mi>c</mi><msub><mrow></mrow><mi>k</mi></msub><mo>=</mo><mn>1</mn></mrow><mo>}</mo></mrow></mrow></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="69">为方便计算, 本文设定<i>c</i><sub>0</sub>=1。</p>
+                </div>
+                <div class="p1">
+                    <p id="70">图1所示为UBM的贝叶斯网络图模型。其中, 左边的箭头集合表示检验概率<i>P</i> (<i>E</i><sub><i>r</i></sub>=1) 依赖于前面的点击事件<i>C</i><sub>1, 2, …, <i>r</i>-1</sub>, 右边的箭头集合表示点击事件<i>C</i><sub><i>r</i></sub>对当前文档后面的文档检验产生影响, <i>α</i><sub><i>qu</i></sub>为吸引度参数。</p>
+                </div>
+                <div class="area_img" id="71">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903001_071.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 UBM的贝叶斯网络图模型" src="Detail/GetImg?filename=images/JSJC201903001_071.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 UBM的贝叶斯网络图模型</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903001_071.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="72">通过概率图模型, 可以得到UBM的条件依赖公式:</p>
+                </div>
+                <div class="p1">
+                    <p id="73"><i>C</i><sub><i>r</i></sub>=1⇔<i>E</i><sub><i>r</i></sub>=1, <i>A</i><sub><i>r</i></sub>=1      (7) </p>
+                </div>
+                <div class="p1">
+                    <p id="74"><i>P</i> (<i>A</i><sub><i>r</i></sub>=1) =<i>α</i><sub><i>qu</i></sub>      (8) </p>
+                </div>
+                <div class="p1">
+                    <p id="75"><i>P</i> (<i>E</i><sub><i>r</i></sub>=1) =<i>P</i> (<i>E</i><sub><i>r</i></sub>=1|<i>C</i><sub>1, 2, …, <i>r</i>-1</sub>) =<i>γ</i><sub><i>rr</i>′</sub>      (9) </p>
+                </div>
+                <div class="p1">
+                    <p id="76"><i>P</i> (<i>C</i><sub><i>r</i></sub>=1) =<i>P</i> (<i>E</i><sub><i>r</i></sub>=1) <i>P</i> (<i>A</i><sub><i>r</i></sub>=1) =<i>α</i><sub><i>qu</i></sub><i>γ</i><sub><i>rr</i>′</sub>      (10) </p>
+                </div>
+                <div class="p1">
+                    <p id="77">UBM通过EM算法来求解隐变量参数<citation id="175" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。EM算法是一种迭代求解算法, 可以找到参数的极大似然估计, 其主要分为E步和M步, E步利用参数的现有估计计算其最大似然估计值, M步通过最大化最大似然值来计算参数值。由M步计算的参数估计值被用于下一个E步计算, 该过程不断交替进行<citation id="176" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>。式 (11) 是UBM模型检验度<i>E</i>和吸引度<i>A</i>的迭代求解公式, 具体求解细节可以参考文献<citation id="177" type="reference">[<a class="sup">3</a>]</citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="78" class="code-formula">
+                        <mathml id="78"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>α</mi><msubsup><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow><mrow><mo stretchy="false"> (</mo><mi>t</mi><mo>+</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></msubsup><mo>=</mo><mfrac><mn>1</mn><mrow><mrow><mo>|</mo><mrow><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>s</mi><mo>∈</mo><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow></munder><mrow><mrow><mo> (</mo><mrow><mi>c</mi><msubsup><mrow></mrow><mi>u</mi><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup><mo>+</mo><mrow><mo> (</mo><mrow><mn>1</mn><mo>-</mo><mi>c</mi><msubsup><mrow></mrow><mi>u</mi><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup></mrow><mo>) </mo></mrow><mfrac><mrow><mrow><mo> (</mo><mrow><mn>1</mn><mo>-</mo><mi>γ</mi><msubsup><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow><mrow><mo stretchy="false"> (</mo><mi>t</mi><mo stretchy="false">) </mo></mrow></msubsup></mrow><mo>) </mo></mrow><mi>α</mi><msubsup><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow><mrow><mo stretchy="false"> (</mo><mi>t</mi><mo stretchy="false">) </mo></mrow></msubsup></mrow><mrow><mn>1</mn><mo>-</mo><mi>γ</mi><msubsup><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow><mrow><mo stretchy="false"> (</mo><mi>t</mi><mo stretchy="false">) </mo></mrow></msubsup><mi>α</mi><msubsup><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow><mrow><mo stretchy="false"> (</mo><mi>t</mi><mo stretchy="false">) </mo></mrow></msubsup></mrow></mfrac></mrow><mo>) </mo></mrow></mrow></mstyle><mo>, </mo></mtd></mtr><mtr><mtd><mrow><mtext> </mtext><mtext> </mtext></mrow><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub><mo>=</mo><mrow><mo>{</mo><mrow><mi>S</mi><msub><mrow></mrow><mi>q</mi></msub><mo>:</mo><mi>u</mi><mo>∈</mo><mi>S</mi><msub><mrow></mrow><mi>q</mi></msub></mrow><mo>}</mo></mrow></mtd></mtr><mtr><mtd><mi>γ</mi><msubsup><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow><mrow><mo stretchy="false"> (</mo><mi>t</mi><mo>+</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></msubsup><mo>=</mo><mfrac><mn>1</mn><mrow><mrow><mo>|</mo><mrow><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>s</mi><mo>∈</mo><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow></munder><mrow><mrow><mo> (</mo><mrow><mi>c</mi><msubsup><mrow></mrow><mi>u</mi><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup><mo>+</mo><mrow><mo> (</mo><mrow><mn>1</mn><mo>-</mo><mi>c</mi><msubsup><mrow></mrow><mi>u</mi><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup></mrow><mo>) </mo></mrow><mfrac><mrow><mrow><mo> (</mo><mrow><mn>1</mn><mo>-</mo><mi>α</mi><msubsup><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow><mrow><mo stretchy="false"> (</mo><mi>t</mi><mo stretchy="false">) </mo></mrow></msubsup></mrow><mo>) </mo></mrow><mi>γ</mi><msubsup><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow><mrow><mo stretchy="false"> (</mo><mi>t</mi><mo stretchy="false">) </mo></mrow></msubsup></mrow><mrow><mn>1</mn><mo>-</mo><mi>γ</mi><msubsup><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow><mrow><mo stretchy="false"> (</mo><mi>t</mi><mo stretchy="false">) </mo></mrow></msubsup><mi>α</mi><msubsup><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow><mrow><mo stretchy="false"> (</mo><mi>t</mi><mo stretchy="false">) </mo></mrow></msubsup></mrow></mfrac></mrow><mo>) </mo></mrow></mrow></mstyle><mo>, </mo></mtd></mtr><mtr><mtd><mrow><mtext> </mtext><mtext> </mtext></mrow><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub><mo>=</mo><mrow><mo>{</mo><mrow><mi>s</mi><mo>:</mo><mi>c</mi><msubsup><mrow></mrow><msup><mi>r</mi><mo>′</mo></msup><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup><mo>=</mo><mn>1</mn><mo>, </mo><mi>c</mi><msubsup><mrow></mrow><mrow><msup><mi>r</mi><mo>′</mo></msup><mo>+</mo><mn>1</mn></mrow><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup><mo>=</mo><mn>0</mn><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>c</mi><msubsup><mrow></mrow><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup><mo>=</mo><mn>0</mn></mrow><mo>}</mo></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>1</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="79">由式 (11) 可以看出, 计算第<i>t</i>+1轮迭代的参数<i>α</i><sub><i>qu</i></sub>和<i>γ</i><sub><i>rr</i>′</sub>, 需要用到第<i>t</i>轮迭代的估计参数。</p>
+                </div>
+                <h3 id="80" name="80" class="anchor-tag">2 UBM分布式过程中存在的问题</h3>
+                <div class="p1">
+                    <p id="81">目前, 主流的分布式数据处理平台 (如Hadoop<citation id="178" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>和Spark等) 基本的编程范式都是基于MapReduce模型<citation id="182" type="reference"><link href="29" rel="bibliography" /><link href="31" rel="bibliography" /><link href="33" rel="bibliography" /><sup>[<a class="sup">13</a>,<a class="sup">14</a>,<a class="sup">15</a>]</sup></citation>。因MapReduce的机制特点, Hadoop存在数据倾斜问题, 大幅降低了运行效率<citation id="179" type="reference"><link href="35" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>。Spark扩展了MapReduce模型以支持更多的计算, 其可以覆盖更广泛的工作流, 同时使用了内存缓存数据机制, 但数据倾斜问题和数据shuffle过程等, 同样对Spark的性能产生了很大的负面影响<citation id="180" type="reference"><link href="37" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>。针对数据倾斜问题, 典型的缓解方法有提高数据的并行度<citation id="181" type="reference"><link href="39" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>、对数据的key进行拆分、减少shuffle过程等<citation id="183" type="reference"><link href="41" rel="bibliography" /><link href="43" rel="bibliography" /><link href="45" rel="bibliography" /><sup>[<a class="sup">19</a>,<a class="sup">20</a>,<a class="sup">21</a>]</sup></citation>。这些通用方法能在一定程度上提高运行效率, 但均未考虑UBM模型本身的特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="82">通过统计分析点击日志数据的分布可以发现, 点击日志存在严重的数据倾斜问题, 其总体按照长尾分布。对Yandex (http://imat-relpred.yandex.ru/en/datasets) 搜索引擎公开的数据集, 随机不放回抽样1%比例的搜索会话并统计频率, 选取频率排名前3 000的词, 得到频率分布情况如图2所示, 从中可以看出用户查询词query以及查询词query和文档doc组成的关键词分布情况。在抽样数据中, 头部出现的频率达到了千甚至万的级别, 而尾部数据只有个位数的频率, 差距非常大。通过抽样可以看出整体数据倾斜问题非常严重。</p>
+                </div>
+                <div class="area_img" id="83">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903001_083.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 查询词query和&lt;query, doc&gt;频率分布情况" src="Detail/GetImg?filename=images/JSJC201903001_083.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 查询词query和&lt;query, doc&gt;频率分布情况</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903001_083.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="84">UBM模型通过EM算法迭代求解, 每一轮参数的估计都需要用到上一轮参数。通过式 (11) 可以看出, 每一轮迭代求解参数<i>α</i><sub><i>qu</i></sub>需要将所有搜索会话中出现过相同的&lt;query, doc&gt;进行聚合求解 (在Spark中涉及aggregateByKey接口) , 同时, 由于要用到上一轮估计的参数, 需要将上一轮的参数连接到当前轮的参数上。在Hadoop、Spark等主流的分布式数据处理平台中, 上述2个操作都会把相同关键字key对应的数据在同一个执行单元上进行处理。分析UBM模型可以发现, 在聚合阶段和连接阶段, 其key分别为&lt;query, doc&gt;和&lt;<i>r</i>, <i>r</i>′&gt;, &lt;<i>r</i>, <i>r</i>′&gt;参数均匀分布, 不存在数据倾斜问题, 而&lt;query, doc&gt;存在严重的倾斜问题。高频的&lt;query, doc&gt;数据会聚集到同一个执行单元上, 造成执行单元内存压力过大, 同时, 由于不同执行单元处理的数据不均衡, 使得性能大幅降低。对于热点数据, 需要的资源 (内存、计算资源等) 多, 而非热点数据需要的资源少, 导致资源利用不均。此外, 热点数据需要的资源多, 如果执行单元满足不了其需求, 可能会导致程序执行失败。</p>
+                </div>
+                <div class="p1">
+                    <p id="85">通过以上分析可知, 点击日志中存在的数据倾斜问题是UBM模型分布式过程中的主要性能瓶颈。</p>
+                </div>
+                <h3 id="86" name="86" class="anchor-tag">3 分布式UBM算法设计</h3>
+                <h4 class="anchor-tag" id="87" name="87">3.1 总体框架</h4>
+                <div class="p1">
+                    <p id="88">如图3所示, 本文分布式UBM算法可以分为数据抽样、检验度参数<i>E</i>估计、吸引度<i>A</i>求解3个部分。数据抽样部分从海量点击日志中抽样小部分数据, 通过原始UBM算法对检验度<i>E</i>进行估计。为使得估计更加准确, 对海量点击日志进行多次抽样, 然后分别训练UBM模型, 得到多个检验度<i>E</i>的参数估计, 对它们求平均值从而使估计更准确且估计方差更小。吸引度<i>A</i>求解模块把检验度<i>E</i>作为观测变量, 通过直接求吸引度<i>A</i>解析解的方法, 把已有对海量数据进行迭代求解检验度<i>E</i>和吸引度<i>A</i>的算法, 优化成对小数据进行迭代估计检验度<i>E</i>以及对海量点击日志进行非迭代求解吸引度<i>A</i>的算法, 从而保证求解精度并大幅提高运行效率。</p>
+                </div>
+                <div class="area_img" id="89">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903001_089.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 分布式UBM算法总体框架" src="Detail/GetImg?filename=images/JSJC201903001_089.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 分布式UBM算法总体框架</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903001_089.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="90" name="90">3.2 数据抽样与检验度参数<i>E</i>估计</h4>
+                <div class="p1">
+                    <p id="91">数据抽样从总体点击日志中抽样<i>N</i>份数据, 选取合适的样本大小以及样本数目是估计检验度<i>E</i>的关键。样本越大、样本数目越多, 得到整体数据的分布信息就越多, 检验度<i>E</i>的估计就越准确, 但同时会增加执行时间。为选取合适的样本大小和样本数目, 需要度量检验度<i>E</i>之间的差异, 常用度量指标有欧式距离、马氏距离、余弦距离等。检验度<i>E</i>各分量的性质及权重系数相同, 对度量的贡献相等, 因此, 本文直接使用欧式距离来衡量。检验度<i>E</i>的欧式距离与样本大小关系如图4所示。其中, 图4 (a) 表示由抽样样本占比估计出来的检验度<i>E</i>与用整体数据求出的检验度<i>E</i>之间的欧式距离变化关系。由图4可以看出, 当样本大小占比达到3%时, 欧式距离趋于稳定。因此, 对于总体数据, 只要随机抽样3%～5%的数据即可, 数据量相当于缩小了20倍～30倍。</p>
+                </div>
+                <div class="area_img" id="92">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903001_092.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 检验度E的欧式距离与样本大小的关系" src="Detail/GetImg?filename=images/JSJC201903001_092.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 检验度<i>E</i>的欧式距离与样本大小的关系</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903001_092.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="93">由于每份抽样样本的数据很小, 且UBM算法是内存依赖算法, 可以直接在单机上并行运行以得到检验度<i>E</i>的估计值。对每份抽样数据, 用原始UBM算法算出相应的检验度估计<i>E</i><sub><i>i</i></sub>。为使得估计更加准确, 方差更小, 本文运用Bagging方法<citation id="184" type="reference"><link href="47" rel="bibliography" /><sup>[<a class="sup">22</a>]</sup></citation>对所有的<i>E</i><sub><i>i</i></sub>求均值, 得到最终的<mathml id="94"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi>E</mi><mo>¯</mo></mover></math></mathml>:</p>
+                </div>
+                <div class="p1">
+                    <p id="95" class="code-formula">
+                        <mathml id="95"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi>E</mi><mo>¯</mo></mover><mo>=</mo><mfrac><mrow><mi>E</mi><msub><mrow></mrow><mn>1</mn></msub><mo>+</mo><mi>E</mi><msub><mrow></mrow><mn>2</mn></msub><mo>+</mo><mo>⋯</mo><mo>+</mo><mi>E</mi><msub><mrow></mrow><mi>Ν</mi></msub></mrow><mi>Ν</mi></mfrac><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>2</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="96">图4 (<i>b</i>) 表示检验度E之间的欧式距离与样本数目的变化关系, 其中, 每个样本大小占总体数据的3%。从中可以看到, 当样本数目达到10时, 欧式距离基本收敛。</p>
+                </div>
+                <div class="p1">
+                    <p id="97">通过以上分析可知, 对整体数据抽样10个样本, 同时设定每个样本数据大小占比为3%, 就可以很好地估计出检验度<i>E</i>。</p>
+                </div>
+                <h4 class="anchor-tag" id="98" name="98">3.3 吸引度<i>A</i>求解</h4>
+                <div class="p1">
+                    <p id="99">原始UBM算法通过EM迭代求解, 随着迭代次数的增加, 最终检验度<i>E</i>和吸引度<i>A</i>会收敛且趋于稳定。吸引度<i>A</i>求解模块直接把检验度<i>E</i>当作一个已知变量。假设迭代收敛后<i>α</i><mathml id="100"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow><mrow><mo stretchy="false"> (</mo><mi>t</mi><mo>+</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>=<i>α</i><mathml id="101"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow><mrow><mo stretchy="false"> (</mo><mi>t</mi><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>, 由式 (11) 可以得到:</p>
+                </div>
+                <div class="p1">
+                    <p id="102" class="code-formula">
+                        <mathml id="102"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>α</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mrow><mo>|</mo><mrow><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>s</mi><mo>∈</mo><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow></munder><mrow><mrow><mo> (</mo><mrow><mi>c</mi><msubsup><mrow></mrow><mi>u</mi><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup><mo>+</mo><mrow><mo> (</mo><mrow><mn>1</mn><mo>-</mo><mi>c</mi><msubsup><mrow></mrow><mi>u</mi><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup></mrow><mo>) </mo></mrow><mfrac><mrow><mo stretchy="false"> (</mo><mn>1</mn><mo>-</mo><mover accent="true"><mi>γ</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow></msub><mo stretchy="false">) </mo><mi>α</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow><mrow><mn>1</mn><mo>-</mo><mover accent="true"><mi>γ</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow></msub><mi>α</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow></mfrac></mrow><mo>) </mo></mrow></mrow></mstyle><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>3</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="103">其中, <mathml id="104"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi>γ</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow></msub></mrow></math></mathml>表示检验度<i>E</i>的估计值。式 (13) 无法直接求解析解。注意到式 (13) 中的<mathml id="105"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>1</mn><mo>-</mo><mover accent="true"><mi>γ</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow></msub><mi>α</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow></math></mathml>, 假设用户的每一次搜索会话都是相等的, 则可以得到:</p>
+                </div>
+                <div class="p1">
+                    <p id="106" class="code-formula">
+                        <mathml id="106"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mo stretchy="false">|</mo><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub><mo stretchy="false">|</mo><mo stretchy="false"> (</mo><mn>1</mn><mo>-</mo><mover accent="true"><mi>γ</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow></msub><mi>α</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub><mo stretchy="false">) </mo><mo>=</mo><mo stretchy="false"> (</mo><mn>1</mn><mo>-</mo><mover accent="true"><mi>γ</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow></msub><mi>α</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub><mo stretchy="false">) </mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>s</mi><mo>∈</mo><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow></munder><mi>c</mi></mstyle><msubsup><mrow></mrow><mi>u</mi><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup><mo>+</mo></mtd></mtr><mtr><mtd><mrow><mtext> </mtext><mtext> </mtext></mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>s</mi><mo>∈</mo><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow></munder><mo stretchy="false"> (</mo></mstyle><mn>1</mn><mo>-</mo><mi>c</mi><msubsup><mrow></mrow><mi>u</mi><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup><mo stretchy="false">) </mo><mo stretchy="false"> (</mo><mn>1</mn><mo>-</mo><mover accent="true"><mi>γ</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow></msub><mo stretchy="false">) </mo><mi>α</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>4</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="107">展开得到:</p>
+                </div>
+                <div class="p1">
+                    <p id="108" class="code-formula">
+                        <mathml id="108"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mo stretchy="false">|</mo><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub><mo stretchy="false">|</mo><mover accent="true"><mi>γ</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow></msub><mi>α</mi><msubsup><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow><mn>2</mn></msubsup><mo>+</mo><mrow><mo> (</mo><mrow><mrow><mo> (</mo><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>s</mi><mo>∈</mo><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow></munder><mo stretchy="false"> (</mo></mstyle><mn>1</mn><mo>-</mo><mi>c</mi><msubsup><mrow></mrow><mi>u</mi><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup><mo stretchy="false">) </mo><mo stretchy="false"> (</mo><mn>1</mn><mo>-</mo><mover accent="true"><mi>γ</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow></msub><mo stretchy="false">) </mo></mrow><mo>) </mo></mrow></mrow></mrow><mo>-</mo></mtd></mtr><mtr><mtd><mrow><mtext> </mtext><mtext> </mtext></mrow><mrow><mrow><mrow><mo> (</mo><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>s</mi><mo>∈</mo><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow></munder><mi>c</mi></mstyle><msubsup><mrow></mrow><mi>u</mi><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup></mrow><mo>) </mo></mrow><mover accent="true"><mi>γ</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow></msub><mo>-</mo><mo stretchy="false">|</mo><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub><mo stretchy="false">|</mo><mo>-</mo><mover accent="true"><mi>γ</mi><mo>¯</mo></mover><msub><mrow></mrow><mrow><mi>r</mi><msup><mi>r</mi><mo>′</mo></msup></mrow></msub></mrow><mo>) </mo></mrow><mi>α</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub><mo>+</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>s</mi><mo>∈</mo><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow></munder><mi>c</mi></mstyle><msubsup><mrow></mrow><mi>u</mi><mrow><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo></mrow></msubsup><mo>=</mo><mn>0</mn><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>5</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="109">式 (15) 可以很容易求解析解以得到检验度<i>A</i>。通过上述公式的转换, 通过一次求解就可以得到检验度<i>A</i>的值, 该过程将迭代算法转变成了非迭代算法。由于无需迭代, 不存在数据连接过程, 既解决了数据倾斜问题, 也大幅提高了算法的运行效率。</p>
+                </div>
+                <h3 id="110" name="110" class="anchor-tag">4 基于Spark的分布式UBM算法实现</h3>
+                <div class="p1">
+                    <p id="111">本文基于Spark平台实现分布式UBM算法。UBM算法主要分为检验度<i>E</i>估计、吸引度<i>A</i>求解2个部分, 分别如算法1、算法2所示。其中, 算法1包括数据抽样以及检验度<i>E</i>估计2个过程。</p>
+                </div>
+                <div class="p1">
+                    <p id="112"><b>算法1</b> 检验度<i>E</i>估计算法</p>
+                </div>
+                <div class="area_img" id="186">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201903001_18600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="127"><b>算法2</b> 吸引度<i>A</i>求解算法</p>
+                </div>
+                <div class="area_img" id="187">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201903001_18700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="187">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201903001_18701.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="150" name="150" class="anchor-tag">5 实验结果与分析</h3>
+                <div class="p1">
+                    <p id="151">为与原始UBM算法进行对比, 本文基于Spark平台实现了迭代版本的UBM算法 (下文简称为UBM1算法) 和分布式UBM算法 (下文简称为UBM2算法) , 并进行充分的调优。为比较各算法的性能, 使用Yandex开源的数据量最大的2012年数据集进行测试。该数据集中共有146 278 823个用户搜索会话、30 717 251个搜索词和117 093 258个搜索文档。</p>
+                </div>
+                <div class="p1">
+                    <p id="152">算法评估参数采用被广泛使用的似然函数 (Log-Likelihood) 以及困惑度 (Perplexity) , 两者都能衡量一个算法对数据的拟合程度<citation id="185" type="reference"><link href="7" rel="bibliography" /><link href="9" rel="bibliography" /><link href="11" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>。Log-Likelihood的计算方式如式 (16) , 其表示一个算法拟合真实点击行为的能力, 取值范围为 (-∞, 0) , 值越大表示模型的效果越好。Perplexity的计算方式如式 (17) , 其表示一个模型在之前行为未知的情况下预测当前行为的能力, 取值范围为 (1, 2) , 值越小表示模型效果越好。</p>
+                </div>
+                <div class="p1">
+                    <p id="153" class="code-formula">
+                        <mathml id="153"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>L</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mrow><mo>|</mo><mrow><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>s</mi><mo>∈</mo><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow></munder><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mi>c</mi></mstyle></mrow></mstyle><msubsup><mrow></mrow><mi>u</mi><mi>r</mi></msubsup><mtext>l</mtext><mtext>b</mtext><mspace width="0.25em" /><mi>Ρ</mi><mo stretchy="false"> (</mo><mi>c</mi><msubsup><mrow></mrow><mi>u</mi><mi>r</mi></msubsup><mo stretchy="false">) </mo><mo>+</mo><mo stretchy="false"> (</mo><mn>1</mn><mo>-</mo><mi>c</mi><msubsup><mrow></mrow><mi>u</mi><mi>r</mi></msubsup><mo stretchy="false">) </mo><mtext>l</mtext><mtext>b</mtext><mspace width="0.25em" /><mo stretchy="false"> (</mo><mn>1</mn><mo>-</mo><mi>Ρ</mi><mo stretchy="false"> (</mo><mi>c</mi><msubsup><mrow></mrow><mi>u</mi><mi>r</mi></msubsup><mo stretchy="false">) </mo><mo stretchy="false">) </mo><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>6</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>Ρ</mi><mi>e</mi><mi>r</mi><mo>=</mo><mn>2</mn><msup><mrow></mrow><mrow><mo>-</mo><mfrac><mn>1</mn><mrow><mrow><mo>|</mo><mrow><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>s</mi><mo>∈</mo><mi>S</mi><msub><mrow></mrow><mrow><mi>q</mi><mi>u</mi></mrow></msub></mrow></munder><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>r</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mi>c</mi></mstyle></mrow></mstyle><msub><mrow></mrow><mi>u</mi></msub><mtext>l</mtext><mtext>b</mtext><mspace width="0.25em" /><mi>q</mi><msubsup><mrow></mrow><mi>r</mi><mi>s</mi></msubsup><mo>+</mo><mo stretchy="false"> (</mo><mn>1</mn><mo>-</mo><mi>c</mi><msub><mrow></mrow><mi>u</mi></msub><mo stretchy="false">) </mo><mtext>l</mtext><mtext>b</mtext><mspace width="0.25em" /><mo stretchy="false"> (</mo><mn>1</mn><mo>-</mo><mi>q</mi><msubsup><mrow></mrow><mi>r</mi><mi>s</mi></msubsup><mo stretchy="false">) </mo></mrow></msup><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>7</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="154">本文在不同query频率下, 对比UBM1与UBM2 2种算法的差异。UBM1是迭代算法, 需要设置算法迭代终止条件, 本文设置收敛条件为评估指标Log-Likelihood收敛到千分位 (0.001) , 以充分保证算法收敛。图5和图6所示分别为2种UBM算法在不同query频率下的困惑度与似然函数对比结果。其中, 对于UBM2算法, 每个样本是从整体数据随机抽取3%所得的数据。从图5、图6可以看出, 由于先抽样样本再估计检验度<i>E</i>, UBM2算法在效果上略差于UBM1, 但是随着样本数目的增加, 其效果逐渐接近UBM1算法, 当抽样数目达到8时, UBM2与UBM1算法效果几乎没有差异。</p>
+                </div>
+                <div class="area_img" id="155">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903001_155.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 2种算法困惑度对比" src="Detail/GetImg?filename=images/JSJC201903001_155.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 2种算法困惑度对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903001_155.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="156">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903001_156.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 2种算法似然函数值对比" src="Detail/GetImg?filename=images/JSJC201903001_156.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 2种算法似然函数值对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903001_156.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="157">本文在表1所示的运行环境下, 对比不同数据量时2种算法的运行效率, 结果如图7所示。其中, 数据量的大小以3为指数递增。从图7可以看出, UBM1算法的运行时间递增非常快, 其以指数级递增。在抽样样本数与样本大小固定时, UBM2算法估计检验度<i>E</i>所花费的时间不随训练数据的递增而增加。在数据量较小时, 检验度<i>E</i>估计时间占比较大, 使得UBM2算法比UBM1算法运行时间长。但随着数据量的增加, 检验度<i>E</i>估计时间占比减小, UBM2算法运行时间增加值小于UBM1算法。在大数据量的情况下, UBM2算法的效率约是UBM1算法的20倍。</p>
+                </div>
+                <div class="area_img" id="158">
+                    <p class="img_tit"><b>表1 算法运行环境</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="158" border="1"><tr><td>Spark版本</td><td>Executor</td><td>Cores</td><td>Executor-Memory/G</td></tr><tr><td><br />1.6.0</td><td>10</td><td>2</td><td>3</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="159">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903001_159.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 2种算法在不同测试数据上的运行时间比较" src="Detail/GetImg?filename=images/JSJC201903001_159.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图7 2种算法在不同测试数据上的运行时间比较</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903001_159.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="160" name="160" class="anchor-tag">6 结束语</h3>
+                <div class="p1">
+                    <p id="161">UBM算法的检验度估计参数数目较少, 本文通过数据抽样的方法, 只使用少量数据估计出检验度。将该检验度作为一个观测变量, 使用极大似然估计求解搜索词和文档的吸引度。在此基础上, 基于Spark数据处理平台实现一种分布式UBM算法。实验结果表明, 当抽样数目较大时, 该算法的效果和原始UBM算法相当, 但其运行效率明显提升。下一步将在更多点击模型上对本文算法进行分布式的优化与实现。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="5">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Click models for web search">
+
+                                <b>[1]</b> CHUKLIN A, MARKOV I, RIJKE M D.Click models for Web search[J].Synthesis Lectures on Information Concepts, Retrieval, and Services, 2015, 7 (3) :110-115.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=An experimental comparison of click position-bias models">
+
+                                <b>[2]</b> CRASWELL N, ZOETER O, TAYLOR M, et al.An experimental comparison of click position-bias models[C]//Proceedings of 2008 International Conference on Web Search and Data Mining.New York, USA:ACM Press, 2008:87-94.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A user browsing model to predict search engine click data from past observations">
+
+                                <b>[3]</b> DUPRET G E, PIWOWARSKI B.A user browsing model to predict search engine click data from past observations[C]//Proceedings of International ACM SIGIR Conference on Research and Development in Information Retrieval.New York, USA:ACM Press, 2008:331-338.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient multiple-click models in web search">
+
+                                <b>[4]</b> GUO F, LIU C, WANG Y M.Efficient multiple-click models in Web search[C]//Proceedings of the 2nd ACM International Conference on Web Search and Data Mining.New York, USA:ACM Press, 2009:124-131.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Click chain model in web search">
+
+                                <b>[5]</b> GUO F, LIU C, KANNAN A, et al.Click chain model in Web search[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2009:11-20.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A dynamic bayesian network click model for web search ranking">
+
+                                <b>[6]</b> CHAPELLE O, ZHANG Y.A dynamic Bayesian network click model for Web search ranking[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2009:1-10.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011300318464&amp;v=MTMxNjJkR2VycVFUTW53WmVadUh5am1VTG5JSjFvV2FSbz1OaWZPZmJLN0h0RE5ySTlGWitvSENIbzlvQk1UNlQ0UFFIL2lyUg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> SKIERA B, ECKERT J, HINZ O.An analysis of the importance of the long tail in search engine marketing[J].Electronic Commerce Research and Applications, 2010, 9 (6) :488-494.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Maximum likelihood from incomplete data via the EM algorithm">
+
+                                <b>[8]</b> DEMPSTER A P, LAIRD N M, RUBIN D B, et al.Maximum Likelihood from incomplete data via the EM algorithm[J].Journal of the Royal Statistical Society, 1977, 39 (1) :1-38.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Spark:Cluster Computing With Working Sets">
+
+                                <b>[9]</b> ZAHARIA M, CHOWDHURY M, FRANKLIN M J, et al.Spark:cluster computing with working sets[C]//Proceedings of USENIX Conference on Hot Topics in Cloud Computing.San Diego, USA:USENIX Association, 2010:5-10.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZNXT201606001&amp;v=MjEyNzR6cXFCdEdGckNVUkxPZVplUm9GeS9oVWJ6QVB5UFRlckc0SDlmTXFZOUZaWVFLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 王超, 刘奕群, 马少平.搜索引擎点击模型综述[J].智能系统学报, 2016, 11 (6) :711-718.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Predicting clicks:estimating the click-through rate for new ads">
+
+                                <b>[11]</b> RICHARDSON M, DOMINOWSKA E, RAGNO R.Predicting clicks:estimating the click-through rate for new ads[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2007:521-530.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJFZ200909031&amp;v=MDAzMzMzenFxQnRHRnJDVVJMT2VaZVJvRnkvaFViekFNaWZOZExHNEh0ak1wbzlHWllRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 王爱平, 张功营, 刘方.EM算法研究与应用[J].计算机技术与发展, 2009, 19 (9) :108-110.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The Hadoop Distributed File System">
+
+                                <b>[13]</b> SHVACHKO K, KUANG H, RADIA S, et al.The Hadoop distributed file system[C]//Proceedings of 2010 IEEE Symposium on Mass Storage Systems and Technologies.Washington D.C., USA:IEEE Press, 2010:1-10.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning spark:lightning-fast big data analytics">
+
+                                <b>[14]</b> KARAU H, KONWINSKI A, WENDELL P, et al.Learning spark:lightning-fast big data analytics[M].[S.l.]:O’Reilly Media, Inc., 2015.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Spark is superior to Map Reduce over Big Data">
+
+                                <b>[15]</b> FAROOK S, LAKSHMI G, TARAKESWARA B.Spark is superior to map reduce over big data[J].International Journal of Computer Applications, 2016, 133:13-16.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A study of skew in mapreduce applications">
+
+                                <b>[16]</b> KWON Y, BALAZINSKA M, HOWE B, et al.A study of skew in mapreduce applications[EB/OL].[2018-01-05].http://nuage.cs.washington.edu/pubs/opencirrus2011.pdf.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Shuffle Performance in Apache Spark">
+
+                                <b>[17]</b> RANA N, DESHMUKH S.Shuffle performance in apache Spark[J].International Journal of Engineering Research and Technology, 2015, 4 (2) :177-180.
+                            </a>
+                        </p>
+                        <p id="39">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=An efficient solution for processing skewed mapreduce jobs">
+
+                                <b>[18]</b> AKBARINIA R, LIROZ-GISTAU M, AGRAWAL D, et al.An efficient solution for processing skewed mapreduce jobs[J].Database and Expert Systems Applications, 2015, 9262:417-429.
+                            </a>
+                        </p>
+                        <p id="41">
+                            <a id="bibliography_19" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A data skew oriented reduce placement algorithm based on sampling">
+
+                                <b>[19]</b> TANG Z, MA W, LI K, et al.A data skew oriented reduce placement algorithm based on sampling[J].IEEE Transactions on Cloud Computing, 2016, 15 (6) :13-16.
+                            </a>
+                        </p>
+                        <p id="43">
+                            <a id="bibliography_20" target="_blank" href="http://scholar.cnki.net/result.aspx?q=SP-partitioner:a novel partition method to handle intermediate data skew in Spark streaming">
+
+                                <b>[20]</b> LIU G, ZHU X, WANG J, et al.SP-partitioner:a novel partition method to handle intermediate data skew in Spark streaming[J].Future Generation Computer Systems, 2017, 86:1054-1063.
+                            </a>
+                        </p>
+                        <p id="45">
+                            <a id="bibliography_21" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Optimizing shuffle performance in Spark">
+
+                                <b>[21]</b> DAVIDSON A, OR A.Optimizing shuffle performance in Spark[EB/OL].[2018-01-05].https://people.eecs.berkeley.edu/～kubitron/courses/cs262a-F13/projects/reports/project16_report.pdf.
+                            </a>
+                        </p>
+                        <p id="47">
+                            <a id="bibliography_22" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00001339482&amp;v=MTA5MDg0ajk5U1hxUnJ4b3hjTUg3UjdxZWJ1ZHRGQzdsVkx2S0kxWT1OajdCYXJPNEh0SE5ySXhNWU9NTlkzazV6QmRo&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[22]</b> BREIMAN L.Bagging predictors[J].Machine Learning, 1996, 24 (2) :123-140.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201903001" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201903001&amp;v=MTI4MjRSTE9lWmVSb0Z5L2hVYnpBTHo3QmJiRzRIOWpNckk5RlpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="1" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

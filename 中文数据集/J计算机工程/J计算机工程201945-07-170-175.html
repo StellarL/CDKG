@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637129939985275000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201907027%26RESULT%3d1%26SIGN%3dE%252f3BBgxF%252bdFqy0VAO8oss4UFYGs%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201907027&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201907027&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201907027&amp;v=MzIxNTgvTkx6N0JiYkc0SDlqTXFJOUhZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ2poVWI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#35" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#40" data-title="1 DDTM设计 ">1 DDTM设计</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#47" data-title="2 DDTM形式化定义与算法实现 ">2 DDTM形式化定义与算法实现</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#135" data-title="3 DDTM实现与验证 ">3 DDTM实现与验证</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#137" data-title="3.1 DDTM功能实现">3.1 DDTM功能实现</a></li>
+                                                <li><a href="#147" data-title="3.2 DDTM性能分析">3.2 DDTM性能分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#171" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#42" data-title="&lt;b&gt;图1 DDTM概念模型&lt;/b&gt;"><b>图1 DDTM概念模型</b></a></li>
+                                                <li><a href="#140" data-title="&lt;b&gt;图2 系统数据容灾流程&lt;/b&gt;"><b>图2 系统数据容灾流程</b></a></li>
+                                                <li><a href="#156" data-title="&lt;b&gt;图3 系统性能对比&lt;/b&gt;"><b>图3 系统性能对比</b></a></li>
+                                                <li><a href="#165" data-title="&lt;b&gt;图4 系统开机时间对比&lt;/b&gt;"><b>图4 系统开机时间对比</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="186">
+
+
+                                    <a id="bibliography_1" title=" 周殷华, 范璐, 沈小白.我国Linux发展的成功模式:政府引导的产学研战略合作联盟——以中科红旗公司为例[J].中国软科学, 2008 (8) :85-92." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGRK200808011&amp;v=MTU0ODF5clpaYkc0SHRuTXA0OUVaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ2poVWIvTlA=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         周殷华, 范璐, 沈小白.我国Linux发展的成功模式:政府引导的产学研战略合作联盟——以中科红旗公司为例[J].中国软科学, 2008 (8) :85-92.
+                                    </a>
+                                </li>
+                                <li id="188">
+
+
+                                    <a id="bibliography_2" title=" GANTZ J F.The diverse and exploding digital universe[EB/OL].[2018-04-13].https://www.ifap.ru/libr ary/book268.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The diverse and exploding digital universe">
+                                        <b>[2]</b>
+                                         GANTZ J F.The diverse and exploding digital universe[EB/OL].[2018-04-13].https://www.ifap.ru/libr ary/book268.pdf.
+                                    </a>
+                                </li>
+                                <li id="190">
+
+
+                                    <a id="bibliography_3" title=" 凌杭, 吴震.杜之波.基于汉明重的EPCBC代数侧信道攻击[J].计算机工程, 2017, 43 (8) :156-160, 168." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201708027&amp;v=Mjk4MzJwNDlIWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRkNqaFViL05MejdCYmJHNEg5Yk0=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         凌杭, 吴震.杜之波.基于汉明重的EPCBC代数侧信道攻击[J].计算机工程, 2017, 43 (8) :156-160, 168.
+                                    </a>
+                                </li>
+                                <li id="192">
+
+
+                                    <a id="bibliography_4" title=" 莫樱.基于病毒行为分析的特征码的提取与检测[D].成都:电子科技大学, 2011." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1011194256.nh&amp;v=MTE1NjNVUkxPZVplUnBGQ2poVWIvTlZGMjZIN0t4R3RQSnFaRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         莫樱.基于病毒行为分析的特征码的提取与检测[D].成都:电子科技大学, 2011.
+                                    </a>
+                                </li>
+                                <li id="194">
+
+
+                                    <a id="bibliography_5" title=" 柯圣财, 赵永威, 李弼程, 等.基于卷积神经网络和监督核哈希的图像检索方法[J].电子学报, 2017, 45 (1) :157-163." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZXU201701022&amp;v=MjU3OTNDamhVYi9OSVRmVGU3RzRIOWJNcm85SFpvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         柯圣财, 赵永威, 李弼程, 等.基于卷积神经网络和监督核哈希的图像检索方法[J].电子学报, 2017, 45 (1) :157-163.
+                                    </a>
+                                </li>
+                                <li id="196">
+
+
+                                    <a id="bibliography_6" title=" 周云霞, 赵跃龙, 杨希.智能网络磁盘存储系统的容灾研究[J].计算机研究与发展, 2012, 49 (7) :1587-1592." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201207027&amp;v=MTk4ODdUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRkNqaFViL05MeXZTZExHNEg5UE1xSTlIWTRRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         周云霞, 赵跃龙, 杨希.智能网络磁盘存储系统的容灾研究[J].计算机研究与发展, 2012, 49 (7) :1587-1592.
+                                    </a>
+                                </li>
+                                <li id="198">
+
+
+                                    <a id="bibliography_7" title=" 刘正伟, 张华忠, 文中领.海量数据持续数据保护技术研究及实现[J].计算机研究与发展, 2012, 49 (1) , 37-41." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ2012S1010&amp;v=MDE4NTVoVWIvTkx5dlNkTEc0SDlPdnJvOUVaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ2o=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         刘正伟, 张华忠, 文中领.海量数据持续数据保护技术研究及实现[J].计算机研究与发展, 2012, 49 (1) , 37-41.
+                                    </a>
+                                </li>
+                                <li id="200">
+
+
+                                    <a id="bibliography_8" title=" 王子伟, 王晓京.基于低密度随机纠删码的TFS容灾优化方案[J].计算机应用, 2016, 36 (s2) :66-68, 81." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY2016S2017&amp;v=MjEyOTlOTHo3QmQ3RzRIOWV2clk5RVk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDamhVYi8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         王子伟, 王晓京.基于低密度随机纠删码的TFS容灾优化方案[J].计算机应用, 2016, 36 (s2) :66-68, 81.
+                                    </a>
+                                </li>
+                                <li id="202">
+
+
+                                    <a id="bibliography_9" title=" 滕鹏国, 张景中, 陈亮.随机阵列码:一种高容灾易扩展的RAID存储容灾方法[J].工程科学与技术, 2017, 49 (3) :110-116." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SCLH201703014&amp;v=MTc1MDFyQ1VSTE9lWmVScEZDamhVYi9OTmk3SFpyRzRIOWJNckk5RVlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         滕鹏国, 张景中, 陈亮.随机阵列码:一种高容灾易扩展的RAID存储容灾方法[J].工程科学与技术, 2017, 49 (3) :110-116.
+                                    </a>
+                                </li>
+                                <li id="204">
+
+
+                                    <a id="bibliography_10" title=" 林国勇, 黄帆.一种用于云计算的数据容灾分配算法的改进[J].科学技术与工程, 2017, 17 (1) :260-264." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KXJS201701047&amp;v=Mjk5NDhIOWJNcm85Qlk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDamhVYi9OTGpYQmZiRzQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         林国勇, 黄帆.一种用于云计算的数据容灾分配算法的改进[J].科学技术与工程, 2017, 17 (1) :260-264.
+                                    </a>
+                                </li>
+                                <li id="206">
+
+
+                                    <a id="bibliography_11" title=" ALSHAMMARI M M, ALWAN A A, NORDIN A, et al.Disaster recovery with minimum replica plan for reliability checking in multi-cloud[J].Procedia Computer Science, 2018, 130:247-254." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES644401AEB65FABB1B83EAFE375E48A53&amp;v=MDMzOTBRMzVOOWl4THk5d0swPU5pZk9mYlc4R3RYTXJ2NHdGdTBLZWcxTHZSZGg0andJT1FtWHJ4VXdETGFjTkwrY0NPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         ALSHAMMARI M M, ALWAN A A, NORDIN A, et al.Disaster recovery with minimum replica plan for reliability checking in multi-cloud[J].Procedia Computer Science, 2018, 130:247-254.
+                                    </a>
+                                </li>
+                                <li id="208">
+
+
+                                    <a id="bibliography_12" title=" 程万前, 阮慧, 郭少艾, 等.LDO稳压器对嵌入式系统掉电保护作用的研究[J].电源技术, 2016, 40 (6) :1290-1292." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DYJS201606048&amp;v=MjUyOTE0TzN6cXFCdEdGckNVUkxPZVplUnBGQ2poVWIvTklUVEJmYkc0SDlmTXFZOUJiSVFLREg4NHZSNFQ2ajU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         程万前, 阮慧, 郭少艾, 等.LDO稳压器对嵌入式系统掉电保护作用的研究[J].电源技术, 2016, 40 (6) :1290-1292.
+                                    </a>
+                                </li>
+                                <li id="210">
+
+
+                                    <a id="bibliography_13" title=" 杨毓军, 苏晨, 张俊安, 等.一种多电源信号处理系统的保护电路设计[J].微电子学, 2013, 43 (3) :401-404." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MINI201303022&amp;v=Mjg5NTh0R0ZyQ1VSTE9lWmVScEZDamhVYi9OS0NURlo3RzRIOUxNckk5SFpvUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         杨毓军, 苏晨, 张俊安, 等.一种多电源信号处理系统的保护电路设计[J].微电子学, 2013, 43 (3) :401-404.
+                                    </a>
+                                </li>
+                                <li id="212">
+
+
+                                    <a id="bibliography_14" title=" 蔡德明.鸟哥的Linux私房菜[M].北京:人民邮电出版社, 2010." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787115226266001&amp;v=MDcwMTFuM3hFOWZidm5LcmlmWnU5dUZDdmlVTC9NSWw0UlhGcXpHYks1RzlQT3FZMURZdXNQRFJNOHp4VVNtRGQ5U0g3&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         蔡德明.鸟哥的Linux私房菜[M].北京:人民邮电出版社, 2010.
+                                    </a>
+                                </li>
+                                <li id="214">
+
+
+                                    <a id="bibliography_15" title=" OverlayFS[EB/OL].[2018-04-13].https://en.wikipedia.org/wiki/OverlayFS." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=OverlayFS">
+                                        <b>[15]</b>
+                                         OverlayFS[EB/OL].[2018-04-13].https://en.wikipedia.org/wiki/OverlayFS.
+                                    </a>
+                                </li>
+                                <li id="216">
+
+
+                                    <a id="bibliography_16" title=" WOLFGANG M.深入Linux内核架构[M].郭旭, 译.北京:人民邮电出版社, 2010." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787115227430004&amp;v=MjIwODZLNUc5UE9xSXRHWk9zUENCTTh6eFVTbURkOVNIN24zeEU5ZmJ2bktyaWZadTl1RkN2aVVML01JbDRSWEZxekdi&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         WOLFGANG M.深入Linux内核架构[M].郭旭, 译.北京:人民邮电出版社, 2010.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(07),170-175 DOI:10.19678/j.issn.1000-3428.0051549            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>具备完整性追溯的系统数据容灾机制</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%9C%E5%86%9B%E9%BE%99&amp;code=17298555&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">杜军龙</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%87%91%E4%BF%8A%E5%B9%B3&amp;code=36247623&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">金俊平</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%91%A8%E5%89%91%E6%B6%9B&amp;code=38104864&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">周剑涛</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%B1%9F%E8%A5%BF%E7%9C%81%E4%BF%A1%E6%81%AF%E4%B8%AD%E5%BF%83&amp;code=0187323&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">江西省信息中心</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对通用Linux平台因遭受异常攻击、破坏、宕机与病毒感染导致系统无法启动的问题, 提出一种系统数据容灾机制 (DDTM) 。以安全上下文为宿主对象, 基于可配置形式涵盖挂载预设、容灾粒度与改写策略库, 通过文件完整性的追溯构建动态改写链。在DDTM形式化定义的基础上, 给出细粒度的实现算法。实验结果表明, 该机制可靠性高、实用性强。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%95%B0%E6%8D%AE%E5%AE%B9%E7%81%BE&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">数据容灾;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%B3%BB%E7%BB%9F%E5%BC%82%E5%B8%B8&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">系统异常;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%96%87%E4%BB%B6%E5%AE%89%E5%85%A8%E4%B8%8A%E4%B8%8B%E6%96%87&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">文件安全上下文;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%AE%8C%E6%95%B4%E6%80%A7%E8%BF%BD%E6%BA%AF&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">完整性追溯;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8A%A8%E6%80%81%E6%94%B9%E5%86%99&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">动态改写;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    杜军龙 (1978—) , 男, 高级工程师, 主研方向为信息安全、电子政务, E-mail: dujl@ jiangxi. gov. cn;
+                                </span>
+                                <span>
+                                    金俊平, 研究员;;
+                                </span>
+                                <span>
+                                    周剑涛, 工程师。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-05-14</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>“核高基”重大专项“工业互联网安全操作系统产业化及规模化应用” (2017ZX01038103);</span>
+                    </p>
+            </div>
+                    <h1><b>System Data Disaster Tolerant Mechanism with Integrity Traceability</b></h1>
+                    <h2>
+                    <span>DU Junlong</span>
+                    <span>JIN Junping</span>
+                    <span>ZHOU Jiantao</span>
+            </h2>
+                    <h2>
+                    <span>Jiangxi Information Center</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>This paper proposes a system Data Disaster Tolerant Mechanism (DDTM) to address the problem that general Linux platforms suffer from abnormal attacks, damage, downtime, and virus infection, which leads to system startup failure. The security context is used as a host object, and the configurable form covers the mount preset, the disaster tolerance granularity, and the rewriting policy library. A dynamic rewriting chain is built by traceability of file integrity.Based on the formal definition of DDTM, a fine-grained implementation algorithm is given.Experimental results show that the mechanism is of high reliability and practicability.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=data%20tolerance&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">data tolerance;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=system%20abnormal&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">system abnormal;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=file%20security%20context&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">file security context;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=integrity%20traceability&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">integrity traceability;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=dynamic%20rewriting&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">dynamic rewriting;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-05-14</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="35" name="35" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="36">随着信息技术的发展, 越来越多的数据存储于通用Linux平台中, 据IDC在数字宇宙的研究报告中指出, 预计到2020年, 全球数字量将达到35 ZB, 而中国将占据1/5<citation id="218" type="reference"><link href="186" rel="bibliography" /><link href="188" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>]</sup></citation>。在不同行业中, 集中式的数据存储方式给企业、单位、团体与个人都带来极大的便利, 但平台的容灾可靠性面临巨大的挑战。</p>
+                </div>
+                <div class="p1">
+                    <p id="37">目前, 通用Linux平台在遭受网络 (病毒) 攻击时, 当系统管理员误执行操作 (命令) 时, 如在专用领域移动作业过程中机器震荡 (瞬时掉电) 宕机时, 均可导致平台无法再次正常启动<citation id="219" type="reference"><link href="190" rel="bibliography" /><link href="192" rel="bibliography" /><link href="194" rel="bibliography" /><sup>[<a class="sup">3</a>,<a class="sup">4</a>,<a class="sup">5</a>]</sup></citation>。当企业、团体或个人PC机等平台发生此类问题, 会带来不同程度的经济损失。因此, 研究通用Linux平台在发生异常情况时的容灾措施具有重要意义。</p>
+                </div>
+                <div class="p1">
+                    <p id="38">面对平台的异常容灾问题, 国内外学者进行了大量研究。在抵抗网络攻击破坏的容灾方面, 文献<citation id="220" type="reference">[<a class="sup">6</a>]</citation>在智能网络存储系统上, 提出自免疫容灾恢复算法和后备智能网络磁盘容灾恢复算法, 将每一个智能网络磁盘 (Intelligent Network Disk, IND) 分成相等的记录区与备份区, 以多磁盘与多分区形式, 实现平台异常容灾的数据恢复。文献<citation id="221" type="reference">[<a class="sup">7</a>]</citation>构建了一种持续数据保护机制, 可以持续对系统所发生的任何改变进行捕捉和目标跟踪。文献<citation id="222" type="reference">[<a class="sup">8</a>]</citation>以纠删码对TFS中存放原数据的block块进行编码并生成冗余信息, 当异常发生, 借助冗余信息进行数据恢复。文献<citation id="223" type="reference">[<a class="sup">9</a>]</citation>以矩阵编码对存放原始数据进行不同磁盘域的标记, 当异常发生, 借助标记对数据进行高效率恢复。考虑到特殊情况下本地数据具有彻底损毁的可能性, 文献<citation id="226" type="reference">[<a class="sup">10</a>,<a class="sup">11</a>]</citation>给出一种通过异地备份的方法, 异地备份原理是依照预先设计的调度分配算法将数据资源在备份节点中进行文件副本拷贝, 以此避免数据的丢失。在防止异常掉电对系统造成影响的容灾方面, 文献<citation id="224" type="reference">[<a class="sup">12</a>]</citation>提出基于硬件实现的容灾机制, 借助LDO稳压器技术, 当系统异常掉电时, 可提供更加充足的时间, 以便随机存取存储器 (Random Access Memory, RAM) 与磁盘数据进行同步, 避免系统中索引节点数据不一致导致系统无法启动问题。文献<citation id="225" type="reference">[<a class="sup">13</a>]</citation>设计一款多电源信号处理保护电路, 一旦发现电源状态异常, 便给出供电切换信号, 确保系统后续正常工作。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">目前, 数据容灾相关研究主要集中在系统中“用户”的数据上, 而对系统自身数据容灾的相关研究较少。本文提出一种具备完整性追溯的系统数据容灾机制 (Data Disaster Tolerant Mechanism, DDTM) , 并对该机制进行了容灾模型设计、形式化语言描述与细粒度算法实现。</p>
+                </div>
+                <h3 id="40" name="40" class="anchor-tag">1 DDTM设计</h3>
+                <div class="p1">
+                    <p id="41">为使平台能在发生各种系统异常情况下, 有足够的可靠性与可用性, 本文提出一种具备完整性追溯的系统数据容灾机制。DDTM主要由保护实体 (Protected Entity, PE) 、构造客体 (Construct Object, CO) 、保护策略 (Protection Strategy, PS) 与动态改写链 (Dynamic Rewriting Chain, DRC) 共4部分组成, 其概念模型如图1所示。</p>
+                </div>
+                <div class="area_img" id="42">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907027_042.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 DDTM概念模型" src="Detail/GetImg?filename=images/JSJC201907027_042.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 DDTM概念模型</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907027_042.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="43">保护实体作为DDTM设计的初始发散点与校验回归点, 具有独特的结构特征 (文件系统的层级嵌套) 、操作属性 (<i>r</i>, <i>w</i>, <i>x</i>) 与应用功能 (配置文件、脚本、动态库、可执行文件与KO模块等) 。研究PE结构形式<citation id="227" type="reference"><link href="212" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>, 以树形集合概念刻画的PE结构特征可分为复合实体 (<i>cps</i>, DDTM层次化的宏观表述) 与原子实体 (<i>atm</i>, DDTM微层次化粒子表述) 2类。复合实体 (<i>PE</i><sub><i>cps</i></sub>=<i>PE</i><sub><i>scps</i></sub>∪<i>PE</i><sub><i>atm</i></sub>) 可层级嵌套子复合实体与原子实体。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">构造客体是PE在DDTM模式下的有效增量累积, 其结构特征、操作属性、应用功能与保护实体PE相同, 为方便模型区别表述, 构造客体中称为复合客体与原子客体。在CO中, 复合客体与原子客体是PE中复合实体与原子实体的动态增量叠加, 其内容统一而物理位置分离。为支持CO的完整性追溯查询, CO中的构造客体和原子客体存活周期有临时 (系统重启时, 经过文件完整性比对校验后, 自动消失) 、暂存 (系统重启时, 经过文件完整性比对校验后, 进行周期内的保存, 如支持30 d内的历史追溯查询) 与永久 (系统重启时, 经过文件完整性比对校验后, 对CO进行永久保存, 支持后续的历史追溯查询) 3种形式, 可根据实际查询需求进行策略配置。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">保护策略作为DDTM关键模块, 其延续了传统产品设计的可配置策略思想, 根据具体项目保护PE需求, 以作用点边界为切入对系统数据容灾机制完成挂载预设。根据系统启动过程, 挂载预设可选取initrd (在虚拟内存中进行截弧, 实现数据容灾机制) 与sysinit (内核启动完成后, 实现数据容灾机制) 。容灾粒度与改写策略库是PS的重要考虑因素, 粒度的粗细由立项需求中受保护实体PE而定, 具有被动性, 而改写策略库则是DDTM方案的实现细节体现, 由CO存活周期、挂载策略、改写路径、打标算法、安全检测 (Y/N) 与改写白名单共同组成, 具有主动性, 同时, 为避免策略库中数据存储依赖性, 均以配置文件形式存储。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">动态改写链, 在容灾机制进行数据恢复之前对系统数据进行了完整性追溯的可信校验, 同时, 借助安全上下文为宿主对象将完整性计算结果进行了存储隐藏, 进而提供一套高耦合、高可靠的数据改写功能。高耦合体现在前期在CO的文件安全上下文动态打标与后期完整性追溯校验的组合实现。其中, 动态打标借助内核hook技术, 在file_permission中截弧, 获取当前操作文件名称与全路径, 同时记录到用户层的改写白名单中, 然后由守护进程daemon查阅该白名单, 并判断是否符合PS中改写路径范畴, 若符合, 则在文件关闭状态的前提下, 对文件进行完整性计算, 并将计算结果存贮于文件安全上下文中;若不符, 则略过, 如图1中kernel部分所示。高可靠体现在后期完整性追溯的可信校验, 完整性追溯是打标的逆向工程, 首先判别PS中的改写路径与改写白名单文件是否可信, 若可信则结合改写路径与改写白名单, 对文件进行完整性计算, 然后与文件安全上下文中存贮值做对比, 相同则改写覆盖, 不同则略过。若不可信, 追溯并继续采用上次可信系统源数据。</p>
+                </div>
+                <h3 id="47" name="47" class="anchor-tag">2 DDTM形式化定义与算法实现</h3>
+                <div class="p1">
+                    <p id="48">本节基于DDTM概念模型基础上, 给出形式化定义, 同时, 在容灾机制实现的关键节点给出细粒度算法。</p>
+                </div>
+                <div class="p1">
+                    <p id="49"><b>定义1</b> (保护实体) 设<i>PE</i>是保护实体集合, 则每一个保护实体<i>pe</i>定义为一个四元组, 即:</p>
+                </div>
+                <div class="p1">
+                    <p id="50"><i>pe</i>=&lt;<i>id</i><sub><i>pe</i></sub>, <i>struct</i>, <i>attr</i>, <i>func</i>&gt;</p>
+                </div>
+                <div class="p1">
+                    <p id="51">其中, 标识符<i>id</i><sub><i>pe</i></sub>∈<i>ID</i><sub>1</sub> (<i>ID</i><sub>1</sub>为保护实体标识符集合) , 结构特征<i>struct</i>∈<i>Struct</i>, <i>Struct</i>={<i>cps</i>, <i>scps atm</i>}体现了系统文件层级嵌套与包含关系, 如:{&lt;<i>sda</i><sub>1</sub>, <i>sda</i><sub>2</sub>, …, <i>sda</i><sub><i>n</i></sub>&gt;, &lt;/etc, /var, …, /tmp&gt;, &lt;/etc/*, /var/*, …, /tmp/*&gt;}, 操作属性<i>attr</i>∈<i>Attribute</i>, <i>Attribute</i>={<i>r</i>, <i>w</i>, <i>x</i>}有读、写与执行共计3种形式, 应用功能<i>func</i>∈<i>Function</i>是系统中文件功能属性统称, 有配置文件、系统库文件、脚本文件、可执行文件与KO模块等。</p>
+                </div>
+                <div class="p1">
+                    <p id="52"><b>定义2</b> (构造客体) 设<i>CO</i>是构造客体集合, 则每一个构造客体<i>co</i>定义为一个五元组, 即:</p>
+                </div>
+                <div class="p1">
+                    <p id="53"><i>co</i>=&lt;<i>id</i><sub><i>co</i></sub>, <i>struct</i>, <i>attr</i>, <i>func</i>, <i>live</i>&gt;</p>
+                </div>
+                <div class="p1">
+                    <p id="54">其中, 标识符<i>id</i><sub><i>co</i></sub>∈<i>ID</i><sub>2</sub> (<i>ID</i><sub>2</sub>为构造客体标识符集合) , <i>struct</i>、<i>attr</i>、<i>func</i>同PE定义 (保护实体) 相同, 存活周期<i>live</i>∈<i>policy</i><sub><i>cycle</i></sub>由保护策略<i>PS</i>定义5设定。</p>
+                </div>
+                <div class="p1">
+                    <p id="55"><b>定义3</b> (保护实体与构造客体逻辑关系) 设<i>relation</i>为系统数据容灾机制中<i>PE</i>与<i>CO</i>的量化关系表示符, <i>relation</i>=&lt;<i>pe</i>, <i>co</i>, <i>union</i>&gt;, 其中, <i>pe</i>∈<i>PE</i>, <i>co</i>∈<i>CO</i>, <i>union</i>表示<i>pe</i>与<i>co</i>的联合。具体到系统文件, 设有文件名称为<i>afile</i>, 那么有:</p>
+                </div>
+                <div class="p1">
+                    <p id="56">1) <i>pe</i><sub><i>afile</i></sub>∪<i>co</i><sub><i>afile</i></sub>=<i>afile</i>。</p>
+                </div>
+                <div class="p1">
+                    <p id="57">2) <i>pe</i><sub><i>afile</i></sub>∩<i>co</i><sub><i>afile</i></sub>=Ø。</p>
+                </div>
+                <div class="p1">
+                    <p id="58"><b>定义4</b> (保护策略) 设<i>PS</i>是保护策略集合, 则每一个保护策略<i>ps</i>可定义为一个四元组, 即:</p>
+                </div>
+                <div class="p1">
+                    <p id="59"><i>ps</i>=&lt;<i>id</i><sub><i>ps</i></sub>, <i>request</i>, <i>point</i>, <i>policy</i>&gt;</p>
+                </div>
+                <div class="p1">
+                    <p id="60">其中, 标识符<i>id</i><sub><i>ps</i></sub>∈<i>ID</i><sub>3</sub> (<i>ID</i><sub>3</sub>为保护策略标识符集合) , 项目需求<i>request</i>∈<i>Request</i>是不同用户根据平台实际应用场景进而对项目立项实现功效的量化指标, 作用点<i>point</i>∈<i>Point</i>, <i>Point</i>={<i>initrd</i>, <i>sysinit</i>}, 改写策略库<i>police</i>∈<i>Policy</i>, <i>Policy</i>以文件形式存储, 包含CO存活周期、挂载策略、改写路径、打标算法、安全检测 (Y/N) 与改写白名单。</p>
+                </div>
+                <div class="p1">
+                    <p id="61"><b>定义5</b> (改写策略库) 设<i>PS</i><sub><i>policy</i></sub>为改写策略库集合, 则<i>policy</i>可定义为一个六元组, 即:<i>policy</i>=&lt;<i>cycle</i>, <i>mount</i>, <i>chgpath</i>, <i>algorithm</i>, <i>check</i>, <i>whitelist</i>&gt;</p>
+                </div>
+                <div class="p1">
+                    <p id="62">其中, <i>CO</i>存活周期<i>cycle</i>∈<i>Cycle</i>, <i>Cycle</i>={<i>temp</i>, <i>ltime</i>, <i>forever</i>}, <i>temp</i>为临时文件模式, 仅支持一次完整性比对校验追溯, <i>ltime</i>为暂存文件模式, 支持周期内完整性比对校验追溯, <i>forever</i>为永久文件模式, 支持后续历史的完整性比对校验追溯, 挂载策略<i>mount</i>∈<i>Mount</i>, <i>Mount</i>={<i>ram</i>, <i>partition</i>, <i>folder</i>}, <i>ram</i>是以内存形式作为系统数据容灾机制模式下的<i>rw</i>空间, <i>partition</i>是以硬盘分区形式作为<i>rw</i>空间 (双分区策略) , <i>folder</i>是以文件夹重构形式做为<i>rw</i>空间, 改写路径<i>chgpath</i>∈<i>Chgpath</i>, <i>Chgpath</i>默认设置为<i>default</i>, <i>default</i>和<i>all</i>状态值为全部改写, <i>nil</i>为不改写, 具体改写路径依据规则自行添加, 如<i>etc</i>&amp; <i>var</i>, 则为仅改写/<i>etc</i>和/<i>var</i>路径, 打标算法<i>algorithm</i>∈<i>Algorithm</i>, 默认采用md5算法, 如特殊需求支持自定义扩展, 安全检测<i>check</i>∈<i>Check</i>, <i>Check</i>={Y, N}, Y表示动态改写链启用完整性检测, N表示动态改写链不启用完整性检测, 改写白名单<i>whitelist</i>∈<i>Whitelist</i>, <i>Whitelist</i>={<i>path</i>, <i>filename</i>, <i>status</i>}, <i>path</i>为改写文件路径, <i>filename</i>为文件名, <i>status</i>表示是否已打标完成。</p>
+                </div>
+                <div class="p1">
+                    <p id="63">根据定义5, 算法1给出以作用点为边界切入实现系统数据容灾机制的可达性算法。</p>
+                </div>
+                <div class="p1">
+                    <p id="64"><b>算法1</b> 系统数据容灾机制可达性算法</p>
+                </div>
+                <div class="p1">
+                    <p id="65"><b>输入</b> 保护实体<i>PE</i><sub><i>cps</i></sub>与<i>PE</i><sub><i>atm</i></sub>, 保护策略<i>PS</i>, 项目立项需求<i>PS</i><sub><i>request</i></sub>, 作用点<i>PS</i><sub><i>point</i></sub>与改写策略库<i>PS</i><sub><i>policy</i></sub>及所属</p>
+                </div>
+                <div class="p1">
+                    <p id="66"><b>输出</b> 容灾机制执行结果</p>
+                </div>
+                <div class="p1">
+                    <p id="67">#define MYCORCT  0</p>
+                </div>
+                <div class="p1">
+                    <p id="68">#define MYERROR  -1</p>
+                </div>
+                <div class="p1">
+                    <p id="69">1.switch (PS<sub>request</sub>) //挂载预设</p>
+                </div>
+                <div class="p1">
+                    <p id="70">2.case "PE<sub>cps</sub> (sda/b/c) "</p>
+                </div>
+                <div class="p1">
+                    <p id="71">thenpoint<sub>initrd</sub>←point, flag=1;</p>
+                </div>
+                <div class="p1">
+                    <p id="72">3.case "PE<sub>cps</sub> (/etc, /var…/sys) ‖ PE<sub>atm</sub>\\</p>
+                </div>
+                <div class="p1">
+                    <p id="73"> (grub.conf, …, passwd) "</p>
+                </div>
+                <div class="p1">
+                    <p id="74">then point<sub>sysinit</sub>←point, flag=2;</p>
+                </div>
+                <div class="p1">
+                    <p id="75">4.default:return MYERROR;</p>
+                </div>
+                <div class="p1">
+                    <p id="76">5.if flag==1 //容灾策略挂载实现</p>
+                </div>
+                <div class="p1">
+                    <p id="77">mount -o ro PE<sub>cps</sub> ramdisk/ro/;//选取挂载策略</p>
+                </div>
+                <div class="p1">
+                    <p id="78">6.select policy<sub>mount</sub>{ram, partition}</p>
+                </div>
+                <div class="p1">
+                    <p id="79">7.if policy<sub>mount</sub>==ram</p>
+                </div>
+                <div class="p1">
+                    <p id="80">then applicate mem space;//生成CO读写区间</p>
+                </div>
+                <div class="p1">
+                    <p id="81">mount -o rw ram ramdisk/rw/;</p>
+                </div>
+                <div class="p1">
+                    <p id="82">8.else if policy<sub>mount</sub>==partition</p>
+                </div>
+                <div class="p1">
+                    <p id="83">then mkfs.ext4 sd._rw;</p>
+                </div>
+                <div class="p1">
+                    <p id="84">mount -o rw /sd._rw ramdisk/rw/;</p>
+                </div>
+                <div class="p1">
+                    <p id="85">9.mount -t unionFS ramdisk/ro/=ro, ramdisk/rw/=</p>
+                </div>
+                <div class="p1">
+                    <p id="86">rw, sysroot/;//双区联合挂载</p>
+                </div>
+                <div class="p1">
+                    <p id="87">10.chroot sysroot/;return MYCORRECT</p>
+                </div>
+                <div class="p1">
+                    <p id="88">11.else if flag==2</p>
+                </div>
+                <div class="p1">
+                    <p id="89">12.then point=point<sub>sysinit</sub>;</p>
+                </div>
+                <div class="p1">
+                    <p id="90">mv PE<sub>cps</sub>‖PE<sub>atm</sub> PE<sub>cps</sub>=ro‖PE<sub>atm</sub>=ro &amp; &amp; \\</p>
+                </div>
+                <div class="p1">
+                    <p id="91">mkdir PE<sub>cpsrw</sub>‖PE<sub>atmrw</sub></p>
+                </div>
+                <div class="p1">
+                    <p id="92">13.chroot sysroot/;return MYCORRECT</p>
+                </div>
+                <div class="p1">
+                    <p id="93">14.else return MYERROR;</p>
+                </div>
+                <div class="p1">
+                    <p id="94"><b>定义6</b> (动态改写链) 设<i>DC</i>是动态改写链集合, 则每一次动态改写<i>dc</i>可定义为一个五元组, 则:<i>dc</i>=&lt;<i>id</i><sub><i>dc</i></sub>, <i>policy</i><sub><i>dc</i></sub>, <i>label</i>, <i>compare</i>, <i>cover</i>&gt;。其中, 标识符<i>id</i><sub><i>dc</i></sub>∈<i>ID</i><sub>4</sub> (<i>ID</i><sub>4</sub>为动态改写链标识符集合) , 改写策略<i>policy</i><sub><i>dc</i></sub>∈<i>PS</i><sub><i>policy</i></sub>, 涉及策略库中改写路径<i>policy</i><sub><i>chgpath</i></sub>、打标算法<i>policy</i><sub><i>algorithm</i></sub>、安全检测<i>policy</i><sub><i>check</i></sub>与改写白名单<i>policy</i><sub><i>wihtelist</i></sub>, 打标<i>label</i>∈<i>Label</i>, <i>Label</i>是对文件安全上下文的动态打标, 比对<i>compare</i>∈<i>Compare</i>, 通过对文件完整性计算与文件安全上下文中的基准值做对比, 改写<i>cover</i>∈<i>Cover</i>, 根据改写路径与配置白名单对文进行动态改写。</p>
+                </div>
+                <div class="p1">
+                    <p id="95"><b>定义7</b> (完整性) 完整性是指系统数据的配置文件、系统库文件、脚本文件、可执行文件与KO模块被破坏或篡改的程度, 系统数据的完整性可表示为<i>integrity</i>, 且0≤<i>integrity</i>≤1。当未被破坏或篡改时, <i>integrity</i>=1;当部分信息被破坏或篡改时, 0&lt;<i>integrity</i>&lt;1;当完全被篡改或破坏时, <i>integrity</i>=0。</p>
+                </div>
+                <div class="p1">
+                    <p id="96"><b>定义8</b> (完整性追溯) 为确保系统数据容灾的高可靠性, 在完整性定义的基础上, 设读写区间中CO的可信度为<i>reliability</i>, <i>reliability</i>∈[<i>integrity</i><sub><i>min</i></sub>, <i>integrity</i><sub><i>max</i></sub>], 那么在打标时刻<i>t</i><sub>1</sub>和校验时刻<i>t</i><sub>2</sub>, 满足如下条件:</p>
+                </div>
+                <div class="p1">
+                    <p id="97">1) 若在<i>t</i><sub>1</sub>和<i>t</i><sub>2</sub>时刻, <i>n</i>=<i>m</i>, (&lt;<i>afile</i>, <i>t</i><sub>1</sub>&gt;→<i>n</i> &amp; &lt;<i>afile</i>, <i>t</i><sub>2</sub>&gt;→<i>m</i>) / (<i>afile</i>, <i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>&gt;) →<i>true</i>。</p>
+                </div>
+                <div class="p1">
+                    <p id="98">2) 若在<i>t</i><sub>1</sub>和<i>t</i><sub>2</sub>时刻, <i>n</i>≠<i>m</i>, (&lt;<i>afile</i>, <i>t</i><sub>1</sub>&gt;→<i>n</i> &amp; &lt;<i>afile</i>, <i>t</i><sub>2</sub>&gt;→<i>m</i>) / (&lt;<i>afile</i>, <i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>&gt;) →<i>false</i>。</p>
+                </div>
+                <div class="p1">
+                    <p id="99"><b>定义9</b> (容灾机制约束条件) 为使系统数据容灾机制具有可达性, 那么容灾机制的实现, 在读写区间中有容量 (<i>capacity</i>) , 恢复时间 (<i>time</i>) , 应满足式 (1) 和式 (2) 约束条件。</p>
+                </div>
+                <div class="p1">
+                    <p id="100" class="code-formula">
+                        <mathml id="100"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle></mrow><mtext> </mtext><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow></mrow></mstyle></mrow><mo stretchy="false"> (</mo><mi>c</mi><mi>o</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo>≤</mo><mi>c</mi><mi>a</mi><mi>p</mi><mi>a</mi><mi>c</mi><mi>i</mi><mi>t</mi><mi>y</mi><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>h</mi></mstyle><mi>a</mi><mi>s</mi><mi>h</mi><mo stretchy="false"> (</mo><mi>c</mi><mi>o</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>+</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo stretchy="false"> (</mo></mstyle><mi>c</mi><mi>o</mi><msub><mrow></mrow><mi>i</mi></msub><mo>→</mo><mi>p</mi><mi>e</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>=</mo><mi>t</mi><mi>i</mi><mi>m</mi><mi>e</mi><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="101">式 (1) 表示在容灾机制下, <i>capacity</i>应满足构造客体在<i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, …, <i>t</i><sub><i>m</i></sub>时刻的所有总量存储上限界值。式 (2) 恢复时间是完整性追溯与改写时间总和, 与CO数量有直接关系。</p>
+                </div>
+                <div class="p1">
+                    <p id="102">根据定义9, 基于文件完整性追溯, 算法2给出数据容灾机制改写算法。</p>
+                </div>
+                <div class="p1">
+                    <p id="103"><b>算法2</b> 数据容灾机制改写算法</p>
+                </div>
+                <div class="area_img" id="185">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201907027_18500.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="185">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201907027_18501.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="135" name="135" class="anchor-tag">3 DDTM实现与验证</h3>
+                <div class="p1">
+                    <p id="136">为验证系统数据容灾机制DDTM的可行性, 本文在满足实际项目需求的前提下, 按照DDTM设计思路, 在通用Linux平台中进行了定制产品化的实现与性能试验。为缩短开发周期, 实现过程中的<i>policy</i><sub><i>mount</i></sub>部分并没有完全自主研发, 而是借助了开源项目overlayfs的部分技术<citation id="228" type="reference"><link href="214" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>。</p>
+                </div>
+                <h4 class="anchor-tag" id="137" name="137">3.1 DDTM功能实现</h4>
+                <div class="p1">
+                    <p id="138">通过研究Linux平台启动过程, 平台无法启动的原因在于系统数据遭到异常的完整性破坏<citation id="229" type="reference"><link href="216" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>, 考虑到在满足项目<i>PS</i><sub><i>request</i></sub>前提下, 尽可能迎合不同客户的系统数据容灾需求, 选取保护实体<i>PE</i>为平台根 ($root) 目录, <i>PE</i>层级嵌套子复合实体 (<i>PE</i><sub><i>cps</i></sub>=/etc, /boot, …, /var) 与原子实体 (<i>PE</i><sub><i>atm</i></sub>=/etc/file*, /boot/file*, …, /var/run/file*) 。<i>PEattr</i>={<i>r</i>, <i>w</i>, <i>x</i>}涵盖读、写与执行权限。<i>PE</i><sub><i>func</i></sub>涵盖配置文件、系统库文件、脚本文件、可执行文件与KO模块。</p>
+                </div>
+                <div class="p1">
+                    <p id="139">参照DDTM与平台启动的映射关系, 遵循保护周期最大化原则, 选取作用点<i>PS</i><sub><i>point</i></sub>=<i>initrd</i>。根据定义5知, <i>policy</i><sub><i>mount</i></sub>={<i>ram</i>, <i>partition</i>, <i>folder</i>}, 由于<i>PE</i>整体相对较大, 牺牲<i>ram</i>空间换取的<i>rw</i>挂载, 势必导致平台运行性能降低, 因此双区联合挂载的<i>partition</i>策略为最佳抉择。采用双区联合挂载, 构造客体<i>CO</i>则动态建立在sda_rw分区中, <i>CO</i>是<i>PE</i>动态生成的有效增量累积, <i>CO</i><sub><i>attr</i></sub>与<i>CO</i><sub><i>func</i></sub>同<i>PE</i>中相同。为便于系统数据容灾模式下改写的回滚溯源, <i>CO</i><sub><i>live</i></sub>选取了<i>ltime</i>模式, 设定有效追溯周期为30 d。具体掉电保护实现流程如图2所示。</p>
+                </div>
+                <div class="area_img" id="140">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907027_140.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 系统数据容灾流程" src="Detail/GetImg?filename=images/JSJC201907027_140.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 系统数据容灾流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907027_140.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="141">系统数据库容灾流程具体描述如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="142">1) 系统开机启动, 首先进行BIOS加电自检, 然后经过系统MBR和grub引导进入initrd的虚拟内存盘。</p>
+                </div>
+                <div class="p1">
+                    <p id="143">2) 在虚拟内存盘中, 对系统文件mount过程截弧 (systemV与systemD两种启动方式的截弧思路相同, 嵌入过程略有不同) , 将默认系统磁盘区间的挂载策略替换为<i>policy</i><sub><i>mount</i></sub>, 根据系统数据容灾机制可达性算法1, 在<i>policy</i><sub><i>mount</i></sub>为<i>partition</i>双区联合挂载方式时, 执行mkfs.ext4将<i>rw</i>分区进行格式化, 然后借助overlayfs技术, 执行命令mount -t overlayfs -olowerdir=$root, upperdir=sda_rw sysroot/, 将$root分区和sda_rw分区联合挂载, 作为系统根分区。</p>
+                </div>
+                <div class="p1">
+                    <p id="144">3) 紧接着加载系统数据容灾的ddtm.ko模块, 此时改写file_permission钩子生效。ddtm.ko模块监控<i>PE</i><sub><i>cps</i></sub>和<i>PE</i><sub><i>atm</i></sub>文件行为, 一旦用户对之操作, KO模块便将<i>PE</i><sub><i>cps</i></sub>和<i>PE</i><sub><i>atm</i></sub>文件名称与路径写到<i>policy</i><sub><i>whitelist</i></sub>中, 等待守护进程ddtm_daemon操作。</p>
+                </div>
+                <div class="p1">
+                    <p id="145">4) 守护进程ddtm_daemon首先读取<i>policy</i><sub><i>check</i></sub>, 如果<i>policy</i><sub><i>check</i></sub>设置为0, 表示不启用完整性追溯检测;如果<i>policy</i><sub><i>check</i></sub>设置为1, 表示执行完整性追溯检测, 然后读取<i>policy</i><sub><i>chgpath</i></sub>, 对<i>policy</i><sub><i>chgpath</i></sub>路径中<i>policy</i><sub><i>whitelist</i></sub>文件进行状态检测, 按照<i>policy</i><sub><i>algorithm</i></sub>算法, 完成文件安全上下文的动态打标。</p>
+                </div>
+                <div class="p1">
+                    <p id="146">5) 当系统发生系统异常情况时, 再次启动系统。根据数据容灾机制改写算法2, 读取<i>policy</i><sub><i>check</i></sub>, 若为1, 则读取<i>policy</i><sub><i>chgpath</i></sub>&amp; &amp; <i>policy</i><sub><i>whitelist</i></sub>, 按照<i>policy</i><sub><i>algorithm</i></sub>对文件进行完整性计算, 如果值与文件安全上下文中存储的值相同, 则执行动态改写链中的改写操作;如果不同, 则略过改写操作。若为0, 表示不启用完整性追溯检测功能。</p>
+                </div>
+                <h4 class="anchor-tag" id="147" name="147">3.2 DDTM性能分析</h4>
+                <div class="p1">
+                    <p id="148">为验证本文系统数据容灾机制的性能损耗与改写所用时间, 在Linux通用系统平台中进行以下实验。</p>
+                </div>
+                <h4 class="anchor-tag" id="149" name="149">3.2.1 系统功耗</h4>
+                <div class="p1">
+                    <p id="150">本文系统功耗性能验证步骤描述如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="151"><b>步骤1</b> 选用2台同型号硬件机器, CPU为Intel (R) Core (TM) Duo E8400 3.0 GHz, Memory为4.00 GB, 操作系统为x86_64, 其他参数均视为理想状态值, 忽略其影响。</p>
+                </div>
+                <div class="p1">
+                    <p id="152"><b>步骤2</b> 在2台机器系统正常条件下, 执行1×10<sup>3</sup>次、5×10<sup>3</sup>次、1×10<sup>4</sup>次、5×10<sup>4</sup>次与1×10<sup>5</sup>次的文件打开与关闭操作, 同时记录全程消耗时间, 每组重复执行3次, 取均值。</p>
+                </div>
+                <div class="p1">
+                    <p id="153"><b>步骤3</b> 对2台机器进行系统数据容灾机制部署, 保护系统数据均按最小保护策略实现, 不涉及用户自定义保护数据。</p>
+                </div>
+                <div class="p1">
+                    <p id="154"><b>步骤4</b> 将2台机器分别执行执行10<sup>3</sup>次、5×10<sup>3</sup>次、1×10<sup>4</sup>次、5×10<sup>4</sup>次与1×10<sup>5</sup>次的文件打开与关闭操作, 同时记录全程消耗时间, 每组重复执行3次, 取均值。</p>
+                </div>
+                <div class="p1">
+                    <p id="155">两组数据结果对比如图3所示。</p>
+                </div>
+                <div class="area_img" id="156">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907027_156.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 系统性能对比" src="Detail/GetImg?filename=images/JSJC201907027_156.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 系统性能对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907027_156.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="157">与未添加DDTM机器相比, 本文提供的系统数据容灾机制, 在相同工作压力的情况下, 效率分别降低1.6%、1.5%、1.2%、1.1%和1.1%, 平均系统性能损耗为1.3%, 均在系统损耗偏差可接受范围内。</p>
+                </div>
+                <h4 class="anchor-tag" id="158" name="158">3.2.2 系统改写时间</h4>
+                <div class="p1">
+                    <p id="159">系统改写时间验证步骤描述如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="160"><b>步骤1</b> 2台测试机均已署系统数据容灾机制, 保护系统数据均按最小保护策略, 不涉及用户自定义保护数据。</p>
+                </div>
+                <div class="p1">
+                    <p id="161"><b>步骤2</b> 在2台机器正常情况下, 执行5次重启动操作, 全程记录启动时间。</p>
+                </div>
+                <div class="p1">
+                    <p id="162"><b>步骤3</b> 在2台机器的保护策略目录下, 以超级管理员权限执行rm -rf $root/ (bin、dev、etc、lib、lib64、media、opt、sbin、sys、tmp、usr、var) 进行破坏, 每台机器均执行5次, 全程记录系统重启动时间。</p>
+                </div>
+                <div class="p1">
+                    <p id="163"><b>步骤4</b> 在2台机器的保护策略目录下, 以超级管理员权限分别设置可改写1×10<sup>3</sup>、5×10<sup>3</sup>、1×10<sup>4</sup>、5×10<sup>4</sup>与1×10<sup>5</sup>个文件, 同时记录全程消耗时间, 每组重复执行3次, 取均值。</p>
+                </div>
+                <div class="p1">
+                    <p id="164">系统开机时间结果对比如图4所示。</p>
+                </div>
+                <div class="area_img" id="165">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907027_165.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 系统开机时间对比" src="Detail/GetImg?filename=images/JSJC201907027_165.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 系统开机时间对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907027_165.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="166">以超级管理员权限执行rm -rf $root/*操作的系统启动时间与正常机器相比几乎相同, 因为在执行完删除操作后, 在可读写区间中没有CO的相关文件记录, 所以在打标时, 无文件可操作, 在下次启动时, 根据DDTM策略, 直接追溯启用上一次正常启动的系统数据。与正常机器相比, 以超级管理员权限在进行系统数据可改写操作时的系统启动时间, 与改写系统的数据量成正相关性。</p>
+                </div>
+                <div class="p1">
+                    <p id="167">针对通用Linux平台依照DDTM进行系统数据容灾机制的设计与实现, 经上述产品化实现与性能验证, 具有以下特点:</p>
+                </div>
+                <div class="p1">
+                    <p id="168">1) 可靠:避免平台被异常攻击、破坏、宕机与病毒感染致使无法启动的异常情况, 提高平台可靠性。</p>
+                </div>
+                <div class="p1">
+                    <p id="169">2) 安全:对系统保护数据改写前进行完整性校验, 增强了系统数据改写安全性。</p>
+                </div>
+                <div class="p1">
+                    <p id="170">3) 实用:在各行业中, 企业、团体以及个人的Linux平台均可部署此种数据容灾机制, 部署完成后该机制立即生效, 实用性强。</p>
+                </div>
+                <h3 id="171" name="171" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="172">为解决通用Linux平台在遭受异常攻击、破坏、宕机与病毒感染后系统无法启动的问题, 本文通过构建概念模型辅以形式化定义和细粒度算法描述, 提出一种切实可行的、高可用的且具备完整性追溯的系统数据容灾机制DDTM。将系统数据与环境要素进行了量化分离, 通过完整性追溯, 对系统数据进行完整性检测, 充分保证该容灾机制的可用性与可靠性。下一步将对系统用户数据的容灾与数据恢复效率进行扩展和优化, 为用户构建一个从应用层到系统层的数据容灾保护机制。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="186">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGRK200808011&amp;v=MDMxMjhIdG5NcDQ5RVpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDamhVYi9OUHlyWlpiRzQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 周殷华, 范璐, 沈小白.我国Linux发展的成功模式:政府引导的产学研战略合作联盟——以中科红旗公司为例[J].中国软科学, 2008 (8) :85-92.
+                            </a>
+                        </p>
+                        <p id="188">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The diverse and exploding digital universe">
+
+                                <b>[2]</b> GANTZ J F.The diverse and exploding digital universe[EB/OL].[2018-04-13].https://www.ifap.ru/libr ary/book268.pdf.
+                            </a>
+                        </p>
+                        <p id="190">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201708027&amp;v=MTUyMzBScEZDamhVYi9OTHo3QmJiRzRIOWJNcDQ5SFk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 凌杭, 吴震.杜之波.基于汉明重的EPCBC代数侧信道攻击[J].计算机工程, 2017, 43 (8) :156-160, 168.
+                            </a>
+                        </p>
+                        <p id="192">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1011194256.nh&amp;v=Mjc1MzNDamhVYi9OVkYyNkg3S3hHdFBKcVpFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 莫樱.基于病毒行为分析的特征码的提取与检测[D].成都:电子科技大学, 2011.
+                            </a>
+                        </p>
+                        <p id="194">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZXU201701022&amp;v=MjAwMTVxcUJ0R0ZyQ1VSTE9lWmVScEZDamhVYi9OSVRmVGU3RzRIOWJNcm85SFpvUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 柯圣财, 赵永威, 李弼程, 等.基于卷积神经网络和监督核哈希的图像检索方法[J].电子学报, 2017, 45 (1) :157-163.
+                            </a>
+                        </p>
+                        <p id="196">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201207027&amp;v=MDIxODY0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDamhVYi9OTHl2U2RMRzRIOVBNcUk5SFk0UUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 周云霞, 赵跃龙, 杨希.智能网络磁盘存储系统的容灾研究[J].计算机研究与发展, 2012, 49 (7) :1587-1592.
+                            </a>
+                        </p>
+                        <p id="198">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ2012S1010&amp;v=MTcwNTZaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ2poVWIvTkx5dlNkTEc0SDlPdnJvOUU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 刘正伟, 张华忠, 文中领.海量数据持续数据保护技术研究及实现[J].计算机研究与发展, 2012, 49 (1) , 37-41.
+                            </a>
+                        </p>
+                        <p id="200">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY2016S2017&amp;v=MjY5MDY0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDamhVYi9OTHo3QmQ3RzRIOWV2clk5RVk0UUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 王子伟, 王晓京.基于低密度随机纠删码的TFS容灾优化方案[J].计算机应用, 2016, 36 (s2) :66-68, 81.
+                            </a>
+                        </p>
+                        <p id="202">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SCLH201703014&amp;v=MDE3NjY0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDamhVYi9OTmk3SFpyRzRIOWJNckk5RVlJUUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 滕鹏国, 张景中, 陈亮.随机阵列码:一种高容灾易扩展的RAID存储容灾方法[J].工程科学与技术, 2017, 49 (3) :110-116.
+                            </a>
+                        </p>
+                        <p id="204">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KXJS201701047&amp;v=MDI5NTNvOUJZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ2poVWIvTkxqWEJmYkc0SDliTXI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 林国勇, 黄帆.一种用于云计算的数据容灾分配算法的改进[J].科学技术与工程, 2017, 17 (1) :260-264.
+                            </a>
+                        </p>
+                        <p id="206">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES644401AEB65FABB1B83EAFE375E48A53&amp;v=MjgyODRETGFjTkwrY0NPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU45aXhMeTl3SzA9TmlmT2ZiVzhHdFhNcnY0d0Z1MEtlZzFMdlJkaDRqd0lPUW1YcnhVdw==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> ALSHAMMARI M M, ALWAN A A, NORDIN A, et al.Disaster recovery with minimum replica plan for reliability checking in multi-cloud[J].Procedia Computer Science, 2018, 130:247-254.
+                            </a>
+                        </p>
+                        <p id="208">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DYJS201606048&amp;v=MDQ2NjVMT2VaZVJwRkNqaFViL05JVFRCZmJHNEg5Zk1xWTlCYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 程万前, 阮慧, 郭少艾, 等.LDO稳压器对嵌入式系统掉电保护作用的研究[J].电源技术, 2016, 40 (6) :1290-1292.
+                            </a>
+                        </p>
+                        <p id="210">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MINI201303022&amp;v=MDkxMzhRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRkNqaFViL05LQ1RGWjdHNEg5TE1ySTlIWm8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 杨毓军, 苏晨, 张俊安, 等.一种多电源信号处理系统的保护电路设计[J].微电子学, 2013, 43 (3) :401-404.
+                            </a>
+                        </p>
+                        <p id="212">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787115226266001&amp;v=MDQ1ODlyaWZadTl1RkN2aVVML01JbDRSWEZxekdiSzVHOVBPcVkxRFl1c1BEUk04enhVU21EZDlTSDduM3hFOWZidm5L&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 蔡德明.鸟哥的Linux私房菜[M].北京:人民邮电出版社, 2010.
+                            </a>
+                        </p>
+                        <p id="214">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=OverlayFS">
+
+                                <b>[15]</b> OverlayFS[EB/OL].[2018-04-13].https://en.wikipedia.org/wiki/OverlayFS.
+                            </a>
+                        </p>
+                        <p id="216">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787115227430004&amp;v=MjE4MjFsNFJYRnF6R2JLNUc5UE9xSXRHWk9zUENCTTh6eFVTbURkOVNIN24zeEU5ZmJ2bktyaWZadTl1RkN2aVVML01J&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> WOLFGANG M.深入Linux内核架构[M].郭旭, 译.北京:人民邮电出版社, 2010.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201907027" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201907027&amp;v=MzIxNTgvTkx6N0JiYkc0SDlqTXFJOUhZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ2poVWI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

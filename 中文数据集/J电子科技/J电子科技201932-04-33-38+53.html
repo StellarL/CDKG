@@ -1,0 +1,928 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2fKXReader%2fDetail%3fTIMESTAMP%3d637139873309482500%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dDZKK201904009%26RESULT%3d1%26SIGN%3dAuxf0LxN9Hd9kDD92ms0k0Jjko4%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZKK201904009&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZKK201904009&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201904009&amp;v=MDIwNTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1Wm9GaURnV3J2TElUZkFaYkc0SDlqTXE0OUZiWVE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="&lt;b&gt;1 算法介绍&lt;/b&gt; "><b>1 算法介绍</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#46" data-title="&lt;b&gt;1.1 混合像元模型的建立&lt;/b&gt;"><b>1.1 混合像元模型的建立</b></a></li>
+                                                <li><a href="#51" data-title="&lt;b&gt;1.2 端元字典的训练&lt;/b&gt;"><b>1.2 端元字典的训练</b></a></li>
+                                                <li><a href="#75" data-title="&lt;b&gt;1.3 基于&lt;/b&gt;K-SVD&lt;b&gt;的丰度求解&lt;/b&gt;"><b>1.3 基于</b>K-SVD<b>的丰度求解</b></a></li>
+                                                <li><a href="#88" data-title="&lt;b&gt;1.4 亚像元定位&lt;/b&gt;"><b>1.4 亚像元定位</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#100" data-title="&lt;b&gt;2 实验结果与分析&lt;/b&gt; "><b>2 实验结果与分析</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#102" data-title="&lt;b&gt;2.1 光谱解混的实验结果与分析&lt;/b&gt;"><b>2.1 光谱解混的实验结果与分析</b></a></li>
+                                                <li><a href="#113" data-title="&lt;b&gt;2.2 亚像元定位的实验结果与分析&lt;/b&gt;"><b>2.2 亚像元定位的实验结果与分析</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#124" data-title="&lt;b&gt;3 结束语&lt;/b&gt; "><b>3 结束语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#45" data-title="图1 算法流程图">图1 算法流程图</a></li>
+                                                <li><a href="#53" data-title="图2 端元字典示意图">图2 端元字典示意图</a></li>
+                                                <li><a href="#91" data-title="图3 亚像元定位流程图">图3 亚像元定位流程图</a></li>
+                                                <li><a href="#106" data-title="图4 模拟数据示意图">图4 模拟数据示意图</a></li>
+                                                <li><a href="#107" data-title="&lt;b&gt;表&lt;/b&gt;1 &lt;b&gt;模拟数据用不同算法解混的&lt;/b&gt;RMSE"><b>表</b>1 <b>模拟数据用不同算法解混的</b>RMSE</a></li>
+                                                <li><a href="#108" data-title="&lt;b&gt;表&lt;/b&gt;2 &lt;b&gt;模拟数据用不同算法解混的&lt;/b&gt;SRE "><b>表</b>2 <b>模拟数据用不同算法解混的</b>SRE </a></li>
+                                                <li><a href="#110" data-title="图5 真实数据图与地物分布">图5 真实数据图与地物分布</a></li>
+                                                <li><a href="#112" data-title="图6 草端元的丰度图对比">图6 草端元的丰度图对比</a></li>
+                                                <li><a href="#118" data-title="图7 块状数据亚像元定位结果">图7 块状数据亚像元定位结果</a></li>
+                                                <li><a href="#120" data-title="图8 小目标数据亚像元定位结果">图8 小目标数据亚像元定位结果</a></li>
+                                                <li><a href="#121" data-title="&lt;b&gt;表&lt;/b&gt;3 &lt;b&gt;模拟数据亚像元定位误差对比&lt;/b&gt;"><b>表</b>3 <b>模拟数据亚像元定位误差对比</b></a></li>
+                                                <li><a href="#123" data-title="图9 真实数据亚像元定位结果">图9 真实数据亚像元定位结果</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" Duponchel L.Exploring hyperspectral imaging data sets with topological data analysis[J].Analytica Chimica Acta, 2018, 1000 (7) :123-131." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES29B224A770633277864C580486CC7B6C&amp;v=MzEyODZHeGJOUE9xLzVDWStzSkQzODd5QkViN0RzT1RYZmlxQm96Q3NHVE43enNDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZCckxVMDV0NWd6TDIyeEtzPU5pZk9mYg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         Duponchel L.Exploring hyperspectral imaging data sets with topological data analysis[J].Analytica Chimica Acta, 2018, 1000 (7) :123-131.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 宋义刚, 吴泽彬, 韦志辉, 等.稀疏性高光谱解混方法研究[J].南京理工大学学报, 2013, 37 (4) :486-492.  Song Yigang, Wu Zebin, Wei Zhihui, et al.Research on sparse hyperspectral unmixing methods[J].Journal of Nanjing University of Technology, 2013, 37 (4) :486-492." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=NJLG201304006&amp;v=MjY3NTVnV3J2TEt5ZkhhYkc0SDlMTXE0OUZZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1Wm9GaUQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         宋义刚, 吴泽彬, 韦志辉, 等.稀疏性高光谱解混方法研究[J].南京理工大学学报, 2013, 37 (4) :486-492.  Song Yigang, Wu Zebin, Wei Zhihui, et al.Research on sparse hyperspectral unmixing methods[J].Journal of Nanjing University of Technology, 2013, 37 (4) :486-492.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" Somers B, Asner G P, Tits L, et al.Endmember variability in spectral mixture analysis: a review[J].Remote Sensing of Environment, 2011, 115 (7) :1603-1616." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011600662446&amp;v=MzE5NjZLN0h0RE5xWTlGWXUwTkNIZy9vQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0RmlubFVybkpLRnNkYmhFPU5pZk9mYg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         Somers B, Asner G P, Tits L, et al.Endmember variability in spectral mixture analysis: a review[J].Remote Sensing of Environment, 2011, 115 (7) :1603-1616.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" Atkinson P M, Culter M E J, Lewis H. Mapping sub-pixel proportional land cover with AVHRR imagery[J]. International Journal of Remote Sensing, 1997, 18 (4) : 917-935." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=STJD&amp;filename=STJD713858899&amp;v=MjI3NzdCdEdGckNVUjdxZlp1Wm9GaURnV3J2TE5qbkJhclM1SGRuSnA0ZE1iWVFLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         Atkinson P M, Culter M E J, Lewis H. Mapping sub-pixel proportional land cover with AVHRR imagery[J]. International Journal of Remote Sensing, 1997, 18 (4) : 917-935.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" Chen Y, Ge Y, Chen Y, et al.Subpixel land cover mapping using multiscale spatial dependence[J].IEEE Transactions on Geoscience &amp;amp; Remote Sensing, 2018 (99) :1-10." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Subpixel land cover mapping using multiscale spatial dependence">
+                                        <b>[5]</b>
+                                         Chen Y, Ge Y, Chen Y, et al.Subpixel land cover mapping using multiscale spatial dependence[J].IEEE Transactions on Geoscience &amp;amp; Remote Sensing, 2018 (99) :1-10.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" Wu K, Du Q, Wang Y, et al.Supervised sub-pixel mapping for change detection from remotely sensed images with different resolutions[J].Remote Sensing, 2017, 9 (3) :284." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Supervised Sub-Pixel Mapping for Change Detection from Remotely Sensed Images with Different Resolutions">
+                                        <b>[6]</b>
+                                         Wu K, Du Q, Wang Y, et al.Supervised sub-pixel mapping for change detection from remotely sensed images with different resolutions[J].Remote Sensing, 2017, 9 (3) :284.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 吴健康.基于稀疏表示的高光谱图像解混研究[D].西安: 西安电子科技大学, 2014.  Wu Jiankang.Hyperspectral image unmixing based on sparse representation[D].Xi’an:Xidian University, 2014." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015437315.nh&amp;v=MDUyMDJDVVI3cWZadVpvRmlEZ1dydkxWRjI2RzdlN0dkTE5xcEViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         吴健康.基于稀疏表示的高光谱图像解混研究[D].西安: 西安电子科技大学, 2014.  Wu Jiankang.Hyperspectral image unmixing based on sparse representation[D].Xi’an:Xidian University, 2014.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 张亚坤, 张洪艳, 沈焕锋, 等.一种基于稀疏表达的遥感影像时空融合方法[J].电子科技, 2017, 30 (11) :56-59. Zhang Yakun, Zhang Hongyan, Shen Huanfeng, et al.A spatiotemporal fusion algorithm based on sparse representation for remote sensing imagery[J]. Electronic Science and Technology, 2017, 30 (11) :56-59." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201711017&amp;v=MjUwMjFUZkFaYkc0SDliTnJvOUVZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1Wm9GaURnV3J2TEk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         张亚坤, 张洪艳, 沈焕锋, 等.一种基于稀疏表达的遥感影像时空融合方法[J].电子科技, 2017, 30 (11) :56-59. Zhang Yakun, Zhang Hongyan, Shen Huanfeng, et al.A spatiotemporal fusion algorithm based on sparse representation for remote sensing imagery[J]. Electronic Science and Technology, 2017, 30 (11) :56-59.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" Iordache M D, Plaza A, Dias J B.On the use of spectral libraries to perform sparse unmixing of hyperspectral data[C].Reykjavik:IEEE GRSS Workshop on Hyperspectral Image and Signal Processing:Evolution in Remote Sensing (WHISPERS) , 2010." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=&amp;quot;On the Use of Spectral Libraries to perform Sparse Unmixing of Hyperspectral Data&amp;quot;">
+                                        <b>[9]</b>
+                                         Iordache M D, Plaza A, Dias J B.On the use of spectral libraries to perform sparse unmixing of hyperspectral data[C].Reykjavik:IEEE GRSS Workshop on Hyperspectral Image and Signal Processing:Evolution in Remote Sensing (WHISPERS) , 2010.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" Iordache M D, Bioucas-Dias J M, Plaza A. Collaborative sparse regression for hyperspectral unmixing[J].IEEE Transactions on Geoscience &amp;amp; Remote Sensing, 2014, 52 (1) :341-354." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Collaborative sparse regression for hyperspectral unmixing">
+                                        <b>[10]</b>
+                                         Iordache M D, Bioucas-Dias J M, Plaza A. Collaborative sparse regression for hyperspectral unmixing[J].IEEE Transactions on Geoscience &amp;amp; Remote Sensing, 2014, 52 (1) :341-354.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" 沈丽, 韩彦芳.基于稀疏表示的超分辨率图像重建[J].电子科技, 2015, 28 (9) :144-147. Shen Li, Han Yanfang.Image super-resolution reconstruction based on sparse representation[J]. Electronic Science and Technology, 2015, 28 (9) :144-147." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201509037&amp;v=Mjg2MTh2TElUZkFaYkc0SDlUTXBvOUdZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1Wm9GaURnV3I=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         沈丽, 韩彦芳.基于稀疏表示的超分辨率图像重建[J].电子科技, 2015, 28 (9) :144-147. Shen Li, Han Yanfang.Image super-resolution reconstruction based on sparse representation[J]. Electronic Science and Technology, 2015, 28 (9) :144-147.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 刘万军, 杨秀红, 曲海成, 等.基于光谱信息散度与光谱角匹配的高光谱解混算法[J].计算机应用, 2015, 35 (3) : 844-848.  Liu Wanjun, Yang Xiuhong, Qu Haicheng, et al. Hyperspectral unmixing algorithm based on spectral information divergence and spectral angle matching[J]. Computer Application, 2015, 35 (3) :844-848." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201503053&amp;v=MTc1NzFvRmlEZ1dydkxMejdCZDdHNEg5VE1ySTlBWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         刘万军, 杨秀红, 曲海成, 等.基于光谱信息散度与光谱角匹配的高光谱解混算法[J].计算机应用, 2015, 35 (3) : 844-848.  Liu Wanjun, Yang Xiuhong, Qu Haicheng, et al. Hyperspectral unmixing algorithm based on spectral information divergence and spectral angle matching[J]. Computer Application, 2015, 35 (3) :844-848.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 凌峰, 吴胜军, 肖飞.遥感影像亚像元定位研究综述[J]. 中国图象图形学报, 2011, 16 (8) :1335-1345. Ling Feng, Wu Shengjun, Xiao Fei.Survey of subpixel localization in remote sensing images[J].China Journal of Image and Graphics, 2011, 16 (8) :1335-1345." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGTB201108000&amp;v=MjU0MTR6cXFCdEdGckNVUjdxZlp1Wm9GaURnV3J2TFB5cmZiTEc0SDlETXA0OUZaSVFLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         凌峰, 吴胜军, 肖飞.遥感影像亚像元定位研究综述[J]. 中国图象图形学报, 2011, 16 (8) :1335-1345. Ling Feng, Wu Shengjun, Xiao Fei.Survey of subpixel localization in remote sensing images[J].China Journal of Image and Graphics, 2011, 16 (8) :1335-1345.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" Atkinson P M.Mapping sub-pixel boundaries from remotely sensed images[C].London:Innovations in GIS 4, 1997." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Mapping Sub-Pixel Boundaries from RemotelySensed Images">
+                                        <b>[14]</b>
+                                         Atkinson P M.Mapping sub-pixel boundaries from remotely sensed images[C].London:Innovations in GIS 4, 1997.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" Krafft C, Diderhoshan M A, Recknagel P, et al.Crisp and soft multivariate methods visualize individual cell nuclei in Raman images of liver tissue sections[J].Vibrational Spectroscopy, 2011, 55 (1) :90-100." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501972138&amp;v=MDg1MTZiZXdORFg4eG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnRGaW5sVXJuSktGc2RiaEU9TmlmT2ZiSzdIdEROcW85RQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         Krafft C, Diderhoshan M A, Recknagel P, et al.Crisp and soft multivariate methods visualize individual cell nuclei in Raman images of liver tissue sections[J].Vibrational Spectroscopy, 2011, 55 (1) :90-100.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" Dias J B.Alternating direction algorithms for constrained sparse regression: application to hyperspectral unmixing[C].Grenoble:First IEEE GRSS Workshop on Hyperspectral Image and Signal Processing, 2009." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Alternating direction algorithmsfor constrained sparse regression:Application to hyper-spectral unmixing">
+                                        <b>[16]</b>
+                                         Dias J B.Alternating direction algorithms for constrained sparse regression: application to hyperspectral unmixing[C].Grenoble:First IEEE GRSS Workshop on Hyperspectral Image and Signal Processing, 2009.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" Iordache M D, Bioucas-Dias J M, Plaza A.Total variation regulatization in sparse hyperspectral unmixing[C]. Lisbon:Hyperspectral Image and Signal Processing: Evolution in Remote Sensing, 2011." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Total variation regulati-zation in sparse hyperspectral unmixing">
+                                        <b>[17]</b>
+                                         Iordache M D, Bioucas-Dias J M, Plaza A.Total variation regulatization in sparse hyperspectral unmixing[C]. Lisbon:Hyperspectral Image and Signal Processing: Evolution in Remote Sensing, 2011.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_18" title=" 范明阳.基于光谱解混和目标优化的高光谱图像亚像元定位研究[D].杭州:杭州电子科技大学, 2016. Fan Mingyang.Research on sub-pixel localization of hyperspectral imagery based on optimization of spectral mixture and target optimization[D].Hangzhou: Hangzhou Dianzi University, 2016." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016074033.nh&amp;v=MDEzNDlqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVab0ZpRGdXcnZMVkYyNkdMTy9HdEhQckpFYlBJUUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[18]</b>
+                                         范明阳.基于光谱解混和目标优化的高光谱图像亚像元定位研究[D].杭州:杭州电子科技大学, 2016. Fan Mingyang.Research on sub-pixel localization of hyperspectral imagery based on optimization of spectral mixture and target optimization[D].Hangzhou: Hangzhou Dianzi University, 2016.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=DZKK" target="_blank">电子科技</a>
+                2019,32(04),33-38+53 DOI:10.16180/j.cnki.issn1007-7820.2019.04.008            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于端元字典稀疏解混的高光谱图像亚像元定位</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="javascript:;">顾正之</a>
+                                <a href="javascript:;">王素玉</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8C%97%E4%BA%AC%E6%9C%AA%E6%9D%A5%E7%BD%91%E7%BB%9C%E7%A7%91%E6%8A%80%E5%88%9B%E6%96%B0%E4%B8%AD%E5%BF%83&amp;code=0034856&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北京未来网络科技创新中心</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8C%97%E4%BA%AC%E7%89%A9%E8%81%94%E7%BD%91%E8%BD%AF%E4%BB%B6%E4%B8%8E%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北京物联网软件与系统工程研究中心</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8C%97%E4%BA%AC%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%83%A8&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北京工业大学信息学部</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对高光谱图像中普遍存在的混合像元中各端元空间分布定位困难的问题, 文中提出一种基于K-SVD的光谱解混算法, 利用其解混结果进行亚像元定位。算法首先通过KNN分类来区分待处理图像中的混合像元和纯像元, 然后借鉴基于冗余字典的稀疏分解相关理论, 以标准光谱库为基础, 通过基于K-SVD的字典训练算法训练产生最具代表性的地物光谱曲线, 构建端元冗余字典, 通过基于K-SVD的稀疏分解算法实现各端元丰度的求解。最后利用求得的丰度系数在两种空间性相关性约束下进行亚像元定位。实验结果表明, 采用该算法进行模拟数据和真实数据的亚像元的定位可以取得不错的定位结果。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%AB%98%E5%85%89%E8%B0%B1%E5%9B%BE%E5%83%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">高光谱图像;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%85%89%E8%B0%B1%E8%A7%A3%E6%B7%B7&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">光谱解混;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%BA%9A%E5%83%8F%E5%85%83%E5%AE%9A%E4%BD%8D&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">亚像元定位;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=K-SVD&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">K-SVD;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%A8%80%E7%96%8F%E8%A1%A8%E7%A4%BA&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">稀疏表示;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%86%97%E4%BD%99%E5%AD%97%E5%85%B8&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">冗余字典;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    顾正之 (1991-) , 男, 硕士研究生。研究方向:数字图像处理。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-03-18</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金 (61201361);</span>
+                                <span>北京市教委科学基金 (KM201710005011);</span>
+                                <span>北京市人才培养计划基金 (2013D005015000008);</span>
+                    </p>
+            </div>
+                    <h1><b>Hyperspectral Image Sub-Pixel Mapping Based on Sparse Unmixing of Endmember Dictionary</b></h1>
+                    <h2>
+                    <span>GU Zhengzhi</span>
+                    <span>WANG Suyu</span>
+            </h2>
+                    <h2>
+                    <span>Beijing Advanced Innovation Center for Future Internet Technology</span>
+                    <span>Beijing Engineering Research Center for IoT Software and Systems</span>
+                    <span>Faculty of Information Technology, Beijing University of Technology</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>In general, it is difficult to locate the spatial distribution of each endmember in the hyperspectral image. To solve the problem, this study proposed a K-SVD-based spectral unmixing algorithm whose result of the demixing was further used for performing the subpixel location. First, the mixed pixel and pure pixel were distinguished by KNN classification, and then the sparse decomposition correlation theory based on redundant dictionary was used for reference. Based on the standard spectral library, the K-SVD based dictionary training algorithm was used to train the most representative material spectral curves, and the endmember redundancy dictionary was subsequently constructed. The abundances were solved by the sparse decomposition algorithm based on K-SVD. Finally, the obtained abundance coefficient was used to locate the sub-pixel under the two spatial correlation constraints. Experimental results showed that the proposed algorithm had reliable performance for the sub-pixel mapping effects of simulated data and measured data.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=hyperspectral%20image&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">hyperspectral image;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=spectral%20unmixing&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">spectral unmixing;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=sub-pixel%20mapping&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">sub-pixel mapping;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=K-SVD&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">K-SVD;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=sparse%20representation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">sparse representation;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=redundant%20dictionary&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">redundant dictionary;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-03-18</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>National Natural Science Foundation of China (61201361);</span>
+                                <span>Science Foundation of the Beijing Education Commission (KM201710005011);</span>
+                                <span>Training Program Foundation for the Talents in Beijing City (2013D005015000008);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <div class="p1">
+                    <p id="39">高光谱图像具有很高的光谱分辨率, 能够在可见光、近红外、中红外和热红外波段获得大量的光谱信息, 产生连续的光谱图像数据<citation id="126" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>, 已被广泛应用于各个领域。由于采集方法和成像光谱仪性能的限制, 高光谱遥感图像的空间分辨率一般较低, 对应于像素的瞬时视场角通常含有多种类型的地面信息。这种包含了两种或两种以上地物类型的像元被称作混合像元, 组成混合像元的这些单类地物被称为端元<citation id="127" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>, 这些端元在对应像素中所占的混合比例即为丰度。像元解混仅仅可以得到混合像元各端元所占的比例, 无法得知它们在混合像元中的空间位置。通过丰度系数来确定各端元在混合像元中的空间分布情况被称为亚像元定位。高光谱图像中混合像元的普遍存在对高光谱遥感信息处理带来了很大的影响。目前高光谱遥感信息处理的研究热点, 如分类、目标识别、异常检测、超分辨率重建等, 均依赖于有效的高光谱亚像元定位。</p>
+                </div>
+                <div class="p1">
+                    <p id="40">高光谱图像亚像元定位的效果依赖于精准的解混结果, 其混合像元的分解过程则涉及光谱混合模型的建立、端元提取和丰度估计三个方面<citation id="128" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>, 相关工作都得到了深入的研究:在光谱混合模型方面, 线性光谱混合模型具有计算简单、物理意义明确等特点, 因此在各类研究中得到了广泛的应用;端元提取过程旨在确定组成混合像元的端元类别;而丰度估计则是依据一定的混合像元模型, 求解各端元在组成该混合像元时的混合比例。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">高光谱图像亚像元定位的过程涉及根据丰度系数的初步定位以及利用空间相关性约束的精确定位。目前比较常用的精确定位算法为像元交换算法, 它是由Atkinson提出的通过不断交换像元内亚像元的位置来使得亚像元之间的空间相关性达到最大的一种算法<citation id="129" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>, 类似于空间模拟退火算法。目前, 在这一领域的研究中也开展了很多相关方面的工作, 例如Y Chen等利用多尺度空间相关性, 从物种类别提取尺度空间依赖关系来进行亚像元定位<citation id="130" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>;K Wu等提出了引入基于不同分辨率图像的反向传播神经网络模型, 利用已有的高空间分辨率图片来训练BP神经网络, 以解决亚像元定位的问题<citation id="131" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="42">本文针对上述问题, 提出了一种基于K-SVD稀疏解混的高光谱图像亚像元定位算法。该算法首先通过KNN分类根据高光谱图像光谱特征寻找图像中存在的混合像元;然后基于标准光谱库采用基于K-SVD的字典训练算法建立端元冗余字典;接着采用基于K-SVD的稀疏分解算法, 以所建立的端元冗余字典为基础, 求解丰度系数;最后利用得到的丰度系数通过像元交换算法完成亚像元定位。该算法以标准光谱库为基础, 通过K-SVD字典训练, 选择最为典型的光谱曲线作为原子构建冗余字典, 保证了良好的解混精度。同时像元交换算法采用了两种空间相关性约束, 在上一步的基础上取得了良好的亚像元定位效果。</p>
+                </div>
+                <h3 id="43" name="43" class="anchor-tag"><b>1 算法介绍</b></h3>
+                <div class="p1">
+                    <p id="44">本文所提出的基于端元字典稀疏解混的高光谱图像亚像元定位算法由基于K-SVD的端元冗余字典建立以及基于稀疏分解的丰度求解和基于像元交换算法的亚像元定位3部分组成, 其基本框架如图1所示。算法首先以典型地物光谱库为基础, 通过基于K-SVD的方法, 以光谱库中的地物光谱曲线为基础选择最具代表性的像元曲线构建端元冗余字典。对于一组待分解的高光谱图像, 首先通过KNN分类对图像中的地物类别进行分类, 从而有效区分图像中的纯净像元区域和混合像元区域, 再对混合像元区域进行光谱解混。在解混过程中, 采用线性光谱混合模型, 通过基于K-SVD的稀疏分解方法将各光谱曲线基于该冗余字典进行稀疏分解, 所得到的稀疏表示系数即为各端元的丰度值。然后根据丰度系数按照线性光谱混合模型对亚像元进行初步定位, 最后通过像元交换算法进行亚像元的精确定位。</p>
+                </div>
+                <div class="area_img" id="45">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201904009_045.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 算法流程图" src="Detail/GetImg?filename=images/DZKK201904009_045.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 算法流程图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201904009_045.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 1. Algorithm flowchart</p>
+
+                </div>
+                <h4 class="anchor-tag" id="46" name="46"><b>1.1 混合像元模型的建立</b></h4>
+                <div class="p1">
+                    <p id="47">建立准确的光谱混合模型是对混合像元进行有效分解及亚像元定位的基本前提。本文在综合分析高光谱图像的成像原理与混合像元的生成过程以及应用特点等多种因素的基础上, 采用了线性光谱混合模型。线性混合模型 (Linear Mixed Model) 是从宏观上来看物质对光的反射作用, 认为反射面是平整的且是由多种地物类型按线性规则混合而成<citation id="132" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>, 无需考虑物质之间对光的相互作用。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">通常情况下, 高光谱图像中的每一个像元都可以被近似的认为是图像中某些端元的线性组合<citation id="133" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>, 即</p>
+                </div>
+                <div class="p1">
+                    <p id="49"><b><i>y</i></b>=<b><i>Mx</i></b>+<i>ε</i>      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="50">式 (1) 中<b><i>y</i></b>∈<i>R</i><sup><i>L</i>×1</sup>为混合像元, <i>L</i>表示波段数目, <b><i>M</i></b>={<b><i>m</i></b><sub>1</sub>, <b><i>m</i></b><sub>2</sub>, …, <b><i>m</i></b><sub><i>p</i></sub>}∈<i>R</i><sup><i>L</i>×<i>p</i></sup>为端元矩阵, 其中<i>p</i>表示包含的端元数目, 矩阵中的端元<b><i>m</i></b><sub><i>i</i></sub>∈<i>R</i><sup><i>L</i>×1</sup>, <i>i</i>=1, 2, …, <i>p</i>, <b><i>x</i></b>∈<i>R</i><sup><i>p</i>×1</sup>表示了<i>p</i>个端元分别在混合像元<i>y</i>中所占的比例。式中<i>ε</i>∈<i>R</i><sup><i>L</i>×1</sup>表示了其他因素对混合像元的影响<citation id="134" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>。</p>
+                </div>
+                <h4 class="anchor-tag" id="51" name="51"><b>1.2 端元字典的训练</b></h4>
+                <div class="p1">
+                    <p id="52">在高光谱图像稀疏解混中, 需要对光谱库进行一系列预处理。在光谱解混中, 端元之间的高相关性会严重影响到解混结果, 通过降低光谱库中谱特征之间的相关性可以有效的提高解混精度<citation id="135" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>。为了降低光谱库中不同原子之间的相关性, 首先采用K-SVD训练单类字典。在光谱库中, 一般情况下每种地物类型都会拥有两种以上的光谱曲线。同种地物类型的光谱曲线之间相关性很高, 严重影响后续的解混效果<citation id="136" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>, 因此考虑用K-SVD将每种地物类型的光谱曲线训练成单类字典, 并使用训练出的各类地物类别最具代表性的光谱曲线进行后续处理。</p>
+                </div>
+                <div class="area_img" id="53">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201904009_053.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 端元字典示意图" src="Detail/GetImg?filename=images/DZKK201904009_053.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 端元字典示意图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201904009_053.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 2. Endmember dictionary schematic</p>
+
+                </div>
+                <div class="p1">
+                    <p id="54">如图2所示, 这样光谱库中的曲线原子可以表示为<b><i>Y</i></b>= (<b><i>y</i></b><sub>1</sub>, <b><i>y</i></b><sub>2</sub>, …, <b><i>y</i></b><sub><i>h</i></sub>) , 其中<b><i>y</i></b><sub><i>i</i></sub>= (<b><i>y</i></b><sup> (1) </sup>, <b><i>y</i></b><sup> (2) </sup>, …, <b><i>y</i></b><sup> (<i>j</i>) </sup>) 为每一类地物在光谱库中的光谱曲线。随后分别对每种地物类别训练字典, 端元字典的具体训练过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="55"><b>步骤1</b> 输入光谱库数据<b><i>Y</i></b>;</p>
+                </div>
+                <div class="p1">
+                    <p id="56"><b>步骤2</b> 输出:端元字典<b><i>D</i></b>= (<b><i>d</i></b><sub>1</sub>, <b><i>d</i></b><sub>2</sub>, …, <b><i>d</i></b><sub><i>h</i></sub>) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="57"><b>步骤3</b> 将光谱库<b><i>Y</i></b>中同物种类别的光谱曲线归为一类, 分别记为<b><i>y</i></b><sub>1</sub>, <b><i>y</i></b><sub>2</sub>, …, <b><i>y</i></b><sub><i>h</i></sub>;</p>
+                </div>
+                <div class="p1">
+                    <p id="58"><b>步骤4</b> 随机生成各类字典<b><i>D</i></b>= (<b><i>d</i></b><sub>1</sub>, <b><i>d</i></b><sub>2</sub>, …, <b><i>d</i></b><sub><i>h</i></sub>) ;随机选取训练数据中光谱曲线<b><i>y</i></b><sub><i>i</i></sub>, 计算</p>
+                </div>
+                <div class="p1">
+                    <p id="59"><mathml id="60"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false">{</mo><mi>a</mi><msub><mrow></mrow><mi>m</mi></msub><mo stretchy="false">}</mo><mo>=</mo><mrow><mi>arg</mi></mrow><mspace width="0.25em" /><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mrow><mi>a</mi><msub><mrow></mrow><mi>m</mi></msub></mrow></munder><mo stretchy="false">∥</mo><mi>y</mi><mo>-</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Μ</mi></munderover><mi mathvariant="bold-italic">a</mi></mstyle><msub><mrow></mrow><mi>i</mi></msub><mo>×</mo><mi mathvariant="bold-italic">d</mi><msub><mrow></mrow><mrow><mi>h</mi><mi>i</mi></mrow></msub><mo stretchy="false">∥</mo><msubsup><mrow></mrow><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mi>γ</mi><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>Μ</mi></munderover><mo stretchy="false">|</mo></mstyle><mi mathvariant="bold-italic">a</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">|</mo></mrow></math></mathml>      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="61">其中<b><i>a</i></b>为稀疏分解系数, <i>γ</i>为平衡因子, 平衡重建误差与系数稀疏度之间的权重占比;</p>
+                </div>
+                <div class="p1">
+                    <p id="62"><b>步骤5</b> 计算更新步长</p>
+                </div>
+                <div class="p1">
+                    <p id="63"><mathml id="64"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">t</mi><msub><mrow></mrow><mrow><mi>m</mi><mo>, </mo><mi>r</mi></mrow></msub><mo>=</mo><mi mathvariant="bold-italic">a</mi><msub><mrow></mrow><mi>m</mi></msub><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">y</mi><mo>-</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi>Μ</mi></munderover><mi mathvariant="bold-italic">a</mi></mstyle><msub><mrow></mrow><mi>l</mi></msub><mo>×</mo><mi mathvariant="bold-italic">d</mi><msub><mrow></mrow><mrow><mi>h</mi><mi>l</mi></mrow></msub><mo stretchy="false">) </mo></mrow></math></mathml>      (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="65"><b>步骤6</b> 更新字典步长</p>
+                </div>
+                <div class="p1">
+                    <p id="66"><mathml id="67"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">t</mi><msub><mrow></mrow><mi>m</mi></msub><mo>=</mo><mfrac><mi>μ</mi><mi>Ν</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mi mathvariant="bold-italic">t</mi></mstyle><msub><mrow></mrow><mrow><mi>m</mi><mo>, </mo><mi>r</mi></mrow></msub></mrow></math></mathml>      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="68"><b><i>d</i></b><sub><i>hm</i></sub>=<b><i>d</i></b><sub><i>hm</i></sub>+<b><i>t</i></b><sub><i>m</i></sub>      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="69"><i>μ</i>=<i>μ</i>×0.995      (6) </p>
+                </div>
+                <div class="p1">
+                    <p id="70">其中, 设定参数<i>μ</i>=10, <i>N</i>=200。</p>
+                </div>
+                <div class="p1">
+                    <p id="71"><b>步骤7</b> 循环步骤4～步骤6直至字典<b><i>D</i></b>收敛。</p>
+                </div>
+                <div class="p1">
+                    <p id="72">在得到了单类字典后, 为进一步降低光谱曲线之间的相关性, 采用光谱角匹配与光谱信息散度混合 (SID_SA) 的方法对上一步处理完的光谱库数据进行进一步筛选, 从而提高解混效果。光谱角匹配 (Spectral Angle Mapping, SAM) 是根据光谱之间的夹角数值大小来判断两条光谱曲线的相似性, 夹角数值越小则匹配程度越高。但是光谱角匹配只能比较光谱之间在形状上的相似程度, 对局部特征上的差异很难进行区分, 因此本文的研究加入了光谱信息散度 (Spectral Information Divergence, SID) 。光谱信息散度法是基于信息论衡量两条光谱之间差异的波谱分类方法, 可以对两条光谱进行整体上的比较<citation id="137" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>。为了能够更准确的判断两条光谱曲线间的相关性, 文中将两种方法结合到一起, 具体的混合方法如下</p>
+                </div>
+                <div class="p1">
+                    <p id="73"><i>S</i> (<b><i>x</i></b>, <b><i>y</i></b>) =SID (<b><i>x</i></b>, <b><i>y</i></b>) ×sin (SAM (<b><i>x</i></b>, <b><i>y</i></b>) )      (7) </p>
+                </div>
+                <div class="p1">
+                    <p id="74">式中的<b><i>x</i></b>和<b><i>y</i></b>为任意两条光谱曲线。此时为了降低光谱库中谱特征之间的相关性, 可以设定一个阈值<i>τ</i>, 使最后处理过的光谱库任意两个光谱曲线的SIDSA值都大于等于这个阈值, 使之构成冗余字典, 即可在一定程度下提高解混精度。</p>
+                </div>
+                <h4 class="anchor-tag" id="75" name="75"><b>1.3 基于</b>K-SVD<b>的丰度求解</b></h4>
+                <div class="p1">
+                    <p id="76">稀疏解混的过程中首先对需处理的高光谱图像进行KNN (K-Nearest Neighbor) 分类, 依次对目标图像像元的光谱曲线与处理过的光谱库光谱曲线进行欧式距离排序, 然后统计距离最近的<i>K</i>个元素所属的地物类别, 获得该像元中一种或几种地物光谱信息融合的权重。由于有的像元包含多种光谱信息的融合, 应设定一个适当的阈值<i>T</i><sub><i>i</i></sub>, 若<i>W</i><sub>1</sub>≥<i>T</i><sub>1</sub>, 则该像元划分为单一地物区域;若<i>W</i><sub>1</sub>≤<i>T</i><sub>1</sub>∧<i>W</i><sub>2</sub>≥<i>T</i><sub>2</sub>, 则该像元划分为混合地物区域。其中<i>W</i><sub>1</sub>, <i>W</i><sub>2</sub>为最多的两类地物的权重, 这样避免了类别分界处信息失真, 可以区分纯像元和混合像元区域, 并且进一步提高解混效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="77">采用的稀疏解混方法是基于K-SVD算法实现的, 把处理过的光谱库用作冗余字典来进行稀疏解混。算法的具体步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="78"><b>步骤1</b> 输入端元字典<b><i>D</i></b>, 测试图像<i>S</i>;</p>
+                </div>
+                <div class="p1">
+                    <p id="79"><b>步骤2</b> 输出丰度系数{<b><i>a</i></b><sub><i>m</i></sub>};</p>
+                </div>
+                <div class="p1">
+                    <p id="80"><b>步骤3</b> 顺序选取测试图像像素, 依次计算光谱曲线<b><i>y</i></b>与处理后的光谱库中光谱曲线的距离<i>I</i>;</p>
+                </div>
+                <div class="p1">
+                    <p id="81"><b>步骤4</b> 对<i>I</i>排序处理并且归纳其中最小的<i>K</i>个光谱库数据各地物类别, 以分类并标定该像元类别, 设定阈值划分单一地物区域与混合地物区域。</p>
+                </div>
+                <div class="p1">
+                    <p id="82">随机选取混合像元, 使用端元字典按照式 (8) 进行稀疏分解, 输出丰度系数{<b><i>a</i></b><sub><i>m</i></sub>}</p>
+                </div>
+                <div class="p1">
+                    <p id="83"><mathml id="84"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false">{</mo><mi mathvariant="bold-italic">a</mi><msub><mrow></mrow><mi>m</mi></msub><mo stretchy="false">}</mo><mo>=</mo><mrow><mi>arg</mi></mrow><mspace width="0.25em" /><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mrow><mi mathvariant="bold-italic">a</mi><msub><mrow></mrow><mi>m</mi></msub></mrow></munder><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">y</mi><mo>-</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Μ</mi></munderover><mi mathvariant="bold-italic">a</mi></mstyle><msub><mrow></mrow><mi>i</mi></msub><mo>×</mo><mi mathvariant="bold-italic">d</mi><msub><mrow></mrow><mrow><mi>h</mi><mi>i</mi></mrow></msub><mo stretchy="false">∥</mo><msubsup><mrow></mrow><mn>2</mn><mn>2</mn></msubsup><mo>+</mo><mi>γ</mi><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>Μ</mi></munderover><mo stretchy="false">|</mo></mstyle><mi mathvariant="bold-italic">a</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">|</mo></mrow></math></mathml>      (8) </p>
+                </div>
+                <div class="p1">
+                    <p id="85">其中, <b><i>y</i></b>为实验图像中任意一像元, <b><i>a</i></b><sub><i>i</i></sub>为该像元的丰度系数, <b><i>d</i></b><sub><i>i</i></sub>为经过预处理过的光谱库字典, 设置平衡因子<i>γ</i>为0.01。对稀疏系数的求解采用梯度下降法, 即在计算丰度系数矩阵{<b><i>a</i></b><sub><i>m</i></sub>}时利用式 (9) 求解。</p>
+                </div>
+                <div class="p1">
+                    <p id="86"><mathml id="87"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mo>∂</mo><mi>f</mi></mrow><mrow><mo>∂</mo><mi>a</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></mfrac><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mi mathvariant="bold-italic">d</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>×</mo><mi>m</mi><msub><mrow></mrow><mi>j</mi></msub><mo>+</mo><mi>γ</mi></mrow></math></mathml>      (9) </p>
+                </div>
+                <h4 class="anchor-tag" id="88" name="88"><b>1.4 亚像元定位</b></h4>
+                <div class="p1">
+                    <p id="89">亚像元定位是在对高光谱图像进行像元解混之后的进一步研究, 首先将混合像元划分为面积更小的亚像元, 并认为这些亚像元均为纯像元;根据解混得到的混合像元的丰度系数通过线性光谱混合模型确定各类地物在混合像元中所占的亚像元数目并进行初始定位;最后利用空间相关性或者其他相关的先验信息, 确定不同地物类型所处的空间位置, 从而得到亚像元尺度上的地物分类图<citation id="138" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>。一般来讲, 地理物体之间是互相关联的, 空间邻近的物体间关联程度高<citation id="139" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>。在空间尺度比高光谱图像像元大的情况下, 距离相近的亚像元相比距离较远的亚像元, 更可能属于同一地物。</p>
+                </div>
+                <div class="p1">
+                    <p id="90">如图3所示, 本文研究的亚像元定位的流程主要分为灰度扩大量化处理、初步定位以及精确定位。灰度扩大量化处理首先将一个原始像元分解成4个亚像元, 将目标地物的丰度系数的数值扩大到原来的四倍, 取整数部分输出, 确定该地物在原始像素中应占有的亚像元个数;然后根据目标地物所占的亚像元个数进行初步随机定位;精确定位采用的是亚像元交换算法, 通过反复交换原始像素中不同位置的亚像元来达到亚像元定位的目的。在执行每次交换前, 需要计算交换收益, 只有当满足条件后才执行本次亚像元交换。在本文的研究中, 交换收益采用了两种目标函数:一种是根据交换之后该亚像元与其二阶邻域系统内的状态相同的亚像元个数与交换之前该亚像元与其二阶邻域系统内状态相同的亚像元个数的差值来判断;另外一种是根据图像连通区域的周长来判断本次交换是否可以提高整体上的空间相关性。亚像元定位的具体算法如下:</p>
+                </div>
+                <div class="area_img" id="91">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201904009_091.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 亚像元定位流程图" src="Detail/GetImg?filename=images/DZKK201904009_091.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 亚像元定位流程图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201904009_091.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 3. Sub-pixel mapping flowchart</p>
+
+                </div>
+                <div class="p1">
+                    <p id="92"><b>步骤1</b> 输入丰度系数{<b><i>a</i></b><sub><i>m</i></sub>}, 测试图像<i>S</i>;</p>
+                </div>
+                <div class="p1">
+                    <p id="93"><b>步骤2</b> 输出高分辨率分类图<i>S</i>′;</p>
+                </div>
+                <div class="p1">
+                    <p id="94"><b>步骤3</b> 将丰度系数{<b><i>a</i></b><sub><i>m</i></sub>}做灰度扩大量化处理, 确定目标地物在各像元中所占的亚像元个数;</p>
+                </div>
+                <div class="p1">
+                    <p id="95"><b>步骤4</b> 将测试图像<i>S</i>按照1∶4的比例扩大, 然后根据上一步结果为每个亚像元进行随机定位, 定位严格按照线性光谱混合模型;</p>
+                </div>
+                <div class="p1">
+                    <p id="96"><b>步骤5</b> 定义一个2×2的移动窗口, 移动窗口每次覆盖一个原像元的位置。在窗口内随机选取一个与邻居状态不同的亚像元;</p>
+                </div>
+                <div class="p1">
+                    <p id="97"><b>步骤6</b> 在移动窗口中依次选取另一个亚像元, 计算交换收益<i>G</i><sub>1</sub>, <i>G</i><sub>2</sub>。<i>G</i><sub>1</sub>为交换之后该亚像元与其二阶邻域系统内的状态相同的亚像元个数减去交换之前该亚像元与其二阶邻域系统内状态相同的亚像元个数。<i>G</i><sub>2</sub>为交换之后的连通区域的周长减去交换之前连通区域的周长。若<i>G</i><sub>1</sub>&gt;0∧<i>G</i><sub>2</sub>&lt;0, 则执行本次交换;</p>
+                </div>
+                <div class="p1">
+                    <p id="98"><b>步骤7</b> 结束子过程, 将移动窗口依次移动到各个原像元的位置, 循环执行步骤5～步骤6直至全部整幅图像处理完毕;</p>
+                </div>
+                <div class="p1">
+                    <p id="99"><b>步骤8</b> 输出高分辨率分类图<i>S</i>′。</p>
+                </div>
+                <h3 id="100" name="100" class="anchor-tag"><b>2 实验结果与分析</b></h3>
+                <div class="p1">
+                    <p id="101">实验通过模拟数据和真实数据来评估所提出的算法的性能。实验采用的光谱库是美国地质调查局USGS于2017年4月发布的Splib07, 共包含498个光谱特征, 谱特征的波段数目为224, 光谱覆盖范围为0.2～2.4 μm, 光谱分辨率为10 nm。</p>
+                </div>
+                <h4 class="anchor-tag" id="102" name="102"><b>2.1 光谱解混的实验结果与分析</b></h4>
+                <div class="p1">
+                    <p id="103">模拟数据采用光谱库来构建模拟数据集, 求得光谱库中任意两个光谱曲线的光谱角距离, 并将数值从大到小排序, 取最大的五个光谱曲线作为构成模拟数据的端元集合。模拟数据大小为75×75, 并且每个像素点都是按照线性混合模型混合而成, 满足丰度非负约束和丰度和为一约束。</p>
+                </div>
+                <div class="p1">
+                    <p id="104">图4显示了模拟数据的结构构成, 图中包括了纯像元区域以及混合像元区域, 数据分别加入了3种不同强度的高斯白噪声。加入噪声后模拟图像的信噪比 (Signal to Noise Ratio, SNR) 分别为20 dB、30 dB和40 dB。</p>
+                </div>
+                <div class="p1">
+                    <p id="105">表1和表2为不同算法在不同噪声下对模拟数据的解混精度, 分别用RMSE和SRE表示。从两个表格可以看出, 基于端元字典的解混算法较其他算法表现稍好, 且由于是基于KNN的混合像素检测, 与其他算法相比, 在低SNR情况下的纯像素更易于检测, 有助于提高解混性能。</p>
+                </div>
+                <div class="area_img" id="106">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201904009_106.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 模拟数据示意图" src="Detail/GetImg?filename=images/DZKK201904009_106.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 模拟数据示意图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201904009_106.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 4. Simulated data schematic</p>
+
+                </div>
+                <div class="area_img" id="107">
+                    <p class="img_tit"><b>表</b>1 <b>模拟数据用不同算法解混的</b>RMSE <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 1. RMSE value comparison between different algorithms for simulated data</p>
+                    <p class="img_note"></p>
+                    <table id="107" border="1"><tr><td></td><td>NCLS <sup>[9]</sup></td><td>SUnSAL <sup>[12]</sup></td><td>CLSUnSAL <sup>[21]</sup></td><td>GSUnSAL <sup>[13]</sup></td><td>本文算法</td></tr><tr><td><br />20DB</td><td>1.051 4</td><td>0.384 7</td><td>0.273 5</td><td>0.272 0</td><td><b>0.237 7</b></td></tr><tr><td><br />30DB</td><td>0.486 5</td><td>0.264 6</td><td>0.230 6</td><td>0.229 2</td><td><b>0.197 5</b></td></tr><tr><td><br />40DB</td><td>0.281 7</td><td>0.148 1</td><td>0.118 0</td><td>0.101 9</td><td><b>0.097 9</b></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="108">
+                    <p class="img_tit"><b>表</b>2 <b>模拟数据用不同算法解混的</b>SRE  <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 2. SRE value comparison between different algorithms for simulated data </p>
+                    <p class="img_note">/dB</p>
+                    <table id="108" border="1"><tr><td></td><td>NCLS</td><td>SUnSAL</td><td>CLSUnSAL</td><td>GSUnSAL</td><td>Proposed</td></tr><tr><td><br />20DB</td><td>-5.864 9</td><td>2.867 4</td><td>5.830 9</td><td>5.826 4</td><td><b>6.143 2</b></td></tr><tr><td><br />30DB</td><td>0.828 5</td><td>6.118 7</td><td>7.312 7</td><td>7.388 9</td><td><b>7.511 2</b></td></tr><tr><td><br />40DB</td><td>5.573 0</td><td>11.153 6</td><td>13.130 6</td><td>14.409 2</td><td><b>14.382 9</b></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="109">真实数据是来自AVIRIS Indian pines 高光谱图像。AVIRIS传感器包括224个光谱波段, 波长均匀分布在0.2～2.4 μm之间。图5为真实数据以及部分地面真值统计。由于对真实数据很难进行定量性的解混效果评价, 因此采用从定性的角度来考察算法性能。</p>
+                </div>
+                <div class="area_img" id="110">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201904009_110.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 真实数据图与地物分布" src="Detail/GetImg?filename=images/DZKK201904009_110.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 真实数据图与地物分布  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201904009_110.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 5. Real data and distribution of objects</p>
+
+                </div>
+                <div class="p1">
+                    <p id="111">图6显示了4种算法NCLS、SUnSAL、CLSUnSAL与本次算法的对图中干草这类的地物的丰度估计结果。图6 (a) ～图6 (e) 分别为干草类端元的丰度图像、本次实验算法的丰度图像、NCLS算法的丰度图像、SUnSAL算法的丰度图像以及CLSUnSAL算法的丰度图像。丰度系数用灰度值来表示, 丰度为0即为黑色, 丰度为1即为白色。通过对比观察图像, 可以分析各稀疏解混算法的解混精度和效果。从图中可以看出, 本次实验算法的反演丰度值完全正确的个数较多, 在解混前加入分类增强了对其他因素的抗干扰能力, 但在地物边界处的解混效果还有待改进。</p>
+                </div>
+                <div class="area_img" id="112">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201904009_112.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 草端元的丰度图对比" src="Detail/GetImg?filename=images/DZKK201904009_112.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 草端元的丰度图对比  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201904009_112.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 6. Comparison of abundance of Dry Grass endmember</p>
+
+                </div>
+                <h4 class="anchor-tag" id="113" name="113"><b>2.2 亚像元定位的实验结果与分析</b></h4>
+                <div class="p1">
+                    <p id="114">实验首先采用两组模拟数据图来验证亚像元定位算法的有效性和准确性。第一组图像是块状数据, 用以检测连通区域边缘的定位准确性;第二组图像是小目标, 用来检测算法在小目标的形状方面的定位准确性。两组数据原始大小都为200×200, 实验图像数据为100×100, 定位结果数据大小为200×200。原始图像中的像元皆为纯像元, 将原始图像转化为实验图像时按照线性光谱混合的原则进行缩小处理, 转化为含有混合像元的实验图像, 最后再进行亚像元定位的实验。进行误差评价时统一使用式 (10) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="115"><mathml id="116"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>E</mi><msub><mrow></mrow><mrow><mi>m</mi><mi>s</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mi>Ν</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mo stretchy="false"> (</mo></mstyle><mover accent="true"><mi>X</mi><mo>^</mo></mover><mo stretchy="false"> (</mo><mi>i</mi><mo stretchy="false">) </mo><mo>-</mo><mi>x</mi><mo stretchy="false"> (</mo><mi>i</mi><mo stretchy="false">) </mo><mo stretchy="false">) </mo><msup><mrow></mrow><mn>2</mn></msup></mrow></math></mathml>      (10) </p>
+                </div>
+                <div class="p1">
+                    <p id="117">如图7所示, 实验结果表明块状数据的亚像元定位结果还原度很高, 只是在下半部分边缘出有一些出入。</p>
+                </div>
+                <div class="area_img" id="118">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201904009_118.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 块状数据亚像元定位结果" src="Detail/GetImg?filename=images/DZKK201904009_118.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 块状数据亚像元定位结果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201904009_118.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 7. Block data sub-pixel mapping results</p>
+
+                </div>
+                <div class="p1">
+                    <p id="119">如图8所示, 实验结果表明小目标数据的亚像元定位效果基本可以还原小目标的形状。模拟数据的误差对比结果如表3所示, 证明了本文采用的亚像元定位算法的准确性。</p>
+                </div>
+                <div class="area_img" id="120">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201904009_120.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图8 小目标数据亚像元定位结果" src="Detail/GetImg?filename=images/DZKK201904009_120.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图8 小目标数据亚像元定位结果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201904009_120.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 8. Small target data sub-pixel mapping results</p>
+
+                </div>
+                <div class="area_img" id="121">
+                    <p class="img_tit"><b>表</b>3 <b>模拟数据亚像元定位误差对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 3. Sub-pixel mapping error comparison of analog data</p>
+                    <p class="img_note"></p>
+                    <table id="121" border="1"><tr><td><br /></td><td>对比算法<sup>[18]</sup></td><td>提出的算法</td></tr><tr><td><br />块状数据</td><td>0.015 8</td><td><b>0.010 6</b></td></tr><tr><td><br />小目标数据</td><td>0.026 2</td><td><b>0.024 8</b></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="122">真实数据依旧来自AVIRIS Indian pines 高光谱图像, 截取其中的一部分来进行亚像元定位实验。实验首先由本文提出的基于端元字典的解混算法得到实验图像的丰度矩阵, 然后对不同的目标地物依次进行亚像元定位。如图9所示, 实验结果中包含了5种不同类型的端元, 分别以不同的颜色标记亚像元定位分类结果。通过实验结果图可以看到, 亚像元定位所获得的结果边缘信息丰富, 比较接近于实际情况, 但是在一些小目标的形状上还有待提高。</p>
+                </div>
+                <div class="area_img" id="123">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201904009_123.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图9 真实数据亚像元定位结果" src="Detail/GetImg?filename=images/DZKK201904009_123.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图9 真实数据亚像元定位结果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201904009_123.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 9. Real data sub-pixel mapping results</p>
+
+                </div>
+                <h3 id="124" name="124" class="anchor-tag"><b>3 结束语</b></h3>
+                <div class="p1">
+                    <p id="125">本文提出了一种基于端元字典解混的亚像元定位算法, 通过引入K-SVD字典训练算法到光谱解混结果;将光谱库训练端元字典作为端元, 并且利用KNN来检测混合像元;然后利用基于K-SVD的稀疏分解算出端元的丰度。在解混取得良好效果的基础上进行了亚像元定位的应用, 采用了两种目标函数通过像元交换的方法实现了亚像元定位。模拟数据和真实数据的实验证明了本文算法的准确性和有效性。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES29B224A770633277864C580486CC7B6C&amp;v=MzE4MTFHUWxmQnJMVTA1dDVnekwyMnhLcz1OaWZPZmJHeGJOUE9xLzVDWStzSkQzODd5QkViN0RzT1RYZmlxQm96Q3NHVE43enNDT052RlNpV1dyN0pJRnBtYUJ1SFlmTw==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> Duponchel L.Exploring hyperspectral imaging data sets with topological data analysis[J].Analytica Chimica Acta, 2018, 1000 (7) :123-131.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=NJLG201304006&amp;v=MzA1ODNVUjdxZlp1Wm9GaURnV3J2TEt5ZkhhYkc0SDlMTXE0OUZZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 宋义刚, 吴泽彬, 韦志辉, 等.稀疏性高光谱解混方法研究[J].南京理工大学学报, 2013, 37 (4) :486-492.  Song Yigang, Wu Zebin, Wei Zhihui, et al.Research on sparse hyperspectral unmixing methods[J].Journal of Nanjing University of Technology, 2013, 37 (4) :486-492.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011600662446&amp;v=MTg4ODBUTW53WmVadEZpbmxVcm5KS0ZzZGJoRT1OaWZPZmJLN0h0RE5xWTlGWXUwTkNIZy9vQk1UNlQ0UFFIL2lyUmRHZXJxUQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> Somers B, Asner G P, Tits L, et al.Endmember variability in spectral mixture analysis: a review[J].Remote Sensing of Environment, 2011, 115 (7) :1603-1616.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=STJD&amp;filename=STJD713858899&amp;v=MDY2MzA1NE8zenFxQnRHRnJDVVI3cWZadVpvRmlEZ1dydkxOam5CYXJTNUhkbkpwNGRNYllRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> Atkinson P M, Culter M E J, Lewis H. Mapping sub-pixel proportional land cover with AVHRR imagery[J]. International Journal of Remote Sensing, 1997, 18 (4) : 917-935.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Subpixel land cover mapping using multiscale spatial dependence">
+
+                                <b>[5]</b> Chen Y, Ge Y, Chen Y, et al.Subpixel land cover mapping using multiscale spatial dependence[J].IEEE Transactions on Geoscience &amp; Remote Sensing, 2018 (99) :1-10.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Supervised Sub-Pixel Mapping for Change Detection from Remotely Sensed Images with Different Resolutions">
+
+                                <b>[6]</b> Wu K, Du Q, Wang Y, et al.Supervised sub-pixel mapping for change detection from remotely sensed images with different resolutions[J].Remote Sensing, 2017, 9 (3) :284.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015437315.nh&amp;v=MjM2NDhHZExOcXBFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVab0ZpRGdXcnZMVkYyNkc3ZTc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 吴健康.基于稀疏表示的高光谱图像解混研究[D].西安: 西安电子科技大学, 2014.  Wu Jiankang.Hyperspectral image unmixing based on sparse representation[D].Xi’an:Xidian University, 2014.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201711017&amp;v=MDkzMTFOcm85RVk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVab0ZpRGdXcnZMSVRmQVpiRzRIOWI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 张亚坤, 张洪艳, 沈焕锋, 等.一种基于稀疏表达的遥感影像时空融合方法[J].电子科技, 2017, 30 (11) :56-59. Zhang Yakun, Zhang Hongyan, Shen Huanfeng, et al.A spatiotemporal fusion algorithm based on sparse representation for remote sensing imagery[J]. Electronic Science and Technology, 2017, 30 (11) :56-59.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=&amp;quot;On the Use of Spectral Libraries to perform Sparse Unmixing of Hyperspectral Data&amp;quot;">
+
+                                <b>[9]</b> Iordache M D, Plaza A, Dias J B.On the use of spectral libraries to perform sparse unmixing of hyperspectral data[C].Reykjavik:IEEE GRSS Workshop on Hyperspectral Image and Signal Processing:Evolution in Remote Sensing (WHISPERS) , 2010.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Collaborative sparse regression for hyperspectral unmixing">
+
+                                <b>[10]</b> Iordache M D, Bioucas-Dias J M, Plaza A. Collaborative sparse regression for hyperspectral unmixing[J].IEEE Transactions on Geoscience &amp; Remote Sensing, 2014, 52 (1) :341-354.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201509037&amp;v=MjYwMDBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVab0ZpRGdXcnZMSVRmQVpiRzRIOVRNcG85R1k0UUs=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 沈丽, 韩彦芳.基于稀疏表示的超分辨率图像重建[J].电子科技, 2015, 28 (9) :144-147. Shen Li, Han Yanfang.Image super-resolution reconstruction based on sparse representation[J]. Electronic Science and Technology, 2015, 28 (9) :144-147.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201503053&amp;v=MTY0MTdCdEdGckNVUjdxZlp1Wm9GaURnV3J2TEx6N0JkN0c0SDlUTXJJOUFaNFFLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 刘万军, 杨秀红, 曲海成, 等.基于光谱信息散度与光谱角匹配的高光谱解混算法[J].计算机应用, 2015, 35 (3) : 844-848.  Liu Wanjun, Yang Xiuhong, Qu Haicheng, et al. Hyperspectral unmixing algorithm based on spectral information divergence and spectral angle matching[J]. Computer Application, 2015, 35 (3) :844-848.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGTB201108000&amp;v=MjI3NjlqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVab0ZpRGdXcnZMUHlyZmJMRzRIOURNcDQ5RlpJUUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 凌峰, 吴胜军, 肖飞.遥感影像亚像元定位研究综述[J]. 中国图象图形学报, 2011, 16 (8) :1335-1345. Ling Feng, Wu Shengjun, Xiao Fei.Survey of subpixel localization in remote sensing images[J].China Journal of Image and Graphics, 2011, 16 (8) :1335-1345.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Mapping Sub-Pixel Boundaries from RemotelySensed Images">
+
+                                <b>[14]</b> Atkinson P M.Mapping sub-pixel boundaries from remotely sensed images[C].London:Innovations in GIS 4, 1997.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501972138&amp;v=MTk0OTNNbndaZVp0RmlubFVybkpLRnNkYmhFPU5pZk9mYks3SHRETnFvOUViZXdORFg4eG9CTVQ2VDRQUUgvaXJSZEdlcnFRVA==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> Krafft C, Diderhoshan M A, Recknagel P, et al.Crisp and soft multivariate methods visualize individual cell nuclei in Raman images of liver tissue sections[J].Vibrational Spectroscopy, 2011, 55 (1) :90-100.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Alternating direction algorithmsfor constrained sparse regression:Application to hyper-spectral unmixing">
+
+                                <b>[16]</b> Dias J B.Alternating direction algorithms for constrained sparse regression: application to hyperspectral unmixing[C].Grenoble:First IEEE GRSS Workshop on Hyperspectral Image and Signal Processing, 2009.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Total variation regulati-zation in sparse hyperspectral unmixing">
+
+                                <b>[17]</b> Iordache M D, Bioucas-Dias J M, Plaza A.Total variation regulatization in sparse hyperspectral unmixing[C]. Lisbon:Hyperspectral Image and Signal Processing: Evolution in Remote Sensing, 2011.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_18" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016074033.nh&amp;v=MjE1MTh0R0ZyQ1VSN3FmWnVab0ZpRGdXcnZMVkYyNkdMTy9HdEhQckpFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[18]</b> 范明阳.基于光谱解混和目标优化的高光谱图像亚像元定位研究[D].杭州:杭州电子科技大学, 2016. Fan Mingyang.Research on sub-pixel localization of hyperspectral imagery based on optimization of spectral mixture and target optimization[D].Hangzhou: Hangzhou Dianzi University, 2016.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="DZKK201904009" />
+        <input id="dpi" type="hidden" value="399" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201904009&amp;v=MDIwNTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1Wm9GaURnV3J2TElUZkFaYkc0SDlqTXE0OUZiWVE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZNc25zRDRuRVU4L0NLNVRPODU4TT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=842_VlRz_g1CMCLi-M0twVw-4EOFG_noWyi_OsMnrAg1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=vAscMyvIPP9NePnbGPkqJ0A5tHOvnzl65tGuRDsf9xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

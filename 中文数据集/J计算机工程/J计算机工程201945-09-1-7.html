@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637126275612427500%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201909001%26RESULT%3d1%26SIGN%3dzL%252bh2KwnjYld4a68rEfUCvu2OuM%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201909001&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201909001&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201909001&amp;v=MTYzNDVSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTdoVzd6T0x6N0JiYkc0SDlqTXBvOUZaWVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#41" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#45" data-title="1 相关工作 ">1 相关工作</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#46" data-title="1.1 基于MC模型的位置预测">1.1 基于MC模型的位置预测</a></li>
+                                                <li><a href="#48" data-title="1.2 基于循环神经网络的位置预测">1.2 基于循环神经网络的位置预测</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#62" data-title="2 基于ST-LSTM网络的位置预测 ">2 基于ST-LSTM网络的位置预测</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#63" data-title="2.1 问题定义">2.1 问题定义</a></li>
+                                                <li><a href="#74" data-title="2.2 ST-LSTM网络模型">2.2 ST-LSTM网络模型</a></li>
+                                                <li><a href="#96" data-title="2.3 ST-LSTM网络模型变体">2.3 ST-LSTM网络模型变体</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#110" data-title="3 实验结果与分析 ">3 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#111" data-title="3.1 实验数据">3.1 实验数据</a></li>
+                                                <li><a href="#115" data-title="3.2 对比模型">3.2 对比模型</a></li>
+                                                <li><a href="#121" data-title="3.3 评估方法">3.3 评估方法</a></li>
+                                                <li><a href="#130" data-title="3.4 结果分析">3.4 结果分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#146" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#51" data-title="&lt;b&gt;图1 传统RNN模型展开结构示意图&lt;/b&gt;"><b>图1 传统RNN模型展开结构示意图</b></a></li>
+                                                <li><a href="#52" data-title="&lt;b&gt;图2 LSTM模型展开结构示意图&lt;/b&gt;"><b>图2 LSTM模型展开结构示意图</b></a></li>
+                                                <li><a href="#60" data-title="&lt;b&gt;图3 LSTM模型的cell展开结构示意图&lt;/b&gt;"><b>图3 LSTM模型的cell展开结构示意图</b></a></li>
+                                                <li><a href="#73" data-title="&lt;b&gt;图4 签到地之间的时空信息示意图&lt;/b&gt;"><b>图4 签到地之间的时空信息示意图</b></a></li>
+                                                <li><a href="#76" data-title="&lt;b&gt;图5 ST-LSTM模型的cell展开结构示意图&lt;/b&gt;"><b>图5 ST-LSTM模型的cell展开结构示意图</b></a></li>
+                                                <li><a href="#100" data-title="&lt;b&gt;图6 ST-LSTM1模型的cell展开结构示意图&lt;/b&gt;"><b>图6 ST-LSTM1模型的cell展开结构示意图</b></a></li>
+                                                <li><a href="#106" data-title="&lt;b&gt;图7 ST-LSTM2模型的cell展开结构示意图&lt;/b&gt;"><b>图7 ST-LSTM2模型的cell展开结构示意图</b></a></li>
+                                                <li><a href="#113" data-title="&lt;b&gt;表1 数据集统计结果&lt;/b&gt;"><b>表1 数据集统计结果</b></a></li>
+                                                <li><a href="#132" data-title="&lt;b&gt;表2 对比模型在各数据集上的性能表现&lt;/b&gt;"><b>表2 对比模型在各数据集上的性能表现</b></a></li>
+                                                <li><a href="#133" data-title="&lt;b&gt;表3 ST-LSTM与2种变体模型在各数据集上的性能表现&lt;/b&gt;"><b>表3 ST-LSTM与2种变体模型在各数据集上的性能表现</b></a></li>
+                                                <li><a href="#140" data-title="&lt;b&gt;图8 各模型迭代的收敛过程&lt;/b&gt;"><b>图8 各模型迭代的收敛过程</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="189">
+
+
+                                    <a id="bibliography_1" title=" KOLODZIEJ K W,HJELM J.Local positioning systems:LBS applications and services[M].[S.1.]:CRC Press,2006:101-158." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Local Positioning Systems: LBS Applications and Services">
+                                        <b>[1]</b>
+                                         KOLODZIEJ K W,HJELM J.Local positioning systems:LBS applications and services[M].[S.1.]:CRC Press,2006:101-158.
+                                    </a>
+                                </li>
+                                <li id="191">
+
+
+                                    <a id="bibliography_2" title=" ASAHARA A,MARUYAMA K,SATO A,et al.Pedestrian movement prediction based on mixed Markov-chain model[C]//Proceedings of the 19th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.New York,USA:ACM Press,2011:25-33." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Pedestrian-movement prediction based on mixed Markov-chain model">
+                                        <b>[2]</b>
+                                         ASAHARA A,MARUYAMA K,SATO A,et al.Pedestrian movement prediction based on mixed Markov-chain model[C]//Proceedings of the 19th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.New York,USA:ACM Press,2011:25-33.
+                                    </a>
+                                </li>
+                                <li id="193">
+
+
+                                    <a id="bibliography_3" title=" QIAO Shaojie,SHEN Dayong,WANG Xiaoteng,et al.A self-adaptive parameter selection trajectory prediction approach via hidden Markov models[J].IEEE Transactions on Intelligent Transportation Systems,2015,16(1):284-296." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A self-adaptive parameter selection trajectory prediction approach via hidden Markov models">
+                                        <b>[3]</b>
+                                         QIAO Shaojie,SHEN Dayong,WANG Xiaoteng,et al.A self-adaptive parameter selection trajectory prediction approach via hidden Markov models[J].IEEE Transactions on Intelligent Transportation Systems,2015,16(1):284-296.
+                                    </a>
+                                </li>
+                                <li id="195">
+
+
+                                    <a id="bibliography_4" title=" LIAN Defu,ZHENG V W,XIE Xing.Collaborative filtering meets next check-in location prediction[C]//Proceedings of the 22nd International Conference on World Wide Web.New York,USA:ACM Press,2013:231-232." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Collaborative Filtering Meets Next Check-in Location Prediction">
+                                        <b>[4]</b>
+                                         LIAN Defu,ZHENG V W,XIE Xing.Collaborative filtering meets next check-in location prediction[C]//Proceedings of the 22nd International Conference on World Wide Web.New York,USA:ACM Press,2013:231-232.
+                                    </a>
+                                </li>
+                                <li id="197">
+
+
+                                    <a id="bibliography_5" title=" MORZY M.Prediction of moving object location based on frequent trajectories[C]//Proceedings of International Symposium on Computer and Information Sciences.Berlin,Germany:Springer,2006:583-592." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Prediction of moving object location based on frequent trajectories">
+                                        <b>[5]</b>
+                                         MORZY M.Prediction of moving object location based on frequent trajectories[C]//Proceedings of International Symposium on Computer and Information Sciences.Berlin,Germany:Springer,2006:583-592.
+                                    </a>
+                                </li>
+                                <li id="199">
+
+
+                                    <a id="bibliography_6" title=" MORZY M.Mining frequent trajectories of moving objects for location prediction[C]//Proceedings of International Workshop on Machine Learning and Data Mining in Pattern Recognition.Berlin,Germany:Springer,2007:667-680." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Mining frequent trajectories of moving objects for location prediction">
+                                        <b>[6]</b>
+                                         MORZY M.Mining frequent trajectories of moving objects for location prediction[C]//Proceedings of International Workshop on Machine Learning and Data Mining in Pattern Recognition.Berlin,Germany:Springer,2007:667-680.
+                                    </a>
+                                </li>
+                                <li id="201">
+
+
+                                    <a id="bibliography_7" title=" GAMBS S,KILLIJIAN M O,DEL PRADO C M N.Next place prediction using mobility markov chains[C]//Proceedings of the 1st Workshop on Measurement,Privacy,and Mobility.New York,USA:ACM Press,2012:3." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Next place prediction using mobility M arkov chains">
+                                        <b>[7]</b>
+                                         GAMBS S,KILLIJIAN M O,DEL PRADO C M N.Next place prediction using mobility markov chains[C]//Proceedings of the 1st Workshop on Measurement,Privacy,and Mobility.New York,USA:ACM Press,2012:3.
+                                    </a>
+                                </li>
+                                <li id="203">
+
+
+                                    <a id="bibliography_8" title=" BAUMANN P,KLEIMINGER W,Santini S.The influence of temporal and spatial featureson the performance of next-place prediction algorithms [C]//Proceedings of ACM International Joint Conference on Pervasive and Ubiquitous Computing.New York,USA:ACM Press,2013:449-458." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The influence of temporal and spatial features on the performance of next-place prediction algorithms">
+                                        <b>[8]</b>
+                                         BAUMANN P,KLEIMINGER W,Santini S.The influence of temporal and spatial featureson the performance of next-place prediction algorithms [C]//Proceedings of ACM International Joint Conference on Pervasive and Ubiquitous Computing.New York,USA:ACM Press,2013:449-458.
+                                    </a>
+                                </li>
+                                <li id="205">
+
+
+                                    <a id="bibliography_9" title=" YE Jihang,ZHU Zhe,CHENG Hong.What’s your next move:user activity prediction in location-based social networks[C]//Proceedings of 2013 SIAM International Conference on Data Mining.Washington D.C.,USA:IEEE Press,2013:171-179." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=What&amp;#39;&amp;#39;s your next move:User activity prediction in location-based social networks">
+                                        <b>[9]</b>
+                                         YE Jihang,ZHU Zhe,CHENG Hong.What’s your next move:user activity prediction in location-based social networks[C]//Proceedings of 2013 SIAM International Conference on Data Mining.Washington D.C.,USA:IEEE Press,2013:171-179.
+                                    </a>
+                                </li>
+                                <li id="207">
+
+
+                                    <a id="bibliography_10" title=" LIU Qiang,WU Shu,WANG Liang,et al.Predicting the next location:a recurrent model with spatial and temporal contexts[C]//Proceedings of the 30th AAAI Conference on Artificial Intelligence.[S.1.]:AAAI Press,2016:194-200." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Predicting the next location:a recurrent model with spatial and temporal contexts">
+                                        <b>[10]</b>
+                                         LIU Qiang,WU Shu,WANG Liang,et al.Predicting the next location:a recurrent model with spatial and temporal contexts[C]//Proceedings of the 30th AAAI Conference on Artificial Intelligence.[S.1.]:AAAI Press,2016:194-200.
+                                    </a>
+                                </li>
+                                <li id="209">
+
+
+                                    <a id="bibliography_11" title=" PASCANU R,MIKOLOV T,BENGIO Y.On the difficulty of training recurrent neural networks[C]//Proceedings of the 30th IEEE International Conference on Machine Learning.Washington D.C.,USA:IEEE Press,2013:1310-1318." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=On the difficulty of training recurrent neural networks">
+                                        <b>[11]</b>
+                                         PASCANU R,MIKOLOV T,BENGIO Y.On the difficulty of training recurrent neural networks[C]//Proceedings of the 30th IEEE International Conference on Machine Learning.Washington D.C.,USA:IEEE Press,2013:1310-1318.
+                                    </a>
+                                </li>
+                                <li id="211">
+
+
+                                    <a id="bibliography_12" >
+                                        <b>[12]</b>
+                                     BENGIO Y,SIMARD P,FRASCONI P.Learning long-term dependencies with gradient descent is difficult [J].IEEE Transactions on Neural Networks,2002,5(2):157-166.</a>
+                                </li>
+                                <li id="213">
+
+
+                                    <a id="bibliography_13" title=" WANG Jian.Chinese text sentiment analysis using LSTM network based on L2 and nadam[C]//Proceedings of the 17th International IEEE Conference on Communication Technology.Washington D.C.,USA:IEEE Press,2017:1891-1895." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Chinese text sentiment analysis using LSTM network based on L2 and nadam">
+                                        <b>[13]</b>
+                                         WANG Jian.Chinese text sentiment analysis using LSTM network based on L2 and nadam[C]//Proceedings of the 17th International IEEE Conference on Communication Technology.Washington D.C.,USA:IEEE Press,2017:1891-1895.
+                                    </a>
+                                </li>
+                                <li id="215">
+
+
+                                    <a id="bibliography_14" title=" 梁军,柴玉梅,原慧斌,等.基于极性转移和LSTM递归网络的情感分析[J].中文信息学报,2015,29(5):152-159." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201505021&amp;v=MDI5OTN5N2hXN3pPS0NqWWZiRzRIOVRNcW85SFpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         梁军,柴玉梅,原慧斌,等.基于极性转移和LSTM递归网络的情感分析[J].中文信息学报,2015,29(5):152-159.
+                                    </a>
+                                </li>
+                                <li id="217">
+
+
+                                    <a id="bibliography_15" title=" GRAVES A.Supervised sequence labelling with recurrent neural networks[M].Berlin,Germany:Springer,2012." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Supervised sequence labelling">
+                                        <b>[15]</b>
+                                         GRAVES A.Supervised sequence labelling with recurrent neural networks[M].Berlin,Germany:Springer,2012.
+                                    </a>
+                                </li>
+                                <li id="219">
+
+
+                                    <a id="bibliography_16" title=" GRAVES A,SCHMIDHUBER J.Framewise phoneme classification with bidirectional LSTM and other neural network architectures[J].Neural Networks,2005,18(5):602-610." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13012300069870&amp;v=MDI1MDF5am1VTHpJSmxvY2FSUT1OaWZPZmJLN0h0RE9ySTlGWk8wR0JIczVvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SA==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         GRAVES A,SCHMIDHUBER J.Framewise phoneme classification with bidirectional LSTM and other neural network architectures[J].Neural Networks,2005,18(5):602-610.
+                                    </a>
+                                </li>
+                                <li id="221">
+
+
+                                    <a id="bibliography_17" title=" NNEIL D,PFEIFFER M,LIU S C.Phased LSTM:accelerating recurrent network training for long or event-based sequences[C]//Proceedings of ANIPS’16.Washington D.C.,USA:IEEE Press,2016:3882-3890." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Phased LSTM:accelerating recurrent network training for long or event-based sequences">
+                                        <b>[17]</b>
+                                         NNEIL D,PFEIFFER M,LIU S C.Phased LSTM:accelerating recurrent network training for long or event-based sequences[C]//Proceedings of ANIPS’16.Washington D.C.,USA:IEEE Press,2016:3882-3890.
+                                    </a>
+                                </li>
+                                <li id="223">
+
+
+                                    <a id="bibliography_18" title=" GREFF K,SRIVASTAVA R K,KOUTNIK J,et al.LSTM:a search space odyssey[J].IEEE Transactions on Neural Networks and Learning Systems,2017,28(10):2222-2232." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=LSTM:A Search Space Odyssey">
+                                        <b>[18]</b>
+                                         GREFF K,SRIVASTAVA R K,KOUTNIK J,et al.LSTM:a search space odyssey[J].IEEE Transactions on Neural Networks and Learning Systems,2017,28(10):2222-2232.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(09),1-7 DOI:10.19678/j.issn.1000-3428.0052883            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于ST-LSTM网络的位置预测模型</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%AE%B8%E8%8A%B3%E8%8A%B3&amp;code=40955845&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">许芳芳</a>
+                                <a href="javascript:;">杨俊杰</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%88%98%E5%AE%8F%E5%BF%97&amp;code=06253980&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">刘宏志</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6%E8%BD%AF%E4%BB%B6%E4%B8%8E%E5%BE%AE%E7%94%B5%E5%AD%90%E5%AD%A6%E9%99%A2&amp;code=0038515&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北京大学软件与微电子学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%9B%BD%E7%BD%91%E4%B8%AD%E5%85%B4%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">国网中兴有限公司</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对现有位置预测研究多数忽略时间和空间之间关联性的问题,提出一种基于时空特性的长短期记忆模型(ST-LSTM)。基于LSTM网络添加单独处理用户移动行为时空信息的时空门,并考虑用户签到的时间及空间因素,从而使模型具有时空特性。在ST-LSTM网络中引入个人修正因子,对每类用户的输出结果进行修正,在确保基本特性的基础上突出个性化,更好地学习每类用户的行为轨迹特征,同时在保证ST-LSTM网络特性的前提下给出2种ST-LSTM网络的简化变体模型。在公开数据集上的测试结果表明,与主流位置预测方法相比,该预测模型精确率、召回率、<i>F</i>1值都有明显提升。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%BD%8D%E7%BD%AE%E9%A2%84%E6%B5%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">位置预测;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%95%BF%E7%9F%AD%E6%9C%9F%E8%AE%B0%E5%BF%86%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">长短期记忆模型;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%97%B6%E7%A9%BA%E4%BF%A1%E6%81%AF&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">时空信息;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%B8%AA%E6%80%A7%E5%8C%96&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">个性化;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%A1%8C%E4%B8%BA%E8%BD%A8%E8%BF%B9&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">行为轨迹;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    许芳芳(1992—),女,硕士研究生,主研方向为数据挖掘、深度学习;;
+                                </span>
+                                <span>
+                                    杨俊杰,硕士;;
+                                </span>
+                                <span>
+                                    刘宏志,副教授、博士。E-mail:liuhz@ pku. edu. cn;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-10-16</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家重点研发计划(2017YFB1002000);</span>
+                    </p>
+            </div>
+                    <h1><b>Location Prediction Model Based on ST-LSTM Network</b></h1>
+                    <h2>
+                    <span>XU Fangfang</span>
+                    <span>YANG Junjie</span>
+                    <span>LIU Hongzhi</span>
+            </h2>
+                    <h2>
+                    <span>School of Software and Microelectronic,Peking University</span>
+                    <span>State Grid Zhongxing Co.,Ltd.</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Existing research on location prediction usually neglects the correlation between time and space.To address the problem,this paper proposes a Long and Short Term Memory model based on Spatial and Temporal features(ST-LSTM).Based on the LSTM network,a spatial-temporal gate that independently processes the spatial-temporal information of the user's move is added,and the spatial and temporal factors of the user's sign-in are added,so that the model has spatial-temporal characteristics.The personal correction factor is introduced in the ST-LSTM network to correct the output of each type of users,highlighting the individuality on the basis of ensuring the basic characteristics,and better learning the behavioral trajectory characteristics of each type of users.At the same time,a simplified variant model of two ST-LSTM networks is proposed under the premise of ensuring the characteristics of the ST-LSTM network.Results of testing on the public dataset show that compared with the mainstream location prediction methods,the prediction model has better performance in terms of accuracy,recall rate,and <i>F</i>1 value.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=location%20prediction&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">location prediction;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Long%20Short%20Term%20Memory(LSTM)%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Long Short Term Memory(LSTM) model;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=spatial-temporal%20information&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">spatial-temporal information;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=individuality&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">individuality;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=behavioral%20trajectory&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">behavioral trajectory;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-10-16</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="41" name="41" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="42">随着移动互联网技术的发展以及全球定位技术的普及,基于位置的服务(Location-Based Service,LBS)<citation id="225" type="reference"><link href="189" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>应用迅速增长。在移动通信环境下,LBS的广泛应用,积累了大量的用户时空位置数据,方便了对用户运动状态的跟踪。尽管人类的移动模式有较高的自由度和变化,但是通过挖掘大量用户的行为规律及兴趣点,可获得人类行为动态的基本规律,进而提供便利的服务以改变人类的生活与工作方式。除了为日常生活提供便利外,还可以将海量的时空位置信息用于交通管理和城市规划。现有的地图服务软件,通过检测车流量,并对周围地点流量预测进行综合建模,可以预测某条道路的交通拥堵状况并推荐合理路线,使司机可以避开交通堵塞的路线,从而缓解城市交通拥堵状态。移动轨迹分析还可用于国家安防,通过提前预测恐怖分子下一次袭击地点,及时做好安防准备或者干预措施。这些应用的关键都在于如何挖掘用户的移动数据以获得人类行为和动态的基本规律,并对用户行为建模和准确预测下一时刻的位置。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">马尔可夫链(Markov Chain,MC)和频繁模式(Frequent Pattern,FP)是2种常用的位置预测模型。基于马尔可夫链的位置预测模型通过用户过去的行为序列建立位置的转移矩阵,然后利用该矩阵预测用户下一个签到位置<citation id="226" type="reference"><link href="191" rel="bibliography" /><link href="193" rel="bibliography" /><link href="195" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>。基于频繁模式的位置预测模型利用Aprior算法提取用户的频繁移动模式信息,然后结合物体最近的运动函数估计用户下一个访问的位置<citation id="227" type="reference"><link href="197" rel="bibliography" /><link href="199" rel="bibliography" /><sup>[<a class="sup">5</a>,<a class="sup">6</a>]</sup></citation>。虽然这些方法都有较好的预测效果,但大多忽略了时间和空间两者之间的关联性,比如马尔可夫链模型只考虑了空间的转移,却忽略了签到时间的影响,但用户的行为习惯不仅与地点转移的先后有关,而且与时间也是密切相关的。基于轨迹频繁模式的预测模型每次都需要对所有数据集进行扫描查询,模型复杂度较高,忽略了用户的个性化特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">为解决上述问题,本文提出一种基于时空特性的长短期记忆模型(ST-LSTM)。在LSTM网络基础上,添加处理用户移动行为时空信息的时空门,并在模型每个时刻的输出中加入修正结果的个性化因子,以更好地学习用户的行为轨迹规律。</p>
+                </div>
+                <h3 id="45" name="45" class="anchor-tag">1 相关工作</h3>
+                <h4 class="anchor-tag" id="46" name="46">1.1 基于MC模型的位置预测</h4>
+                <div class="p1">
+                    <p id="47">文献<citation id="228" type="reference">[<a class="sup">7</a>]</citation>采用马尔可夫链模型来预测用户的移动行为,从实验结果可以看出,一阶的马尔可夫链模型可以达到较好的预测效果,且通过提升阶数能够得到更好的预测效果,但是随着阶数的升高,所需要的计算和存储成本则会变大。文献<citation id="229" type="reference">[<a class="sup">8</a>]</citation>基于马尔可夫模型,采用时间特征进行多个模型组合投票的形式进行位置预测,但是预测下一个地点的候选集中只选择了之前去过的地方,这对于数据稀疏的用户来讲推荐范围较为局限。文献<citation id="230" type="reference">[<a class="sup">9</a>]</citation>采用混合的隐马尔可夫模型(Hidden Markov Model,HMM),该模型包括隐含状态、签到活动类型以及时空特征,从而克服了基础马尔可夫模型原有忽略时间因素的弊端,但其在实现上预测下一个签到活动类型的计算中过于冗余,且对签到候选集只选取当前位置最近的400 m以内的位置,明显不符合大部分的实际应用场景。</p>
+                </div>
+                <h4 class="anchor-tag" id="48" name="48">1.2 基于循环神经网络的位置预测</h4>
+                <div class="p1">
+                    <p id="49">为解决马尔可夫链模型在连续时间间隔训练上的能力欠缺问题,文献<citation id="231" type="reference">[<a class="sup">10</a>]</citation>提出时空循环网络模型。在递归神经网络(Recurrent Neural Network,RNN)的基础上加入了时间和空间的参数,通过神经网络不断地修正参数,从而更好地将时间和空间进行融合。该模型将同一间隔内的数据加和,分别设置不同的时间间隔进行实验,寻找最优间隔。由于存在一些间隔内的位置信息数是0,导致很难对模型进行调整,不能保证最优间隔。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">LSTM是传统RNN模型的一个扩展,传统RNN模型<citation id="232" type="reference"><link href="209" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>与LSTM模型展开结构分别如图1、图2所示,两者的不同主要是是否存在控制存储状态的结构。可以看出,LSTM具有比传统RNN模型更好的学习长期记忆信息的能力<citation id="233" type="reference"><link href="211" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>,在自然语言处理方面<citation id="235" type="reference"><link href="213" rel="bibliography" /><link href="215" rel="bibliography" /><sup>[<a class="sup">13</a>,<a class="sup">14</a>]</sup></citation>以及图像识别等领域也具有较好的处理效果<citation id="234" type="reference"><link href="217" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>。</p>
+                </div>
+                <div class="area_img" id="51">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909001_051.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 传统RNN模型展开结构示意图" src="Detail/GetImg?filename=images/JSJC201909001_051.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 传统RNN模型展开结构示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909001_051.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="52">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909001_052.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 LSTM模型展开结构示意图" src="Detail/GetImg?filename=images/JSJC201909001_052.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 LSTM模型展开结构示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909001_052.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="53">LSTM的核心结构是细胞(cell)单元,如图3所示,其主要包含3个门:控制新信息输入的输入门,决定丢弃多少信息的遗忘门,过滤最终输出信息的输出门和一个决定当前时刻的细胞状态的细胞<citation id="236" type="reference"><link href="219" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>。记忆模块的各个组成部分的前向计算公式如式(1)～式(5)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="54"><i>f</i><sub><i>t</i></sub>=<i>σ</i><sub><i>f</i></sub>(<i><b>w</b></i><sub><i>xf</i></sub><i>x</i><sub><i>t</i></sub>+<i><b>w</b></i><sub><i>hf</i></sub><i>h</i><sub><i>t</i></sub>-1+<i><b>w</b></i><sub><i>cf</i></sub>⊙<i>c</i><sub><i>t</i></sub>-1+<i>b</i><sub><i>f</i></sub>)      (1)</p>
+                </div>
+                <div class="p1">
+                    <p id="55"><i>i</i><sub><i>t</i></sub>=<i>σ</i><sub><i>i</i></sub>(<i><b>w</b></i><sub><i>xi</i></sub><i>x</i><sub><i>t</i></sub>+<i><b>w</b></i><sub><i>hi</i></sub><i>h</i><sub><i>t</i></sub>-1+<i><b>w</b></i><sub><i>ci</i></sub>⊙<i>c</i><sub><i>t</i></sub>-1+<i>b</i><sub><i>i</i></sub>)      (2)</p>
+                </div>
+                <div class="p1">
+                    <p id="56"><i>c</i><sub><i>t</i></sub>=<i>f</i><sub><i>t</i></sub>⊙<i>c</i><sub><i>t</i></sub>-1+<i>i</i><sub><i>t</i></sub>⊙tanh(<i><b>w</b></i><sub><i>xc</i></sub><i>x</i><sub><i>t</i></sub>+<i><b>w</b></i><sub><i>hc</i></sub><i>h</i><sub><i>t</i></sub>-1+<i>b</i><sub><i>c</i></sub>)      (3)</p>
+                </div>
+                <div class="p1">
+                    <p id="57"><i>o</i><sub><i>t</i></sub>=<i>σ</i><sub><i>o</i></sub>(<i><b>w</b></i><sub><i>xo</i></sub><i>x</i><sub><i>t</i></sub>+<i><b>w</b></i><sub><i>ho</i></sub><i>h</i><sub><i>t</i></sub>-1+<i><b>w</b></i><sub><i>co</i></sub>⊙<i>c</i><sub><i>t</i></sub>+<i>b</i><sub><i>o</i></sub>)      (4)</p>
+                </div>
+                <div class="p1">
+                    <p id="58"><i>h</i><sub><i>t</i></sub>=<i>o</i><sub><i>t</i></sub>⊙tanh(<i>c</i><sub><i>t</i></sub>+<i>b</i>)      (5)</p>
+                </div>
+                <div class="p1">
+                    <p id="59">其中,<i>i</i><sub><i>t</i></sub>、<i>f</i><sub><i>t</i></sub>、<i>o</i><sub><i>t</i></sub>、<i>c</i><sub><i>t</i></sub>分别代表输入门、遗忘门、输出门、细胞状态,每个控制门中都有一个激活函数<i>σ</i>,默认为sigmoid函数,这些向量的大小与隐藏状态向量<i><b>h</b></i>相同,每个权重矩阵<i><b>w</b></i>的下标是有一定意义的,例如<i><b>w</b></i><sub><i>hi</i></sub>是隐藏状态到输入门的权重矩阵,<i><b>w</b></i><sub><i>xo</i></sub>是输入到输出门的权重矩阵等,<i>b</i>为各个门的偏置。</p>
+                </div>
+                <div class="area_img" id="60">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909001_060.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 LSTM模型的cell展开结构示意图" src="Detail/GetImg?filename=images/JSJC201909001_060.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 LSTM模型的cell展开结构示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909001_060.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="61">在图1中,<i><b>X</b></i><sub><i>t</i></sub>为<i>t</i>时刻的向量输入,<i>H</i><sub><i>t</i></sub>-1为<i>t</i>-1时刻的输出,<i>C</i><sub><i>t</i></sub>-1为<i>t</i>-1时刻的细胞状态,<i>O</i><sub><i>t</i></sub>为<i>t</i>时刻的输出门,<i><b>S</b></i><sub><i>t</i></sub>为<i>t</i>时刻的空间向量输入,<i>ST</i>为时空门,<image href="images/JSJC201909001_148.jpg" type="" display="inline" placement="inline"><alt></alt></image>为tanh激励函数。文献<citation id="237" type="reference">[<a class="sup">17</a>]</citation>提出Phased LSTM模型,其在LSTM模型中添加了时间门,但更多地是模拟一个时刻,进而特征化一个单独的行为,而不是2个行为动作之间的时间间隔。</p>
+                </div>
+                <h3 id="62" name="62" class="anchor-tag">2 基于ST-LSTM网络的位置预测</h3>
+                <h4 class="anchor-tag" id="63" name="63">2.1 问题定义</h4>
+                <div class="p1">
+                    <p id="64">本文研究的位置预测问题需要结合上下文信息,来反映行为之间的关联性。通过用户的历史签到信息去预测用户下一个有可能去的位置。本文的目标是要学习一个位置预测模型<i>f</i>,其输入为用户<i>u</i>的历史行为信息<i><b>H</b></i><sub><i>u</i></sub>:</p>
+                </div>
+                <div class="p1">
+                    <p id="65"><i><b>H</b></i><sub><i>u</i></sub> :=[(<i>l</i><mathml id="149"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>1</mn><mi>u</mi></msubsup></mrow></math></mathml>,t<mathml id="150"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>1</mn><mi>u</mi></msubsup></mrow></math></mathml>),(l<mathml id="151"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>2</mn><mi>u</mi></msubsup></mrow></math></mathml>,t<mathml id="152"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>2</mn><mi>u</mi></msubsup></mrow></math></mathml>),…,(l<mathml id="153"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mi>u</mi></msubsup></mrow></math></mathml>,t<mathml id="154"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mi>u</mi></msubsup></mrow></math></mathml>)]</p>
+                </div>
+                <div class="p1">
+                    <p id="66">其中,(l<mathml id="155"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mi>u</mi></msubsup></mrow></math></mathml>,t<mathml id="156"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mi>u</mi></msubsup></mrow></math></mathml>)表示用户u在t<mathml id="157"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mi>u</mi></msubsup></mrow></math></mathml>时刻的签到位置为l<mathml id="158"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mi>u</mi></msubsup></mrow></math></mathml>。预测模型f的输出为各个候选地点的条件概率:[p<mathml id="159"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>l</mi><msub><mrow></mrow><mn>1</mn></msub></mrow><mi>u</mi></msubsup></mrow></math></mathml>,p<mathml id="160"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>l</mi><msub><mrow></mrow><mn>2</mn></msub></mrow><mi>u</mi></msubsup></mrow></math></mathml>,…,p<mathml id="161"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>l</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mi>u</mi></msubsup></mrow></math></mathml>,…,p<mathml id="162"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>l</mi><msub><mrow></mrow><mi>n</mi></msub></mrow><mi>u</mi></msubsup></mrow></math></mathml>],其中,p<mathml id="163"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>l</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo></mrow><mi>u</mi></msubsup></mrow></math></mathml>=f(H<sub>u</sub>,l<sub>i</sub>)=P(l<sub>i</sub>|H<sub>u</sub>)。</p>
+                </div>
+                <div class="p1">
+                    <p id="67">对每一个用户u,根据预测模型f输出的各候选地点的概率值,对候选地点进行排序。</p>
+                </div>
+                <div class="p1">
+                    <p id="68">为更加准确地预测用户的行为轨迹,考虑用户行为之间的时空信息<i>Δ</i>t<sub>t</sub>与<i>Δ</i>s<sub>t</sub>:</p>
+                </div>
+                <div class="p1">
+                    <p id="69"><i>Δ</i>t<sub>m</sub>=t<mathml id="164"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mi>u</mi></msubsup></mrow></math></mathml>-t<mathml id="165"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mi>u</mi></msubsup></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="70"><i>Δ</i>s<sub>m</sub>=‖x<mathml id="166"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mi>u</mi></msubsup></mrow></math></mathml>-x<mathml id="167"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mi>u</mi></msubsup></mrow></math></mathml>,y<mathml id="168"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>m</mi><mo>+</mo><mn>1</mn></mrow><mi>u</mi></msubsup></mrow></math></mathml>-y<mathml id="169"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mi>u</mi></msubsup></mrow></math></mathml>‖<sub>2</sub></p>
+                </div>
+                <div class="p1">
+                    <p id="71">其中,x<mathml id="170"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mi>u</mi></msubsup></mrow></math></mathml>、y<mathml id="171"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mi>u</mi></msubsup></mrow></math></mathml>为位置l<mathml id="172"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mi>u</mi></msubsup></mrow></math></mathml>的经度与维度。</p>
+                </div>
+                <div class="p1">
+                    <p id="72">签到地之间的时空信息示意如图4所示。</p>
+                </div>
+                <div class="area_img" id="73">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909001_073.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 签到地之间的时空信息示意图" src="Detail/GetImg?filename=images/JSJC201909001_073.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 签到地之间的时空信息示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909001_073.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="74" name="74">2.2 ST-LSTM网络模型</h4>
+                <div class="p1">
+                    <p id="75">ST-LSTM模型(如图5所示)在LSTM模型(见图3)的基础上添加了一个时空门,用来存储时间间隔及空间距离间隔到每个时刻的细胞状态,进而学习行为之间的时空隐含关系。</p>
+                </div>
+                <div class="area_img" id="76">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909001_076.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 ST-LSTM模型的cell展开结构示意图" src="Detail/GetImg?filename=images/JSJC201909001_076.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 ST-LSTM模型的cell展开结构示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909001_076.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="77">ST-LSTM模型是从近几年LSTM的变体CIFG(Coupled Input and Forget Gate)中获得的改进思路,其中,CIGF将遗忘门用输入门代替,采取了将输入门和遗忘门进行耦合的方式,但文献<citation id="238" type="reference">[<a class="sup">18</a>]</citation>通过对比实验说明遗忘门对于LSTM的重要性,如果没有遗忘门则提升效果并不明显。本文提出的ST-LSTM模型是在有输入门和遗忘门的基础上,加入了时空门和遗忘时空门的耦合方式。</p>
+                </div>
+                <div class="p1">
+                    <p id="78">本文基于LSTM的计算公式(式(1)～式(5)),更新现有模型的公式并描述位置预测中各个门的作用:</p>
+                </div>
+                <div class="p1">
+                    <p id="79">1)遗忘门</p>
+                </div>
+                <div class="p1">
+                    <p id="80">遗忘门作用于细胞状态,将输入的上一时刻序列的隐藏状态和现在时刻的序列数据(见图5),通过sigmoid激活函数,使输出控制在0～1之间,0表示全部遗忘,1表示信息全部保留,从而得到遗忘门的输出计算公式如式(1)所示。因为遗忘门偏向于不激活状态,更偏于值为0,即忘记事物。因此,本文将上一时刻序列隐藏状态中的信息选择性遗忘,选择性地忘记前面一些不重要的移动行为习惯,或者减小这个时刻签到地点对预测的影响作用。比如一个用户在一年前经常在早上九点去的地方,但近几个月都没有再去过,遗忘门就会“忘记”这样的行为。</p>
+                </div>
+                <div class="p1">
+                    <p id="81">2)输入门</p>
+                </div>
+                <div class="p1">
+                    <p id="82">输入门作用于细胞状态,与遗忘门结构类似,同样是由上一时刻的隐藏状态和现有的序列组成。因为输入门相对于遗忘门更偏向于打开的状态,将新的信息选择性地记录到细胞状态中。加入在学习用户的时序信息时,就会将当前新签到的地点作为新的兴趣地点存储到细胞状态中,其中输入门的计算公式如式(2)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">3)时空门</p>
+                </div>
+                <div class="p1">
+                    <p id="84">时空门的输入由3个部分组成,除了与已有门一样输入<i>x</i><sub><i>t</i></sub>,另外还增加了时间间隔Δ<i>t</i><sub><i>t</i></sub>与Δ<i>s</i><sub><i>t</i></sub>这2个输入特征,并分别与时间差权重<i>w</i><sub>Δ</sub><i>t</i>(<i>st</i>)和距离差权重<i>w</i><sub>Δ</sub><i>s</i>(<i>st</i>)2个权重相乘,计算公式如式(6)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="85"><i>st</i><sub><i>t</i></sub>=<i>σ</i><sub><i>st</i></sub>(<i>w</i><sub><i>x</i></sub>(<i>st</i>)<i>x</i><sub><i>t</i></sub>+<i>w</i><sub>Δ</sub><i>t</i>(<i>st</i>)Δ<i>t</i><sub><i>t</i></sub>+<i>w</i><sub>Δ</sub><i>s</i>(<i>st</i>)Δ<i>s</i><sub><i>t</i></sub>+<i>b</i><sub>(</sub><i>st</i>))      (6)</p>
+                </div>
+                <div class="p1">
+                    <p id="86">4)细胞状态</p>
+                </div>
+                <div class="p1">
+                    <p id="87">细胞状态由两部分组成,一部分是上一时刻序列的隐藏状态和遗忘门的按元素乘,另一部分是当前输入的细胞状态和输入门的按元素乘(见图2),这样就可以将细胞状态更新为以往历史重要的兴趣信息和现在信息相结合的状态,得到的结果即为新的地点候选值。因此,细胞状态是存储各个门的综合信息。在改进的ST-LSTM网络层中(见图5),<i>st</i><sub><i>t</i></sub>作为细胞状态公式的一部分,将时空信息加入到细胞状态中去,进入下一时刻的计算,1-<i>st</i><sub><i>t</i></sub>参与到上一时刻的细胞状态中,则式(3)改为式(7)。</p>
+                </div>
+                <div class="p1">
+                    <p id="88"><i>c</i><sub><i>t</i></sub>=<i>f</i><sub><i>t</i></sub>⊙<i>c</i><sub><i>t</i></sub>-1⊙(1-<i>st</i><sub><i>t</i></sub>)+</p>
+                </div>
+                <div class="p1">
+                    <p id="89"><i>i</i><sub><i>t</i></sub>⊙tanh(<i><b>w</b></i><sub><i>xc</i></sub><i>x</i><sub><i>t</i></sub>+<i><b>w</b></i><sub><i>hc</i></sub><i>h</i><sub><i>t</i></sub>-1+<i>b</i><sub><i>c</i></sub>)⊙<i>st</i><sub><i>t</i></sub>      (7)</p>
+                </div>
+                <div class="p1">
+                    <p id="90">5)输出门及最终输出状态(<i>h</i><sub><i>t</i></sub>)</p>
+                </div>
+                <div class="p1">
+                    <p id="91">输出门不像其他控制门,它的开和关都是较为平衡的,控制细胞状态有多少输出到ST-LSTM的当前输出值<i>h</i><sub><i>t</i></sub>中,然后会把前面的判断信息保存到隐层中去,并通过激活函数tanh将输出的当前时刻的细胞状态的值保持在区间[-1,1]。本文模型每次循环输出时,在输出结果上添加个人修正因子参数,表示采取k-means聚类后每类用户的行为兴趣,是对用户结果的一个修正,输出门的公式如式(4)所示,最终的输出状态的公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="92"><i>h</i><sub><i>t</i></sub>=<i>o</i><sub><i>t</i></sub>⊙tanh(<i>c</i><sub><i>t</i></sub>)+<i>p</i><sub><i>ui</i></sub>      (8)</p>
+                </div>
+                <div class="p1">
+                    <p id="93">其中,<i>p</i><sub><i>ui</i></sub>表示用户<i>u</i><sub><i>i</i></sub>的修正因子。一方面,ST-LSTM模型通过添加时空门将Δ<i>t</i>和Δ<i>s</i><sub><i>t</i></sub>的时空信息存入<i>st</i><sub><i>t</i></sub>中,以单独的门存在,将时空关联性更加直接地表示出来,并且是只负责用户行为的时空特性,这里没有像其他门一样加入上一时刻的隐藏状态<i>h</i><sub><i>t</i></sub>-1,因为已经将上一时刻与当前时刻的信息用时间间隔和距离间隔数据来表示,并将时空门看作单位1,作用于细胞状态中。一部分将<i>st</i><sub><i>t</i></sub>参与到当前输入的单元状态信息,控制Δ<i>t</i><sub><i>t</i></sub>和Δ<i>s</i><sub><i>t</i></sub>的时空信息进入新的细胞状态中,另一部分将1-<i>st</i><sub><i>t</i></sub>参与到上一时刻的细胞状态中,和遗忘门一起控制将不重要的以往历史信息过滤掉。因此,时空门有助于将长远的信息存储在细胞状态中。在这个模型中,实际上是将<i>st</i><sub><i>t</i></sub>看成时空特征数据的输入门,将1-<i>st</i><sub><i>t</i></sub>看作为时空特征数据的遗忘门,共同控制时空信息,使模型具有时空特性。</p>
+                </div>
+                <div class="p1">
+                    <p id="94">另一方面,在ST-LSTM模型的最后输出加上个人修正因子(如式(8)所示),用<i>o</i><sub><i>t</i></sub>⊙tanh(<i>c</i><sub><i>t</i></sub>)表示大众的兴趣爱好,具有大众性;在训练模型前会对用户采取k-means聚类,并将结果作为输入特征,<i>p</i><sub><i>ui</i></sub>用来表示一类用户的个性化特性,从而使模型预测结果更为精准。</p>
+                </div>
+                <div class="p1">
+                    <p id="95">ST-LSTM综合时空和个性化2个方面的特性,从而达到了优化模型的效果。</p>
+                </div>
+                <h4 class="anchor-tag" id="96" name="96">2.3 ST-LSTM网络模型变体</h4>
+                <div class="p1">
+                    <p id="97">ST-LSTM模型较为复杂,为了简化模型并保留ST-LSTM中的时空特性和个性化,本文进一步提出2种ST-LSTM的简化变体。</p>
+                </div>
+                <h4 class="anchor-tag" id="98" name="98">2.3.1 ST-LSTM1模型</h4>
+                <div class="p1">
+                    <p id="99">第1种ST-LSTM模型变体ST-LSTM1的结构如图6所示,与ST-LSTM模型同样都添加了一个时空门和个性化因子,但是方式更为简化。</p>
+                </div>
+                <div class="area_img" id="100">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909001_100.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 ST-LSTM1模型的cell展开结构示意图" src="Detail/GetImg?filename=images/JSJC201909001_100.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 ST-LSTM1模型的cell展开结构示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909001_100.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="101">从图6中可以看出,时空门是以加的形式添加到cell细胞状态中,通过存储时间间隔以及空间距离到每个时刻的细胞状态,学习移动行为之间的时空隐含关系。基于ST-LSTM的公式,可以更新得到变体模型ST-LSTM1的前向计算公式。在ST-LSTM1网络层中,将时空门以加的方式作为细胞状态公式的一部分参与计算,将时空信息加入到细胞状态中,进入下一时刻的计算:</p>
+                </div>
+                <div class="p1">
+                    <p id="102"><i>c</i><sub><i>t</i></sub>=<i>f</i><sub><i>t</i></sub>⊙<i>c</i><sub><i>t</i></sub>-1+<i>i</i><sub><i>t</i></sub>⊙tanh(<i><b>w</b></i><sub><i>xc</i></sub><i>x</i><sub><i>t</i></sub>+<i><b>w</b></i><sub><i>hc</i></sub><i>h</i><sub><i>t</i></sub>-1+<i>b</i><sub><i>c</i></sub>)+<i>st</i><sub><i>t</i></sub>      (9)</p>
+                </div>
+                <div class="p1">
+                    <p id="103">变体模型ST-LSTM1是将全部信息输入到细胞状态中,并没有对当前输入的时空信息进行一定的筛选,但是相比ST-LSTM更加简化,相应的训练时间也会缩短。</p>
+                </div>
+                <h4 class="anchor-tag" id="104" name="104">2.3.2 ST-LSTM2模型</h4>
+                <div class="p1">
+                    <p id="105">第2种ST-LSTM模型变体ST-LSTM2的结构如图7所示,其相对于ST-LSTM模型更加简化。时空门不再和遗忘时空门进行耦合,而是改为通过与输入门<i>i</i><sub><i>t</i></sub>元素乘的方式将时空信息添加到细胞状态中。</p>
+                </div>
+                <div class="area_img" id="106">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909001_106.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 ST-LSTM2模型的cell展开结构示意图" src="Detail/GetImg?filename=images/JSJC201909001_106.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图7 ST-LSTM2模型的cell展开结构示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909001_106.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="107">基于ST-LSTM的公式,可以更新得到变体模型ST-LSTM2的前向计算公式,用当前输入的单元状态按元素乘以时空门,使输入门和时空门共同决定当前输入的单元状态信息保留多少,如式(10)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="108"><i>c</i><sub><i>t</i></sub>=<i>f</i><sub><i>t</i></sub>⊙<i>c</i><sub><i>t</i></sub>-1+<i>i</i><sub><i>t</i></sub>⊙tanh(<i><b>w</b></i><sub><i>xc</i></sub><i>x</i><sub><i>t</i></sub>+<i><b>w</b></i><sub><i>hc</i></sub><i>h</i><sub><i>t</i></sub>-1+<i>b</i><sub><i>c</i></sub>)⊙<i>st</i><sub><i>t</i></sub>      (10)</p>
+                </div>
+                <div class="p1">
+                    <p id="109">ST-LSTM2模型通过添加时空门,使得当前时刻的细胞状态tanh(<i><b>w</b></i><sub><i>xc</i></sub><i>x</i><sub><i>t</i></sub>+<i><b>w</b></i><sub><i>hc</i></sub><i>h</i><sub><i>t</i></sub>-1+<i>b</i><sub><i>c</i></sub>)中不仅可以获取到输入门<i>i</i><sub><i>t</i></sub>的有关当前兴趣地点的信息,还可以获取时空门的时间与空间特征的相关信息。此外,获取的信息通过这样的组合形式也有一定的筛选作用,相比于ST-LSTM网络,ST-LSTM2虽然少了对一些不重要信息的选择性遗忘,但是简化了ST-LSTM网络,加快了训练速度。</p>
+                </div>
+                <h3 id="110" name="110" class="anchor-tag">3 实验结果与分析</h3>
+                <h4 class="anchor-tag" id="111" name="111">3.1 实验数据</h4>
+                <div class="p1">
+                    <p id="112">本文以基于位置的社交网络数据集Gowalla的New York与Los Angeles 2个城市,以及数据集Weeplace的New York城市的数据作为实验数据,数据集的统计结果如表1所示。</p>
+                </div>
+                <div class="area_img" id="113">
+                    <p class="img_tit"><b>表1 数据集统计结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="113" border="1"><tr><td><br />数据集</td><td>用户数</td><td>签到数</td></tr><tr><td><br />Gowalla New York</td><td>2 201</td><td>107 793</td></tr><tr><td><br />Gowalla Los Angeles</td><td>2 263</td><td>128 589</td></tr><tr><td><br />Weeplace New York</td><td>3 321</td><td>625 088</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="114">对于每一个数据集,本文采取80%的数据作为训练集与20%的数据作为测试集进行实验。</p>
+                </div>
+                <h4 class="anchor-tag" id="115" name="115">3.2 对比模型</h4>
+                <div class="p1">
+                    <p id="116">为评估本文ST-LSTM模型的效果,在相同的数据集上与以下4种常用的模型进行对比分析:</p>
+                </div>
+                <div class="p1">
+                    <p id="117">1)隐马尔可夫模型(HMM)<citation id="239" type="reference"><link href="209" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>:通过用户过去的序列行为,建立位置的转移矩阵,从而去预测用户下一个签到位置。</p>
+                </div>
+                <div class="p1">
+                    <p id="118">2)循环神经网络模型(RNN):通过对序列化的数据进行分类,从而预测出用户下一个状态在某地的概率。</p>
+                </div>
+                <div class="p1">
+                    <p id="119">3)长短期记忆模型(LSTM):一种时间递归神经网络,通过使用遗忘机制使其更适合于处理和预测时间序列中间隔相对较长的事件。</p>
+                </div>
+                <div class="p1">
+                    <p id="120">4)Phased LSTM模型:在传统的LSTM模型中添加了时间门,使时间作为特征输入到时间门中从而去控制细胞状态的输出信息。</p>
+                </div>
+                <h4 class="anchor-tag" id="121" name="121">3.3 评估方法</h4>
+                <div class="p1">
+                    <p id="122">为综合评估各种模型的性能,使用4种常用的评价指标对各模型进行评估。具体指标包括:</p>
+                </div>
+                <div class="p1">
+                    <p id="123">1)<i>Precision</i>@<i>k</i>。预测结果中概率最高的前<i>k</i>个目标签到地点的精确率,设<i>n</i><sub>hit</sub>为这<i>k</i>个目标签到地点命中的次数,则:</p>
+                </div>
+                <div class="p1">
+                    <p id="124" class="code-formula">
+                        <mathml id="124"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ρ</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>@</mo><mi>k</mi><mo>=</mo><mfrac><mrow><mi>n</mi><msub><mrow></mrow><mrow><mtext>h</mtext><mtext>i</mtext><mtext>t</mtext></mrow></msub></mrow><mi>k</mi></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>1</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="125">2)<i>Recall</i>@<i>k</i>。预测结果中概率最高的前<i>k</i>个目标签到地点的召回率,设<i>n</i><sub>hit</sub>为这<i>k</i>个目标签到地点命中的次数,<i>n</i><sub>test_num</sub>为测试集中用户真正签到过的地点数量,则:</p>
+                </div>
+                <div class="p1">
+                    <p id="126" class="code-formula">
+                        <mathml id="126"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>R</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi><mo>@</mo><mi>k</mi><mo>=</mo><mfrac><mrow><mi>n</mi><msub><mrow></mrow><mrow><mtext>h</mtext><mtext>i</mtext><mtext>t</mtext></mrow></msub></mrow><mrow><mi>n</mi><msub><mrow></mrow><mrow><mtext>t</mtext><mtext>e</mtext><mtext>s</mtext><mtext>t</mtext><mo>_</mo><mtext>n</mtext><mtext>u</mtext><mtext>m</mtext></mrow></msub></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>2</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="127">3)<i>F</i>1@<i>k</i>。是一种综合评价指标,是<i>Precision</i>@<i>k</i>和<i>Recall</i>@<i>k</i>的调和平均值:</p>
+                </div>
+                <div class="p1">
+                    <p id="128" class="code-formula">
+                        <mathml id="128"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>F</mi><mn>1</mn><mo>@</mo><mi>k</mi><mo>=</mo><mn>2</mn><mo>×</mo><mfrac><mrow><mi>Ρ</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>@</mo><mi>k</mi><mo>×</mo><mi>R</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi><mo>@</mo><mi>k</mi></mrow><mrow><mi>Ρ</mi><mi>r</mi><mi>e</mi><mi>c</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>@</mo><mi>k</mi><mo>+</mo><mi>R</mi><mi>e</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi><mo>@</mo><mi>k</mi></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>3</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="129">4)<i>AUC</i>。是一种综合评定模型好坏的指标,被定义为ROC曲线下方的面积,也可以看作是一个概率值,表示正例(用户有过签到的地点)排在负例(用户没有签到过的地点)前面的概率。</p>
+                </div>
+                <h4 class="anchor-tag" id="130" name="130">3.4 结果分析</h4>
+                <div class="p1">
+                    <p id="131">表2为各模型在不同数据集上的性能表现。在表2中,将本文ST-LSTM模型与其他4种模型中效果最好的LSTM模型相比,从而得到提升效果,其中,3种数据集在4个评价指标的提升效果分别为:13.39%、13.32%、24.18%、4.90%;12.91%、12.76%、21.94%、0.87%;8.24%、8.24%、14.56%、5.97%。表3为ST-LSTM和其他2种变体在各数据集上的性能表现。</p>
+                </div>
+                <div class="area_img" id="132">
+                    <p class="img_tit"><b>表2 对比模型在各数据集上的性能表现</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="132" border="1"><tr><td>数据集</td><td>模型</td><td><i>Recall</i><br />@10</td><td><i>Precision</i><br />@10</td><td><i>F</i>1@10</td><td><i>AUC</i></td></tr><tr><td rowspan="5"><br />Gowalla<br />New York</td><td>HMM</td><td>0.392 0</td><td>0.039 2</td><td>0.071 1</td><td>0.707 8</td></tr><tr><td><br />RNN</td><td>0.551 2</td><td>0.055 1</td><td>0.086 9</td><td>0.799 2</td></tr><tr><td><br />Phased LSTM</td><td>0.567 7</td><td>0.056 7</td><td>0.089 0</td><td>0.817 3</td></tr><tr><td><br />LSTM</td><td>0.607 9</td><td>0.060 8</td><td>0.100 9</td><td>0.842 5</td></tr><tr><td><br />ST-LSTM</td><td>0.689 0</td><td>0.068 9</td><td>0.125 3</td><td>0.883 8</td></tr><tr><td rowspan="5"><br />Gowalla<br />Los Angeles</td><td>HMM</td><td>0.381 2</td><td>0.038 1</td><td>0.068 7</td><td>0.707 5</td></tr><tr><td><br />RNN</td><td>0.540 5</td><td>0.054 1</td><td>0.089 9</td><td>0.809 1</td></tr><tr><td><br />Phased LSTM</td><td>0.571 8</td><td>0.057 2</td><td>0.095 3</td><td>0.881 5</td></tr><tr><td><br />LSTM</td><td>0.610 5</td><td>0.061 1</td><td>0.102 1</td><td>0.856 6</td></tr><tr><td><br />ST-LSTM</td><td>0.689 3</td><td>0.068 9</td><td>0.124 5</td><td>0.889 2</td></tr><tr><td rowspan="5"><br />Weeplace<br />New York</td><td>HMM</td><td>0.502 3</td><td>0.050 2</td><td>0.088 1</td><td>0.797 4</td></tr><tr><td><br />RNN</td><td>0.651 2</td><td>0.065 1</td><td>0.096 9</td><td>0.891 1</td></tr><tr><td><br />Phased LSTM</td><td>0.672 9</td><td>0.067 3</td><td>0.102 7</td><td>0.853 1</td></tr><tr><td><br />LSTM</td><td>0.716 1</td><td>0.071 6</td><td>0.120 9</td><td>0.895 9</td></tr><tr><td><br />ST-LSTM</td><td>0.775 1</td><td>0.077 5</td><td>0.138 5</td><td>0.949 3</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="133">
+                    <p class="img_tit"><b>表3 ST-LSTM与2种变体模型在各数据集上的性能表现</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="133" border="1"><tr><td>数据集</td><td>模型</td><td><i>Recall</i>@10</td><td><i>Precision</i>@10</td><td><i>F</i>1@10</td><td><i>AUC</i></td></tr><tr><td rowspan="3"><br />Gowalla <br />New York</td><td>ST-LSTM</td><td>0.689 0</td><td>0.068 9</td><td>0.125 3</td><td>0.883 8</td></tr><tr><td><br />ST-LSTM1</td><td>0.682 2</td><td>0.068 2</td><td>0.124 0</td><td>0.884 9</td></tr><tr><td><br />ST-LSTM2</td><td>0.674 9</td><td>0.067 5</td><td>0.122 7</td><td>0.882 7</td></tr><tr><td rowspan="3"><br />Gowalla<br />Los Angeles</td><td>ST-LSTM</td><td>0.689 3</td><td>0.068 9</td><td>0.124 5</td><td>0.889 2</td></tr><tr><td><br />ST-LSTM1</td><td>0.681 9</td><td>0.068 2</td><td>0.123 9</td><td>0.888 0</td></tr><tr><td><br />ST-LSTM2</td><td>0.679 5</td><td>0.068 0</td><td>0.122 9</td><td>0.884 8</td></tr><tr><td rowspan="3"><br />Weeplace<br />New York</td><td>ST-LSTM</td><td>0.775 1</td><td>0.077 5</td><td>0.138 5</td><td>0.949 3</td></tr><tr><td><br />ST-LSTM1</td><td>0.741 8</td><td>0.074 2</td><td>0.134 9</td><td>0.933 5</td></tr><tr><td><br />ST-LSTM2</td><td>0.759 0</td><td>0.075 9</td><td>0.137 9</td><td>0.948 4</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="134">通过实验结果分析可得到如下结论:</p>
+                </div>
+                <div class="p1">
+                    <p id="135">1)基于循环神经网络的模型(RNN、LSTM、ST-LSTM)性能优于马尔可夫链模型(HMM)。在不同数据上根据不同的评价指标,基于循环神经网络的模型(如RNN、LSTM、ST-LSTM)性能都要明显优于马尔可夫链模型(如HMM),其中,ST-LSTM模型的<i>Recall</i>@10值高于HMM模型的75%,在综合评价指标<i>AUC</i>上也高出HMM模型的19%。具体来说,HMM模型这种非深度网络模型假设当前状态只与上一时刻的状态有关,相比于仿大脑思考的神经网络,对以往的兴趣地点学习不够。由此可见,对于地点预测这种长序列问题,基于循环神经网络的深度学习模型能学习到的规律更为准确。</p>
+                </div>
+                <div class="p1">
+                    <p id="136">2)基于LSTM的模型(如LSTM、Phased LSTM、ST-LSTM)性能优于传统循环神经网络模型RNN。通过比较RNN模型和LSTM模型(如LSTM、Phased LSTM、ST-LSTM)在各项评价指标上的表现(见表2)可以看出,LSTM模型优于RNN,这主要在于LSTM比RNN门控组件增多。</p>
+                </div>
+                <div class="p1">
+                    <p id="137">3)时空信息对提高预测性能帮助较大。对比于基础LSTM模型,具有时空特性的ST-LSTM模型的<i>Recall</i>@10指标,要比LSTM在Gowlla与Weeplace 2个数据集上高出13.39%和8.24%,在其他指标上也有较明显提升。这样的结果主要是由于ST-LSTM引入了空间信息,并且更好地利用了时间和空间信息。此外,通过添加的个人修正因子<i>p</i><sub><i>u</i></sub>对输出结果起到了修正作用,能较好地训练每类用户的个性化行为规律。</p>
+                </div>
+                <div class="p1">
+                    <p id="138">4)ST-LSTM模型与2个变体的性能相差不大。从实验结果(见表3)中可以看出,ST-LSTM以及2种变体ST-LSTM1、ST-LSTM2这3种模型的各项评估指标都相差不大。其中,<i>AUC</i>的变化都在1.2%上下浮动,这表明3种模型的总体性能相当。从各项指标整体来看,ST-LSTM模型的性能要略好于ST-LSTM1和ST-LSTM2,这主要是因为ST-LSTM模型的结构相较于2个变体更复杂,考虑的问题比较全面。</p>
+                </div>
+                <div class="p1">
+                    <p id="139">为了对比分析ST-LSTM和2个变体的运行效率,图8展示了各模型迭代的收敛过程。从图8可以看出,相同迭代次数最先收敛的为ST-LSTM2,其次是ST-LSTM1,最慢为ST-LSTM。但是ST-LSTM2网络随着迭代次数的增加,出现了过拟合现象,模型整体效果不如其他2个。另外,通过比较实验过程中最终收敛的时间发现,收敛速度(即耗时)最快的是ST-LSTM1,ST-LSTM2次之,ST-LSTM最慢,这是因为ST-LSTM2使用张量相乘,公式的复杂程度较高。从图8中还可以看出,ST-LSTM1评估指标只比ST-LSTM略低,但是收敛速度比ST-LSTM快,所以,如果在时间上要求较高,可以选择性能稍低的ST-LSTM1变体模型,以加快训练速度。</p>
+                </div>
+                <div class="area_img" id="140">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909001_140.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图8 各模型迭代的收敛过程" src="Detail/GetImg?filename=images/JSJC201909001_140.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图8 各模型迭代的收敛过程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909001_140.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="141">本文的主要贡献如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="142">1)本文提出的ST-LSTM位置预测模型不同于传统的LSTM模型,它将用户行为之间的时间与距离间隔所隐含的关系单独存入到时空门中,在循环网络中筛选和保留相应的信息,从而能更好地学习运动轨迹信息中所蕴含的行为习惯。</p>
+                </div>
+                <div class="p1">
+                    <p id="143">2)ST-LSTM模型在输出时添加了个性化修正因子,在大众的兴趣爱好基础上训练每类用户的个性化特点。</p>
+                </div>
+                <div class="p1">
+                    <p id="144">3)提出2种ST-LSTM网络模型的变体形式,在保证精度的情况下,降低模型的复杂度。</p>
+                </div>
+                <div class="p1">
+                    <p id="145">4)通过2个真实的数据集,采用几种常用的评价指标综合评估了本文提出的模型,并与现有的HMM<citation id="240" type="reference"><link href="209" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>、RNN、LSTM、Phased LSTM等模型进行对比分析,结果表明,本文提出模型能更好地反映出用户的行为规律。</p>
+                </div>
+                <h3 id="146" name="146" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="147">为更准确地预测用户的下一个位置信息,本文提出一种基于时空特性的长短期记忆模型。在LSTM网络的基础上添加单独处理用户移动行为时空信息的时空门,并引入个人修正因子对每类用户的输出结果进行修正。实验结果表明,带时空特性以及个人修正因子的ST-LSTM模型泛化能力强,相比现有的模型具有较好的预测效果。另外,给出的2种ST-LSTM变体模型,在时间复杂度要求高的情况下,采取相应的变体模型虽然相对于ST-LSTM模型预测效果略低,但是运行时间较快。下一步将在现有模型中加入更多信息,以提升模型预测的准确率。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="189">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Local Positioning Systems: LBS Applications and Services">
+
+                                <b>[1]</b> KOLODZIEJ K W,HJELM J.Local positioning systems:LBS applications and services[M].[S.1.]:CRC Press,2006:101-158.
+                            </a>
+                        </p>
+                        <p id="191">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Pedestrian-movement prediction based on mixed Markov-chain model">
+
+                                <b>[2]</b> ASAHARA A,MARUYAMA K,SATO A,et al.Pedestrian movement prediction based on mixed Markov-chain model[C]//Proceedings of the 19th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems.New York,USA:ACM Press,2011:25-33.
+                            </a>
+                        </p>
+                        <p id="193">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A self-adaptive parameter selection trajectory prediction approach via hidden Markov models">
+
+                                <b>[3]</b> QIAO Shaojie,SHEN Dayong,WANG Xiaoteng,et al.A self-adaptive parameter selection trajectory prediction approach via hidden Markov models[J].IEEE Transactions on Intelligent Transportation Systems,2015,16(1):284-296.
+                            </a>
+                        </p>
+                        <p id="195">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Collaborative Filtering Meets Next Check-in Location Prediction">
+
+                                <b>[4]</b> LIAN Defu,ZHENG V W,XIE Xing.Collaborative filtering meets next check-in location prediction[C]//Proceedings of the 22nd International Conference on World Wide Web.New York,USA:ACM Press,2013:231-232.
+                            </a>
+                        </p>
+                        <p id="197">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Prediction of moving object location based on frequent trajectories">
+
+                                <b>[5]</b> MORZY M.Prediction of moving object location based on frequent trajectories[C]//Proceedings of International Symposium on Computer and Information Sciences.Berlin,Germany:Springer,2006:583-592.
+                            </a>
+                        </p>
+                        <p id="199">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Mining frequent trajectories of moving objects for location prediction">
+
+                                <b>[6]</b> MORZY M.Mining frequent trajectories of moving objects for location prediction[C]//Proceedings of International Workshop on Machine Learning and Data Mining in Pattern Recognition.Berlin,Germany:Springer,2007:667-680.
+                            </a>
+                        </p>
+                        <p id="201">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Next place prediction using mobility M arkov chains">
+
+                                <b>[7]</b> GAMBS S,KILLIJIAN M O,DEL PRADO C M N.Next place prediction using mobility markov chains[C]//Proceedings of the 1st Workshop on Measurement,Privacy,and Mobility.New York,USA:ACM Press,2012:3.
+                            </a>
+                        </p>
+                        <p id="203">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The influence of temporal and spatial features on the performance of next-place prediction algorithms">
+
+                                <b>[8]</b> BAUMANN P,KLEIMINGER W,Santini S.The influence of temporal and spatial featureson the performance of next-place prediction algorithms [C]//Proceedings of ACM International Joint Conference on Pervasive and Ubiquitous Computing.New York,USA:ACM Press,2013:449-458.
+                            </a>
+                        </p>
+                        <p id="205">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=What&amp;#39;&amp;#39;s your next move:User activity prediction in location-based social networks">
+
+                                <b>[9]</b> YE Jihang,ZHU Zhe,CHENG Hong.What’s your next move:user activity prediction in location-based social networks[C]//Proceedings of 2013 SIAM International Conference on Data Mining.Washington D.C.,USA:IEEE Press,2013:171-179.
+                            </a>
+                        </p>
+                        <p id="207">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Predicting the next location:a recurrent model with spatial and temporal contexts">
+
+                                <b>[10]</b> LIU Qiang,WU Shu,WANG Liang,et al.Predicting the next location:a recurrent model with spatial and temporal contexts[C]//Proceedings of the 30th AAAI Conference on Artificial Intelligence.[S.1.]:AAAI Press,2016:194-200.
+                            </a>
+                        </p>
+                        <p id="209">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=On the difficulty of training recurrent neural networks">
+
+                                <b>[11]</b> PASCANU R,MIKOLOV T,BENGIO Y.On the difficulty of training recurrent neural networks[C]//Proceedings of the 30th IEEE International Conference on Machine Learning.Washington D.C.,USA:IEEE Press,2013:1310-1318.
+                            </a>
+                        </p>
+                        <p id="211">
+                            <a id="bibliography_12" >
+                                    <b>[12]</b>
+                                 BENGIO Y,SIMARD P,FRASCONI P.Learning long-term dependencies with gradient descent is difficult [J].IEEE Transactions on Neural Networks,2002,5(2):157-166.
+                            </a>
+                        </p>
+                        <p id="213">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Chinese text sentiment analysis using LSTM network based on L2 and nadam">
+
+                                <b>[13]</b> WANG Jian.Chinese text sentiment analysis using LSTM network based on L2 and nadam[C]//Proceedings of the 17th International IEEE Conference on Communication Technology.Washington D.C.,USA:IEEE Press,2017:1891-1895.
+                            </a>
+                        </p>
+                        <p id="215">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201505021&amp;v=MDU4NTZxQnRHRnJDVVJMT2VaZVJ0Rnk3aFc3ek9LQ2pZZmJHNEg5VE1xbzlIWllRS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 梁军,柴玉梅,原慧斌,等.基于极性转移和LSTM递归网络的情感分析[J].中文信息学报,2015,29(5):152-159.
+                            </a>
+                        </p>
+                        <p id="217">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Supervised sequence labelling">
+
+                                <b>[15]</b> GRAVES A.Supervised sequence labelling with recurrent neural networks[M].Berlin,Germany:Springer,2012.
+                            </a>
+                        </p>
+                        <p id="219">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13012300069870&amp;v=MDUzNjdjYVJRPU5pZk9mYks3SHRET3JJOUZaTzBHQkhzNW9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUx6SUpsbw==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> GRAVES A,SCHMIDHUBER J.Framewise phoneme classification with bidirectional LSTM and other neural network architectures[J].Neural Networks,2005,18(5):602-610.
+                            </a>
+                        </p>
+                        <p id="221">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Phased LSTM:accelerating recurrent network training for long or event-based sequences">
+
+                                <b>[17]</b> NNEIL D,PFEIFFER M,LIU S C.Phased LSTM:accelerating recurrent network training for long or event-based sequences[C]//Proceedings of ANIPS’16.Washington D.C.,USA:IEEE Press,2016:3882-3890.
+                            </a>
+                        </p>
+                        <p id="223">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=LSTM:A Search Space Odyssey">
+
+                                <b>[18]</b> GREFF K,SRIVASTAVA R K,KOUTNIK J,et al.LSTM:a search space odyssey[J].IEEE Transactions on Neural Networks and Learning Systems,2017,28(10):2222-2232.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201909001" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201909001&amp;v=MTYzNDVSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTdoVzd6T0x6N0JiYkc0SDlqTXBvOUZaWVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUrQUw0a1VMWGVBYXN2T3VyMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

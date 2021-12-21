@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637128035607217500%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201909033%26RESULT%3d1%26SIGN%3dlvuc0CdquUx%252fQ1AhJPAAj2Q10Os%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201909033&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201909033&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201909033&amp;v=MTIwMjVSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnJGeS9oVzd6TEx6N0JiYkc0SDlqTXBvOUdaNFFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#47" data-title="1 平滑反频率句向量模型 ">1 平滑反频率句向量模型</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#71" data-title="2 方差选词方法 ">2 方差选词方法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#75" data-title="2.1 方差因子计算">2.1 方差因子计算</a></li>
+                                                <li><a href="#87" data-title="2.2 基于方差权重的SIF句向量模型">2.2 基于方差权重的SIF句向量模型</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#119" data-title="3 CwVW-SIF模型 ">3 CwVW-SIF模型</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#120" data-title="3.1 句向量分类模型">3.1 句向量分类模型</a></li>
+                                                <li><a href="#124" data-title="3.2 文本关键词抽取">3.2 文本关键词抽取</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#128" data-title="4 实验结果与分析 ">4 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#129" data-title="4.1 数据集">4.1 数据集</a></li>
+                                                <li><a href="#136" data-title="4.2 模型效果的PCA降维">4.2 模型效果的PCA降维</a></li>
+                                                <li><a href="#144" data-title="4.3 模型分类效果">4.3 模型分类效果</a></li>
+                                                <li><a href="#159" data-title="4.4 关键词提取">4.4 关键词提取</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#162" data-title="5 结束语 ">5 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#122" data-title="&lt;b&gt;图1 句向量分类模型&lt;/b&gt;"><b>图1 句向量分类模型</b></a></li>
+                                                <li><a href="#132" data-title="&lt;b&gt;表1 数据集20 Newsgroups类型&lt;/b&gt;"><b>表1 数据集20 Newsgroups类型</b></a></li>
+                                                <li><a href="#140" data-title="&lt;b&gt;图2 大差别数据集二维效果展示&lt;/b&gt;"><b>图2 大差别数据集二维效果展示</b></a></li>
+                                                <li><a href="#141" data-title="&lt;b&gt;图3 大差别数据集三维效果展示&lt;/b&gt;"><b>图3 大差别数据集三维效果展示</b></a></li>
+                                                <li><a href="#143" data-title="&lt;b&gt;图4 小差别数据集三维效果&lt;/b&gt;"><b>图4 小差别数据集三维效果</b></a></li>
+                                                <li><a href="#150" data-title="&lt;b&gt;图5 不同分类任务下模型精度对比&lt;/b&gt;"><b>图5 不同分类任务下模型精度对比</b></a></li>
+                                                <li><a href="#152" data-title="&lt;b&gt;表2 不同分类任务精度和最佳剪裁率对比&lt;/b&gt;"><b>表2 不同分类任务精度和最佳剪裁率对比</b></a></li>
+                                                <li><a href="#157" data-title="&lt;b&gt;表3 不同规模训练集的性能对比&lt;/b&gt;"><b>表3 不同规模训练集的性能对比</b></a></li>
+                                                <li><a href="#158" data-title="&lt;b&gt;图6 5种训练集规模下精度对比结果&lt;/b&gt;"><b>图6 5种训练集规模下精度对比结果</b></a></li>
+                                                <li><a href="#161" data-title="&lt;b&gt;表4 关键词提取效果展示&lt;/b&gt;"><b>表4 关键词提取效果展示</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="193">
+
+
+                                    <a id="bibliography_1" title=" MIKOLOV T,CORRADO G,CHEN Kai,et al.Efficient estimation of word representations in vector space[EB/OL].[2018-07-10].https://arxiv.org/pdf/1301.3781.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+                                        <b>[1]</b>
+                                         MIKOLOV T,CORRADO G,CHEN Kai,et al.Efficient estimation of word representations in vector space[EB/OL].[2018-07-10].https://arxiv.org/pdf/1301.3781.pdf.
+                                    </a>
+                                </li>
+                                <li id="195">
+
+
+                                    <a id="bibliography_2" title=" PENNINGTON J,SOCHER R,MANNING C.GloVe:global vectors for word representation[C]//Proceedings of Conference on Empirical Methods in Natural Language Processing.Stroudsburg,USA:Association for Computational Linguistics,2014:1532-1543." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Glove:Global vectors for word representation">
+                                        <b>[2]</b>
+                                         PENNINGTON J,SOCHER R,MANNING C.GloVe:global vectors for word representation[C]//Proceedings of Conference on Empirical Methods in Natural Language Processing.Stroudsburg,USA:Association for Computational Linguistics,2014:1532-1543.
+                                    </a>
+                                </li>
+                                <li id="197">
+
+
+                                    <a id="bibliography_3" title=" JOULIN A,GRAVE E,BOJANOWSKI P,et al.Bag of tricks for efficient text classification[C]//Proceedings of Conference of European Chapter of the Association for Computational Linguistics.Stroudsburg,USA:Association for Computational Linguistics,2017:427-431." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Bag of Tricks for Efficient Text Classification">
+                                        <b>[3]</b>
+                                         JOULIN A,GRAVE E,BOJANOWSKI P,et al.Bag of tricks for efficient text classification[C]//Proceedings of Conference of European Chapter of the Association for Computational Linguistics.Stroudsburg,USA:Association for Computational Linguistics,2017:427-431.
+                                    </a>
+                                </li>
+                                <li id="199">
+
+
+                                    <a id="bibliography_4" title=" WIETING J,BANSAL M,GIMPEL K,et al.From paraphrase database to compositional paraphrase model and back[J].Transactions of the Association for Computational Linguistics,2015,3:345-358." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=From paraphrase database to compositional paraphrase model and back">
+                                        <b>[4]</b>
+                                         WIETING J,BANSAL M,GIMPEL K,et al.From paraphrase database to compositional paraphrase model and back[J].Transactions of the Association for Computational Linguistics,2015,3:345-358.
+                                    </a>
+                                </li>
+                                <li id="201">
+
+
+                                    <a id="bibliography_5" title=" PETERS M E,NEUMANN M,IYYER M,et al.Deep contextualized word representations[EB/OL].[2018-07-10].https://arxiv.org/pdf/1802.05365.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep contextualized word representations">
+                                        <b>[5]</b>
+                                         PETERS M E,NEUMANN M,IYYER M,et al.Deep contextualized word representations[EB/OL].[2018-07-10].https://arxiv.org/pdf/1802.05365.pdf.
+                                    </a>
+                                </li>
+                                <li id="203">
+
+
+                                    <a id="bibliography_6" title=" GANITKEVITCH J,VANDURME B,CALLISON-BURCH C.PPDB:the paraphrase database[C]//Proceedings of Conference of the North American Chapter of the Association for Computational Linguistics.Stroudsburg,USA:Association for Computational Linguistics,2013:758-764." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=PPDB:The Paraphrase Database">
+                                        <b>[6]</b>
+                                         GANITKEVITCH J,VANDURME B,CALLISON-BURCH C.PPDB:the paraphrase database[C]//Proceedings of Conference of the North American Chapter of the Association for Computational Linguistics.Stroudsburg,USA:Association for Computational Linguistics,2013:758-764.
+                                    </a>
+                                </li>
+                                <li id="205">
+
+
+                                    <a id="bibliography_7" title=" LE Q,MIKOLOV T.Distributed representations of sentences and documents[C]//Proceedings of the 31st International Conference on International Conference on Machine Learning.Cambridge,USA:MIT Press,2014:1188-1196." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Distributed Representations of Sentences and Documents">
+                                        <b>[7]</b>
+                                         LE Q,MIKOLOV T.Distributed representations of sentences and documents[C]//Proceedings of the 31st International Conference on International Conference on Machine Learning.Cambridge,USA:MIT Press,2014:1188-1196.
+                                    </a>
+                                </li>
+                                <li id="207">
+
+
+                                    <a id="bibliography_8" title=" IYYER M,MANJUNATHA V,BOYD-GRABER J,et al.Deep unordered composition rivals syntactic methods for text classification[C]//Proceedings of International Joint Conference on Natural Language Processing.Stroudsburg,USA:Association for Computational Linguistics,2015:1681-1691." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep unordered composition rivals syntactic methods for text classification">
+                                        <b>[8]</b>
+                                         IYYER M,MANJUNATHA V,BOYD-GRABER J,et al.Deep unordered composition rivals syntactic methods for text classification[C]//Proceedings of International Joint Conference on Natural Language Processing.Stroudsburg,USA:Association for Computational Linguistics,2015:1681-1691.
+                                    </a>
+                                </li>
+                                <li id="209">
+
+
+                                    <a id="bibliography_9" title=" KIROS R,ZHU Yukun,SALAKHUTDINOV R,et al.Skip-thought vectors[C]//Proceedings of International Conference on Neural Information Processing Systems.Cambridge,USA:MIT Press,2015:3294-3302." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Skip-thought vectors">
+                                        <b>[9]</b>
+                                         KIROS R,ZHU Yukun,SALAKHUTDINOV R,et al.Skip-thought vectors[C]//Proceedings of International Conference on Neural Information Processing Systems.Cambridge,USA:MIT Press,2015:3294-3302.
+                                    </a>
+                                </li>
+                                <li id="211">
+
+
+                                    <a id="bibliography_10" title=" TAI Kaisheng,SOCHER R,MANNING C D.Improved semantic representations from tree-structured long short-term memory networks[C]//Proceedings of International Joint Conference on Natural Language Processing.Stroudsburg,USA:Association for Computational Linguistics,2015:1556-1566." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks">
+                                        <b>[10]</b>
+                                         TAI Kaisheng,SOCHER R,MANNING C D.Improved semantic representations from tree-structured long short-term memory networks[C]//Proceedings of International Joint Conference on Natural Language Processing.Stroudsburg,USA:Association for Computational Linguistics,2015:1556-1566.
+                                    </a>
+                                </li>
+                                <li id="213">
+
+
+                                    <a id="bibliography_11" title=" WIETING J,BANSAL M,GIMPEL K,et al.Towards universal paraphrastic sentence embeddings[EB/OL].[2018-07-10].https://arxiv.org/pdf/1511.08198.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Towards universal paraphrastic sentence embeddings">
+                                        <b>[11]</b>
+                                         WIETING J,BANSAL M,GIMPEL K,et al.Towards universal paraphrastic sentence embeddings[EB/OL].[2018-07-10].https://arxiv.org/pdf/1511.08198.pdf.
+                                    </a>
+                                </li>
+                                <li id="215">
+
+
+                                    <a id="bibliography_12" title=" 段旭磊,张仰森,孙祎卓.微博文本的句向量表示及相似度计算方法研究[J].计算机工程,2017,43(5):143-148." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201705024&amp;v=MTQ0NDRSTE9lWmVSckZ5L2hXN3pMTHo3QmJiRzRIOWJNcW85SFlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         段旭磊,张仰森,孙祎卓.微博文本的句向量表示及相似度计算方法研究[J].计算机工程,2017,43(5):143-148.
+                                    </a>
+                                </li>
+                                <li id="217">
+
+
+                                    <a id="bibliography_13" title=" ARORA S,LIANG Y,MA Tengyu.A simple but tough to beat baseline for sentence embeddings[EB/OL].[2018-07-10].https://openreview.net/pdf?id=SyK00v5xx." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A simple but tough to beat baseline for sentence embeddings">
+                                        <b>[13]</b>
+                                         ARORA S,LIANG Y,MA Tengyu.A simple but tough to beat baseline for sentence embeddings[EB/OL].[2018-07-10].https://openreview.net/pdf?id=SyK00v5xx.
+                                    </a>
+                                </li>
+                                <li id="219">
+
+
+                                    <a id="bibliography_14" title=" R&#220;CKL&#201; A,EGER S,PEYRARD M,et al.Concatenated p-mean word embeddings as universal cross-lingual sentence representations[EB/OL].[2018-07-10].https://arxiv.org/pdf/1803.01400.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Concatenated p-mean word embeddings as universal cross-lingual sentence representations">
+                                        <b>[14]</b>
+                                         R&#220;CKL&#201; A,EGER S,PEYRARD M,et al.Concatenated p-mean word embeddings as universal cross-lingual sentence representations[EB/OL].[2018-07-10].https://arxiv.org/pdf/1803.01400.pdf.
+                                    </a>
+                                </li>
+                                <li id="221">
+
+
+                                    <a id="bibliography_15" title=" LANG K.NewsWeeder:learning to filter netnews[C]//Proceedings of International Conference on International Conference on Machine Learning.San Francisco,USA:Morgan Kaufmann Publishers Inc.,1995:331-339." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=NewsWeeder: learning to filter netnews">
+                                        <b>[15]</b>
+                                         LANG K.NewsWeeder:learning to filter netnews[C]//Proceedings of International Conference on International Conference on Machine Learning.San Francisco,USA:Morgan Kaufmann Publishers Inc.,1995:331-339.
+                                    </a>
+                                </li>
+                                <li id="223">
+
+
+                                    <a id="bibliography_16" title=" 20 newsgroups[EB/OL].[2018-07-10].http://www.qwone.com/～jason/20Newsgroups." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=20 newsgroups">
+                                        <b>[16]</b>
+                                         20 newsgroups[EB/OL].[2018-07-10].http://www.qwone.com/～jason/20Newsgroups.
+                                    </a>
+                                </li>
+                                <li id="225">
+
+
+                                    <a id="bibliography_17" title=" MAAS A L,DALY R E,PHAM P T,et al.Learning word vectors for sentiment analysis[C]//Proceedings of Meeting of the Association for Computational Linguistics.Stroudsburg,USA:Association for Computational Linguistics,2011:142-150." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning Word Vectors for Sentiment Analysis">
+                                        <b>[17]</b>
+                                         MAAS A L,DALY R E,PHAM P T,et al.Learning word vectors for sentiment analysis[C]//Proceedings of Meeting of the Association for Computational Linguistics.Stroudsburg,USA:Association for Computational Linguistics,2011:142-150.
+                                    </a>
+                                </li>
+                                <li id="227">
+
+
+                                    <a id="bibliography_18" title=" Large movie review dataset[EB/OL].[2018-07-10].http://ai.stanford.edu/～amaas/data/sentiment." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Large movie review dataset">
+                                        <b>[18]</b>
+                                         Large movie review dataset[EB/OL].[2018-07-10].http://ai.stanford.edu/～amaas/data/sentiment.
+                                    </a>
+                                </li>
+                                <li id="229">
+
+
+                                    <a id="bibliography_19" title=" GloVe:global vectors for word representation[EB/OL].[2018-07-10].https://nlp.stanford.edu/projects/glove." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=GloVe:global vectors for word representation">
+                                        <b>[19]</b>
+                                         GloVe:global vectors for word representation[EB/OL].[2018-07-10].https://nlp.stanford.edu/projects/glove.
+                                    </a>
+                                </li>
+                                <li id="231">
+
+
+                                    <a id="bibliography_20" title=" Wikimedia.English Wikipedia dump[EB/OL].[2018-07-10].http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-page s-articles.xml.bz2." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=English Wikipedia dump">
+                                        <b>[20]</b>
+                                         Wikimedia.English Wikipedia dump[EB/OL].[2018-07-10].http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-page s-articles.xml.bz2.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(09),204-210+234 DOI:10.19678/j.issn.1000-3428.0052381            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于方差权重因子选词的SIF句向量模型</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%AD%99%E6%AF%85&amp;code=40419779&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">孙毅</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%A3%98%E6%9D%AD%E8%90%8D&amp;code=38810418&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">裘杭萍</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BA%B7%E7%9D%BF%E6%99%BA&amp;code=38797972&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">康睿智</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%9B%BD%E4%BA%BA%E6%B0%91%E8%A7%A3%E6%94%BE%E5%86%9B%E9%99%86%E5%86%9B%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6%E6%8C%87%E6%8C%A5%E6%8E%A7%E5%88%B6%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=1701801&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中国人民解放军陆军工程大学指挥控制工程学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对平滑反频率(SIF)模型在文本分类和情感分析中性能较差的问题,在SIF模型的基础上,根据单词在不同分类任务类别中的分布情况,计算其对任务贡献度的方差权重(VW)因子,建立一种VW因子选词句向量模型CwVW-SIF。在标准文本分类数据集和情感分析数据集上进行测试,结果表明,CwVW-SIF相对SIF模型具有较高的分类精度。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%B9%B3%E6%BB%91%E5%8F%8D%E9%A2%91%E7%8E%87&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">平滑反频率;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8F%A5%E5%90%91%E9%87%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">句向量;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%96%B9%E5%B7%AE%E6%9D%83%E9%87%8D&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">方差权重;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">文本分类;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">情感分析;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    孙毅(1993—),男,硕士研究生,主研方向为自然语言处理、网络通信;E-mail:sunyi_lgdx@ sina. com;
+                                </span>
+                                <span>
+                                    裘杭萍,教授、博士;;
+                                </span>
+                                <span>
+                                    康睿智,博士研究生。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-08-13</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>江苏省自然科学基金(BK20150721,BK20161469);</span>
+                                <span>江苏省重点研发计划(BE2015728,BE2016904,BE2017616);</span>
+                    </p>
+            </div>
+                    <h1><b>SIF Sentence Vector Model Based on Word Selection by Variance Weight Factor</b></h1>
+                    <h2>
+                    <span>SUN Yi</span>
+                    <span>QIU Hangping</span>
+                    <span>KANG Ruizhi</span>
+            </h2>
+                    <h2>
+                    <span>Institute of Command and Control Engineering,Army Engineering University of PLA</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>To address the poor performance of the Smooth Inverse Frequency(SIF) model in text classification and sentiment analysis,based on the SIF model,the Variance Weight(VW) of the task contribution is calculated according to the distribution of words in different classification task,and a VW factor selection sentence vector model CwVW-SIF is established.Tested on the standard text classification datasets and sentiment analysis datasets,the results show that CwVW-SIF has higher classification accuracy than SIF model.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Smooth%20Inverse%20Frequency%20(SIF)&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Smooth Inverse Frequency (SIF);</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=sentence%20vector&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">sentence vector;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Variance%20Weight%20(VW)&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Variance Weight (VW);</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=text%20classification&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">text classification;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=emotion%20analysis&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">emotion analysis;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-08-13</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="43" name="43" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="44">使用不同方法生成词向量是自然语言处理(Natural Language Processing,NLP)和信息检索(Information Retrieval,IR)领域的基本任务之一。目前,词向量生成模型主要有Word2Vec<citation id="233" type="reference"><link href="193" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>、GloVe<citation id="234" type="reference"><link href="195" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>、FastText<citation id="235" type="reference"><link href="197" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>、PSL<citation id="236" type="reference"><link href="199" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>和ELMo<citation id="237" type="reference"><link href="201" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>。其中,Word2Vec和GloVe是基于分布假设的无监督方法,FastText在Word2Vec的基础上添加了基于字符的<i>N</i>-gram模型,可以计算表外单词的向量,PSL模型利用解释数据集PPDB<citation id="238" type="reference"><link href="203" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>有监督地对词向量进行调整,在文本相似性任务上具有较好的性能,ELMo(Embeddings from Language Models)模型利用深度上下文单词表征方法,学习不同上下文的词汇多义性。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">近年来,国内外学者研究了句向量模型在文本相似度比较、文本分类和文本情感分析等下游任务中的应用。文献<citation id="239" type="reference">[<a class="sup">7</a>]</citation>在Word2Vec基础上,提出分布式记忆句向量(Distributed Memory of Paragraph Vector,PV-DM)和分布式词袋句向量(Distributed Bag of Words of Paragraph Vector,PV-DBOW)2种模型。文献<citation id="240" type="reference">[<a class="sup">8</a>]</citation>提出神经词袋(Neural Bag-of-Words,NBOW)和深度平均网络 (Deep Averaging Network,DAN)2种句向量模型,实验结果验证了深层无序组合方法的有效性。文献<citation id="241" type="reference">[<a class="sup">9</a>]</citation>提出Skip-thoughts模型,通过训练2个循环神经网络(Recurrent Neural Network,RNN)组成的编码-解码模型得到句向量,并通过词汇扩展方法来编码训练集外的单词。文献<citation id="242" type="reference">[<a class="sup">10</a>]</citation>提出RNNs模型,利用长短时记忆(Long Short-Term Memory,LSTM)来捕捉长距离依存关系。文献<citation id="243" type="reference">[<a class="sup">11</a>]</citation>提出PP(Paragram-Phrase embeddings)模型,通过将句子中词的词向量进行算术平均得到句向量,并利用投影方法来对模型进行优化,同时运用PSL词向量来改善模型在各项任务中的性能。文献<citation id="244" type="reference">[<a class="sup">12</a>]</citation>采用TF-IDF加权的方法形成句向量,并在文本相似度任务上取得较好的效果。文献<citation id="245" type="reference">[<a class="sup">13</a>]</citation>提出平滑反频率(Smooth Inverse Frequency,SIF)模型,该模型与PP模型相似,但是选择了加权平均的方法,并通过移除句子的第一主成分上矢量的方法进行优化,该方法在各项任务上(除情感分类任务)均优于其他方法的性能。文献<citation id="246" type="reference">[<a class="sup">14</a>]</citation>提出p-mean模型,通过集成学习的方法来提升句向量的性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">SIF模型统计了通用数据集上词的频率,但未考虑与任务无关词的筛选或权重的修正,在情感分析方面相对RNN和LSTM方法性能较差。为此,本文利用方差选词的方法对SIF模型进行优化,去除对分类任务贡献值较低单词,以提高SIF模型在文本分类和情感分析方面的性能。</p>
+                </div>
+                <h3 id="47" name="47" class="anchor-tag">1 平滑反频率句向量模型</h3>
+                <div class="p1">
+                    <p id="48">随机游走(Random Walk,RW)是网络图的经典算法之一,从给定图的初始位置出发,随机地选择并移动到邻居节点上,将当前节点作为出发点,迭代上述过程,其特点是无后效性,即基于过去的表现,无法预测将来事件的发生步骤和方向。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">平滑反频率模型将语句的产生视为一个动态的随机游走过程,在第<i>t</i>步产生第<i>t</i>个单词,每一步都由一个话题向量<i><b>c</b></i><sub><i>t</i></sub>∈<image href="images/JSJC201909033_164.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>d</i></sup>决定。对于给定的句子<i>s</i>,其句向量是对决定该句子的话题向量<i><b>c</b></i><sub><i>t</i></sub>的最大后验概率估计。同时,由于在一句话中话题向量<i><b>c</b></i><sub><i>t</i></sub>的改变很小即一个句子中的话题相对固定,因此将所有都近似为<i><b>c</b></i><sub><i>s</i></sub>。在平滑反频率模型中平滑基于以下2种假设:</p>
+                </div>
+                <div class="p1">
+                    <p id="50">1)部分单词并不是根据上下文出现的。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">2)一些高频词汇(如“the”“and”)的出现与句子的话题无关。</p>
+                </div>
+                <div class="p1">
+                    <p id="52">单词<i>w</i>出现在以<i><b>c</b></i><sub><i>s</i></sub>为话题的句子中的概率为:</p>
+                </div>
+                <div class="p1">
+                    <p id="53" class="code-formula">
+                        <mathml id="53"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mtext>Ρ</mtext><mtext>r</mtext></mrow><mo stretchy="false">[</mo><mi mathvariant="bold-italic">w</mi><msub><mrow></mrow><mi>s</mi></msub><mo stretchy="false">|</mo><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mi>s</mi></msub><mo stretchy="false">]</mo><mo>=</mo><mi>α</mi><mi>p</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>α</mi><mo stretchy="false">)</mo><mfrac><mrow><mi>exp</mi><mo stretchy="false">(</mo><mo>&lt;</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub><mo>,</mo><mi mathvariant="bold-italic">v</mi><msub><mrow></mrow><mi>w</mi></msub><mo>&gt;</mo><mo stretchy="false">)</mo></mrow><mrow><mi>Ζ</mi><msub><mrow></mrow><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub></mrow></msub></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="54">其中,<mathml id="165"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub><mo>=</mo><mi>β</mi><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mn>0</mn></msub><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>β</mi><mo stretchy="false">)</mo><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mi>s</mi></msub><mo>,</mo><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mn>0</mn></msub></mrow></math></mathml>与<i><b>c</b></i><sub><i>s</i></sub>正交。第1项<i>αp</i>(<i>w</i>)对应假设1,<i>p</i>(<i>w</i>)表示单词在整个语料集中出现的频率,<i>α</i>为常量,允许单词的概率极小,但仍以<i>αp</i>(<i>w</i>)的概率出现。第2项对应假设2,假设对所有的句子都有一个共同的话题向量<i><b>c</b></i><sub>0</sub>∈<image href="images/JSJC201909033_166.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>d</i></sup>,当单词<i>w</i>是高频词即与共同话题<i><b>c</b></i><sub>0</sub>相关时,能以一定的概率出现,<i>β</i>为常量,<mathml id="167"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ζ</mi><msub><mrow></mrow><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>w</mi><mo>∈</mo><mi>V</mi></mrow></munder><mrow><mi>exp</mi></mrow></mstyle><mo stretchy="false">(</mo><mo>&lt;</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub><mo>,</mo><mi mathvariant="bold-italic">v</mi><msub><mrow></mrow><mi>w</mi></msub><mo>&gt;</mo><mo stretchy="false">)</mo></mrow></math></mathml>将第2项进行归一化。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">基于以上的假设,以<i><b>c</b></i><sub><i>s</i></sub>为话题的句子<i>s</i>的生成概率为:</p>
+                </div>
+                <div class="p1">
+                    <p id="56" class="code-formula">
+                        <mathml id="56"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>p</mi><mo stretchy="false">[</mo><mi>s</mi><mo stretchy="false">|</mo><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mi>s</mi></msub><mo stretchy="false">]</mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><mi>w</mi><mo>∈</mo><mi>s</mi></mrow></munder><mi>p</mi></mstyle><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">|</mo><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mi>s</mi></msub><mo stretchy="false">)</mo><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><mi>w</mi><mo>∈</mo><mi>s</mi></mrow></munder><mrow><mrow><mo>[</mo><mrow><mi>α</mi><mi>p</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>a</mi><mo stretchy="false">)</mo><mfrac><mrow><mi>exp</mi><mo>&lt;</mo><mi mathvariant="bold-italic">v</mi><msub><mrow></mrow><mi>w</mi></msub><mo>,</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub><mo>&gt;</mo></mrow><mi>Ζ</mi></mfrac></mrow><mo>]</mo></mrow></mrow></mstyle><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="57">令<mathml id="168"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>f</mi><msub><mrow></mrow><mi>w</mi></msub><mo stretchy="false">(</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mrow><mi>ln</mi></mrow><mo stretchy="false">[</mo><mi>α</mi><mi>p</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>α</mi><mo stretchy="false">)</mo><mfrac><mrow><mi>exp</mi><mo stretchy="false">(</mo><mo>&lt;</mo><mi mathvariant="bold-italic">v</mi><msub><mrow></mrow><mi>w</mi></msub><mo>,</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub><mo>&gt;</mo><mo stretchy="false">)</mo></mrow><mi>Ζ</mi></mfrac><mo stretchy="false">]</mo><mo>,</mo></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="58">对其进行微分,有:</p>
+                </div>
+                <div class="p1">
+                    <p id="59" class="code-formula">
+                        <mathml id="59"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo>∇</mo><mi>f</mi><msub><mrow></mrow><mi>w</mi></msub><mo stretchy="false">(</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mi>α</mi><mi>p</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>α</mi><mo stretchy="false">)</mo><mi>exp</mi><mo stretchy="false">(</mo><mo>&lt;</mo><mi mathvariant="bold-italic">v</mi><msub><mrow></mrow><mi>w</mi></msub><mo>,</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub><mo>&gt;</mo><mo stretchy="false">)</mo><mo>/</mo><mi>Ζ</mi></mrow></mfrac><mo>×</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="60" class="code-formula">
+                        <mathml id="60"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mn>1</mn><mo>-</mo><mi>α</mi></mrow><mi>Ζ</mi></mfrac><mrow><mi>exp</mi></mrow><mo stretchy="false">(</mo><mo>&lt;</mo><mi mathvariant="bold-italic">v</mi><msub><mrow></mrow><mi>w</mi></msub><mo>,</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub><mo>&gt;</mo><mo stretchy="false">)</mo><mi mathvariant="bold-italic">v</mi><msub><mrow></mrow><mi>w</mi></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="61">根据泰勒展开,有:</p>
+                </div>
+                <div class="p1">
+                    <p id="62" class="code-formula">
+                        <mathml id="62"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>f</mi><msub><mrow></mrow><mi>w</mi></msub><mo stretchy="false">(</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub><mo stretchy="false">)</mo><mo>≈</mo><mi>f</mi><msub><mrow></mrow><mi>w</mi></msub><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo><mo>+</mo><mo>∇</mo><mi>f</mi><msub><mrow></mrow><mi>w</mi></msub><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><msup><mrow></mrow><mtext>Τ</mtext></msup><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mi>C</mi><mo>+</mo><mfrac><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>α</mi><mo stretchy="false">)</mo><mo>/</mo><mo stretchy="false">(</mo><mi>α</mi><mi>Ζ</mi><mo stretchy="false">)</mo></mrow><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>α</mi><mo stretchy="false">)</mo><mo>/</mo><mo stretchy="false">(</mo><mi>α</mi><mi>Ζ</mi><mo stretchy="false">)</mo></mrow></mfrac><mo>&lt;</mo><mi mathvariant="bold-italic">v</mi><msub><mrow></mrow><mi>w</mi></msub><mo>,</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub><mo>&gt;</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="63">因此,对<mathml id="169"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub></mrow></math></mathml>的最大后验估计为:</p>
+                </div>
+                <div class="p1">
+                    <p id="64" class="code-formula">
+                        <mathml id="64"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><mo stretchy="false">[</mo><mi>s</mi><mo stretchy="false">|</mo><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mi>s</mi></msub><mo stretchy="false">]</mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>w</mi><mo>∈</mo><mi>s</mi></mrow></munder><mi>f</mi></mstyle><msub><mrow></mrow><mi>w</mi></msub><mo stretchy="false">(</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>s</mi></msub><mo stretchy="false">)</mo><mo>∝</mo><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>w</mi><mo>∈</mo><mi>s</mi></mrow></munder><mrow></mrow></mstyle></mrow><mtext> </mtext><mfrac><mi>a</mi><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>+</mo><mi>a</mi></mrow></mfrac><mi mathvariant="bold-italic">v</mi><msub><mrow></mrow><mi>w</mi></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="65">其中,<mathml id="170"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>a</mi><mo>=</mo><mfrac><mrow><mn>1</mn><mo>-</mo><mi>α</mi></mrow><mrow><mi>α</mi><mi>Ζ</mi></mrow></mfrac></mrow></math></mathml>。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">定义单词<i>w</i>在句子<i>s</i>中对应的权重为:</p>
+                </div>
+                <div class="p1">
+                    <p id="67" class="code-formula">
+                        <mathml id="67"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>W</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mi>a</mi><mrow><mi>a</mi><mo>+</mo><mi>p</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="68">句子<i>s</i>的句向量<i><b>v</b></i><sub><i>s</i></sub>为:</p>
+                </div>
+                <div class="p1">
+                    <p id="69" class="code-formula">
+                        <mathml id="69"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">v</mi><msub><mrow></mrow><mi>s</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mrow><mo>|</mo><mi>s</mi><mo>|</mo></mrow></mrow></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>w</mi><mo>∈</mo><mi>s</mi></mrow></munder><mrow><mfrac><mi>a</mi><mrow><mi>a</mi><mo>+</mo><mi>p</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mfrac></mrow></mstyle><mi mathvariant="bold-italic">v</mi><msub><mrow></mrow><mi>s</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mrow><mo>|</mo><mi>s</mi><mo>|</mo></mrow></mrow></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>w</mi><mo>∈</mo><mi>s</mi></mrow></munder><mi>W</mi></mstyle><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mi mathvariant="bold-italic">v</mi><msub><mrow></mrow><mi>w</mi></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="70">句向量<i><b>v</b></i><sub><i>s</i></sub>是以<i>a</i>/(<i>a</i>+<i>p</i>(<i>w</i>))为权重的词向量的加权平均,根据单词频率<i>p</i>(<i>w</i>)的分布规律,<i>a</i>在[10&lt;sup&gt;-3&lt;/sup&gt;,10&lt;sup&gt;-4&lt;/sup&gt;]范围内对权重的区分度最大,即在这个范围之外,不同单词的权重<i>a</i>/(<i>a</i>+<i>p</i>(<i>w</i>))基本相等。</p>
+                </div>
+                <h3 id="71" name="71" class="anchor-tag">2 方差选词方法</h3>
+                <div class="p1">
+                    <p id="72">在平滑反频率模型中,随机游走能够较好地反映在通用语料的统计规律下句子的生成规律,但在具体分类任务中,没有考虑每一类话题对句子生成的影响。</p>
+                </div>
+                <div class="p1">
+                    <p id="73">假设在分类任务中的总体语料数据集为<i>D</i>,每一类语料为<i>D</i><sub><i>i</i></sub>,<i>i</i>∈[2,<i>n</i>],则模型共同的话题向量<i><b>c</b></i><sub>0</sub>为总体语料的共同话题,而针对每一类的语料,应该有属于该类语料的专有共同话题,定义为<i><b>c</b></i><sub><i>i</i></sub>,其中<i>i</i>与分类语料对应。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">为保持平滑反频率模型的通用性,同时提高其在分类任务中的准确性,本文在该模型中添加了方差选词组件,通过在计算句向量时去除存在共同话题的词,提升句向量在不同类别中的区分度。</p>
+                </div>
+                <h4 class="anchor-tag" id="75" name="75">2.1 方差因子计算</h4>
+                <div class="p1">
+                    <p id="76">设单词<i>w</i>在第<i>i</i>类语料中出现的概率为:</p>
+                </div>
+                <div class="p1">
+                    <p id="77" class="code-formula">
+                        <mathml id="77"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ρ</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">|</mo><mi>D</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mrow><mo>|</mo><mrow><mo stretchy="false">{</mo><mi>s</mi><mo stretchy="false">|</mo><mi>w</mi><mo>∈</mo><mi>s</mi><mo>,</mo><mi>s</mi><mo>∈</mo><mi>D</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mo>|</mo></mrow></mrow><mrow><mrow><mo>|</mo><mrow><mi>D</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mo>|</mo></mrow></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="78">其中,<mathml id="171"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>|</mo><mrow><mo stretchy="false">{</mo><mi>s</mi><mo stretchy="false">|</mo><mi>w</mi><mo>∈</mo><mi>s</mi><mo>,</mo><mi>s</mi><mo>∈</mo><mi>D</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mo>|</mo></mrow></mrow></math></mathml>为含有单词w的句子的个数,<mathml id="172"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>|</mo><mrow><mi>D</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mo>|</mo></mrow></mrow></math></mathml>为该类语料中所有句子的个数。</p>
+                </div>
+                <div class="p1">
+                    <p id="79">无论句子<i>s</i>中单词<i>w</i>出现过多少次,都记为1。定义单词<i>w</i>在不同类别语料中的方差因子为<i>Var</i>(<i>w</i>),则均方差为:</p>
+                </div>
+                <div class="p1">
+                    <p id="80" class="code-formula">
+                        <mathml id="80"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><msup><mrow></mrow><mn>2</mn></msup><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo stretchy="false">(</mo></mstyle><mi>X</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>-</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>X</mi></mstyle><mrow><mspace width="0.25em" /><mo>—</mo></mrow></mover><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>9</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="81">其中,<i>X</i><sub><i>i</i></sub>(<i>w</i>)=<i>P</i>(<i>w</i>|<i>D</i><sub><i>i</i></sub>)。</p>
+                </div>
+                <div class="p1">
+                    <p id="82">为方便不同单词方差因子的比较,本文将均方差进行归一化处理,得到如式(8)所示的方差因子。</p>
+                </div>
+                <div class="p1">
+                    <p id="83" class="code-formula">
+                        <mathml id="83"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>V</mi><mi>a</mi><mi>r</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>=</mo><mi>S</mi><msup><mrow></mrow><mn>2</mn></msup><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mfrac><mrow><mrow><mo stretchy="false">(</mo><mi>X</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>-</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>X</mi></mstyle><mrow><mspace width="0.25em" /><mo>—</mo></mrow></mover><mo stretchy="false">)</mo></mrow><msup><mrow></mrow><mn>2</mn></msup></mrow><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>X</mi></mstyle><mrow><mspace width="0.25em" /><mo>—</mo></mrow></mover><msup><mrow></mrow><mn>2</mn></msup></mrow></mfrac></mrow></mstyle><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>0</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="84">方差因子越小,表示该单词的意思在不同类别语料中出现的概率越接近,即可能属于总体语料的共同话题;方差因子越大,表示该单词的意思在不同类别语料中出现的概率相差越大,即可能属于不同类别语料的专有共同话题。因此,方差因子越大对分类问题的贡献率越大,因子越小对分类问题贡献率越小。方差因子较小的单词,在句向量生成过程中会成为影响分类效果的“噪声”。</p>
+                </div>
+                <div class="p1">
+                    <p id="85">为体现方差因子在多分类问题(即<i>n</i>≥3)对类与类之间的区别的贡献度,本文选取两两类别归一化方差的最大值作为多分类情况下的方差因子,可表示为:</p>
+                </div>
+                <div class="p1">
+                    <p id="86" class="code-formula">
+                        <mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>V</mi><mi>a</mi><mi>r</mi><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>max</mi></mrow></mstyle><mrow><mi>i</mi><mo>,</mo><mi>j</mi><mo>∈</mo><mi>n</mi><mo>,</mo><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></munder></mrow><mtext> </mtext><mi>S</mi><msubsup><mrow></mrow><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><mn>2</mn></msubsup><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>1</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <h4 class="anchor-tag" id="87" name="87">2.2 基于方差权重的SIF句向量模型</h4>
+                <div class="p1">
+                    <p id="88">上述方差因子的计算仅考虑单词<i>w</i>在具体任务的总体语料数据集<i>D</i>中的重要性,为综合考虑单词<i>w</i>在通用背景下的重要性,本文通过方差权重(Variance Weight,VW)因子表征单词对分类任务的重要程度,即:</p>
+                </div>
+                <div class="p1">
+                    <p id="89"><i>VW</i>(<i>w</i>)=<i>Var</i>(<i>w</i>)<i>Weight</i>(<i>w</i>)      (12)</p>
+                </div>
+                <div class="p1">
+                    <p id="90">在句向量的生成过程中,将方差权重因子<i>VW</i>(<i>w</i>)去除,再进行句向量计算,因此本文提出基于方差权重选词的SIF句向量模型CwVW-SIF,具体算法描述如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="91"><b>算法1</b> 基于方差权重选词的平滑反频率句向量生成</p>
+                </div>
+                <div class="p1">
+                    <p id="92"><b>输入</b> 词向量集{<i><b>v</b></i><sub><i>w</i></sub>:<i>w</i>∈<i>V</i>},句子集合<i>S</i>,参数<i>a</i>,通用语料库统计的单词频率{<i>p</i>(<i>w</i>):<i>w</i>∈<i>V</i>},分类任务训练集{<i>D</i><sub><i>i</i></sub>:<i>D</i><sub><i>i</i></sub>∈<i>D</i>}</p>
+                </div>
+                <div class="p1">
+                    <p id="93"><b>输出</b> 单词出现频率集{<i>f</i>(<i>w</i>|<i>D</i><sub><i>i</i></sub>):<i>w</i>∈<i>V</i>,<i>D</i><sub><i>i</i></sub>∈<i>D</i>},单词方差权重因子{<i>VW</i>(<i>w</i>):<i>w</i>∈<i>V</i>},句向量集{<i><b>v</b></i><sub><i>s</i></sub>:<i>s</i>∈<i>S</i>},单词剪裁数量<i>k</i></p>
+                </div>
+                <div class="p1">
+                    <p id="94">1.for all w in V do</p>
+                </div>
+                <div class="p1">
+                    <p id="95">2.f(w|D<sub>i</sub>)←get_frequence(w)</p>
+                </div>
+                <div class="p1">
+                    <p id="96">3.end for</p>
+                </div>
+                <div class="p1">
+                    <p id="97">4.for all w in V do</p>
+                </div>
+                <div class="p1">
+                    <p id="98">5.Var(w)←calculate_var(w)</p>
+                </div>
+                <div class="p1">
+                    <p id="99">6.VW<mathml id="173"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false">(</mo><mtext>w</mtext><mo stretchy="false">)</mo><mo>←</mo><mtext>V</mtext><mtext>a</mtext><mtext>r</mtext><mo stretchy="false">(</mo><mtext>w</mtext><mo stretchy="false">)</mo><mfrac><mtext>a</mtext><mrow><mtext>a</mtext><mo>+</mo><mtext>p</mtext><mo stretchy="false">(</mo><mtext>w</mtext><mo stretchy="false">)</mo></mrow></mfrac></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="100">7.end for</p>
+                </div>
+                <div class="p1">
+                    <p id="101">8.V_sorted sort V by VW(w)</p>
+                </div>
+                <div class="p1">
+                    <p id="102">9.k←cut_number(V_sorted,D)</p>
+                </div>
+                <div class="p1">
+                    <p id="103">10.for all s in S do</p>
+                </div>
+                <div class="p1">
+                    <p id="104">11.s←remove V_sorted[0,k]ins</p>
+                </div>
+                <div class="p1">
+                    <p id="105" class="code-formula">
+                        <mathml id="105"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>1</mn><mn>2</mn><mo>.</mo><mtext>v</mtext><msub><mrow></mrow><mtext>s</mtext></msub><mo>←</mo><mfrac><mn>1</mn><mrow><mrow><mo>|</mo><mtext>s</mtext><mo>|</mo></mrow></mrow></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mtext>w</mtext><mo>∈</mo><mtext>s</mtext></mrow></munder><mrow><mfrac><mtext>a</mtext><mrow><mtext>a</mtext><mo>+</mo><mtext>p</mtext><mo stretchy="false">(</mo><mtext>w</mtext><mo stretchy="false">)</mo></mrow></mfrac></mrow></mstyle><mtext>v</mtext><msub><mrow></mrow><mtext>w</mtext></msub></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="106">13.end for</p>
+                </div>
+                <div class="p1">
+                    <p id="107">算法1的第1行和第2行表示每个单词在不同类句子或文章中出现的概率,第5行用来计算方差因子,第6行用于方差权重因子的计算,第8行将单词表<i>V</i>按照方差权重因子<i>VW</i>(<i>w</i>)由小到大排序为单词表<i>V</i>_<i>sorted</i>,第9行用来计算最佳单词裁剪数,如算法2所示,<i>cut</i>_<i>number</i>(<i>V</i>_<i>sorted</i>,<i>D</i>)函数通过按照循序依次从训练集中去除单词表<i>V</i>_<i>sorted</i>中前<i>k</i>个单词,然后将训练后的句向量用于分类器,寻找最佳的准确率对应的剪裁数值,并将其返回,第11行将单词表中的单词去掉,第12行通过加权平均,将词向量加权平均为句向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="108"><b>算法2</b> 最佳单词剪裁数量计算<i>cut</i>_<i>number</i>(<i>V</i>_<i>sorted</i>,<i>D</i>)</p>
+                </div>
+                <div class="p1">
+                    <p id="109"><b>输入</b> 词向量集{<i><b>v</b></i><sub><i>w</i></sub>:<i>w</i>∈<i>V</i>},句子集合<i>S</i>,参数<i>a</i>,通用语料库统计的单词频率{<i>p</i>(<i>w</i>):<i>w</i>∈<i>V</i>},分类任务训练集{<i>D</i><sub><i>i</i></sub>:<i>D</i><sub><i>i</i></sub>∈<i>D</i>},按照方差权重因子排序的词汇表<i>V</i>_<i>sorted</i></p>
+                </div>
+                <div class="p1">
+                    <p id="110"><b>输出</b> 准确率集<i>ACC</i>={<i>acc</i>(<i>i</i>)|<i>i</i>∈[0,<i>len</i>(<i>V</i>_<i>sorted</i>)]},单词裁剪数<i>k</i></p>
+                </div>
+                <div class="p1">
+                    <p id="111">1.for i in range [0,len(V_sorted)] do</p>
+                </div>
+                <div class="p1">
+                    <p id="112">2.for all s in D do</p>
+                </div>
+                <div class="p1">
+                    <p id="113">3.s←remove V_sorted[0,i] ins</p>
+                </div>
+                <div class="p1">
+                    <p id="114" class="code-formula">
+                        <mathml id="114"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>4</mn><mo>.</mo><mtext>v</mtext><msub><mrow></mrow><mtext>s</mtext></msub><mo>←</mo><mfrac><mn>1</mn><mrow><mrow><mo>|</mo><mtext>s</mtext><mo>|</mo></mrow></mrow></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mtext>w</mtext><mo>∈</mo><mtext>s</mtext></mrow></munder><mrow><mfrac><mtext>a</mtext><mrow><mtext>a</mtext><mo>+</mo><mtext>p</mtext><mo stretchy="false">(</mo><mtext>w</mtext><mo stretchy="false">)</mo></mrow></mfrac></mrow></mstyle><mtext>v</mtext><msub><mrow></mrow><mtext>w</mtext></msub></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="115">5.end for</p>
+                </div>
+                <div class="p1">
+                    <p id="116">6.acc(i)←SVM({v<sub>s</sub>:s∈S},D)</p>
+                </div>
+                <div class="p1">
+                    <p id="117">7.end for</p>
+                </div>
+                <div class="p1">
+                    <p id="118">8.return max_number(ACC)</p>
+                </div>
+                <h3 id="119" name="119" class="anchor-tag">3 CwVW-SIF模型</h3>
+                <h4 class="anchor-tag" id="120" name="120">3.1 句向量分类模型</h4>
+                <div class="p1">
+                    <p id="121">在句向量模型上加入有监督的分类器,构成基于句向量的分类模型,如图1所示。首先将分类任务中带有标记的训练语料输入到CwVW-SIF模型,得到带有标记的句向量,每个句向量是<i>m</i>维的数值向量,然后将带有标记的句向量输入到分类器中,经过训练的分类器便可用于测试语料的分类。</p>
+                </div>
+                <div class="area_img" id="122">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909033_122.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 句向量分类模型" src="Detail/GetImg?filename=images/JSJC201909033_122.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 句向量分类模型</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909033_122.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="123">分类器即分类算法,如支持向量机、各类决策树(如随机森林、极端随机树)、BP(如前馈神经网络)算法等,分类器的输入为数值特征向量,输出为输入数据的分类标记。分类器的选择在整个分类模型中并不起决定性作用,但通过合理选择分类器,并对分类器的参数进行调整,可在一定程度上改善分类效果。</p>
+                </div>
+                <h4 class="anchor-tag" id="124" name="124">3.2 文本关键词抽取</h4>
+                <div class="p1">
+                    <p id="125">CwVW-SIF模型生成句向量的过程是对词向量进行加权求和的过程,因此,可利用该过程确定句子中的关键词。某一个单词<i>w</i>的权重值可表示为方差权重因子,即:</p>
+                </div>
+                <div class="p1">
+                    <p id="126"><i>FVW</i>(<i>w</i>)=<i>F</i>(<i>w</i>)<i>Var</i>(<i>w</i>)<i>Weight</i>(<i>w</i>)      (13)</p>
+                </div>
+                <div class="p1">
+                    <p id="127">其中,<i>F</i>(<i>w</i>)表示单词在句子中出现的次数,即某一单词在同一句子中出现的次数越多,对该句子的贡献越大,<i>Var</i>(<i>w</i>)表示单词<i>w</i>的归一化方差因子,其取值范围为[0,1],越接近1对分类的贡献越大,对句子的中心主题描述的贡献就越大,<i>Weight</i>(<i>w</i>)表示单词<i>w</i>的权重因子,与单词的统计频率呈反比,即单词在全体文本中出现的频率越大,对句子含义的表达的贡献值越小。通过方差权重因子,计算句子中单词所对应的<i>FVW</i>值,并根据排序,筛选出句子的关键词。</p>
+                </div>
+                <h3 id="128" name="128" class="anchor-tag">4 实验结果与分析</h3>
+                <h4 class="anchor-tag" id="129" name="129">4.1 数据集</h4>
+                <div class="p1">
+                    <p id="130">本文使用公开分类任务数据集20 Newsgroups<citation id="247" type="reference"><link href="221" rel="bibliography" /><link href="223" rel="bibliography" /><sup>[<a class="sup">15</a>,<a class="sup">16</a>]</sup></citation>和取自IMDB的情感分析任务数据集Large Movie Review Dataset<citation id="248" type="reference"><link href="225" rel="bibliography" /><link href="227" rel="bibliography" /><sup>[<a class="sup">17</a>,<a class="sup">18</a>]</sup></citation>进行实验。</p>
+                </div>
+                <div class="p1">
+                    <p id="131">数据集20 Newsgroups主要用于文本分类、文本挖掘和信息检索研究,共收录20个不同主题的新闻约20 000篇,训练集和测试集分别占60%和40%,分类情况如表1所示。其中部分新闻类型极为相似(如comp.sys.ibm.pc.hardware和 comp.sys.mac.hardware),也有一些类别之间完全不同(如misc.forsale和soc.religion.christian)。</p>
+                </div>
+                <div class="area_img" id="132">
+                    <p class="img_tit"><b>表1 数据集20 Newsgroups类型</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="132" border="1"><tr><td><br />序号</td><td>类型</td></tr><tr><td><br />1</td><td>comp.graphics<br />comp.os.ms-windows.misc<br />comp.sys.ibm.pc.hardware<br />comp.sys.mac.hardware</td></tr><tr><td><br />2</td><td>comp.windows.x<br />rec.autos<br />rec.motorcycles<br />rec.sport.baseball<br />rec.sport.hockey</td></tr><tr><td><br />3</td><td>sci.crypt<br />sci.electronics<br />sci.med<br />sci.space</td></tr><tr><td><br />4</td><td>misc.forsale</td></tr><tr><td><br />5</td><td>talk.politics.misc<br />talk.politics.guns<br />talk.politics.mideast</td></tr><tr><td><br />6</td><td>talk.religion.misc<br />alt.atheism<br />soc.religion.christian</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="133">数据集Large Movie Review Dataset是通用的情感二分类数据集,共有50 000条源自IMDB的评论,训练集和测试集各有25 000条样本,正负样本各12 500条。</p>
+                </div>
+                <div class="p1">
+                    <p id="134">本文采用的词向量集为glove.6B.50d<citation id="249" type="reference"><link href="229" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>,该数据集是在维基百科语料库上根据GloVe模型训练得到,共有40万个单词,每个单词表示为50维的向量,选择该向量集有如下原因:1)该向量集由斯坦福大学训练并公开,较为成熟,具有通用性和可比性;2)该训练集将单词表示为50维度的向量,模型的训练速度相对较快。</p>
+                </div>
+                <div class="p1">
+                    <p id="135">单词频率数据集enwiki_vocab_min200是由维基百科语料统计而来<citation id="250" type="reference"><link href="231" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>,共含有34.8万个单词。</p>
+                </div>
+                <h4 class="anchor-tag" id="136" name="136">4.2 模型效果的PCA降维</h4>
+                <div class="p1">
+                    <p id="137">在通过分类器对改进的CwVW-SIF模型进行性能度量之前,本文运用改进前和改进后的模型,分别通过主成分分析方法,将句向量投影到低维空间进行可视化效果展示并进行比较。</p>
+                </div>
+                <div class="p1">
+                    <p id="138">本文选取2对数据集(大差别、小差别)进行实验,经过SIF模型和CwVW-SIF模型将每一条新闻文本转化为50维的句向量,再将句向量通过PCA降维到2维和3维进行观察。</p>
+                </div>
+                <div class="p1">
+                    <p id="139">大差别数据集选取20 Newsgroups中类别之间有较大差别的comp.graphics和 soc.religion.christian这2类数据进行展示。其中,comp.graphics类584条,soc.religion.christian类599条。其二维效果如图2所示,三维效果如图3所示,灰色的点为comp.graphics类,黑色的点为soc.religion.christian类。可以看出,经过优化后的模型训练出的数据,同一类更加紧凑,不同类之间区分更加明显。</p>
+                </div>
+                <div class="area_img" id="140">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909033_140.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 大差别数据集二维效果展示" src="Detail/GetImg?filename=images/JSJC201909033_140.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 大差别数据集二维效果展示</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909033_140.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="141">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909033_141.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 大差别数据集三维效果展示" src="Detail/GetImg?filename=images/JSJC201909033_141.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 大差别数据集三维效果展示</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909033_141.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="142">小差别数据集选取了20 Newsgroups中类别之间极为相似的comp.sys.ibm.pc.hardware和 comp.sys.mac.hardware两类数据进行展示。其中,comp.sys.ibm.pc.hardware类590条,comp.sys.mac.hardware类578条。由于2个数据集差别较小,因此三维图展示效果如图4所示,其中灰色的点为comp.sys.ibm.pc.hardware类,黑色的点为somp.sys.mac.hardware类。</p>
+                </div>
+                <div class="area_img" id="143">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909033_143.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 小差别数据集三维效果" src="Detail/GetImg?filename=images/JSJC201909033_143.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 小差别数据集三维效果</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909033_143.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="144" name="144">4.3 模型分类效果</h4>
+                <div class="p1">
+                    <p id="145">本文重点在于对比模型改进前后的效果,因此在分类器上选择支持向量机,且只简单对其参数进行调节(情感分析任务同样如此)。</p>
+                </div>
+                <div class="p1">
+                    <p id="146">支持向量机输入由训练集经SIF模型和CwVW-SIF模型产生的句向量,输出为分类结果。其采用高斯核函数,核函数系数为5,SVC的惩罚值为3,停止训练误差为10<sup>-3</sup>,无最大迭代次数限制,决策函数为OVR。根据调试,权重计算参数<i>a</i>=2.7×10<sup>-3</sup>时分类效果最佳。</p>
+                </div>
+                <div class="p1">
+                    <p id="147">CwVW-SIF模型在分类任务中最重要的是找到最佳的单词剪裁率,即算法2所示的最佳单词剪裁数量。以不同的比例除去按照方差权重因子排序后的单词表的部分单词,通过训练集对模型进行训练,然后根据验证集找到最佳的剪裁率,并在验证集上检测模型效果。</p>
+                </div>
+                <h4 class="anchor-tag" id="148" name="148">4.3.1 文本分类任务</h4>
+                <div class="p1">
+                    <p id="149">本文选取20 Newsgroups中难度不同的4种话题类型任务对本文模型进行实验,其精度结果如图5所示。</p>
+                </div>
+                <div class="area_img" id="150">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909033_150.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 不同分类任务下模型精度对比" src="Detail/GetImg?filename=images/JSJC201909033_150.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 不同分类任务下模型精度对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909033_150.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="151">表2给出不同分类任务精度和最佳剪裁率对比结果。可以看出,4种任务的最佳剪裁率分别为14.5%、24.8%、38.2%、45.4%,对于每个分类任务,在剪裁率从0%递增到100%的过程中,算法的精度先提升,达到极值后,再下降,且任务难度越大,最佳剪裁率越大。这是由于分类任务难度大,主题无关或与分类无关的词汇多,对于句向量的影响就越大。对于类别comp.sys.ibm.pc.hardware与类别comp.sys.mac.hardware,两者均为计算机硬件领域,前者是IBM公司,后者是苹果公司,只有少数的关键词才会对分类起到决定性的作用。因此通过方差因子去除无关词汇,再进行句向量生成,能够提高分类任务的性能。</p>
+                </div>
+                <div class="area_img" id="152">
+                    <p class="img_tit"><b>表2 不同分类任务精度和最佳剪裁率对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="152" border="1"><tr><td rowspan="2">分类任务</td><td colspan="2"><br />精度</td><td rowspan="2">精度<br />提升</td><td rowspan="2">最佳<br />剪裁率</td></tr><tr><td><br />SIF<br />模型</td><td>CwVW-SIF<br />模型</td></tr><tr><td>comp.graphics/<br />soc.religion.christian</td><td>0.970</td><td>0.981</td><td>0.011</td><td>0.145</td></tr><tr><td><br />alt.atheism/sci.med</td><td>0.921</td><td>0.935</td><td>0.014</td><td>0.248</td></tr><tr><td><br />talk.politics.misc/<br />talk.politics.guns</td><td>0.724</td><td>0.777</td><td>0.053</td><td>0.382</td></tr><tr><td><br />comp.sys.ibm.pc.hardware/<br />comp.sys.mac.hardware</td><td>0.663</td><td>0.757</td><td>0.094</td><td>0.454</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="153" name="153">4.3.2 情感分析任务</h4>
+                <div class="p1">
+                    <p id="154">本文情感分析任务选取数据集Large Movie Review Dataset中不同数据规模的数据,数据规模分别为1 000条、2 500条、5 000条、10 000条和20 000条,利用CwVW-SIF模型找到单词表的最佳剪裁率,得到模型的最佳性能,分类器选择支持向量机。</p>
+                </div>
+                <div class="p1">
+                    <p id="155">支持向量机输入由训练集经SIF模型和CwVW-SIF模型产生的句向量,输出为分类结果。支持向量机采用高斯核函数,核函数系数为3,SVC的惩罚值为20,停止训练误差为10<sup>-3</sup>,无最大迭代次数限制,决策函数为OVR。根据调试,权重计算参数<i>a</i>=2.7×10<sup>-3</sup>时分类效果最佳。</p>
+                </div>
+                <div class="p1">
+                    <p id="156">2种模型在5种训练集规模下的精度如表3所示。不同剪裁率对CwVW-SIF模型精度的影响如图6所示。可以看出,5种训练规模下CwVW-SIF模型对于SIF模型都有提高,且随着训练规模的增大,性能提升幅度也随之增大。</p>
+                </div>
+                <div class="area_img" id="157">
+                    <p class="img_tit"><b>表3 不同规模训练集的性能对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="157" border="1"><tr><td rowspan="2">训练集规模</td><td colspan="2"><br />精度</td><td rowspan="2">精度<br />提升</td><td rowspan="2">最佳<br />剪裁率</td></tr><tr><td><br />SIF+SVM<br />模型</td><td>CwVW-SIF+<br />SVM模型</td></tr><tr><td>1 000</td><td>0.746</td><td>0.760</td><td>0.014</td><td>0.230</td></tr><tr><td><br />2 500</td><td>0.750</td><td>0.779</td><td>0.029</td><td>0.260</td></tr><tr><td><br />5 000</td><td>0.757</td><td>0.791</td><td>0.034</td><td>0.360</td></tr><tr><td><br />10 000</td><td>0.768</td><td>0.815</td><td>0.047</td><td>0.440</td></tr><tr><td><br />20 000</td><td>0.772</td><td>0.813</td><td>0.036</td><td>0.400</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="158">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909033_158.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 5种训练集规模下精度对比结果" src="Detail/GetImg?filename=images/JSJC201909033_158.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 5种训练集规模下精度对比结果</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909033_158.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="159" name="159">4.4 关键词提取</h4>
+                <div class="p1">
+                    <p id="160">本文通过对数据集20 Newsgroups的文章进行关键词抽取,检验方差权重因子的效果,选取comp.sys.ibm.pc.hardware(类别0)、rec.sport.baseball(类别1)2种类别的文章,然后对比文章题目和根据本文算法抽取的Top5关键词。同时,由于关键词提取不是本文的重点,且数据集20 Newsgroups中文章的题目并非其关键词,因此只举例说明,不做命中率的统计,结果如表4所示。其中,加粗表示题目中含有的关键词和方差权重因子,且不区分大小写。可以看出,本文算法对关键词的抽取效果较好。</p>
+                </div>
+                <div class="area_img" id="161">
+                    <p class="img_tit"><b>表4 关键词提取效果展示</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="161" border="1"><tr><td><br />文章题目</td><td>类别</td><td>关键词/FVW权重</td></tr><tr><td><b>NetBIOS</b> and <b>BIOS</b></td><td>0</td><td><b>netbios/4.00</b>,emilio/1.95,<b>bios/1.95</b>,interrupt/0.99,sci/0.96</td></tr><tr><td><br /><b>IDE</b> vs <b>SCSI</b></td><td>0</td><td><b>scsi/23.86</b>,pc/10.57,asynchronous/7.94,<b>ide/7.90</b>,mac/7.86</td></tr><tr><td><br />Re:<b>AMD</b> i486 clones:<br />Now legal in US?!?!?!</td><td>0</td><td><b>amd/2.99,clones/2.94</b>,sward/2.00,prohibiting/1.97,chip/1.86</td></tr><tr><td><br /><b>Ram boards</b> on a 486 ?</td><td>0</td><td><b>ram/5.15</b>,simms/4.95,oracle/2.88,isa/2.69,<b>boards/2.68</b></td></tr><tr><td><br /><b>ide</b> &amp;<b>scsi</b> controller</td><td>0</td><td>ram/3.43,hd/2.73,<b>scsi/1.99,ide/1.96</b>,cache/1.89</td></tr><tr><td><br />WHAT’S WITH ALL THESE <b>SCORES</b>?</td><td>1</td><td>hernandez/3.91,<b>scores/2.57</b>,mailing/2.45,posts/1.74,standings/1.71</td></tr><tr><td><br /><b>WFAN</b></td><td>1</td><td><b>wip/8.97</b>,lupica/4.00,berman/3.94,sports/3.94,<b>fan/2.81</b></td></tr><tr><td><br />Hal <b>McRae</b></td><td>1</td><td><b>mcrae/3.96</b>,rbd/2.00,mcgraw/1.95,royals/1.90,davis/1.32</td></tr><tr><td><br />Let’s Talk <b>Phillies</b></td><td>1</td><td><b>phillies/4.73</b>,phils/3.98,cubs/2.82,homers/1.99,myers/1.91</td></tr><tr><td><br />Re:<b>Royals</b></td><td>1</td><td><b>royals/1.90</b>,depressis/1.00,spork/1.00,izzo/1.00,mcreynolds/1.00</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h3 id="162" name="162" class="anchor-tag">5 结束语</h3>
+                <div class="p1">
+                    <p id="163">本文根据单词在分类任务中的分布情况,建立基于方差权重选词改进的平滑反频率句向量模型CwVW-SIF。在文本分类和情感分析2种任务上进行实验,结果表明,该模型具有较高的分类精度。由于在单词剪裁率增长的过程中,精度曲线并不完全平滑,因此下一步将优化单词的权重因子来解决该问题。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="193">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+
+                                <b>[1]</b> MIKOLOV T,CORRADO G,CHEN Kai,et al.Efficient estimation of word representations in vector space[EB/OL].[2018-07-10].https://arxiv.org/pdf/1301.3781.pdf.
+                            </a>
+                        </p>
+                        <p id="195">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Glove:Global vectors for word representation">
+
+                                <b>[2]</b> PENNINGTON J,SOCHER R,MANNING C.GloVe:global vectors for word representation[C]//Proceedings of Conference on Empirical Methods in Natural Language Processing.Stroudsburg,USA:Association for Computational Linguistics,2014:1532-1543.
+                            </a>
+                        </p>
+                        <p id="197">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Bag of Tricks for Efficient Text Classification">
+
+                                <b>[3]</b> JOULIN A,GRAVE E,BOJANOWSKI P,et al.Bag of tricks for efficient text classification[C]//Proceedings of Conference of European Chapter of the Association for Computational Linguistics.Stroudsburg,USA:Association for Computational Linguistics,2017:427-431.
+                            </a>
+                        </p>
+                        <p id="199">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=From paraphrase database to compositional paraphrase model and back">
+
+                                <b>[4]</b> WIETING J,BANSAL M,GIMPEL K,et al.From paraphrase database to compositional paraphrase model and back[J].Transactions of the Association for Computational Linguistics,2015,3:345-358.
+                            </a>
+                        </p>
+                        <p id="201">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep contextualized word representations">
+
+                                <b>[5]</b> PETERS M E,NEUMANN M,IYYER M,et al.Deep contextualized word representations[EB/OL].[2018-07-10].https://arxiv.org/pdf/1802.05365.pdf.
+                            </a>
+                        </p>
+                        <p id="203">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=PPDB:The Paraphrase Database">
+
+                                <b>[6]</b> GANITKEVITCH J,VANDURME B,CALLISON-BURCH C.PPDB:the paraphrase database[C]//Proceedings of Conference of the North American Chapter of the Association for Computational Linguistics.Stroudsburg,USA:Association for Computational Linguistics,2013:758-764.
+                            </a>
+                        </p>
+                        <p id="205">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Distributed Representations of Sentences and Documents">
+
+                                <b>[7]</b> LE Q,MIKOLOV T.Distributed representations of sentences and documents[C]//Proceedings of the 31st International Conference on International Conference on Machine Learning.Cambridge,USA:MIT Press,2014:1188-1196.
+                            </a>
+                        </p>
+                        <p id="207">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep unordered composition rivals syntactic methods for text classification">
+
+                                <b>[8]</b> IYYER M,MANJUNATHA V,BOYD-GRABER J,et al.Deep unordered composition rivals syntactic methods for text classification[C]//Proceedings of International Joint Conference on Natural Language Processing.Stroudsburg,USA:Association for Computational Linguistics,2015:1681-1691.
+                            </a>
+                        </p>
+                        <p id="209">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Skip-thought vectors">
+
+                                <b>[9]</b> KIROS R,ZHU Yukun,SALAKHUTDINOV R,et al.Skip-thought vectors[C]//Proceedings of International Conference on Neural Information Processing Systems.Cambridge,USA:MIT Press,2015:3294-3302.
+                            </a>
+                        </p>
+                        <p id="211">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks">
+
+                                <b>[10]</b> TAI Kaisheng,SOCHER R,MANNING C D.Improved semantic representations from tree-structured long short-term memory networks[C]//Proceedings of International Joint Conference on Natural Language Processing.Stroudsburg,USA:Association for Computational Linguistics,2015:1556-1566.
+                            </a>
+                        </p>
+                        <p id="213">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Towards universal paraphrastic sentence embeddings">
+
+                                <b>[11]</b> WIETING J,BANSAL M,GIMPEL K,et al.Towards universal paraphrastic sentence embeddings[EB/OL].[2018-07-10].https://arxiv.org/pdf/1511.08198.pdf.
+                            </a>
+                        </p>
+                        <p id="215">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201705024&amp;v=Mjc0NTJPM3pxcUJ0R0ZyQ1VSTE9lWmVSckZ5L2hXN3pMTHo3QmJiRzRIOWJNcW85SFlJUUtESDg0dlI0VDZqNTQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 段旭磊,张仰森,孙祎卓.微博文本的句向量表示及相似度计算方法研究[J].计算机工程,2017,43(5):143-148.
+                            </a>
+                        </p>
+                        <p id="217">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A simple but tough to beat baseline for sentence embeddings">
+
+                                <b>[13]</b> ARORA S,LIANG Y,MA Tengyu.A simple but tough to beat baseline for sentence embeddings[EB/OL].[2018-07-10].https://openreview.net/pdf?id=SyK00v5xx.
+                            </a>
+                        </p>
+                        <p id="219">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Concatenated p-mean word embeddings as universal cross-lingual sentence representations">
+
+                                <b>[14]</b> RÜCKLÉ A,EGER S,PEYRARD M,et al.Concatenated p-mean word embeddings as universal cross-lingual sentence representations[EB/OL].[2018-07-10].https://arxiv.org/pdf/1803.01400.pdf.
+                            </a>
+                        </p>
+                        <p id="221">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=NewsWeeder: learning to filter netnews">
+
+                                <b>[15]</b> LANG K.NewsWeeder:learning to filter netnews[C]//Proceedings of International Conference on International Conference on Machine Learning.San Francisco,USA:Morgan Kaufmann Publishers Inc.,1995:331-339.
+                            </a>
+                        </p>
+                        <p id="223">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=20 newsgroups">
+
+                                <b>[16]</b> 20 newsgroups[EB/OL].[2018-07-10].http://www.qwone.com/～jason/20Newsgroups.
+                            </a>
+                        </p>
+                        <p id="225">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning Word Vectors for Sentiment Analysis">
+
+                                <b>[17]</b> MAAS A L,DALY R E,PHAM P T,et al.Learning word vectors for sentiment analysis[C]//Proceedings of Meeting of the Association for Computational Linguistics.Stroudsburg,USA:Association for Computational Linguistics,2011:142-150.
+                            </a>
+                        </p>
+                        <p id="227">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Large movie review dataset">
+
+                                <b>[18]</b> Large movie review dataset[EB/OL].[2018-07-10].http://ai.stanford.edu/～amaas/data/sentiment.
+                            </a>
+                        </p>
+                        <p id="229">
+                            <a id="bibliography_19" target="_blank" href="http://scholar.cnki.net/result.aspx?q=GloVe:global vectors for word representation">
+
+                                <b>[19]</b> GloVe:global vectors for word representation[EB/OL].[2018-07-10].https://nlp.stanford.edu/projects/glove.
+                            </a>
+                        </p>
+                        <p id="231">
+                            <a id="bibliography_20" target="_blank" href="http://scholar.cnki.net/result.aspx?q=English Wikipedia dump">
+
+                                <b>[20]</b> Wikimedia.English Wikipedia dump[EB/OL].[2018-07-10].http://dumps.wikimedia.org/enwiki/latest/enwiki-latest-page s-articles.xml.bz2.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201909033" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201909033&amp;v=MTIwMjVSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnJGeS9oVzd6TEx6N0JiYkc0SDlqTXBvOUdaNFFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cEN5cUtVN2lISGlaR0pNOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

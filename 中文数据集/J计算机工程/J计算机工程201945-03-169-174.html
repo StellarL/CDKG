@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130634215587500%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201903029%26RESULT%3d1%26SIGN%3dMf0IIO5uOaPjICBmJzE8yvhmOdU%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201903029&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201903029&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201903029&amp;v=MTAxODhaZVJvRnk3bFVyL09MejdCYmJHNEg5ak1ySTlIYllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2U=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#47" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#51" data-title="1 相关知识 ">1 相关知识</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#52" data-title="1.1 语义表达式">1.1 语义表达式</a></li>
+                                                <li><a href="#57" data-title="1.2 语义表达式预处理">1.2 语义表达式预处理</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#67" data-title="2 神经语义分析 ">2 神经语义分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#69" data-title="2.1 双编码结合">2.1 双编码结合</a></li>
+                                                <li><a href="#78" data-title="2.2 多语言到语义表达式的注意力模型">2.2 多语言到语义表达式的注意力模型</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#90" data-title="3 实验结果与分析 ">3 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#91" data-title="3.1 实验语料与设置">3.1 实验语料与设置</a></li>
+                                                <li><a href="#96" data-title="3.2 实验结果与讨论">3.2 实验结果与讨论</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#116" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#55" data-title="&lt;b&gt;表1 不同自然语言句子以及相应树形结构语义表达式&lt;/b&gt;"><b>表1 不同自然语言句子以及相应树形结构语义表达式</b></a></li>
+                                                <li><a href="#56" data-title="&lt;b&gt;表2 不同自然语言句子以及相应λ演算语义表达式&lt;/b&gt;"><b>表2 不同自然语言句子以及相应λ演算语义表达式</b></a></li>
+                                                <li><a href="#62" data-title="&lt;b&gt;表3 树形结构语义表达式&lt;/b&gt;"><b>表3 树形结构语义表达式</b></a></li>
+                                                <li><a href="#71" data-title="&lt;b&gt;图1 基于注意力机制的编码-解码模型流程&lt;/b&gt;"><b>图1 基于注意力机制的编码-解码模型流程</b></a></li>
+                                                <li><a href="#74" data-title="&lt;b&gt;图2 双编码-解码模型&lt;/b&gt;"><b>图2 双编码-解码模型</b></a></li>
+                                                <li><a href="#99" data-title="&lt;b&gt;表4 2种方法在GEOQUERY语料上单语言 语义分析对比结果&lt;/b&gt; %"><b>表4 2种方法在GEOQUERY语料上单语言 语义分析对比结果</b> %</a></li>
+                                                <li><a href="#100" data-title="&lt;b&gt;表5 2种方法在ATIS语料上单语言 语义分析对比结果&lt;/b&gt; %"><b>表5 2种方法在ATIS语料上单语言 语义分析对比结果</b> %</a></li>
+                                                <li><a href="#106" data-title="&lt;b&gt;表6 2种方法在GEOQUERY语料上多语言 语义分析对比结果&lt;/b&gt;"><b>表6 2种方法在GEOQUERY语料上多语言 语义分析对比结果</b></a></li>
+                                                <li><a href="#107" data-title="&lt;b&gt;表7 2种方法在ATIS语料上多语言 语义分析对比结果&lt;/b&gt; %"><b>表7 2种方法在ATIS语料上多语言 语义分析对比结果</b> %</a></li>
+                                                <li><a href="#113" data-title="&lt;b&gt;表8 多语言模型与单语言模型在ATIS语料上对比示例&lt;/b&gt;"><b>表8 多语言模型与单语言模型在ATIS语料上对比示例</b></a></li>
+                                                <li><a href="#115" data-title="&lt;b&gt;图3 多语言到语义表达式注意力模型对齐示例&lt;/b&gt;"><b>图3 多语言到语义表达式注意力模型对齐示例</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" POPESCU A, ETZIONI O, KAUTZ H.Towards a theory of natural language interfaces to databases[C]//Proceedings of the 8th International Conference on Intelligent User Interfaces.New York, USA:ACM Press, 2003:149-157." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Towards a theory of natural language interfaces to databases">
+                                        <b>[1]</b>
+                                         POPESCU A, ETZIONI O, KAUTZ H.Towards a theory of natural language interfaces to databases[C]//Proceedings of the 8th International Conference on Intelligent User Interfaces.New York, USA:ACM Press, 2003:149-157.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" ZELLE J M.Using inductive logic programming to automate the construction of natural language parsers[D].Austin, USA:University of Texas at Austin, 1995." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Using inductive logic programming to automate the construction of natural language parsers">
+                                        <b>[2]</b>
+                                         ZELLE J M.Using inductive logic programming to automate the construction of natural language parsers[D].Austin, USA:University of Texas at Austin, 1995.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" GOLDWASSER D, REICHART R, CLARKE J, et al.Confidence driven unsupervised semantic parsing[C]//Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics:Human Language Technologies.Stroudsburg, USA:Association for Computational Linguistics, 2011:1486-1495." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Confidence driven unsupervised semantic parsing">
+                                        <b>[3]</b>
+                                         GOLDWASSER D, REICHART R, CLARKE J, et al.Confidence driven unsupervised semantic parsing[C]//Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics:Human Language Technologies.Stroudsburg, USA:Association for Computational Linguistics, 2011:1486-1495.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" ANDREAS J, VLACHOS A, CLARK S.Semantic parsing as machine translation[EB/OL].[2017-11-18].https://www.cl.cam.ac.uk/～sc609/pubs/acl 13jacob.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Semantic parsing as machine translation">
+                                        <b>[4]</b>
+                                         ANDREAS J, VLACHOS A, CLARK S.Semantic parsing as machine translation[EB/OL].[2017-11-18].https://www.cl.cam.ac.uk/～sc609/pubs/acl 13jacob.pdf.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" DONG L, LAPATA M.Language to logical form with neural attention[EB/OL].[2017-11-18].https://arxiv.org/pdf/1601.01280.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Language to logical form with neural attention">
+                                        <b>[5]</b>
+                                         DONG L, LAPATA M.Language to logical form with neural attention[EB/OL].[2017-11-18].https://arxiv.org/pdf/1601.01280.pdf.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" ZETTLEMOYER L S, COLLINS M.Learning context-dependent mappings from sentences to logical form[C]//Proceedings of the 4th International Joint Conference on Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2009:976-984." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning context-dependent mappings from sentences to logical form">
+                                        <b>[6]</b>
+                                         ZETTLEMOYER L S, COLLINS M.Learning context-dependent mappings from sentences to logical form[C]//Proceedings of the 4th International Joint Conference on Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2009:976-984.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" CHAN Y S, NG H T.Scaling up word sense disambiguation via parallel texts[C]//Proceedings of the American Association for Artificial Intelligence.[S.l.]:AAAI Press, 2005:1037-1042." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Scaling up word sense disambiguation via parallel texts">
+                                        <b>[7]</b>
+                                         CHAN Y S, NG H T.Scaling up word sense disambiguation via parallel texts[C]//Proceedings of the American Association for Artificial Intelligence.[S.l.]:AAAI Press, 2005:1037-1042.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" JIE Z, LU W.Multilingual semantic parsing:parsing multiple languages into semantic representations[EB/OL].[2017-11-18].http://www.aclweb.org/anthology/C14-1122." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Multilingual semantic parsing:parsing multiple languages into semantic representations">
+                                        <b>[8]</b>
+                                         JIE Z, LU W.Multilingual semantic parsing:parsing multiple languages into semantic representations[EB/OL].[2017-11-18].http://www.aclweb.org/anthology/C14-1122.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" WONG Y W, MOONEY R J.Learning for semantic parsing with statistical machine translation[C]//Proceedings of the main conference on Human Language Technology Conference of the North American Chapter of the Association of Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2006:439-446." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning for semantic parsing with statistical machine translation">
+                                        <b>[9]</b>
+                                         WONG Y W, MOONEY R J.Learning for semantic parsing with statistical machine translation[C]//Proceedings of the main conference on Human Language Technology Conference of the North American Chapter of the Association of Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2006:439-446.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" KATE R J, MOONEY R J.Using string-kernels for learning semantic parsers[C]//Proceedings of the 21st International Conference on Computational Linguistics and the 44th annual meeting of the Association for Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2006:913-920." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Using string-kernels for learning semantic parsers,">
+                                        <b>[10]</b>
+                                         KATE R J, MOONEY R J.Using string-kernels for learning semantic parsers[C]//Proceedings of the 21st International Conference on Computational Linguistics and the 44th annual meeting of the Association for Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2006:913-920.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" LU W, NG H T, LEE W S, et al.A generative model for parsing natural language to meaning representation[C]//Proceedings of the Conference on Empirical Methods in Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2008:783-792." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A generative model for parsing natural language to meaning representations">
+                                        <b>[11]</b>
+                                         LU W, NG H T, LEE W S, et al.A generative model for parsing natural language to meaning representation[C]//Proceedings of the Conference on Empirical Methods in Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2008:783-792.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" CHIANG D.Hierarchical phrase-based translation[J].Compositional Linguistics, 2007, 33 (2) :201-228." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJBK&amp;filename=SJBK15090500000317&amp;v=MjgyODc9TmlmSlpiSzlIdGpNcW85RlpPc1BEMzArb0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTG5JSmw0VmFoUQ==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         CHIANG D.Hierarchical phrase-based translation[J].Compositional Linguistics, 2007, 33 (2) :201-228.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" LI J, ZHU M H, LU W, et al.Improving semantic parsing with enriched synchronous context-free grammar[C]//Proceedings of 2015 Conference on Empirical Methods in Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2015:1455-1465." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Improving semantic parsing with enriched synchronous context-free grammar">
+                                        <b>[13]</b>
+                                         LI J, ZHU M H, LU W, et al.Improving semantic parsing with enriched synchronous context-free grammar[C]//Proceedings of 2015 Conference on Empirical Methods in Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2015:1455-1465.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 刘洋.神经机器翻译前沿进展[J].计算机研究与发展, 2017, 54 (6) :1144-1149." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201706002&amp;v=MDA1OTdyL09MeXZTZExHNEg5Yk1xWTlGWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk3bFU=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         刘洋.神经机器翻译前沿进展[J].计算机研究与发展, 2017, 54 (6) :1144-1149.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" FIRAT O, CHO K, BENGIO Y.Multi-way, multilingual neural machine translation with a shared attention mechanism[C]//Proceedings of the North American Chapter of the Association for Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2016:866-875." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Multi-way,multilingual neural machine translation with a shared attention mechanism">
+                                        <b>[15]</b>
+                                         FIRAT O, CHO K, BENGIO Y.Multi-way, multilingual neural machine translation with a shared attention mechanism[C]//Proceedings of the North American Chapter of the Association for Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2016:866-875.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" ZOPH B, KNIGHT K.Multi-source Neural Transla-tion[C]//Proceedings of the North American Chapter of the Association for Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2016:30-34." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Multi-source Neural Transla-tion">
+                                        <b>[16]</b>
+                                         ZOPH B, KNIGHT K.Multi-source Neural Transla-tion[C]//Proceedings of the North American Chapter of the Association for Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2016:30-34.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" SUSANTO R H, LU W.Neural Architectures for Multilingual Semantic Parsing[C]//Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2017:38-44." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Neural Architectures for Multilingual Semantic Parsing">
+                                        <b>[17]</b>
+                                         SUSANTO R H, LU W.Neural Architectures for Multilingual Semantic Parsing[C]//Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2017:38-44.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_18" title=" ZETTLEMOYER L S, COLLINS M.Learning to map sentences to logical form:structured classification with probabilistic categorical grammars[C]//Proceedings of the 21st Conference on Uncertainty in Artificial Intelligence.Arlington, USA:AUAI Press, 2005:658-666." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning to map sentences to logical form:structured classification with probabilistic categorical grammars">
+                                        <b>[18]</b>
+                                         ZETTLEMOYER L S, COLLINS M.Learning to map sentences to logical form:structured classification with probabilistic categorical grammars[C]//Proceedings of the 21st Conference on Uncertainty in Artificial Intelligence.Arlington, USA:AUAI Press, 2005:658-666.
+                                    </a>
+                                </li>
+                                <li id="39">
+
+
+                                    <a id="bibliography_19" title=" LIANG P, JORDAN M I, KLEIN D.Learning dependency-based compositional semantics[J].Compositional Linguistics, 2013, 39 (2) :389-446." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning dependency-based compositional semantics">
+                                        <b>[19]</b>
+                                         LIANG P, JORDAN M I, KLEIN D.Learning dependency-based compositional semantics[J].Compositional Linguistics, 2013, 39 (2) :389-446.
+                                    </a>
+                                </li>
+                                <li id="41">
+
+
+                                    <a id="bibliography_20" title=" BAHDANAU D, CHO K, BENGIO Y.Neural machine translation by jointly learning to align and translate[EB/OL].[2017-11-18].https://arxiv.org/pdf/1409.0473.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Neural machine translation by jointly learning to align and translate">
+                                        <b>[20]</b>
+                                         BAHDANAU D, CHO K, BENGIO Y.Neural machine translation by jointly learning to align and translate[EB/OL].[2017-11-18].https://arxiv.org/pdf/1409.0473.pdf.
+                                    </a>
+                                </li>
+                                <li id="43">
+
+
+                                    <a id="bibliography_21" title=" JONES B K, JOHNSON M, GOLDWATER S.Semantic parsing with Bayesian tree transducers[C]//Proceedings of the Association of Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2012:488-496." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Semantic parsing with Bayesian tree transducers">
+                                        <b>[21]</b>
+                                         JONES B K, JOHNSON M, GOLDWATER S.Semantic parsing with Bayesian tree transducers[C]//Proceedings of the Association of Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2012:488-496.
+                                    </a>
+                                </li>
+                                <li id="45">
+
+
+                                    <a id="bibliography_22" title=" LU W, NG H T.A probabilistic forest-to-string model for language generation from typed lambda calculus expressions[C]//Proceedings of 2011 Conference on Empirical Methods in Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2011:1611-1622." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A probabilistic forest-to-string model for language generation from typed lambda calculus expressions">
+                                        <b>[22]</b>
+                                         LU W, NG H T.A probabilistic forest-to-string model for language generation from typed lambda calculus expressions[C]//Proceedings of 2011 Conference on Empirical Methods in Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2011:1611-1622.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(03),169-174 DOI:10.19678/j.issn.1000-3428.0049899            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>多语言输入的神经语义分析方法研究</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9F%B4%E5%BC%BA&amp;code=38497859&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">柴强</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%8E%E5%86%9B%E8%BE%89&amp;code=09886805&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">李军辉</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%AD%94%E8%8A%B3&amp;code=08865090&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">孔芳</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%91%A8%E5%9B%BD%E6%A0%8B&amp;code=13898054&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">周国栋</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E8%8B%8F%E5%B7%9E%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=0240077&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">苏州大学计算机科学与技术学院自然语言处理实验室</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>多语言到语义表达式的语义分析, 即将多个语义上等价的不同语言句子同时作为输入并解析为相应的语义表达式。在神经网络编码-解码的框架下, 针对多语言输入, 将不同语言输入相结合以建立双编码-解码模型。基于该模型, 将2种不同自然语言作为源端, 语义表达式作为目标端, 实现多语言到语义表达式的语义分析。在多语言句子的语义分析数据集上的评测结果表明, 多语言到语义表达式的语义分析方法取得的准确率高于单语言到语义表达式的语义分析方法。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%A4%9A%E8%AF%AD%E8%A8%80&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">多语言;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%AD%E4%B9%89%E5%88%86%E6%9E%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">语义分析;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8F%8C%E7%BC%96%E7%A0%81&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">双编码;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%A7%A3%E7%A0%81&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">解码;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">神经网络;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    柴强 (1992—) , 男, 硕士, 主研方向为语义分析、机器翻译;;
+                                </span>
+                                <span>
+                                    李军辉, 副教授、博士;;
+                                </span>
+                                <span>
+                                    孔芳, 教授、博士。;
+                                </span>
+                                <span>
+                                    周国栋, 教授、博士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2017-12-28</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金 (61333018, 61472264);</span>
+                    </p>
+            </div>
+                    <h1><b>Research on Neural Semantic Analysis Method for Multi-language Input</b></h1>
+                    <h2>
+                    <span>CHAI Qiang</span>
+                    <span>LI Junhui</span>
+                    <span>KONG Fang</span>
+                    <span>ZHOU Guodong</span>
+            </h2>
+                    <h2>
+                    <span>Natural Language Processing Laboratory, School of Computer Science and Technology, Soochow University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>The semantic analysis of multi-language to semantic expressions is to take multiple semantically equivalent different language sentences as input and parse them into corresponding semantic expressions.Under the framework of neural network coding-decoding, different language inputs is combined for multi-language input to build a dual-encoding-decoding model.Based on the model, two different natural languages are used as the source, and the semantic expression is used as the target to realize the semantic analysis of multi-language to semantic expression.Evaluation results on the semantic analysis dataset with multi-lingual sentences show that the semantic analysis method of multi-language to semantic expression achieves higher accuracy than the semantic analysis method of single-language to semantic expression.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=multi-language&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">multi-language;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=semantic%20analysis&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">semantic analysis;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=double%20encode&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">double encode;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=decode&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">decode;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=neural%20network&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">neural network;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2017-12-28</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="47" name="47" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="48">近年来, 语义分析的研究关注点集中在单个语言的背景, 即将单个语言作为语义分析的输入。研究语义分析的方法包括基于规则<citation id="118" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>、有监督<citation id="119" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>、无监督<citation id="120" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>、基于统计机器翻译模型<citation id="121" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>、基于深度学习框架<citation id="122" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>等。然而, 自然语言的表达是多样的, 利用有限的语言背景信息获得正确的句子语义较为困难。为缓解这种状况, 文献<citation id="123" type="reference">[<a class="sup">6</a>]</citation>提出在上下文相关的语境中实现语义分析。文献<citation id="124" type="reference">[<a class="sup">7</a>]</citation>成功地利用平行语料来提高词级别上的语义分析, 由于来自不同语言但传达相同语义的词可以被用来消除彼此之间的歧义。目前, 来自不同语言但表达相同语义信息的文本越来越多, 网络爬虫每天可以迅速地聚集大量的新闻, 例如谷歌、百度, 但用不同语言写的文章事实上在讨论相同的新闻内容, 即这些文章在传达相似或者相同的语义信息。因此, 构建一个可以同时处理不同语言输入的语义分析系统非常必要。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">文献<citation id="125" type="reference">[<a class="sup">8</a>]</citation>实现多语言到语义表达式的语义分析, 将多个单语言模型集成起来, 其中每一个模型单独使用一种自然语言作为输入, 但很难捕获到源端不同自然语言之间的共享信息, 同时为每一种自然语言都单独训练一个模型, 因此该方法在实现上较为复杂。多数语义分析是研究单语言输入。文献<citation id="126" type="reference">[<a class="sup">9</a>]</citation>提出WASP模型, 将一般的语义分析问题转化为基于短语的机器翻译问题。文献<citation id="127" type="reference">[<a class="sup">10</a>]</citation>充分利用线性核支持向量机将连续的词序列映射到语义单元, 从而构建出语义表达式的树形结构。文献<citation id="128" type="reference">[<a class="sup">11</a>]</citation>使用动态规划算法在混合树上学习分布, 混合树可以同时生成自然语言和语义。受层次短语翻译模型的启发<citation id="129" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>, 文献<citation id="130" type="reference">[<a class="sup">13</a>]</citation>通过改进翻译模型中的同步上下文来提高语义分析的性能。多语言输入的模型在神经网络机器翻译<citation id="131" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>中应用广泛, 如采用共享注意力机制的多语言神经网络机翻译<citation id="132" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>、多资源神经网络机器翻译<citation id="133" type="reference"><link href="33" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>等。文献<citation id="134" type="reference">[<a class="sup">17</a>]</citation>采用序列-树状模型实现多语言到语义表达式的语义分析。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">针对多语言输入, 本文将不同语言输入相结合, 提出一种新的多语言到语义表达式语义分析模型。该模型将语义分析看作序列-序列的翻译任务, 在编码-解码框架下, 针对多语言输入, 提出双编码-解码模型, 利用各种不同自然语言之间的共享信息, 以提高语义的分析性能。</p>
+                </div>
+                <h3 id="51" name="51" class="anchor-tag">1 相关知识</h3>
+                <h4 class="anchor-tag" id="52" name="52">1.1 语义表达式</h4>
+                <div class="p1">
+                    <p id="53">语义分析中的语义表达式主要有树形结构语义表达式<citation id="135" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>、λ演算语义表达式<citation id="136" type="reference"><link href="37" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>和基于依赖性的语义表达式<citation id="137" type="reference"><link href="39" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>。本文研究树形结构语义表达式和λ演算语义表达式。</p>
+                </div>
+                <div class="p1">
+                    <p id="54">表1给出3个语义等价的不同自然语言的示例以及相应的树形结构语义表达式, 每个树形结构语义表达式是由语义单元构成, 每个语义单元可以看作一个函数, 它把其他语义表达式的特定类型当作参数, 嵌套在圆括号内。类似地, 表2的前3行给出3门语义上等价的自然语言, 即英文、中文、印尼文, 第4行给出与它们对应的λ演算语义表达式, 其中“$0”表示变量名称。</p>
+                </div>
+                <div class="area_img" id="55">
+                    <p class="img_tit"><b>表1 不同自然语言句子以及相应树形结构语义表达式</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="55" border="1"><tr><td><br />语言</td><td>语句</td></tr><tr><td><br />英文</td><td>What rivers do not run through Tennessee?</td></tr><tr><td><br />中文</td><td>什么 河流 不 贯穿 田纳西 州</td></tr><tr><td><br />泰文</td><td><img src="images\JSJC201903029_150.jpg" /></td></tr><tr><td><br />树形结构<br />语义表达式</td><td>answer (exclude (river (all) , traverse (stated (‘TN’) ) ) ) </td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="56">
+                    <p class="img_tit"><b>表2 不同自然语言句子以及相应λ演算语义表达式</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="56" border="1"><tr><td><br />语言</td><td>语句</td></tr><tr><td><br />英文</td><td>please list ground transport in Chicago</td></tr><tr><td><br />中文</td><td>请 列出 芝加哥 的 地面 交通 信息</td></tr><tr><td><br />印尼文</td><td>tolong daftarkan transporttasi darat di Chicago</td></tr><tr><td><br />λ演算语<br />义表达式</td><td>lambda $0 e (and (ground_transport $0) (to_city $0 Chicago) ) </td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="57" name="57">1.2 语义表达式预处理</h4>
+                <div class="p1">
+                    <p id="58">为将语义分析看作是序列-序列标注任务, 本文需要对语义表达式进行预处理。</p>
+                </div>
+                <h4 class="anchor-tag" id="59" name="59">1) 树形结构语义表达式</h4>
+                <div class="p1">
+                    <p id="60">参照文献<citation id="138" type="reference">[<a class="sup">4</a>]</citation>方法, 本文对树形结构语义表达式进行预处理, 将它转化为类似于自然语言的一连串的字符串。本文对语义表达式中的每个函数形式进行简单的前序遍历, 然后给每个函数指定一个数字标签, 用来表示该函数所需的参数个数。</p>
+                </div>
+                <div class="p1">
+                    <p id="61">表3给出预处理前的树形结构语义表达式和预处理后的树形结构语义表达式。表达式中每个标记都是A@B形式, 其中, A是一个符号, B表示有字符串和数字2种情况。当B为s时, A表示一个字符串;当B为数字时, A表示一个函数, B即为该函数所带参数的个数, 函数的返回值作为前一个函数的参数。对每一个语义表达式, 可以按上述方式转化为一个唯一的字符串序列。同样, 对于一个合法的字符串序列, 也可以转化为一个唯一的语义表达式。因此, 树状结构的语义表达式和处理后的字符串形式的语义表达式之间是一一对应的关系。</p>
+                </div>
+                <div class="area_img" id="62">
+                    <p class="img_tit"><b>表3 树形结构语义表达式</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="62" border="1"><tr><td><br />阶段</td><td>语义表达式</td></tr><tr><td><br />预处理前</td><td>answer (population_1 (cityid (‘boulder’, _) ) ) </td></tr><tr><td><br />预处理后</td><td>answer@1population_1@1cityid@2 boulder@s _@0</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="63" name="63">2) λ演算语义表达式</h4>
+                <div class="p1">
+                    <p id="64">参照文献<citation id="139" type="reference">[<a class="sup">5</a>]</citation>方法, 本文识别出λ演算语义表达式中出现的实体名和数字, 并用类型名和唯一的ID替换。例如表2中的句子“please list ground transport in Chicago”, 首先识别出句子中的城市名“Chicago”, 再用“ci0”替换“Chicago”, 得到预处理后的句子为“please list ground transport in ci0”, 对应的λ演算语义表达式按同样的预处理方法处理之后为“lambda $0 e (and (ground_transport $0) (to_city $0 ci0) ) ”。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">当目标端为树形结构语义表达式时, 序列-序列模型最后生成的是一系列如表3所示的预处理后的语义表达式, 实验评测前需对表达式进行后处理, 转换成如表3所示的预处理前的语义表达式。转换的方法是识别每个符号后面的元素, 恢复表达式中的圆括号和逗号, 从而重建表达式中的树形结构。实验结果中对于那些不能被转换到树形结构的表达式将视作错误结果。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">当目标端为λ演算语义表达式时, 在得到模型输出结果之后, 根据结果句子中存在的类型名和ID匹配出对应的实体名和数字, 恢复为完整的表达式。</p>
+                </div>
+                <h3 id="67" name="67" class="anchor-tag">2 神经语义分析</h3>
+                <div class="p1">
+                    <p id="68">在现有编码-解码框架<citation id="140" type="reference"><link href="41" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>下, 本文提出双编码-解码模型。</p>
+                </div>
+                <h4 class="anchor-tag" id="69" name="69">2.1 双编码结合</h4>
+                <div class="p1">
+                    <p id="70">在单语言到语义表达式的编码-解码框架中, 编码器和解码器的网络层数均为3。编码器将源端的一个自然语言句子作为输入, 输出其对应的隐含层状态, 将该隐含层状态传递给解码器作为解码器的输入, 同时在编码器与解码器之间存在注意力模型。整体的流程如图1所示。</p>
+                </div>
+                <div class="area_img" id="71">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903029_071.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 基于注意力机制的编码-解码模型流程" src="Detail/GetImg?filename=images/JSJC201903029_071.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 基于注意力机制的编码-解码模型流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903029_071.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="72">一般RNN按照从前往后的顺序对输入序列<b><i>x</i></b>= (<b><i>x</i></b><sub>1</sub>, <b><i>x</i></b><sub>2</sub>, …, <b><i>x</i></b><sub><b><i>m</i></b></sub>) 进行读取, 编码器按照从前往后的顺序读取或按照从后往前的顺序读取。通过在2个方向上运行RNN, 序列中的某个单词<b><i>x</i></b>包含2个方向的隐含层状态, 分别为前向隐含层状态和后向隐含层状态, 通过将这2个隐含层状态拼接起来得到编码器输出结果。该输出结果包含<b><i>x</i></b>前面词的信息和后面词的信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="73">基于编码-解码模型, 本文增加一个编码器, 让每一个源端语言都有各自对应的编码器, 并且共享一个解码器。如图2所示, 灰色部分代表新增的编码器和注意力模型, <b><i>x</i></b>与<b><i>z</i></b>表示源端2种不同输入, <b><i>y</i></b>表示目标端输出, <b><i>hx</i></b>与<b><i>hz</i></b>分别表示2个编码器的隐含层状态, <b><i>s</i></b><sub><i>i</i></sub>表示当前时刻解码器的隐含层状态。2个编码器对应2个注意力分数<b><i>cx</i></b>与<b><i>cz</i></b>, 再将2个注意力分数结合起来得到<b><i>c</i></b><sub><i>i</i></sub>, 作为计算当前时刻解码器隐含层状态的输入。</p>
+                </div>
+                <div class="area_img" id="74">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903029_074.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 双编码-解码模型" src="Detail/GetImg?filename=images/JSJC201903029_074.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 双编码-解码模型</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903029_074.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="75">解码端初始隐含层状态的设置如式 (1) 、式 (2) 所示, 在得到每个编码器的输出<b><i>hx</i></b>和<b><i>hz</i></b>之后, 按照矩阵的最后一维将<b><i>hx</i></b>和<b><i>hz</i></b>拼接起来, 然后对拼接后的矩阵按照第一维计算均值 (如式 (3) 中<i>mean</i> () 函数) , 得到<b><i>h</i></b>。用<b><i>W</i></b><sub><i>c</i></sub>对<b><i>h</i></b>进行线性变换, 然后对线性变换结果使用tan <b><i>h</i></b>非线性变换, 最终得到解码端初始隐含层状态值<b><i>s</i></b><sub>0</sub>。</p>
+                </div>
+                <div class="p1">
+                    <p id="76" class="code-formula">
+                        <mathml id="76"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi mathvariant="bold-italic">h</mi><mi mathvariant="bold-italic">x</mi><mo>=</mo><mrow><mo>[</mo><mrow><mtable><mtr><mtd columnalign="left"><mover accent="true"><mrow><mi>h</mi><mi>x</mi><mn>1</mn></mrow><mo stretchy="true">→</mo></mover><mtext> </mtext><mover accent="true"><mrow><mi>h</mi><mi>x</mi><mn>2</mn></mrow><mo stretchy="true">→</mo></mover><mtext> </mtext><mo>⋯</mo><mtext> </mtext><mover accent="true"><mrow><mi>h</mi><mi>x</mi><mi>m</mi></mrow><mo stretchy="true">→</mo></mover></mtd></mtr><mtr><mtd columnalign="left"><mover accent="true"><mrow><mi>h</mi><mi>x</mi><mn>1</mn></mrow><mo stretchy="true">←</mo></mover><mtext> </mtext><mover accent="true"><mrow><mi>h</mi><mi>x</mi><mn>2</mn></mrow><mo stretchy="true">←</mo></mover><mtext> </mtext><mo>⋯</mo><mtext> </mtext><mover accent="true"><mrow><mi>h</mi><mi>x</mi><mi>m</mi></mrow><mo stretchy="true">←</mo></mover></mtd></mtr></mtable></mrow><mo>]</mo></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi mathvariant="bold-italic">h</mi><mi mathvariant="bold-italic">z</mi><mo>=</mo><mrow><mo>[</mo><mrow><mtable><mtr><mtd columnalign="left"><mover accent="true"><mrow><mi>h</mi><mi>z</mi><mn>1</mn></mrow><mo stretchy="true">→</mo></mover><mtext> </mtext><mover accent="true"><mrow><mi>h</mi><mi>z</mi><mn>2</mn></mrow><mo stretchy="true">→</mo></mover><mtext> </mtext><mo>⋯</mo><mtext> </mtext><mover accent="true"><mrow><mi>h</mi><mi>z</mi><mi>n</mi></mrow><mo stretchy="true">→</mo></mover></mtd></mtr><mtr><mtd columnalign="left"><mover accent="true"><mrow><mi>h</mi><mi>z</mi><mn>1</mn></mrow><mo stretchy="true">←</mo></mover><mtext> </mtext><mover accent="true"><mrow><mi>h</mi><mi>z</mi><mn>2</mn></mrow><mo stretchy="true">←</mo></mover><mtext> </mtext><mo>⋯</mo><mtext> </mtext><mover accent="true"><mrow><mi>h</mi><mi>z</mi><mi>n</mi></mrow><mo stretchy="true">←</mo></mover></mtd></mtr></mtable></mrow><mo>]</mo></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi mathvariant="bold-italic">h</mi><mo>=</mo><mi>m</mi><mi>e</mi><mi>a</mi><mi>n</mi><mo stretchy="false"> (</mo><mo stretchy="false">[</mo><mi mathvariant="bold-italic">h</mi><mi mathvariant="bold-italic">x</mi><mo>;</mo><mi mathvariant="bold-italic">h</mi><mi mathvariant="bold-italic">z</mi><mo stretchy="false">]</mo><mo stretchy="false">) </mo><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="77"><b><i>s</i></b><sub>0</sub>=tan <b><i>h</i></b> (<b><i>W</i></b><sub><i>c</i></sub>·<b><i>h</i></b>)      (4) </p>
+                </div>
+                <h4 class="anchor-tag" id="78" name="78">2.2 多语言到语义表达式的注意力模型</h4>
+                <div class="p1">
+                    <p id="79">在单语言到语义表达式的注意力模型中<citation id="141" type="reference"><link href="41" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>, 如图1所示, 来自解码器顶层的第i-1时刻隐含层状态<b><i>s</i></b><sub><i>i</i>-</sub><sub>1</sub>、前一个词嵌入<b><i>y</i></b><sub><i>i</i>-</sub><sub>1</sub>、与当前时刻注意力分数<b><i>c</i></b><sub><i>i</i></sub>相互组合, 得到第<i>i</i>时刻的隐含层状态, 如式 (5) 所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="80"><b><i>s</i></b><sub><i>i</i></sub>=<i>f</i> (<b><i>s</i></b><sub><i>i</i>-1</sub>, <b><i>y</i></b><sub><i>i</i>-1</sub>, <b><i>c</i></b><sub><i>i</i></sub>)      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="81">文本向量<b><i>c</i></b><sub><i>i</i></sub>的计算依赖于 (<b><i>h</i></b><sub>1</sub>, <b><i>h</i></b><sub>2</sub>, …, <b><i>h</i></b><sub><i>m</i></sub>) 序列, 该序列由编码器从输入句子映射得到, 其中每个<b><i>h</i></b><sub><i>j</i></sub>包含整个输入句子信息, 主要包含句子中第<i>j</i>个词附近词的信息。然后对这些序列进行加权求和得到<b><i>c</i></b><sub><i>i</i></sub>, 计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="82" class="code-formula">
+                        <mathml id="82"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mi mathvariant="bold-italic">α</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mi>j</mi></msub><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="83">每个<b><i>h</i></b><sub><i>j</i></sub>的权重<i>α</i><sub><i>ij</i></sub>计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="84" class="code-formula">
+                        <mathml id="84"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">α</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>exp</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">e</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">) </mo></mrow><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mtext>e</mtext></mstyle><mtext>x</mtext><mtext>p</mtext><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">e</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>k</mi></mrow></msub><mo stretchy="false">) </mo></mrow></mfrac><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>7</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="85">其中, <b><i>e</i></b><sub><i>ij</i></sub>=<i>a</i> (<b><i>s</i></b><sub><i>i</i>-1</sub>, <b><i>h</i></b><sub><i>j</i></sub>) , <i>a</i>代表对齐模型, 用分数来反映输入句子中第<i>j</i>位置附近的词与第<i>i</i>位置输出之间的对齐程度。该分数的计算依赖于隐含层状态<b><i>s</i></b><sub><i>i</i>-1</sub>和输入句子的第<i>j</i>个序列<b><i>h</i></b><sub><i>j</i></sub>。由此可以看出, 在计算当前时刻的隐含层状态时, 前一个时刻的隐含层状态与输入序列<b><i>h</i></b><sub><i>j</i></sub>是必不可少的。</p>
+                </div>
+                <div class="p1">
+                    <p id="86">在模型中引入注意力机制后, 解码器只需要关注输入句子的部分信息。为同时处理来自源端2个编码器的信息, 本文对注意力模型进行修改。参照注意力的计算公式, 本文各自计算了2个文本向量与2个编码器对应, 分别为<b><i>cx</i></b><sub><i>i</i></sub>和<b><i>cz</i></b><sub><i>i</i></sub>, 以此来代替单语言注意力模型中的<b><i>c</i></b><sub><i>i</i></sub>。</p>
+                </div>
+                <div class="p1">
+                    <p id="87"><b><i>s</i></b><sub><i>i</i></sub>=<i>f</i> (<b><i>s</i></b><sub><i>i</i>-1</sub>, <b><i>y</i></b><sub><i>i</i>-1</sub>, <b><i>cx</i></b><sub><i>i</i></sub>, <b><i>cz</i></b><sub><i>i</i></sub>)      (8) </p>
+                </div>
+                <div class="p1">
+                    <p id="88">本文方法包含2套独立的软对齐集合和2个文本向量<b><i>cx</i></b><sub><i>i</i></sub>和<b><i>cz</i></b><sub><i>i</i></sub>, 同时2个编码模型中的参数完全独立, 互不相同。</p>
+                </div>
+                <div class="p1">
+                    <p id="89">虽然图2的双编码-解码模型只针对2门语言同时作为输入的情景, 本文的模型也很容易扩展到3门或更多的语言输入的场合。在双编码-解码的模型基础之上, 源端每增加一门语言对应增加一个编码器, 此时的多编码器模型会生成多个编码器输出和多个注意力分数值。接着按照式 (3) 的方法, 将各个编码器输出结合起来得到<b><i>h</i></b>, 作为计算解码端初始状态值的输入, 将各个注意力模型返回的结果 (如式 (8) 中的<b><i>cx</i></b><sub><i>i</i></sub>、<b><i>cz</i></b><sub><i>i</i></sub>) 添加到<i>f</i>函数中, 作为计算解码端当前时刻隐含层状态的输入。最终实现多语言到语义表达式的神经语义分析。</p>
+                </div>
+                <h3 id="90" name="90" class="anchor-tag">3 实验结果与分析</h3>
+                <h4 class="anchor-tag" id="91" name="91">3.1 实验语料与设置</h4>
+                <div class="p1">
+                    <p id="92">本文采用的实验语料是文献<citation id="142" type="reference">[<a class="sup">21</a>]</citation>发布的多语言<i>GEOQUERY</i>数据集。该语料由美国地理信息相关的880个自然语言问句组成, 每个问句都有与之相应的语义编程语言形式的语义表达式。最初始的<i>GEOQUERY</i>数据集只包含英语形式的自然语言问句, 文献<citation id="143" type="reference">[<a class="sup">22</a>]</citation>在实验自然语言生成的任务过程中添加了中文版本, 文献<citation id="144" type="reference">[<a class="sup">21</a>]</citation>在数据集中添加泰文和德文版本。因此, 该数据集附有4种不同的自然语言, 其中, 中文和泰文属于汉藏语系, 英文和德文是印欧语系。参照文献<citation id="145" type="reference">[<a class="sup">21</a>]</citation>的分割方法, 本文将<i>GEOQUERY</i>数据集分割成2部分, 将其中600个句例作为训练集, 剩下280个句例作为测试集。</p>
+                </div>
+                <div class="p1">
+                    <p id="93">本文采用的另一个语料是<i>ATIS</i>数据集, 该语料包含5 410个关于航班预定系统的查询语句, 其中每个句子都有与之对应的<i>λ</i>演算语义表达式。参照文献<citation id="146" type="reference">[<a class="sup">5</a>]</citation>分割方法, 本文将语料中4 434个句例作为训练集, 491个句例作为开发集, 448个句例作为测试集。最初的<i>ATIS</i>语料只有英文版, 文献<citation id="147" type="reference">[<a class="sup">17</a>]</citation>新标注了中文版和印尼文版。</p>
+                </div>
+                <div class="p1">
+                    <p id="94">参照之前语义分析的工作, 本文对多语言<i>GEOQUERY</i>和<i>ATIS</i>数据集都采用<i>Accuracy</i>值 (正确的输入句子数占总输入句子数的比例) 评估。对于<i>GEOQUERY</i>语料, 在得到其输出结果之后, 本文先采用第1.2节方法, 将输出结果转换成语义编程语言的形式, 然后从与之对应的数据库中检索答案, 如果该答案与参照语义表达式的答案相同, 那么这个被预测的语义表达式被认为是正确的语义表达式。对于<i>ATIS</i>语料, 本文先用后处理程序恢复输出结果句子中出现的实体名和数字, 再与标准的<i>λ</i>演算语义表达式作对比, 如果完全相同, 则该输出结果句子正确。</p>
+                </div>
+                <div class="p1">
+                    <p id="95">每个编码器和解码器都各自有500个隐含层单元, 词向量的长度均为200, 采用<i>GRU</i>神经网络。本文使用随机梯度下降法来训练模型, 随机梯度下降的更新方向是由一个<i>batch</i>中的所有句子计算决定, <i>batch</i>大小设置为15, 学习率是0.05。在得到训练模型后, 本文使用束搜索找出概率最大的一个语义表达式结果, 束大小设置为10。为防止过拟合, <i>dropout</i>设置为0.3。</p>
+                </div>
+                <h4 class="anchor-tag" id="96" name="96">3.2 实验结果与讨论</h4>
+                <h4 class="anchor-tag" id="97" name="97">3.2.1 单语言语义分析实验结果</h4>
+                <div class="p1">
+                    <p id="98">表4、表5给出在不同语料上单语言到语义表达式语义分析的<i>Accuracy</i>值。表4中<i>Zhan</i>14代表文献<citation id="148" type="reference">[<a class="sup">8</a>]</citation>方法在<i>GEOQUER</i>语料上的实验结果, 表5中<i>Raymond</i>17代表文献<citation id="149" type="reference">[<a class="sup">17</a>]</citation>方法在<i>ATIS</i>语料上的实验结果。</p>
+                </div>
+                <div class="area_img" id="99">
+                    <p class="img_tit"><b>表4 2种方法在GEOQUERY语料上单语言 语义分析对比结果</b> % <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="99" border="1"><tr><td><br />源端语言</td><td>本文方法</td><td>Zhan14方法</td></tr><tr><td><br />英文</td><td>82.01</td><td>78.60</td></tr><tr><td><br />泰文</td><td>82.73</td><td>74.30</td></tr><tr><td><br />中文</td><td>82.50</td><td>73.20</td></tr><tr><td><br />德文</td><td>78.33</td><td>62.50</td></tr><tr><td><br />平均性能</td><td>81.39</td><td>72.15</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="100">
+                    <p class="img_tit"><b>表5 2种方法在ATIS语料上单语言 语义分析对比结果</b> % <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="100" border="1"><tr><td><br />源端语言</td><td>本文方法</td><td>Raymond17方法</td></tr><tr><td><br />英文</td><td>81.52</td><td>81.85</td></tr><tr><td><br />印尼文</td><td>75.67</td><td>74.85</td></tr><tr><td><br />中文</td><td>74.11</td><td>73.66</td></tr><tr><td><br />平均性能</td><td>77.10</td><td>76.79</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="101">从表4、表5可以得出如下结论:</p>
+                </div>
+                <div class="p1">
+                    <p id="102">1) 在GEOQUERY语料上, 本文方法取得的Accuracy值远高于Zhan14方法;在ATIS语料上, 本文方法取得的性能总体上略高于Raymond17方法。</p>
+                </div>
+                <div class="p1">
+                    <p id="103">2) 以英文、中文为例, 在GEOQUERY语料上, 两者作为源端语言取得的性能非常接近, 但在ATIS语料上, 中文作为源端语言取得的性能明显低于英文取得的性能。其原因主要是在ATIS语料上, 中文语料含有较多未登录词。</p>
+                </div>
+                <h4 class="anchor-tag" id="104" name="104">3.2.2 多语言语义分析实验结果</h4>
+                <div class="p1">
+                    <p id="105">为评价本文提出的双编码-解码模型的性能, 表6、表7给出多语言到语义表达式的语义分析的Accuracy值。</p>
+                </div>
+                <div class="area_img" id="106">
+                    <p class="img_tit"><b>表6 2种方法在GEOQUERY语料上多语言 语义分析对比结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"> %</p>
+                    <table id="106" border="1"><tr><td><br />源端语言</td><td>本文方法</td><td>Zhan14方法</td></tr><tr><td><br />英文+中文</td><td>87.46</td><td>83.60</td></tr><tr><td><br />中文+泰文</td><td>86.74</td><td>80.70</td></tr><tr><td><br />英文+泰文</td><td>83.51</td><td>83.60</td></tr><tr><td><br />中文+德文</td><td>84.95</td><td>76.80</td></tr><tr><td><br />英文+德文</td><td>85.19</td><td>82.10</td></tr><tr><td><br />泰文+德文</td><td>82.90</td><td>77.10</td></tr><tr><td><br />平均性能</td><td>85.13</td><td>80.65</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="107">
+                    <p class="img_tit"><b>表7 2种方法在ATIS语料上多语言 语义分析对比结果</b> % <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="107" border="1"><tr><td><br />源端语言</td><td>本文方法</td><td>Raymond17方法</td></tr><tr><td><br />英文+中文</td><td>84.15</td><td>82.96</td></tr><tr><td><br />英文+印尼文</td><td>82.81</td><td>82.81</td></tr><tr><td><br />印尼文+中文</td><td>77.68</td><td>77.75</td></tr><tr><td><br />平均性能</td><td>81.55</td><td>81.17</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="108">从表6、表7中可以看出:</p>
+                </div>
+                <div class="p1">
+                    <p id="109">1) 与表4、表5相比, 多语言输入的实验结果优于单语言输入。在ATIS语料中, 当中文和英文同时输入时的Accuracy值为84.15%, 远高于英文单独输入时的语义分析结果81.52%和中文单独输入时的语义分析结果74.11%。</p>
+                </div>
+                <div class="p1">
+                    <p id="110">2) 在多语言输入背景下, 本文方法的Accuracy值比Zhan14方法平均高出4个点, 这表明深度神经网络方法比传统统计方法更能提高多语言到语义表达式的语义分析性能。本文方法取得的性能总体上略高于Raymond17方法, 表明本文的语义分析性能达到目前较优的性能水平。</p>
+                </div>
+                <div class="p1">
+                    <p id="111">3) 在2个语料中, 英文和中文同时作为输入时的表现最优。</p>
+                </div>
+                <div class="p1">
+                    <p id="112">多语言到语义表达式语义分析结果与单语言到语义表达式语义分析结果之间的对比结果表明, 与单语言到语义表达式系统相比, 多语言到语义表达式语义分析系统可以从多语言输入句子中挖掘出较丰富的语义信息, 从而提高语义分析的性能。以英文作为输入跟英文中文同时作为输入之间的对比为例, 如表8所示, 英文和中文句子中都包含语义表达式中“has_meal”语义单元信息, 当英文单独作为输入时, 英文单语言到语义表达式系统并没有从源端英文输入句子中获取到“has_meal”信息, 与正确语义分析结果出现偏差。而当英文和中文同时作为输入时, 系统成功地从中文输入句子“提供 餐点”中获取到“has_meal”信息, 得到正确语义分析结果。</p>
+                </div>
+                <div class="area_img" id="113">
+                    <p class="img_tit"><b>表8 多语言模型与单语言模型在ATIS语料上对比示例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="113" border="1"><tr><td><br />语言模型</td><td>分析结果</td></tr><tr><td><br />英文</td><td>give me flight from ci0 to ci1 that have meal on al0</td></tr><tr><td><br />中文</td><td>请 给 我 al0 大陆 航空 从 ci0 到 ci1 的 提供 餐点 的 航班</td></tr><tr><td><br />英文单独输入</td><td>lambda $0 e (and (flight $0) (airline $0 al0) (from $0 ci0) (to $0 ci1) ) </td></tr><tr><td><br />英文中文同时输入</td><td>lambda $0 e (and (flight $0) (has_meal $0) (airline $0 al0) (from $0 ci0) (to $0 ci1) ) </td></tr><tr><td><br />参照语义</td><td>lambda $0 e (and (flight $0) (has_meal $0) (airline $0 al0) (from $0 ci0) (to $0 ci1) ) </td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="114">如图3所示, 多语言注意力对齐模型不同于单语言注意力对齐模型, 其源端2个输入语言分别是中文和英文, 目标端每个词对源端句子中每个词都有一个概率分数, 线越粗就代表2个词之间的对齐概率分数越大。例如, 目标端词“colorado@s”与英文输入端词“colorado”对齐概率分数最大, 同时与中文端词“科罗拉多”之间对齐概率分数最大。</p>
+                </div>
+                <div class="area_img" id="115">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903029_115.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 多语言到语义表达式注意力模型对齐示例" src="Detail/GetImg?filename=images/JSJC201903029_115.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 多语言到语义表达式注意力模型对齐示例</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903029_115.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="116" name="116" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="117">本文研究多语言到语义表达式的语义分析方法, 该方法能够将来自不同语言的输入句子解析为相应的语义表达式。在传统编码-解码框架的基础上, 本文提出双编码-解码模型。在语义分析模型中, 每个编码器对应一种输入语言, 描述了通过设置2个注意力模型将2个独立的编码器输出信息相结合的方法。在2个多语言语义分析数据集上的实验结果表明, 本文提出的双编码-解码模型适用于多语言到语义表达式的语义分析任务, 并且对多语言到语义表达式语义分析性能有显著的提升。下一步将研究双编码-解码模型在其他自然语言处理任务如语言生成、机器翻译等中的应用。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Towards a theory of natural language interfaces to databases">
+
+                                <b>[1]</b> POPESCU A, ETZIONI O, KAUTZ H.Towards a theory of natural language interfaces to databases[C]//Proceedings of the 8th International Conference on Intelligent User Interfaces.New York, USA:ACM Press, 2003:149-157.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Using inductive logic programming to automate the construction of natural language parsers">
+
+                                <b>[2]</b> ZELLE J M.Using inductive logic programming to automate the construction of natural language parsers[D].Austin, USA:University of Texas at Austin, 1995.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Confidence driven unsupervised semantic parsing">
+
+                                <b>[3]</b> GOLDWASSER D, REICHART R, CLARKE J, et al.Confidence driven unsupervised semantic parsing[C]//Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics:Human Language Technologies.Stroudsburg, USA:Association for Computational Linguistics, 2011:1486-1495.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Semantic parsing as machine translation">
+
+                                <b>[4]</b> ANDREAS J, VLACHOS A, CLARK S.Semantic parsing as machine translation[EB/OL].[2017-11-18].https://www.cl.cam.ac.uk/～sc609/pubs/acl 13jacob.pdf.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Language to logical form with neural attention">
+
+                                <b>[5]</b> DONG L, LAPATA M.Language to logical form with neural attention[EB/OL].[2017-11-18].https://arxiv.org/pdf/1601.01280.pdf.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning context-dependent mappings from sentences to logical form">
+
+                                <b>[6]</b> ZETTLEMOYER L S, COLLINS M.Learning context-dependent mappings from sentences to logical form[C]//Proceedings of the 4th International Joint Conference on Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2009:976-984.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Scaling up word sense disambiguation via parallel texts">
+
+                                <b>[7]</b> CHAN Y S, NG H T.Scaling up word sense disambiguation via parallel texts[C]//Proceedings of the American Association for Artificial Intelligence.[S.l.]:AAAI Press, 2005:1037-1042.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Multilingual semantic parsing:parsing multiple languages into semantic representations">
+
+                                <b>[8]</b> JIE Z, LU W.Multilingual semantic parsing:parsing multiple languages into semantic representations[EB/OL].[2017-11-18].http://www.aclweb.org/anthology/C14-1122.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning for semantic parsing with statistical machine translation">
+
+                                <b>[9]</b> WONG Y W, MOONEY R J.Learning for semantic parsing with statistical machine translation[C]//Proceedings of the main conference on Human Language Technology Conference of the North American Chapter of the Association of Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2006:439-446.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Using string-kernels for learning semantic parsers,">
+
+                                <b>[10]</b> KATE R J, MOONEY R J.Using string-kernels for learning semantic parsers[C]//Proceedings of the 21st International Conference on Computational Linguistics and the 44th annual meeting of the Association for Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2006:913-920.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A generative model for parsing natural language to meaning representations">
+
+                                <b>[11]</b> LU W, NG H T, LEE W S, et al.A generative model for parsing natural language to meaning representation[C]//Proceedings of the Conference on Empirical Methods in Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2008:783-792.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJBK&amp;filename=SJBK15090500000317&amp;v=MTQxOTd5am1VTG5JSmw0VmFoUT1OaWZKWmJLOUh0ak1xbzlGWk9zUEQzMCtvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SA==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> CHIANG D.Hierarchical phrase-based translation[J].Compositional Linguistics, 2007, 33 (2) :201-228.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Improving semantic parsing with enriched synchronous context-free grammar">
+
+                                <b>[13]</b> LI J, ZHU M H, LU W, et al.Improving semantic parsing with enriched synchronous context-free grammar[C]//Proceedings of 2015 Conference on Empirical Methods in Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2015:1455-1465.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201706002&amp;v=MDMyOTVsVXIvT0x5dlNkTEc0SDliTXFZOUZab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 刘洋.神经机器翻译前沿进展[J].计算机研究与发展, 2017, 54 (6) :1144-1149.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Multi-way,multilingual neural machine translation with a shared attention mechanism">
+
+                                <b>[15]</b> FIRAT O, CHO K, BENGIO Y.Multi-way, multilingual neural machine translation with a shared attention mechanism[C]//Proceedings of the North American Chapter of the Association for Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2016:866-875.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Multi-source Neural Transla-tion">
+
+                                <b>[16]</b> ZOPH B, KNIGHT K.Multi-source Neural Transla-tion[C]//Proceedings of the North American Chapter of the Association for Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2016:30-34.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Neural Architectures for Multilingual Semantic Parsing">
+
+                                <b>[17]</b> SUSANTO R H, LU W.Neural Architectures for Multilingual Semantic Parsing[C]//Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2017:38-44.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning to map sentences to logical form:structured classification with probabilistic categorical grammars">
+
+                                <b>[18]</b> ZETTLEMOYER L S, COLLINS M.Learning to map sentences to logical form:structured classification with probabilistic categorical grammars[C]//Proceedings of the 21st Conference on Uncertainty in Artificial Intelligence.Arlington, USA:AUAI Press, 2005:658-666.
+                            </a>
+                        </p>
+                        <p id="39">
+                            <a id="bibliography_19" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning dependency-based compositional semantics">
+
+                                <b>[19]</b> LIANG P, JORDAN M I, KLEIN D.Learning dependency-based compositional semantics[J].Compositional Linguistics, 2013, 39 (2) :389-446.
+                            </a>
+                        </p>
+                        <p id="41">
+                            <a id="bibliography_20" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Neural machine translation by jointly learning to align and translate">
+
+                                <b>[20]</b> BAHDANAU D, CHO K, BENGIO Y.Neural machine translation by jointly learning to align and translate[EB/OL].[2017-11-18].https://arxiv.org/pdf/1409.0473.pdf.
+                            </a>
+                        </p>
+                        <p id="43">
+                            <a id="bibliography_21" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Semantic parsing with Bayesian tree transducers">
+
+                                <b>[21]</b> JONES B K, JOHNSON M, GOLDWATER S.Semantic parsing with Bayesian tree transducers[C]//Proceedings of the Association of Computational Linguistics.Stroudsburg, USA:Association for Computational Linguistics, 2012:488-496.
+                            </a>
+                        </p>
+                        <p id="45">
+                            <a id="bibliography_22" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A probabilistic forest-to-string model for language generation from typed lambda calculus expressions">
+
+                                <b>[22]</b> LU W, NG H T.A probabilistic forest-to-string model for language generation from typed lambda calculus expressions[C]//Proceedings of 2011 Conference on Empirical Methods in Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2011:1611-1622.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201903029" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201903029&amp;v=MTAxODhaZVJvRnk3bFVyL09MejdCYmJHNEg5ak1ySTlIYllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2U=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

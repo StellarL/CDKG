@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637126237382740000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201910047%26RESULT%3d1%26SIGN%3dTsTlU8Ev3TRl0FF1%252fWVahmGNQEk%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201910047&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201910047&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201910047&amp;v=MjYwNjM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5emtVTC9BTHo3QmJiRzRIOWpOcjQ5Qlk0UUtESDg=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#33" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="1 微博热点话题挖掘模型 ">1 微博热点话题挖掘模型</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#40" data-title="1.1 标签相似度计算">1.1 标签相似度计算</a></li>
+                                                <li><a href="#72" data-title="1.2 对合并后的微博建模">1.2 对合并后的微博建模</a></li>
+                                                <li><a href="#86" data-title="1.3 K-means聚类">1.3 K-means聚类</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#89" data-title="2 实验结果与分析 ">2 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#96" data-title="2.1 困惑度">2.1 困惑度</a></li>
+                                                <li><a href="#104" data-title="2.2 准确性评价指标">2.2 准确性评价指标</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#113" data-title="3 结束语 ">3 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#39" data-title="&lt;b&gt;图1 微博热点话题挖掘模型&lt;/b&gt;"><b>图1 微博热点话题挖掘模型</b></a></li>
+                                                <li><a href="#45" data-title="&lt;b&gt;图2 CBOW模式的Word2Vec工作流程&lt;/b&gt;"><b>图2 CBOW模式的Word2Vec工作流程</b></a></li>
+                                                <li><a href="#63" data-title="&lt;b&gt;表1 微博标签示例&lt;/b&gt;"><b>表1 微博标签示例</b></a></li>
+                                                <li><a href="#64" data-title="&lt;b&gt;图3 词语相似度矩阵&lt;/b&gt;"><b>图3 词语相似度矩阵</b></a></li>
+                                                <li><a href="#75" data-title="&lt;b&gt;图4 LDA主题模型结构&lt;/b&gt;"><b>图4 LDA主题模型结构</b></a></li>
+                                                <li><a href="#83" data-title="&lt;b&gt;图5 LDA三层贝叶斯生成模型&lt;/b&gt;"><b>图5 LDA三层贝叶斯生成模型</b></a></li>
+                                                <li><a href="#85" data-title="&lt;b&gt;表2 LDA主题示例&lt;/b&gt;"><b>表2 LDA主题示例</b></a></li>
+                                                <li><a href="#88" data-title="&lt;b&gt;表3 K-means聚类结果&lt;/b&gt;"><b>表3 K-means聚类结果</b></a></li>
+                                                <li><a href="#95" data-title="&lt;b&gt;表4 测试集1包含的主题&lt;/b&gt;"><b>表4 测试集1包含的主题</b></a></li>
+                                                <li><a href="#102" data-title="&lt;b&gt;图6 3种模型的困惑度比较&lt;/b&gt;"><b>图6 3种模型的困惑度比较</b></a></li>
+                                                <li><a href="#111" data-title="&lt;b&gt;图7 3种模型的准确率、召回率和&lt;/b&gt;&lt;i&gt;&lt;b&gt;F&lt;/b&gt;&lt;/i&gt;&lt;b&gt;1值对比&lt;/b&gt;"><b>图7 3种模型的准确率、召回率和</b><i><b>F</b></i><b>1值对比</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" >
+                                        <b>[1]</b>
+                                     中国互联网信息中心.第42次《中国互联网络发展状况统计报告》[EB/OL].[2018-08-20].http://www.cnnic.net.cn.</a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" BALASUBRAMANYAN R,ROUTLEDGE B R,SMITH N R.From tweets to polls:linking text sentiment to public opinion time series[C]//Proceedings of International Conference on Weblogs and Social Media.Reston,USA:AIAA Press 2010:122-129." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=From Tweets to Polls:Linking Text Sentiment to Public Opinion Time Series">
+                                        <b>[2]</b>
+                                         BALASUBRAMANYAN R,ROUTLEDGE B R,SMITH N R.From tweets to polls:linking text sentiment to public opinion time series[C]//Proceedings of International Conference on Weblogs and Social Media.Reston,USA:AIAA Press 2010:122-129.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" STEINSKOGA O,THERKELSEN J F,GAMB&#196;CK B.Twitter topic modeling by tweet aggregation[EB/OL].[2018-08-20].https://www.aclweb.org/anthology/W17- 0210." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Twitter topic modeling by tweet aggregation">
+                                        <b>[3]</b>
+                                         STEINSKOGA O,THERKELSEN J F,GAMB&#196;CK B.Twitter topic modeling by tweet aggregation[EB/OL].[2018-08-20].https://www.aclweb.org/anthology/W17- 0210.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" 郭庆琳,李艳梅,唐琦.基于VSM的文本相似度计算的研究[J].计算机应用研究,2008,25(11):3256-3258." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ200811017&amp;v=Mjg2NzR6a1VMekpMejdTWkxHNEh0bk5ybzlFWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0Rnk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         郭庆琳,李艳梅,唐琦.基于VSM的文本相似度计算的研究[J].计算机应用研究,2008,25(11):3256-3258.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" 孙励.基于微博的热点话题发现[D].北京:北京邮电大学,2013." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1013243954.nh&amp;v=MTIxMzRFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5emtVTHpKVkYyNkhiRzhIZGpKcTU=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         孙励.基于微博的热点话题发现[D].北京:北京邮电大学,2013.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 刘红兵,李文坤,张仰森.基于LDA模型和多层聚类的微博话题检测[J].计算机技术与发展,2016,26(6):25-30." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJFZ201606006&amp;v=MjgzMzQ5RllvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5emtVTHpKTWlmTmRMRzRIOWZNcVk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         刘红兵,李文坤,张仰森.基于LDA模型和多层聚类的微博话题检测[J].计算机技术与发展,2016,26(6):25-30.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 叶成绪,杨萍,刘少鹏.基于主题词的微博热点话题发现[J].计算机应用与软件,2016,33(2):46-50." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201602012&amp;v=MTI4NDZHNEg5Zk1yWTlFWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0Rnl6a1VMekpMelRaWkw=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         叶成绪,杨萍,刘少鹏.基于主题词的微博热点话题发现[J].计算机应用与软件,2016,33(2):46-50.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 张群,王红军,王伦文.词向量与LDA相融合的短文本分类方法[J].现代图书情报技术,2016(12):27-35." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201612004&amp;v=MTM5NzVrVUx6SlBTbmZmN0c0SDlmTnJZOUZZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeXo=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         张群,王红军,王伦文.词向量与LDA相融合的短文本分类方法[J].现代图书情报技术,2016(12):27-35.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" MIKOLOV T,LE Q V,SUTSKEVER H,et al.Exploiting similarities among languages for machine translation[EB/OL].[2018-08-20].https://arxiv.org/pdf/1309.4168v1.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Exploiting similarities among languages for machine translation">
+                                        <b>[9]</b>
+                                         MIKOLOV T,LE Q V,SUTSKEVER H,et al.Exploiting similarities among languages for machine translation[EB/OL].[2018-08-20].https://arxiv.org/pdf/1309.4168v1.pdf.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" BOJANOWSKI P,GRAVE E,JOULIN A,et al.Enriching word vectors with subword information[EB/OL].[2018-08-20].https://arxiv.org/pdf/1607.04606.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Enriching word vectors with subword information">
+                                        <b>[10]</b>
+                                         BOJANOWSKI P,GRAVE E,JOULIN A,et al.Enriching word vectors with subword information[EB/OL].[2018-08-20].https://arxiv.org/pdf/1607.04606.pdf.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" MIKOLOV T,CHEN Kai,CORRADO G,et al.Efficient estimation of word representations in vector space[EB/OL].[2018-08-20].https://arxiv.org/pdf/1301.3781.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+                                        <b>[11]</b>
+                                         MIKOLOV T,CHEN Kai,CORRADO G,et al.Efficient estimation of word representations in vector space[EB/OL].[2018-08-20].https://arxiv.org/pdf/1301.3781.pdf.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 陈红阳.中文微博话题发现技术研究[D].重庆:重庆理工大学,2015." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015342693.nh&amp;v=MDA5NzlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeXprVUx6SlZGMjZHN0M4SE5mRnJKRWJQSVE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         陈红阳.中文微博话题发现技术研究[D].重庆:重庆理工大学,2015.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 黄贤英,刘英涛,饶勤菲.一种基于公共词块的英文短文本相似度算法[J].重庆理工大学学报(自然科学版):2015,29(8):88-93." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=CGGL201508017&amp;v=MzA1MDI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeXprVUx6Skppck1Zckc0SDlUTXA0OUVZNFFLREg=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         黄贤英,刘英涛,饶勤菲.一种基于公共词块的英文短文本相似度算法[J].重庆理工大学学报(自然科学版):2015,29(8):88-93.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" BLEI D M,NG A Y,JORDAN M I.Latent Dirichlet allocation[J].Journal of Machine Learning Research,2003,3:993-1022." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Latent Dirichlet allocation">
+                                        <b>[14]</b>
+                                         BLEI D M,NG A Y,JORDAN M I.Latent Dirichlet allocation[J].Journal of Machine Learning Research,2003,3:993-1022.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" MIMNO D,WALLACH H M,TAL-LEY E,et al.Optimizing semantic coherence in topic models[C]//Proceedings of the Conference on Empirical Methods in Natural Language Processing.Stroudsburg,USA:Association for Computational Linguistics,2011:262-272." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Optimizing semantic coherence in topic models">
+                                        <b>[15]</b>
+                                         MIMNO D,WALLACH H M,TAL-LEY E,et al.Optimizing semantic coherence in topic models[C]//Proceedings of the Conference on Empirical Methods in Natural Language Processing.Stroudsburg,USA:Association for Computational Linguistics,2011:262-272.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(10),283-287 DOI:10.19678/j.issn.1000-3428.0052535            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>一种融合标签语义的微博热点话题挖掘方法</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%91%A8%E7%A6%8F%E6%98%9F&amp;code=40275947&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">周福星</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%88%E7%A7%80%E7%9C%9F&amp;code=10629357&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陈秀真</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%A9%AC%E8%BF%9B&amp;code=08519647&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">马进</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%8E%E7%94%9F%E7%BA%A2&amp;code=08568672&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">李生红</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8%E5%AD%A6%E9%99%A2&amp;code=0054402&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海交通大学网络空间安全学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E5%B8%82%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%BB%BC%E5%90%88%E7%AE%A1%E7%90%86%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海市信息安全综合管理技术研究重点实验室</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>由于微博文本的长度较短,直接使用隐狄利克雷分布(LDA)模型会导致特征向量高维稀疏。为此,提出一种融合标签语义的热点话题挖掘方法。利用公共块算法计算微博标签的相似度,合并标签相似度较高的微博文本。采用LDA模型对合并后的文本建模,并通过K-means聚类算法挖掘微博热点话题。实验结果表明,与针对单一微博文本建模的方法以及直接合并相同标签的方法相比,该方法的困惑度较低,挖掘热点话题的准确性较高。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%BE%AE%E5%8D%9A%E6%96%87%E6%9C%AC&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">微博文本;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%9A%90%E7%8B%84%E5%88%A9%E5%85%8B%E9%9B%B7%E5%88%86%E5%B8%83%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">隐狄利克雷分布模型;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%A0%87%E7%AD%BE%E8%AF%AD%E4%B9%89&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">标签语义;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%85%AC%E5%85%B1%E5%9D%97&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">公共块;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=K-means%E8%81%9A%E7%B1%BB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">K-means聚类;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    周福星(1994—),女,硕士研究生,主研方向为社交网络大数据分析;;
+                                </span>
+                                <span>
+                                    *陈秀真(通信作者),副教授、博士;E-mail:chenxz@sjtu.edu.cn;
+                                </span>
+                                <span>
+                                    马进,高级工程师、博士;;
+                                </span>
+                                <span>
+                                    李生红,教授、博士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-09-03</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金(61562004,61431008);</span>
+                                <span>国家重点研发计划“网络空间安全”(2016YFB0801003);</span>
+                    </p>
+            </div>
+                    <h1><b>A Microblog Hot Topic Mining Method Integrating Tag Semantics</b></h1>
+                    <h2>
+                    <span>ZHOU Fuxing</span>
+                    <span>CHEN Xiuzhen</span>
+                    <span>MA Jin</span>
+                    <span>LI Shenghong</span>
+            </h2>
+                    <h2>
+                    <span>School of Cyber Science and Engineering,Shanghai Jiao Tong University</span>
+                    <span>Shanghai Key Laboratory of Integrated Administration Technologies for Information Security</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Due to the short length of the microblog text,the direct use of Latent Dirichlet Allocation(LDA) model will lead to high-dimensional sparse feature vectors.Thus,a hot topic mining method integrating tag semantics is proposed.The common block algorithm is used to calculate the similarity of the microblog tags,and the microblog texts with high tag similarity are combined.The merged text is modeled by LDA model,and the hot topic of microblog is mined by K-means clustering algorithm.Experimental results show that compared with the method of modeling a single microblog text and the method of directly merging the same label,the proposed method obtains a lower perplexity and a higher accuracy in mining topics.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=microblog%20text&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">microblog text;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Latent%20Dirichlet%20Allocation(LDA)%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Latent Dirichlet Allocation(LDA) model;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=tag%20semantics&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">tag semantics;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=common%20block&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">common block;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=K-means%20clustering&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">K-means clustering;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-09-03</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="33" name="33" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="34">随着互联网的快速发展,用户产生内容(User Generated Content,UGC)式的移动应用逐渐被人们熟知。微博是典型的UGC应用,中国互联网络信息中心(CNNIC)发布的《第42次中国互联网络发展状况统计报告》显示,截至2018年6月30日,微博用户达3.37亿,网民使用率为42.1%<citation id="134" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。庞大的网络用户群体,加上VIP用户的传播影响力和开放的网络结构,导致微博热点事件可在极短的时间内广泛传播。因此,从海量文本中准确地抽取热点话题,对于控制与引导网络舆情、创建和谐的网络环境具有重要意义。</p>
+                </div>
+                <div class="p1">
+                    <p id="35">目前,国内外学者已针对社交平台内容进行了大量研究并取得较多成果。文献<citation id="135" type="reference">[<a class="sup">2</a>]</citation>发现推特中词语出现的频率与公众对于政策的态度有相关性。文献<citation id="136" type="reference">[<a class="sup">3</a>]</citation>使用隐狄利克雷分布(Latent Dirichlet Allocation,LDA)模型分别对单一推特文本和同一作者发布的微博进行研究,以解决语义稀疏问题。然而,同一作者发布的微博内容不一定相似,直接合并同一作者的微博会改变原微博文本的主题分布。在国内,文献<citation id="137" type="reference">[<a class="sup">4</a>]</citation>利用TF-IDF算法提取特征词并用向量空间余弦值来衡量文本相似度。然而,TF-IDF算法仅考虑词语在文本中出现的频率而未考虑语义,因此,该算法更适用于长文本。文献<citation id="138" type="reference">[<a class="sup">5</a>]</citation>采用LDA模型对微博文本建模,并以LDA隐主题代表话题。该方法直接将LDA模型应用于微博短文本,主题抽取效果较差,将得到的隐主题作为微博文本的话题,其准确性不高。文献<citation id="139" type="reference">[<a class="sup">6</a>]</citation>使用多层聚类取代K-means的方法检测微博热点话题,该方法同样未能解决微博文本语义稀疏的问题。文献<citation id="140" type="reference">[<a class="sup">7</a>]</citation>通过最长公共块算法得到描述话题的候选主题词,然后基于维基百科知识筛选候选主题词并进行聚类。然而,直接对微博文本使用公共块算法的计算代价较大,效率较低。文献<citation id="141" type="reference">[<a class="sup">8</a>]</citation>提出一种词向量与LDA模型相融合的短文本分类方法,从词粒度和文本粒度2个层面对微博文本进行建模。该方法可解决微博短文本的稀疏问题,但其采用的相加平均法使得原词向量携带的相关信息丢失。</p>
+                </div>
+                <div class="p1">
+                    <p id="36">由于热点话题相关的微博通常带有相应标签,且标签通常只有2个或3个词语,本文提出基于公共块算法的微博热点话题挖掘方法。根据词语相似度计算标签之间的语义相似度,将具有相近语义标签的微博文本进行结合来解决语义稀疏问题。采用LDA模型对合并后的文本建模,并使用K-means聚类得到热点话题。</p>
+                </div>
+                <h3 id="37" name="37" class="anchor-tag">1 微博热点话题挖掘模型</h3>
+                <div class="p1">
+                    <p id="38">本文微博热点话题挖掘模型如图1所示。</p>
+                </div>
+                <div class="area_img" id="39">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910047_039.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 微博热点话题挖掘模型" src="Detail/GetImg?filename=images/JSJC201910047_039.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 微博热点话题挖掘模型</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910047_039.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="40" name="40">1.1 标签相似度计算</h4>
+                <div class="p1">
+                    <p id="41">微博标签是一种由用户定义的,可概括微博主题的词语或短句。某个热点话题相关的微博通常带有与该话题相关的标签,因此标签语义对于微博热点话题挖掘具有重要意义。本文通过公共块算法,从词语相似度出发,计算标签相似度,然后合并具有相近语义标签的微博,这样不仅能够解决LDA模型在短文本中的稀疏问题,同时也能结合语义和统计特征,提高热点话题挖掘的准确性。</p>
+                </div>
+                <h4 class="anchor-tag" id="42" name="42">1.1.1 基于连续词袋模型的Word2Vec</h4>
+                <div class="p1">
+                    <p id="43">词向量是词语的一种数学表示方式,向量的每个维度代表一种语义特征,向量间的距离反映了词语间的相似度。Word2Vec是由谷歌提出的一种可从原始语料中学习字词空间向量的预测模型,主要分为连续词袋(Continuous Bag-of-Words Model,CBOW)和Skip-Gram 2种模式。其中,CBOW模式从原始语句推测目标字词<citation id="142" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>,而Skip-Gram是从目标字词推测原始语句<citation id="143" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>。CBOW比Skip-Gram更加适用于小型数据,考虑到本文语料库规模不大,因此,使用基于CBOW模式的Word2Vec模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">CBOW模型网络结构分为3层,即输入层、投影层和输出层,如图2所示。将训练样本记作(<i>Context</i>(<i>w</i>)<sub>2</sub><sub><i>c</i></sub>,<i>w</i>),待建模的词语为<i>w</i>=足球,<i>Context</i>(<i>w</i>)由<i>w</i>前后各<i>c</i>个词构成,则输入层为含<i>Context</i>(<i>w</i>)中2<i>c</i>个词的词向量,投影层为输入层的2<i>c</i>个词向量累加的和,即:<mathml id="115"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>X</mi><msub><mrow></mrow><mi>w</mi></msub><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>2</mn><mi>c</mi></mrow></munderover><mi mathvariant="bold-italic">V</mi></mstyle><mo stretchy="false">(</mo><mi>C</mi><mi>o</mi><mi>n</mi><mi>t</mi><mi>e</mi><mi>x</mi><mi>t</mi><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo><mo>∈</mo></mrow></math></mathml><image href="images/JSJC201910047_116.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>m</i></sup>,输出层为相对应的一棵Huffman树,该树以语料库中出现过的词作为叶子结点,以各词在语料库中出现的次数作为权值构造而成。在这棵Huffman树中,叶子结点共有<mathml id="117"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ν</mi><mo>=</mo><mrow><mo>|</mo><mi>D</mi><mo>|</mo></mrow></mrow></math></mathml>个,分别对应词典D中的词,非叶子结点有N-1个。</p>
+                </div>
+                <div class="area_img" id="45">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910047_045.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 CBOW模式的Word2Vec工作流程" src="Detail/GetImg?filename=images/JSJC201910047_045.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 CBOW模式的Word2Vec工作流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910047_045.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="46">本文所涉及的符号描述如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="47">1)<i>p</i><sup><i>w</i></sup>表示从根节点出发到达<i>w</i>叶子结点的路径。<i>p</i><mathml id="118"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>1</mn><mi>w</mi></msubsup></mrow></math></mathml>表示根结点,p<mathml id="119"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>l</mi><msup><mrow></mrow><mi>w</mi></msup></mrow><mi>w</mi></msubsup></mrow></math></mathml>表示w对应的结点。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">2)l<sup>w</sup>为路径p<sup>w</sup>中包含结点的个数。</p>
+                </div>
+                <div class="p1">
+                    <p id="49"><mathml id="120"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>3</mn><mo stretchy="false">)</mo><mi>X</mi><msub><mrow></mrow><mi>w</mi></msub><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>2</mn><mi>c</mi></mrow></munderover><mi mathvariant="bold-italic">V</mi></mstyle><mo stretchy="false">(</mo><mi>c</mi><mi>o</mi><mi>n</mi><mi>t</mi><mi>e</mi><mi>x</mi><mi>t</mi><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo><mo>∈</mo></mrow></math></mathml><image href="images/JSJC201910047_121.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>m</i></sup>表示路径<i>p</i><sup><i>w</i></sup>中的<i>l</i><sup><i>w</i></sup>-1个结点。</p>
+                </div>
+                <div class="p1">
+                    <p id="50"><mathml id="122"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>4</mn><mo stretchy="false">)</mo><mi>d</mi><msubsup><mrow></mrow><mn>2</mn><mi>w</mi></msubsup><mo>,</mo><mi>d</mi><msubsup><mrow></mrow><mn>3</mn><mi>w</mi></msubsup><mo>,</mo><mo>⋯</mo><mo>,</mo><mi>d</mi><msubsup><mrow></mrow><mrow><mi>i</mi><msup><mrow></mrow><mi>w</mi></msup></mrow><mi>w</mi></msubsup><mo>∈</mo><mrow><mo>{</mo><mrow><mn>0</mn><mo>,</mo><mrow><mn>1</mn><mo>}</mo></mrow></mrow></mrow></mrow></math></mathml>为词w的<i>Huffman</i>编码,其由l<sup>w</sup>-1位编码构成,d<mathml id="123"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>j</mi><mi>w</mi></msubsup></mrow></math></mathml>表示路径p<sup>w</sup>中第j个结点对应的编码(根节点不对应编码)。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">5)<i>θ</i><mathml id="124"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>1</mn><mi mathvariant="bold-italic">w</mi></msubsup></mrow></math></mathml>,<i>θ</i><mathml id="125"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>2</mn><mi mathvariant="bold-italic">w</mi></msubsup></mrow></math></mathml>,…,<i>θ</i><mathml id="126"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi mathvariant="bold-italic">i</mi><msup><mrow></mrow><mi mathvariant="bold-italic">w</mi></msup><mo>-</mo><mn>1</mn></mrow><mi mathvariant="bold-italic">w</mi></msubsup></mrow></math></mathml>∈<image href="images/JSJC201910047_127.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>m</i></sup>为路径<i>p</i><mathml id="128"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>1</mn><mi mathvariant="bold-italic">w</mi></msubsup></mrow></math></mathml>中非叶子结点对应的向量,<i>θ</i><mathml id="129"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>j</mi><mi>w</mi></msubsup></mrow></math></mathml>表示路径p<sup>w</sup>中的第j个非叶子结点对应的向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="52">对于w=足球,路径p<sup>w</sup>为38→23→9→4→3,其长度l<sup>w</sup>=5,38、23、9、4、3为路径p<sup>w</sup>上的5个结点,其中结点38为根节点。d<mathml id="130"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>2</mn><mi>w</mi></msubsup></mrow></math></mathml>、d<mathml id="131"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>3</mn><mi>w</mi></msubsup></mrow></math></mathml>、d<mathml id="132"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>4</mn><mi>w</mi></msubsup></mrow></math></mathml>、d<mathml id="133"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>5</mn><mi>w</mi></msubsup></mrow></math></mathml>的值分别为1、0、0、1,即“足球”的<i>Huffman</i>编码为1001,从而可将词语映射到空间向量中<citation id="144" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="53">本文训练<i>Word</i>2<i>Vec</i>模型使用的语料库来自爬取的5.915 <i>GB</i>微博文本,训练所得的模型更符合微博语言环境。</p>
+                </div>
+                <h4 class="anchor-tag" id="54" name="54">1.1.2 基于公共块算法的标签相似度计算</h4>
+                <div class="p1">
+                    <p id="55">本文使用公共块算法计算微博标签相似度。公共块是指2个短文本中拥有相同词义的连续词项组合形成的词块,且任一公共块至少包含一个词项,至多与2个文本中较短的一个相同<citation id="145" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>。相似度计算的具体步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="56">1)使用结巴分词对2个文本进行预处理。</p>
+                </div>
+                <div class="p1">
+                    <p id="57">2)从2个分词后的词语集合中分别任选一个词,并使用1.1.1节中训练的Word2Vec模型计算2个词的相似度,得到词语相似度矩阵。</p>
+                </div>
+                <div class="p1">
+                    <p id="58">3)查找该矩阵每一行的最大值,并把该值所对应的词对写入词对集合中。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">4)将词对集合中的每对单词的第1个词写入词集1,将第2个词写入词集2。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">5)根据在文本中出现的顺序对2个词集中的词语进行排序,将排序后的词集分别记作sorted_word_list1和sorted_word_list2。</p>
+                </div>
+                <div class="p1">
+                    <p id="61">6)在sorted_word_list1词集中选择最前面的2个词语,记作word1_in_list1和word2_in_list1,并找到这2个词在sorted_word_list2词集中对应的词语,记作word1_in_list2和word2_in_list2。如果word1_in_list2和word2_in_list2在sorted_word_list2中不连续且前后顺序与word1_in_list1和word2_in_list1一致,则将word1_in_list1和word2_in_list1从sorted_word_list1中删除,并将其作为2个公共块写入公共块集合中;如果word1_in_list2和word2_in_list2在sorted_word_list2中连续且前后顺序一致,则继续遍历直到sorted_word_list1中的词语全部被选中。通过该操作可以得到2个文本的公共块。</p>
+                </div>
+                <div class="p1">
+                    <p id="62">例如,对于表1所示的2个微博标签,使用Word2Vec模型可以得到如图3所示的词语相似度矩阵。遍历该矩阵,将每行中相似度的最大值所对应的词写入词对集合,并得到2个词集:{端午节,安康}和{粽子节,快乐},最终基于公共块算法得到2个公共块:{(端午节,粽子节),(安康,快乐)}。</p>
+                </div>
+                <div class="area_img" id="63">
+                    <p class="img_tit"><b>表1 微博标签示例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="63" border="1"><tr><td><br />序号</td><td>标签内容</td></tr><tr><td><br />1</td><td>端午节安康</td></tr><tr><td><br />2</td><td>粽子节快乐</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="64">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910047_064.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 词语相似度矩阵" src="Detail/GetImg?filename=images/JSJC201910047_064.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 词语相似度矩阵</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910047_064.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="65">在得到公共块之后,基于以下3个准则判断文本间的相似度:</p>
+                </div>
+                <div class="p1">
+                    <p id="66">1)2个文本拥有的公共块数量越多,相似度越高。</p>
+                </div>
+                <div class="p1">
+                    <p id="67">2)2个文本拥有的公共块包含词项个数越多,相似度越高。</p>
+                </div>
+                <div class="p1">
+                    <p id="68">3)2个文本公共块先后顺序越相符,文本相似度越高。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">文本相似度计算公式如下<citation id="146" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>:</p>
+                </div>
+                <div class="p1">
+                    <p id="70" class="code-formula">
+                        <mathml id="70"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>s</mi><mi>i</mi><mi>m</mi><msub><mrow></mrow><mrow><mtext>w</mtext><mtext>o</mtext><mtext>r</mtext><mtext>d</mtext></mrow></msub><mo stretchy="false">(</mo><mi>D</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mi>D</mi><msub><mrow></mrow><mrow><msub><mrow></mrow><mn>2</mn></msub></mrow></msub><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mi>B</mi><mo stretchy="false">(</mo><mi>D</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mi>D</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mrow><mi>L</mi><mo stretchy="false">(</mo><mi>D</mi><msub><mrow></mrow><mn>1</mn></msub><mo stretchy="false">)</mo><mo>+</mo><mi>L</mi><mo stretchy="false">(</mo><mi>D</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mi>s</mi><mi>i</mi><mi>m</mi><msub><mrow></mrow><mrow><mtext>o</mtext><mtext>r</mtext><mtext>d</mtext><mtext>e</mtext><mtext>r</mtext></mrow></msub><mo stretchy="false">(</mo><mi>D</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mi>D</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mn>1</mn><mo>-</mo><mrow><mo>|</mo><mrow><mfrac><mrow><mi mathvariant="bold-italic">r</mi><msub><mrow></mrow><mn>1</mn></msub><mo>-</mo><mi mathvariant="bold-italic">r</mi><msub><mrow></mrow><mn>2</mn></msub></mrow><mrow><mi mathvariant="bold-italic">r</mi><msub><mrow></mrow><mn>1</mn></msub><mo>+</mo><mi mathvariant="bold-italic">r</mi><msub><mrow></mrow><mn>2</mn></msub></mrow></mfrac></mrow><mo>|</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mi>s</mi><mi>i</mi><mi>m</mi><mo stretchy="false">(</mo><mi>D</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mi>D</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">)</mo><mo>=</mo><mi>α</mi><mo>×</mo><mi>s</mi><mi>i</mi><mi>m</mi><msub><mrow></mrow><mrow><mtext>w</mtext><mtext>o</mtext><mtext>r</mtext><mtext>d</mtext></mrow></msub><mo stretchy="false">(</mo><mi>D</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mi>D</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">)</mo><mo>+</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mi>β</mi><mo>×</mo><mi>s</mi><mi>i</mi><mi>m</mi><msub><mrow></mrow><mrow><mtext>o</mtext><mtext>r</mtext><mtext>d</mtext><mtext>e</mtext><mtext>r</mtext></mrow></msub><mo stretchy="false">(</mo><mi>D</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mi>D</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="71">其中,<i>sim</i><sub>word</sub>由公共块包含的词项数目决定,<i>sim</i><sub>order</sub>由公共块在2个文本中出现的顺序决定,<i>B</i>(<i>D</i><sub>1</sub>,<i>D</i><sub>2</sub>)表示所有公共块包含的词项总数,<i>L</i>(<i>D</i><sub>1</sub>)和<i>L</i>(<i>D</i><sub>2</sub>)指2个文本中分别包含的词项个数,<i><b>r</b></i><sub>1</sub>、<i><b>r</b></i><sub>2</sub>分别指公共块在文本<i>D</i><sub>1</sub>和文本<i>D</i><sub>2</sub>中的顺序向量,<i>α</i>和<i>β</i>是人为设定的2个参数。考虑到标签通常只包含2个～3个词语,词语顺序对相似度的影响较小,因此本文设置<i>α</i>=0.8,<i>β</i>=0.2。根据式(1)～式(3)可以计算得到表1中2个微博标签的相似度为1。</p>
+                </div>
+                <h4 class="anchor-tag" id="72" name="72">1.2 对合并后的微博建模</h4>
+                <div class="p1">
+                    <p id="73">在计算出标签相似度后,合并带有相似语义标签的微博文本,然后使用LDA模型对合并后的微博文本建模。这样能够弥补LDA模型不适用于短文本的缺陷。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">LDA模型是目前常用的一种文档隐主题生成模型<citation id="147" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>,包含词、主题和文档3层结构,其本质上是一个3层贝叶斯概率模型。LDA模型基于以下假设:任意一篇文档可由若干个隐含主题构成,而其中的每个主题由若干个词语组成。LDA模型的简化层次结构如图4所示。</p>
+                </div>
+                <div class="area_img" id="75">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910047_075.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 LDA主题模型结构" src="Detail/GetImg?filename=images/JSJC201910047_075.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 LDA主题模型结构</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910047_075.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="76">LDA主题模型的生成过程可以分为3个步骤。</p>
+                </div>
+                <div class="p1">
+                    <p id="77"><b>步骤1</b> 根据泊松分布得到文档中包含的词语数<i>N</i>。</p>
+                </div>
+                <div class="p1">
+                    <p id="78"><b>步骤2</b> 对每一个文档计算其隐含主题的概率分布。</p>
+                </div>
+                <div class="p1">
+                    <p id="79"><b>步骤3</b> 对于每个关键词:</p>
+                </div>
+                <div class="p1">
+                    <p id="80">1) 通过主题概率分布<i>θ</i>随机选择一个隐主题<i>z</i>。</p>
+                </div>
+                <div class="p1">
+                    <p id="81">2) 通过主题<i>z</i>的多项式分布随机选择一个关键词。</p>
+                </div>
+                <div class="p1">
+                    <p id="82">LDA3层概率生成模型如图5所示,其中,<i>M</i>表示语料集合中的文档个数,<i>N</i>表示主题中的词语个数,<i>K</i>表示隐含主题个数,<i>α</i>和<i>β</i>是语料级别的参数,在生成过程中只需采样一次,<i>θ</i>是文档级别的参数,每个文档对应一个<i>θ</i>,<i>z</i>和<i>w</i>都是单词级别的参数,<i>z</i>由<i>θ</i>生成,<i>w</i>由<i>z</i>和<i>β</i>共同生成。</p>
+                </div>
+                <div class="area_img" id="83">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910047_083.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 LDA三层贝叶斯生成模型" src="Detail/GetImg?filename=images/JSJC201910047_083.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 LDA三层贝叶斯生成模型</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910047_083.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="84">本文通过调用python的第三方库gensim中的models.ldamodel.LdaModel方法对合并后的微博文本建模。综合考虑算法的效率和准确性,将主题个数设置为30。在LDA模型训练完成后,即可将挖掘出的隐主题作为特征来表示微博文本。表2给出3个LDA主题的示例。</p>
+                </div>
+                <div class="area_img" id="85">
+                    <p class="img_tit"><b>表2 LDA主题示例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="85" border="1"><tr><td><br />主题编号</td><td>主题词(概率)</td></tr><tr><td><br />Topic0</td><td>世界杯(0.014)、vs(0.006)、俄罗斯(0.006)、<br />德国(0.006)、墨西哥(0.005)</td></tr><tr><td><br />Topic1</td><td>粽子(0.019)、端午节(0.015)、吃(0.015)、<br />端午(0.014)、安康(0.005)</td></tr><tr><td><br />Topic2</td><td>父亲节(0.008)、父亲(0.008)、快乐(0.006)、<br />梦想(0.005)、爱(0.003)</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="86" name="86">1.3 K-means聚类</h4>
+                <div class="p1">
+                    <p id="87">本文使用K-means方法对所有微博文本进行聚类。根据经验将<i>K</i>值设置为5。用聚类中心特征向量中特征值最大的主题特征表示该中心点,选取该主题特征中概率最大的7个主题词作为聚类结果,如表3所示。</p>
+                </div>
+                <div class="area_img" id="88">
+                    <p class="img_tit"><b>表3 K-means聚类结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="88" border="1"><tr><td><br />序号</td><td>主题词  </td></tr><tr><td><br />1</td><td>世界杯、阿根廷、冰岛、俄罗斯、今晚、梅西、球</td></tr><tr><td><br />2</td><td>端午、粽子、快乐、喜欢、甜、咸、pk</td></tr><tr><td><br />3</td><td>C罗、葡萄牙、世界杯、帽子戏法、机会、旁边</td></tr><tr><td><br />4</td><td>我、世界杯、谁、在、一起、围观、比比</td></tr><tr><td><br />5</td><td>父亲节、父亲、快乐、爱、创造、爸爸、我</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h3 id="89" name="89" class="anchor-tag">2 实验结果与分析</h3>
+                <div class="p1">
+                    <p id="90">为证实本文算法的有效性和优越性,对以下 3个模型进行对比:</p>
+                </div>
+                <div class="p1">
+                    <p id="91">1)Model1:直接使用LDA模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="92">2)Model2:合并标签相同的微博后使用LDA模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="93">3)Model3:合并标签语义相近的微博后使用LDA模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="94">本文从2个方面来评估本文提出的算法的性能:困惑度指标用来衡量LDA模型的优劣;准确率、召回率和<i>F</i>1指标用来检测主题挖掘的准确性。采用python技术爬取了2种数据集作为实验数据集。一种是随机爬取的微博文本,作为Word2Vec的训练数据集。另一类采用定主题的方式爬取2018年6月15日—18日、2018年6月20日—22日、2018年6月25日—27日3个时间区间的微博文本共计5 404条,数据清洗后作为3个测试集,每个测试集包含5个主题。表4给出测试集1中包含的主题内容。</p>
+                </div>
+                <div class="area_img" id="95">
+                    <p class="img_tit"><b>表4 测试集1包含的主题</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="95" border="1"><tr><td><br />序号</td><td>主题  </td></tr><tr><td><br />1</td><td>阿根廷对战冰岛梅西失点</td></tr><tr><td><br />2</td><td>端午节甜、咸粽子大pk</td></tr><tr><td><br />3</td><td>双牙pk,C罗上演帽子戏法</td></tr><tr><td><br />4</td><td>创造101</td></tr><tr><td><br />5</td><td>父亲节快乐</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="96" name="96">2.1 困惑度</h4>
+                <div class="p1">
+                    <p id="97">困惑度是一种信息理论的测量方法,通常用于评判某个概率模型的优劣<citation id="148" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>。一个概率模型的困惑度定义为基于该概率模型的熵的能量,计算过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="98" class="code-formula">
+                        <mathml id="98"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><mi>e</mi><mi>r</mi><mi>p</mi><mi>l</mi><mi>e</mi><mi>x</mi><mi>i</mi><mi>t</mi><mi>y</mi><mo>=</mo><mn>2</mn><msup><mrow></mrow><mrow><mo>-</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mrow><mfrac><mn>1</mn><mi>Ν</mi></mfrac></mrow></mstyle><mtext>l</mtext><mtext>b</mtext><mspace width="0.25em" /><mi>q</mi><mo stretchy="false">(</mo><mi>x</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></msup><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="99">为了简化计算,对困惑度进行取对数运算:</p>
+                </div>
+                <div class="p1">
+                    <p id="100" class="code-formula">
+                        <mathml id="100"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mtext>l</mtext><mtext>b</mtext><mspace width="0.25em" /><mi>p</mi><mi>e</mi><mi>r</mi><mi>p</mi><mi>l</mi><mi>e</mi><mi>x</mi><mi>i</mi><mi>t</mi><mi>y</mi><mo>=</mo><mo>-</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mrow><mfrac><mn>1</mn><mi>Ν</mi></mfrac></mrow></mstyle><mtext>l</mtext><mtext>b</mtext><mspace width="0.25em" /><mi>q</mi><mo stretchy="false">(</mo><mi>x</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="101">图6给出3种模型在不同主题数目下的困惑度对比结果。</p>
+                </div>
+                <div class="area_img" id="102">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910047_102.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 3种模型的困惑度比较" src="Detail/GetImg?filename=images/JSJC201910047_102.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 3种模型的困惑度比较</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910047_102.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="103">从图6可以看出,LDA模型的困惑度随着主题数目的增加而降低,且在主题数相同的情况下,本文模型的困惑度较低。上述结果证明,通过合并语义相近标签对应的微博能够有效解决LDA模型在处理微博短文本时的高维稀疏问题。</p>
+                </div>
+                <h4 class="anchor-tag" id="104" name="104">2.2 准确性评价指标</h4>
+                <div class="p1">
+                    <p id="105">仅降低LDA模型的困惑度是不够的,本文的最终目标是提高主题挖掘的准确性。准确率(<i>P</i>)、召回率(<i>R</i>)和<i>F</i>1值是机器学习中常用的评价指标,其定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="106" class="code-formula">
+                        <mathml id="106"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>Ρ</mi><mo>=</mo><mfrac><mrow><mi>Τ</mi><mi>Ρ</mi></mrow><mrow><mi>Τ</mi><mi>Ρ</mi><mo>+</mo><mi>F</mi><mi>Ρ</mi></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mi>R</mi><mo>=</mo><mfrac><mrow><mi>Τ</mi><mi>Ρ</mi></mrow><mrow><mi>Τ</mi><mi>Ρ</mi><mo>+</mo><mi>F</mi><mi>Ν</mi></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>7</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="107">其中,<i>TP</i>表示真正例的样例数,<i>FP</i>表示假正例的样例数,<i>FN</i>表示假反例的样例数。</p>
+                </div>
+                <div class="p1">
+                    <p id="108">准确率和召回率是一对矛盾的度量,通常来说,准确率会随着召回率的升高而降低,同样,召回率也会伴随着准确率的升高而降低。<i>F</i>1值可用来平衡这2个指标,其计算过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="109" class="code-formula">
+                        <mathml id="109"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>F</mi><mn>1</mn><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mi>Ρ</mi><mo>×</mo><mi>R</mi></mrow><mrow><mi>Ρ</mi><mo>+</mo><mi>R</mi></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>8</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="110">图7给出3种模型在准确率、召回率和<i>F</i>1值指标上的对比结果。</p>
+                </div>
+                <div class="area_img" id="111">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910047_111.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 3种模型的准确率、召回率和F1值对比" src="Detail/GetImg?filename=images/JSJC201910047_111.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图7 3种模型的准确率、召回率和</b><i><b>F</b></i><b>1值对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910047_111.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="112">从图7可以看出,Model2和Model3相较于Model1在3个指标上都有明显的提升,而Model3的准确性比Model2更高。因此,可以证明本文方法不仅能够改善LDA模型在微博文本上的表现,也使得热点话题挖掘的准确性更高。</p>
+                </div>
+                <h3 id="113" name="113" class="anchor-tag">3 结束语</h3>
+                <div class="p1">
+                    <p id="114">本文提出一种融合标签语义的微博热点话题挖掘方法。将微博的语义特征和统计特征相结合,以解决LDA模型在微博短文本上的稀疏问题,提高话题挖掘的准确性。由于某些微博为了蹭热度,存在内容与标签不符的现象,会对算法产生影响,同时微博的时效性与热点话题挖掘有很大联系,下一步将对以上因素进行考虑,提高话题挖掘的准确性。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" >
+                                    <b>[1]</b>
+                                 中国互联网信息中心.第42次《中国互联网络发展状况统计报告》[EB/OL].[2018-08-20].http://www.cnnic.net.cn.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=From Tweets to Polls:Linking Text Sentiment to Public Opinion Time Series">
+
+                                <b>[2]</b> BALASUBRAMANYAN R,ROUTLEDGE B R,SMITH N R.From tweets to polls:linking text sentiment to public opinion time series[C]//Proceedings of International Conference on Weblogs and Social Media.Reston,USA:AIAA Press 2010:122-129.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Twitter topic modeling by tweet aggregation">
+
+                                <b>[3]</b> STEINSKOGA O,THERKELSEN J F,GAMBÄCK B.Twitter topic modeling by tweet aggregation[EB/OL].[2018-08-20].https://www.aclweb.org/anthology/W17- 0210.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ200811017&amp;v=MDMyNjg2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeXprVUx6Skx6N1NaTEc0SHRuTnJvOUVZNFFLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 郭庆琳,李艳梅,唐琦.基于VSM的文本相似度计算的研究[J].计算机应用研究,2008,25(11):3256-3258.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1013243954.nh&amp;v=MTUxMjc4SGRqSnE1RWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeXprVUx6SlZGMjZIYkc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 孙励.基于微博的热点话题发现[D].北京:北京邮电大学,2013.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJFZ201606006&amp;v=MjY4MjVMRzRIOWZNcVk5RllvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5emtVTHpKTWlmTmQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 刘红兵,李文坤,张仰森.基于LDA模型和多层聚类的微博话题检测[J].计算机技术与发展,2016,26(6):25-30.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201602012&amp;v=MjUzNzR6a1VMekpMelRaWkxHNEg5Zk1yWTlFWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0Rnk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 叶成绪,杨萍,刘少鹏.基于主题词的微博热点话题发现[J].计算机应用与软件,2016,33(2):46-50.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201612004&amp;v=MDg1OTJyWTlGWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0Rnl6a1VMekpQU25mZjdHNEg5Zk4=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 张群,王红军,王伦文.词向量与LDA相融合的短文本分类方法[J].现代图书情报技术,2016(12):27-35.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Exploiting similarities among languages for machine translation">
+
+                                <b>[9]</b> MIKOLOV T,LE Q V,SUTSKEVER H,et al.Exploiting similarities among languages for machine translation[EB/OL].[2018-08-20].https://arxiv.org/pdf/1309.4168v1.pdf.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Enriching word vectors with subword information">
+
+                                <b>[10]</b> BOJANOWSKI P,GRAVE E,JOULIN A,et al.Enriching word vectors with subword information[EB/OL].[2018-08-20].https://arxiv.org/pdf/1607.04606.pdf.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+
+                                <b>[11]</b> MIKOLOV T,CHEN Kai,CORRADO G,et al.Efficient estimation of word representations in vector space[EB/OL].[2018-08-20].https://arxiv.org/pdf/1301.3781.pdf.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015342693.nh&amp;v=MzA0MjM2RzdDOEhOZkZySkViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0Rnl6a1VMekpWRjI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 陈红阳.中文微博话题发现技术研究[D].重庆:重庆理工大学,2015.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=CGGL201508017&amp;v=MTQ5NDNNWXJHNEg5VE1wNDlFWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0Rnl6a1VMekpKaXI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 黄贤英,刘英涛,饶勤菲.一种基于公共词块的英文短文本相似度算法[J].重庆理工大学学报(自然科学版):2015,29(8):88-93.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Latent Dirichlet allocation">
+
+                                <b>[14]</b> BLEI D M,NG A Y,JORDAN M I.Latent Dirichlet allocation[J].Journal of Machine Learning Research,2003,3:993-1022.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Optimizing semantic coherence in topic models">
+
+                                <b>[15]</b> MIMNO D,WALLACH H M,TAL-LEY E,et al.Optimizing semantic coherence in topic models[C]//Proceedings of the Conference on Empirical Methods in Natural Language Processing.Stroudsburg,USA:Association for Computational Linguistics,2011:262-272.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201910047" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201910047&amp;v=MjYwNjM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5emtVTC9BTHo3QmJiRzRIOWpOcjQ5Qlk0UUtESDg=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEUyT01LT2tybWxpemFsY2tqYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

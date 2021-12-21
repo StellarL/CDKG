@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130386157020000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201906033%26RESULT%3d1%26SIGN%3dbLoHnUN6M0wY6kZTWKY3Z42%252bnZM%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201906033&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201906033&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201906033&amp;v=MjAzNjBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5bmxWTHZNTHo3QmJiRzRIOWpNcVk5R1o0UUs=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#33" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="1 相关工作 ">1 相关工作</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="2 算法介绍 ">2 算法介绍</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#44" data-title="2.1 网页预处理与SVM初次正文提取">2.1 网页预处理与SVM初次正文提取</a></li>
+                                                <li><a href="#51" data-title="2.2 DOM重心半径模型">2.2 DOM重心半径模型</a></li>
+                                                <li><a href="#84" data-title="2.3 DOM重心半径模型推导">2.3 DOM重心半径模型推导</a></li>
+                                                <li><a href="#89" data-title="2.4 正文抽取算法">2.4 正文抽取算法</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#115" data-title="3 实验结果与分析 ">3 实验结果与分析</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#137" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#83" data-title="&lt;b&gt;图1 网页半径聚类示意图&lt;/b&gt;"><b>图1 网页半径聚类示意图</b></a></li>
+                                                <li><a href="#117" data-title="&lt;b&gt;表1 各网站新闻正文抽取测试结果&lt;/b&gt;"><b>表1 各网站新闻正文抽取测试结果</b></a></li>
+                                                <li><a href="#119" data-title="&lt;b&gt;表2 5种抽取算法测试结果对比&lt;/b&gt;"><b>表2 5种抽取算法测试结果对比</b></a></li>
+                                                <li><a href="#121" data-title="&lt;b&gt;图2 各网站DOM重心半径直方图&lt;/b&gt;"><b>图2 各网站DOM重心半径直方图</b></a></li>
+                                                <li><a href="#136" data-title="&lt;b&gt;图3&lt;/b&gt;&lt;i&gt;θ&lt;/i&gt;&lt;b&gt;对3个网站抽取准确率的影响&lt;/b&gt;"><b>图3</b><i>θ</i><b>对3个网站抽取准确率的影响</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" IKVIK L.Information extraction from World Wide Web:a survey[M].Oslo, Norway:Norweigan Computing Center, 1999:8-9." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Information Extraction from World Wide Web: A Survey">
+                                        <b>[1]</b>
+                                         IKVIK L.Information extraction from World Wide Web:a survey[M].Oslo, Norway:Norweigan Computing Center, 1999:8-9.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" VAPNIK V N.The nature of statistical learning theory[M].Berlin, Germany:Springer, 1995." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The nature of statistical learning theory">
+                                        <b>[2]</b>
+                                         VAPNIK V N.The nature of statistical learning theory[M].Berlin, Germany:Springer, 1995.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" HAMMER J, MCHUGH J, GARCIA-MOLIN H.Semistructured data:the TSIMMIS experience[C]//Proceedings of East-European Conference on Advances in Databases and Information Systems.Swindon, UK:British Computer Society, 1997:1-8." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Semistructured Data:The TSIMMIS Experience">
+                                        <b>[3]</b>
+                                         HAMMER J, MCHUGH J, GARCIA-MOLIN H.Semistructured data:the TSIMMIS experience[C]//Proceedings of East-European Conference on Advances in Databases and Information Systems.Swindon, UK:British Computer Society, 1997:1-8.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" LIU Ling, PU Caltm, HAN Wei.XWRAP:an XML-enabled wrapper construction system for Web information sources[C]//Proceedings of International Conference on Data Engineering.Washington D.C., USA:IEEE Press, 2000:611-621." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=XWRAP:An XML-enable Wrapper Construction System for Web Information Sources">
+                                        <b>[4]</b>
+                                         LIU Ling, PU Caltm, HAN Wei.XWRAP:an XML-enabled wrapper construction system for Web information sources[C]//Proceedings of International Conference on Data Engineering.Washington D.C., USA:IEEE Press, 2000:611-621.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" CRESCENZI V, MECCA G, MERIALDO P.RoadRunner:automatic data extraction from data-intensive web sites[C]//Proceedings of ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2002:624-624." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=RoadRunner: automatic data extraction from data-intensive web sites">
+                                        <b>[5]</b>
+                                         CRESCENZI V, MECCA G, MERIALDO P.RoadRunner:automatic data extraction from data-intensive web sites[C]//Proceedings of ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2002:624-624.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" FINN A, KUSHMERICK N, SMYTH B.Fact or fiction:content classification for digital libraries[EB/OL].[2018-03-01].https://www.ercim.eu/publication/ws-proceedings/DelNoe02/AidanFinn.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Fact or fiction:content classification for digital libraries">
+                                        <b>[6]</b>
+                                         FINN A, KUSHMERICK N, SMYTH B.Fact or fiction:content classification for digital libraries[EB/OL].[2018-03-01].https://www.ercim.eu/publication/ws-proceedings/DelNoe02/AidanFinn.pdf.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" MANTRATZIS C, ORGUN M, CASSIDY S.Separating XHTML content from navigation clutter using DOM-structure block analysis[C]//Proceedings of ACM Conference on Hypertext and Hypermedia.New York, USA:ACM Press, 2005:145-147." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Separating XHTML content from navigation clutter using DOM-structure block analysis">
+                                        <b>[7]</b>
+                                         MANTRATZIS C, ORGUN M, CASSIDY S.Separating XHTML content from navigation clutter using DOM-structure block analysis[C]//Proceedings of ACM Conference on Hypertext and Hypermedia.New York, USA:ACM Press, 2005:145-147.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 孙承杰, 关毅.基于统计的网页正文信息抽取方法的研究[J].中文信息学报, 2004, 18 (5) :18-23." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS200405002&amp;v=MTQ1NDg2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeW5sVkx2TUtDallmYkc0SHRYTXFvOUZab1FLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         孙承杰, 关毅.基于统计的网页正文信息抽取方法的研究[J].中文信息学报, 2004, 18 (5) :18-23.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" SONG Ruihua, LIU Haifeng, WEN Jirong, et al.Learning important models for Web page blocks based on layout and content analysis[J].ACM SIGKDD Explorations Newsletter, 2004, 6 (2) :14-23." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000085430&amp;v=MTU3ODBZN0s3SHRqTnI0OUZaT01LQ0g4NW9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSUlWNFRiaFk9TmlmSQ==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         SONG Ruihua, LIU Haifeng, WEN Jirong, et al.Learning important models for Web page blocks based on layout and content analysis[J].ACM SIGKDD Explorations Newsletter, 2004, 6 (2) :14-23.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" 胡国平, 张巍, 王仁华.基于双层决策的新闻网页正文精确抽取[J].中文信息学报, 2006, 20 (6) :1-9." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS200606000&amp;v=MjI5ODZHNEh0Zk1xWTlGWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnlubFZMdk1LQ2pZZmI=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         胡国平, 张巍, 王仁华.基于双层决策的新闻网页正文精确抽取[J].中文信息学报, 2006, 20 (6) :1-9.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" GIBSON J, WELLNER B, LUBAR S.Adaptive Web-page content identification[C]//Proceedings of ACM International Workshop on Web Information and Data Management.New York, USA:ACM Press, 2007:105-112." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Adaptive web-page content identification">
+                                        <b>[11]</b>
+                                         GIBSON J, WELLNER B, LUBAR S.Adaptive Web-page content identification[C]//Proceedings of ACM International Workshop on Web Information and Data Management.New York, USA:ACM Press, 2007:105-112.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" CAI Deng, YU Shipeng, WHEN Jirong, et al.VIPS:a vision based page segmentation algorithm[EB/OL].[2018-03-01].https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2003-79.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=VIPS:a vision based page segmentation algorithm">
+                                        <b>[12]</b>
+                                         CAI Deng, YU Shipeng, WHEN Jirong, et al.VIPS:a vision based page segmentation algorithm[EB/OL].[2018-03-01].https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2003-79.pdf.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 李蕾, 王劲林, 白鹤, 等.基于FFT的网页正文提取算法研究与实现[J].计算机工程与应用, 2007, 43 (30) :148-151." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSGG200730045&amp;v=MzI2NDZHNEh0YlByNDlCWVlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnlubFZMdk1MejdNYWI=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         李蕾, 王劲林, 白鹤, 等.基于FFT的网页正文提取算法研究与实现[J].计算机工程与应用, 2007, 43 (30) :148-151.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 朱泽德, 李淼, 张健, 等.基于文本密度模型的Web正文抽取[J].模式识别与人工智能, 2013, 26 (7) :667-672." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MSSB201307010&amp;v=MjkxNzQ5RVpJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5bmxWTHZNS0Q3WWJMRzRIOUxNcUk=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         朱泽德, 李淼, 张健, 等.基于文本密度模型的Web正文抽取[J].模式识别与人工智能, 2013, 26 (7) :667-672.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 王辉, 郁波, 洪宇, 等.基于知识图谱的Web信息抽取系统[J].计算机工程, 2017, 43 (6) :118- 124." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201706021&amp;v=MTQ2MzZWTHZNTHo3QmJiRzRIOWJNcVk5SFpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5bmw=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         王辉, 郁波, 洪宇, 等.基于知识图谱的Web信息抽取系统[J].计算机工程, 2017, 43 (6) :118- 124.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(06),206-210 DOI:10.19678/j.issn.1000-3428.0050677            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于SVM与DOM重心半径模型的Web正文提取</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%98%93%E5%9B%BD%E6%B4%AA&amp;code=11132517&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">易国洪</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E4%BB%A3%E7%91%9C&amp;code=40552492&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">代瑜</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%86%AF%E6%99%BA%E8%8E%89&amp;code=40141884&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">冯智莉</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%BB%8E%E6%85%A7%E6%BA%90&amp;code=40552491&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">黎慧源</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%AD%A6%E6%B1%89%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0202782&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">武汉工程大学计算机科学与工程学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%AD%A6%E6%B1%89%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6%E6%99%BA%E8%83%BD%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%B9%96%E5%8C%97%E7%9C%81%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=0202782&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">武汉工程大学智能机器人湖北省重点实验室</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>为了从网页中精确地提取正文内容, 提出一种基于支持向量机 (SVM) 与DOM重心半径模型的算法。通过SVM对网页DOM节点集进行提取, 得出文本块节点。根据网页链接信息和初次提取的文本块节点计算重心半径, 利用重心半径模型进行二次精确提取, 并给出相应的公式推导和超参数选取过程。实验结果表明, 与统计抽取、FFT抽取等算法相比, 该算法的准确率和提取效率较高, 泛化能力较好。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">支持向量机;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">特征向量;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%87%8D%E5%BF%83%E5%8D%8A%E5%BE%84&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">重心半径;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%BD%91%E9%A1%B5&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">网页;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%AD%A3%E6%96%87%E6%8F%90%E5%8F%96&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">正文提取;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    易国洪 (1972—) , 男, 副教授、硕士, 主研方向为数据挖掘、软件工程、Web语义;;
+                                </span>
+                                <span>
+                                    *代瑜 (通信作者) , 硕士研究生。;
+                                </span>
+                                <span>
+                                    冯智莉, 硕士研究生。;
+                                </span>
+                                <span>
+                                    黎慧源, 硕士研究生。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-03-08</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金青年项目“基于能力集成动态规划的自适应软件需求的群体决策问题研究” (61502355);</span>
+                    </p>
+            </div>
+                    <h1><b>Web Content Extraction Based on SVM and Gravity Radius Model of DOM</b></h1>
+                    <h2>
+                    <span>YI Guohong</span>
+                    <span>DAI Yu</span>
+                    <span>FENG Zhili</span>
+                    <span>LI Huiyuan</span>
+            </h2>
+                    <h2>
+                    <span>School of Computer Science and Engineering, Wuhan Institute of Technology</span>
+                    <span>Hubei Provincial Key Laboratory of Intelligent Robot, Wuhan Institute of Technology</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>To extract the content from a Web page accurately, an algorithm based on Support Vector Machine (SVM) and gravity radius model of DOM is proposed.Extract the node of text block from Web pages by means of SVM.Use the links information from its page and the node above to calculate the gravity radius, and utilize gravity radius model of DOM to accurately extract content again.The process of corresponding formula derivation and hyper parameters selection are presented in this paper.Experimental results show that compared with statistical extraction, FFT extraction and other algorithm, the proposed algorithm has higher accuracy and efficiency as well as better generalization ability.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Support%20Vector%20Machine%20(SVM)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Support Vector Machine (SVM) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=feature%20vector&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">feature vector;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=gravity%20radius&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">gravity radius;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Web%20pages&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Web pages;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=content%20extraction&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">content extraction;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-03-08</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="33" name="33" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="34">互联网的快速发展产生海量网页数据, 其中一大部分是新闻网页。由这些网页产生各种不同的应用, 如搜索引擎、文本分类、文本的情感分析、新闻推荐系统、机器自动文摘系统等, 这些应用大部分基于网页正文提取技术。新闻网页正文提取还可以直接成为一种应用, 如新闻的采集与推荐系统。此外, Web语料库的建设也依赖于该技术。</p>
+                </div>
+                <div class="p1">
+                    <p id="35">网页由HTML格式的DOM (Document Object Model) 树构成, 这些DOM节点标签包括div、tr、span等。同时, 网页含有正文非结构化的文本数据, 其本质上是一种半结构化数据。网页内容包括正文、导航信息、广告、版权和相关链接等, 正文提取的目的就是过滤与正文无关的信息并直接提取正文。</p>
+                </div>
+                <div class="p1">
+                    <p id="36">本文构建一种DOM重心半径模型, 用于二次网页正文的精确提取。借助BeautifulSoup将网页结构化一个DOM树, 并删除style与script标签。应用文献<citation id="139" type="reference">[<a class="sup">1</a>]</citation>提出的支持向量机 (Support Vector Machine, SVM) 对DOM树节点进行粗分类, 提取文本块节点并以此为基础计算文本块聚类的中心节点, 即为DOM树的重心。利用页面信息计算出文本聚类的半径, 并将所有的文本节点加入到该聚类中。</p>
+                </div>
+                <h3 id="37" name="37" class="anchor-tag">1 相关工作</h3>
+                <div class="p1">
+                    <p id="38">网页正文提取是Web数据挖掘的一个重要方向, 但相关的研究并不充分。其主要提取方法包括基于结构与规则的方法、统计方法和机器学习方法。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">基于结构与规则的方法, 主要针对特定的网页, 一般使用包装器来实现。包装器本质上是一个程序, 需要特定的规则来描述特定来源的网站, 因此, 其规则信息的编写费时费力。文献<citation id="140" type="reference">[<a class="sup">2</a>]</citation>介绍了构造包装器规则的方法, 文献<citation id="141" type="reference">[<a class="sup">3</a>]</citation>提出一种需要人工自定义规则的包装器, 由用户来填写相对应的规则三元组。文献<citation id="142" type="reference">[<a class="sup">4</a>]</citation>提出XWRAP半自动化规则的包装器。文献<citation id="143" type="reference">[<a class="sup">5</a>]</citation>构造出完全自动化规则包装器生成工具RoadRunner。总体来讲, 包装器大多依赖于特定网站结构, 需要人工维护且泛化能力较差。</p>
+                </div>
+                <div class="p1">
+                    <p id="40">基于统计的方法主要利用网页文本的数量分布和标签的结构关系来提取正文。文献<citation id="144" type="reference">[<a class="sup">6</a>]</citation>提出一种将网页转化成标签与文字的序列, 从而求出包含文字最多、标签最单一的节点。文献<citation id="145" type="reference">[<a class="sup">7</a>]</citation>提出一种基于链接与导航提取的方法。文献<citation id="146" type="reference">[<a class="sup">8</a>]</citation>在table标签里提取新闻正文, 其主要依赖字符在table中的数量阈值和table嵌套结构中字符量的占比来实现, 该方法在旅游新闻提取场景中实用性较好, 但泛化能力不强。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">机器学习也被引入网页正文提取中, 文献<citation id="147" type="reference">[<a class="sup">9</a>]</citation>利用径向基函数 (Radical Basis Function, RBF) 神经网络与SVM来衡量网页块的比重。文献<citation id="148" type="reference">[<a class="sup">10</a>]</citation>基于机器学习来提取网页新闻, 对每一个叶子节点提取标签名、文字长度、是否含特定字符等, 组成特征向量, 再基于其占根节点的比例等全局特征来进行决策。文献<citation id="149" type="reference">[<a class="sup">11</a>]</citation>使用条件随机场 (Conditional Random Field, CRF) 将提取问题转换为标注问题, 通过标注序列状态来判定是否为正文。</p>
+                </div>
+                <div class="p1">
+                    <p id="42">在其他提取方法中, 文献<citation id="150" type="reference">[<a class="sup">12</a>]</citation>提出基于视觉分割的VIPS算法, 利用每个节点的DOC值和网页布局特征提取正文。文献<citation id="151" type="reference">[<a class="sup">13</a>]</citation>提出基于快速傅里叶变换 (Fast Fourier Transformation, FFT) 的正文提取方法。文献<citation id="152" type="reference">[<a class="sup">14</a>]</citation>采用一种基于文本密度模型的抽取方法。在内容提取方面, 文献<citation id="153" type="reference">[<a class="sup">15</a>]</citation>提出基于知识图谱的信息抽取方法, 以CN-DBpedia为基础训练出一个具有容错能力的包装器。</p>
+                </div>
+                <h3 id="43" name="43" class="anchor-tag">2 算法介绍</h3>
+                <h4 class="anchor-tag" id="44" name="44">2.1 网页预处理与SVM初次正文提取</h4>
+                <div class="p1">
+                    <p id="45">在正文提取之前对网页进行预处理。首先, 删除网页中与正文主体无关的结构, 如注释文本、script标签与相应JavaScript代码、style标签与CSS样式。然后, 将网页转换为树形的DOM结构。在这一过程中可以发现, 通常正文和非正文没有出现在同一段, 正文所对应的节点都包含在一棵子树下, 而非正文节点被排除于该子树外。最后, 借助BeautifulSoup工具排除无法识别的HTML标签并确定网页内容的正确编码格式。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">引入机器学习的方法将文本抽取的问题转换为对DOM节点进行分类的问题, 本文使用SVM进行分类。首先将DOM树中的每个节点看成一个特征向量, 设节点<i>i</i>所对应的特征向量为<mathml id="47"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">x</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mrow><mrow><mo> (</mo><mrow><mi>t</mi><mi>a</mi><mi>g</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>t</mi><mi>s</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>m</mi><mi>k</mi><mn>1</mn><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>m</mi><mi>k</mi><mn>2</mn><msub><mrow></mrow><mi>i</mi></msub></mrow><mo>) </mo></mrow></mrow><msup><mrow></mrow><mtext>Τ</mtext></msup></mrow></math></mathml>。其中, tag<sub>i</sub>是<i>div</i>、<i>p</i>、<i>table</i>等节点标签名称的<i>one</i>-<i>hot</i>表示, 本文选用35个标签种类。ts<sub>i</sub>是该节点自身所包含文字的长度, 不包括子孙节点文本的标准化长度。mk1表示该节点文本中是否包含发布时间、编辑、作者等特定字符, mk1<sub>i</sub>∈{0, 1}。mk2表示该节点文本是否包含版权、下一页、转载等字符, mk2<sub>i</sub>∈{0, 1}。为了减少训练迭代时间, 提高分类精度, 需要将<b><i>x</i></b><sub><i>i</i></sub>所对应的文本长度进行标准化, 具体过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="48" class="code-formula">
+                        <mathml id="48"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mi>t</mi><mi>s</mi></mrow><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mi>t</mi><mi>l</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mi>j</mi></munder><mo stretchy="false"> (</mo><mi>t</mi><mi>l</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo></mrow><mrow><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>max</mi></mrow></mstyle><mi>j</mi></munder><mo stretchy="false"> (</mo><mi>t</mi><mi>l</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo>-</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>min</mi></mrow></mstyle><mi>j</mi></munder><mo stretchy="false"> (</mo><mi>t</mi><mi>l</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="49">其中, <i>i</i>=0, 1, …, <i>N</i>, <i>j</i>=0, 1, …, <i>N</i>, <i>tl</i><sub><i>i</i></sub>是第<i>i</i>个节点所包含的文本长度, <i>ts</i><sub><i>i</i></sub>是标准化后的长度, <i>ts</i><sub><i>i</i></sub>∈[0, 1]。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">由于SVM以结构风险极小化为基础, 因此当<b><i>x</i></b><sub><i>i</i></sub>是一个相对稀疏的向量时, 本文不使用将核函数映射到高纬度空间的方法, 而只使用线性SVM的方法。通过训练好的SVM来提取网页中具有代表性的文本DOM节点, 能到达很好的效果。</p>
+                </div>
+                <h4 class="anchor-tag" id="51" name="51">2.2 DOM重心半径模型</h4>
+                <div class="p1">
+                    <p id="52">引入度量<i>DOM</i>中节点间距离与相似度的公式。设同一个<i>DOM</i>中的2个不同节点a、b, 则可计算节点a、b的距离与相似度。</p>
+                </div>
+                <div class="p1">
+                    <p id="53"><b>定义1</b> (DOM节点距离) 同一棵DOM树上节点<i>a</i>、<i>b</i>之间的距离计算过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="54" class="code-formula">
+                        <mathml id="54"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><mi>i</mi><mi>s</mi><mo stretchy="false"> (</mo><mi>a</mi><mo>, </mo><mi>b</mi><mo stretchy="false">) </mo><mo>=</mo><mrow><mo>|</mo><mrow><mi>p</mi><mo stretchy="false"> (</mo><mi>a</mi><mo stretchy="false">) </mo><mstyle displaystyle="true"><mo>∪</mo><mi>p</mi></mstyle><mo stretchy="false"> (</mo><mi>b</mi><mo stretchy="false">) </mo></mrow><mo>|</mo></mrow><mo>-</mo><mrow><mo>|</mo><mrow><mi>p</mi><mo stretchy="false"> (</mo><mi>a</mi><mo stretchy="false">) </mo><mstyle displaystyle="true"><mo>∩</mo><mi>p</mi></mstyle><mo stretchy="false"> (</mo><mi>b</mi><mo stretchy="false">) </mo></mrow><mo>|</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="55">其中, <i>p</i> (<i>a</i>) 、<i>p</i> (<i>b</i>) 是指节点<i>a</i>、<i>b</i>所有祖先节点的集合。</p>
+                </div>
+                <div class="p1">
+                    <p id="56"><b>定义2</b> (DOM节点相似度) 同一棵DOM树上的2个节点<i>a</i>、<i>b</i>之间的相似度计算过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="57" class="code-formula">
+                        <mathml id="57"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>s</mi><mi>i</mi><mi>m</mi><mo stretchy="false"> (</mo><mi>a</mi><mo>, </mo><mi>b</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mi>k</mi><mrow><mi>k</mi><mo>+</mo><mi>d</mi><mi>i</mi><mi>s</mi><mo stretchy="false"> (</mo><mi>a</mi><mo>, </mo><mi>b</mi><mo stretchy="false">) </mo></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="58">其中, <i>k</i>是一个超参数且<i>k</i>∈ (0, +∞) , <i>dis</i> (<i>a</i>, <i>b</i>) 越小, 则相似度越大。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">通过SVM选取具有代表性的文本DOM节点, 设这些节点的数量为<i>L</i>, 则可计算它们之间的距离矩阵<b><i>D</i></b>和重心矩阵<b><i>G</i></b>。</p>
+                </div>
+                <div class="p1">
+                    <p id="60"><b>定义3</b> (DOM距离矩阵) 同一棵DOM树上任意2个节点<i>a</i>、<i>b</i>之间的相似度可用DOM距离矩阵来度量, 计算过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="61" class="code-formula">
+                        <mathml id="61"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">D</mi><mo>=</mo><mrow><mo> (</mo><mrow><mtable><mtr><mtd><mi>d</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>1</mn></mrow></msub></mtd><mtd><mi>d</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><mi>d</mi><msub><mrow></mrow><mrow><mn>1</mn><mi>l</mi></mrow></msub></mtd></mtr><mtr><mtd><mi>d</mi><msub><mrow></mrow><mrow><mn>2</mn><mn>1</mn></mrow></msub></mtd><mtd><mi>d</mi><msub><mrow></mrow><mrow><mn>2</mn><mn>2</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><mi>d</mi><msub><mrow></mrow><mrow><mn>2</mn><mi>l</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><mi>d</mi><msub><mrow></mrow><mrow><mi>l</mi><mn>1</mn></mrow></msub></mtd><mtd><mi>d</mi><msub><mrow></mrow><mrow><mi>l</mi><mn>2</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><mi>d</mi><msub><mrow></mrow><mrow><mi>l</mi><mi>l</mi></mrow></msub></mtd></mtr></mtable></mrow><mo>) </mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>4</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="62">其中, <i>d</i><sub><i>ij</i></sub>=<i>dis</i> (<i>i</i>, <i>j</i>) , 是节点<i>i</i>与节点<i>j</i>的距离。</p>
+                </div>
+                <div class="p1">
+                    <p id="63"><b>定义4</b> (DOM重心矩阵) 同一棵DOM树上每个节点作为重心时距离其他节点的距离可用DOM重心矩阵来度量, 计算过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="64" class="code-formula">
+                        <mathml id="64"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi mathvariant="bold-italic">G</mi><mo>=</mo><mrow><mo> (</mo><mrow><mtable><mtr><mtd><mi>g</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>1</mn></mrow></msub></mtd><mtd><mi>g</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>2</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><mi>g</mi><msub><mrow></mrow><mrow><mn>1</mn><mi>l</mi></mrow></msub></mtd></mtr><mtr><mtd><mi>g</mi><msub><mrow></mrow><mrow><mn>2</mn><mn>1</mn></mrow></msub></mtd><mtd><mi>g</mi><msub><mrow></mrow><mrow><mn>2</mn><mn>2</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><mi>g</mi><msub><mrow></mrow><mrow><mn>2</mn><mi>l</mi></mrow></msub></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd><mtd><mo>⋮</mo></mtd><mtd></mtd><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><mi>g</mi><msub><mrow></mrow><mrow><mi>l</mi><mn>1</mn></mrow></msub></mtd><mtd><mi>g</mi><msub><mrow></mrow><mrow><mi>l</mi><mn>2</mn></mrow></msub></mtd><mtd><mo>⋯</mo></mtd><mtd><mi>g</mi><msub><mrow></mrow><mrow><mi>l</mi><mi>l</mi></mrow></msub></mtd></mtr></mtable></mrow><mo>) </mo></mrow><mo>=</mo><mrow><mo> (</mo><mrow><mtable><mtr><mtd><mi mathvariant="bold-italic">g</mi><msubsup><mrow></mrow><mn>1</mn><mtext>Τ</mtext></msubsup></mtd></mtr><mtr><mtd><mi mathvariant="bold-italic">g</mi><msubsup><mrow></mrow><mn>2</mn><mtext>Τ</mtext></msubsup></mtd></mtr><mtr><mtd><mo>⋮</mo></mtd></mtr><mtr><mtd><mi mathvariant="bold-italic">g</mi><msubsup><mrow></mrow><mi>l</mi><mtext>Τ</mtext></msubsup></mtd></mtr></mtable></mrow><mo>) </mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>5</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>g</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mi>m</mi><msub><mrow></mrow><mi>i</mi></msub><mo>⋅</mo><mi>d</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mtext>l</mtext><mtext>b</mtext><mo stretchy="false"> (</mo><mn>2</mn><mo>+</mo><mi>t</mi><mi>l</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo></mrow></mfrac><mo>⋅</mo><mi>d</mi><mi>i</mi><mi>s</mi><mo stretchy="false"> (</mo><mi>i</mi><mo>, </mo><mi>j</mi><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="65">其中, <i>tl</i><sub><i>i</i></sub>是第<i>i</i>个节点的文本长度, <b><i>g</i></b><sup>T</sup><sub><i>i</i></sub>是<b><i>G</i></b>的第<i>i</i>行的行向量。<i>m</i><sub><i>i</i></sub>表示与第<i>i</i>个DOM节点文本长度有关的系数, 其可加大长文本节点成为重心的概率。式 (5) 、式 (6) 表明, 如果其中某一个节点距离其他节点非常近且该节点所包含的文本长度较长, 则该节点被选为重心的概率较大。式 (6) 使用对数是为了抑制过长文本对模型的影响, 因为当抽取的正文较短时, 过长的文本节点并不一定是希望抽取的节点。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">设<b><i>m</i></b>是一个长度为<i>L</i>的列向量, 该向量中的每一个分量是<i>m</i><sub><i>i</i></sub>, 则可根据式 (7) 计算重心矩阵<b><i>G</i></b>。</p>
+                </div>
+                <div class="p1">
+                    <p id="67"><b><i>G</i></b>=<b><i>D</i></b>·<b><i>m</i></b>      (7) </p>
+                </div>
+                <div class="p1">
+                    <p id="68">其中, <b><i>m</i></b>= (<i>m</i><sub>1</sub>, <i>m</i><sub>2</sub>, …, <i>m</i><sub><i>l</i></sub>) <sup>T</sup>。</p>
+                </div>
+                <div class="p1">
+                    <p id="69"><b>定义5</b> (DOM重心) 由重心矩阵<b><i>G</i></b>可以计算DOM重心, 该重心以较大概率距离这<i>L</i>个节点最近。从用户的角度来说, 该节点通常是整个正文篇章中最长且比较居中的部分。重心计算过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="70" class="code-formula">
+                        <mathml id="70"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>g</mi><mo>=</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mtext>a</mtext><mtext>r</mtext><mtext>g</mtext><mtext>m</mtext><mtext>i</mtext><mtext>n</mtext></mrow></mstyle><mi>j</mi></munder><mo stretchy="false"> (</mo><mrow><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">g</mi><msubsup><mrow></mrow><mi>j</mi><mtext>Τ</mtext></msubsup><mo stretchy="false">∥</mo></mrow><msub><mrow></mrow><mn>1</mn></msub><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>8</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="71">其中, <i>j</i>=0, 1, …, <i>l</i>, <i>g</i>是这<i>L</i>个节点的聚类中心, 同时也是DOM的重心。</p>
+                </div>
+                <div class="p1">
+                    <p id="72"><b>定义6</b> (正样本距离向量) 定义<b><i>dg</i></b><sup>T</sup>是重心<i>g</i>在距离矩阵<b><i>D</i></b>中所对应的行向量, 则称<b><i>dg</i></b><sup>T</sup>为正样本距离向量, 其每一个分量都是<i>g</i>与其他<i>L</i>个DOM节点的距离。</p>
+                </div>
+                <div class="p1">
+                    <p id="73"><b><i>dg</i></b><sup>T</sup>= (<i>dg</i><sub>1</sub>, <i>dg</i><sub>2</sub>, …, <i>dg</i><sub><i>l</i></sub>) <sup>T</sup>      (9) </p>
+                </div>
+                <div class="p1">
+                    <p id="74">将这<i>L</i>个DOM节点看成一个聚类, 聚类的中心就是重心<i>g</i>, 可以通过<b><i>dg</i></b><sup>T</sup>计算每个DOM节点与<i>g</i>的距离, 在此基础上确定这个聚类的半径, 即该模型的半径。</p>
+                </div>
+                <div class="p1">
+                    <p id="75"><b>定义7</b> (负样本距离向量) 定义该DOM对应的网页中所有的网页链接为DOM节点, 以这些节点为负样本可计算节点与重心<i>g</i>的距离, 用行向量<b><i>eg</i></b><sup>T</sup>表示, 通常这些链接节点在DOM中距离重心<i>g</i>较远。假设这些链接节点的数量为<i>M</i>, 则有:</p>
+                </div>
+                <div class="p1">
+                    <p id="76"><b><i>eg</i></b><sup>T</sup>= (<i>eg</i><sub>1</sub>, <i>eg</i><sub>2</sub>, …, <i>eg</i><sub><i>m</i></sub>) <sup>T</sup>      (10) </p>
+                </div>
+                <div class="p1">
+                    <p id="77"><b>定义8</b> (最小二乘半径) DOM以<i>g</i>为聚类中心, 以<i>r</i>′为最小二乘半径, 其计算过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="78" class="code-formula">
+                        <mathml id="78"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msup><mi>r</mi><mo>′</mo></msup><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>i</mi><mi>L</mi></munderover><mi>d</mi></mstyle><mi>g</mi><msub><mrow></mrow><mi>i</mi></msub><mo>+</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>j</mi><mi>Μ</mi></munderover><mi>e</mi></mstyle><mi>g</mi><msub><mrow></mrow><mi>j</mi></msub></mrow><mrow><mi>L</mi><mo>+</mo><mi>Μ</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mrow><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">d</mi><mi mathvariant="bold-italic">g</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mo stretchy="false">∥</mo></mrow><msub><mrow></mrow><mn>1</mn></msub><mo>+</mo><mrow><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">e</mi><mi mathvariant="bold-italic">g</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mo stretchy="false">∥</mo></mrow><msub><mrow></mrow><mn>1</mn></msub></mrow><mrow><mi>L</mi><mo>+</mo><mi>Μ</mi></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>1</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="79"><b>定义9</b> (DOM重心半径) DOM以<i>g</i>为聚类中心, 以<i>gr</i>为聚类半径, 其计算过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="80" class="code-formula">
+                        <mathml id="80"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>g</mi><mi>r</mi><mo>=</mo><mi>θ</mi><mo>⋅</mo><msup><mi>r</mi><mo>′</mo></msup><mo>=</mo><mi>θ</mi><mo>⋅</mo><mfrac><mrow><mrow><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">d</mi><mi mathvariant="bold-italic">g</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mo stretchy="false">∥</mo></mrow><msub><mrow></mrow><mn>1</mn></msub><mo>+</mo><mrow><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">e</mi><mi mathvariant="bold-italic">g</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mo stretchy="false">∥</mo></mrow><msub><mrow></mrow><mn>1</mn></msub></mrow><mrow><mi>L</mi><mo>+</mo><mi>Μ</mi></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>2</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="81">其中, <i>θ</i>是半径缩放因子且<i>θ</i>∈ (0, 1]。</p>
+                </div>
+                <div class="p1">
+                    <p id="82"><b>定义10</b> (半径缩放因子) 用<i>θ</i>表示半径缩放因子, 通常其值取0.50～0.75时, 效果较好。本文假设负样本是网页中的链接节点, 但是在真实情况下负样本不全是网页链接节点, 还有一些为包含短文本的节点且这些文本与正文无关, 如发布时间、网站来源、版权、编辑等。这些短文本节点比网页链接节点距离聚类重心相对更近。由于网页链接节点的数量通常多于文本节点, 导致优化的最小二乘半径更加靠近网页链接节点, 因此通过优化目标函数所求出的最优半径需要乘以一个半径缩放因子<i>θ</i>来进一步提高抽取正文的准确率。图1所示为实验过程中一个网页的聚类示意图, 其中圆点代表文本节点 (正样本) , 矩形节点代表网页链接节点 (负样本) , <i>θ</i>=0.65。由图1可以看出DOM重心半径可以隔离正负样本。</p>
+                </div>
+                <div class="area_img" id="83">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906033_083.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 网页半径聚类示意图" src="Detail/GetImg?filename=images/JSJC201906033_083.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 网页半径聚类示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906033_083.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="84" name="84">2.3 DOM重心半径模型推导</h4>
+                <div class="p1">
+                    <p id="85">设<i>H</i> (<i>r</i>) 是需要优化的目标函数, 以<i>g</i>为聚类中心并以<i>r</i>为聚类半径时, <i>H</i> (<i>r</i>) 为<i>r</i>距离正负样本的距离的平方和。优化的目标是<i>H</i> (<i>r</i>) 取最小值, 这时<i>r</i>通常在正负样本节点之间相对居中的位置, 并且可将正负样本分离, 对<i>H</i> (<i>r</i>) 求导并使其值为0。</p>
+                </div>
+                <div class="p1">
+                    <p id="86" class="code-formula">
+                        <mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>Η</mi><mo stretchy="false"> (</mo><mi>r</mi><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>i</mi><mi>L</mi></munderover><mrow><mo stretchy="false"> (</mo><mi>r</mi><mo>-</mo><mi>d</mi><mi>g</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo></mrow></mstyle><msup><mrow></mrow><mn>2</mn></msup><mo>+</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>j</mi><mi>Μ</mi></munderover><mrow><mo stretchy="false"> (</mo><mi>r</mi><mo>-</mo><mi>e</mi><mi>g</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo></mrow></mstyle><msup><mrow></mrow><mn>2</mn></msup><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>3</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><msup><mi>r</mi><mo>′</mo></msup><mo>=</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mtext>a</mtext><mtext>r</mtext><mtext>g</mtext><mtext>m</mtext><mtext>i</mtext><mtext>n</mtext><mspace width="0.25em" /></mrow></mstyle><mi>r</mi></munder><mo stretchy="false">[</mo><mi>Η</mi><mo stretchy="false"> (</mo><mi>r</mi><mo stretchy="false">) </mo><mo stretchy="false">]</mo><mo>⇔</mo><mfrac><mrow><mo>∂</mo><mi>Η</mi><mo stretchy="false"> (</mo><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false">) </mo></mrow><mrow><mo>∂</mo><mi>r</mi></mrow></mfrac><mo>=</mo><mn>0</mn><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>4</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="87">由<i>H</i> (<i>r</i>) 的导数为0推出:</p>
+                </div>
+                <div class="p1">
+                    <p id="88" class="code-formula">
+                        <mathml id="88"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mfrac><mrow><mo>∂</mo><mi>Η</mi><mo stretchy="false"> (</mo><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false">) </mo></mrow><mrow><mo>∂</mo><mi>r</mi></mrow></mfrac><mo>=</mo><mn>0</mn><mo>⇔</mo></mtd></mtr><mtr><mtd><mtext> </mtext><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false"> (</mo><mi>L</mi><mo>+</mo><mi>Μ</mi><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>i</mi><mi>L</mi></munderover><mi>d</mi></mstyle><mi>g</mi><msub><mrow></mrow><mi>i</mi></msub><mo>+</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>j</mi><mi>Μ</mi></munderover><mi>e</mi></mstyle><mi>g</mi><msub><mrow></mrow><mi>i</mi></msub><mo>⇔</mo></mtd></mtr><mtr><mtd><mtext> </mtext><msup><mi>r</mi><mo>′</mo></msup><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>i</mi><mi>L</mi></munderover><mi>d</mi></mstyle><mi>g</mi><msub><mrow></mrow><mi>i</mi></msub><mo>+</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>j</mi><mi>Μ</mi></munderover><mi>e</mi></mstyle><mi>g</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mrow><mi>L</mi><mo>+</mo><mi>Μ</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mrow><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">d</mi><mi mathvariant="bold-italic">g</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mo stretchy="false">∥</mo></mrow><msub><mrow></mrow><mn>1</mn></msub><mo>+</mo><mrow><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">e</mi><mi mathvariant="bold-italic">g</mi><msup><mrow></mrow><mtext>Τ</mtext></msup><mo stretchy="false">∥</mo></mrow><msub><mrow></mrow><mn>1</mn></msub></mrow><mrow><mi>L</mi><mo>+</mo><mi>Μ</mi></mrow></mfrac><mo>⇒</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mi>g</mi><mi>r</mi><mo>=</mo><mi>θ</mi><mo>⋅</mo><msup><mi>r</mi><mo>′</mo></msup></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <h4 class="anchor-tag" id="89" name="89">2.4 正文抽取算法</h4>
+                <div class="p1">
+                    <p id="90">正文抽取算法的具体过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="91"><b>步骤1</b> 对网页进行预处理并转化DOM。</p>
+                </div>
+                <div class="p1">
+                    <p id="92"><b>步骤2</b> 对DOM每一个节点转化特征向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="93"><b>步骤3</b> 使用已训练好的SVM对DOM的特征向量集进行分类, 得出初始文本节点集。</p>
+                </div>
+                <div class="p1">
+                    <p id="94"><b>步骤4</b> 利用DOM重心半径模型求出该网页对应的重心与半径。</p>
+                </div>
+                <div class="p1">
+                    <p id="95"><b>步骤5</b> 计算其余节点与重心的距离, 将距离小于半径的节点加入初始文本节点集。</p>
+                </div>
+                <div class="p1">
+                    <p id="96"><b>步骤6</b> 提取初始文本节点集中每个节点所对应的文本, 该文本即为正文。</p>
+                </div>
+                <div class="p1">
+                    <p id="97">算法伪代码如下:</p>
+                </div>
+                <div class="area_img" id="154">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201906033_15400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="115" name="115" class="anchor-tag">3 实验结果与分析</h3>
+                <div class="p1">
+                    <p id="116">本文实验数据从10个新闻网站通过爬虫抓取, 每个网站抓取100个网页进行测试, 这些网站包括QQ新闻、中国汽车新闻网、新华网、南方网等。通过本文算法抽取的正文与标准正文对比, 结果如表1所示。</p>
+                </div>
+                <div class="area_img" id="117">
+                    <p class="img_tit"><b>表1 各网站新闻正文抽取测试结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="117" border="1"><tr><td>数据源</td><td>网页总数</td><td>正确数量</td><td>错误数量</td></tr><tr><td>news.cnhubei.com</td><td>100</td><td>97</td><td>3</td></tr><tr><td><br />news.cnhan.com</td><td>100</td><td>98</td><td>3</td></tr><tr><td><br />southcn.com</td><td>100</td><td>98</td><td>2</td></tr><tr><td><br />news.qq.com</td><td>100</td><td>99</td><td>1</td></tr><tr><td><br />xinhuanet.com</td><td>100</td><td>100</td><td>0</td></tr><tr><td><br />qdaily.com</td><td>100</td><td>97</td><td>3</td></tr><tr><td><br />news.cncn.com</td><td>100</td><td>98</td><td>2</td></tr><tr><td><br />yangtse.com</td><td>100</td><td>97</td><td>3</td></tr><tr><td><br />cnautonews.com</td><td>100</td><td>98</td><td>2</td></tr><tr><td><br />news.jstv.com</td><td>100</td><td>98</td><td>2</td></tr><tr><td><br />合计</td><td>1 000</td><td>979</td><td>21</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="118">由表1可知, 网页总数为1 000个, 正确抽取979个, 错误抽取21个, 综合抽取准确率为97%。需要说明的是, 将本文算法抽取的正文与标准正文对比, 如果相差非常小, 通常是抽取出来的正文比标准正文多几个字符, 即判定其为正确抽取。表2给出本文算法与其他抽取算法的对比结果。从表1和表2可以看出, 本文算法具有良好的泛化能力, 同时也保持了准确率。</p>
+                </div>
+                <div class="area_img" id="119">
+                    <p class="img_tit"><b>表2 5种抽取算法测试结果对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="119" border="1"><tr><td><br />抽取算法</td><td>准确率</td></tr><tr><td><br />本文算法</td><td>0.97</td></tr><tr><td><br />统计抽取</td><td>0.95</td></tr><tr><td><br />内容相似抽取</td><td>0.95</td></tr><tr><td><br />FFT抽取</td><td>0.91</td></tr><tr><td><br />密度抽取</td><td>0.94</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="120">另外, 图2给出该算法在运行过程中的一些参数统计, 以其中6个网站的网页为数据源绘制直方图。以每个网页的DOM重心半径为横坐标, 以该区间网页的数量为纵坐标, 横坐标的取值范围是4.0～8.5, 步长为0.02。从图2可以看出, 这些直方图取值稳定在一定的区间内, 类似于高斯分布。</p>
+                </div>
+                <div class="area_img" id="121">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906033_121.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 各网站DOM重心半径直方图" src="Detail/GetImg?filename=images/JSJC201906033_121.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 各网站DOM重心半径直方图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906033_121.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="122">假设各个网站的网页DOM重心半径服从于某个高斯分布。通过样本计算对数释然函数得出:</p>
+                </div>
+                <div class="p1">
+                    <p id="123" class="code-formula">
+                        <mathml id="123"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>μ</mi><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>i</mi><mi>Ν</mi></munderover><mi>g</mi></mstyle><mi>r</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mi>Ν</mi></mfrac><mo>, </mo><mi>σ</mi><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>i</mi><mi>Ν</mi></munderover><mrow><mo stretchy="false"> (</mo><mi>g</mi><mi>r</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mi>μ</mi><mo stretchy="false">) </mo></mrow></mstyle><msup><mrow></mrow><mn>2</mn></msup></mrow><mrow><mi>Ν</mi><mo>-</mo><mn>1</mn></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>5</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="124">其中, <i>gr</i><sub><i>i</i></sub>是每个网页的DOM重心半径, <i>N</i>=1 000分别代表1 000个网页。</p>
+                </div>
+                <div class="p1">
+                    <p id="125">根据式 (15) 计算得出<i>μ</i>=6.32 , <i>σ</i>=0.649, 通过最小化<i>L</i> (<i>μ</i>, <i>σ</i>) 得出该高斯分布的均值和方差的估计, 具体过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="126" class="code-formula">
+                        <mathml id="126"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>g</mi><mi>r</mi><mo>∼</mo><mi>Ν</mi><mo stretchy="false"> (</mo><mi>μ</mi><mo>, </mo><mi>σ</mi><mo stretchy="false">) </mo><mo>=</mo><mi>Ν</mi><mo stretchy="false"> (</mo><mn>6</mn><mo>.</mo><mn>3</mn><mn>2</mn><mo>, </mo><mn>0</mn><mo>.</mo><mn>6</mn><mn>4</mn><mn>9</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>Ρ</mi><mo stretchy="false"> (</mo><mi>g</mi><mi>r</mi><mo>&lt;</mo><mn>7</mn><mrow><mo>|</mo><mrow><mi>μ</mi><mo>=</mo><mn>6</mn><mo>.</mo><mn>3</mn><mn>2</mn><mo>, </mo><mi>σ</mi><mo>=</mo><mn>0</mn><mo>.</mo><mn>6</mn><mn>4</mn><mn>9</mn><mo stretchy="false">) </mo><mo>=</mo><mn>0</mn><mo>.</mo><mn>8</mn><mn>5</mn></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>6</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="127">由于每次都要计算网页链接点与重心<i>gr</i>的距离耗时较长, 且已推断出<i>gr</i>服从于某个高斯分布, 其方差不大, 因此可通过计算该分布的累积函数来确定一个阈值, 并用该阈值代替所有网页的DOM重心半径以提高计算效率。通过式 (16) 得出当半径阈值小于7时, 总体网页重心半径小于7的概率高达0.85。</p>
+                </div>
+                <div class="p1">
+                    <p id="128">由以上结论, 可简化算法步骤:</p>
+                </div>
+                <div class="p1">
+                    <p id="129"><b>步骤1</b> 对网页进行预处理并转化DOM。</p>
+                </div>
+                <div class="p1">
+                    <p id="130"><b>步骤2</b> 对DOM的每一个节点转化特征向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="131"><b>步骤3</b> 使用已训练好的SVM对DOM的特征向量集进行分类, 得出初始文本节点集。</p>
+                </div>
+                <div class="p1">
+                    <p id="132"><b>步骤4</b> 使用DOM重心半径模型求出该网页对应的重心, 并设重心半径为7。</p>
+                </div>
+                <div class="p1">
+                    <p id="133"><b>步骤5</b> 计算其余节点与重心的距离, 将距离小于半径的节点加入初始文本节点集。</p>
+                </div>
+                <div class="p1">
+                    <p id="134"><b>步骤6</b> 提取初始文本节点集中每个节点所对应的文本, 即为正文文本。</p>
+                </div>
+                <div class="p1">
+                    <p id="135">图3给出半径缩放因子<i>θ</i>对准确率的影响情况。其中, <i>θ</i>的取值范围是0～1, 步长为0.05。从图3可以看出, <i>θ</i>取值为0.5～0.7时, 准确率相对较高。</p>
+                </div>
+                <div class="area_img" id="136">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906033_136.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3θ对3个网站抽取准确率的影响" src="Detail/GetImg?filename=images/JSJC201906033_136.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3</b><i>θ</i><b>对3个网站抽取准确率的影响</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906033_136.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="137" name="137" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="138">本文提出一种基于SVM与DOM重心半径模型的Web正文提取算法。利用SVM对DOM树节点进行粗分类, 提取文本块节点并计算重心半径。通过DOM重心半径模型进行二次提取。实验结果表明, 该算法具有良好的泛化能力和较高的准确率, 准确率平均值达到0.97。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Information Extraction from World Wide Web: A Survey">
+
+                                <b>[1]</b> IKVIK L.Information extraction from World Wide Web:a survey[M].Oslo, Norway:Norweigan Computing Center, 1999:8-9.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The nature of statistical learning theory">
+
+                                <b>[2]</b> VAPNIK V N.The nature of statistical learning theory[M].Berlin, Germany:Springer, 1995.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Semistructured Data:The TSIMMIS Experience">
+
+                                <b>[3]</b> HAMMER J, MCHUGH J, GARCIA-MOLIN H.Semistructured data:the TSIMMIS experience[C]//Proceedings of East-European Conference on Advances in Databases and Information Systems.Swindon, UK:British Computer Society, 1997:1-8.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=XWRAP:An XML-enable Wrapper Construction System for Web Information Sources">
+
+                                <b>[4]</b> LIU Ling, PU Caltm, HAN Wei.XWRAP:an XML-enabled wrapper construction system for Web information sources[C]//Proceedings of International Conference on Data Engineering.Washington D.C., USA:IEEE Press, 2000:611-621.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=RoadRunner: automatic data extraction from data-intensive web sites">
+
+                                <b>[5]</b> CRESCENZI V, MECCA G, MERIALDO P.RoadRunner:automatic data extraction from data-intensive web sites[C]//Proceedings of ACM SIGMOD International Conference on Management of Data.New York, USA:ACM Press, 2002:624-624.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Fact or fiction:content classification for digital libraries">
+
+                                <b>[6]</b> FINN A, KUSHMERICK N, SMYTH B.Fact or fiction:content classification for digital libraries[EB/OL].[2018-03-01].https://www.ercim.eu/publication/ws-proceedings/DelNoe02/AidanFinn.pdf.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Separating XHTML content from navigation clutter using DOM-structure block analysis">
+
+                                <b>[7]</b> MANTRATZIS C, ORGUN M, CASSIDY S.Separating XHTML content from navigation clutter using DOM-structure block analysis[C]//Proceedings of ACM Conference on Hypertext and Hypermedia.New York, USA:ACM Press, 2005:145-147.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS200405002&amp;v=Mjc1NjI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeW5sVkx2TUtDallmYkc0SHRYTXFvOUZab1FLREg=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 孙承杰, 关毅.基于统计的网页正文信息抽取方法的研究[J].中文信息学报, 2004, 18 (5) :18-23.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000085430&amp;v=MjA2NzE9TmlmSVk3SzdIdGpOcjQ5RlpPTUtDSDg1b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTG5JSVY0VGJoWQ==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> SONG Ruihua, LIU Haifeng, WEN Jirong, et al.Learning important models for Web page blocks based on layout and content analysis[J].ACM SIGKDD Explorations Newsletter, 2004, 6 (2) :14-23.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS200606000&amp;v=MTE1MjRmYkc0SHRmTXFZOUZaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeW5sVkx2TUtDalk=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 胡国平, 张巍, 王仁华.基于双层决策的新闻网页正文精确抽取[J].中文信息学报, 2006, 20 (6) :1-9.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Adaptive web-page content identification">
+
+                                <b>[11]</b> GIBSON J, WELLNER B, LUBAR S.Adaptive Web-page content identification[C]//Proceedings of ACM International Workshop on Web Information and Data Management.New York, USA:ACM Press, 2007:105-112.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=VIPS:a vision based page segmentation algorithm">
+
+                                <b>[12]</b> CAI Deng, YU Shipeng, WHEN Jirong, et al.VIPS:a vision based page segmentation algorithm[EB/OL].[2018-03-01].https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/tr-2003-79.pdf.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSGG200730045&amp;v=MTI4MjNVUkxPZVplUm9GeW5sVkx2TUx6N01hYkc0SHRiUHI0OUJZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 李蕾, 王劲林, 白鹤, 等.基于FFT的网页正文提取算法研究与实现[J].计算机工程与应用, 2007, 43 (30) :148-151.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MSSB201307010&amp;v=MjQ1NTBMTXFJOUVaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeW5sVkx2TUtEN1liTEc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 朱泽德, 李淼, 张健, 等.基于文本密度模型的Web正文抽取[J].模式识别与人工智能, 2013, 26 (7) :667-672.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201706021&amp;v=MTYyMTFNcVk5SFpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5bmxWTHZNTHo3QmJiRzRIOWI=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 王辉, 郁波, 洪宇, 等.基于知识图谱的Web信息抽取系统[J].计算机工程, 2017, 43 (6) :118- 124.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201906033" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201906033&amp;v=MjAzNjBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5bmxWTHZNTHo3QmJiRzRIOWpNcVk5R1o0UUs=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

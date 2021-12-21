@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130374348582500%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201906018%26RESULT%3d1%26SIGN%3d1fS9fbzP%252fxxPhngrOrsbChhMxLs%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201906018&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201906018&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201906018&amp;v=MTczMzVoVmIvTkx6N0JiYkc0SDlqTXFZOUViSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GaUQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#35" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#39" data-title="1 硬件预取机制 ">1 硬件预取机制</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="2 双倍步长流预取策略 ">2 双倍步长流预取策略</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#51" data-title="3 预取策略的实现与评测 ">3 预取策略的实现与评测</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#52" data-title="3.1 预取策略实现">3.1 预取策略实现</a></li>
+                                                <li><a href="#60" data-title="3.2 性能评测">3.2 性能评测</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#75" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#42" data-title="&lt;b&gt;图1 3种预取机制的硬件实现过程&lt;/b&gt;"><b>图1 3种预取机制的硬件实现过程</b></a></li>
+                                                <li><a href="#46" data-title="&lt;b&gt;表1 传统流预取机制性能参数&lt;/b&gt;"><b>表1 传统流预取机制性能参数</b></a></li>
+                                                <li><a href="#47" data-title="&lt;b&gt;表2 双倍步长流预取机制性能参数&lt;/b&gt;"><b>表2 双倍步长流预取机制性能参数</b></a></li>
+                                                <li><a href="#56" data-title="&lt;b&gt;图2 预取部件微结构&lt;/b&gt;"><b>图2 预取部件微结构</b></a></li>
+                                                <li><a href="#59" data-title="&lt;b&gt;图3 预取缓冲条目状态转换关系&lt;/b&gt;"><b>图3 预取缓冲条目状态转换关系</b></a></li>
+                                                <li><a href="#63" data-title="&lt;b&gt;图4 在不同预取策略下运行SPEC2006各应用的性能提升结果&lt;/b&gt;"><b>图4 在不同预取策略下运行SPEC2006各应用的性能提升结果</b></a></li>
+                                                <li><a href="#65" data-title="&lt;b&gt;表3 部分SPEC2006应用的各级Cache Miss率&lt;/b&gt; %"><b>表3 部分SPEC2006应用的各级Cache Miss率</b> %</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" WULF W A, MCKEE S A.Hitting the memory wall:implications of the obvious[J].ACM SIGARCH Computer Architecture News, 1995, 23 (1) :20-24." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000043918&amp;v=MDMwNjhIdGpOcjQ5RlpPOE1CWDB4b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTG5KS0ZvU2FoWT1OaWZJWTdLNw==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         WULF W A, MCKEE S A.Hitting the memory wall:implications of the obvious[J].ACM SIGARCH Computer Architecture News, 1995, 23 (1) :20-24.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" SMITH J E.Decoupled access/execute computer archi-tecture[J].ACM SIGARCH Computer Architecture News, 1982, 10 (3) :112-119." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000042861&amp;v=MjQwMTlGWk84TkJIbzRvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMbkpLRm9TYWhZPU5pZklZN0s3SHRqTnI0OQ==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         SMITH J E.Decoupled access/execute computer archi-tecture[J].ACM SIGARCH Computer Architecture News, 1982, 10 (3) :112-119.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" GUO Yan, NARAYANAN P, BENNASER M A, et al.Energy-efficient hardware data prefetching[J].IEEE Transactions on Very Large Scale Integration Systems, 2011, 19 (2) :250-263." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Energy-efficient hardware data prefetching">
+                                        <b>[3]</b>
+                                         GUO Yan, NARAYANAN P, BENNASER M A, et al.Energy-efficient hardware data prefetching[J].IEEE Transactions on Very Large Scale Integration Systems, 2011, 19 (2) :250-263.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" GINDELE J D.Buffer block prefetching method[J].IBM Technical Disclosure Bulletin, 1977, 20 (2) :696-697." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Buffer Block Prefetching Method">
+                                        <b>[4]</b>
+                                         GINDELE J D.Buffer block prefetching method[J].IBM Technical Disclosure Bulletin, 1977, 20 (2) :696-697.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" CHEN Tienfu, BAER J L.Effective hardware-based data prefetching for high-performance processors[J].IEEE Transaction on Computers, 1995, 44 (5) :609-623." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Effective hardware-based data prefetching for high-performance processors">
+                                        <b>[5]</b>
+                                         CHEN Tienfu, BAER J L.Effective hardware-based data prefetching for high-performance processors[J].IEEE Transaction on Computers, 1995, 44 (5) :609-623.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" PINTER S S, YOAZ A.Tango:a hardware-based data prefetching technique for superscalar processors[C]//Proceedings of the 29th Annual ACM/IEEE International Symposium on Microarchitecture.Washington D.C., USA:IEEE Computer Society, 1996:214-225." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Tango:a hardware-based data prefetching technique for superscalar processors">
+                                        <b>[6]</b>
+                                         PINTER S S, YOAZ A.Tango:a hardware-based data prefetching technique for superscalar processors[C]//Proceedings of the 29th Annual ACM/IEEE International Symposium on Microarchitecture.Washington D.C., USA:IEEE Computer Society, 1996:214-225.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 靳强, 郭阳, 鲁健壮.一种步长自适应二级Cache预取机制[J].计算机工程与应用, 2011, 47 (29) :56-59." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSGG201129019&amp;v=MTI4MTA1NE8zenFxQnRHRnJDVVJMT2VaZVJvRmlEaFZiL01MejdNYWJHNEg5RE9wbzlFYllRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         靳强, 郭阳, 鲁健壮.一种步长自适应二级Cache预取机制[J].计算机工程与应用, 2011, 47 (29) :56-59.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" BAER J L, CHEN Tienfu.An effective on-chip preloading scheme to reduce data access penalty[C]//Proceedings of 1991 ACM/IEEE Conference on Supercomputing.New York, USA:ACM Press, 1991:176-186." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=An effective on-chip preloading scheme to reduce data access penalty">
+                                        <b>[8]</b>
+                                         BAER J L, CHEN Tienfu.An effective on-chip preloading scheme to reduce data access penalty[C]//Proceedings of 1991 ACM/IEEE Conference on Supercomputing.New York, USA:ACM Press, 1991:176-186.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" JOUPPI N P.Improving directed-mapped cache performance by addition of small fully-associative cache and prefetching buffers[J].ACM SIGARCH Computer Architecture News, 1990, 18 (3) :363-373." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000043551&amp;v=MTUxMzZlcnFRVE1ud1plWnVIeWptVUxuSktGb1NhaFk9TmlmSVk3SzdIdGpOcjQ5RlpPOE1DWGs0b0JNVDZUNFBRSC9pclJkRw==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         JOUPPI N P.Improving directed-mapped cache performance by addition of small fully-associative cache and prefetching buffers[J].ACM SIGARCH Computer Architecture News, 1990, 18 (3) :363-373.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" ALACHARLS S, KESSLER R E.Evaluating stream buffer as a secondary cache replacement[J].ACM SIGARCH Computer Architecture News, 1994, 22 (2) :24-33." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000043869&amp;v=MDk2OTAvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSktGb1NhaFk9TmlmSVk3SzdIdGpOcjQ5RlpPOE1CSG93b0JNVDZUNFBRSA==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         ALACHARLS S, KESSLER R E.Evaluating stream buffer as a secondary cache replacement[J].ACM SIGARCH Computer Architecture News, 1994, 22 (2) :24-33.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" JOSEPH D, GRUNWALD D.Prefetching using Markov predictors[J].ACM SIGARCH Computer Architecture News, 1997, 25 (2) :252-263." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000044060&amp;v=MjAwMTA4TERIbzVvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMbkpLRm9TYWhZPU5pZklZN0s3SHRqTnI0OUZaTw==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         JOSEPH D, GRUNWALD D.Prefetching using Markov predictors[J].ACM SIGARCH Computer Architecture News, 1997, 25 (2) :252-263.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" HU Zhigang, MARTONOSI M, KAXIRAS S.TCP:tag correlating prefetchers[C]//Proceedings of International Symposium on High-performance Computer Architecture.Washington D.C., USA:IEEE Press, 2003:317-326." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=TCP:tag correlating prefetchers">
+                                        <b>[12]</b>
+                                         HU Zhigang, MARTONOSI M, KAXIRAS S.TCP:tag correlating prefetchers[C]//Proceedings of International Symposium on High-performance Computer Architecture.Washington D.C., USA:IEEE Press, 2003:317-326.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" NESBIT K J, DHODAPKAR A S, SMITH J E.AC/DC:an adaptive data cache prefetcher[C]//Proceedings of the 13th International Conference on Parallel Architectures and Compilation Techniques.Washington D.C., USA:IEEE Computer Society, 2004:135-145." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=AC/DC:An adaptive data cache prefetcher">
+                                        <b>[13]</b>
+                                         NESBIT K J, DHODAPKAR A S, SMITH J E.AC/DC:an adaptive data cache prefetcher[C]//Proceedings of the 13th International Conference on Parallel Architectures and Compilation Techniques.Washington D.C., USA:IEEE Computer Society, 2004:135-145.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" LAI A C, FIDE C, FALSAFI B.Dead-block predictionand dead-block correlating prefetchers[J].ACM SIGARCH Computer Architecture News, 2001, 29 (2) :144-154." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000010896&amp;v=Mjc3NjNQQkhVL29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSktGb1NhaFk9TmlmSVk3SzdIdGpOcjQ5RlpPbw==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         LAI A C, FIDE C, FALSAFI B.Dead-block predictionand dead-block correlating prefetchers[J].ACM SIGARCH Computer Architecture News, 2001, 29 (2) :144-154.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 贾迅, 翁志强, 胡向东.基于流访问特征的多级硬件预取[J].计算机工程, 2016, 42 (1) :51-55." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201601010&amp;v=MDY2MTdJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0ZpRGhWYi9NTHo3QmJiRzRIOWZNcm85RVo=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         贾迅, 翁志强, 胡向东.基于流访问特征的多级硬件预取[J].计算机工程, 2016, 42 (1) :51-55.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" 贾迅, 尹飞, 胡向东.申威处理器硬件预取技术的实现[J].计算机工程与科学, 2015, 37 (11) :2013-2017." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJK201511004&amp;v=MjAyNDdUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRmlEaFZiL01MejdCWmJHNEg5VE5ybzlGWUlRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         贾迅, 尹飞, 胡向东.申威处理器硬件预取技术的实现[J].计算机工程与科学, 2015, 37 (11) :2013-2017.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+    <div class="head-tag">   
+            <p>
+               <b> 网络首发时间: 2018-11-01 15:57:54</b>
+            </p>     
+    </div>
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(06),115-118+126 DOI:10.19678/j.issn.1000-3428.0051185            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于双倍步长数据流的硬件预取机制</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E9%94%A6%E6%B6%B5&amp;code=40276364&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王锦涵</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%8E%E4%BF%8A&amp;code=38586758&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">李俊</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%B7%AF%E5%86%AC%E5%86%AC&amp;code=40276365&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">路冬冬</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E6%B5%B7%E9%BE%99&amp;code=40276366&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张海龙</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9C%B1%E8%8B%B1&amp;code=22310937&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">朱英</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E9%AB%98%E6%80%A7%E8%83%BD%E9%9B%86%E6%88%90%E7%94%B5%E8%B7%AF%E8%AE%BE%E8%AE%A1%E4%B8%AD%E5%BF%83&amp;code=0654819&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海高性能集成电路设计中心</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>硬件数据预取技术可以有效提升处理器的访存性能, 但传统流预取策略存在预取不及时的问题。为此, 提出一种双倍步长流预取策略, 并设计对应的预取部件结构。预取部件自动检测数据流的固定步长并将该步长扩大为原有的2倍, 以计算预取地址。实验结果表明, 加入该预取部件后, 运行SPEC2006测试集的整数应用与浮点应用时, 处理器性能最高可分别提升45%与57%, 针对Cache Miss率较高的应用, 该预取部件可以有效隐藏访存延时。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%A1%AC%E4%BB%B6%E9%A2%84%E5%8F%96&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">硬件预取;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8F%8C%E5%80%8D%E6%AD%A5%E9%95%BF&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">双倍步长;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B5%81%E9%A2%84%E5%8F%96&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">流预取;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=SPEC2006%E6%B5%8B%E8%AF%95%E9%9B%86&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">SPEC2006测试集;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Cache%20Miss%E7%8E%87&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Cache Miss率;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    王锦涵 (1993—) , 男, 硕士研究生, 主研方向为高性能处理器设计;E-mail: pkuwangjh@163.com;
+                                </span>
+                                <span>
+                                    李俊, 工程师;;
+                                </span>
+                                <span>
+                                    路冬冬, 工程师;;
+                                </span>
+                                <span>
+                                    张海龙, 助理工程师;;
+                                </span>
+                                <span>
+                                    朱英, 高级工程师。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-04-12</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>核高基重大专项“超级计算机处理器研制” (20172X01028101-001);</span>
+                    </p>
+            </div>
+                    <h1><b>Hardware Prefetching Mechanism Based on Double Step Data Stream</b></h1>
+                    <h2>
+                    <span>WANG Jinhan</span>
+                    <span>LI Jun</span>
+                    <span>LU Dongdong</span>
+                    <span>ZHANG Hailong</span>
+                    <span>ZHU Ying</span>
+            </h2>
+                    <h2>
+                    <span>Shanghai High Performance IC Design Center</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Hardware data prefetching technology can effectively improve the memory access performance of processors, but the traditional stream prefetching strategy has the problem of untimely prefetching.Therefore, a double step stream prefetching strategy is proposed, and the corresponding prefetching component structure is designed.The prefetching component automatically detects the fixed step size of the data stream and enlarges the step size to twice of the original one to calculate the prefetching address.Experimental results show that the performance of the processor can be improved by 45% and 57% respectively when SPEC2006 test set integer application and floating-point application are run with the prefetching component.For applications with high Cache Miss rate, the prefetch component can effectively hide the memory access latency.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=hardware%20prefetching&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">hardware prefetching;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=double%20step&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">double step;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=stream%20prefetching&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">stream prefetching;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=SPEC2006%20test%20set&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">SPEC2006 test set;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Cache%20Miss%20rate&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Cache Miss rate;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-04-12</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="35" name="35" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="36">处理器的计算速度与存储器的访问速度存在巨大差异, 这导致了“存储墙”问题<citation id="77" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。如今, 随着计算机技术的发展, “存储墙”问题日益突出, 已成为处理器性能提升的主要影响因素。针对“存储墙”问题, 多种解决方案被提出, 包括超标量技术、乱序执行技术等。其中, Cache是应用最广泛的技术之一。Cache技术利用程序局域性原理, 将最近经常访问的数据装入速度较快的Cache中, 处理器可以直接从其中存取数据, 从而缩短了访存延时。但是, 一旦处理器所需数据不在Cache中, 处理器不得不从更低层次的存储结构中获取数据, 这将大幅增长访存延时。</p>
+                </div>
+                <div class="p1">
+                    <p id="37">数据预取技术将未来一段时间内可能用到的数据提前装入Cache中, 从而提升Cache的访问命中率, 并在很大程度上缩短访存延时。数据预取技术根据实现方式可以分为软件预取与硬件预取。软件预取通过在程序中插入预取指令或优化编译器等方式进行实现, 硬件预取则在硬件中加入预取部件, 由预取部件根据访存数据流自动进行预取操作。目前, 国外主流处理器, 如Intel、Power、ARM、AMD等, 均实现了硬件预取机制并取得较好的效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="38">本文提出一种双倍步长的流预取策略, 并设计预取部件的组成结构, 以更好地隐藏访存延时, 提升高性能处理器的访存性能。</p>
+                </div>
+                <h3 id="39" name="39" class="anchor-tag">1 硬件预取机制</h3>
+                <div class="p1">
+                    <p id="40">目前, 学者们对硬件预取进行了广泛研究, 并提出多种硬件预取机制, 包括针对规则访存行为的顺序预取、跨步预取、流预取, 以及针对不规则访存行为的关联预取等。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">顺序预取机制<citation id="79" type="reference"><link href="5" rel="bibliography" /><link href="7" rel="bibliography" /><link href="9" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>利用程序的局域性原理, 预取相邻的Cache行。该机制算法简单, 且在多数情况下能取得较好的效果。跨步预取<citation id="80" type="reference"><link href="11" rel="bibliography" /><link href="13" rel="bibliography" /><link href="15" rel="bibliography" /><sup>[<a class="sup">5</a>,<a class="sup">6</a>,<a class="sup">7</a>]</sup></citation>针对固定步长的访存地址进行预取, 其在数组、矩阵运算等高性能计算领域具有广泛应用<citation id="78" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>。在硬件实现方面, 跨步预取通常使用如图1 (a) 所示的访问预取表 (PRT) , PRT的每个条目记录了指令的PC值、访存地址、步长、状态信息。预取部件根据上述信息决定是否发出预取指令与预取地址。流预取<citation id="81" type="reference"><link href="19" rel="bibliography" /><link href="21" rel="bibliography" /><sup>[<a class="sup">9</a>,<a class="sup">10</a>]</sup></citation>根据数据流的访存特征进行预取。数据流访存特征指在一段时间内访存地址出现有规律的增加或减少的情况。在硬件实现方面, 流预取机制通常设置流预取缓冲条目, 如图1 (b) 所示, 每个流预取缓冲条目包含访存地址、步长、状态等信息。预取部件根据流预取缓冲条目的信息识别数据流, 一旦识别出数据流, 则发出预取指令。关联预取<citation id="82" type="reference"><link href="23" rel="bibliography" /><link href="25" rel="bibliography" /><link href="27" rel="bibliography" /><sup>[<a class="sup">11</a>,<a class="sup">12</a>,<a class="sup">13</a>]</sup></citation>利用访存地址之间存在的关联性进行预取, 通常采用Markov图对访存缺失地址进行建模。在硬件实现方面, 关联预取通常采用关联信息表保存访存地址, 如图1 (c) 所示。在实际中, 较大的硬件开销限制了关联预取机制在商用处理器中的应用。</p>
+                </div>
+                <div class="area_img" id="42">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906018_042.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 3种预取机制的硬件实现过程" src="Detail/GetImg?filename=images/JSJC201906018_042.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 3种预取机制的硬件实现过程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906018_042.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="43" name="43" class="anchor-tag">2 双倍步长流预取策略</h3>
+                <div class="p1">
+                    <p id="44">目前, 商用处理器采用流预取机制处理顺序访存和跨步访存行为时取得了较好的效果。但是, 在某国产高性能处理器的使用过程中, 发现了如下问题:在顺序访存或跨步访存模式下, 预取部件虽然可以准确地预测访存地址, 但是, 产生预取指令以及将数据装入Cache均需占据若干时钟周期, 这导致了预取不及时的问题。如果相邻2条访存指令间隔周期很短, 则预取不及时问题将变得非常突出。预取不及时会严重削弱预取部件的功能, 从而影响处理器的整体性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">为解决相邻访存指令间隔周期较短而产生的预取不及时问题, 本文提出一种双倍步长的流预取策略。该策略适用于顺序访问和跨步访问2种访存模式, 预取部件自动检测数据流的固定步长, 并将检测到的步长扩大为原来的2倍以计算预取地址。在该策略下, 对于同一个地址流, 由2个预取条目交替发出预取指令, 从而降低预取不及时发生的概率。表1、表2将传统流预取机制和双倍步长流预取机制进行对比, 由表1、表2可以看出, 双倍步长流预取机制具有一定优势。</p>
+                </div>
+                <div class="area_img" id="46">
+                    <p class="img_tit"><b>表1 传统流预取机制性能参数</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="46" border="1"><tr><td>周期数</td><td>处理器操作</td><td>Cache<br />命中情况</td><td>预取部件<br />操作</td><td>Cache<br />包含的数据</td></tr><tr><td>0</td><td>访存A请求</td><td>不命中</td><td>预取A+1</td><td>—</td></tr><tr><td><br />4</td><td>访存A+1请求</td><td>不命中</td><td>预取A+2</td><td>—</td></tr><tr><td><br />8</td><td>访存A+2请求</td><td>不命中</td><td>预取A+3</td><td>A、A+1</td></tr><tr><td><br />9</td><td>访存A请求重试</td><td>—</td><td>—</td><td>—</td></tr><tr><td><br />10</td><td>访存A+1请求重试</td><td>—</td><td>—</td><td>—</td></tr><tr><td><br />12</td><td>访存A+3请求</td><td>不命中</td><td>预取A+4</td><td>A+2</td></tr><tr><td><br />13</td><td>访存A+2请求重试</td><td>—</td><td>—</td><td>—</td></tr><tr><td><br />16</td><td>访存A+4请求</td><td>不命中</td><td>预取A+5</td><td>A+3</td></tr><tr><td><br />17</td><td>访存A+3请求重试</td><td>—</td><td>—</td><td>—</td></tr><tr><td><br />20</td><td>访存A+5请求</td><td>不命中</td><td>预取A+6</td><td>A+4</td></tr><tr><td><br />21</td><td>访存A+4请求重试</td><td>—</td><td>—</td><td>—</td></tr><tr><td><br />24</td><td>访存A+6请求</td><td>不命中</td><td>预取A+7</td><td>A+5</td></tr><tr><td><br />︙</td><td>︙</td><td>︙</td><td>︙</td><td>︙</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="47">
+                    <p class="img_tit"><b>表2 双倍步长流预取机制性能参数</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="47" border="1"><tr><td>周期数</td><td>处理器操作</td><td>Cache<br />命中情况</td><td>预取部件<br />操作</td><td>Cache<br />包含的数据</td></tr><tr><td>0</td><td>访存A请求</td><td>不命中</td><td>预取A+2</td><td>—</td></tr><tr><td><br />4</td><td>访存A+1请求</td><td>不命中</td><td>预取A+3</td><td>—</td></tr><tr><td><br />8</td><td>访存A+2请求</td><td>命中</td><td>预取A+4</td><td>A、A+2</td></tr><tr><td><br />9</td><td>访存A请求重试</td><td>—</td><td>—</td><td>—</td></tr><tr><td><br />12</td><td>访存A+3请求</td><td>命中</td><td>预取A+5</td><td>A+1、A+3</td></tr><tr><td><br />13</td><td>访存A+2请求重试</td><td>—</td><td>—</td><td>—</td></tr><tr><td><br />16</td><td>访存A+4请求</td><td>命中</td><td>预取A+6</td><td>A+4</td></tr><tr><td><br />20</td><td>访存A+5请求</td><td>命中</td><td>预取A+7</td><td>A+5</td></tr><tr><td><br />24</td><td>访存A+6请求</td><td>命中</td><td>预取A+8</td><td>A+6</td></tr><tr><td><br />︙</td><td>︙</td><td>︙</td><td>︙</td><td>︙</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="48">需要特别说明, 如果采用3倍甚至4倍的步长, 并不会取得更好的效果。原因如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="49">1) 采用3倍、4倍步长的预取策略会占用更多的预取条目, 在硬件实现过程中, 预取条目的数目有限, 同一数据流如果占据较多的预取条目, 必然导致可识别数据流数目降低。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">2) 采用3倍、4倍步长的预取策略会更早地发出预取指令, 预取过早, 可能会出现预取的数据将有用的Cache块替换, 造成“Cache污染”问题<citation id="83" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>。此外, 过早地将数据装入Cache中, 该数据同样可能被其他数据替换, 即不能获取预期的效果。</p>
+                </div>
+                <h3 id="51" name="51" class="anchor-tag">3 预取策略的实现与评测</h3>
+                <h4 class="anchor-tag" id="52" name="52">3.1 预取策略实现</h4>
+                <div class="p1">
+                    <p id="53">为更好地隐藏访存延时, 提升高性能处理器的访存性能, 本文以某高产高性能处理器为实验平台<citation id="84" type="reference"><link href="31" rel="bibliography" /><link href="33" rel="bibliography" /><sup>[<a class="sup">15</a>,<a class="sup">16</a>]</sup></citation>, 重新设计预取部件, 在预取部件中采用双倍步长流预取策略, 同时加入跨步检测模块, 一旦检测到访存地址按照固定步长有规律地递增或递减, 则分配流缓冲条目并产生预取请求。</p>
+                </div>
+                <div class="p1">
+                    <p id="54">处理器设置三级Cache, 预取部件在每个周期可以发出一条预取指令, 该预取指令可以针对一级Cache和二级Cache进行数据预取。一级Cache、二级Cache的预取策略大致相同, 因此, 下文仅对一级预取的工作方式进行描述。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">预取部件的微结构如图2所示。</p>
+                </div>
+                <div class="area_img" id="56">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906018_056.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 预取部件微结构" src="Detail/GetImg?filename=images/JSJC201906018_056.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 预取部件微结构</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906018_056.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="57">在图2中, 虚线方框内为预取部件, 其包括3个部分:预取控制模块PFH_Ctrl, 跨步检测模块Stride_Ctrl, 预取条目模块PFH_Item。PFH_Ctrl模块接收流水线的访存请求, 判断请求是否需要分配预取缓冲条目, 然后向流水线发出预取请求;Stride_Ctrl模块检测访存地址流中是否存在固定步长的跨步, 一旦检测到跨步, 则向PFH_Ctrl模块申请预取缓冲条目;PFH_Item模块负责保存每个预取缓冲条目, 每个预取缓冲条目包含地址、步长、命中次数、状态等信息。预取条目根据其状态决定是否申请发出预取请求, 如有多个预取条目同时发出预取申请, 则根据命中次数等信息进行仲裁, 最终产生一条预取请求并送往PFH_Ctrl模块, 由PFH_Ctrl模块发往流水线。</p>
+                </div>
+                <div class="p1">
+                    <p id="58">每个预取条目按照图3所示的状态转换关系进行控制, 预取缓冲条目初始化时被置为INIT状态。若后续访存地址正向或反向命中预取条目, 则转换至Fwd/Bck状态;若再次命中, 则进入Steady状态, 此时预取方向已经固定, 后续不会发生变化。当预取条目进入PFH状态时, 条目发出预取申请, 申请被确认后进入Pred状态, 后续每命中2次, 预取缓冲条目进入PFH状态并发出一条预取指令。为避免预取方向判断错误, 在状态转换中, 只要在Bck状态下正向命中预取缓冲条目, 则允许其由Bck状态转换至Fwd状态。</p>
+                </div>
+                <div class="area_img" id="59">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906018_059.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 预取缓冲条目状态转换关系" src="Detail/GetImg?filename=images/JSJC201906018_059.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 预取缓冲条目状态转换关系</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906018_059.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="60" name="60">3.2 性能评测</h4>
+                <div class="p1">
+                    <p id="61">进行预取机制性能评测的实验环境由3个部分构成:处理器模型, 基准测试程序, 硬件仿真加速器。处理器模型选用上文提到的某国产高性能处理器, 在该处理器模型的基础上加入预取部件, 在预取部件中, 设置16个预取缓冲条目, 每个周期最多可产生一条预取指令。实验采用SPEC2006 测试集作为基准测试程序集。SPEC2006目前被广泛应用于服务器及桌面系统的性能测试, 由整数应用和浮点应用组成, 可以真实反映不同应用的访存特征。为进一步提升实验结果的准确度, 采用Cadence公司生产的Palladium XP GXL系列硬件仿真加速器作为实验平台。该实验平台具有容量大、可编译以及运行速度快的优点, 可以提供处理器模型的仿真环境, 同时准确反映处理器仿真运行过程中的相关性能参数。</p>
+                </div>
+                <div class="p1">
+                    <p id="62">在硬件仿真加速器平台上运行SPEC2006测试集的各个应用, 分别统计使用传统流预取策略和本文双倍步长流预取策略的预取部件对处理器性能的提升效果, 实验结果如图4所示。其中, 横坐标左侧10个为整数应用, 右侧15个为浮点应用。从图4可以看出, 使用双倍步长流预取策略对处理器性能的提升更显著。其中, 470.lbm应用使用传统流预取策略时性能提升20.32%, 采用双倍步长流预取策略时性能提升57.08%。从硬件开销角度来看, 相比传统流预取策略, 使用双倍步长流预取策略减少了可识别地址流数目, 但并未带来额外的开销。</p>
+                </div>
+                <div class="area_img" id="63">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906018_063.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 在不同预取策略下运行SPEC2006各应用的性能提升结果" src="Detail/GetImg?filename=images/JSJC201906018_063.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 在不同预取策略下运行SPEC2006各应用的性能提升结果</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906018_063.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="64">由图4还可以看出, 预取部件并非针对每个应用都有效, 为深入探究预取部件的适用范围, 进一步提升其工作效率, 统计429.mcf、410.bwaves、459.GemsFDTD、470.lbm和481.wrf这5个应用的各级Cache Miss率。结果表明, 上述5个应用的性能提升均超过20%。同时统计473.astar、453.povray和465.tonto的各级Cache Miss率, 结果表明, 这3个应用在加入预取部件后性能均没有明显提升。上述应用的各级Cache Miss率如表3所示。</p>
+                </div>
+                <div class="area_img" id="65">
+                    <p class="img_tit"><b>表3 部分SPEC2006应用的各级Cache Miss率</b> % <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="65" border="1"><tr><td rowspan="2"><br />应用名称</td><td rowspan="2">预取情况</td><td colspan="3"><br />Cache Miss率</td></tr><tr><td><br />一级</td><td>二级</td><td>三级</td></tr><tr><td rowspan="2"><br />429.mcf</td><td>无预取</td><td>55.00</td><td>47.17</td><td>23.39</td></tr><tr><td><br />有预取</td><td>52.07</td><td>36.55</td><td>17.23</td></tr><tr><td rowspan="2"><br />410.bwaves</td><td>无预取</td><td>5.05</td><td>63.74</td><td>83.20</td></tr><tr><td><br />有预取</td><td>4.97</td><td>22.48</td><td>61.61</td></tr><tr><td rowspan="2"><br />459.GemsFDTD</td><td>无预取</td><td>21.55</td><td>66.90</td><td>42.23</td></tr><tr><td><br />有预取</td><td>11.83</td><td>34.72</td><td>39.37</td></tr><tr><td rowspan="2"><br />470.lbm</td><td>无预取</td><td>42.69</td><td>45.06</td><td>98.59</td></tr><tr><td><br />有预取</td><td>24.92</td><td>8.72</td><td>98.69</td></tr><tr><td rowspan="2"><br />481.wrf</td><td>无预取</td><td>8.40</td><td>38.94</td><td>34.96</td></tr><tr><td><br />有预取</td><td>3.72</td><td>12.77</td><td>29.70</td></tr><tr><td rowspan="2"><br />473.astar</td><td>无预取</td><td>9.72</td><td>2.26</td><td>0.79</td></tr><tr><td><br />有预取</td><td>9.67</td><td>2.75</td><td>0.31</td></tr><tr><td rowspan="2"><br />453.povray</td><td>无预取</td><td>9.95</td><td>0.84</td><td>11.83</td></tr><tr><td><br />有预取</td><td>8.72</td><td>2.06</td><td>1.95</td></tr><tr><td rowspan="2"><br />465.tonto</td><td>无预取</td><td>1.70</td><td>1.70</td><td>9.21</td></tr><tr><td><br />有预取</td><td>1.27</td><td>2.46</td><td>5.86</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="66">从表3可以看出:</p>
+                </div>
+                <div class="p1">
+                    <p id="67">1) 459.GemsFDTD等加入预取部件后取得较大性能提升的应用, 都具有如下特征:Cache Miss率本身处于较高水平, 加入预取部件后, 某一级或某两级的Cache Miss率明显降低。如459.GemsFDTD和470.lbm应用, 在加入预取部件后, 一级和二级Cache Miss率均大幅下降, 从而导致这2个应用的性能得到最大程度的提升。</p>
+                </div>
+                <div class="p1">
+                    <p id="68">2) 473.astar等加入预取部件后性能提升不明显的应用, 在不加入预取部件的情况下, 其各级Cache Miss率已经处于较低水平, 因此, 加入预取部件后其没有明显的性能提升, 同时, 预取部件发出的预取指令有可能占用访存带宽, 阻塞正常访存指令, 从而使得处理器性能小幅下降。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">通过以上分析可以得出如下结论:</p>
+                </div>
+                <div class="p1">
+                    <p id="70">1) 预取部件在Cache Miss率较高的情况下可以较好地发挥作用, 提升访存性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="71">2) 在运行对访存不敏感的程序时, 预取部件的作用不明显, 甚至会造成处理器性能小幅下降。</p>
+                </div>
+                <div class="p1">
+                    <p id="72">基于此, 本文今后将在以下2个方面进行研究:</p>
+                </div>
+                <div class="p1">
+                    <p id="73">1) 针对Cache Miss率较高的情况, 尽可能发挥预取部件的作用, 进一步提升访存性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">2) 针对访存行为不敏感的情况, 调整预取策略, 减少预取指令的产生, 避免预取指令过度占用访存带宽、阻塞正常访存指令的情况。</p>
+                </div>
+                <h3 id="75" name="75" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="76">本文提出一种双倍步长流预取策略, 并设计预取部件的组成结构。以某国产高性能处理器作为实验平台进行仿真验证, 结果表明, 该预取部件在Cache Miss率较高的情况下可以有效提升处理器的访存性能。本文研究成果可为硬件预取技术在国产高性能处理器中的应用提供一种思路。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000043918&amp;v=MTM0MzRkR2VycVFUTW53WmVadUh5am1VTG5KS0ZvU2FoWT1OaWZJWTdLN0h0ak5yNDlGWk84TUJYMHhvQk1UNlQ0UFFIL2lyUg==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> WULF W A, MCKEE S A.Hitting the memory wall:implications of the obvious[J].ACM SIGARCH Computer Architecture News, 1995, 23 (1) :20-24.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000042861&amp;v=MzE5MTFOQkhvNG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSktGb1NhaFk9TmlmSVk3SzdIdGpOcjQ5RlpPOA==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> SMITH J E.Decoupled access/execute computer archi-tecture[J].ACM SIGARCH Computer Architecture News, 1982, 10 (3) :112-119.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Energy-efficient hardware data prefetching">
+
+                                <b>[3]</b> GUO Yan, NARAYANAN P, BENNASER M A, et al.Energy-efficient hardware data prefetching[J].IEEE Transactions on Very Large Scale Integration Systems, 2011, 19 (2) :250-263.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Buffer Block Prefetching Method">
+
+                                <b>[4]</b> GINDELE J D.Buffer block prefetching method[J].IBM Technical Disclosure Bulletin, 1977, 20 (2) :696-697.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Effective hardware-based data prefetching for high-performance processors">
+
+                                <b>[5]</b> CHEN Tienfu, BAER J L.Effective hardware-based data prefetching for high-performance processors[J].IEEE Transaction on Computers, 1995, 44 (5) :609-623.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Tango:a hardware-based data prefetching technique for superscalar processors">
+
+                                <b>[6]</b> PINTER S S, YOAZ A.Tango:a hardware-based data prefetching technique for superscalar processors[C]//Proceedings of the 29th Annual ACM/IEEE International Symposium on Microarchitecture.Washington D.C., USA:IEEE Computer Society, 1996:214-225.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSGG201129019&amp;v=MjU2MTVoVmIvTUx6N01hYkc0SDlET3BvOUViWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GaUQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 靳强, 郭阳, 鲁健壮.一种步长自适应二级Cache预取机制[J].计算机工程与应用, 2011, 47 (29) :56-59.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=An effective on-chip preloading scheme to reduce data access penalty">
+
+                                <b>[8]</b> BAER J L, CHEN Tienfu.An effective on-chip preloading scheme to reduce data access penalty[C]//Proceedings of 1991 ACM/IEEE Conference on Supercomputing.New York, USA:ACM Press, 1991:176-186.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000043551&amp;v=MTMxMTNMbkpLRm9TYWhZPU5pZklZN0s3SHRqTnI0OUZaTzhNQ1hrNG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVQ==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> JOUPPI N P.Improving directed-mapped cache performance by addition of small fully-associative cache and prefetching buffers[J].ACM SIGARCH Computer Architecture News, 1990, 18 (3) :363-373.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000043869&amp;v=MDk3MzVOcjQ5RlpPOE1CSG93b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTG5KS0ZvU2FoWT1OaWZJWTdLN0h0ag==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> ALACHARLS S, KESSLER R E.Evaluating stream buffer as a secondary cache replacement[J].ACM SIGARCH Computer Architecture News, 1994, 22 (2) :24-33.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000044060&amp;v=MDcwMTc0OUZaTzhMREhvNW9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSktGb1NhaFk9TmlmSVk3SzdIdGpOcg==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> JOSEPH D, GRUNWALD D.Prefetching using Markov predictors[J].ACM SIGARCH Computer Architecture News, 1997, 25 (2) :252-263.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=TCP:tag correlating prefetchers">
+
+                                <b>[12]</b> HU Zhigang, MARTONOSI M, KAXIRAS S.TCP:tag correlating prefetchers[C]//Proceedings of International Symposium on High-performance Computer Architecture.Washington D.C., USA:IEEE Press, 2003:317-326.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=AC/DC:An adaptive data cache prefetcher">
+
+                                <b>[13]</b> NESBIT K J, DHODAPKAR A S, SMITH J E.AC/DC:an adaptive data cache prefetcher[C]//Proceedings of the 13th International Conference on Parallel Architectures and Compilation Techniques.Washington D.C., USA:IEEE Computer Society, 2004:135-145.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000010896&amp;v=MTc4NzFtVUxuSktGb1NhaFk9TmlmSVk3SzdIdGpOcjQ5RlpPb1BCSFUvb0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5ag==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> LAI A C, FIDE C, FALSAFI B.Dead-block predictionand dead-block correlating prefetchers[J].ACM SIGARCH Computer Architecture News, 2001, 29 (2) :144-154.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201601010&amp;v=MDI4NTlHRnJDVVJMT2VaZVJvRmlEaFZiL01MejdCYmJHNEg5Zk1ybzlFWklRS0RIODR2UjRUNmo1NE8zenFxQnQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 贾迅, 翁志强, 胡向东.基于流访问特征的多级硬件预取[J].计算机工程, 2016, 42 (1) :51-55.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJK201511004&amp;v=MDAyMjJDVVJMT2VaZVJvRmlEaFZiL01MejdCWmJHNEg5VE5ybzlGWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> 贾迅, 尹飞, 胡向东.申威处理器硬件预取技术的实现[J].计算机工程与科学, 2015, 37 (11) :2013-2017.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201906018" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201906018&amp;v=MTczMzVoVmIvTkx6N0JiYkc0SDlqTXFZOUViSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GaUQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

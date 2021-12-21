@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130530017530000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201905019%26RESULT%3d1%26SIGN%3d8NFhtBsJ6Zn6tlP%252bvqbIKQasG6o%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201905019&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201905019&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201905019&amp;v=Mjg4Mzh0R0ZyQ1VSTE9lWmVSb0Z5M2xXcjNPTHo3QmJiRzRIOWpNcW85RWJZUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#45" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#49" data-title="1 相关研究 ">1 相关研究</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#51" data-title="2 特征对齐算法 ">2 特征对齐算法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#54" data-title="2.1 相关定义">2.1 相关定义</a></li>
+                                                <li><a href="#67" data-title="2.2 文本预处理">2.2 文本预处理</a></li>
+                                                <li><a href="#72" data-title="2.3 文本特征抽取">2.3 文本特征抽取</a></li>
+                                                <li><a href="#75" data-title="2.4 GloVe模型特征">2.4 GloVe模型特征</a></li>
+                                                <li><a href="#89" data-title="2.5 WordNet模型特征">2.5 WordNet模型特征</a></li>
+                                                <li><a href="#97" data-title="2.6 算法流程">2.6 算法流程</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#108" data-title="3 实验结果与分析 ">3 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#109" data-title="3.1 数据集">3.1 数据集</a></li>
+                                                <li><a href="#111" data-title="3.2 结果对比">3.2 结果对比</a></li>
+                                                <li><a href="#115" data-title="3.3 参数敏感性">3.3 参数敏感性</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#122" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#88" data-title="&lt;b&gt;图1 GloVe特征对齐示意图&lt;/b&gt;"><b>图1 GloVe特征对齐示意图</b></a></li>
+                                                <li><a href="#96" data-title="&lt;b&gt;图2 WordNet特征对齐示意图&lt;/b&gt;"><b>图2 WordNet特征对齐示意图</b></a></li>
+                                                <li><a href="#107" data-title="&lt;b&gt;图3 特征对齐算法流程&lt;/b&gt;"><b>图3 特征对齐算法流程</b></a></li>
+                                                <li><a href="#113" data-title="&lt;b&gt;表1 不同算法迁移分类准确率对比结果&lt;/b&gt;"><b>表1 不同算法迁移分类准确率对比结果</b></a></li>
+                                                <li><a href="#117" data-title="&lt;b&gt;图4 目标域为B时模型滑动窗口的准确率&lt;/b&gt;"><b>图4 目标域为B时模型滑动窗口的准确率</b></a></li>
+                                                <li><a href="#119" data-title="&lt;b&gt;图5 目标域为B时模型迭代次数的准确率&lt;/b&gt;"><b>图5 目标域为B时模型迭代次数的准确率</b></a></li>
+                                                <li><a href="#121" data-title="&lt;b&gt;图6 目标域为B时模型词向量维度的准确率&lt;/b&gt;"><b>图6 目标域为B时模型词向量维度的准确率</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" LIU Bing.Sentiment analysis and opinion mining[EB/OL].[2018-01-16].https://www.cs.uic.edu/～liub/FBS/SentimentAnalysis-and-OpinionMining.html." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Sentiment analysis and opinion mining">
+                                        <b>[1]</b>
+                                         LIU Bing.Sentiment analysis and opinion mining[EB/OL].[2018-01-16].https://www.cs.uic.edu/～liub/FBS/SentimentAnalysis-and-OpinionMining.html.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" LIU Bing.Web data mining[M].Berlin, Germany:Springer, 2011." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Web data mining">
+                                        <b>[2]</b>
+                                         LIU Bing.Web data mining[M].Berlin, Germany:Springer, 2011.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" PANG Bo, LEE L.Thumbs up?sentiment classification using machine learning[EB/OL].[2018-01-16].https://arxiv.org/pdf/cs/0205070.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Thumbs up?sentiment classification using machine learning">
+                                        <b>[3]</b>
+                                         PANG Bo, LEE L.Thumbs up?sentiment classification using machine learning[EB/OL].[2018-01-16].https://arxiv.org/pdf/cs/0205070.pdf.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" BLITZER J, MCDONALD R, PEREIRA F.Domain adaptation with structural correspondence learning[C]//Proceedings of Conference on Empirical Methods in Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2006:120-128." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Domain adaptation with structural correspondence learning">
+                                        <b>[4]</b>
+                                         BLITZER J, MCDONALD R, PEREIRA F.Domain adaptation with structural correspondence learning[C]//Proceedings of Conference on Empirical Methods in Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2006:120-128.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" PAN Jialin, NI Xiaochuan, SUN Jiantao, et al.Cross-domain sentiment classification via spectral feature alignment[C]//Proceedings of the 19th International Conference on World Wide Web.New York, USA:ACM Press, 2010:751-760." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Cross-Domain Sentiment Classification via Spectral Feature Alignment">
+                                        <b>[5]</b>
+                                         PAN Jialin, NI Xiaochuan, SUN Jiantao, et al.Cross-domain sentiment classification via spectral feature alignment[C]//Proceedings of the 19th International Conference on World Wide Web.New York, USA:ACM Press, 2010:751-760.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" ZHANG Shaowu, LIU Huali, YANG Liang, et al.A cross-domain sentiment classification method based on extraction of key sentiment sentence[J].Natural Language Processing and Chinese Computing, 2015, 9362:90-101." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A cross-domain sentiment classification method based on extraction of key sentiment sentence">
+                                        <b>[6]</b>
+                                         ZHANG Shaowu, LIU Huali, YANG Liang, et al.A cross-domain sentiment classification method based on extraction of key sentiment sentence[J].Natural Language Processing and Chinese Computing, 2015, 9362:90-101.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 孟佳娜, 段晓东, 杨亮.基于特征变换的跨领域产品评论倾向性分析[J].计算机工程, 2013, 39 (10) :167-171." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201310036&amp;v=MTI0NzN5M2xXcjNPTHo3QmJiRzRIOUxOcjQ5R1lvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Y=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         孟佳娜, 段晓东, 杨亮.基于特征变换的跨领域产品评论倾向性分析[J].计算机工程, 2013, 39 (10) :167-171.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" BOLLEGALA D, WEIR D, CARROLL J.Cross-domain sentiment classification using a sentiment sensitive thesaurus[J].IEEE Transactions on Knowledge and Data Engineering, 2013, 25 (8) :1719-1731." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Cross-Domain sentiment classification using a sentiment sensitive thesaurus">
+                                        <b>[8]</b>
+                                         BOLLEGALA D, WEIR D, CARROLL J.Cross-domain sentiment classification using a sentiment sensitive thesaurus[J].IEEE Transactions on Knowledge and Data Engineering, 2013, 25 (8) :1719-1731.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" XIA Rui, ZONG Chengqing, HU Xuelei, et al.Feature ensemble plus sample selection:domain adaptation for sentiment classification[J].IEEE Intelligent Systems, 2013, 28 (3) :10-18." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Feature Ensemble Plus Sample Selection: Domain Adaptation forSentiment Classification">
+                                        <b>[9]</b>
+                                         XIA Rui, ZONG Chengqing, HU Xuelei, et al.Feature ensemble plus sample selection:domain adaptation for sentiment classification[J].IEEE Intelligent Systems, 2013, 28 (3) :10-18.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" ZHOU Guangyou, HE Tingting, WU Wensheng, et al.Linking heterogeneous input features with pivots for domain adaptation[C]//Proceedings of the 24th International Conference on Artificial Intelligence.[S.l.]:AAAI Press, 2015:1419-1425." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Linking Heterogeneous Input Features with Pivots for Domain Adaptation">
+                                        <b>[10]</b>
+                                         ZHOU Guangyou, HE Tingting, WU Wensheng, et al.Linking heterogeneous input features with pivots for domain adaptation[C]//Proceedings of the 24th International Conference on Artificial Intelligence.[S.l.]:AAAI Press, 2015:1419-1425.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" 魏晓聪, 林鸿飞.面向迁移学习的文本特征对齐算法[J].计算机工程, 2017, 43 (2) :215-219." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201702036&amp;v=Mjk0NTQzbFdyM09MejdCYmJHNEg5Yk1yWTlHWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         魏晓聪, 林鸿飞.面向迁移学习的文本特征对齐算法[J].计算机工程, 2017, 43 (2) :215-219.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" ZHANG Yuhong, XU Xu, HU Xuegang.A common subspace construction method in cross-domain sentiment classification[C]//Proceedings of International Conference on Electronic Science and Automation Control.[S.l.]:Atlantis Press, 2015:48-52." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A Common Subspace Construction Method in Cross-domain Sentiment Classification">
+                                        <b>[12]</b>
+                                         ZHANG Yuhong, XU Xu, HU Xuegang.A common subspace construction method in cross-domain sentiment classification[C]//Proceedings of International Conference on Electronic Science and Automation Control.[S.l.]:Atlantis Press, 2015:48-52.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" ZHOU Guangyou, ZHOU Yin, GUO Xiyue, et al.Cross-domain sentiment classification via topical correspondence transfer[J].Neurocomputing, 2015, 159:298-305." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14123100019792&amp;v=MDU1ODlvOUZaT29HQzNVN29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSUpWNGRhQlE9TmlmT2ZiSzhIOVBQcg==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         ZHOU Guangyou, ZHOU Yin, GUO Xiyue, et al.Cross-domain sentiment classification via topical correspondence transfer[J].Neurocomputing, 2015, 159:298-305.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" GLOROT X, BORDES A, BENGIO Y.Domain adapta-tion for large-scale sentiment classification:a deep learning approach[C]//Proceedings of the 28th International Conference on Machine Learning.[S.l.]:Omnipress, 2011:513-520." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Domain adaptation for large-scalesentiment classification: A deep learning approach">
+                                        <b>[14]</b>
+                                         GLOROT X, BORDES A, BENGIO Y.Domain adapta-tion for large-scale sentiment classification:a deep learning approach[C]//Proceedings of the 28th International Conference on Machine Learning.[S.l.]:Omnipress, 2011:513-520.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" BENGIO Y, GUYON G, DROR V, et al.Deep learning of representations for unsupervised and transfer learning[EB/OL].[2018-01-16].https://www.docin.com/p-1690924284.html." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep learning of representations for unsupervised and transfer learning">
+                                        <b>[15]</b>
+                                         BENGIO Y, GUYON G, DROR V, et al.Deep learning of representations for unsupervised and transfer learning[EB/OL].[2018-01-16].https://www.docin.com/p-1690924284.html.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" COLLOBERT R, WESTON J.A unified architecture for natural language processing:deep neural networks with multitask learning[C]//Proceedings of the 25th Inter-national Conference on Machine learning.New York, USA:ACM Press, 2008:160-167." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A unified architecture for natural language processing:Deep neural networks with multitask learning">
+                                        <b>[16]</b>
+                                         COLLOBERT R, WESTON J.A unified architecture for natural language processing:deep neural networks with multitask learning[C]//Proceedings of the 25th Inter-national Conference on Machine learning.New York, USA:ACM Press, 2008:160-167.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" MARQUEZ L, RODR&#205;GUEZ H.Part-of-speech tagging using decision trees[C]//Proceedings of the 10th European Conference on Machine Learning.London, UK:Springer, 1998:25-36." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Part-of-speech tagging using decision trees">
+                                        <b>[17]</b>
+                                         MARQUEZ L, RODR&#205;GUEZ H.Part-of-speech tagging using decision trees[C]//Proceedings of the 10th European Conference on Machine Learning.London, UK:Springer, 1998:25-36.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_18" title=" LANDAUER T K, DUMAIS S T.A solution to plato’s problem:the latent semantic analysis theory of acquisition, induction, and representation of knowledge[J].Psychological Review, 1997, 104 (2) :211-240." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A solution to Plato&amp;#39; s problem: the latent semantic analysis theory of the acquisition, induction and representation of knowledge">
+                                        <b>[18]</b>
+                                         LANDAUER T K, DUMAIS S T.A solution to plato’s problem:the latent semantic analysis theory of acquisition, induction, and representation of knowledge[J].Psychological Review, 1997, 104 (2) :211-240.
+                                    </a>
+                                </li>
+                                <li id="39">
+
+
+                                    <a id="bibliography_19" title=" MIKOLOV T, CHEN K, CORRADO G, et al.Efficient estimation of word representations in vector space[EB/OL].[2018-01-16].https://arxiv.org/pdf/1301.3781.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+                                        <b>[19]</b>
+                                         MIKOLOV T, CHEN K, CORRADO G, et al.Efficient estimation of word representations in vector space[EB/OL].[2018-01-16].https://arxiv.org/pdf/1301.3781.pdf.
+                                    </a>
+                                </li>
+                                <li id="41">
+
+
+                                    <a id="bibliography_20" title=" PENNINGTON J, SOCHER R, MANNING C.GloVe:global vectors for word representation[EB/OL].[2018-01-16].https://nlp.stanford.edu/projects/glove/." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=GloVe:global vectors for word representation">
+                                        <b>[20]</b>
+                                         PENNINGTON J, SOCHER R, MANNING C.GloVe:global vectors for word representation[EB/OL].[2018-01-16].https://nlp.stanford.edu/projects/glove/.
+                                    </a>
+                                </li>
+                                <li id="43">
+
+
+                                    <a id="bibliography_21" title=" MILLER G A.WordNet:a lexical database for English[J].Communications of the Association for Computing Machinery, 1995, 38 (11) :39-41." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000027180&amp;v=MjM1MTZVTG5JSlY0ZGFCUT1OaWZJWTdLN0h0ak5yNDlGWk9rSURYUTVvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[21]</b>
+                                         MILLER G A.WordNet:a lexical database for English[J].Communications of the Association for Computing Machinery, 1995, 38 (11) :39-41.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(05),116-121 DOI:10.19678/j.issn.1000-3428.0050574            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于语义结构的迁移学习文本特征对齐算法</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%8D%A2%E6%99%A8%E9%98%B3&amp;code=38732447&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">卢晨阳</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BA%B7%E9%9B%81&amp;code=09324466&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">康雁</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%A8%E6%88%90%E8%8D%A3&amp;code=38732448&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">杨成荣</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%92%B2%E6%96%8C&amp;code=36964071&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">蒲斌</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%BA%91%E5%8D%97%E5%A4%A7%E5%AD%A6%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2&amp;code=0233984&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">云南大学软件学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>特征对齐在源域和目标域空间不一致时会导致负迁移现象。为此, 提出一种基于GloVe和WordNet模型的迁移学习文本特征对齐算法。根据数据样本词性和类别对分类任务进行特征筛选, 选择源域和目标域的领域共有词作为枢纽词, 使用GloVe模型对齐源域和目标域中最相似的非枢纽特征。在此基础上, 根据源域和目标域的非共有特征, 通过WordNet模型对领域独立特征完成强语义对齐, 同时利用含有枢纽特征的对齐三元组表示对齐特征。实验结果表明, 该算法可有效降低特征维度, 扩充特征空间, 提高跨领域文本分类精度。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%BF%81%E7%A7%BB%E5%AD%A6%E4%B9%A0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">迁移学习;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%89%B9%E5%BE%81%E5%AF%B9%E9%BD%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">特征对齐;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%8D%E5%90%91%E9%87%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">词向量;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%8D%E7%BD%91&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">词网;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%96%87%E6%9C%AC%E6%8C%96%E6%8E%98&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">文本挖掘;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    卢晨阳 (1994—) , 男, 硕士研究生, 主研方向为自然语言处理;E-mail: luchenyanglcy@ 163. com;
+                                </span>
+                                <span>
+                                    康雁, 副教授;;
+                                </span>
+                                <span>
+                                    杨成荣, 硕士研究生。;
+                                </span>
+                                <span>
+                                    蒲斌, 硕士研究生。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-03-02</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金 (61762092);</span>
+                                <span>云南省软件工程重点实验室开放基金 (2017SE204);</span>
+                    </p>
+            </div>
+                    <h1><b>Text Feature Alignment Algorithm for Transfer Learning Based on Semantic Structure</b></h1>
+                    <h2>
+                    <span>LU Chenyang</span>
+                    <span>KANG Yan</span>
+                    <span>YANG Chengrong</span>
+                    <span>PU Bin</span>
+            </h2>
+                    <h2>
+                    <span>School of Software, Yunnan University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Feature alignment causes a negative transfer when the source domain space and target domain space are inconsistent.Therefore, a text feature alignment algorithm for transfer learning based on the GloVe and WordNet model is proposed.According to the part of speech and category of the sample data, feature filtering is performed to classification tasks.The shared terms of the source domains and target domain are selected as pivot words, and the GloVe model is used to align the most similar non-pivot features in the source domain and target domain.On this basis, according to the unique features of the source domain and target domain, strong semantic alignment is achieved through the WordNet model for the domain independent features.At the same time, alignment features are represented by aligning triples with pivot features.Experimental results show that the algorithm can effectively reduce the feature dimension, expand the feature space, and improve the accuracy of cross-domain text classification.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=transfer%20learning&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">transfer learning;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=feature%20alignment&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">feature alignment;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=word%20vector&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">word vector;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=WordNet&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">WordNet;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=text%20mining&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">text mining;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-03-02</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="45" name="45" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="46">近年来, 迁移学习已成为人工智能领域的研究热点。多数信息以文本数据的形式存在于网络上, 因此对文本挖掘方法进行研究具有重要意义。例如, 网络舆情分析使用文本挖掘方法, 通过分析网民对某一新闻热点的情感极性 (积极或消极) 来判断某新闻事件的社会影响。关于情感分类已经有较多的研究成果<citation id="124" type="reference"><link href="3" rel="bibliography" /><link href="5" rel="bibliography" /><link href="7" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>,<a class="sup">3</a>]</sup></citation>。在监督式学习模式下, 情感倾向性分析依赖大量有标记的情感数据, 通过训练判别模型对未标记的数据进行情感分析。但在实际情况中, 有标记的数据获取成本很高, 且人工标记的数据可能存在主观性问题。迁移学习可以将相似领域的源域知识迁移到只有少量标注信息的目标域中, 以帮助目标域训练。因此, 如何寻找可以迁移的相似领域、迁移哪些特征以及如何迁移是迁移学习研究的重点。</p>
+                </div>
+                <div class="p1">
+                    <p id="47">由于语言的多样性和同义性, 不同领域描述相同情感的情感词及其概率分布会有所不同。例如, 在电影评论中, 人们会用“magnificent”“interesting”等词表达积极的语意, 用“suffer”“complex”等词表达消极的语义;在厨房商品评论中, 人们会用“convenience”“clean”等词语表达积极的语义, 使用“noise”“trash”等词表达消极的语义。迁移学习如果直接使用电影评论的语义判别模型去预测厨房商品评论的语义倾向, 效果往往较差。因此, 迁移学习要想获得比较好的迁移效果, 需要使源域数据特征和目标域数据的数据特征保持一致。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">本文提出一种基于GloVe模型的文本特征对齐算法。该算法使用GloVe从结构和弱语义层面对不同领域的特征进行对齐, 利用WordNet从强语义层面对不同领域的相关特征进行特征对齐。</p>
+                </div>
+                <h3 id="49" name="49" class="anchor-tag">1 相关研究</h3>
+                <div class="p1">
+                    <p id="50">目前, 国内外研究者对迁移学习中特征空间不一致问题提出多种算法。文献<citation id="125" type="reference">[<a class="sup">4</a>]</citation>提出结构一致学习 (Structure Correspondence Learning, SCL) 算法, 该算法利用不同领域中共同出现的枢纽特征对非枢纽特征进行关联, 以达到结构对应学习的目的。文献<citation id="126" type="reference">[<a class="sup">5</a>]</citation>提出谱特征对齐 (Spectral Feature Alignment, SFA) 算法, 该算法基于聚类假设, 利用谱聚类算法对非枢纽特征进行对齐。文献<citation id="127" type="reference">[<a class="sup">6</a>]</citation>从情感、关键词和结构3个方面抽取情感句, 并将其划分为关键字视图和细节视图, 分别训练不同的基分类, 并应用集成学习实现知识迁移。文献<citation id="128" type="reference">[<a class="sup">7</a>]</citation>使用特征变换来解决跨领域情感分析问题, 通过选取枢纽特征, 计算源域和目标域中同枢纽特征关联度最高的特征, 对源域和目标域的文本进行特征变换, 以完成特征对齐。文献<citation id="129" type="reference">[<a class="sup">8</a>]</citation>构建并使用语义敏感词典选取源域和目标域的相关特征词, 通过扩展特征向量完成知识迁移。文献<citation id="130" type="reference">[<a class="sup">9</a>]</citation>提出特征集成及样本选择算法 (SS-FE) , 该算法将FE和PCA-SS相结合完成迁移学习。文献<citation id="131" type="reference">[<a class="sup">10</a>]</citation>提出混合特征核即非负矩阵分解方法, 该方法针对文本的异构输入特性使用联合非负矩阵因子分解, 利用枢纽特征完成不同领域的特征迁移。文献<citation id="132" type="reference">[<a class="sup">11</a>]</citation>使用Word2vec, 根据词性不同分别训练Word2vec, 将领域共有词作为枢纽特征, 使用Word2vec对不同领域的非枢纽特征进行映射。文献<citation id="133" type="reference">[<a class="sup">12</a>]</citation>提出共有子空间重构算法 (Common Subspace Construction, CSC) , 使用源域和目标域的情感倾向识别公共子空间, 然后将领域依赖特征投射到该子空间, 基于公共特征子空间来表示评论文本, 并在该子空间训练目标领域情感倾向预测模型。文献<citation id="134" type="reference">[<a class="sup">13</a>]</citation>提出主题对应迁移 (Topical Correspondence Transfer, TCT) 算法, 通过识别不同领域间的公共主题来映射不同领域的其他主题, 以减小不同领域特征的分布差异, 模型在优化目标函数时发现主题并完成情感分类。此外, 研究者提出使用深度学习来获取特征, 并将其应用于自然语言处理, 如命名实体识别、词性标注和语言模型中的知识迁移<citation id="135" type="reference"><link href="29" rel="bibliography" /><link href="31" rel="bibliography" /><link href="33" rel="bibliography" /><sup>[<a class="sup">14</a>,<a class="sup">15</a>,<a class="sup">16</a>]</sup></citation>。</p>
+                </div>
+                <h3 id="51" name="51" class="anchor-tag">2 特征对齐算法</h3>
+                <div class="p1">
+                    <p id="52">传统的迁移学习文本特征对齐方法考虑词语在句子结构上的特征, 例如, 结构一致学习算法和谱特征对齐算法利用整个语料的词共现矩阵进行矩阵运算得到在频谱或概率上相似的词语, 但忽略文本类标信息与文本中特征间的联系。在情感标记为积极的样本中, “good”“bravo”等表示积极语义的词语较多;在情感标记为消极的样本中, “bad”“terrible”等表示消极语义的词语较多。如果在特征对齐时不考虑类标信息, 只考虑情感词与句子结构的相关关系, 则可能导致表示积极语义的词被对齐为表示消极语义的词, 使特征对齐后和语义簇与句子类标特征呈现非强相关性。</p>
+                </div>
+                <div class="p1">
+                    <p id="53">本文根据类标信息和词性分别抽取特征进行对齐, 在特征抽取时保留了文本特征和语义簇的强相关性。然后对领域独立词使用WordNet同义词/近义词进行特征对齐, 构建强语义对齐二元特征组。同时使用Glove对领域非枢纽特征进行对齐, 构建结构弱语义三元特征组。</p>
+                </div>
+                <h4 class="anchor-tag" id="54" name="54">2.1 相关定义</h4>
+                <div class="p1">
+                    <p id="55">领域是实体世界中类别事物的抽象表示。在文本分类任务中, 领域用来表达不同类别事物的文本集合。例如, 在亚马逊网站不同类型的产品及产品评论中, “books”“DVD”“furniture”是3个不同的领域。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">在跨领域情感分类问题中, 源域<i>D</i><sub>s</sub>是某领域有标签的评论文本, 可表示为:</p>
+                </div>
+                <div class="p1">
+                    <p id="57"><i>D</i><sub>s</sub>={ (<i>x</i><sub><i>i</i></sub>, <i>y</i><sub><i>i</i></sub>) }<mathml id="58"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><msub><mrow></mrow><mtext>s</mtext></msub></mrow></msubsup></mrow></math></mathml>      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="59">其中, y<sub>i</sub>是样本评论x<sub>i</sub>的情感标签, 且y<sub>i</sub>∈{+1, -1}, +1表示积极语义, -1表示消极语义, n<sub><i>s</i></sub>是源域中有标记样本的数量。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">目标域D<sub><i>t</i></sub>是某领域无标签的评论文本, 可表示为:</p>
+                </div>
+                <div class="p1">
+                    <p id="61">D<sub><i>t</i></sub>={ (x<sub>i</sub>) }<mathml id="62"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><msub><mrow></mrow><mtext>t</mtext></msub></mrow></msubsup></mrow></math></mathml>      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="63">其中, n<sub><i>t</i></sub>是目标域中无标记样本的数量。</p>
+                </div>
+                <div class="p1">
+                    <p id="64">领域独有词是指去除停用词等噪声词后只在该领域出现而不在其他领域出现的词。如“<i>books</i>”评论中的“<i>obscure</i>”, “<i>computer</i>”评论中的“<i>short battery life</i>”, 其表示特定领域的词。领域共有词是指去除停用词等噪声词后在不同领域间共同出现的词。如“<i>like</i>”“<i>hate</i>”等在各个领域中都会出现的词。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">枢纽特征是指在源域与目标域的迁移过程中可以起到桥接作用的特征。本文使用出现频率达到一定数量的领域共有词作为枢纽特征。除了枢纽特征外的其他特征称为非枢纽特征。某个跟枢纽特征最为靠近或相似的非枢纽特征, 称为近邻枢纽特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">跨领域文本特征对齐通过对领域的非枢纽特征进行抽取, 然后对不同领域的非枢纽特征进行特征映射来完成领域特征对齐。在对齐源域和目标文本特征后, 跨领域情感分类使用源域样本构造情感分类器来对目标域样本进行情感分类。</p>
+                </div>
+                <h4 class="anchor-tag" id="67" name="67">2.2 文本预处理</h4>
+                <div class="p1">
+                    <p id="68">文本预处理主要包括以下内容:</p>
+                </div>
+                <div class="p1">
+                    <p id="69">1) 词干提取。词干提取是将英文单词的各种时态变化和后缀提取为单词最原始的样子, 且具有降维作用。在词干提取之前, 将文本中的单词全部转换为小写。</p>
+                </div>
+                <div class="p1">
+                    <p id="70">2) 停用词过滤。停用词是没有实际意义的词以及标点符号、数字、特殊字符等。如“the”“a”“an”“that”“those”“under”等。</p>
+                </div>
+                <div class="p1">
+                    <p id="71">3) 词性标注及词性过滤。词性标注是对过滤过停用词的文本进行分词, 然后对每一个词的词性进行标注。名词、动词、形容词、副词在情感分类中具有重要影响, 对正类样本和负类样本分别抽取名词、动词、形容词和副词。有些词在词性标注中会被标注为多种词性, 例如词语“like”同时具有动词、形容词、副词和名词的词性, 但在不同的句子结构中词性不同, 如在句子“I like this book.”中“like”是动词, 而在句子“It sounds like the violin.”中“like”是形容词。为了让词性标注更为准确, 本文使用文献<citation id="136" type="reference">[<a class="sup">17</a>]</citation>提出的基于概率的决策树词性标注方法, 该方法利用决策树方法对词性的转移概率进行估计。</p>
+                </div>
+                <h4 class="anchor-tag" id="72" name="72">2.3 文本特征抽取</h4>
+                <div class="p1">
+                    <p id="73">本文对要迁移的源域和目标域抽取领域独有词, 然后将领域独有词作为WordNet模型的输入。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">传统的枢纽特征抽取和对齐一般只考虑到句子的结构和词性等信息, 而忽略词语特征和类别信息存在一定的相关性, 因此在抽取特征时应考虑类别影响。以情感分类为例, 在抽取特征训练模型时, 首先将源域和目标域的正类样本 (积极) 和负类样本 (消极) 分开, 将不同词性的词语抽取出来, 其中, 在情感分类中起主要影响的是名词、动词、形容词、副词, 然后对正类样本和负类样本分别抽取名词、动词、形容词和副词, 原始的源域和目标域的2份数据变成根据样本类别和词性划分的16份数据。最后使用16份数据作为GloVe模型的输入来进行训练。</p>
+                </div>
+                <h4 class="anchor-tag" id="75" name="75">2.4 GloVe模型特征</h4>
+                <div class="p1">
+                    <p id="76">传统的词向量模型大致分为2类, 第1类是以隐语义分析 (Latent Semantic Analysis, LSA) 为代表使用矩阵分解的方法获取词向量<citation id="137" type="reference"><link href="37" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>, 第2类是以Skip-gram为代表使用局部上下文窗口的方法获取词向量<citation id="138" type="reference"><link href="39" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>。在模型中, 矩阵分解类方法使用词共现矩阵, 虽然可以较好地利用全局统计信息, 但无法获得理想的向量空间结构。同时局部上下文窗口类方法虽然能在词类比任务上取得较好的效果, 但忽略了全文词语统计信息。GloVe模型融合这2类模型的优点, 利用全局统计信息和局部窗口的统计信息生成词向量模型<citation id="139" type="reference"><link href="41" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="77" class="code-formula">
+                        <mathml id="77"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>J</mi><mo>=</mo><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>, </mo><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>V</mi></munderover><mi>f</mi></mstyle><mtext> </mtext><mo stretchy="false"> (</mo><mi>X</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">) </mo><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">w</mi><msubsup><mrow></mrow><mi>i</mi><mtext>Τ</mtext></msubsup><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">w</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub><mo>+</mo><mi>b</mi><msub><mrow></mrow><mi>i</mi></msub><mo>+</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>b</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub><mo>-</mo><mi>lg</mi><mtext> </mtext><mi>X</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">) </mo></mrow><msup><mrow></mrow><mn>2</mn></msup><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>f</mi><mtext> </mtext><mo stretchy="false"> (</mo><mi>x</mi><mo stretchy="false">) </mo><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mo stretchy="false"> (</mo><mi>x</mi><mo>/</mo><mi>x</mi><msub><mrow></mrow><mrow><mi>max</mi></mrow></msub><mo stretchy="false">) </mo><mi>α</mi><mo>, </mo><mspace width="0.25em" /><mi>x</mi><mo>&lt;</mo><mi>x</mi><msub><mrow></mrow><mrow><mi>max</mi></mrow></msub></mtd></mtr><mtr><mtd columnalign="left"><mn>1</mn><mo>, </mo><mspace width="0.25em" /><mtext>其</mtext><mtext>他</mtext></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>4</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="78">其中, <i>V</i>是词汇表大小, <b><i>w</i></b><sub><i>i</i></sub>和<b><i>w</i></b><sub><i>j</i></sub>是词典中词<i>i</i>和词<i>j</i>的词向量, <b><i>X</i></b>是文档的词共现矩阵, <i>X</i><sub><i>ij</i></sub>表示词<i>i</i>和词<i>j</i>同时出现的次数, <i>b</i><sub><i>i</i></sub>是词向量<b><i>w</i></b><sub><i>i</i></sub>的偏置, <mathml id="79"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>b</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub></mrow></math></mathml>是词向量<mathml id="80"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">w</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover><msub><mrow></mrow><mi>j</mi></msub></mrow></math></mathml>的偏置, α是权重函数f (x) 的参数, 一般取3/4。为防止过拟合, 降低噪声对词向量的影响, 词向量<b><i>w</i></b>和<mathml id="81"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">w</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow></math></mathml>在随机初始化时取不同的值。</p>
+                </div>
+                <div class="p1">
+                    <p id="82">本文使用16份根据类标和词性切分好的数据输入<i>GloVe</i>训练模型, 然后利用枢纽特征找出对应领域的非枢纽特征构成特征对齐三元组。传统的迁移学习文本特征对齐算法使用<i>A</i>_<i>B</i>的方式对不同领域的词语进行特征对齐表示, 但该表示会丢失部分特征, 例如源域的特征词在不同的上下文环境中可能对齐目标域的不同词语, 而使用<i>A</i>_<i>B</i>这种形式则无法保留不同上下文环境中需要对齐的不同特征。例如“<i>I hate this book but my wife cherish it</i>.”“<i>I hate this DVD but my wife love it so much</i>.”2个分别来自领域<i>A</i>和领域<i>B</i>的样本, 在上下文环境为“<i>but</i>”时, 领域<i>A</i>的词“<i>cherish</i>”对应为领域<i>B</i>的词“<i>love</i>”, 而在“<i>I will always cherish this book</i>.”“<i>My lover always remind me to value this DVD</i>, <i>because we had a lot of beautiful memory about it</i>.”2个分别来自领域<i>A</i>和领域<i>B</i>的样本, 在上下文环境为“<i>always</i>”时, 领域<i>A</i>的词“<i>cherish</i>”对应为领域<i>B</i>的“<i>value</i>”。基于上述分析, <i>A</i>_<i>B</i>表示形式只能保留一种特征对齐, 无法保留在不同上下文词出现时的不同特征对齐。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">本文提出一种加入上下文环境词的迁移特征对齐三元组的表示方式。在<i>GloVe</i>训练出的模型中, 如果源域和目标域的枢纽特征词为W<mathml id="84"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>c</mi><mrow><mtext>s</mtext><mo>, </mo><mtext>t</mtext></mrow></msubsup></mrow></math></mathml>、源域对齐的非枢纽特征为W<sup><i>s</i></sup><sub>i</sub>、目标域对齐的非枢纽特征为W<mathml id="85"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>j</mi><mtext>t</mtext></msubsup></mrow></math></mathml>, 则特征对齐后的词语表示为W<sup><i>s</i></sup><sub>i</sub>_W<mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>c</mi><mrow><mtext>s</mtext><mo>, </mo><mtext>t</mtext></mrow></msubsup></mrow></math></mathml>_W<mathml id="87"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>j</mi><mtext>t</mtext></msubsup></mrow></math></mathml>。该表示方式可以表示在不同上下文环境中源域和目标域对齐的不同特征, 且能够扩充特征维数。<i>GloVe</i>特征对齐示意图如图1所示。</p>
+                </div>
+                <div class="area_img" id="88">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905019_088.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 GloVe特征对齐示意图" src="Detail/GetImg?filename=images/JSJC201905019_088.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 GloVe特征对齐示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905019_088.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="89" name="89">2.5 WordNet模型特征</h4>
+                <div class="p1">
+                    <p id="90">GloVe对齐特征是在全局文档词频中统计窗口内相似的特征, 在结构和部分弱语义上相似, 如将“life”和“battery”“cheap”和“creak”在上下文相似和全局概率条件相似的词找出, 但仍无法做到语义对齐。</p>
+                </div>
+                <div class="p1">
+                    <p id="91">WordNet是一种基于认知语言学的英语词典, 它按照单词意义将英文的各种词性组织为同义词集合, 组成一个“单词的网络”, 并在这些词汇概念间建立同义、反义、继承等多种词汇语义关系<citation id="140" type="reference"><link href="43" rel="bibliography" /><sup>[<a class="sup">21</a>]</sup></citation>。本文使用WordNet找出源域的领域独有词在目标域独有词是否存在近义词/同义词, 如果源域的独有词<i>W</i><sup>s</sup><sub><i>i</i></sub>在与目标域的独有词<i>W</i><mathml id="92"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>j</mi><mtext>t</mtext></msubsup></mrow></math></mathml>构成近义词/同义词关系, 则在源域D<sub><i>s</i></sub>和目标域D<sub><i>t</i></sub>将W<sup><i>s</i></sup><sub>i</sub>和W<mathml id="93"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>j</mi><mtext>t</mtext></msubsup></mrow></math></mathml>进行对齐并表示为W<sup><i>s</i></sup><sub>i</sub>_W<mathml id="94"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>j</mi><mtext>t</mtext></msubsup></mrow></math></mathml>。由于W<sup><i>s</i></sup><sub>i</sub>和W<mathml id="95"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>j</mi><mtext>t</mtext></msubsup></mrow></math></mathml>属于同一近义词簇, 因此可以保证迁移学习的特征对齐的强语义相关性。<i>WordNet</i>特征对齐示意图如图2所示。</p>
+                </div>
+                <div class="area_img" id="96">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905019_096.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 WordNet特征对齐示意图" src="Detail/GetImg?filename=images/JSJC201905019_096.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 WordNet特征对齐示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905019_096.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="97" name="97">2.6 算法流程</h4>
+                <div class="p1">
+                    <p id="98">文本预处理的主要步骤包括过滤词干提取、停用词和词性标注, 然后将数据复制为2份, 第1份根据类标和词性对文本特征进行抽取, 第2份抽取领域独有词、领域共有词。将第1份按照类别和词性抽取过特征的共16份数据分别输入GloVe进行训练, 此处将会产生16个训练出的模型, 然后根据领域枢纽词找出对应模型的最相似非枢纽特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="99">在迁移学习中, 对2个领域结构不一致的特征进行迁移对齐, 另一方面是对共有知识进行迁移。例如, 在跨领域情感分类实验中, 领域共有词不仅包含领域间的共有知识, 其数据分布的不同体现不同领域内的领域知识, 并且在实验中对于分类准确性影响较大。因此在特征对齐时, 需并入领域共有词来构造对齐特征集。</p>
+                </div>
+                <div class="p1">
+                    <p id="100">在特征选择时, 如果是领域共有词, 则依次保留WordNet特征对齐二元组和GloVe特征对齐三元组。领域共有词表示领域间的公共知识域, 而WordNet对齐特征表示在公共知识域中公认的语义相似或相同的特征。特征对齐算法如图3所示, 具体步骤描述如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="101"><b>步骤1</b> 数据预处理 (词干提取→过滤停用词→词性标注) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="102"><b>步骤2</b> 数据复制2份, 第1份切分为领域独立词、领域共有词, 第2份按照类别和词性分开。</p>
+                </div>
+                <div class="p1">
+                    <p id="103"><b>步骤3</b> 将分好的类别和词性数据分别输入GloVe模型训练, 将领域共有词作为枢纽特征, 在源域和目标域对应类别和词性训练好的GloVe模型中寻找与枢纽特征最相似的非枢纽特征, 构造特征对齐三元组。</p>
+                </div>
+                <div class="p1">
+                    <p id="104"><b>步骤4</b> 使用源域的领域特有词在目标域的领域特有词中寻找是否存在同义词/近义词, 如果存在, 则构造特征对齐二元组。</p>
+                </div>
+                <div class="p1">
+                    <p id="105"><b>步骤5</b> 如果是领域共有词, 则保留领域共有词, 其次保留WordNet特征对齐二元组, 再次保留GloVe特征对齐三元组。</p>
+                </div>
+                <div class="p1">
+                    <p id="106"><b>步骤6</b> 使用特征对齐二元组和特征对齐三元组对源域和目标域对齐的词进行替换。</p>
+                </div>
+                <div class="area_img" id="107">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905019_107.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 特征对齐算法流程" src="Detail/GetImg?filename=images/JSJC201905019_107.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 特征对齐算法流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905019_107.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="108" name="108" class="anchor-tag">3 实验结果与分析</h3>
+                <h4 class="anchor-tag" id="109" name="109">3.1 数据集</h4>
+                <div class="p1">
+                    <p id="110">实验数据集使用亚马逊产品评论数据集, 其包含4个产品领域的商品评论, 分别是:books (B) , DVDs (D) , electronics (E) 和kitchen appliances (K) 。每个领域各包含1 000条积极评论样本和1 000条消极评论样本, 每条样本基于评论的给分已经被情感标记为+1 (积极情感) 或-1 (消极情感) 。本文进行12组跨领域情感分类任务实验, 分别是D→B, E→B, K→B, B→D, E→D, K→D, B→E, D→E, K→E, B→K, D→K, E→K, 其中, 箭头左边表示迁移学习的源域, 箭头右边表示迁移学习的目标域。</p>
+                </div>
+                <h4 class="anchor-tag" id="111" name="111">3.2 结果对比</h4>
+                <div class="p1">
+                    <p id="112">为验证算法的有效性, 本文在亚马逊产品评论数据集上与SCL-MI、SFA、SS-FE、Word2vec等文本特征对齐算法进行对比实验, 结果如表1所示。实验使用逻辑回归 (Logistic Regression, LR) 作为基分类器。其中, Word2vec算法和本文GloVe算法的窗口大小设置为5, 迭代次数设置为4 000。</p>
+                </div>
+                <div class="area_img" id="113">
+                                            <p class="img_tit">
+                                                <b>表1 不同算法迁移分类准确率对比结果</b>
+                                                
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905019_11300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/JSJC201905019_11300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905019_11300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表1 不同算法迁移分类准确率对比结果" src="Detail/GetImg?filename=images/JSJC201905019_11300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <div class="p1">
+                    <p id="114">从表1可以看出, 本文算法的平均准确率高于其他算法。其原因是本文算法根据样本类别和词性不同分开训练模型, 利用GloVe模型从结构和部分语义上进行特征对齐, 同时根据上下文特征, 设计含有上下文的特征三元组对齐领域特征。针对强语义层面情感词, 使用WordNet模型进行对齐领域特征。因此, 本文通过GloVe模型和WordNet模型从结构和语义上对不同领域相似的特征进行空间映射, 同时保留领域共有词, 不仅可以保证迁移学习的共有特征空间一致, 而且扩展了特征映射空间的知识域。</p>
+                </div>
+                <h4 class="anchor-tag" id="115" name="115">3.3 参数敏感性</h4>
+                <div class="p1">
+                    <p id="116">在GloVe模型训练时, 训练参数主要有上下文窗口大小、迭代次数、向量维度大小。为确定适合该数据集的模型参数, 本文在保证模型收敛的情况下测试上下文窗口大小, 同时使用平均分类准确率作为衡量指标, 其中, 迭代次数设为400次, 向量维度设为300。在目标域为B时, 上下文窗口的分类准确率结果如图4所示。如果上下文窗口太小, 则容易导致模型无法较好地学习全文统计信息;如果上下文窗口太大, 则容易导致模型无法较好地学习语义信息。</p>
+                </div>
+                <div class="area_img" id="117">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905019_117.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 目标域为B时模型滑动窗口的准确率" src="Detail/GetImg?filename=images/JSJC201905019_117.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 目标域为B时模型滑动窗口的准确率</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905019_117.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="118">当上下文窗口大小为5、向量维度为300时, 对模型最佳迭代次数进行测试。在目标域为B时, 不同迭代次数的平均准确率如图5所示, 可以看出, 当迭代到150次后, 准确率基本不变, 即模型收敛。</p>
+                </div>
+                <div class="area_img" id="119">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905019_119.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 目标域为B时模型迭代次数的准确率" src="Detail/GetImg?filename=images/JSJC201905019_119.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 目标域为B时模型迭代次数的准确率</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905019_119.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="120">当上下文窗口大小为5、迭代次数为150时, 测试向量维度的最佳长度, 如图6所示。从图6可以看出, 向量维度的最佳长度为300, 设置过长或过短均不利于模型训练。</p>
+                </div>
+                <div class="area_img" id="121">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905019_121.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 目标域为B时模型词向量维度的准确率" src="Detail/GetImg?filename=images/JSJC201905019_121.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 目标域为B时模型词向量维度的准确率</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905019_121.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="122" name="122" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="123">本文提出一种语义结构混合的迁移学习文本特征对齐算法, 在抽取特征对齐时使用GloVe和WordNet对不同领域的特征从结构和语义上进行对齐。实验结果验证了该算法在准确率上优于传统算法。下一步将通过模型组合自动抽取特征进行映射, 以降低模型复杂度。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Sentiment analysis and opinion mining">
+
+                                <b>[1]</b> LIU Bing.Sentiment analysis and opinion mining[EB/OL].[2018-01-16].https://www.cs.uic.edu/～liub/FBS/SentimentAnalysis-and-OpinionMining.html.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Web data mining">
+
+                                <b>[2]</b> LIU Bing.Web data mining[M].Berlin, Germany:Springer, 2011.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Thumbs up?sentiment classification using machine learning">
+
+                                <b>[3]</b> PANG Bo, LEE L.Thumbs up?sentiment classification using machine learning[EB/OL].[2018-01-16].https://arxiv.org/pdf/cs/0205070.pdf.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Domain adaptation with structural correspondence learning">
+
+                                <b>[4]</b> BLITZER J, MCDONALD R, PEREIRA F.Domain adaptation with structural correspondence learning[C]//Proceedings of Conference on Empirical Methods in Natural Language Processing.Stroudsburg, USA:Association for Computational Linguistics, 2006:120-128.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Cross-Domain Sentiment Classification via Spectral Feature Alignment">
+
+                                <b>[5]</b> PAN Jialin, NI Xiaochuan, SUN Jiantao, et al.Cross-domain sentiment classification via spectral feature alignment[C]//Proceedings of the 19th International Conference on World Wide Web.New York, USA:ACM Press, 2010:751-760.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A cross-domain sentiment classification method based on extraction of key sentiment sentence">
+
+                                <b>[6]</b> ZHANG Shaowu, LIU Huali, YANG Liang, et al.A cross-domain sentiment classification method based on extraction of key sentiment sentence[J].Natural Language Processing and Chinese Computing, 2015, 9362:90-101.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201310036&amp;v=MzE2NTVxcUJ0R0ZyQ1VSTE9lWmVSb0Z5M2xXcjNPTHo3QmJiRzRIOUxOcjQ5R1lvUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 孟佳娜, 段晓东, 杨亮.基于特征变换的跨领域产品评论倾向性分析[J].计算机工程, 2013, 39 (10) :167-171.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Cross-Domain sentiment classification using a sentiment sensitive thesaurus">
+
+                                <b>[8]</b> BOLLEGALA D, WEIR D, CARROLL J.Cross-domain sentiment classification using a sentiment sensitive thesaurus[J].IEEE Transactions on Knowledge and Data Engineering, 2013, 25 (8) :1719-1731.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Feature Ensemble Plus Sample Selection: Domain Adaptation forSentiment Classification">
+
+                                <b>[9]</b> XIA Rui, ZONG Chengqing, HU Xuelei, et al.Feature ensemble plus sample selection:domain adaptation for sentiment classification[J].IEEE Intelligent Systems, 2013, 28 (3) :10-18.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Linking Heterogeneous Input Features with Pivots for Domain Adaptation">
+
+                                <b>[10]</b> ZHOU Guangyou, HE Tingting, WU Wensheng, et al.Linking heterogeneous input features with pivots for domain adaptation[C]//Proceedings of the 24th International Conference on Artificial Intelligence.[S.l.]:AAAI Press, 2015:1419-1425.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201702036&amp;v=MDQwNTE0TzN6cXFCdEdGckNVUkxPZVplUm9GeTNsV3IzT0x6N0JiYkc0SDliTXJZOUdZb1FLREg4NHZSNFQ2ajU=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 魏晓聪, 林鸿飞.面向迁移学习的文本特征对齐算法[J].计算机工程, 2017, 43 (2) :215-219.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A Common Subspace Construction Method in Cross-domain Sentiment Classification">
+
+                                <b>[12]</b> ZHANG Yuhong, XU Xu, HU Xuegang.A common subspace construction method in cross-domain sentiment classification[C]//Proceedings of International Conference on Electronic Science and Automation Control.[S.l.]:Atlantis Press, 2015:48-52.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14123100019792&amp;v=MjM4Mjg2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSUpWNGRhQlE9TmlmT2ZiSzhIOVBQcm85RlpPb0dDM1U3b0JNVA==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> ZHOU Guangyou, ZHOU Yin, GUO Xiyue, et al.Cross-domain sentiment classification via topical correspondence transfer[J].Neurocomputing, 2015, 159:298-305.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Domain adaptation for large-scalesentiment classification: A deep learning approach">
+
+                                <b>[14]</b> GLOROT X, BORDES A, BENGIO Y.Domain adapta-tion for large-scale sentiment classification:a deep learning approach[C]//Proceedings of the 28th International Conference on Machine Learning.[S.l.]:Omnipress, 2011:513-520.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep learning of representations for unsupervised and transfer learning">
+
+                                <b>[15]</b> BENGIO Y, GUYON G, DROR V, et al.Deep learning of representations for unsupervised and transfer learning[EB/OL].[2018-01-16].https://www.docin.com/p-1690924284.html.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A unified architecture for natural language processing:Deep neural networks with multitask learning">
+
+                                <b>[16]</b> COLLOBERT R, WESTON J.A unified architecture for natural language processing:deep neural networks with multitask learning[C]//Proceedings of the 25th Inter-national Conference on Machine learning.New York, USA:ACM Press, 2008:160-167.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Part-of-speech tagging using decision trees">
+
+                                <b>[17]</b> MARQUEZ L, RODRÍGUEZ H.Part-of-speech tagging using decision trees[C]//Proceedings of the 10th European Conference on Machine Learning.London, UK:Springer, 1998:25-36.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A solution to Plato&amp;#39; s problem: the latent semantic analysis theory of the acquisition, induction and representation of knowledge">
+
+                                <b>[18]</b> LANDAUER T K, DUMAIS S T.A solution to plato’s problem:the latent semantic analysis theory of acquisition, induction, and representation of knowledge[J].Psychological Review, 1997, 104 (2) :211-240.
+                            </a>
+                        </p>
+                        <p id="39">
+                            <a id="bibliography_19" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+
+                                <b>[19]</b> MIKOLOV T, CHEN K, CORRADO G, et al.Efficient estimation of word representations in vector space[EB/OL].[2018-01-16].https://arxiv.org/pdf/1301.3781.pdf.
+                            </a>
+                        </p>
+                        <p id="41">
+                            <a id="bibliography_20" target="_blank" href="http://scholar.cnki.net/result.aspx?q=GloVe:global vectors for word representation">
+
+                                <b>[20]</b> PENNINGTON J, SOCHER R, MANNING C.GloVe:global vectors for word representation[EB/OL].[2018-01-16].https://nlp.stanford.edu/projects/glove/.
+                            </a>
+                        </p>
+                        <p id="43">
+                            <a id="bibliography_21" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000027180&amp;v=MjczMTRud1plWnVIeWptVUxuSUpWNGRhQlE9TmlmSVk3SzdIdGpOcjQ5RlpPa0lEWFE1b0JNVDZUNFBRSC9pclJkR2VycVFUTQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[21]</b> MILLER G A.WordNet:a lexical database for English[J].Communications of the Association for Computing Machinery, 1995, 38 (11) :39-41.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201905019" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201905019&amp;v=Mjg4Mzh0R0ZyQ1VSTE9lWmVSb0Z5M2xXcjNPTHo3QmJiRzRIOWpNcW85RWJZUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637134077014475000%26DBCODE%3dCJFD%26TABLEName%3dCJFDTEMP%26FileName%3dJYRJ201911018%26RESULT%3d1%26SIGN%3dMcJItxjHlpUtDYDDpYrkHed2cNE%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201911018&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201911018&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201911018&amp;v=MDE3MzF1RnkvZ1dyek5MelRaWkxHNEg5ak5ybzlFYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVY=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#41" data-title="&lt;b&gt;0 引 言&lt;/b&gt; "><b>0 引 言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#45" data-title="&lt;b&gt;1 数据预处理&lt;/b&gt; "><b>1 数据预处理</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#47" data-title="&lt;b&gt;1.1 数据源说明&lt;/b&gt;"><b>1.1 数据源说明</b></a></li>
+                                                <li><a href="#50" data-title="&lt;b&gt;1.2 数据预处理&lt;/b&gt;"><b>1.2 数据预处理</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#71" data-title="&lt;b&gt;2 粗聚类与聚类&lt;/b&gt; "><b>2 粗聚类与聚类</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#72" data-title="&lt;b&gt;2.1 粗聚类&lt;/b&gt;"><b>2.1 粗聚类</b></a></li>
+                                                <li><a href="#84" data-title="&lt;b&gt;2.2 K-均值聚类算法描述&lt;/b&gt;"><b>2.2 K-均值聚类算法描述</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#93" data-title="&lt;b&gt;3 聚类结果与分析&lt;/b&gt; "><b>3 聚类结果与分析</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#96" data-title="&lt;b&gt;3.1 工作日聚类结果与分析&lt;/b&gt;"><b>3.1 工作日聚类结果与分析</b></a></li>
+                                                <li><a href="#111" data-title="&lt;b&gt;3.2 周末聚类结果与分析&lt;/b&gt;"><b>3.2 周末聚类结果与分析</b></a></li>
+                                                <li><a href="#125" data-title="&lt;b&gt;3.3 按个人及专业的上网时间特征&lt;/b&gt;"><b>3.3 按个人及专业的上网时间特征</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#134" data-title="&lt;b&gt;4 结 语&lt;/b&gt; "><b>4 结 语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#49" data-title="&lt;b&gt;表1 源数据信息表&lt;/b&gt;"><b>表1 源数据信息表</b></a></li>
+                                                <li><a href="#70" data-title="&lt;b&gt;表2 认证数据表&lt;/b&gt;"><b>表2 认证数据表</b></a></li>
+                                                <li><a href="#98" data-title="图1 工作日聚类结果">图1 工作日聚类结果</a></li>
+                                                <li><a href="#99" data-title="&lt;b&gt;表3 工作日各类的人数占总人数比例和各类各年级的人数比例汇总&lt;/b&gt;"><b>表3 工作日各类的人数占总人数比例和各类各年级的人数比例汇总</b></a></li>
+                                                <li><a href="#113" data-title="图2 周末聚类结果">图2 周末聚类结果</a></li>
+                                                <li><a href="#114" data-title="&lt;b&gt;表4 周末各类的人数占总人数比例和各类中各年级的人数比例汇总&lt;/b&gt;"><b>表4 周末各类的人数占总人数比例和各类中各年级的人数比例汇总</b></a></li>
+                                                <li><a href="#128" data-title="&lt;b&gt;表5 某学生上网时间特征分布&lt;/b&gt;"><b>表5 某学生上网时间特征分布</b></a></li>
+                                                <li><a href="#131" data-title="&lt;b&gt;表6 此校计算机科学技术专业学生上网分布&lt;/b&gt;"><b>表6 此校计算机科学技术专业学生上网分布</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="151">
+
+
+                                    <a id="bibliography_1" title=" 潘莹,梁京章,黎慧娟.基于K-means算法的校园网用户行为聚类分析[J].计算技术与自动化,2007,26(1):66-69." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJH200701017&amp;v=Mjk5NzR6cXFCdEdGckNVUkxPZVplVnVGeS9nV3J6TUx6N0Jackc0SHRiTXJvOUVZNFFLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         潘莹,梁京章,黎慧娟.基于K-means算法的校园网用户行为聚类分析[J].计算技术与自动化,2007,26(1):66-69.
+                                    </a>
+                                </li>
+                                <li id="153">
+
+
+                                    <a id="bibliography_2" title=" 丁青,周留根,朱爱兵,等.基于K-means聚类算法的校园网用户行为分析研究[J].微计算机应用,2010,31(6):74-80." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJSY201006014&amp;v=MDc2NjBGckNVUkxPZVplVnVGeS9nV3J6TU1pZllkN0c0SDlITXFZOUVZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         丁青,周留根,朱爱兵,等.基于K-means聚类算法的校园网用户行为分析研究[J].微计算机应用,2010,31(6):74-80.
+                                    </a>
+                                </li>
+                                <li id="155">
+
+
+                                    <a id="bibliography_3" title=" 朱正国.应用K-means算法分析校园网用户行为[J].安庆师范大学学报(自然科学版),2017,23(1):53-56." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=AQSX201701014&amp;v=MTg3MzNvOUVZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplVnVGeS9nV3J6TUpEellkckc0SDliTXI=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         朱正国.应用K-means算法分析校园网用户行为[J].安庆师范大学学报(自然科学版),2017,23(1):53-56.
+                                    </a>
+                                </li>
+                                <li id="157">
+
+
+                                    <a id="bibliography_4" >
+                                        <b>[4]</b>
+                                     杜杰.基于校园网海量访问日志的用户行为分析[D].大连:大连海事大学,2016.</a>
+                                </li>
+                                <li id="159">
+
+
+                                    <a id="bibliography_5" title=" 皇甫大鹏,陈平,王兴建.基于一种改进的K-means算法的校园网用户行为分析研究[J].广西大学学报(自然科学版),2011,36(S1):69-72." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GXKZ2011S1014&amp;v=MDQ3NTBDdnJvOUVZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplVnVGeS9nV3J6TUlqWEFkTEc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         皇甫大鹏,陈平,王兴建.基于一种改进的K-means算法的校园网用户行为分析研究[J].广西大学学报(自然科学版),2011,36(S1):69-72.
+                                    </a>
+                                </li>
+                                <li id="161">
+
+
+                                    <a id="bibliography_6" title=" 楼若岩,许晓东,朱士瑞.面向校园网的IP地址逐步优化层次聚类算法[J].计算机应用,2007,27(8):1862-1864." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY200708011&amp;v=MjQ0OThRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVZ1RnkvZ1dyek1MejdCZDdHNEh0Yk1wNDlFWlk=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         楼若岩,许晓东,朱士瑞.面向校园网的IP地址逐步优化层次聚类算法[J].计算机应用,2007,27(8):1862-1864.
+                                    </a>
+                                </li>
+                                <li id="163">
+
+
+                                    <a id="bibliography_7" title=" 宋坤.校园网用户行为信息的预处理与聚类方法研究[D].重庆:重庆交通大学,2016." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016163357.nh&amp;v=MDcyNjIyNkdMSytIZExKcUpFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVWdUZ5L2dXcnpNVkY=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         宋坤.校园网用户行为信息的预处理与聚类方法研究[D].重庆:重庆交通大学,2016.
+                                    </a>
+                                </li>
+                                <li id="165">
+
+
+                                    <a id="bibliography_8" title=" Shi Q,Qian Y,Gong Y,et al.The Analysis and Data Mining of Students&#39; Online Data Based on Digital Campus[J].Applied Mechanics &amp;amp; Materials,2013,397-400:2326-2329." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJTT&amp;filename=SJTT13121200045837&amp;v=MjMxMDBaZVp1SHlqbVViL0lKMXNkYVJZPU5pZmZlcks3SDlQTnJZOUZaTzhLQkg4K29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1udw==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         Shi Q,Qian Y,Gong Y,et al.The Analysis and Data Mining of Students&#39; Online Data Based on Digital Campus[J].Applied Mechanics &amp;amp; Materials,2013,397-400:2326-2329.
+                                    </a>
+                                </li>
+                                <li id="167">
+
+
+                                    <a id="bibliography_9" title=" Poucin G,Farooq B,Patterson Z.Activity Patterns Mining in Wi-Fi Access Point Logs[J].Computers Environment &amp;amp; Urban Systems,2018,67:55-67." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES312A290DC77CC95447C800501B3E173D&amp;v=MjU3MTJRcm5yQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1ZGhodzcyMnc2dz1OaWZPZmJDNUhLRE9wbzh4Rit3SWZ3OHd5aElYN1V4MVNIL25yQk5IZXNlVg==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         Poucin G,Farooq B,Patterson Z.Activity Patterns Mining in Wi-Fi Access Point Logs[J].Computers Environment &amp;amp; Urban Systems,2018,67:55-67.
+                                    </a>
+                                </li>
+                                <li id="169">
+
+
+                                    <a id="bibliography_10" title=" 余长俊,张燃.云环境下基于Canopy聚类的FCM算法研究[J].计算机科学,2014,41(b11):316-319." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJA2014S2077&amp;v=MjM1ODBMejdCYjdHNEg5V3ZyWTlDWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVZ1RnkvZ1dyek0=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         余长俊,张燃.云环境下基于Canopy聚类的FCM算法研究[J].计算机科学,2014,41(b11):316-319.
+                                    </a>
+                                </li>
+                                <li id="171">
+
+
+                                    <a id="bibliography_11" title=" Zhang G,Zhang C,Zhang H.Improved K-means Algorithm Based on Density Canopy[J].Knowledge-Based Systems,2018,145." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES3D39D047B8D5D7195E34AA26065C5655&amp;v=MTk3NTVIWWZPR1FsZkNwYlEzNWRoaHc3MjJ3Nnc9TmlmT2ZiRE1IZGk0cjR0Q0Z1TjdDUWcremg4V256eDVPUTdncWhJemZNR1JRNythQ09OdkZTaVdXcjdKSUZwbWFCdQ==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         Zhang G,Zhang C,Zhang H.Improved K-means Algorithm Based on Density Canopy[J].Knowledge-Based Systems,2018,145.
+                                    </a>
+                                </li>
+                                <li id="173">
+
+
+                                    <a id="bibliography_12" title=" Wang M,Abrams Z B,Kornblau S M,et al.Thresher:Determining the Number of Clusters while Removing Outliers[J].Bmc Bioinformatics,2018,19(1):9." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Thresher:determining the number of clusters while removing outliers">
+                                        <b>[12]</b>
+                                         Wang M,Abrams Z B,Kornblau S M,et al.Thresher:Determining the Number of Clusters while Removing Outliers[J].Bmc Bioinformatics,2018,19(1):9.
+                                    </a>
+                                </li>
+                                <li id="175">
+
+
+                                    <a id="bibliography_13" title=" Zhou S B,Xu Z Y,Tang X Q.A Method for Determining the Optimal Number of Clusters Based on Affinity Propagation Clustering[J].Control &amp;amp; Decision,2011,26(8):1147-1152,1157." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KZYC201108008&amp;v=MjQ4MjVMT2VaZVZ1RnkvZ1dyek1MamZTYmJHNEg5RE1wNDlGYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         Zhou S B,Xu Z Y,Tang X Q.A Method for Determining the Optimal Number of Clusters Based on Affinity Propagation Clustering[J].Control &amp;amp; Decision,2011,26(8):1147-1152,1157.
+                                    </a>
+                                </li>
+                                <li id="177">
+
+
+                                    <a id="bibliography_14" title=" Lukashin A V,Fuchs R.Analysis of Temporal Gene Expression Profiles:Clustering by Simulated Annealing and Determining the Optimal Number of Clusters[J].Bioinformatics,2001,17(4):405-414." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJOX&amp;filename=SJOX14010900014159&amp;v=MjUzNTlkYVJZPU5pZkVkcks4SHRETXBvOUZaT29MRFhrd29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVWIvSUoxcw==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         Lukashin A V,Fuchs R.Analysis of Temporal Gene Expression Profiles:Clustering by Simulated Annealing and Determining the Optimal Number of Clusters[J].Bioinformatics,2001,17(4):405-414.
+                                    </a>
+                                </li>
+                                <li id="179">
+
+
+                                    <a id="bibliography_15" title=" Menardi G.Density-based Silhouette Diagnostics for Clustering Methods[J].Statistics &amp;amp; Computing,2011,21(3):295-308." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Density-based Silhouette diagnostics for clustering methods">
+                                        <b>[15]</b>
+                                         Menardi G.Density-based Silhouette Diagnostics for Clustering Methods[J].Statistics &amp;amp; Computing,2011,21(3):295-308.
+                                    </a>
+                                </li>
+                                <li id="181">
+
+
+                                    <a id="bibliography_16" title=" Kim G J,Sang S P,Jang D S.Technology Forecasting Using Topic-based Patent Analysis[J].Journal of Scientific &amp;amp; Industrial Research,2015,74(5):265-270." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Technology forecasting using topic-based patent analysis">
+                                        <b>[16]</b>
+                                         Kim G J,Sang S P,Jang D S.Technology Forecasting Using Topic-based Patent Analysis[J].Journal of Scientific &amp;amp; Industrial Research,2015,74(5):265-270.
+                                    </a>
+                                </li>
+                                <li id="183">
+
+
+                                    <a id="bibliography_17" title=" Su T,Dy J.A Deterministic Method for Initializing K-means Clustering[C]//Proceedings of the 16th IEEE International Conference on Tools with Artificial Intelligence.IEEE Computer Society,2004:784-786." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A Deterministic Method for Initializing K-Means Clustering">
+                                        <b>[17]</b>
+                                         Su T,Dy J.A Deterministic Method for Initializing K-means Clustering[C]//Proceedings of the 16th IEEE International Conference on Tools with Artificial Intelligence.IEEE Computer Society,2004:784-786.
+                                    </a>
+                                </li>
+                                <li id="185">
+
+
+                                    <a id="bibliography_18" title=" Chang D X,Zhang X D,Zheng C W.A Genetic Algorithm with Gene Rearrangement for K-means Clustering[J].Pattern Recognition,2009,42(7):1210-1222." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011600738883&amp;v=MDMzMThqbVViL0lKMXNkYVJZPU5pZk9mYks3SHRETnFZOUZZK2dIQkhRNm9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeQ==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[18]</b>
+                                         Chang D X,Zhang X D,Zheng C W.A Genetic Algorithm with Gene Rearrangement for K-means Clustering[J].Pattern Recognition,2009,42(7):1210-1222.
+                                    </a>
+                                </li>
+                                <li id="187">
+
+
+                                    <a id="bibliography_19" title=" 孙吉贵,刘杰,赵连宇.聚类算法研究[J].软件学报,2008(1):48-61." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB200801009&amp;v=MDEyMDhIdG5Ncm85RmJZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVWdUZ5L2dXcnpNTnlmVGJMRzQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[19]</b>
+                                         孙吉贵,刘杰,赵连宇.聚类算法研究[J].软件学报,2008(1):48-61.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JYRJ" target="_blank">计算机应用与软件</a>
+                2019,36(11),101-106+133 DOI:10.3969/j.issn.1000-386x.2019.11.017            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于认证数据的学生上网时间特征分析</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%83%AD%E7%8E%89%E5%BD%AC&amp;code=22222384&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">郭玉彬</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%90%B4%E5%AE%87%E8%88%AA&amp;code=40703905&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">吴宇航</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%96%84%E5%82%B2%E5%B3%B0&amp;code=43235596&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">薄傲峰</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%83%91%E6%B7%91%E6%95%8F&amp;code=43235597&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">郑淑敏</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E6%99%93%E9%B9%8F&amp;code=07564161&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张晓鹏</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8D%8E%E5%8D%97%E5%86%9C%E4%B8%9A%E5%A4%A7%E5%AD%A6%E6%95%B0%E5%AD%A6%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%99%A2&amp;code=0221203&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">华南农业大学数学与信息学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%B1%B1%E5%A4%A7%E5%AD%A6%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E4%B8%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2&amp;code=0140250&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中山大学数据科学与计算机学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>为研究高校本科生上网时间特征,将学生上网认证数据转换成学生上网时长向量集。利用K-canopy算法去除离群点,并通过指标投票机制得到最佳聚类个数;利用K-means算法分别对工作日和周末上网时长向量集进行聚类,将工作日向量集聚为6个类、周末向量集聚为5个类;分析聚类结果,得到各类学生的上网时间特征、学生个人的上网时间特征和各专业中各年级学生上网时间特征。学生上网时间特征可为专业课程时间安排、学生管理等工作提供参考。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AE%A4%E8%AF%81%E6%95%B0%E6%8D%AE&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">认证数据;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%97%B6%E9%97%B4%E7%89%B9%E5%BE%81&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">时间特征;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=K-canopy%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">K-canopy算法;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=K-means%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">K-means算法;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    郭玉彬，副教授，主研领域:数据库，网络计算。;
+                                </span>
+                                <span>
+                                    吴宇航，硕士生。;
+                                </span>
+                                <span>
+                                    薄傲峰，硕士。;
+                                </span>
+                                <span>
+                                    郑淑敏，学士。;
+                                </span>
+                                <span>
+                                    张晓鹏，硕士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-10-30</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家重点研发计划项目(2016YFD0800307);</span>
+                                <span>国家科技支撑计划项目(2015BAD06B03-3);</span>
+                    </p>
+            </div>
+                    <h1><b>ANALYSIS OF STUDENTS' ONLINE TIME CHARACTERISTICS BASED ON AUTHENTICATION DATA</b></h1>
+                    <h2>
+                    <span>Guo Yubin</span>
+                    <span>Wu Yuhang</span>
+                    <span>Bo Aofeng</span>
+                    <span>Zheng Shumin</span>
+                    <span>Zhang Xiaopeng</span>
+            </h2>
+                    <h2>
+                    <span>College of Mathematics and Information, South China Agricultural University</span>
+                    <span>School of Data and Computer Science, Sun Yat-sen University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>For studying undergraduates' online time characteristics, the online authentication data of undergraduates were transformed into the vector set of their online time. K-canopy algorithm was used to remove outliers, and the quota voting mechanism was adopted for selecting the optimal number of clusters. The K-means algorithm was adopted to cluster the vectors of the time spent on the Internet on weekdays and weekends respectively. The vectors of the weekdays were clustered into 6 classes, and the vectors of weekends were clustered into 5 classes. By analyzing the clustering results, we can acquire online time characteristics of all kinds of students, a single student and students in different grades of a certain specialty. All those online time characteristics can provide reference for time arrangement of professional courses and student management.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Authentication%20data&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Authentication data;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Time%20characteristic&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Time characteristic;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=K-canopy%20algorithm&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">K-canopy algorithm;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=K-means%20algorithm&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">K-means algorithm;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-10-30</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="41" name="41" class="anchor-tag"><b>0 引 言</b></h3>
+                <div class="p1">
+                    <p id="42">高校校园网是承载高校学生学习、生活、娱乐等各类活动的基础性设施。随着移动互联网技术的发展,学生对网络的使用增长迅速,其上网行为也呈现多样化和复杂化特征。校园网认证数据包含了学生用户名、上网端口地址、上下线时间等信息。通过对这些数据的分析,可发现学生上网时间、时长等信息及相关的特征分类规律。而这些规律性信息对学生管理、专业课程设置等工作具有较高的参考价值。2016年上网认证数据量约8 000万条,并以每年约1亿条的速度增加。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">针对校园网日志数据进行学生行为分析的研究有很多,大多数研究都是采用传统的K-means算法对在线时长和校园网使用流量进行聚类,利用聚类结果分析每一类用户的上网行为和优化校园网管理<citation id="194" type="reference"><link href="151" rel="bibliography" /><link href="153" rel="bibliography" /><link href="155" rel="bibliography" /><link href="157" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>,<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>。文献<citation id="189" type="reference">[<a class="sup">5</a>]</citation>基于一种改进的K-means算法,即SimiClustering算法,对校园网用户在线时长和流量进行聚类,得出3种用户行为,并利用聚类结果为校园网用户个性化需求方面提供理论依据。文献<citation id="190" type="reference">[<a class="sup">6</a>]</citation>利用优化层次聚类算法对校园网主干数据流的IP地址进行聚类,得到网络用户的访问地址分布情况,从中了解用户行为特征。文献<citation id="191" type="reference">[<a class="sup">7</a>]</citation>提出结合网络用户数据特点的预处理方式,并引入基于图论的子空间聚类方法、粒子群聚类算法得到校园网用户网络行为模式。文献<citation id="192" type="reference">[<a class="sup">8</a>]</citation>利用K-means算法和统计技术对校园网用户日志数据进行分析,发现大部分学生每个月上网时间小于170小时、学生上网时间越长越容易挂科的规律。文献<citation id="193" type="reference">[<a class="sup">9</a>]</citation>对Concordia大学Wi-Fi日志数据利用PCA制导的聚类算法进行分析,得到7类行为模式,并给出多天同类型活动的搜索算法。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">上述研究中,聚类中采用上网时间都是用户一天或者一个月为单位的上网时间,大多数研究没有去除脏数据。本文将学生上网认证数据转换为24小时时长向量,保留较多细节,更方便分析学生上网时刻及更能反映学生上网时间分布规律;采用改进Canopy算法,即K-canopy算法,去除离群点,提高聚类质量,进而提高分析结论的可靠性。本文首先选择校园网认证数据并对其进行清洗,去除与研究目标无关的数据;然后进行数据预处理,得到学生上网时长向量集;再对学生工作日和周末的上网时长向量分别进行聚类。最后依据聚类结果分析了各类学生上网时间和时长分布特征,结合年级专业上网规律进行总结,为学生管理、专业课程设置等工作提供参考。</p>
+                </div>
+                <h3 id="45" name="45" class="anchor-tag"><b>1 数据预处理</b></h3>
+                <div class="p1">
+                    <p id="46">本文选择校园网2016年11月本科生的认证数据进行实验分析。因为11月份是正常学期时间,不受开学、期末考试影响,且11月假期较少,更能全面反映学生上网行为分布规律。在数据预处理阶段,首先进行数据清洗,去掉与研究目标无关的数据,然后计算每个用户、每天24小时内每小时的上网时长,得到上网时长向量集合。</p>
+                </div>
+                <h4 class="anchor-tag" id="47" name="47"><b>1.1 数据源说明</b></h4>
+                <div class="p1">
+                    <p id="48">本文实验数据来源于SAM网络认证计费系统和Syslog网络设备日志收集系统。主要提供的信息有:用户帐号、IP地址信息、上线时间、下线时间和离线原因等。表1给出源数据表中关键字段说明。</p>
+                </div>
+                <div class="area_img" id="49">
+                    <p class="img_tit"><b>表1 源数据信息表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="49" border="1"><tr><td>名称</td><td>类型</td><td>长度</td><td>说明</td></tr><tr><td><br />USER_ID</td><td>varchar</td><td>32</td><td>用户帐号</td></tr><tr><td><br />USER_IPV4</td><td>varchar</td><td>16</td><td>IPv4地址</td></tr><tr><td><br />LOGIN_TIME</td><td>datetime</td><td>0</td><td>上线时间</td></tr><tr><td><br />LOGOUT_TIME</td><td>datetime</td><td>0</td><td>下线时间</td></tr><tr><td><br />TERMINATE_CAUSE</td><td>varchar</td><td>256</td><td>离线原因</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="50" name="50"><b>1.2 数据预处理</b></h4>
+                <h4 class="anchor-tag" id="51" name="51">(1) 数据选择:</h4>
+                <div class="p1">
+                    <p id="52">校园网认证记录数据量比较大,其中包括本科生、研究生、教职工和住宅区等多种类型账号的认证数据,也包括了线路故障反复登录、设备自动登录等其他与本研究无关的认证数据。针对本文研究目标,下面详细列出需要清洗的数据及其清洗原因和处理策略。</p>
+                </div>
+                <h4 class="anchor-tag" id="53" name="53">① 研究生、教职工、办公区、来访人员和住宅区等非本科生认证数据。</h4>
+                <div class="p1">
+                    <p id="54">此类数据与本研究无关,依据帐号特征去除该类数据。</p>
+                </div>
+                <h4 class="anchor-tag" id="55" name="55">② 大学一、五年级学生认证数据。</h4>
+                <div class="p1">
+                    <p id="56">学校规定仅有少量满足特殊条件的一年级学生可开设校园网帐号,五年级学生是特殊专业或者学籍异动的学生,此类学生不具有代表性,依据帐号特征去除。</p>
+                </div>
+                <h4 class="anchor-tag" id="57" name="57">③ 去除11日的数据。</h4>
+                <div class="p1">
+                    <p id="58">双11购物节,按学校规定10-11日夜间不断网,因此这一天学生的上网行为不是常规工作日行为或者周末行为,属于异常行为,直接删除该时间段全部认证记录。</p>
+                </div>
+                <h4 class="anchor-tag" id="59" name="59">④ 上下线时间间隔小于或等于60秒的数据。</h4>
+                <div class="p1">
+                    <p id="60">机器故障所产生的,这类数据对分析学生上网行为没有意义,依据上下线时间计算时长,然后去除该类数据。</p>
+                </div>
+                <h4 class="anchor-tag" id="61" name="61">⑤ 单次在线时长超过48个小时的数据。</h4>
+                <div class="p1">
+                    <p id="62">可能是设备挂机或者是个人极端行为,这类数据不反映学生上网行为或者不具有代表性。依据上下线时间计算时长,然后去除该类数据。</p>
+                </div>
+                <h4 class="anchor-tag" id="63" name="63">⑥ 从6点钟到23点钟时间段内上网时长都是3 600秒的数据。</h4>
+                <div class="p1">
+                    <p id="64">设备自动认证数据,不反映学生上网行为,依据帐号每小时上网时长去除该类数据。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">综上所述,本文实验数据范围:全月原始数据有1 990 396条认证数据,其中工作日数据1 487 914条,周末502 482条。清洗后总数据量201 523条,其中工作日152 007条,周末49 516条。</p>
+                </div>
+                <h4 class="anchor-tag" id="66" name="66">(2) 实验数据预处理:</h4>
+                <div class="p1">
+                    <p id="67">本小节对学生每天产生的多条上网认证数据进行处理,得到每个学生每天的上网时长向量。计算每个学生每天24小时上网时长向量,从而将学生一天上网时长细化到每天每小时,更能反映学生上网时间分布。为保护学生隐私,本文对用户帐号进行了脱敏处理,利用无意义的数字替代敏感信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="68">表2给出学号为2013000XXXX的学生在2016年11月2日的认证数据预处理结果,假设其上网时长向量<i><b>m</b></i>,那么<i><b>m</b></i>值如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="69"><i><b>m</b></i>=[2013000XXXX,2016/11/2,0,0,0,0,0,0,0,0,876,2 278,0,0,0,2 626,3 600,3 600,3 018,0,2 400,3 600,3 600,3 530,3 600,1 799]</p>
+                </div>
+                <div class="area_img" id="70">
+                    <p class="img_tit"><b>表2 认证数据表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="70" border="1"><tr><td><br />USER_ID</td><td>LOGIN_TIME</td><td>LOGOUT_TIME</td></tr><tr><td><br />2013000XXXX</td><td>2016/11/2 8:45</td><td>2016/11/2 9:37</td></tr><tr><td><br />2013000XXXX</td><td>2016/11/2 12:09</td><td>2016/11/2 12:25</td></tr><tr><td><br />2013000XXXX</td><td>2016/11/2 13:16</td><td>2016/11/2 16:50</td></tr><tr><td><br />2013000XXXX</td><td>2016/11/2 18:20</td><td>2016/11/2 21:26</td></tr><tr><td><br />2013000XXXX</td><td>2016/11/2 21:27</td><td>2016/11/2 23:30</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h3 id="71" name="71" class="anchor-tag"><b>2 粗聚类与聚类</b></h3>
+                <h4 class="anchor-tag" id="72" name="72"><b>2.1 粗聚类</b></h4>
+                <div class="p1">
+                    <p id="73">本小节使用K-canopy算法对上网时长向量集进行粗聚类,去除离群点并估计聚类个数。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">Canopy算法一般称为粗聚类算法,它不需要指定聚类个数,算法简单,运算速度快<citation id="195" type="reference"><link href="169" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>。Canopy算法原理和实现方法见文献<citation id="196" type="reference">[<a class="sup">11</a>]</citation>。本文基于Canopy算法基本原理设计并实现K-canopy聚类算法,用于去除离群点。K-canopy聚类算法的基本思想是首先利用Canopy算法对数据进行一次粗聚类,取数据个数少且聚类中心与其他Canopy中心距离较远的Canopy作为离群点去掉。重复此操作直到去掉总数据量的2%～5%的离群数据为止。按常规,2%～5%的数据为离群点是合理的,具体数量可依据数据质量、学生实际上网特征异常的人数来设定,以下是K-canopy聚类算法步骤。</p>
+                </div>
+                <div class="p1">
+                    <p id="75">(1) 构造原始数据集合<i>List</i>,计算全部数据两两之间的欧式距离的均值<i>T</i>,令<i>T</i>1=0.65×<i>T</i>;</p>
+                </div>
+                <div class="p1">
+                    <p id="76">(2) 在<i>List</i>中随机选取一个样本数据作为基点<i>P</i>,将其从<i>List</i>删除,并计算<i>List</i>中其他样本点到基点<i>P</i>的距离<i>d</i>1;</p>
+                </div>
+                <div class="p1">
+                    <p id="77">(3) 把<i>d</i>1小于<i>T</i>1的样本划到一个Canopy中,同时把这些已划分好的数据从原始数据集合<i>List</i>中移除;</p>
+                </div>
+                <div class="p1">
+                    <p id="78">(4) 重复(2)、(3),直到<i>List</i>为空;</p>
+                </div>
+                <div class="p1">
+                    <p id="79">(5) 开始发现异常点,构造由各个Canopy的中心组成的数据集合<i>Center</i>,令<i>T</i>2=0.95×<i>T</i>1;</p>
+                </div>
+                <div class="p1">
+                    <p id="80">(6) 从<i>Center</i>中顺序选取一个数据<i>C</i>,计算<i>C</i>与<i>Center</i>中其他所有数据的距离<i>d</i>2,统计<i>d</i>2小于<i>T</i>2的次数<i>n</i>,直到遍历<i>Center</i>;</p>
+                </div>
+                <div class="p1">
+                    <p id="81">(7) <i>n</i>小于或者等于2,则将由样本<i>C</i>生成的Canopy定义为一个异常类,其他Canopy定义为正常类,该异常类中的样本全部定义为离群点。</p>
+                </div>
+                <div class="p1">
+                    <p id="82">该算法中变量<i>T</i>、<i>T</i>1、<i>T</i>2和<i>n</i>是较重要的参数。<i>T</i>是两两向量之间距离的平均值,用来划分Canopy的阈值。对每个向量,若其与选定向量的距离小于<i>T</i>1,则被划分到选定向量所在的Canopy中,此处取<i>T</i>1=0.65×<i>T</i>是针对本实验数据经过多次实验后能有效避免数据倾斜现象而选定的。参数<i>T</i>2和<i>n</i>是划分离群点所在类的阈值。若一个类与其他类的中心之间的距离小于<i>T</i>2的次数少于或等于2次,则说明此类的中心与其他类的中心距离较远。如果类包含向量个数少于200,则此类中所有向量为离群点。此处取<i>T</i>2=0.95×<i>T</i>1、<i>n</i>=2、类中向量个数小于200是针对本实验上网时长向量集多次实验选定的。对其他数据集,可选择不同参数。本文为达到更好的粗聚类结果,对向量集循环了20次K-canopy聚类算法。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">由于学校工作日和周末的断网策略不同,本文将工作日和周末分别粗聚类。工作日粗聚类后得到148个Canopy,其中包含6个向量数量明显较大的Canopy,去除2 323个离群点,占比1.53%;周末粗聚类后得到106个Canopy,其中包含5个向量数量明显较大的Canopy,去除3 627个离群点,占比7.32%。通过分析发现,去除的向量确实与其他向量差异较大。</p>
+                </div>
+                <h4 class="anchor-tag" id="84" name="84"><b>2.2 K-均值聚类算法描述</b></h4>
+                <div class="p1">
+                    <p id="85"><i>K</i>值,即聚类个数,是K-均值聚类算法(K-means算法)中最重要的参数,会极大地影响聚类结果。确定<i>K</i>值的思路有很多种<citation id="201" type="reference"><link href="173" rel="bibliography" /><link href="175" rel="bibliography" /><link href="177" rel="bibliography" /><sup>[<a class="sup">12</a>,<a class="sup">13</a>,<a class="sup">14</a>]</sup></citation>。本文采用投票机制,即利用多种指标最终确定<i>K</i>值。在对数据样本分布缺乏先验的理解前提下,本文选择稳定性较好的三种指标,分别是轮廓系数<citation id="197" type="reference"><link href="179" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>、戴维森堡丁指数(DBI)<citation id="198" type="reference"><link href="181" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>与误差平方和系数(SSE)<citation id="199" type="reference"><link href="183" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>。轮廓系数、戴维森堡丁指数侧重于类间间隔性与类内紧密性,轮廓系数越大、戴维森堡丁指数越小说明聚类效果好。误差平方和系数则是常规K-means算法的损失函数,可以直接表现出聚类效果<citation id="200" type="reference"><link href="185" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="86">K-means算法是一种简单、收敛速度快、易实现的经典聚类算法,适用于数值型数据集聚类。该算法的核心思想是找出<i>K</i>个聚类中心,使得每一个样本点和与其最近的聚类中心的平方距离和被最小化<citation id="202" type="reference"><link href="187" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>。本文K-means算法流程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="87">(1) 根据K-canopy聚类得到最优<i>K</i>值,并从数据集中随机选取<i>K</i>个样本点作为初始中心点;</p>
+                </div>
+                <div class="p1">
+                    <p id="88">(2) 计算各个样本点到各个中心点的距离,并将其归类到距离最小时对应的类;</p>
+                </div>
+                <div class="p1">
+                    <p id="89">(3) 根据聚类结果,重新计算每一个类的中心值;</p>
+                </div>
+                <div class="p1">
+                    <p id="90">(4) 重复(2)、(3),直到每一个类的中心值稳定或者迭代次数超过给定阈值。</p>
+                </div>
+                <div class="p1">
+                    <p id="91">本文首先依据K-canopy算法计算结果中向量个数明显较大的Canopy个数,粗略得出<i>K</i>值范围;然后对范围内每个<i>K</i>值的每一个指标都进行10次K-means聚类再求均值,以降低随机性影响;再利用投票原则来选取最优<i>K</i>值;最后通过K-means聚类算法对数据集进行聚类。</p>
+                </div>
+                <div class="p1">
+                    <p id="92">综上,本文最终得到的工作日学生的上网行为聚类个数即<i>K</i>值为6,周末聚类个数即<i>K</i>值为5。通过实验结果可发现本文对工作日和周末数据聚类所得到的<i>K</i>值可得到较好的聚类效果。</p>
+                </div>
+                <h3 id="93" name="93" class="anchor-tag"><b>3 聚类结果与分析</b></h3>
+                <div class="p1">
+                    <p id="94">本文实验使用Java编程语言实现,主机的CPU型号为CPUi7-8700K,内存为8 GB,操作系统为Microsoft Windows 10。</p>
+                </div>
+                <div class="p1">
+                    <p id="95">由于工作日和周末的断网策略不同,且学生课程安排也不一样,学生的行为也存在较大差异,因此本文将周末和工作日数据分开处理。以下是整体的实验流程:(1) 选择校园网2016年11月本科生的认证数据,并对其预处理得到上网时长向量集合;(2) 利用K-canopy算法对得到上网时长向量集进行粗聚类,去除离群点并估计聚类个数;(3) 利用K-means算法和估计聚类个数对去除离群点后的上网时长向量集合进行进一步聚类,并使用三种指标对聚类结果进行评价,选择出最优的聚类个数和聚类结果。</p>
+                </div>
+                <h4 class="anchor-tag" id="96" name="96"><b>3.1 工作日聚类结果与分析</b></h4>
+                <div class="p1">
+                    <p id="97">以下先对工作日12天数据进行聚类分析。图1给出工作日聚类结果,图的横坐标是时间,代表24个时段,纵坐标为平均上网时长。曲线反应各类各时段上网平均时长。表3给出工作日各类中学生人数分布,按学生学号统计每类中学生人数。</p>
+                </div>
+                <div class="area_img" id="98">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201911018_098.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 工作日聚类结果" src="Detail/GetImg?filename=images/JYRJ201911018_098.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 工作日聚类结果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201911018_098.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="99">
+                    <p class="img_tit"><b>表3 工作日各类的人数占总人数比例和各类各年级的人数比例汇总</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="99" border="1"><tr><td rowspan="2"><br />分<br />类</td><td colspan="2">总体</td><td colspan="2">大二</td><td colspan="2">大三</td><td colspan="2">大四</td></tr><tr><td>人数</td><td>百分比<br />/%</td><td>人数</td><td>百分比<br />/%</td><td>人数</td><td>百分比<br />/%</td><td>人数</td><td>百分比<br />/%</td></tr><tr><td>a</td><td>4 476</td><td>7.88</td><td>1 352</td><td>30.21</td><td>1 604</td><td>35.84</td><td>1 520</td><td>33.96</td></tr><tr><td><br />b</td><td>9 361</td><td>16.48</td><td>1 968</td><td>21.02</td><td>3 338</td><td>35.66</td><td>4 055</td><td>43.32</td></tr><tr><td><br />c</td><td>9 398</td><td>16.54</td><td>2 196</td><td>23.37</td><td>3 449</td><td>36.70</td><td>3 753</td><td>39.93</td></tr><tr><td><br />d</td><td>10 398</td><td>18.30</td><td>2 688</td><td>25.85</td><td>3 728</td><td>35.85</td><td>3 982</td><td>38.30</td></tr><tr><td><br />e</td><td>9 569</td><td>16.85</td><td>2 800</td><td>29.26</td><td>3 401</td><td>35.54</td><td>3 368</td><td>35.20</td></tr><tr><td><br />f</td><td>13 603</td><td>23.95</td><td>3 909</td><td>28.74</td><td>4 817</td><td>35.41</td><td>4 877</td><td>35.85</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="100">从图1和表3可总结工作日校园网用户的上网时间分布规律如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="101">(1) a类学生和b类学生上网行为相似,都是白天长时间上网的学生。其中a类学生从早晨6点时段陆续开始上网,8点时段几乎全部上线,直到当天结束。b类学生在8点时段陆续开始上线,10点时段几乎全部上线,10点到16点时段有少量下线,16点时段到23点时段在线人数有细微波动,直到0点断网时全部下线。</p>
+                </div>
+                <div class="p1">
+                    <p id="102">a类学生人数少,占比为7.88%。其中,三个年级学生人数差距不大,分别占30.21%、35.84%和33.96%。本类学生工作日全天上网而且人数较少,说明上网应属个人行为,学生个人有网瘾的概率较高。b类学生人数中等,占比16.48%,明显大四、大二学生较多,分别占43.32%、35.66%。分析原因应该与学校各专业课程设计相关,是大二学生上午有课的较多,而大四学生上午没课的比例较大。</p>
+                </div>
+                <div class="p1">
+                    <p id="103">(2) c类学生在12点时段陆续开始上网,13时段上线在数达到最多,14点时段到22点时段有少量学生下线,22点到23点时段又有少量上线,直到24点断网。</p>
+                </div>
+                <div class="p1">
+                    <p id="104">此类学生人数占比16.54%,同样大三和大四学生较多,分别占36.70%和39.93%。分析原因同样应该是大三、大四学生下午没课的比例较大。</p>
+                </div>
+                <div class="p1">
+                    <p id="105">(3) d类学生白天上网较少,峰值出现在13点时段,但此时段时长均值仅1 100秒(约合18分钟)。13点时段后继续下线,至16点时段到达最低点,平均上网时间约180秒(约3分钟)。之后继续上线,至晚上22点时段时达到峰值,平均上网时长3 437秒(约57分钟)。之后继续下线,直到12点断网。</p>
+                </div>
+                <div class="p1">
+                    <p id="106">此类学生使用网络较少,工作时间基本不使用网络,上线时间集中在晚上7点-10点时段。此类学生总数点比较高,点18.30%,有10 398人。三四年级学生人数占比稍大,分别占35.85%和38.30%。</p>
+                </div>
+                <div class="p1">
+                    <p id="107">(4) e类学生与d类有些相似,白天上网较少,峰值出现在13点时段,该时段平均时长略高于d类学生,1 311秒(约22分钟)。其主要上网时间从21点时段开始陆续上网,至22点-23点时段达到峰值。其峰值比a-d类学生平均时长都少3 066秒,约51分钟。</p>
+                </div>
+                <div class="p1">
+                    <p id="108">此类学生工作日基本不使用网络,仅在晚上10点-11点时段上网。对大二、大三学生预计上课、自习时间较长,而对大四学生,可能因为参加实习等原因未在宿舍使用网络。</p>
+                </div>
+                <div class="p1">
+                    <p id="109">(5) f类学生全天在线时间最短,峰值出现在中午13点时段,此时段平均上网时长峰值也仅仅551秒,约9分钟。</p>
+                </div>
+                <div class="p1">
+                    <p id="110">此类学生上网行为与前面5类学生差异较大。此类学生总体占比23.95%,人数最多。在此类学生中同样大三、大四学生较多。</p>
+                </div>
+                <h4 class="anchor-tag" id="111" name="111"><b>3.2 周末聚类结果与分析</b></h4>
+                <div class="p1">
+                    <p id="112">与工作日分析相类似,本文对周末同样进行聚类分析。图2给出周末聚类结果,表4给出周末各类学生人数分布。</p>
+                </div>
+                <div class="area_img" id="113">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201911018_113.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 周末聚类结果" src="Detail/GetImg?filename=images/JYRJ201911018_113.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 周末聚类结果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201911018_113.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="114">
+                    <p class="img_tit"><b>表4 周末各类的人数占总人数比例和各类中各年级的人数比例汇总</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="114" border="1"><tr><td rowspan="2"><br />分<br />类</td><td colspan="2">总体</td><td colspan="2">大二</td><td colspan="2">大三</td><td colspan="2">大四</td></tr><tr><td>人数</td><td>百分比<br />/%</td><td>人数</td><td>百分比<br />/%</td><td>人数</td><td>百分比<br />/%</td><td>人数</td><td>百分比<br />/%</td></tr><tr><td>a</td><td>9 548</td><td>34.54</td><td>2412</td><td>25.26</td><td>3353</td><td>35.12</td><td>3783</td><td>39.62</td></tr><tr><td><br />b</td><td>7 088</td><td>25.64</td><td>1 871</td><td>26.40</td><td>2 501</td><td>35.28</td><td>2 716</td><td>38.32</td></tr><tr><td><br />c</td><td>7 798</td><td>28.21</td><td>2 260</td><td>28.98</td><td>2 645</td><td>33.92</td><td>2 893</td><td>37.10</td></tr><tr><td><br />d</td><td>1 499</td><td>5.42</td><td>459</td><td>30.62</td><td>543</td><td>36.22</td><td>497</td><td>33.16</td></tr><tr><td><br />e</td><td>1 710</td><td>6.19</td><td>493</td><td>28.83</td><td>587</td><td>34.33</td><td>630</td><td>36.84</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="115">在周末,学校24小时不会断网,根据图2和表4总结出代表周末校园网用户的上网行为如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="116">(1) a类学生周末会熬夜,在0点时段在线时长均值为1 449秒(约24分钟),说明约一半学生在线。从0点时段开始陆续下线,4点时段差才全部下线。之后上午8点时段开始陆续上线,至14点时段时多数学生上线,上网时长均值达到3 386秒(约56分钟)。从此时段直到晚23点时段此类学生大部分在线。</p>
+                </div>
+                <div class="p1">
+                    <p id="117">此类学生周末主要是白天长时间在线、会熬夜。总学生人数占比34.54%,是人数最多的一类。其中大二、大三、大四学生各占25.26%、35.12%、39.62%。</p>
+                </div>
+                <div class="p1">
+                    <p id="118">(2) b类学生周末熬夜,白天上网较少。在0点时段在线时长均值为963秒(约16分钟),说明有些学生熬夜,但人数比a类少。此类学生熬夜集中在0点-4点时段。白天上网时间不多,峰值出现在中午13点时段,均值512秒,约9分钟。下午在线人数少,晚上在线人数继续增加,23点时段达到峰值,平均时长为3 392秒(约57分钟)。</p>
+                </div>
+                <div class="p1">
+                    <p id="119">此类学生白天上网少,有少量学生会熬夜。占总人数的25.64%,其中大二、大三和大四年级学生各占26.40%、35.28%、38.32%。</p>
+                </div>
+                <div class="p1">
+                    <p id="120">(3) c类学生在线峰值出现在凌晨0点、中午13点和晚23点时段,但时长均值不大,最高1 587秒(约16分钟),说明最多约一半学生23点时在线。其他时间在线的学生不超过一半。</p>
+                </div>
+                <div class="p1">
+                    <p id="121">此类学生使用网络时长较短,少量熬夜,白天较少上网,人数占总人数的28.21%,比例较大。各级学生占比分别是28.98%、33.92%和37.10%。</p>
+                </div>
+                <div class="p1">
+                    <p id="122">(4) d类学生全部通宵,白天很少上网。这类学生从0点到6点多全部通宵,6点多后陆续下线,至19点时段的在线人数趋近0。22点时段开始又有少量学生开始上线,至23点时段在线时长均值为239秒(约4分钟)。</p>
+                </div>
+                <div class="p1">
+                    <p id="123">此类学生在总体中占比最少,为5.42%,人数1 499人。此类学生中三年级基本均衡,都占30%以上。</p>
+                </div>
+                <div class="p1">
+                    <p id="124">(5) e类0点到18点时段几乎在线上,在线时长均值达到59分钟。18点时段开始至24点有少量下线。此类学生在总体中占比6.19%,人数较少,约1 700人。且在此类三个年级人数相差不多,大四学生稍多,大二学生略少。</p>
+                </div>
+                <h4 class="anchor-tag" id="125" name="125"><b>3.3 按个人及专业的上网时间特征</b></h4>
+                <h4 class="anchor-tag" id="126" name="126">(1) 个人上网时间特征:</h4>
+                <div class="p1">
+                    <p id="127">针对每个学生,依据帐号可统计其上网时间分布所属的类,从而发现学生个人的上网时间分布。表5给出两个学生的上网时间分布。第一个学生工作日在线时间较少,有2天属b类、1天c类、2天d类、1天e类和5天f类。其工作日大约有2天工作时间在线、6天时间晚睡。周末白天上网较多,有2天可能晚睡,但未通宵熬夜。可知,此学生是正常上网的学生。第二个学生15天中有10个工作日上网行为属于a类,几乎工作时间都在线,周末又有4天属于a类,即白天几乎全在线,晚上有晚睡。此学生使用网络时间超长,有网瘾的可能性较大。此类学生需要统计后提请学生管理部门特别注意。通过聚类结果,可以很容易发现使用网络过多、过少或具有其他特征的学生,为学生管理部门提供建议。</p>
+                </div>
+                <div class="area_img" id="128">
+                    <p class="img_tit"><b>表5 某学生上网时间特征分布</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="128" border="1"><tr><td rowspan="2"><br />帐号</td><td colspan="6"><br />工作日(在线天数)</td><td colspan="5">周末(在线天数)</td></tr><tr><td><br />a类</td><td>b类</td><td>c类</td><td>d类</td><td>e类</td><td>f类</td><td>a类</td><td>b类</td><td>c类</td><td>d类</td><td>e类</td></tr><tr><td><br />20130000XXXX</td><td>0</td><td>2</td><td>1</td><td>2</td><td>1</td><td>5</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td></tr><tr><td><br />20151102XXXX</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="129" name="129">(2) 各专业学生的上网时间特征:</h4>
+                <div class="p1">
+                    <p id="130">对各专业可统计每年级属于不同类的学生人数,再对比其他年级专业可发现各专业学生上网时间分布特征。作为示例,表6给出计算机科学技术专业学生总人数、上网人数、工作日和周末上网人数分布。</p>
+                </div>
+                <div class="area_img" id="131">
+                    <p class="img_tit"><b>表6 此校计算机科学技术专业学生上网分布</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="131" border="1"><tr><td rowspan="2"><br />年级</td><td rowspan="2">总<br />人数</td><td rowspan="2">上网<br />人数</td><td colspan="6"><br />工作日(在线人数)</td><td colspan="5">周末(在线人数)</td></tr><tr><td><br />a类</td><td>b类</td><td>c类</td><td>d类</td><td>e类</td><td>f类</td><td>a类</td><td>b类</td><td>c类</td><td>d类</td><td>e类</td></tr><tr><td>大二</td><td>191</td><td>109</td><td>24</td><td>47</td><td>57</td><td>73</td><td>77</td><td>91</td><td>61</td><td>43</td><td>53</td><td>14</td><td>12</td></tr><tr><td><br />大三</td><td>189</td><td>102</td><td>50</td><td>55</td><td>41</td><td>49</td><td>46</td><td>76</td><td>58</td><td>31</td><td>32</td><td>16</td><td>18</td></tr><tr><td><br />大四</td><td>190</td><td>149</td><td>57</td><td>110</td><td>90</td><td>81</td><td>68</td><td>110</td><td>87</td><td>55</td><td>52</td><td>14</td><td>34</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="132">从表6可知,三个年级总人数相似,大四学生上网人数较多(149人)。总体来看,工作日大二学生使用网络较少,晚睡、通宵的人数都比较少。大三使用网络人数有所增加,晚睡、通宵的人数也都有增加。大四学生上网人数增加,在各类中人数占比大,说明学生上网时间差异较大,可能因为课程设置较少,学生不受上课时间约束,自由度高。对于周末人数分布,大四学生使用网络最多,通宵、熬夜人最多。大二学生周末使用网络比大三学生多,熬夜通宵人数少于大三人数。</p>
+                </div>
+                <div class="p1">
+                    <p id="133">对其他专业可进行类似分析。当然也可通过数据对比获取各专业学生上网时间分布的差异。限于篇幅,本文未给出各专业对比情况。通过专业对比,可为专业设置、专业各年级课程设置提供参考。</p>
+                </div>
+                <h3 id="134" name="134" class="anchor-tag"><b>4 结 语</b></h3>
+                <div class="p1">
+                    <p id="135">本文选择2016年11月的校园网上网认证数据,清洗掉与研究目标无关的数据,然后计算得到学生的上网时长向量集合。对上网时长向量的聚类分三步进行,首先利用K-canopy算法选择并去除离群点数据,提高了数据质量和聚类效率,使聚类结果更具说服力。再用轮廓系数、戴维森堡丁指数与误差平方和系数三种参数投票确定最优聚类个数。最后利用K-means算法对工作日和周末上网时长向量集分别进行聚类,对聚类结果进行分析,得到工作日、周末不同类型学生上网时长特征。另外,统计单个学生、某专业各年级学生的聚类结果,分别得到对应的上网时长特征。本文分析结果可为专业课程安排、学生管理工作提供参考。</p>
+                </div>
+                <div class="p1">
+                    <p id="136">随着无线网络认证数据的暴增,学生上网行为信息更为丰富。因此下一步会利用Spark平台对有线、无线认证数据、网络流量数据及学生成绩等数据进行进一步分析,在校园人员流动规律、学生成绩与上网成绩关联性等方面获取更有价值的分析结果。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="151">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJH200701017&amp;v=Mjc0NTVxcUJ0R0ZyQ1VSTE9lWmVWdUZ5L2dXcnpNTHo3QlpyRzRIdGJNcm85RVk0UUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 潘莹,梁京章,黎慧娟.基于K-means算法的校园网用户行为聚类分析[J].计算技术与自动化,2007,26(1):66-69.
+                            </a>
+                        </p>
+                        <p id="153">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJSY201006014&amp;v=MDA5NDNVUkxPZVplVnVGeS9nV3J6TU1pZllkN0c0SDlITXFZOUVZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 丁青,周留根,朱爱兵,等.基于K-means聚类算法的校园网用户行为分析研究[J].微计算机应用,2010,31(6):74-80.
+                            </a>
+                        </p>
+                        <p id="155">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=AQSX201701014&amp;v=MzAyMTJPM3pxcUJ0R0ZyQ1VSTE9lWmVWdUZ5L2dXcnpNSkR6WWRyRzRIOWJNcm85RVlJUUtESDg0dlI0VDZqNTQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 朱正国.应用K-means算法分析校园网用户行为[J].安庆师范大学学报(自然科学版),2017,23(1):53-56.
+                            </a>
+                        </p>
+                        <p id="157">
+                            <a id="bibliography_4" >
+                                    <b>[4]</b>
+                                 杜杰.基于校园网海量访问日志的用户行为分析[D].大连:大连海事大学,2016.
+                            </a>
+                        </p>
+                        <p id="159">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GXKZ2011S1014&amp;v=MTk3MjFyQ1VSTE9lWmVWdUZ5L2dXcnpNSWpYQWRMRzRIOUN2cm85RVlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 皇甫大鹏,陈平,王兴建.基于一种改进的K-means算法的校园网用户行为分析研究[J].广西大学学报(自然科学版),2011,36(S1):69-72.
+                            </a>
+                        </p>
+                        <p id="161">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY200708011&amp;v=MjMzMjRSTE9lWmVWdUZ5L2dXcnpNTHo3QmQ3RzRIdGJNcDQ5RVpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 楼若岩,许晓东,朱士瑞.面向校园网的IP地址逐步优化层次聚类算法[J].计算机应用,2007,27(8):1862-1864.
+                            </a>
+                        </p>
+                        <p id="163">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016163357.nh&amp;v=MjQ1NjVSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplVnVGeS9nV3J6TVZGMjZHTEsrSGRMSnFKRWJQSVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 宋坤.校园网用户行为信息的预处理与聚类方法研究[D].重庆:重庆交通大学,2016.
+                            </a>
+                        </p>
+                        <p id="165">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJTT&amp;filename=SJTT13121200045837&amp;v=MTkxNzFkYVJZPU5pZmZlcks3SDlQTnJZOUZaTzhLQkg4K29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVWIvSUoxcw==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> Shi Q,Qian Y,Gong Y,et al.The Analysis and Data Mining of Students' Online Data Based on Digital Campus[J].Applied Mechanics &amp; Materials,2013,397-400:2326-2329.
+                            </a>
+                        </p>
+                        <p id="167">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES312A290DC77CC95447C800501B3E173D&amp;v=MTg4NDFsZkNwYlEzNWRoaHc3MjJ3Nnc9TmlmT2ZiQzVIS0RPcG84eEYrd0lmdzh3eWhJWDdVeDFTSC9uckJOSGVzZVZRcm5yQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUQ==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> Poucin G,Farooq B,Patterson Z.Activity Patterns Mining in Wi-Fi Access Point Logs[J].Computers Environment &amp; Urban Systems,2018,67:55-67.
+                            </a>
+                        </p>
+                        <p id="169">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJA2014S2077&amp;v=MTkyMzZxQnRHRnJDVVJMT2VaZVZ1RnkvZ1dyek1MejdCYjdHNEg5V3ZyWTlDWTRRS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 余长俊,张燃.云环境下基于Canopy聚类的FCM算法研究[J].计算机科学,2014,41(b11):316-319.
+                            </a>
+                        </p>
+                        <p id="171">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES3D39D047B8D5D7195E34AA26065C5655&amp;v=MjI3NjhRNythQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1ZGhodzcyMnc2dz1OaWZPZmJETUhkaTRyNHRDRnVON0NRZyt6aDhXbnp4NU9RN2dxaEl6Zk1HUg==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> Zhang G,Zhang C,Zhang H.Improved K-means Algorithm Based on Density Canopy[J].Knowledge-Based Systems,2018,145.
+                            </a>
+                        </p>
+                        <p id="173">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Thresher:determining the number of clusters while removing outliers">
+
+                                <b>[12]</b> Wang M,Abrams Z B,Kornblau S M,et al.Thresher:Determining the Number of Clusters while Removing Outliers[J].Bmc Bioinformatics,2018,19(1):9.
+                            </a>
+                        </p>
+                        <p id="175">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KZYC201108008&amp;v=MDU2MjRSTE9lWmVWdUZ5L2dXcnpNTGpmU2JiRzRIOURNcDQ5RmJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> Zhou S B,Xu Z Y,Tang X Q.A Method for Determining the Optimal Number of Clusters Based on Affinity Propagation Clustering[J].Control &amp; Decision,2011,26(8):1147-1152,1157.
+                            </a>
+                        </p>
+                        <p id="177">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJOX&amp;filename=SJOX14010900014159&amp;v=MDQ3NDV5am1VYi9JSjFzZGFSWT1OaWZFZHJLOEh0RE1wbzlGWk9vTERYa3dvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SA==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> Lukashin A V,Fuchs R.Analysis of Temporal Gene Expression Profiles:Clustering by Simulated Annealing and Determining the Optimal Number of Clusters[J].Bioinformatics,2001,17(4):405-414.
+                            </a>
+                        </p>
+                        <p id="179">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Density-based Silhouette diagnostics for clustering methods">
+
+                                <b>[15]</b> Menardi G.Density-based Silhouette Diagnostics for Clustering Methods[J].Statistics &amp; Computing,2011,21(3):295-308.
+                            </a>
+                        </p>
+                        <p id="181">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Technology forecasting using topic-based patent analysis">
+
+                                <b>[16]</b> Kim G J,Sang S P,Jang D S.Technology Forecasting Using Topic-based Patent Analysis[J].Journal of Scientific &amp; Industrial Research,2015,74(5):265-270.
+                            </a>
+                        </p>
+                        <p id="183">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A Deterministic Method for Initializing K-Means Clustering">
+
+                                <b>[17]</b> Su T,Dy J.A Deterministic Method for Initializing K-means Clustering[C]//Proceedings of the 16th IEEE International Conference on Tools with Artificial Intelligence.IEEE Computer Society,2004:784-786.
+                            </a>
+                        </p>
+                        <p id="185">
+                            <a id="bibliography_18" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011600738883&amp;v=MDMzMzhLN0h0RE5xWTlGWStnSEJIUTZvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVViL0lKMXNkYVJZPU5pZk9mYg==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[18]</b> Chang D X,Zhang X D,Zheng C W.A Genetic Algorithm with Gene Rearrangement for K-means Clustering[J].Pattern Recognition,2009,42(7):1210-1222.
+                            </a>
+                        </p>
+                        <p id="187">
+                            <a id="bibliography_19" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB200801009&amp;v=Mjc0ODJmVGJMRzRIdG5Ncm85RmJZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVWdUZ5L2dXcnpNTnk=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[19]</b> 孙吉贵,刘杰,赵连宇.聚类算法研究[J].软件学报,2008(1):48-61.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JYRJ201911018" />
+        <input id="dpi" type="hidden" value="96" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201911018&amp;v=MDE3MzF1RnkvZ1dyek5MelRaWkxHNEg5ak5ybzlFYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVY=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="0" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

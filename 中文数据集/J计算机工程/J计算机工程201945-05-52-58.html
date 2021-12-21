@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130525495342500%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201905008%26RESULT%3d1%26SIGN%3dvhiD3lIUKP1xXRm9pH2tParLxx0%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201905008&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201905008&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201905008&amp;v=MjkwMjJDVVJMT2VaZVJvRnkzbFZyck5MejdCYmJHNEg5ak1xbzlGYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="1 OFT-PC查找算法 ">1 OFT-PC查找算法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#44" data-title="1.1 问题描述">1.1 问题描述</a></li>
+                                                <li><a href="#49" data-title="1.2 网络流量局部性">1.2 网络流量局部性</a></li>
+                                                <li><a href="#54" data-title="1.3 算法原理">1.3 算法原理</a></li>
+                                                <li><a href="#60" data-title="1.4 算法实现">1.4 算法实现</a></li>
+                                                <li><a href="#132" data-title="1.5 算法复杂度分析">1.5 算法复杂度分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#153" data-title="2 实验与结果分析 ">2 实验与结果分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#155" data-title="2.1 网络流量样本">2.1 网络流量样本</a></li>
+                                                <li><a href="#159" data-title="2.2 缓存命中率">2.2 缓存命中率</a></li>
+                                                <li><a href="#162" data-title="2.3 平均查找长度">2.3 平均查找长度</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#168" data-title="3 结束语 ">3 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#47" data-title="&lt;b&gt;图1 流表查找过程&lt;/b&gt;"><b>图1 流表查找过程</b></a></li>
+                                                <li><a href="#52" data-title="&lt;b&gt;图2 网络包流的局部性示意图&lt;/b&gt;"><b>图2 网络包流的局部性示意图</b></a></li>
+                                                <li><a href="#57" data-title="&lt;b&gt;图3 基于预测缓存的虚拟流表查找过程&lt;/b&gt;"><b>图3 基于预测缓存的虚拟流表查找过程</b></a></li>
+                                                <li><a href="#151" data-title="&lt;b&gt;表1 不同&lt;i&gt;p&lt;/i&gt;、&lt;i&gt;k&lt;/i&gt;、&lt;i&gt;α&lt;/i&gt;情况下平均查找长度及加速比&lt;/b&gt;"><b>表1 不同<i>p</i>、<i>k</i>、<i>α</i>情况下平均查找长度及加速比</b></a></li>
+                                                <li><a href="#158" data-title="&lt;b&gt;图4 实时流表项数量趋势图&lt;/b&gt;"><b>图4 实时流表项数量趋势图</b></a></li>
+                                                <li><a href="#161" data-title="&lt;b&gt;图5 缓存命中率趋势图&lt;/b&gt;"><b>图5 缓存命中率趋势图</b></a></li>
+                                                <li><a href="#164" data-title="&lt;b&gt;图6 流表的平均查找长度趋势图&lt;/b&gt;"><b>图6 流表的平均查找长度趋势图</b></a></li>
+                                                <li><a href="#167" data-title="&lt;b&gt;图7 加速比趋势图&lt;/b&gt;"><b>图7 加速比趋势图</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" LI Shengzhao, HAO Qinfen, XIAO Limin, et al.Optimizing network virtualization in kernel-based virtual machine[C]//Proceedings of 2009 IEEE International Conference on Information Science and Engineering.Washington D.C., USA:IEEE Press, 2009:282-285." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Optimizing network virtualization in kernel-based virtual machine">
+                                        <b>[1]</b>
+                                         LI Shengzhao, HAO Qinfen, XIAO Limin, et al.Optimizing network virtualization in kernel-based virtual machine[C]//Proceedings of 2009 IEEE International Conference on Information Science and Engineering.Washington D.C., USA:IEEE Press, 2009:282-285.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" LEE S S W, LI Kuangyi, WU Mingshu.Design and implementation of a GPON-based virtual OpenFlow-enabled SDN switch[J].Journal of Lightwave Technology, 2016, 34 (10) :2552-2561." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Design and Implementation of a GPON-Based Virtual Open Flow-Enabled SDN Switch">
+                                        <b>[2]</b>
+                                         LEE S S W, LI Kuangyi, WU Mingshu.Design and implementation of a GPON-based virtual OpenFlow-enabled SDN switch[J].Journal of Lightwave Technology, 2016, 34 (10) :2552-2561.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" MATSUMOTO N, HAYASHI M.Performance improvement of flow switching with automatic maintenance of hash table assisted by wildcard flow entries[C]//Proceedings of the 10th International Conference on Optical Internet.Washington D.C., USA:IEEE Press, 2012:12-13." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Performance improvement of flowswitching with automatic maintenance of hash table assisted by wildcard flowentries">
+                                        <b>[3]</b>
+                                         MATSUMOTO N, HAYASHI M.Performance improvement of flow switching with automatic maintenance of hash table assisted by wildcard flow entries[C]//Proceedings of the 10th International Conference on Optical Internet.Washington D.C., USA:IEEE Press, 2012:12-13.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" MATSUMOTO N, HAYASHI M.LightFlow:speeding up GPU-based flow switching and facilitating maintenance of flow table[C]//Proceedings of 2012 IEEE International Conference on High Performance Switching and Routing.Washington D.C., USA:IEEE Press, 2012:76-81." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Light Flow:Speeding up GPU-based flow switching and facilitating maintenance of flow table">
+                                        <b>[4]</b>
+                                         MATSUMOTO N, HAYASHI M.LightFlow:speeding up GPU-based flow switching and facilitating maintenance of flow table[C]//Proceedings of 2012 IEEE International Conference on High Performance Switching and Routing.Washington D.C., USA:IEEE Press, 2012:76-81.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" CHO C H, LEE J B, RYOO J D.A collision-mitigation hashing scheme utilizing empty slots of cuckoo hash table[C]//Proceedings of the 19th International Conference on Advanced Communication Technology.Washington D.C., USA:IEEE Press, 2017:514-517." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=&amp;quot;A collision-mitigation hashing scheme utiliz-ing empty slots of cuckoo hash table&amp;quot;">
+                                        <b>[5]</b>
+                                         CHO C H, LEE J B, RYOO J D.A collision-mitigation hashing scheme utilizing empty slots of cuckoo hash table[C]//Proceedings of the 19th International Conference on Advanced Communication Technology.Washington D.C., USA:IEEE Press, 2017:514-517.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" CARLI L D, PAN Yi, KUMAR A, et al.Flexible lookup modules for rapid deployment of new protocols in high-speed routers[C]//Proceedings of 2009 ACM SIGCOMM Conference on Data Communication.New York, USA:ACM Press, 2009, 39 (4) :207-218." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=PLUG: Flexible lookup modules for rapid deployment of new protocols in high-speed routers">
+                                        <b>[6]</b>
+                                         CARLI L D, PAN Yi, KUMAR A, et al.Flexible lookup modules for rapid deployment of new protocols in high-speed routers[C]//Proceedings of 2009 ACM SIGCOMM Conference on Data Communication.New York, USA:ACM Press, 2009, 39 (4) :207-218.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" SUN Hai, SUN Yan, VALGENTI V C, et al.OpenFlow accelerator:a decomposition-based hashing approach for flow processing[C]//Proceedings of the 24th International Conference on Computer Communication and Networks.Washington D.C., USA:IEEE Press, 2015:1-10." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Open Flow accelerator:a decomposition-based hashing approach for flow processing">
+                                        <b>[7]</b>
+                                         SUN Hai, SUN Yan, VALGENTI V C, et al.OpenFlow accelerator:a decomposition-based hashing approach for flow processing[C]//Proceedings of the 24th International Conference on Computer Communication and Networks.Washington D.C., USA:IEEE Press, 2015:1-10.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 毛健彪, 卞洪飞, 韩彪, 等.PiBuffer:面向数据中心的OpenFlow流缓存管理模型[J].计算机学报, 2016, 39 (6) :1092-1104." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201606002&amp;v=MDY1NjFIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkzbFZyck5MejdCZHJHNEg5Zk1xWTlGWm9RS0Q=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         毛健彪, 卞洪飞, 韩彪, 等.PiBuffer:面向数据中心的OpenFlow流缓存管理模型[J].计算机学报, 2016, 39 (6) :1092-1104.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" LEE B S, KANAGAVELU R, AUNG K M M.An efficient flow cache algorithm with improved fairness in software-defined data center networks[C]//Proceedings of 2013 IEEE International Conference on Cloud Networking.Washington D.C., USA:IEEE Press, 2013:18-24." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=An efficient flow cache algorithm with improved fairness in software-defined data center networks">
+                                        <b>[9]</b>
+                                         LEE B S, KANAGAVELU R, AUNG K M M.An efficient flow cache algorithm with improved fairness in software-defined data center networks[C]//Proceedings of 2013 IEEE International Conference on Cloud Networking.Washington D.C., USA:IEEE Press, 2013:18-24.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" CONGDON P T, MOHAPATRA P, FARRENS M, et al.Simultaneously reducing latency and power consumption in OpenFlow switches[J].IEEE/ACM Transactions on Networking, 2014, 22 (3) :1007-1020." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM129FE5480DCA762AA145F8D5B669D77B&amp;v=MTc0NjFsZkNwYlEzNU41aHdiaTZ4YTA9TmlmSVk3SzZGNmU1cW90TlpKOThmWHMveldkaTZ6dDRQbmVXcVdBemY3dmdRcjN0Q09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         CONGDON P T, MOHAPATRA P, FARRENS M, et al.Simultaneously reducing latency and power consumption in OpenFlow switches[J].IEEE/ACM Transactions on Networking, 2014, 22 (3) :1007-1020.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" PFAFF B, PETTIT J, KOPONEN T, et al.The design and implementation of Open vSwitch[C]//Proceedings of the 12th USENIX Conference on Networked Systems Design and Implementation.Oakland, USA:[s.n.], 2015:117-130." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The Design and Implementation of Open Vswitch">
+                                        <b>[11]</b>
+                                         PFAFF B, PETTIT J, KOPONEN T, et al.The design and implementation of Open vSwitch[C]//Proceedings of the 12th USENIX Conference on Networked Systems Design and Implementation.Oakland, USA:[s.n.], 2015:117-130.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" KIZHEPAT G, TENG M H, CHOY K Y Y.Switching systems and methods using wildcard searching:US 7774374B1[P].2010-08-10." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Switching systems and methods using wildcard searching">
+                                        <b>[12]</b>
+                                         KIZHEPAT G, TENG M H, CHOY K Y Y.Switching systems and methods using wildcard searching:US 7774374B1[P].2010-08-10.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" Sandvine.2014 global internet phenomena report[R/OL].[2017-12-15].https://www.sandvine.com/downloads/general/global-internet-phenomena/2014/2h-2014-global-internet-phenomena-report.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Global Internet Phenomena Report">
+                                        <b>[13]</b>
+                                         Sandvine.2014 global internet phenomena report[R/OL].[2017-12-15].https://www.sandvine.com/downloads/general/global-internet-phenomena/2014/2h-2014-global-internet-phenomena-report.pdf.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" PAN Tian, GUO Xiaoyu, ZHANG Chenhui, et al.Tracking millions of flows in high speed networks for application identification[C]//Proceedings of 2012 IEEE International Conference on Computer Communications.Washington D.C., USA:IEEE Press, 2012:1647-1655." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Tracking millions of flows in high speed networks for application identification">
+                                        <b>[14]</b>
+                                         PAN Tian, GUO Xiaoyu, ZHANG Chenhui, et al.Tracking millions of flows in high speed networks for application identification[C]//Proceedings of 2012 IEEE International Conference on Computer Communications.Washington D.C., USA:IEEE Press, 2012:1647-1655.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 王鹏, 张良, 周舟, 等.一种高并发网络环境下快速流表查找方法[J].电子学报, 2017, 45 (4) :974-981." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZXU201704035&amp;v=MjI0MTdCdEdGckNVUkxPZVplUm9GeTNsVnJyTklUZlRlN0c0SDliTXE0OUdZWVFLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         王鹏, 张良, 周舟, 等.一种高并发网络环境下快速流表查找方法[J].电子学报, 2017, 45 (4) :974-981.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" >
+                                        <b>[16]</b>
+                                     江苏省计算机网络技术中心.IP trace and service[EB/OL].[2017-12-15].http://iptas.edu.cn/src/system.php.</a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" 姜腊林, 胡念, 熊兵.基于MTF启发法的OpenFlow虚拟流表高效查找算法[J].小型微型计算机系统, 2017, 38 (7) :1533-1537." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XXWX201707021&amp;v=MTE0MzE0TzN6cXFCdEdGckNVUkxPZVplUm9GeTNsVnJyTlBUWGNkckc0SDliTXFJOUhaWVFLREg4NHZSNFQ2ajU=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                         姜腊林, 胡念, 熊兵.基于MTF启发法的OpenFlow虚拟流表高效查找算法[J].小型微型计算机系统, 2017, 38 (7) :1533-1537.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(05),52-58 DOI:10.19678/j.issn.1000-3428.0050067            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于预测缓存的OpenFlow虚拟流表高效查找方法</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%82%85%E6%98%8E&amp;code=06474237&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">傅明</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E4%BD%95%E6%B4%8B&amp;code=38999645&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">何洋</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%86%8A%E5%85%B5&amp;code=25477455&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">熊兵</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E9%95%BF%E6%B2%99%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E9%80%9A%E4%BF%A1%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0175884&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">长沙理工大学计算机与通信工程学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E9%95%BF%E6%B2%99%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E7%BB%BC%E5%90%88%E4%BA%A4%E9%80%9A%E8%BF%90%E8%BE%93%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%99%BA%E8%83%BD%E5%A4%84%E7%90%86%E6%B9%96%E5%8D%97%E7%9C%81%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">长沙理工大学综合交通运输大数据智能处理湖南省重点实验室</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>OpenFlow支持通配符查找, 会造成严重的流表查找性能瓶颈。为此, 基于网络流量局部性, 提出一种OpenFlow虚拟流表查找方法。通过缓存在数据包流中近期频繁出现的连接和对应的掩码, 对大部分数据包直接定位其掩码, 进而查找流表, 无需逐个探测掩码数组。理论分析和实验结果表明, 相比于目前主流虚拟交换机中的流表查找方法OFT-OVS, 该方法的平均查找长度较小, 可有效提升OpenFlow虚拟交换机的数据转发性能。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%BD%91%E7%BB%9C%E8%99%9A%E6%8B%9F%E5%8C%96&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">网络虚拟化;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=OpenFlow%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">OpenFlow网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%99%9A%E6%8B%9F%E4%BA%A4%E6%8D%A2%E6%9C%BA&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">虚拟交换机;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%A2%84%E6%B5%8B%E7%BC%93%E5%AD%98&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">预测缓存;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B5%81%E8%A1%A8%E6%9F%A5%E6%89%BE&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">流表查找;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    傅明 (1963—) , 男, 教授、博士, 主研方向为未来网络、软件定义网络;;
+                                </span>
+                                <span>
+                                    何洋, 硕士研究生;;
+                                </span>
+                                <span>
+                                    熊兵, 副教授、博士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-01-11</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金 (61502056);</span>
+                                <span>湖南省自然科学基金 (2015JJ3010);</span>
+                                <span>湖南省教育厅科研项目 (15B009);</span>
+                                <span>湖南省研究生科研创新项目 (CX2017B487);</span>
+                    </p>
+            </div>
+                    <h1><b>Efficient Lookup Method of OpenFlow Table Based on Predictive Caching</b></h1>
+                    <h2>
+                    <span>FU Ming</span>
+                    <span>HE Yang</span>
+                    <span>XIONG Bing</span>
+            </h2>
+                    <h2>
+                    <span>School of Computer and Communication Engineering, Changsha University of Science and Technology</span>
+                    <span>Hunan Provincial Key Laboratory of Intelligent Processing of Big Data on Transportation, Changsha University of Science and Technology</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>There are serious performance bottlenecks of flow table lookups as OpenFlow supports wildcard search.Therefore, a lookup method of OpenFlow table is proposed based on network traffic locality.By caching recent frequent connections in packet traffic and the corresponding masks, the method directly locates the masks of most of the packets, and then runs flow table lookup without probing mask array one by one.Theoretical analysis and experimental results show that the average lookup length of the proposed method is significantly smaller than that of OFT-OVS method used in the current mainstream virtual switches, which effectively improves data forwarding performance of OpenFlow virtual switches.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=network%20virtualization&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">network virtualization;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=OpenFlow%20network&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">OpenFlow network;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=virtual%20switch&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">virtual switch;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=predictive%20caching&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">predictive caching;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=flow%20table%20lookup&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">flow table lookup;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-01-11</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="37" name="37" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="38">网络虚拟化通过软硬件解耦和功能抽象, 使网络功能不再依赖于专用硬件, 硬件资源可以灵活共享以实现新业务的快速开发和部署, 有效解决了现有网络体系的僵化问题, 被普遍认为是构建下一代网络的关键技术<citation id="170" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。OpenFlow将网络协议栈扁平化, 各个网络字段都可以作为流表的匹配域, 并引入通配符支持任意字段的组合, 大幅提高了网络的灵活性, 是最具前景的网络应用技术之一。OpenFlow虚拟交换机也因其成本低、配置灵活、便于调度部署, 已广泛应用于各类云环境中, 尤其是云数据中心<citation id="171" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">OpenFlow虚拟交换机由于采用纯软件交换方式, 当部署在大规模网络中时, 将面临严重的数据转发性能瓶颈, 而OpenFlow虚拟流表查找是影响数据转发性能的关键环节之一。在OpenFlow虚拟交换机中, 每收到一个数据包, 需要依据其流标识符, 逐个尝试每个掩码, 即将流标识符与掩码进行与运算, 然后在流表中查找对应的流表项, 以找出其中的动作集, 进而实现数据包的转发处理。由于每个数据包通常最多成功尝试一个掩码, 在尝试成功前的每个掩码都需要遍历流表, 且会查找失败, 这导致数据包的查找开销很大。因此, 研究如何提升OpenFlow虚拟交换机的流表查找性能具有重要的理论意义和实用价值。</p>
+                </div>
+                <div class="p1">
+                    <p id="40">为提高虚拟交换机的流表查找性能, 众多国内外学者对其展开了研究。文献<citation id="175" type="reference">[<a class="sup">3</a>,<a class="sup">4</a>]</citation>提出一种基于通配符的线性匹配流表和基于哈希的精确匹配流表的二维并行化查找架构, 实现快速分组转发。文献<citation id="172" type="reference">[<a class="sup">5</a>]</citation>提出一种哈希冲突缓解方案, 通过避免无效的内存访问, 使碰撞元素的访问时间减少一半, 有效减少查找时间, 从而提高流表查找速率。文献<citation id="173" type="reference">[<a class="sup">6</a>]</citation>构建一个流水线查找网格架构PLUG, 利用查找数据结构中的内在结构特性, 将数据结构物理映射到芯片上的分片存储, 从而实现通用性和高能效。文献<citation id="174" type="reference">[<a class="sup">7</a>]</citation>设计一种字段分解方法, 对每个流表项字段执行单独的搜索, 聚合这些结果并在单个哈希表中进行查询, 有效提升了OpenFlow流表查找性能。以上研究都是通过优化设计流表的组织架构以提升其查找性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">文献<citation id="176" type="reference">[<a class="sup">8</a>]</citation>提出一种OpenFlow虚拟交换机流缓存管理模型PiBuffer, 通过PiBT表记录未命中报文的标识信息, 区分同一条流的首报文和后续报文, 使同一条不命中报文流只产生一个Packet-in消息到控制器, 并让流表下发时缓存报文先发送, 从而实现流内报文保序。文献<citation id="177" type="reference">[<a class="sup">9</a>]</citation>针对OpenFlow虚拟交换机的流表规模受限问题, 提出基于哈希存储和基于局部LRU原则的区分性流缓存框架, 加快查找速度, 减少缓存失配率, 从而实现高效的缓存管理和良好的公平性。文献<citation id="178" type="reference">[<a class="sup">10</a>]</citation>利用网络流量的时间局部性, 在每个数据转发端口设计预测电路, 缓存包签名和流关键字之间的映射关系, 以预测进入分组的流分类结果, 从而加快数据包转发。上述三者都是通过设计预测性缓存和流缓存架构以提高流表查找效率。文献<citation id="179" type="reference">[<a class="sup">11</a>]</citation>在实现开源虚拟交换机OVS时, 在不增加专用硬件并保持良好通用性和灵活性的前提下, 设计微流缓存与宏流缓存, 以提升数据通道的包处理速度。</p>
+                </div>
+                <div class="p1">
+                    <p id="42">上述研究从各种角度来提升虚拟交换机的流表查找效率, 却很少关注其掩码探测性能瓶颈。为此, 本文利用网络流量局部性特征, 提出一种基于预测缓存的OpenFlow虚拟流表查找方法OFT-PC, 动态缓存最近频繁出现的连接标识符及其对应的掩码, 使数据包直接定位其掩码, 而无需逐个探测掩码数组, 以提高数据包的流表查找效率。</p>
+                </div>
+                <h3 id="43" name="43" class="anchor-tag">1 OFT-PC查找算法</h3>
+                <h4 class="anchor-tag" id="44" name="44">1.1 问题描述</h4>
+                <div class="p1">
+                    <p id="45">OpenFlow虚拟交换机通常运行在通用硬件上。用于存储流表的SRAM和DRAM等存储器采用地址寻址方式, 不支持通配符查找, 而OpenFlow引入通配符, 使得流表查找无法直接使用哈希表等传统的高效查找方式。目前主流的OpenFlow虚拟交换机采用元组空间搜索法 (Tuple Space Search, TSS) , 将所有规则按照各个字段头域长度的组合划分成比规则数目少得多的元组集合, 然后在这些元组里进行哈希查找<citation id="180" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">图1为流表查找过程, 其中, 掩码数组的每个元素对应一个元组。对于到达的每一个数据包, 提取其关键字段并计算流标识符<i>fid</i>后, 需要依次探测掩码数组中的每个掩码。其掩码探测过程如下:1) 流标识符<i>fid</i>与掩码进行与运算, 得到掩码关键字<i>key</i><sub><i>i</i></sub>;2) 在流表中查找对应的流表项, 若查找成功, 执行对应流表项中的动作集, 并进行更新处理, 若查找失败, 则探测下一个掩码;3) 如果所有掩码均探测失败, 则将该数据包封装成流安装请求发送给控制器, 等待控制器下发对应的流规则以便处理数据包, 并更新流表。</p>
+                </div>
+                <div class="area_img" id="47">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905008_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 流表查找过程" src="Detail/GetImg?filename=images/JSJC201905008_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 流表查找过程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905008_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="48">在上述流表查找方案中, 每个数据包都需要逐个探测掩码查找流表, 直到命中流表项为止。成功命中流表项之前的每次掩码探测均会失败, 需要遍历流表, 从而产生了较大的流表查找开销, 严重制约了虚拟交换机的数据转发性能。本文分析并利用网络流量局部性, 设计预测型缓存, 为到达的数据包快速定位其对应的掩码, 以降低流表查找开销。</p>
+                </div>
+                <h4 class="anchor-tag" id="49" name="49">1.2 网络流量局部性</h4>
+                <div class="p1">
+                    <p id="50">Sandvine机构在2014年的流量报告<citation id="181" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>中指出:在骨干网络中, TCP流量占比超过90%, 文件、音视频等多媒体流量占比超过70%。这意味着网络流量分布并不均匀, 而是存在局部性特点。网络流量局部性具体表现为大部分数据包集中分布在少量的大流中, 而大量的小流只占据数据包总量的少部分<citation id="182" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>。此外, 从传输连接的角度看, 局部性还表现为同一连接的众多数据包往往会成批集中到达<citation id="183" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">图2展示了网络数据包流分布在传输连接上的局部性特点。在图2中, 假设网络中有<i>n</i>个并发连接{<i>C</i><sub>1</sub>, <i>C</i><sub>2</sub>, …, <i>C</i><sub><i>n</i></sub>}, 当一段时间到达21个数据包时, 其与连接的对应关系如下:连接<i>C</i><sub>1</sub>对应5个数据包, 连接<i>C</i><sub>2</sub>没有对应的数据包, 连接<i>C</i><sub>3</sub>对应4个数据包, 连接<i>C</i><sub><i>n</i>-1</sub>对应5个数据包, 连接<i>C</i><sub><i>n</i></sub>对应2个数据包, 其他5个数据包对应到连接<i>C</i><sub>4</sub>～<i>C</i><sub><i>n</i>-2</sub>。这意味着, 大部分数据包分布在少数连接上, 表现出显著的局部性特点。当这些数据包进入虚拟交换机时, 将会查找命中连接<i>C</i><sub>1</sub>、<i>C</i><sub>3</sub>、<i>C</i><sub><i>n</i>-1</sub>对应的流表项, 并在查找过程中成功探测对应的掩码。</p>
+                </div>
+                <div class="area_img" id="52">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905008_052.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 网络包流的局部性示意图" src="Detail/GetImg?filename=images/JSJC201905008_052.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 网络包流的局部性示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905008_052.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="53">上述网络流量局部性表明, 某段时间内到达虚拟交换机的数据包往往呈现出成批特性, 并集中在少量的连接上。而每个连接可映射到唯一的掩码。因此, 可设计缓存机制, 动态存储连接与掩码的映射关系, 使数据包能够快速定位正确的掩码, 进而在流表中找到对应的流表项, 实现数据包的快速转发。</p>
+                </div>
+                <h4 class="anchor-tag" id="54" name="54">1.3 算法原理</h4>
+                <div class="p1">
+                    <p id="55">利用上述数据包流分布在传输连接上的局部性特点, 本文提出掩码预测缓存思想, 动态记录最近频繁出现的连接标识符及其对应的掩码, 使得大部分数据包到达OpenFlow虚拟交换机后, 能够根据其连接标识符直接定位出对应的掩码, 进而找到对应的流表项。同时, 采用LRU缓存替换策略, 每次出现新的连接标识符时, 替换最近最久未访问的缓存项。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">依据上述掩码预测缓存思想, 设计基于预测缓存的虚拟流表查找方法, 其查找过程如图3所示。连接标识符由传统的五元组 (源IP地址、目的IP地址、源端口、目的端口、协议类型) 构成。在图3中, 掩码缓存存储连接标识符的哈希值、掩码索引值以及最近数据包的到达时间。这是因为缓存项只存储其哈希值和掩码索引值, 可以减少缓存大小, 加快匹配速度。而缓存项记录最近数据包的到达时间, 以便采用LRU策略替换已失效的缓存项。</p>
+                </div>
+                <div class="area_img" id="57">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905008_057.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 基于预测缓存的虚拟流表查找过程" src="Detail/GetImg?filename=images/JSJC201905008_057.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 基于预测缓存的虚拟流表查找过程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905008_057.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="58">当一个数据包到达时, 提取其关键字段并计算得到连接标识符后, 需要在缓存中查找对应的缓存项。为了加快缓存匹配速度, 对连接标识符进行哈希运算, 得到固定长度的哈希值 (32 bit) , 将哈希值以字节为单位划分为多个字段, 进而将每个字段作为缓存的索引值。该索引值的长度决定了缓存项数量。在本文设计的缓存机制中, 索引值占8 bit, 缓存项数量为256。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">上述掩码预测缓存机制将显著提升网络数据包流的OpenFlow虚拟流表查找性能。由于传输连接上的数据包分布具有局部性特点, 通过采用LRU缓存替换策略, 使得缓存存储占据大量数据包的少量频繁访问连接。对于频繁访问连接上的大量数据包, 将会直接命中缓存找到对应的掩码, 其流表查找开销大幅度降低。而对于稀疏访问连接对应的少量数据包, 缓存匹配将会失败, 进而逐个探测掩码, 导致其流表查找开销略有增加。综合可知, 通过设计掩码预测缓存机制, 将显著降低OpenFlow虚拟流表的平均查找开销。</p>
+                </div>
+                <h4 class="anchor-tag" id="60" name="60">1.4 算法实现</h4>
+                <h4 class="anchor-tag" id="61" name="61">1.4.1 数据包转发流程</h4>
+                <div class="p1">
+                    <p id="62">算法1为OpenFlow虚拟交换机的包转发流程伪代码。当一个数据包到达时, 首先提取其关键字段, 得到连接标识符<i>fid</i>, 进而计算其哈希值<i>fid</i>_<i>hash</i>。将<i>fid</i>_<i>hash</i>划分为4个字段作为缓存索引值, 并与对应缓存项逐个进行匹配, 见算法1第4步～第6步。若缓存匹配成功, 则根据缓存项中的掩码索引值在掩码数组中找到对应的掩码, 进而查找流表, 见算法1第7步。若流表查找成功, 则数据包执行流表项中的动作集, 并更新对应的缓存项, 见算法1第8步～第13步。若缓存匹配失败, 则需要探测全部掩码, 查找流表。</p>
+                </div>
+                <div class="p1">
+                    <p id="63"><b>算法1</b> 包转发伪代码</p>
+                </div>
+                <div class="area_img" id="187">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201905008_18700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="86" name="86">1.4.2 掩码探测流程</h4>
+                <div class="p1">
+                    <p id="87">当缓存匹配失败时, 数据包的掩码探测过程伪代码如算法2所示。数据包对掩码数组依次进行探测查找流表, 并跳过缓存匹配成功时已探测失败的掩码, 见算法2中第1步～第5步。若成功探测某个掩码, 并找到对应的流表项, 则数据包执行其中的动作集, 并更新缓存。若掩码数组均探测失败, 则需将数据包封装成流安装请求发送给SDN控制器, 等待下发对应的流表项, 并加入到流表中, 同时更新缓存。</p>
+                </div>
+                <div class="p1">
+                    <p id="88"><b>算法2</b> 掩码探测伪代码</p>
+                </div>
+                <div class="area_img" id="188">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201905008_18800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="188">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201905008_18801.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="107" name="107">1.4.3 流表查找流程</h4>
+                <div class="p1">
+                    <p id="108">根据给定数据包的连接标识符和探测的掩码, 流表查找流程伪代码如算法3所示。将连接标识符和掩码进行与运算得到关键字, 根据关键字和掩码在流表中逐个匹配流表项, 直到匹配成功为止。</p>
+                </div>
+                <div class="p1">
+                    <p id="109"><b>算法3</b> 流表查找伪代码</p>
+                </div>
+                <div class="area_img" id="189">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201905008_18900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="117" name="117">1.4.4 缓存更新流程</h4>
+                <div class="p1">
+                    <p id="118">当数据包匹配缓存失败, 并得到对应流表项时, 需要更新掩码缓存, 如算法4所示。将连接标识符的哈希值划分为4个字段, 并索引掩码缓存的4个缓存项, 找出其中最久没有数据包到达的缓存项, 并更新为当前数据包的连接标识符哈希值、掩码索引值及包到达时间。</p>
+                </div>
+                <div class="p1">
+                    <p id="119"><b>算法4</b> 缓存更新伪代码</p>
+                </div>
+                <div class="area_img" id="190">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201905008_19000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="132" name="132">1.5 算法复杂度分析</h4>
+                <div class="p1">
+                    <p id="133">假设OpenFlow流表项分布均匀, 且装载因子为<i>α</i>, 掩码数组长度为<i>L</i>。根据网络流量局部性, 可假设网络中的连接由<i>r</i>批数据包组成, 第<i>i</i>批数据包个数为<i>m</i><sub><i>i</i></sub>。基于上述假设, 可推导出连接中数据包的平均查找长度。</p>
+                </div>
+                <div class="p1">
+                    <p id="134">对于第<i>i</i>批数据包, 分别分析首个包和后续包的流表查找长度。当首个包到达时, 在掩码缓存中没有对应的缓存项, 需要依次尝试掩码数组中的每个掩码。若第<i>j</i>个掩码探测成功, 则前面的<i>j</i>-1个掩码均会探测失败。由于每次掩码探测失败需要遍历流表, 流表查找长度为<i>α</i>, 因此<i>j</i>-1个掩码探测失败的开销为 (<i>j</i>-1) <i>α</i>。对于探测成功的第<i>j</i>个掩码, 流表查找长度为 (1+<i>α</i>) /2。所以, 首个包的总流表查找长度为<i>jα</i>+ (1-<i>α</i>) /2。设缓存的查找长度为1, 则首个数据包的平均查找长度为:</p>
+                </div>
+                <div class="p1">
+                    <p id="135" class="code-formula">
+                        <mathml id="135"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>L</mi><msub><mrow></mrow><mn>1</mn></msub><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mi>L</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>L</mi></munderover><mrow><mrow><mo> (</mo><mrow><mi>j</mi><mi>α</mi><mo>+</mo><mfrac><mrow><mn>1</mn><mo>-</mo><mi>α</mi></mrow><mn>2</mn></mfrac></mrow><mo>) </mo></mrow></mrow></mstyle><mo>=</mo><mfrac><mrow><mi>L</mi><mi>α</mi><mo>+</mo><mn>3</mn></mrow><mn>2</mn></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="136">对于第<i>i</i>批中的后续<i>m</i><sub><i>i</i></sub>-1个包, 在掩码缓存中往往存在其对应的缓存项, 匹配缓存将会找到对应的掩码, 进而成功查找流表, 查找长度为 (1+<i>α</i>) /2。若缓存匹配失败, 则该数据包需和首个包一样探测掩码查找流表, 平均查找长度为 (<i>Lα</i>+3) /2。设掩码缓存失配概率为<i>p</i>, 则每个后续包的平均查找长度为:</p>
+                </div>
+                <div class="p1">
+                    <p id="137" class="code-formula">
+                        <mathml id="137"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>S</mi><mi>L</mi><msub><mrow></mrow><mn>2</mn></msub><mo>=</mo><mi>p</mi><mo>⋅</mo><mfrac><mrow><mi>L</mi><mi>α</mi><mo>+</mo><mn>3</mn></mrow><mn>2</mn></mfrac><mo>+</mo><mo stretchy="false"> (</mo><mn>1</mn><mo>-</mo><mi>p</mi><mo stretchy="false">) </mo><mo>⋅</mo><mrow><mo> (</mo><mrow><mfrac><mrow><mi>α</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mo>+</mo><mn>1</mn></mrow><mo>) </mo></mrow><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false"> (</mo><mi>p</mi><mi>L</mi><mi>α</mi><mo>-</mo><mi>p</mi><mi>α</mi><mo>+</mo><mi>α</mi><mo>+</mo><mn>3</mn><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="138">综合上述2种情况, 可计算出第<i>i</i>批数据包的总查找长度为:</p>
+                </div>
+                <div class="p1">
+                    <p id="139" class="code-formula">
+                        <mathml id="139"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>Τ</mi><mi>S</mi><mi>L</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mi>S</mi><mi>L</mi><msub><mrow></mrow><mn>1</mn></msub><mo>+</mo><mo stretchy="false"> (</mo><mi>m</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>S</mi><mi>L</mi><msub><mrow></mrow><mn>2</mn></msub><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mfrac><mrow><mi>α</mi><mo stretchy="false"> (</mo><mi>L</mi><mo>-</mo><mi>p</mi><mi>L</mi><mo>+</mo><mi>p</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo></mrow><mn>2</mn></mfrac><mo>+</mo><mfrac><mrow><mi>p</mi><mi>L</mi><mi>α</mi><mo>-</mo><mi>p</mi><mi>α</mi><mo>+</mo><mi>α</mi><mo>+</mo><mn>3</mn></mrow><mn>2</mn></mfrac><mi>m</mi><msub><mrow></mrow><mi>i</mi></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="140">假设每批包的平均包的个数为<i>k</i>, 即:</p>
+                </div>
+                <div class="p1">
+                    <p id="141" class="code-formula">
+                        <mathml id="141"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>k</mi><mo>=</mo><mfrac><mn>1</mn><mi>r</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>r</mi></munderover><mi>m</mi></mstyle><msub><mrow></mrow><mi>i</mi></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>4</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="142">结合式 (3) 与式 (4) , 可得到数据包的平均查找长度为:</p>
+                </div>
+                <div class="p1">
+                    <p id="143" class="code-formula">
+                        <mathml id="143"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>A</mi><mi>S</mi><mi>L</mi><msub><mrow></mrow><mrow><mtext>Ο</mtext><mtext>F</mtext><mtext>Τ</mtext><mo>-</mo><mtext>Ρ</mtext><mtext>C</mtext></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>r</mi></munderover><mi>Τ</mi></mstyle><mi>S</mi><mi>L</mi><msub><mrow></mrow><mi>i</mi></msub><mo>/</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>r</mi></munderover><mi>m</mi></mstyle><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mfrac><mrow><mi>α</mi><mo stretchy="false"> (</mo><mi>L</mi><mo>-</mo><mi>p</mi><mi>L</mi><mo>+</mo><mi>p</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo></mrow><mrow><mn>2</mn><mi>k</mi></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>p</mi><mi>L</mi><mi>α</mi><mo>-</mo><mi>p</mi><mi>α</mi><mo>+</mo><mi>α</mi><mo>+</mo><mn>3</mn></mrow><mn>2</mn></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>5</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="144">对于目前主流虚拟交换机OVS的流表查找算法而言, 其到达的每个数据包, 会依次探测掩码数组中的掩码。若成功探测第<i>j</i>个掩码 (1≤<i>j</i>≤<i>L</i>) , 则前面的<i>j</i>-1个掩码均会探测失败, 流表查找长度为 (<i>j</i>-1) <i>α</i>。对于探测成功的第<i>j</i>个掩码, 流表查找长度为 (1+<i>α</i>) /2。综合可得数据包的流表查找总长度为 (<i>j</i>-1) <i>α</i>+ (1+<i>α</i>) /2。假设所有掩码探测成功的概率相等, 则可得数据包的平均查找长度为:</p>
+                </div>
+                <div class="p1">
+                    <p id="145" class="code-formula">
+                        <mathml id="145"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>A</mi><mi>S</mi><mi>L</mi><msub><mrow></mrow><mrow><mtext>Ο</mtext><mtext>F</mtext><mtext>Τ</mtext><mo>-</mo><mtext>Ο</mtext><mtext>V</mtext><mtext>S</mtext></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mi>L</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>L</mi></munderover><mrow><mrow><mo>[</mo><mrow><mo stretchy="false"> (</mo><mi>j</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mi>α</mi><mo>+</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>α</mi></mrow><mn>2</mn></mfrac></mrow><mo>]</mo></mrow></mrow></mstyle><mo>=</mo><mfrac><mrow><mi>L</mi><mi>α</mi><mo>+</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="146">本文OFT-PC算法的平均查找长度比较于主流流表查找算法OFT-OVS的加速比为:</p>
+                </div>
+                <div class="p1">
+                    <p id="147" class="code-formula">
+                        <mathml id="147"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>S</mi><mi>p</mi><mi>e</mi><mi>e</mi><mi>d</mi><mi>u</mi><mi>p</mi><mo>=</mo><mfrac><mrow><mi>A</mi><mi>S</mi><mi>L</mi><msub><mrow></mrow><mrow><mtext>Ο</mtext><mtext>F</mtext><mtext>Τ</mtext><mo>-</mo><mtext>Ο</mtext><mtext>V</mtext><mtext>S</mtext></mrow></msub></mrow><mrow><mi>A</mi><mi>S</mi><mi>L</mi><msub><mrow></mrow><mrow><mtext>Ο</mtext><mtext>F</mtext><mtext>Τ</mtext><mo>-</mo><mtext>Ρ</mtext><mtext>C</mtext></mrow></msub></mrow></mfrac><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mfrac><mrow><mi>k</mi><mo stretchy="false"> (</mo><mi>L</mi><mi>α</mi><mo>+</mo><mn>1</mn><mo stretchy="false">) </mo></mrow><mrow><mi>α</mi><mo stretchy="false"> (</mo><mi>L</mi><mo>-</mo><mi>p</mi><mi>L</mi><mo>+</mo><mi>p</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mo>+</mo><mi>k</mi><mo stretchy="false"> (</mo><mi>p</mi><mi>L</mi><mi>α</mi><mo>-</mo><mi>p</mi><mi>α</mi><mo>+</mo><mi>α</mi><mo>+</mo><mn>3</mn><mo stretchy="false">) </mo></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>7</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="148">在目前主流虚拟交换机OVS中, 掩码长度<i>L</i>被默认为16, 则式 (7) 可转化为:</p>
+                </div>
+                <div class="p1">
+                    <p id="149" class="code-formula">
+                        <mathml id="149"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>p</mi><mi>e</mi><mi>e</mi><mi>d</mi><mi>u</mi><mi>p</mi><mo>=</mo><mfrac><mrow><mi>k</mi><mo stretchy="false"> (</mo><mn>1</mn><mn>6</mn><mi>α</mi><mo>+</mo><mn>1</mn><mo stretchy="false">) </mo></mrow><mrow><mn>1</mn><mn>5</mn><mi>α</mi><mo stretchy="false"> (</mo><mn>1</mn><mo>-</mo><mi>p</mi><mo stretchy="false">) </mo><mo>+</mo><mi>k</mi><mo stretchy="false"> (</mo><mn>1</mn><mn>5</mn><mi>p</mi><mi>α</mi><mo>+</mo><mi>α</mi><mo>+</mo><mn>3</mn><mo stretchy="false">) </mo></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>8</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="150">从式 (8) 可知, 加速比主要取决于缓存失配率<i>p</i>、流表装载因子<i>α</i>和平均每批包个数<i>k</i>。其中, 缓存失配率<i>p</i>的取值范围为[0, 1], 反映了网络数据包流在连接上分布的局部性程度。<i>p</i>越趋近于0, 表明局部性程度越高。流表装载因子<i>α</i>通常可通过调整流表长度使其取值较小, 一般不超过10。平均每批包个数<i>k</i>的取值范围变化较大, 通常大于4。上述参数取不同典型值时2种流表查找方法的平均查找长度及加速比如表1所示。</p>
+                </div>
+                <div class="area_img" id="151">
+                    <p class="img_tit"><b>表1 不同<i>p</i>、<i>k</i>、<i>α</i>情况下平均查找长度及加速比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="151" border="1"><tr><td><i>p</i></td><td><i>k</i></td><td><i>α</i></td><td><i>ASL</i><sub>OFC-PC</sub></td><td><i>ASL</i><sub>OFC-OVS</sub></td><td><i>Speedup</i></td></tr><tr><td>0.2</td><td>4</td><td>2</td><td>8.500</td><td>16.5</td><td>1.941</td></tr><tr><td><br />0.2</td><td>4</td><td>4</td><td>15.500</td><td>32.5</td><td>2.097</td></tr><tr><td><br />0.2</td><td>8</td><td>2</td><td>7.000</td><td>16.5</td><td>2.357</td></tr><tr><td><br />0.2</td><td>8</td><td>4</td><td>12.500</td><td>32.5</td><td>2.600</td></tr><tr><td><br />0.4</td><td>4</td><td>2</td><td>10.750</td><td>16.5</td><td>1.535</td></tr><tr><td><br />0.4</td><td>4</td><td>4</td><td>20.000</td><td>32.5</td><td>1.625</td></tr><tr><td><br />0.4</td><td>8</td><td>2</td><td>9.825</td><td>16.5</td><td>1.679</td></tr><tr><td><br />0.4</td><td>8</td><td>4</td><td>17.750</td><td>32.5</td><td>1.831</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="152">从表1可以看出, <i>p</i>取0.2时的加速比明显比取0.4时大, 表明缓存失配率对加速比有显著的影响。</p>
+                </div>
+                <h3 id="153" name="153" class="anchor-tag">2 实验与结果分析</h3>
+                <div class="p1">
+                    <p id="154">为验证算法的有效性, 借助实际网络流量样本, 对本文所提的流表查找算法OFT-PC与目前主流虚拟交换机OVS的流表查找算法OFT-OVS进行性能对比。</p>
+                </div>
+                <h4 class="anchor-tag" id="155" name="155">2.1 网络流量样本</h4>
+                <div class="p1">
+                    <p id="156">实验采用江苏省计算机网络技术中心发布的2个数据集 (CERNET20150222、CERNET20150903) <citation id="185" type="reference"><link href="33" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>作为网络流量样本。这2个网络流量样本均是按照1∶4的比例从速率为10 Gb/s的骨干网络链路上采集获得, 采集日期分别在2015年2月22日和2015年9月3日, 持续时间分别约为122.6 s和100.2 s, 采集的数据包个数均为15 420 235。</p>
+                </div>
+                <div class="p1">
+                    <p id="157">流表规模对流表查找性能有重要影响。一般而言, 流表关键字段选取标识连接会话的五元组 (源IP地址、目的IP地址、源端口、目的端口和协议类型) 。对于掩码数组, 源端口、目的端口、协议字段统一设置为通配符, 源IP地址按地址类型分为A、B、C、D、E (D类和E类合为一类) 4类, 从而组合得到16种掩码<citation id="186" type="reference"><link href="35" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>。因此, 对于网络流量样本中的每个IP包, 可根据其源IP地址类型计算出对应的流标识符, 进而得到网络流量样本中的实时流表项数量, 结果如图4所示。由图4可以看出, 数据集CERNET20150222和CERNET20150903的流表项数量均从第10秒开始进入稳定状态, 并且分别在2.5×10<sup>4</sup>和1.8×10<sup>4</sup>上下波动。</p>
+                </div>
+                <div class="area_img" id="158">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905008_158.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 实时流表项数量趋势图" src="Detail/GetImg?filename=images/JSJC201905008_158.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 实时流表项数量趋势图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905008_158.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="159" name="159">2.2 缓存命中率</h4>
+                <div class="p1">
+                    <p id="160">缓存命中率对流表查找长度有较大的影响。实验从数据集中逐个读取数据包, 提取其关键字段, 并计算连接标识符。根据连接标识符索引并匹配掩码缓存中对应的4个缓存项。统计数据集中匹配命中缓存的数据包个数, 进而得到2个数据集的缓存命中率, 结果如图5所示。由图5可以看出, 数据集CERNET20150222和CERNET20150903的缓存命中率分别保持在0.46和0.65左右。</p>
+                </div>
+                <div class="area_img" id="161">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905008_161.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 缓存命中率趋势图" src="Detail/GetImg?filename=images/JSJC201905008_161.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 缓存命中率趋势图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905008_161.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="162" name="162">2.3 平均查找长度</h4>
+                <div class="p1">
+                    <p id="163">本节在上述2个数据集中对OFT-PC和OFT-OVS算法的平均查找长度进行比较。实验从数据集中逐个读取数据包, 计算连接标识符, 进而探测掩码, 查找流表。依据上述步骤, 记录每个数据包的流表查找长度, 进而统计每秒所有数据包的平均查找长度, 结果如图6所示。其中, 流表长度设为2<sup>14</sup>。</p>
+                </div>
+                <div class="area_img" id="164">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905008_164.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 流表的平均查找长度趋势图" src="Detail/GetImg?filename=images/JSJC201905008_164.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 流表的平均查找长度趋势图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905008_164.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="165">由图6可看出, 在2个数据集中, 本文算法的平均查找长度均明显小于OFT-OVS算法。并且在查找数据集CERNET20150222时, 本文算法从第20秒开始, 平均查找长度稳定在8.3左右;在查找数据集CERNET20150903时, 本文算法从第10秒开始, 平均查找长度稳定在4.6左右。这是因为采用 OFT-PC算法时, 频繁出现连接上的数据包将匹配命中缓存, 直接查找流表, 而无需逐个探测掩码, 从而大幅减少流表查找开销。</p>
+                </div>
+                <div class="p1">
+                    <p id="166">为更清晰显示查找性能对比, 图7给出了OFT-OVS算法相对于OFT-PC算法的加速比。从图7可以看出, 数据集CERNET20150222和CERNET20150903的加速比分别保持在1.5和2.2以上, 表明本文算法具有更好的流表查找性能。</p>
+                </div>
+                <div class="area_img" id="167">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905008_167.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 加速比趋势图" src="Detail/GetImg?filename=images/JSJC201905008_167.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图7 加速比趋势图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905008_167.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="168" name="168" class="anchor-tag">3 结束语</h3>
+                <div class="p1">
+                    <p id="169">针对OpenFlow虚拟交换机因流表项字段引入通配符带来的流表查找性能瓶颈, 本文利用网络流量局部性, 设计OFT-PC算法对流表进行查找。实验选取不同的网络数据集, 从缓存命中率和平均查找长度2个方面对本文算法进行了评估, 结果显示, 相对于OFT-OVS算法, 本文算法的平均查找长度较短, 加速比基本保持在1.5以上。但网络状况具有一定的突发性, 若出现大量的短暂性连接, 本文方法的优越性将无法体现, 下一步将对此开展研究。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Optimizing network virtualization in kernel-based virtual machine">
+
+                                <b>[1]</b> LI Shengzhao, HAO Qinfen, XIAO Limin, et al.Optimizing network virtualization in kernel-based virtual machine[C]//Proceedings of 2009 IEEE International Conference on Information Science and Engineering.Washington D.C., USA:IEEE Press, 2009:282-285.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Design and Implementation of a GPON-Based Virtual Open Flow-Enabled SDN Switch">
+
+                                <b>[2]</b> LEE S S W, LI Kuangyi, WU Mingshu.Design and implementation of a GPON-based virtual OpenFlow-enabled SDN switch[J].Journal of Lightwave Technology, 2016, 34 (10) :2552-2561.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Performance improvement of flowswitching with automatic maintenance of hash table assisted by wildcard flowentries">
+
+                                <b>[3]</b> MATSUMOTO N, HAYASHI M.Performance improvement of flow switching with automatic maintenance of hash table assisted by wildcard flow entries[C]//Proceedings of the 10th International Conference on Optical Internet.Washington D.C., USA:IEEE Press, 2012:12-13.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Light Flow:Speeding up GPU-based flow switching and facilitating maintenance of flow table">
+
+                                <b>[4]</b> MATSUMOTO N, HAYASHI M.LightFlow:speeding up GPU-based flow switching and facilitating maintenance of flow table[C]//Proceedings of 2012 IEEE International Conference on High Performance Switching and Routing.Washington D.C., USA:IEEE Press, 2012:76-81.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=&amp;quot;A collision-mitigation hashing scheme utiliz-ing empty slots of cuckoo hash table&amp;quot;">
+
+                                <b>[5]</b> CHO C H, LEE J B, RYOO J D.A collision-mitigation hashing scheme utilizing empty slots of cuckoo hash table[C]//Proceedings of the 19th International Conference on Advanced Communication Technology.Washington D.C., USA:IEEE Press, 2017:514-517.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=PLUG: Flexible lookup modules for rapid deployment of new protocols in high-speed routers">
+
+                                <b>[6]</b> CARLI L D, PAN Yi, KUMAR A, et al.Flexible lookup modules for rapid deployment of new protocols in high-speed routers[C]//Proceedings of 2009 ACM SIGCOMM Conference on Data Communication.New York, USA:ACM Press, 2009, 39 (4) :207-218.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Open Flow accelerator:a decomposition-based hashing approach for flow processing">
+
+                                <b>[7]</b> SUN Hai, SUN Yan, VALGENTI V C, et al.OpenFlow accelerator:a decomposition-based hashing approach for flow processing[C]//Proceedings of the 24th International Conference on Computer Communication and Networks.Washington D.C., USA:IEEE Press, 2015:1-10.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201606002&amp;v=MjYyNjNVUkxPZVplUm9GeTNsVnJyTkx6N0Jkckc0SDlmTXFZOUZab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 毛健彪, 卞洪飞, 韩彪, 等.PiBuffer:面向数据中心的OpenFlow流缓存管理模型[J].计算机学报, 2016, 39 (6) :1092-1104.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=An efficient flow cache algorithm with improved fairness in software-defined data center networks">
+
+                                <b>[9]</b> LEE B S, KANAGAVELU R, AUNG K M M.An efficient flow cache algorithm with improved fairness in software-defined data center networks[C]//Proceedings of 2013 IEEE International Conference on Cloud Networking.Washington D.C., USA:IEEE Press, 2013:18-24.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM129FE5480DCA762AA145F8D5B669D77B&amp;v=MDY0MzA1aHdiaTZ4YTA9TmlmSVk3SzZGNmU1cW90TlpKOThmWHMveldkaTZ6dDRQbmVXcVdBemY3dmdRcjN0Q09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1Tg==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> CONGDON P T, MOHAPATRA P, FARRENS M, et al.Simultaneously reducing latency and power consumption in OpenFlow switches[J].IEEE/ACM Transactions on Networking, 2014, 22 (3) :1007-1020.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The Design and Implementation of Open Vswitch">
+
+                                <b>[11]</b> PFAFF B, PETTIT J, KOPONEN T, et al.The design and implementation of Open vSwitch[C]//Proceedings of the 12th USENIX Conference on Networked Systems Design and Implementation.Oakland, USA:[s.n.], 2015:117-130.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Switching systems and methods using wildcard searching">
+
+                                <b>[12]</b> KIZHEPAT G, TENG M H, CHOY K Y Y.Switching systems and methods using wildcard searching:US 7774374B1[P].2010-08-10.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Global Internet Phenomena Report">
+
+                                <b>[13]</b> Sandvine.2014 global internet phenomena report[R/OL].[2017-12-15].https://www.sandvine.com/downloads/general/global-internet-phenomena/2014/2h-2014-global-internet-phenomena-report.pdf.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Tracking millions of flows in high speed networks for application identification">
+
+                                <b>[14]</b> PAN Tian, GUO Xiaoyu, ZHANG Chenhui, et al.Tracking millions of flows in high speed networks for application identification[C]//Proceedings of 2012 IEEE International Conference on Computer Communications.Washington D.C., USA:IEEE Press, 2012:1647-1655.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZXU201704035&amp;v=MzE5MThyTklUZlRlN0c0SDliTXE0OUdZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTNsVnI=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 王鹏, 张良, 周舟, 等.一种高并发网络环境下快速流表查找方法[J].电子学报, 2017, 45 (4) :974-981.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" >
+                                    <b>[16]</b>
+                                 江苏省计算机网络技术中心.IP trace and service[EB/OL].[2017-12-15].http://iptas.edu.cn/src/system.php.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XXWX201707021&amp;v=MTk0NTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTNsVnJyTlBUWGNkckc0SDliTXFJOUhaWVE=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b> 姜腊林, 胡念, 熊兵.基于MTF启发法的OpenFlow虚拟流表高效查找算法[J].小型微型计算机系统, 2017, 38 (7) :1533-1537.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201905008" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201905008&amp;v=MjkwMjJDVVJMT2VaZVJvRnkzbFZyck5MejdCYmJHNEg5ak1xbzlGYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

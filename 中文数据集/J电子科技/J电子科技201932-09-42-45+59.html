@@ -1,0 +1,796 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2fKXReader%2fDetail%3fTIMESTAMP%3d637139228016513750%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dDZKK201909010%26RESULT%3d1%26SIGN%3dQAH0vN0yvh9Gpe3hTQe4Zb9b8r4%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZKK201909010&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZKK201909010&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201909010&amp;v=MjUxODRSN3FmWnVacEZ5emhVYnpJSVRmQVpiRzRIOWpNcG85RVpJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#35" data-title="&lt;b&gt;1&lt;/b&gt; 研究背景 "><b>1</b> 研究背景</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#42" data-title="&lt;b&gt;2&lt;/b&gt; 文本定位 "><b>2</b> 文本定位</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#43" data-title="&lt;b&gt;2.1&lt;/b&gt; 实验数据集图片预处理"><b>2.1</b> 实验数据集图片预处理</a></li>
+                                                <li><a href="#45" data-title="&lt;b&gt;2.2&lt;/b&gt; 算法核心流程"><b>2.2</b> 算法核心流程</a></li>
+                                                <li><a href="#48" data-title="&lt;b&gt;2.3&lt;/b&gt; 构建文本定位模型"><b>2.3</b> 构建文本定位模型</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#57" data-title="&lt;b&gt;3&lt;/b&gt; 文本分类 "><b>3</b> 文本分类</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#58" data-title="&lt;b&gt;3.1&lt;/b&gt; 数据集处理"><b>3.1</b> 数据集处理</a></li>
+                                                <li><a href="#61" data-title="&lt;b&gt;3.2&lt;/b&gt; 分类模型构建"><b>3.2</b> 分类模型构建</a></li>
+                                                <li><a href="#64" data-title="&lt;b&gt;3.3&lt;/b&gt; 模型改进方法"><b>3.3</b> 模型改进方法</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#87" data-title="&lt;b&gt;4&lt;/b&gt; 信息提示文本识别 "><b>4</b> 信息提示文本识别</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#94" data-title="&lt;b&gt;5&lt;/b&gt; 结束语 "><b>5</b> 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#37" data-title="图1 文本验证码">图1 文本验证码</a></li>
+                                                <li><a href="#39" data-title="图2 极验点选式验证码">图2 极验点选式验证码</a></li>
+                                                <li><a href="#41" data-title="图3 验证码识别流程图">图3 验证码识别流程图</a></li>
+                                                <li><a href="#47" data-title="图4 Faster-RCNN算法框架图">图4 Faster-RCNN算法框架图</a></li>
+                                                <li><a href="#50" data-title="图5 RPN网络结构">图5 RPN网络结构</a></li>
+                                                <li><a href="#55" data-title="&lt;b&gt;表&lt;/b&gt;1 &lt;b&gt;实验结果对比&lt;/b&gt;"><b>表</b>1 <b>实验结果对比</b></a></li>
+                                                <li><a href="#63" data-title="&lt;b&gt;表&lt;/b&gt;2 CNN&lt;b&gt;网络结构及参数配置&lt;/b&gt;"><b>表</b>2 CNN<b>网络结构及参数配置</b></a></li>
+                                                <li><a href="#85" data-title="&lt;b&gt;表&lt;/b&gt;3 &lt;b&gt;实验结果对比&lt;/b&gt;"><b>表</b>3 <b>实验结果对比</b></a></li>
+                                                <li><a href="#90" data-title="图6 信息提示文本图片">图6 信息提示文本图片</a></li>
+                                                <li><a href="#92" data-title="图7 训练前后识别效果对比">图7 训练前后识别效果对比</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="2">
+
+
+                                    <a id="bibliography_1" title=" 胡健,柳青,王海林.验证码安全与验证码绕过技术[J].计算机应用,2016,36(S1):37-41  Hu Jian,Liu Qing,Wang Hailin.CAPTCHA security and bypass technique[J].Journal of Computer Applications,2016,36(S1):37-41." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY2016S1010&amp;v=MjU3NzVxcUJ0R0ZyQ1VSN3FmWnVacEZ5emhVYnpJTHo3QmQ3RzRIOWV2cm85RVpJUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         胡健,柳青,王海林.验证码安全与验证码绕过技术[J].计算机应用,2016,36(S1):37-41  Hu Jian,Liu Qing,Wang Hailin.CAPTCHA security and bypass technique[J].Journal of Computer Applications,2016,36(S1):37-41.
+                                    </a>
+                                </li>
+                                <li id="4">
+
+
+                                    <a id="bibliography_2" title=" 孟凯.基于SVM的空心验证码识别技术研究[D].重庆:重庆邮电大学,2017.Meng Kai.Research on recognition technology of hollow CHPTCHAs based on SVM[D].Chongqing:Chongqing University of Posts and Telecommunication,2017." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1018973007.nh&amp;v=MDY2ODg2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeXpoVWJ6SVZGMjZGcnEvSGRITXFKRWJQSVFLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         孟凯.基于SVM的空心验证码识别技术研究[D].重庆:重庆邮电大学,2017.Meng Kai.Research on recognition technology of hollow CHPTCHAs based on SVM[D].Chongqing:Chongqing University of Posts and Telecommunication,2017.
+                                    </a>
+                                </li>
+                                <li id="6">
+
+
+                                    <a id="bibliography_3" title=" 王斌君,王靖亚,杜凯选.验证码技术的攻防对策研究[J].计算机应用研究,2013,30(9):2777-2779.Wang Binjun,Wang Jingya,Du Kaixuan.Research on attach strategy of CHPTCHA technology[J].Application Research of Computers,2013,30(9):2777-2779." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201309053&amp;v=MTU1MjRSN3FmWnVacEZ5emhVYnpJTHo3U1pMRzRIOUxNcG85QVo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         王斌君,王靖亚,杜凯选.验证码技术的攻防对策研究[J].计算机应用研究,2013,30(9):2777-2779.Wang Binjun,Wang Jingya,Du Kaixuan.Research on attach strategy of CHPTCHA technology[J].Application Research of Computers,2013,30(9):2777-2779.
+                                    </a>
+                                </li>
+                                <li id="8">
+
+
+                                    <a id="bibliography_4" title=" 汪中.验证码识别技术及应用[J].计算机光盘软件与应用,2014,17(5):167-168.Wang Zhong.CHPTCHA recognition technology and application[J].Computer CD Software and Application,2014,17(5):167-168." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GPRJ201405100&amp;v=MjU3OTFwRnl6aFVieklJajNaWkxHNEg5WE1xbzVGWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         汪中.验证码识别技术及应用[J].计算机光盘软件与应用,2014,17(5):167-168.Wang Zhong.CHPTCHA recognition technology and application[J].Computer CD Software and Application,2014,17(5):167-168.
+                                    </a>
+                                </li>
+                                <li id="10">
+
+
+                                    <a id="bibliography_5" title=" 尹龙.扭曲粘连字符验证码识别研究[D].合肥:中国科学技术大学,2014.Yin Long.Recognition of distorted and merged text-based CHPTCHA[D].Hefei:University of Science and Technology of China,2014." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1014300172.nh&amp;v=Mjk5Mjl1WnBGeXpoVWJ6SVZGMjZHckM0SHRETHJaRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         尹龙.扭曲粘连字符验证码识别研究[D].合肥:中国科学技术大学,2014.Yin Long.Recognition of distorted and merged text-based CHPTCHA[D].Hefei:University of Science and Technology of China,2014.
+                                    </a>
+                                </li>
+                                <li id="12">
+
+
+                                    <a id="bibliography_6" title=" 安改换.扭曲粘连字符验证码识别技术研究[D].上海:上海应用技术大学,2016.An Gaihuan.Recognition technology research of distorted and merged text-based CHPTCHA [D].Shanghai:Shanghai Institution of Technology,2016." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017276682.nh&amp;v=MTc1NzdieklWRjI2R2JHL0dOZkVyWkViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnl6aFU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         安改换.扭曲粘连字符验证码识别技术研究[D].上海:上海应用技术大学,2016.An Gaihuan.Recognition technology research of distorted and merged text-based CHPTCHA [D].Shanghai:Shanghai Institution of Technology,2016.
+                                    </a>
+                                </li>
+                                <li id="14">
+
+
+                                    <a id="bibliography_7" title=" 唐海涛.自组织增量神经网络的验证码识别模型与算法[D].广州:广东工业大学,2016." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016166834.nh&amp;v=MTgzMzA1NE8zenFxQnRHRnJDVVI3cWZadVpwRnl6aFVieklWRjI2R0xLK0dOblBxNUViUElRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         唐海涛.自组织增量神经网络的验证码识别模型与算法[D].广州:广东工业大学,2016.
+                                    </a>
+                                </li>
+                                <li id="16">
+
+
+                                    <a id="bibliography_8" title=" Lu P,Shan L,Li J,et al.A new segmentation method for connected characters in CAPTCHA[C].Changshu:International Conference on Control,Automation and Information Sciences (ICCAIS),2015." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A new segmentation method for connected characters in CAPTCHA">
+                                        <b>[8]</b>
+                                         Lu P,Shan L,Li J,et al.A new segmentation method for connected characters in CAPTCHA[C].Changshu:International Conference on Control,Automation and Information Sciences (ICCAIS),2015.
+                                    </a>
+                                </li>
+                                <li id="18">
+
+
+                                    <a id="bibliography_9" title=" 汪洋,许映秋,彭艳兵.基于KNN技术的校内网验证码识别[J].计算机与现代化,2017(2):93-97.Wang Yang,Xu Yingqiu,Peng Yanbing.KNN-based verification code recognition on campus network[J].Computer and Modernization,2017(2):93-97." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYXH201702019&amp;v=MjAzMjhadVpwRnl6aFVieklMelRUWnJHNEg5Yk1yWTlFYllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         汪洋,许映秋,彭艳兵.基于KNN技术的校内网验证码识别[J].计算机与现代化,2017(2):93-97.Wang Yang,Xu Yingqiu,Peng Yanbing.KNN-based verification code recognition on campus network[J].Computer and Modernization,2017(2):93-97.
+                                    </a>
+                                </li>
+                                <li id="20">
+
+
+                                    <a id="bibliography_10" title=" Wang Ye,Lu Mi.A self-adaptive algorithm to defeat text-based CAPTCHA[C].Taipei:IEEE International Confer-ence on Industrial Technology,2016." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A self-adaptive algorithm to defeat text-based CAPTCHA">
+                                        <b>[10]</b>
+                                         Wang Ye,Lu Mi.A self-adaptive algorithm to defeat text-based CAPTCHA[C].Taipei:IEEE International Confer-ence on Industrial Technology,2016.
+                                    </a>
+                                </li>
+                                <li id="22">
+
+
+                                    <a id="bibliography_11" title=" Garg G,Pollett C.Neural network CAPTCHA crackers[C].San Francisco:Future Technologies Conference (FTC),2016." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Neural network CAPTCHA crackers">
+                                        <b>[11]</b>
+                                         Garg G,Pollett C.Neural network CAPTCHA crackers[C].San Francisco:Future Technologies Conference (FTC),2016.
+                                    </a>
+                                </li>
+                                <li id="24">
+
+
+                                    <a id="bibliography_12" title=" 刘达荣,张远平,汤茂斌,等.基于渐进式学习的神经网络端到端验证码识别[J].计算机技术与发展,2018(9):9-13.Liu Darong,Zhang Yuanping,Tang Maobin,et al.End-to-end verification code identification of neural network based on progressive learning[J].Computer Technology and Development,2018(9):9-13." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJFZ201809004&amp;v=MDQyMzh0R0ZyQ1VSN3FmWnVacEZ5emhVYnpJTWlmTmRMRzRIOW5NcG85RllJUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         刘达荣,张远平,汤茂斌,等.基于渐进式学习的神经网络端到端验证码识别[J].计算机技术与发展,2018(9):9-13.Liu Darong,Zhang Yuanping,Tang Maobin,et al.End-to-end verification code identification of neural network based on progressive learning[J].Computer Technology and Development,2018(9):9-13.
+                                    </a>
+                                </li>
+                                <li id="26">
+
+
+                                    <a id="bibliography_13" title=" 熊海朋,陈洋洋,陈春玮.基于卷积神经网络的场景图像文本定位研究[J].电子科技,2018,31(1):50-53.Xiong Haipeng,Chen Yangyang,Chen Chunyu.Text location in image based on convolutional neural network[J].Electronic Science and Technology,2018,31(1):50-53." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201801014&amp;v=MjU2Mjc0SDluTXJvOUVZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeXpoVWJ6SUlUZkFaYkc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         熊海朋,陈洋洋,陈春玮.基于卷积神经网络的场景图像文本定位研究[J].电子科技,2018,31(1):50-53.Xiong Haipeng,Chen Yangyang,Chen Chunyu.Text location in image based on convolutional neural network[J].Electronic Science and Technology,2018,31(1):50-53.
+                                    </a>
+                                </li>
+                                <li id="28">
+
+
+                                    <a id="bibliography_14" >
+                                        <b>[14]</b>
+                                     Ren S,Girshick R.Faster R-CNN:towards real-time objection with region proposal networks[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence,2017,39(6):1137-1149.</a>
+                                </li>
+                                <li id="30">
+
+
+                                    <a id="bibliography_15" >
+                                        <b>[15]</b>
+                                     Simonyan K,Zisserman A.Very deep convolutional networks for large-scale image recognition[C].San Diego:International Conference on Learning Representations,2015.</a>
+                                </li>
+                                <li id="32">
+
+
+                                    <a id="bibliography_16" title=" Li Q,An W,Zhou A,et al.Recognition of offline handwritten Chinese characters using the tesseract open source OCR engine[C].Hangzhou:8&lt;sup&gt;th&lt;/sup&gt; International Conference on Intelligent Human-Machine Systems and Cybernetics (IHMSC),2016." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Recognition of Offline Handwritten Chinese Characters Using the Tesseract Open Source OCR Engine">
+                                        <b>[16]</b>
+                                         Li Q,An W,Zhou A,et al.Recognition of offline handwritten Chinese characters using the tesseract open source OCR engine[C].Hangzhou:8&lt;sup&gt;th&lt;/sup&gt; International Conference on Intelligent Human-Machine Systems and Cybernetics (IHMSC),2016.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+    <div class="head-tag">   
+            <p>
+               <b> 网络首发时间: 2018-12-20 09:12</b>
+            </p>     
+    </div>
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=DZKK" target="_blank">电子科技</a>
+                2019,32(09),42-45+59 DOI:10.16180/j.cnki.issn1007-7820.2019.09.009            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm">基于Faster-RCNN的极验点选式验证码识别</span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%91%A8%E6%96%87%E5%87%AF&amp;code=42773641&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">周文凯</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%9F%A9%E8%8A%B3&amp;code=26696537&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">韩芳</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%AD%94%E7%BB%B4%E5%81%A5&amp;code=34280990&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">孔维健</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%9C%E5%8D%8E%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&amp;code=0265717&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">东华大学信息科学与技术学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对传统方法难以识别极验点选式验证码的问题,文中提出一种基于Faster-RCNN目标检测模型和卷积神经网络的识别方法。通过简化的RPN提高Faster-RCNN对于背景图片文本定位的精度,再设计卷积神经网络对文本进行分类识别,并训练Tesseract-OCR识别库对信息提示文本进行识别,实现背景图片文本识别结果与信息提示文本识别结果一一对应,达到识别此类验证码的目的。实验结果表明,该方法识别此类验证码的准确率达到72.4%。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%9E%81%E9%AA%8C%E9%AA%8C%E8%AF%81%E7%A0%81&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">极验验证码;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Faster-RCNN&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Faster-RCNN;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">卷积神经网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Tesseract-OCR&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Tesseract-OCR;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    周文凯(1994-),男,硕士研究生。研究方向:图像处理,虚拟现实。;
+                                </span>
+                                <span>
+                                    韩芳(1981-),女,博士,教授。研究方向:智能系统与神经动力学。;
+                                </span>
+                                <span>
+                                    孔维健(1983-),男,博士,讲师。研究方向:计算智能,复杂工业过程建模与优化。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-09-12</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金(11572084,11472061);</span>
+                                <span>中央高校基本科研业务费(18D210402);</span>
+                    </p>
+            </div>
+                    <h1><b>Point-selective Geetest CAPTCHA Recognition Based on Faster-RCNN</b></h1>
+                    <h2>
+                    <span>ZHOU Wenkai</span>
+                    <span>HAN Fang</span>
+                    <span>KONG Weijian</span>
+            </h2>
+                    <h2>
+                    <span>School of Information Science and Technology,Donghua University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>In view of the problem that traditional methods were difficult to recognize the geetest point-selective CAPTCHA, this paper proposed a recognition method that based on Faster-RCNN object detection model and convolutional neural network. Firstly, it improved the accuracy of text positioning by simplified RPN, then designed convolutional neural network to classify and identify texts,and trained the Tesseract-OCR identification databases to recognize the message texts. Finally, the result of texts recognition which embedded into background picture corresponded to the result of message texts recognition, then it reached the purpose of CAPTCHA recognition. Experimental results showed that the accuracy of this recognition method up to 72.4%.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=geetest%20CAPTCHA%20recognition&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">geetest CAPTCHA recognition;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Faster-RCNN&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Faster-RCNN;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=convolutional%20neural%20network&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">convolutional neural network;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Tesseract-OCR&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Tesseract-OCR;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-09-12</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>National Natural Science Foundation of China(11572084,11472061);</span>
+                                <span>The Fundamental Research Funds for the Central Universities(18D210402);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <div class="p1">
+                    <p id="34">验证码(CAPTCHA)是全自动区分计算机和人类的图灵测试(Completely Automated Public Turing Test to Tell Computers and Humans Apart)的首字母缩写,它能在一定程度上保证网络安全<citation id="96" type="reference"><link href="2" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。验证码在防止破解密码、批量注册用户、批量投放广告、发送垃圾邮件等恶意行为上有很好的效果<citation id="97" type="reference"><link href="4" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>。而验证码识别技术的发展可帮助发现验证码的安全漏洞,促进验证码设计技术的发展。验证码的识别技术已成为当前的一个重要研究方向<citation id="98" type="reference"><link href="6" rel="bibliography" /><link href="8" rel="bibliography" /><sup>[<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>。</p>
+                </div>
+                <h3 id="35" name="35" class="anchor-tag"><b>1</b> 研究背景</h3>
+                <div class="p1">
+                    <p id="36">目前,网站上采用的最为广泛的验证码类型是文本验证码,如图1所示。一般是在文本中加入背景噪音、字符扭曲旋转和粘连等干扰<citation id="105" type="reference"><link href="10" rel="bibliography" /><link href="12" rel="bibliography" /><sup>[<a class="sup">5</a>,<a class="sup">6</a>]</sup></citation>。这种类型的验证码前人已经做过诸多研究,且都达到了较好的识别效果。如唐海涛<citation id="99" type="reference"><link href="14" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>通过构建自组织增量神经网络对验证码的识别率在60%～85%之间,Lu P等<citation id="100" type="reference"><link href="16" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>提出BP神经网络结合SVM算法进行字符识别;汪洋等<citation id="101" type="reference"><link href="18" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>用水滴算法与轮廓差投影法进行字符切割,然后利用KNN算法进行分类识别;Wang Ye等<citation id="102" type="reference"><link href="20" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>用基于自适应的算法来对验证码进行去噪和分割,并采用模板匹配的方法来对分割后的字符识别;Garg Geetika等<citation id="103" type="reference"><link href="22" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>利用CNN和RNN对文本验证码识别率达到99.8%和81%。刘达荣等<citation id="104" type="reference"><link href="24" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>采用渐进式学习的神经网络实现端到端的验证码识别,准确率可达86%。</p>
+                </div>
+                <div class="area_img" id="37">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201909010_037.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 文本验证码" src="Detail/GetImg?filename=images/DZKK201909010_037.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 文本验证码  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201909010_037.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 1. Text CAPTCHA</p>
+
+                </div>
+                <div class="p1">
+                    <p id="38">除上文所提到文本验证码以外,还有许多其他类型的验证码。极验就是一家专门提供验证码服务的第三方验证码平台,目前已有超过20万家网站和移动应用使用该平台提供的验证码。极验提供了许多新类别的验证码,极验第三代点选式验证码就是其中的一种,如图2所示。该验证码分为信息提示文本和背景图片两部分,信息提示文本是一张116×40的图片,一般包含2～5个汉字,部分汉字角度有轻微旋转;背景图片像素大小为344×344,其中随机分布包含信息提示文本在内的2～7个汉字;需要根据信息提示文本依次点击背景图片对应的文本进行验证。此类验证码的识别难点在于:(1)识别目标文本为汉字,分类超过4 000类;(2)文本包含粗细两种不同字体;(3)文本颜色与背景颜色相似,难以区分;(4)文本有任意角度的旋转、边缘模糊;(5)图片太大,文本随机分布。传统办法难以将文本分割。</p>
+                </div>
+                <div class="area_img" id="39">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201909010_039.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 极验点选式验证码" src="Detail/GetImg?filename=images/DZKK201909010_039.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 极验点选式验证码  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201909010_039.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 2. Geetest point-selective CAPTCHA</p>
+
+                </div>
+                <div class="p1">
+                    <p id="40">本文提出了一种专门针对该类验证码的识别方法,识别流程如图3所示。首先,通过自动化测试工具Selenium从网站上大量的验证码原图;将验证码图片切割成背景图片和信息提示文本两个部分分别进行处理;背景图片的处理分为文本定位<citation id="106" type="reference"><link href="26" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>和分类识别两个步骤,采用Faster-RCNN<citation id="107" type="reference"><link href="28" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>目标检测模型进行文本定位,获取文本的坐标信息,将文本分割并标记,对标记好的数据集做均衡化处理,采用卷积神经网络进行分类识别;最后使用Tesseract-OCR技术对信息提示文本进行识别;将信息提示获得的文本与背景图片提取后识别的文本对应起来,即可获得背景图片文本的坐标信息。</p>
+                </div>
+                <div class="area_img" id="41">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201909010_041.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 验证码识别流程图" src="Detail/GetImg?filename=images/DZKK201909010_041.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 验证码识别流程图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201909010_041.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 3. CHPTCHA recognition flowchart</p>
+
+                </div>
+                <h3 id="42" name="42" class="anchor-tag"><b>2</b> 文本定位</h3>
+                <h4 class="anchor-tag" id="43" name="43"><b>2.1</b> 实验数据集图片预处理</h4>
+                <div class="p1">
+                    <p id="44">使用LabelImg工具将数据集标注为VOC数据格式,将每张图片中文本的边框信息保存在一个xml文件中。本文标注了2 000张图片作为训练集。</p>
+                </div>
+                <h4 class="anchor-tag" id="45" name="45"><b>2.2</b> 算法核心流程</h4>
+                <div class="p1">
+                    <p id="46">Faster R-CNN 主要由3个部分组成:基础特征提取网络、区域建议网络和分类回归网络。特征提取网络对感兴趣的区域进行特征提取,RPN将生成的建议窗口映射到最后一层卷积特征图上,RoI池化层生成固定大小的特征图,最后进行分类概率和边框回归训练。整体框架如图4所示。</p>
+                </div>
+                <div class="area_img" id="47">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201909010_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 Faster-RCNN算法框架图" src="Detail/GetImg?filename=images/DZKK201909010_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 Faster-RCNN算法框架图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201909010_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 4. Faster-RCNN algorithm flow diagram</p>
+
+                </div>
+                <h4 class="anchor-tag" id="48" name="48"><b>2.3</b> 构建文本定位模型</h4>
+                <div class="p1">
+                    <p id="49">本文根据文本特征简化了RPN网络,原始 RPN 网络结构如图5所示。在特征提取网络的最后一层特征图上经过3×3像素卷积之后将每一个像素点映射回原始图片对应的坐标点,以该点为中心生成3种比例 1∶1/1∶2/2∶1,3种尺度128/256/512 像素共9种不同大小的粗粒度的候选区域 ,即Anchor。由于目标文本对象尺度大小没有显著的差异,为了使模型对该尺度的目标更为敏感,将Anchor比例限定为1∶1,同时将Scale修改为60/70/80像素,只需生成3种不同的候选区域。</p>
+                </div>
+                <div class="area_img" id="50">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201909010_050.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 RPN网络结构" src="Detail/GetImg?filename=images/DZKK201909010_050.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 RPN网络结构  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201909010_050.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 5. RPN network structure</p>
+
+                </div>
+                <div class="p1">
+                    <p id="51">RPN网络的输出包含一个二分类Softmax层和一个Bounding box回归层,Softmax层用2个Score分别表示其是文本的概率与不是文本的概率(<i>p</i><sub><i>i</i></sub>), Bounding box回归层的输出代表这个anchor的4个坐标信息(<i>t</i><sub><i>i</i></sub>),基于上述理论,将RPN网络训练候选区域的总体loss函数定义为</p>
+                </div>
+                <div class="p1">
+                    <p id="52"><mathml id="53"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>L</mi><mo stretchy="false">(</mo><mi>p</mi><msub><mrow></mrow><mi>i</mi></msub><mo>,</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mi>Ν</mi><msub><mrow></mrow><mrow><mtext>c</mtext><mtext>l</mtext><mtext>s</mtext></mrow></msub></mrow></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mi>i</mi></munder><mi>L</mi></mstyle><msub><mrow></mrow><mrow><mtext>c</mtext><mtext>l</mtext><mtext>s</mtext></mrow></msub><mo stretchy="false">(</mo><mi>p</mi><msub><mrow></mrow><mi>i</mi></msub><mo>,</mo><mi>p</mi><msubsup><mrow></mrow><mi>i</mi><mo>*</mo></msubsup><mo stretchy="false">)</mo><mo>+</mo><mi>λ</mi><mfrac><mn>1</mn><mrow><mi>Ν</mi><msub><mrow></mrow><mrow><mtext>r</mtext><mtext>e</mtext><mtext>g</mtext></mrow></msub></mrow></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mi>i</mi></munder><mi>p</mi></mstyle><msubsup><mrow></mrow><mi>i</mi><mo>*</mo></msubsup><mi>L</mi><msub><mrow></mrow><mrow><mtext>r</mtext><mtext>e</mtext><mtext>g</mtext></mrow></msub><mo stretchy="false">(</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>,</mo><mi>t</mi><msubsup><mrow></mrow><mi>i</mi><mo>*</mo></msubsup><mo stretchy="false">)</mo></mrow></math></mathml>      (1)</p>
+                </div>
+                <div class="p1">
+                    <p id="54">基于上述理论,分别用ZF和VGG特征提取网络对RPN改进的有效性进行了验证,训练时将其他参数设置完全相同,然后都ImageNet预训练模型对网络进行初始化,迭代训练80 000次时得到最终模型。实验结果如表1所示。</p>
+                </div>
+                <div class="area_img" id="55">
+                    <p class="img_tit"><b>表</b>1 <b>实验结果对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 1. Comparison of experimental results</p>
+                    <p class="img_note"></p>
+                    <table id="55" border="1"><tr><td>特征提取网络</td><td>RPN</td><td>误识率</td><td>时间/ms</td></tr><tr><td><br />ZF网络</td><td>使用原始的RPN</td><td>25%</td><td>105</td></tr><tr><td><br /></td><td>使用改进的RPN</td><td>17%</td><td>94</td></tr><tr><td><br />VGG网络</td><td>使用原始的RPN</td><td>14.3%</td><td>198</td></tr><tr><td><br /></td><td>使用改进的RPN</td><td>9.4%</td><td>192</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="56">其中误识率是指未识别出的文本和识别错误文本概率之和,时间是指识别一张图片的平均时间,由实验结果可以看出,不管是对ZF网络还是VGG网络,使用改进的RPN训练出来的模型对识别图片的平均时间影响不大,但是能明显降低误识率。对当前验证码文本定位能达到比较好的效果。</p>
+                </div>
+                <h3 id="57" name="57" class="anchor-tag"><b>3</b> 文本分类</h3>
+                <h4 class="anchor-tag" id="58" name="58"><b>3.1</b> 数据集处理</h4>
+                <div class="p1">
+                    <p id="59">利用训练好的文本定位模型对3万张图片进行文本切割,得到了10万多张文本样本,对这些样本标记,得到3 990类汉字。但是分类太多且样本不均衡,不能直接训练。首先对小数量样本进行剔除,一共剔除1 931类汉字,占总样本数量的4.6%;可得到2 059类汉字,大幅简化了分类数量。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">为了均衡样本,对2 059类汉字进行过采样和欠采样处理,即将样本数量小于200的汉字进行高斯模糊、旋转等,使其样本数达到200个,将样本数量大于200的汉字随机删除到200个。</p>
+                </div>
+                <h4 class="anchor-tag" id="61" name="61"><b>3.2</b> 分类模型构建</h4>
+                <div class="p1">
+                    <p id="62">本文使用的文本分类的神经网络基本结构与VGG<citation id="108" type="reference"><link href="30" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>类似,首先将所有图片resize成大小为64×64像素的图片,整个网络一共12层,分别为7个卷积层、3个池化层、1个全连接层和一个Softmax回归层,每层卷积都会叠加2～3次。前面11层网络通过堆叠相同尺寸的卷积核(3×3)和池化层(1×1)来提取特征,这样能够提升神经网络对特征的学习能力,网络输入的BatchSize大小为200,使用修正线性单元Relu作为激活函数,最后一层使用Softmax回归层作为分类器,并采用交叉熵函数来计算分类损失,网络结构的详细参数如表2所示。</p>
+                </div>
+                <div class="area_img" id="63">
+                    <p class="img_tit"><b>表</b>2 CNN<b>网络结构及参数配置</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 2. Structure and parameter configuration of CNN network</p>
+                    <p class="img_note"></p>
+                    <table id="63" border="1"><tr><td>类型</td><td>层数</td><td>卷积核数量</td><td>卷积核大小</td><td>卷积核步长</td><td>输出大小</td></tr><tr><td><br />Conv1</td><td>2</td><td>64</td><td>3×3</td><td>1</td><td>64×64</td></tr><tr><td><br />Pool_1</td><td>1</td><td>64</td><td>3×3</td><td>2</td><td>32×32</td></tr><tr><td><br />Conv2</td><td>2</td><td>128</td><td>3×3</td><td>1</td><td>32×32</td></tr><tr><td><br />Pool_2</td><td>1</td><td>128</td><td>3×3</td><td>2</td><td>16×16</td></tr><tr><td><br />Conv3</td><td>3</td><td>256</td><td>3×3</td><td>1</td><td>16×16</td></tr><tr><td><br />Pool_3</td><td>1</td><td>256</td><td>3×3</td><td>2</td><td>8×8</td></tr><tr><td><br />Fc</td><td>1</td><td>-</td><td>-</td><td>-</td><td>4 096</td></tr><tr><td><br />Softmax</td><td>1</td><td>-</td><td>-</td><td>-</td><td>2 059</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="64" name="64"><b>3.3</b> 模型改进方法</h4>
+                <div class="p1">
+                    <p id="65">基于上述模型,本文用不同的方法提高了模型的泛化能力。首先采用数据增广,即在将样本输入网络之前,对样本进行预处理,根据样本特征对样本进行对比度增强、随机旋转、随机调整图片亮度、宽度和高度的随机偏移等操作,这些操作是在训练过程中实时进行的,相当于大量增加了训练样本量,获得了更健壮的数据,可以明显提高模型的泛化能力。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">其次在训练过程中进行批标准化。神经网络的输入在经过非线性激活函数时其分布会发生相应变化,每增加一层神经网络,分布的差异就会逐渐放大,由于采用的网络结构层数过深,最终会导致模型的泛化能力大幅降低,批标准化可以有效解决这一问题。批标准化是指在非线性映射(激活函数)之前,对<i>x</i>=<i>Wu</i>+<i>b</i>进行规范化,使输出信号的各个维度的均值都为0,方差为1,即让输入大部分值落在激活函数的线性区间内,使得每一层的输入有一个稳定的分布;而这种固定的分布不一定是前一层网络要学习到的分布,因此又引入两个可学习的参数<i>γ</i>和<i>β</i>,去还原上一层所学习到的数据分布,所以对于某一层的样本集合<i>B</i>={<i>x</i><sub>1</sub>,…,<i>x</i><sub><i>m</i></sub> },批标准化的公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="67"><mathml id="68"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>μ</mi><msub><mrow></mrow><mi>B</mi></msub><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>i</mi><mi>m</mi></munderover><mi>x</mi></mstyle><msub><mrow></mrow><mi>i</mi></msub></mrow></math></mathml>      (2)</p>
+                </div>
+                <div class="p1">
+                    <p id="69"><mathml id="70"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>σ</mi><msubsup><mrow></mrow><mi>B</mi><mn>2</mn></msubsup><mo>=</mo><mfrac><mn>1</mn><mi>m</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mi>i</mi><mi>m</mi></munderover><mo stretchy="false">(</mo></mstyle><mi>x</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mi>μ</mi><msub><mrow></mrow><mi>B</mi></msub><mo stretchy="false">)</mo><msup><mrow></mrow><mn>2</mn></msup></mrow></math></mathml>      (3)</p>
+                </div>
+                <div class="p1">
+                    <p id="71"><mathml id="72"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mfrac><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup><mo>-</mo><mi>μ</mi><msub><mrow></mrow><mi>B</mi></msub></mrow><mrow><mi>σ</mi><msub><mrow></mrow><mi>B</mi></msub></mrow></mfrac></mrow></math></mathml>      (4)</p>
+                </div>
+                <div class="p1">
+                    <p id="73"><mathml id="74"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>y</mi><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup><mo>=</mo><mi>γ</mi><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup><mover accent="true"><mi>x</mi><mo>^</mo></mover><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup><mo>+</mo><mi>β</mi><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup></mrow></math></mathml>      (5)</p>
+                </div>
+                <div class="p1">
+                    <p id="75">其中,μ<sub>B</sub>是集合b的均值,σ<mathml id="76"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>B</mi><mn>2</mn></msubsup></mrow></math></mathml>为方差,<mathml id="77"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup></mrow></math></mathml>为输入<mathml id="78"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup></mrow></math></mathml>时的标准化结果,<mathml id="79"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi>γ</mi><mo>^</mo></mover><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup></mrow></math></mathml>和<mathml id="80"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi>β</mi><mo>^</mo></mover><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math></mathml>表示对标准化结果<mathml id="81"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup></mrow></math></mathml>进行平移拉伸变换需要学习的参数,y<sup>(k)</sup>是对<mathml id="82"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi>x</mi><mo>^</mo></mover><msup><mrow></mrow><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup></mrow></math></mathml>进行平移拉伸变换后的最终输出结果。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">最后由于图片中的文本有些进行了模糊、淡化等处理,导致某些本就相似的文本更难以区分,如白和日,千和干,土和士等等,考虑到相似的文本之间必然会有相似的特征,它们在空间的分布距离必然不大,因此用训练好的模型对文本进行识别时,对每个文本给出根据分类概率给出概率最高的3个候选预测值。</p>
+                </div>
+                <div class="p1">
+                    <p id="84">对使用数据增广和批标准化后得到的模型的分类能力与不使用时得到的模型分类能力进行了实验对比,结果如表3所示。</p>
+                </div>
+                <div class="area_img" id="85">
+                    <p class="img_tit"><b>表</b>3 <b>实验结果对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 3. Comparison of experimental results</p>
+                    <p class="img_note"></p>
+                    <table id="85" border="1"><tr><td><br />方法</td><td>识别率</td></tr><tr><td><br />不使用数据增广</td><td>92.25%</td></tr><tr><td><br />不使用批标准化</td><td>87.98%</td></tr><tr><td><br />唯一的预测值</td><td>95.66%</td></tr><tr><td><br />本文方法</td><td>97.94%</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="86">根据以上实验结果可以得出,虽然使用增广和加入批标准化会在一定程度上增加训练时间,但大幅提升了最终模型的识别率;使用多个候选预测值也可明显提升识别率,并且不会对最终验证码的识别造成影响。</p>
+                </div>
+                <h3 id="87" name="87" class="anchor-tag"><b>4</b> 信息提示文本识别</h3>
+                <div class="p1">
+                    <p id="88">对于一张验证码图片,定位文本并进行分类后,就知道所得文本的坐标,因此只需根据信息提示文本获得其相应的点选顺序即可。</p>
+                </div>
+                <div class="p1">
+                    <p id="89">信息提示文本图片如图6所示,考虑其为标准的印刷体文本,采用Tesseract OCR<citation id="109" type="reference"><link href="32" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>工具进行文本识别。Tesseract OCR是一个开源的光学字符图像识别引擎,其最新版本为Tesserac4.0版本,带有中文识别库,支持中文本符的识别,但Tesseract OCR的中文识别库信息提示文本的识别率并不高,本文通过训练新的文字识别库提高了对信息提示文本的识别率。</p>
+                </div>
+                <div class="area_img" id="90">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201909010_090.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 信息提示文本图片" src="Detail/GetImg?filename=images/DZKK201909010_090.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 信息提示文本图片  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201909010_090.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 6. Information prompt text picture</p>
+
+                </div>
+                <div class="p1">
+                    <p id="91">将3 990类汉字保存于Word文档中,设置字体为黑体,并设定一定的行间距,转成PDF后设计算法对其进行分割,可得到3 990类黑体汉字训练集。训练后保存为新的识别库,将文本图片进行缩放、灰度化、去除噪声、二值化等预处理后的图片用该字库进行识别,并保存识别结果。训练前后的识别效果对比如图7所示。</p>
+                </div>
+                <div class="area_img" id="92">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201909010_092.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 训练前后识别效果对比" src="Detail/GetImg?filename=images/DZKK201909010_092.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 训练前后识别效果对比  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201909010_092.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 7. Comparison of recognition effects before and after training
+(a)Before training (b)After training</p>
+                                <p class="img_note">(a)训练前 (b)训练后</p>
+
+                </div>
+                <div class="p1">
+                    <p id="93">Tesseract的中文识别库对一张图片所有文本全部识别的概率不足40%,通过黑体字训练后的识别库识别率到达81.2%。</p>
+                </div>
+                <h3 id="94" name="94" class="anchor-tag"><b>5</b> 结束语</h3>
+                <div class="p1">
+                    <p id="95">本文提出了一种识别极验点选式验证码的方法,首先通过改进的Faster-RCNN模型对文本定位,然后用卷积神经网络对文本分类识别,最后使用Tesseract OCR对信息提示文本识别并与分类结果对照,即可达到识别该验证码的目的。实验表明,使用本文所述方法对该类型验证码背景文本识别结果与信息提示文本的识别结果能完全对应的概率为72.4%。然而Faster-RCNN定位文本相对耗时间,另外在卷积神经网络分类时剔除了4.6%的数据、降低了分类识别率,Tesseract OCR对信息提示文本的识别率也未达到理想效果,因此在之后的研究中将重点解决这几个方面的问题,以期对极验点选式验证码的识别获得更好的效果。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="2">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY2016S1010&amp;v=MDA2MTVFWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnl6aFVieklMejdCZDdHNEg5ZXZybzk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 胡健,柳青,王海林.验证码安全与验证码绕过技术[J].计算机应用,2016,36(S1):37-41  Hu Jian,Liu Qing,Wang Hailin.CAPTCHA security and bypass technique[J].Journal of Computer Applications,2016,36(S1):37-41.
+                            </a>
+                        </p>
+                        <p id="4">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1018973007.nh&amp;v=MDA3MjcvSGRITXFKRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeXpoVWJ6SVZGMjZGcnE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 孟凯.基于SVM的空心验证码识别技术研究[D].重庆:重庆邮电大学,2017.Meng Kai.Research on recognition technology of hollow CHPTCHAs based on SVM[D].Chongqing:Chongqing University of Posts and Telecommunication,2017.
+                            </a>
+                        </p>
+                        <p id="6">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201309053&amp;v=MTU2MTBMTXBvOUFaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeXpoVWJ6SUx6N1NaTEc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 王斌君,王靖亚,杜凯选.验证码技术的攻防对策研究[J].计算机应用研究,2013,30(9):2777-2779.Wang Binjun,Wang Jingya,Du Kaixuan.Research on attach strategy of CHPTCHA technology[J].Application Research of Computers,2013,30(9):2777-2779.
+                            </a>
+                        </p>
+                        <p id="8">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GPRJ201405100&amp;v=MTMyOTJPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZ5emhVYnpJSWozWlpMRzRIOVhNcW81RlpJUUtESDg0dlI0VDZqNTQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 汪中.验证码识别技术及应用[J].计算机光盘软件与应用,2014,17(5):167-168.Wang Zhong.CHPTCHA recognition technology and application[J].Computer CD Software and Application,2014,17(5):167-168.
+                            </a>
+                        </p>
+                        <p id="10">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1014300172.nh&amp;v=MDYxMzViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnl6aFVieklWRjI2R3JDNEh0RExyWkU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 尹龙.扭曲粘连字符验证码识别研究[D].合肥:中国科学技术大学,2014.Yin Long.Recognition of distorted and merged text-based CHPTCHA[D].Hefei:University of Science and Technology of China,2014.
+                            </a>
+                        </p>
+                        <p id="12">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017276682.nh&amp;v=MDk4MjBGckNVUjdxZlp1WnBGeXpoVWJ6SVZGMjZHYkcvR05mRXJaRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 安改换.扭曲粘连字符验证码识别技术研究[D].上海:上海应用技术大学,2016.An Gaihuan.Recognition technology research of distorted and merged text-based CHPTCHA [D].Shanghai:Shanghai Institution of Technology,2016.
+                            </a>
+                        </p>
+                        <p id="14">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016166834.nh&amp;v=MTk0NjlqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZ5emhVYnpJVkYyNkdMSytHTm5QcTVFYlBJUUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 唐海涛.自组织增量神经网络的验证码识别模型与算法[D].广州:广东工业大学,2016.
+                            </a>
+                        </p>
+                        <p id="16">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A new segmentation method for connected characters in CAPTCHA">
+
+                                <b>[8]</b> Lu P,Shan L,Li J,et al.A new segmentation method for connected characters in CAPTCHA[C].Changshu:International Conference on Control,Automation and Information Sciences (ICCAIS),2015.
+                            </a>
+                        </p>
+                        <p id="18">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYXH201702019&amp;v=MDk5OTVxcUJ0R0ZyQ1VSN3FmWnVacEZ5emhVYnpJTHpUVFpyRzRIOWJNclk5RWJZUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 汪洋,许映秋,彭艳兵.基于KNN技术的校内网验证码识别[J].计算机与现代化,2017(2):93-97.Wang Yang,Xu Yingqiu,Peng Yanbing.KNN-based verification code recognition on campus network[J].Computer and Modernization,2017(2):93-97.
+                            </a>
+                        </p>
+                        <p id="20">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A self-adaptive algorithm to defeat text-based CAPTCHA">
+
+                                <b>[10]</b> Wang Ye,Lu Mi.A self-adaptive algorithm to defeat text-based CAPTCHA[C].Taipei:IEEE International Confer-ence on Industrial Technology,2016.
+                            </a>
+                        </p>
+                        <p id="22">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Neural network CAPTCHA crackers">
+
+                                <b>[11]</b> Garg G,Pollett C.Neural network CAPTCHA crackers[C].San Francisco:Future Technologies Conference (FTC),2016.
+                            </a>
+                        </p>
+                        <p id="24">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJFZ201809004&amp;v=MTM3Nzh0R0ZyQ1VSN3FmWnVacEZ5emhVYnpJTWlmTmRMRzRIOW5NcG85RllJUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 刘达荣,张远平,汤茂斌,等.基于渐进式学习的神经网络端到端验证码识别[J].计算机技术与发展,2018(9):9-13.Liu Darong,Zhang Yuanping,Tang Maobin,et al.End-to-end verification code identification of neural network based on progressive learning[J].Computer Technology and Development,2018(9):9-13.
+                            </a>
+                        </p>
+                        <p id="26">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201801014&amp;v=MjQxNzVoVWJ6SUlUZkFaYkc0SDluTXJvOUVZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeXo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 熊海朋,陈洋洋,陈春玮.基于卷积神经网络的场景图像文本定位研究[J].电子科技,2018,31(1):50-53.Xiong Haipeng,Chen Yangyang,Chen Chunyu.Text location in image based on convolutional neural network[J].Electronic Science and Technology,2018,31(1):50-53.
+                            </a>
+                        </p>
+                        <p id="28">
+                            <a id="bibliography_14" >
+                                    <b>[14]</b>
+                                 Ren S,Girshick R.Faster R-CNN:towards real-time objection with region proposal networks[J].IEEE Transactions on Pattern Analysis &amp; Machine Intelligence,2017,39(6):1137-1149.
+                            </a>
+                        </p>
+                        <p id="30">
+                            <a id="bibliography_15" >
+                                    <b>[15]</b>
+                                 Simonyan K,Zisserman A.Very deep convolutional networks for large-scale image recognition[C].San Diego:International Conference on Learning Representations,2015.
+                            </a>
+                        </p>
+                        <p id="32">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Recognition of Offline Handwritten Chinese Characters Using the Tesseract Open Source OCR Engine">
+
+                                <b>[16]</b> Li Q,An W,Zhou A,et al.Recognition of offline handwritten Chinese characters using the tesseract open source OCR engine[C].Hangzhou:8<sup>th</sup> International Conference on Intelligent Human-Machine Systems and Cybernetics (IHMSC),2016.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="DZKK201909010" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201909010&amp;v=MjUxODRSN3FmWnVacEZ5emhVYnpJSVRmQVpiRzRIOWpNcG85RVpJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="1" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=P0ea_aWnQfx5aXr8bS4u3GGmKX_ORbqAf_1HJ_4Trvg1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=vAscMyvIPP9NePnbGPkqJ0A5tHOvnzl65tGuRDsf9xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

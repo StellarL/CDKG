@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637138991732603750%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJY201903011%26RESULT%3d1%26SIGN%3dhhqGy6llOkmmkM1Gh7Mdaud3sQs%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201903011&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201903011&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201903011&amp;v=MTIxNDVSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGaURsVzczS0x6N0JkN0c0SDlqTXJJOUVaWVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#47" data-title="0 引言 ">0 引言</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#53" data-title="1 轨迹预处理及模型定义 ">1 轨迹预处理及模型定义</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#55" data-title="1.1 &lt;b&gt;轨迹划分与兴趣点提取&lt;/b&gt;">1.1 <b>轨迹划分与兴趣点提取</b></a></li>
+                                                <li><a href="#72" data-title="1.2 &lt;b&gt;模型状态定义&lt;/b&gt;">1.2 <b>模型状态定义</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#81" data-title="2 Adaboost-Markov建模 ">2 Adaboost-Markov建模</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#101" data-title="3 实验分析 ">3 实验分析</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#120" data-title="4 结语 ">4 结语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#67" data-title="图1 轨迹转角偏移度与距离偏移量示意图">图1 轨迹转角偏移度与距离偏移量示意图</a></li>
+                                                <li><a href="#80" data-title="图2 用户历史轨迹序列模式树">图2 用户历史轨迹序列模式树</a></li>
+                                                <li><a href="#100" data-title="图3 阶数&lt;i&gt;k&lt;/i&gt;的自适应确定示例">图3 阶数<i>k</i>的自适应确定示例</a></li>
+                                                <li><a href="#113" data-title="图4 前缀轨迹序列元素个数与预测准确率的关系">图4 前缀轨迹序列元素个数与预测准确率的关系</a></li>
+                                                <li><a href="#114" data-title="图5 小规模轨迹数据集下的预测准确率对比">图5 小规模轨迹数据集下的预测准确率对比</a></li>
+                                                <li><a href="#115" data-title="图6 大规模轨迹数据集下的预测准确率对比">图6 大规模轨迹数据集下的预测准确率对比</a></li>
+                                                <li><a href="#118" data-title="图7 不同轨迹数据集的预测准确率对比">图7 不同轨迹数据集的预测准确率对比</a></li>
+                                                <li><a href="#122" data-title="图8 预测步长与预测准确率的关系">图8 预测步长与预测准确率的关系</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="146">
+
+
+                                    <a id="bibliography_1" title="郭迟, 刘经南, 方媛, 等.位置大数据的价值提取与协同挖掘方法[J].软件学报, 2014, 25 (4) :713-730. (GUO C, LIU J N, FANGY, et al.Value extraction and collaborative mining methods for location big data[J].Journal of Software, 2014, 25 (4) :713-730.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201404003&amp;v=Mjk1NjU3cWZadVpwRmlEbFc3M05OeWZUYkxHNEg5WE1xNDlGWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                        郭迟, 刘经南, 方媛, 等.位置大数据的价值提取与协同挖掘方法[J].软件学报, 2014, 25 (4) :713-730. (GUO C, LIU J N, FANGY, et al.Value extraction and collaborative mining methods for location big data[J].Journal of Software, 2014, 25 (4) :713-730.) 
+                                    </a>
+                                </li>
+                                <li id="148">
+
+
+                                    <a id="bibliography_2" title="WIDHALM P, NITSCHE P, BRANDIE N.Transport mode detection with realistic smartphone sensor data[C]//Proceedings of the21st International Conference on Pattern Recognition.Piscataway, NJ:IEEE, 2012:573-576." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Transport mode detection with realistic smart phone sensor data">
+                                        <b>[2]</b>
+                                        WIDHALM P, NITSCHE P, BRANDIE N.Transport mode detection with realistic smartphone sensor data[C]//Proceedings of the21st International Conference on Pattern Recognition.Piscataway, NJ:IEEE, 2012:573-576.
+                                    </a>
+                                </li>
+                                <li id="150">
+
+
+                                    <a id="bibliography_3" title="SHIH D H, SHIH M H, YEN D C, et al.Personal mobility pattern mining and anomaly detection in the GPS era[J].American Cartographer, 2016, 43 (1) :55-67." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=STJD&amp;filename=STJD15111600000617&amp;v=MTk3NDMrb0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadEZpbmxVcmpKS0Y0Y2FCYz1Oam5CYXJLOUg5RE5xWTlGWk9zUENuMA==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                        SHIH D H, SHIH M H, YEN D C, et al.Personal mobility pattern mining and anomaly detection in the GPS era[J].American Cartographer, 2016, 43 (1) :55-67.
+                                    </a>
+                                </li>
+                                <li id="152">
+
+
+                                    <a id="bibliography_4" title="GUNDUZ S, YAVANOGLU U, SAGIROGLU S.Predicting next location of twitter users for surveillance[C]//Proceedings of the 12th International Conference on Machine Learning and Applications.Washington, DC:IEEE Computer Society, 2013:267-273." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Predicting next location of twitter users for surveillance">
+                                        <b>[4]</b>
+                                        GUNDUZ S, YAVANOGLU U, SAGIROGLU S.Predicting next location of twitter users for surveillance[C]//Proceedings of the 12th International Conference on Machine Learning and Applications.Washington, DC:IEEE Computer Society, 2013:267-273.
+                                    </a>
+                                </li>
+                                <li id="154">
+
+
+                                    <a id="bibliography_5" title="BOGOMOLOV A, LEPRI B, STAIANO J, et al.Once upon a crime:towards crime prediction from demographics and mobile data[C]//ICMI&#39;14:Proceedings of the 16th International Conference on Multimodal Interaction.New York:ACM, 2014:427-434." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Once upon a crime:towards crime prediction from demographics and mobile data">
+                                        <b>[5]</b>
+                                        BOGOMOLOV A, LEPRI B, STAIANO J, et al.Once upon a crime:towards crime prediction from demographics and mobile data[C]//ICMI&#39;14:Proceedings of the 16th International Conference on Multimodal Interaction.New York:ACM, 2014:427-434.
+                                    </a>
+                                </li>
+                                <li id="156">
+
+
+                                    <a id="bibliography_6" title="QIAO S, HAN N, ZHU W, et al.Tra Plan:an effective three-inone trajectory-prediction model in transportation networks[J].IEEETransactions on Intelligent Transportation Systems, 2015, 16 (3) :1188-1198." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Tra Plan:an effective threein-one trajectory-prediction model in transportation networks">
+                                        <b>[6]</b>
+                                        QIAO S, HAN N, ZHU W, et al.Tra Plan:an effective three-inone trajectory-prediction model in transportation networks[J].IEEETransactions on Intelligent Transportation Systems, 2015, 16 (3) :1188-1198.
+                                    </a>
+                                </li>
+                                <li id="158">
+
+
+                                    <a id="bibliography_7" title="余雪岗, 刘衍珩, 魏达, 等.用于移动路径预测的混合Markov模型[J].通信学报, 2006, 27 (12) :61-69. (YU X G, LIU Y H, WEI D, et al.Hybrid Markov model for mobile path prediction[J].Journal on Communications, 2006, 27 (12) :61-69.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=TXXB200612011&amp;v=MDAyNzdCdEdGckNVUjdxZlp1WnBGaURsVzczTk1UWFRiTEc0SHRmTnJZOUVaWVFLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                        余雪岗, 刘衍珩, 魏达, 等.用于移动路径预测的混合Markov模型[J].通信学报, 2006, 27 (12) :61-69. (YU X G, LIU Y H, WEI D, et al.Hybrid Markov model for mobile path prediction[J].Journal on Communications, 2006, 27 (12) :61-69.) 
+                                    </a>
+                                </li>
+                                <li id="160">
+
+
+                                    <a id="bibliography_8" title="吕明琪, 陈岭, 陈根才.基于自适应多阶Markov模型的位置预测[J].计算机研究与发展, 2010, 47 (10) :1764-1770. (LYU M Q, CHEN L, CHEN G C.Position prediction based on adaptive multiorder Markov model[J].Journal of Computer Research and Development, 2010, 47 (10) :1764-1770.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201010017&amp;v=MTk0NzMzenFxQnRHRnJDVVI3cWZadVpwRmlEbFc3M05MeXZTZExHNEg5SE5yNDlFWTRRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                        吕明琪, 陈岭, 陈根才.基于自适应多阶Markov模型的位置预测[J].计算机研究与发展, 2010, 47 (10) :1764-1770. (LYU M Q, CHEN L, CHEN G C.Position prediction based on adaptive multiorder Markov model[J].Journal of Computer Research and Development, 2010, 47 (10) :1764-1770.) 
+                                    </a>
+                                </li>
+                                <li id="162">
+
+
+                                    <a id="bibliography_9" title="CHEN M, YU X, LIU Y.Mining moving patterns for predicting next location[J].Information Systems, 2015, 54:156-168." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES15122600211161&amp;v=MzEyODZLOUg5UE9xWTlGWnVvT0RYbzRvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0RmlubFVyakpLRjRjYUJjPU5pZk9mYg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                        CHEN M, YU X, LIU Y.Mining moving patterns for predicting next location[J].Information Systems, 2015, 54:156-168.
+                                    </a>
+                                </li>
+                                <li id="164">
+
+
+                                    <a id="bibliography_10" title="宋路杰, 孟凡荣, 袁冠.基于Markov模型与轨迹相似度的移动对象位置预测算法[J].计算机应用, 2016, 36 (1) :39-43. (SONG L J, MENG F R, YUAN G.Moving object location prediction algorithm based on Markov model and trajectory similarity[J].Journal of Computer Applications, 2016, 36 (1) :39-43.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201601009&amp;v=MTQxODg2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGaURsVzczTkx6N0JkN0c0SDlmTXJvOUZiWVFLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                        宋路杰, 孟凡荣, 袁冠.基于Markov模型与轨迹相似度的移动对象位置预测算法[J].计算机应用, 2016, 36 (1) :39-43. (SONG L J, MENG F R, YUAN G.Moving object location prediction algorithm based on Markov model and trajectory similarity[J].Journal of Computer Applications, 2016, 36 (1) :39-43.) 
+                                    </a>
+                                </li>
+                                <li id="166">
+
+
+                                    <a id="bibliography_11" title="乔少杰, 韩楠, 李天瑞, 等.基于前缀投影技术的大规模轨迹预测模型[J].软件学报, 2017, 28 (11) :3043-3057. (QIAO S J, HAN N, LI T R, et al.Large-scale trajectory prediction model based on prefix projection technique[J].Journal of Software, 2017, 28 (11) :3043-3057.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201711018&amp;v=MDI1NjhadVpwRmlEbFc3M05OeWZUYkxHNEg5Yk5ybzlFYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                        乔少杰, 韩楠, 李天瑞, 等.基于前缀投影技术的大规模轨迹预测模型[J].软件学报, 2017, 28 (11) :3043-3057. (QIAO S J, HAN N, LI T R, et al.Large-scale trajectory prediction model based on prefix projection technique[J].Journal of Software, 2017, 28 (11) :3043-3057.) 
+                                    </a>
+                                </li>
+                                <li id="168">
+
+
+                                    <a id="bibliography_12" title="KILLIJIAN M O.Next place prediction using mobility Markov chains[C]//MPM&#39;12:Proceedings of the 1st Workshop on Measurement, Privacy, and Mobility.New York:ACM, 2012:Article No.3." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Next place prediction using mobility M arkov chains">
+                                        <b>[12]</b>
+                                        KILLIJIAN M O.Next place prediction using mobility Markov chains[C]//MPM&#39;12:Proceedings of the 1st Workshop on Measurement, Privacy, and Mobility.New York:ACM, 2012:Article No.3.
+                                    </a>
+                                </li>
+                                <li id="170">
+
+
+                                    <a id="bibliography_13" title="QIAO S J, SHEN D, WANG X, et al.A self-adaptive parameter selection trajectory prediction approach via hidden Markov models[J].IEEE Transactions on Intelligent Transportation Systems, 2015, 16 (1) :284-296." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A self-adaptive parameter selection trajectory prediction approach via hidden Markov models">
+                                        <b>[13]</b>
+                                        QIAO S J, SHEN D, WANG X, et al.A self-adaptive parameter selection trajectory prediction approach via hidden Markov models[J].IEEE Transactions on Intelligent Transportation Systems, 2015, 16 (1) :284-296.
+                                    </a>
+                                </li>
+                                <li id="172">
+
+
+                                    <a id="bibliography_14" title="乔少杰, 金琨, 韩楠, 等.一种基于高斯混合模型的轨迹预测算法[J].软件学报, 2015, 26 (5) :1048-1063. (QIAO S J, JIN K, HAN N, et al.Trajectory prediction algorithm based on Gaussian mixture model[J].Journal of Software, 2015, 26 (5) :1048-1063.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201505005&amp;v=MDQwNzgzTk55ZlRiTEc0SDlUTXFvOUZZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGaURsVzc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                        乔少杰, 金琨, 韩楠, 等.一种基于高斯混合模型的轨迹预测算法[J].软件学报, 2015, 26 (5) :1048-1063. (QIAO S J, JIN K, HAN N, et al.Trajectory prediction algorithm based on Gaussian mixture model[J].Journal of Software, 2015, 26 (5) :1048-1063.) 
+                                    </a>
+                                </li>
+                                <li id="174">
+
+
+                                    <a id="bibliography_15" title="PATHIRANA P N, SAVKIN A V, JHA S.Robust extended Kalman filter applied to location tracking and trajectory prediction for PCS networks[C]//Proceedings of the 2004 IEEE International Conference on Control Applications.Piscataway, NJ:IEEE, 2004, 1:63-68." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Robust extended kalman filter applied to location tracking and trajectory prediction for PCS networks">
+                                        <b>[15]</b>
+                                        PATHIRANA P N, SAVKIN A V, JHA S.Robust extended Kalman filter applied to location tracking and trajectory prediction for PCS networks[C]//Proceedings of the 2004 IEEE International Conference on Control Applications.Piscataway, NJ:IEEE, 2004, 1:63-68.
+                                    </a>
+                                </li>
+                                <li id="176">
+
+
+                                    <a id="bibliography_16" title="TRASARTI R, GUIDOTTI R, MONREALE A, et al.My Way:location prediction via mobility profiling[J].Information Systems, 2017, 64:350-367." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES15122600210044&amp;v=Mjg2MDRUTW53WmVadEZpbmxVcmpKS0Y0Y2FCYz1OaWZPZmJLOUg5UE9xWTlGWnVvUERIZzlvQk1UNlQ0UFFIL2lyUmRHZXJxUQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                        TRASARTI R, GUIDOTTI R, MONREALE A, et al.My Way:location prediction via mobility profiling[J].Information Systems, 2017, 64:350-367.
+                                    </a>
+                                </li>
+                                <li id="178">
+
+
+                                    <a id="bibliography_17" title="MONREALE A, PINELLI F, TRASARTI R, et al.WhereNext:a location predictor on trajectory pattern mining[C]//Proceedings of the 15th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York:ACM, 2009:637-646." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Wherenext:A Location Predictor on Trajectory Pattern Mining">
+                                        <b>[17]</b>
+                                        MONREALE A, PINELLI F, TRASARTI R, et al.WhereNext:a location predictor on trajectory pattern mining[C]//Proceedings of the 15th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York:ACM, 2009:637-646.
+                                    </a>
+                                </li>
+                                <li id="180">
+
+
+                                    <a id="bibliography_18" title="YUAN G, ZHAO J, XIA S, et al.Multi-granularity periodic activity discovery for moving objects[J].International Journal of Geographical Information Systems, 2016, 31 (3) :435-462." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Multi-granularity periodic activity discovery for moving objects">
+                                        <b>[18]</b>
+                                        YUAN G, ZHAO J, XIA S, et al.Multi-granularity periodic activity discovery for moving objects[J].International Journal of Geographical Information Systems, 2016, 31 (3) :435-462.
+                                    </a>
+                                </li>
+                                <li id="182">
+
+
+                                    <a id="bibliography_19" title="杨震, 王红军, 周宇.一种截断距离和聚类中心自适应的聚类算法[J].数据分析与知识发现, 2018, 2 (3) :39-48. (YANG Z, WANG H J, ZHOU Y.A clustering algorithm by adaptive cut-off distances and cluster centers[J].Data Analysis and Knowledge Discovery, 2018, 2 (3) :39-48.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201803005&amp;v=MzE2ODJuZmY3RzRIOW5Nckk5RllZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZpRGxXNzNOUFM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[19]</b>
+                                        杨震, 王红军, 周宇.一种截断距离和聚类中心自适应的聚类算法[J].数据分析与知识发现, 2018, 2 (3) :39-48. (YANG Z, WANG H J, ZHOU Y.A clustering algorithm by adaptive cut-off distances and cluster centers[J].Data Analysis and Knowledge Discovery, 2018, 2 (3) :39-48.) 
+                                    </a>
+                                </li>
+                                <li id="184">
+
+
+                                    <a id="bibliography_20" title="李航.统计学习方法[M].北京:清华大学出版社, 2012:137-139. (LI H.Statistical Learning Method[M].Beijing:Tsinghua University Press, 2012:137-139.) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787302275954001&amp;v=MDU1MTNOUExxb1pBWU9zUERSTTh6eFVTbURkOVNIN24zeEU5ZmJ2bktyaWZaZVp2RnluaVVyZklLRndSWEZxekdiQzRI&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[20]</b>
+                                        李航.统计学习方法[M].北京:清华大学出版社, 2012:137-139. (LI H.Statistical Learning Method[M].Beijing:Tsinghua University Press, 2012:137-139.) 
+                                    </a>
+                                </li>
+                                <li id="186">
+
+
+                                    <a id="bibliography_21" title="ZHENG Y, CHEN Y, XIE X, et al.Geo Life2.0:alocation-based social networking service[C]//Proceedings of the 2009 10th International Conference on Mobile Data Management:Systems, Services and Middleware.Washington, DC:IEEE Computer Society, 2009:357-358." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Geo Life2.0 alocation-based social networking service">
+                                        <b>[21]</b>
+                                        ZHENG Y, CHEN Y, XIE X, et al.Geo Life2.0:alocation-based social networking service[C]//Proceedings of the 2009 10th International Conference on Mobile Data Management:Systems, Services and Middleware.Washington, DC:IEEE Computer Society, 2009:357-358.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+    <div class="head-tag">   
+            <p>
+               <b> 网络首发时间: 2018-11-30 09:46</b>
+            </p>     
+    </div>
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJY" target="_blank">计算机应用</a>
+                2019,39(03),675-680 DOI:10.11772/j.issn.1001-9081.2018071506            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于Adaboost-Markov模型的移动用户位置预测方法</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%A8%E9%9C%87&amp;code=28182800&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">杨震</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E7%BA%A2%E5%86%9B&amp;code=38295460&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王红军</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%9B%BD%E9%98%B2%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E7%94%B5%E5%AD%90%E5%AF%B9%E6%8A%97%E5%AD%A6%E9%99%A2&amp;code=0269230&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">国防科技大学电子对抗学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对Markov模型在位置预测中存在预测精度不高及匹配稀疏等问题, 提出了一种基于Adaboost-Markov模型的移动用户位置预测方法。首先, 通过基于转角偏移度与距离偏移量的轨迹划分方法对原始轨迹数据进行预处理, 提取出特征点, 并采用密度聚类算法将特征点聚类为用户的各个兴趣区域, 把原始轨迹数据离散化为由兴趣区域组成的轨迹序列;然后, 根据前缀轨迹序列与历史轨迹序列模式树的匹配程度来自适应地确定模型阶数<i>k</i>;最后, 采用Adaboost算法根据1～<i>k</i>阶Markov模型的重要程度为其赋予相应的权重系数, 组成多阶融合Markov模型, 从而实现对移动用户未来兴趣区域的预测。在大规模真实用户轨迹数据集上的实验结果表明, 与1阶Markov模型、2阶Markov模型、权重系数平均的多阶融合Markov模型相比, Adaboost-Markov模型的平均预测准确率分别提高了20.83%、11.3%以及5.38%, 且具有良好的普适性与多步预测性能。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%BD%8D%E7%BD%AE%E9%A2%84%E6%B5%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">位置预测;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%85%B4%E8%B6%A3%E5%8C%BA%E5%9F%9F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">兴趣区域;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Adaboost%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Adaboost算法;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%A4%9A%E9%98%B6%E8%9E%8D%E5%90%88Markov%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">多阶融合Markov模型;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%9D%83%E9%87%8D%E7%B3%BB%E6%95%B0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">权重系数;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%87%AA%E9%80%82%E5%BA%94&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">自适应;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    *杨震 (1994—) , 男, 福建南平人, 硕士研究生, 主要研究方向:聚类分析、轨迹预测;电子邮箱eei_yz@163.com;
+                                </span>
+                                <span>
+                                    王红军 (1968—) , 男, 江苏镇江人, 教授, 博士, 主要研究方向:移动通信网、认知电子战。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-07-23</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金资助项目 (61273302);</span>
+                    </p>
+            </div>
+                    <h1><b>Location prediction method of mobile user based on Adaboost-Markov model</b></h1>
+                    <h2>
+                    <span>YANG Zhen</span>
+                    <span>WANG Hongjun</span>
+            </h2>
+                    <h2>
+                    <span>College of Electronic Countermeasure, National University of Defense Technology</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>To solve the problem that Markov model has poor prediction accuracy and sparse matching in location prediction, a mobile user location prediction method based on Adaboost-Markov model was proposed. Firstly, the original trajectory data was preprocessed by a trajectory division method based on angle offset and distance offset to extract feature points, and density clustering algorithm was used to cluster the feature points into interest regions of the user, then the original trajectory data was discretized into a trajectory sequence composed of interest regions. Secondly, according to the matching degree of prefix trajectory sequence and historical trajectory pattern tree, the model order <i>k</i> was adaptively determined. Finally, Adaboost algorithm was used to assign the corresponding weight coefficients according to the importance degree of 1 to <i>k</i> order Markov models to form a multi-order fusion Markov model, realizing the prediction of future interest regions of the mobile user. The experimental results on a large-scale real user trajectory dataset show that the average prediction accuracy of Adaboost-Markov model is improved by 20.83%, 11.3%, and 5.38% respectively compared with the first-order Markov model, the second-order Markov model, and the multi-order fusion Markov model with average weight coefficient, and the proposed model has good universality and multi-step prediction performance.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=location%20prediction&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">location prediction;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=region%20of%20interest&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">region of interest;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Adaboost%20algorithm&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Adaboost algorithm;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=multi-order%20fusion%20Markov%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">multi-order fusion Markov model;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=weight%20coefficient&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">weight coefficient;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=adaptation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">adaptation;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                            <b>Author：</b>
+                                                        <span>
+                                    YANG Zhen, born in 1994, M. S. candidate. His research interests include clustering analysis, trajectory prediction.;
+                                </span>
+                                <span>
+                                    WANG Hongjun, born in 1968, Ph. D. , professor. His research interests include mobile communication network, cognitive electronic warfare.;
+                                </span>
+                    </p>
+                                    <p><b>Received：</b> 2018-07-23</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>supported by the National Natural Science Foundation of China (61273302);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="47" name="47" class="anchor-tag">0 引言</h3>
+                <div class="p1">
+                    <p id="48">随着智能移动终端普及率的提高以及移动空间定位技术的迅猛发展, 基于位置的服务 (Location Based Service, LBS) 得到了广泛应用<citation id="188" type="reference"><link href="146" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。目前基于位置的服务主要包含定位查询、路径规划和位置共享等功能, 这些功能多集中于为用户提供当前位置的相关服务。为了使服务更具前瞻性, 近年来大量国内外学者把目光投向了移动用户的位置预测上<citation id="190" type="reference"><link href="148" rel="bibliography" /><link href="150" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>]</sup></citation>。移动用户位置预测具有很高的研究价值与广阔的应用前景, 其中最直观的应用包括:1) 个性化推荐与提醒。根据预测出的用户下一步地点, 可以针对用户进行个性化的推荐与提醒, 例如系统预测出某个用户的下一步地点为某个酒吧, 可以向这位用户推荐这个酒吧的促销活动, 以及推荐常去此酒吧的新朋友。2) 可疑目标追踪。移动用户位置预测可用于对可疑用户进行追踪定位, 例如在网上发表极端言论的用户, 通过预测目标用户的未来目的地, 可以有效防范危害公共安全的恶性事件发生<citation id="191" type="reference"><link href="152" rel="bibliography" /><link href="154" rel="bibliography" /><sup>[<a class="sup">4</a>,<a class="sup">5</a>]</sup></citation>。3) 智能化交通。通过车载GPS (Global Positioning System) 设备采集的大量轨迹数据可用于预测交通拥堵情况, 从而便于司机规划行驶路线以及提高出租车的调度效率<citation id="189" type="reference"><link href="156" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">但是, 移动用户位置预测也是一项非常困难且富有挑战性的工作。首先, 由于城市内高楼建筑的遮挡以及用户随意开关设备定位功能, 容易造成部分重要数据的缺失以及训练数据的不足;其次, 移动用户的活动具有不确定性, 在不同的时间周期内, 同一个用户表现出的移动模式可能大相径庭;再者, 用户的轨迹数据同时具有离散型和海量性, 研究人员无法直接将原始数据用于位置预测, 需要通过轨迹处理算法提取出重要数据, 并过滤掉冗余数据以提高预测效率。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">现有的研究方法主要通过建立用户的历史移动模式以及轨迹匹配进行位置预测, 常用的方法有马尔可夫 (Markov) 模型<citation id="195" type="reference"><link href="158" rel="bibliography" /><link href="160" rel="bibliography" /><link href="162" rel="bibliography" /><link href="164" rel="bibliography" /><link href="166" rel="bibliography" /><link href="168" rel="bibliography" /><sup>[<a class="sup">7</a>,<a class="sup">8</a>,<a class="sup">9</a>,<a class="sup">10</a>,<a class="sup">11</a>,<a class="sup">12</a>]</sup></citation>、隐马尔可夫 (Hidden Markov) 模型<citation id="192" type="reference"><link href="170" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>、高斯混合模型<citation id="193" type="reference"><link href="172" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>以及卡尔曼滤波<citation id="194" type="reference"><link href="174" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>等。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">Markov模型以其良好的时序轨迹数据表示能力而成为应用最为广泛的位置预测模型之一。余雪岗等<citation id="196" type="reference"><link href="158" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>结合最大期望算法提出了1阶1步与2步相结合的Markov模型, 在一定程度上解决了低阶Markov 预测精度差的问题。吕明琪等<citation id="197" type="reference"><link href="160" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>针对高阶Markov模型中难以确定最优阶数的问题, 提出了自适应变阶Markov模型, 但其实质与历史模式匹配相同, 根据最长匹配序列来确定阶数, 仍然存在匹配稀疏率高等问题。Chen等<citation id="198" type="reference"><link href="162" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>考虑了轨迹中的时间因素, 提出了一种时间箱与Markov模型结合的位置预测算法。宋路杰等<citation id="199" type="reference"><link href="164" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>通过引入轨迹相似度对Markov模型的预测结果进行修正, 提高了预测的准确率与稳定性。乔少杰等<citation id="200" type="reference"><link href="166" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>提出了基于前缀投影数据库的Markov模型, 通过设置支持度阈值, 将符合条件的前缀轨迹序列放入投影数据库。该方法一定程度上解决了高阶Markov模型中匹配稀疏率高的问题, 但是建立投影数据库的时间代价较大。Killijian<citation id="201" type="reference"><link href="168" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>提出了<i>n</i>-MMC (<i>n</i>-Mobility Markov Chain) 模型来预测用户位置, 并验证了在<i>n</i>=2时预测效果最好。Trasarti等<citation id="202" type="reference"><link href="176" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>提出了MyWay方法对移动用户进行位置预测, 该方法采用插值修正轨迹, 接着通过设定启发式阈值来寻找与待预测轨迹相似的历史轨迹;但是该方法没有对原始轨迹进行预处理, 预测出的结果粒度过细, 导致计算量太大。Monreale等<citation id="203" type="reference"><link href="178" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>提出了WhereNext方法进行位置预测, 该方法首先通过网格划分将原始轨迹数据离散化, 随后采用T模式树挖掘用户的频繁移动模式, 从而完成位置预测;但是, 采用网格划分方法进行数据预处理必须以用户的各个兴趣区域规模相当为前提, 该方法可伸缩性较差, 难以适用于大规模轨迹数据中。Yuan等<citation id="204" type="reference"><link href="180" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>提出了一种移动用户多粒度周期性模型, 用于发现个体行为规律, 预测用户未来位置;但是, 该模型采用有监督的学习方法识别个体行为, 计算开销较大。</p>
+                </div>
+                <div class="p1">
+                    <p id="52">针对现有方法存在的问题, 本文首先采用轨迹划分与密度聚类相结合的方法, 将原始轨迹数据离散化为移动用户的各个兴趣区域, 接着利用Adaboost算法为多阶融合Markov模型合理确定权重系数, 在充分利用历史轨迹序列的基础上, 提高了预测准确率, 保证了模型的普适性。</p>
+                </div>
+                <h3 id="53" name="53" class="anchor-tag">1 轨迹预处理及模型定义</h3>
+                <div class="p1">
+                    <p id="54">移动用户的轨迹通常为由若干个轨迹采样点构成的时序序列, 表示为<i>TJ</i><sub><i>i</i></sub>={<i>P</i><sub>1</sub>, <i>P</i><sub>2</sub>, …, <i>P</i><sub><i>m</i></sub>} (1≤<i>i</i>≤<i>n</i>) , 其中, <i>n</i>为用户的轨迹总数, 每个轨迹采样点又可以表示为<i>P</i><sub><i>j</i></sub>=〈<i>Lat</i><sub><i>j</i></sub>, <i>Lng</i><sub><i>j</i></sub>, <i>T</i><sub><i>j</i></sub>〉, 表示此用户在时刻<i>T</i><sub><i>j</i></sub>位于经纬度坐标 (<i>Lat</i><sub><i>j</i></sub>, <i>Lng</i><sub><i>j</i></sub>) 处, 且对于任意<i>i</i> &lt; <i>j</i>, 有<i>T</i><sub><i>i</i></sub>&lt; <i>T</i><sub><i>j</i></sub>。但是, 轨迹采样点的粒度过小, 想要理解用户的移动模式则需要进一步的处理。本文的预测对象不是用户未来的某个轨迹采样点, 而是对用户具有特殊意义的兴趣区域, 例如用户的住址、工作单位以及常去的休闲场所。</p>
+                </div>
+                <h4 class="anchor-tag" id="55" name="55">1.1 <b>轨迹划分与兴趣点提取</b></h4>
+                <div class="p1">
+                    <p id="56">为了实现上述目的, 本文提出了一种新的轨迹划分方法, 用于提取出轨迹中用户行为变化较大的采样点, 并将它们作为特征点, 每个特征点作为前一段子轨迹的终点与下一段子轨迹的起点, 从而将一条完整轨迹划分为若干条连续子轨迹。</p>
+                </div>
+                <div class="p1">
+                    <p id="57"><b>定义</b>1 子轨迹 (sub-trajectory) 。轨迹<i>TJ</i><sub><i>i</i></sub>的子轨迹表示为<i>STJ</i><sub><i>i</i></sub>={ <i>P</i><sub><i>s</i>1</sub>, <i>P</i><sub><i>s</i>2</sub>, …, <i>P</i><sub><i>sk</i></sub>} (1≤<i>s</i>1&lt;<i>s</i>2&lt;…&lt;<i>sk</i>≤<i>m</i>) 。且本文中提到的子轨迹均为连续子轨迹, 即从<i>P</i><sub><i>s</i>1</sub>到<i>P</i><sub><i>sk</i></sub>为连续轨迹采样点。</p>
+                </div>
+                <div class="p1">
+                    <p id="58"><b>定义</b>2 转角偏移度 (angle offset) 。如图1所示, 以轨迹<i>TJ</i><sub><i>i</i></sub>为例, <i>P</i><sub>1</sub>为初始轨迹点, <i>P</i><sub>1</sub><i>P</i><sub>2</sub>为初始移动行为。转角偏移度是指移动行为<i>P</i><sub><i>i</i></sub><i>P</i><sub><i>i</i>+1</sub>与<i>P</i><sub><i>i</i></sub><i>P</i><sub><i>i</i>+2</sub> (1≤<i>i</i>≤<i>m</i>-2) 与尾端相连时的夹角大小<i>θ</i><sub><i>i</i></sub>, 如图中<i>P</i><sub>1</sub><i>P</i><sub>2</sub>与<i>P</i><sub>2</sub><i>P</i><sub>3</sub>尾端相连时的夹角<i>θ</i><sub>1</sub>以及<i>P</i><sub>2</sub><i>P</i><sub>3</sub>与<i>P</i><sub>3</sub><i>P</i><sub>4</sub>尾端相连时的夹角<i>θ</i><sub>2</sub>。本文设定顺时针转角为正值, 逆时针转角为负值, 即<i>θ</i><sub>1</sub>为正值, <i>θ</i><sub>2</sub>为负值。为了计算转角偏移度的大小, 首先要通过轨迹采样点的经纬度值计算出两点之间的距离大小, 具体方法如下:</p>
+                </div>
+                <div class="area_img" id="145">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JSJY201903011_14500.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="62">其中:<i>d</i> (<i>P</i><sub><i>i</i></sub>, <i>P</i><sub><i>j</i></sub>) 为轨迹采样点<i>P</i><sub><i>i</i></sub>与<i>P</i><sub><i>j</i></sub>之间的距离, <i>R</i>为地球半径。</p>
+                </div>
+                <div class="p1">
+                    <p id="63">轨迹转角偏移度的公式如下所示:</p>
+                </div>
+                <div class="p1">
+                    <p id="64" class="code-formula">
+                        <mathml id="64"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>α</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mrow><mi>arccos</mi></mrow><mspace width="0.25em" /><mfrac><mrow><mo stretchy="false">|</mo><mi>Ρ</mi><msub><mrow></mrow><mi>i</mi></msub><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">|</mo><msup><mrow></mrow><mn>2</mn></msup><mo>+</mo><mo stretchy="false">|</mo><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>2</mn></mrow></msub><mo stretchy="false">|</mo><msup><mrow></mrow><mn>2</mn></msup><mo>-</mo><mo stretchy="false">|</mo><mi>Ρ</mi><msub><mrow></mrow><mi>i</mi></msub><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>2</mn></mrow></msub><mo stretchy="false">|</mo><msup><mrow></mrow><mn>2</mn></msup></mrow><mrow><mn>2</mn><mo stretchy="false">|</mo><mi>Ρ</mi><msub><mrow></mrow><mi>i</mi></msub><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">|</mo><msup><mrow></mrow><mn>2</mn></msup><mo stretchy="false">|</mo><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>2</mn></mrow></msub><mo stretchy="false">|</mo><msup><mrow></mrow><mn>2</mn></msup></mrow></mfrac><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>θ</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left"><mtr><mtd><mi>α</mi><mo>-</mo><mtext>π</mtext><mo>, </mo><mtext> </mtext><mi>Ρ</mi><msub><mrow></mrow><mi>i</mi></msub><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>×</mo><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>2</mn></mrow></msub><mi>＜</mi><mn>0</mn></mtd></mtr><mtr><mtd><mtext>π</mtext><mo>-</mo><mi>α</mi><mo>, </mo><mrow><mtext> </mtext><mtext> </mtext></mrow><mi>Ρ</mi><msub><mrow></mrow><mi>i</mi></msub><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>×</mo><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>≥</mo><mn>0</mn></mtd></mtr></mtable></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="65"><b>定义</b>3 距离偏移量 (distance offset) 。距离偏移量是指轨迹采样点到初始移动行为所在直线的垂直距离。如图1所示, 采样点<i>P</i><sub>3</sub>与<i>P</i><sub>4</sub>到初始移动行为<i>P</i><sub>1</sub><i>P</i><sub>2</sub>延长线的垂直距离<i>d</i><sub>1</sub>与<i>d</i><sub>2</sub>即为距离偏移量。其计算公式如式 (4) 所示:</p>
+                </div>
+                <div class="p1">
+                    <p id="66"><i>d</i><sub><i>i</i></sub>=|<i>P</i><sub>2</sub><i>P</i><sub><i>i</i>+2</sub>| sin ∠<i>P</i><sub>1</sub><i>P</i><sub>2</sub><i>P</i><sub><i>i</i>+2</sub>      (4) </p>
+                </div>
+                <div class="area_img" id="67">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201903011_067.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 轨迹转角偏移度与距离偏移量示意图" src="Detail/GetImg?filename=images/JSJY201903011_067.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 轨迹转角偏移度与距离偏移量示意图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201903011_067.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 1 Schematic diagram of trajectory angle offset and distance offset</p>
+
+                </div>
+                <div class="p1">
+                    <p id="68">对于轨迹<i>TJ</i><sub><i>i</i></sub>, 首先从采样点<i>P</i><sub>3</sub>开始, 计算其转角偏移度<i>θ</i><sub>1</sub>与距离偏移度<i>d</i><sub>1</sub>, 若<i>θ</i><sub>1</sub>的绝对值不超过转角偏移度阈值<i>θ</i><sub>th</sub>, 且<i>d</i><sub>1</sub>也不超过距离偏移度阈值<i>d</i><sub>th</sub>, 则继续计算采样点<i>P</i><sub>4</sub>的偏移度, 依此类推。若采样点<i>P</i><sub><i>i</i></sub>的转角偏移度或距离偏移度超过了相应的阈值, 则将<i>P</i><sub><i>i</i></sub>划入特征点集中, 且将<i>P</i><sub><i>i</i></sub><i>P</i><sub><i>i</i>+1</sub>定义为新的初始移动行为, 并从采样点<i>P</i><sub><i>i</i>+2</sub>起, 继续执行上述步骤。最后, 轨迹<i>TJ</i><sub><i>i</i></sub>将被划分为若干个连续子轨迹。本文的轨迹划分算法的时间复杂度为<i>O</i> (<i>n</i>) , <i>n</i>为轨迹采样点的个数。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">接着, 本文采用改进后的密度峰值聚类算法<citation id="205" type="reference"><link href="176" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>对用户特征点进行聚类, 一个类簇里的所有特征点表示用户的一个兴趣区域, 并采用该类簇的质心作为这个兴趣区域的代表:</p>
+                </div>
+                <div class="p1">
+                    <p id="70" class="code-formula">
+                        <mathml id="70"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mi>C</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>Ρ</mi><msub><mrow></mrow><mi>j</mi></msub><mo>∈</mo><mi>C</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></munder><mo stretchy="false"> (</mo></mstyle><mi>L</mi><mi>a</mi><mi>t</mi><msub><mrow></mrow><mi>j</mi></msub><mo>, </mo><mi>L</mi><mi>n</mi><mi>g</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>5</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="71">其中:<b><i>c</i></b><sub><i>i</i></sub>表示类簇<i>i</i>的质心点, |<i>C</i><sub><i>i</i></sub>|表示类簇<i>i</i>所包含的兴趣点数目, <i>P</i><sub><i>j</i></sub>表示类簇<i>i</i>中的某个兴趣点, <i>Lat</i><sub><i>j</i></sub>与<i>Lng</i><sub><i>j</i></sub>分别表示此兴趣点的纬度与经度。</p>
+                </div>
+                <h4 class="anchor-tag" id="72" name="72">1.2 <b>模型状态定义</b></h4>
+                <div class="p1">
+                    <p id="73"><b>定义</b>4 马尔可夫链 (Markov chain) 。假设有随机过程{<i>X</i><sub><i>n</i></sub>, <i>n</i>∈<i>T</i>}, 且存在有限状态<i>i</i><sub>0</sub>, <i>i</i><sub>1</sub>, …, <i>i</i><sub><i>n</i></sub>∈<i>I</i>, 若<i>P</i>{<i>X</i><sub><i>n</i>+1</sub>=<i>i</i><sub><i>n</i>+1</sub>| <i>X</i><sub>0</sub>=<i>i</i><sub>0</sub>, <i>X</i><sub>1</sub>=<i>i</i><sub>1</sub>, …, <i>X</i><sub><i>n</i></sub>=<i>i</i><sub><i>n</i></sub>}=<i>P</i>{<i>X</i><sub><i>n</i>+1</sub>=<i>i</i><sub><i>n</i>+1</sub>|<i>X</i><sub><i>n</i></sub>=<i>i</i><sub><i>n</i></sub>}, 则{<i>X</i><sub><i>n</i></sub>, <i>n</i>∈<i>T</i>}为马尔可夫链, 即对象的下一状态仅与此时状态有关, 也称作1阶马尔可夫链。若对象的下一状态不仅与此时状态相关, 也与前<i>k</i>-1个状态相关, 则称为<i>k</i>阶马尔可夫链。</p>
+                </div>
+                <div class="p1">
+                    <p id="74"><b>定义</b>5 轨迹序列 (Trajectory sequence) 。用户的轨迹序列是其原始轨迹经过轨迹预处理与聚类后的离散化表示, 由聚类提取出的各个兴趣区域组成。例如, 用户的原始轨迹由采样轨迹点的经纬度与时间戳组成, 表示为<i>TJ</i><sub><i>i</i></sub>={<i>P</i><sub>1</sub>, <i>P</i><sub>2</sub>, …, <i>P</i><sub><i>m</i></sub>} (1≤<i>i</i>≤<i>n</i>) , 而经过处理后的离散化轨迹序列由用户的兴趣区域组成, 表示为<i>TS</i><sub><i>i</i></sub>={<i>C</i><sub><i>k</i>1</sub>, <i>C</i><sub><i>k</i>2</sub>, …, <i>C</i><sub><i>kj</i></sub>} (1≤<i>i</i>≤<i>n</i>) , 其中离散化轨迹序列中的兴趣区域也称为元素。</p>
+                </div>
+                <div class="p1">
+                    <p id="75"><b>定义</b>6 前缀轨迹序列 (Prefix trajectory sequence) 。假设给定轨迹序列<i>TS</i><sub><i>i</i></sub>={<i>C</i><sub><i>k</i>1</sub>, <i>C</i><sub><i>k</i>2</sub>, …, <i>C</i><sub><i>kj</i></sub>} (1≤<i>i</i>≤<i>n</i>) , 且存在1&lt; <i>l</i> &lt; <i>j</i>, 若要预测<i>C</i><sub><i>kl</i></sub>为哪一个兴趣区域, 则称{<i>C</i><sub><i>k</i>1</sub>, <i>C</i><sub><i>k</i>2</sub>, …, <i>C</i><sub><i>k</i>, <i>l</i>-1) </sub>}为其对应的前缀轨迹序列, 并且<i>C</i><sub><i>k</i>, <i>l</i>-1</sub>称为用户当前所在兴趣区域。</p>
+                </div>
+                <div class="p1">
+                    <p id="76"><b>定义</b>7 轨迹马尔可夫链 (Trajectory Markov chain) 。轨迹马尔可夫链的状态空间由用户的兴趣区域<i>C</i><sub>1</sub>, <i>C</i><sub>2</sub>, …, <i>C</i><sub><i>n</i></sub>组成, 如果用户的下一个兴趣区域取决于当前兴趣区域以及过去的<i>k</i>-1个兴趣区域, 则称该马尔可夫链为<i>k</i>阶轨迹马尔可夫链, 即:</p>
+                </div>
+                <div class="p1">
+                    <p id="77" class="code-formula">
+                        <mathml id="77"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><msub><mrow></mrow><mi>p</mi></msub><mo>=</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>arg</mi><mspace width="0.25em" /><mi>max</mi></mrow></mstyle><mrow><mi>C</mi><msub><mrow></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></munder><mo stretchy="false">{</mo><mi>p</mi><mo stretchy="false"> (</mo><mi>C</mi><msub><mrow></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">|</mo><mi>C</mi><msub><mrow></mrow><mrow><mi>n</mi><mo>-</mo><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>, </mo><mi>C</mi><msub><mrow></mrow><mrow><mi>n</mi><mo>-</mo><mi>k</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>C</mi><msub><mrow></mrow><mi>n</mi></msub><mo stretchy="false">) </mo><mo stretchy="false">}</mo><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="78">其中:<i>C</i><sub><i>p</i></sub>表示用户下一个兴趣区域的预测结果, <i>C</i><sub><i>n</i></sub>表示用户当前所在的兴趣区域。</p>
+                </div>
+                <div class="p1">
+                    <p id="79">低阶Markov模型具有时间代价小、计算速度快的优点, 但是其预测精度不高, 如1阶Markov模型, 它仅仅利用用户当前所在的兴趣区域来预测下一个兴趣区域, 没有充分利用前缀轨迹序列中所包含的信息。而高阶Markov模型通常拥有更高的预测精度, 但是随之而来的是空间状态膨胀与匹配稀疏问题, 并且有研究<citation id="206" type="reference"><link href="160" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>指出, 随着阶数提高带来的预测性能增长有一个极限。若Markov模型阶数设定过高, 如3阶及以上Markov模型, 它同时利用用户当前所在的兴趣区域与前缀轨迹序列中的多个兴趣区域来预测下一个兴趣区域, 在与用户的历史轨迹序列进行匹配时, 可能会导致匹配失败或是仅仅匹配出极少数的历史轨迹序列, 即匹配稀疏, 这样反而会导致模型的预测性能降低。如图2所示, 以某位用户的历史轨迹序列模式树为例, 假设采用三阶Markov模型, 前缀轨迹序列为<i>C</i><sub>2</sub> → <i>C</i><sub>4</sub> → <i>C</i><sub>5</sub>, 并基于此移动模式树预测用户的下一兴趣区域。但是, 在此模式树中并没有以<i>C</i><sub>2</sub> → <i>C</i><sub>4</sub> → <i>C</i><sub>5</sub>为前缀序列的历史轨迹, 三阶Markov模型无法作出预测。针对此问题, 文献<citation id="207" type="reference">[<a class="sup">8</a>]</citation>提出了的自适应多阶Markov模型能够在前缀序列与移动历史模式树匹配失败时自动降阶, 直到匹配成功。然而, 当Markov模型的阶数较高时, 即使在用户的历史轨迹序列模式树中找到以<i>C</i><sub>2</sub> → <i>C</i><sub>4</sub> → <i>C</i><sub>5</sub>为前缀的序列, 也极有可能存在匹配数量过少、稀疏率高等问题, 从而导致预测效果不佳。</p>
+                </div>
+                <div class="area_img" id="80">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201903011_080.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 用户历史轨迹序列模式树" src="Detail/GetImg?filename=images/JSJY201903011_080.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 用户历史轨迹序列模式树  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201903011_080.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 2 Mode tree of user historical trajectory sequence</p>
+
+                </div>
+                <h3 id="81" name="81" class="anchor-tag">2 Adaboost-Markov建模</h3>
+                <div class="p1">
+                    <p id="82">1阶Markov模型仅仅利用了用户当前所在的兴趣区域, 对历史轨迹序列的利用率不高;而高阶Markov模型由于存在匹配困难、稀疏率高的问题, 同样存在无法充分利用历史轨迹序列的问题。因此, 将低阶模型与高阶模型相结合是一种可行的方法。那么, 合理地确定各阶模型对最终预测结果的影响系数, 则是保证预测性能良好的重要前提。从宏观上看, 高阶Markov模型通常具有更高的预测精度, 在组合模型中应该具有更大的“话语权”。为了确定各阶模型的具体影响系数, 本文提出了基于Adaboost-Markov模型的移动用户位置预测方法。Adaboost算法作为一种代表性的提升方法, 可以通过改变训练数据的概率分布以及弱分类器的权重系数, 组合多个弱分类器, 生成一个强分类器<citation id="208" type="reference"><link href="178" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>。本文自适应确定模型阶数<i>k</i>, 将1阶至<i>k</i>阶Markov模型作为<i>k</i>个弱预测器, 通过Adaboost算法改变用户轨迹数据的概率分布与各阶Markov模型的权重系数, 最终生成一个多阶融合Markov模型用于预测用户位置。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">阶数<i>k</i>由用户前缀轨迹序列与历史轨迹序列的最大匹配阶长所决定。以图3为例, 用户原始轨迹数据经过预处理后建立了历史轨迹序列库, 参与匹配的前缀轨迹序列长度通常有两种方法确定:一是前缀轨迹序列与历史轨迹序列的最大匹配长度, 但是当前缀轨迹序列过长时, 采用这种方法会导致时间代价过高。二是人为指定参与匹配的前缀轨迹序列长度, 由用户确定参与匹配的前缀轨迹序列元素个数并输入相应长度的待预测前缀轨迹序列, 若能在历史轨迹序列库中找到与前缀轨迹序列相同的序列, 则匹配成功, 并将此时前缀轨迹序列的元素个数设为模型阶数<i>k</i>;否则, 此次匹配失败, 则自动降阶, 去掉前缀轨迹序列中距离当前最远的一个元素, 并继续在历史轨迹序列库中寻求匹配, 重复以上步骤, 直至匹配成功。</p>
+                </div>
+                <div class="p1">
+                    <p id="84">确定了模型阶数<i>k</i>后, 融合一阶至<i>k</i>阶Markov模型, 即Adaboost-Markov模型由<i>k</i>个<i>m</i>阶 (<i>m</i>=1, 2, …, <i>k</i>) Markov模型组成, 各阶模型权重系数<i>α</i><sub><i>m</i></sub>与该模型的预测误差大小成负相关:预测误差越大, 则该阶模型的权重系数越小, 反之则反。对于具有<i>N</i>个元素的轨迹序列训练样本, <i>m</i>阶 (<i>m</i>=1, 2, …, <i>k</i>) Markov模型的预测误差<i>e</i><sub><i>m</i></sub>计算方法如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="85" class="code-formula">
+                        <mathml id="85"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>e</mi><msub><mrow></mrow><mi>m</mi></msub><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mi>w</mi></mstyle><msub><mrow></mrow><mrow><mi>m</mi><mi>i</mi></mrow></msub><mi>Ι</mi><msubsup><mrow></mrow><mi>m</mi><mi>i</mi></msubsup><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>7</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="86">其中:<i>w</i><sub><i>mi</i></sub>是<i>m</i>阶 (<i>m</i>=1, 2, …, <i>k</i>) Markov模型所对应训练样本的权值, 且有<mathml id="87"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mi>w</mi></mstyle><msub><mrow></mrow><mrow><mi>m</mi><mi>i</mi></mrow></msub><mo>=</mo><mn>1</mn></mrow></math></mathml>, 初始时通常设为1/<i>N</i>。<i>I</i><mathml id="88"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>m</mi><mi>i</mi></msubsup></mrow></math></mathml>是<i>m</i>阶Markov模型对训练样本<i>i</i>的预测结果判定器, 其公式如式 (8) 所示:</p>
+                </div>
+                <div class="p1">
+                    <p id="89" class="code-formula">
+                        <mathml id="89"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ι</mi><msubsup><mrow></mrow><mi>m</mi><mi>i</mi></msubsup><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left"><mtr><mtd><mn>1</mn><mo>, </mo><mtext> </mtext><mtext>e</mtext><mtext>r</mtext><mtext>r</mtext><mtext>o</mtext><mtext>r</mtext><mspace width="0.25em" /><mtext>p</mtext><mtext>r</mtext><mtext>e</mtext><mtext>d</mtext><mtext>i</mtext><mtext>c</mtext><mtext>t</mtext><mtext>i</mtext><mtext>o</mtext><mtext>n</mtext></mtd></mtr><mtr><mtd><mn>0</mn><mo>, </mo><mrow><mtext> </mtext><mtext> </mtext></mrow><mtext>c</mtext><mtext>o</mtext><mtext>r</mtext><mtext>r</mtext><mtext>e</mtext><mtext>c</mtext><mtext>t</mtext><mspace width="0.25em" /><mtext>p</mtext><mtext>r</mtext><mtext>e</mtext><mtext>d</mtext><mtext>i</mtext><mtext>c</mtext><mtext>t</mtext><mtext>i</mtext><mtext>o</mtext><mtext>n</mtext></mtd></mtr></mtable></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>8</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="90">计算出预测误差<i>e</i><sub><i>m</i></sub>后, 可以计算模型权重系数<i>α</i><sub><i>m</i></sub>, 计算方法如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="91" class="code-formula">
+                        <mathml id="91"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>α</mi><msub><mrow></mrow><mi>m</mi></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mspace width="0.25em" /><mrow><mi>ln</mi></mrow><mspace width="0.25em" /><mfrac><mrow><mn>1</mn><mo>-</mo><mi>e</mi><msub><mrow></mrow><mi>m</mi></msub></mrow><mrow><mi>e</mi><msub><mrow></mrow><mi>m</mi></msub></mrow></mfrac><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>9</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="92">接着, 根据上述方法得到的<i>m</i>阶模型权重系数更新训练样本的权值, 计算<i>m</i>+1阶 (<i>m</i>=1, 2, …, <i>k</i>-1) Markov模型所对应训练样本的权值<i>w</i><sub><i>m</i>+1, <i>i</i></sub>, 提高在<i>m</i>阶Markov模型中错误预测的样本权值, 降低正确预测的样本权值, 以此来使误预测样本在下一轮学习中得到更大的关注。计算方法如 (10) 、 (11) 所示:</p>
+                </div>
+                <div class="p1">
+                    <p id="93" class="code-formula">
+                        <mathml id="93"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>w</mi><msub><mrow></mrow><mrow><mi>m</mi><mo>+</mo><mn>1</mn><mo>, </mo><mi>i</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>w</mi><msub><mrow></mrow><mrow><mi>m</mi><mi>i</mi></mrow></msub></mrow><mrow><mi>Ζ</mi><msub><mrow></mrow><mi>m</mi></msub></mrow></mfrac><mspace width="0.25em" /><mrow><mi>exp</mi></mrow><mo stretchy="false"> (</mo><mi>α</mi><msub><mrow></mrow><mi>m</mi></msub><mi>Ι</mi><msubsup><mrow></mrow><mi>m</mi><mi>i</mi></msubsup><mo stretchy="false">) </mo><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>0</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>Ζ</mi><msub><mrow></mrow><mi>m</mi></msub><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mi>w</mi></mstyle><msub><mrow></mrow><mrow><mi>m</mi><mi>i</mi></mrow></msub><mspace width="0.25em" /><mrow><mi>exp</mi></mrow><mo stretchy="false"> (</mo><mi>α</mi><msub><mrow></mrow><mi>m</mi></msub><mi>Ι</mi><msubsup><mrow></mrow><mi>m</mi><mi>i</mi></msubsup><mo stretchy="false">) </mo><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>1</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="94">其中:<i>Z</i><sub><i>m</i></sub>是规范化因子, 它使<i>w</i><sub><i>m</i>+1, <i>i</i></sub>成为一个概率分布。</p>
+                </div>
+                <div class="p1">
+                    <p id="95">之后, 再根据新的训练样本权值以及<i>m</i>+1阶Markov模型算出预测误差<i>e</i><sub><i>m</i>+1</sub>与模型权重系数<i>α</i><sub><i>m</i>+1</sub>, 以此类推, 直至算出<i>k</i>阶Markov模型的预测误差<i>e</i><sub><i>k</i></sub>与模型权重系数<i>α</i><sub><i>k</i></sub>。</p>
+                </div>
+                <div class="p1">
+                    <p id="96">最后, 将各阶模型的权重系数归一化:</p>
+                </div>
+                <div class="p1">
+                    <p id="97" class="code-formula">
+                        <mathml id="97"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>β</mi><msub><mrow></mrow><mi>m</mi></msub><mo>=</mo><mi>α</mi><msub><mrow></mrow><mi>m</mi></msub><mo>/</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mi>α</mi></mstyle><msub><mrow></mrow><mi>m</mi></msub><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>2</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mtext>A</mtext><mtext>d</mtext><mtext>a</mtext><mtext>b</mtext><mtext>o</mtext><mtext>o</mtext><mtext>s</mtext><mtext>t</mtext><mo>-</mo><mtext>Μ</mtext><mtext>a</mtext><mtext>r</mtext><mtext>k</mtext><mtext>o</mtext><mtext>v</mtext><mtext>模</mtext><mtext>型</mtext><mtext>可</mtext><mtext>表</mtext><mtext>示</mtext><mtext>如</mtext><mtext>下</mtext><mo>∶</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="98" class="code-formula">
+                        <mathml id="98"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>G</mi><mo stretchy="false"> (</mo><mi>x</mi><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mi>β</mi></mstyle><msub><mrow></mrow><mi>m</mi></msub><mi>G</mi><msub><mrow></mrow><mi>m</mi></msub><mo stretchy="false"> (</mo><mi>x</mi><mo stretchy="false">) </mo><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>3</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="99">其中:<i>G</i><sub><i>m</i></sub> (<i>x</i>) 代表<i>m</i>阶Markov模型。</p>
+                </div>
+                <div class="area_img" id="100">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201903011_100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 阶数k的自适应确定示例" src="Detail/GetImg?filename=images/JSJY201903011_100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 阶数<i>k</i>的自适应确定示例  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201903011_100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 3 Example of adaptive determination of order <i>k</i></p>
+
+                </div>
+                <h3 id="101" name="101" class="anchor-tag">3 实验分析</h3>
+                <div class="p1">
+                    <p id="102">本文仿真实验环境为Windows10 64 位操作系统, Intel Core i7-6700HQ 2.60 GHz CPU, 8 GB内存, 硬盘1 TB。本实验中所采用的轨迹数据集来自于微软亚洲研究院的Geolife项目<citation id="209" type="reference"><link href="180" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>, 该数据集包含182名用户从2007年4月至2012年8月的轨迹采样点, 共有17 621条轨迹, 总距离为1 292 951 km, 总持续时间为50 176 h;并且, 91.5%的轨迹以每1～5 s或每5～10 m记录一次, 能够真实反映出用户的生活习惯及行为模式。</p>
+                </div>
+                <div class="p1">
+                    <p id="103">为验证模型的有效性, 本文对4种模型进行对比实验:1阶Markov模型、2阶Markov模型、权重系数平均的多阶融合Markov模型以及本文提出的Adaboost-Markov模型。其中, 权重系数平均的多阶融合Markov模型与Adaboost-Markov模型的区别在于, 前者为1～<i>k</i>阶Markov模型赋予相同的权重系数, 而后者采用Adaboost算法根据各阶模型的预测误差调整对应的权重系数。从Geolife轨迹数据集中随机抽取90%用于训练上述模型, 剩下10%的轨迹数据用于检测预测性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="104">为了方便量化表示算法的性能优势, 本文采用如下性能评价指标。</p>
+                </div>
+                <div class="p1">
+                    <p id="105"><b>定义</b>8 预测命中。已知待预测轨迹序列<i>T</i>={<i>T</i><sub>1</sub>, <i>T</i><sub>2</sub>, …, <i>T</i><sub><i>n</i></sub>} (1≤<i>i</i>≤<i>n</i>) , 由某个模型预测出的轨迹序列<i>P</i>={<i>P</i><sub>1</sub>, <i>P</i><sub>2</sub>, …, <i>P</i><sub><i>n</i></sub>} (1≤<i>i</i>≤<i>n</i>) , 若有<i>T</i><sub><i>i</i></sub>= <i>P</i><sub><i>i</i></sub>, 则表示预测命中, 定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="106" class="code-formula">
+                        <mathml id="106"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Η</mi><mo stretchy="false"> (</mo><mi>Τ</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>Ρ</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left"><mtr><mtd><mn>1</mn><mo>, </mo><mtext> </mtext><mi>Τ</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mi>Ρ</mi><msub><mrow></mrow><mi>i</mi></msub></mtd></mtr><mtr><mtd><mn>0</mn><mo>, </mo><mrow><mtext> </mtext><mtext> </mtext></mrow><mi>Τ</mi><msub><mrow></mrow><mi>i</mi></msub><mo>≠</mo><mi>Ρ</mi><msub><mrow></mrow><mi>i</mi></msub></mtd></mtr></mtable></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>4</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="107"><b>定义</b>9 预测准确率 (Prediction Accuracy) 。已知待预测轨迹序列<i>T</i>与由某个模型预测出的轨迹序列<i>P</i>, 预测准确率定义为:</p>
+                </div>
+                <div class="p1">
+                    <p id="108" class="code-formula">
+                        <mathml id="108"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ρ</mi><mi>r</mi><mi>e</mi><mi>d</mi><mi>i</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>_</mo><mi>A</mi><mi>c</mi><mi>c</mi><mi>u</mi><mi>r</mi><mi>a</mi><mi>c</mi><mi>y</mi><mo>=</mo><mo stretchy="false"> (</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>Η</mi></mstyle><mo stretchy="false"> (</mo><mi>Τ</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>Ρ</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo stretchy="false">) </mo><mo>/</mo><mrow><mo>|</mo><mi>Τ</mi><mo>|</mo></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>5</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="109">其中|<i>T</i>|表示轨迹序列的长度。</p>
+                </div>
+                <div class="p1">
+                    <p id="110">首先, 为验证使用Adaboost算法进行权重系数分配的合理性, 比较了不同前缀轨迹序列元素个数下Adaboost-Markov模型、权重系数均等的多阶融合Markov模型与普通Markov模型的预测准确率。</p>
+                </div>
+                <div class="p1">
+                    <p id="111">如图4所示, 横轴表示前缀轨迹序列元素的个数, 纵轴表示预测准确率。对于普通Markov模型来说, 前缀元素个数即等同于模型阶数, 而Adaboost-Markov模型与权重系数平均的多阶融合Markov模型采用了自适应确定模型阶数<i>k</i>的匹配方法。因此, 随着前缀元素个数的增多, 普通Markov模型的预测准确率首先呈现出提升的趋势, 在2阶时达到最大值, 随后由于阶数的增多, 匹配稀疏率逐渐增高, 从而导致预测准确率逐渐降低。Adaboost-Markov模型则有效克服了这一不足, 其预测准确率首先随着前缀元素数量的增加而提高, 在前缀元素数量为3时基本趋近于最大值, 随后预测准确率一直稳定在最大值附近。因此, 在接下来的仿真实验中, Adaboost-Markov模型与权重系数平均的多阶融合Markov模型均将前缀轨迹序列长度设为3。并且, 从图4中可以看出, 通过Adaboost算法确定的模型权重系数是合理有效的, 无论给定的待预测序列中前缀元素的数量怎样变化, Adaboost-Markov模型的预测准确率均高于权重系数平均的多阶融合Markov模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="112">接着, 利用上述4种模型进行单步预测, 即预测用户的下一个兴趣区域, 图5和图6分别展示了4种模型在小规模轨迹数据集及大规模轨迹数据集上的预测效果, 横轴代表轨迹序列长度, 即用于预测的历史轨迹序列库中的元素个数, 纵轴表示预测准确率。</p>
+                </div>
+                <div class="area_img" id="113">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201903011_113.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 前缀轨迹序列元素个数与预测准确率的关系" src="Detail/GetImg?filename=images/JSJY201903011_113.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 前缀轨迹序列元素个数与预测准确率的关系  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201903011_113.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 4 Relationship between number of prefix trajectory sequence elements and prediction accuracy</p>
+
+                </div>
+                <div class="area_img" id="114">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201903011_114.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 小规模轨迹数据集下的预测准确率对比" src="Detail/GetImg?filename=images/JSJY201903011_114.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 小规模轨迹数据集下的预测准确率对比  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201903011_114.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 5 Prediction accuracy comparison under small-scale trajectory dataset</p>
+
+                </div>
+                <div class="area_img" id="115">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201903011_115.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 大规模轨迹数据集下的预测准确率对比" src="Detail/GetImg?filename=images/JSJY201903011_115.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 大规模轨迹数据集下的预测准确率对比  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201903011_115.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 6 Prediction accuracy comparison under large-scale trajectory dataset</p>
+
+                </div>
+                <div class="p1">
+                    <p id="116">从图5、6中观察可以发现, 本文提出的Adaboost-Markov模型对用户下一步兴趣区域预测的准确率明显高于1阶Markov模型、2阶Markov模型以及权重系数平均的多阶融合Markov模型:在小规模轨迹数据集的实验中, 与1阶Markov模型、2阶Markov模型以及权重系数平均的多阶融合Markov模型相比, Adaboost-Markov模型的平均预测准确率分别提高了39.73%、18.3%以及9.12%;在大规模轨迹数据集的实验中, 与1阶Markov模型、2阶Markov模型以及权重系数平均的多阶融合Markov模型相比, Adaboost-Markov模型的平均预测准确率分别提高了20.83%、11.3%以及5.38%。随着轨迹长度的增加, 各模型预测准确率的增长也趋于稳定, 因此在大规模轨迹数据集的实验中, 各模型的准确率曲线相对平缓。1阶Markov模型和2阶Markov模型由于对前缀轨迹序列的利用不够充分, 所以其预测准确率的上升空间不大;而权重系数平均的多阶融合Markov模型与Adaboost-Markov模型的预测准确率均明显高于1、2阶Markov模型, 这是因为权重系数平均的多阶融合Markov模型与Adaboost-Markov模型的前缀轨迹序列长度被设为3, 当历史轨迹序列库满足匹配条件时, 上述模型同时利用了1～3阶Markov模型的前缀轨迹序列, 充分利用了轨迹序列中所包含的移动模式信息, 在历史轨迹序列库不符合匹配条件时, 亦可自适应降低前缀轨迹序列长度, 相比于定阶Markov模型具有更好的灵活性。权重系数平均的多阶融合Markov模型虽然融合了各阶Markov模型且较为充分利用了前缀轨迹序列, 但是其没有考虑到各阶Markov模型的重要性差异问题, 因此结合了Adaboost算法为各阶模型合理分配权重系数的Adaboost-Markov模型具有更高的预测准确率。</p>
+                </div>
+                <div class="p1">
+                    <p id="117">为了更为全面地比较4种模型的预测性能, 随机选用了Geolife项目中8名用户的轨迹数据集。从图7中可以看出, 虽然四种模型在不同数据集上的预测准确率存在一定范围的波动, 但是整体上的预测性能排名与之前的实验结果并无二致, 与1阶Markov模型、2阶Markov模型以及权重系数平均的多阶融合Markov模型相比, Adaboost-Markov模型的平均预测准确率分别提高了23.14%、15.44%以及7.06%。可见本文提出的Adaboost-Markov模型具有良好的普适性, 在不同数据集上的预测准确率均好于另外3种模型。</p>
+                </div>
+                <div class="area_img" id="118">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201903011_118.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 不同轨迹数据集的预测准确率对比" src="Detail/GetImg?filename=images/JSJY201903011_118.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 不同轨迹数据集的预测准确率对比  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201903011_118.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 7 Prediction accuracy comparison under different trajectory datasets</p>
+
+                </div>
+                <div class="p1">
+                    <p id="119">在位置预测中, 多步预测能力也是反映模型好坏的关键之一。多步预测即预测出用户在<i>n</i>步之后所处的兴趣区域。实验结果如图8所示, 从图8中可以看出, 随着预测步长的增加, 各模型预测准确率的下降幅度均较为明显, 但是Adaboost-Markov模型在各步长的预测准确率均优于另外三种模型。原因在于, 在进行<i>n</i>步预测对比实验时, 1、2阶Markov模型采用<i>n</i>步转移概率预测之后的兴趣区域, 相比于Adaboost-Markov模型的自适应可变长序列的预测方式, 1、2阶Markov模型仅仅考虑了固定长度的轨迹序列, 对于数据的适应性不佳。</p>
+                </div>
+                <h3 id="120" name="120" class="anchor-tag">4 结语</h3>
+                <div class="p1">
+                    <p id="121">本文针对Markov模型进行位置预测时存在预测准确率低与匹配稀疏等不足, 采用轨迹划分与密度聚类相结合的方法作为轨迹数据预处理手段, 提出了Adaboost算法与多阶融合Markov模型相结合的预测方法, 充分利用了历史轨迹序列, 提高了预测准确率。真实用户轨迹数据集上的实验证明了本文方法在一定程度上解决了低阶Markov模型预测准确率低以及高阶Markov模型匹配稀疏率高等问题, 具有较高的预测准确率以及良好的普适性。未来工作中, 还将对上述模型进一步优化, 更深入地研究轨迹数据的时空特性与群体特性, 将天气、时间 (工作日与休息日) 以及用户相关的社交数据等因素考虑在内, 以期进一步提高模型的预测准确率。</p>
+                </div>
+                <div class="area_img" id="122">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201903011_122.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图8 预测步长与预测准确率的关系" src="Detail/GetImg?filename=images/JSJY201903011_122.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图8 预测步长与预测准确率的关系  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201903011_122.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 8 Relationship between prediction steps and prediction accuracy</p>
+
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="146">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201404003&amp;v=MDM2MDk5WE1xNDlGWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRmlEbFc3M05OeWZUYkxHNEg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b>郭迟, 刘经南, 方媛, 等.位置大数据的价值提取与协同挖掘方法[J].软件学报, 2014, 25 (4) :713-730. (GUO C, LIU J N, FANGY, et al.Value extraction and collaborative mining methods for location big data[J].Journal of Software, 2014, 25 (4) :713-730.) 
+                            </a>
+                        </p>
+                        <p id="148">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Transport mode detection with realistic smart phone sensor data">
+
+                                <b>[2]</b>WIDHALM P, NITSCHE P, BRANDIE N.Transport mode detection with realistic smartphone sensor data[C]//Proceedings of the21st International Conference on Pattern Recognition.Piscataway, NJ:IEEE, 2012:573-576.
+                            </a>
+                        </p>
+                        <p id="150">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=STJD&amp;filename=STJD15111600000617&amp;v=MDUyMjhLRjRjYUJjPU5qbkJhcks5SDlETnFZOUZaT3NQQ24wK29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnRGaW5sVXJqSg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b>SHIH D H, SHIH M H, YEN D C, et al.Personal mobility pattern mining and anomaly detection in the GPS era[J].American Cartographer, 2016, 43 (1) :55-67.
+                            </a>
+                        </p>
+                        <p id="152">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Predicting next location of twitter users for surveillance">
+
+                                <b>[4]</b>GUNDUZ S, YAVANOGLU U, SAGIROGLU S.Predicting next location of twitter users for surveillance[C]//Proceedings of the 12th International Conference on Machine Learning and Applications.Washington, DC:IEEE Computer Society, 2013:267-273.
+                            </a>
+                        </p>
+                        <p id="154">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Once upon a crime:towards crime prediction from demographics and mobile data">
+
+                                <b>[5]</b>BOGOMOLOV A, LEPRI B, STAIANO J, et al.Once upon a crime:towards crime prediction from demographics and mobile data[C]//ICMI'14:Proceedings of the 16th International Conference on Multimodal Interaction.New York:ACM, 2014:427-434.
+                            </a>
+                        </p>
+                        <p id="156">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Tra Plan:an effective threein-one trajectory-prediction model in transportation networks">
+
+                                <b>[6]</b>QIAO S, HAN N, ZHU W, et al.Tra Plan:an effective three-inone trajectory-prediction model in transportation networks[J].IEEETransactions on Intelligent Transportation Systems, 2015, 16 (3) :1188-1198.
+                            </a>
+                        </p>
+                        <p id="158">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=TXXB200612011&amp;v=MTEzNThRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRmlEbFc3M05NVFhUYkxHNEh0Zk5yWTlFWlk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b>余雪岗, 刘衍珩, 魏达, 等.用于移动路径预测的混合Markov模型[J].通信学报, 2006, 27 (12) :61-69. (YU X G, LIU Y H, WEI D, et al.Hybrid Markov model for mobile path prediction[J].Journal on Communications, 2006, 27 (12) :61-69.) 
+                            </a>
+                        </p>
+                        <p id="160">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201010017&amp;v=MTMwNTA1NE8zenFxQnRHRnJDVVI3cWZadVpwRmlEbFc3M05MeXZTZExHNEg5SE5yNDlFWTRRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b>吕明琪, 陈岭, 陈根才.基于自适应多阶Markov模型的位置预测[J].计算机研究与发展, 2010, 47 (10) :1764-1770. (LYU M Q, CHEN L, CHEN G C.Position prediction based on adaptive multiorder Markov model[J].Journal of Computer Research and Development, 2010, 47 (10) :1764-1770.) 
+                            </a>
+                        </p>
+                        <p id="162">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES15122600211161&amp;v=MDE2MDByUmRHZXJxUVRNbndaZVp0RmlubFVyakpLRjRjYUJjPU5pZk9mYks5SDlQT3FZOUZadW9PRFhvNG9CTVQ2VDRQUUgvaQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b>CHEN M, YU X, LIU Y.Mining moving patterns for predicting next location[J].Information Systems, 2015, 54:156-168.
+                            </a>
+                        </p>
+                        <p id="164">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201601009&amp;v=MDgxNDRSN3FmWnVacEZpRGxXNzNOTHo3QmQ3RzRIOWZNcm85RmJZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b>宋路杰, 孟凡荣, 袁冠.基于Markov模型与轨迹相似度的移动对象位置预测算法[J].计算机应用, 2016, 36 (1) :39-43. (SONG L J, MENG F R, YUAN G.Moving object location prediction algorithm based on Markov model and trajectory similarity[J].Journal of Computer Applications, 2016, 36 (1) :39-43.) 
+                            </a>
+                        </p>
+                        <p id="166">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201711018&amp;v=MzI0OTMzenFxQnRHRnJDVVI3cWZadVpwRmlEbFc3M05OeWZUYkxHNEg5Yk5ybzlFYklRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b>乔少杰, 韩楠, 李天瑞, 等.基于前缀投影技术的大规模轨迹预测模型[J].软件学报, 2017, 28 (11) :3043-3057. (QIAO S J, HAN N, LI T R, et al.Large-scale trajectory prediction model based on prefix projection technique[J].Journal of Software, 2017, 28 (11) :3043-3057.) 
+                            </a>
+                        </p>
+                        <p id="168">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Next place prediction using mobility M arkov chains">
+
+                                <b>[12]</b>KILLIJIAN M O.Next place prediction using mobility Markov chains[C]//MPM'12:Proceedings of the 1st Workshop on Measurement, Privacy, and Mobility.New York:ACM, 2012:Article No.3.
+                            </a>
+                        </p>
+                        <p id="170">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A self-adaptive parameter selection trajectory prediction approach via hidden Markov models">
+
+                                <b>[13]</b>QIAO S J, SHEN D, WANG X, et al.A self-adaptive parameter selection trajectory prediction approach via hidden Markov models[J].IEEE Transactions on Intelligent Transportation Systems, 2015, 16 (1) :284-296.
+                            </a>
+                        </p>
+                        <p id="172">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201505005&amp;v=Mjc3MzlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGaURsVzczTk55ZlRiTEc0SDlUTXFvOUZZWVE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b>乔少杰, 金琨, 韩楠, 等.一种基于高斯混合模型的轨迹预测算法[J].软件学报, 2015, 26 (5) :1048-1063. (QIAO S J, JIN K, HAN N, et al.Trajectory prediction algorithm based on Gaussian mixture model[J].Journal of Software, 2015, 26 (5) :1048-1063.) 
+                            </a>
+                        </p>
+                        <p id="174">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Robust extended kalman filter applied to location tracking and trajectory prediction for PCS networks">
+
+                                <b>[15]</b>PATHIRANA P N, SAVKIN A V, JHA S.Robust extended Kalman filter applied to location tracking and trajectory prediction for PCS networks[C]//Proceedings of the 2004 IEEE International Conference on Control Applications.Piscataway, NJ:IEEE, 2004, 1:63-68.
+                            </a>
+                        </p>
+                        <p id="176">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES15122600210044&amp;v=MDY0NDVpbmxVcmpKS0Y0Y2FCYz1OaWZPZmJLOUg5UE9xWTlGWnVvUERIZzlvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0Rg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b>TRASARTI R, GUIDOTTI R, MONREALE A, et al.My Way:location prediction via mobility profiling[J].Information Systems, 2017, 64:350-367.
+                            </a>
+                        </p>
+                        <p id="178">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Wherenext:A Location Predictor on Trajectory Pattern Mining">
+
+                                <b>[17]</b>MONREALE A, PINELLI F, TRASARTI R, et al.WhereNext:a location predictor on trajectory pattern mining[C]//Proceedings of the 15th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York:ACM, 2009:637-646.
+                            </a>
+                        </p>
+                        <p id="180">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Multi-granularity periodic activity discovery for moving objects">
+
+                                <b>[18]</b>YUAN G, ZHAO J, XIA S, et al.Multi-granularity periodic activity discovery for moving objects[J].International Journal of Geographical Information Systems, 2016, 31 (3) :435-462.
+                            </a>
+                        </p>
+                        <p id="182">
+                            <a id="bibliography_19" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201803005&amp;v=MTMwNzc3M05QU25mZjdHNEg5bk1ySTlGWVlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRmlEbFc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[19]</b>杨震, 王红军, 周宇.一种截断距离和聚类中心自适应的聚类算法[J].数据分析与知识发现, 2018, 2 (3) :39-48. (YANG Z, WANG H J, ZHOU Y.A clustering algorithm by adaptive cut-off distances and cluster centers[J].Data Analysis and Knowledge Discovery, 2018, 2 (3) :39-48.) 
+                            </a>
+                        </p>
+                        <p id="184">
+                            <a id="bibliography_20" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787302275954001&amp;v=MTc3MjFyZklLRndSWEZxekdiQzRITlBMcW9aQVlPc1BEUk04enhVU21EZDlTSDduM3hFOWZidm5LcmlmWmVadkZ5bmlV&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[20]</b>李航.统计学习方法[M].北京:清华大学出版社, 2012:137-139. (LI H.Statistical Learning Method[M].Beijing:Tsinghua University Press, 2012:137-139.) 
+                            </a>
+                        </p>
+                        <p id="186">
+                            <a id="bibliography_21" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Geo Life2.0 alocation-based social networking service">
+
+                                <b>[21]</b>ZHENG Y, CHEN Y, XIE X, et al.Geo Life2.0:alocation-based social networking service[C]//Proceedings of the 2009 10th International Conference on Mobile Data Management:Systems, Services and Middleware.Washington, DC:IEEE Computer Society, 2009:357-358.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJY201903011" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201903011&amp;v=MTIxNDVSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGaURsVzczS0x6N0JkN0c0SDlqTXJJOUVaWVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONFRYTUhIM2RrMzdIS2psYmhhZz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

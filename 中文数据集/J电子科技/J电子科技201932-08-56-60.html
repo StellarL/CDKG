@@ -1,0 +1,767 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2fKXReader%2fDetail%3fTIMESTAMP%3d637139234837451250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dDZKK201908013%26RESULT%3d1%26SIGN%3d8jDQh7kcU4RUWdRLp0MQ7ufuGAo%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZKK201908013&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZKK201908013&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201908013&amp;v=MDQzMzlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeS9rVnJyTklUZkFaYkc0SDlqTXA0OUVaNFE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="&lt;b&gt;1 系统总体设计&lt;/b&gt; "><b>1 系统总体设计</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#38" data-title="&lt;b&gt;1.1 系统组成&lt;/b&gt;"><b>1.1 系统组成</b></a></li>
+                                                <li><a href="#41" data-title="&lt;b&gt;1.2 系统工作原理&lt;/b&gt;"><b>1.2 系统工作原理</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#44" data-title="&lt;b&gt;2 硬件设计&lt;/b&gt; "><b>2 硬件设计</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#48" data-title="&lt;b&gt;2.1 主控电路&lt;/b&gt;"><b>2.1 主控电路</b></a></li>
+                                                <li><a href="#50" data-title="&lt;b&gt;2.2 卫星通信电路&lt;/b&gt;"><b>2.2 卫星通信电路</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#52" data-title="&lt;b&gt;3 软件设计&lt;/b&gt; "><b>3 软件设计</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#55" data-title="&lt;b&gt;4 系统测试&lt;/b&gt; "><b>4 系统测试</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#58" data-title="&lt;b&gt;4.1 定位精度测试&lt;/b&gt;"><b>4.1 定位精度测试</b></a></li>
+                                                <li><a href="#66" data-title="&lt;b&gt;4.2 系统功耗测试&lt;/b&gt;"><b>4.2 系统功耗测试</b></a></li>
+                                                <li><a href="#76" data-title="&lt;b&gt;4.3 稳定性测试&lt;/b&gt;"><b>4.3 稳定性测试</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#79" data-title="&lt;b&gt;5 结束语&lt;/b&gt; "><b>5 结束语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#40" data-title="图1 系统总体结构">图1 系统总体结构</a></li>
+                                                <li><a href="#43" data-title="图2 系统工作原理图">图2 系统工作原理图</a></li>
+                                                <li><a href="#47" data-title="图3 系统硬件框图">图3 系统硬件框图</a></li>
+                                                <li><a href="#54" data-title="图4 系统软件框图">图4 系统软件框图</a></li>
+                                                <li><a href="#57" data-title="图5 系统硬件实物图">图5 系统硬件实物图</a></li>
+                                                <li><a href="#64" data-title="&lt;b&gt;表&lt;/b&gt;1 &lt;b&gt;定位坐标测试&lt;/b&gt;"><b>表</b>1 <b>定位坐标测试</b></a></li>
+                                                <li><a href="#68" data-title="&lt;b&gt;表&lt;/b&gt;2 &lt;b&gt;系统功耗&lt;/b&gt;"><b>表</b>2 <b>系统功耗</b></a></li>
+                                                <li><a href="#78" data-title="图6 各通信模块数据发送时间分布图">图6 各通信模块数据发送时间分布图</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" 陈鹰, 杨灿军, 陶春辉, 等.海底观测系统[M].北京:海洋出版社, 2006.Chen Ying, Yang Canjun, Tao Chunhui, et al.Ocean observing system[M].Beijing:Ocean Press, 2006." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=0007502765557999&amp;v=MDUzMDNpVTdqSkpWc1JWVjI3R2JhNEhOYktxb3BBWStJR0JSTTh6eFVTbURkOVNIN24zeEU5ZmJ2bktyaWZaZVp2Rnlu&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         陈鹰, 杨灿军, 陶春辉, 等.海底观测系统[M].北京:海洋出版社, 2006.Chen Ying, Yang Canjun, Tao Chunhui, et al.Ocean observing system[M].Beijing:Ocean Press, 2006.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 赵进平.发展海洋监测技术的思考与实践[M].北京:海洋出版社, 2005.Zhao Jinping.Thinking and practice of developing marine monitoring technology[M].Beijing:Ocean Press, 2005." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=0007502765107001&amp;v=MTAyMTA3bjN4RTlmYnZuS3JpZlplWnZGeW5pVTdqSkpWc1JWVjI3R2JhNEhOYktxbzVGWStzUERSTTh6eFVTbURkOVNI&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         赵进平.发展海洋监测技术的思考与实践[M].北京:海洋出版社, 2005.Zhao Jinping.Thinking and practice of developing marine monitoring technology[M].Beijing:Ocean Press, 2005.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 徐立军, 侯朝焕, 鄢社锋, 等.深海潜标观测数据无线实时传输系统设计[J].电信科学, 2018 (6) :29-35.Xu Lijun, Hou Zhaohuan, Yan Shefeng, et al.Design of a wireless real-time observation data transmission system for deep ocean mooring[J].Telecommunications Science, 2018 (6) :29-35." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DXKX201806006&amp;v=MTgwMzA1NE8zenFxQnRHRnJDVVI3cWZadVpwRnkva1Zyck5JVFhBZHJHNEg5bk1xWTlGWW9RS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         徐立军, 侯朝焕, 鄢社锋, 等.深海潜标观测数据无线实时传输系统设计[J].电信科学, 2018 (6) :29-35.Xu Lijun, Hou Zhaohuan, Yan Shefeng, et al.Design of a wireless real-time observation data transmission system for deep ocean mooring[J].Telecommunications Science, 2018 (6) :29-35.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" 黎明, 时海勇.基于北斗卫星的大型海洋浮标通信机制研究[J].海洋技术学报, 2012, 31 (1) :1-5.Li Ming, Shi Haiyong.Research of communication mechanism based on beidou satellite for large buoy[J].Ocean Technology, 2012, 31 (1) :1-5." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HYJS201201000&amp;v=MDIxMzA1NE8zenFxQnRHRnJDVVI3cWZadVpwRnkva1Zyck5MVFRCZmJHNEg5UE1ybzlGWklRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         黎明, 时海勇.基于北斗卫星的大型海洋浮标通信机制研究[J].海洋技术学报, 2012, 31 (1) :1-5.Li Ming, Shi Haiyong.Research of communication mechanism based on beidou satellite for large buoy[J].Ocean Technology, 2012, 31 (1) :1-5.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" 时慧晶.某型水下航行体长报文通信机制[J].电子科技, 2014, 27 (11) :151-155.Shi Huijing.A reliable communication mechanism of long messages for underwater vehicles[J].Electronic Science and Technology, 2014, 27 (11) :151-155." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201411044&amp;v=MTQ1OTFOcm85QllJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZ5L2tWcnJOSVRmQVpiRzRIOVg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         时慧晶.某型水下航行体长报文通信机制[J].电子科技, 2014, 27 (11) :151-155.Shi Huijing.A reliable communication mechanism of long messages for underwater vehicles[J].Electronic Science and Technology, 2014, 27 (11) :151-155.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 徐良波.水下绞车及其在实时传输潜标的应用[J].舰船科学技术, 2017, 39 (9) :132-134.Xu Liangbo.Underwater winch and the application to the real-time transmission latent buoyage[J].Ship Science and Technology, 2017, 39 (9) :132-134." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JCKX201709026&amp;v=MDU5MTMzenFxQnRHRnJDVVI3cWZadVpwRnkva1Zyck5MeTdBZHJHNEg5Yk1wbzlIWW9RS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         徐良波.水下绞车及其在实时传输潜标的应用[J].舰船科学技术, 2017, 39 (9) :132-134.Xu Liangbo.Underwater winch and the application to the real-time transmission latent buoyage[J].Ship Science and Technology, 2017, 39 (9) :132-134.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 成跃进.现代卫星导航定位系统发展介绍[J].空间电子技术, 2015 (1) :17-25.Cheng Yuejin.The development intro of satellite navigation and positioning system[J].Space Electronic Technology, 2015 (1) :17-25." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KJDZ201501008&amp;v=Mjk0MDc0SDlUTXJvOUZiSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeS9rVnJyTkxpZlBkTEc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         成跃进.现代卫星导航定位系统发展介绍[J].空间电子技术, 2015 (1) :17-25.Cheng Yuejin.The development intro of satellite navigation and positioning system[J].Space Electronic Technology, 2015 (1) :17-25.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 任勇峰, 程艳, 文丰, 等.基于GPS与Iridium9523的信标机设计 [J].计算机测量与控制, 2015, 23 (3) :1052-1054.Ren Yongfeng, Cheng Yan, Wen Feng, et al.Design of beacon based on GPS and Iridium 9523[J].Computer Measurement &amp;amp; Control, 2015, 23 (3) :1052-1054." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JZCK201503110&amp;v=MjcxMzhRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnkva1Zyck5MemZJWmJHNEg5VE1ySTVFWkk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         任勇峰, 程艳, 文丰, 等.基于GPS与Iridium9523的信标机设计 [J].计算机测量与控制, 2015, 23 (3) :1052-1054.Ren Yongfeng, Cheng Yan, Wen Feng, et al.Design of beacon based on GPS and Iridium 9523[J].Computer Measurement &amp;amp; Control, 2015, 23 (3) :1052-1054.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" 吴志宏, 翟成瑞, 王红亮.基于单片机的信标机系统设计 [J].电视技术, 2013, 37 (15) :44-47.Wu Zhihong, Zhai Chengrui, Wang Hongliang.Design of beacon system based on microcontroller[J].Video Engineering, 2013, 37 (15) :44-47." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DSSS201315013&amp;v=MjQzNjBJVDdZZmJHNEg5TE5xbzlFWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnkva1Zyck4=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         吴志宏, 翟成瑞, 王红亮.基于单片机的信标机系统设计 [J].电视技术, 2013, 37 (15) :44-47.Wu Zhihong, Zhai Chengrui, Wang Hongliang.Design of beacon system based on microcontroller[J].Video Engineering, 2013, 37 (15) :44-47.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" 汪嘉宁, 王凡, 张林林.西太平洋深海科学观测网的建设和运行[J].海洋与湖沼, 2017 (6) :66-69.Wang Jianing, Wang Fan, Zhang Linlin.Construction and operation of the western pacific deep-sea scientific observation network[J].Oceanologia Et Limnologia Sinica, 2017 (6) :66-69." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HYFZ201706035&amp;v=MTY5NTMzenFxQnRHRnJDVVI3cWZadVpwRnkva1Zyck5MVFROZExHNEg5Yk1xWTlHWVlRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         汪嘉宁, 王凡, 张林林.西太平洋深海科学观测网的建设和运行[J].海洋与湖沼, 2017 (6) :66-69.Wang Jianing, Wang Fan, Zhang Linlin.Construction and operation of the western pacific deep-sea scientific observation network[J].Oceanologia Et Limnologia Sinica, 2017 (6) :66-69.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" 陈洪武, 胡斌, 田铖.北斗卫星导航系统在海洋工程中的应用[J].全球定位系统, 2016, 41 (2) :121-124.Chen Hongwu, Hu Bin, Tian Chen.Application of beidou satellite system in ocean engineering[J].Gnss World of China, 2016, 41 (2) :121-124." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QUDW201602026&amp;v=MDY4OTFwRnkva1Zyck5ORGpQZWJHNEg5Zk1yWTlIWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         陈洪武, 胡斌, 田铖.北斗卫星导航系统在海洋工程中的应用[J].全球定位系统, 2016, 41 (2) :121-124.Chen Hongwu, Hu Bin, Tian Chen.Application of beidou satellite system in ocean engineering[J].Gnss World of China, 2016, 41 (2) :121-124.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 王世明, 李晴.基于北斗卫星导航系统的海洋监测浮标通信系统设计与应用[J].全球定位系统, 2016, 41 (4) :102-105.Wang Shiming, Li Qing.Design and application of ocean monitoring buoy communication system based on Beidou satellite navigation system[J].GNSS World of China, 2016, 41 (4) :102-105." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QUDW201604022&amp;v=MjgzNzN5L2tWcnJOTkRqUGViRzRIOWZNcTQ5SFpvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         王世明, 李晴.基于北斗卫星导航系统的海洋监测浮标通信系统设计与应用[J].全球定位系统, 2016, 41 (4) :102-105.Wang Shiming, Li Qing.Design and application of ocean monitoring buoy communication system based on Beidou satellite navigation system[J].GNSS World of China, 2016, 41 (4) :102-105.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 王嘉鑫.一种适用于水上漂浮目标的北斗信标机[J].舰船科学技术, 2014, 36 (2) :108-111.Wang Jiaxin.A Beidou satellite beacon applies for the water floating target[J].Ship Science and Technology, 2014, 36 (2) :108-111." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JCKX201402024&amp;v=MjgxNjY0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZ5L2tWcnJOTHk3QWRyRzRIOVhNclk5SFlJUUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         王嘉鑫.一种适用于水上漂浮目标的北斗信标机[J].舰船科学技术, 2014, 36 (2) :108-111.Wang Jiaxin.A Beidou satellite beacon applies for the water floating target[J].Ship Science and Technology, 2014, 36 (2) :108-111.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 洪常委.北斗卫星导航系统在海洋浮标中的应用[J].声学与电子工程, 2014 (2) :41-43.Hong Changwei.Application of Beidou satellite navigation system in ocean buoys[J].Acoustics and Electronics Engineering, 2014 (2) :41-43." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SXDG201402015&amp;v=MDAyMTZxQnRHRnJDVVI3cWZadVpwRnkva1Zyck5OalhQYWJHNEg5WE1yWTlFWVlRS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         洪常委.北斗卫星导航系统在海洋浮标中的应用[J].声学与电子工程, 2014 (2) :41-43.Hong Changwei.Application of Beidou satellite navigation system in ocean buoys[J].Acoustics and Electronics Engineering, 2014 (2) :41-43.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 姜萍, 戎文强, 孙健.北斗二代RDSS与RNSS组合技术分析及应用实例[J].数字通信世界, 2013 (S2) :22-24.Jiang Ping, Rong Wenqiang, Sun Jian.The analysis and application of RDSS and RNSS combination technology of BDS[J].Digital Communication World, 2013 (S2) :22-24." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SZTJ2013S2011&amp;v=MjE0MTJGeS9rVnJyTk5qZmZaTEc0SDlLdnJZOUVaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnA=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         姜萍, 戎文强, 孙健.北斗二代RDSS与RNSS组合技术分析及应用实例[J].数字通信世界, 2013 (S2) :22-24.Jiang Ping, Rong Wenqiang, Sun Jian.The analysis and application of RDSS and RNSS combination technology of BDS[J].Digital Communication World, 2013 (S2) :22-24.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" 张鸣.北斗一代卫星导航接收机射频通道技术研究[D].北京:北方工业大学, 2011.Zhang Ming.Research of RF channel technology of Beidou star I[D].Beijing:North China University of Technology, 2011." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1011084906.nh&amp;v=MTc0NDdmWnVacEZ5L2tWcnJOVkYyNkg3T3dHdGpNcVpFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3E=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         张鸣.北斗一代卫星导航接收机射频通道技术研究[D].北京:北方工业大学, 2011.Zhang Ming.Research of RF channel technology of Beidou star I[D].Beijing:North China University of Technology, 2011.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+    <div class="head-tag">   
+            <p>
+               <b> 网络首发时间: 2018-12-20 15:17</b>
+            </p>     
+    </div>
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=DZKK" target="_blank">电子科技</a>
+                2019,32(08),56-60 DOI:10.16180/j.cnki.issn1007-7820.2019.08.012            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于北斗卫星的潜标数据回收技术研究</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%88%98%E8%87%AA%E5%BC%BA&amp;code=39058914&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">刘自强</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%94%A1%E6%96%87%E9%83%81&amp;code=17678902&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">蔡文郁</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E9%B9%8F%E9%B9%8F&amp;code=35122194&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张鹏鹏</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%9D%AD%E5%B7%9E%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E7%94%B5%E5%AD%90%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%99%A2&amp;code=0073968&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">杭州电子科技大学电子信息学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>基于我国自主研发的北斗卫星, 设计了一套潜标数据回收系统, 采用卫星通信方式对潜标数据进行实时传输, 卫星通信方式选用北斗一代卫星进行数据传输。由主控芯片STM32L控制系统工作状态, 通信定位芯片RD0538对位置信息进行采集并解析, 最后将待传回数据和定位数据通过北斗一代卫星进行报文传输。测试结果表明, 该系统定位精度误差符合海上使用要求。该系统结构简单、占用体积小, 用户可以设置系统发送频率。对该系统进行降低功耗的改进后, 可将其工作时间延长至9天。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8C%97%E6%96%97%E5%8D%AB%E6%98%9F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北斗卫星;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%9F%AD%E6%8A%A5%E6%96%87&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">短报文;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%95%B0%E6%8D%AE%E5%9B%9E%E6%94%B6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">数据回收;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%BD%8E%E5%8A%9F%E8%80%97&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">低功耗;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%BD%9C%E6%A0%87&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">潜标;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8D%AB%E6%98%9F%E9%80%9A%E4%BF%A1&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">卫星通信;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    蔡文郁 (1979-) , 男, 博士, 副教授。研究方向:电子系统集成。;
+                                </span>
+                                <span>
+                                    刘自强 (1995-) , 男, 硕士研究生。研究方向:电子系统集成。;
+                                </span>
+                                <span>
+                                    张鹏鹏 (1992-) , 男, 硕士研究生。研究方向:电子系统集成。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-08-09</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>浙江省自然科学基金 (LY18F030006);</span>
+                    </p>
+            </div>
+                    <h1><b>Research on Date Recycling Technology of Submerged Buoy Based on Beidou Satellite</b></h1>
+                    <h2>
+                    <span>LIU Ziqiang</span>
+                    <span>CAI Wenyu</span>
+                    <span>ZHANG Pengpeng</span>
+            </h2>
+                    <h2>
+                    <span>School of Electronic Information, Hangzhou Dianzi University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>A set of submarine data recycling system was designed based on the Beidou satellite independently developed by China. The main control chip STM32L was responsible for controlling the working status. The communication positioning chip RD0538 collected and analyzed position information. Finally, the data to be transmitted back and the positioning data were transmitted through the Beidou first generation satellite. The test result showed that the positioning accuracy met the requirements for maritime use. The system had a simple structure and a small size, and the user could set the system transmission frequency.By reducing the power consumption, the system was able to extend its working time to 9 days.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Beidou%20satellite&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Beidou satellite;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=short%20message&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">short message;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=date%20recycling&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">date recycling;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=low%20power&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">low power;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=submerged%20buoy&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">submerged buoy;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=satellite%20communications&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">satellite communications;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-08-09</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>Natural Science Foundation of Zhejiang (LY18F030006);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <div class="p1">
+                    <p id="35">随着我国对海洋资源需求的不断增加, 浮标、潜标系统成为了海洋环境监测、资源获取的重要组成部分<citation id="83" type="reference"><link href="3" rel="bibliography" /><link href="5" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>]</sup></citation>。浮标、潜标系统能够在海平面以下对海洋温度、盐度、海流剖面等环境数据进行长期、定点采集, 且具有不易受外部天气影响、隐蔽性好等特点。随着近年来海洋环境监测技术的发展, 浮标、潜标系统向着更高效、更可靠、更智能的方向发展。获取海洋数据的途径从回收整个潜标系统并导出数据转向通过无线电进行数据传输<citation id="84" type="reference"><link href="7" rel="bibliography" /><link href="9" rel="bibliography" /><link href="11" rel="bibliography" /><sup>[<a class="sup">3</a>,<a class="sup">4</a>,<a class="sup">5</a>]</sup></citation>, 使得数据的实时性得到大幅度提升。传统潜标不具有实时通讯功能且回收复杂。本文通过采用潜标搭载绞车<citation id="82" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>来控制浮标上浮及下沉, 浮标上搭载卫星通信装置, 以实现数据的实时传输。这不仅有效解决了传统潜标不能实时通讯和回收困难的问题, 同时保留了原有隐蔽好和不易受天气影响的优点。</p>
+                </div>
+                <div class="p1">
+                    <p id="36">许多研究人员在卫星通信<citation id="85" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>方面进行了深入研究<citation id="87" type="reference"><link href="17" rel="bibliography" /><link href="19" rel="bibliography" /><sup>[<a class="sup">8</a>,<a class="sup">9</a>]</sup></citation>, 其大多都依赖于海事卫星、GPS、铱星等以卫星通信定位技术为核心的应用。这些卫星系统都是由其他国家开发运营, 自主控制性和保密性不强, 容易发生信息泄露事件, 进而危及到国防安全<citation id="86" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>。北斗卫星导航系统由我国自主研发, 能够提供导航、定位、授时等服务, 并具有短报文通信功能<citation id="88" type="reference"><link href="23" rel="bibliography" /><link href="25" rel="bibliography" /><link href="27" rel="bibliography" /><link href="29" rel="bibliography" /><sup>[<a class="sup">11</a>,<a class="sup">12</a>,<a class="sup">13</a>,<a class="sup">14</a>]</sup></citation>。潜标采集相应海洋数据并保存, 当数据量充足后, 释放浮标至海平面, 将采集的环境数据及位置数据打包一并通过通信模块发送至北斗卫星, 北斗卫星将数据传送到相应接收人员, 实现数据实时传输;数据传送完成后, 浮标自动下沉并继续采集海洋环境数据。地面接收系统可将数据保存并发布在网络中, 方便科研人员远程实时查看相应数据;海上科研人员也可通过甲板接收机接收数据, 根据其中的位置信息前往相关海域可对系统进行维护或回收。</p>
+                </div>
+                <h3 id="37" name="37" class="anchor-tag"><b>1 系统总体设计</b></h3>
+                <h4 class="anchor-tag" id="38" name="38"><b>1.1 系统组成</b></h4>
+                <div class="p1">
+                    <p id="39">通信浮标由玻璃球体、天线、电路板、电池、水密接插件、压敏传感器等构成, 系统总体结构如图1所示。玻璃球体具有耐腐蚀、抗压性能好等特点, 能够有效保护其电子设备。电池负责提供电路板工作所需的能量, 电路板通过水密接插件与潜标或其他电子设备进行数据传输, 并由天线负责与卫星通信, 压敏传感器检测海深并控制系统是否工作。</p>
+                </div>
+                <div class="area_img" id="40">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201908013_040.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 系统总体结构" src="Detail/GetImg?filename=images/DZKK201908013_040.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 系统总体结构  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201908013_040.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 1. Overall system structure</p>
+
+                </div>
+                <h4 class="anchor-tag" id="41" name="41"><b>1.2 系统工作原理</b></h4>
+                <div class="p1">
+                    <p id="42">图2为系统工作原理图, 潜标上搭载绞车, 通过电缆与北斗通信浮标相连。当需要将数据传回时, 绞车释放电缆, 北斗浮标开始上浮, 上浮至海平面时, 北斗通信浮标搭载的水下压力开关闭合, 浮标开始工作, 接收潜标传感器收集的数据, 接收完成后再通过北斗卫星发送至陆面北斗指挥机, 陆上科研人员即可实时收到来自浮标传回的海洋环境数据。海上科研人员也可以通过甲板接收机同时接收相应数据, 并可以根据位置数据前往该海域对潜标系统进行维护或回收。当数据发送完毕后, 绞车开始收回浮标, 浮标下沉后发送任务结束。</p>
+                </div>
+                <div class="area_img" id="43">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201908013_043.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 系统工作原理图" src="Detail/GetImg?filename=images/DZKK201908013_043.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 系统工作原理图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201908013_043.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 2. System working principle diagram</p>
+
+                </div>
+                <h3 id="44" name="44" class="anchor-tag"><b>2 硬件设计</b></h3>
+                <div class="p1">
+                    <p id="45">通信浮标系统硬件框图如图2所示, 主要由北斗通信模块、功耗控制模块、电源模块、主控模块、以及接口模块这五部分组成。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">电池选用18650电池组供电, RD0538模块为北斗定位通信模块, 具有定位及短报文传输能力;微处理器通过UART与北斗模块进行数据通信。</p>
+                </div>
+                <div class="area_img" id="47">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201908013_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 系统硬件框图" src="Detail/GetImg?filename=images/DZKK201908013_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 系统硬件框图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201908013_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 3. Hardware block diagram of system</p>
+
+                </div>
+                <h4 class="anchor-tag" id="48" name="48"><b>2.1 主控电路</b></h4>
+                <div class="p1">
+                    <p id="49">系统以STM32L151C8T6作为核心控制器。STM32L1围绕工业标准32位内核Cortex-M3构建, STM32L系列针对低功耗应用而设计。芯片包括三路串口, UART2连接北斗定位通信模块用于控制模块的工作模式;UART3连接芯片MAX3232进行TTL-CMOS电平转换, 采用RS232接口, 用于接收海洋传感器的数据, 同时负责配置系统的工作参数, 配置工作参数时与计算机相连, 也可以作为其它功能扩展口。</p>
+                </div>
+                <h4 class="anchor-tag" id="50" name="50"><b>2.2 卫星通信电路</b></h4>
+                <div class="p1">
+                    <p id="51">系统采用卫星通信模块向北斗卫星<citation id="89" type="reference"><link href="31" rel="bibliography" /><link href="33" rel="bibliography" /><sup>[<a class="sup">15</a>,<a class="sup">16</a>]</sup></citation>发送数据, 通信芯片为RD0538。该芯片是一款北斗RDSS单模模块, 具备授时、定位、短报文传输等功能, 其集成度高、功耗低、体积小, 可大幅度降低硬件系统所占用的空间。该模块由5 V电源供电, 电源纹波电压小于50 mV。不同于GPS定位, 北斗定位属于主动定位, 在定位时需要发送一条定位申请至北斗卫星, 经过北斗中心控制系统计算后得出所在位置并通过报文再次将位置信息传回至设备。在发送模式时, 芯片收到串口的指令或数据后, 解析并形成数据流, 经整形、滤波、调制、放大后通过天线发送到卫星。在接收模式时, 芯片收到北斗RDSS卫星信号后, 经过滤波、放大、混频、模数转换等处理后, 通过3.3 V TTL电平串口输出;模块需要使用北斗SIM卡, 北斗民用卡的发送频率最高为每分钟一次。</p>
+                </div>
+                <h3 id="52" name="52" class="anchor-tag"><b>3 软件设计</b></h3>
+                <div class="p1">
+                    <p id="53">系统在海洋中向卫星发送定位数据时, 需要在控制各个模块的同时保证其稳定性。软件流程如图3所示, 系统上电后, 首先对内部时钟、IO、串口、中断等初始化, 为保证系统长时间稳定可靠运行, 引入看门狗定时器, 防止系统在受到未知干扰时出现工作异常。系统初始化完成后, 通过调用RD0538初始化函数, 对其所需要的资源初始化, 并查询SIM卡是否正常。随后对系统的工作参数进行配置, 发送AT指令可将对方北斗卡号、发送频率等进行查看或设置。参数设定结束后, 进入正常工作模式。正常工作分为两个状态, 定位申请以及报文传输。由于北斗民用卡的通信最高频率为每分钟一次, 所以在定位申请成功后, 需要等待一分钟后再进入报文传输。首先通过RS232接口接收传感器数据, 当数据接收完成后, 开始定位申请, 定位申请成功后将收到卫星传回的经纬度等信息, 解析并将所有数据打包, 等待一分钟后在进行报文发送。考虑到存在天气原因导致信号弱等情况, 如果长时间无法与卫星正常通信, 持续工作会导致系统电量消耗过大, 故在此加入发送检测机制, 当发送失败超过一定次数时, 自动下沉并休眠以降低功耗, 等待下一轮发送周期。</p>
+                </div>
+                <div class="area_img" id="54">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201908013_054.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 系统软件框图" src="Detail/GetImg?filename=images/DZKK201908013_054.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 系统软件框图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201908013_054.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 4. Software block diagram of system</p>
+
+                </div>
+                <h3 id="55" name="55" class="anchor-tag"><b>4 系统测试</b></h3>
+                <div class="p1">
+                    <p id="56">通过示波器、高精度GPS定位仪、串口调试助手、铱星通信模块、甲板接收机等对该系统的定位模块、功耗模块以及稳定性进行测试, 保证该系统可以能在海洋中稳定长期使用。图4为系统硬件实物图。</p>
+                </div>
+                <div class="area_img" id="57">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201908013_057.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 系统硬件实物图" src="Detail/GetImg?filename=images/DZKK201908013_057.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 系统硬件实物图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201908013_057.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 5. System hardware diagram</p>
+
+                </div>
+                <h4 class="anchor-tag" id="58" name="58"><b>4.1 定位精度测试</b></h4>
+                <div class="p1">
+                    <p id="59">科研人员需要前往潜标所在海域对潜标系统进行回收或维护, 系统的定位坐标决定了科研人员是否能顺利找到相应潜标, 故对系统的定位精度进行测试。测试工具包括串口调试助手和高精度GPS定位仪Trimble JUNO SA。通过测量同一时刻该系统获取的坐标与GPS定位仪获取的坐标之间的距离, 可得出系统的定位误差。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">将地球视为一个球体, 球面上任意两点之间的弧长<i>d</i>计算公式为</p>
+                </div>
+                <div class="p1">
+                    <p id="61"><mathml id="62"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><mo>=</mo><mn>2</mn><mi>R</mi><mo>×</mo><mrow><mi>arcsin</mi></mrow><msqrt><mrow><mi>sin</mi><mfrac><mrow><mn>2</mn><mtext>l</mtext><mtext>a</mtext><mtext>t</mtext><msub><mrow></mrow><mn>1</mn></msub><mo>-</mo><mtext>l</mtext><mtext>a</mtext><mtext>t</mtext><msub><mrow></mrow><mn>2</mn></msub></mrow><mn>2</mn></mfrac><mo>+</mo><mi>cos</mi><mo stretchy="false"> (</mo><mtext>l</mtext><mtext>a</mtext><mtext>t</mtext><msub><mrow></mrow><mn>1</mn></msub><mo stretchy="false">) </mo><mo>×</mo><mi>cos</mi><mo stretchy="false"> (</mo><mtext>l</mtext><mtext>a</mtext><mtext>t</mtext><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">) </mo><mo>×</mo><mi>sin</mi><mfrac><mrow><mn>2</mn><mtext>l</mtext><mtext>o</mtext><mtext>n</mtext><msub><mrow></mrow><mn>1</mn></msub><mo>-</mo><mtext>l</mtext><mtext>o</mtext><mtext>n</mtext><msub><mrow></mrow><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mrow></msqrt></mrow></math></mathml>      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="63">其中, lon<sub>1</sub>、lat<sub>1</sub>和lon<sub>2</sub>、lat<sub>2</sub>分别为两点的经纬度坐标, 坐标采用弧度表示, <i>R</i>为地球赤道半径, 取6 378.137 km。定位测试数据如表1所示。</p>
+                </div>
+                <div class="area_img" id="64">
+                    <p class="img_tit"><b>表</b>1 <b>定位坐标测试</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 1. Positioning coordinate test</p>
+                    <p class="img_note"></p>
+                    <table id="64" border="1"><tr><td colspan="2"><br />GPS定位仪坐标</td><td colspan="2">系统坐标</td><td rowspan="2">距离/m</td></tr><tr><td><br />lon<sub>1</sub></td><td>lat<sub>1</sub></td><td>lon<sub>2</sub></td><td>lat<sub>2</sub></td></tr><tr><td>120.337 267 2</td><td>30.314 151 11</td><td>120.337 216</td><td>30.313 892</td><td>29.260</td></tr><tr><td><br />120.337 243 3</td><td>30.314 123 06</td><td>120.337 129</td><td>30.313 889</td><td>28.277</td></tr><tr><td><br />120.337 288 6</td><td>30.314 130 28</td><td>120.337 219</td><td>30.313 873</td><td>29.411</td></tr><tr><td><br />120.337 271 1</td><td>30.314 148 06</td><td>120.337 219</td><td>30.313 889</td><td>29.270</td></tr><tr><td><br />120.337 273 1</td><td>30.314 163 61</td><td>120.337 225</td><td>30.313 895</td><td>30.256</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="65">由表1数据可知:对于同一位置的坐标, 系统定位的坐标与GPS定位仪定位的坐标之间距离约为30 m, 符合海洋环境中使用的范围。</p>
+                </div>
+                <h4 class="anchor-tag" id="66" name="66"><b>4.2 系统功耗测试</b></h4>
+                <div class="p1">
+                    <p id="67">通过对系统功耗进行测试, 可以估算出其可持续工作时间。系统测试使用18650电池, 电压8.41 V, 容量为4 400 mA。对其电流消耗进行了实际测量, 测量结果如表2所示。</p>
+                </div>
+                <div class="area_img" id="68">
+                    <p class="img_tit"><b>表</b>2 <b>系统功耗</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 2. System power consumption</p>
+                    <p class="img_note"></p>
+                    <table id="68" border="1"><tr><td rowspan="2"><br />工作状态</td><td colspan="3"><br />电流消耗</td></tr><tr><td><br />min</td><td>max</td><td>unit</td></tr><tr><td><br />发射</td><td>1 200</td><td>2 000</td><td rowspan="3">mA</td></tr><tr><td><br />接收</td><td>70</td><td>100</td></tr><tr><td><br />睡眠</td><td>5</td><td>6</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="69">18 650电池的自放电率较低, 在此对自放电率忽略不计。DC-DC电压转换效率取90%, 发送一次数据需要经历两次发射状态, 一次定位申请, 一次进行数据发送, 每次发射状态持续时间不超过1 s。在不对系统进行功耗控制时, 系统首先进入定位申请发射状态, 发射成功后进入数据接收状态, 定位数据接收成功后等待一分钟进入数据发送状态, 发送成功后等待1 min进入下一轮定位申请发射状态。通过计算一轮发送周期内其平均电流, 用电池容量除以平均电流可估算出其工作时长</p>
+                </div>
+                <div class="p1">
+                    <p id="70"><mathml id="71"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>4</mn><mspace width="0.25em" /><mn>4</mn><mn>0</mn><mn>0</mn><mo>×</mo><mn>9</mn><mn>0</mn><mi>%</mi><mfrac><mrow><mn>1</mn><mn>2</mn><mn>0</mn></mrow><mrow><mn>2</mn><mo>×</mo><mn>2</mn><mspace width="0.25em" /><mn>0</mn><mn>0</mn><mn>0</mn><mo>+</mo><mn>1</mn><mn>1</mn><mn>8</mn><mo>+</mo><mn>1</mn><mn>0</mn><mn>0</mn></mrow></mfrac><mo>≈</mo><mn>3</mn><mn>0</mn></mrow></math></mathml>      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="72">在加入功耗控制后, 让单片机及通信模块定时进入休眠, 取系统休眠时最大消耗电流6 mA, 接收状态总共时间不低于20 s, 这里取28 s, 可得以下式, <i>n</i> (<i>n</i>≥2 min) 为发送间隔时间</p>
+                </div>
+                <div class="p1">
+                    <p id="73"><mathml id="74"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mn>4</mn><mspace width="0.25em" /><mn>4</mn><mn>0</mn><mn>0</mn><mo>×</mo><mn>9</mn><mn>0</mn><mi>%</mi><mo>×</mo><mfrac><mrow><mi>n</mi><mo>×</mo><mn>6</mn><mn>0</mn></mrow><mrow><mn>2</mn><mo>×</mo><mn>2</mn><mspace width="0.25em" /><mn>0</mn><mn>0</mn><mn>0</mn><mo>+</mo><mn>2</mn><mn>8</mn><mo>×</mo><mn>1</mn><mn>0</mn><mn>0</mn><mo>+</mo><mo stretchy="false"> (</mo><mtext>n</mtext><mo>×</mo><mn>6</mn><mn>0</mn><mo>-</mo><mn>3</mn><mn>0</mn><mo stretchy="false">) </mo><mo>×</mo><mn>6</mn></mrow></mfrac></mrow></math></mathml>      (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="75">当每隔2 min发送一次时, <i>n</i>=2, 工作时长约为65 h;当每隔10 min发送一次时, <i>n</i>=10, 则其工作时长约为232 h, 由此可见在采取了一系列降低功耗的措施后, 工作时长可大幅增加。</p>
+                </div>
+                <h4 class="anchor-tag" id="76" name="76"><b>4.3 稳定性测试</b></h4>
+                <div class="p1">
+                    <p id="77">稳定性测试通过在一定时间范围内按照某一频率向卫星发送数据, 分析数据接收情况, 可以得出系统是否工作稳定。测试分别使用北斗通信模块与铱星通信模块, 测试时间从23:00开始, 持续到第二天早上9:30, 数据发送间隔设置为10 min。测试结果如图6所示, 北斗与铱星模块在23:06成功发送了第一个数据, 测试结束时间是9:30, 期间理论总发送数据量为63个。北斗模块总共发送62个数据, 成功接收到了62个数据;铱星模块总共发送43个数据, 成功接收到了28个数据。由图可知铱星模块工作不稳定, 例如发送的第1个数据与第2个数据之间的时间间隔为23 min, 第3、4个数据丢失, 其平均发送间隔时间远超过10 min, 导致在规定时间内其发送的数据量更少, 同时容易出现数据丢失的情况。分析后发现铱星模块在结束休眠状态后, GPS重新启动并定位需要40 s以上的时间, 而且与卫星通信时也需要等待一定时间, 所以铱星的发送间隔经常大于10 min。北斗模块总共缺少1个数据, 由图可知北斗模块发送第36个数据的时间是5:06, 而理论第36个数据的时间是4:56, 分析后发现北斗模块未能成功定位导致直接跳过发送数据模式, 等待下一个发送周期, 故在4:56时未发送数据, 10 min后发送了第36个数据;因此之后发送数据的时间都比理论时间晚10 min。可见北斗模块稳定性优于铱星模块。北斗模块发送成功率更接近理论成功率, 工作更为稳定。</p>
+                </div>
+                <div class="area_img" id="78">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201908013_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 各通信模块数据发送时间分布图" src="Detail/GetImg?filename=images/DZKK201908013_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 各通信模块数据发送时间分布图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201908013_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 6. Data transmission time distribution map of each communication module</p>
+
+                </div>
+                <h3 id="79" name="79" class="anchor-tag"><b>5 结束语</b></h3>
+                <div class="p1">
+                    <p id="80">本文通过对潜标数据回收技术进行研究, 设计并实现了一种可行的潜标数据回收系统。该系统能够通过北斗卫星对数据进行可靠传输, 且具有体积小、结构简单、功耗低、运行可靠稳定等特点, 达到了系统的设计要求和性能指标。</p>
+                </div>
+                <div class="p1">
+                    <p id="81">随着对海洋资源探索的增加, 实时产生的海洋数据也将大幅增加, 数据回收面临新的挑战。目前北斗卫星服务区域有限, 随着北斗卫星系统全面建成以及覆盖区域逐渐广阔, 海洋探索也将走的更远。为满足更苛刻的海洋使用环境以及更灵活调节潜标工作参数, 减小定位误差和双向通信功能将是该领域下一个研究热点。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=0007502765557999&amp;v=MjI0ODl4VVNtRGQ5U0g3bjN4RTlmYnZuS3JpZlplWnZGeW5pVTdqSkpWc1JWVjI3R2JhNEhOYktxb3BBWStJR0JSTTh6&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 陈鹰, 杨灿军, 陶春辉, 等.海底观测系统[M].北京:海洋出版社, 2006.Chen Ying, Yang Canjun, Tao Chunhui, et al.Ocean observing system[M].Beijing:Ocean Press, 2006.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=0007502765107001&amp;v=MTk3Nzk3R2JhNEhOYktxbzVGWStzUERSTTh6eFVTbURkOVNIN24zeEU5ZmJ2bktyaWZaZVp2RnluaVU3akpKVnNSVlYy&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 赵进平.发展海洋监测技术的思考与实践[M].北京:海洋出版社, 2005.Zhao Jinping.Thinking and practice of developing marine monitoring technology[M].Beijing:Ocean Press, 2005.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DXKX201806006&amp;v=MzE0NzVxcUJ0R0ZyQ1VSN3FmWnVacEZ5L2tWcnJOSVRYQWRyRzRIOW5NcVk5RllvUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 徐立军, 侯朝焕, 鄢社锋, 等.深海潜标观测数据无线实时传输系统设计[J].电信科学, 2018 (6) :29-35.Xu Lijun, Hou Zhaohuan, Yan Shefeng, et al.Design of a wireless real-time observation data transmission system for deep ocean mooring[J].Telecommunications Science, 2018 (6) :29-35.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HYJS201201000&amp;v=MTA2OTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeS9rVnJyTkxUVEJmYkc0SDlQTXJvOUZaSVE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 黎明, 时海勇.基于北斗卫星的大型海洋浮标通信机制研究[J].海洋技术学报, 2012, 31 (1) :1-5.Li Ming, Shi Haiyong.Research of communication mechanism based on beidou satellite for large buoy[J].Ocean Technology, 2012, 31 (1) :1-5.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201411044&amp;v=MDQyMTNvOUJZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeS9rVnJyTklUZkFaYkc0SDlYTnI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 时慧晶.某型水下航行体长报文通信机制[J].电子科技, 2014, 27 (11) :151-155.Shi Huijing.A reliable communication mechanism of long messages for underwater vehicles[J].Electronic Science and Technology, 2014, 27 (11) :151-155.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JCKX201709026&amp;v=MjkyMDJDVVI3cWZadVpwRnkva1Zyck5MeTdBZHJHNEg5Yk1wbzlIWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 徐良波.水下绞车及其在实时传输潜标的应用[J].舰船科学技术, 2017, 39 (9) :132-134.Xu Liangbo.Underwater winch and the application to the real-time transmission latent buoyage[J].Ship Science and Technology, 2017, 39 (9) :132-134.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KJDZ201501008&amp;v=MzI0NzdJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZ5L2tWcnJOTGlmUGRMRzRIOVRNcm85RmI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 成跃进.现代卫星导航定位系统发展介绍[J].空间电子技术, 2015 (1) :17-25.Cheng Yuejin.The development intro of satellite navigation and positioning system[J].Space Electronic Technology, 2015 (1) :17-25.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JZCK201503110&amp;v=MTEzMzQva1Zyck5MemZJWmJHNEg5VE1ySTVFWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 任勇峰, 程艳, 文丰, 等.基于GPS与Iridium9523的信标机设计 [J].计算机测量与控制, 2015, 23 (3) :1052-1054.Ren Yongfeng, Cheng Yan, Wen Feng, et al.Design of beacon based on GPS and Iridium 9523[J].Computer Measurement &amp; Control, 2015, 23 (3) :1052-1054.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DSSS201315013&amp;v=MTE5MzZWcnJOSVQ3WWZiRzRIOUxOcW85RVo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZ5L2s=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 吴志宏, 翟成瑞, 王红亮.基于单片机的信标机系统设计 [J].电视技术, 2013, 37 (15) :44-47.Wu Zhihong, Zhai Chengrui, Wang Hongliang.Design of beacon system based on microcontroller[J].Video Engineering, 2013, 37 (15) :44-47.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HYFZ201706035&amp;v=MTM4MjR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnkva1Zyck5MVFROZExHNEg5Yk1xWTlHWVlRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 汪嘉宁, 王凡, 张林林.西太平洋深海科学观测网的建设和运行[J].海洋与湖沼, 2017 (6) :66-69.Wang Jianing, Wang Fan, Zhang Linlin.Construction and operation of the western pacific deep-sea scientific observation network[J].Oceanologia Et Limnologia Sinica, 2017 (6) :66-69.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QUDW201602026&amp;v=MTA3NTZZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeS9rVnJyTk5EalBlYkc0SDlmTXJZOUg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 陈洪武, 胡斌, 田铖.北斗卫星导航系统在海洋工程中的应用[J].全球定位系统, 2016, 41 (2) :121-124.Chen Hongwu, Hu Bin, Tian Chen.Application of beidou satellite system in ocean engineering[J].Gnss World of China, 2016, 41 (2) :121-124.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QUDW201604022&amp;v=MjAyODNQZWJHNEg5Zk1xNDlIWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnkva1Zyck5ORGo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 王世明, 李晴.基于北斗卫星导航系统的海洋监测浮标通信系统设计与应用[J].全球定位系统, 2016, 41 (4) :102-105.Wang Shiming, Li Qing.Design and application of ocean monitoring buoy communication system based on Beidou satellite navigation system[J].GNSS World of China, 2016, 41 (4) :102-105.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JCKX201402024&amp;v=MTU1NDhIOVhNclk5SFlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZ5L2tWcnJOTHk3QWRyRzQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 王嘉鑫.一种适用于水上漂浮目标的北斗信标机[J].舰船科学技术, 2014, 36 (2) :108-111.Wang Jiaxin.A Beidou satellite beacon applies for the water floating target[J].Ship Science and Technology, 2014, 36 (2) :108-111.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SXDG201402015&amp;v=MzEyMjY0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZ5L2tWcnJOTmpYUGFiRzRIOVhNclk5RVlZUUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 洪常委.北斗卫星导航系统在海洋浮标中的应用[J].声学与电子工程, 2014 (2) :41-43.Hong Changwei.Application of Beidou satellite navigation system in ocean buoys[J].Acoustics and Electronics Engineering, 2014 (2) :41-43.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SZTJ2013S2011&amp;v=MDY1MTMzenFxQnRHRnJDVVI3cWZadVpwRnkva1Zyck5OamZmWkxHNEg5S3ZyWTlFWllRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 姜萍, 戎文强, 孙健.北斗二代RDSS与RNSS组合技术分析及应用实例[J].数字通信世界, 2013 (S2) :22-24.Jiang Ping, Rong Wenqiang, Sun Jian.The analysis and application of RDSS and RNSS combination technology of BDS[J].Digital Communication World, 2013 (S2) :22-24.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1011084906.nh&amp;v=MTUzOTlHRnJDVVI3cWZadVpwRnkva1Zyck5WRjI2SDdPd0d0ak1xWkViUElRS0RIODR2UjRUNmo1NE8zenFxQnQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> 张鸣.北斗一代卫星导航接收机射频通道技术研究[D].北京:北方工业大学, 2011.Zhang Ming.Research of RF channel technology of Beidou star I[D].Beijing:North China University of Technology, 2011.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="DZKK201908013" />
+        <input id="dpi" type="hidden" value="299" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201908013&amp;v=MDQzMzlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeS9rVnJyTklUZkFaYkc0SDlqTXA0OUVaNFE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=P0ea_aWnQfx5aXr8bS4u3GGmKX_ORbqAf_1HJ_4Trvg1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=vAscMyvIPP9NePnbGPkqJ0A5tHOvnzl65tGuRDsf9xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

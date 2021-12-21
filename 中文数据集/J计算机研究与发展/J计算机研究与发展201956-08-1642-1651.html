@@ -1,0 +1,1079 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637127883144025000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJFYZ201908007%26RESULT%3d1%26SIGN%3dh1c1bq5i2QkMy10pGQ0RdTWcR0A%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JFYZ201908007&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JFYZ201908007&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201908007&amp;v=MDIwMjNVUkxPZVplUnJGeXZnVjcvS0x5dlNkTEc0SDlqTXA0OUZZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#77" data-title="&lt;b&gt;1 相关工作&lt;/b&gt; "><b>1 相关工作</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#81" data-title="&lt;b&gt;2 模  型&lt;/b&gt; "><b>2 模  型</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#83" data-title="&lt;b&gt;2.1 模型概述&lt;/b&gt;"><b>2.1 模型概述</b></a></li>
+                                                <li><a href="#87" data-title="&lt;b&gt;2.2 RNN单元: LSTM, GRU和MGU&lt;/b&gt;"><b>2.2 RNN单元: LSTM, GRU和MGU</b></a></li>
+                                                <li><a href="#122" data-title="&lt;b&gt;2.3 目标函数和优化方法&lt;/b&gt;"><b>2.3 目标函数和优化方法</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#129" data-title="&lt;b&gt;3 实  验&lt;/b&gt; "><b>3 实  验</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#131" data-title="&lt;b&gt;3.1 度量标准&lt;/b&gt;"><b>3.1 度量标准</b></a></li>
+                                                <li><a href="#144" data-title="&lt;b&gt;3.2 数据说明&lt;/b&gt;"><b>3.2 数据说明</b></a></li>
+                                                <li><a href="#150" data-title="&lt;b&gt;3.3 实验结果&lt;/b&gt;"><b>3.3 实验结果</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#176" data-title="&lt;b&gt;4 总  结&lt;/b&gt; "><b>4 总  结</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#78" data-title="图1 用于预测的&lt;i&gt;N&lt;/i&gt;层神经网络模型">图1 用于预测的<i>N</i>层神经网络模型</a></li>
+                                                <li><a href="#88" data-title="图2 各种典型的门控RNN单元中的数据流动和运算">图2 各种典型的门控RNN单元中的数据流动和运算</a></li>
+                                                <li><a href="#121" data-title="图3 MIXGU模型中的数据流动和运算">图3 MIXGU模型中的数据流动和运算</a></li>
+                                                <li><a href="#158" data-title="&lt;b&gt;表1 ARIMA和不同网络隐单元数量下MIXGUs, LSTMs, GRUs和MGUs的模型性能&lt;/b&gt;"><b>表1 ARIMA和不同网络隐单元数量下MIXGUs, LSTMs, GRUs和MGUs的模型性能</b></a></li>
+                                                <li><a href="#159" data-title="&lt;b&gt;表2 不同网络深度下MIXGUs, LSTMs, GRUs和MGUs的模型性能&lt;/b&gt;"><b>表2 不同网络深度下MIXGUs, LSTMs, GRUs和MGUs的模型性能</b></a></li>
+                                                <li><a href="#160" data-title="图4 NSMTS的实际数据与MIXGU, LSTM, GRU和MGU模型的预测及学习曲线">图4 NSMTS的实际数据与MIXGU, LSTM, GRU和MGU模型的预测及学习曲线</a></li>
+                                                <li><a href="#175" data-title="图5 SMIXGU&lt;sub&gt;&lt;i&gt;t&lt;/i&gt;&lt;/sub&gt;中&lt;b&gt;&lt;i&gt;W&lt;/i&gt;&lt;/b&gt;&lt;sub&gt;&lt;i&gt;s&lt;/i&gt;&lt;/sub&gt;和&lt;b&gt;&lt;i&gt;W&lt;/i&gt;&lt;/b&gt;&lt;sub&gt;&lt;i&gt;s&lt;/i&gt;&lt;/sub&gt;的动态变化">图5 SMIXGU<sub><i>t</i></sub>中<b><i>W</i></b><sub><i>s</i></sub>和<b><i>W</i></b><sub><i>s</i></sub>的动态变化</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+                                    <dd class="subnode">
+                                        <h6>
+                                            <a href="#a_footnote">注释</a>
+
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="317">
+
+
+                                    <a id="bibliography_1" title="Sch&#246;neburg E.Stock price prediction using neural networks:A project report[J].Neurocomputing, 1990, 2 (1) :17- 27" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Stock price prediction using neural networks : A project report">
+                                        <b>[1]</b>
+                                        Sch&#246;neburg E.Stock price prediction using neural networks:A project report[J].Neurocomputing, 1990, 2 (1) :17- 27
+                                    </a>
+                                </li>
+                                <li id="319">
+
+
+                                    <a id="bibliography_2" title="Yao Huaxiu, Wu Fei, Ke Jintao, et al.Deep multi-view spatial-temporal network for taxi demand prediction[C] // Proc of the 32nd AAAI Conf on Artificial Intelligence.Menlo Park, CA:AAAI Press, 2018:2588- 2595" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep multi-view spatial-temporal network for taxi demand prediction">
+                                        <b>[2]</b>
+                                        Yao Huaxiu, Wu Fei, Ke Jintao, et al.Deep multi-view spatial-temporal network for taxi demand prediction[C] // Proc of the 32nd AAAI Conf on Artificial Intelligence.Menlo Park, CA:AAAI Press, 2018:2588- 2595
+                                    </a>
+                                </li>
+                                <li id="321">
+
+
+                                    <a id="bibliography_3" title="Shi Xingjian, Chen Zhourong, Wang Hao, et al.Convolutional LSTM network:A machine learning approach for precipitation nowcasting[C] //Advances in Neural Information Processing Systems.New York:ACM, 2015:802- 810" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Convolutional lstm network:A machine learning approach for precipitation nowcasting">
+                                        <b>[3]</b>
+                                        Shi Xingjian, Chen Zhourong, Wang Hao, et al.Convolutional LSTM network:A machine learning approach for precipitation nowcasting[C] //Advances in Neural Information Processing Systems.New York:ACM, 2015:802- 810
+                                    </a>
+                                </li>
+                                <li id="323">
+
+
+                                    <a id="bibliography_4" title="Ouyang Jianquan, Zhou Yong, Tang Huanrong.A meteorological prediction model based on storm and online sequential extreme learning machine[J].Journal of Computer Research and Development, 2017, 54 (8) :1736- 1743 (in Chinese) (欧阳健全, 周勇, 唐欢容.基于Storm的在线序列极限学习机的气象预测[J].计算机研究与发展, 2017, 54 (8) :1736- 1743) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201708010&amp;v=MzEwOTJwNDlFWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJyRnl2Z1Y3L0tMeXZTZExHNEg5Yk0=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                        Ouyang Jianquan, Zhou Yong, Tang Huanrong.A meteorological prediction model based on storm and online sequential extreme learning machine[J].Journal of Computer Research and Development, 2017, 54 (8) :1736- 1743 (in Chinese) (欧阳健全, 周勇, 唐欢容.基于Storm的在线序列极限学习机的气象预测[J].计算机研究与发展, 2017, 54 (8) :1736- 1743) 
+                                    </a>
+                                </li>
+                                <li id="325">
+
+
+                                    <a id="bibliography_5" title="Chen Zhi, Ivanov P C, Hu Kun, et al.Effect of nonstationarities on detrended fluctuation analysis[J].Physical Review E, 2002, 65 (4) :041107" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Effect of nonstationarities on detrended fluctuation analysis">
+                                        <b>[5]</b>
+                                        Chen Zhi, Ivanov P C, Hu Kun, et al.Effect of nonstationarities on detrended fluctuation analysis[J].Physical Review E, 2002, 65 (4) :041107
+                                    </a>
+                                </li>
+                                <li id="327">
+
+
+                                    <a id="bibliography_6" title="Das S.Time Series Analysis[M].Princeton, NJ:Princeton University Press, 1994" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Time Series Analysis">
+                                        <b>[6]</b>
+                                        Das S.Time Series Analysis[M].Princeton, NJ:Princeton University Press, 1994
+                                    </a>
+                                </li>
+                                <li id="329">
+
+
+                                    <a id="bibliography_7" title="Chatfield C.The Analysis of Time Series:An Introduction[M].New York:Chapman and Hall/CRC, 2016" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The Analysis of Time Series:An Introduction">
+                                        <b>[7]</b>
+                                        Chatfield C.The Analysis of Time Series:An Introduction[M].New York:Chapman and Hall/CRC, 2016
+                                    </a>
+                                </li>
+                                <li id="331">
+
+
+                                    <a id="bibliography_8" title="Xue Jingming, Zhou Sihang, Liu Qiang, et al.Financial time series prediction using ℓ2, 1RF-ELM[J].Neurocomputing, 2018, 277:176- 186" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES87F3500309B5481459335AA7A17DE679&amp;v=MDA1MzNsZkNwYlEzNU4xaHg3Mjd3S289TmlmT2ZidS9hTkxKcjQ5R1pPSjlDWGd4emhJVzR6eCtUUTZUcTJNMGZzYmhRNzJXQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                        Xue Jingming, Zhou Sihang, Liu Qiang, et al.Financial time series prediction using ℓ2, 1RF-ELM[J].Neurocomputing, 2018, 277:176- 186
+                                    </a>
+                                </li>
+                                <li id="333">
+
+
+                                    <a id="bibliography_9" title="Box G E P, Jenkins G M, Reinsel G C, et al.Time Series Analysis:Forecasting and Control[M].New York:John Wiley &amp;amp; Sons, 2015" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Time Series Analysis:Forecasting and Control">
+                                        <b>[9]</b>
+                                        Box G E P, Jenkins G M, Reinsel G C, et al.Time Series Analysis:Forecasting and Control[M].New York:John Wiley &amp;amp; Sons, 2015
+                                    </a>
+                                </li>
+                                <li id="335">
+
+
+                                    <a id="bibliography_10" title="Winters P R.Forecasting sales by exponentially weighted moving averages[J].Management Science, 1960, 6 (3) :324- 342" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJIF&amp;filename=SJIF13022100018873&amp;v=MTIwNDJLN0h0UE9ybzlGWk9vSEJIczZvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMcklJMXNRYWhBPU5pZkNhTA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                        Winters P R.Forecasting sales by exponentially weighted moving averages[J].Management Science, 1960, 6 (3) :324- 342
+                                    </a>
+                                </li>
+                                <li id="337">
+
+
+                                    <a id="bibliography_11" title="Goodfellow I, Bengio Y, Courville A.Deep Learning[M].Cambridge, MA:MIT Press, 2016" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep Learning">
+                                        <b>[11]</b>
+                                        Goodfellow I, Bengio Y, Courville A.Deep Learning[M].Cambridge, MA:MIT Press, 2016
+                                    </a>
+                                </li>
+                                <li id="339">
+
+
+                                    <a id="bibliography_12" title="Maguire L P, Roche B, McGinnity T M, et al.Predicting a chaotic time series using a fuzzy neural network[J].Information Sciences, 1998, 112 (1/2/3/4) :125- 136" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011601419787&amp;v=MzA2MTBETnFZOUVZT29HQzNRK29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxySUkxc1FhaEE9TmlmT2ZiSzdIdA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                        Maguire L P, Roche B, McGinnity T M, et al.Predicting a chaotic time series using a fuzzy neural network[J].Information Sciences, 1998, 112 (1/2/3/4) :125- 136
+                                    </a>
+                                </li>
+                                <li id="341">
+
+
+                                    <a id="bibliography_13" >
+                                        <b>[13]</b>
+                                    Bengio Y, Simard P, Frasconi P.Learning long-term dependencies with gradient descent is difficult[J].IEEE Transactions on Neural Networks, 1994, 5 (2) :157- 166</a>
+                                </li>
+                                <li id="343">
+
+
+                                    <a id="bibliography_14" title="Greff K, Srivastava R K, Koutn&#237;k J, et al.LSTM:A search space odyssey[J].IEEE Transactions on Neural Networks and Learning Systems, 2017, 28 (10) :2222- 2232" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=LSTM:a search space odyssey">
+                                        <b>[14]</b>
+                                        Greff K, Srivastava R K, Koutn&#237;k J, et al.LSTM:A search space odyssey[J].IEEE Transactions on Neural Networks and Learning Systems, 2017, 28 (10) :2222- 2232
+                                    </a>
+                                </li>
+                                <li id="345">
+
+
+                                    <a id="bibliography_15" title="Hochreiter S, Schmidhuber J.Long short-term memory[J].Neural Computation, 1997, 9 (8) :1735- 1780" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJBK&amp;filename=SJBK15090500014198&amp;v=MDEwMTMxc1FhaEE9TmlmSlpiSzlIdGpNcW85RlpPb0xEWFV4b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTHJJSQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                        Hochreiter S, Schmidhuber J.Long short-term memory[J].Neural Computation, 1997, 9 (8) :1735- 1780
+                                    </a>
+                                </li>
+                                <li id="347">
+
+
+                                    <a id="bibliography_16" title="Yao Huaxiu, Tang Xianfeng, Wei Hua, et al.Revisiting spatial-temporal similarity:A deep learning framework for traffic prediction[C] // Proc of 2019 AAAI Conf on Artificial Intelligence (AAAI’19) .2019" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Revisiting spatial-temporal similarity:A deep learning framework for traffic prediction">
+                                        <b>[16]</b>
+                                        Yao Huaxiu, Tang Xianfeng, Wei Hua, et al.Revisiting spatial-temporal similarity:A deep learning framework for traffic prediction[C] // Proc of 2019 AAAI Conf on Artificial Intelligence (AAAI’19) .2019
+                                    </a>
+                                </li>
+                                <li id="349">
+
+
+                                    <a id="bibliography_17" title="Jozefowicz R, Zaremba W, Sutskever I.An empirical exploration of recurrent network architectures[C] // Proc of the 32nd Int Conf on Machine Learning.New York:ACM, 2015:2342- 2350" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=&amp;quot;An empirical exploration of recurrent network architectures &amp;quot;">
+                                        <b>[17]</b>
+                                        Jozefowicz R, Zaremba W, Sutskever I.An empirical exploration of recurrent network architectures[C] // Proc of the 32nd Int Conf on Machine Learning.New York:ACM, 2015:2342- 2350
+                                    </a>
+                                </li>
+                                <li id="351">
+
+
+                                    <a id="bibliography_18" title="Cho K, Van Merri&#235;nboer B, Bahdanau D, et al.On the properties of neural machine translation:Encoder-decoder approaches[J].arXiv preprint arXiv:1409.1259, 2014" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=On the properties of neural machine translation:Encoder-decoder approaches">
+                                        <b>[18]</b>
+                                        Cho K, Van Merri&#235;nboer B, Bahdanau D, et al.On the properties of neural machine translation:Encoder-decoder approaches[J].arXiv preprint arXiv:1409.1259, 2014
+                                    </a>
+                                </li>
+                                <li id="353">
+
+
+                                    <a id="bibliography_19" title="Fu Rui, Zhang Zuo, Li Li.Using LSTM and GRU neural network methods for traffic flow prediction[C] // Proc of the 31st Youth Academic Annual Conf of Chinese Association of Automation.Piscataway, NJ:IEEE, 2016:324- 328" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Using LSTM and GRU Neural Network Methods for Traffic Flow Prediction">
+                                        <b>[19]</b>
+                                        Fu Rui, Zhang Zuo, Li Li.Using LSTM and GRU neural network methods for traffic flow prediction[C] // Proc of the 31st Youth Academic Annual Conf of Chinese Association of Automation.Piscataway, NJ:IEEE, 2016:324- 328
+                                    </a>
+                                </li>
+                                <li id="355">
+
+
+                                    <a id="bibliography_20" title="Zhou Guobing, Wu Jianxin, Zhang Chenlin, et al.Minimal gated unit for recurrent neural networks[J].International Journal of Automation and Computing, 2016, 13 (3) :226- 234" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JDYS201603002&amp;v=Mjg3NDk5Zk1ySTlGWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJyRnl2Z1Y3L0tMeW5TZmJHNEg=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[20]</b>
+                                        Zhou Guobing, Wu Jianxin, Zhang Chenlin, et al.Minimal gated unit for recurrent neural networks[J].International Journal of Automation and Computing, 2016, 13 (3) :226- 234
+                                    </a>
+                                </li>
+                                <li id="357">
+
+
+                                    <a id="bibliography_21" title="Chung J, Gulcehre C, Cho K H, et al.Empirical evaluation of gated recurrent neural networks on sequence modeling[J].arXiv preprint arXiv:1412.3555, 2014" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Empirical evaluation of gated recurrent neural networks on sequence modeling">
+                                        <b>[21]</b>
+                                        Chung J, Gulcehre C, Cho K H, et al.Empirical evaluation of gated recurrent neural networks on sequence modeling[J].arXiv preprint arXiv:1412.3555, 2014
+                                    </a>
+                                </li>
+                                <li id="359">
+
+
+                                    <a id="bibliography_22" title="Melnyk I, Banerjee A.Estimating structured vector autoregressive models[C] //Proc of the 33rd Int Conf on Machine Learning.New York:ACM, 2016:830- 839" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Estimating structured vector autoregressive models">
+                                        <b>[22]</b>
+                                        Melnyk I, Banerjee A.Estimating structured vector autoregressive models[C] //Proc of the 33rd Int Conf on Machine Learning.New York:ACM, 2016:830- 839
+                                    </a>
+                                </li>
+                                <li id="361">
+
+
+                                    <a id="bibliography_23" title="ao L J, Tay F E H.Support vector machine with adaptive parameters in financial time series forecasting[J].IEEE Transactions on Neural Networks, 2003, 14 (6) :1506- 1518" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Support Vector Machine with Adaptive Parameters in Financial Time Series Forecasting">
+                                        <b>[23]</b>
+                                        ao L J, Tay F E H.Support vector machine with adaptive parameters in financial time series forecasting[J].IEEE Transactions on Neural Networks, 2003, 14 (6) :1506- 1518
+                                    </a>
+                                </li>
+                                <li id="363">
+
+
+                                    <a id="bibliography_24" title="Li Jiahan, Chen Weiye.Forecasting macroeconomic time series:LASSO-based approaches and their forecast combinations with dynamic factor models[J].International Journal of Forecasting, 2014, 30 (4) :996- 1015" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14061600113352&amp;v=Mjc3NjBaZW9NRDNrN29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxySUkxc1FhaEE9TmlmT2ZiSzhIdGZOcVk5Rg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[24]</b>
+                                        Li Jiahan, Chen Weiye.Forecasting macroeconomic time series:LASSO-based approaches and their forecast combinations with dynamic factor models[J].International Journal of Forecasting, 2014, 30 (4) :996- 1015
+                                    </a>
+                                </li>
+                                <li id="365">
+
+
+                                    <a id="bibliography_25" title="Graves A.Generating sequences with recurrent neural networks[J].arXiv preprint arXiv:1308.0850, 2013" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Generating sequences with recurrent neural networks">
+                                        <b>[25]</b>
+                                        Graves A.Generating sequences with recurrent neural networks[J].arXiv preprint arXiv:1308.0850, 2013
+                                    </a>
+                                </li>
+                                <li id="367">
+
+
+                                    <a id="bibliography_26" title="Zhang G P.Time series forecasting using a hybrid ARIMA and neural network model[J].Neurocomputing, 2003, 50:159- 175" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501914443&amp;v=MDQ5ODJvTENIZzZvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMcklJMXNRYWhBPU5pZk9mYks3SHRETnFvOUViZQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[26]</b>
+                                        Zhang G P.Time series forecasting using a hybrid ARIMA and neural network model[J].Neurocomputing, 2003, 50:159- 175
+                                    </a>
+                                </li>
+                                <li id="369">
+
+
+                                    <a id="bibliography_27" title="Kingma D P, Ba J.Adam:A method for stochastic optimization[J].arXiv preprint arXiv:1412.6980, 2014" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Adam:A method for stochastic optimization">
+                                        <b>[27]</b>
+                                        Kingma D P, Ba J.Adam:A method for stochastic optimization[J].arXiv preprint arXiv:1412.6980, 2014
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JFYZ" target="_blank">计算机研究与发展</a>
+                2019,56(08),1642-1651 DOI:10.7544/issn1000-1239.2019.20190326            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于混合门单元的非平稳时间序列预测</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%88%98%E9%A2%89%E7%BE%B2&amp;code=42589266&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">刘颉羲</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%88%E6%9D%BE%E7%81%BF&amp;code=08081378&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陈松灿</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%A8%A1%E5%BC%8F%E5%88%86%E6%9E%90%E4%B8%8E%E6%9C%BA%E5%99%A8%E6%99%BA%E8%83%BD%E5%B7%A5%E4%B8%9A%E5%92%8C%E4%BF%A1%E6%81%AF%E5%8C%96%E9%83%A8%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4(%E5%8D%97%E4%BA%AC%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9%E5%A4%A7%E5%AD%A6)&amp;code=0014291&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">模式分析与机器智能工业和信息化部重点实验室(南京航空航天大学)</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>非平稳多变量时间序列 (non-stationary multivariate time series, NSMTS) 预测目前仍是一个具有挑战性的任务.基于循环神经网络的深度学习模型, 尤其是基于长短期记忆 (long short-term memory, LSTM) 和门循环单元 (gated recurrent unit, GRU) 的神经网络已获得了令人印象深刻的预测性能.尽管LSTM结构上较为复杂, 却并不总是在性能上占优.最近提出的最小门单元 (minimal gated unit, MGU) 神经网络具有更简单的结构, 并在图像处理和一些序列处理问题中能够提升训练效率.更为关键的是, 实验中我们发现该门单元可以高效运用于NSMTS的预测, 并达到了与基于LSTM和GRU的神经网络相当的预测性能.然而, 基于这3类门单元的神经网络中, 没有任何一类总能保证性能上的优势.为此提出了一种线性混合门单元 (MIX gated unit, MIXGU) , 试图利用该单元动态调整GRU和MGU的混合权重, 以便在训练期间为网络中的每个MIXGU获得更优的混合结构.实验结果表明, 与基于单一门单元的神经网络相比, 混合2类门单元的MIXGU神经网络具有更优的预测性能.</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%9D%9E%E5%B9%B3%E7%A8%B3%E5%A4%9A%E5%8F%98%E9%87%8F%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">非平稳多变量时间序列;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">循环神经网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%95%BF%E7%9F%AD%E6%9C%9F%E8%AE%B0%E5%BF%86&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">长短期记忆;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%97%A8%E5%BE%AA%E7%8E%AF%E5%8D%95%E5%85%83&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">门循环单元;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%9C%80%E5%B0%8F%E9%97%A8%E5%8D%95%E5%85%83&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">最小门单元;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B7%B7%E5%90%88%E9%97%A8%E5%8D%95%E5%85%83&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">混合门单元;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    *陈松灿, s.chen@nuaa.edu.cn;
+                                </span>
+                                <span>
+                                    刘颉羲, liujiexi@nuaa.edu.cn;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2019-06-03</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金项目 (61732006);</span>
+                    </p>
+            </div>
+                    <h1><b>Non-Stationary Multivariate Time Series Prediction with MIX Gated Unit</b></h1>
+                    <h2>
+                    <span>Liu Jiexi</span>
+                    <span>Chen Songcan</span>
+            </h2>
+                    <h2>
+                    <span>MIIT Key Laboratory of Pattern Analysis and Machine Intelligence (Nanjing University of Aeronautics and Astronautics)</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Non-stationary multivariate time series (NSMTS) forecasting is still a challenging issue nowadays. The existing deep learning models based on recurrent neural networks (RNNs) , especially long short-term memory (LSTM) and gated recurrent unit (GRU) neural networks, have received impressive performance in prediction. Although the architecture of the LSTM is relatively complex, it cannot always dominate in performance. Latest researches show that with a simpler gated unit structure, the minimal gated unit (MGU) can not only simplify the network architecture, but also improve the training efficiency in computer vision and some sequence problems. Most importantly, our experiments show that this kind of unit can be effectively applied to the NSMTS predictions and achieve comparable results with LSTM and MGU neural networks. However, none of the three gated unit based neural networks can always dominate in performance over all the NSMTS. Therefore, in this paper we propose a novel linear MIX gated unit (MIXGU) . This gated unit can adjust the importance weights of GRU and MGU dynamically to achieve a better hybrid structure for each MIXGU in the network during training. The experimental results show that this MIXGU neural network has higher prediction performance than other state-of-the-art one gated unit neural network models.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=non-stationary%20multivariate%20time%20series%20(NSMTS)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">non-stationary multivariate time series (NSMTS) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=recurrent%20neural%20networks%20(RNNs)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">recurrent neural networks (RNNs) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=long%20short-term%20memory%20(LSTM)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">long short-term memory (LSTM) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=gated%20recurrent%20unit%20(GRU)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">gated recurrent unit (GRU) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=minimal%20gated%20unit%20(MGU)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">minimal gated unit (MGU) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=MIX%20gated%20unit%20(MIXGU)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">MIX gated unit (MIXGU) ;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                            <b>Author：</b>
+                                                        <span>
+                                    Liu Jiexi, born in 1993.Master candidate. Student member of CCF. Her main research interests include machine learning and pattern recognition. <image id="313" type="" href="images/JFYZ201908007_31300.jpg" display="inline" placement="inline"><alt></alt></image>;
+                                </span>
+                                <span>
+                                    Chen Songcan, born in 1962.Professor and PhD supervisor.Senior member of CCF. His main research interests include pattern recognition, machine learning and neural computing.<image id="316" type="" href="images/JFYZ201908007_31600.jpg" display="inline" placement="inline"><alt></alt></image>;
+                                </span>
+                    </p>
+                                    <p><b>Received：</b> 2019-06-03</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>supported by the National Natural Science Foundation of China (61732006);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <div class="p1">
+                    <p id="67">时间序列预测在科学和社会的各个领域起着重要的作用, 例如对股票价格<citation id="371" type="reference"><link href="317" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>、交通状况<citation id="372" type="reference"><link href="319" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>和天气状况<citation id="373" type="reference"><link href="321" rel="bibliography" /><link href="323" rel="bibliography" /><sup>[<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>等的预测.然而这些任务的复杂性导致了预测的挑战性, 通常归咎于时间序列的非平稳性以及多个变量之间的动态依赖性等, 并为此促发了一系列的研究.</p>
+                </div>
+                <div class="p1">
+                    <p id="68">一般而言, 时间序列大致可被分为平稳和非平稳2类<citation id="374" type="reference"><link href="325" rel="bibliography" /><link href="327" rel="bibliography" /><sup>[<a class="sup">5</a>,<a class="sup">6</a>]</sup></citation>.给定同一时间序列的2个子序列<i>x</i><sub><i>t</i><sub>1</sub></sub>, <i>x</i><sub><i>t</i><sub>2</sub></sub>, …, <i>x</i><sub><i>t</i><sub><i>k</i></sub></sub>和<i>x</i><sub><i>t</i><sub>1+<i>τ</i></sub></sub>, <i>x</i><sub><i>t</i><sub>2+<i>τ</i></sub></sub>, …, <i>x</i><sub><i>t</i><sub><i>k</i>+<i>τ</i></sub></sub>, 如果对任意<i>τ</i>, 2个子序列的联合统计分布相同, 则称该时间序列为平稳序列.而事实上, 现实中大部分时间序列难以满足上述条件, 因此形成了所谓的非平稳时间序列.此类时间序列中, 非平稳多变量时间序列 (NSMTS) 存在相对广泛, 因此对于NSMTS的预测成为了重要和持续的研究主题<citation id="375" type="reference"><link href="327" rel="bibliography" /><link href="329" rel="bibliography" /><link href="331" rel="bibliography" /><sup>[<a class="sup">6</a>,<a class="sup">7</a>,<a class="sup">8</a>]</sup></citation>.</p>
+                </div>
+                <div class="p1">
+                    <p id="69">现有时间序列预测的方法主要可分为基于深度学习和非深度学习两大类<citation id="376" type="reference"><link href="333" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>.典型的非深度学习方法, 如基于统计方法的指数加权滑动平均模型 (EWMA) <citation id="377" type="reference"><link href="335" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>和差分整合滑动平均自回归模型 (ARIMA) <citation id="378" type="reference"><link href="333" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>等, 在预测中通常存在几个缺陷, 例如无法应对非平稳序列或处理非平稳序列时需要进行平稳化预处理;无法获取并利用多个变量间的动态依赖性;不仅如此, 这类方法效率较低, 处理大数据时耗时较多.相反, 基于深度学习的方法则能克服上述不足<citation id="379" type="reference"><link href="333" rel="bibliography" /><link href="337" rel="bibliography" /><sup>[<a class="sup">9</a>,<a class="sup">11</a>]</sup></citation>, 因此, 本文侧重于当前较为流行的深度学习方法.</p>
+                </div>
+                <div class="p1">
+                    <p id="70">深度学习方法尤其是基于神经网络 (NNs) 的方法已在时间序列预测中取得了相当的成效, 其中前馈神经网络 (FNNs) <citation id="380" type="reference"><link href="337" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>、模糊神经网络<citation id="381" type="reference"><link href="339" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>、混合神经网络<citation id="382" type="reference"><link href="331" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>以及循环神经网络 (RNNs) <citation id="383" type="reference"><link href="337" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>都已得到广泛运用.而RNNs由于其具有循环链状结构以及各变体门单元内部的特殊结构, 更加适合于处理各类时间序列.然而, 早期的RNNs存在若干严重的缺陷, 典型的如梯度消失和梯度爆炸问题<citation id="384" type="reference"><link href="341" rel="bibliography" /><link href="343" rel="bibliography" /><sup>[<a class="sup">13</a>,<a class="sup">14</a>]</sup></citation>.</p>
+                </div>
+                <div class="p1">
+                    <p id="71">梯度爆炸问题通过对梯度范数的严格约束可解决, 而梯度消失问题相对复杂.最先用于解决该问题的方法是设计出新的长短期记忆 (LSTM) <citation id="385" type="reference"><link href="345" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>以替换循环神经网络结构中的RNN单元.该单元可以利用3个门 (遗忘门、输入门和输出门) 和内部存储器以控制梯度流动并更新单元内部信息.同时基于LSTM的神经网络 (LSTMs) 可通过门控机制改善RNNs无法获取长程依赖关系的问题<citation id="386" type="reference"><link href="341" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>, 因此很长一段时期使用LSTM替换RNN单元是处理梯度消失问题的标准方法.虽然LSTMs在NSMTS预测问题上已获得了state-of-the-art的结果<citation id="387" type="reference"><link href="347" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>, 但该门单元并不完美.例如其内部结构非常复杂, 但其中部分组件在训练中并没有明显意图<citation id="388" type="reference"><link href="349" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>.因此, 研究者进一步对门单元结构进行合理简化, 其中门循环单元 (GRU) <citation id="389" type="reference"><link href="351" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>的表现非常突出, 该门单元结构中没有单独的内部存储器并且仅包含2个门 (更新门和复位门) .多数情况下, 基于GRU的神经网络 (GRUs) 被证明与LSTMs的预测精度具有可比性<citation id="390" type="reference"><link href="353" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>并因此成为序列预测中的一个可行的选择.而最近提出的最小门单元 (MGU) <citation id="391" type="reference"><link href="355" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>更被简化到了仅含单个遗忘门的结构, 令人惊讶之处在于基于MGU的神经网络 (MGUs) 在部分序列分析和图像处理方面仍显示出了初步的优势.这源于已有的评估证据, 即遗忘门是这些门中的关键所在<citation id="392" type="reference"><link href="343" rel="bibliography" /><link href="349" rel="bibliography" /><link href="357" rel="bibliography" /><sup>[<a class="sup">14</a>,<a class="sup">17</a>,<a class="sup">21</a>]</sup></citation>.既然MGUs具有更少的可调参数, 故而相对更易训练, 为此我们也尝试将其用于时间序列预测.</p>
+                </div>
+                <div class="p1">
+                    <p id="72">虽然已存在多种类型的门单元, 然而目前仍无研究表明哪一种门单元最适合处理一个特定时间序列, 为此在本文中加以弥补.我们选用上述各门单元 (LSTM, GRU和MGU) 分别构建了相应的神经网络预测模型对NSMTS进行预测.具体而言, 实验中采用单层或多层神经网络预测模型评估这些门单元在5个NSMTS数据集上的预测性能.结果表明:没有任何一类能始终保证性能上的占优.这启发我们设计了一种混合门单元 (MIXGU) , 它包含GRU和MGU<citation id="416" type="note"><link href="410" rel="footnote" /><sup>①</sup></citation>, 并通过动态调整GRU和MGU的混合权重, 发挥各门单元的优势以达成2个世界的最优.</p>
+                </div>
+                <div class="p1">
+                    <p id="73">本文的主要贡献有3个方面:</p>
+                </div>
+                <div class="p1">
+                    <p id="74">1) 将MGU应用于NSMTS预测中, 并将其预测性能与LSTM和GRU进行比较分析;</p>
+                </div>
+                <div class="p1">
+                    <p id="75">2) 提出了MIXGU, 在训练过程中使得模型中的每一个单元动态地, 自适应地改变混合的各个门单元 (GRU和MGU) 的重要性权重.同时我们也证明了训练过程中确实存在重要性权重的动态变化;</p>
+                </div>
+                <div class="p1">
+                    <p id="76">3) 将MIXGU构成的神经网络与每个单元仅含有一种门单元的典型神经网络进行对比, 并得出基于MIXGU的神经网络模型可以获得更高的预测准确率.</p>
+                </div>
+                <h3 id="77" name="77" class="anchor-tag"><b>1 相关工作</b></h3>
+                <div class="area_img" id="78">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201908007_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 用于预测的N层神经网络模型" src="Detail/GetImg?filename=images/JFYZ201908007_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 用于预测的<i>N</i>层神经网络模型  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201908007_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 1 <i>N</i>-layer Neural network model for prediction</p>
+
+                </div>
+                <div class="p1">
+                    <p id="79">为了解决NSMTS预测, 许多学者尝试采用传统的统计方法.其中, 差分整合滑动平均自回归模型 (ARIMA) <citation id="393" type="reference"><link href="333" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>由于其统计特性以及在模型选择过程中使用了广为人知的博克思-詹金斯 (Box-Jenkins) 法而广泛运用于金融领域.同时该模型适用于各种指数平滑技术<citation id="394" type="reference"><link href="359" rel="bibliography" /><sup>[<a class="sup">22</a>]</sup></citation>, 可以灵活地解决一系列, 诸如自回归 (AR) 、滑动平均 (MA) 以及自回归滑动平均 (ARMA) 等模型能够解决的问题.但是, ARIMA需要对非平稳数据进行平稳化处理, 这毫无疑问会影响预测精度和效率, 同时该模型计算复杂度较高, 因此无法较好地进行NSMTS的预测.除此之外, 自回归模型 (VAR) <citation id="395" type="reference"><link href="333" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>通过将AR模型拓展成为多变量模型以解决多变量时间序列问题.然而, 这种拓展忽略了输出变量之间的依赖关系.不仅如此, VAR模型的容量在训练中随着时间窗口的增大线性增长, 随着变量数量上升呈二次方增长, 因此继承的大模型容易出现过拟合问题并无法有效处理长程时间模式.</p>
+                </div>
+                <div class="p1">
+                    <p id="80">由于上述方法无法有效地解决NSMTS预测问题, 研究人员进一步通过建立机器学习模型来处理这类问题.例如, 带有时变参数的标准回归模型<citation id="396" type="reference"><link href="361" rel="bibliography" /><sup>[<a class="sup">23</a>]</sup></citation>在处理多变量时间序列上有一些突破, 该模型能够使用不同损失函数和正则化项进行建模, 但是由于其无法获取多个变量之间非线性关系, 因此容易影响模型的预测精度.此外, 非参数高斯模型 (GP) <citation id="397" type="reference"><link href="363" rel="bibliography" /><sup>[<a class="sup">24</a>]</sup></citation>通过对连续函数域上的分布进行建模可以获取序列中的动态模式, 尤其是复杂的动态模式.但是该模型具有较高的计算复杂度, 例如在实现过程中的核矩阵求逆过程会产生超过观测值数量立方的复杂性.</p>
+                </div>
+                <h3 id="81" name="81" class="anchor-tag"><b>2 模  型</b></h3>
+                <div class="p1">
+                    <p id="82">本节中, 我们首先定义NSMTS预测问题, 然后介绍于滚动预测的神经网络模型.为了完整性, 我们也详细介绍本文预测模型中所使用的门单元结构 (LSTM, GRU以及MGU) 并详细说明本文提出的新型MIXGU的门单元结构, 最后, 介绍了预测模型的目标函数和优化策略.</p>
+                </div>
+                <h4 class="anchor-tag" id="83" name="83"><b>2.1 模型概述</b></h4>
+                <div class="p1">
+                    <p id="84">本文中, 我们主要通过使用图1所示的神经网络预测模型进行简单的多步滚动预测.具体来说, 给定一系列已知时间序列<b><i>Y</i></b>= (<b><i>y</i></b><sub>1</sub>, <b><i>y</i></b><sub>2</sub>, …, <b><i>y</i></b><sub><i>T</i></sub>) , 其中<b><i>y</i></b><sub><i>t</i></sub>∈R<sup><i>n</i></sup>, <i>n</i>是时间序列的维度.我们的目标是预测<b><i>y</i></b><sub><i>T</i>+<i>h</i></sub>, 其中<i>h</i>表示预测范围 (horizon) , 代表当前时间步向前的预测范围, 其取值范围可以从几秒到一年, 通常根据时间序列数据集中环境设置需求进行选择.滚动预测表示当我们预测<b><i>y</i></b><sub><i>T</i>+<i>h</i>+1</sub>时<b><i>y</i></b><sub>1</sub>, <b><i>y</i></b><sub>2</sub>, …, <b><i>y</i></b><sub><i>T</i>+1</sub>是已知的.我们将时间步<i>T</i>时输入矩阵表示为<b><i>X</i></b><sub><i>T</i></sub>= (<b><i>y</i></b><sub>1</sub>, <b><i>y</i></b><sub>2</sub>, …, <b><i>y</i></b><sub><i>T</i></sub>) ∈R<sup><i>n</i>×<i>T</i></sup>.</p>
+                </div>
+                <div class="p1">
+                    <p id="85">图1所示的神经网络结构中, RNN Unit可由LSTM, GRU, MGU以及我们设计的MIXGU代替.随后, 我们将逐一介绍上述门单元结构.</p>
+                </div>
+                <div class="p1">
+                    <p id="86">本文中, <b><i>W</i></b>表示权重矩阵, <b><i>b</i></b>表示偏差向量, <i>t</i>表示时间序列中的第<i>t</i>个时间戳, <b><i>x</i></b><sub><i>t</i></sub>表示RNN单元及其变体在时间<i>t</i>时的输入, <b><i>h</i></b><sub><i>t</i></sub>表示时刻<i>t</i>的系统隐状态, <i>σ</i> (<b><i>z</i></b>) 表示逻辑Sigmoid函数<i>σ</i> (<b><i>z</i></b>) =1/ (1+exp (-<b><i>z</i></b>) ) , tanh是适用于输入的每个元素的激活函数, 而符号⊙是表示2个向量之间逐个元素相乘.</p>
+                </div>
+                <h4 class="anchor-tag" id="87" name="87"><b>2.2 RNN单元: LSTM, GRU和MGU</b></h4>
+                <div class="area_img" id="88">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201908007_088.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 各种典型的门控RNN单元中的数据流动和运算" src="Detail/GetImg?filename=images/JFYZ201908007_088.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 各种典型的门控RNN单元中的数据流动和运算  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201908007_088.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 2 Data flow and operations in various typical gated RNN units</p>
+
+                </div>
+                <div class="p1">
+                    <p id="89">循环神经网络 (RNNs) 是前馈神经网络 (FNNs) 的扩展, 可以通过特殊的反馈回路存储和利用过去的信息从而有效解决序列问题<citation id="398" type="reference"><link href="365" rel="bibliography" /><sup>[<a class="sup">25</a>]</sup></citation>.一般而言, 循环神经网络门单元 (RNN) 通过式 (1) 更新隐状态:</p>
+                </div>
+                <div class="p1">
+                    <p id="90"><b><i>h</i></b><sub><i>t</i></sub>=<i>f</i> (<b><i>h</i></b><sub><i>t</i>-1</sub>, <b><i>x</i></b><sub><i>t</i></sub>) ,      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="91">其中, <i>f</i>是一个非线性映射.定义<i>f</i>的常用方法为使用线性变换加上非线性激活函数, </p>
+                </div>
+                <div class="p1">
+                    <p id="92"><b><i>h</i></b><sub><i>t</i></sub>=tanh (<b><i>W</i></b>[<b><i>h</i></b><sub><i>t</i>-1</sub>, <b><i>x</i></b><sub><i>t</i></sub>]+<b><i>b</i></b>) .      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="93">这种单向RNN单元通常表示为SimpleRNN单元, 其内部结构由图2 (a) 所示.</p>
+                </div>
+                <div class="p1">
+                    <p id="94">不幸的是, SimpleRNN单元在时间序列预测中存在一系列问题, 基于该单元的网络在训练过程中存在梯度下降或梯度消失问题<citation id="399" type="reference"><link href="341" rel="bibliography" /><link href="343" rel="bibliography" /><sup>[<a class="sup">13</a>,<a class="sup">14</a>]</sup></citation>以及该单元结构无法获取长程依赖关系.因此各类RNN单元的变体如, LSTM, GRU等, 被设计以缓解上述问题.所以本文关注的是基于RNN单元变体 (LSTM, GRU和MGU) 的神经网络的性能.</p>
+                </div>
+                <h4 class="anchor-tag" id="95" name="95">2.2.1 LSTM</h4>
+                <div class="p1">
+                    <p id="96">时间序列预测中, 长程和短程依赖关系都十分重要, 尤其对具有季节性周期变化或循环变化等特性的时间序列.然而, 由于传统的SimpleRNN单元结构简单, 获取长程依赖的能力较弱, 当长程的相关信息与当前时间点之间的距离足够大时, 其无法获取所需的远程信息<citation id="400" type="reference"><link href="341" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>.为了解决这一问题, 如图2 (b) 所示的具有特殊门控机制和内部存储器来控制信息流的LSTM<citation id="401" type="reference"><link href="345" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>被设计出来.迄今为止, LSTM及其各类变体仍然在实际应用中扮演主导角色, 如利用ARIMA-LSTM混合模型进行股票预测<citation id="402" type="reference"><link href="367" rel="bibliography" /><sup>[<a class="sup">26</a>]</sup></citation>, 利用改进的卷积LSTM (ConvLSTM) 进行天气预测<citation id="403" type="reference"><link href="321" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>等都展现出了LSTM的优势.</p>
+                </div>
+                <div class="p1">
+                    <p id="97">LSTM门控机制中包含3个门, 即遗忘门<b><i>f</i></b><sub><i>t</i></sub>, 输入门<b><i>i</i></b><sub><i>t</i></sub>和输出门<b><i>o</i></b><sub><i>t</i></sub>和另外, 结构中还含有一个内部存储器<b><i>c</i></b><sub><i>t</i></sub>.循环单位的隐状态在时刻<i>t</i>计算为</p>
+                </div>
+                <div class="area_img" id="98">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JFYZ201908007_09800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="100">这里, 各个LSTM单元之间通过控制单元状态<b><i>c</i></b><sub><i>t</i></sub>和隐状态<b><i>h</i></b><sub><i>t</i></sub>进行信息传递.</p>
+                </div>
+                <h4 class="anchor-tag" id="101" name="101">2.2.2 GRU</h4>
+                <div class="p1">
+                    <p id="102">作为LSTM的常用变体, GRU<citation id="404" type="reference"><link href="351" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>具有更简化的结构.如图2 (c) 所示, GRU将遗忘门<b><i>f</i></b><sub><i>t</i></sub>和输入门<b><i>i</i></b><sub><i>t</i></sub>组合成单个更新门<b><i>z</i></b><sub><i>t</i></sub>, 另外增加一个复位门<b><i>r</i></b><sub><i>t</i></sub>并将内部存储器与隐状态<b><i>h</i></b><sub><i>t</i></sub>合并.GRU的更新规则为</p>
+                </div>
+                <div class="area_img" id="103">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JFYZ201908007_10300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="105">实验表明, 当LSTM与GRU具有相同的参数量时<citation id="405" type="reference"><link href="349" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>, GRU的预测效果与LSTM具有可比性.在GRU网络中, 各单元间只对隐状态<b><i>h</i></b><sub><i>t</i></sub>进行传递.</p>
+                </div>
+                <h4 class="anchor-tag" id="106" name="106">2.2.3 MGU</h4>
+                <div class="p1">
+                    <p id="107">受GRU设计有效性的启发, 如图2 (d) 所示仅包含单门的最小门单元 (MGU) <citation id="406" type="reference"><link href="355" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>被设计出来进一步有效简化门单元结构.由于MGU在现有的计算机视觉和序列分析的应用中展现出训练速度和结果准确性的优势, 我们希望将这一门单元引入时间序列预测, 尤其是本文中的NSMTS预测.</p>
+                </div>
+                <div class="p1">
+                    <p id="108">在MGU结构中, 唯一门的选择至关重要.通过分析LSTM各部分重要性的实验, 发现遗忘门<b><i>f</i></b><sub><i>t</i></sub>最为重要且不可或缺<citation id="407" type="reference"><link href="343" rel="bibliography" /><link href="349" rel="bibliography" /><link href="357" rel="bibliography" /><sup>[<a class="sup">14</a>,<a class="sup">17</a>,<a class="sup">21</a>]</sup></citation>.同时, 从经验角度分析, 遗忘门能决定存储或遗忘的信息, 这对于解决长程依赖问题至关重要.而MGU正是在GRU基础上, 进一步通过有效合并复位门<b><i>r</i></b><sub><i>t</i></sub>和更新门<b><i>z</i></b><sub><i>t</i></sub>作为遗忘门<b><i>f</i></b><sub><i>t</i></sub> (<b><i>r</i></b><sub><i>t</i></sub>=<b><i>f</i></b><sub><i>t</i></sub>, ∀<i>t</i>) .由此MGU隐单元状态更新规则为</p>
+                </div>
+                <div class="area_img" id="109">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JFYZ201908007_10900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="111">在MGU网络中, 各单元间只对隐状态<b><i>h</i></b><sub><i>t</i></sub>进行传递.</p>
+                </div>
+                <h4 class="anchor-tag" id="112" name="112">2.2.4 MIXGU</h4>
+                <div class="p1">
+                    <p id="113">基于上述门单元的循环神经网络模型已获得了现存最优的结果.尽管如此, 网络的构成成分, 如网络的层数、各层的宽度和所涉及的门单元结构, 都会对其性能产生不可忽视的影响, 而后者已被证明在预测中起到关键作用.目前的研究通常只使用一种门单元解决预测问题, 然而, 由于各数据集的特性差异, 单一门单元构成的神经网络并不能足够有效地应用于所有数据集, 从而限制了预测精度.因此我们设计了一个新的混合门单元 (MIXGU) , 组合GRU和MGU并动态自适应地调整它们的重要性权重以实现性能的提升.由于LSTM的结构最为复杂, 且单元之间传递的状态参数量多于GRU和MGU, 同时后两者已在预测中获得了与LSTM可比的结果.因此, 如图3所示, 我们新设计的MIXGU主要由3部分组成, 即GRU, MGU及权重调节模块 (adjustment module) .具体而言, 调节模块包含2个输入向量, 分别对应GRU和MGU单元计算得出的隐状态, 记作<b><i>h</i></b><mathml id="114"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>t</mi><mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>和<b><i>h</i></b><mathml id="115"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>t</mi><mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>.在每一时间步, 调节模块通过<b><i>h</i></b><mathml id="116"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>t</mi><mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>和<b><i>h</i></b><mathml id="117"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>t</mi><mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>生成门向量MIXGU<sub><i>t</i></sub>, 随后用如下方法对隐状态进行更新, </p>
+                </div>
+                <div class="area_img" id="118">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JFYZ201908007_11800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="120">经过调节模块后, 我们将得到新的隐状态<b><i>h</i></b><sub><i>t</i></sub>作为下一个单元的输入.</p>
+                </div>
+                <div class="area_img" id="121">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201908007_121.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 MIXGU模型中的数据流动和运算" src="Detail/GetImg?filename=images/JFYZ201908007_121.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 MIXGU模型中的数据流动和运算  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201908007_121.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 3 Data flow and operations in MIXGU</p>
+
+                </div>
+                <h4 class="anchor-tag" id="122" name="122"><b>2.3 目标函数和优化方法</b></h4>
+                <div class="p1">
+                    <p id="123">平方误差是许多预测任务的默认损失函数, 因此本文的也采用了相应的优化目标:</p>
+                </div>
+                <div class="p1">
+                    <p id="124" class="code-formula">
+                        <mathml id="124"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mtext>m</mtext><mtext>i</mtext><mtext>n</mtext><mtext>i</mtext><mtext>m</mtext><mtext>i</mtext><mtext>z</mtext><mtext>e</mtext></mrow></mstyle><mi>Θ</mi></munder><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>t</mi><mo>∈</mo><mi>Ω</mi><msub><mrow></mrow><mrow><mtext>Τ</mtext><mtext>r</mtext><mtext>a</mtext><mtext>i</mtext><mtext>n</mtext></mrow></msub></mrow></munder><mrow><mrow><mo>|</mo><mrow><mi mathvariant="bold-italic">Y</mi><msub><mrow></mrow><mi>t</mi></msub><mo>-</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">Y</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mi>h</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow></mstyle><msubsup><mrow></mrow><mtext>F</mtext><mn>2</mn></msubsup><mo>, </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>7</mn><mo stretchy="false">) </mo><mspace width="0.25em" /></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="125">其中, <i>Θ</i>表示我们模型的参数集, <mathml id="126"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>|</mo><mo>⋅</mo><mo>|</mo></mrow><msub><mrow></mrow><mtext>F</mtext></msub></mrow></math></mathml>是Frobenius范数, <i>Ω</i><sub>Train</sub>表示用于训练的时间戳的集<mathml id="127"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mtext>合</mtext><mo>, </mo><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">Y</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mi>t</mi></msub><mtext>表</mtext></mrow></math></mathml>示模型在时间<i>t</i>处的最终预测, 其中<i>h</i>是2.1节描述的预测水平.</p>
+                </div>
+                <div class="p1">
+                    <p id="128">我们的优化策略是将预测问题转化为一个回归任务.假设输入的已知时间序列为<b><i>Y</i></b><sub><i>t</i></sub>= (<b><i>y</i></b><sub>1</sub>, <b><i>y</i></b><sub>2</sub>, …, <b><i>y</i></b><sub><i>t</i></sub>) , 随后定义一个可调节大小的窗口, 将其大小记作<i>q</i>并将时刻<i>t</i>的输入序列重新定义为<b><i>X</i></b><sub><i>t</i></sub>= (<b><i>y</i></b><sub><i>t</i>-<i>q</i>+1</sub>, <b><i>y</i></b><sub><i>t</i>-<i>q</i>+2</sub>, …, <b><i>y</i></b><sub><i>t</i></sub>) .最终优化目标即为特征-值对 (<b><i>X</i></b><sub><i>t</i></sub>, <b><i>Y</i></b><sub><i>t</i>+<i>h</i></sub>) 的回归任务, 进而可由随机梯度下降 (SGD) 或其变体进行优化求解<citation id="408" type="reference"><link href="369" rel="bibliography" /><sup>[<a class="sup">27</a>]</sup></citation>.</p>
+                </div>
+                <h3 id="129" name="129" class="anchor-tag"><b>3 实  验</b></h3>
+                <div class="p1">
+                    <p id="130">我们分别使用基于4种不同的门单元 (包括我们新提出的门单元) 的神经网络预测模型对5个NSMTS数据集进行了大量实验.</p>
+                </div>
+                <h4 class="anchor-tag" id="131" name="131"><b>3.1 度量标准</b></h4>
+                <div class="p1">
+                    <p id="132">本文使用3种度量标准来评估模型的预测性能.3种度量标准的定义:</p>
+                </div>
+                <div class="p1">
+                    <p id="133">1) 均方根误差 (<i>RMSE</i>) </p>
+                </div>
+                <div class="p1">
+                    <p id="134" class="code-formula">
+                        <mathml id="134"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>R</mi><mi>Μ</mi><mi>S</mi><mi>E</mi><mo>=</mo><msqrt><mrow><mfrac><mn>1</mn><mi>Τ</mi></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>t</mi><mo>∈</mo><mi>Ω</mi><msub><mrow></mrow><mrow><mtext>Τ</mtext><mtext>r</mtext><mtext>a</mtext><mtext>i</mtext><mtext>n</mtext></mrow></msub></mrow></munder><mo stretchy="false"> (</mo></mstyle><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">Y</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mi>t</mi></msub><mo>-</mo><mi mathvariant="bold-italic">Y</mi><msub><mrow></mrow><mi>t</mi></msub><mo stretchy="false">) </mo><msup><mrow></mrow><mn>2</mn></msup></mrow></msqrt><mo>;</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>8</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="135">2) 绝对平均误差 (<i>MAE</i>) </p>
+                </div>
+                <div class="p1">
+                    <p id="136" class="code-formula">
+                        <mathml id="136"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Μ</mi><mi>A</mi><mi>E</mi><mo>=</mo><mfrac><mn>1</mn><mi>Τ</mi></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>t</mi><mo>∈</mo><mi>Ω</mi><msub><mrow></mrow><mrow><mtext>Τ</mtext><mtext>r</mtext><mtext>a</mtext><mtext>i</mtext><mtext>n</mtext></mrow></msub></mrow></munder><mrow><mrow><mo>|</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">Y</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mi>t</mi></msub><mo>-</mo><mi mathvariant="bold-italic">Y</mi><msub><mrow></mrow><mi>t</mi></msub></mrow><mo>|</mo></mrow></mrow></mstyle><mo>;</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>9</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="137">3) 决定系数 (<i>R</i><sup>2</sup>) </p>
+                </div>
+                <div class="p1">
+                    <p id="138" class="code-formula">
+                        <mathml id="138"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>R</mi><msup><mrow></mrow><mn>2</mn></msup><mo>=</mo><mn>1</mn><mo>-</mo><mfrac><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>t</mi><mo>∈</mo><mi>Ω</mi><msub><mrow></mrow><mrow><mtext>Τ</mtext><mtext>r</mtext><mtext>a</mtext><mtext>i</mtext><mtext>n</mtext></mrow></msub></mrow></munder><mo stretchy="false"> (</mo></mstyle><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">Y</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mi>t</mi></msub><mo>-</mo><mi mathvariant="bold-italic">Y</mi><msub><mrow></mrow><mi>t</mi></msub><mo stretchy="false">) </mo><msup><mrow></mrow><mn>2</mn></msup></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>t</mi><mo>∈</mo><mi>Ω</mi><msub><mrow></mrow><mrow><mtext>Τ</mtext><mtext>r</mtext><mtext>a</mtext><mtext>i</mtext><mtext>n</mtext></mrow></msub></mrow></munder><mo stretchy="false"> (</mo></mstyle><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">Y</mi></mstyle><mrow><mspace width="0.25em" /><mo>-</mo></mrow></mover><msub><mrow></mrow><mi>t</mi></msub><mo>-</mo><mi mathvariant="bold-italic">Y</mi><msub><mrow></mrow><mi>t</mi></msub><mo stretchy="false">) </mo><msup><mrow></mrow><mn>2</mn></msup></mrow></mfrac><mo>, </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>0</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="139">其中, <b><i>Y</i></b><sub><i>t</i></sub>和<mathml id="140"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">Y</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mi>t</mi></msub></mrow></math></mathml>代表在时间步<i>t</i> (0&lt;<i>t</i>≤<i>T</i>) 时的真实值和预测值, <mathml id="141"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">Y</mi></mstyle><mrow><mspace width="0.25em" /><mo>-</mo></mrow></mover><msub><mrow></mrow><mi>t</mi></msub></mrow></math></mathml>表示为<mathml id="142"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">Y</mi></mstyle><mrow><mspace width="0.25em" /><mo>-</mo></mrow></mover><msub><mrow></mrow><mi>t</mi></msub><mo>=</mo></mrow></math></mathml><mathml id="143"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mn>1</mn><mi>Τ</mi></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>t</mi><mo>∈</mo><mi>Ω</mi><msub><mrow></mrow><mrow><mtext>Τ</mtext><mtext>r</mtext><mtext>a</mtext><mtext>i</mtext><mtext>n</mtext></mrow></msub></mrow></munder><mi mathvariant="bold-italic">Y</mi></mstyle><msub><mrow></mrow><mi>t</mi></msub></mrow></math></mathml>.<i>MAE</i>和<i>RMSE</i>接近0, <i>R</i><sup>2</sup>接近1反映了模型良好的预测性能.</p>
+                </div>
+                <h4 class="anchor-tag" id="144" name="144"><b>3.2 数据说明</b></h4>
+                <div class="p1">
+                    <p id="145">该实验中, 我们使用了5个NSMTS数据集, 其中4个为公开数据集, 1个为保密数据集.</p>
+                </div>
+                <div class="p1">
+                    <p id="146">1) 光纤数据集.该数据集是光纤拉丝生产过程中的真实数据集, 记作 “Optical”.其中包括30个有效特征, 序列长度为259 202, 采样频率为1秒/次.由于光纤拉丝过程中会因为断裂而产生巨大的经济损失, 因此光纤断裂情况的预测十分重要.该数据集为保密数据集.</p>
+                </div>
+                <div class="p1">
+                    <p id="147">2) 3个股票数据集<citation id="417" type="note"><link href="412" rel="footnote" /><sup>①</sup></citation> .该数据集是在Kaggle Datesets中的公开数据, 记作“BAC”, “C” 以及“GS”.每个数据集都包括每日的收盘价、开盘价、低价、高价和成交量, 序列的长度为2 517, 采样频率为1天/次.</p>
+                </div>
+                <div class="p1">
+                    <p id="148">3) 空气状况数据集<citation id="418" type="note"><link href="414" rel="footnote" /><sup>②</sup></citation>.我们将该数据集记作“Pollution”, 其中包含7个有效特征, 该序列长度为43 825, 采样频率为1天/次.同时该数据集存在一些缺失, 我们使用均值进行代替.</p>
+                </div>
+                <div class="p1">
+                    <p id="149">上述数据集按时间顺序分为训练集 (60%) 、验证集 (20%) 和测试集 (20%) .</p>
+                </div>
+                <h4 class="anchor-tag" id="150" name="150"><b>3.3 实验结果</b></h4>
+                <div class="p1">
+                    <p id="151">我们的实验设定遵循了此类实验的一般方法, 对于各神经网络调整深度和宽度 (隐单元数) 以获得最优的预测效果<citation id="409" type="reference"><link href="343" rel="bibliography" /><link href="349" rel="bibliography" /><link href="355" rel="bibliography" /><link href="357" rel="bibliography" /><sup>[<a class="sup">14</a>,<a class="sup">17</a>,<a class="sup">20</a>,<a class="sup">21</a>]</sup></citation>.因此对各个门单元组成的神经网络, 我们在集合{32, 64, 96, 128}中选择隐单元数, 同时我们构建了<i>N</i>层的神经网络, 其中网络深度<i>N</i>的选择范围为{1, 2, 3}, 对应了图2中“<i>N</i>层”.每一个网络都经过100次迭代. 为了实验的完整性, 我们还在各数据集上使用经典统计方法ARIMA进行实验.</p>
+                </div>
+                <div class="p1">
+                    <p id="152">表1中我们固定预测模型在每个数据集上的网络深度, 通过调整隐单元数分别比较基于各门单元网络的预测性能, 而表2反之.</p>
+                </div>
+                <div class="p1">
+                    <p id="153">首先, 我们试图将MGU引入NSMTS序列预测问题中并通过实验验证这个模型是否能够得到好的结果, 并用图2序列预测模型构建MGUs并与LSTMs和GRUs在预测性能上作对比.表1、表2中, 我们用粗体字表示除去MIXGU的实验结果后每个数据集上的最佳结果.我们发现:</p>
+                </div>
+                <div class="p1">
+                    <p id="154">1) 5个数据集的最优结果并不是由单一门单元组成的神经网络所得, 如表1中数据集“BAC”的最优结果由LSTMs神经网络获得, 而数据集“Optical”最优结果是由MGUs神经网络取得;</p>
+                </div>
+                <div class="p1">
+                    <p id="155">2) MGU可用于时间序列预测, 并可以获得了与LSTM及GRU相当的预测结果;</p>
+                </div>
+                <div class="p1">
+                    <p id="156">3) ARIMA的预测准确性较差且实验中耗时较长, 无法有效预测数据量较大的NSMTS序列.</p>
+                </div>
+                <div class="p1">
+                    <p id="157">随后, 我们将新设计的MIXGU引入预测问题并与上述由单一门单元构成的预测模型进行比较预测过程中发现确实存在对于门单元的动态选样.这里, 我们采用同样的实验参数设置对MIXGU进行实验.表1和表2中灰色背景突出的实验结果是各数据集中的最佳.由实验结果, 我们能得出:MIXGU网络在5个数据集上都获得了最佳的预测结果, 因此该单元可确保预测的准确性.此外, 图4 (a) ～ (d) 显示了时间序列的真实值与预测值的对比.显然各数据集中基于MIXGU的神经网络预测结果与真实值最接近, 因此直观上显示出其预测精度更高.而图4 (e) ～ (f) 则展示了在数据集“Optical”和 “Pollution”的学习曲线.</p>
+                </div>
+                <div class="area_img" id="158">
+                    <p class="img_tit"><b>表1 ARIMA和不同网络隐单元数量下MIXGUs, LSTMs, GRUs和MGUs的模型性能</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 1 Performance of ARIMA and MIXGUs, LSTMs, GRUs, MGUs Neural Network on Different Amount of Hidden Units</b></p>
+                    <p class="img_note"></p>
+                    <table id="158" border="1"><tr><td colspan="2"><br />Dataset</td><td colspan="3">BAC</td><td colspan="3">C</td><td colspan="3">GS</td><td colspan="3">Pollution</td><td colspan="3">Optical</td></tr><tr><td><br />#Hidden Units</td><td>Gated Unit</td><td><i>RMSE</i></td><td><i>MAE</i></td><td><i>R</i><sup>2</sup></td><td><i>RMSE</i></td><td><i>MAE</i></td><td><i>R</i><sup>2</sup></td><td><i>RMSE</i></td><td><i>MAE</i></td><td><i>R</i><sup>2</sup></td><td><i>RMSE</i></td><td><i>MAE</i></td><td><i>R</i><sup>2</sup></td><td><i>RMSE</i></td><td><i>MAE</i></td><td><i>R</i><sup>2</sup></td></tr><tr><td colspan="2"><br />Layers</td><td colspan="3">1</td><td colspan="3">1</td><td colspan="3">1</td><td colspan="3">2</td><td colspan="3">2</td></tr><tr><td rowspan="4"><br />32</td><td><br />MIXGU</td><td>0.152</td><td>0.098</td><td>0.968</td><td>0.794</td><td>0.651</td><td>0.931</td><td>1.352</td><td>0.921</td><td>0.992</td><td>10.904</td><td>3.127</td><td>0.990</td><td>21.358</td><td>14.054</td><td>0.991</td></tr><tr><td><br />GRU</td><td>0.228</td><td>0.187</td><td>0.925</td><td>0.598</td><td>0.422</td><td>0.937</td><td>1.477</td><td>1.106</td><td>0.990</td><td>10.873</td><td>3.227</td><td>0.987</td><td>28.899</td><td>19.241</td><td>0.981</td></tr><tr><td><br />LSTM</td><td><b>0.164</b></td><td><b>0.111</b></td><td><b>0.961</b></td><td>1.061</td><td>0.863</td><td>0.884</td><td>2.574</td><td>2.118</td><td>0.968</td><td><b>10.861</b></td><td>3.472</td><td><b>0.991</b></td><td>25.174</td><td>16.951</td><td>0.983</td></tr><tr><td><br />MGU</td><td>0.174</td><td>0.132</td><td>0.957</td><td>0.746</td><td>0.559</td><td>0.944</td><td>1.785</td><td>1.401</td><td>0.985</td><td>10.984</td><td>3.396</td><td>0.983</td><td>30.824</td><td>21.826</td><td>0.978</td></tr><tr><td rowspan="4"><br />64</td><td><br />MIXGU</td><td>0.164</td><td>0.112</td><td>0.963</td><td>0.948</td><td>0.819</td><td>0.904</td><td>1.729</td><td>1.374</td><td>0.986</td><td>10.865</td><td>3.115</td><td>0.989</td><td>22.087</td><td>14.561</td><td>0.994</td></tr><tr><td><br />GRU</td><td>0.201</td><td>0.163</td><td>0.943</td><td>0.681</td><td>0.489</td><td>0.951</td><td>1.412</td><td>1.017</td><td>0.991</td><td>10.978</td><td><b>3.100</b></td><td>0.989</td><td>36.936</td><td>22.479</td><td>0.963</td></tr><tr><td><br />LSTM</td><td>0.376</td><td>0.323</td><td>0.810</td><td>1.596</td><td>1.464</td><td>0.728</td><td>2.288</td><td>1.800</td><td>0.977</td><td>11.053</td><td>3.824</td><td>0.964</td><td>28.264</td><td>19.622</td><td>0.989</td></tr><tr><td><br />MGU</td><td>0.191</td><td>0.149</td><td>0.950</td><td>0.691</td><td>0.522</td><td><b>0.953</b></td><td>1.392</td><td>0.955</td><td>0.991</td><td>10.984</td><td>3.173</td><td>0.988</td><td><b>13.335</b></td><td>9.507</td><td>0.994</td></tr><tr><td rowspan="4"><br />96</td><td><br />MIXGU</td><td>0.172</td><td>0.128</td><td>0.958</td><td>0.479</td><td>0.382</td><td>0.964</td><td>1.389</td><td>0.960</td><td>0.991</td><td>10.974</td><td>3.033</td><td>0.983</td><td>16.912</td><td>10.876</td><td>0.995</td></tr><tr><td><br />GRU</td><td>0.172</td><td>0.127</td><td>0.959</td><td><b>0.530</b></td><td><b>0.413</b></td><td>0.951</td><td>1.462</td><td>1.086</td><td>0.990</td><td>10.911</td><td>3.274</td><td>0.985</td><td>19.880</td><td>13.344</td><td>0.994</td></tr><tr><td><br />LSTM</td><td>0.202</td><td>0.148</td><td>0.943</td><td>1.543</td><td>1.387</td><td>0.702</td><td>1.423</td><td>0.989</td><td>0.991</td><td>10.984</td><td>3.180</td><td>0.988</td><td>33.783</td><td>26.260</td><td>0.939</td></tr><tr><td><br />MGU</td><td>0.192</td><td>0.145</td><td>0.947</td><td>0.896</td><td>0.799</td><td>0.789</td><td>1.709</td><td>1.353</td><td>0.987</td><td>10.867</td><td>3.187</td><td>0.987</td><td>25.641</td><td>16.750</td><td>0.993</td></tr><tr><td rowspan="4"><br />128</td><td><br />MIXGU</td><td>0.196</td><td>0.149</td><td>0.946</td><td>0.654</td><td>0.503</td><td>0.953</td><td>1.483</td><td>1.104</td><td>0.990</td><td>10.856</td><td>3.006</td><td>0.992</td><td>11.471</td><td>6.550</td><td>0.997</td></tr><tr><td><br />GRU</td><td>0.220</td><td>0.180</td><td>0.932</td><td>0.716</td><td>0.563</td><td>0.945</td><td>1.429</td><td>1.049</td><td>0.991</td><td>10.905</td><td>3.472</td><td>0.986</td><td>14.321</td><td><b>9.460</b></td><td><b>0.996</b></td></tr><tr><td><br />LSTM</td><td>0.313</td><td>0.272</td><td>0.860</td><td>0.996</td><td>0.872</td><td>0.888</td><td>1.540</td><td>1.135</td><td>0.989</td><td>11.089</td><td>3.892</td><td>0.983</td><td>24.030</td><td>14.650</td><td>0.985</td></tr><tr><td><br />MGU</td><td>0.168</td><td>0.113</td><td>0.961</td><td>1.070</td><td>0.924</td><td>0.868</td><td><b>1.361</b></td><td><b>0.946</b></td><td><b>0.992</b></td><td>10.893</td><td>3.119</td><td>0.989</td><td>14.470</td><td>9.540</td><td>0.996</td></tr><tr><td colspan="2"><br />ARIMA</td><td>0.225</td><td>0.169</td><td>0.962</td><td>0.764</td><td>0.591</td><td>0.985</td><td>2.192</td><td>1.667</td><td>0.987</td><td>15.152</td><td>5.148</td><td>0.873</td><td>20.251</td><td>14.197</td><td>0.992</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note">Note: The boldface represents the best experimental results for the LSTM, GRU and MGU, while the results with background color means they are optimal for all the four gated units included.</p>
+                </div>
+                <div class="area_img" id="159">
+                    <p class="img_tit"><b>表2 不同网络深度下MIXGUs, LSTMs, GRUs和MGUs的模型性能</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 2 Performance of MIXGUs, LSTMs, GRUs and MGUs Neural Network on Different Depth of Models</b></p>
+                    <p class="img_note"></p>
+                    <table id="159" border="1"><tr><td colspan="2"><br />Dataset</td><td colspan="3">BAC</td><td colspan="3">C</td><td colspan="3">GS</td><td colspan="3">Pollution</td><td colspan="3">Optical</td></tr><tr><td><br />Layers</td><td>Gated Unit</td><td><i>RMSE</i></td><td><i>MAE</i></td><td><i>R</i><sup>2</sup></td><td><i>RMSE</i></td><td><i>MAE</i></td><td><i>R</i><sup>2</sup></td><td><i>RMSE</i></td><td><i>MAE</i></td><td><i>R</i><sup>2</sup></td><td><i>RMSE</i></td><td><i>MAE</i></td><td><i>R</i><sup>2</sup></td><td><i>RMSE</i></td><td><i>MAE</i></td><td><i>R</i><sup>2</sup></td></tr><tr><td colspan="2"><br />#Hidden Units</td><td colspan="3">32</td><td colspan="3">96</td><td colspan="3">32</td><td colspan="3">128</td><td colspan="3">128</td></tr><tr><td rowspan="4"><br />1</td><td><br />MIXGU</td><td>0.152</td><td>0.098</td><td>0.968</td><td>0.479</td><td>0.382</td><td>0.964</td><td>1.352</td><td>0.921</td><td>0.992</td><td>11.215</td><td>3.437</td><td>0.971</td><td>13.985</td><td>9.698</td><td>0.996</td></tr><tr><td><br />GRU</td><td>0.228</td><td>0.187</td><td>0.925</td><td><b>0.530</b></td><td><b>0.413</b></td><td><b>0.951</b></td><td>1.477</td><td><b>1.106</b></td><td><b>0.990</b></td><td>11.224</td><td>3.397</td><td>0.958</td><td>16.445</td><td>8.608</td><td>0.991</td></tr><tr><td><br />LSTM</td><td>0.164</td><td><b>0.111</b></td><td>0.961</td><td>1.543</td><td>1.387</td><td>0.702</td><td>2.574</td><td>2.118</td><td>0.968</td><td>11.273</td><td>3.714</td><td>0.956</td><td>13.884</td><td>11.737</td><td>0.996</td></tr><tr><td><br />MGU</td><td>0.174</td><td>0.132</td><td>0.957</td><td>0.896</td><td>0.799</td><td>0.789</td><td>1.785</td><td>1.401</td><td>0.985</td><td>11.246</td><td>3.482</td><td>0.958</td><td><b>11.954</b></td><td><b>6.586</b></td><td>0.994</td></tr><tr><td rowspan="4"><br />2</td><td><br />MIXGU</td><td>0.170</td><td>0.136</td><td>0.963</td><td>0.644</td><td>0.497</td><td>0.928</td><td>1.624</td><td>1.357</td><td>0.924</td><td>10.856</td><td>3.006</td><td>0.992</td><td>11.471</td><td>6.550</td><td>0.997</td></tr><tr><td><br />GRU</td><td>0.238</td><td>0.208</td><td>0.909</td><td>0.542</td><td>0.417</td><td>0.944</td><td>1.750</td><td>1.492</td><td>0.953</td><td>10.905</td><td>3.472</td><td>0.986</td><td>14.321</td><td>9.460</td><td><b>0.996</b></td></tr><tr><td><br />LSTM</td><td>0.169</td><td>0.121</td><td>0.960</td><td>0.606</td><td>0.592</td><td>0.929</td><td><b>1.406</b></td><td>1.111</td><td>0.944</td><td>11.089</td><td>3.892</td><td>0.983</td><td>24.030</td><td>14.650</td><td>0.985</td></tr><tr><td><br />MGU</td><td><b>0.157</b></td><td>0.119</td><td><b>0.964</b></td><td>0.631</td><td>0.472</td><td>0.923</td><td>1.835</td><td>1.564</td><td>0.948</td><td><b>10.893</b></td><td><b>3.119</b></td><td><b>0.989</b></td><td>14.470</td><td>9.540</td><td>0.996</td></tr><tr><td rowspan="4"><br />3</td><td><br />MIXGU</td><td>0.161</td><td>0.126</td><td>0.963</td><td>0.921</td><td>0.697</td><td>0.917</td><td>2.138</td><td>1.486</td><td>0.930</td><td>17.113</td><td>4.003</td><td>0.824</td><td>29.246</td><td>21.104</td><td>0.644</td></tr><tr><td><br />GRU</td><td>0.195</td><td>0.150</td><td>0.948</td><td>1.090</td><td>0.737</td><td>0.920</td><td>2.125</td><td>1.549</td><td>0.930</td><td>17.263</td><td>3.978</td><td>0.823</td><td>30.463</td><td>21.431</td><td>0.513</td></tr><tr><td><br />LSTM</td><td>0.238</td><td>0.208</td><td>0.879</td><td>1.652</td><td>1.455</td><td>0.904</td><td>2.177</td><td>1.538</td><td>0.925</td><td>17.276</td><td>4.319</td><td>0.818</td><td>37.495</td><td>26.589</td><td>0.451</td></tr><tr><td><br />MGU</td><td>0.230</td><td>0.148</td><td>0.927</td><td>0.606</td><td>0.592</td><td>0.935</td><td>2.341</td><td>1.798</td><td>0.914</td><td>17.134</td><td>4.113</td><td>0.822</td><td>27.013</td><td>19.101</td><td>0.590</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note">Note: The boldface represents the best experimental results for the LSTM, GRU and MGU, while the results with background color means they are optimal for all the four gated units included.</p>
+                </div>
+                <div class="area_img" id="160">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201908007_160.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 NSMTS的实际数据与MIXGU, LSTM, GRU和MGU模型的预测及学习曲线" src="Detail/GetImg?filename=images/JFYZ201908007_160.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 NSMTS的实际数据与MIXGU, LSTM, GRU和MGU模型的预测及学习曲线  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201908007_160.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 4 The forecasting curve and learning curve for actual data versus MIXGU, LSTM, GRU and MGU models</p>
+
+                </div>
+                <div class="p1">
+                    <p id="162">这里为了说明MIXGU确实存在GRU和MGU重要性权重的自适应变化, 我们进行了实验:由于MIXGU的调节模块中的<i>MIXGU</i><sub><i>t</i></sub>=<i>σ</i> (<b><i>W</i></b><sub><i>s</i></sub>[<b><i>h</i></b><mathml id="163"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>t</mi><mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>, <b><i>h</i></b><mathml id="164"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>t</mi><mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>]+<b><i>b</i></b><sub><i>s</i></sub>) 可通过优化训练<b><i>W</i></b><sub><i>s</i></sub>施加影响, 进而决定<b><i>h</i></b><sub><i>t</i></sub>中GRU和MGU的重要性权重.因此我们用<b><i>W</i></b><sub><i>s</i></sub>的变化表示权重的重要性变化.并将<b><i>h</i></b><mathml id="165"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>t</mi><mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>和<b><i>h</i></b><mathml id="166"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>t</mi><mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>对应的权向量分别记作<b><i>W</i></b><mathml id="167"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>s</mi><mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>和<b><i>W</i></b><mathml id="168"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>s</mi><mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>, 由于两者均为向量无法直观表示, 为此我们以频数图代替.图5展示了“Pollution”数据集中具有代表性的3组值.其中横坐标为<b><i>W</i></b><mathml id="169"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>s</mi><mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>或<b><i>W</i></b><mathml id="170"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>s</mi><mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>的取值, 纵坐标为出现次数.其中 (a) 与 (d) , (b) 与 (e) 以及 (c) 与 (f) 分别为3组<b><i>W</i></b><mathml id="171"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>s</mi><mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>和<b><i>W</i></b><mathml id="172"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>s</mi><mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>的值.显然, <b><i>W</i></b><mathml id="173"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>s</mi><mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>和<b><i>W</i></b><mathml id="174"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>s</mi><mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></msubsup></mrow></math></mathml>变化多量, 说明确实存在参数的动态调节致使GRU和MGU间的权重产生变化.</p>
+                </div>
+                <div class="area_img" id="175">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201908007_175.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 SMIXGUt中W (1) s和W (2) s的动态变化" src="Detail/GetImg?filename=images/JFYZ201908007_175.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 SMIXGU<sub><i>t</i></sub>中<b><i>W</i></b><sup> (1) </sup><sub><i>s</i></sub>和<b><i>W</i></b><sup> (2) </sup><sub><i>s</i></sub>的动态变化  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201908007_175.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 5 The dynamic changes between <b><i>W</i></b><sup> (1) </sup><sub><i>s</i></sub> and <b><i>W</i></b><sup> (2) </sup><sub><i>s</i></sub> in SMIXGU<sub><i>t</i></sub></p>
+
+                </div>
+                <h3 id="176" name="176" class="anchor-tag"><b>4 总  结</b></h3>
+                <div class="p1">
+                    <p id="177">本文首先将MGU用于NSMTS预测, 实验证明了它达到了与LSTM和GRU相当的预测精度.同时我们在实验中也发现, 没有任何单一门单元在处理各NSMTS时间序列时始终能表现出最佳行为.为了缓和这一局面, 我们设计了一种混合的MIXGU门单元, 通过在训练中动态调整MGU和GRU的组合权重, 达到了更优性能的混合结构.预测实验验证了MIXGU网络确实获得了比由单一门单元构建的神经网络更优的性能, 这一新型混合门单元也可望用于其他诸如视频流预测.</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="317">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Stock price prediction using neural networks : A project report">
+
+                                <b>[1]</b>Schöneburg E.Stock price prediction using neural networks:A project report[J].Neurocomputing, 1990, 2 (1) :17- 27
+                            </a>
+                        </p>
+                        <p id="319">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep multi-view spatial-temporal network for taxi demand prediction">
+
+                                <b>[2]</b>Yao Huaxiu, Wu Fei, Ke Jintao, et al.Deep multi-view spatial-temporal network for taxi demand prediction[C] // Proc of the 32nd AAAI Conf on Artificial Intelligence.Menlo Park, CA:AAAI Press, 2018:2588- 2595
+                            </a>
+                        </p>
+                        <p id="321">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Convolutional lstm network:A machine learning approach for precipitation nowcasting">
+
+                                <b>[3]</b>Shi Xingjian, Chen Zhourong, Wang Hao, et al.Convolutional LSTM network:A machine learning approach for precipitation nowcasting[C] //Advances in Neural Information Processing Systems.New York:ACM, 2015:802- 810
+                            </a>
+                        </p>
+                        <p id="323">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201708010&amp;v=Mjg0ODdlWmVSckZ5dmdWNy9LTHl2U2RMRzRIOWJNcDQ5RVpJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE8=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b>Ouyang Jianquan, Zhou Yong, Tang Huanrong.A meteorological prediction model based on storm and online sequential extreme learning machine[J].Journal of Computer Research and Development, 2017, 54 (8) :1736- 1743 (in Chinese) (欧阳健全, 周勇, 唐欢容.基于Storm的在线序列极限学习机的气象预测[J].计算机研究与发展, 2017, 54 (8) :1736- 1743) 
+                            </a>
+                        </p>
+                        <p id="325">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Effect of nonstationarities on detrended fluctuation analysis">
+
+                                <b>[5]</b>Chen Zhi, Ivanov P C, Hu Kun, et al.Effect of nonstationarities on detrended fluctuation analysis[J].Physical Review E, 2002, 65 (4) :041107
+                            </a>
+                        </p>
+                        <p id="327">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Time Series Analysis">
+
+                                <b>[6]</b>Das S.Time Series Analysis[M].Princeton, NJ:Princeton University Press, 1994
+                            </a>
+                        </p>
+                        <p id="329">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The Analysis of Time Series:An Introduction">
+
+                                <b>[7]</b>Chatfield C.The Analysis of Time Series:An Introduction[M].New York:Chapman and Hall/CRC, 2016
+                            </a>
+                        </p>
+                        <p id="331">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES87F3500309B5481459335AA7A17DE679&amp;v=MTYyODJvPU5pZk9mYnUvYU5MSnI0OUdaT0o5Q1hneHpoSVc0engrVFE2VHEyTTBmc2JoUTcyV0NPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU4xaHg3Mjd3Sw==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b>Xue Jingming, Zhou Sihang, Liu Qiang, et al.Financial time series prediction using ℓ2, 1RF-ELM[J].Neurocomputing, 2018, 277:176- 186
+                            </a>
+                        </p>
+                        <p id="333">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Time Series Analysis:Forecasting and Control">
+
+                                <b>[9]</b>Box G E P, Jenkins G M, Reinsel G C, et al.Time Series Analysis:Forecasting and Control[M].New York:John Wiley &amp; Sons, 2015
+                            </a>
+                        </p>
+                        <p id="335">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJIF&amp;filename=SJIF13022100018873&amp;v=MjQ1NzJvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMcklJMXNRYWhBPU5pZkNhTEs3SHRQT3JvOUZaT29IQkhzNg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b>Winters P R.Forecasting sales by exponentially weighted moving averages[J].Management Science, 1960, 6 (3) :324- 342
+                            </a>
+                        </p>
+                        <p id="337">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep Learning">
+
+                                <b>[11]</b>Goodfellow I, Bengio Y, Courville A.Deep Learning[M].Cambridge, MA:MIT Press, 2016
+                            </a>
+                        </p>
+                        <p id="339">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011601419787&amp;v=MjE2ODloQT1OaWZPZmJLN0h0RE5xWTlFWU9vR0MzUStvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMcklJMXNRYQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b>Maguire L P, Roche B, McGinnity T M, et al.Predicting a chaotic time series using a fuzzy neural network[J].Information Sciences, 1998, 112 (1/2/3/4) :125- 136
+                            </a>
+                        </p>
+                        <p id="341">
+                            <a id="bibliography_13" >
+                                    <b>[13]</b>
+                                Bengio Y, Simard P, Frasconi P.Learning long-term dependencies with gradient descent is difficult[J].IEEE Transactions on Neural Networks, 1994, 5 (2) :157- 166
+                            </a>
+                        </p>
+                        <p id="343">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=LSTM:a search space odyssey">
+
+                                <b>[14]</b>Greff K, Srivastava R K, Koutník J, et al.LSTM:A search space odyssey[J].IEEE Transactions on Neural Networks and Learning Systems, 2017, 28 (10) :2222- 2232
+                            </a>
+                        </p>
+                        <p id="345">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJBK&amp;filename=SJBK15090500014198&amp;v=MDU4OTV3WmVadUh5am1VTHJJSTFzUWFoQT1OaWZKWmJLOUh0ak1xbzlGWk9vTERYVXhvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b>Hochreiter S, Schmidhuber J.Long short-term memory[J].Neural Computation, 1997, 9 (8) :1735- 1780
+                            </a>
+                        </p>
+                        <p id="347">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Revisiting spatial-temporal similarity:A deep learning framework for traffic prediction">
+
+                                <b>[16]</b>Yao Huaxiu, Tang Xianfeng, Wei Hua, et al.Revisiting spatial-temporal similarity:A deep learning framework for traffic prediction[C] // Proc of 2019 AAAI Conf on Artificial Intelligence (AAAI’19) .2019
+                            </a>
+                        </p>
+                        <p id="349">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=&amp;quot;An empirical exploration of recurrent network architectures &amp;quot;">
+
+                                <b>[17]</b>Jozefowicz R, Zaremba W, Sutskever I.An empirical exploration of recurrent network architectures[C] // Proc of the 32nd Int Conf on Machine Learning.New York:ACM, 2015:2342- 2350
+                            </a>
+                        </p>
+                        <p id="351">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=On the properties of neural machine translation:Encoder-decoder approaches">
+
+                                <b>[18]</b>Cho K, Van Merriënboer B, Bahdanau D, et al.On the properties of neural machine translation:Encoder-decoder approaches[J].arXiv preprint arXiv:1409.1259, 2014
+                            </a>
+                        </p>
+                        <p id="353">
+                            <a id="bibliography_19" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Using LSTM and GRU Neural Network Methods for Traffic Flow Prediction">
+
+                                <b>[19]</b>Fu Rui, Zhang Zuo, Li Li.Using LSTM and GRU neural network methods for traffic flow prediction[C] // Proc of the 31st Youth Academic Annual Conf of Chinese Association of Automation.Piscataway, NJ:IEEE, 2016:324- 328
+                            </a>
+                        </p>
+                        <p id="355">
+                            <a id="bibliography_20" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JDYS201603002&amp;v=MTg0MjNTZmJHNEg5Zk1ySTlGWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJyRnl2Z1Y3L0tMeW4=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[20]</b>Zhou Guobing, Wu Jianxin, Zhang Chenlin, et al.Minimal gated unit for recurrent neural networks[J].International Journal of Automation and Computing, 2016, 13 (3) :226- 234
+                            </a>
+                        </p>
+                        <p id="357">
+                            <a id="bibliography_21" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Empirical evaluation of gated recurrent neural networks on sequence modeling">
+
+                                <b>[21]</b>Chung J, Gulcehre C, Cho K H, et al.Empirical evaluation of gated recurrent neural networks on sequence modeling[J].arXiv preprint arXiv:1412.3555, 2014
+                            </a>
+                        </p>
+                        <p id="359">
+                            <a id="bibliography_22" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Estimating structured vector autoregressive models">
+
+                                <b>[22]</b>Melnyk I, Banerjee A.Estimating structured vector autoregressive models[C] //Proc of the 33rd Int Conf on Machine Learning.New York:ACM, 2016:830- 839
+                            </a>
+                        </p>
+                        <p id="361">
+                            <a id="bibliography_23" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Support Vector Machine with Adaptive Parameters in Financial Time Series Forecasting">
+
+                                <b>[23]</b>ao L J, Tay F E H.Support vector machine with adaptive parameters in financial time series forecasting[J].IEEE Transactions on Neural Networks, 2003, 14 (6) :1506- 1518
+                            </a>
+                        </p>
+                        <p id="363">
+                            <a id="bibliography_24" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14061600113352&amp;v=MDAzMzMxc1FhaEE9TmlmT2ZiSzhIdGZOcVk5Rlplb01EM2s3b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTHJJSQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[24]</b>Li Jiahan, Chen Weiye.Forecasting macroeconomic time series:LASSO-based approaches and their forecast combinations with dynamic factor models[J].International Journal of Forecasting, 2014, 30 (4) :996- 1015
+                            </a>
+                        </p>
+                        <p id="365">
+                            <a id="bibliography_25" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Generating sequences with recurrent neural networks">
+
+                                <b>[25]</b>Graves A.Generating sequences with recurrent neural networks[J].arXiv preprint arXiv:1308.0850, 2013
+                            </a>
+                        </p>
+                        <p id="367">
+                            <a id="bibliography_26" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501914443&amp;v=MDU1ODFiSzdIdEROcW85RWJlb0xDSGc2b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTHJJSTFzUWFoQT1OaWZPZg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[26]</b>Zhang G P.Time series forecasting using a hybrid ARIMA and neural network model[J].Neurocomputing, 2003, 50:159- 175
+                            </a>
+                        </p>
+                        <p id="369">
+                            <a id="bibliography_27" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Adam:A method for stochastic optimization">
+
+                                <b>[27]</b>Kingma D P, Ba J.Adam:A method for stochastic optimization[J].arXiv preprint arXiv:1412.6980, 2014
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+            <div class="reference anchor-tag" id="a_footnote">
+ <h3>注释</h3>
+                    <p>
+                        <span id="410" href="javascript:void(0)">
+                            <b>1</b> 由于LSTM在一定条件下与GRU在预测性能上具有可比性[19, 17, 21], 且LSTM与GRU和MGU间的传递状态参数量不同, 为了简化模型, 本文设计MIXGU中仅包含GRU和MGU.
+                        </span>
+                    </p>
+                    <p>
+                        <span id="412" href="javascript:void(0)">
+                            <b>2</b> 3个股票数据集数据可在https://www.kaggle.com/rohan8594/stock-data获取
+                        </span>
+                    </p>
+                    <p>
+                        <span id="414" href="javascript:void(0)">
+                            <b>3</b> 天气状况数据集可在https://raw.githubusercontent.com/jbrownlee/Datasets/master/pollution.csv获取
+                        </span>
+                    </p>
+            </div>
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JFYZ201908007" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201908007&amp;v=MDIwMjNVUkxPZVplUnJGeXZnVjcvS0x5dlNkTEc0SDlqTXA0OUZZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR281VVIraUtFOC9nUlMyND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=NLcKG8I1SJUaVFrQ0iGpF2klAT0OsmHRaVSZ1rKb5xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

@@ -1,0 +1,756 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2fKXReader%2fDetail%3fTIMESTAMP%3d637139238379795000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dDZKK201907007%26RESULT%3d1%26SIGN%3d96AhOI9cYy8mwxAHdnT9pp56GSs%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZKK201907007&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZKK201907007&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201907007&amp;v=MjQ3NjdmWnVacEZ5L2xVcjNCSVRmQVpiRzRIOWpNcUk5Rlk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3E=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="&lt;b&gt;1 系统总体架构&lt;/b&gt; "><b>1 系统总体架构</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#41" data-title="&lt;b&gt;2 系统模块设计&lt;/b&gt; "><b>2 系统模块设计</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#42" data-title="&lt;b&gt;2.1 前置采样模块&lt;/b&gt;"><b>2.1 前置采样模块</b></a></li>
+                                                <li><a href="#45" data-title="&lt;b&gt;2.2&lt;/b&gt; PL&lt;b&gt;端设计&lt;/b&gt;"><b>2.2</b> PL<b>端设计</b></a></li>
+                                                <li><a href="#62" data-title="&lt;b&gt;2.3&lt;/b&gt; PL&lt;b&gt;端与&lt;/b&gt;PS&lt;b&gt;端数据传输机制设计&lt;/b&gt;"><b>2.3</b> PL<b>端与</b>PS<b>端数据传输机制设计</b></a></li>
+                                                <li><a href="#67" data-title="&lt;b&gt;2.4&lt;/b&gt; PS&lt;b&gt;端设计&lt;/b&gt;"><b>2.4</b> PS<b>端设计</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#70" data-title="&lt;b&gt;3 系统实现&lt;/b&gt; "><b>3 系统实现</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#80" data-title="&lt;b&gt;4 结束语&lt;/b&gt; "><b>4 结束语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#39" data-title="图1 麦克风阵列高速采集处理系统框图">图1 麦克风阵列高速采集处理系统框图</a></li>
+                                                <li><a href="#44" data-title="图2 前置缓冲电路">图2 前置缓冲电路</a></li>
+                                                <li><a href="#47" data-title="图3 IS数据格式">图3 IS数据格式</a></li>
+                                                <li><a href="#59" data-title="图4 PL端IS时序图">图4 PL端IS时序图</a></li>
+                                                <li><a href="#64" data-title="图5 传输机制流程">图5 传输机制流程</a></li>
+                                                <li><a href="#73" data-title="图6 Vivado IP核综合图">图6 Vivado IP核综合图</a></li>
+                                                <li><a href="#76" data-title="图7 系统资源利用率">图7 系统资源利用率</a></li>
+                                                <li><a href="#79" data-title="图8 均匀圆阵麦克风阵列硬件平台">图8 均匀圆阵麦克风阵列硬件平台</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" 杨晓安, 罗杰, 苏豪, 等.基于Zynq-7000高速图像采集与实时处理系统[J].电子科技, 2014, 23 (7) :96-98.Yang Xiaoan, Luo Jie, Su Hao, et al.Zynq-7000 high speed image acquisition and real-time processing system[J].Electronic Science and Technology, 2014, 23 (7) :96-98." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201407045&amp;v=MjM2NTVCWVlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnkvbFVyM0JJVGZBWmJHNEg5WE1xSTk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         杨晓安, 罗杰, 苏豪, 等.基于Zynq-7000高速图像采集与实时处理系统[J].电子科技, 2014, 23 (7) :96-98.Yang Xiaoan, Luo Jie, Su Hao, et al.Zynq-7000 high speed image acquisition and real-time processing system[J].Electronic Science and Technology, 2014, 23 (7) :96-98.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 张朝元, 邵高平, 汪洋.基于Zynq-7000的嵌入式Linux移植[J].电子科技, 2018, 31 (1) :9-11.Zhang Chaoyuan, Shao Gaoping, Wang Yang.Embedded Linux porting based on Zynq-7000[J].Electronic Science and Technology, 2018, 31 (1) :9-11." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201801004&amp;v=MTU1NzR6cXFCdEdGckNVUjdxZlp1WnBGeS9sVXIzQklUZkFaYkc0SDluTXJvOUZZSVFLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         张朝元, 邵高平, 汪洋.基于Zynq-7000的嵌入式Linux移植[J].电子科技, 2018, 31 (1) :9-11.Zhang Chaoyuan, Shao Gaoping, Wang Yang.Embedded Linux porting based on Zynq-7000[J].Electronic Science and Technology, 2018, 31 (1) :9-11.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 张龙, 冯帅.基于Zynq的视频图像处理平台的设计[J].计算机与数字工程, 2016, 12 (44) :2519-223.Zhang Long, Feng Shuai.Design of video image processing platform based on Zynq[J].Computer and Digital Engineering, 2016, 12 (44) :2519-223." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSSG201612047&amp;v=MDQwMzFOclk5Qlk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacEZ5L2xVcjNCTHo3WWFiRzRIOWY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         张龙, 冯帅.基于Zynq的视频图像处理平台的设计[J].计算机与数字工程, 2016, 12 (44) :2519-223.Zhang Long, Feng Shuai.Design of video image processing platform based on Zynq[J].Computer and Digital Engineering, 2016, 12 (44) :2519-223.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" Mumolo E, Nolich M, Menegatti E.A multi agent system for audio-video tracking of a walking person in a structured environment[C].Columbus:Proceedings of Workshop on Multi agent Robotic Systems Trends and Industrial Applications, 2013." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A multi agent system for audio-video tracking of a walking person in a structured environment">
+                                        <b>[4]</b>
+                                         Mumolo E, Nolich M, Menegatti E.A multi agent system for audio-video tracking of a walking person in a structured environment[C].Columbus:Proceedings of Workshop on Multi agent Robotic Systems Trends and Industrial Applications, 2013.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" Millet J, Balingand B.Latest achievements in gun fire detection systems[C].Paris:Proceeding of the RTO-MP-SET-107 Battle field Acoustic Sensing for ISR Applications, 2014." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Latest achievements in gun fire detection systems">
+                                        <b>[5]</b>
+                                         Millet J, Balingand B.Latest achievements in gun fire detection systems[C].Paris:Proceeding of the RTO-MP-SET-107 Battle field Acoustic Sensing for ISR Applications, 2014.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" >
+                                        <b>[6]</b>
+                                     邹霞, 周彬, 贾冲, 等.麦克风阵列信号处理[M].北京:国防工业出版社, 2016.Zou Xia, Zhou Bin, Jia Chong, et al.Signal processing of microphone array[M].Beijing:National Defence Industry Press, 2016.</a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" Texas Instruments.PCM4204 guide book[M].Texas:Texas Instruments, 2010." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=PCM4204 guide book">
+                                        <b>[7]</b>
+                                         Texas Instruments.PCM4204 guide book[M].Texas:Texas Instruments, 2010.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" >
+                                        <b>[8]</b>
+                                     何宾.Xilinx all programmable SoC technical reference manual[M].北京:清华大学出版社, 2013.He Bin.Xilinx all programmable SoC technical reference manual[M].Beijing:Tsinghua University Press, 2013.</a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" Crockett L H, Elliot R A, Enderwitz M A, et al.Embedded processing with the ARM Cortex-A9 on the Xilinx Zynq-7000 all programmable SoC[M].UK:Strathclyde Academic Media, 2016." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Embedded processing with the ARM Cortex-A9 on the Xilinx Zynq-7000 all programmable SoC">
+                                        <b>[9]</b>
+                                         Crockett L H, Elliot R A, Enderwitz M A, et al.Embedded processing with the ARM Cortex-A9 on the Xilinx Zynq-7000 all programmable SoC[M].UK:Strathclyde Academic Media, 2016.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" 吴宗汉.实用微型ECM研制[M].南京:东南大学出版社, 2012.Wu Zonghan.Practical micro ECM development[M].Nanjing:Southeast University Press, 2012." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787564138448000&amp;v=MTIwNTJEQk04enhVU21EZDlTSDduM3hFOWZidm5LcmlmWmVadkZ5bmlVN2pJSVZ3ZFhGcXpHYmErR3REUHA0dEJiT3NQ&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         吴宗汉.实用微型ECM研制[M].南京:东南大学出版社, 2012.Wu Zonghan.Practical micro ECM development[M].Nanjing:Southeast University Press, 2012.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" 党俊博, 李哲, 李俊雅.基于FPGA的串口通信电路设计与实现[J].电子科技, 2016, 29 (7) :106-110.Dang Junbo, Li Zhe, Li Junya.Design and implementation of serial communication circuit based on FPGA[J].Electronic Science and Technology, 2016, 29 (7) :106-110." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201607031&amp;v=MjczNTBacEZ5L2xVcjNCSVRmQVpiRzRIOWZNcUk5R1pZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         党俊博, 李哲, 李俊雅.基于FPGA的串口通信电路设计与实现[J].电子科技, 2016, 29 (7) :106-110.Dang Junbo, Li Zhe, Li Junya.Design and implementation of serial communication circuit based on FPGA[J].Electronic Science and Technology, 2016, 29 (7) :106-110.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 陆启帅, 王地, 陆彦婷.Xilinx Zynq SoC与嵌入式Linux设计实战指南[M].北京:清华大学出版社, 2014.Lu Qishuai, Wang Di, Lu Yanting.Xilinx Zynq SoC and embedded Linux design guide[M].Beijing:Tsinghua University Press, 2014." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787302373445000&amp;v=MDExNTB3ZFhGcXpHYkM0SE5MTHJJdEJZZXNQREJNOHp4VVNtRGQ5U0g3bjN4RTlmYnZuS3JpZlplWnZGeW5pVTdqSUlW&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         陆启帅, 王地, 陆彦婷.Xilinx Zynq SoC与嵌入式Linux设计实战指南[M].北京:清华大学出版社, 2014.Lu Qishuai, Wang Di, Lu Yanting.Xilinx Zynq SoC and embedded Linux design guide[M].Beijing:Tsinghua University Press, 2014.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" >
+                                        <b>[13]</b>
+                                     杜春雷.ARM体系结构与编程[M].北京:清华大学出版社, 2015.Du Chunlei.ARM architecture and programming[M].Beijing:Tsinghua University Press, 2015.</a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 杨霞.基于OMAP3530以太网视频采集系统的设计与实现[D].南京:南京邮电大学, 2011.Yang Xia.Design and implementation of OMAP3530 ethernet video acquisition system[D].Nanjing:Nanjing University of Posts and Telecommunications, 2011" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1011227229.nh&amp;v=MTY5NDFIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnkvbFVyM0JWRjI2SDdHNkdkUE9wcEViUElRS0Q=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         杨霞.基于OMAP3530以太网视频采集系统的设计与实现[D].南京:南京邮电大学, 2011.Yang Xia.Design and implementation of OMAP3530 ethernet video acquisition system[D].Nanjing:Nanjing University of Posts and Telecommunications, 2011
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 冯利美, 冯健.嵌入式Linux C 语言程序设计基础教程[M].北京:人民邮电出版社, 2013.Feng Limei, Feng Jian.Embedded Linux C language programming basics tutorial[M].Beijing:Posts and Telecommunications Press, 2013." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787115316936000&amp;v=MjE3MjRtRGQ5U0g3bjN4RTlmYnZuS3JpZlplWnZGeW5pVTdqSUlWd2RYRnF6R2JLNUc5TE5xWVpHWXVzUERCTTh6eFVT&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         冯利美, 冯健.嵌入式Linux C 语言程序设计基础教程[M].北京:人民邮电出版社, 2013.Feng Limei, Feng Jian.Embedded Linux C language programming basics tutorial[M].Beijing:Posts and Telecommunications Press, 2013.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" Xilinx, lnc.Vivado suite user guide partial reconfiguration[EB/OL]. (2016-04-06) [2018-06-02]https://www.xilinx.com/." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Vivado suite user guide partial reconfiguration">
+                                        <b>[16]</b>
+                                         Xilinx, lnc.Vivado suite user guide partial reconfiguration[EB/OL]. (2016-04-06) [2018-06-02]https://www.xilinx.com/.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+    <div class="head-tag">   
+            <p>
+               <b> 网络首发时间: 2018-12-20 09:13</b>
+            </p>     
+    </div>
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=DZKK" target="_blank">电子科技</a>
+                2019,32(07),28-32 DOI:10.16180/j.cnki.issn1007-7820.2019.07.006            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于</b>Zynq<b>的麦克风阵列同步高速采集系统设计</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%87%91%E6%81%92%E5%BA%B7&amp;code=40564346&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">金恒康</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E4%B8%80%E9%97%BB&amp;code=28358305&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张一闻</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%AD%A6%E8%AD%A6%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=1694105&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">武警工程大学信息工程学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>高速同步采样处理是麦克风阵列系统的基础。针对传统音频采集系统采集速率低、成本高、体积大及便携性差的问题, 文中基于Xilinx Zynq-7000系列可扩展平台, 设计了一款麦克风阵列同步高速采集系统。该系统采用FPGA+ARM软硬件协同的工作方式, 通过AXI总线实现数据互通。由FPGA中模拟音频传输接口协议与系统的操作控制;在ARM上移植Linux操作系统, 用千兆网口和高速SD卡两种方式对数据进行传输保存;利用Xilinx-Vivado套件设计制作系统。实验结果表明, 该系统最高支持采样率为96 kHz的16路同步采集, 整体重量为1.67 kg, 续航约5小时, 填补了千元级小型音频阵列采集空白。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Zynq-7000&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Zynq-7000;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%AB%98%E9%80%9F%E9%87%87%E9%9B%86&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">高速采集;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%98%B5%E5%88%97%E4%BF%A1%E5%8F%B7&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">阵列信号;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=AXI%E6%80%BB%E7%BA%BF&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">AXI总线;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Linux&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Linux;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">数据存储;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    金恒康 (1994-) , 男, 硕士研究生。研究方向:嵌入式系统, FPGA。;
+                                </span>
+                                <span>
+                                    张一闻 (1978-) , 男, 博士, 副教授。研究方向:阵列信号处理, FPGA。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-07-25</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然基金青年基金 (61101238);</span>
+                    </p>
+            </div>
+                    <h1><b>Research on Design of Synchronous High Speed Acquisition System of Microphone Array Based on ZYNQ</b></h1>
+                    <h2>
+                    <span>JIN Hengkang</span>
+                    <span>ZHANG Yiwen</span>
+            </h2>
+                    <h2>
+                    <span>School of Information Engineering, Engineering University of PAP</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>High-speed simultaneous sampling processing is the basis of a microphone array system. Aiming at the low acquisition rate, high cost, large size and poor portability of the traditional audio acquisition system, the paper designed a microphone array synchronous high-speed acquisition system based on the Xilinx Zynq-7000 series scalable platform. Using FPGA+ARM software and hardware cooperative working mode, data intercommunication was realized through AXI bus. The system was controlled by the analog audio transmission interface protocol and system of the FPGA.The Linux operating system was transplanted on the ARM with the data being transmitted and was saved by the Gigabit Ethernet port and the high-speed SD card.The Xilinx-Vivado kit was used to design the manufacturing system. The experimental results showed that the system supported up to 16 channels of synchronous acquisition with a sampling rate of 96 kHz. The overall weight was 1.67 kg, and the battery life was about 5 hours, which filled the blank of 1000-level small audio array.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Zynq-7000&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Zynq-7000;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=high%20speed&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">high speed;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=acquisition&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">acquisition;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=array%20signal&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">array signal;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=AXI%20bus&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">AXI bus;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Linux&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Linux;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=data%20store&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">data store;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-07-25</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>National Natural Science Fundation of China Youth Foud (61101238);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <div class="p1">
+                    <p id="35">随着科学技术的高速发展, 阵列信号, 尤其是高速、同步音频的阵列信号采集处理过程对硬件平台系统设计提出了更高的要求。相较于传统的音频数据采集系统, 阵列音频信号采集系统需要解决高速接收、高速缓存、高速通信以及低功耗等几项问题<citation id="82" type="reference"><link href="3" rel="bibliography" /><link href="5" rel="bibliography" /><link href="7" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>,<a class="sup">3</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="36">在传统嵌入式平台上, 一般采用A/D模块+DSP+通信传输模块的方式实现。在处理高速数据时, 将面临几个问题: (1) 接收高速同步A/D数据需要FPGA或者高端DSP; (2) 处理传输高速数据需要ARM或者DSP作为计算核心; (3) 传统组合平台体积大、功耗高、便携性差<citation id="83" type="reference"><link href="9" rel="bibliography" /><link href="11" rel="bibliography" /><sup>[<a class="sup">4</a>,<a class="sup">5</a>]</sup></citation>。市面上传统的解决方案在成本、通信设计、功耗以及移植扩展性上都不尽人意。Xilinx公司出品的Zynq-7000系列可扩展平台, 集成了Cortex-A9核心处理器, 改变了原先分离式FPGA+ARM/DSP的架构模式, 提供了一套集成、高效、快速、多核处理、小型化解决方案。</p>
+                </div>
+                <h3 id="37" name="37" class="anchor-tag"><b>1 系统总体架构</b></h3>
+                <div class="p1">
+                    <p id="38">基于Zynq的麦克风阵列同步高速采集系统的组成主要由图1所示。系统主要由MIC阵列模块组、A/D采样模块组 (A/D处理芯片选用TI公司的PCM4204<citation id="85" type="reference"><link href="13" rel="bibliography" /><link href="15" rel="bibliography" /><sup>[<a class="sup">6</a>,<a class="sup">7</a>]</sup></citation>, 其采样速率最高可达216 kHz, 采样位数为24位) 构成。Zynq-7000可扩展平台为系统的处理核心, 包括可编程逻辑 (Programming Logic, PL) 和处理系统 (Processing System, PS) 两部分。其中PL部分包含了传统意义的FPGA逻辑单元和部分DSP资源, PS部分主要是两个Cortex-A9硬核<citation id="84" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>。</p>
+                </div>
+                <div class="area_img" id="39">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201907007_039.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 麦克风阵列高速采集处理系统框图" src="Detail/GetImg?filename=images/DZKK201907007_039.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 麦克风阵列高速采集处理系统框图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201907007_039.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 1. Microphone array high-speed acquisition and processing system block diagram</p>
+
+                </div>
+                <div class="p1">
+                    <p id="40">环境声通过MIC阵列模块组采集, 模拟信号经运放放大之后送入A/D采样模块转为数字信号, 通过通用I/O管脚送入Zynq-7000的PL端。由于飞利浦I<sup>2</sup>S音频数据格式为串行传输, 会在PL端经串并转换, 通过Ping-Pang操作在BRAM块进行缓存。PS端与PL端经AXI总线进行传输通信。在ARM中移植操作系统, 通过BRAM控制器, 读取PL端缓存的数据<citation id="86" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>。利用PL端的按键控制, 实现两种数据存储模式, 分别经网口传输至上位机保存或经Micro SD外设存入SD卡保存。最终数字信号以二进制媒体文件 (.dat) 格式保存。</p>
+                </div>
+                <h3 id="41" name="41" class="anchor-tag"><b>2 系统模块设计</b></h3>
+                <h4 class="anchor-tag" id="42" name="42"><b>2.1 前置采样模块</b></h4>
+                <div class="p1">
+                    <p id="43">系统采用驻极体电容式麦克风<citation id="87" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>。麦克风输出端经放大后, 经SMA接口送入A/D采样模块。A/D采样模块采用4片PCM4204芯片来实现16通道的A/D转换。其中每片PCM4204接收4路麦克风的信号。由于麦克风的输出信号不是差分信号, 而PCM4204要求输入信号为差分信号, 因此需在每路信号的前端设计一个缓冲电路, 用来对所接收的麦克风信号进行差分信号转化和振幅调整。在对输入的麦克风信号缓冲处理后, 通过转换电路进行A/D转换, 两路并行输出。为实现16路同步采集, 采样模块设置主从模式, 1块主模式, 3块从模式。主模式模块提供时钟信号, 从模式模块被动接收时钟信号, 从而实现同步采样, 其中前置缓冲电路如图2所示。</p>
+                </div>
+                <div class="area_img" id="44">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201907007_044.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 前置缓冲电路" src="Detail/GetImg?filename=images/DZKK201907007_044.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 前置缓冲电路  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201907007_044.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 2. Pre-buffer circuit</p>
+
+                </div>
+                <h4 class="anchor-tag" id="45" name="45"><b>2.2</b> PL<b>端设计</b></h4>
+                <div class="p1">
+                    <p id="46">根据24 bit A/D转换器PCM4204接口时序, 工作模式、数据采集流程等特点。PL端需要进行串并转换、输出I<sup>2</sup>S音频数据格式、通道数据分离等操作<citation id="88" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>。I<sup>2</sup>S的数据格式如图3所示。</p>
+                </div>
+                <div class="area_img" id="47">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201907007_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 I2S数据格式" src="Detail/GetImg?filename=images/DZKK201907007_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 I<sup>2</sup>S数据格式  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201907007_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 3. I<sup>2</sup>S data format</p>
+
+                </div>
+                <div class="p1">
+                    <p id="48">其中, LRCK信号控制左右声道即通道信号选择, 低电平时输出CH1和CH3, 高电平时输出CH2和CH4。BCK对应信号位时钟, 每一个下降沿对应一位数据, BCK=2×采样频率×采样位数。PL端在接收数据时, 依次进行LRCK判断、BCK判断、串并转化的处理, 存入相应通道的寄存器。下面是一个24位宽I<sup>2</sup>S的音频数据接收模块, 主要通过移位来实现, 其关键部位代码语言描述为:</p>
+                </div>
+                <div class="p1">
+                    <p id="49">if (左右时钟==0) begin</p>
+                </div>
+                <div class="p1">
+                    <p id="50">if (位时钟==0) begin</p>
+                </div>
+                <div class="p1">
+                    <p id="51">if (1/3通道计数&lt;=24) begin</p>
+                </div>
+                <div class="p1">
+                    <p id="52">通道计数&lt;=通道计数+1;</p>
+                </div>
+                <div class="p1">
+                    <p id="53">if (通道计数 &gt;=1) begin</p>
+                </div>
+                <div class="p1">
+                    <p id="54">通道寄存器1[0]&lt;=输入信号1</p>
+                </div>
+                <div class="p1">
+                    <p id="55">sdout1_buf [23:1] &lt;=sdout1_buf [22:0];</p>
+                </div>
+                <div class="p1">
+                    <p id="56">通道寄存器3[0]&lt;=输入信号2</p>
+                </div>
+                <div class="p1">
+                    <p id="57">sdout3_buf [23:1] &lt;=sdout3_buf[22:0];</p>
+                </div>
+                <div class="p1">
+                    <p id="58">仿真后得到时序图, 如图4所示。</p>
+                </div>
+                <div class="area_img" id="59">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201907007_059.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 PL端I2S时序图" src="Detail/GetImg?filename=images/DZKK201907007_059.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 PL端I<sup>2</sup>S时序图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201907007_059.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 4. PL port I<sup>2</sup>S timing diagram</p>
+
+                </div>
+                <div class="p1">
+                    <p id="60">分析仿真结果, bcki信号在每一个采样点向寄存器输入数据, 在25.6 μs时, 通道信号发生切换, 目标寄存器发生改变。仿真结果表明, PL端I<sup>2</sup>S时序符合I<sup>2</sup>S音频数据格式协议传输时序。</p>
+                </div>
+                <div class="p1">
+                    <p id="61">为了满足便携控制与操作的要求, 在PL端同时加入人际交互功能, 对采集系统进行控制。分别设置存储模式按钮、SD卡存储模式按钮、网络实时传输模式按钮。利用标志位进行模式控制, 将16路通道数据通过BRAM缓存方式传给PS端<citation id="89" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>。当按下结束按钮时, 系统整体暂停运行。</p>
+                </div>
+                <h4 class="anchor-tag" id="62" name="62"><b>2.3</b> PL<b>端与</b>PS<b>端数据传输机制设计</b></h4>
+                <div class="p1">
+                    <p id="63">为实现PL端采集数据与PS端存储数据无失真交互, 此系统设计了一套Ping-Pang轮询标志交互机制。通过Ping-Pong操作可以提高数据传输的效率, 加入数据轮询标志位, 可实现数据传输的确认。其通信过程如图5所示。</p>
+                </div>
+                <div class="area_img" id="64">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201907007_064.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 传输机制流程" src="Detail/GetImg?filename=images/DZKK201907007_064.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 传输机制流程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201907007_064.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 5. Transport mechanism flow</p>
+
+                </div>
+                <div class="p1">
+                    <p id="65">具体过程为:PL端与PS端之间采用BRAM缓存方式完成数据交互。每一个数据通道占据一个独立的BRAM控制器, PS端通过BRAM控制器的地址来区分各个通道的数据。PL端将采集到的数据以乒乓方式缓存送入BRAM中, Ping和Pang分别占据1 000个32 bit位宽数据 (低24 bit位宽有效, 高8 bit置1) 共8 000 Byte。PL端先将数据写入0～3 999地址, 再向标识地址8100中写入0x0000000F, 同时完成Ping-Pang切换。向4000～7999地址段写入数据, 再向标识地址写入0x000000F0。PS端轮询检测各BRAM块对应的8 100地址, 发现上述两个标识后立刻读出4 000长度的数据, 再向8100地址写入0x00000000, 清空标识位。由于PS端轮询速度远大于PL端写入数据的速度, 即当PL端Ping操作的数据还没有写完, PS端已经将Ping操作的数据读取完毕, 并清空标识位。同理, PL端写Pang操作的过程中, PS端已经将Pang操作的数据读取完毕并清空标识位。Ping-Pang轮询交互, 将PL端数据向PS端传输。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">采用16块BRAM块来缓存PL端数据, 来缓解PS端的处理压力。若采用小空间, 频繁读写易造成PS端轮询检测标志位的频率激增。由于每次轮询标志位的时间固定, 易造成整体处理速率的下降。采用块读写的方式, 能够充分利用资源换速率, 提高整体传输效率。</p>
+                </div>
+                <h4 class="anchor-tag" id="67" name="67"><b>2.4</b> PS<b>端设计</b></h4>
+                <div class="p1">
+                    <p id="68">在ARM上移植Linux操作系统<citation id="90" type="reference"><link href="25" rel="bibliography" /><link href="27" rel="bibliography" /><link href="29" rel="bibliography" /><sup>[<a class="sup">12</a>,<a class="sup">13</a>,<a class="sup">14</a>]</sup></citation>, 其过程包括:编译U-BOOT、编译Linux内核、生成设备树和生成文件系统等。系统开辟两个进程, 分别负责将PL端传输的数据写入系统缓存DDR3和判断运行模式由网口或SD卡转发出去。依据传输机制读取数据, 存入DDR3, 将标志位清零。BRAM块基地址从0x4000_1FFF到0x5400_3FFF, 分别对应传输通道PORT1到PORT15。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">若发现某端口标志位无读取标志, 则跳至下一通道标志处, 进行判断。按此法串行轮询读取1～16通道数据, 送入DDR3缓存。根据模式区分工作:网络模式下, 利用网络ATi接口函数进行网络分包。通过UDP组播形式将不同通道数据分配到不同端口;SD卡模式下, 利用filp_open () , vfs_read () , set_fs () 等函数, 根据端口号 (7043-7058) 划分SD卡存储区。设定SD卡存储上限, 当SD卡存满时, LED停止闪烁, 保持高亮状态。每一路通道数据保存为一个 (.dat) 文件, 以时间作为文件名, 每一次暂停存储为一次文件, 开始则继续创建新的文件。Linux系统挂载于SD卡, 编译并运行SD卡上的Boot.bin程序文件。</p>
+                </div>
+                <h3 id="70" name="70" class="anchor-tag"><b>3 系统实现</b></h3>
+                <div class="p1">
+                    <p id="71">根据各模块设计架构, 在Vivado套件上搭建系统<citation id="91" type="reference"><link href="31" rel="bibliography" /><link href="33" rel="bibliography" /><sup>[<a class="sup">15</a>,<a class="sup">16</a>]</sup></citation>。PS端通过AXI总线对FPGA上的IP核进行操作, 实现BRAM块的控制。BRAM块配置完成完成后, 分别对应相应的传输通道。PortA和PortB分别对应着Ping-Pang的两个端口, 读写时钟由clk_AXI提供。Vivado套件上搭建的框图图如图6所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="72">A/D转换部分, 片上缓存, BRAM写入均由AXi总线控制。BRAM分配2048的深度, 位宽32位。</p>
+                </div>
+                <div class="area_img" id="73">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201907007_073.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 Vivado IP核综合图" src="Detail/GetImg?filename=images/DZKK201907007_073.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 Vivado IP核综合图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201907007_073.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 6. Vivado IP nuclear comprehensive map</p>
+
+                </div>
+                <div class="p1">
+                    <p id="74">综合后得到资源消耗统计图, 如图7所示。逻辑单元 (LUT) 使用约1/2, 仍然有较大的扩展空间。BRAM由于PL端与PS端交互, 占用率较高。其余片上资源余量较高, 扩展空间丰富, 满足可扩展平台要求。</p>
+                </div>
+                <div class="p1">
+                    <p id="75">用Sony-3400毫安电芯供电, 可提供系统持续运行5小时, 整体重量约1.67 kg, 整体硬件成本为896元, 满足低功耗、便携性及千元级要求。</p>
+                </div>
+                <div class="area_img" id="76">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201907007_076.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 系统资源利用率" src="Detail/GetImg?filename=images/DZKK201907007_076.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 系统资源利用率  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201907007_076.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 7. System resource utilization</p>
+
+                </div>
+                <div class="p1">
+                    <p id="77">在一间15 m (<i>L</i>) ×8 m (<i>W</i>) ×3.5 m (<i>H</i>) 的房间, 两面有窗户, 周围墙壁未做任何处理, 噪声中等的环境中, 搭建环形麦克风阵列, 进行16路同步采样测试。均匀圆阵麦克风阵列硬件平台如图8所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="78">利用板卡上LED灯来检测是否出现传输错误, 通过检测LED灯翻转次数, 统计差错bit。经测试, 采样率为96 kHz的16路麦克风音频信号, 每1 MB音频数据差错2.45 bit, 满足后续阵列信号处理要求。</p>
+                </div>
+                <div class="area_img" id="79">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZKK201907007_079.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图8 均匀圆阵麦克风阵列硬件平台" src="Detail/GetImg?filename=images/DZKK201907007_079.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图8 均匀圆阵麦克风阵列硬件平台  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZKK201907007_079.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Figure 8. Uniform circular array microphone array hardware platform</p>
+
+                </div>
+                <h3 id="80" name="80" class="anchor-tag"><b>4 结束语</b></h3>
+                <div class="p1">
+                    <p id="81">本文针对传统麦克风阵列同步采集系统, 采集速率低、功耗高、便携性差等问题。设计制作了一套基于Zynq的麦克风阵列高速采集处理系统。利用Zynq集成化的体系结构, 设计了采样电路、音频接口以及关键的传输机制, 促进系统高效运行, 突破了硬件系统与操作系统的通信限制, 实现同步采样系统优秀的控制能力、高速的采集处理能力以及低功耗、便携等特性。本文设计的采集系统满足随时随地高精度采集阵列信号的需要, 扩展了采集应用环境, 为日后阵列信号算法研究提供了硬件基础, 其在小型化、便携化、高精度声源定位、特征识别以及人工智能等领域具有一定的应用价值。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201407045&amp;v=MTM5NjZxZlp1WnBGeS9sVXIzQklUZkFaYkc0SDlYTXFJOUJZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 杨晓安, 罗杰, 苏豪, 等.基于Zynq-7000高速图像采集与实时处理系统[J].电子科技, 2014, 23 (7) :96-98.Yang Xiaoan, Luo Jie, Su Hao, et al.Zynq-7000 high speed image acquisition and real-time processing system[J].Electronic Science and Technology, 2014, 23 (7) :96-98.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201801004&amp;v=MDM0MzBuTXJvOUZZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeS9sVXIzQklUZkFaYkc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 张朝元, 邵高平, 汪洋.基于Zynq-7000的嵌入式Linux移植[J].电子科技, 2018, 31 (1) :9-11.Zhang Chaoyuan, Shao Gaoping, Wang Yang.Embedded Linux porting based on Zynq-7000[J].Electronic Science and Technology, 2018, 31 (1) :9-11.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSSG201612047&amp;v=MzExMDdUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpwRnkvbFVyM0JMejdZYWJHNEg5Zk5yWTlCWTRRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 张龙, 冯帅.基于Zynq的视频图像处理平台的设计[J].计算机与数字工程, 2016, 12 (44) :2519-223.Zhang Long, Feng Shuai.Design of video image processing platform based on Zynq[J].Computer and Digital Engineering, 2016, 12 (44) :2519-223.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A multi agent system for audio-video tracking of a walking person in a structured environment">
+
+                                <b>[4]</b> Mumolo E, Nolich M, Menegatti E.A multi agent system for audio-video tracking of a walking person in a structured environment[C].Columbus:Proceedings of Workshop on Multi agent Robotic Systems Trends and Industrial Applications, 2013.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Latest achievements in gun fire detection systems">
+
+                                <b>[5]</b> Millet J, Balingand B.Latest achievements in gun fire detection systems[C].Paris:Proceeding of the RTO-MP-SET-107 Battle field Acoustic Sensing for ISR Applications, 2014.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" >
+                                    <b>[6]</b>
+                                 邹霞, 周彬, 贾冲, 等.麦克风阵列信号处理[M].北京:国防工业出版社, 2016.Zou Xia, Zhou Bin, Jia Chong, et al.Signal processing of microphone array[M].Beijing:National Defence Industry Press, 2016.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=PCM4204 guide book">
+
+                                <b>[7]</b> Texas Instruments.PCM4204 guide book[M].Texas:Texas Instruments, 2010.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" >
+                                    <b>[8]</b>
+                                 何宾.Xilinx all programmable SoC technical reference manual[M].北京:清华大学出版社, 2013.He Bin.Xilinx all programmable SoC technical reference manual[M].Beijing:Tsinghua University Press, 2013.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Embedded processing with the ARM Cortex-A9 on the Xilinx Zynq-7000 all programmable SoC">
+
+                                <b>[9]</b> Crockett L H, Elliot R A, Enderwitz M A, et al.Embedded processing with the ARM Cortex-A9 on the Xilinx Zynq-7000 all programmable SoC[M].UK:Strathclyde Academic Media, 2016.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787564138448000&amp;v=MzAxOTFmWmVadkZ5bmlVN2pJSVZ3ZFhGcXpHYmErR3REUHA0dEJiT3NQREJNOHp4VVNtRGQ5U0g3bjN4RTlmYnZuS3Jp&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 吴宗汉.实用微型ECM研制[M].南京:东南大学出版社, 2012.Wu Zonghan.Practical micro ECM development[M].Nanjing:Southeast University Press, 2012.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201607031&amp;v=MTgwMDc0SDlmTXFJOUdaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnBGeS9sVXIzQklUZkFaYkc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 党俊博, 李哲, 李俊雅.基于FPGA的串口通信电路设计与实现[J].电子科技, 2016, 29 (7) :106-110.Dang Junbo, Li Zhe, Li Junya.Design and implementation of serial communication circuit based on FPGA[J].Electronic Science and Technology, 2016, 29 (7) :106-110.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787302373445000&amp;v=MTEzMzdOTExySXRCWWVzUERCTTh6eFVTbURkOVNIN24zeEU5ZmJ2bktyaWZaZVp2RnluaVU3aklJVndkWEZxekdiQzRI&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 陆启帅, 王地, 陆彦婷.Xilinx Zynq SoC与嵌入式Linux设计实战指南[M].北京:清华大学出版社, 2014.Lu Qishuai, Wang Di, Lu Yanting.Xilinx Zynq SoC and embedded Linux design guide[M].Beijing:Tsinghua University Press, 2014.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" >
+                                    <b>[13]</b>
+                                 杜春雷.ARM体系结构与编程[M].北京:清华大学出版社, 2015.Du Chunlei.ARM architecture and programming[M].Beijing:Tsinghua University Press, 2015.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1011227229.nh&amp;v=MTU0NTdCdEdGckNVUjdxZlp1WnBGeS9sVXIzQlZGMjZIN0c2R2RQT3BwRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 杨霞.基于OMAP3530以太网视频采集系统的设计与实现[D].南京:南京邮电大学, 2011.Yang Xia.Design and implementation of OMAP3530 ethernet video acquisition system[D].Nanjing:Nanjing University of Posts and Telecommunications, 2011
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787115316936000&amp;v=MTIyODdkWEZxekdiSzVHOUxOcVlaR1l1c1BEQk04enhVU21EZDlTSDduM3hFOWZidm5LcmlmWmVadkZ5bmlVN2pJSVZ3&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 冯利美, 冯健.嵌入式Linux C 语言程序设计基础教程[M].北京:人民邮电出版社, 2013.Feng Limei, Feng Jian.Embedded Linux C language programming basics tutorial[M].Beijing:Posts and Telecommunications Press, 2013.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Vivado suite user guide partial reconfiguration">
+
+                                <b>[16]</b> Xilinx, lnc.Vivado suite user guide partial reconfiguration[EB/OL]. (2016-04-06) [2018-06-02]https://www.xilinx.com/.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="DZKK201907007" />
+        <input id="dpi" type="hidden" value="399" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZKK201907007&amp;v=MjQ3NjdmWnVacEZ5L2xVcjNCSVRmQVpiRzRIOWpNcUk5Rlk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3E=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZONEkxbmYxYzdzR0dyZ1pjdDhmMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="1" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=P0ea_aWnQfx5aXr8bS4u3GGmKX_ORbqAf_1HJ_4Trvg1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=vAscMyvIPP9NePnbGPkqJ0A5tHOvnzl65tGuRDsf9xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130640058712500%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201903046%26RESULT%3d1%26SIGN%3d%252fZfbhcsi1n0%252fKela3N7WZAzL%252fW4%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201903046&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201903046&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201903046&amp;v=MzI1OTJySTlCWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk3bVVyN0lMejdCYmJHNEg5ak0=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#39" data-title="1 相关研究 ">1 相关研究</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="2 中文文本摘要自动提取 ">2 中文文本摘要自动提取</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#46" data-title="2.1 基于Doc2Vec模型的句子向量化">2.1 基于Doc2Vec模型的句子向量化</a></li>
+                                                <li><a href="#49" data-title="2.2 改进的K-means聚类算法">2.2 改进的K-means聚类算法</a></li>
+                                                <li><a href="#57" data-title="2.3 改进的TextRank算法">2.3 改进的TextRank算法</a></li>
+                                                <li><a href="#67" data-title="2.4 位置关系">2.4 位置关系</a></li>
+                                                <li><a href="#72" data-title="2.5 摘要语句与文章标题的相似度">2.5 摘要语句与文章标题的相似度</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#77" data-title="3 实验结果与分析 ">3 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#78" data-title="3.1 实验过程">3.1 实验过程</a></li>
+                                                <li><a href="#89" data-title="3.2 结果分析">3.2 结果分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#96" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#45" data-title="&lt;b&gt;图1 中文文本摘要自动提取流程&lt;/b&gt;"><b>图1 中文文本摘要自动提取流程</b></a></li>
+                                                <li><a href="#59" data-title="&lt;b&gt;图2 PageRank算法示意图&lt;/b&gt;"><b>图2 PageRank算法示意图</b></a></li>
+                                                <li><a href="#93" data-title="&lt;b&gt;表1 算法准确率、召回率及F值统计&lt;/b&gt; %"><b>表1 算法准确率、召回率及F值统计</b> %</a></li>
+                                                <li><a href="#94" data-title="&lt;b&gt;图3 不同摘要句数目时的算法F值对比&lt;/b&gt;"><b>图3 不同摘要句数目时的算法F值对比</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" BIADSY F, HIRSCHBERG J, FILATOVA E.An unsupervised approach to biography production using Wikipedia[C]//Proceedings of Meeting of the Association for Computational Linguistics.Cambridge, USA:Association for Computational Linguistics, 2008:807-815." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=An Unsupervised Approach to Biography Production Using Wikipedia">
+                                        <b>[1]</b>
+                                         BIADSY F, HIRSCHBERG J, FILATOVA E.An unsupervised approach to biography production using Wikipedia[C]//Proceedings of Meeting of the Association for Computational Linguistics.Cambridge, USA:Association for Computational Linguistics, 2008:807-815.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 张云涛, 龚玲, 王永成.基于综合方法的文本主题句的自动抽取[J].上海交通大学学报, 2006, 40 (5) :771-774." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SHJT200605013&amp;v=MjgyMDNCZXJHNEh0Zk1xbzlFWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk3bVVyN0lOaVg=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         张云涛, 龚玲, 王永成.基于综合方法的文本主题句的自动抽取[J].上海交通大学学报, 2006, 40 (5) :771-774.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" YEH J, KE H, YANG W.iSpreadRank:ranking sentences for extraction-based summarization using feature weight propagation in the sentence similarity networkp[J].Expert Systems with Applications, 2008, 35 (3) :1451-1462." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501643010&amp;v=MjUzNDl5am1VTG5JSmwwVmF4ST1OaWZPZmJLN0h0RE5xbzlFWXU4TURIMDVvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SA==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         YEH J, KE H, YANG W.iSpreadRank:ranking sentences for extraction-based summarization using feature weight propagation in the sentence similarity networkp[J].Expert Systems with Applications, 2008, 35 (3) :1451-1462.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" SALTON G, CLEMENT T.On the construction of effective vocabularies for information retrieval[C]//Proceedings of 1973 Meeting on Programming Languages and Information Retrieval.New York, USA:ACM Press, 1973:48-60." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=On the construction of effective vocabularies for information retrieval">
+                                        <b>[4]</b>
+                                         SALTON G, CLEMENT T.On the construction of effective vocabularies for information retrieval[C]//Proceedings of 1973 Meeting on Programming Languages and Information Retrieval.New York, USA:ACM Press, 1973:48-60.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" 张奇, 黄萱菁, 吴立德.一种新的句子相似度度量及其在文本自动摘要中的应用[J].中文信息学报, 2005, 19 (2) :93-99." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS200502013&amp;v=MDc5NzQ3bVVyN0lLQ2pZZmJHNEh0VE1yWTlFWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         张奇, 黄萱菁, 吴立德.一种新的句子相似度度量及其在文本自动摘要中的应用[J].中文信息学报, 2005, 19 (2) :93-99.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 张筱丹, 胡学钢.基于向量空间模型的自动摘要冗余处理研究[J].合肥工业大学学报 (自然科学版) , 2010, 33 (9) :1355-1358." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HEFE201009017&amp;v=MTU4NDU3RzRIOUhNcG85RVk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5N21VcjdJTFNqTmE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         张筱丹, 胡学钢.基于向量空间模型的自动摘要冗余处理研究[J].合肥工业大学学报 (自然科学版) , 2010, 33 (9) :1355-1358.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" LE Q, MIKOLOV T.Distributed representations of sentences and documents[C]//Proceedings of International Conference on Machine Learning.New York, USA:ACM Press, 2014:1188-1196." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Distributed representations of sentences and documents">
+                                        <b>[7]</b>
+                                         LE Q, MIKOLOV T.Distributed representations of sentences and documents[C]//Proceedings of International Conference on Machine Learning.New York, USA:ACM Press, 2014:1188-1196.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 甘如饴.基于doc2vec和SVM的舆情情感分析系统的研究与设计[D].北京:北京邮电大学, 2017." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017286621.nh&amp;v=MTYwNDg2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTdtVXI3SVZGMjZHYkd3R05mT3JwRWJQSVFLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         甘如饴.基于doc2vec和SVM的舆情情感分析系统的研究与设计[D].北京:北京邮电大学, 2017.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" DAI X, BIKDASH M, MEYER B.From social media to public health surveillance:word embedding based clustering method for Twitter classification[C]//Proceedings of SoutheastCon’17.Washington D.C., USA:IEEE Press, 2017:1-11." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=From Social Media to Public Health Surveillance:Word Embedding Based Clustering Method for Twitter Classification">
+                                        <b>[9]</b>
+                                         DAI X, BIKDASH M, MEYER B.From social media to public health surveillance:word embedding based clustering method for Twitter classification[C]//Proceedings of SoutheastCon’17.Washington D.C., USA:IEEE Press, 2017:1-11.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" CHANG W B, XU Z Z, ZHOU S H, et al.Research on detection methods based on Doc2vec abnormal comments[J].Future Generation Computer Systems, 2018, 86:656-662." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Research on detection methods based on Doc2vec abnormal comments">
+                                        <b>[10]</b>
+                                         CHANG W B, XU Z Z, ZHOU S H, et al.Research on detection methods based on Doc2vec abnormal comments[J].Future Generation Computer Systems, 2018, 86:656-662.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" 李依尘.面向自动问答的中学历史知识库构建[D].哈尔滨:哈尔滨工业大学, 2017." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017739646.nh&amp;v=MjUwNjVMT2VaZVJvRnk3bVVyN0lWRjI2R2JTN0Y5ZklxWkViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         李依尘.面向自动问答的中学历史知识库构建[D].哈尔滨:哈尔滨工业大学, 2017.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 汪文靖, 冯瑞.基于二分K-means的测试用例集约简方法[J].计算机工程, 2016, 42 (12) :73-77, 83." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201612013&amp;v=MDQ0NDhIOWZOclk5RVo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5N21VcjdJTHo3QmJiRzQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         汪文靖, 冯瑞.基于二分K-means的测试用例集约简方法[J].计算机工程, 2016, 42 (12) :73-77, 83.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 贾晓婷, 王名扬, 曹宇.结合Doc2Vec与改进聚类算法的中文单文档自动摘要方法研究[J].数据分析与知识发现, 2018, 14 (2) :86-95." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201802027&amp;v=MjI5ODBQU25mZjdHNEg5bk1yWTlIWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk3bVVyN0k=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         贾晓婷, 王名扬, 曹宇.结合Doc2Vec与改进聚类算法的中文单文档自动摘要方法研究[J].数据分析与知识发现, 2018, 14 (2) :86-95.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 张银明, 黄廷磊, 林科, 等.一种改进的k均值文本聚类算法[J].桂林电子科技大学学报, 2016, 36 (4) :311-314." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GLDZ201604011&amp;v=MjE5MzdCdEdGckNVUkxPZVplUm9GeTdtVXI3SUlpSFBkTEc0SDlmTXE0OUVaWVFLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         张银明, 黄廷磊, 林科, 等.一种改进的k均值文本聚类算法[J].桂林电子科技大学学报, 2016, 36 (4) :311-314.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 夏天.词语位置加权TextRank的关键词抽取研究[J].现代图书情报技术, 2013 (9) :30-34." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201309006&amp;v=MDU3MTJwbzlGWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk3bVVyN0lQU25mZjdHNEg5TE0=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         夏天.词语位置加权TextRank的关键词抽取研究[J].现代图书情报技术, 2013 (9) :30-34.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" 罗庆平.基于信息融合的Web信息可信度研究[D].长沙:中南大学, 2014." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1014398785.nh&amp;v=MjM2MDVSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTdtVXI3SVZGMjZHckN4RnRiRXFwRWJQSVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         罗庆平.基于信息融合的Web信息可信度研究[D].长沙:中南大学, 2014.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" TOMAS M, KAI C, GREG C, et al.Efficient estimation of word representations in vector space[EB/OL].[2018-03-11].http://arxiv.org/abs/1301.3781." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+                                        <b>[17]</b>
+                                         TOMAS M, KAI C, GREG C, et al.Efficient estimation of word representations in vector space[EB/OL].[2018-03-11].http://arxiv.org/abs/1301.3781.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(03),273-277 DOI:10.19678/j.issn.1000-3428.0051615            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于改进TextRank算法的中文文本摘要提取</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BE%90%E9%A6%A8%E9%9F%AC&amp;code=40329268&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">徐馨韬</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9F%B4%E5%B0%8F%E4%B8%BD&amp;code=26546184&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">柴小丽</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%B0%A2%E5%BD%AC&amp;code=33596265&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">谢彬</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%B2%88%E6%99%A8&amp;code=38975864&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">沈晨</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E6%95%AC%E5%B9%B3&amp;code=27624198&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王敬平</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%9B%BD%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E9%9B%86%E5%9B%A2%E5%85%AC%E5%8F%B8%E7%AC%AC%E4%B8%89%E5%8D%81%E4%BA%8C%E7%A0%94%E7%A9%B6%E6%89%80&amp;code=0131038&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中国电子科技集团公司第三十二研究所</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>为提高中文文本摘要提取的准确度, 融合Doc2Vec模型、K-means算法和TextRank算法, 提出一种中文文本摘要自动提取算法 (DK-TextRank) 。使用Doc2Vec模型进行文本向量化, 采用改进的K-means算法实现相似文本聚类, 在每个聚类簇中应用加入权重影响因子的TextRank算法对文本语句进行排序, 并提取主题句生成摘要。实验结果表明, DK-TextRank算法在摘要语句数量为7时F值达到79.36%, 相比传统TF-IDF、TextRank算法提取的摘要质量更高。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Doc2Vec%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Doc2Vec模型;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=K-means%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">K-means算法;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=TextRank%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">TextRank算法;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%91%98%E8%A6%81%E6%8F%90%E5%8F%96&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">摘要提取;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%9D%83%E9%87%8D%E5%BD%B1%E5%93%8D%E5%9B%A0%E5%AD%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">权重影响因子;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    徐馨韬 (1995—) , 女, 硕士研究生, 主研方向为自然语言处理;;
+                                </span>
+                                <span>
+                                    柴小丽, 研究员;;
+                                </span>
+                                <span>
+                                    谢彬, 高级工程师;;
+                                </span>
+                                <span>
+                                    沈晨, 学士;;
+                                </span>
+                                <span>
+                                    王敬平, 工程师。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-05-22</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家部委基金;</span>
+                    </p>
+            </div>
+                    <h1><b>Extraction of Chinese Text Summarization Based on Improved TextRank Algorithm</b></h1>
+                    <h2>
+                    <span>XU Xintao</span>
+                    <span>CHAI Xiaoli</span>
+                    <span>XIE Bin</span>
+                    <span>SHEN Chen</span>
+                    <span>WANG Jingping</span>
+            </h2>
+                    <h2>
+                    <span>The 32nd Research Institute of China Electronics Technology Group Corporation</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>This paper proposes a Chinese text summarization extraction algorithm, called DK-TextRank, combines Doc2Vec model, K-means and TextRank algorithm for Chinese texts to improve summarization accuracy.After using the Doc2Vec model for text vectorization, the DK-TextRank algorithm uses an improved K-means algorithm for similar text clustering, and the TextRank algorithm with weight impact factors in each cluster to sort and extract topic sentence.Then, it generates a summary.Experimental results show that, compared with traditional TF-IDF, TextRank algorithm, the DK-TextRank algorithm has an F value of 79.36% when the number of summary statements is 7, and the extracted abstract has higher quality.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Doc2Vec%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Doc2Vec model;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=K-means%20algorithm&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">K-means algorithm;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=TextRank%20algorithm&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">TextRank algorithm;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=summarization%20extraction&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">summarization extraction;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=weight%20influence%20factor&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">weight influence factor;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-05-22</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="37" name="37" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="38">随着互联网技术的发展, 网络与生活的关系愈发密切, 涵盖的信息也日渐全面。互联网上的海量信息在给人们生活带来便利的同时, 也带来了许多问题。由于周围信息量过于庞大, 人们很难快速准确地获取自己想要的信息, 因此如何快速提炼关键信息、获取信息主旨已成为急需解决的问题。自动摘要系统作为自然语言处理领域的一项具有重要意义的工作, 在长文本中提取摘要句, 使人们在短时间内快速了解文章内容, 提升人们阅读和获取信息的效率, 是应对上述问题的重要途径之一, 引起了国内外研究人员的广泛关注。目前, 国外自动摘要系统的研究已经取得初步的成果, 英文文本摘要提取算法被相继提出。而国内文本摘要提取尚处于早期研究阶段, 对于中文文本摘要的提取还不够准确, 因此针对中文特点设计合适的自动摘要系统具有重要意义。本文借鉴英文文本摘要领域相关研究成果, 结合中文文本的特点, 提出一种适用于中文文本摘要的自动提取算法。</p>
+                </div>
+                <h3 id="39" name="39" class="anchor-tag">1 相关研究</h3>
+                <div class="p1">
+                    <p id="40">目前, 国内外学者在摘要句提取方面进行相关研究。文献<citation id="98" type="reference">[<a class="sup">1</a>]</citation>利用文章作者写作时表述观点的语气和态度、句子主题的依赖性和句子中运用的修辞手法等综合因素进行摘要句提取。文献<citation id="99" type="reference">[<a class="sup">2</a>]</citation>运用不同的权值度量方式, 利用同义及上下文概念综合评估句子并提取最能反映文章主题的句子。文献<citation id="100" type="reference">[<a class="sup">3</a>]</citation>将摘要句提取问题转化为无向图中节点权重计算问题, 利用图中边的权重衡量其在文章中的重要程度, 以此提取最终摘要句。文献<citation id="101" type="reference">[<a class="sup">4</a>]</citation>根据词在特定文档中出现的频率及在相关文档中出现的范围区分文档内容属性。文献<citation id="102" type="reference">[<a class="sup">5</a>]</citation>采用基于文章语义信息的摘要方法, 通过对文章段落之间的语义关系进行分析建立语义网, 在对文章进行语义理解的基础上对摘要进行提取。文献<citation id="103" type="reference">[<a class="sup">6</a>]</citation>采用基于向量空间模型的方法对文章摘要进行提取, 利用统计学原理得到文章的粗摘要句集, 并引入空间向量模型, 将粗摘要句表示为向量的方式, 使用余弦相似度公式计算句子间的相似度, 删除集合中相似度较高的冗余句子, 以提高生成摘要的质量。随着神经网络等人工智能技术的逐渐成熟, 文献<citation id="104" type="reference">[<a class="sup">7</a>]</citation>提出可对文本进行向量化的Doc2Vec方法, 能更全面地考察语义和上下文等信息。文献<citation id="105" type="reference">[<a class="sup">8</a>,<a class="sup">9</a>,<a class="sup">10</a>]</citation>使用Doc2Vec方法在文本聚类领域取得了较好的效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">在聚类算法中, K-means算法由于聚类效果佳, 因此在文本句子聚类中使用广泛。该算法从向量化后的数据对象中随机提取<i>K</i>个对象作为初始聚类中心, 而随机提取初始聚类中心可能会产生聚类效果不稳定的问题<citation id="106" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>。为解决该问题, 文献<citation id="107" type="reference">[<a class="sup">12</a>]</citation>提出基于二分K-means聚类算法的测试用例集约简方法, 文献<citation id="108" type="reference">[<a class="sup">13</a>]</citation>采用密度最大距离最远原则为聚类算法选取初始聚类中心。文献<citation id="109" type="reference">[<a class="sup">14</a>]</citation>将过滤后的频繁项集作为初始聚类中心。在实际应用过程中, 理想的初始聚类中心相互距离相对较远, 且各自都具有一定代表性。</p>
+                </div>
+                <div class="p1">
+                    <p id="42">在摘要句提取方面, TextRank算法用文本之间的关联性构建有向图, 通过计算每个图节点的权重挑选摘要句。但是传统TextRank算法将每个节点的初始权重设置为1, 忽略了每个节点本身的重要程度。文献<citation id="110" type="reference">[<a class="sup">15</a>]</citation>指出每个图节点本身的重要性差异会影响相邻节点的重要性, 进而影响最终结果。文献<citation id="111" type="reference">[<a class="sup">16</a>]</citation>在传统TextRank算法中加入位置权重, 提升最终准确度。</p>
+                </div>
+                <h3 id="43" name="43" class="anchor-tag">2 中文文本摘要自动提取</h3>
+                <div class="p1">
+                    <p id="44">为提高摘要句提取的准确度, 本文选用能更好结合上下文的Doc2Vec模型对文本中的句子进行向量表达。在此基础上, 采用改进的K-means聚类算法进行聚类, 得到<i>K</i>个类簇, 保证聚类准确性。在每个类簇中使用加权的TextRank算法对每个节点的重要度进行排序, 挑选每个类簇中权值最高的句子作为摘要句。中文文本摘要自动提取流程如图1所示。</p>
+                </div>
+                <div class="area_img" id="45">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903046_045.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 中文文本摘要自动提取流程" src="Detail/GetImg?filename=images/JSJC201903046_045.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 中文文本摘要自动提取流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903046_045.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="46" name="46">2.1 基于Doc2Vec模型的句子向量化</h4>
+                <div class="p1">
+                    <p id="47">Doc2Vec向量训练模型可以将文档表征为实数向量。该模型使用深度学习思想, 利用多层神经网络, 以极大似然作为目标函数建立模型, 将每个句子映射成实数向量。经过大量训练后, Doc2Vec模型可以将文本内容的处理抽象为在<i>K</i>维向量空间中的向量运算, 且文本语义上的相似度可以用向量空间中的相似度表示。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">Doc2Vec主要包括CBOW模型和Skip-gram模型<citation id="112" type="reference"><link href="35" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>。其中, CBOW模型的核心思想是使用上下文对当前文本出现概率进行预测, Skip-gram模型解决了训练语料选择问题。考虑到具体实现, 本文选择CBOW模型进行文本向量化。</p>
+                </div>
+                <h4 class="anchor-tag" id="49" name="49">2.2 改进的K-means聚类算法</h4>
+                <div class="p1">
+                    <p id="50">K-means聚类算法具体过程如下:随机选择<i>K</i>个点作为初始聚类中心, 将剩余的每个点按照距离分配给上述<i>K</i>个点, 形成<i>K</i>个类簇。然后计算每个类簇的质心, 并将其作为下一次迭代的聚类中心, 直到测度函数收敛或达到最大迭代次数。两点之间的距离计算方式有欧氏距离、曼哈顿距离、切比雪夫距离、余弦距离、Jaccard相似系数、相关系数等, 本文采用欧式距离计算方法计算两点之间的距离。</p>
+                </div>
+                <div class="p1">
+                    <p id="51" class="code-formula">
+                        <mathml id="51"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><mrow><mo> (</mo><mrow><mi>s</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>s</mi><msub><mrow></mrow><mi>j</mi></msub></mrow><mo>) </mo></mrow><mo>=</mo><msqrt><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle><mrow><mrow><mo>|</mo><mrow><mi>s</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>p</mi></mrow></msub><mo>-</mo><mi>s</mi><msub><mrow></mrow><mrow><mi>j</mi><mi>p</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow><msup><mrow></mrow><mn>2</mn></msup></mrow></msqrt><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="52">其中, <i>s</i><sub><i>i</i></sub>、<i>s</i><sub><i>j</i></sub>表示文本, <i>i</i>、<i>j</i>、<i>n</i>表示文本向量维度, <i>s</i><sub><i>ip</i></sub>和<i>s</i><sub><i>jp</i></sub>表示<i>i</i>、<i>j</i>的文本向量在第<i>p</i>维上的取值。一般采用误差平方和 (Sum of Squared Error, SSE) 作为测度函数。</p>
+                </div>
+                <div class="p1">
+                    <p id="53" class="code-formula">
+                        <mathml id="53"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>S</mi><mi>E</mi><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mrow></mrow></mstyle><mspace width="0.25em" /><mspace width="0.25em" /><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>p</mi><mo>∈</mo><mi>C</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></munder><mrow></mrow></mstyle><mi>D</mi><mi>i</mi><mi>s</mi><mi>t</mi><mrow><mo stretchy="false"> (</mo><mi>p</mi><mo>, </mo><mi>C</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo></mrow><msup><mrow></mrow><mn>2</mn></msup><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="54">其中, <i>SSE</i>为数据集所有对象的误差平方和, <i>k</i>为聚类个数, <i>p</i>为给定的文本对象, <i>C</i><sub><i>i</i></sub>为类簇<i>i</i>的中心点。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">传统K-means聚类算法具有实现简单、时间复杂度低、可解释性强的优点, 但是K-means聚类的效果和初始聚类中心的选取有密切关联, 而随机选择数据样本可能会使算法陷入局部最优, 因此本文在选取初始聚类中心时需稍作改进, 使得实验中的初始聚类中心相对散开。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">初始聚类中心的选取方法具体如下:取所有点的质心作为第1个点, 然后对数据集中的每个点计算该点到已有聚类中心的距离, 并采用现行概率选择下一个聚类中心。使用上述方法选取初始聚类中心, 可以保证选取的初始聚类中心不过于集中, 从而避免K-means聚类算法陷入局部最优, 同时可保证随机选取初始聚类中心。</p>
+                </div>
+                <h4 class="anchor-tag" id="57" name="57">2.3 改进的TextRank算法</h4>
+                <div class="p1">
+                    <p id="58">传统TextRank算法是根据PageRank算法进行改进。PageRank是一种链接分析算法, 主要用于网页排序并衡量网页重要程度。PageRank排序基于其他网页到该网页的链接数量, 链接数量越多, 该网页越重要。PageRank算法示意图如图2所示。</p>
+                </div>
+                <div class="area_img" id="59">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903046_059.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 PageRank算法示意图" src="Detail/GetImg?filename=images/JSJC201903046_059.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 PageRank算法示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903046_059.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="60">由于网页<i>B</i>与其他网页的交互数量最多, 因此网页<i>B</i>最重要。受PageRank算法的启发, TextRank算法将每个句子或关键词看作PageRank算法中的网页节点。利用句子之间的相似性构成边权重, 进而构造TextRank网络图, 然后采用迭代的方式对节点进行排序, 最终得到关键词或摘要句。</p>
+                </div>
+                <div class="p1">
+                    <p id="61">TextRank模型一般可以表示为有向有权图<i>G</i>= (<i>V</i>, <i>E</i>) , 其中, <i>V</i>是图中的点集, <i>E</i>是图中的边集, <i>ω</i><sub><i>ji</i></sub>为图中任意2点<i>V</i><sub><i>i</i></sub>、<i>V</i><sub><i>j</i></sub>之间边的权重。对于任意一个给定的点<i>V</i><sub><i>i</i></sub>, <i>In</i> (<i>V</i><sub><i>i</i></sub>) 为指向该点的点集合, <i>Out</i> (<i>V</i><sub><i>i</i></sub>) 为点<i>V</i><sub><i>i</i></sub>指向的点集合, 点<i>V</i><sub><i>i</i></sub>的权重定义为:</p>
+                </div>
+                <div class="p1">
+                    <p id="62" class="code-formula">
+                        <mathml id="62"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mo stretchy="false"> (</mo><mi>V</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>=</mo><mrow><mo> (</mo><mrow><mn>1</mn><mo>-</mo><mi>d</mi></mrow><mo>) </mo></mrow><mo>+</mo><mi>d</mi><mo>×</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>V</mi><msub><mrow></mrow><mi>j</mi></msub><mo>∈</mo><mi>Ι</mi><mi>n</mi><mo stretchy="false"> (</mo><mi>V</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo></mrow></munder><mrow></mrow></mstyle><mfrac><mrow><mi>ω</mi><msub><mrow></mrow><mrow><mi>j</mi><mi>i</mi></mrow></msub></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>V</mi><msub><mrow></mrow><mi>k</mi></msub><mo>∈</mo><mi>Ο</mi><mi>u</mi><mi>t</mi><mo stretchy="false"> (</mo><mi>V</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo></mrow></munder><mrow></mrow></mstyle><mi>ω</mi><msub><mrow></mrow><mrow><mi>j</mi><mi>k</mi></mrow></msub></mrow></mfrac><mi>S</mi><mo stretchy="false"> (</mo><mi>V</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="63">其中, <i>d</i>是阻尼系数, 代表从图中某一点指向其他任意点的概率, 一般取值为0.85, <i>ω</i><sub><i>ji</i></sub>用余弦相似度衡量, 定义为:</p>
+                </div>
+                <div class="p1">
+                    <p id="64" class="code-formula">
+                        <mathml id="64"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ω</mi><msub><mrow></mrow><mrow><mi>j</mi><mi>i</mi></mrow></msub><mo>=</mo><mrow><mi>cos</mi></mrow><mspace width="0.25em" /><mi>θ</mi><mo>=</mo><mfrac><mrow><mi mathvariant="bold-italic">A</mi><mo>×</mo><mi mathvariant="bold-italic">B</mi></mrow><mrow><mi mathvariant="bold-italic">A</mi><mi mathvariant="bold-italic">B</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle><mi>A</mi><msub><mrow></mrow><mi>i</mi></msub><mo>×</mo><mi>B</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mrow><msqrt><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle><mi>A</mi><msubsup><mrow></mrow><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt><mo>×</mo><msqrt><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow></mrow></mstyle><mi>B</mi><msubsup><mrow></mrow><mi>i</mi><mn>2</mn></msubsup></mrow></msqrt></mrow></mfrac><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>4</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="65">其中, <b><i>A</i></b>、<b><i>B</i></b>为使用Doc2Vec后的句子向量, <i>n</i>为句子向量的维度。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">在使用TextRank算法时, 需要对图中的每个节点指定任意初始值, 并进行迭代训练直至收敛, 才能计算出各节点的最终权重。传统的TextRank算法通常将各节点的初值指定为1, 忽略了中文写作习惯的影响, 如起始句、点题句等句子的重要性比其他句子高。针对该问题, 本文对传统的TextRank算法进行改进, 充分考虑句子位置、点题句等情况对节点权重的影响。</p>
+                </div>
+                <h4 class="anchor-tag" id="67" name="67">2.4 位置关系</h4>
+                <div class="p1">
+                    <p id="68">句子位置影响句子重要性, 例如出现在段首、段中和段末的句子, 重要性不同。据研究表明, 在人工摘要中, 选取段首句作为摘要的比例高达85%, 而选取段尾句作为摘要的比例接近7%。新闻类的文章首段很可能会交代文章主旨, 因此应适当提高距离开始位置较近的段落及句子的权重。本文采用逐渐降低首段中句子权重, 逐渐提高末段中句子权重的方法调整句子权重。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">本文选取首段前3个句子和末段全部句子, 通过权重系数<i>e</i>实现相应句子初始权重的调整, 权重系数<i>e</i>的计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="70" class="code-formula">
+                        <mathml id="70"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>e</mi><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left"><mtr><mtd><mo stretchy="false"> (</mo><mn>1</mn><mo>+</mo><mi>e</mi><msub><mrow></mrow><mn>1</mn></msub><mo stretchy="false">) </mo><mo>-</mo><mi>exp</mi><mo stretchy="false"> (</mo><mi>i</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mo>×</mo><mfrac><mrow><mi>e</mi><msub><mrow></mrow><mn>1</mn></msub></mrow><mrow><mi>exp</mi><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mrow></mfrac><mo>, </mo><mn>1</mn><mo>&lt;</mo><mi>i</mi><mo>≤</mo><mn>3</mn></mtd></mtr><mtr><mtd><mn>1</mn><mo>, </mo><mn>3</mn><mo>&lt;</mo><mi>i</mi><mo>&lt;</mo><mi>n</mi><mo>+</mo><mn>1</mn><mo>-</mo><mi>m</mi></mtd></mtr><mtr><mtd><mn>1</mn><mo>+</mo><mi>exp</mi><mo stretchy="false"> (</mo><mi>i</mi><mo>-</mo><mi>n</mi><mo>+</mo><mi>m</mi><mo stretchy="false">) </mo><mo>×</mo><mfrac><mrow><mi>e</mi><msub><mrow></mrow><mn>1</mn></msub></mrow><mrow><mi>exp</mi><mo stretchy="false"> (</mo><mi>m</mi><mo stretchy="false">) </mo></mrow></mfrac><mo>, </mo><mi>n</mi><mo>+</mo><mn>1</mn><mo>-</mo><mi>m</mi><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mtd></mtr></mtable></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>5</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="71">其中, <i>e</i><sub>1</sub>和<i>e</i><sub>2</sub>为权重调整阈值, 本文设定为<i>e</i><sub>1</sub>=1, <i>e</i><sub>2</sub>=0.5, <i>m</i>为末段句子个数。</p>
+                </div>
+                <h4 class="anchor-tag" id="72" name="72">2.5 摘要语句与文章标题的相似度</h4>
+                <div class="p1">
+                    <p id="73">在新闻报道中, 标题在一定程度上反映文章的主旨信息, 因此在正文中和标题形成呼应的句子更可能成为最终的摘要句。本文使用余弦相似度衡量文中句子与标题的相似性, 若句子与标题具有较高的相似性, 则对该句子的最终权重进行调整, 调整规则为:</p>
+                </div>
+                <div class="p1">
+                    <p id="74" class="code-formula">
+                        <mathml id="74"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mi>S</mi><mo stretchy="false"> (</mo><mi>V</mi><mo stretchy="false">) </mo><mo>=</mo><mi>S</mi><mo stretchy="false"> (</mo><mi>V</mi><mo stretchy="false">) </mo><mo>+</mo><mi>s</mi><mi>i</mi><mi>m</mi><mi>i</mi><mi>l</mi><mi>a</mi><mi>r</mi><mi>i</mi><mi>t</mi><mi>y</mi><mo>, </mo><mn>0</mn><mo>.</mo><mn>5</mn><mo>&lt;</mo><mi>s</mi><mi>i</mi><mi>m</mi><mi>i</mi><mi>l</mi><mi>a</mi><mi>r</mi><mi>i</mi><mi>t</mi><mi>y</mi><mo>≤</mo><mn>1</mn></mtd></mtr><mtr><mtd columnalign="left"><mi>S</mi><mo stretchy="false"> (</mo><mi>V</mi><mo stretchy="false">) </mo><mo>=</mo><mi>S</mi><mo stretchy="false"> (</mo><mi>V</mi><mo stretchy="false">) </mo><mo>, </mo><mn>0</mn><mo>≤</mo><mi>s</mi><mi>i</mi><mi>m</mi><mi>i</mi><mi>l</mi><mi>a</mi><mi>r</mi><mi>i</mi><mi>t</mi><mi>y</mi><mo>≤</mo><mn>0</mn><mo>.</mo><mn>5</mn></mtd></mtr></mtable></mrow></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="75">其中, <i>S</i> (<i>V</i>) 为节点最终权重, <i>similarity</i>为句子与标题的余弦相似度。</p>
+                </div>
+                <div class="p1">
+                    <p id="76">本文调整句子初始权重, 将初始权重乘以权重系数<i>e</i>得到TextRank各节点的初始权重<i>e</i>×<i>S</i> (<i>V</i><sub><i>i</i></sub>) , 然后逐步更新权重并对得到的权重加入相似度信息获得最终句子权重, 从而进行排序提取摘要句。</p>
+                </div>
+                <h3 id="77" name="77" class="anchor-tag">3 实验结果与分析</h3>
+                <h4 class="anchor-tag" id="78" name="78">3.1 实验过程</h4>
+                <div class="p1">
+                    <p id="79">实验过程具体如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="80">1) 数据收集。本文爬取搜狗新闻、新华网、凤凰网等新闻报道, 涉及经济、政治、社会、文化、教育等5个方面, 共50 000篇。为使本文算法具有普适性, 要求各方向的新闻数目基本相当。本文从上述50 000篇文档中随机挑选4 000篇文档作为测试文档, 剩余文档用于训练Doc2Vec文本表示模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="81">2) 数据预处理。具体步骤为: (1) 去除实验噪声。去除对提取摘要无明显影响的图片、表格、特殊符号等计算机语言不易识别的形式。 (2) 文档分割。将文档分割为句子形成句子集合, 对这些句子进行分词、去除停用词, 得到由词项构成的句子集合。在Doc2Vec深度学习模型的训练学习时, 应保证分句操作后的句子语序按照原文顺序排布, 这样能更好地获取文本上下文语义及相应的语法信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="82">3) 向量化句子。输入46 000篇报道, 用于训练Doc2Vec模型。本文选取更节省存储空间的DBOW模型, 实验语言为Python3.5, 环境为Anaconda数据处理环境, 同时配置GPU以加速训练过程。向量维度人工确定为200维。保留原文顺序的全部训练文档串联输入模型进行DBOW模型训练。在DBOW模型训练完成后, 将经过预处理的4 000篇文章输入模型中, 得到可以表征语句中语境、语法及上下文逻辑等信息的200维句子向量集合<i>T</i>, 新闻报道可以表示为向量化后的语句所组成的矩阵。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">4) 筛选过滤句子。过长或过短的句子都不应作为摘要候选句, 因此本文去除长度系数<i>C</i><sub>L</sub>&gt;0.8及<i>C</i><sub>L</sub>&lt;0.2的句子。句子长度系数定义为:</p>
+                </div>
+                <div class="p1">
+                    <p id="84" class="code-formula">
+                        <mathml id="84"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><msub><mrow></mrow><mtext>L</mtext></msub><mo>=</mo><mfrac><mi>L</mi><mrow><mi>L</mi><msub><mrow></mrow><mtext>Μ</mtext></msub></mrow></mfrac><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>7</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="85">其中, <i>L</i>为句子长度, <i>L</i><sub>M</sub>为最长句子的长度。</p>
+                </div>
+                <div class="p1">
+                    <p id="86">5) K-means聚类。利用改进的K-means算法进行报道中句子向量的聚类。将<i>K</i>值设定为要提取的摘要句数目, 最终将新闻报道中的句子划分成<i>K</i>个类簇。</p>
+                </div>
+                <div class="p1">
+                    <p id="87">6) 在每个类簇中进行TextRank权值计算。传统的K-means算法选取最终摘要句时, 通常选择距离聚类中心最近的句子。但是该方法并不能保证提取的摘要句是在该类簇中所有句子的最佳代表, 因此本文在挑选摘要句时, 利用改进的TextRank算法对每个类簇中的句子进行权重排序, 挑选出最能代表每个类簇的句子作为摘要句。</p>
+                </div>
+                <div class="p1">
+                    <p id="88">7) 摘要输出。利用TextRank排序后的句子按原文顺序输出, 保证提取摘要的连贯性。</p>
+                </div>
+                <h4 class="anchor-tag" id="89" name="89">3.2 结果分析</h4>
+                <div class="p1">
+                    <p id="90">通常采用内部评价方法评价自动摘要的提取效果, 即与人工撰写的摘要进行比较评价文摘质量。机器学习中的准确率 (<i>P</i>) 和召回率 (<i>R</i>) 常被用来作为评价自动摘要结果质量的指标。摘要准确率用来评价摘要表现原文主体信息的准确度, 而摘要召回率则用来评价摘要句对原文主题信息的覆盖程度, F值 (<i>F</i>) 则是摘要准确率和摘要召回率的调和平均值。本文实验采用F值衡量聚类效果, 综合平衡准确率和召回率, 一般F值越高, 说明聚类效果越好。具体计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="91" class="code-formula">
+                        <mathml id="91"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>Ρ</mi><mo>=</mo><mfrac><mrow><mtext>准</mtext><mtext>确</mtext><mtext>提</mtext><mtext>取</mtext><mtext>的</mtext><mtext>主</mtext><mtext>题</mtext><mtext>句</mtext><mtext>数</mtext><mtext>目</mtext></mrow><mrow><mtext>所</mtext><mtext>有</mtext><mtext>提</mtext><mtext>取</mtext><mtext>的</mtext><mtext>主</mtext><mtext>题</mtext><mtext>句</mtext><mtext>数</mtext><mtext>目</mtext></mrow></mfrac><mo>×</mo><mn>1</mn><mn>0</mn><mn>0</mn><mi>%</mi><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>8</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>R</mi><mo>=</mo><mfrac><mrow><mtext>准</mtext><mtext>确</mtext><mtext>提</mtext><mtext>取</mtext><mtext>的</mtext><mtext>主</mtext><mtext>题</mtext><mtext>句</mtext><mtext>数</mtext><mtext>目</mtext></mrow><mrow><mtext>所</mtext><mtext>有</mtext><mtext>人</mtext><mo>⌶</mo><mtext>标</mtext><mtext>注</mtext><mtext>的</mtext><mtext>主</mtext><mtext>题</mtext><mtext>句</mtext><mtext>数</mtext><mtext>目</mtext></mrow></mfrac><mo>×</mo><mn>1</mn><mn>0</mn><mn>0</mn><mi>%</mi><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>9</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>F</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>Ρ</mi><mi>R</mi></mrow><mrow><mi>Ρ</mi><mo>+</mo><mi>R</mi></mrow></mfrac><mo>×</mo><mn>1</mn><mn>0</mn><mn>0</mn><mi>%</mi><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>0</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="92">为保证主题句评价的正确性并降低个人主观性带来的结果偏差, 同时研究提取摘要句数目对摘要结果质量的影响, 本文采用多组实验人员交叉对测试文档进行摘要句标注的方式, 分别为每篇测试文档标注了5句～8句摘要句作为测试校验对比结果。实验中使用3种算法分别进行摘要句提取, 计算每种算法的准确率、召回率及F值评价指标, 如表1所示。图3给出了摘要句为5句～8句时3种算法的F值对比结果。</p>
+                </div>
+                <div class="area_img" id="93">
+                    <p class="img_tit"><b>表1 算法准确率、召回率及F值统计</b> % <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="93" border="1"><tr><td>摘要句<br />数目</td><td>算法</td><td><i>P</i></td><td><i>R</i></td><td><i>F</i></td></tr><tr><td rowspan="3"><br />5</td><td><br />TF-IDF</td><td>72.12</td><td>52.69</td><td>60.89</td></tr><tr><td><br />TextRank</td><td>75.34</td><td>53.65</td><td>62.67</td></tr><tr><td><br />DK-TextRank</td><td>77.68</td><td>55.46</td><td>64.72</td></tr><tr><td rowspan="3"><br />6</td><td><br />TF-IDF</td><td>69.69</td><td>59.68</td><td>64.30</td></tr><tr><td><br />TextRank</td><td>73.25</td><td>62.77</td><td>67.61</td></tr><tr><td><br />DK-TextRank</td><td>75.67</td><td>64.59</td><td>69.69</td></tr><tr><td rowspan="3"><br />7</td><td><br />TF-IDF</td><td>73.68</td><td>73.59</td><td>73.63</td></tr><tr><td><br />TextRank</td><td>76.39</td><td>76.82</td><td>76.60</td></tr><tr><td><br />DK-TextRank</td><td>79.28</td><td>79.45</td><td>79.36</td></tr><tr><td rowspan="3"><br />8</td><td><br />TF-IDF</td><td>65.29</td><td>74.53</td><td>69.60</td></tr><tr><td><br />TextRank</td><td>66.12</td><td>75.29</td><td>70.41</td></tr><tr><td><br />DK-TextRank</td><td>69.35</td><td>79.62</td><td>74.13</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="94">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903046_094.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 不同摘要句数目时的算法F值对比" src="Detail/GetImg?filename=images/JSJC201903046_094.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 不同摘要句数目时的算法F值对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903046_094.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="95">由上述实验可知, 本文提出的DK-TextRank算法效果优于TF-IDF及传统TextRank算法。首先利用K-means算法将文本划分为若干具有相关关系的类簇, 再用TextRank算法选取每个具有相关关系的类簇中最能代表整个类簇的点, 同时考虑到中文文本中语句位置和标题相似度对句子重要度的影响。与传统TextRank算法相比, 本文提出的DK-TextRank算法在选取摘要句方面更具代表性。从图3中可以发现, 随着提取摘要句数目的增加, F值呈现先上升后下降的趋势, 当摘要句数目为7时F值最大, 此时采用DK-TextRank算法的F值达到79.36%。经进一步分析可知, 由于采用人工标注的摘要句数目通常为7句, 因此在摘要句数目为7时算法效果最佳。</p>
+                </div>
+                <h3 id="96" name="96" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="97">本文在使用Doc2Vec模型生成句子向量集的基础上, 应用改进的K-means算法进行聚类, 并在每个类簇中通过加入位置关系、标题相似性等特征的TextRank算法进行重要度排序, 提取最终摘要句。利用各类新闻报道进行摘要句提取实验, 结果表明相对于传统TF-IDF、TextRank算法, 本文提出的DK-TextRank算法能有效提高摘要句的质量。下一步将对DK-TextRank算法模型进行训练, 提升算法效率。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=An Unsupervised Approach to Biography Production Using Wikipedia">
+
+                                <b>[1]</b> BIADSY F, HIRSCHBERG J, FILATOVA E.An unsupervised approach to biography production using Wikipedia[C]//Proceedings of Meeting of the Association for Computational Linguistics.Cambridge, USA:Association for Computational Linguistics, 2008:807-815.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SHJT200605013&amp;v=MTc1MTdyN0lOaVhCZXJHNEh0Zk1xbzlFWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk3bVU=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 张云涛, 龚玲, 王永成.基于综合方法的文本主题句的自动抽取[J].上海交通大学学报, 2006, 40 (5) :771-774.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501643010&amp;v=MTA4NzVWYXhJPU5pZk9mYks3SHRETnFvOUVZdThNREgwNW9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSUpsMA==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> YEH J, KE H, YANG W.iSpreadRank:ranking sentences for extraction-based summarization using feature weight propagation in the sentence similarity networkp[J].Expert Systems with Applications, 2008, 35 (3) :1451-1462.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=On the construction of effective vocabularies for information retrieval">
+
+                                <b>[4]</b> SALTON G, CLEMENT T.On the construction of effective vocabularies for information retrieval[C]//Proceedings of 1973 Meeting on Programming Languages and Information Retrieval.New York, USA:ACM Press, 1973:48-60.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS200502013&amp;v=MzA0MzBUTXJZOUVaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTdtVXI3SUtDallmYkc0SHQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 张奇, 黄萱菁, 吴立德.一种新的句子相似度度量及其在文本自动摘要中的应用[J].中文信息学报, 2005, 19 (2) :93-99.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HEFE201009017&amp;v=MTc5MjJDVVJMT2VaZVJvRnk3bVVyN0lMU2pOYTdHNEg5SE1wbzlFWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 张筱丹, 胡学钢.基于向量空间模型的自动摘要冗余处理研究[J].合肥工业大学学报 (自然科学版) , 2010, 33 (9) :1355-1358.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Distributed representations of sentences and documents">
+
+                                <b>[7]</b> LE Q, MIKOLOV T.Distributed representations of sentences and documents[C]//Proceedings of International Conference on Machine Learning.New York, USA:ACM Press, 2014:1188-1196.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017286621.nh&amp;v=Mjc2MTBmT3JwRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTdtVXI3SVZGMjZHYkd3R04=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 甘如饴.基于doc2vec和SVM的舆情情感分析系统的研究与设计[D].北京:北京邮电大学, 2017.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=From Social Media to Public Health Surveillance:Word Embedding Based Clustering Method for Twitter Classification">
+
+                                <b>[9]</b> DAI X, BIKDASH M, MEYER B.From social media to public health surveillance:word embedding based clustering method for Twitter classification[C]//Proceedings of SoutheastCon’17.Washington D.C., USA:IEEE Press, 2017:1-11.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Research on detection methods based on Doc2vec abnormal comments">
+
+                                <b>[10]</b> CHANG W B, XU Z Z, ZHOU S H, et al.Research on detection methods based on Doc2vec abnormal comments[J].Future Generation Computer Systems, 2018, 86:656-662.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017739646.nh&amp;v=Mjg2NjBGckNVUkxPZVplUm9GeTdtVXI3SVZGMjZHYlM3RjlmSXFaRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 李依尘.面向自动问答的中学历史知识库构建[D].哈尔滨:哈尔滨工业大学, 2017.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201612013&amp;v=MTM0MjllUm9GeTdtVXI3SUx6N0JiYkc0SDlmTnJZOUVaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVo=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 汪文靖, 冯瑞.基于二分K-means的测试用例集约简方法[J].计算机工程, 2016, 42 (12) :73-77, 83.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201802027&amp;v=MDgwNTVIWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk3bVVyN0lQU25mZjdHNEg5bk1yWTk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 贾晓婷, 王名扬, 曹宇.结合Doc2Vec与改进聚类算法的中文单文档自动摘要方法研究[J].数据分析与知识发现, 2018, 14 (2) :86-95.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GLDZ201604011&amp;v=Mjk3MTJxNDlFWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk3bVVyN0lJaUhQZExHNEg5Zk0=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 张银明, 黄廷磊, 林科, 等.一种改进的k均值文本聚类算法[J].桂林电子科技大学学报, 2016, 36 (4) :311-314.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201309006&amp;v=MTQzMDBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5N21VcjdJUFNuZmY3RzRIOUxNcG85RllvUUs=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 夏天.词语位置加权TextRank的关键词抽取研究[J].现代图书情报技术, 2013 (9) :30-34.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1014398785.nh&amp;v=MjQ2NzZQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTdtVXI3SVZGMjZHckN4RnRiRXFwRWI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> 罗庆平.基于信息融合的Web信息可信度研究[D].长沙:中南大学, 2014.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+
+                                <b>[17]</b> TOMAS M, KAI C, GREG C, et al.Efficient estimation of word representations in vector space[EB/OL].[2018-03-11].http://arxiv.org/abs/1301.3781.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201903046" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201903046&amp;v=MzI1OTJySTlCWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk3bVVyN0lMejdCYmJHNEg5ak0=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="3" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

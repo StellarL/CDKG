@@ -1,0 +1,963 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637127883654025000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJFYZ201908009%26RESULT%3d1%26SIGN%3dY8OZRhsA8Rn9s1n0CosnYPe55ws%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JFYZ201908009&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JFYZ201908009&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201908009&amp;v=MDE4Njk5ak1wNDlGYllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJyRnl2Z1ZMN05MeXZTZExHNEg=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#51" data-title="&lt;b&gt;1 相关知识&lt;/b&gt; "><b>1 相关知识</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#60" data-title="&lt;b&gt;2 本文方法&lt;/b&gt; "><b>2 本文方法</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#63" data-title="&lt;b&gt;2.1 TDHR模型概述&lt;/b&gt;"><b>2.1 TDHR模型概述</b></a></li>
+                                                <li><a href="#66" data-title="&lt;b&gt;2.2 特征提取&lt;/b&gt;"><b>2.2 特征提取</b></a></li>
+                                                <li><a href="#97" data-title="&lt;b&gt;2.3 评分预测&lt;/b&gt;"><b>2.3 评分预测</b></a></li>
+                                                <li><a href="#104" data-title="&lt;b&gt;2.4 模型训练与参数学习&lt;/b&gt;"><b>2.4 模型训练与参数学习</b></a></li>
+                                                <li><a href="#126" data-title="&lt;b&gt;2.5 复杂度分析&lt;/b&gt;"><b>2.5 复杂度分析</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#133" data-title="&lt;b&gt;3 实  验&lt;/b&gt; "><b>3 实  验</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#134" data-title="&lt;b&gt;3.1 数据集&lt;/b&gt;"><b>3.1 数据集</b></a></li>
+                                                <li><a href="#137" data-title="&lt;b&gt;3.2 评估指标&lt;/b&gt;"><b>3.2 评估指标</b></a></li>
+                                                <li><a href="#146" data-title="&lt;b&gt;3.3 对比算法&lt;/b&gt;"><b>3.3 对比算法</b></a></li>
+                                                <li><a href="#149" data-title="&lt;b&gt;3.4 实验结果&lt;/b&gt;"><b>3.4 实验结果</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#167" data-title="&lt;b&gt;4 结论与展望&lt;/b&gt; "><b>4 结论与展望</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#62" data-title="&lt;b&gt;表1 文中常用的符号定义及描述&lt;/b&gt;"><b>表1 文中常用的符号定义及描述</b></a></li>
+                                                <li><a href="#65" data-title="图1 TDHR模型的整体架构">图1 TDHR模型的整体架构</a></li>
+                                                <li><a href="#152" data-title="&lt;b&gt;表2 不同推荐算法在通用数据集上的性能比较&lt;/b&gt;"><b>表2 不同推荐算法在通用数据集上的性能比较</b></a></li>
+                                                <li><a href="#157" data-title="&lt;b&gt;表3 在稀疏数据集上不同推荐算法的性能比较&lt;/b&gt;"><b>表3 在稀疏数据集上不同推荐算法的性能比较</b></a></li>
+                                                <li><a href="#161" data-title="&lt;b&gt;表4 不同算法对冷启动用户的推荐性能比较&lt;/b&gt;"><b>表4 不同算法对冷启动用户的推荐性能比较</b></a></li>
+                                                <li><a href="#165" data-title="图2 Dropout在冷启动环境中的性能表现">图2 Dropout在冷启动环境中的性能表现</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+                                    <dd class="subnode">
+                                        <h6>
+                                            <a href="#a_footnote">注释</a>
+
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="185">
+
+
+                                    <a id="bibliography_1" title="Ren Ming.Intelligent Information System:Method and Practice of Optimizing Data Modeling with Relevant Knowledge[M].Hangzhou:Zhejiang University Press, 2012 (in Chinese) (任明.智能信息系统:以关联知识优化数据建模的方法和实践[M].杭州:浙江大学出版社, 2012) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787308099776001&amp;v=MTk5MTJGdEhGcG9oQ1l1c1BEUk04enhVU21EZDlTSDduM3hFOWZidm5LcmlmWnU5dUZDdmdVN3pOSjE4UlhGcXpHYkM0&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                        Ren Ming.Intelligent Information System:Method and Practice of Optimizing Data Modeling with Relevant Knowledge[M].Hangzhou:Zhejiang University Press, 2012 (in Chinese) (任明.智能信息系统:以关联知识优化数据建模的方法和实践[M].杭州:浙江大学出版社, 2012) 
+                                    </a>
+                                </li>
+                                <li id="187">
+
+
+                                    <a id="bibliography_2" title="Wang Hao, Wang Naiyan, Yeung D Y.Collaborative deep learning for recommender systems[C] //Proc of the 15th ACM SIGKDD Conf on Knowledge Discovery and Data Mining.New York:ACM, 2015.DOI:10.1145/2783258.2783273" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Collaborative deep learning for recommender systems">
+                                        <b>[2]</b>
+                                        Wang Hao, Wang Naiyan, Yeung D Y.Collaborative deep learning for recommender systems[C] //Proc of the 15th ACM SIGKDD Conf on Knowledge Discovery and Data Mining.New York:ACM, 2015.DOI:10.1145/2783258.2783273
+                                    </a>
+                                </li>
+                                <li id="189">
+
+
+                                    <a id="bibliography_3" title="Zhang Shuai, Yao Lina, Xu Xiwei.AutoSVD++:An efficient hybrid collaborative filtering model via contractive auto-encoders [C] //Proc of the 40th ACM SIGIR Conf on Research and Development in Information Retrieval.New York:ACM, 2017.arXiv:1704.00551v3" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=AutoSVD++:An efficient hybrid collaborative filtering model via contractive auto-encoders">
+                                        <b>[3]</b>
+                                        Zhang Shuai, Yao Lina, Xu Xiwei.AutoSVD++:An efficient hybrid collaborative filtering model via contractive auto-encoders [C] //Proc of the 40th ACM SIGIR Conf on Research and Development in Information Retrieval.New York:ACM, 2017.arXiv:1704.00551v3
+                                    </a>
+                                </li>
+                                <li id="191">
+
+
+                                    <a id="bibliography_4" title="Zhang Libo, Luo Tiejian, Zhang Fei, et al.A recommendation model based on deep neural network[J] IEEE Access, 2018, 6:9454- 9463" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A recommendation model based on deep neural network">
+                                        <b>[4]</b>
+                                        Zhang Libo, Luo Tiejian, Zhang Fei, et al.A recommendation model based on deep neural network[J] IEEE Access, 2018, 6:9454- 9463
+                                    </a>
+                                </li>
+                                <li id="193">
+
+
+                                    <a id="bibliography_5" title="Wang Hongxiang, Liang Guihuang, Zhang Xingming.Feature regularization and deep learning for human resource recommendation[J] IEEE Access, 2018, 6:39415- 39421" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Feature Regularization and Deep Learning for Human Resource Recommendation">
+                                        <b>[5]</b>
+                                        Wang Hongxiang, Liang Guihuang, Zhang Xingming.Feature regularization and deep learning for human resource recommendation[J] IEEE Access, 2018, 6:39415- 39421
+                                    </a>
+                                </li>
+                                <li id="195">
+
+
+                                    <a id="bibliography_6" title="Wu Hao, Zhang Zhengxin, Yue Kun, et al.Dual-regularized matrix factorization with deep neural networks for recommender systems[J] Knowledge-Based Systems, 2018, 145:46- 58" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJESEB01B1D20BEB01C0F0872598976870D3&amp;v=MjU2Njc9TmlmT2ZjYktIdEMrcnZ0SFpKbDZmbnc0dkJabDZqZDZTbnJycEJzeWY3cVRSYzZjQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TjFoeDcyNHdhMA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                        Wu Hao, Zhang Zhengxin, Yue Kun, et al.Dual-regularized matrix factorization with deep neural networks for recommender systems[J] Knowledge-Based Systems, 2018, 145:46- 58
+                                    </a>
+                                </li>
+                                <li id="197">
+
+
+                                    <a id="bibliography_7" title="Covington P, Adams J, Sargin E.Deep neural networks for YouTube recommendations[C] //Proc of the 10th ACM Conf on Recommender Systems.New York:ACM, 2016:191- 198" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep Neural Networks for YouTube Recom-mendations">
+                                        <b>[7]</b>
+                                        Covington P, Adams J, Sargin E.Deep neural networks for YouTube recommendations[C] //Proc of the 10th ACM Conf on Recommender Systems.New York:ACM, 2016:191- 198
+                                    </a>
+                                </li>
+                                <li id="199">
+
+
+                                    <a id="bibliography_8" title="Chen Minmin, Xu Zhixiang, Weinberger K Q, et al.Marginalized stacked denoising auto-encoders[C] //Proc of the NIPS Special on Learning Workshop.New York:ACM, 2012.DOI:10.1.1.308.8543" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Marginalized stacked denoising auto-encoders">
+                                        <b>[8]</b>
+                                        Chen Minmin, Xu Zhixiang, Weinberger K Q, et al.Marginalized stacked denoising auto-encoders[C] //Proc of the NIPS Special on Learning Workshop.New York:ACM, 2012.DOI:10.1.1.308.8543
+                                    </a>
+                                </li>
+                                <li id="201">
+
+
+                                    <a id="bibliography_9" title="Cheng H T, Koc L, Harmsen J, et al.Wide &amp;amp; deep learning for recommender systems[C] //Proc of the Workshop on Deep Learning for Recommender Systems.New York:ACM, 2016.DOI:10.1145/2988450.2988454" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Wide&amp;amp;deep learning for recommender systems">
+                                        <b>[9]</b>
+                                        Cheng H T, Koc L, Harmsen J, et al.Wide &amp;amp; deep learning for recommender systems[C] //Proc of the Workshop on Deep Learning for Recommender Systems.New York:ACM, 2016.DOI:10.1145/2988450.2988454
+                                    </a>
+                                </li>
+                                <li id="203">
+
+
+                                    <a id="bibliography_10" title="Guo Huifeng, Tang Ruiming, Ye Yunming, et al.DeepFM:A factorization-machine based neural network for CTR prediction[C] //Proc of the 26th Int Joint Conf on Artificial Intelligence.New York:ACM, 2017.arXiv:1703.04247v1" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=DeepFM:A factorizationmachine based neural network for CTR prediction">
+                                        <b>[10]</b>
+                                        Guo Huifeng, Tang Ruiming, Ye Yunming, et al.DeepFM:A factorization-machine based neural network for CTR prediction[C] //Proc of the 26th Int Joint Conf on Artificial Intelligence.New York:ACM, 2017.arXiv:1703.04247v1
+                                    </a>
+                                </li>
+                                <li id="205">
+
+
+                                    <a id="bibliography_11" title="Lian Jianxun, Zhou Xiaohua, Zhang Fuzheng, et al.xDeepFM:Combining explicit and implicit feature interactions for recommender systems[C] //Proc of the 24th ACM SIGKDD Int Conf.New York:ACM, 2018.arXiv:1803.05170v3" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=xDeepFM:Combining explicit and implicit feature interactions for recommender systems">
+                                        <b>[11]</b>
+                                        Lian Jianxun, Zhou Xiaohua, Zhang Fuzheng, et al.xDeepFM:Combining explicit and implicit feature interactions for recommender systems[C] //Proc of the 24th ACM SIGKDD Int Conf.New York:ACM, 2018.arXiv:1803.05170v3
+                                    </a>
+                                </li>
+                                <li id="207">
+
+
+                                    <a id="bibliography_12" title="He Xiangnan, Liao Lizi, Zhang Hanwang, et al.Neural collaborative filtering[C] //Proc of the 26th Int Conf on World Wide Web.New York:ACM, 2017.arXiv:1708.05027v1" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Neural collaborative filtering">
+                                        <b>[12]</b>
+                                        He Xiangnan, Liao Lizi, Zhang Hanwang, et al.Neural collaborative filtering[C] //Proc of the 26th Int Conf on World Wide Web.New York:ACM, 2017.arXiv:1708.05027v1
+                                    </a>
+                                </li>
+                                <li id="209">
+
+
+                                    <a id="bibliography_13" title="Chen Minmin, Xu Zhixiang, Weinberger K, et al.Marginalized denoising auto-encoders for domain adaptation[C] //Proc of the 29th Int Conf on Machine Learning.New York:ACM, 2012.arXiv:1206.4683" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Marginalized denoising autoencoders for domain adaptation">
+                                        <b>[13]</b>
+                                        Chen Minmin, Xu Zhixiang, Weinberger K, et al.Marginalized denoising auto-encoders for domain adaptation[C] //Proc of the 29th Int Conf on Machine Learning.New York:ACM, 2012.arXiv:1206.4683
+                                    </a>
+                                </li>
+                                <li id="211">
+
+
+                                    <a id="bibliography_14" title="Wu Yao, DuBois C, Zheng A X, et al.Collaborative denoising auto-encoders for top-n recommender systems[C] //Proc of the ACM Int Conf on Web Search and Data Mining.New York:ACM, 2016.DOI:10.1145/2835776.2835837" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Collaborative Denoising Auto-encoders for Top-N Recommender Systems">
+                                        <b>[14]</b>
+                                        Wu Yao, DuBois C, Zheng A X, et al.Collaborative denoising auto-encoders for top-n recommender systems[C] //Proc of the ACM Int Conf on Web Search and Data Mining.New York:ACM, 2016.DOI:10.1145/2835776.2835837
+                                    </a>
+                                </li>
+                                <li id="213">
+
+
+                                    <a id="bibliography_15" title="Li Sheng, Kawale J, Fu Yun.Deep collaborative filtering via marginalized denoising auto-encoder[C] //Proc of the ACM Int Conf on Information and Knowledge Management.New York:ACM, 2015.DOI:10.1145/2806416.2806527" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep collaborative filtering via marginalized denoising auto-encoder">
+                                        <b>[15]</b>
+                                        Li Sheng, Kawale J, Fu Yun.Deep collaborative filtering via marginalized denoising auto-encoder[C] //Proc of the ACM Int Conf on Information and Knowledge Management.New York:ACM, 2015.DOI:10.1145/2806416.2806527
+                                    </a>
+                                </li>
+                                <li id="215">
+
+
+                                    <a id="bibliography_16" title="Ioffe S, Szegedy C.Batch normalization:Accelerating deep network training by reducing internal covariate shift[C] //Proc of the 32nd Int Conf on Machine Learning.New York:ACM, 2015.DOI:10.1145/2806416.2806527" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Batch normalization:Accelerating deep network training by reducing internal covariate shift">
+                                        <b>[16]</b>
+                                        Ioffe S, Szegedy C.Batch normalization:Accelerating deep network training by reducing internal covariate shift[C] //Proc of the 32nd Int Conf on Machine Learning.New York:ACM, 2015.DOI:10.1145/2806416.2806527
+                                    </a>
+                                </li>
+                                <li id="217">
+
+
+                                    <a id="bibliography_17" title="Abadi M, Barham P, Chen J, et al.Tensorflow:A system for large-scale machine learning[C] //Proc of the 12th USENIX Conf on Operating Systems Design and Implementation.New York:ACM, 2016:165- 283" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=TensorFlow:a system for large-scale machine learning">
+                                        <b>[17]</b>
+                                        Abadi M, Barham P, Chen J, et al.Tensorflow:A system for large-scale machine learning[C] //Proc of the 12th USENIX Conf on Operating Systems Design and Implementation.New York:ACM, 2016:165- 283
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JFYZ" target="_blank">计算机研究与发展</a>
+                2019,56(08),1661-1669 DOI:10.7544/issn1000-1239.2019.20190178            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>一种基于两阶段深度学习的集成推荐模型</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E7%91%9E%E7%90%B4&amp;code=33283921&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王瑞琴</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%90%B4%E5%AE%97%E5%A4%A7&amp;code=43064501&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">吴宗大</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%92%8B%E4%BA%91%E8%89%AF&amp;code=05981975&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">蒋云良</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%A5%BC%E4%BF%8A%E9%92%A2&amp;code=26317545&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">楼俊钢</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%B9%96%E5%B7%9E%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0147794&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">湖州师范学院信息工程学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%B8%A9%E5%B7%9E%E5%A4%A7%E5%AD%A6%E7%93%AF%E6%B1%9F%E5%AD%A6%E9%99%A2&amp;code=1750702&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">温州大学瓯江学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>近年来, 深度学习技术被广泛应用于推荐系统领域并获得了很大的成功, 然而深度学习模型的输入质量对学习结果具有很大影响, 稀疏的输入特征向量不仅会增加后续模型训练的难度, 而且容易导致学习结果落入局部最优.提出一个基于两阶段深度学习的集成推荐模型:首先, 利用具有封闭式参数计算能力的边缘化堆叠去噪自动编码机进行用户和项目高层抽象特征的提取;然后, 将得到的用户抽象特征和项目抽象特征进行连接并作为深度神经网络模型的输入向量, 通过联合训练的方式进行参数学习和模型优化.此外, 为了对低阶特征交互进行建模, 推荐模型中还集成了基于原始特征向量的逻辑回归模型.在通用数据集上的大量对比实验研究表明:与当前流行的深度学习推荐方法相比, 该方法在推荐精度和召回率方面都有所改善, 甚至是在数据稀疏和冷启动的环境下.</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">深度学习;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%BE%B9%E7%BC%98%E5%8C%96%E5%A0%86%E5%8F%A0%E5%8E%BB%E5%99%AA%E8%87%AA%E5%8A%A8%E7%BC%96%E7%A0%81%E6%9C%BA&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">边缘化堆叠去噪自动编码机;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B7%B1%E5%BA%A6%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">深度神经网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">特征提取;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    吴宗大, zongda1983@163.com;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2019-03-20</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>教育部人文社科规划基金项目 (19YJA870013);</span>
+                                <span>国家自然科学基金项目 (61403338);</span>
+                                <span>浙江省科技计划重点研发项目 (2017C03047);</span>
+                    </p>
+            </div>
+                    <h1><b>An Integrated Recommendation Model Based on Two-stage Deep Learning</b></h1>
+                    <h2>
+                    <span>Wang Ruiqin</span>
+                    <span>Wu Zongda</span>
+                    <span>Jiang Yunliang</span>
+                    <span>Lou Jungang</span>
+            </h2>
+                    <h2>
+                    <span>School of Information Engineering, Huzhou University</span>
+                    <span>School of Oujiang, Wenzhou University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>In recent years, deep learning technology has been widely used in the field of recommendation systems and has achieved great success. However, the input quality of the deep learning models has a great influence on the learning results. A sparse input feature vector will not only increase the difficulty of subsequent model training, but also will lead to the learning results falling into local optimum. In this article, an integrated recommendation model based on two-stage deep learning is proposed. Firstly, two individual marginal stacked denoising auto-encoders (mSDA) models with closed-form parameter calculation are used to extract the high-level abstract features of the users and the items. Then the resulted user abstract feature and the item abstract feature are connected as the input vector of the deep neural network (DNN) model, and the parameter learning and model optimization are performed through joint training. In addition, in order to model low-order feature interactions, a logistic regression model based on original feature vector is also integrated into the recommendation model. Extensive experiments with two real-world datasets indicate that the proposed recommendation model shows excellent recommendation performance compared with the state-of-the-art methods, especially in the data sparse and the cold start environments.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=deep%20learning&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">deep learning;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=marginalized%20stacked%20denoising%20auto-encoder&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">marginalized stacked denoising auto-encoder;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=deep%20neural%20network%20(DNN)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">deep neural network (DNN) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=feature%20extraction&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">feature extraction;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                            <b>Author：</b>
+                                                        <span>
+                                    Wang Ruiqin, born in 1979. PhD, associate professor.Member of CCF.Her main research interests include data mining and social recommendation. (angelwrq@ 163.com) <image id="233" type="" href="images/JFYZ201908009_23300.jpg" display="inline" placement="inline"><alt></alt></image>;
+                                </span>
+                                <span>
+                                    Wu Zongda, born in 1983.PhD, professor. Member of CCF. His main research interests include social network analysis and natural language processing. <image id="235" type="" href="images/JFYZ201908009_23500.jpg" display="inline" placement="inline"><alt></alt></image>;
+                                </span>
+                                <span>
+                                    Jiang Yunliang, born in 1967.PhD, professor.Member of CCF.His main research interests include artificial intelli-gence and data integration. (jyl@zjhu.edu. cn) <image id="237" type="" href="images/JFYZ201908009_23700.jpg" display="inline" placement="inline"><alt></alt></image>;
+                                </span>
+                                <span>
+                                    Lou Jungang, born in 1982.PhD, professor. Member of CCF.His main research interests include software reliability evaluation and dependable computing. (ljg@zjhu.edu.cn) <image id="239" type="" href="images/JFYZ201908009_23900.jpg" display="inline" placement="inline"><alt></alt></image>;
+                                </span>
+                    </p>
+                                    <p><b>Received：</b> 2019-03-20</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>supported by the Humantities and Social Science Project of Ministry of Education of China (19YJA870013);</span>
+                                <span>the National Natural Science Foundation of China (61403338);</span>
+                                <span>and the Zhejiang Science and Technology Major Project (2017C03047);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <div class="p1">
+                    <p id="43">个性化推荐系统是互联网和电子商务发展的产物, 是建立在海量数据挖掘基础上的高级商务智能平台, 旨在向顾客提供个性化的信息服务和决策支持.个性化推荐技术是最具人文关怀的技术之一, 它尊重个体、相信每个人都是与众不同的, 在这个信息爆炸和以人为本的时代, 实现个性化推荐服务势在必行.成功的电子商务推荐系统能有效保留客户, 提高企业销售额, 产生巨大的经济效益和社会效益<citation id="219" type="reference"><link href="185" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>.</p>
+                </div>
+                <div class="p1">
+                    <p id="44">近年来, 越来越多的研究人员将深度学习技术应用于推荐系统领域并取得了一定的成功<citation id="221" type="reference"><link href="187" rel="bibliography" /><link href="189" rel="bibliography" /><link href="191" rel="bibliography" /><link href="193" rel="bibliography" /><link href="195" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>,<a class="sup">4</a>,<a class="sup">5</a>,<a class="sup">6</a>]</sup></citation>, 其中以基于深度神经网络 (deep neural network, DNN) 的协同推荐模型最为流行, DNN推荐模型主要研究高阶特征的交互行为对预测和推荐任务的影响<citation id="220" type="reference"><link href="197" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>.尽管深度学习模型本身就是特征提取和参数学习的有效工具, 但在输入向量稀疏的情况下, 其学习结果很容易落入局部最优, 从而影响推荐性能.</p>
+                </div>
+                <div class="p1">
+                    <p id="45">对于深度学习模型的输入优化, 目前比较流行的做法是采用嵌入式编码方案对输入向量进行稠密化处理, 然而嵌入式编码无疑会产生附加的模型参数, 这些参数都需要经过迭代进行学习, 使整个模型的复杂度也有所增加.因此, 探索一种具有封闭式参数计算能力的特征学习模型是提高基于深度学习的推荐模型的关键所在, 而边缘化堆叠式去噪自动编码机 (marginalized stacked denoising auto-encoder, mSDA) 正好满足这一需求, 它通过无限最大化随机特征扰动的次数使参数计算具有封闭性, 具有较低的计算复杂度和良好的可扩展性<citation id="222" type="reference"><link href="199" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>.那么是否可以利用mSDA模型对DNN推荐模型的输入向量进行初始化呢?如果可以那么应该采用怎样的方式将2个模型进行组合或集成?这些都是值得研究的问题.</p>
+                </div>
+                <div class="p1">
+                    <p id="46">基于这一启发式思想, 本文提出一个基于两阶段深度学习的集成推荐模型, 通过mSDA模型进行用户和项目抽象特征的学习, 将学习到的抽象特征作为DNN模型的输入进行评分预测, 通过联合训练的方法进行集成模型的参数学习和模型优化.总的来说, 本文的贡献主要表现在4个方面:</p>
+                </div>
+                <div class="p1">
+                    <p id="47">1) 提出一种基于两阶段深度学习的集成推荐模型架构, 即采用一种低成本的深度学习模型来初始化另一种高性能的深度学习模型, 二者进行联合训练以达到全局最优;</p>
+                </div>
+                <div class="p1">
+                    <p id="48">2) 采用mSDA模型代替传统深度学习模型中的嵌入式编码方法, 这样不仅可以学习到高阶特征, 而且其特有的封闭式参数计算方法快速而高效, 没有产生太多的计算负载;</p>
+                </div>
+                <div class="p1">
+                    <p id="49">3) 为了建模低阶特征交互对评分预测和推荐性能的影响, 将逻辑回归模型集成到两阶段深度学习模型中, 使模型同时具有线性建模和深度学习的能力;</p>
+                </div>
+                <div class="p1">
+                    <p id="50">4) 本文提出的模型是一个通用的两阶段推荐模型, 在该模型框架上, 完全可以采用其他低时高效的特征学习模型对深度学习模型的输入向量进行优化.</p>
+                </div>
+                <h3 id="51" name="51" class="anchor-tag"><b>1 相关知识</b></h3>
+                <div class="p1">
+                    <p id="52">本文提出的推荐模型是基于DNN模型和mSDA模型的集成框架, 本节将简要介绍这2种模型以及基于这些模型的一些流行的推荐方法.</p>
+                </div>
+                <div class="p1">
+                    <p id="53">近年来, 随着深度学习技术在语音识别、计算机视觉、自然语言处理等领域的成功应用和优异表现, 研究者们尝试利用深度学习模型来建模高阶特征之间的交互关系, 进而实现评分预测与推荐, 其中以DNN模型最为常用.DNN是对神经网络的扩展, 可以直观地理解为有很多隐藏层的神经网络, DNN模型以其独特的特征交叉以及非线性建模能力受到推荐领域专家、学者的广泛青睐.然而, DNN的局限性在于其对离散特征的处理方式, 它通常将离散特征转换成One-Hot的编码形式, 而DNN全连接的特征交叉特性会使One-Hot类型的输入产生大量的网络参数, 这不仅会增加模型训练的复杂度, 而且容易导致学习结果陷入局部最优.</p>
+                </div>
+                <div class="p1">
+                    <p id="54">2016年Google大脑研究团队在其开源软件库TensorFlow上发布了用于分类和回归的推荐模型Wide&amp;Deep<citation id="223" type="reference"><link href="201" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>, 其核心思想是将线性模型的记忆能力和深度学习模型的泛化能力相结合, 在训练过程中同时优化2个模型的参数, 使得整个模型同时具有线性建模和深度学习的能力.遗憾的是, Wide&amp; Deep模型的输入特征向量依然采用One-Hot编码格式.</p>
+                </div>
+                <div class="p1">
+                    <p id="55">随后, 研究者们陆续提出一系列兼具线性建模和深度学习的推荐模型, 其中DeepFM<citation id="224" type="reference"><link href="203" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>是一个端到端的推荐模型, 它包含2个组成部件:DNN模型和因子分解机 (factorization machine, FM) 模型, 分别负责低阶特征交互的建模和高阶特征交互的建模, 这2部分共享相同的输入.与Wide&amp;Deep模型不同的是, DeepFM模型的输入特征向量是经过嵌入式编码的特征向量, 将One-Hot编码基于field进行分组, 转化为低维、稠密的编码向量.然而DeepFM模型的局限性在于, 它学习出的是隐式的交互特征, 其形式是未知、不可控的.另外, DeepFM中的特征交互是发生在元素级而不是特征向量之间, 这一点违背了FM的初衷.</p>
+                </div>
+                <div class="p1">
+                    <p id="56">在知识发现与数据挖掘会议KDD 2018上, 微软亚洲研究院的社会计算组提出一种极深因子分解机模型xDeepFM<citation id="225" type="reference"><link href="205" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>, 包含压缩交互网络模型和DNN模型2个组成部件, 前者以显式方式在向量级建模特征交互, 后者以隐式方式在元素级建模特征交互.随后, He等人<citation id="226" type="reference"><link href="207" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>提出一种神经分解机模型NFM, 在嵌入式编码层之上又增加了一个二阶交互层, 采用池化操作对嵌入式特征编码进行合并, 进一步降低输入特征向量的维度, 从而降低了后续隐藏层对高阶特征交互建模的计算复杂度.</p>
+                </div>
+                <div class="p1">
+                    <p id="57">边缘化去噪自动编码机 (marginal denoising auto-encoder, mDA) <citation id="227" type="reference"><link href="209" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>是一种低成本的去噪自动编码机解决方案, 它通过无限最大化随机特征扰动的次数使参数计算具有封闭性.为了增强mDA模型的学习能力, 进一步将其扩展到多层就得到了mSDA模型.mSDA从输入层经过多层编码得到原始输入特征的抽象特征, 然后再经过多层解码恢复到原始特征, 通过多次编码和解码过程实现无监督的特征学习, 模型的具体层数通过训练方法确定<citation id="228" type="reference"><link href="211" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>.</p>
+                </div>
+                <div class="p1">
+                    <p id="58">目前对mSDA模型的应用非常有限, Li等人<citation id="229" type="reference"><link href="213" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>提出基于mSDA的协同推荐模型mSDA-CF, 其中包含2个组成部件:mSDA模型与矩阵分解模型, 前者用于项目抽象特征的提取, 后者用于评分预测与协同推荐.通过将mSDA模型最中间层学习到的项目抽象特征向量映射到矩阵分解模型中的项目潜在因子向量, 从而实现2个模型之间的无缝集成.</p>
+                </div>
+                <div class="p1">
+                    <p id="59">综上, 基于深度学习的推荐模型已经得到了业界广泛关注并取得了一定成功, 然而深度学习模型中的初始化对模型训练的收敛速度和模型质量具有重要影响, 有必要采用相应的特征学习算法进行深度学习模型的输入特征向量进行优化.然而, 传统的特征工程方法和人工特征选择方法都具有明显不足, 前者假设特征之间是独立同分布的, 与现实不符;后者需要领域专家的参与, 费时费力, 而且不能扩展到未出现的特征组合中.本文提出将低时、高效的mSDA模型作为DNN深度学习模型的初始化模型, 完成抽象输入特征的快速提取, 并采用联合训练的方式实现集成模型的全局优化.</p>
+                </div>
+                <h3 id="60" name="60" class="anchor-tag"><b>2 本文方法</b></h3>
+                <div class="p1">
+                    <p id="61">本节首先给出基于两阶段深度学习的集成推荐模型TDHR (two-stage deep learning based hybrid recommendation) 的定义和理论框架, 然后详细介绍特征提取过程和集成模型的参数学习方法, 最后对模型的计算复杂度进行简要分析, 表1列出了本文后续内容经常使用的一些符号定义.</p>
+                </div>
+                <div class="area_img" id="62">
+                    <p class="img_tit"><b>表1 文中常用的符号定义及描述</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 1 Definition and Description of Common Symbols in This Paper</b></p>
+                    <p class="img_note"></p>
+                    <table id="62" border="1"><tr><td><br />Symble</td><td>Description</td></tr><tr><td><br /><i>m</i></td><td>Number of users</td></tr><tr><td><br /><i>n</i></td><td>Number of items</td></tr><tr><td><br /><i>p</i></td><td>Dimension of vector of user features</td></tr><tr><td><br /><i>q</i></td><td>Dimension of vector of item features</td></tr><tr><td><br /><b><i>R</i></b>∈R<sup><i>m</i>×<i>n</i></sup></td><td>Rating matrix</td></tr><tr><td><br /><b><i>X</i></b>∈R<sup><i>p</i>×<i>m</i></sup></td><td>Vectors of original feature of users</td></tr><tr><td><br /><b><i>Y</i></b>∈R<sup><i>q</i>×<i>n</i></sup></td><td>Vectors of original feature of items</td></tr><tr><td><br /><b><i>U</i></b></td><td>Vectors of abstract feature of users</td></tr><tr><td><br /><b><i>V</i></b></td><td>Vectors of abstract feature of items</td></tr><tr><td><br /><b><i>W</i></b>∈R<sup><i>p</i>×<i>p</i></sup></td><td>Reconstructed mapping vector of <b><i>X</i></b></td></tr><tr><td><br /><b><i>S</i></b>∈R<sup><i>q</i>×<i>q</i></sup></td><td>Reconstructed mapping vector of <b><i>Y</i></b></td></tr><tr><td><br /><i>L</i><sub>1</sub></td><td>Layer number of user feature extraction model</td></tr><tr><td><br /><i>L</i><sub>2</sub></td><td>Layer number of item feature extraction model</td></tr><tr><td><br /><i>a</i></td><td>Global bias</td></tr><tr><td><br /><b><i>w</i></b></td><td>Weights of vectors of user features</td></tr><tr><td><br /><b><i>v</i></b></td><td>Weights of vectors of item features</td></tr><tr><td><br /><b><i>H</i></b></td><td>Weight vectors of hidden layers</td></tr><tr><td><br /><i>b</i></td><td>bias of hidden layers</td></tr><tr><td><br /><i>σ</i></td><td>Activation function of hidden layers</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="63" name="63"><b>2.1 TDHR模型概述</b></h4>
+                <div class="p1">
+                    <p id="64">TDHR是一个同时具有线性建模和深度学习能力的集成推荐模型, 其工作原理如下:首先, 采用One-Hot编码方法对原始的用户特征和项目特征进行向量化处理;然后, 一方面将One-Hot编码向量经过逻辑回归 (logical regression, LR) 模型进行线性交互建模, 另一方面使用2个独立的mSDA模型分别进行用户抽象特征和项目抽象特征的提取;最后, 将学习到的抽象特征进行合并并作为DNN模型的输入, 采用联合训练的方式进行参数学习和模型优化.TDHR模型的整体架构如图1所示:</p>
+                </div>
+                <div class="area_img" id="65">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201908009_065.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 TDHR模型的整体架构" src="Detail/GetImg?filename=images/JFYZ201908009_065.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 TDHR模型的整体架构  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201908009_065.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 1 Framework of the TDHR model</p>
+
+                </div>
+                <h4 class="anchor-tag" id="66" name="66"><b>2.2 特征提取</b></h4>
+                <div class="p1">
+                    <p id="67">在TDHR集成推荐模型中, 用户抽象特征和项目抽象特征的提取采用mSDA模型实现, mSDA模型每一层的特征重构参数均采用封闭式的计算方法得到.其中用户抽象特征向量的提取过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="68">首先, 对用户输入特征向量中的元素进行随机扰动, 以增加模型的鲁棒学习能力, 目标函数为</p>
+                </div>
+                <div class="p1">
+                    <p id="69"><mathml id="70"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ℓ</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">W</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>k</mi><mi>l</mi></mrow></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mrow><mo>|</mo><mrow><mi>x</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mi mathvariant="bold-italic">W</mi><mover accent="true"><mi>x</mi><mo>˜</mo></mover><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow></mstyle></mrow></mstyle></mrow></math></mathml>, (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="71">其中, <mathml id="72"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi>x</mi><mo>˜</mo></mover></math></mathml><sub><i>i</i>, <i>j</i></sub>表示对输入特征向量<b><i>X</i></b>的第<i>i</i>个元素<i>x</i><sub><i>i</i></sub>的第<i>j</i>次扰动版本, <i>k</i>表示扰动的次数, <i>l</i>表示输入特征向量的维度, <b><i>W</i></b>表示特征重构向量.</p>
+                </div>
+                <div class="p1">
+                    <p id="73">然后, 定义<b><i>X</i></b>的<i>k</i>次重复版本向量<mathml id="74"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>¯</mo></mover><mo>=</mo><mo stretchy="false">[</mo><mi mathvariant="bold-italic">X</mi><mo>, </mo><mo>⋯</mo><mo>, </mo><mi mathvariant="bold-italic">X</mi><mo stretchy="false">]</mo></mrow></math></mathml>, 以及<mathml id="75"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>¯</mo></mover></math></mathml>的扰动版本向量<mathml id="76"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>˜</mo></mover></math></mathml>, 则目标函数可以改写为</p>
+                </div>
+                <div class="p1">
+                    <p id="77"><mathml id="78"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ℓ</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">W</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>k</mi><mi>l</mi></mrow></mfrac><mi>Τ</mi><mi>r</mi><mo stretchy="false"> (</mo><mo stretchy="false"> (</mo><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>¯</mo></mover><mo>-</mo><mi mathvariant="bold-italic">W</mi><mtext> </mtext><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>˜</mo></mover><mo stretchy="false">) </mo><msup><mrow></mrow><mtext>Τ</mtext></msup><mo stretchy="false"> (</mo><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>¯</mo></mover><mo>-</mo><mi mathvariant="bold-italic">W</mi><mtext> </mtext><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>˜</mo></mover><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow></math></mathml>, (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="79">其中, <i>Tr</i> (·) 表示向量的迹, 很明显, 以上方程的参数求解可以使用最小二乘法实现.根据最小二乘法原理, <b><i>W</i></b>的计算形式为</p>
+                </div>
+                <div class="p1">
+                    <p id="80"><b><i>W</i></b>=<b><i>P</i></b><sub>1</sub><b><i>Q</i></b><mathml id="81"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>1</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow></math></mathml>, (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="82">其中, <mathml id="83"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">Ρ</mi><msub><mrow></mrow><mn>1</mn></msub><mo>=</mo><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>¯</mo></mover><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>˜</mo></mover><msup><mrow></mrow><mtext>Τ</mtext></msup><mo>, </mo><mi mathvariant="bold-italic">Q</mi><msub><mrow></mrow><mn>1</mn></msub><mo>=</mo><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>˜</mo></mover><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>˜</mo></mover><msup><mrow></mrow><mtext>Τ</mtext></msup></mrow></math></mathml>.很显然, 扰动次数<i>k</i>的值越大, 模型的特征学习能力就越强.理想情况下, 不妨假设<i>k</i>→∞, 即进行无限次扰动.根据弱大数定律, 矩阵<b><i>P</i></b><sub>1</sub>和<b><i>Q</i></b><sub>1</sub>将收敛于期望值<i>E</i>[<b><i>P</i></b><sub>1</sub>]和<i>E</i>[<b><i>Q</i></b><sub>1</sub>], 此时<b><i>W</i></b>的表达形式为</p>
+                </div>
+                <div class="p1">
+                    <p id="84"><b><i>W</i></b>=<i>E</i>[<b><i>P</i></b><sub>1</sub>]<i>E</i>[<b><i>Q</i></b><sub>1</sub>]<sup>-1</sup>. (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="85">接下来推导<i>E</i>[<b><i>Q</i></b><sub>1</sub>]=<mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>l</mi></munderover><mrow></mrow></mstyle></mrow></math></mathml><i>E</i>[<mathml id="87"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>˜</mo></mover></math></mathml><mathml id="88"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>˜</mo></mover></math></mathml><sup>T</sup>]的计算方法.当矩阵<b><i>Q</i></b><sub>1</sub>的2个因子和<mathml id="89"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>˜</mo></mover></math></mathml>和<mathml id="90"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi mathvariant="bold-italic">X</mi><mo>˜</mo></mover></math></mathml><sup>T</sup>都未被破坏时, 其非对角元素才未被破环.假设特征扰动的概率为<i>c</i>, 定义一个向量<b><i>q</i></b>=[1-<i>c</i>, …, 1-<i>c</i>, 1]<sup>T</sup>∈R<sup><i>l</i>+1</sup>, 其中<i>q</i><sub><i>α</i></sub>表示特征元素<i>α</i>不被破环的概率, 则<i>E</i>[<b><i>Q</i></b><sub>1</sub>]的计算公式为</p>
+                </div>
+                <div class="area_img" id="91">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JFYZ201908009_09100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="93">其中, <b><i>M</i></b>=<b><i>XX</i></b><sup>T</sup>表示<b><i>X</i></b>的散布矩阵.</p>
+                </div>
+                <div class="p1">
+                    <p id="94">同理, 可以得到<i>E</i>[<b><i>P</i></b><sub>1</sub>]的封闭式计算形式:</p>
+                </div>
+                <div class="p1">
+                    <p id="95"><i>E</i>[<b><i>P</i></b><sub>1</sub>]=<b><i>M</i></b><sub><i>α β</i></sub><i>q</i><sub><i>α</i></sub>. (6) </p>
+                </div>
+                <div class="p1">
+                    <p id="96">在一个<i>L</i><sub>1</sub>层的mSDA特征提取模型中, 采用以上方法, 经过<i>L</i><sub>1</sub>/2层的特征重构编码, 在最中间层得到用户抽象特征<b><i>U</i></b>=<b><i>W</i></b><sub><i>L</i><sub>1</sub>/2</sub><b><i>X</i></b><sub><i>L</i><sub>1</sub>/2</sub>.同理, 可以得到项目抽象特征向量<b><i>V</i></b>=<b><i>S</i></b><sub><i>L</i><sub>2</sub>/2</sub><b><i>Y</i></b><sub><i>L</i><sub>2</sub>/2</sub>.</p>
+                </div>
+                <h4 class="anchor-tag" id="97" name="97"><b>2.3 评分预测</b></h4>
+                <div class="p1">
+                    <p id="98">给定评分矩阵<b><i>R</i></b>、用户特征属性向量<b><i>X</i></b>、项目特征属性向量<b><i>Y</i></b>以及由mSDA学习到的用户抽象特征向量<b><i>U</i></b>和项目抽象特征向量<b><i>V</i></b>, TDHR模型为评分预测:</p>
+                </div>
+                <div class="p1">
+                    <p id="99"><mathml id="100"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>r</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub></mrow><mo>=</mo><mi>a</mi><mo>+</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>m</mi><mo>=</mo><mn>1</mn></mrow><mi>p</mi></munderover><mi>w</mi></mstyle><msub><mrow></mrow><mi>m</mi></msub><mi>x</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>m</mi></mrow></msub><mo>+</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>q</mi></munderover><mi>v</mi></mstyle><msub><mrow></mrow><mi>n</mi></msub><mi>y</mi><msub><mrow></mrow><mrow><mi>j</mi><mi>n</mi></mrow></msub><mo>+</mo><mi>f</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">Ζ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub><mo stretchy="false">) </mo></mrow></math></mathml>, (7) </p>
+                </div>
+                <div class="p1">
+                    <p id="101">其中, <i>x</i><sub><i>im</i></sub>表示用户<i>i</i>的第<i>m</i>个原始特征向量元素的值, <i>y</i><sub><i>jn</i></sub>表示项目<i>j</i>的第<i>n</i>个原始特征向量元素的值;<b><i>Z</i></b><sub><i>i</i>, <i>j</i></sub>表示由用户<i>i</i>的抽象特征向量和项目<i>j</i>的抽象特征向量通过向量连接的方式得到的组合向量, <b><i>Z</i></b><sub><i>i</i>, <i>j</i></sub>=[<b><i>U</i></b><sub><i>i</i></sub>, <b><i>V</i></b><sub><i>j</i></sub>];<i>f</i> (<b><i>Z</i></b><sub><i>i</i>, <i>j</i></sub>) 表示以<b><i>Z</i></b><sub><i>i</i>, <i>j</i></sub>作为输入向量的DNN模型, 定义为</p>
+                </div>
+                <div class="p1">
+                    <p id="102"><i>f</i> (<b><i>Z</i></b><sub><i>i</i>, <i>j</i></sub>) =<b><i>h</i></b><sup>T</sup><i>σ</i><sub><i>L</i></sub> (<b><i>H</i></b><sub><i>L</i></sub> (…<i>σ</i><sub><i>l</i></sub> (<b><i>H</i></b><sub>1</sub><b><i>Z</i></b><sub><i>i</i>, <i>j</i></sub>+<i>b</i><sub><i>l</i></sub>) ) , (8) </p>
+                </div>
+                <div class="p1">
+                    <p id="103">其中, <i>L</i>表示DNN模型的层数, <b><i>H</i></b><sub><i>l</i></sub>, <i>b</i><sub><i>l</i></sub>和<i>σ</i><sub><i>l</i></sub>分别表示第<i>l</i>层的权重向量、偏置和激活函数, <b><i>h</i></b>表示输出层的权重.</p>
+                </div>
+                <h4 class="anchor-tag" id="104" name="104"><b>2.4 模型训练与参数学习</b></h4>
+                <div class="p1">
+                    <p id="105">TDHR采用联合训练的方法进行特征建模和评分估计, 目标函数为</p>
+                </div>
+                <div class="p1">
+                    <p id="106"><mathml id="107"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>ℓ</mi><mo stretchy="false"> (</mo><mi>R</mi><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mo stretchy="false"> (</mo><mi>i</mi><mo>, </mo><mi>j</mi><mo stretchy="false">) </mo><mo>∈</mo><mi>R</mi><msup><mrow></mrow><mo>+</mo></msup></mrow></munder><mrow><mo stretchy="false"> (</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>r</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub><mo>-</mo><mi>r</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub><mo stretchy="false">) </mo></mrow></mstyle><msup><mrow></mrow><mn>2</mn></msup></mrow></math></mathml>, (9) </p>
+                </div>
+                <div class="p1">
+                    <p id="108">其中, <i>R</i><sup>+</sup>表示可观察的评分集, <i>r</i><sub><i>i</i>, <i>j</i></sub>表示用户<i>i</i>对项目<i>j</i>的实际评分值, <mathml id="109"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>r</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub></mrow></math></mathml>表示相应的预测评分.</p>
+                </div>
+                <div class="p1">
+                    <p id="110">采用随机梯度下降 (stochastic gradient descent, SGD) 优化方法进行集成模型的超参数的学习:</p>
+                </div>
+                <div class="p1">
+                    <p id="111"><mathml id="112"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>θ</mi><mo>=</mo><mi>θ</mi><mo>-</mo><mi>η</mi><mo>×</mo><mn>2</mn><mo stretchy="false"> (</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>r</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub><mo>-</mo><mi>r</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub><mo stretchy="false">) </mo><mfrac><mrow><mo>∂</mo><mi>ℓ</mi></mrow><mrow><mo>∂</mo><mi>θ</mi></mrow></mfrac></mrow></math></mathml>, (10) </p>
+                </div>
+                <div class="p1">
+                    <p id="113">其中, <i>η</i>表示梯度下降的学习率, <i>θ</i>代表集成模型的所有超参数.</p>
+                </div>
+                <div class="p1">
+                    <p id="114">对于DNN模型这样的多层网络结构, 进一步使用链式规则计算其中的参数对于<i>f</i> (<b><i>Z</i></b><sub><i>i</i>, <i>j</i></sub>) 的梯度:</p>
+                </div>
+                <div class="p1">
+                    <p id="115"><mathml id="116"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mo>∂</mo><mi>f</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">Ζ</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">) </mo></mrow><mrow><mo>∂</mo><mi mathvariant="bold-italic">Η</mi><msubsup><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow><mi>l</mi></msubsup></mrow></mfrac><mo>=</mo><mi mathvariant="bold-italic">o</mi><msubsup><mrow></mrow><mi>j</mi><mrow><mi>l</mi><mo>-</mo><mn>1</mn></mrow></msubsup><mi>δ</mi><msubsup><mrow></mrow><mi>j</mi><mi>l</mi></msubsup></mrow></math></mathml>, (11) </p>
+                </div>
+                <div class="p1">
+                    <p id="117"><mathml id="118"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mo>∂</mo><mi>f</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">Ζ</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub><mo stretchy="false">) </mo></mrow><mrow><mo>∂</mo><mi>b</mi><msubsup><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow><mi>l</mi></msubsup></mrow></mfrac><mo>=</mo><mi>δ</mi><msubsup><mrow></mrow><mi>j</mi><mi>l</mi></msubsup></mrow></math></mathml>, (12) </p>
+                </div>
+                <div class="p1">
+                    <p id="119">其中, <i>ο</i><sup><i>l</i></sup>表示DNN模型的第<i>l</i>层的输出向量, <i>δ</i>是为了表示清晰而引入的中间变量, 其定义为</p>
+                </div>
+                <div class="p1">
+                    <p id="120"><i>δ</i><sup><i>l</i></sup>= ( (<b><i>H</i></b><sup><i>l</i>+1</sup>) <sup>T</sup><i>δ</i><sup><i>l</i>+1</sup>) ·<i>σ</i><sup><i>l</i></sup> (<b><i>a</i></b><sup><i>l</i></sup>) , (13) </p>
+                </div>
+                <div class="p1">
+                    <p id="121"><mathml id="122"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>δ</mi><msup><mrow></mrow><mi>L</mi></msup><mo>=</mo><mfrac><mrow><mo>∂</mo><mi>ℓ</mi></mrow><mrow><mo>∂</mo><mi>f</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">Ζ</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">) </mo></mrow></mfrac><mo>⋅</mo><mi>σ</mi><msup><mrow></mrow><mi>l</mi></msup><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">a</mi><msup><mrow></mrow><mi>l</mi></msup><mo stretchy="false">) </mo></mrow></math></mathml>, (14) </p>
+                </div>
+                <div class="p1">
+                    <p id="123">其中, <b><i>a</i></b><sup><i>l</i></sup>表示DNN模型第<i>l</i>层的输入向量.</p>
+                </div>
+                <div class="p1">
+                    <p id="124">一轮训练结束之后, 重新调整2个特征学习mSDA模型的层数<i>L</i><sub>1</sub>和<i>L</i><sub>2</sub>, 再对集成模型进行下一轮训练, 直到ℓ得到最优的值为止.</p>
+                </div>
+                <div class="p1">
+                    <p id="125">需要说明的是, 为了防止过拟合现象, 在TDHR模型的训练过程中还使用了Dropout技术<citation id="230" type="reference"><link href="215" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>, 即每次迭代过程仅对部分模型参数进行更新.此外, 为了避免参数震荡、加速模型收敛, TDHR中还使用了动量 (momentum) 技术和批量规格化方法, 前者根据历史梯度均值对当前梯度进行微调, 后者使用高斯分布对批量化的输入训练样本进行规格化操作.</p>
+                </div>
+                <h4 class="anchor-tag" id="126" name="126"><b>2.5 复杂度分析</b></h4>
+                <div class="p1">
+                    <p id="127">TDHR是一个集成模型, 其时间复杂度由其组成部件模型mSDA和DNN的复杂度来共同决定.mSDA模型是一个多层的框架, 每一层特征重构向量的计算均采用基于矩阵运算的封闭式计算方法实现, 矩阵运算的复杂度为<i>O</i> (<i>dp</i><sup>2</sup>) , 其中<i>d</i>表示mSDA的层数, <i>p</i>表示特征的维度.</p>
+                </div>
+                <div class="p1">
+                    <p id="128">DNN模型是具有多个隐藏层的计算框架, 每个隐藏层的主要操作是矩阵乘法运算, 时间复杂度为<i>O</i> (<i>d</i><sub><i>l</i>-1</sub><i>d</i><sub><i>l</i></sub>) , 其中<i>d</i><sub><i>l</i></sub>表示第<i>l</i>层的维度.因此, DNN模型参数学习的时间复杂度为<mathml id="129"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ο</mi><mo stretchy="false"> (</mo><mi>t</mi><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi>L</mi></munderover><mi>d</mi></mstyle><msub><mrow></mrow><mrow><mi>l</mi><mo>-</mo><mn>1</mn></mrow></msub><mi>d</mi><msub><mrow></mrow><mi>l</mi></msub><mo stretchy="false">) </mo></mrow></math></mathml>, 其中<i>t</i>表示模型训练的迭代次数.</p>
+                </div>
+                <div class="p1">
+                    <p id="130">综上, TDHR模型一次训练的时间复杂度为<mathml id="131"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ο</mi><mo stretchy="false"> (</mo><mi>d</mi><mi>p</mi><msup><mrow></mrow><mn>2</mn></msup><mo>+</mo><mi>t</mi><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi>L</mi></munderover><mi>d</mi></mstyle><msub><mrow></mrow><mrow><mi>l</mi><mo>-</mo><mn>1</mn></mrow></msub><mi>d</mi><msub><mrow></mrow><mi>l</mi></msub><mo stretchy="false">) </mo></mrow></math></mathml>.为了得到mSDA模型的最优层数, 集成模型需要迭代<i>d</i>次, 所以TDHR模型的整体时间复杂度为<mathml id="132"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ο</mi><mo stretchy="false"> (</mo><mi>d</mi><mo stretchy="false"> (</mo><mi>d</mi><mi>p</mi><msup><mrow></mrow><mn>2</mn></msup><mo>+</mo><mi>t</mi><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi>L</mi></munderover><mi>d</mi></mstyle><msub><mrow></mrow><mrow><mi>l</mi><mo>-</mo><mn>1</mn></mrow></msub><mi>d</mi><msub><mrow></mrow><mi>l</mi></msub><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow></math></mathml>.在实际应用中mSDA模型的层数一般都不会太大, 而且采用mSDA模型对DNN模型的输入向量进行优化之后, DNN模型的迭代次数也会大大降低, 所以本文方法具有良好的可扩展性.</p>
+                </div>
+                <h3 id="133" name="133" class="anchor-tag"><b>3 实  验</b></h3>
+                <h4 class="anchor-tag" id="134" name="134"><b>3.1 数据集</b></h4>
+                <div class="p1">
+                    <p id="135">在推荐系统领域, 一个广泛用于评分预测的数据集是由GroupLens<citation id="242" type="note"><link href="240" rel="footnote" /><sup>①</sup></citation>研究团队开发的MovieLens数据集, 本实验使用了其中的2个不同规模的数据集, 即MovieLens-100K和MovieLens-1M, 前者包括943个用户对1 682部电影的100 000个评分值, 后者包括6 040个用户对3 882个电影的1 000 209个评分值, 由2个数据集组成的评分矩阵的稀疏度分别为93.7%和95.9%.</p>
+                </div>
+                <div class="p1">
+                    <p id="136">首先, 将每个数据集分成2个不同的部分, 随机选择20%的实例作为测试集, 另外80%作为训练集;然后, 使用5-交叉验证法来评估评分预测和个性化推荐的性能.</p>
+                </div>
+                <h4 class="anchor-tag" id="137" name="137"><b>3.2 评估指标</b></h4>
+                <div class="p1">
+                    <p id="138">本文采用平均绝对误差 (mean absolute error, <i>MAE</i>) 和均方根误差 (root mean square error, <i>RMSE</i>) 这2个指标来衡量不同推荐算法在评分预测中的性能表现.</p>
+                </div>
+                <div class="p1">
+                    <p id="139"><i>MAE</i>指标用于描述预测值与实际值偏差量绝对值的平均数, 其中的所有偏差量都具有相等的权重.在本实验中, 通过计算测试集中的所有可观察评分值的平均预测误差来计算<i>MAE</i>:</p>
+                </div>
+                <div class="p1">
+                    <p id="140"><mathml id="141"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Μ</mi><mi>A</mi><mi>E</mi><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mo stretchy="false"> (</mo><mi>i</mi><mo>, </mo><mi>j</mi><mo stretchy="false">) </mo><mo>∈</mo><mi>R</mi><msup><mrow></mrow><mo>+</mo></msup></mrow></munder><mrow><mrow><mo>|</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>r</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub><mo>-</mo><mi>r</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub></mrow><mo>|</mo></mrow></mrow></mstyle><mo>/</mo><mi>Ν</mi></mrow></math></mathml>, (15) </p>
+                </div>
+                <div class="p1">
+                    <p id="142">其中, <i>N</i>表示测试集<i>R</i><sup>+</sup>中的样本数.</p>
+                </div>
+                <div class="p1">
+                    <p id="143"><i>RMSE</i>指标用于描述预测值与实际值之间偏差量的标准差, 该指标具有惩罚较大偏差的优势, 定义为</p>
+                </div>
+                <div class="p1">
+                    <p id="144"><mathml id="145"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>R</mi><mi>Μ</mi><mi>S</mi><mi>E</mi><mo>=</mo><msqrt><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mo stretchy="false"> (</mo><mi>i</mi><mo>, </mo><mi>j</mi><mo stretchy="false">) </mo><mo>∈</mo><mi>R</mi><msup><mrow></mrow><mo>+</mo></msup></mrow></munder><mrow><mo stretchy="false"> (</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>r</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub><mo>-</mo><mi>r</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub><mo stretchy="false">) </mo></mrow></mstyle><msup><mrow></mrow><mn>2</mn></msup><mo>/</mo><mi>Ν</mi></mrow></msqrt></mrow></math></mathml>. (16) </p>
+                </div>
+                <h4 class="anchor-tag" id="146" name="146"><b>3.3 对比算法</b></h4>
+                <div class="p1">
+                    <p id="147">为了说明本文方法的有效性, 本节进行了大量实验分析, 将本文方法与当前一些具有代表性的推荐方法进行比较, 其中包括传统的PMF模型、FM模型的官方实现版本LibFM、基于mSDA的协同推荐模型mSDA-CF、基于DNN技术的FM模型DeepFM和基于嵌入式编码和DNN技术的推荐模型NFM.为了证明本文方法在数据稀疏环境和冷启动环境中的性能表现, 进一步模拟了数据稀疏环境和冷启动环境, 并在模拟环境下对不同推荐方法的推荐性能进行了比较分析.</p>
+                </div>
+                <div class="p1">
+                    <p id="148">本文模型TDHR使用Tensorflow框架<citation id="231" type="reference"><link href="217" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>实现, 模型的参数配置如下:用户特征提取mSDA模型的层数<i>L</i><sub>1</sub>=3, 项目特征提取mSDA模型的层数<i>L</i><sub>2</sub>=5, 特征扰动概率<i>c</i>=0.3.DNN推荐模型的隐层数<i>L</i>=3, 各层的维度分别为20, 10和5, 各层的dropout值为0.8, 0.8, 0.5, 动量<i>momentum</i>=0.9, SGD的学习率<i>η</i>=0.05, 批量大小<i>batch</i>=512, 激活函数sigmoid函数, DNN模型的迭代过程通常需要20～30次可以收敛.此外, 在每次循环之后以一定比例降低学习率<i>η</i>有助于避免预测值的大幅波动, 实验中<i>η</i>=0.9.实验对比结果中的最佳性能用黑体字表示.</p>
+                </div>
+                <h4 class="anchor-tag" id="149" name="149"><b>3.4 实验结果</b></h4>
+                <h4 class="anchor-tag" id="150" name="150">3.4.1 不同推荐算法的性能比较</h4>
+                <div class="p1">
+                    <p id="151">所有推荐算法都在相同的实验环境 (2.9 GHz Intel Core i5处理器, 8 GB 1 867 MHz DDR3内存) 中进行测试, 并使用了相同的输入特征信息, 其中用户特征包括用户ID、性别、年龄和职业, 经过One-Hot编码后, 得到一个57维的向量;项目特征包括项目ID和项目类型, 是一个19维的向量.本实验的测试项目是电影, 电影类型包括爱情、恐怖、侦探等.所有比较算法的参数都是通过实验训练得到的, 例如:正则化参数、学习率、抽象特征的维度等, 实验结果如表2所示:</p>
+                </div>
+                <div class="area_img" id="152">
+                    <p class="img_tit"><b>表2 不同推荐算法在通用数据集上的性能比较</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 2 Performance Comparison of Different Algorithms in the Universal Data Sets</b></p>
+                    <p class="img_note"></p>
+                    <table id="152" border="1"><tr><td rowspan="2"><br />Algorithm</td><td colspan="2"><br />MovieLens-100K</td><td colspan="2">MovieLens-1M</td></tr><tr><td><br /><i>RMSE</i></td><td><i>MAE</i></td><td><i>RMSE</i></td><td><i>MAE</i></td></tr><tr><td><br />PMF</td><td>0.941</td><td>0.759</td><td>0.877</td><td>0.681</td></tr><tr><td><br />LibFM</td><td>0.924</td><td>0.738</td><td>0.898</td><td>0.706</td></tr><tr><td><br />mSDA-CF</td><td>0.919</td><td>0.741</td><td>0.852</td><td>0.672</td></tr><tr><td><br />DeepFM</td><td>0.911</td><td>0.741</td><td>0.878</td><td>0.683</td></tr><tr><td><br />NFM</td><td>0.897</td><td>0.721</td><td>0.861</td><td>0.673</td></tr><tr><td><br />TDHR</td><td><b>0.873</b></td><td><b>0.701</b></td><td><b>0.835</b></td><td><b>0.655</b></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="153">从表2可以看出, LibFM在MovieLens-100K数据集上的性能优于PMF, 但在MovieLens-1M数据集上表现的恰好相反, 这表明因子分解机模型更适合应用于数据稀疏的环境, 而矩阵分解模型则更适用于数据密集型环境.此外, mSDA-CF具有比PMF模型具有更好的性能, 这表明深度学习技术在抽象特征提取方面具有明显优势.基于DNN技术的推荐模型DeepFM和NFM比LibFM模型的性能要好, 这进一步验证了深度学习技术在推荐领域中的应用潜力.</p>
+                </div>
+                <div class="p1">
+                    <p id="154">最后, 本文方法TDHR在2个数据集上的性能表现在所有比较算法中都是最好的, 其<i>RMSE</i>值在MovieLens-100K和MovieLens-1M数据集上分别比NFM模型低2.4%和2.6%.这样的改进程度看起来似乎并不明显, 但需要指出的是, 即使是1%的性能提升也可能在实际应用中带来巨大的经济收益.本文模型TDHR良好的性能表现得益于对DNN模型输入特征向量的优化, 这正是本文提出的集成推荐模型的核心技术, 也是本文方法区别于其他深度学习推荐模型的根本所在.</p>
+                </div>
+                <h4 class="anchor-tag" id="155" name="155">3.4.2 数据稀疏环境下不同算法的性能比较</h4>
+                <div class="p1">
+                    <p id="156">为了进一步评估数据稀疏性对推荐性能的影响, 对MovieLens-1M数据集手动选取不同规模 (90%, 70%, 50%, 30%, 10%) 的内容, 用于模拟不同稀疏程度的训练数据集, 对比算法在不同程度数据稀疏环境中的推荐性能表现如表3所示:</p>
+                </div>
+                <div class="area_img" id="157">
+                    <p class="img_tit"><b>表3 在稀疏数据集上不同推荐算法的性能比较</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 3 Performance Comparison of Different Algorithms in Sparse Data Sets</b></p>
+                    <p class="img_note"></p>
+                    <table id="157" border="1"><tr><td rowspan="3"><br />Algorithm</td><td colspan="10"><br />Sparse Degree</td></tr><tr><td colspan="2"><br />10%</td><td colspan="2">30%</td><td colspan="2">50%</td><td colspan="2">70%</td><td colspan="2">90%</td></tr><tr><td><br /><i>RMSE</i></td><td><i>MAE</i></td><td><i>RMSE</i></td><td><i>MAE</i></td><td><i>RMSE</i></td><td><i>MAE</i></td><td><i>RMSE</i></td><td><i>MAE</i></td><td><i>RMSE</i></td><td><i>MAE</i></td></tr><tr><td><br />PMF</td><td>0.883</td><td>0.686</td><td>0.902</td><td>0.704</td><td>0.917</td><td>0.722</td><td>0.924</td><td>0.729</td><td>0.946</td><td>0.748</td></tr><tr><td><br />LibFM</td><td>0.901</td><td>0.709</td><td>0.906</td><td>0.711</td><td>0.908</td><td>0.715</td><td>0.933</td><td>0.731</td><td>0.942</td><td>0.746</td></tr><tr><td><br />mSDA-CF</td><td>0.854</td><td>0.674</td><td>0.868</td><td>0.681</td><td>0.883</td><td>0.692</td><td>0.909</td><td>0.715</td><td>0.943</td><td>0.746</td></tr><tr><td><br />DeepFM</td><td>0.882</td><td>0.688</td><td>0.892</td><td>0.696</td><td>0.896</td><td>0.702</td><td>0.934</td><td>0.724</td><td>0.949</td><td>0.747</td></tr><tr><td><br />NFM</td><td>0.867</td><td>0.679</td><td>0.878</td><td>0.688</td><td>0.891</td><td>0.694</td><td>0.931</td><td>0.721</td><td>0.945</td><td>0.742</td></tr><tr><td><br />TDHR</td><td><b>0.842</b></td><td><b>0.658</b></td><td><b>0.850</b></td><td><b>0.664</b></td><td><b>0.852</b></td><td><b>0.669</b></td><td><b>0.879</b></td><td><b>0.688</b></td><td><b>0.894</b></td><td><b>0.708</b></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="158">从表3可以看出, 无论在哪种数据集上, 随着评分数据稀疏程度的持续上升, 所有推荐模型的性能都有相应的下降.比较而言, LibFM模型的性能相对稳定, 因为它使用了用户和项目的特征属性而不是评分矩阵作为数据源;然而, 在大多数情况下, LibFM模型的性能都低于基于深度学习的推荐方法.最后, 与其他推荐模型相比, TDHR模型的推荐性能具有明显优势, 而其他基于深度学习的推荐方法DeepFM和NFM在数据稀疏环境中的表现并不理想, 这一现象表明除了附加数据源之外, 对深度学习模型的输入进行相应优化也会对推荐性能产生重大影响, 这正是本文研究的动机与创新所在.</p>
+                </div>
+                <h4 class="anchor-tag" id="159" name="159">3.4.3 对冷启动用户的推荐性能比较</h4>
+                <div class="p1">
+                    <p id="160">为了进一步评估不同推荐算法对冷启动用户的推荐性能, 对训练集中的每个用户随机选择1～10个评分数据予以保留, 删除其余的评分数据来模拟冷启动的环境, 实验结果如表4所示:</p>
+                </div>
+                <div class="area_img" id="161">
+                    <p class="img_tit"><b>表4 不同算法对冷启动用户的推荐性能比较</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 4 Recommendation Performance Comparison of Different Algorithms for Cold-Start Users</b></p>
+                    <p class="img_note"></p>
+                    <table id="161" border="1"><tr><td rowspan="2"><br />Algorithm</td><td colspan="2"><br />MovieLens-100K</td><td colspan="2">MovieLens-1M</td></tr><tr><td><br /><i>RMSE</i></td><td><i>MAE</i></td><td><i>RMSE</i></td><td><i>MAE</i></td></tr><tr><td><br />PMF</td><td>1.119</td><td>0.888</td><td>0.992</td><td>0.780</td></tr><tr><td><br />LibFM</td><td>1.008</td><td>0.807</td><td>0.983</td><td>0.784</td></tr><tr><td><br />mSDA-CF</td><td>1.011</td><td>0.811</td><td>0.986</td><td>0.776</td></tr><tr><td><br />DeepFM</td><td>1.016</td><td>0.818</td><td>0.982</td><td>0.782</td></tr><tr><td><br />NFM</td><td>1.053</td><td>0.832</td><td>0.989</td><td>0.786</td></tr><tr><td><br />TDHR</td><td><b>0.998</b></td><td><b>0.796</b></td><td><b>0.966</b></td><td><b>0.767</b></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="162">从表4可以看出, 总体而言, 冷启动对所有推荐方法都有重大影响.PMF方法和mSDA-CF方法受冷启动的影响尤其严重, 这是因为基于评分矩阵的矩阵分解方法在处理冷启动问题时具有固有缺陷.相比之下, 使用特征信息作为数据源的因子分解机模型LibFM受冷启动的影响相对较小, 但性能依然不及基于深度学习的推荐方法DeepFM和NFM.本文方法TDHR在所有待比较方法中性能表现最优, 这进一步表明本文方法性能表现的相对稳定性.同时也表明引入特征信息是抵抗冷启动问题的有效手段.因此, 进一步探索更多更有效的附加数据源是解决数据稀疏性和冷启动问题、进一步提高推荐性能的有效手段.</p>
+                </div>
+                <h4 class="anchor-tag" id="163" name="163">3.4.4 Dropout在冷启动环境中的作用</h4>
+                <div class="p1">
+                    <p id="164">为了进一步评估Dropout方法在冷启动环境中的性能表现, 在3.4.3节中模拟的冷启动环境下, 测试了本文算法TDHR在不同Dropout取值情况下的推荐性能表现, 测试数据集为MovieLens-1M.为了简化测试过程, 将DNN模型中各层的Dropout设置为相同的取值, 实验结果如图2所示.</p>
+                </div>
+                <div class="area_img" id="165">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201908009_165.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 Dropout在冷启动环境中的性能表现" src="Detail/GetImg?filename=images/JFYZ201908009_165.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 Dropout在冷启动环境中的性能表现  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201908009_165.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 2 Recommendation performance of Dropout  technology in cold start environment</p>
+
+                </div>
+                <div class="p1">
+                    <p id="166">从图2可以看出, 在不使用Dropout的情况下, 推荐性能很不理想, 采用Dropout技术后, 推荐性能有所改善;当Dropout为0.8时 (每次迭代对其中20%的模型参数进行更新) , 推荐性能最优.以上实验结果表明, 在深度学习模型的迭代训练过程中, 只更新部分模型参数对防止过拟合、提高推荐性能具有重要意义, 但选择更新的参数比例要适当, 具体取值和数据特征有关, 需要采用实验方法进行设定.</p>
+                </div>
+                <h3 id="167" name="167" class="anchor-tag"><b>4 结论与展望</b></h3>
+                <div class="p1">
+                    <p id="168">本文提出一种基于mSDA和DNN的两阶段深度学习推荐模型TDHR.首先, 利用mSDA模型进行用户和项目高阶抽象特征向量的学习;然后, 将得到的用户和项目抽象特征向量进行合并, 并作为DNN模型的输入;最后, 通过联合训练的方法进行集成模型的参数学习和模型优化.此外, 为了对低阶特征交互进行建模, 推荐模型中还集成了基于低阶特征的逻辑回归模型.通过这种方式, 不仅使模型同时具有线性建模和深度学习能力, 而且以优化过的抽象特征作为深度学习模型的输入可以大大减轻后续隐藏层的学习负担, 并避免模型训练落入局部最优.实验研究结果表明, 无论是在常规环境下, 还是在数据稀疏和冷启动环境下, 本文方法较传统方法都具有明显优势.</p>
+                </div>
+                <div class="p1">
+                    <p id="169">需要指出的是, 本文方法是一个通用框架, 指出一种对现有基于深度学习的推荐方法进行改进的思路, 即使用一种低成本的深度学习模型来初始化另一种高性能的深度学习模型, 从而提高整个模型的推荐性能.在该框架的基础上, 完全可以采用其他类型的特征学习模型对深度学习模型的输入进行优化, 重点在于用作输入向量初始化的模型必须具有较低的计算复杂性, 以避免对集成模型增加过多的额外过载.</p>
+                </div>
+                <div class="p1">
+                    <p id="170">本文方法尚有需要改进的地方.目前本文仅使用了用户的人口统计学信息和项目的类型信息作为特征属性信息进行用户和项目抽象特征的提取, 实际系统中还存在许多有意义的辅助信息可以利用, 例如项目描述、用户评论、项目标签等.此外, 来自开放数据源的语义特征属性也可以用作推荐过程中的辅助信息.另外, 用户社交网络中的社交关系信息, 如关注、跟随、点赞、朋友、信任等都可以用作附加数据源来处理推荐过程中的数据稀疏性问题和冷启动问题.当然, 这将会涉及多学科领域的问题, 我们将在未来的工作中加以讨论.</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="185">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787308099776001&amp;v=MjYyOTlOSjE4UlhGcXpHYkM0RnRIRnBvaENZdXNQRFJNOHp4VVNtRGQ5U0g3bjN4RTlmYnZuS3JpZlp1OXVGQ3ZnVTd6&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b>Ren Ming.Intelligent Information System:Method and Practice of Optimizing Data Modeling with Relevant Knowledge[M].Hangzhou:Zhejiang University Press, 2012 (in Chinese) (任明.智能信息系统:以关联知识优化数据建模的方法和实践[M].杭州:浙江大学出版社, 2012) 
+                            </a>
+                        </p>
+                        <p id="187">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Collaborative deep learning for recommender systems">
+
+                                <b>[2]</b>Wang Hao, Wang Naiyan, Yeung D Y.Collaborative deep learning for recommender systems[C] //Proc of the 15th ACM SIGKDD Conf on Knowledge Discovery and Data Mining.New York:ACM, 2015.DOI:10.1145/2783258.2783273
+                            </a>
+                        </p>
+                        <p id="189">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=AutoSVD++:An efficient hybrid collaborative filtering model via contractive auto-encoders">
+
+                                <b>[3]</b>Zhang Shuai, Yao Lina, Xu Xiwei.AutoSVD++:An efficient hybrid collaborative filtering model via contractive auto-encoders [C] //Proc of the 40th ACM SIGIR Conf on Research and Development in Information Retrieval.New York:ACM, 2017.arXiv:1704.00551v3
+                            </a>
+                        </p>
+                        <p id="191">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A recommendation model based on deep neural network">
+
+                                <b>[4]</b>Zhang Libo, Luo Tiejian, Zhang Fei, et al.A recommendation model based on deep neural network[J] IEEE Access, 2018, 6:9454- 9463
+                            </a>
+                        </p>
+                        <p id="193">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Feature Regularization and Deep Learning for Human Resource Recommendation">
+
+                                <b>[5]</b>Wang Hongxiang, Liang Guihuang, Zhang Xingming.Feature regularization and deep learning for human resource recommendation[J] IEEE Access, 2018, 6:39415- 39421
+                            </a>
+                        </p>
+                        <p id="195">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJESEB01B1D20BEB01C0F0872598976870D3&amp;v=MTcwMzVIWkpsNmZudzR2QlpsNmpkNlNucnJwQnN5ZjdxVFJjNmNDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMzVOMWh4NzI0d2EwPU5pZk9mY2JLSHRDK3J2dA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b>Wu Hao, Zhang Zhengxin, Yue Kun, et al.Dual-regularized matrix factorization with deep neural networks for recommender systems[J] Knowledge-Based Systems, 2018, 145:46- 58
+                            </a>
+                        </p>
+                        <p id="197">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep Neural Networks for YouTube Recom-mendations">
+
+                                <b>[7]</b>Covington P, Adams J, Sargin E.Deep neural networks for YouTube recommendations[C] //Proc of the 10th ACM Conf on Recommender Systems.New York:ACM, 2016:191- 198
+                            </a>
+                        </p>
+                        <p id="199">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Marginalized stacked denoising auto-encoders">
+
+                                <b>[8]</b>Chen Minmin, Xu Zhixiang, Weinberger K Q, et al.Marginalized stacked denoising auto-encoders[C] //Proc of the NIPS Special on Learning Workshop.New York:ACM, 2012.DOI:10.1.1.308.8543
+                            </a>
+                        </p>
+                        <p id="201">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Wide&amp;amp;deep learning for recommender systems">
+
+                                <b>[9]</b>Cheng H T, Koc L, Harmsen J, et al.Wide &amp; deep learning for recommender systems[C] //Proc of the Workshop on Deep Learning for Recommender Systems.New York:ACM, 2016.DOI:10.1145/2988450.2988454
+                            </a>
+                        </p>
+                        <p id="203">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=DeepFM:A factorizationmachine based neural network for CTR prediction">
+
+                                <b>[10]</b>Guo Huifeng, Tang Ruiming, Ye Yunming, et al.DeepFM:A factorization-machine based neural network for CTR prediction[C] //Proc of the 26th Int Joint Conf on Artificial Intelligence.New York:ACM, 2017.arXiv:1703.04247v1
+                            </a>
+                        </p>
+                        <p id="205">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=xDeepFM:Combining explicit and implicit feature interactions for recommender systems">
+
+                                <b>[11]</b>Lian Jianxun, Zhou Xiaohua, Zhang Fuzheng, et al.xDeepFM:Combining explicit and implicit feature interactions for recommender systems[C] //Proc of the 24th ACM SIGKDD Int Conf.New York:ACM, 2018.arXiv:1803.05170v3
+                            </a>
+                        </p>
+                        <p id="207">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Neural collaborative filtering">
+
+                                <b>[12]</b>He Xiangnan, Liao Lizi, Zhang Hanwang, et al.Neural collaborative filtering[C] //Proc of the 26th Int Conf on World Wide Web.New York:ACM, 2017.arXiv:1708.05027v1
+                            </a>
+                        </p>
+                        <p id="209">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Marginalized denoising autoencoders for domain adaptation">
+
+                                <b>[13]</b>Chen Minmin, Xu Zhixiang, Weinberger K, et al.Marginalized denoising auto-encoders for domain adaptation[C] //Proc of the 29th Int Conf on Machine Learning.New York:ACM, 2012.arXiv:1206.4683
+                            </a>
+                        </p>
+                        <p id="211">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Collaborative Denoising Auto-encoders for Top-N Recommender Systems">
+
+                                <b>[14]</b>Wu Yao, DuBois C, Zheng A X, et al.Collaborative denoising auto-encoders for top-n recommender systems[C] //Proc of the ACM Int Conf on Web Search and Data Mining.New York:ACM, 2016.DOI:10.1145/2835776.2835837
+                            </a>
+                        </p>
+                        <p id="213">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep collaborative filtering via marginalized denoising auto-encoder">
+
+                                <b>[15]</b>Li Sheng, Kawale J, Fu Yun.Deep collaborative filtering via marginalized denoising auto-encoder[C] //Proc of the ACM Int Conf on Information and Knowledge Management.New York:ACM, 2015.DOI:10.1145/2806416.2806527
+                            </a>
+                        </p>
+                        <p id="215">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Batch normalization:Accelerating deep network training by reducing internal covariate shift">
+
+                                <b>[16]</b>Ioffe S, Szegedy C.Batch normalization:Accelerating deep network training by reducing internal covariate shift[C] //Proc of the 32nd Int Conf on Machine Learning.New York:ACM, 2015.DOI:10.1145/2806416.2806527
+                            </a>
+                        </p>
+                        <p id="217">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=TensorFlow:a system for large-scale machine learning">
+
+                                <b>[17]</b>Abadi M, Barham P, Chen J, et al.Tensorflow:A system for large-scale machine learning[C] //Proc of the 12th USENIX Conf on Operating Systems Design and Implementation.New York:ACM, 2016:165- 283
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+            <div class="reference anchor-tag" id="a_footnote">
+ <h3>注释</h3>
+                    <p>
+                        <span id="240" href="javascript:void(0)">
+                            <b>1</b> http://www.grouplens.org
+                        </span>
+                    </p>
+            </div>
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JFYZ201908009" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201908009&amp;v=MDE4Njk5ak1wNDlGYllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJyRnl2Z1ZMN05MeXZTZExHNEg=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDYzUnVIR29xNjE2VHo3NkdabDMvOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=NLcKG8I1SJUaVFrQ0iGpF2klAT0OsmHRaVSZ1rKb5xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

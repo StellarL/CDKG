@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637135626610627500%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJYRJ201907041%26RESULT%3d1%26SIGN%3dbFRZO8VeXuhL35qY6TW7WBE5qSA%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201907041&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201907041&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201907041&amp;v=MDUwOTc3N0lMelRaWkxHNEg5ak1xSTlCWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlqaFU=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="&lt;b&gt;0 引 言&lt;/b&gt; "><b>0 引 言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#42" data-title="&lt;b&gt;1 立体匹配视差图获取&lt;/b&gt; "><b>1 立体匹配视差图获取</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#44" data-title="&lt;b&gt;2 匹配算法原理&lt;/b&gt; "><b>2 匹配算法原理</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#45" data-title="&lt;b&gt;2.1 SGBM算法原理&lt;/b&gt;"><b>2.1 SGBM算法原理</b></a></li>
+                                                <li><a href="#53" data-title="&lt;b&gt;2.2 BM算法原理&lt;/b&gt;"><b>2.2 BM算法原理</b></a></li>
+                                                <li><a href="#59" data-title="&lt;b&gt;2.3 DP算法原理&lt;/b&gt;"><b>2.3 DP算法原理</b></a></li>
+                                                <li><a href="#68" data-title="&lt;b&gt;2.4 本文算法具体步骤&lt;/b&gt;"><b>2.4 本文算法具体步骤</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#73" data-title="&lt;b&gt;3 实验对比分析&lt;/b&gt; "><b>3 实验对比分析</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#106" data-title="&lt;b&gt;4 结 语&lt;/b&gt; "><b>4 结 语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#55" data-title="图1 文本串P与模版串Q进行匹配">图1 文本串P与模版串Q进行匹配</a></li>
+                                                <li><a href="#57" data-title="图2 坏字符与好后缀匹配">图2 坏字符与好后缀匹配</a></li>
+                                                <li><a href="#79" data-title="图3 三种检测方法在cones图应用">图3 三种检测方法在cones图应用</a></li>
+                                                <li><a href="#80" data-title="图4 三种检测方法在teddy图应用">图4 三种检测方法在teddy图应用</a></li>
+                                                <li><a href="#81" data-title="图5 三种检测方法在venus图应用">图5 三种检测方法在venus图应用</a></li>
+                                                <li><a href="#83" data-title="图6 标准视差图">图6 标准视差图</a></li>
+                                                <li><a href="#84" data-title="图7 基于BM算法的得到原图视差图">图7 基于BM算法的得到原图视差图</a></li>
+                                                <li><a href="#85" data-title="图8 基于DP算法得到原图视差图">图8 基于DP算法得到原图视差图</a></li>
+                                                <li><a href="#86" data-title="图9 基于SGBM算法得到原图视差图">图9 基于SGBM算法得到原图视差图</a></li>
+                                                <li><a href="#87" data-title="&lt;b&gt;表1 基于BM方法匹配误差率&lt;/b&gt; %"><b>表1 基于BM方法匹配误差率</b> %</a></li>
+                                                <li><a href="#88" data-title="&lt;b&gt;表2 基于BM算法匹配时间 s&lt;/b&gt;"><b>表2 基于BM算法匹配时间 s</b></a></li>
+                                                <li><a href="#89" data-title="&lt;b&gt;表3 基于DP算法匹配误差率&lt;/b&gt; %"><b>表3 基于DP算法匹配误差率</b> %</a></li>
+                                                <li><a href="#90" data-title="&lt;b&gt;表4 基于DP算法匹配时间 s&lt;/b&gt;"><b>表4 基于DP算法匹配时间 s</b></a></li>
+                                                <li><a href="#91" data-title="&lt;b&gt;表5 基于SGBM算法匹配误差率&lt;/b&gt; %"><b>表5 基于SGBM算法匹配误差率</b> %</a></li>
+                                                <li><a href="#92" data-title="&lt;b&gt;表6 基于SGBM算法匹配时间 s&lt;/b&gt;"><b>表6 基于SGBM算法匹配时间 s</b></a></li>
+                                                <li><a href="#100" data-title="图10 KITTI数据库中不同场景图">图10 KITTI数据库中不同场景图</a></li>
+                                                <li><a href="#101" data-title="&lt;b&gt;表7 图10 (a) 基于SGBM算法的视差图误匹配率和匹配时间&lt;/b&gt;"><b>表7 图10 (a) 基于SGBM算法的视差图误匹配率和匹配时间</b></a></li>
+                                                <li><a href="#102" data-title="&lt;b&gt;表8 图10 (b) 基于SGBM算法的视差图误匹配率和匹配时间&lt;/b&gt;"><b>表8 图10 (b) 基于SGBM算法的视差图误匹配率和匹配时间</b></a></li>
+                                                <li><a href="#103" data-title="&lt;b&gt;表9 图10 (c) 基于SGBM算法的视差图误匹配率和匹配时间&lt;/b&gt;"><b>表9 图10 (c) 基于SGBM算法的视差图误匹配率和匹配时间</b></a></li>
+                                                <li><a href="#104" data-title="&lt;b&gt;表10 图10 (d) 基于SGBM算法的视差图误匹配率和匹配时间&lt;/b&gt;"><b>表10 图10 (d) 基于SGBM算法的视差图误匹配率和匹配时间</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" 王茜, 陈一民, 丁友东.基于改进卷积神经网络的机动车图像分类算法[J].计算机应用与软件, 2018, 35 (7) :263-266, 298." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201807048&amp;v=MTY1MTJxSTlCYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlqaFU3N0lMelRaWkxHNEg5bk0=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         王茜, 陈一民, 丁友东.基于改进卷积神经网络的机动车图像分类算法[J].计算机应用与软件, 2018, 35 (7) :263-266, 298.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" Kanade T, Okutomi M.A stereo matching algorithm with an adaptive window:Theory and experiment[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence, 1994, 16 (9) :920-932." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A Stereo Matching Algorithm with an Adaptive Window: Theory and Experiment">
+                                        <b>[2]</b>
+                                         Kanade T, Okutomi M.A stereo matching algorithm with an adaptive window:Theory and experiment[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence, 1994, 16 (9) :920-932.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" Veksler O.Stereo correspondence with compact windows via minimum ratio cycle[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence, 2002, 24 (12) :1654-1660." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Stereo correspondence with compact windows via minimum ratio cycle">
+                                        <b>[3]</b>
+                                         Veksler O.Stereo correspondence with compact windows via minimum ratio cycle[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence, 2002, 24 (12) :1654-1660.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" 李金凤, 边继龙.基于迭代指导滤波的立体匹配方法[J].计算机应用与软件, 2017, 34 (9) :178-182, 239." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201709036&amp;v=MjM5ODZxZlp1WnRGeWpoVTc3SUx6VFpaTEc0SDliTXBvOUdZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjc=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         李金凤, 边继龙.基于迭代指导滤波的立体匹配方法[J].计算机应用与软件, 2017, 34 (9) :178-182, 239.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" Sun J, Shum H Y, Zheng N N.Stereo Matching Using Belief Propagation[J].Pattern Analysis &amp;amp; Machine Intelligence IEEE Transactions on, 2003, 25 (7) :787-800." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Stereo Matching Using Belief Propagation">
+                                        <b>[5]</b>
+                                         Sun J, Shum H Y, Zheng N N.Stereo Matching Using Belief Propagation[J].Pattern Analysis &amp;amp; Machine Intelligence IEEE Transactions on, 2003, 25 (7) :787-800.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 曹之乐, 严中红, 王洪.双目立体视觉匹配技术综述[J].重庆理工大学学报 (自然科学) , 2015 (2) :70-75." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=CGGL201502014&amp;v=MTMyOTA1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlqaFU3N0lKaXJNWXJHNEg5VE1yWTlFWUlRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         曹之乐, 严中红, 王洪.双目立体视觉匹配技术综述[J].重庆理工大学学报 (自然科学) , 2015 (2) :70-75.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 韩峻峰, 王帅.基于双目立体视觉技术的汽车测距系统实现[J].计算机应用与软件, 2016, 33 (9) :227-230." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201609054&amp;v=MDkxNjFyQ1VSN3FmWnVadEZ5amhVNzdJTHpUWlpMRzRIOWZNcG85QVlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         韩峻峰, 王帅.基于双目立体视觉技术的汽车测距系统实现[J].计算机应用与软件, 2016, 33 (9) :227-230.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 葛亮, 朱庆生, 傅思思, 等.改进的立体像对稠密匹配算法[J].吉林大学学报 (工学版) , 2010 (1) :212-217." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JLGY201001040&amp;v=MTg2MzZxQnRHRnJDVVI3cWZadVp0RnlqaFU3N0lMeUhNZDdHNEg5SE1ybzlCWklRS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         葛亮, 朱庆生, 傅思思, 等.改进的立体像对稠密匹配算法[J].吉林大学学报 (工学版) , 2010 (1) :212-217.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" 宗晨临.基于双目立体匹配的视差提取算法研究[D].成都:西南交通大学, 2013." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1013250541.nh&amp;v=MjIzNTVxcUJ0R0ZyQ1VSN3FmWnVadEZ5amhVNzdJVkYyNkhiRzlIdFRJcnBFYlBJUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         宗晨临.基于双目立体匹配的视差提取算法研究[D].成都:西南交通大学, 2013.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" Hosni A, Rhemann C, Bleyer M, et al.Fast Cost-Volume Filtering for Visual Correspondence and Beyond[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence, 2011, 35 (2) :504-511." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Fast Cost-Volume Filtering for Visual Correspondence and Beyond">
+                                        <b>[10]</b>
+                                         Hosni A, Rhemann C, Bleyer M, et al.Fast Cost-Volume Filtering for Visual Correspondence and Beyond[J].IEEE Transactions on Pattern Analysis &amp;amp; Machine Intelligence, 2011, 35 (2) :504-511.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" M&#252;hlmann K, Maier D, Hesser J, et al.Calculating Dense Disparity Maps from Color Stereo Images, an Efficient Implementation[J].International Journal of Computer Vision, 2002, 47 (1) :79-88." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00002830725&amp;v=MjQ3Njc9Tmo3QmFyTzRIdEhPcDR4Rlkra0tZM2s1ekJkaDRqOTlTWHFScnhveGNNSDdSN3FkWitadUZpdmxVN3ZJSVY0&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         M&#252;hlmann K, Maier D, Hesser J, et al.Calculating Dense Disparity Maps from Color Stereo Images, an Efficient Implementation[J].International Journal of Computer Vision, 2002, 47 (1) :79-88.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" Hirschm&#252;ller H.Stereo Processing by Semiglobal Matching and Mutual Information[J].IEEE Transactions on Pattern Analysis and Machine Intelligence, 2007, 30 (2) :328-341." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Stereo processing by semiglobal matching and mutual information">
+                                        <b>[12]</b>
+                                         Hirschm&#252;ller H.Stereo Processing by Semiglobal Matching and Mutual Information[J].IEEE Transactions on Pattern Analysis and Machine Intelligence, 2007, 30 (2) :328-341.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" Hirschm&#252;ller H.Accurate and Efficient Stereo Processing by Semi-Global Matching and Mutual Information[C]//Proceedings of the 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR’05) .IEEE, 2005, 2:807-814." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Accurate and efficient stereo processing by semi-global matching and mutual information">
+                                        <b>[13]</b>
+                                         Hirschm&#252;ller H.Accurate and Efficient Stereo Processing by Semi-Global Matching and Mutual Information[C]//Proceedings of the 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR’05) .IEEE, 2005, 2:807-814.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 张欢, 安利, 张强, 等.SGBM算法与BM算法分析研究[J].测绘与空间地理信息, 2016 (10) :214-216." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DBCH201610063&amp;v=MjM2NTVEWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlqaFU3N0lJUy9JWnJHNEg5Zk5yNDk=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         张欢, 安利, 张强, 等.SGBM算法与BM算法分析研究[J].测绘与空间地理信息, 2016 (10) :214-216.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 龚文.基于动态规划的立体匹配算法研究[D].南昌:南昌航空大学, 2015" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015968215.nh&amp;v=MTU1NzR6cXFCdEdGckNVUjdxZlp1WnRGeWpoVTc3SVZGMjZHN3ErRnRQTnFwRWJQSVFLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         龚文.基于动态规划的立体匹配算法研究[D].南昌:南昌航空大学, 2015
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" Jin L, Guo B, Jiang Y, et al.Study on the Impact Degrees of Several Driving Behaviors When Driving While Performing Secondary Tasks[J].IEEE Access, 2018, 6 (1) :65772-65782." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Study on the impact degrees of several driving behaviors when driving while performing aecondary tasks">
+                                        <b>[16]</b>
+                                         Jin L, Guo B, Jiang Y, et al.Study on the Impact Degrees of Several Driving Behaviors When Driving While Performing Secondary Tasks[J].IEEE Access, 2018, 6 (1) :65772-65782.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" Yue X Y, Wang F R, Guo B C, et al.Disparity map optimization based on edge detection[C]//2018 Chinese Control And Decision Conference (CCDC) .2018:3311-3315." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Disparity map optimization based on edge detection">
+                                        <b>[17]</b>
+                                         Yue X Y, Wang F R, Guo B C, et al.Disparity map optimization based on edge detection[C]//2018 Chinese Control And Decision Conference (CCDC) .2018:3311-3315.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JYRJ" target="_blank">计算机应用与软件</a>
+                2019,36(07),236-241 DOI:10.3969/j.issn.1000-386x.2019.07.040            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于边缘检测的视差图效果优化</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E5%AE%89&amp;code=42231776&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王安</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E8%8A%B3%E8%8D%A3&amp;code=07680921&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王芳荣</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%83%AD%E6%9F%8F%E8%8B%8D&amp;code=34879178&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">郭柏苍</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%B2%B3%E6%AC%A3%E7%BE%BD&amp;code=42231777&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">岳欣羽</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%90%89%E6%9E%97%E5%A4%A7%E5%AD%A6%E4%B8%AD%E6%97%A5%E8%81%94%E8%B0%8A%E5%8C%BB%E9%99%A2&amp;code=0221274&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">吉林大学中日联谊医院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%90%89%E6%9E%97%E5%A4%A7%E5%AD%A6%E9%80%9A%E4%BF%A1%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=1046463&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">吉林大学通信工程学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%90%89%E6%9E%97%E5%A4%A7%E5%AD%A6%E4%BA%A4%E9%80%9A%E5%AD%A6%E9%99%A2&amp;code=0445347&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">吉林大学交通学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%90%89%E5%88%A9%E6%B1%BD%E8%BD%A6%E7%A0%94%E7%A9%B6%E9%99%A2(%E5%AE%81%E6%B3%A2)%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">吉利汽车研究院(宁波)有限公司</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>在立体视觉中, 匹配之后得到的视差图利用投影模型可以得到原图像的深度信息和三维信息。为了达到提高立体匹配的精度与速度的目的, 提高视差图的质量成为了立体匹配的核心问题。利用Canny检测算法、Sobel检测算法、Scharr检测算法对双目图像进行边缘提取。在此基础上, 分别使用BM (Boyer-Moore algorithm) 算法、SGBM (Semi-global block Matching) 算法以及DP (Dynamic programming) 算法进行立体匹配, 并且分别计算视差图及误匹配率。经分析, Canny检测算法与SGBM算法相结合的方法剔除了大量不相关信息, 大幅度减少数据的处理量。选取真实场景图片对该方法进行结论验证。实验结果表明, 该方法提高了视差图的质量。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%AB%8B%E4%BD%93%E8%A7%86%E8%A7%89&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">立体视觉;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%BE%B9%E7%BC%98%E6%A3%80%E6%B5%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">边缘检测;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%AB%8B%E4%BD%93%E5%8C%B9%E9%85%8D&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">立体匹配;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%A7%86%E5%B7%AE%E5%9B%BE&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">视差图;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    王安, 工程师, 主研领域:数字图像处理。;
+                                </span>
+                                <span>
+                                    王芳荣, 教授。;
+                                </span>
+                                <span>
+                                    郭柏苍, 博士生。;
+                                </span>
+                                <span>
+                                    岳欣羽, 硕士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-12-05</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金项目 (51575229);</span>
+                    </p>
+            </div>
+                    <h1><b>DISPARITY MAP OPTIMIZATION BASED ON EDGE DETECTION</b></h1>
+                    <h2>
+                    <span>Wang An</span>
+                    <span>Wang Fangrong</span>
+                    <span>Guo Baicang</span>
+                    <span>Yue Xinyu</span>
+            </h2>
+                    <h2>
+                    <span>China-Japan Union Hospital, Jilin University</span>
+                    <span>College of Communication Engineering, Jilin University</span>
+                    <span>College of Transportation, Jilin University</span>
+                    <span>Ningbo Geely Automobile Research and Development Co., Ltd.</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>In stereo vision, disparity map after stereo matching using projection model can get the depth information and 3 D information of the original image. In order to improve the accuracy and speed of stereo matching, improving the quality of disparity map becomes the core problem of stereo matching. The paper extracted edge information of binocular images using Canny, Scharr and Sobel edge detection algorithm. On this basis, BM (Boyer-Moore algorithm) , SGBM (Semi-global block matching) algorithm and DP (Dynamic programming) algorithm were used for stereo matching, and disparity map and mismatch rate were calculated respectively. After analysis, the combination of Canny detection algorithm and SGBM algorithm could eliminate a large number of irrelevant information and reduce the amount of data processing. The real scene image was selected to validate the method. The experimental results show that this method improves the quality of disparity map.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Stereo%20vision&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Stereo vision;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Edge%20detection&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Edge detection;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Stereo%20matching&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Stereo matching;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Disparity%20map&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Disparity map;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-12-05</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="37" name="37" class="anchor-tag"><b>0 引 言</b></h3>
+                <div class="p1">
+                    <p id="38">随着社会自动化进程的加快, 汽车已经融入到我们的日常生活中, 成为了我们生活中不可或缺的代步工具, 同时汽车的数量每年在不断提升。所以人、汽车、路之间的矛盾也日益突显出来, 相应的智能辅助驾驶应运而生。双目立体视觉智能辅助驾驶可以检测车辆前方的景象的深度信息, 包括前方一定距离内的障碍物及其距离和高度等, 进行预警或者提醒驾驶员采取相应的安全措施。在双目立体视觉研究领域, 立体匹配获取视差图是一项必不可少的步骤, 同时也是立体视觉中核心问题。所以视差图质量的好坏直接影响了场景信息能否实时稳定有效地被获取出来, 实现二维信息到三维信息的转换。基于以上背景, 国内外很多学者在视差图获取算法上投入了大量的精力, 取得了一定成绩。目前立体匹配算法主要分为局部立体匹配方法和全局立体匹配方法。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">局部立体匹配方法通过选择支持窗口选择相似度最大的匹配像素。文献<citation id="108" type="reference">[<a class="sup">1</a>,<a class="sup">2</a>]</citation>对支持窗口的尺寸与形状估计视差值进行了研究, 但是由于这种方法需要确定的参数众多, 会增加计算匹配工作量。针对这一问题, 使用局部匹配算法可以提高计算速度, 在一定程度上可以改善匹配搜索问题。然而, 上述算法的共同缺陷是局部支持窗口没有通用的尺寸。</p>
+                </div>
+                <div class="p1">
+                    <p id="40">全局匹配方法通过寻找全局函数的最小值得到能量函数的最优解。传统的动态规划立体匹配算法的实时性较差且匹配效果并不理想, 文献<citation id="109" type="reference">[<a class="sup">3</a>,<a class="sup">4</a>]</citation>分别使用了金字塔双层动态规划立体匹配算法和马尔科夫网络进行全局立体匹配。其结果表明, 全局立体匹配算法的效果比局部立体匹配方法更好, 然而, 较慢的匹配速度不能很好的用于实时立体匹配。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">本文选择Canny算子、Sobel算子以及Scharr边缘检测算法分别对图像进行预处理, 选取边缘特征为约束, 通过利用BM立体匹配算法、SGBM立体匹配算法以及DP算法进行立体匹配, 获取视差图。分别计算视差图的错误匹配率, 选取使视差图优化效果最好的组合, 评价该方法的可行性与可靠性。</p>
+                </div>
+                <h3 id="42" name="42" class="anchor-tag"><b>1 立体匹配视差图获取</b></h3>
+                <div class="p1">
+                    <p id="43">完成立体匹配前一般要完成匹配代价计算和匹配代价聚合<citation id="112" type="reference"><link href="11" rel="bibliography" /><link href="13" rel="bibliography" /><link href="15" rel="bibliography" /><link href="17" rel="bibliography" /><sup>[<a class="sup">5</a>,<a class="sup">6</a>,<a class="sup">7</a>,<a class="sup">8</a>]</sup></citation>。常见的匹配代价计算就是Census变换, 在目标图像中选取任意一点, 以该点为中心构造3×3的矩形窗口, 令窗口中除中心点之外的每个像素都与中心点进行比较, 灰度值小于中心像素的记为1, 大于的记为0, 产生了由1和0构成的Census序列。经过Census变换后的图像通过汉明距离计算相似度, 该值越小, 相似度越高。匹配代价聚合主要应用支持窗口的聚合方法, 将支持窗内像素的代价相加或平均作为中心像素的匹配代价。常用的支持窗口法有自适应窗口法和移动窗口法。支持窗包含二维和三维。二维支持窗口需要事先将视差固定, 然后计算代价聚合。完成之后采用胜者为王算法即最小代价对应的视差作为所要求的视差。该算法主要应用与局部匹配算法。针对全局匹配算法, 基于全局的立体匹配方法是同时优化所有像素的视差, 聚焦在优化技术上面, 该方法效果好但非常耗时, 因此会跳过代价聚合的步骤。得到视差图之后, 需要将视差图细化, 该步骤在过去大部分的立体匹配研究都是被忽略的。传统的方法主要包括左右一致性检测和中值滤波方法<citation id="110" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>。文献<citation id="111" type="reference">[<a class="sup">10</a>]</citation>提出了基于双边滤波的加权中值滤波方法, 该方法使得到的视差图变得更加清晰, 但是由于该滤波器比较复杂, 导致严重耗时, 降低了局部聚合的速度。</p>
+                </div>
+                <h3 id="44" name="44" class="anchor-tag"><b>2 匹配算法原理</b></h3>
+                <h4 class="anchor-tag" id="45" name="45"><b>2.1 SGBM算法原理</b></h4>
+                <div class="p1">
+                    <p id="46">半全局匹配算法SGBM主要源于SGM算法<citation id="113" type="reference"><link href="23" rel="bibliography" /><link href="25" rel="bibliography" /><sup>[<a class="sup">11</a>,<a class="sup">12</a>]</sup></citation>。SGM算法是由H.Hirschmuller提出的, 该算法只考虑图像中非遮挡点, 将每个像素点产生的视差, 组成一个视差图。通过构建一个能量函数, 优化得到最小值, 从而得到每个像素视差的最优值。能量函数表示如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="47" class="code-formula">
+                        <mathml id="47"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>E</mi><mo stretchy="false"> (</mo><mi>D</mi><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mi>p</mi></munder><mo stretchy="false"> (</mo></mstyle><mi>C</mi><mo stretchy="false"> (</mo><mi>p</mi><mo>, </mo><mi>D</mi><msub><mrow></mrow><mi>p</mi></msub><mo stretchy="false">) </mo><mo>+</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>q</mi><mo>∈</mo><mi>Ν</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></munder><mi>Ρ</mi></mstyle><msub><mrow></mrow><mn>1</mn></msub><mi>Τ</mi><mo stretchy="false">[</mo><mrow><mo>|</mo><mrow><mi>D</mi><msub><mrow></mrow><mi>p</mi></msub><mo>-</mo><mi>D</mi><msub><mrow></mrow><mi>q</mi></msub></mrow><mo>|</mo></mrow><mo stretchy="false">]</mo><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mn>1</mn><mo>+</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>q</mi><mo>∈</mo><mi>Ν</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></munder><mi>Ρ</mi></mstyle><msub><mrow></mrow><mn>2</mn></msub><mi>Τ</mi><mo stretchy="false">[</mo><mrow><mo>|</mo><mrow><mi>D</mi><msub><mrow></mrow><mi>p</mi></msub><mo>-</mo><mi>D</mi><msub><mrow></mrow><mi>q</mi></msub></mrow><mo>|</mo></mrow><mo stretchy="false">]</mo><mo>&gt;</mo><mn>1</mn><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="48">式中:<i>D</i>为视差图, <i>E</i> (<i>D</i>) 为能量函数, <i>p</i>、<i>q</i>代表图像中的像素, <i>N</i><sub><i>p</i></sub>代表像素<i>P</i>的8连通区域的相邻像素, <i>C</i> (<i>p</i>, <i>D</i><sub><i>p</i></sub>) 表示当像素<i>p</i>的视差为<i>D</i><sub><i>p</i></sub>时的匹配代价。<i>P</i><sub>1</sub>是相邻像素点视差增减1的惩罚系数, <i>P</i><sub>2</sub>是相邻像素点视差变化大于1的惩罚系数, 且<i>P</i><sub>2</sub>要大于<i>P</i><sub>1</sub>。对于函数<i>T</i>[·], 如果函数内的值为真, 返回1, 否则返回0。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">与SGM方法相比, SGBM算法是半全局块匹配算法, 在计算匹配代价函数时, 采用块匹配方法 (SAD算法) 。SGBM算法没有采用基于互熵信息的匹配代价方法, 增加了预处理算法。BM算法和SGBM算法都采用SAD (sum of absolute differences) 方法进行匹配代价聚合。SAD方法可表示如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="50"><mathml id="51"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>A</mi><mi>D</mi><mo stretchy="false"> (</mo><mi>u</mi><mo>, </mo><mi>v</mi><mo stretchy="false">) </mo><mo>=</mo><mi>S</mi><mi>u</mi><mi>m</mi><mo stretchy="false">{</mo><mrow><mo>|</mo><mrow><mi>l</mi><mi>e</mi><mi>f</mi><mi>t</mi><mo stretchy="false"> (</mo><mi>u</mi><mo>, </mo><mi>v</mi><mo stretchy="false">) </mo><mo>-</mo><mi>r</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mo stretchy="false"> (</mo><mi>u</mi><mo>, </mo><mi>v</mi><mo stretchy="false">) </mo></mrow><mo>|</mo></mrow><mo stretchy="false">}</mo></mrow></math></mathml>      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="52">SAD窗口的大小, 决定了误匹配的大小和匹配效率, 在完成以上步骤时, 就可以获取视差图了。在选定的范围内选取代价聚合的最小值的点作为对应匹配点。</p>
+                </div>
+                <h4 class="anchor-tag" id="53" name="53"><b>2.2 BM算法原理</b></h4>
+                <div class="p1">
+                    <p id="54">BM算法在进行匹配时, 采用坏字符算法和好后缀算法即从右向左比较的方法, 同时引入两种启发式跳转规则决定模板向右移动的步长<citation id="114" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>。其基本原理可以表述为:设文本串<i>P</i>为待匹配的图像灰度数据, 文本<i>Q</i>为用于去匹配的模版, 将<i>P</i>与<i>Q</i>对齐, 从右至左依次比较, 如图1所示。</p>
+                </div>
+                <div class="area_img" id="55">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201907041_055.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 文本串P与模版串Q进行匹配" src="Detail/GetImg?filename=images/JYRJ201907041_055.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 文本串P与模版串Q进行匹配  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201907041_055.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="56">若是两者比较不匹配时, BM算法就采用好后缀与坏字符算法计算<i>Q</i>的移动步长, 直至匹配结束, 如图2所示。</p>
+                </div>
+                <div class="area_img" id="57">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201907041_057.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 坏字符与好后缀匹配" src="Detail/GetImg?filename=images/JYRJ201907041_057.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 坏字符与好后缀匹配  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201907041_057.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="58">可以看出由箭头连接的B和E均为坏字符, 加大字部分CAB为好后缀。</p>
+                </div>
+                <h4 class="anchor-tag" id="59" name="59"><b>2.3 DP算法原理</b></h4>
+                <div class="p1">
+                    <p id="60">动态规划最初是优化决策过程的数学方法, 核心思想就是将整体分割成若干个子任务, 求解全局最优。当前阶段的最优决策与前面阶段无关, 仅是基于当前状态。通过将整体复杂问题分解成若干单一简单的问题, 降低复杂度<citation id="115" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>。传统的动态规划方法是在水平方向进行扫描从而寻找最优路径, 以图像的水平方向为横坐标, 视差值为纵坐标, 将立体匹配分解为若干阶段, 每个<i>x</i>坐标点对应一个阶段, 之后再将各个阶段用不同的状态表示且状态的选择要满足无后向性。在同一极线上按照从左至右的顺序依次计算, 求取相似性度量函数和平滑函数的最小值, 最后找出使全局能量函数最小的匹配路径。</p>
+                </div>
+                <div class="p1">
+                    <p id="61">全局能量函数表示如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="62"><i>E</i> (<i>d</i>) =<i>E</i> (data) +<i>E</i> (smooth)      (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="63"><mathml id="64"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>E</mi><mo stretchy="false"> (</mo><mtext>d</mtext><mtext>a</mtext><mtext>t</mtext><mtext>a</mtext><mo stretchy="false">) </mo><mo>=</mo><mi>m</mi><mo stretchy="false"> (</mo><mi>p</mi><msub><mrow></mrow><mrow><mi>x</mi><mo>, </mo><mi>y</mi></mrow></msub><mo>, </mo><mi>d</mi><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>p</mi><mo>∈</mo><mi>Ι</mi></mrow></munder><mi>c</mi></mstyle><mo stretchy="false"> (</mo><mi>p</mi><mo>, </mo><mi>d</mi><mo stretchy="false">) </mo></mrow></math></mathml>      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="65"><mathml id="66"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>E</mi><mo stretchy="false"> (</mo><mtext>s</mtext><mtext>m</mtext><mtext>o</mtext><mtext>o</mtext><mtext>t</mtext><mtext>h</mtext><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mo stretchy="false">{</mo><mi>p</mi><mo>, </mo><mi>q</mi><mo stretchy="false">}</mo><mo>∈</mo><mi>Ν</mi></mrow></munder><mi>S</mi></mstyle><mo stretchy="false"> (</mo><mi>d</mi><msub><mrow></mrow><mi>p</mi></msub><mo>, </mo><mi>d</mi><msub><mrow></mrow><mi>q</mi></msub><mo stretchy="false">) </mo></mrow></math></mathml>      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="67">式中:<i>E</i> (data) 为图像数据约束项, 表示匹配点的相似性。<i>E</i> (smooth) 为相邻像素点间的平滑约束项, 表示相邻点之间的连续性。<i>m</i> (<i>p</i><sub><i>x</i>, <i>y</i></sub>, <i>d</i>) 表示左像素点与视差<i>d</i>的右像素点的匹配代价函数。<i>N</i>是相邻像素对的集合, <i>d</i><sub><i>p</i></sub>、<i>d</i><sub><i>q</i></sub>分别表示像素<i>p</i>和<i>q</i>的视差, 平滑项<i>S</i> (<i>d</i><sub><i>p</i></sub>, <i>d</i><sub><i>q</i></sub>) 为相邻像素<i>p</i>和<i>q</i>间的平滑约束。</p>
+                </div>
+                <h4 class="anchor-tag" id="68" name="68"><b>2.4 本文算法具体步骤</b></h4>
+                <div class="p1">
+                    <p id="69"> (1) 分别使用Canny边缘检测算子、Sobel边缘检测算子和Scharr滤波器对图像对进行边缘检测。</p>
+                </div>
+                <div class="p1">
+                    <p id="70"> (2) 将执行步骤 (1) 得到的图像以边缘特征为约束, 分别使用BM算法、DP算法、SGBM算法进行立体匹配。</p>
+                </div>
+                <div class="p1">
+                    <p id="71"> (3) 设定误差阈值, 然后对每组方法得到的视差图进行误匹配率计算, 同时计算匹配时间。</p>
+                </div>
+                <div class="p1">
+                    <p id="72"> (4) 通过对比不同边缘检测算法与不同立体匹配算法组合的结果, 选取一种精度与速度相对最优的组合算法。</p>
+                </div>
+                <h3 id="73" name="73" class="anchor-tag"><b>3 实验对比分析</b></h3>
+                <div class="p1">
+                    <p id="74">Middlebury提供了很多标准测试库, 本文在该库中选择了几组校正后的图像对参与实验。本文整体是在Opencv和Matlab软件环境下进行试验, 利用Opencv对图像进行立体匹配, 利用Matlab编写计算误匹配率程序, 计算误匹配率。本文采用三种立体匹配算法求取视差图, 通过在不同匹配算法下对比不同的边缘检测方法, 找出精度与速度俱佳的搭配方法。针对匹配质量, 利用误匹配率<i>P</i>进行评价, 表达式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="75"><mathml id="76"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ρ</mi><mo>=</mo><mfrac><mn>1</mn><mi>Ν</mi></mfrac><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><mi>y</mi><mo stretchy="false">) </mo></mrow></munder><mo stretchy="false"> (</mo></mstyle><mrow><mo>|</mo><mrow><mi>d</mi><msub><mrow></mrow><mi>c</mi></msub><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><mi>y</mi><mo stretchy="false">) </mo></mrow></mrow><mo>-</mo><mrow><mrow><mi>d</mi><msub><mrow></mrow><mi>t</mi></msub><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><mi>y</mi><mo stretchy="false">) </mo></mrow><mo>|</mo></mrow><mo>&gt;</mo><mi>δ</mi><msub><mrow></mrow><mi>d</mi></msub><mo stretchy="false">) </mo></mrow></math></mathml>      (6) </p>
+                </div>
+                <div class="p1">
+                    <p id="77">式中:<i>N</i>代表图像像素数, <i>d</i><sub><i>c</i></sub> (<i>x</i>, <i>y</i>) 是计算得到的视差图, <i>d</i><sub><i>t</i></sub> (<i>x</i>, <i>y</i>) 是真实视差图, <i>δ</i><sub><i>d</i></sub>是误差阈值, 通常取1。该指标反映在一定误差阈值内, 两幅图像匹配所得视差图的误差占整幅图像的比重, 可以客观地反映出立体匹配质量的好坏。</p>
+                </div>
+                <div class="p1">
+                    <p id="78">图3-图5分别是cones图、teddy图和venus图经过Scharr边缘检测、Sobel边缘检测以及Canny边缘检测得到的效果图, 其中Sobel算子选用内核大小为3。</p>
+                </div>
+                <div class="area_img" id="79">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201907041_07900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 三种检测方法在cones图应用" src="Detail/GetImg?filename=images/JYRJ201907041_07900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 三种检测方法在cones图应用  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201907041_07900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="80">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201907041_08000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 三种检测方法在teddy图应用" src="Detail/GetImg?filename=images/JYRJ201907041_08000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 三种检测方法在teddy图应用  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201907041_08000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="81">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201907041_08100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 三种检测方法在venus图应用" src="Detail/GetImg?filename=images/JYRJ201907041_08100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 三种检测方法在venus图应用  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201907041_08100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="82">图6为标准视差图, 图7-图9为基于BM算法、DP算法、SGBM算法得到的原图视差图。通过误差匹配率计算各组图片的匹配质量, 结果如表1-表6所示。</p>
+                </div>
+                <div class="area_img" id="83">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201907041_08300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 标准视差图" src="Detail/GetImg?filename=images/JYRJ201907041_08300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 标准视差图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201907041_08300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="84">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201907041_08400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 基于BM算法的得到原图视差图" src="Detail/GetImg?filename=images/JYRJ201907041_08400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 基于BM算法的得到原图视差图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201907041_08400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="85">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201907041_08500.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图8 基于DP算法得到原图视差图" src="Detail/GetImg?filename=images/JYRJ201907041_08500.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图8 基于DP算法得到原图视差图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201907041_08500.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="86">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201907041_08600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图9 基于SGBM算法得到原图视差图" src="Detail/GetImg?filename=images/JYRJ201907041_08600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图9 基于SGBM算法得到原图视差图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201907041_08600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="87">
+                    <p class="img_tit"><b>表1 基于BM方法匹配误差率</b> % <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="87" border="1"><tr><td><br />图像</td><td>cones</td><td>teddy</td><td>venus</td></tr><tr><td><br />Scharr</td><td>66.25</td><td>64.40</td><td>63.96</td></tr><tr><td><br />Sobel</td><td>69.02</td><td>67.61</td><td>68.04</td></tr><tr><td><br />Canny</td><td>52.63</td><td>35.56</td><td>47.43</td></tr><tr><td><br />原图</td><td>73.43</td><td>52.53</td><td>73.47</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="88">
+                    <p class="img_tit"><b>表2 基于BM算法匹配时间 s</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="88" border="1"><tr><td><br />图像</td><td>cones</td><td>teddy</td><td>venus</td></tr><tr><td><br />Scharr</td><td>0.032</td><td>0.029</td><td>0.029</td></tr><tr><td><br />Sobel</td><td>0.029</td><td>0.064</td><td>0.029</td></tr><tr><td><br />Canny</td><td>0.038</td><td>0.027</td><td>0.026</td></tr><tr><td><br />原图</td><td>0.032</td><td>0.057</td><td>0.056</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="89">
+                    <p class="img_tit"><b>表3 基于DP算法匹配误差率</b> % <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="89" border="1"><tr><td><br />图像</td><td>cones</td><td>teddy</td><td>venus</td></tr><tr><td><br />Scharr</td><td>33.76</td><td>44.73</td><td>30.46</td></tr><tr><td><br />Sobel</td><td>46.31</td><td>61.87</td><td>30.85</td></tr><tr><td><br />Canny</td><td>36.88</td><td>44.64</td><td>26.05</td></tr><tr><td><br />原图</td><td>57.99</td><td>75.61</td><td>30.45</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="90">
+                    <p class="img_tit"><b>表4 基于DP算法匹配时间 s</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="90" border="1"><tr><td><br />图像</td><td>cones</td><td>teddy</td><td>venus</td></tr><tr><td><br />Scharr</td><td>0.837</td><td>0.766</td><td>0.958</td></tr><tr><td><br />Sobel</td><td>0.897</td><td>0.758</td><td>0.101</td></tr><tr><td><br />Canny</td><td>0.114</td><td>0.747</td><td>0.926</td></tr><tr><td><br />原图</td><td>0.739</td><td>0.762</td><td>0.956</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="91">
+                    <p class="img_tit"><b>表5 基于SGBM算法匹配误差率</b> % <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="91" border="1"><tr><td><br />图像</td><td>cones</td><td>teddy</td><td>venus</td></tr><tr><td><br />Scharr</td><td>8.59</td><td>11.42</td><td>0.74</td></tr><tr><td><br />Sobel</td><td>9.34</td><td>10.76</td><td>0.33</td></tr><tr><td><br />Canny</td><td>7.56</td><td>16.87</td><td>0.32</td></tr><tr><td><br />原图</td><td>9.94</td><td>12.53</td><td>1.60</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="92">
+                    <p class="img_tit"><b>表6 基于SGBM算法匹配时间 s</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="92" border="1"><tr><td><br />图像</td><td>cones</td><td>teddy</td><td>venus</td></tr><tr><td><br />Scharr</td><td>0.267</td><td>0.294</td><td>0.296</td></tr><tr><td><br />Sobel</td><td>0.275</td><td>0.305</td><td>0.271</td></tr><tr><td><br />Canny</td><td>0.274</td><td>0.269</td><td>0.264</td></tr><tr><td><br />原图</td><td>0.302</td><td>0.318</td><td>0.278</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="93">表1、表3、表5分别记录了在BM算法、DP算法、SGBM算法下, 经过边缘提取的图像对立体匹配后视差图的误匹配率。从误匹配率方面观察, 三种方法经过边缘检测后视差图的误匹配率均在一定程度上有所降低。</p>
+                </div>
+                <div class="p1">
+                    <p id="94">表2、表4、表6分别显示了基于以上三种算法立体匹配算法进行立体匹配所消耗时间。时间数据显示BM算法和SGBM算法经过边缘特征提取之后, 匹配时间都缩短了很多, 然而DP算法时间却在处理部分图像时增加了少许。我们可以得到结论, 速度上, BM算法最好, SGBM算法一般, DP算法最慢。精度上, SGBM算法最好, DP算法较好, BM算法最差。</p>
+                </div>
+                <div class="p1">
+                    <p id="95">对比三种边缘检测算子, 通过三种立体匹配算法的实验可以得出, 采用BM立体匹配算法, 速度和精度上, Canny算法最好, Scharr算法一般, Sobel算法最差。采用DP立体匹配算法, 速度上, Canny算法最快, Sobel算法一般, Scharr算法最慢, 精度上, Canny算法最好, Scharr算法一般, Sobel算法最差。采用SGBM立体匹配算法, 速度和精度上Canny算法最快, Scharr算法和Sobel算法效果相似。通过六组试验, 我们可以总结得出在精度和速度上, Canny边缘检测与其他两种边缘检测算法相比存在明显优势。Scharr滤波器在性能上略强于Sobel检测算子。</p>
+                </div>
+                <div class="p1">
+                    <p id="96">基于以上分析, 以边缘信息为匹配基元进行立体匹配可以大幅度提高匹配的精度和速度, 在一定程度上可以改善视差图的匹配质量, 为后续场景重建与还原有着至关重要的辅助作用。</p>
+                </div>
+                <div class="p1">
+                    <p id="97">针对三种匹配算法, 我们得出了如下结论:传统的DP算法在匹配精度和速度方面介于BM算法和SGBM算法之间, 在大多是情景中可以使用的, 但是得到视差图会存在条纹;SGBM算法适用于效果好和实时性要求相对较高的情景, 如零部件生产线实时检测和医学图像处理等领域;BM算法速度快但是精度较差, 适用于精度要求不是特别高同时要满足很高实时性的情景, 如目标实时跟踪和监控等。通过上文分析得出, SGBM算法搭配Canny边缘检测算子在处理速度和精度上存在明显优势。</p>
+                </div>
+                <div class="p1">
+                    <p id="98">本文利用KITTI数据库中选取几幅道路场景下的代表性图片, 进行测试与验证。通过对比匹配误差率和匹配时间, 判断在不同边缘检测方法下获取视差图的好坏程度, 选取一种处理效果相对好的方法, 为接下来的研究奠定基础。图10为选取四幅真实场景图。表7-表10分别记录了四幅图片经过三种边缘检测算法后基于SGBM算法得到视差图需要的匹配时间和误匹配率。</p>
+                </div>
+                <div class="area_img" id="100">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201907041_10000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图10 KITTI数据库中不同场景图" src="Detail/GetImg?filename=images/JYRJ201907041_10000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图10 KITTI数据库中不同场景图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201907041_10000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="101">
+                    <p class="img_tit"><b>表7 图10 (a) 基于SGBM算法的视差图误匹配率和匹配时间</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="101" border="1"><tr><td>图像</td><td>匹配误差率/%</td><td>匹配时间/ms</td></tr><tr><td><br />原图</td><td>20.53</td><td>738.233</td></tr><tr><td><br />Scharr</td><td>19.98</td><td>740.721</td></tr><tr><td><br />Sobel</td><td>20.60</td><td>751.504</td></tr><tr><td><br />Canny</td><td>11.77</td><td>715.801</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="102">
+                    <p class="img_tit"><b>表8 图10 (b) 基于SGBM算法的视差图误匹配率和匹配时间</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="102" border="1"><tr><td><br />图像</td><td>匹配误差率/%</td><td>匹配时间/ms</td></tr><tr><td><br />原图</td><td>24.49</td><td>721.272</td></tr><tr><td><br />Scharr</td><td>23.25</td><td>719.703</td></tr><tr><td><br />Sobel</td><td>24.42</td><td>721.073</td></tr><tr><td><br />Canny</td><td>21.57</td><td>712.777</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="103">
+                    <p class="img_tit"><b>表9 图10 (c) 基于SGBM算法的视差图误匹配率和匹配时间</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="103" border="1"><tr><td><br />图像</td><td>匹配误差率/%</td><td>匹配时间/ms</td></tr><tr><td><br />原图</td><td>21.16</td><td>762.456</td></tr><tr><td><br />Scharr</td><td>18.99</td><td>720.037</td></tr><tr><td><br />Sobel</td><td>20.47</td><td>763.959</td></tr><tr><td><br />Canny</td><td>16.56</td><td>751.394</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="104">
+                    <p class="img_tit"><b>表10 图10 (d) 基于SGBM算法的视差图误匹配率和匹配时间</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="104" border="1"><tr><td><br />图像</td><td>匹配误差率/%</td><td>匹配时间/ms</td></tr><tr><td><br />原图</td><td>20.36</td><td>750.872</td></tr><tr><td><br />Scharr</td><td>19.09</td><td>757.500</td></tr><tr><td><br />Sobel</td><td>19.70</td><td>753.973</td></tr><tr><td><br />Canny</td><td>17.14</td><td>742.279</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="105">结合以上试验, 可以得出在三种检测方法中, 与Canny检测算法结合后得到的视差图匹配质量最高, 同时花费的匹配时间较短。对于其他两种检测方法来说, 效果不是特别稳定, 匹配质量与匹配时间不一定同时都得到了优化, 有的是以牺牲实时性来提高精度或者以牺牲匹配质量来加快匹配的速度。</p>
+                </div>
+                <h3 id="106" name="106" class="anchor-tag"><b>4 结 语</b></h3>
+                <div class="p1">
+                    <p id="107">本文利用Canny检测算法、Scharr检测算法和Sobel算法对图像进行边缘提取, 分别使用BM、SGBM和DP立体匹配算法对图像进行立体匹配, 同时记录匹配时间和视差图误匹配率。经分析, 经过以边缘特征为基元的立体匹配较未经过任何处理的图片在速度和精度都有所提高, 该方法剔除了大量不相关的信息, 提高了立体匹配的可靠性。通过真实场景图进行验证, 选择Canny检测算法结合SGBM立体匹配算法优化视差图效果最好, 提高了视差图的质量。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201807048&amp;v=MDQwMzFNcUk5QmJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5amhVNzdJTHpUWlpMRzRIOW4=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 王茜, 陈一民, 丁友东.基于改进卷积神经网络的机动车图像分类算法[J].计算机应用与软件, 2018, 35 (7) :263-266, 298.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A Stereo Matching Algorithm with an Adaptive Window: Theory and Experiment">
+
+                                <b>[2]</b> Kanade T, Okutomi M.A stereo matching algorithm with an adaptive window:Theory and experiment[J].IEEE Transactions on Pattern Analysis &amp; Machine Intelligence, 1994, 16 (9) :920-932.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Stereo correspondence with compact windows via minimum ratio cycle">
+
+                                <b>[3]</b> Veksler O.Stereo correspondence with compact windows via minimum ratio cycle[J].IEEE Transactions on Pattern Analysis &amp; Machine Intelligence, 2002, 24 (12) :1654-1660.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201709036&amp;v=MTIwNTJGeWpoVTc3SUx6VFpaTEc0SDliTXBvOUdZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnQ=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 李金凤, 边继龙.基于迭代指导滤波的立体匹配方法[J].计算机应用与软件, 2017, 34 (9) :178-182, 239.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Stereo Matching Using Belief Propagation">
+
+                                <b>[5]</b> Sun J, Shum H Y, Zheng N N.Stereo Matching Using Belief Propagation[J].Pattern Analysis &amp; Machine Intelligence IEEE Transactions on, 2003, 25 (7) :787-800.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=CGGL201502014&amp;v=MjczNTBadEZ5amhVNzdJSmlyTVlyRzRIOVRNclk5RVlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnU=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 曹之乐, 严中红, 王洪.双目立体视觉匹配技术综述[J].重庆理工大学学报 (自然科学) , 2015 (2) :70-75.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201609054&amp;v=MDExNTBmTXBvOUFZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeWpoVTc3SUx6VFpaTEc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 韩峻峰, 王帅.基于双目立体视觉技术的汽车测距系统实现[J].计算机应用与软件, 2016, 33 (9) :227-230.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JLGY201001040&amp;v=MTY5NDFIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlqaFU3N0lMeUhNZDdHNEg5SE1ybzlCWklRS0Q=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 葛亮, 朱庆生, 傅思思, 等.改进的立体像对稠密匹配算法[J].吉林大学学报 (工学版) , 2010 (1) :212-217.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1013250541.nh&amp;v=MjE3MjRIYkc5SHRUSXJwRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeWpoVTc3SVZGMjY=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 宗晨临.基于双目立体匹配的视差提取算法研究[D].成都:西南交通大学, 2013.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Fast Cost-Volume Filtering for Visual Correspondence and Beyond">
+
+                                <b>[10]</b> Hosni A, Rhemann C, Bleyer M, et al.Fast Cost-Volume Filtering for Visual Correspondence and Beyond[J].IEEE Transactions on Pattern Analysis &amp; Machine Intelligence, 2011, 35 (2) :504-511.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD00002830725&amp;v=MTM5NjZ4Rlkra0tZM2s1ekJkaDRqOTlTWHFScnhveGNNSDdSN3FkWitadUZpdmxVN3ZJSVY0PU5qN0Jhck80SHRIT3A0&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> Mühlmann K, Maier D, Hesser J, et al.Calculating Dense Disparity Maps from Color Stereo Images, an Efficient Implementation[J].International Journal of Computer Vision, 2002, 47 (1) :79-88.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Stereo processing by semiglobal matching and mutual information">
+
+                                <b>[12]</b> Hirschmüller H.Stereo Processing by Semiglobal Matching and Mutual Information[J].IEEE Transactions on Pattern Analysis and Machine Intelligence, 2007, 30 (2) :328-341.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Accurate and efficient stereo processing by semi-global matching and mutual information">
+
+                                <b>[13]</b> Hirschmüller H.Accurate and Efficient Stereo Processing by Semi-Global Matching and Mutual Information[C]//Proceedings of the 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR’05) .IEEE, 2005, 2:807-814.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DBCH201610063&amp;v=MDM0MzBmTnI0OURaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeWpoVTc3SUlTL0lackc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 张欢, 安利, 张强, 等.SGBM算法与BM算法分析研究[J].测绘与空间地理信息, 2016 (10) :214-216.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015968215.nh&amp;v=MzExMDdUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlqaFU3N0lWRjI2RzdxK0Z0UE5xcEViUElRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 龚文.基于动态规划的立体匹配算法研究[D].南昌:南昌航空大学, 2015
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Study on the impact degrees of several driving behaviors when driving while performing aecondary tasks">
+
+                                <b>[16]</b> Jin L, Guo B, Jiang Y, et al.Study on the Impact Degrees of Several Driving Behaviors When Driving While Performing Secondary Tasks[J].IEEE Access, 2018, 6 (1) :65772-65782.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Disparity map optimization based on edge detection">
+
+                                <b>[17]</b> Yue X Y, Wang F R, Guo B C, et al.Disparity map optimization based on edge detection[C]//2018 Chinese Control And Decision Conference (CCDC) .2018:3311-3315.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JYRJ201907041" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201907041&amp;v=MDUwOTc3N0lMelRaWkxHNEg5ak1xSTlCWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlqaFU=&amp;uid=WEEvREcwSlJHSldRa1FhdkJtNEYxa3hKZG9XL1JrZXNhdGVWVEdvM0tSMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="1" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

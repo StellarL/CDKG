@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637128035107998750%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201909030%26RESULT%3d1%26SIGN%3dFDu8YmvkHcDbPwc%252fXji8jWJpR8Q%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201909030&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201909030&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201909030&amp;v=MjU3NDZHNEg5ak1wbzlHWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJyRnkvaFdyM0xMejdCYmI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#42" data-title="1 压缩方法及过程描述 ">1 压缩方法及过程描述</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#44" data-title="1.1 CNN模型容量压缩策略">1.1 CNN模型容量压缩策略</a></li>
+                                                <li><a href="#67" data-title="1.2 权值k-means聚类量化">1.2 权值k-means聚类量化</a></li>
+                                                <li><a href="#106" data-title="1.3 基于LZW编码的压缩方法">1.3 基于LZW编码的压缩方法</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#133" data-title="2 实验结果与分析 ">2 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#134" data-title="2.1 2种容量压缩策略的结果对比">2.1 2种容量压缩策略的结果对比</a></li>
+                                                <li><a href="#141" data-title="2.2 k-means聚类量化结果">2.2 k-means聚类量化结果</a></li>
+                                                <li><a href="#144" data-title="2.3 LZW编码压缩结果">2.3 LZW编码压缩结果</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#152" data-title="3 结束语 ">3 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#46" data-title="&lt;b&gt;表1 LeNet-5权值分布情况&lt;/b&gt;"><b>表1 LeNet-5权值分布情况</b></a></li>
+                                                <li><a href="#104" data-title="&lt;b&gt;图1 LeNet-5的Conv2层权值分布及聚类情况&lt;/b&gt;"><b>图1 LeNet-5的Conv2层权值分布及聚类情况</b></a></li>
+                                                <li><a href="#137" data-title="&lt;b&gt;表2 浮点转定点后的模型准确率对比&lt;/b&gt;"><b>表2 浮点转定点后的模型准确率对比</b></a></li>
+                                                <li><a href="#138" data-title="&lt;b&gt;表3 卷积层量化为不同精度时的模型准确率对比&lt;/b&gt;"><b>表3 卷积层量化为不同精度时的模型准确率对比</b></a></li>
+                                                <li><a href="#143" data-title="&lt;b&gt;图2 LeNet-5网络Ip1层量化后的权重分布&lt;/b&gt;"><b>图2 LeNet-5网络Ip1层量化后的权重分布</b></a></li>
+                                                <li><a href="#146" data-title="&lt;b&gt;表4 LeNet-5网络各层编码前后的结果对比&lt;/b&gt;"><b>表4 LeNet-5网络各层编码前后的结果对比</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="181">
+
+
+                                    <a id="bibliography_1" >
+                                        <b>[1]</b>
+                                     深度学习大讲堂.ILSVRC2016目标检测任务回顾:图像目标检测[EB/OL].[2018-07-01].https://www.leiphone.com/news/201701/u3D5QnJbS9khm0VT.html.</a>
+                                </li>
+                                <li id="183">
+
+
+                                    <a id="bibliography_2" title=" HU Jie,LI Shen,SUN Gang.Squeeze-and-excitation networks[EB/OL].[2018-07-01].https://arxiv.org/pdf/1709.01507.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Squeeze-and-excitation networks[OL]">
+                                        <b>[2]</b>
+                                         HU Jie,LI Shen,SUN Gang.Squeeze-and-excitation networks[EB/OL].[2018-07-01].https://arxiv.org/pdf/1709.01507.pdf.
+                                    </a>
+                                </li>
+                                <li id="185">
+
+
+                                    <a id="bibliography_3" title=" BOJARSKI M,TESTA D D,DWORAKOWSKI D,et al.End to end learning for self-driving cars[EB/OL].[2018-07-01].https://arxiv.org/pdf/1604.07316.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=End to end learning for self-driving cars">
+                                        <b>[3]</b>
+                                         BOJARSKI M,TESTA D D,DWORAKOWSKI D,et al.End to end learning for self-driving cars[EB/OL].[2018-07-01].https://arxiv.org/pdf/1604.07316.pdf.
+                                    </a>
+                                </li>
+                                <li id="187">
+
+
+                                    <a id="bibliography_4" title=" FANG Shihau,FEI Yuxaing,XU Zhezhuang,et al.Learning transportation modes from smartphone sensors based on deep neural network[J].IEEE Sensors Journal,2017,17(18):6111-6118." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning Transportation Modes From Smartphone Sensors Based on Deep Neural Network">
+                                        <b>[4]</b>
+                                         FANG Shihau,FEI Yuxaing,XU Zhezhuang,et al.Learning transportation modes from smartphone sensors based on deep neural network[J].IEEE Sensors Journal,2017,17(18):6111-6118.
+                                    </a>
+                                </li>
+                                <li id="189">
+
+
+                                    <a id="bibliography_5" title=" GANDHI D,PINTO L,GUPTA A.Learning to fly by crashing[C]//Proceedings of 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems.Washington D.C.,USA:IEEE Press,2017:3948-3955." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning to fly by crashing">
+                                        <b>[5]</b>
+                                         GANDHI D,PINTO L,GUPTA A.Learning to fly by crashing[C]//Proceedings of 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems.Washington D.C.,USA:IEEE Press,2017:3948-3955.
+                                    </a>
+                                </li>
+                                <li id="191">
+
+
+                                    <a id="bibliography_6" title=" DENTON E,ZAREMBA W,BRUNA J,et al.Exploiting linear structure within convolutional networks for efficient evaluation[C]//Proceedings of International Conference on Neural Information Processing Systems.Cambridge,USA:MIT Press 2014:1269-1277." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Exploiting linear structure within convolutional networks for efficient evaluation">
+                                        <b>[6]</b>
+                                         DENTON E,ZAREMBA W,BRUNA J,et al.Exploiting linear structure within convolutional networks for efficient evaluation[C]//Proceedings of International Conference on Neural Information Processing Systems.Cambridge,USA:MIT Press 2014:1269-1277.
+                                    </a>
+                                </li>
+                                <li id="193">
+
+
+                                    <a id="bibliography_7" title=" NOVIKOV A,PODOPRIKHIN D,OSOKIN A,et al.Tensorizing neural networks[EB/OL].[2018-07-01].https://arxiv.org/pdf/1509.06569.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Tensorizing neural networks">
+                                        <b>[7]</b>
+                                         NOVIKOV A,PODOPRIKHIN D,OSOKIN A,et al.Tensorizing neural networks[EB/OL].[2018-07-01].https://arxiv.org/pdf/1509.06569.pdf.
+                                    </a>
+                                </li>
+                                <li id="195">
+
+
+                                    <a id="bibliography_8" title=" CHEN Wenlin,WILSON J T,TYREE S,et al.Compressing neural networks with the hashing trick[EB/OL].[2018-07-01].https://arxiv.org/pdf/1504.04788.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Compressing neural networks with the hashing trick">
+                                        <b>[8]</b>
+                                         CHEN Wenlin,WILSON J T,TYREE S,et al.Compressing neural networks with the hashing trick[EB/OL].[2018-07-01].https://arxiv.org/pdf/1504.04788.pdf.
+                                    </a>
+                                </li>
+                                <li id="197">
+
+
+                                    <a id="bibliography_9" title=" ANWAR S,HWANG K,SUNG Wonyong.Fixed point optimization of deep convolutional neural networks for object recognition[C]//Proceedings of IEEE International Conference on Acoustics,Speech and Signal Processing.Washington D.C.,USA:IEEE Press,2015:1131-1135." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Fixed point optimization of deep convolutional neural networks for object recognition">
+                                        <b>[9]</b>
+                                         ANWAR S,HWANG K,SUNG Wonyong.Fixed point optimization of deep convolutional neural networks for object recognition[C]//Proceedings of IEEE International Conference on Acoustics,Speech and Signal Processing.Washington D.C.,USA:IEEE Press,2015:1131-1135.
+                                    </a>
+                                </li>
+                                <li id="199">
+
+
+                                    <a id="bibliography_10" title=" HAN Song.Efficient Methods and Hardware for Deep Learning[D].San Francisco,USA:Stanford University,2017." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient Methods and Hardware for Deep Learning">
+                                        <b>[10]</b>
+                                         HAN Song.Efficient Methods and Hardware for Deep Learning[D].San Francisco,USA:Stanford University,2017.
+                                    </a>
+                                </li>
+                                <li id="201">
+
+
+                                    <a id="bibliography_11" title=" HAN Song,MAO Huizi,DALLY W J.Deep compression:compressing deep neural networks with pruning,trained quantization and huffman coding[EB/OL].[2018-07-01].https://arxiv.org/pdf/1510.00149.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Deep compression:compressing deep neural networks with pruning trained quantization and huffman coding">
+                                        <b>[11]</b>
+                                         HAN Song,MAO Huizi,DALLY W J.Deep compression:compressing deep neural networks with pruning,trained quantization and huffman coding[EB/OL].[2018-07-01].https://arxiv.org/pdf/1510.00149.pdf.
+                                    </a>
+                                </li>
+                                <li id="203">
+
+
+                                    <a id="bibliography_12" title=" 韩云飞,蒋同海,马玉鹏,等.深度神经网络的压缩研究[J].计算机应用研究,2018,35(10):2894-2897." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201810004&amp;v=MDI2MzBSckZ5L2hXcjNMTHo3U1pMRzRIOW5OcjQ5RllJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmU=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         韩云飞,蒋同海,马玉鹏,等.深度神经网络的压缩研究[J].计算机应用研究,2018,35(10):2894-2897.
+                                    </a>
+                                </li>
+                                <li id="205">
+
+
+                                    <a id="bibliography_13" title=" 蔡瑞初,钟椿荣,余洋,等.面向“边缘”应用的卷积神经网络量化与压缩方法[J].计算机应用,2018,39(9):2449-2454." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201809002&amp;v=MjcxMTdyM0xMejdCZDdHNEg5bk1wbzlGWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJyRnkvaFc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         蔡瑞初,钟椿荣,余洋,等.面向“边缘”应用的卷积神经网络量化与压缩方法[J].计算机应用,2018,39(9):2449-2454.
+                                    </a>
+                                </li>
+                                <li id="207">
+
+
+                                    <a id="bibliography_14" title=" 雷杰,高鑫,宋杰,等.深度网络模型压缩综述[J].软件学报,2018,29(2):251-266." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201802002&amp;v=MTUzOTR6cXFCdEdGckNVUkxPZVplUnJGeS9oV3IzTE55ZlRiTEc0SDluTXJZOUZab1FLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         雷杰,高鑫,宋杰,等.深度网络模型压缩综述[J].软件学报,2018,29(2):251-266.
+                                    </a>
+                                </li>
+                                <li id="209">
+
+
+                                    <a id="bibliography_15" title=" DENIL M,SHAKIBI B,DINH L,et al.Predicting parameters in deep learning[C]//Proceedings of the 26th International Conference on Neural Information Processing Systems.New York,USA:ACM Press,2013:2148-2156." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Predicting parameters in deep learning">
+                                        <b>[15]</b>
+                                         DENIL M,SHAKIBI B,DINH L,et al.Predicting parameters in deep learning[C]//Proceedings of the 26th International Conference on Neural Information Processing Systems.New York,USA:ACM Press,2013:2148-2156.
+                                    </a>
+                                </li>
+                                <li id="211">
+
+
+                                    <a id="bibliography_16" title=" JIA Yangping,SHELHAMER E,DONAHUE J,et al.Caffe:convolutional architecture for fast feature embedding[C]//Proceedings of ACM International Conference on Multimedia.New York,USA:ACM Press,2014:675-678." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Caffe:Convolutional architecture for fast feature embedding">
+                                        <b>[16]</b>
+                                         JIA Yangping,SHELHAMER E,DONAHUE J,et al.Caffe:convolutional architecture for fast feature embedding[C]//Proceedings of ACM International Conference on Multimedia.New York,USA:ACM Press,2014:675-678.
+                                    </a>
+                                </li>
+                                <li id="213">
+
+
+                                    <a id="bibliography_17" title=" HAN Song,JEFF P,JOHN T,et al.Learning both weights and connections for efficient neural networks[C]//Proceedings of Annual Conference on Neural Information Processing Systems.Cambridge,USA:MIT Press,2015:1135-1143." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning both weights and connections for efficient neural networks">
+                                        <b>[17]</b>
+                                         HAN Song,JEFF P,JOHN T,et al.Learning both weights and connections for efficient neural networks[C]//Proceedings of Annual Conference on Neural Information Processing Systems.Cambridge,USA:MIT Press,2015:1135-1143.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(09),188-193 DOI:10.19678/j.issn.1000-3428.0052195            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于LZW编码的卷积神经网络压缩方法</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%88%98%E5%B4%87%E9%98%B3&amp;code=39402361&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">刘崇阳</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%88%98%E5%8B%A4%E8%AE%A9&amp;code=17417509&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">刘勤让</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%9B%BD%E5%AE%B6%E6%95%B0%E5%AD%97%E4%BA%A4%E6%8D%A2%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83&amp;code=0291391&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">国家数字交换系统工程技术研究中心</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对卷积神经网络(CNN)因参数量大难以移植到嵌入式平台的问题,提出基于LZW编码的CNN压缩方法。通过浮点转定点和剪枝2种方法来压缩模型容量。对权值进行k-means聚类量化,并在此基础上进行LZW编码。在MNIST数据集上进行实验,结果表明,剪枝效果优于浮点转定点的压缩效果,在进行剪枝、量化后使用LZW编码,其压缩比可达25.338。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">卷积神经网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=LZW%E7%BC%96%E7%A0%81&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">LZW编码;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B5%AE%E7%82%B9%E8%BD%AC%E5%AE%9A%E7%82%B9&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">浮点转定点;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%A8%A1%E5%9E%8B%E5%89%AA%E6%9E%9D&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">模型剪枝;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=k-means%E8%81%9A%E7%B1%BB%E9%87%8F%E5%8C%96&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">k-means聚类量化;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    刘崇阳(1994—),男,硕士研究生,主研方向为人工智能、深度学习;E-mail:zmylmh1@ 163. com;
+                                </span>
+                                <span>
+                                    刘勤让,研究员、博士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-07-24</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家科技重大专项(2016ZX01012101);</span>
+                                <span>国家自然科学基金(61572520,61521003);</span>
+                    </p>
+            </div>
+                    <h1><b>Convolutional Neural Network Compression Method Based on LZW Encoding</b></h1>
+                    <h2>
+                    <span>LIU Chongyang</span>
+                    <span>LIU Qinrang</span>
+            </h2>
+                    <h2>
+                    <span>China National Digital Switching System Engineering and Technological R &amp; D Center</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Aiming at the problem that the Convolutional Neural Network(CNN) parameters are large and difficult to be transplanted to the embedded platform,a CNN compression method based on Lempel-Ziv-Welch(LZW) encoding is proposed.The model capacity is compressed by two ways:convert floating point to fixed point and pruning.The weights are quantized by k-means clustering,and LZW encoding is performed on this basis.Experimental results on the MNIST dataset show that the pruning effect is better than the compression effect of converting floating point to fixed point.After pruning and quantification,the compression ratio of LZW encoding can reach 25.338.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Convolutional%20Neural%20Network%20(CNN)&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Convolutional Neural Network (CNN);</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Lempel-Ziv-Welch%20(LZW)%20encoding&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Lempel-Ziv-Welch (LZW) encoding;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=convert%20floating%20point%20to%20fixed%20point&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">convert floating point to fixed point;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=model%20pruning&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">model pruning;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=k-means%20clustering%20quantification&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">k-means clustering quantification;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-07-24</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="37" name="37" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="38">卷积神经网络(Convolutional Neural Networks,CNN)主要用于计算机视觉领域。近年来,CNN的性能大幅提升,CNN模型的分类准确率从84.7%增长至96.5%。2016年,在ImageNet比赛的图像目标检测任务中,前5名的队伍大多采用ResNet/Inception网络,并融合Faster R-CNN框架<citation id="215" type="reference"><link href="181" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。自动驾驶公司Momenta研发团队提出SE(Squeeze and Excitation)架构<citation id="216" type="reference"><link href="183" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>,其识别错误率为2.3%。SE架构在引入较少的计算量和参数量的情况下,可大幅提升现有CNN模型的性能,从而将人工应用于更广泛的领域,例如自动驾驶汽车<citation id="217" type="reference"><link href="185" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>、智能手机<citation id="218" type="reference"><link href="187" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>和无人机<citation id="219" type="reference"><link href="189" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>等。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">然而,CNN的计算复杂度较高,模型参数量较多。例如,AlexNet需要1.4 GOPS来处理单个224像素×224像素的图像,并且其模型参数所占容量达到61 MB,这对于计算及存储资源有限的移动端设备来讲是难以达到的。CNN的压缩是有效的解决途径之一,以自动驾驶为例,特斯拉会周期性地更新用户汽车中的模型,对模型进行压缩会使频繁更新的可行性更高,提高更新速度,改善用户体验。同时,模型压缩有利于提升推理速度,从而保证自动驾驶的实时性推理。此外,移动设备受到电池电量的限制,运行大的神经网络模型需要足够的带宽和能量。以现场可编程门阵列(Field Programmable Gate Array,FPGA)为例,其片上存储约为10 MB,放不下完整的网络权值。如果模型压缩后能存储到片上静态随机存储器上,其消耗的能量比从片外动态随机存储器存取数据的耗能少。因此,神经网络的压缩非常重要。</p>
+                </div>
+                <div class="p1">
+                    <p id="40">目前已有很多神经网络的压缩方法。文献<citation id="220" type="reference">[<a class="sup">6</a>]</citation>基于神经网络的线性结构,通过低秩近似来减少参数量。文献<citation id="221" type="reference">[<a class="sup">7</a>]</citation>利用奇异值分解来减少权重数量。文献<citation id="222" type="reference">[<a class="sup">8</a>]</citation>使用哈希函数将连接权重随机分组到哈希表中以减少参数的位宽。文献<citation id="223" type="reference">[<a class="sup">9</a>]</citation>使用L2最小误差来量化神经网络。文献<citation id="227" type="reference">[<a class="sup">10</a>,<a class="sup">11</a>]</citation>通过剪枝、量化以及Huffman压缩实现对神经网络的深度压缩。文献<citation id="224" type="reference">[<a class="sup">12</a>]</citation>将网络删减、参数共享相结合来对CNN进行压缩。文献<citation id="225" type="reference">[<a class="sup">13</a>]</citation>采用动态定点量化方法缩短权重数据的位宽,以压缩CNN。网络精馏、网络分解等方法也能实现对神经网络的压缩<citation id="226" type="reference"><link href="207" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">针对神经网络模型在权值量化后个别元素组成的子串重复出现的情况,本文基于文献<citation id="228" type="reference">[<a class="sup">11</a>]</citation>的剪枝和量化方法,利用LZW(Lempel-Ziv-Welch)编码算法,以单个字符的ASCII码为中间承接变量,把重复子串转化为简短信息,以达到压缩模型容量的目的。</p>
+                </div>
+                <h3 id="42" name="42" class="anchor-tag">1 压缩方法及过程描述</h3>
+                <div class="p1">
+                    <p id="43">神经网络一般包含较多参数<citation id="229" type="reference"><link href="209" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>,造成计算以及存储资源的浪费。对于参数冗余的情况,CNN模型可从直接降低模型精度和直接进行剪枝2个角度压缩模型容量。</p>
+                </div>
+                <h4 class="anchor-tag" id="44" name="44">1.1 CNN模型容量压缩策略</h4>
+                <div class="p1">
+                    <p id="45">直接降低模型精度可压缩CNN模型的容量,在caffe<citation id="230" type="reference"><link href="211" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>深度学习框架中,CNN模型的参数以32位浮点的方式进行存储和计算,若能降低单个权值的有效位数,就可以压缩模型容量。通过分析发现,CNN中卷积层以及全连接层的参数大多介于-1～1之间,位于0值周围。LeNet-5网络模型各层权值的范围如表1所示。</p>
+                </div>
+                <div class="area_img" id="46">
+                    <p class="img_tit"><b>表1 LeNet-5权值分布情况</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="46" border="1"><tr><td><br />各层名称</td><td>权值范围</td></tr><tr><td><br />Conv1</td><td>-0.50～0.60</td></tr><tr><td><br />Conv2</td><td>-0.20～0.30</td></tr><tr><td><br />Ip1</td><td>-0.15～0.15</td></tr><tr><td><br />Ip2</td><td>-0.30～0.30</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="47">LeNet-5模型的权值介于-0.50～0.60之间,有效位在小数位上,为此可以把定点数(不包含符号位)全部用于存储小数部分,直接把小数点放置在有效位的前一位。如简化为8位定点,就用8 bit来存储32位浮点对应的前8位小数。由于神经网络一般为深层网络,各层的参数量不同,扮演的角色以及重要程度也不同。在降低精度时可以分层考虑,例如把卷积层参数转化为8位,把全连接层参数转化为10位。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">由于最初的输入特征图是浮点形式的,计算得到的输出结果也是浮点形式的,不能直接把连接权重转换为定点形式,因此本文综合考虑浮点数在计算机中的存储格式以及定点数的意义,提出将伪代码1(C++形式)的浮点转化为“伪定点”的方式。该“伪定点”具有浮点数的形式,但是可以表达定点数的意义。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">32位浮点在计算机中存储的最高位为符号位,其后8位为经过偏差修正的指数位,剩下的23位为小数位。伪代码1实现了转8位定点,通过tmp=*(int*)v语句获取浮点数的32位二进制形式。在将浮点数的二进制形式还原为具体小数时,32位浮点数会在小数点前添1,使小数位变为24位。若指数偏差值(exp)为-8,则小数点向左移动8位,即小数点后有7位是0,第8位是1。如果把32位浮点的23位小数部分全部置0,就可以达到和定点数相同的意义。若exp大于-8,则小数点移动后前8位小数不会全部为0,通过tmp=tmp &amp; (0xffffffff &lt;&lt; (23-exp-8))语句截取前8位小数而丢弃后面的小数位,使8位定点数只包含小数点后8位小数的含义。若exp小于-8,该代码的浮点转定点未能完全实现,这是因为32位浮点数的小数点在移位前,会在小数点前自动添1且添加的1无法消除,不能变为0。32位浮点转8位定点的具体过程如算法1所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="50"><b>算法1</b> 32位浮点转8位定点算法</p>
+                </div>
+                <div class="p1">
+                    <p id="51">#define EXP_BIT 0x7f800000</p>
+                </div>
+                <div class="p1">
+                    <p id="52">int main()</p>
+                </div>
+                <div class="p1">
+                    <p id="53">{</p>
+                </div>
+                <div class="p1">
+                    <p id="54">float *v=&amp; va;//va为待转化32位浮点数</p>
+                </div>
+                <div class="p1">
+                    <p id="55">tmp=*(int*)v;</p>
+                </div>
+                <div class="p1">
+                    <p id="56">exp=((tmp &amp; EXP_BIT) &gt;&gt; 23)-127;</p>
+                </div>
+                <div class="p1">
+                    <p id="57">if(exp&lt;=-8)</p>
+                </div>
+                <div class="p1">
+                    <p id="58">{</p>
+                </div>
+                <div class="p1">
+                    <p id="59">tmp=tmp &amp; (0xffffffff &lt;&lt; 23);</p>
+                </div>
+                <div class="p1">
+                    <p id="60">}</p>
+                </div>
+                <div class="p1">
+                    <p id="61">else</p>
+                </div>
+                <div class="p1">
+                    <p id="62">{</p>
+                </div>
+                <div class="p1">
+                    <p id="63">tmp=tmp &amp; (0xffffffff &lt;&lt; (23-exp-8));</p>
+                </div>
+                <div class="p1">
+                    <p id="64">}</p>
+                </div>
+                <div class="p1">
+                    <p id="65">}</p>
+                </div>
+                <div class="p1">
+                    <p id="66">通过把不重要的权值直接置0进行剪枝也可以压缩模型容量,重要权值与不重要权值主要根据其绝对值来进行区分<citation id="231" type="reference"><link href="213" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>。在修剪连接权值后,神经网络中的某些神经元可能没有输入或者输出,这些神经元就失去了存在的意义,也应该减掉。由于神经网络在训练过程中要进行反向传播和梯度计算,某些理应被减掉的神经元由于没有输入或者输出,反向传播计算梯度时为0,不会对其他神经元造成影响,相当于从神经网络中剔除,因此不需要对这些神经元进行人为剪枝。此外,剪枝过程不是一次性完成的,必须重新训练且剪枝比例(阈值)要逐渐加大,以保证剪枝效果。</p>
+                </div>
+                <h4 class="anchor-tag" id="67" name="67">1.2 权值k-means聚类量化</h4>
+                <div class="p1">
+                    <p id="68">在神经网络模型压缩模型容量后,结合k-means算法进行聚类量化。首先要设置量化个数,确定量化中心。量化中心的初始化方法有很多,其中线性平均初始化的效果较好<citation id="232" type="reference"><link href="201" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>。然后采用k-means聚类,使权值聚集在最近的初始量化中心,把聚类簇中心值作为新的量化中心,如此迭代直到聚类中心不能更新或者小于某个范围,具体过程如算法2(C++形式)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="69"><b>算法2</b> 权值k-means聚类量化算法</p>
+                </div>
+                <div class="p1">
+                    <p id="70">//检测是否达到聚类要求</p>
+                </div>
+                <div class="p1">
+                    <p id="71">if (fabs(mPreD-mCurD) / mPreD &lt; 0.001)  break;</p>
+                </div>
+                <div class="p1">
+                    <p id="72">//给每个权值选择最近的聚类中心</p>
+                </div>
+                <div class="p1">
+                    <p id="73">for (int n=0;n &lt; nWeights;n++) //nWeights为进行//聚类的权值数目</p>
+                </div>
+                <div class="p1">
+                    <p id="74">{</p>
+                </div>
+                <div class="p1">
+                    <p id="75">for (int k=0;k &lt; nCluster;k++)//nCluster为聚类中//心数目</p>
+                </div>
+                <div class="p1">
+                    <p id="76">{</p>
+                </div>
+                <div class="p1">
+                    <p id="77">distance=fabs(cWeights[n]-cCentro[k]);//cWeights[n]//为权值,cCentro[k]为聚类中心值</p>
+                </div>
+                <div class="p1">
+                    <p id="78">if (distance &lt; mindistance)</p>
+                </div>
+                <div class="p1">
+                    <p id="79">mindistance=distance;</p>
+                </div>
+                <div class="p1">
+                    <p id="80">cLabel[n]=k;//cLabel[n]为权值聚类后标签</p>
+                </div>
+                <div class="p1">
+                    <p id="81">}</p>
+                </div>
+                <div class="p1">
+                    <p id="82">cDistance[n]=mindistance;//cDistance[n]为权值到聚//类中心的距离</p>
+                </div>
+                <div class="p1">
+                    <p id="83">}</p>
+                </div>
+                <div class="p1">
+                    <p id="84">//累加聚类后权值到聚类中心的总距离</p>
+                </div>
+                <div class="p1">
+                    <p id="85">for (int n=0;n &lt; nWeights;n++)</p>
+                </div>
+                <div class="p1">
+                    <p id="86">{</p>
+                </div>
+                <div class="p1">
+                    <p id="87">mCurD=mCurD + cDistance[n];</p>
+                </div>
+                <div class="p1">
+                    <p id="88">}</p>
+                </div>
+                <div class="p1">
+                    <p id="89">//聚类中心更新</p>
+                </div>
+                <div class="p1">
+                    <p id="90">for (int n=0;n &lt; nWeights;n++)</p>
+                </div>
+                <div class="p1">
+                    <p id="91">{</p>
+                </div>
+                <div class="p1">
+                    <p id="92">ptrC[cLabel[n]]+=cWeights[n];</p>
+                </div>
+                <div class="p1">
+                    <p id="93">ptrS[cLabel[n]]+=1;</p>
+                </div>
+                <div class="p1">
+                    <p id="94">}</p>
+                </div>
+                <div class="p1">
+                    <p id="95">for (int k=0;k &lt; nCluster;k++)</p>
+                </div>
+                <div class="p1">
+                    <p id="96">{</p>
+                </div>
+                <div class="p1">
+                    <p id="97">cCentro[k]=ptrC[k];</p>
+                </div>
+                <div class="p1">
+                    <p id="98">cClusterSize[k]==ptrS[k];</p>
+                </div>
+                <div class="p1">
+                    <p id="99">cCentro[k]/=cClusterSize[k];//得出新的聚类中心</p>
+                </div>
+                <div class="p1">
+                    <p id="100">}</p>
+                </div>
+                <div class="p1">
+                    <p id="101">在聚类量化后增加一个查找表,神经网络的权值用聚类中心值代替,可减少每个权值的有效位数。例如,权值量化到32个区间,则量化结果可以用5 bit表示,实现进一步压缩。在量化后,前向计算的每个权值用对应的聚类中心代替,通过后向传播计算每个类内的权值梯度,聚类中心的更新同文献<citation id="233" type="reference">[<a class="sup">11</a>]</citation>。然而,聚类中心的更新存在以下问题:</p>
+                </div>
+                <div class="p1">
+                    <p id="102">1)对于剪枝后的模型,如果剪枝足够充分,0值附近是没有权值的,则在k-means的线性平均初始化后,0值周围的聚类中心存在没有权值聚集的情况,该聚类中心也不会更新。</p>
+                </div>
+                <div class="p1">
+                    <p id="103">2)同问题1)的情形类似,极大值或极小值周围的权值很少,有可能导致某些聚类中心不能进行权值聚集和更新。具体情况如图1所示。</p>
+                </div>
+                <div class="area_img" id="104">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909030_104.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 LeNet-5的Conv2层权值分布及聚类情况" src="Detail/GetImg?filename=images/JSJC201909030_104.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 LeNet-5的Conv2层权值分布及聚类情况</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909030_104.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="105">针对上述问题,可以在聚类完成后剔除这些没有权值聚集的聚类中心,进一步减少聚类中心的数量。</p>
+                </div>
+                <h4 class="anchor-tag" id="106" name="106">1.3 基于LZW编码的压缩方法</h4>
+                <div class="p1">
+                    <p id="107">LZW编码算法的基本过程如下:提取待压缩文件数据中的不同字符,并基于这些字符创建一个初始编码表,即字典。将每个新出现的字符串添加到编码表中,用一个数字来表示相应的字符串,压缩文件只存数字,如果某一字符串再次出现在后续待压缩序列中,可用相应的数字来代替。随着压缩过程的进行,动态构建编码表并逐渐增大。在解码时,从已编码的数据中还原编码表,待解压缩完成后,将其丢弃。与量化、Huffman等压缩方法相比,压缩文件中重复子串出现的次数越多,LZW编码压缩的效果就越好。</p>
+                </div>
+                <div class="p1">
+                    <p id="108">经分析,AlexNet、Vgg、Googlennet、LeNet-5等网络模型剪枝后的大部分值为0,量化时只对非0值进行操作。0值直接赋予一个标签号(例如-1),则量化结果会有大量由-1组成的子串出现,符合LZW的特点。根据文献<citation id="234" type="reference">[<a class="sup">11</a>]</citation>,将LeNet-5卷积层和全连接层的非0值分别量化为8 bit(256个量化值)和5 bit(32个量化值),量化后卷积层权重的标签号为-1～255共257个,全连接层权重标签号为-1～31共33个。LZW编码初始化的编码表一般只定义单个字符,比如数字0～9、字母a～z,采用单字节编码系统ASCII码的方式,以0～255来表示单个字符。为得到最佳压缩效果,本文在初始化编码表之前加入新的映射,以全连接层的33个标签号为例,把标签号加上某个数后作为ASCII码使用。例如,-1映射为单个字符@,10映射为单个字符K,25映射为Z,则原数据-1/-1/10/25/10会映射为@@KZK组成的字符串,其长度缩短。然后,以映射后的33个字符建立初始编码表。LZW压缩编码过程如算法3(python形式)所示,解压缩过程与此相反,不再赘述。</p>
+                </div>
+                <div class="p1">
+                    <p id="109"><b>算法3</b> LZW压缩编码算法</p>
+                </div>
+                <div class="p1">
+                    <p id="110">def compress():</p>
+                </div>
+                <div class="p1">
+                    <p id="111">dict_size=33</p>
+                </div>
+                <div class="p1">
+                    <p id="112">dictionary=dict((chr(int(i)+65),int(i)) for i in xrange(dict_size))</p>
+                </div>
+                <div class="p1">
+                    <p id="113">w=""</p>
+                </div>
+                <div class="p1">
+                    <p id="114">result=[]</p>
+                </div>
+                <div class="p1">
+                    <p id="115">s=""</p>
+                </div>
+                <div class="p1">
+                    <p id="116">f=open("量化后的权值文件")//每行只有一个权值//标签</p>
+                </div>
+                <div class="p1">
+                    <p id="117">for line in f:</p>
+                </div>
+                <div class="p1">
+                    <p id="118">c=line.strip(‘\\n’)</p>
+                </div>
+                <div class="p1">
+                    <p id="119">s=s + str(chr(int(c)+65))</p>
+                </div>
+                <div class="p1">
+                    <p id="120">for c in s:</p>
+                </div>
+                <div class="p1">
+                    <p id="121">wc=w + c</p>
+                </div>
+                <div class="p1">
+                    <p id="122">if wc in dictionary:</p>
+                </div>
+                <div class="p1">
+                    <p id="123">w=wc</p>
+                </div>
+                <div class="p1">
+                    <p id="124">else:</p>
+                </div>
+                <div class="p1">
+                    <p id="125">result.append(dictionary[w])</p>
+                </div>
+                <div class="p1">
+                    <p id="126">dictionary[wc]=dict_size</p>
+                </div>
+                <div class="p1">
+                    <p id="127">dict_size +=1</p>
+                </div>
+                <div class="p1">
+                    <p id="128">w=c</p>
+                </div>
+                <div class="p1">
+                    <p id="129">if w:</p>
+                </div>
+                <div class="p1">
+                    <p id="130">result.append(dictionary[w])</p>
+                </div>
+                <div class="p1">
+                    <p id="131">return result</p>
+                </div>
+                <div class="p1">
+                    <p id="132">本文LZW编码压缩方法相对于Huffman压缩方法<citation id="235" type="reference"><link href="201" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>最主要的特点如下:Huffman方法作用于非0值,而这些非0值的存储与计算都采用稀疏矩阵的格式,导致计算过程中寻址过程复杂,耗时较长;LZW编码方法作用于含0值的全体权值,不需要稀疏矩阵,因此其计算速度更快。</p>
+                </div>
+                <h3 id="133" name="133" class="anchor-tag">2 实验结果与分析</h3>
+                <h4 class="anchor-tag" id="134" name="134">2.1 2种容量压缩策略的结果对比</h4>
+                <div class="p1">
+                    <p id="135">为了对比2种CNN模型容量压缩策略的效果,本文首先把浮点数转换为各种长度的定点数并测试模型的准确率。本文实验在ubuntu16.04操作系统下进行,基于caffe(源码为C++语言)深度学习框架,具体修改位于src/caffe/layers/文件夹下的conv_layer.cpp(卷积层)和inner_product_layer.cpp(全连接层)的2个.cpp文件,在ComputeBlobMask函数中加入算法1所示的32位浮点转定点片段。本文浮点转定点的操作分层进行,转换并训练微调完一层后再继续下一层的转换操作。</p>
+                </div>
+                <div class="p1">
+                    <p id="136">表2所示为浮点转为各种长度的定点数后的模型准确率。在表2中,准确率项有2个数值,括号前的数值表示转化后不经过重新训练的准确率,括号内的数值表示经过训练后所能达到的准确率,下同。从表2可以看出,在定点位数下降到8位时准确率基本维持不变,当下降为7位时无论是否进行下一步训练,全连接层的准确率都明显下降,尤其在转换Ip1后,下降幅度较大。对于卷积层,在定点位数为5时的准确率明显下降,说明卷积层和全连接层对于精度降低的敏感程度不同。为此,本文将全连接层的位数设为8,对卷积层进行不同位数的定点转换,然而效果并不好,具体结果如表3所示。因此,对于浮点转定点这一方法,各层权值最小可转化为8位定点。</p>
+                </div>
+                <div class="area_img" id="137">
+                    <p class="img_tit"><b>表2 浮点转定点后的模型准确率对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="137" border="1"><tr><td>定点位数</td><td>转换Conv1后</td><td>转换Conv2后</td><td>转换Ip1后</td><td>转换Ip2后</td></tr><tr><td>16</td><td>0.991 0(0.991 2)</td><td>0.991 2(0.991 4)</td><td>0.991 4(0.991 7)</td><td>0.990 7(0.991 7)</td></tr><tr><td><br />12</td><td>0.991 0(0.991 2)</td><td>0.991 3(0.991 4)</td><td>0.991 4(0.991 5)</td><td>0.990 8(0.991 6)</td></tr><tr><td><br />10</td><td>0.991 0(0.991 2)</td><td>0.991 2(0.991 4)</td><td>0.991 4(0.991 5)</td><td>0.990 8(0.991 7)</td></tr><tr><td><br />9</td><td>0.991 1(0.991 3)</td><td>0.991 3(0.991 4)</td><td>0.990 9(0.991 5)</td><td>0.990 9(0.991 5)</td></tr><tr><td><br />8</td><td>0.991 0(0.991 3)</td><td>0.991 1(0.991 4)</td><td>0.991 0(0.991 1)</td><td>0.990 9(0.991 3)</td></tr><tr><td><br />7</td><td>0.991 0(0.991 3)</td><td>0.991 3(0.991 6)</td><td>0.988 3(0.990 1)</td><td>0.990 1(0.990 2)</td></tr><tr><td><br />6</td><td>0.990 9(0.991 3)</td><td>0.990 8(0.991 5)</td><td>0.975 2(0.990 3)</td><td>0.978 4(0.989 5)</td></tr><tr><td><br />5</td><td>0.990 2(0.991 3)</td><td>0.990 1(0.990 9)</td><td>0.978 7(0.989 8)</td><td>0.984 8(0.987 6)</td></tr><tr><td><br />4</td><td>0.990 6(0.991 3)</td><td>0.989 5(0.990 9)</td><td>0.984 3(0.998 5)</td><td>0.981 8(0.986 1)</td></tr><tr><td><br />3</td><td>0.990 6(0.991 4)</td><td>0.989 7(0.990 1)</td><td>0.946 3(0.980 7)</td><td>0.972 8(0.981 1)</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="138">
+                    <p class="img_tit"><b>表3 卷积层量化为不同精度时的模型准确率对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="138" border="1"><tr><td>卷积层定点位数</td><td>转换Conv1后</td><td>转换Conv2后</td><td>转换Ip1后</td><td>转换Ip2后</td></tr><tr><td><br />5</td><td>0.990 7(0.991 3)</td><td>0.991 2(0.991 3)</td><td>0.977 9(0.990 1)</td><td>0.989 6(0.988 6)</td></tr><tr><td><br />6</td><td>0.990 9(0.991 3)</td><td>0.990 8(0.991 7)</td><td>0.978 8(0.990 0)</td><td>0.989 0(0.989 7)</td></tr><tr><td><br />7</td><td>0.991 0(0.991 3)</td><td>0.990 9(0.991 5)</td><td>0.979 6(0.990 5)</td><td>0.988 8(0.990 4)</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="139">由文献<citation id="236" type="reference">[<a class="sup">11</a>]</citation>可知,对于直接剪枝,LeNet-5的权值数量可以减少90%以上而不降低精度。本文复现了文献<citation id="237" type="reference">[<a class="sup">11</a>]</citation>的实验过程,权值数量能减少90.5%而不降低准确率。与直接减少精度的方法相比,直接剪枝的方法小数位能减少到8位,加上符号位一共9位,压缩比小于4,因此,剪枝方式的压缩比更高。</p>
+                </div>
+                <div class="p1">
+                    <p id="140">本文也尝试把2种方法结合起来使用,但其效果较差。例如,以一定的剪枝比例剪枝后模型没有精度衰减,然后把权值转化为20位定点数时,模型的准确率仍在0.99以下。究其原因,剪枝把小于一定阈值的权值置为0,本文的浮点转定点方法会适当缩小权值,其原因为:剪枝舍弃了较小的权值,把部分阈值较小的权值直接裁剪掉;浮点转定点抛弃了权值的尾巴部分而保留了主干部分,对每个权值都适当修剪。两者都减少了模型容量,舍弃了神经网络连接权值中的细小枝节,结合起来会因为抛弃太多内容而使准确率下降。</p>
+                </div>
+                <h4 class="anchor-tag" id="141" name="141">2.2 k-means聚类量化结果</h4>
+                <div class="p1">
+                    <p id="142">在量化部分,文献<citation id="238" type="reference">[<a class="sup">11</a>]</citation>和本文复现的实验都能在没有精度损失的情况下把LeNet-5模型的卷积层量化为8位,而把全连接层量化为5位。另外,本文在浮点转定点后加入量化过程也能达到卷积层8位和全连接层5位的结果。总体来讲,无论是剪枝后的模型还是转定点后的模型,量化后的准确率基本不变。但是,采用k-means聚类剪枝后的模型在进行线性初始化后,部分聚类中心没有权值聚类到其周围,如图2所示。在图2中,Ip1的中间4个聚类中心没有权值聚集,可以丢弃。</p>
+                </div>
+                <div class="area_img" id="143">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201909030_143.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 LeNet-5网络Ip1层量化后的权重分布" src="Detail/GetImg?filename=images/JSJC201909030_143.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 LeNet-5网络Ip1层量化后的权重分布</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201909030_143.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="144" name="144">2.3 LZW编码压缩结果</h4>
+                <div class="p1">
+                    <p id="145">在转定点并量化之后,由于没有大量子串重复出现,LZW编码的效果不理想。直接对剪枝并量化后的非零值进行LZW编码效果也不好,在具体实验过程中,Ip1层剪枝量化后的非0值大约有40 000个,每个数值占5 bit,经过LZW编码后长度为14 685,但编码结果中的最大值为14 477,需要16 bit,LZW编码的压缩作用很小。在对剪枝量化后的整体进行编码时,压缩效果较明显,具体情况如表4所示。</p>
+                </div>
+                <div class="area_img" id="146">
+                    <p class="img_tit"><b>表4 LeNet-5网络各层编码前后的结果对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="146" border="1"><tr><td>网络各层</td><td>编码前的<br />参数量</td><td>编码前的参数<br />位数/bit</td><td>编码后的<br />参数量</td><td>编码结果中的<br />最大值</td><td>编码后的参数<br />位数/bit</td><td>编码前和编码后<br />所需总位数/bit</td><td>压缩比</td></tr><tr><td><br />Conv1</td><td>500</td><td>8</td><td>412</td><td>631</td><td>10</td><td>4 000(4 120)</td><td>0.970 9</td></tr><tr><td><br />Conv2</td><td>25 000</td><td>8</td><td>5 487</td><td>5 702</td><td>13</td><td>200 000(71 331)</td><td>2.803 8</td></tr><tr><td><br />Ip1</td><td>400 000</td><td>5</td><td>30 404</td><td>30 351</td><td>15</td><td>2 000 000(456 060)</td><td>4.385 4</td></tr><tr><td><br />Ip2</td><td>5 000</td><td>5</td><td>1 062</td><td>1 061</td><td>11</td><td>25 000(11 682)</td><td>2.140 0</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="147">由表4可以看出,除了Conv1外,其他层都压缩为原来的一半以下,效果较明显。总的压缩比依据编码前后的总位数来计算,计算过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="148" class="code-formula">
+                        <mathml id="148"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mn>4</mn><mspace width="0.25em" /><mn>0</mn><mn>0</mn><mn>0</mn><mo>+</mo><mn>2</mn><mn>0</mn><mn>0</mn><mspace width="0.25em" /><mn>0</mn><mn>0</mn><mn>0</mn><mo>+</mo><mn>2</mn><mspace width="0.25em" /><mn>0</mn><mn>0</mn><mn>0</mn><mspace width="0.25em" /><mn>0</mn><mn>0</mn><mn>0</mn><mo>+</mo><mn>2</mn><mn>5</mn><mspace width="0.25em" /><mn>0</mn><mn>0</mn><mn>0</mn></mrow><mrow><mn>4</mn><mspace width="0.25em" /><mn>1</mn><mn>2</mn><mn>0</mn><mo>+</mo><mn>7</mn><mn>1</mn><mspace width="0.25em" /><mn>3</mn><mn>3</mn><mn>1</mn><mo>+</mo><mn>4</mn><mn>5</mn><mn>6</mn><mspace width="0.25em" /><mn>0</mn><mn>6</mn><mn>0</mn><mo>+</mo><mn>1</mn><mn>1</mn><mspace width="0.25em" /><mn>6</mn><mn>8</mn><mn>2</mn></mrow></mfrac><mo>=</mo><mn>4</mn><mo>.</mo><mn>1</mn><mn>0</mn><mn>3</mn><mspace width="0.25em" /><mn>5</mn></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="149">即可以压缩为原来的24.37%。文献<citation id="239" type="reference">[<a class="sup">11</a>]</citation>只对剪枝后的非0值进行量化,并以紧凑的存储方式CSC(Compressed Sparse Column)或CSR(Compressed Sparse Row)来存储稀疏网络,本文将LZW直接作用于全部参数,相比之下本文方法少了一级寻址过程,计算速度更快。剪枝加量化可以压缩为:</p>
+                </div>
+                <div class="p1">
+                    <p id="150" class="code-formula">
+                        <mathml id="150"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>.</mo><mn>2</mn><mn>5</mn><mo>+</mo><mn>2</mn><mn>5</mn><mo>+</mo><mn>4</mn><mn>0</mn><mn>0</mn><mo>+</mo><mn>5</mn><mo stretchy="false">)</mo><mo>×</mo><mn>3</mn><mn>2</mn></mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>.</mo><mn>2</mn><mn>5</mn><mo>+</mo><mn>2</mn><mn>5</mn><mo stretchy="false">)</mo><mo>×</mo><mn>8</mn><mo>+</mo><mo stretchy="false">(</mo><mn>4</mn><mn>0</mn><mn>0</mn><mo>+</mo><mn>5</mn><mo stretchy="false">)</mo><mo>×</mo><mn>5</mn></mrow></mfrac><mo>=</mo><mn>6</mn><mo>.</mo><mn>1</mn><mn>8</mn></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="151">在剪枝、量化、LZW编码后,最终压缩比可以达到6.18×4.10=25.338,略小于文献<citation id="240" type="reference">[<a class="sup">11</a>]</citation>所能达到的39。但文献<citation id="241" type="reference">[<a class="sup">11</a>]</citation>的Huffman编码存储稀疏权值的索引以及计算时寻址的过程较繁琐,本文直接对全体权值进行操作,过程简单且速度更快,是压缩比和计算速度的折中选择。</p>
+                </div>
+                <h3 id="152" name="152" class="anchor-tag">3 结束语</h3>
+                <div class="p1">
+                    <p id="153">本文提出基于LZW编码的CNN压缩方法,对剪枝、浮点转定点这2种模型容量压缩策略进行分析,采用k-means聚类量化,并引入LZW编码方式。实验结果表明,在剪枝、量化、LZW编码后,该方法的压缩比可达25.338,且计算速度较快。下一步将把该方法应用于AlexNet、Vgg等大型网络中,验证其压缩效果。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="181">
+                            <a id="bibliography_1" >
+                                    <b>[1]</b>
+                                 深度学习大讲堂.ILSVRC2016目标检测任务回顾:图像目标检测[EB/OL].[2018-07-01].https://www.leiphone.com/news/201701/u3D5QnJbS9khm0VT.html.
+                            </a>
+                        </p>
+                        <p id="183">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Squeeze-and-excitation networks[OL]">
+
+                                <b>[2]</b> HU Jie,LI Shen,SUN Gang.Squeeze-and-excitation networks[EB/OL].[2018-07-01].https://arxiv.org/pdf/1709.01507.pdf.
+                            </a>
+                        </p>
+                        <p id="185">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=End to end learning for self-driving cars">
+
+                                <b>[3]</b> BOJARSKI M,TESTA D D,DWORAKOWSKI D,et al.End to end learning for self-driving cars[EB/OL].[2018-07-01].https://arxiv.org/pdf/1604.07316.pdf.
+                            </a>
+                        </p>
+                        <p id="187">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning Transportation Modes From Smartphone Sensors Based on Deep Neural Network">
+
+                                <b>[4]</b> FANG Shihau,FEI Yuxaing,XU Zhezhuang,et al.Learning transportation modes from smartphone sensors based on deep neural network[J].IEEE Sensors Journal,2017,17(18):6111-6118.
+                            </a>
+                        </p>
+                        <p id="189">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning to fly by crashing">
+
+                                <b>[5]</b> GANDHI D,PINTO L,GUPTA A.Learning to fly by crashing[C]//Proceedings of 2017 IEEE/RSJ International Conference on Intelligent Robots and Systems.Washington D.C.,USA:IEEE Press,2017:3948-3955.
+                            </a>
+                        </p>
+                        <p id="191">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Exploiting linear structure within convolutional networks for efficient evaluation">
+
+                                <b>[6]</b> DENTON E,ZAREMBA W,BRUNA J,et al.Exploiting linear structure within convolutional networks for efficient evaluation[C]//Proceedings of International Conference on Neural Information Processing Systems.Cambridge,USA:MIT Press 2014:1269-1277.
+                            </a>
+                        </p>
+                        <p id="193">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Tensorizing neural networks">
+
+                                <b>[7]</b> NOVIKOV A,PODOPRIKHIN D,OSOKIN A,et al.Tensorizing neural networks[EB/OL].[2018-07-01].https://arxiv.org/pdf/1509.06569.pdf.
+                            </a>
+                        </p>
+                        <p id="195">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Compressing neural networks with the hashing trick">
+
+                                <b>[8]</b> CHEN Wenlin,WILSON J T,TYREE S,et al.Compressing neural networks with the hashing trick[EB/OL].[2018-07-01].https://arxiv.org/pdf/1504.04788.pdf.
+                            </a>
+                        </p>
+                        <p id="197">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Fixed point optimization of deep convolutional neural networks for object recognition">
+
+                                <b>[9]</b> ANWAR S,HWANG K,SUNG Wonyong.Fixed point optimization of deep convolutional neural networks for object recognition[C]//Proceedings of IEEE International Conference on Acoustics,Speech and Signal Processing.Washington D.C.,USA:IEEE Press,2015:1131-1135.
+                            </a>
+                        </p>
+                        <p id="199">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient Methods and Hardware for Deep Learning">
+
+                                <b>[10]</b> HAN Song.Efficient Methods and Hardware for Deep Learning[D].San Francisco,USA:Stanford University,2017.
+                            </a>
+                        </p>
+                        <p id="201">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Deep compression:compressing deep neural networks with pruning trained quantization and huffman coding">
+
+                                <b>[11]</b> HAN Song,MAO Huizi,DALLY W J.Deep compression:compressing deep neural networks with pruning,trained quantization and huffman coding[EB/OL].[2018-07-01].https://arxiv.org/pdf/1510.00149.pdf.
+                            </a>
+                        </p>
+                        <p id="203">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201810004&amp;v=MDE5NzVoV3IzTEx6N1NaTEc0SDluTnI0OUZZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnJGeS8=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 韩云飞,蒋同海,马玉鹏,等.深度神经网络的压缩研究[J].计算机应用研究,2018,35(10):2894-2897.
+                            </a>
+                        </p>
+                        <p id="205">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201809002&amp;v=MjM4ODZHNEg5bk1wbzlGWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJyRnkvaFdyM0xMejdCZDc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 蔡瑞初,钟椿荣,余洋,等.面向“边缘”应用的卷积神经网络量化与压缩方法[J].计算机应用,2018,39(9):2449-2454.
+                            </a>
+                        </p>
+                        <p id="207">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201802002&amp;v=MzAzODdUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJyRnkvaFdyM0xOeWZUYkxHNEg5bk1yWTlGWm9RS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 雷杰,高鑫,宋杰,等.深度网络模型压缩综述[J].软件学报,2018,29(2):251-266.
+                            </a>
+                        </p>
+                        <p id="209">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Predicting parameters in deep learning">
+
+                                <b>[15]</b> DENIL M,SHAKIBI B,DINH L,et al.Predicting parameters in deep learning[C]//Proceedings of the 26th International Conference on Neural Information Processing Systems.New York,USA:ACM Press,2013:2148-2156.
+                            </a>
+                        </p>
+                        <p id="211">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Caffe:Convolutional architecture for fast feature embedding">
+
+                                <b>[16]</b> JIA Yangping,SHELHAMER E,DONAHUE J,et al.Caffe:convolutional architecture for fast feature embedding[C]//Proceedings of ACM International Conference on Multimedia.New York,USA:ACM Press,2014:675-678.
+                            </a>
+                        </p>
+                        <p id="213">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning both weights and connections for efficient neural networks">
+
+                                <b>[17]</b> HAN Song,JEFF P,JOHN T,et al.Learning both weights and connections for efficient neural networks[C]//Proceedings of Annual Conference on Neural Information Processing Systems.Cambridge,USA:MIT Press,2015:1135-1143.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201909030" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201909030&amp;v=MjU3NDZHNEg5ak1wbzlHWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJyRnkvaFdyM0xMejdCYmI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU4rdTg2cENpRHQrYkl0RWY3TklJUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

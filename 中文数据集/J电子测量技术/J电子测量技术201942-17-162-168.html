@@ -1,0 +1,926 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637135602437600000%26DBCODE%3dCJFD%26TABLEName%3dCJFDTEMP%26FileName%3dDZCL201917026%26RESULT%3d1%26SIGN%3dovzPX0%252fEPXVhEDxR%252fvAT3kbdgps%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZCL201917026&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZCL201917026&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201917026&amp;v=MjEyMDlqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5amxVcnJQSVRmSVlyRzRIOWpOcUk5SFlvUUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#33" data-title="&lt;b&gt;0 引  言&lt;/b&gt; "><b>0 引  言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#40" data-title="&lt;b&gt;1 算法整体框架&lt;/b&gt; "><b>1 算法整体框架</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="&lt;b&gt;2 关键帧提取&lt;/b&gt; "><b>2 关键帧提取</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#45" data-title="&lt;b&gt;2.1 Fast特征点检测&lt;/b&gt;"><b>2.1 Fast特征点检测</b></a></li>
+                                                <li><a href="#55" data-title="&lt;b&gt;2.2 特征点描述&lt;/b&gt;"><b>2.2 特征点描述</b></a></li>
+                                                <li><a href="#69" data-title="&lt;b&gt;2.3 关键帧筛选&lt;/b&gt;"><b>2.3 关键帧筛选</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#75" data-title="&lt;b&gt;3 匹配对筛选&lt;/b&gt; "><b>3 匹配对筛选</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#77" data-title="&lt;b&gt;3.1 匹配对粗筛选&lt;/b&gt;"><b>3.1 匹配对粗筛选</b></a></li>
+                                                <li><a href="#80" data-title="&lt;b&gt;3.2 匹配对细筛选&lt;/b&gt;"><b>3.2 匹配对细筛选</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#110" data-title="&lt;b&gt;4 实验对比&lt;/b&gt; "><b>4 实验对比</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#112" data-title="&lt;b&gt;4.1 验证数据集&lt;/b&gt;"><b>4.1 验证数据集</b></a></li>
+                                                <li><a href="#116" data-title="&lt;b&gt;4.2 实验分析&lt;/b&gt;"><b>4.2 实验分析</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#128" data-title="&lt;b&gt;5 结  论&lt;/b&gt; "><b>5 结  论</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#36" data-title="图1 车载图像拼接整体流程">图1 车载图像拼接整体流程</a></li>
+                                                <li><a href="#38" data-title="图2 传统求解图像间映射参数的方法">图2 传统求解图像间映射参数的方法</a></li>
+                                                <li><a href="#42" data-title="图3 新算法整体框架">图3 新算法整体框架</a></li>
+                                                <li><a href="#47" data-title="图4 Fast角点检测">图4 Fast角点检测</a></li>
+                                                <li><a href="#74" data-title="图5 关键帧的筛选">图5 关键帧的筛选</a></li>
+                                                <li><a href="#79" data-title="图6 一对多的匹配对实例">图6 一对多的匹配对实例</a></li>
+                                                <li><a href="#96" data-title="图7 特征匹配对网格分布">图7 特征匹配对网格分布</a></li>
+                                                <li><a href="#115" data-title="图8 车载摄像头安装示意图">图8 车载摄像头安装示意图</a></li>
+                                                <li><a href="#118" data-title="图9 单帧图像特征点匹配对效果">图9 单帧图像特征点匹配对效果</a></li>
+                                                <li><a href="#121" data-title="&lt;b&gt;表1 改进RANSAC计算映射参数的效率对比&lt;/b&gt;"><b>表1 改进RANSAC计算映射参数的效率对比</b></a></li>
+                                                <li><a href="#123" data-title="图10 待拼接原图">图10 待拼接原图</a></li>
+                                                <li><a href="#124" data-title="图11 RANSAC算法拼接效果图">图11 RANSAC算法拼接效果图</a></li>
+                                                <li><a href="#127" data-title="图12 车载全景图像运行效果">图12 车载全景图像运行效果</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" 李洪蕊.全景图像的校正与拼接算法[D]天津:天津科技大学,2015." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016105090.nh&amp;v=MDExMDBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5amxVcnJPVkYyNkdMSzRHOUhGcjVFYlBJUUs=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         李洪蕊.全景图像的校正与拼接算法[D]天津:天津科技大学,2015.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 张宝龙,李洪蕊,李丹,等.一种针对车载全景系统的图像拼接算法的仿真[J].电子与信息学报,2015,37(5):1149-1153." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZYX201505021&amp;v=MTAxMzlPSVRmU2RyRzRIOVRNcW85SFpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5amxVcnI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         张宝龙,李洪蕊,李丹,等.一种针对车载全景系统的图像拼接算法的仿真[J].电子与信息学报,2015,37(5):1149-1153.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 周芳,杨鸣,王益平.基于车载多视角的鱼眼图像拼接算法[J].数据通信,2017(5):29-34." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SJTX201705008&amp;v=MjA3MDk5Yk1xbzlGYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlqbFVyck9OaWZmZHJHNEg=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         周芳,杨鸣,王益平.基于车载多视角的鱼眼图像拼接算法[J].数据通信,2017(5):29-34.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" 李娅,令亮,杨拓,等.全景泊车辅助技术及图像无缝拼接技术分析研究[J].自动化与仪器仪表,2017(9):47-49." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZDYY201709019&amp;v=MTE0NzlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeWpsVXJyT1B5blNkN0c0SDliTXBvOUViWVE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         李娅,令亮,杨拓,等.全景泊车辅助技术及图像无缝拼接技术分析研究[J].自动化与仪器仪表,2017(9):47-49.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" 邢凯盛,凌有铸,陈孟元.ORB特征匹配的误匹配点剔除算法研究[J].电子测量与仪器学报,2016,30(8):1255-1262." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZIY201608020&amp;v=MDc0ODl1WnRGeWpsVXJyT0lUZkNkN0c0SDlmTXA0OUhaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlo=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         邢凯盛,凌有铸,陈孟元.ORB特征匹配的误匹配点剔除算法研究[J].电子测量与仪器学报,2016,30(8):1255-1262.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 黄梅.基于改进RANSAC算法的图像拼接技术[J].海南大学学报(自然科学版),2011,29(2):172-177." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HNDK201102017&amp;v=MjM1OTZZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeWpsVXJyT0xTUFBaYkc0SDlETXJZOUU=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         黄梅.基于改进RANSAC算法的图像拼接技术[J].海南大学学报(自然科学版),2011,29(2):172-177.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 张博.基于Mask R-CNN的ORB去误匹配方法[J].液晶与显示,2018,33(8):690-696." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=YJYS201808009&amp;v=MjI1NjJmU2ZiRzRIOW5NcDQ5RmJZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5amxVcnJPUEM=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         张博.基于Mask R-CNN的ORB去误匹配方法[J].液晶与显示,2018,33(8):690-696.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 方贤勇.图像拼接技术研究[D].杭州:浙江大学,2005." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CDFD&amp;filename=2006015231.nh&amp;v=MTYwMTJGeWpsVXJyT1YxMjdHTE81RzlQUHJwRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         方贤勇.图像拼接技术研究[D].杭州:浙江大学,2005.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" 赵辉,陈辉,于泓.一种改进的全景图自动拼接算法[J].中国图象图形学报,2007,12(2):336-342." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGTB200702026&amp;v=MTIwNTdyck9QeXJmYkxHNEh0Yk1yWTlIWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlqbFU=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         赵辉,陈辉,于泓.一种改进的全景图自动拼接算法[J].中国图象图形学报,2007,12(2):336-342.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" RUBLEE E,RABAUD V,KONOLIGE K,et al.ORB:An efficient alternative to SIFT or SURF[C].IEEE International Conference on Computer Vision,2011:2564-2571." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=ORB:An efficient alternative to SIFT or SURF">
+                                        <b>[10]</b>
+                                         RUBLEE E,RABAUD V,KONOLIGE K,et al.ORB:An efficient alternative to SIFT or SURF[C].IEEE International Conference on Computer Vision,2011:2564-2571.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" ROSIN P L.Measuring corner properties [J].Computer Visionand Image Understanding,1999,73(2):291-307." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501084512&amp;v=MDY2NjM9TmlmT2ZiSzdIdEROcW85RVpPTUxDWDA3b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadEZpbmxVcnpJSUY0VmJ4UQ==&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         ROSIN P L.Measuring corner properties [J].Computer Visionand Image Understanding,1999,73(2):291-307.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" CALONDER M,LEPETIT V,STRECHA C,et al.BRIEF:Binary robust independent elementary features[C].European Conference on Computer Vision,2010:778-792." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Brief:Binary robust independent elementary features">
+                                        <b>[12]</b>
+                                         CALONDER M,LEPETIT V,STRECHA C,et al.BRIEF:Binary robust independent elementary features[C].European Conference on Computer Vision,2010:778-792.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 常伟,刘云.一种改进的快速全景图像拼接算法[J].电子测量技术,2017,40(7):90-94." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201707020&amp;v=Mjc1NjdUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlqbFVyck9JVGZJWXJHNEg5Yk1xSTlIWklRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         常伟,刘云.一种改进的快速全景图像拼接算法[J].电子测量技术,2017,40(7):90-94.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 张东,余朝刚.基于特征点的图像拼接方法[J].计算机系统应用,2016,25(3):107-112." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XTYY201603018&amp;v=MDk5MzR6cXFCdEdGckNVUjdxZlp1WnRGeWpsVXJyT1BUblNkN0c0SDlmTXJJOUViSVFLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         张东,余朝刚.基于特征点的图像拼接方法[J].计算机系统应用,2016,25(3):107-112.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 雒伟群,高屹.基于改进RANSAC算法的图像拼接方法[J].科技创新与应用,2015(5):21-22." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=CXYY201505011&amp;v=MjgzODFqWFNkN0c0SDlUTXFvOUVaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeWpsVXJyT0o=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         雒伟群,高屹.基于改进RANSAC算法的图像拼接方法[J].科技创新与应用,2015(5):21-22.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=DZCL" target="_blank">电子测量技术</a>
+                2019,42(17),162-168 DOI:10.19651/j.cnki.emt.1902783            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>车载视频拼接中求解映射参数新算法</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%B4%BA%E7%A8%B3%E5%AE%9A&amp;code=39445052&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">贺稳定</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E6%B3%A2%E6%B6%9B&amp;code=24241057&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王波涛</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8C%97%E4%BA%AC%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E5%AD%A6%E9%83%A8&amp;code=0034856&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北京工业大学信息学部</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对车载摄像头之间位置固定不变和图像特征不明显的特点,提出使用连续关键帧获取特征匹配对,并结合改进的误匹配对剔除方法,在线求解车载视频间映射参数的算法。首先使用ORB算法累积提取图像间的特征匹配对,其次进行关键帧的筛选,然后将提取的匹配对进行粗筛选,最后利用改进的随机采样一致算法(RANSAC)细筛选,并求解出最优映射参数。通过车载图像拼接实验证明,该算法对低分辨率摄像头,在特征不明显的路面场景下获取映射参数具有很好的效果,不仅提高了图像拼接中求解映射参数的便利性,而且保留了车载视频拼接中的准确性。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%BF%9E%E7%BB%AD%E5%85%B3%E9%94%AE%E5%B8%A7&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">连续关键帧;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%9C%A8%E7%BA%BF%E6%B1%82%E8%A7%A3&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">在线求解;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%AF%E5%8C%B9%E9%85%8D%E5%AF%B9&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">误匹配对;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%BD%8E%E5%88%86%E8%BE%A8%E7%8E%87&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">低分辨率;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=RANSAC&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">RANSAC;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    贺稳定,硕士研究生,主要研究方向为计算机视觉。E-mail:wendinghe@163.com;
+                                </span>
+                                <span>
+                                    王波涛,博士后,副教授,主要研究方向为图像处理技术。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2019-03-08</p>
+
+            </div>
+                    <h1><b>New algorithm for solving monosyllabic matrix in car video mosaic</b></h1>
+                    <h2>
+                    <span>He Wending</span>
+                    <span>Wang Botao</span>
+            </h2>
+                    <h2>
+                    <span>Beijing University of Technology Department of Information</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Aiming at the fixed position between the vehicle camera and the inconspicuous image feature, this paper proposes to use the continuous key frame to acquire the feature matching pair, and combines the improved mismatch matching culling method to solve the mapping algorithm between the vehicle video online. Firstly, the ORB algorithm is used to accumulate the feature matching pairs between the extracted images, and then the key frames are filtered. Then the extracted matching pairs are coarsely filtered. Finally, the improved random sample consensus(RANSAC) algorithm is used to finely screen and solve the most. Excellent mapping parameters. The vehicle image splicing experiment proves that the algorithm has a good effect on obtaining the mapping parameters in the low-resolution camera under the road surface with no obvious features, which not only improves the convenience of solving the mapping parameters in the image splicing, but also retains the vehicle accuracy in video stitching.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=continuous%20key%20frame&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">continuous key frame;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=online%20solution&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">online solution;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=mismatched%20pair&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">mismatched pair;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=low%20resolution&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">low resolution;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=RANSAC&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">RANSAC;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2019-03-08</p>
+                            </div>
+
+
+        <!--brief start-->
+                        <h3 id="33" name="33" class="anchor-tag"><b>0 引  言</b></h3>
+                <div class="p1">
+                    <p id="34">随着智能汽车的发展,车载全景图像被广泛的应用于车辆安全行驶中。所谓的车载全景图像,就是在车辆运行中通过安装在车身周围不同方位的摄像头,对前后左右的视频进行图像采集,同一时刻会得到不同方位的图像帧,通过摄像头之间映射参数的变换,最后将其拼接成一张全景图像。</p>
+                </div>
+                <div class="p1">
+                    <p id="35">车载图像拼接总体流程如图1所示,可分为图像采集、图像校正、图像逆投影变换、图像间映射参数求解、图像融合几个步骤。其中图像校正的原因是:通常经过采集后的图像由于设备等原因往往存在几何畸变和图像噪声点,因此在处理图像之前需要对输入的图像进行畸变校正以改善图像质量。图像逆投影变换的作用是:车身周围的摄像头光轴和地面不是垂直的,在经过校正后的图像会存在透视现象不利于图像拼接的完成。空间逆投影变换能够将各个视频图像转化为统一的俯视路面图像视角,消除透视现象的干扰。图像拼接整体流程中最关键的一步是图像间映射参数的求解,使用图像变换模型来解决参考图像和待拼接图像间的缩放,平移,旋转等变换,搜寻图像最佳特征匹配位置。图像融合指在图像信息完成匹配对齐后,对参考图像和待拼接图像边界进行平滑处理,研究与实现图像边界自然过渡。</p>
+                </div>
+                <div class="area_img" id="36">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201917026_036.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 车载图像拼接整体流程" src="Detail/GetImg?filename=images/DZCL201917026_036.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 车载图像拼接整体流程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201917026_036.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="37">本文重点研究图像间映射参数的求解,并提出适合动态求解映射参数的方法。传统求解车载图像拼接中映射参数的方法可分为:方格布标定法<citation id="131" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>、菱形块标定法<citation id="132" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>、手动标记法<citation id="133" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>,如图2所示,都是车辆处于静态的状态下,周围铺设一定的辅助设备进行标定求解。在运行的过程中车辆会随着路况的不同而出现颠簸,久而久之车载摄像头不免出现松动移位的现象,随着摄像头间位置关系发生变化视频图像间的映射参数也会发生变化,全景图像会出现重影的现象。这时又需要重新标定映射参数,以达到最优的效果。可知现有的标定方法程序操作起来太过繁琐,不方便对映射参数进行实时校准,而且此类方法对专业性要求很高,不利于实际情况的运用和车载全景视觉产品的推广。基于这方面的考虑,本文提出一种车辆在运动状态下通过提取图像特征点的方式进行映射参数的求解,此方法只需要将车辆开动,由算法自动求解映射参数,不需要认为的繁琐标记,在很大程度上简化了标定流程。</p>
+                </div>
+                <div class="area_img" id="38">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201917026_038.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 传统求解图像间映射参数的方法" src="Detail/GetImg?filename=images/DZCL201917026_038.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 传统求解图像间映射参数的方法  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201917026_038.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="39">使用提取特征点的方式进行映射参数的求解,主要流程可分为:图像特征提取、图像特征的匹配、误匹配点对的剔除。文献<citation id="134" type="reference">[<a class="sup">4</a>]</citation>对SIFT算法进行了改造,有效地减少了匹配的数量和匹配的次数,然而在特征点少的场景下,可用的匹配对原本就很少,如果再加以减少匹配的数量和次数,反而会带来不好效果。文献<citation id="135" type="reference">[<a class="sup">5</a>]</citation>通过减小抽样点的总量来保障选取出匹配点的质量,从而降低了迭代的次数,但是针对于稀疏特征的路面场景没有实用性。文献<citation id="136" type="reference">[<a class="sup">6</a>]</citation>提出改进的RANSAC算法能够很好的应对高分辨率的图像拼接任务,但是针对低分辨率的图像效果却很差。文献<citation id="137" type="reference">[<a class="sup">7</a>]</citation>提出使用深度学习的方式利用Mask Rcnn网络进行目标分割,在原有的ORB特征点匹配基础上,剔除两幅图像中的相同分割区域之外的误匹配点,这种方法的实现涉及到深度学习的复杂模型需要借助GPU计算工具,进一步增加了算法实现的成本。文献<citation id="138" type="reference">[<a class="sup">8</a>]</citation>提出了一种改进的 RANSAC 算法,主要针对特征点匹配中出现的大量冗余特征对,但该方法不能确定中值滤波处理的特征点是否满足RANSAC算法的迭代要求。文献<citation id="139" type="reference">[<a class="sup">9</a>]</citation>提出一种经过改进版的全景图像自动拼接算法,使用 RANSAC算法消除误匹配对,但是估算出的矩阵不精确,拼接效果不好。从以上文献可知,传统视觉图像拼接中映射矩阵的查找是基于单帧图像的特征点对,这种做法的前提是图像的分辨率较高,且场景的特征丰富。然而在车辆行驶的过程中摄像头获取的是路面图像,场景比较单一且特征点难以提取,因此这种方法不适用于车载全景图像中映射矩阵的求解。以上文献均不能在低分辨率的图像中根据特征点的特点很好地求解车载视频拼接中图像映射参数。</p>
+                </div>
+                <h3 id="40" name="40" class="anchor-tag"><b>1 算法整体框架</b></h3>
+                <div class="p1">
+                    <p id="41">本文针对车载摄像头之间的相对位置固定不变,且摄像头获取的图像在一个平面内的特点,提出基于连续关键帧共同提取特征点对,以扩大匹配对的质量和数量,从而弥补图像分辨率较低和场景特征点稀疏的不足。针对误匹配问题,本文提出粗细筛选相结合的方法进行匹配对的修复。首先根据匹配对中存在一对多的情况进行反向匹配,剔除匹配对中明显错误的点;然后在传统的RANSAC算法中提出改进方案,使其很好的进行误匹配对的剔除和优质匹配对的查找;最后在一个大的特征点对集合中进行摄像头间最优映射矩阵求解。经过验证本文算法在特征不明显的路面场景下也能够准确地求解出映射参数,从而完成全景图像拼接的任务。整体框架如图3所示。</p>
+                </div>
+                <div class="area_img" id="42">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201917026_042.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 新算法整体框架" src="Detail/GetImg?filename=images/DZCL201917026_042.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 新算法整体框架  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201917026_042.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="43" name="43" class="anchor-tag"><b>2 关键帧提取</b></h3>
+                <div class="p1">
+                    <p id="44">在特征点不明显的场景下获得的匹配对具有高误差的风险,因此需要对视频帧作关键帧的筛选,从而提取出场景丰富的图像用作后续匹配对的提取。关键帧提取算法主要分为3步:特征点检测、特征点描述以及关键帧筛选。所谓特征点就是图像中较为显著的点。ORB算法<citation id="140" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>是在2011年的ICCV首次提出,作为一种视觉信息的检测与描述算法,它融合了Fast算子的角点检测与Brief特征点描述两种算法。</p>
+                </div>
+                <h4 class="anchor-tag" id="45" name="45"><b>2.1 Fast特征点检测</b></h4>
+                <div class="p1">
+                    <p id="46">ORB特征具有旋转不变性和噪声抑制特性,特征点的检测部分采用的是Fast算子,当图像中某些点相对于周围一个区域内大多数像素点的灰度值存在明显差值时,判定此点为图像特征点。如图4所,假设待判定点<i>P</i>周围一共有16个点,若在这16个点中有连续12个点的灰度值与点<i>P</i>的灰度值之间的差值大于一定的阈值,则判定<i>P</i>为特征点。</p>
+                </div>
+                <div class="area_img" id="47">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201917026_047.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 Fast角点检测" src="Detail/GetImg?filename=images/DZCL201917026_047.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 Fast角点检测  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201917026_047.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="48">首先利用Harris检测算法对提取局部特征点的Harris兴趣值进行计算,其次在每一层图像金字塔中获得Fast特征点,最后为Fast算子加入方向特性,采用Rosin<citation id="141" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>的灰度质心法作为角点的主方向。图像块<i>I</i>(<i>x</i>,<i>y</i>)的力矩计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="49"><i><b>m</b></i><sub><i>pq</i></sub>=∑<sub><i>xy</i></sub><i>x</i><sup><i>p</i></sup><i>y</i><sup><i>q</i></sup><i>I</i>(<i>x</i>,<i>y</i>)      (1)</p>
+                </div>
+                <div class="p1">
+                    <p id="50">式中:<i>I</i>(<i>x</i>,<i>y</i>)代表点(<i>x</i>,<i>y</i>)的灰度值;<i><b>m</b></i><sub><i>pq</i></sub>代表(<i>p</i>+<i>q</i>)阶矩,<i>p</i>,<i>q</i>=0,1,2,…。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">图像块<i>I</i>(<i>x</i>,<i>y</i>)质心<i>C</i>的坐标为:</p>
+                </div>
+                <div class="p1">
+                    <p id="52" class="code-formula">
+                        <mathml id="52"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><mo>=</mo><mrow><mo>(</mo><mrow><mfrac><mrow><mi mathvariant="bold-italic">m</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>0</mn></mrow></msub></mrow><mrow><mi mathvariant="bold-italic">m</mi><msub><mrow></mrow><mrow><mn>0</mn><mn>0</mn></mrow></msub></mrow></mfrac><mo>,</mo><mfrac><mrow><mi mathvariant="bold-italic">m</mi><msub><mrow></mrow><mrow><mn>0</mn><mn>1</mn></mrow></msub></mrow><mrow><mi mathvariant="bold-italic">m</mi><msub><mrow></mrow><mrow><mn>0</mn><mn>0</mn></mrow></msub></mrow></mfrac></mrow><mo>)</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="53">式中:<i><b>m</b></i><sub>00</sub>代表零阶矩,<i><b>m</b></i><sub>10</sub>,<i><b>m</b></i><sub>01</sub>代表一阶矩。从特征中心点到质心<i>C</i>,即为Fast特征点的主方向:</p>
+                </div>
+                <div class="p1">
+                    <p id="54" class="code-formula">
+                        <mathml id="54"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>θ</mi><mo>=</mo><mrow><mi>arctan</mi></mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mi mathvariant="bold-italic">m</mi><msub><mrow></mrow><mrow><mn>1</mn><mn>0</mn></mrow></msub></mrow><mrow><mi mathvariant="bold-italic">m</mi><msub><mrow></mrow><mrow><mn>0</mn><mn>0</mn></mrow></msub></mrow></mfrac></mrow><mo>)</mo></mrow><mo>=</mo><mrow><mi>arctan</mi></mrow><mrow><mo>(</mo><mrow><mfrac><mrow><mstyle displaystyle="true"><msub><mo>∑</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></msub><mi>y</mi></mstyle><mi>Ι</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mrow><mstyle displaystyle="true"><msub><mo>∑</mo><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow></msub><mtext>x</mtext></mstyle><mi>Ι</mi><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mfrac></mrow><mo>)</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo><mspace width="0.25em" /></mrow></math></mathml>
+                    </p>
+                </div>
+                <h4 class="anchor-tag" id="55" name="55"><b>2.2 特征点描述</b></h4>
+                <div class="p1">
+                    <p id="56">ORB算法采用的是基于Brief算法的描述子,Brief描述子是对图像块二值字符串的描述,图像块由二值灰度比较的结果构成<citation id="142" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>。对于<i>m</i>×<i>n</i>大小图像邻域<i>p</i>的分段函数<i>τ</i>定义为:</p>
+                </div>
+                <div class="area_img" id="58">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/DZCL201917026_05800.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="59">式中:<i>p</i>(<i>x</i>)表示平滑后在邻域内<i>x</i>处的灰度函数。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">选择<i>n</i>个(<i>x</i>,<i>y</i>)位置点对时,通过二进制测试准则生成<i>n</i>维二进制串的描述子。如式(5)所示:</p>
+                </div>
+                <div class="p1">
+                    <p id="61"><i>f</i><sub><i>n</i></sub>(<i>p</i>)=∑<sub>1≤</sub><sub><i>i</i></sub><sub>≤</sub><sub><i>n</i></sub>2<sup><i>i</i></sup><sup>-1</sup><i>τ</i>(<i>p</i>;<i>x</i><sub><i>i</i></sub>,<i>y</i><sub><i>i</i></sub>)      (5)</p>
+                </div>
+                <div class="p1">
+                    <p id="62">为了解决Brief对噪声敏感这一缺点,在特征点领域的31×31像素区域内随机选取5×5的子窗口,比较子窗口的灰度积分来替换点对的像素值的比较。对于任意点(<i>x</i><sub><i>i</i></sub>,<i>y</i><sub><i>i</i></sub>)上的<i>n</i>个二值测试特征组,定义<i><b>M</b></i>矩阵:</p>
+                </div>
+                <div class="p1">
+                    <p id="63" class="code-formula">
+                        <mathml id="63"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">Μ</mi><mo>=</mo><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mi>x</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mi>x</mi><msub><mrow></mrow><mn>2</mn></msub><mo>,</mo><mo>⋯</mo><mo>,</mo><mi>x</mi><msub><mrow></mrow><mi>n</mi></msub></mtd></mtr><mtr><mtd><mi>y</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mi>y</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mo>⋯</mo><mo>,</mo><mi>y</mi><msub><mrow></mrow><mi>n</mi></msub></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="64">为了改善Brief不具备旋转不变性的缺点,ORB算法通过将角点主方向作为Brief的主方向解决了这个问题。将特征点检测得到的主方向所确定的仿射变换矩阵<i><b>R</b></i><sub>n</sub>进行旋转得到新的描述矩阵:</p>
+                </div>
+                <div class="p1">
+                    <p id="65" class="code-formula">
+                        <mathml id="65"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">Μ</mi><msub><mrow></mrow><mi>θ</mi></msub><mo>=</mo><mi mathvariant="bold-italic">R</mi><msub><mrow></mrow><mtext>n</mtext></msub><mi mathvariant="bold-italic">Μ</mi><mo>=</mo><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mi>cos</mi><mi>θ</mi></mtd><mtd><mi>sin</mi><mi>θ</mi></mtd></mtr><mtr><mtd><mo>-</mo><mi>sin</mi><mi>θ</mi></mtd><mtd><mtext>c</mtext><mtext>o</mtext><mtext>n</mtext><mi>θ</mi></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mrow><mo>(</mo><mrow><mtable><mtr><mtd><mi>x</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mi>x</mi><msub><mrow></mrow><mn>2</mn></msub><mo>,</mo><mo>⋯</mo><mo>,</mo><mi>x</mi><msub><mrow></mrow><mi>n</mi></msub></mtd></mtr><mtr><mtd><mi>y</mi><msub><mrow></mrow><mn>1</mn></msub><mo>,</mo><mi>y</mi><msub><mrow></mrow><mn>2</mn></msub><mo>,</mo><mo>⋯</mo><mo>,</mo><mi>y</mi><msub><mrow></mrow><mi>n</mi></msub></mtd></mtr></mtable></mrow><mo>)</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="66">结合式(5)和(7),可以得到矫正后的Brief描述子:</p>
+                </div>
+                <div class="p1">
+                    <p id="67"><i>g</i><sub><i>n</i></sub>(<i>p</i>,<i>θ</i>)=<i>f</i><sub><i>n</i></sub>(<i>p</i>)|(<i>x</i><sub><i>i</i></sub>,<i>y</i><sub><i>i</i></sub>)∈<i>M</i><sub><i>θ</i></sub>      (8)</p>
+                </div>
+                <div class="p1">
+                    <p id="68">式中:<i>n</i>的取值依赖于识别率、存储效率、计算速度的影响,一般将128、256、512作为<i>n</i>的候选值。在ORB的算法中选取的是<i>n</i>=256,意味着每一个特征点将使用256对像素块进行特征描述。</p>
+                </div>
+                <h4 class="anchor-tag" id="69" name="69"><b>2.3 关键帧筛选</b></h4>
+                <div class="p1">
+                    <p id="70">针对于车载摄像头获取的图像为路面场景,并不是每一帧都适合寻找特征匹配对。因为路面场景大部分情况特征过于单一,提取出的特征点不多,且过于相似。因此会大量增加误匹配对的概率,本文提出使用挑选关键帧的方式进行后续特征点匹配对查找。</p>
+                </div>
+                <div class="p1">
+                    <p id="71">使用ORB算法提取图像的特征点,统计同一时刻单帧图像的特征点数量<i>F</i>,同时设定挑选关键帧的判定阈值<i>σ</i>:</p>
+                </div>
+                <div class="p1">
+                    <p id="72"><i>F</i><sub>1</sub>&amp;&amp;<i>F</i><sub>2</sub>≥<i>σ</i>(9)</p>
+                </div>
+                <div class="p1">
+                    <p id="73">式中:<i>F</i><sub>1</sub>和<i>F</i><sub>2</sub>分别表示待匹配的两帧图像特征点数。若<i>F</i><sub>1</sub>和<i>F</i><sub>2</sub>同时大于阈值<i>σ</i>时,将其判定为关键帧。如图5所示,(a)为关键帧,(b)为非关键帧。图5中每个小圆圈分别表示被提取出的特征点。</p>
+                </div>
+                <div class="area_img" id="74">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201917026_074.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 关键帧的筛选" src="Detail/GetImg?filename=images/DZCL201917026_074.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 关键帧的筛选  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201917026_074.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="75" name="75" class="anchor-tag"><b>3 匹配对筛选</b></h3>
+                <div class="p1">
+                    <p id="76">在每一对关键帧中分别提取图像的ORB特征点,计算两两特征点对之间的汉明距离。将距离最近的特征点进行匹配,由于特征点匹配的过程只是依靠距离的信息作为判定标准,难免会出现误匹配的情况,因此需要有误匹配剔除的工作才能够更好的保障求得的映射参数的准确性。每一对关键帧中特征点匹配对在经过粗筛选之后,将留下的匹配对进行排序,考虑到匹配对的准确性,只是将排名靠前的匹配对存储在向量中。之后不断地从视频中获取关键帧中排名靠前的匹配对,存储在这个向量中,直到数量达到一定的阈值,此时停止获取图像开始进行下一步。当所有的匹配对都获取完之后,利用改进的RANSAC算法进一步剔除误匹配对,同时根据筛选出的正确匹配对计算得出最终的映射参数<citation id="143" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>。</p>
+                </div>
+                <h4 class="anchor-tag" id="77" name="77"><b>3.1 匹配对粗筛选</b></h4>
+                <div class="p1">
+                    <p id="78">在经过第一次特征点匹配后,经常会出现目标图像中多个点与待匹配中同一个点匹配的情况,针对一对多的特征匹配对,本文采用反向匹配法:为待配准图像中的特征点进行单向匹配后,再对配准图像中的对应配点进行同阈值的逆向匹配,只保留双向匹配均为相同双方的特征点对,将剩余不符合要求的特征点删除掉。通过逆向匹配的方式,可以找到唯一对应的匹配点,从而有效排除其他错误的匹配,如图6所示是一对多的匹配对实例。</p>
+                </div>
+                <div class="area_img" id="79">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201917026_079.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 一对多的匹配对实例" src="Detail/GetImg?filename=images/DZCL201917026_079.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 一对多的匹配对实例  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201917026_079.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="80" name="80"><b>3.2 匹配对细筛选</b></h4>
+                <h4 class="anchor-tag" id="81" name="81">1)RANSAC算法及存在的问题</h4>
+                <div class="p1">
+                    <p id="82">RANSAC算法的输入是一组观测数据(往往含有较大的噪声或无效点),通过反复选择数据中的一组随机子集来达成目标。选取的子集被假设为局内点,并用下述步骤进行验证。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">(1)在数据中随机选择4对特征点设定为内群并算出映射模型;</p>
+                </div>
+                <div class="p1">
+                    <p id="84">(2)用步骤(1)中得到的模型对集合中剩余的匹配点进行变换,并计算匹配点对之间的欧式距离,根据阈值判断内点的数量,若内点的数量超过一致性集合大小阈值<i>T</i>则停止迭代;</p>
+                </div>
+                <div class="p1">
+                    <p id="85">(3)重复前两步,通过不断比较求出包含内点数最多的预估模型,当迭代的次数达到设定的上限阈值时停止迭代;</p>
+                </div>
+                <div class="p1">
+                    <p id="86">(4)选择内点数量最多的点集来重新估计模型(譬如使用最小二乘法),因为它仅仅被初始的假设局内点估计过;</p>
+                </div>
+                <div class="p1">
+                    <p id="87">经过分析发现,该算法中影响算法效率的主要有3个参数,分别是:估计次数<i>C</i>、一致性集合大小阈值<i>T</i>和判定内外点阈值<i>R</i>。其中计算估计次数<i>C</i>的公式:</p>
+                </div>
+                <div class="p1">
+                    <p id="88"><mathml id="130"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><mo>=</mo><mfrac><mrow><mi>log</mi><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><mrow><mi>log</mi><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>w</mi><msup><mrow></mrow><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mfrac></mrow></math></mathml>      (10)</p>
+                </div>
+                <div class="p1">
+                    <p id="89">式中:<i>p</i>表示经过<i>C</i>次至少有1次估计中的所有数据都是内点的概率;<i>n</i>表示估计时所需的最少点对数;<i>w</i>表示每个点为真正内群的概率;<i>w</i><sup><i>n</i></sup>表示所选择的<i>n</i>个点都是内群的概率;1-<i>w</i><sup><i>n</i></sup>表示<i>n</i>个点中至少有一个点为局外点的概率。</p>
+                </div>
+                <div class="p1">
+                    <p id="90">RANSAC的主要缺点如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="91">(1)当匹配对中存在的误匹配对较多时,不能在有限的次数内找到具有高鲁棒性的模型参数;</p>
+                </div>
+                <div class="p1">
+                    <p id="92">(2)判定内外点阈值<i>R</i>始终固定不变,不能自适应。当集合中的误匹配对很少时,很快就会因为估计出的模型内点数超过<i>T</i>而停止。而此时迭代的次数远低于上限阈值。在这种情况下容易引起最后的模型参数不是全局最优解,只能保证其为局部最优解。</p>
+                </div>
+                <h4 class="anchor-tag" id="93" name="93">2)改进RANSAC算法</h4>
+                <div class="p1">
+                    <p id="94">由于之前提取的特征点都是位于图像间重合区域,因此待匹配图像中的特征点通过映射参数<i>H</i>变换之后的坐标,一定位于参考图像内部,若不符合,则表明<i>H</i>变换存在误差。映射参数<i>H</i>表示从待匹配图像到参考图像的变换关系。</p>
+                </div>
+                <div class="p1">
+                    <p id="95">针对RANSAC算法计算量大、耗时长的不足,本文采用一种预划分特征点图像块的方法,在提高了算法的运行速度的同时也增加了模型的准确性。计算图像中匹配点坐标的最大值和最小值,并据此把图像中包含匹配点的部分平均分成<i>w</i>×<i>h</i>=<i>B</i>块,假设<i>w</i>=5,<i>h</i>=6,如图7所示。在理想情况下每一个图像块中的所有特征点对应的匹配点,在另一个图像中也同样位于同一个图像块中。根据这个特性,可以通过判断同一图像块的特征点中对应的关系,将少数不符合对应关系的匹配对作为误匹配对剔除。</p>
+                </div>
+                <div class="area_img" id="96">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201917026_096.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 特征匹配对网格分布" src="Detail/GetImg?filename=images/DZCL201917026_096.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 特征匹配对网格分布  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201917026_096.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="97">经过改进的RANSAC算法具体步骤如下。</p>
+                </div>
+                <div class="p1">
+                    <p id="98">根据输入图像<i>J</i>的实际分辨率按照式(11)设定一致性集合<i>T</i>和模型最大迭代次数<i>Y</i>的值。</p>
+                </div>
+                <div class="p1">
+                    <p id="99" class="code-formula">
+                        <mathml id="99"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><mo>,</mo><mi>Y</mi><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd><mn>2</mn><mn>0</mn><mn>0</mn><mo>,</mo><mn>3</mn><mspace width="0.25em" /><mn>0</mn><mn>0</mn><mn>0</mn></mtd><mtd><mi>J</mi><mo>≤</mo><mn>6</mn><mn>4</mn><mn>0</mn><mo>×</mo><mn>4</mn><mn>8</mn><mn>0</mn></mtd></mtr><mtr><mtd><mn>3</mn><mn>0</mn><mn>0</mn><mo>,</mo><mn>5</mn><mspace width="0.25em" /><mn>0</mn><mn>0</mn><mn>0</mn></mtd><mtd><mi>J</mi><mo>&gt;</mo><mn>6</mn><mn>4</mn><mn>0</mn><mo>×</mo><mn>4</mn><mn>8</mn><mn>0</mn></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>1</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="100">式中:<i>J</i>表示当前图像的分辨率。式(1)可以表明当前图像的分辨率小于640×480时,<i>T</i>=200,<i>Y</i>=3 000;大于640×480时,<i>T</i>=300,<i>Y</i>=5 000。</p>
+                </div>
+                <div class="p1">
+                    <p id="101">(1)寻找图像中匹配点<i>x</i>,<i>y</i>坐标的最大值和最小值,计算出匹配对特征点在图像中的覆盖的面积<i>S</i>=<i>W</i>×<i>H</i>,并据此把图像中包含匹配点的部分平均分成<i>w</i>×<i>h</i>=<i>B</i>块,假设<i>w</i>=1/10×<i>W</i>,<i>h</i>=1/10×<i>H</i>。根据匹配关系每一个图像块中的所有特征点对应的匹配点,在另一个图像中也同样位于同一个图像块中。根据这个特性,通过判断同一图像块的特征点中对应的关系,将不符合对应关系的匹配对作为误匹配对剔除。</p>
+                </div>
+                <div class="p1">
+                    <p id="102">(2)剔除不包含特征点对的空图像块,接着在图像中随机选取4个互不相同的块。</p>
+                </div>
+                <div class="p1">
+                    <p id="103">(3)在每块中随机选取一个点,共得到4对匹配点对,计算出初始的变换矩阵。</p>
+                </div>
+                <div class="p1">
+                    <p id="104">(4)用步骤(3)中得到的模型对集合中剩余的匹配点进行变换,并计算匹配点对之间的欧式距离,根据<i>S</i>(<i>n</i>)判断内点的数量。</p>
+                </div>
+                <div class="p1">
+                    <p id="105">(5)判断模型的内点数量是否超过一致性集合<i>T</i>,若满足则根据式(12)调整<i>S</i>(<i>n</i>)。</p>
+                </div>
+                <div class="p1">
+                    <p id="106" class="code-formula">
+                        <mathml id="106"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>S</mi><mo stretchy="false">(</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mtd><mtd></mtd><mtd><mi>c</mi><mo>&lt;</mo><mfrac><mn>1</mn><mn>4</mn></mfrac><mi>Y</mi></mtd></mtr><mtr><mtd><mfrac><mn>3</mn><mn>4</mn></mfrac><mi>S</mi><mo stretchy="false">(</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mtd><mtd></mtd><mtd><mfrac><mn>1</mn><mn>4</mn></mfrac><mi>Y</mi><mo>≤</mo><mi>c</mi><mo>≤</mo><mfrac><mn>3</mn><mn>4</mn></mfrac><mi>Y</mi></mtd></mtr><mtr><mtd><mi>S</mi><mo stretchy="false">(</mo><mi>n</mi><mo>-</mo><mn>1</mn><mo stretchy="false">)</mo></mtd><mtd></mtd><mtd><mtext>c</mtext><mo>&gt;</mo><mfrac><mn>3</mn><mn>4</mn></mfrac><mi>Y</mi></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mn>2</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="107">式中:<i>Y</i>表示模型最大迭代次数;<i>c</i>表示当前迭代次数;<i>S</i>(<i>n</i>-1)表示前一轮的内点数判定阈值;<i>S</i>(<i>n</i>)表示本轮的内点数判定阈值。</p>
+                </div>
+                <div class="p1">
+                    <p id="108">(6)重复步骤(1)～(5)通过不断比较求出包含内点数最多的预估模型,随着迭代次数的增加,划分图像块的数量也根据扩大尺度增加,当迭代的次数达到设定的上限<i>Y</i>时停止迭代。</p>
+                </div>
+                <div class="p1">
+                    <p id="109">(7)选择内点数量最多的点集使用最小二乘法来重新估计模型。</p>
+                </div>
+                <h3 id="110" name="110" class="anchor-tag"><b>4 实验对比</b></h3>
+                <div class="p1">
+                    <p id="111">本文采用Windows 10 64 bit操作系统,Intel Core i5-7400 3.00 GHz CPU,Visual Studio 2013开发平台,opencv3.0图像库,车载摄像头视角为180°,鱼眼镜头,Linux操作系统,使用C++语言编程实现。经过大量的参数验证,关键帧的判定阈值<i>σ</i>=20,改进RANSAC算法中图像块<i>w</i>和<i>h</i>分别取输入图像宽和高的1/10大小。</p>
+                </div>
+                <h4 class="anchor-tag" id="112" name="112"><b>4.1 验证数据集</b></h4>
+                <div class="p1">
+                    <p id="113">图像拼接中只有图像重合区域的特征点对计算映射参数有帮助,在特征点的匹配阶段如果存在非重合区域的特征点,反而会增加匹配阶段的运行时间,进一步增加误匹配对,对整体效果产生干扰。为了增加算法的鲁棒性,在计算映射参数的时候,输入的图像只是包含重合区域的部分。</p>
+                </div>
+                <div class="p1">
+                    <p id="114">将车载摄像头获取的图像经过鱼眼矫正预处理之后进行剪裁。如图8所示为车载摄像头的安装示意图,摄像头A所包含的区域为1,5,6;摄像头B包含的区域为2,7,8;摄像头C所包含的区域为3,6,7;摄像头D所包含的区域为4,5,8。由图像可知区域5,6,7,8为摄像头之间的重合部分将这部分的图像作为算法的输入。考虑到车载全景视觉的实际应用场景为城市道路,因此截取其中的60 s路程作为算法的验证数据集。</p>
+                </div>
+                <div class="area_img" id="115">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201917026_115.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图8 车载摄像头安装示意图" src="Detail/GetImg?filename=images/DZCL201917026_115.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图8 车载摄像头安装示意图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201917026_115.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="116" name="116"><b>4.2 实验分析</b></h4>
+                <div class="p1">
+                    <p id="117">基于车载摄像头之间的位置固定不变的特点,因此连续关键帧获取的特征点匹配对组合起来可以类比于在一张图像所获取的匹配对。为了验证在车载视频图像拼接中,对求取映射参数的效果,远远高于仅提取单帧图像的特征点匹配对求解映射参数。将单帧提取的匹配对进行可视化,如图9所示。</p>
+                </div>
+                <div class="area_img" id="118">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201917026_118.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图9 单帧图像特征点匹配对效果" src="Detail/GetImg?filename=images/DZCL201917026_118.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图9 单帧图像特征点匹配对效果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201917026_118.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="119">图9是随机选取视频帧中3对图像特征点匹配对的可视化结果,由图9可知每一帧获取的特征点匹配对存在大量的误匹配对,甚至有些图像帧正确的匹配对还没有达到计算映射参数所需最少的数量要求。因为连续的关键帧在提取匹配对时仅保留了每一帧匹配对中排名靠前的几对,可以将这些优质的匹配对组合起来作为最终的理想集合。所以可知经过连续关键帧计算得到的映射参数更加具有鲁棒性和精确性。</p>
+                </div>
+                <div class="p1">
+                    <p id="120">为了验证改进过的RANSAC算法剔除误匹配对效果优于其他改进的RANSAC算法,将之前通过关键帧收集到的匹配对集合,同时投影到一帧图像中进行算法的验证。同时进行数据的统计,和重合区域的拼接效果展示。</p>
+                </div>
+                <div class="area_img" id="121">
+                    <p class="img_tit"><b>表1 改进RANSAC计算映射参数的效率对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="121" border="1"><tr><td><br />算法</td><td>平均时间/<br />s</td><td>正确特征匹<br />配对/%</td></tr><tr><td><br />RANSAC(传统)</td><td>3.220</td><td>47.436</td></tr><tr><td><br />改进RANSAC(文献3)</td><td>2.45</td><td>61.23</td></tr><tr><td><br />改进RANSAC(文献5)</td><td>2.10</td><td>72.56</td></tr><tr><td><br />改进RANSAC(本文)</td><td>1.541</td><td>93.982</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="122">从表1所示的效率对比可以看出,本文改进的RANSAC具有极强的鲁棒性,可以提取传统RANSAC双倍的正确特征匹配对,和其他改进方案相比也有明显的精度优势,几种算法的运算时间相差很大。造成这种现象的原因是本文改进的RANSAC在每次迭代的过程中都会消除一部分误匹配对,经过不断的迭代集合中错误的匹配对越来越少,因此算法能够更快的收敛达到更好的效果。</p>
+                </div>
+                <div class="area_img" id="123">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201917026_123.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图10 待拼接原图" src="Detail/GetImg?filename=images/DZCL201917026_123.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图10 待拼接原图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201917026_123.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="124">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201917026_124.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图11 RANSAC算法拼接效果图" src="Detail/GetImg?filename=images/DZCL201917026_124.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图11 RANSAC算法拼接效果图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201917026_124.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="125">图10所示为两帧图像分别提取重合区域之后的原图,图11(a)所示为原来RANSAC算法拼接效果图,拼接部分有重影效果,因为映射参数不准确导致的结果;图11(b)所示为本文算法的拼接效果图,没有出现重影的情况。由此可以得出本文算法更加具有鲁棒性。</p>
+                </div>
+                <div class="p1">
+                    <p id="126">图12(b)所示为本文所提出的方法整体运行效果,选择的对比实验为传统求解映射参数方法中具有代表性的文献<citation id="144" type="reference">[<a class="sup">3</a>]</citation>所述的方法,即:手动标记的方式,运行效果如图12(a)所示。从对比实验中可以看出,两种方法的运行效果都能够满足全景图像的连贯性,且差异性不大,由此可得本文提出的方法具有实用性,在保证了等效于传统方法的前提下,增加了求解映射参数的便利性。</p>
+                </div>
+                <div class="area_img" id="127">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201917026_127.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图12 车载全景图像运行效果" src="Detail/GetImg?filename=images/DZCL201917026_127.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图12 车载全景图像运行效果  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201917026_127.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="128" name="128" class="anchor-tag"><b>5 结  论</b></h3>
+                <div class="p1">
+                    <p id="129">本文主要对获取匹配对的方式和误匹配对剔除方式做了改进。结合实际场景中摄像头之间固定不变、图像场景单一、特征点难以提取等特点,创新地提出:结合连续关键帧共同提取的特征点对,在剔除一对多匹配点对的基础上使用改进的RANSAC算法以不断迭代的方式逐步剔除误匹配,实现了映射参数精确求解。通过在验证数据集中实验,本文所提出的改进RANSAC算法能够在低分辨率、特征不明显场景下精确筛选出特征明显的匹配对;所提出的求解映射参数新方法在保证了等效于传统方法的前提下,即精确求出车载全景图像拼接中所需的映射参数,增加了求解映射参数的便利性。下一步的工作是提高图像拼接中融合算法和在复杂环境下的适应能力,进一步提升系统的性能。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016105090.nh&amp;v=MTk4MDVMSzRHOUhGcjVFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5amxVcnJPVkYyNkc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 李洪蕊.全景图像的校正与拼接算法[D]天津:天津科技大学,2015.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZYX201505021&amp;v=MjU4NjVyRzRIOVRNcW85SFpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5amxVcnJPSVRmU2Q=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 张宝龙,李洪蕊,李丹,等.一种针对车载全景系统的图像拼接算法的仿真[J].电子与信息学报,2015,37(5):1149-1153.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SJTX201705008&amp;v=MTYxMTJPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5amxVcnJPTmlmZmRyRzRIOWJNcW85RmJJUUtESDg0dlI0VDZqNTQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 周芳,杨鸣,王益平.基于车载多视角的鱼眼图像拼接算法[J].数据通信,2017(5):29-34.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZDYY201709019&amp;v=MjQzNTlPUHluU2Q3RzRIOWJNcG85RWJZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5amxVcnI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 李娅,令亮,杨拓,等.全景泊车辅助技术及图像无缝拼接技术分析研究[J].自动化与仪器仪表,2017(9):47-49.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZIY201608020&amp;v=MDA2OTA1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlqbFVyck9JVGZDZDdHNEg5Zk1wNDlIWklRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 邢凯盛,凌有铸,陈孟元.ORB特征匹配的误匹配点剔除算法研究[J].电子测量与仪器学报,2016,30(8):1255-1262.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HNDK201102017&amp;v=MDg2MjU3cWZadVp0RnlqbFVyck9MU1BQWmJHNEg5RE1yWTlFWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 黄梅.基于改进RANSAC算法的图像拼接技术[J].海南大学学报(自然科学版),2011,29(2):172-177.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=YJYS201808009&amp;v=MDk1MzlPUENmU2ZiRzRIOW5NcDQ5RmJZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5amxVcnI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 张博.基于Mask R-CNN的ORB去误匹配方法[J].液晶与显示,2018,33(8):690-696.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CDFD&amp;filename=2006015231.nh&amp;v=MTY1MjlqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5amxVcnJPVjEyN0dMTzVHOVBQcnBFYlBJUUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 方贤勇.图像拼接技术研究[D].杭州:浙江大学,2005.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZGTB200702026&amp;v=MjU5OTBiTXJZOUhZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeWpsVXJyT1B5cmZiTEc0SHQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 赵辉,陈辉,于泓.一种改进的全景图自动拼接算法[J].中国图象图形学报,2007,12(2):336-342.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=ORB:An efficient alternative to SIFT or SURF">
+
+                                <b>[10]</b> RUBLEE E,RABAUD V,KONOLIGE K,et al.ORB:An efficient alternative to SIFT or SURF[C].IEEE International Conference on Computer Vision,2011:2564-2571.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011501084512&amp;v=MDU5NDVUNFBRSC9pclJkR2VycVFUTW53WmVadEZpbmxVcnpJSUY0VmJ4UT1OaWZPZmJLN0h0RE5xbzlFWk9NTENYMDdvQk1UNg==&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> ROSIN P L.Measuring corner properties [J].Computer Visionand Image Understanding,1999,73(2):291-307.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Brief:Binary robust independent elementary features">
+
+                                <b>[12]</b> CALONDER M,LEPETIT V,STRECHA C,et al.BRIEF:Binary robust independent elementary features[C].European Conference on Computer Vision,2010:778-792.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201707020&amp;v=MjA3MDBJVGZJWXJHNEg5Yk1xSTlIWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlqbFVyck8=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 常伟,刘云.一种改进的快速全景图像拼接算法[J].电子测量技术,2017,40(7):90-94.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XTYY201603018&amp;v=MjYyMjJuU2Q3RzRIOWZNckk5RWJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5amxVcnJPUFQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 张东,余朝刚.基于特征点的图像拼接方法[J].计算机系统应用,2016,25(3):107-112.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=CXYY201505011&amp;v=MDQ2NjFyQ1VSN3FmWnVadEZ5amxVcnJPSmpYU2Q3RzRIOVRNcW85RVpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 雒伟群,高屹.基于改进RANSAC算法的图像拼接方法[J].科技创新与应用,2015(5):21-22.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="DZCL201917026" />
+        <input id="dpi" type="hidden" value="96" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201917026&amp;v=MjEyMDlqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5amxVcnJQSVRmSVlyRzRIOWpOcUk5SFlvUUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="0" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=NLcKG8I1SJUaVFrQ0iGpF2klAT0OsmHRaVSZ1rKb5xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

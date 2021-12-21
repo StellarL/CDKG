@@ -1,0 +1,807 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637135823306350000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dDZCL201911010%26RESULT%3d1%26SIGN%3d%252bRHQDuV16mckJlXFkHg3m3Xzohk%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZCL201911010&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZCL201911010&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201911010&amp;v=MTI0NzVsV3J2TklUZklZckc0SDlqTnJvOUVaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeTc=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#33" data-title="&lt;b&gt;0 引  言&lt;/b&gt; "><b>0 引  言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#35" data-title="&lt;b&gt;1 联合相容分枝定界 (JCBB) 算法&lt;/b&gt; "><b>1 联合相容分枝定界 (JCBB) 算法</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#56" data-title="&lt;b&gt;2 算法优化&lt;/b&gt; "><b>2 算法优化</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#57" data-title="&lt;b&gt;2.1 基于子地图的匹配方法&lt;/b&gt;"><b>2.1 基于子地图的匹配方法</b></a></li>
+                                                <li><a href="#70" data-title="&lt;b&gt;2.2 划局部关联区域&lt;/b&gt;"><b>2.2 划局部关联区域</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#78" data-title="&lt;b&gt;3 总体方案&lt;/b&gt; "><b>3 总体方案</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#95" data-title="&lt;b&gt;4 实验结果及分析&lt;/b&gt; "><b>4 实验结果及分析</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#96" data-title="&lt;b&gt;4.1 实验过程&lt;/b&gt;"><b>4.1 实验过程</b></a></li>
+                                                <li><a href="#98" data-title="&lt;b&gt;4.2 实验结果&lt;/b&gt;"><b>4.2 实验结果</b></a></li>
+                                                <li><a href="#105" data-title="&lt;b&gt;4.3 结果分析&lt;/b&gt;"><b>4.3 结果分析</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#108" data-title="&lt;b&gt;5 结  论&lt;/b&gt; "><b>5 结  论</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#75" data-title="图1 划分局部关联区域示意">图1 划分局部关联区域示意</a></li>
+                                                <li><a href="#77" data-title="图2 LSJCBB局部关联过程">图2 LSJCBB局部关联过程</a></li>
+                                                <li><a href="#83" data-title="图3 硬件设计">图3 硬件设计</a></li>
+                                                <li><a href="#94" data-title="图4 系统框架">图4 系统框架</a></li>
+                                                <li><a href="#100" data-title="&lt;b&gt;表1 MATLAB仿真中JCBB和SLJCBB关联算法性能比较&lt;/b&gt; (s) "><b>表1 MATLAB仿真中JCBB和SLJCBB关联算法性能比较</b> (s) </a></li>
+                                                <li><a href="#103" data-title="图5 JCBB关联匹配算法的MATLAB仿真">图5 JCBB关联匹配算法的MATLAB仿真</a></li>
+                                                <li><a href="#104" data-title="图6 SLJCBB关联匹配算法的MATLAB仿真">图6 SLJCBB关联匹配算法的MATLAB仿真</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="119">
+
+
+                                    <a id="bibliography_1" title=" SMITH R, SELF M, CHEESEMAN P.A stochastic map for uncertain spatial relationships[C].International Symposium on Robotics Research.1988:467-474." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A stochastic map for uncertain spa-tial relationships">
+                                        <b>[1]</b>
+                                         SMITH R, SELF M, CHEESEMAN P.A stochastic map for uncertain spatial relationships[C].International Symposium on Robotics Research.1988:467-474.
+                                    </a>
+                                </li>
+                                <li id="121">
+
+
+                                    <a id="bibliography_2" title=" 刘丹, 段建民, 王昶人.一种基于聚类分组的快速联合兼容SLAM数据关联算法[J].机器人, 2018, 40 (2) :158-168, 177." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JQRR201802004&amp;v=MTAwNjNVUjdxZlp1WnRGeTdsV3J2Tkx6elpmTEc0SDluTXJZOUZZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         刘丹, 段建民, 王昶人.一种基于聚类分组的快速联合兼容SLAM数据关联算法[J].机器人, 2018, 40 (2) :158-168, 177.
+                                    </a>
+                                </li>
+                                <li id="123">
+
+
+                                    <a id="bibliography_3" title=" 蔡来良, 杨望山, 王姗姗, 等.SLAM在室内测绘仪器研发中的应用综述[J].矿山测量, 2017, 45 (4) :85-91." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KSCL201704022&amp;v=MTkwOTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeTdsV3J2TkxqN0lZckc0SDliTXE0OUhab1E=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         蔡来良, 杨望山, 王姗姗, 等.SLAM在室内测绘仪器研发中的应用综述[J].矿山测量, 2017, 45 (4) :85-91.
+                                    </a>
+                                </li>
+                                <li id="125">
+
+
+                                    <a id="bibliography_4" title=" 伍永健.室内环境下移动机器人混合路径规划研究[D].芜湖:安徽工程大学, 2018." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1018182629.nh&amp;v=MzIyMTBadEZ5N2xXcnZOVkYyNkZyS3dITmZPcHBFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnU=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         伍永健.室内环境下移动机器人混合路径规划研究[D].芜湖:安徽工程大学, 2018.
+                                    </a>
+                                </li>
+                                <li id="127">
+
+
+                                    <a id="bibliography_5" title=" 李延炬, 肖宇峰, 古松, 等.基于激光传感器的SLAM数据关联算法的研究[J].微型机与应用, 2017, 36 (2) :78-82." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WXJY201702024&amp;v=MTM4OTdCdEdGckNVUjdxZlp1WnRGeTdsV3J2Tk1qWEJkN0c0SDliTXJZOUhZSVFLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         李延炬, 肖宇峰, 古松, 等.基于激光传感器的SLAM数据关联算法的研究[J].微型机与应用, 2017, 36 (2) :78-82.
+                                    </a>
+                                </li>
+                                <li id="129">
+
+
+                                    <a id="bibliography_6" title=" 卫恒, 吕强, 林辉灿, 等.多机器人SLAM后端优化算法综述[J].系统工程与电子技术, 2017, 39 (11) :2553-2565." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XTYD201711024&amp;v=MjMxMDNTYXJHNEg5Yk5ybzlIWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnk3bFdydk5QVG4=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         卫恒, 吕强, 林辉灿, 等.多机器人SLAM后端优化算法综述[J].系统工程与电子技术, 2017, 39 (11) :2553-2565.
+                                    </a>
+                                </li>
+                                <li id="131">
+
+
+                                    <a id="bibliography_7" title=" 文国成, 曾碧, 陈云华.一种适用于激光SLAM大尺度地图的闭环检测方法[J].计算机应用研究, 2018, 35 (6) :1724-1727, 1732." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201806028&amp;v=MzE1NTVsV3J2Tkx6N1NaTEc0SDluTXFZOUhiSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeTc=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         文国成, 曾碧, 陈云华.一种适用于激光SLAM大尺度地图的闭环检测方法[J].计算机应用研究, 2018, 35 (6) :1724-1727, 1732.
+                                    </a>
+                                </li>
+                                <li id="133">
+
+
+                                    <a id="bibliography_8" title=" 李鹏, 张金艺, 韩国川, 等.激光雷达移动机器人局部搜索跟踪算法[J].电子测量技术, 2018, 41 (11) :6-9." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=DZCL201811002&amp;v=MjExNzBadEZ5N2xXcnZOSVRmSVlyRzRIOW5Ocm85RlpvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnU=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         李鹏, 张金艺, 韩国川, 等.激光雷达移动机器人局部搜索跟踪算法[J].电子测量技术, 2018, 41 (11) :6-9.
+                                    </a>
+                                </li>
+                                <li id="135">
+
+
+                                    <a id="bibliography_9" title=" 阳樊, 汪婷婷.仓储作业中AGV的定位导航方法研究[J].科学技术创新, 2018, (24) :39-40." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HLKX201824023&amp;v=MTQ2ODdmWnVadEZ5N2xXcnZOTFNIQWRyRzRIOW5PcTQ5SFo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3E=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         阳樊, 汪婷婷.仓储作业中AGV的定位导航方法研究[J].科学技术创新, 2018, (24) :39-40.
+                                    </a>
+                                </li>
+                                <li id="137">
+
+
+                                    <a id="bibliography_10" title=" 寿佳鑫, 张志明, 苏永清, 等.基于ROS和激光雷达的室内移动机器人定位和导航系统设计与实现[J].机械与电子, 2018, 36 (11) :76-80." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JXYD201811019&amp;v=MTA1MTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeTdsV3J2Tkx6WFNhckc0SDluTnJvOUViWVE=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         寿佳鑫, 张志明, 苏永清, 等.基于ROS和激光雷达的室内移动机器人定位和导航系统设计与实现[J].机械与电子, 2018, 36 (11) :76-80.
+                                    </a>
+                                </li>
+                                <li id="139">
+
+
+                                    <a id="bibliography_11" title=" 朱舜, 王立群, 何军.一种基于SLAM技术的智能小车的开发与构建[J].电子测量技术, 2018, 41 (14) :21-25." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=DZCL201814005&amp;v=MjgzMjFUZklZckc0SDluTnE0OUZZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeTdsV3J2Tkk=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         朱舜, 王立群, 何军.一种基于SLAM技术的智能小车的开发与构建[J].电子测量技术, 2018, 41 (14) :21-25.
+                                    </a>
+                                </li>
+                                <li id="141">
+
+
+                                    <a id="bibliography_12" title=" 李洋, 余先涛, 贺勇, 等.基于Cortex-A53平台的激光雷达SLAM实现[J].电子技术应用, 2018, 44 (2) :105-108." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZJY201802027&amp;v=MDgyMjBJVGZCZDdHNEg5bk1yWTlIWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnk3bFdydk4=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         李洋, 余先涛, 贺勇, 等.基于Cortex-A53平台的激光雷达SLAM实现[J].电子技术应用, 2018, 44 (2) :105-108.
+                                    </a>
+                                </li>
+                                <li id="143">
+
+
+                                    <a id="bibliography_13" title=" 熊安, 卞春江, 周海, 等.基于ROS的机器人定位与导航系统的仿真设计[J].电子设计工程, 2018, 26 (24) :188-193." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GWDZ201824040&amp;v=MDEyMzMzenFxQnRHRnJDVVI3cWZadVp0Rnk3bFdydk5JanJQZExHNEg5bk9xNDlCWklRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         熊安, 卞春江, 周海, 等.基于ROS的机器人定位与导航系统的仿真设计[J].电子设计工程, 2018, 26 (24) :188-193.
+                                    </a>
+                                </li>
+                                <li id="145">
+
+
+                                    <a id="bibliography_14" title=" 何叶.基于ROS的移动机器人SLAM技术研究[D].南昌:南昌大学, 2018." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1018226563.nh&amp;v=MTE1MTBadEZ5N2xXcnZOVkYyNkZyRzZHTlRLckpFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnU=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         何叶.基于ROS的移动机器人SLAM技术研究[D].南昌:南昌大学, 2018.
+                                    </a>
+                                </li>
+                                <li id="147">
+
+
+                                    <a id="bibliography_15" title=" 刘丹, 段建民, 孟晓燕.基于激光雷达的智能车SLAM系统[J].激光杂志, 2018, 39 (7) :76-82." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=JGZZ201807018&amp;v=MTE0NDFyQ1VSN3FmWnVadEZ5N2xXcnZOTHlyUmRMRzRIOW5NcUk5RWJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         刘丹, 段建民, 孟晓燕.基于激光雷达的智能车SLAM系统[J].激光杂志, 2018, 39 (7) :76-82.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=DZCL" target="_blank">电子测量技术</a>
+                2019,42(11),51-55 DOI:10.19651/j.cnki.emt.1802480            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于嵌入式平台和子地图局部关联算法的AGV设计</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%83%A1%E4%BD%B3%E8%BE%89&amp;code=41249283&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">胡佳辉</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%88%E5%BF%83%E7%81%B5&amp;code=42201428&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陈心灵</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9C%B1%E6%9D%B0%E5%8D%8E&amp;code=42201429&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">朱杰华</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%B5%B5%E5%A2%9E%E6%97%AD&amp;code=39053642&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">赵增旭</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E7%9F%B3%E5%AE%B6%E5%BA%84%E9%93%81%E9%81%93%E5%A4%A7%E5%AD%A6%E6%9C%BA%E6%A2%B0%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=1694102&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">石家庄铁道大学机械工程学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E7%9F%B3%E5%AE%B6%E5%BA%84%E9%93%81%E9%81%93%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">石家庄铁道大学信息科学与技术学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>为在嵌入式平台上实现同时定位与建图 (SLAM) 以降低硬件成本, 设计了利用激光雷达的AGV, 该AGV运行机器人软件平台 (ROS) , 并采用了包括Cortex-A9内核的i.MX6Q开发板、惯性测量单元、编码器等的硬件设计。针对在SLAM过程中如何快速并准确获取数据关联结果的问题, 提出了一种基于子地图局部关联算法 (SLJCBB) , 该方法首先是接收多帧连续的激光雷达数据构建子地图, 并在子地图上划分出局部关联区域, 最后在局部关联区域内采用联合兼容分支定界 (JCBB) 算法进行数据关联。实验结果表明, 采用子地图局部关联算法在提高关联准确性的同时, 大大降低了关联匹配过程的计算量, 提高了运算速度, 满足了嵌入式平台的运算要求。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%90%8C%E6%97%B6%E5%AE%9A%E4%BD%8D%E4%B8%8E%E5%BB%BA%E5%9B%BE&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">同时定位与建图;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=AGV&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">AGV;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%B9%B3%E5%8F%B0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">嵌入式平台;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%BF%80%E5%85%89%E9%9B%B7%E8%BE%BE&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">激光雷达;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%81%94%E5%90%88%E5%85%BC%E5%AE%B9%E5%88%86%E6%94%AF%E5%AE%9A%E7%95%8C%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">联合兼容分支定界算法;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    胡佳辉, 本科, 主要研究方向为激光SLAM、移动机器人、嵌入式开发。E-mail:920625711@qq.com;
+                                </span>
+                                <span>
+                                    陈心灵, 本科, 主要研究方向为嵌入式开发、模式识别。E-mail:15176112391@163.com;
+                                </span>
+                                <span>
+                                    朱杰华, 本科, 主要研究方向为数字图像处理、机器学习。E-mail:clqqz123@126.com;
+                                </span>
+                                <span>
+                                    *赵增旭 (通信作者) , 博士, 讲师, 主要研究方向为信号检测。E-mail:2856305980@qq.com;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-12</p>
+
+            </div>
+                    <h1><b>AGV design based on embedded platform and sub-map local association algorithm</b></h1>
+                    <h2>
+                    <span>Hu Jiahui</span>
+                    <span>Chen Xinling</span>
+                    <span>Zhu Jiehua</span>
+                    <span>Zhao Zengxu</span>
+            </h2>
+                    <h2>
+                    <span>School of Mechanical Engineering, Shijiazhuang Tiedao University</span>
+                    <span>School of Information Science and technology, Shijiazhuang Tiedao University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>To achieve simultaneous positioning and mapping on embedded platforms to reduce hardware costs, we designed an AGV using lidar. The AGV running robot software platform, which hardware design includes i.MX6 Q development board with Cortex-A9 core, inertial measurement unit, encoder, etc. To quickly and accurately obtain data association results in the SLAM process, an algorithm (SLJCBB) for SLAM based on sub-map local association is proposed. The method firstly receives a multi-frame continuous laser radar data to construct a sub-map, and partitioning the local association area on the sub-map. Finally, joint compatibility branch and bound (JCBB) algorithm is adopted in data association. The experimental results show that the sub-map local association algorithm improves the correlation accuracy, greatly reduces the computational complexity of the association matching process, improves the computation speed, and satisfies the computational requirements of the embedded platform.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=simultaneous%20localization%20and%20mapping%20(SLAM)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">simultaneous localization and mapping (SLAM) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=automated%20guided%20vehicle%20(AGV)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">automated guided vehicle (AGV) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=embedded%20platform&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">embedded platform;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Lidar&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Lidar;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=joint%20compatibility%20branch%20and%20bound%20(JCBB)%20algorithm&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">joint compatibility branch and bound (JCBB) algorithm;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-12</p>
+                            </div>
+
+
+        <!--brief start-->
+                        <h3 id="33" name="33" class="anchor-tag"><b>0 引  言</b></h3>
+                <div class="p1">
+                    <p id="34">近几年自动导引运输车 (automated guided vehicle, AGV) 系统在我国得到了迅速地发展, 要实现AGV的快速移动和精准定位, 同时定位与建图 (simultaneous localization and mapping, SLAM) 是AGV运行过程中不可忽视的部分。SLAM技术于1986年被Randall Smith<citation id="149" type="reference"><link href="119" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>等提出, 并逐渐被应用于无人车、无人机等领域。SLAM主要解决处在未知环境中的机器人如何通过传感器来建立未知环境的特征地图并以此来实现自身定位的问题。目前, 较为主流的方案可分为基于激光的SLAM和基于视觉的SLAM。相较而言, 激光SLAM因其定位的稳健性和灵活性成为国内外研究的热点。SLAM大致可分为两大步骤:状态估计、数据关联<citation id="150" type="reference"><link href="121" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>。数据关联作为SLAM实现的关键, 目前国内外主要采用的较为可靠的算法有联合相容分支定界 (joint compatibility branch and bound, JCBB) 、独立兼容最近邻 (individual compatib-ility nearest neighbor, ICNN) 等关联算法, 但无论何种算法, 其运算复杂度都对实现SLAM的硬件平台要求苛刻<citation id="151" type="reference"><link href="123" rel="bibliography" /><link href="125" rel="bibliography" /><link href="127" rel="bibliography" /><link href="129" rel="bibliography" /><sup>[<a class="sup">3</a>,<a class="sup">4</a>,<a class="sup">5</a>,<a class="sup">6</a>]</sup></citation>。目前实现SLAM较为主流的硬件平台大都为高性能主机, 硬件成本、维护成本高, 不易进入市场。针对这一问题, 本文提出了一种基于嵌入式平台的AGV设计, 充分利用嵌入式系统成本低、低功耗、高集成、专用性强等特点, 以降低投入成本并增大企业效益。对于嵌入式平台相较于高性能主机运算速度低的问题, 本文提出了一种子地图局部关联算法 (SLJCBB) , 对JCBB关联算法进行了优化, 降低了运算复杂度, 以满足嵌入式平台的运算要求。</p>
+                </div>
+                <h3 id="35" name="35" class="anchor-tag"><b>1 联合相容分枝定界 (JCBB) 算法</b></h3>
+                <div class="p1">
+                    <p id="36">联合相容分枝定界算法是将联合相容检验与分支定界法相结合的关联算法, 联合相容检验即同时考虑当前时刻所有的观测值与地图特征之间的相容关系, 之后利用分支定界法求解最优解空间。</p>
+                </div>
+                <div class="p1">
+                    <p id="37">给定关联假设<i>Hr</i>= (<i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>, …<i>p</i><sub><i>r</i></sub>) , 假设<i>k</i>时刻有<i>r</i>个观测值和<i>n</i>个地图特征:</p>
+                </div>
+                <div class="p1">
+                    <p id="38"><i>O</i><sub><i>k</i></sub>={<i>o</i><sub><i>i</i></sub>|<i>i</i>=1, …, <i>r</i>}</p>
+                </div>
+                <div class="p1">
+                    <p id="39"><i>F</i><sub><i>k</i></sub>={<i>f</i><sub><i>j</i></sub>|<i>j</i>=1, …<i>n</i>}      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="40">式中:<i>H</i><sub>r</sub>为<i>O</i><sub>t</sub>的第<i>r</i>个关联假设, 若<i>p</i><sub><i>i</i></sub>=<i>j</i>, 则表示第<i>i</i>个观测值与第<i>j</i>个已有地图特征点相匹配。在关联假设集<i>Hr</i>下, 地图特征的联合观测方程为:</p>
+                </div>
+                <div class="p1">
+                    <p id="41" class="code-formula">
+                        <mathml id="41"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi mathvariant="bold-italic">Ζ</mi><mo>^</mo></mover><msub><mrow></mrow><mrow><mi>Η</mi><msub><mrow></mrow><mi>r</mi></msub></mrow></msub><mo>=</mo><mi>h</mi><msub><mrow></mrow><mrow><mi>Η</mi><msub><mrow></mrow><mi>r</mi></msub></mrow></msub><mo stretchy="false"> (</mo><mover accent="true"><mi>X</mi><mo>^</mo></mover><msub><mrow></mrow><mrow><mi>k</mi><mo>, </mo><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo stretchy="false">) </mo><mo>+</mo><mi>n</mi><msub><mrow></mrow><mrow><mi>Η</mi><msub><mrow></mrow><mi>r</mi></msub></mrow></msub><mo>=</mo><mrow><mo>[</mo><mrow><mtable><mtr><mtd columnalign="left"><mi>h</mi><msub><mrow></mrow><mrow><mi>p</mi><msub><mrow></mrow><mn>1</mn></msub></mrow></msub><mo stretchy="false"> (</mo><mover accent="true"><mi>X</mi><mo>^</mo></mover><msub><mrow></mrow><mrow><mi>k</mi><mo>, </mo><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd columnalign="left"><mo>⋯</mo></mtd></mtr><mtr><mtd columnalign="left"><mi>h</mi><msub><mrow></mrow><mrow><mi>p</mi><msub><mrow></mrow><mi>r</mi></msub></mrow></msub><mo stretchy="false"> (</mo><mover accent="true"><mi>X</mi><mo>^</mo></mover><msub><mrow></mrow><mrow><mi>k</mi><mo>, </mo><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo stretchy="false">) </mo></mtd></mtr></mtable></mrow><mo>]</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="42">联合新息及联合新息协方差为:</p>
+                </div>
+                <div class="p1">
+                    <p id="43"><mathml id="44"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>v</mi><msub><mrow></mrow><mrow><mi>Η</mi><msub><mrow></mrow><mi>r</mi></msub></mrow></msub><mo>=</mo><mi mathvariant="bold-italic">Ζ</mi><msub><mrow></mrow><mrow><mi>Η</mi><msub><mrow></mrow><mi>r</mi></msub></mrow></msub><mo>-</mo><mi>h</mi><msub><mrow></mrow><mrow><mi>Η</mi><msub><mrow></mrow><mi>r</mi></msub></mrow></msub><mo stretchy="false"> (</mo><mover accent="true"><mi>X</mi><mo>^</mo></mover><msub><mrow></mrow><mrow><mi>k</mi><mo>, </mo><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub><mo stretchy="false">) </mo></mrow></math></mathml>      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="45"><i>S</i><sub><i>H</i><sub>r</sub></sub>=<i>H</i><sub><i>H</i><sub><i>r</i></sub></sub><i>P</i><sub><i>k</i>, <i>k</i>-1</sub><i>H</i><mathml id="46"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>Η</mi><msub><mrow></mrow><mi>r</mi></msub></mrow><mi>Τ</mi></msubsup></mrow></math></mathml>+<i>R</i><sub><i>H</i><sub><i>r</i></sub></sub>      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="47">式中:<b><i>Z</i></b><sub><i>H</i><sub>r</sub></sub>=[<b><i>Z</i></b><sub><i>k</i>, 1</sub>…<b><i>Z</i></b><sub><i>k</i>, <i>m</i></sub>]表示观测量的预测值;<i>h</i> (·) 表示一非线性函数;<i>n</i><sub><i>H</i><sub><i>r</i></sub></sub>表示方差为<i>R</i><sub><i>K</i></sub>的高斯白噪声;<mathml id="48"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi>X</mi><mo>^</mo></mover><msub><mrow></mrow><mtext>k</mtext></msub></mrow></math></mathml>表示<i>k</i>时刻AGV的预测位姿向量并包含地图特征;<mathml id="49"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Η</mi><msub><mrow></mrow><mrow><mi>Η</mi><msub><mrow></mrow><mi>r</mi></msub></mrow></msub><mo>=</mo><mfrac><mrow><mo>∂</mo><mi>h</mi><msub><mrow></mrow><mrow><mi>Η</mi><msub><mrow></mrow><mi>r</mi></msub></mrow></msub></mrow><mrow><mo>∂</mo><mi>X</mi></mrow></mfrac><mo stretchy="false">|</mo><msub><mrow></mrow><mrow><mo stretchy="false"> (</mo><mrow><mover accent="true"><mi>X</mi><mo>^</mo></mover><msub><mrow></mrow><mrow><mi>k</mi><mo>, </mo><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">) </mo></mrow></msub></mrow></math></mathml>为雅可比矩阵;<i>P</i><sub><i>k</i>, <i>k</i>-1</sub>为状态方差矩阵;<i>R</i><sub><i>H</i><sub><i>r</i></sub></sub>是联合观测误差协方差矩阵。联合兼容条件定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="50"><i>D</i><mathml id="51"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>Η</mi><msub><mrow></mrow><mi>r</mi></msub></mrow><mn>2</mn></msubsup></mrow></math></mathml>=<i>v</i><mathml id="52"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>Η</mi><msub><mrow></mrow><mi>r</mi></msub></mrow><mi>Τ</mi></msubsup></mrow></math></mathml><i>S</i><mathml id="53"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>Η</mi><msub><mrow></mrow><mi>r</mi></msub></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow></math></mathml><i>v</i><sub><i>H</i><sub><i>r</i></sub></sub>≤<i>χ</i><mathml id="54"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mrow><mi>d</mi><mo>, </mo><mn>1</mn><mo>-</mo><mi>α</mi></mrow><mn>2</mn></msubsup></mrow></math></mathml>      (6) </p>
+                </div>
+                <div class="p1">
+                    <p id="55">式中:<i>D</i><sub><i>H</i><sub><i>r</i></sub></sub>为联合马氏距离, 当满足式 (6) 时, 表示此时所有观测特征和地图特征是联合相容的。JCBB 算法的关键在于采用式 (6) 中的联合兼容条件作为遍历关联解释树分支的准则来启发新节点, 采用配对数目的单调非减规则作为定界的条件, 抛弃那些不可能导出最优解的旧节点, 最终将搜索到的兼容性最大的关联假设作为最优关联解。</p>
+                </div>
+                <h3 id="56" name="56" class="anchor-tag"><b>2 算法优化</b></h3>
+                <h4 class="anchor-tag" id="57" name="57"><b>2.1 基于子地图的匹配方法</b></h4>
+                <div class="p1">
+                    <p id="58">JCBB算法一般应用在传统的帧-图匹配上, 帧-图匹配是将激光雷达返回的一帧数据与地图特征进行匹配。该方法虽能保证每帧数据都能被检测到, 但容易因局部相似性高产生错误的匹配结果和数据量的增多而延缓检测速度, 具有一定的局限性<citation id="152" type="reference"><link href="131" rel="bibliography" /><link href="133" rel="bibliography" /><sup>[<a class="sup">7</a>,<a class="sup">8</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">针对这一问题, 本文采用基于子地图的匹配方法。将单帧激光数据变为由多帧激光数据构成的子地图, 假设子地图<i>s</i>由激光数据<i>O</i><sub>1</sub>至<i>O</i><sub><i>l</i></sub>构成, 则子地图表达式:</p>
+                </div>
+                <div class="p1">
+                    <p id="60"><i>s</i><sub><i>t</i></sub>={<i>O</i><sub>1<sub><i>t</i></sub></sub>, …<i>O</i><sub><i>l</i><sub><i>t</i></sub></sub>}      (7) </p>
+                </div>
+                <div class="p1">
+                    <p id="61">式中:<i>s</i><sub><i>t</i></sub>表示<i>t</i>时间段内由系统构成的子地图;<i>O</i><sub><i>l</i><sub><i>t</i></sub></sub>表示<i>t</i>时间段内构成子地图得第<i>l</i>个激光雷达数据。</p>
+                </div>
+                <div class="p1">
+                    <p id="62">用<i>N</i>表示对应帧包含的激光雷达数据的数目, 则 <i>s</i><sub>0</sub>到 <i>s</i><sub><i>t</i></sub>所包含的激光雷达数据总量为:</p>
+                </div>
+                <div class="p1">
+                    <p id="63"><i>N</i><sub><i>s</i><sub>0</sub>:<i>s</i><sub><i>t</i></sub></sub>=<i>N</i><sub><i>s</i><sub>0</sub></sub>+<i>N</i><sub><i>s</i><sub>1</sub></sub>+…+<i>N</i><sub><i>s</i><sub><i>t</i></sub></sub>      (8) </p>
+                </div>
+                <div class="p1">
+                    <p id="64">将基于子地图的匹配方法与直接利用JCBB算法进行匹配的方法进行比较:</p>
+                </div>
+                <div class="p1">
+                    <p id="65"><i>N</i>′<sub><sub><i>O</i><sub>1</sub>:<i>O</i><sub><i>l</i></sub></sub></sub>=<i>N</i>′<sub><sub><i>O</i><sub>1</sub></sub></sub>+<i>N</i>′<sub><sub><i>O</i><sub>3</sub></sub></sub>+…+<i>N</i>′<sub><i>O</i><sub><i>l</i></sub></sub>      (9) </p>
+                </div>
+                <div class="p1">
+                    <p id="66"><i>N</i>′<sub><i>s</i><sub><i>t</i></sub></sub>= (<i>N</i><sub><sub><i>O</i><sub>1</sub></sub></sub>+<i>N</i><sub><sub><i>O</i><sub>3</sub></sub></sub>+…+<i>N</i><sub><i>O</i><sub><i>l</i></sub></sub>) ′      (10) </p>
+                </div>
+                <div class="p1">
+                    <p id="67">式中:<i>N</i>′<sub><sub><i>O</i><sub>1</sub>:<i>O</i><sub><i>l</i></sub></sub></sub>为经栅格化后, 直接利用JCBB算法进行匹配需要匹配计算的栅格数目;<i>N</i>′<sub><sub><i>s</i><sub><i>t</i></sub></sub></sub>为经栅格化后, 基于子地图的匹配方法需要匹配计算的栅格数目。因连续帧数据之间存在冗余性, 所以必有<i>N</i>′<sub><sub><i>s</i><sub><i>t</i></sub></sub></sub>&lt;<i>N</i>′<sub><sub><i>O</i><sub>1</sub>:<i>O</i><sub><i>l</i></sub></sub></sub>。进一步, 对<i>t</i>时间段内的JCBB算法进行复杂度分析可知:假设该时间段内特征地图 <i>F</i>未发生增广, 则改进的关联算法的搜索空间由<mathml id="68"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><msup><mi>Ν</mi><mo>′</mo></msup><msub><mrow></mrow><mrow><mi>Ο</mi><msub><mrow></mrow><mn>1</mn></msub><mo>:</mo><mi>Ο</mi><msub><mrow></mrow><mi>l</mi></msub></mrow></msub></mrow></munderover><mi>Ν</mi></mstyle><msub><mrow></mrow><mi>F</mi></msub></mrow></math></mathml>变为<mathml id="69"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><msup><mi>Ν</mi><mo>′</mo></msup><msub><mrow></mrow><mrow><mi>s</mi><msub><mrow></mrow><mi>t</mi></msub></mrow></msub></mrow></munderover><mi>Ν</mi></mstyle><msub><mrow></mrow><mi>F</mi></msub></mrow></math></mathml>, 其中<i>N</i><sub><i>F</i></sub>表示地图特征点的数目, 可见基于子地图的匹配方法能有效去除观测量之间的冗余信息, 减少了需要进行匹配计算的栅格数目从而加快系统运算速度;另外, 由于子地图是由多帧激光数据构成的, 因此其所包括的信息量较单帧数据丰富很多, 从而提高了匹配的准确率。</p>
+                </div>
+                <h4 class="anchor-tag" id="70" name="70"><b>2.2 划局部关联区域</b></h4>
+                <div class="p1">
+                    <p id="71">利用基于子地图的匹配方法, 降低了系统的运算负担, 但想要在嵌入式平台上实现SLAM, 仍需进一步降低系统的运算量, 因为JCBB算法考虑了所有观测与地图特征间的兼容性, 并采用分支定界法搜索兼容性最大的关联假设, JCBB 算法的时间复杂度不仅仅依赖于当前时刻传感器观测数目, 也取决于已构建的地图中存在的特征个数<i>n</i>, 随着特征地图的不断增广会使需要进行匹配的特征点增多<citation id="153" type="reference"><link href="135" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>, 大大降低了匹配的实时性并提高了系统运算负担。</p>
+                </div>
+                <div class="p1">
+                    <p id="72">针对这一问题, 本文采用划分局部关联区域的方法, 对参与关联匹配的子地图进行划分以减少同一时刻参与匹配的数据量。具体划分规则由式 (11) 确定:</p>
+                </div>
+                <div class="p1">
+                    <p id="73" class="code-formula">
+                        <mathml id="73"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mi>a</mi><mi>b</mi><mi>s</mi><mo stretchy="false"> (</mo><mi>x</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mi>x</mi><msub><mrow></mrow><mi>v</mi></msub><mo stretchy="false">) </mo><mo>&lt;</mo><mi>R</mi><mo>+</mo><mi>d</mi></mtd></mtr><mtr><mtd columnalign="left"><mi>a</mi><mi>b</mi><mi>s</mi><mo stretchy="false"> (</mo><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mi>y</mi><msub><mrow></mrow><mi>v</mi></msub><mo stretchy="false">) </mo><mo>&lt;</mo><mi>R</mi><mo>+</mo><mi>d</mi></mtd></mtr><mtr><mtd columnalign="left"><mo stretchy="false"> (</mo><mi>x</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mi>x</mi><msub><mrow></mrow><mi>v</mi></msub><mo stretchy="false">) </mo><mo>⋅</mo><mi>cos</mi><mi>θ</mi><mo>+</mo><mo stretchy="false"> (</mo><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mi>y</mi><msub><mrow></mrow><mi>v</mi></msub><mo stretchy="false">) </mo><mo>⋅</mo><mi>sin</mi><mi>θ</mi><mo>&gt;</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="left"><mo stretchy="false"> (</mo><msubsup><mrow></mrow><mi>i</mi><mi>x</mi></msubsup><mo>-</mo><mi>x</mi><msub><mrow></mrow><mi>v</mi></msub><mo stretchy="false">) </mo><mn>2</mn><mo>+</mo><mo stretchy="false"> (</mo><msubsup><mrow></mrow><mi>i</mi><mi>y</mi></msubsup><mo>-</mo><mi>y</mi><msub><mrow></mrow><mi>v</mi></msub><mo stretchy="false">) </mo><mn>2</mn><mo>&lt;</mo><mo stretchy="false"> (</mo><msup><mrow></mrow><mi>R</mi></msup><mo>+</mo><mi>d</mi><mo stretchy="false">) </mo><mn>2</mn></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>1</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="74">式中:<i>x</i><sub><i>v</i></sub>, <i>y</i><sub><i>v</i></sub>, <i>θ</i>表示特定时刻AGV的位姿;<i>x</i><sub><i>i</i></sub>, <i>y</i><sub><i>i</i></sub>表示子地图上某个特征的坐标值;<i>R</i>为激光雷达的最大扫描距离;<i>d</i>为补偿距离。由此得到的局部关联区域即为以激光雷达为圆心的半径为<i>R</i>+<i>d</i>的半圆, 具体划分结果如图1所示。局部关联区域对子地图进行分割, 排除没有必要进行关联的数据, 从而进一步提高了运算速度。</p>
+                </div>
+                <div class="area_img" id="75">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201911010_075.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 划分局部关联区域示意" src="Detail/GetImg?filename=images/DZCL201911010_075.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 划分局部关联区域示意  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201911010_075.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="76">划分局部关联区域的方法流程如图2所示。</p>
+                </div>
+                <div class="area_img" id="77">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201911010_077.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 LSJCBB局部关联过程" src="Detail/GetImg?filename=images/DZCL201911010_077.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 LSJCBB局部关联过程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201911010_077.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="78" name="78" class="anchor-tag"><b>3 总体方案</b></h3>
+                <div class="p1">
+                    <p id="79">该AGV的硬件设计由四部分组成, 如图3所示, 分别为车体、控制器、传感器以及电源。其中车体部分包括电机、机械臂、车身。传感器包括一惯性测量单元、激光雷达、电机编码器以及超声波测距模块。控制器为i.MX6Q开发板, 搭载Linux操作系统的基础上运行ROS机器人操作系统, 以实现SLAM以及AGV的控制<citation id="154" type="reference"><link href="137" rel="bibliography" /><link href="139" rel="bibliography" /><sup>[<a class="sup">10</a>,<a class="sup">11</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="80">另外, AGV的工作环境中一般会存在大量的干扰源, 其中电磁干扰会对嵌入式控制器和传感器造成很大的影响甚至使其无法工作, 电磁干扰源大致可分为:1) 电源传导干扰;2) 传输信道传导干扰;3) 空间辐射干扰。针对这一问题, 本文采用了嵌入式系统防干扰技术, 包括硬件防干扰和软件防干扰。</p>
+                </div>
+                <div class="p1">
+                    <p id="81">本文采用的硬件防干扰有:1) 电源电路中加入低通滤波电路;2) 缩短连线, 减小环路面积;3) 设置金属机箱;4) 增设硬件看门狗。</p>
+                </div>
+                <div class="p1">
+                    <p id="82">在软件防干扰中, 本文引入了卡尔曼滤波器算法。惯性测量单元用于检测车体运行的加速度和角速度, 其精度直接影响系统姿态解算结果的可靠性。本文利用卡尔曼滤波算法将惯性测量单元回传的角度和角速度信息代入卡尔曼滤波器中相融合, 从而得到更加精准的车体运动信息。</p>
+                </div>
+                <div class="area_img" id="83">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201911010_083.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 硬件设计" src="Detail/GetImg?filename=images/DZCL201911010_083.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 硬件设计  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201911010_083.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="84">整个系统的运行流程为<citation id="155" type="reference"><link href="141" rel="bibliography" /><link href="143" rel="bibliography" /><link href="145" rel="bibliography" /><sup>[<a class="sup">12</a>,<a class="sup">13</a>,<a class="sup">14</a>]</sup></citation>:</p>
+                </div>
+                <div class="p1">
+                    <p id="85">1) 由上位机系统设定AGV的搬运目标地点、货物的放置地点以及行进速度。</p>
+                </div>
+                <div class="p1">
+                    <p id="86">2) 控制器构建AGV运动模型以及麦克纳姆轮运动学模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="87">3) 控制器内部的九轴陀螺仪实时测算AGV的运行速度和角速度, 同时激光雷达开始采集数据并回传至主控系统。</p>
+                </div>
+                <div class="p1">
+                    <p id="88">4) 控制器分别读取多帧激光雷达数据, 构建子地图。</p>
+                </div>
+                <div class="p1">
+                    <p id="89">5) 对子地图数据进行基于子地图局部关联算法的关联分析, 在此基础上进行AGV的状态预测以及环境地图预测, 结合预测结果, 用于地图更新和地图增广, 并将特征地图存入板载非易失存储器中。</p>
+                </div>
+                <div class="p1">
+                    <p id="90">6) 超声波传感器实施检测前方是否有障碍并把结果回传至主控系统, 主控系统根据最终环境地图和超声波传感器回传的数据计算出AGV的运行轨迹。</p>
+                </div>
+                <div class="p1">
+                    <p id="91">7) 将AGV运行轨迹代入麦克纳姆轮运动学公式, 计算出各轮转向和转速值。</p>
+                </div>
+                <div class="p1">
+                    <p id="92">8) 将各轮转向和转速值代入PID控制器, 结合编码器回传的数据, 驱动直流电机, 最终实现AGV的精准定位和快速有效的搬运。</p>
+                </div>
+                <div class="p1">
+                    <p id="93">系统框架如图4所示。</p>
+                </div>
+                <div class="area_img" id="94">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201911010_094.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 系统框架" src="Detail/GetImg?filename=images/DZCL201911010_094.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 系统框架  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201911010_094.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="95" name="95" class="anchor-tag"><b>4 实验结果及分析</b></h3>
+                <h4 class="anchor-tag" id="96" name="96"><b>4.1 实验过程</b></h4>
+                <div class="p1">
+                    <p id="97">本文利用MATLAB软件进行算法仿真对JCBB关联算法和SLJCBB关联算法加以对比。利用MATLAB构建出一模拟AGV和一模拟直角路口, 对模拟AGV设置三个不同的速度, 实验过程中记录下分别采用JCBB算法和SLJCBB算法的模拟AGV的从直角路口的起点运行到终点时间并显示其运行轨迹<citation id="156" type="reference"><link href="147" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>。</p>
+                </div>
+                <h4 class="anchor-tag" id="98" name="98"><b>4.2 实验结果</b></h4>
+                <div class="p1">
+                    <p id="99">在3个不同速度下, 模拟AGV的运行时间见表1。</p>
+                </div>
+                <div class="area_img" id="100">
+                    <p class="img_tit"><b>表1 MATLAB仿真中JCBB和SLJCBB关联算法性能比较</b> (s)  <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="100" border="1"><tr><td><br />关联算法</td><td>5 km/h</td><td>10 km/h</td><td>12 km/h</td></tr><tr><td><br />JCBB</td><td>14.7</td><td>7.7</td><td>5.8</td></tr><tr><td><br />SLJCBB</td><td>13.0</td><td>6.5</td><td>4.5</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="101">在10 km/h的速度下, 模拟AGV的运行轨迹如图5、6所示, 其中图5为采用JCBB算法的模拟AGV运行轨迹, 图6为采用SLJCBB算法的模拟AGV运行轨迹。图5、6中, 绿线为用户规定的路径, 红线为模拟AGV的运行路径。</p>
+                </div>
+                <div class="area_img" id="103">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201911010_103.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 JCBB关联匹配算法的MATLAB仿真" src="Detail/GetImg?filename=images/DZCL201911010_103.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 JCBB关联匹配算法的MATLAB仿真  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201911010_103.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="104">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201911010_104.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 SLJCBB关联匹配算法的MATLAB仿真" src="Detail/GetImg?filename=images/DZCL201911010_104.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 SLJCBB关联匹配算法的MATLAB仿真  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201911010_104.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="105" name="105"><b>4.3 结果分析</b></h4>
+                <div class="p1">
+                    <p id="106">如表1所示可得, 利用MATLAB进行仿真, 在5 km/h、10 km/h、12 km/h三个不同速度下, 采用SLJCBB关联匹配算法的模拟AGV通过一个直角路口的时间比采用JCBB关联匹配算法的模拟AGV至少短1.2 s。如图5和6所示可得, 采用SLJCBB关联匹配算法的模拟AGV的运行轨迹更加平滑, 通过的总路程较短。</p>
+                </div>
+                <div class="p1">
+                    <p id="107">因此, 可以得出SLJCBB关联匹配算法能够提高AGV的运行效率, 并使其运行轨迹更加平滑, 符合工厂和市场的需求。</p>
+                </div>
+                <h3 id="108" name="108" class="anchor-tag"><b>5 结  论</b></h3>
+                <div class="p1">
+                    <p id="109">本文提出的基于嵌入式平台和子地图局部关联算法的AGV设计主要特点如下:1) 提出了一种AGV设计, 并采用i.MX6开发板, 实现了基于嵌入式平台的SLAM, 相较于搭载大型主机的AGV而言, 其硬件成本大大降低, 更符合市场需求。2) 提出了一种子地图局部关联算法 (SLJCBB) , 对目前较为主流的JCBB关联算法进行了优化, 降低了SLAM的运算复杂度, 提高了系统运算速度, 这为在嵌入式平台上实现SLAM提供了必不可少的铺垫。此外, 本文还对SLJCBB关联算法和JCBB关联算法进行了MATLAB仿真并加以比较, 结果表明, 采用SLJCBB关联算法的AGV路径更平滑、运行效率更高。</p>
+                </div>
+                <div class="p1">
+                    <p id="110">本课题深入研究了激光SLAM以及AGV系统, 但仍存在几点有待加强之处。1) 不同的关联算法对如直角弯道等较为简单的路径表现效果大同小异, 但本文未对复杂路径进行仿真, 在后续的研究中, 本课题小组将进一步研究SLJCBB算法在复杂路径中的表现效果以对其进行更加全面的评价。2) 本文课题进行的MATLAB仿真虽完全采用了普通四驱AGV的运动学模型, 但所得结果可能会与最终的应用结果有所差异, 将来可以考虑以实体模型来进一步验证研究成果。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="119">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A stochastic map for uncertain spa-tial relationships">
+
+                                <b>[1]</b> SMITH R, SELF M, CHEESEMAN P.A stochastic map for uncertain spatial relationships[C].International Symposium on Robotics Research.1988:467-474.
+                            </a>
+                        </p>
+                        <p id="121">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JQRR201802004&amp;v=MDUxNzBuTXJZOUZZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeTdsV3J2Tkx6elpmTEc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 刘丹, 段建民, 王昶人.一种基于聚类分组的快速联合兼容SLAM数据关联算法[J].机器人, 2018, 40 (2) :158-168, 177.
+                            </a>
+                        </p>
+                        <p id="123">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KSCL201704022&amp;v=MzE3NTM0OUhab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeTdsV3J2TkxqN0lZckc0SDliTXE=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 蔡来良, 杨望山, 王姗姗, 等.SLAM在室内测绘仪器研发中的应用综述[J].矿山测量, 2017, 45 (4) :85-91.
+                            </a>
+                        </p>
+                        <p id="125">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1018182629.nh&amp;v=MTI4MzZXcnZOVkYyNkZyS3dITmZPcHBFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5N2w=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 伍永健.室内环境下移动机器人混合路径规划研究[D].芜湖:安徽工程大学, 2018.
+                            </a>
+                        </p>
+                        <p id="127">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WXJY201702024&amp;v=MTE0ODg2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeTdsV3J2Tk1qWEJkN0c0SDliTXJZOUhZSVFLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 李延炬, 肖宇峰, 古松, 等.基于激光传感器的SLAM数据关联算法的研究[J].微型机与应用, 2017, 36 (2) :78-82.
+                            </a>
+                        </p>
+                        <p id="129">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XTYD201711024&amp;v=Mjk2MjBGckNVUjdxZlp1WnRGeTdsV3J2TlBUblNhckc0SDliTnJvOUhZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 卫恒, 吕强, 林辉灿, 等.多机器人SLAM后端优化算法综述[J].系统工程与电子技术, 2017, 39 (11) :2553-2565.
+                            </a>
+                        </p>
+                        <p id="131">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201806028&amp;v=MDM5ODdUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnk3bFdydk5MejdTWkxHNEg5bk1xWTlIYklRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 文国成, 曾碧, 陈云华.一种适用于激光SLAM大尺度地图的闭环检测方法[J].计算机应用研究, 2018, 35 (6) :1724-1727, 1732.
+                            </a>
+                        </p>
+                        <p id="133">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=DZCL201811002&amp;v=MjcyODBGckNVUjdxZlp1WnRGeTdsV3J2TklUZklZckc0SDluTnJvOUZab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 李鹏, 张金艺, 韩国川, 等.激光雷达移动机器人局部搜索跟踪算法[J].电子测量技术, 2018, 41 (11) :6-9.
+                            </a>
+                        </p>
+                        <p id="135">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HLKX201824023&amp;v=MDM3NjhadVp0Rnk3bFdydk5MU0hBZHJHNEg5bk9xNDlIWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWY=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 阳樊, 汪婷婷.仓储作业中AGV的定位导航方法研究[J].科学技术创新, 2018, (24) :39-40.
+                            </a>
+                        </p>
+                        <p id="137">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JXYD201811019&amp;v=MDAwMjVSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeTdsV3J2Tkx6WFNhckc0SDluTnJvOUViWVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 寿佳鑫, 张志明, 苏永清, 等.基于ROS和激光雷达的室内移动机器人定位和导航系统设计与实现[J].机械与电子, 2018, 36 (11) :76-80.
+                            </a>
+                        </p>
+                        <p id="139">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=DZCL201814005&amp;v=MjMyNjRSN3FmWnVadEZ5N2xXcnZOSVRmSVlyRzRIOW5OcTQ5RllZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 朱舜, 王立群, 何军.一种基于SLAM技术的智能小车的开发与构建[J].电子测量技术, 2018, 41 (14) :21-25.
+                            </a>
+                        </p>
+                        <p id="141">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZJY201802027&amp;v=MDkzNDFyQ1VSN3FmWnVadEZ5N2xXcnZOSVRmQmQ3RzRIOW5Nclk5SFk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 李洋, 余先涛, 贺勇, 等.基于Cortex-A53平台的激光雷达SLAM实现[J].电子技术应用, 2018, 44 (2) :105-108.
+                            </a>
+                        </p>
+                        <p id="143">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GWDZ201824040&amp;v=MTc4NTR6cXFCdEdGckNVUjdxZlp1WnRGeTdsV3J2TklqclBkTEc0SDluT3E0OUJaSVFLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 熊安, 卞春江, 周海, 等.基于ROS的机器人定位与导航系统的仿真设计[J].电子设计工程, 2018, 26 (24) :188-193.
+                            </a>
+                        </p>
+                        <p id="145">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1018226563.nh&amp;v=MDA5OTA1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnk3bFdydk5WRjI2RnJHNkdOVEtySkViUElRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 何叶.基于ROS的移动机器人SLAM技术研究[D].南昌:南昌大学, 2018.
+                            </a>
+                        </p>
+                        <p id="147">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=JGZZ201807018&amp;v=MjAyOTFNcUk5RWJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5N2xXcnZOTHlyUmRMRzRIOW4=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 刘丹, 段建民, 孟晓燕.基于激光雷达的智能车SLAM系统[J].激光杂志, 2018, 39 (7) :76-82.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="DZCL201911010" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201911010&amp;v=MTI0NzVsV3J2TklUZklZckc0SDlqTnJvOUVaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeTc=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN6dEtvMkhTQkozQzBMTGlhZVljcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=NLcKG8I1SJUaVFrQ0iGpF2klAT0OsmHRaVSZ1rKb5xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

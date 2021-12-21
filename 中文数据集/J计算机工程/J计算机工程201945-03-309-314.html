@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130640397775000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201903051%26RESULT%3d1%26SIGN%3dSweuMP3LWdEjVrNYBBNQIiD1Roc%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201903051&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201903051&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201903051&amp;v=MTUzMjBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5N21VcjNNTHo3QmJiRzRIOWpNckk5QVpZUUs=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#35" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#39" data-title="1 自然语言隐写分析方法 ">1 自然语言隐写分析方法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#40" data-title="1.1 基于Word2vec的词表示">1.1 基于Word2vec的词表示</a></li>
+                                                <li><a href="#50" data-title="1.2 同义词的上下文合适度计算">1.2 同义词的上下文合适度计算</a></li>
+                                                <li><a href="#62" data-title="1.3 隐写分析特征提取">1.3 隐写分析特征提取</a></li>
+                                                <li><a href="#73" data-title="1.4 算法描述">1.4 算法描述</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#94" data-title="2 实验结果与分析 ">2 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#95" data-title="2.1 实验设置">2.1 实验设置</a></li>
+                                                <li><a href="#97" data-title="2.2 特征分析">2.2 特征分析</a></li>
+                                                <li><a href="#101" data-title="2.3 与其他方法的隐写分析性能对比">2.3 与其他方法的隐写分析性能对比</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#107" data-title="3 结束语 ">3 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#44" data-title="&lt;b&gt;图1 Word2vec模型架构&lt;/b&gt;"><b>图1 Word2vec模型架构</b></a></li>
+                                                <li><a href="#99" data-title="&lt;b&gt;图2 部分原始文本和隐写文本的&lt;i&gt;λ&lt;/i&gt;值对比结果&lt;/b&gt;"><b>图2 部分原始文本和隐写文本的<i>λ</i>值对比结果</b></a></li>
+                                                <li><a href="#100" data-title="&lt;b&gt;图3 部分原始文本和隐写文本的&lt;i&gt;θ&lt;/i&gt;值对比结果&lt;/b&gt;"><b>图3 部分原始文本和隐写文本的<i>θ</i>值对比结果</b></a></li>
+                                                <li><a href="#105" data-title="&lt;b&gt;表1 不同隐写分析方法检测性能对比&lt;/b&gt;"><b>表1 不同隐写分析方法检测性能对比</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" WILSON A, KER A D.Avoiding detection on Twitter:embedding strategies for linguistic steganography[J].Electronic Imaging, 2016 (8) :1-9." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Avoiding detection on Twitter:embedding strategies for linguistic steganography">
+                                        <b>[1]</b>
+                                         WILSON A, KER A D.Avoiding detection on Twitter:embedding strategies for linguistic steganography[J].Electronic Imaging, 2016 (8) :1-9.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" HU H, ZUO X, ZHANG W, et al.Adaptive text steganography by exploring statistical and linguistical distortion[C]//Proceedings of the 2nd International Conference on Data Science in Cyberspace.Washington D.C., USA:IEEE Press, 2017:145-150." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Adaptive text steganography by exploring statistical and linguistical distortion">
+                                        <b>[2]</b>
+                                         HU H, ZUO X, ZHANG W, et al.Adaptive text steganography by exploring statistical and linguistical distortion[C]//Proceedings of the 2nd International Conference on Data Science in Cyberspace.Washington D.C., USA:IEEE Press, 2017:145-150.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" WINSTEIN K.Lexical steganography through adaptive modulation of the word choice hash[EB/OL].[2018-01-07].http://alumni.imsa.edu/～keithw/tlex/lsteg.ps." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Lexical steganography through adaptive modulation of the word choice hash">
+                                        <b>[3]</b>
+                                         WINSTEIN K.Lexical steganography through adaptive modulation of the word choice hash[EB/OL].[2018-01-07].http://alumni.imsa.edu/～keithw/tlex/lsteg.ps.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" CHANG C Y, CLARK S.Practical linguistic steganography using contextual synonym substitution and a novel vertex coding method[J].Computational Linguistics, 2014, 40 (2) :403-448." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Practical Linguistic Steganography using Contextual Synonym Substitution and a Novel Vertex Coding Method">
+                                        <b>[4]</b>
+                                         CHANG C Y, CLARK S.Practical linguistic steganography using contextual synonym substitution and a novel vertex coding method[J].Computational Linguistics, 2014, 40 (2) :403-448.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" 杨潇, 李峰, 向凌云.基于矩阵编码的同义词替换隐写算法[J].小型微型计算机系统, 2015, 36 (6) :1296-1300." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XXWX201506027&amp;v=MDU4NDlqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5N21VcjNNUFRYY2RyRzRIOVRNcVk5SFk0UUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         杨潇, 李峰, 向凌云.基于矩阵编码的同义词替换隐写算法[J].小型微型计算机系统, 2015, 36 (6) :1296-1300.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 霍林, 肖豫川.基于二元依存同义词替换隐写算法[J].计算机应用研究, 2018, 35 (4) :1174-1178." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201804046&amp;v=MzE0ODVMT2VaZVJvRnk3bVVyM01MejdTWkxHNEg5bk1xNDlCWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         霍林, 肖豫川.基于二元依存同义词替换隐写算法[J].计算机应用研究, 2018, 35 (4) :1174-1178.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 罗纲, 孙星明, 向凌云, 等.针对同义词替换信息隐藏的检测方法研究[J].计算机研究与发展, 2008, 45 (10) :1696-1703." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ200810009&amp;v=MjMyNDI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTdtVXIzTUx5dlNkTEc0SHRuTnI0OUZiWVFLREg=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         罗纲, 孙星明, 向凌云, 等.针对同义词替换信息隐藏的检测方法研究[J].计算机研究与发展, 2008, 45 (10) :1696-1703.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" YU Z, HUANG L, CHEN Z, et al.Steganalysis of synonym-substitution based natural language water-marking[J].International Journal of Multimedia and Ubiquitous Engineering, 2012, 4:21-34." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Steganalysis of synonym-substitution based natural language water-marking">
+                                        <b>[8]</b>
+                                         YU Z, HUANG L, CHEN Z, et al.Steganalysis of synonym-substitution based natural language water-marking[J].International Journal of Multimedia and Ubiquitous Engineering, 2012, 4:21-34.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" CHEN Z, HUANG L, MIAO H, et al.Steganalysis against substitution-based linguistic steganography based on context clusters[J].Computers and Electrical Engineering, 2011, 37 (6) :1071-1081." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011600355410&amp;v=MDUwMjdWYUJZPU5pZk9mYks3SHRETnFZOUZaKzRLQ0gwNW9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSUpsMA==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         CHEN Z, HUANG L, MIAO H, et al.Steganalysis against substitution-based linguistic steganography based on context clusters[J].Computers and Electrical Engineering, 2011, 37 (6) :1071-1081.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" CHEN Z, HUANG L, YANG W.Detection of substitution-based linguistic steganography by relative frequency analysis[J].Digital Investigation, 2011, 8 (1) :68-77." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011300181618&amp;v=MTA2MzAweG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSUpsMFZhQlk9TmlmT2ZiSzdIdEROckk5RlplTU9Dbg==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         CHEN Z, HUANG L, YANG W.Detection of substitution-based linguistic steganography by relative frequency analysis[J].Digital Investigation, 2011, 8 (1) :68-77.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" XIANG L, SUN X, LUO G, et al.Linguistic steganalysis using the features derived from synonym frequency[J].Multimedia Tools and Applications, 2014, 71 (3) :1893-1911." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD14071600003771&amp;v=MDI4MTlQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSUpsMFZhQlk9Tmo3QmFySzhIdGJOcVk5RlpPc01DM3M0b0JNVDZUNA==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         XIANG L, SUN X, LUO G, et al.Linguistic steganalysis using the features derived from synonym frequency[J].Multimedia Tools and Applications, 2014, 71 (3) :1893-1911.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" HINTON G E.Learning distributed representations of concepts[C]//Proceedings of the 8th Annual Conference of the Cognitive Science Society.Amherst, USA:Erlbaum Associates, Inc., 1986:12." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning distributed representations of concepts">
+                                        <b>[12]</b>
+                                         HINTON G E.Learning distributed representations of concepts[C]//Proceedings of the 8th Annual Conference of the Cognitive Science Society.Amherst, USA:Erlbaum Associates, Inc., 1986:12.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" MIKOLOV T, CHEN K, CORRADO G, et al.Efficient estimation of word representations in vector space[EB/OL].[2018-01-07].https://arxiv.org/abs/1301.3781." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+                                        <b>[13]</b>
+                                         MIKOLOV T, CHEN K, CORRADO G, et al.Efficient estimation of word representations in vector space[EB/OL].[2018-01-07].https://arxiv.org/abs/1301.3781.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" MIKOLOV T, SUTSKEVER I, CHEN K, et al.Distributed representations of words and phrases and their compositionality[C]//Proceedings of NIPS’13.[S.l.]:Curran Associates, Inc., 2013:3111-3119." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Distributed representations of words and phrases and their compositionality">
+                                        <b>[14]</b>
+                                         MIKOLOV T, SUTSKEVER I, CHEN K, et al.Distributed representations of words and phrases and their compositionality[C]//Proceedings of NIPS’13.[S.l.]:Curran Associates, Inc., 2013:3111-3119.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 梁军, 柴玉梅, 原慧斌, 等.基于深度学习的微博情感分析[J].中文信息学报, 2014, 28 (5) :155-161." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201405021&amp;v=MDQwNDY0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5N21VcjNNS0NqWWZiRzRIOVhNcW85SFpZUUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         梁军, 柴玉梅, 原慧斌, 等.基于深度学习的微博情感分析[J].中文信息学报, 2014, 28 (5) :155-161.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" 孙紫阳, 顾君忠, 杨静.基于深度学习的中文实体关系抽取方法[J].计算机工程, 2018, 44 (9) :164-170." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201809028&amp;v=MDM0ODBMejdCYmJHNEg5bk1wbzlIYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk3bVVyM00=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         孙紫阳, 顾君忠, 杨静.基于深度学习的中文实体关系抽取方法[J].计算机工程, 2018, 44 (9) :164-170.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(03),309-314 DOI:10.19678/j.issn.1000-3428.0050407            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于Word2vec的自然语言隐写分析方法</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%96%BB%E9%9D%96%E6%B0%91&amp;code=38809941&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">喻靖民</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%90%91%E5%87%8C%E4%BA%91&amp;code=29563919&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">向凌云</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9B%BE%E9%81%93%E5%BB%BA&amp;code=38809942&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">曾道建</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E9%95%BF%E6%B2%99%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E7%BB%BC%E5%90%88%E4%BA%A4%E9%80%9A%E8%BF%90%E8%BE%93%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%99%BA%E8%83%BD%E5%A4%84%E7%90%86%E6%B9%96%E5%8D%97%E7%9C%81%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=0175884&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">长沙理工大学综合交通运输大数据智能处理湖南省重点实验室</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E9%95%BF%E6%B2%99%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E9%80%9A%E4%BF%A1%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">长沙理工大学计算机与通信工程学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E9%95%BF%E6%B2%99%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E6%99%BA%E8%83%BD%E9%81%93%E8%B7%AF%E4%B8%8E%E8%BD%A6%E8%B7%AF%E5%8D%8F%E5%90%8C%E6%B9%96%E5%8D%97%E7%9C%81%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">长沙理工大学智能道路与车路协同湖南省重点实验室</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>为数字化表示文本内容的语义信息, 并提高基于同义词替换的隐写文本检测精度, 提出一种新的自然语言隐写分析方法。利用Word2vec对大规模语料库进行训练获得包含丰富语义信息的多维词向量, 使用同义词及其上下文词向量之间的余弦距离度量2个词之间的相关度, 并计算同义词在特定上下文中的合适度。根据信息嵌入过程中同义词替换操作对文本同义词合适度的影响提取检测特征形成特征向量, 采用贝叶斯分类模型训练特征向量得到隐写分析特征, 从而识别隐写文本。实验结果表明, 该方法对于不同嵌入率下隐写文本的平均检测精确率和召回率分别达到97.71%和92.64%, 具有较好的检测性能。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">自然语言;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%8D%E5%90%91%E9%87%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">词向量;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%90%8C%E4%B9%89%E8%AF%8D%E6%9B%BF%E6%8D%A2&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">同义词替换;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%9A%90%E5%86%99%E5%88%86%E6%9E%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">隐写分析;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%B8%8A%E4%B8%8B%E6%96%87%E5%90%88%E9%80%82%E5%BA%A6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上下文合适度;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    喻靖民 (1993—) , 男, 硕士研究生, 主研方向为隐写分析、自然语言处理;;
+                                </span>
+                                <span>
+                                    向凌云, 讲师、博士。;
+                                </span>
+                                <span>
+                                    曾道建, 讲师、博士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-02-05</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金 (61202439, 61602059);</span>
+                                <span>湖南省教育厅科学研究重点项目 (16A008);</span>
+                    </p>
+            </div>
+                    <h1><b>Natural Language Steganalysis Method Based on Word2vec</b></h1>
+                    <h2>
+                    <span>YU Jingmin</span>
+                    <span>XIANG Lingyun</span>
+                    <span>ZENG Daojian</span>
+            </h2>
+                    <h2>
+                    <span>Hunan Provincial Key Laboratory of Intelligent Processing of Big Data on Transportation, Changsha University of Science and Technology</span>
+                    <span>School of Computer and Communication Engineering, Changsha University of Science and Technology</span>
+                    <span>Hunan Provincial Key Laboratory of Smart Roadway and Cooperative Vehicle-Infrastructure Systems, Changsha University of Science and Technology</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>In order to represent the semantic information of the text content for digitization and improve the accuracy of detecting stego texts based on synonym substitution, a novel natural language steganalyisis method is proposed.Word2 vec is employed to train a large-scale corpus to obtain multi-dimensional word vectors which contains rich semantic information.Then, it uses the cosine distance between a synonym and its context word vector to measure the correlation between two words, and calculates the fitness of synonyms in a specific context.According to the effect on the context fitness of the synonyms caused by the synonym substitutions in the embedding process, detection features are extracted to form a feature vector, and the Bayesian classification model is employed to train feature vector for the task of steganalysis feature to detect the stego texts.Experimental results show that the proposed method has good detection performance, whose average detection precision and average recall for the stego texts with different embedding rates achieve 97.71% and 92.64%, respectively.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=natural%20language&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">natural language;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=word%20vector&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">word vector;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=synonym%20substitution&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">synonym substitution;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=steganalysis&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">steganalysis;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=context%20fitness&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">context fitness;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-02-05</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="35" name="35" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="36">近年来, 研究人员提出了各种自然语言隐写方法<citation id="113" type="reference"><link href="3" rel="bibliography" /><link href="5" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>]</sup></citation>。这些方法通过语言等价变换将秘密信息嵌入到自然文本中达到隐蔽通信的目的, 然而不法分子有可能利用这些方法从事非法活动。为有效监管和阻止自然语言隐写方法的滥用, 出现了一种自然语言隐写分析技术, 检测文本中是否存在秘密信息。最早使用的自然语言隐写方法是利用同义词之间的替换实现秘密信息的隐蔽嵌入。文献<citation id="109" type="reference">[<a class="sup">3</a>]</citation>提出一个基于同义词替换的隐写系统T-Lex, 该系统简单实用, 但容易导致语法错误以及统计特性的改变。为解决这些问题, 国内外学者提出了多种新方法, 如文献<citation id="110" type="reference">[<a class="sup">4</a>]</citation>通过使用Google <i>n</i>-gram语料库计算单词的上下文合适度动态选择用于替换的同义词, 提出基于顶点编码的隐写方法。文献<citation id="111" type="reference">[<a class="sup">5</a>]</citation>提出基于矩阵编码的同义词替换隐写方法减少载体文本的修改量。文献<citation id="112" type="reference">[<a class="sup">6</a>]</citation>通过二元依存关系获取最佳同义词替换集, 设计新的隐写方法。</p>
+                </div>
+                <div class="p1">
+                    <p id="37">尽管使用同义词替换的隐写方法可以使替换前后文本的语意基本保持一致, 但不可避免地会使隐写前后文本存在统计上的差异, 从而被其他隐写分析技术利用检测出隐藏信息<citation id="114" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>。文献<citation id="115" type="reference">[<a class="sup">8</a>]</citation>利用上下文的联合频率信息评估同义词在上下文中的合适度, 通过合适度相关序列的统计特征检测隐藏信息。文献<citation id="117" type="reference">[<a class="sup">9</a>,<a class="sup">10</a>]</citation>提出基于相对频率分析、基于上下文词聚类分析的检测方法, 分别计算同义词词频的均值和方差, 以及利用同义词与上下文单词的共现频率估算同义词合适度提取检测特征, 进一步提高检测精度。文献<citation id="116" type="reference">[<a class="sup">11</a>]</citation>利用同义词之间词频的差异, 从同义词的词频大小和同义词个数定义同义词的属性, 从而提取相应的隐写分析特征。上述方法使用的检测特征主要基于词频特性, 属于浅层特征, 不能较好地表达语义语法和其他深层语言特征, 影响了隐写分析的检测精度。</p>
+                </div>
+                <div class="p1">
+                    <p id="38">本文提出一种基于Word2vec的自然语言隐写分析方法, 利用分布式词表示工具Word2vec为每个单词训练出包含丰富语义信息的多维词向量, 使用同义词及其上下文词向量之间的余弦距离度量2个词之间的相关度, 以此计算同义词在特定上下文中的合适度并提取检测特征, 同时将检测特征输入到贝叶斯估计模型中进行训练和测试。</p>
+                </div>
+                <h3 id="39" name="39" class="anchor-tag">1 自然语言隐写分析方法</h3>
+                <h4 class="anchor-tag" id="40" name="40">1.1 基于Word2vec的词表示</h4>
+                <div class="p1">
+                    <p id="41">在对文本进行分析前, 先将文本内容转换成数字 (即词向量化) , 再进行后续运算。词向量化提供了一种数学化的方法, 将自然语言符号信息转化为向量形式的数字信息。文献<citation id="118" type="reference">[<a class="sup">12</a>]</citation>提出词的分布式表示概念, 将单词表示为维度较低的稠密向量且该向量能够刻画单词语义之间的相似度。词的分布式表示能克服另一种典型的词向量表示模型One-hot<citation id="119" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>的缺点, 如向量维数灾难及不能较好地刻画词与词之间的相似性。</p>
+                </div>
+                <div class="p1">
+                    <p id="42">词的分布式表示的实现方法有很多。文献<citation id="120" type="reference">[<a class="sup">13</a>,<a class="sup">14</a>]</citation>提出2个基于神经网络的语言模型, 并具体实现为词向量工具Word2vec。Word2vec是一个开源工具, 通过对大规模语料库的训练, 能够将单词表示成包含丰富语义信息的多维实数向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">Word2vec采用2种神经网络语言模型CBOW和Skip-gram实现词的分布式表示。这2种模型均属于浅层的双层神经网络, 包括输入层、隐藏层和输出层, 结构如图1所示。</p>
+                </div>
+                <div class="area_img" id="44">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903051_044.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 Word2vec模型架构" src="Detail/GetImg?filename=images/JSJC201903051_044.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 Word2vec模型架构</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903051_044.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="45">CBOW模型的建模思想是根据上下文预测当前词语的概率, 即已知上下文<i>w</i><sub><i>i</i>-<i>k</i></sub>, …, <i>w</i><sub><i>i</i>-1</sub>, <i>w</i><sub><i>i</i>+1</sub>, …, <i>w</i><sub><i>i</i>+<i>k</i></sub>的词向量, 预测当前词<i>w</i><sub><i>i</i></sub>的词向量。而Skip-gram模型刚好相反, 根据当前词语来预测上下文的概率, 即已知当前词<i>w</i><sub><i>i</i></sub>的向量预测其上下文<i>w</i><sub><i>i</i>-<i>k</i></sub>, …, <i>w</i><sub><i>i</i>-1</sub>, <i>w</i><sub><i>i</i>+1</sub>, …, <i>w</i><sub><i>i</i>+<i>k</i></sub>的词向量。神经网络语言模型在大规模语料库上反复运行上述过程进行训练, 获得最终的词向量, Skip-gram模型训练速度较慢, CBOW模型训练速度相对较快, 但对于低频词Skip-gram模型的词向量效果较好。在基于同义词替换的隐写方法中, 使用的同义词多数是使用频率较低的词, 针对这类隐写文本的检测, 为获得更好的隐写分析检测结果, 选用Skip-gram模型训练词向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">Skip-gram模型的训练目标是找到对于预测句子或文档中的上下文词语有用的词表示, 本质上是一种词袋模型, 基于单词的上下文训练词向量。每个词向量反映了上下文单词的加权值, 通过训练学习到的向量能较好地表征一个词的语义信息。因此, 本文利用Skip-gram模型从大量非结构化语料库文本数据中学习到高质量的词向量, 将需要量化的单词映射到一个多维的向量空间。获得的词向量能够有效地揭示词之间深层和隐含的语义关系, 如词与词之间的逻辑关系、同义词及其上下文词之间的相关性等。特别地, 词向量能较好地刻画词语之间的语义相似度, 如vector (‘Paris’) -vector (‘France’) +vector (‘Italy’) 的结果与vector (‘Rome’) 非常相近, 而vector (‘king’) -vector (‘man’) +vector (‘woman’) 与vector (‘queen’) 非常接近<citation id="121" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>。目前, 此类词向量已广泛用于自然语言处理中的许多任务, 如情感分析<citation id="122" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>、实体关系抽取<citation id="123" type="reference"><link href="33" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>等, 并取得了较好的效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="47">给定一个单词<i>w</i>, 通过Word2vec工具选用Skip-gram模型获得的词向量表示如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="48"><b><i>V</i></b> (<i>w</i>) ={<i>v</i><sub>1</sub>, <i>v</i><sub>2</sub>, …, <i>v</i><sub><i>m</i></sub>}      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="49">其中, <i>m</i>表示词向量的维数, 其值在训练前预先设定。一般而言向量维数越大越好, 但同时向量的维数越大计算复杂度越高<citation id="124" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>, 过小则包含的语义信息较少, 会降低词向量的表示能力, 因此应当设置适中的<i>m</i>值。</p>
+                </div>
+                <h4 class="anchor-tag" id="50" name="50">1.2 同义词的上下文合适度计算</h4>
+                <div class="p1">
+                    <p id="51"><b>定义1</b> (可替换元素) 在基于同义词替换的隐写方法中, 将用于嵌入信息的同义词定义为可替换元素。每个可替换元素存在1个或多个与其意思相近的可相互替换的元素。</p>
+                </div>
+                <div class="p1">
+                    <p id="52"><b>定义2</b> (替换集) 可相互替换的所有可替换元素的集合, 在基于同义词替换的隐写方法中一个同义词组即为一个替换集。如可替换元素<i>ss</i><sub>1</sub>, <i>ss</i><sub>2</sub>, …, <i>ss</i><sub><i>x</i></sub>是可相互替换嵌入信息的具有近似含义的所有同义词的集合, 是一个替换集, 其中<i>x</i>表示替换集合中元素的总数。每个可替换元素唯一地属于一个替换集合。如{timeworn, hackneyed, trite}表示一个具有3个可替换元素的替换集。</p>
+                </div>
+                <div class="p1">
+                    <p id="53"><b>定义3</b> (上下文) 对于文本中指定的一个词, 其前后一定窗口范围内的单词集合称为该词的上下文。假设窗口的大小为<i>k</i>, 当前词为<i>w</i><sub><i>i</i></sub>, 则该词前后<i>k</i>个单词为当前词的上下文, 表示为<i>c</i> (<i>w</i><sub><i>i</i></sub>) ={<i>w</i><sub><i>i</i>-<i>k</i></sub>, …, <i>w</i><sub><i>i</i>-1</sub>, <i>w</i><sub><i>i</i>+1</sub>, …, <i>w</i><sub><i>i</i>+<i>k</i></sub>}。</p>
+                </div>
+                <div class="p1">
+                    <p id="54">由于词向量包含了丰富的语义信息, 能够刻画2个词之间的相似性, 因此利用词向量度量同义词与其上下文中词的相关度。</p>
+                </div>
+                <div class="p1">
+                    <p id="55"><b>定义4</b> (词相关度) 2个词对应的词向量之间的余弦距离定义为2个词的词相关度。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">假定词<i>w</i>和<i>s</i>的词向量分别为<b><i>V</i></b> (<i>w</i>) 和<b><i>V</i></b> (<i>s</i>) , 根据定义4, <i>w</i>和<i>s</i>的词相关度为:</p>
+                </div>
+                <div class="p1">
+                    <p id="57" class="code-formula">
+                        <mathml id="57"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>s</mi><mi>i</mi><mi>m</mi><mo stretchy="false"> (</mo><mi>s</mi><mo>, </mo><mi>w</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mi mathvariant="bold-italic">V</mi><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo><mo>⋅</mo><mi mathvariant="bold-italic">V</mi><mo stretchy="false"> (</mo><mi>w</mi><mo stretchy="false">) </mo></mrow><mrow><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">V</mi><mo stretchy="false"> (</mo><mi>s</mi><mo stretchy="false">) </mo><mo stretchy="false">∥</mo><mo>⋅</mo><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">V</mi><mo stretchy="false"> (</mo><mi>w</mi><mo stretchy="false">) </mo><mo stretchy="false">∥</mo></mrow></mfrac><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="58">在文本中判断一个词使用是否恰当, 通常情况下该词周围的词中距离越远的词对该词的影响力越小, 一般只会是一定距离内的词决定了该词的使用是否合适。假设只有一定上下文窗口内的词才会影响可替换同义词在固定上下文中的合适度, 因此利用上下文词与可替换同义词之间的词相关度衡量可替换同义词在当前上下文中的合适度。通过观察同义词的上下文合适度判断同义词是否被替换。</p>
+                </div>
+                <div class="p1">
+                    <p id="59"><b>定义5</b> (上下文合适度) 单词<i>s</i>及其上下文中各单词的词相关性之和定义为词<i>s</i>的上下文合适度。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">假定同义词<i>s</i>的上下文为<i>c</i> (<i>s</i>) ={<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, …, <i>w</i><sub><i>k</i></sub>, …, <i>w</i><sub>2<i>k</i></sub>}, 词<i>s</i>与上下文中词<i>w</i><sub><i>i</i></sub>的词相关度为<i>sim</i> (<i>s</i>, <i>w</i><sub><i>i</i></sub>) , 根据定义5, 则<i>s</i>在当前上下文的合适度为:</p>
+                </div>
+                <div class="p1">
+                    <p id="61" class="code-formula">
+                        <mathml id="61"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>F</mi><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>2</mn><mi>k</mi></mrow></munderover><mi>s</mi></mstyle><mi>i</mi><mi>m</mi><mo stretchy="false"> (</mo><mi>s</mi><mo>, </mo><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <h4 class="anchor-tag" id="62" name="62">1.3 隐写分析特征提取</h4>
+                <div class="p1">
+                    <p id="63">对于待分析文本中出现的所有同义词, 可以根据定义5计算上下文合适度。一般而言, 正常文本中所使用的同义词是与当前上下文最合适的词, 因此将该同义词对应替换集合中的可替换元素依次放入当前上下文中, 计算出相应的上下文合适度后, 经过比较可发现, 原始使用的同义词上下文合适度通常是其替换集中元素所对应上下文合适度的最大值。然而, 经过同义词替换操作进行信息嵌入后, 很大程度上替换后元素相应的上下文合适度要比替换前原始使用同义词的上下文合适度小, 具体示例如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="64">原始例句:A newspaper should be lively and should avoid hackneyed stuff。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">隐写例句1:A newspaper should be lively and should avoid timeworn stuff。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">隐写例句2:A newspaper should be lively and should avoid trite stuff。</p>
+                </div>
+                <div class="p1">
+                    <p id="67">原始例句为百度百科讲解单词“hackneyed”含义时使用的例句。“hackneyed”所在替换集为{timeworn, hackneyed, trite}, 因此通过同义词替换嵌入信息生成的隐写例句可能为上述隐写例句1和例句2。3个例句中出现的3个同义词具有相同的上下文单词。本文利用Word2vec获得上下文和这3个同义词的词向量后, 根据式 (2) 、式 (3) 计算的同义词“hackneyed”在当前上下文中的合适度约为1.244 3, 而“timeworn”和“trite”的合适度分别为0.182 3和1.186 2。由此可见, 在原始例句中, 原始使用的同义词确实具有最大的上下文合适度, 而经过同义词替换后的隐写例句中, 同义词的上下文合适度要比替换前的小。“hackneyed”“timeworn”和“trite”的相对词频分别约为0.452 632、0.073 684 2和0.473 684, 即“trite”比“hackneyed”具有更高的使用频率。如果仅从词频特性来提取特征, 则很难准确区分原始例句和隐写例句2。因此, 使用词向量能更准确地刻画同义词的上下文合适度, 从而提高隐写分析特征检测同义词替换隐写文本的能力。</p>
+                </div>
+                <div class="p1">
+                    <p id="68">一方面, 如果句子中使用的某个同义词的上下文合适度不是其替换集中所有元素的上下文合适度的最大值, 那么该词是为了嵌入信息将原始的词进行替换。另一方面, 如果一个同义词的上下文合适度与其替换集中所有元素的上下文合适度的最大值差距越大, 那么在当前上下文中正常使用该词的概率越低, 该词是替换过的概率越高。从这两方面考虑, 本文提取2个用于区分基于同义词替换的隐写文本和正常文本的隐写分析特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">假设待分析文本中出现的所有同义词为<i>s</i><sub>1</sub>, <i>s</i><sub>2</sub>, …, <i>s</i><sub><i>n</i></sub>, 依次计算每个同义词<i>s</i><sub><i>i</i></sub> (1≤<i>i</i>≤<i>n</i>) 所在上下文中的合适度并表示为<i>F</i><sub><i>i</i></sub>。将每个同义词<i>s</i><sub><i>i</i></sub>依次替换为其所在替换集中的可替换元素, 分别计算每个可替换元素在当前上下文中的合适度, 再将该替换集所有元素对应的合适度值进行对比, 选出最大值并记为<i>F</i><mathml id="70"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>i</mi><mrow><mi>max</mi></mrow></msubsup></mrow></math></mathml>。在此基础上, 计算2个检测特征λ和θ, 计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="71" class="code-formula">
+                        <mathml id="71"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>λ</mi><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo stretchy="false">[</mo></mstyle><mi>F</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mi>F</mi><msubsup><mrow></mrow><mi>i</mi><mrow><mi>max</mi></mrow></msubsup><mo stretchy="false">]</mo><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>4</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>θ</mi><mo>=</mo><mfrac><mn>1</mn><mi>n</mi></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mo stretchy="false"> (</mo><mi>F</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mi>F</mi><msubsup><mrow></mrow><mi>i</mi><mrow><mi>max</mi></mrow></msubsup><mo stretchy="false">) </mo></mrow></mstyle><msup><mrow></mrow><mn>2</mn></msup><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>5</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mo stretchy="false">[</mo><mi>F</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mi>F</mi><msubsup><mrow></mrow><mi>i</mi><mrow><mi>max</mi></mrow></msubsup><mo stretchy="false">]</mo><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd><mtable><mtr><mtd><mn>1</mn><mo>, </mo><mi>F</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mi>F</mi><msubsup><mrow></mrow><mi>i</mi><mrow><mi>max</mi></mrow></msubsup></mtd><mtd></mtd></mtr></mtable></mtd></mtr><mtr><mtd><mtable><mtr><mtd><mn>0</mn><mo>, </mo><mi>F</mi><msub><mrow></mrow><mi>i</mi></msub><mo>≠</mo><mi>F</mi><msubsup><mrow></mrow><mi>i</mi><mrow><mi>max</mi></mrow></msubsup></mtd><mtd></mtd></mtr></mtable></mtd></mtr></mtable></mrow></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="72">其中, λ表示文本中出现的可替换元素 (同义词) 的上下文合适度为其对应替换集中上下文合适度最大值所占的比例。通常正常文本中λ的值较大, 趋近于1。在隐写文本中, 由于一个同义词的编码值与待嵌入信息的编码值不一致时, 为了嵌入信息该同义词将被其他词替换;当两者一致时, 保持不变。因此, 与嵌入信息前相比, λ值将会大幅降低。特别是当所有同义词都被嵌入信息即满嵌时, 会导致将近一半的具有最大合适度的同义词被替换, 此时λ的值将趋近于0.5。θ表示文本中每个可替换元素的上下文合适度与其对应替换集中上下文合适度最大值之差的平均平方值。通常正常文本中的θ值比较小, 而隐写文本中θ值相对较大。由此可知, λ和θ可有效区分基于同义词替换的隐写文本和正常文本。</p>
+                </div>
+                <h4 class="anchor-tag" id="73" name="73">1.4 算法描述</h4>
+                <div class="p1">
+                    <p id="74">通过上述过程, 本文将从每个文本中提取出2个隐写分析特征, 然后利用贝叶斯分类器进行训练和检测, 从正常文本中识别出基于同义词替换的隐写文本。</p>
+                </div>
+                <h4 class="anchor-tag" id="75" name="75">1) 训练过程</h4>
+                <div class="p1">
+                    <p id="76">基于Word2vec的隐写分析算法的训练过程具体如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="77"><b>步骤1</b> Word2vec采用Skip-gram模型训练语料库获得字典中所有词的词向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="78"><b>步骤2</b> 利用可替换同义词构建同义词库。</p>
+                </div>
+                <div class="p1">
+                    <p id="79"><b>步骤3</b> 对于训练集中的每一个训练文本进行遍历并利用同义词库检索出文本中出现的所有同义词, 该同义词序列记为<i>S</i>={<i>s</i><sub>1</sub>, <i>s</i><sub>2</sub>, …, <i>s</i><sub><i>n</i></sub>}, <i>n</i>为文本中出现的可替换同义词的个数。记录每个同义词所在的上下文, 第<i>i</i>个同义词<i>s</i><sub><i>i</i></sub>的上下文为<mathml id="80"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mi>c</mi><mo stretchy="false"> (</mo><mi>s</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>=</mo></mrow><mrow><mo>{</mo><mrow><mi>w</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mn>1</mn></mrow></msub><mo>, </mo><mi>w</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mn>2</mn></mrow></msub><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>w</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mn>2</mn><mi>k</mi></mrow></msub></mrow><mo>}</mo></mrow></mrow></math></mathml>, 其中1≤<i>i</i>≤<i>n</i>。当上下文窗口的大小不满<i>k</i>时用零向量进行填充。</p>
+                </div>
+                <div class="p1">
+                    <p id="81"><b>步骤4</b> 遍历同义词序列<i>S</i>, 检索同义词库并记录每个同义词<i>s</i><sub><i>i</i></sub>对应的替换集<i>SS</i> (<i>s</i><sub><i>i</i></sub>) ={<i>ss</i><sub><i>i</i>, 1</sub>, <i>ss</i><sub><i>i</i>, 2</sub>, …, <i>ss</i><sub><i>i</i>, <i>x</i></sub>}。</p>
+                </div>
+                <div class="p1">
+                    <p id="82"><b>步骤5</b> 利用已训练好的词向量库将上述步骤中检索到的同义词、同义词替换集、上下文单词转换为相应的词向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="83"><b>步骤6</b> 根据式 (2) 依次计算同义词<i>s</i><sub><i>i</i></sub>与上下文<i>c</i> (<i>s</i><sub><i>i</i></sub>) 中每个单词的相关度。</p>
+                </div>
+                <div class="p1">
+                    <p id="84"><b>步骤7</b> 根据式 (3) 计算<i>s</i><sub><i>i</i></sub>在上下文<i>c</i> (<i>s</i><sub><i>i</i></sub>) 下的上下文合适度<i>F</i><sub><i>j</i></sub>。</p>
+                </div>
+                <div class="p1">
+                    <p id="85"><b>步骤8</b> 按照计算<i>F</i><sub><i>i</i></sub>的方式, 计算<i>s</i><sub><i>i</i></sub>对应替换集<i>SS</i> (<i>s</i><sub><i>i</i></sub>) 中替换元素<i>ss</i><sub><i>i</i>, <i>j</i></sub>与上下文<i>c</i> (<i>s</i><sub><i>i</i></sub>) 中各单词的相关度, 1≤<i>j</i>≤<i>x</i>, 并进一步计算<i>ss</i><sub><i>i</i>, <i>j</i></sub>在上下文<i>c</i> (<i>s</i><sub><i>i</i></sub>) 下的合适度, 记为<i>F</i>′<sub><i>i</i>, <i>j</i></sub>, 同时计算<i>F</i><mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>i</mi><mrow><mi>max</mi></mrow></msubsup></mrow></math></mathml>=<i>max</i> (F′<sub>i, 0</sub>, F′<sub>i, 1</sub>, …, F′<sub>i, j</sub>, …, F′<sub>i, x</sub>) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="87"><b>步骤9</b> 根据式 (4) 和式 (5) , 计算隐写分析特征<i>λ</i>和<i>θ</i>, 构成特征向量。若对应的样本是隐写文本, 则给定特征向量的类别标签为1;若是正常文本, 则给定类别标签为-1。</p>
+                </div>
+                <div class="p1">
+                    <p id="88"><b>步骤10</b> 重复步骤3～步骤9得到所有训练文本的特征向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="89"><b>步骤11</b> 将所得特征向量输入到贝叶斯分类模型中进行训练得到分类器。</p>
+                </div>
+                <h4 class="anchor-tag" id="90" name="90">2) 检测过程</h4>
+                <div class="p1">
+                    <p id="91">基于Word2vec的隐写分析算法的检测过程具体如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="92"><b>步骤1</b> 对于每个测试文本, 重复训练过程中的步骤3～步骤9提取对应的2个隐写分析特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="93"><b>步骤2</b> 将隐写分析特征输入到训练过程中步骤11所训练好的贝叶斯分类器进行检测, 输出待检测文本的类别。若输出结果为1, 则当前测试文本为隐写文本;否则为正常文本。</p>
+                </div>
+                <h3 id="94" name="94" class="anchor-tag">2 实验结果与分析</h3>
+                <h4 class="anchor-tag" id="95" name="95">2.1 实验设置</h4>
+                <div class="p1">
+                    <p id="96">本文实验利用Word2vec工具在Google News语料库上进行训练获得一个公开词向量库。该词向量库是利用Skip-gram模型在约1 000亿字的语料库上训练所得, 总共包含约3 000 000个不同单词的词向量, 每个词向量的维数为300。从Gutenberg 语料库中随机下载5 000篇世界文学名著组成原始文本集。对于每个原始文本, 利用T-lex隐写工具按照100%、75%、50%、25%这4种嵌入率分别嵌入随机生成的秘密信息, 生成相应的隐写文本。文献<citation id="125" type="reference">[<a class="sup">5</a>]</citation>提出的基于矩阵编码的隐写方法 (MC) 提高了抗隐写分析检测的能力。为验证本文方法的性能, 使用MC以约42.8%的嵌入率 (即采用 (7, 3) 的矩阵编码) 生成5 000个隐写文本。从原始文本集中选取3 000个正常文本, 以及每种嵌入率的隐写文本中选取2 000个隐写文本组成训练集, 利用贝叶斯模型训练分类器, 剩余的样本组成测试集。</p>
+                </div>
+                <h4 class="anchor-tag" id="97" name="97">2.2 特征分析</h4>
+                <div class="p1">
+                    <p id="98">为直观形象地验证隐写分析特征的有效性, 本文随机选取100个原始文本和100个利用T-lex以100%嵌入率生成的隐写文本, 通过本文方法分别提取隐写分析特征<i>λ</i>和<i>θ</i>, 结果如图2、图3所示。可以看出, 原始文本中的<i>λ</i>值集中分布在0.85附近, 而隐写文本中的<i>λ</i>值集中分布在0.5附近, 两者之间的差距明显, 易于区分。尽管隐写文本中的<i>θ</i>值比较分散, 但远大于原始文本中的<i>θ</i>值。由此可见, 2个特征均具有较大区分度, 能较好地区分这2类不同的文本, 说明了本文方法能有效地检测基于同义词替换的隐写文本。</p>
+                </div>
+                <div class="area_img" id="99">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903051_099.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 部分原始文本和隐写文本的λ值对比结果" src="Detail/GetImg?filename=images/JSJC201903051_099.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 部分原始文本和隐写文本的<i>λ</i>值对比结果</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903051_099.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="100">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903051_100.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 部分原始文本和隐写文本的θ值对比结果" src="Detail/GetImg?filename=images/JSJC201903051_100.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 部分原始文本和隐写文本的<i>θ</i>值对比结果</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903051_100.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="101" name="101">2.3 与其他方法的隐写分析性能对比</h4>
+                <div class="p1">
+                    <p id="102">为准确地评估隐写分析算法的可靠性, 本文通过精确率 (<i>P</i>) 和召回率 (<i>R</i>) 表示算法检测结果。</p>
+                </div>
+                <div class="p1">
+                    <p id="103" class="code-formula">
+                        <mathml id="103"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>Ρ</mi><mo>=</mo><mfrac><mrow><mi>Τ</mi><mi>Ρ</mi></mrow><mrow><mi>Τ</mi><mi>Ρ</mi><mo>+</mo><mi>F</mi><mi>Ρ</mi></mrow></mfrac></mtd></mtr><mtr><mtd><mi>R</mi><mo>=</mo><mfrac><mrow><mi>Τ</mi><mi>Ρ</mi></mrow><mrow><mi>Τ</mi><mi>Ρ</mi><mo>+</mo><mi>F</mi><mi>Ν</mi></mrow></mfrac></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="104">其中, <i>TP</i>表示隐写文本正确判定为隐写文本的数量, <i>FP</i>表示正常文本错误判定为隐写文本的数量, <i>FN</i>表示隐写文本错误判定为正常文本的数量。分别使用本文方法、文献<citation id="126" type="reference">[<a class="sup">10</a>]</citation>方法 (NRF) 和文献<citation id="127" type="reference">[<a class="sup">11</a>]</citation>方法 (PP) 对T-lex、MC生成的隐写文本进行检测, 结果见表1。可以看出, 本文方法对不同隐写算法和嵌入率生成的隐写文本都有较好的检测性能, 且优于同类的隐写方法。</p>
+                </div>
+                <div class="area_img" id="105">
+                    <p class="img_tit"><b>表1 不同隐写分析方法检测性能对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="105" border="1"><tr><td>隐写文本</td><td>性能<br />指标</td><td>PP方法</td><td>NRF方法</td><td>本文方法</td><td></td></tr><tr><td rowspan="5"><br />T-lex-25%</td><td><br /><i>TP</i></td><td>2 076</td><td>2 306</td><td colspan="2">2 591</td></tr><tr><td><br /><i>TP</i>+<i>FP</i></td><td>2 436</td><td>2 539</td><td colspan="2">2 801</td></tr><tr><td><br /><i>TP</i>+<i>FN</i></td><td>3 000</td><td>3 000</td><td colspan="2">3 000</td></tr><tr><td><br />精确率/%</td><td>85.22</td><td>90.82</td><td colspan="2">92.50</td></tr><tr><td><br />召回率/%</td><td>69.20</td><td>76.86</td><td colspan="2">86.36</td></tr><tr><td rowspan="5"><br />T-lex-50%</td><td><br /><i>TP</i></td><td>2 533</td><td>2 837</td><td colspan="2">2 867</td></tr><tr><td><br /><i>TP</i>+<i>FP</i></td><td>2 691</td><td>2 906</td><td colspan="2">2 905</td></tr><tr><td><br /><i>TP</i>+<i>FN</i></td><td>3 000</td><td>3 000</td><td colspan="2">3 000</td></tr><tr><td><br />精确率/%</td><td>94.12</td><td>97.62</td><td colspan="2">98.69</td></tr><tr><td><br />召回率/%</td><td>84.43</td><td>94.56</td><td colspan="2">95.56</td></tr><tr><td rowspan="5"><br />T-lex-75%</td><td><br /><i>TP</i></td><td>2 776</td><td>2 940</td><td colspan="2">2 942</td></tr><tr><td><br /><i>TP</i>+<i>FP</i></td><td>2 843</td><td>2 969</td><td colspan="2">2 946</td></tr><tr><td><br /><i>TP</i>+<i>FN</i></td><td>3 000</td><td>3 000</td><td colspan="2">3 000</td></tr><tr><td><br />精确率/%</td><td>97.64</td><td>99.02</td><td colspan="2">99.86</td></tr><tr><td><br />召回率/%</td><td>92.53</td><td>98.00</td><td colspan="2">98.06</td></tr><tr><td rowspan="5"><br />T-lex-100%</td><td><br /><i>TP</i></td><td>2 896</td><td>2 960</td><td colspan="2">2 962</td></tr><tr><td><br /><i>TP</i>+<i>FP</i></td><td>2 941</td><td>2 974</td><td colspan="2">2 962</td></tr><tr><td><br /><i>TP</i>+<i>FN</i></td><td>3 000</td><td>3 000</td><td colspan="2">3 000</td></tr><tr><td><br />精确率/%</td><td>98.46</td><td>99.52</td><td colspan="2">100.00</td></tr><tr><td><br />召回率/%</td><td>96.53</td><td>98.66</td><td colspan="2">98.73</td></tr><tr><td rowspan="5"><br />MC</td><td><br /><i>TP</i></td><td>2 127</td><td>2 221</td><td colspan="2">2 535</td></tr><tr><td><br /><i>TP</i>+<i>FP</i></td><td>2 224</td><td>2 353</td><td colspan="2">2 600</td></tr><tr><td><br /><i>TP</i>+<i>FN</i></td><td>3 000</td><td>3 000</td><td colspan="2">3 000</td></tr><tr><td><br />精确率/%</td><td>95.63</td><td>94.39</td><td colspan="2">97.50</td></tr><tr><td><br />召回率/%</td><td>70.90</td><td>74.03</td><td colspan="2">84.50</td></tr><tr><td rowspan="2"><br />总计</td><td><br />平均精确率/%</td><td>94.21</td><td>96.27</td><td colspan="2">97.71</td></tr><tr><td><br />平均召回率/%</td><td>82.72</td><td>88.42</td><td colspan="2">92.64</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="106">在嵌入率相同的情况下, 本文方法具有比其余2种方法更高的精确度和召回率, 嵌入率越高, 检测精确度和召回率随之提高。当嵌入率超过50%时, 所有隐写分析方法对隐写文本的检测能力均很强, 此时嵌入率对检测性能的影响不明显, 但本文方法仍具有比其他方法稍高的精确率和召回率, 特别是当嵌入率为100%时, 基本能完全区分隐写文本和正常文本, 精确率达到100%, 召回率达到98.73%。当嵌入率较低时, PP、NRF方法的检测性能明显低于本文方法。如对于嵌入率为25%的T-lex隐写文本, PP、NRF方法的召回率均低于80%, 而本文方法的召回率达到86.36%, 对应的精确率达到92.5%, 高于PP、NRF方法的召回率。对于通过MC生成的隐写文本, PP、NRF方法在检测精确率上与本文方法的差距不大, 精确率依次为95.63%、94.39%、97.5%, 但PP、NRF方法的召回率分别为70.9%和74.03%, 远低于本文方法的召回率84.5%。由此可见, 对于低嵌入率隐写文本的检测, 本文方法比PP、NRF方法更有优势, 具有更好的检测性能。另外, 表1中给出了PP、NRF、本文方法的平均精确率和召回率分别为94.21%、82.72%、96.27%、88.42%、97.71%、92.64%, 可见, 本文方法具有较好的综合检测性能。</p>
+                </div>
+                <h3 id="107" name="107" class="anchor-tag">3 结束语</h3>
+                <div class="p1">
+                    <p id="108">本文从词的分布式表示出发, 提出一种基于Word2vec的针对同义词替换隐写的隐写分析方法。该方法利用Word2vec工具获得相关单词的词向量后, 利用词向量包含的丰富语义信息度量一个同义词在特定上下文中的合适度, 并从中提取检测特征用来区分基于同义词替换的隐写文本和正常文本。实验结果表明, 本文方法可以有效检测低嵌入率时基于同义替换的隐写文本, 获得了比同类方法更好的检测性能。但本文方法设计的词相关度、合适度估算模型相对简单, 下一步将考虑用词的词性、搭配、句法结构等度量同义词的上下文合适度, 提取更有效的特征, 以提高低嵌入率时隐写分析方法的检测性能。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Avoiding detection on Twitter:embedding strategies for linguistic steganography">
+
+                                <b>[1]</b> WILSON A, KER A D.Avoiding detection on Twitter:embedding strategies for linguistic steganography[J].Electronic Imaging, 2016 (8) :1-9.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Adaptive text steganography by exploring statistical and linguistical distortion">
+
+                                <b>[2]</b> HU H, ZUO X, ZHANG W, et al.Adaptive text steganography by exploring statistical and linguistical distortion[C]//Proceedings of the 2nd International Conference on Data Science in Cyberspace.Washington D.C., USA:IEEE Press, 2017:145-150.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Lexical steganography through adaptive modulation of the word choice hash">
+
+                                <b>[3]</b> WINSTEIN K.Lexical steganography through adaptive modulation of the word choice hash[EB/OL].[2018-01-07].http://alumni.imsa.edu/～keithw/tlex/lsteg.ps.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Practical Linguistic Steganography using Contextual Synonym Substitution and a Novel Vertex Coding Method">
+
+                                <b>[4]</b> CHANG C Y, CLARK S.Practical linguistic steganography using contextual synonym substitution and a novel vertex coding method[J].Computational Linguistics, 2014, 40 (2) :403-448.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XXWX201506027&amp;v=MDYxMTlNUFRYY2RyRzRIOVRNcVk5SFk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5N21VcjM=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 杨潇, 李峰, 向凌云.基于矩阵编码的同义词替换隐写算法[J].小型微型计算机系统, 2015, 36 (6) :1296-1300.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201804046&amp;v=MTM2NzJGeTdtVXIzTUx6N1NaTEc0SDluTXE0OUJZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm8=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 霍林, 肖豫川.基于二元依存同义词替换隐写算法[J].计算机应用研究, 2018, 35 (4) :1174-1178.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ200810009&amp;v=MDQ0MjRSTE9lWmVSb0Z5N21VcjNNTHl2U2RMRzRIdG5OcjQ5RmJZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 罗纲, 孙星明, 向凌云, 等.针对同义词替换信息隐藏的检测方法研究[J].计算机研究与发展, 2008, 45 (10) :1696-1703.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Steganalysis of synonym-substitution based natural language water-marking">
+
+                                <b>[8]</b> YU Z, HUANG L, CHEN Z, et al.Steganalysis of synonym-substitution based natural language water-marking[J].International Journal of Multimedia and Ubiquitous Engineering, 2012, 4:21-34.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011600355410&amp;v=MjU0NTNIMDVvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMbklKbDBWYUJZPU5pZk9mYks3SHRETnFZOUZaKzRLQw==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> CHEN Z, HUANG L, MIAO H, et al.Steganalysis against substitution-based linguistic steganography based on context clusters[J].Computers and Electrical Engineering, 2011, 37 (6) :1071-1081.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011300181618&amp;v=Mjk0MTAvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSUpsMFZhQlk9TmlmT2ZiSzdIdEROckk5RlplTU9DbjB4b0JNVDZUNFBRSA==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> CHEN Z, HUANG L, YANG W.Detection of substitution-based linguistic steganography by relative frequency analysis[J].Digital Investigation, 2011, 8 (1) :68-77.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD14071600003771&amp;v=MTk3ODRhQlk9Tmo3QmFySzhIdGJOcVk5RlpPc01DM3M0b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTG5JSmwwVg==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> XIANG L, SUN X, LUO G, et al.Linguistic steganalysis using the features derived from synonym frequency[J].Multimedia Tools and Applications, 2014, 71 (3) :1893-1911.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning distributed representations of concepts">
+
+                                <b>[12]</b> HINTON G E.Learning distributed representations of concepts[C]//Proceedings of the 8th Annual Conference of the Cognitive Science Society.Amherst, USA:Erlbaum Associates, Inc., 1986:12.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+
+                                <b>[13]</b> MIKOLOV T, CHEN K, CORRADO G, et al.Efficient estimation of word representations in vector space[EB/OL].[2018-01-07].https://arxiv.org/abs/1301.3781.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Distributed representations of words and phrases and their compositionality">
+
+                                <b>[14]</b> MIKOLOV T, SUTSKEVER I, CHEN K, et al.Distributed representations of words and phrases and their compositionality[C]//Proceedings of NIPS’13.[S.l.]:Curran Associates, Inc., 2013:3111-3119.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201405021&amp;v=MDUyNDBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5N21VcjNNS0NqWWZiRzRIOVhNcW85SFpZUUs=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 梁军, 柴玉梅, 原慧斌, 等.基于深度学习的微博情感分析[J].中文信息学报, 2014, 28 (5) :155-161.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201809028&amp;v=MTA2NzN5N21VcjNNTHo3QmJiRzRIOW5NcG85SGJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Y=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> 孙紫阳, 顾君忠, 杨静.基于深度学习的中文实体关系抽取方法[J].计算机工程, 2018, 44 (9) :164-170.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201903051" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201903051&amp;v=MTUzMjBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5N21VcjNNTHo3QmJiRzRIOWpNckk5QVpZUUs=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU45dm52MzRMT3pvcFZMMjlLRVVpST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="1" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

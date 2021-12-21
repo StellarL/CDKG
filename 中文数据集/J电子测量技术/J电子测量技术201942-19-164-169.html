@@ -1,0 +1,896 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637135576369787500%26DBCODE%3dCJFD%26TABLEName%3dCJFDTEMP%26FileName%3dDZCL201919040%26RESULT%3d1%26SIGN%3dJayapZLKXwHzOiX4wUgUy78Uk5M%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZCL201919040&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DZCL201919040&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201919040&amp;v=MjY1OTZaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5tVmJ6SklUZklZckc0SDlqTnBvOUI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#55" data-title="&lt;b&gt;0 引  言&lt;/b&gt; "><b>0 引  言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#61" data-title="&lt;b&gt;1 LA-SSD模型介绍&lt;/b&gt; "><b>1 LA-SSD模型介绍</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#67" data-title="&lt;b&gt;2 模型训练与测验&lt;/b&gt; "><b>2 模型训练与测验</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#68" data-title="&lt;b&gt;2.1 LA-SSD网络实现&lt;/b&gt;"><b>2.1 LA-SSD网络实现</b></a></li>
+                                                <li><a href="#71" data-title="&lt;b&gt;2.2 预定义边界框生成&lt;/b&gt;"><b>2.2 预定义边界框生成</b></a></li>
+                                                <li><a href="#77" data-title="&lt;b&gt;2.3 匹配策略&lt;/b&gt;"><b>2.3 匹配策略</b></a></li>
+                                                <li><a href="#83" data-title="&lt;b&gt;2.4 损失函数&lt;/b&gt;"><b>2.4 损失函数</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#91" data-title="&lt;b&gt;3 实验结果&lt;/b&gt; "><b>3 实验结果</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#93" data-title="&lt;b&gt;3.1 PASCAL VOC2007&lt;/b&gt;"><b>3.1 PASCAL VOC2007</b></a></li>
+                                                <li><a href="#96" data-title="&lt;b&gt;3.2 PASCAL VOC2012&lt;/b&gt;"><b>3.2 PASCAL VOC2012</b></a></li>
+                                                <li><a href="#100" data-title="&lt;b&gt;3.3 结果对比&lt;/b&gt;"><b>3.3 结果对比</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#106" data-title="&lt;b&gt;4 结  论&lt;/b&gt; "><b>4 结  论</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#63" data-title="图1 LA-SSD框架">图1 LA-SSD框架</a></li>
+                                                <li><a href="#70" data-title="图2 特征融合模块">图2 特征融合模块</a></li>
+                                                <li><a href="#76" data-title="图3 特征涂上每个像素点位置处预定义边界框">图3 特征涂上每个像素点位置处预定义边界框</a></li>
+                                                <li><a href="#82" data-title="图4 中心框内像素点位置处预定义边界框生成">图4 中心框内像素点位置处预定义边界框生成</a></li>
+                                                <li><a href="#99" data-title="&lt;b&gt;表1 PASCAL VOC数据集测试LA-SSD模型结果&lt;/b&gt;"><b>表1 PASCAL VOC数据集测试LA-SSD模型结果</b></a></li>
+                                                <li><a href="#104" data-title="&lt;b&gt;表2 使用MS COCO数据集评估LA-SSD模型的检测性能&lt;/b&gt;"><b>表2 使用MS COCO数据集评估LA-SSD模型的检测性能</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" 周晓彦,王珂,李凌燕.基于深度学习的目标检测算法综述[J].电子测量技术,2017,40(11):89-93." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201711020&amp;v=MDc1MTQ5SFpJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5bm1WYnpKSVRmSVlyRzRIOWJOcm8=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         周晓彦,王珂,李凌燕.基于深度学习的目标检测算法综述[J].电子测量技术,2017,40(11):89-93.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 张立亮,王国中,范涛,等.一种有遮挡人脸识别方法改进[J].电子测量技术,2018,41(22):89-94." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=DZCL201822020&amp;v=MzA0ODZHNEg5bk9yWTlIWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlubVZiekpJVGZJWXI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         张立亮,王国中,范涛,等.一种有遮挡人脸识别方法改进[J].电子测量技术,2018,41(22):89-94.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 余铎,王耀南,毛建旭,等.基于视觉的移动机器人目标跟踪方法[J].仪器仪表学报,2019,40(1):227-235." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=YQXB201901028&amp;v=MjY4NzRubVZiekpQRHpUYkxHNEg5ak1ybzlIYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         余铎,王耀南,毛建旭,等.基于视觉的移动机器人目标跟踪方法[J].仪器仪表学报,2019,40(1):227-235.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" GIRSHICK R,DONAHUE J,DARRELL T,et al.Rich feature hierarchies for accurate object detection and semantic segmentation[C] IEEE Conference on Computer Vision and Pattern Recognition,2014:580-587." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Rich feature hierarchies for accurate object detection and semantic segmentation">
+                                        <b>[4]</b>
+                                         GIRSHICK R,DONAHUE J,DARRELL T,et al.Rich feature hierarchies for accurate object detection and semantic segmentation[C] IEEE Conference on Computer Vision and Pattern Recognition,2014:580-587.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" >
+                                        <b>[5]</b>
+                                     REN S,HE K,GIRSHICK R,et al.Faster R-CNN:Towards real-time object detection with region proposal networks[C].Advances in neural information processing systems,2015:91-99.</a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" >
+                                        <b>[6]</b>
+                                     DAI J,LI Y,HE K,et al.R-FCN:Object detection via region-based fully convolutional networks[C].Annual conference on Neural Information Processing Systems,2016:379-387.</a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" LIN T Y,DOLLAR P,GIRSHICK R,et al.Feature pyramid networks for object detection[C].IEEE Conference on Computer Vision and Pattern Recognition,2017:936-944." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Feature pyramid networks for object detection">
+                                        <b>[7]</b>
+                                         LIN T Y,DOLLAR P,GIRSHICK R,et al.Feature pyramid networks for object detection[C].IEEE Conference on Computer Vision and Pattern Recognition,2017:936-944.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" HE K,ZHANG X,REN S,et al.Spatial pyramid pooling in deep convolutional networks for visual recognition[C].European Conference on Computer Vision,2014:346-361." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Spatial pyramid pooling in deep convolutional networks for visual recognition">
+                                        <b>[8]</b>
+                                         HE K,ZHANG X,REN S,et al.Spatial pyramid pooling in deep convolutional networks for visual recognition[C].European Conference on Computer Vision,2014:346-361.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" GIRSHICK R.Fast R-CNN[J/OL].arXiv preprint,2015.https://arxiv.org/abs/1504.08083." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Fast R-CNN">
+                                        <b>[9]</b>
+                                         GIRSHICK R.Fast R-CNN[J/OL].arXiv preprint,2015.https://arxiv.org/abs/1504.08083.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" REDMON J,DIVVALA S,GIRSHICK R,et al.You only look once:Unified,real-time object detection[C].IEEE Conference on Computer Vision and Pattern Recognition,2016:779-788." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=You Only Look Once:Unified,Real-Time Object Detection">
+                                        <b>[10]</b>
+                                         REDMON J,DIVVALA S,GIRSHICK R,et al.You only look once:Unified,real-time object detection[C].IEEE Conference on Computer Vision and Pattern Recognition,2016:779-788.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" >
+                                        <b>[11]</b>
+                                     LIU W,ANGUELOV D,ERHAN D,et al.SSD:Single shot multibox detector[C].European Conference on Computer Vision,2016:21-37.</a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" >
+                                        <b>[12]</b>
+                                     KONG T,SUN F,YAO A,et al.Ron:Reverse connection with objectness prior networks for object detection[C].IEEE Conference on Computer Vision and Pattern Recognition,2017:5244-5252.</a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" LIN T Y,GOYAL P,GIRSHICK R,et al.Focal loss for dense object detection[C].IEEE International Conference on Computer Vision 2018:2999-3007." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Focal Loss for Dense Object Detection">
+                                        <b>[13]</b>
+                                         LIN T Y,GOYAL P,GIRSHICK R,et al.Focal loss for dense object detection[C].IEEE International Conference on Computer Vision 2018:2999-3007.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" FU CY,LIU W,RANGA A,et al.DSSD:Deconvolutional single shot detector[J/OL].arXiv preprint,2017.https://arxiv.org/abs/1701.06659." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=&amp;quot;Dssd:Deconvolutional single shot detector,&amp;quot;">
+                                        <b>[14]</b>
+                                         FU CY,LIU W,RANGA A,et al.DSSD:Deconvolutional single shot detector[J/OL].arXiv preprint,2017.https://arxiv.org/abs/1701.06659.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" LAW H,DENG J.Cornernet:Detecting objects as paired keypoints[C].European Conference on Computer Vision,2018:765-781." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Cornernet: Detecting objects as paired keypoints">
+                                        <b>[15]</b>
+                                         LAW H,DENG J.Cornernet:Detecting objects as paired keypoints[C].European Conference on Computer Vision,2018:765-781.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" WANG J,CHEN K,YANG S,et al.Region Proposal by Guided Anchoring[C/OL].CVPR 2019,2019.https://arxiv.org/abs/1901.03278." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Region Proposal by Guided Anchoring[C/OL]">
+                                        <b>[16]</b>
+                                         WANG J,CHEN K,YANG S,et al.Region Proposal by Guided Anchoring[C/OL].CVPR 2019,2019.https://arxiv.org/abs/1901.03278.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" ZHONG Y,WANG J,PENG J,et al.Anchor box optimization for object detection[J/OL].arXiv preprint,2018.https://arxiv.org/abs/1812.00469v1." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Anchor box optimization for object detection">
+                                        <b>[17]</b>
+                                         ZHONG Y,WANG J,PENG J,et al.Anchor box optimization for object detection[J/OL].arXiv preprint,2018.https://arxiv.org/abs/1812.00469v1.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_18" title=" LI Z,PENG C,YU G,et al.DetNet:A backbone network for object detection[J/OL].arXiv preprint,2014.https://arxiv.org/abs/1804.06215." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=DetNet:A backbone network for object detection">
+                                        <b>[18]</b>
+                                         LI Z,PENG C,YU G,et al.DetNet:A backbone network for object detection[J/OL].arXiv preprint,2014.https://arxiv.org/abs/1804.06215.
+                                    </a>
+                                </li>
+                                <li id="39">
+
+
+                                    <a id="bibliography_19" >
+                                        <b>[19]</b>
+                                     ZHOU P,NI B,GENG C,et al.Scale-transferrable object detection[C].The IEEE Conference on Computer Vision and Pattern Recognition (CVPR),2018:528-537.</a>
+                                </li>
+                                <li id="41">
+
+
+                                    <a id="bibliography_20" title=" ZHAO Q,SHENG T,WANG Y,et al.M2det:A single-shot object detector based on multi-level feature pyramid network.[C/OL].Thirty-Third AAAI Conference on Artificial Intelligence,2019.https://arxiv.org/abs/1811.04533v1." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=M2Det:a single-shot object detector based on multi-level feature pyramid network">
+                                        <b>[20]</b>
+                                         ZHAO Q,SHENG T,WANG Y,et al.M2det:A single-shot object detector based on multi-level feature pyramid network.[C/OL].Thirty-Third AAAI Conference on Artificial Intelligence,2019.https://arxiv.org/abs/1811.04533v1.
+                                    </a>
+                                </li>
+                                <li id="43">
+
+
+                                    <a id="bibliography_21" title=" ZHANG S,WEN L,BIAN X,et al.Single-shot refinement neural network for object detection[J/OL].arXiv preprint,2018.https://arxiv.org/abs/1711.06897." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Single-shot refinement neural network for object detection">
+                                        <b>[21]</b>
+                                         ZHANG S,WEN L,BIAN X,et al.Single-shot refinement neural network for object detection[J/OL].arXiv preprint,2018.https://arxiv.org/abs/1711.06897.
+                                    </a>
+                                </li>
+                                <li id="45">
+
+
+                                    <a id="bibliography_22" >
+                                        <b>[22]</b>
+                                     RUSSAKOVSKY O,DENG J,SU H,et al.Imagenet large scale visual recognition challenge[J].International Journal of Computer Vision,2015,115(3):211-252.</a>
+                                </li>
+                                <li id="47">
+
+
+                                    <a id="bibliography_23" >
+                                        <b>[23]</b>
+                                     SIMONYAN K,ZISSERMAN A.Very deep convolutional networks for large-scale image recognition[J/OL].arXiv preprint,2015.https://arxiv.org/abs/1409.1556.</a>
+                                </li>
+                                <li id="49">
+
+
+                                    <a id="bibliography_24" title=" EVERINGHAM M,VANGOOL L,WILLIAMS C K I,et al.The pascal visual object classes (voc) challenge[J].International journal of computer vision,2010,88(2):303-338." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD15110200782102&amp;v=MDM1MDRyUmRHZXJxUVRNbndaZVp0RmlubFVyeklJVjBTYVJNPU5qN0Jhcks5SDlETXJZOUZZK01ORFh3N29CTVQ2VDRQUUgvaQ==&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[24]</b>
+                                         EVERINGHAM M,VANGOOL L,WILLIAMS C K I,et al.The pascal visual object classes (voc) challenge[J].International journal of computer vision,2010,88(2):303-338.
+                                    </a>
+                                </li>
+                                <li id="51">
+
+
+                                    <a id="bibliography_25" title=" LIN T Y,MAIRE M,BELONGIE S,et al.Microsoft coco:Common objects in context[C].European Conference on Computer Vision,2014:740-755." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Microsoft COCO:Common Objects in Context">
+                                        <b>[25]</b>
+                                         LIN T Y,MAIRE M,BELONGIE S,et al.Microsoft coco:Common objects in context[C].European Conference on Computer Vision,2014:740-755.
+                                    </a>
+                                </li>
+                                <li id="53">
+
+
+                                    <a id="bibliography_26" title=" JIA Y,SHELHAMER E,DONAHUE J,et al.Caffe:Convolutional architecture for fast feature embedding[J/OL].arXiv preprint,2014.https://arxiv.org/abs/1408.5093." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Caffe:convolutional architecture for fast feature embedding">
+                                        <b>[26]</b>
+                                         JIA Y,SHELHAMER E,DONAHUE J,et al.Caffe:Convolutional architecture for fast feature embedding[J/OL].arXiv preprint,2014.https://arxiv.org/abs/1408.5093.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=DZCL" target="_blank">电子测量技术</a>
+                2019,42(19),164-169 DOI:10.19651/j.cnki.emt.1902898            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于位置预测的目标检测算法</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E5%AE%BD&amp;code=42533005&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张宽</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%BB%95%E5%9B%BD%E4%BC%9F&amp;code=08483666&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">滕国伟</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E5%85%88%E8%BF%9B%E9%80%9A%E4%BF%A1%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E7%A0%94%E7%A9%B6%E9%99%A2&amp;code=0017580&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海先进通信与数据科学研究院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E5%A4%A7%E5%AD%A6%E9%80%9A%E4%BF%A1%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海大学通信与信息工程学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>预定义边界框是目标检测算法的核心技术之一,当前目标检测器的预定义边界框生成策略获得的边界框存在着数量冗余和正负样本不平衡问题。LA-SSD目标检测模型是在经典检测器SSD的基础上引入位置预测子网络,该子网络可以预测图像中当前位置处目标对象存在的概率,并使用位置预测的结果作为模型训练时的权重送到预测特征层,辅助对象检测的类别和边界框回归预测。实验表明LA-SSD模型大幅降低了模型训练时参与训练的预定义边界框的数量,同时实现了正负样本的平衡,这不仅降低了网络模型计算复杂度,还提升了对象检测模型的特征表达能力。当使用PASCAL VOC 2007, PASCAL VOC 2012以及MS COCO数据集训练模型,输入图像尺寸为512×512时,检测准确度(mAP)分别能达到82.9%、81.8%、34.1%。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">目标检测;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%88%86%E7%B1%BB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">分类;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%84%9F%E5%8F%97%E9%87%8E&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">感受野;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%BE%B9%E7%95%8C%E6%A1%86&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">边界框;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%9B%9E%E5%BD%92&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">回归;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%89%B9%E5%BE%81%E5%B1%82&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">特征层;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    *张宽,硕士研究生,主要研究方向为视频图像处理、智能视频与图像分析等人工智能技术研究及应用,E-mail:kwan0828@163.com;;
+                                </span>
+                                <span>
+                                    滕国伟,高级工程师,博士,主要研究方向为中国音视频编解码标准AVS,智能视频处理与传输,基于AVS和DTMB的双国标数字地面电视系统和3DTV等,E-mail:tenggw@shu.edu.cn;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2019-04-02</p>
+
+            </div>
+                    <h1><b>Single-shot location prediction assisting with object detection</b></h1>
+                    <h2>
+                    <span>Zhang Kuan</span>
+                    <span>Teng Guowei</span>
+            </h2>
+                    <h2>
+                    <span>Shanghai Institute for Advanced Communication and Data Science</span>
+                    <span>School of communication and information engineering,Shanghai University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>The bounding boxes is one of the core pipelines of object detection. The approaches which widely adopted in state-of-the-art detection frameworks generates a large number of predefined boundary boxes which are redundancy and positive and negative imbalance. On the basis of the classical detector SSD, the LA-SSD object detection model introduces the location prediction sub-network which predicts the probability of the target object existence at each pixel. The model sends the predicted results to the the prediction layers for the purpose of assisting the works of classification prediction and boundary box regression. It is demonstrated by a large number of experiments that the LA-SSD greatly reduces the number of predefined boundaries boxes that participate in model training while achieving the balance between positive and negative samples. The LA-SSD reduces the computational complexity and improve the model's expression capability. When the size of input images is 512 x 512, the mean accuracy precision(mAP) of the detection can reach to 82.9%, 81.8% and 34.1% on the datasets of PASCAL VOC 2007, PASCAL VOC 2012 and MS COCO respectively.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=object%20detection&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">object detection;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=classification&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">classification;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=bounding%20boxes&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">bounding boxes;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=location%20prediction&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">location prediction;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=regression&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">regression;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=feature%20map&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">feature map;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2019-04-02</p>
+                            </div>
+
+
+        <!--brief start-->
+                        <h3 id="55" name="55" class="anchor-tag"><b>0 引  言</b></h3>
+                <div class="p1">
+                    <p id="56">目标检测(object detection)是计算机视觉中一个重要的基础研究领域,随着具有出色特征提取和表达能力的深度卷积神经网络(CNN)模型的出现和迅猛发展,基于深度学习的目标检测算法得到了广泛的重视和研究<citation id="114" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。目标检测是人脸识别<citation id="115" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>、交通灯识别、异常行为监控、无人驾驶以及智能机器人<citation id="116" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>等人工智能相关领域的工作基础,其主要工作是预测感兴趣对象(ROI)在图像中的位置定位(localization),以及预测该对象ROI所属的类别分类(classification)。</p>
+                </div>
+                <div class="p1">
+                    <p id="57">在深度学习网络模型出现之前,目标检测的研究方法主要是通过手动方式提取目标对象检测所需要的特征,基于深度学习的目标检测器(CNN-based detector)凭借其出色的表现,迅速成为了目标检测领域新的研究方向,主要分为二级目标检测(the two-stage approach)和一级目标检测(the one-stage approach)。二级目标检测方法首先通过筛选生成感兴趣候选边界框(ROI),然后对筛选后的ROI做进一步的类别得分预测和边界框回归,常见的算法有R-CNN<citation id="117" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>, Faster-RCNN<citation id="118" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>, R-FCN<citation id="119" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>以及FPN<citation id="120" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>等。R-CNN<citation id="121" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>直接使用CNN对原图像上预先获取的感兴趣区域(region of interest,ROIs)做分类处理。SPP<citation id="122" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>和Fast-RCN<citation id="123" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>选择从CNN网络模型的特征层(feature maps)上获取待分类的ROIs。Faster-RCNN在CNN的基础上使用候选区域(region proposal)生成网络模型(RPN)来获取ROI候选框。R-FCN使用全卷积网络和位置敏感的池化模块,进一步提升了Faster-RCNN的检测效率。一级目标检测算法舍弃了二级目标检测算法中的ROI生成部分,在一个端到端的网络模型中直接完成目标检测的所有工作,主要有YOLO<citation id="124" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>,SSD<citation id="125" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>,RON<citation id="126" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>以及RetinaNet<citation id="127" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>等。SSD直接使用多个不同空间分辨率的特征层作为预测特征层来预测不同尺度的对象。YOLO直接预测图像上不同像素点处边界框尺度和坐标。DSSD<citation id="128" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>和RON使用类似“沙漏”的网络模型,通过融合高层语义信息和低层空间信息,使目标检测性能得到进一步的提升。CornerNet<citation id="129" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>通过检测对象左上角和右下角两个关键点来确定对象的位置。GA-RPN<citation id="130" type="reference"><link href="33" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>利用他层的语义信息,直接预测对象的中心位置、尺度和长宽比;文献<citation id="131" type="reference"><link href="35" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>在训练时根据数据集中对象的分布特征,动态地优化预定义边界框的尺度和长宽比;DetNet<citation id="132" type="reference"><link href="37" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>引入能够在保持特征层分辨率不变的前提下增加模型感受野的空洞卷积(dilate convolution); STDN <citation id="133" type="reference"><link href="39" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>,M2det<citation id="134" type="reference"><link href="41" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>等通过使用不同感受野的多层特征层的特征信息来检测不同尺度的目标对象。</p>
+                </div>
+                <div class="p1">
+                    <p id="58">预定义边界框是在预先设计好,用来帮助检测器实现边界框回归和边界框内对象识别的矩形框,预测特征层上每个像素点处都有一组预先设定了尺度大小和长宽比的边界框,这些矩形框能够覆盖图像中的每个区域。目标检测器边界框回归预测的值是预测框相对于预定义边界框的偏移量(offset),目标对象一般出现在图像的部分区域,因此将会有大量对边界框回归子网络的训练和预测没有意义的预定义边界框,并且正负样本严重不平衡的边界框会导致训练得到的模型的偏向于数量多的负样本。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">二级目标检测算法在生成边界框候选区时,便已经使用RPN网络滤除了大量不包含对象的预定义边界框,因此二级目标检测算法本身不存在预定义边界框冗余的问题。一级目标检测算法是直接对预测特征层上每个像素点做边界框回归和对象分类预测,因此存在预定义边界框冗余和正负样本不平衡问题。RetinaNet针对预定义边界框冗余和正负样本不平衡问题,使用Focal loss损失函数动态的调整每个预定义边界框在训练时的权重。RefineDet<citation id="135" type="reference"><link href="43" rel="bibliography" /><sup>[<a class="sup">21</a>]</sup></citation>在对象分类预测和边界框回归之前使用特殊设计的滤波器将大量的容易训练的负样本边界框滤除,使目标检测模型将模型表达能力集中在难检测的对象上,提升模型参数性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">为了解决一级目标检测算法中出现的预定义边界框数量冗余和正负样本不平衡问题,本文提出了一种位置预测辅助目标检测的网络模型(location prediction assisting with single-shot object detection,LA-SSD),LA-SSD在SSD的基础上添加位置预测子网络(location prediction sub-network),LA-SSD模型在对对象类别和边界框回归之前,先使用位置预测子网络预测特征图上每个像素点处存在目标对象的概率,并根据位置预测结果滤除对模型训练和预测没有帮助的预定义边界框,使网络模型的权重和关注点集中在大概率出现目标对象的位置。该目标检测算法使用位置预测模型滤除了大量对象小概率出现的位置处的预定义边界框,使网络模型的表达能力集中体现在高概率存在的、相对稀疏的特征像素点处对象类别和边界框回归预测上,提升了模型的训练效率和对像检测能力。</p>
+                </div>
+                <h3 id="61" name="61" class="anchor-tag"><b>1 LA-SSD模型介绍</b></h3>
+                <div class="p1">
+                    <p id="62">为了解决一级目标检测算法中预定义边界框冗余和正负样本比例平衡的问题,本文提出的LA-SSD算法如图1所示。</p>
+                </div>
+                <div class="area_img" id="63">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201919040_063.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 LA-SSD框架" src="Detail/GetImg?filename=images/DZCL201919040_063.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 LA-SSD框架  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201919040_063.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="64">LA-SSD以SSD网络模型为基础,首先在SSD的基础上构建使用不同特征层检测不同尺度对象的FPN网络模型,FPN的自底向上传输模块(bottom-up path)由SSD的最后4层特征层{ Conv4_3、Conv7(fc7)、Conv8_2、Conv9_2}组成,同时使用横向连接(lateral connectivity)以自底向上传输模块为基础生成FPN的自顶向下传输模块(top-down path),横向连接帮助自顶向下传输模块中预测特征层{<i>P</i>1,<i>P</i>2,<i>P</i>3,<i>P</i>4}弥补因前向传输中的下采样而丢失的细粒度空间信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">研究发现位置预测所依赖的更多是图像的空间特征,而不是高度抽象的语义特征,因而LA-SSD中位置预测子模块选择具有丰富空间信息的自底向下传输层作为输入,位置预测子网络的输出则是与输入特征层{<i>Conv</i>4_3、<i>Conv</i>7(<i>fc</i>7)、<i>Conv</i>8_2、<i>Conv</i>9_2}有相同空间分辨率{×8,×16,×32,×64}的位置预测层{<i>L</i>1,<i>L</i>2,<i>L</i>3,<i>L</i>4},位置预测层{<i>L</i>1,<i>L</i>2,<i>L</i>3,<i>L</i>4}每个像素点的值表示该像素点处出现目标对象的概率值。将位置预测结果送到边界框回归和类别识别的预测层,,可以辅助LA-SSD滤除大量对模型训练(training)和前向预测(inference)没有意义的预定义边界框,显著地降低了预定义候选框的冗余度,使用高质量的预定量边界框训练,使整个网络模型的关注点集中在目标对象高概率出现的位置,提高网络模型的表达能力和检测性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">LA-SSD网络模型使用的位置预测子网络是典型的二分类(class-agnostic)全卷积网络(full convolution network),主要使用1个3×3×1卷积层生成单通道(channel)的位置预测层。根据位置预测结果,可以得出位置预测特征层每个像素点上目标对象存在的概率<i>P</i>(<i>i</i>,<i>j</i>/<i>F</i><sub><i>I</i></sub>),其中<i>F</i><sub><i>I</i></sub>表示第<i>I</i>个位置预测特征层,<i>i</i>,<i>j</i>表示位置预测特征层<i>F</i><sub><i>I</i></sub>中坐标为(<i>i</i>,<i>j</i>)处像素点。</p>
+                </div>
+                <h3 id="67" name="67" class="anchor-tag"><b>2 模型训练与测验</b></h3>
+                <h4 class="anchor-tag" id="68" name="68"><b>2.1 LA-SSD网络实现</b></h4>
+                <div class="p1">
+                    <p id="69">本文所有实验均以使用ImageNet数据集<citation id="136" type="reference"><link href="45" rel="bibliography" /><sup>[<a class="sup">22</a>]</sup></citation>预训练的VGG16<citation id="137" type="reference"><link href="47" rel="bibliography" /><sup>[<a class="sup">23</a>]</sup></citation>网络框架为基础,将VGG16的FC6和FC7全连接层使用卷积层替换,删除用于分类的FC8层和Dropout层(截断),在截断层后添加额外的空间分辨率递减的卷积层,如图1基础网络SSD部分所示。FPN网络模型的自底向上传输模块由特征层Conv4_3、Conv7(fc7)、Conv8_2、Conv9_2共同构成,这些特征层分别用{<i>C</i>1,<i>C</i>2,<i>C</i>3,<i>C</i>4}表示;FPN自顶向下传输模块的构建方式如图2所示,从空间分辨率最小的P4开始,使用2×2×256的反卷积上采样扩大其空间分辨率,通过像素级乘积(element-wise product)将上采样后的特征层与相应的自底向上传输模块中的特征层C3合并,合并前使用3×3×256卷积将C3的特征层通道数映射为256;上述过程将迭代进行,直到生成分辨率最大的特征层P1。位置预测子网络用FPN的自底向上传输模块中的特征层{<i>C</i>1,<i>C</i>2,<i>C</i>3,<i>C</i>4}做为输入,预测不同特征层像素点处对象存在的概率;将预测结果传送到边界框回归预测和对象框中类别预测子网络分支,该分支以FPN的自顶向下传输模块中的预测特征层{<i>P</i>1,<i>P</i>2,<i>P</i>3,<i>P</i>4}作为输入,预测不同尺度对象的边界框相对预定义边界框的偏移量和框内对象所属类别的概率值;在模型训练和前向预测时,根据位置预测结果滤除预测特征层像素点处位置预测结果小于指定阈值的预定义边界框,实现预定义边界框筛选和训练样本正负平衡。</p>
+                </div>
+                <div class="area_img" id="70">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201919040_070.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 特征融合模块" src="Detail/GetImg?filename=images/DZCL201919040_070.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 特征融合模块  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201919040_070.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="71" name="71"><b>2.2 预定义边界框生成</b></h4>
+                <div class="p1">
+                    <p id="72">LA-SSD目标检测器预测的对象是预定义边界框与边界框真实值(ground truth)之间的偏移量(offset),以及当前框内对象所属类别的概率得分(Class Score)。预定义边界框在预测特征层每个像素点处以固定的方式生成,如果为每个像素点位置设置<i>K</i>个不同尺度和长宽比的预定义边界框,目标检测器需要为每个预定义边界框预测<i>C</i>个类别得分<i>P</i><sup><i>cls</i></sup>和4个相应的位置偏移量<i>t</i>=(<i>t</i><sub><i>x</i></sub>,<i>t</i><sub><i>y</i></sub>,<i>t</i><sub><i>w</i></sub>,<i>t</i><sub><i>h</i></sub>,),因此一个尺度为<i>M</i>×<i>N</i>的预测特征图总共有要(<i>C</i>+4)<i>KMN</i>个预测通道(channels)。</p>
+                </div>
+                <div class="p1">
+                    <p id="73">为了使预定义边界框需要能够覆盖图像中不同位置和不同尺度大小的目标对象,本文在不同空间分辨率的预测特征层的每个像素点处设置一组多尺度和多长宽比的预定义边界框。根据式(1)设置每个预测特征层K的预定义边界框尺度<i>S</i><sub><i>k</i></sub>为:</p>
+                </div>
+                <div class="p1">
+                    <p id="74"><i>S</i><sub><i>K</i></sub>={(2<i>k</i>-1)<i>S</i><sub>min</sub>,2<i>kS</i><sub>min</sub>},<i>k</i>{1,2,3,4,5,6}(1)</p>
+                </div>
+                <div class="p1">
+                    <p id="75">式中:<i>S</i><sub>min</sub>为特征层相对与输入图像的最小缩放尺度,同时设置长宽比为{1∶2,1∶1,2∶1};因此预测特征层每个像素点处存在一组2个尺度和3个长宽比的预定义边界框,如图3所示。</p>
+                </div>
+                <div class="area_img" id="76">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201919040_076.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 特征涂上每个像素点位置处预定义边界框" src="Detail/GetImg?filename=images/DZCL201919040_076.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 特征涂上每个像素点位置处预定义边界框  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201919040_076.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="77" name="77"><b>2.3 匹配策略</b></h4>
+                <div class="p1">
+                    <p id="78">在训练位置预测子网络时,每张图像需要使用二进制标签图(binary label map)表示当前像素点处是否出现目标对象,1表示当前像素点处存在对象,而0表示不存在。使用真实值边界框辅助生成二进制标签图,将靠近对象中心位置的像素点设为有效样本(值为1),远离目标中心点的像素点为无效样本(值为0)。首先将真实值边界框<i>R</i>(<i>x</i><sub><i>g</i></sub>,<i>y</i><sub><i>g</i></sub>,<i>w</i><sub><i>g</i></sub>,<i>h</i><sub><i>g</i></sub>) 映射到指定尺度的特征层得到<i>R</i>(<i>x</i>′<sub><i>g</i></sub>,<i>y</i>′<sub><i>g</i></sub>,<i>w</i>′<sub><i>g</i></sub>,<i>h</i>′<sub><i>g</i></sub>),此处定义<i>R</i>(<i>x</i>,<i>y</i>,<i>w</i>,<i>h</i>)为真实值边界框内中心坐标为(<i>x</i>,<i>y</i>),尺度为<i>w</i>×<i>h</i>的长方形区域。为了能够准确地预测图像中对象可能出现的位置,此处定义了3个样本区域:</p>
+                </div>
+                <div class="p1">
+                    <p id="79">1)位于中心框<i>CR</i>=<i>R</i>(<i>x</i>′<sub><i>g</i></sub>,<i>y</i>′<sub><i>g</i></sub>,<i>αw</i>′<sub><i>g</i></sub>,<i>αh</i>′<sub><i>g</i></sub>)内的像素点位置处样本被认为是正样本(positive samples),该区域内像素点对应的预定义候选框如图4所示;</p>
+                </div>
+                <div class="p1">
+                    <p id="80">2)可忽略区域定义为<i>IR</i>=(<i>x</i>′<sub><i>g</i></sub>,<i>y</i>′<sub><i>g</i></sub>,<i>βw</i>′<sub><i>g</i></sub>,<i>βh</i>′<sub><i>g</i></sub>)/<i>CR</i>,其中<i>β</i>&gt;<i>α</i>,该区域内的像素点不参与训练;</p>
+                </div>
+                <div class="p1">
+                    <p id="81">3)边缘区域<i>OR</i>是除了<i>CR</i>和<i>IR</i>之外的所有区域,此区域内的像素点被认为是负样本(negative samples)。</p>
+                </div>
+                <div class="area_img" id="82">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DZCL201919040_082.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 中心框内像素点位置处预定义边界框生成" src="Detail/GetImg?filename=images/DZCL201919040_082.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 中心框内像素点位置处预定义边界框生成  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DZCL201919040_082.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="83" name="83"><b>2.4 损失函数</b></h4>
+                <div class="p1">
+                    <p id="84">当目标检测训练和前向预测时,预测特征层上的每个像素点对应着3个预测分支,辅助检测的位置预测和类别预测、边界框回归预测。</p>
+                </div>
+                <div class="p1">
+                    <p id="85">位置预测特征图上的每个位置表示当前像素点位置出现目标对象的概率<i>p</i><sup>obj</sup>={<i>p</i><mathml id="108"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>0</mn><mrow><mtext>o</mtext><mtext>b</mtext><mtext>j</mtext></mrow></msubsup></mrow></math></mathml>,<i>p</i><mathml id="109"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>1</mn><mrow><mtext>o</mtext><mtext>b</mtext><mtext>j</mtext></mrow></msubsup></mrow></math></mathml>},对应的位置预测损失函数由Sigmod损失函数构成,用<i>L</i><sub>obj</sub>表示;第2个预测分支是边界框回归预测分支,其损失函数值为预测得到的边界框偏移量<i>t</i>=(<i>t</i><sub><i>x</i></sub>,<i>t</i><sub><i>y</i></sub>,<i>t</i><sub><i>w</i></sub>,<i>t</i><sub><i>h</i></sub>,)与目标偏移量t<i>t</i><sup>*</sup>=(<i>t</i><sup>*</sup><sub><i>x</i></sub>,<i>t</i><sup>*</sup><sub><i>y</i></sub>,<i>t</i><sup>*</sup><sub><i>w</i></sub>,<i>t</i><sup>*</sup><sub><i>h</i></sub>)之间的平滑<i>L</i>1损失<citation id="138" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>的最小值;第3个分支为边界框内对象的类别预测分支,类别预测损失值由每个位置的<i>K</i>+1个类别对应的概率值的Softmax函数值,即:</p>
+                </div>
+                <div class="p1">
+                    <p id="86"><i>p</i><sup>cls/obj</sup>={<i>p</i><mathml id="110"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>0</mn><mrow><mtext>c</mtext><mtext>l</mtext><mtext>s</mtext><mo>/</mo><mtext>o</mtext><mtext>b</mtext><mtext>j</mtext></mrow></msubsup></mrow></math></mathml>,<i>p</i><mathml id="111"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>1</mn><mrow><mtext>c</mtext><mtext>l</mtext><mtext>s</mtext><mo>/</mo><mtext>o</mtext><mtext>b</mtext><mtext>j</mtext></mrow></msubsup></mrow></math></mathml>,…,<i>p</i><mathml id="112"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>Κ</mi><mrow><mtext>c</mtext><mtext>l</mtext><mtext>s</mtext><mo>/</mo><mtext>o</mtext><mtext>b</mtext><mtext>j</mtext></mrow></msubsup></mrow></math></mathml>}(2)</p>
+                </div>
+                <div class="p1">
+                    <p id="87">在计算类别分类和边界框回归的损失函数时,使用位置预测分支的预测结果<i>p</i><sup>obj</sup>做系数加权,<i>p</i><sup>obj</sup>小于阈值<i>θ</i><sub><i>p</i></sub>的位置处的区域排除不计。</p>
+                </div>
+                <div class="p1">
+                    <p id="88">使用式(3)表示的多任务联合损失函数端到端的训练LA-SSD网络模型:</p>
+                </div>
+                <div class="p1">
+                    <p id="89"><mathml id="113"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>L</mi><mo>=</mo><mi>α</mi><mfrac><mn>1</mn><mrow><mi>Ν</mi><msub><mrow></mrow><mrow><mtext>o</mtext><mtext>b</mtext><mtext>j</mtext></mrow></msub></mrow></mfrac><mi>L</mi><msub><mrow></mrow><mrow><mtext>o</mtext><mtext>b</mtext><mtext>j</mtext></mrow></msub><mo>+</mo><mi>β</mi><mfrac><mn>1</mn><mrow><mi>Ν</mi><msub><mrow></mrow><mrow><mfrac><mrow><mtext>l</mtext><mtext>o</mtext><mtext>c</mtext></mrow><mrow><mtext>o</mtext><mtext>b</mtext><mtext>j</mtext></mrow></mfrac></mrow></msub></mrow></mfrac><mi>L</mi><msub><mrow></mrow><mrow><mfrac><mrow><mtext>l</mtext><mtext>o</mtext><mtext>c</mtext></mrow><mrow><mtext>o</mtext><mtext>b</mtext><mtext>j</mtext></mrow></mfrac></mrow></msub><mo>+</mo><mo stretchy="false">(</mo><mn>1</mn><mo>-</mo><mi>α</mi><mo>-</mo><mi>β</mi><mo stretchy="false">)</mo><mfrac><mn>1</mn><mrow><mi>Ν</mi><msub><mrow></mrow><mrow><mtext>c</mtext><mtext>l</mtext><mtext>s</mtext><mo>/</mo><mtext>o</mtext><mtext>b</mtext><mtext>j</mtext></mrow></msub></mrow></mfrac><mi>L</mi><msub><mrow></mrow><mrow><mtext>c</mtext><mtext>l</mtext><mtext>s</mtext><mo>/</mo><mtext>o</mtext><mtext>b</mtext><mtext>j</mtext></mrow></msub></mrow></math></mathml>      (3)</p>
+                </div>
+                <div class="p1">
+                    <p id="90">其中超参数<i>α</i>和<i>β</i>控制着3个损失函数的平衡,同时使用各自的样本个数正则化损失函数,大量实验证明当<i>α</i>=<i>β</i>=1/3时,取得最佳结果。</p>
+                </div>
+                <h3 id="91" name="91" class="anchor-tag"><b>3 实验结果</b></h3>
+                <div class="p1">
+                    <p id="92">LA-SSD性能评估的所有实验都是用VGG16做为基本网络,模型训练和测试主要使用PASCAL VOC<citation id="139" type="reference"><link href="49" rel="bibliography" /><sup>[<a class="sup">24</a>]</sup></citation> 和 MS COCO<citation id="140" type="reference"><link href="51" rel="bibliography" /><sup>[<a class="sup">25</a>]</sup></citation>数据集,PASCAL VOC数据集有20个类,而MS COCO 有80个类;测试时PASCAL VOC使用IoU阈值为0.5的mAP来评估LA-SSD网络模型的检测性能,COCO使用MS COCO标准的评价指标(standard COCO metrics)来评估。所有实验均以SSD的Caffe<citation id="141" type="reference"><link href="53" rel="bibliography" /><sup>[<a class="sup">26</a>]</sup></citation>实现为基础实现。</p>
+                </div>
+                <h4 class="anchor-tag" id="93" name="93"><b>3.1 PASCAL VOC2007</b></h4>
+                <div class="p1">
+                    <p id="94">PASCAL VOC2007数据集包括20类对象。使用VOC 2007 Trainval(5×10<sup>3</sup>张图片)数据集和VOC 2012 Trainval(11×10<sup>3</sup>张图片)数据集作为训练数据集,使用VOC 2007 Test(4 952张图片)数据集分支作为测试数据集。LA-SSD模型训练时使用4个NVIDIA 1080Ti GPUs,每批次64张图片,总共迭代了120 K次,学习率(learning rate,lr)的初始值为0.001,之后在80 K、100 K和120 K次迭代时依次减小10倍,与SSD的训练方式相同,使用权重系数为0.000 5,冲量(momentum)等于0.9的SGD训练策略,训练初始值为使用ImageNet数据集<citation id="142" type="reference"><link href="45" rel="bibliography" /><sup>[<a class="sup">22</a>]</sup></citation>预训练的VGG16网络模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="95">LA-SSD算法与其他先进目标检测器的检测性能比较如表1所示。除非特别说明,本文参与性能比较的所有算法的输入图像尺度均为300×300和512×512。从表1可以看出在基础模型和输入图像尺度相同的情况下, LA-SSD的目标检测准确度(mAP)在两种图像尺度下比RfineDet分别提升了0.9%和1.1%(80.9%vs80%@mAP,82.9%vs81.8%@mAP),比DSSD分别提升了2.3%和3.2%(80.9% vs 78.6%@ mAP,82.7% vs 79.5%@ mAP),这说明了LA-SSD网络模型引入的位置预测模块能够辅助网络模型获取高质量的预定义边界框,训练后的模型参数能够集中在目标出现的区域,提升了目标检测网络模型的检测性能。就检测实时性而言,LA-SSD相较于RefineDet并没有优势(23 vs 40.3@Fps,16 vs 24.1@Fps),这是因为RefineDet使用的两步级联回归算法能够滤除更多对模型训练和前向预测没有帮助的预定义边界框,减少了模型的计算复杂度。不过LA-SSD检测速度上相对于DSSD也有不少的改进(23 vs 9.5@Fps,16 vs 5.5@Fps),这说明了位置预测分支滤除冗余预定义边界框不仅能集中模型的表达能力,还降低了模型检测预测的计算复杂度,提升模型检测的实时性。</p>
+                </div>
+                <h4 class="anchor-tag" id="96" name="96"><b>3.2 PASCAL VOC2012</b></h4>
+                <div class="p1">
+                    <p id="97">按照VOC 2012协议<citation id="143" type="reference"><link href="49" rel="bibliography" /><sup>[<a class="sup">24</a>]</sup></citation>,本文将LA-SSD检测结果提交到公共测试服务器进行评估。训练数据集由VOC 2007 Trainval\\Test数据集,以及VOC 2012 Trainval数据集(21 503张图片)共同构成,测试数据集由VOC 2012Test数据集(10 991张图片)构成。在前160 K次迭代,模型训练的学习率lr=0.001,之后每迭代40 K次,学习率减小10倍,其他超参数与PASCAL VOC2007数据集验证时的设置相同。</p>
+                </div>
+                <div class="p1">
+                    <p id="98">由表1可以看出,使用VOC 2012数据集训练的LA-SSD模型与使用VOC 2007数据集训练有相似的性能,当输入图像尺寸为300×300时,LA-SSDz的检。测精度(mAP)可以达到79.8%;当输入图像尺寸为512×512,LA-SSD的检测精度(mAP)提高到81.8%,比RefineDet512相比提升了1.7%;同时在两个输入不同输入尺度上相对于DSSD分别提升了3.5%和1.8%,检测速度上相对于DSSD也分别快了13.5 Fps和10.5 Fps。</p>
+                </div>
+                <div class="area_img" id="99">
+                    <p class="img_tit"><b>表1 PASCAL VOC数据集测试LA-SSD模型结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="99" border="1"><tr><td rowspan="2"><br />Method</td><td rowspan="2">Model</td><td rowspan="2">FPS</td><td colspan="2"><br />mAP(%)</td></tr><tr><td><br />VOC 2007</td><td>VOC 2012</td></tr><tr><td><br />faster RCNN</td><td>VGG</td><td>7</td><td>73.2</td><td>75.9</td></tr><tr><td><br />R-FCN</td><td>ResNet101</td><td>9</td><td>80.5</td><td>77.6</td></tr><tr><td><br />SSD300</td><td>VGG16</td><td>46</td><td>77.5</td><td>75.8</td></tr><tr><td><br />DSSD321</td><td>ResNet-101</td><td>9.5</td><td>78.6</td><td>76.3</td></tr><tr><td><br />RefineDet320</td><td>VGG</td><td>40.3</td><td>80</td><td>78.1</td></tr><tr><td><br />LA-SSD300</td><td>VGG</td><td>23</td><td>80.9</td><td>79.4</td></tr><tr><td><br />SSD512</td><td>VGG</td><td>19</td><td>79.5</td><td>78.5</td></tr><tr><td><br />DSSD513</td><td>ResNet101</td><td>5.5</td><td>81.5</td><td>80</td></tr><tr><td><br />RefineDet512</td><td>VGG</td><td>24.1</td><td>81.8</td><td>80.1</td></tr><tr><td><br />LA-SSD512</td><td>VGG</td><td>16</td><td>82.9</td><td>81.8<br /></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="100" name="100"><b>3.3 结果对比</b></h4>
+                <div class="p1">
+                    <p id="101">除了使用PASCAL VOC数据集,本文还使用了MS COCO数据集来测试LA-SSD模型的工作性能。使用MS COCO数据集里具有135 ×10<sup>3</sup>张图像的Trainval数据集进行LA-SSD目标检测模型训练,使用具有20×10<sup>3</sup>张图片的Test-Dev数据集测试训练之后的模型。模型训练时的批量为64,训练初始时学习力lr=0.001,随后在280 K和360 K次迭代时,学习率均降低10倍,模型训练总共迭代了400 K次。</p>
+                </div>
+                <div class="p1">
+                    <p id="102">表2所示为LA-SSD 在MS COCO测试数据集下与其他优秀目标算法的检测性能比较,其中评价指标AP@IoU表示不同IoU阈值下目标检测的平均精度,AP@Area表示面积大小不同的对象的检测精度,AR@Dets表示当每张图片上检测目标的个数为Dets时的召回率,AR@Area表示面积大小不同的对象的召回率;其中IoU阈值为0.75时,根据检测数据评可以估模型的边界框回归能力,IoU阈值为0.5时,可以评估模型的类别区分能力;而AR主要体现的是目标目标模型发现目标对象的能力(class-agnostic)。</p>
+                </div>
+                <div class="p1">
+                    <p id="103">从表2中可以看出,当基础模型(VGG16)相同时,LA-SSD512的检测准确度(mAP)达到了34.1%,比RefineDet512(33%)高了1.1%,但是与RetinaNet相比略差(34.1% vs 34.4%),这里需要强调的是RetinaNet使用的基础模型是具有更强的模型表达能力的ResNet-101。通过进一步的分析表2中的数据可以发现,本文提出的LA-SSD目标检测模型与其他优秀模型相比,虽然在检测精度上有所提升,但提升并不是比较明显(1～2%@mAP),但是在目标对象检测时的召回率AR方面有明显的改进,尤其是小尺度目标对象的召回率(AR@S),相对于不同输入尺度的DSSD,分别提升了6.3%(18.9% vs 12.7%)和9.8%(31.6% vs 21.8%)。这说明使用位置预测网络子模块的预测结果滤除冗余的预定义边界框不仅不会降低检测模型的召回率(AR),还能帮助模型发现更多容易丢失的小尺度目标对象,提高小尺度目标对象的召回率。</p>
+                </div>
+                <div class="area_img" id="104">
+                    <p class="img_tit"><b>表2 使用MS COCO数据集评估LA-SSD模型的检测性能</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="104" border="1"><tr><td rowspan="2"><br />Method</td><td rowspan="2">network</td><td colspan="3"><br />AP@IoU</td><td colspan="3">AP@Area</td><td colspan="3">AR@Dets</td><td colspan="3">AR@Area</td></tr><tr><td>0.5∶0.95</td><td>0.5</td><td>0.75</td><td>S</td><td>M</td><td>L</td><td>1</td><td>10</td><td>100</td><td>S</td><td>M</td><td>L</td></tr><tr><td>Faster RCNN</td><td>VGG16</td><td>21.9</td><td>42.7</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td><br />R-FCN</td><td>ResNet101</td><td>29.9</td><td>51.9</td><td>-</td><td>10.8</td><td>32.8</td><td>45</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td><br />SSD300</td><td>VGG16</td><td>25.1</td><td>43.1</td><td>25.8</td><td>6.6</td><td>25.9</td><td>41.4</td><td>23.7</td><td>35.1</td><td>37.2</td><td>11.2</td><td>40.4</td><td>58.4</td></tr><tr><td><br />DSSD321</td><td>ResNet101</td><td>28</td><td>46.1</td><td>29.2</td><td>7.4</td><td>28.1</td><td>47.6</td><td>25.5</td><td>37.1</td><td>39.4</td><td>12.7</td><td>42</td><td>62.6</td></tr><tr><td><br />RefineDet320</td><td>VGG16</td><td>29.4</td><td>49.2</td><td>31.3</td><td>10</td><td>32</td><td>44.4</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td><br />LASSD300</td><td>VGG16</td><td>31.2</td><td>50.6</td><td>31.7</td><td>12.3</td><td>34.1</td><td>46.4</td><td>27.1</td><td>39.8</td><td>44.3</td><td>18.9</td><td>47.5</td><td>65.1</td></tr><tr><td><br />SSD512</td><td>VGG16</td><td>28.8</td><td>48.5</td><td>30.3</td><td>10.9</td><td>31.8</td><td>43.5</td><td>26.1</td><td>39.5</td><td>42</td><td>16.5</td><td>46.6</td><td>60.8</td></tr><tr><td><br />DSSD513</td><td>ResNet101</td><td>33.2</td><td>53.3</td><td>35.2</td><td>13</td><td>35.4</td><td>51.1</td><td>28.9</td><td>43.5</td><td>46.2</td><td>21.8</td><td>49.1</td><td>66.4</td></tr><tr><td><br />RefineDet512</td><td>VGG16</td><td>33</td><td>54.5</td><td>35.5</td><td>16.3</td><td>36.3</td><td>44.3</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td><br />RetinaNet500</td><td>ResNet101</td><td>34.4</td><td>53.1</td><td>36.8</td><td>14.7</td><td>38.5</td><td>49.1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><br />LASSD512</td><td>VGG16</td><td>34.1</td><td>54.8</td><td>36.1</td><td>17.6</td><td>37.8</td><td>49.8</td><td>30.7</td><td>45.2</td><td>48.7</td><td>31.6</td><td>53.3</td><td>68.5</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h3 id="106" name="106" class="anchor-tag"><b>4 结  论</b></h3>
+                <div class="p1">
+                    <p id="107">本文提出了新的使用位置预测分支辅助检测目标算法LA-SSD,该算法在经典目标检测SSD的基础上增加能够预测特征层像素点处对象出现概率的位置预测模块,该模块能够预测目标对象在图像中出现的位置,帮助检测模型在训练和前向预测时滤除目标对象可能不会出现的位置处的预定义边界框,LA-SSD不仅能降低模型的计算复杂度,还使模型的表达能力集中在对象出现的位置,提高模型的检测性能。大量的实验证明,LA-SSD目标检测算法在准确度上相比RefineNet提升了1%～3% mAP,在检测速度上比DSSD提升了10～12 Fps。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201711020&amp;v=MDIzOTRubVZiekpJVGZJWXJHNEg5Yk5ybzlIWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 周晓彦,王珂,李凌燕.基于深度学习的目标检测算法综述[J].电子测量技术,2017,40(11):89-93.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=DZCL201822020&amp;v=MDM2MjdUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlubVZiekpJVGZJWXJHNEg5bk9yWTlIWklRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 张立亮,王国中,范涛,等.一种有遮挡人脸识别方法改进[J].电子测量技术,2018,41(22):89-94.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=DKFX&amp;filename=YQXB201901028&amp;v=MTQ1MjhIOWpNcm85SGJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5bm1WYnpKUER6VGJMRzQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 余铎,王耀南,毛建旭,等.基于视觉的移动机器人目标跟踪方法[J].仪器仪表学报,2019,40(1):227-235.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Rich feature hierarchies for accurate object detection and semantic segmentation">
+
+                                <b>[4]</b> GIRSHICK R,DONAHUE J,DARRELL T,et al.Rich feature hierarchies for accurate object detection and semantic segmentation[C] IEEE Conference on Computer Vision and Pattern Recognition,2014:580-587.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" >
+                                    <b>[5]</b>
+                                 REN S,HE K,GIRSHICK R,et al.Faster R-CNN:Towards real-time object detection with region proposal networks[C].Advances in neural information processing systems,2015:91-99.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" >
+                                    <b>[6]</b>
+                                 DAI J,LI Y,HE K,et al.R-FCN:Object detection via region-based fully convolutional networks[C].Annual conference on Neural Information Processing Systems,2016:379-387.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Feature pyramid networks for object detection">
+
+                                <b>[7]</b> LIN T Y,DOLLAR P,GIRSHICK R,et al.Feature pyramid networks for object detection[C].IEEE Conference on Computer Vision and Pattern Recognition,2017:936-944.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Spatial pyramid pooling in deep convolutional networks for visual recognition">
+
+                                <b>[8]</b> HE K,ZHANG X,REN S,et al.Spatial pyramid pooling in deep convolutional networks for visual recognition[C].European Conference on Computer Vision,2014:346-361.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Fast R-CNN">
+
+                                <b>[9]</b> GIRSHICK R.Fast R-CNN[J/OL].arXiv preprint,2015.https://arxiv.org/abs/1504.08083.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=You Only Look Once:Unified,Real-Time Object Detection">
+
+                                <b>[10]</b> REDMON J,DIVVALA S,GIRSHICK R,et al.You only look once:Unified,real-time object detection[C].IEEE Conference on Computer Vision and Pattern Recognition,2016:779-788.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" >
+                                    <b>[11]</b>
+                                 LIU W,ANGUELOV D,ERHAN D,et al.SSD:Single shot multibox detector[C].European Conference on Computer Vision,2016:21-37.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" >
+                                    <b>[12]</b>
+                                 KONG T,SUN F,YAO A,et al.Ron:Reverse connection with objectness prior networks for object detection[C].IEEE Conference on Computer Vision and Pattern Recognition,2017:5244-5252.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Focal Loss for Dense Object Detection">
+
+                                <b>[13]</b> LIN T Y,GOYAL P,GIRSHICK R,et al.Focal loss for dense object detection[C].IEEE International Conference on Computer Vision 2018:2999-3007.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=&amp;quot;Dssd:Deconvolutional single shot detector,&amp;quot;">
+
+                                <b>[14]</b> FU CY,LIU W,RANGA A,et al.DSSD:Deconvolutional single shot detector[J/OL].arXiv preprint,2017.https://arxiv.org/abs/1701.06659.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Cornernet: Detecting objects as paired keypoints">
+
+                                <b>[15]</b> LAW H,DENG J.Cornernet:Detecting objects as paired keypoints[C].European Conference on Computer Vision,2018:765-781.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Region Proposal by Guided Anchoring[C/OL]">
+
+                                <b>[16]</b> WANG J,CHEN K,YANG S,et al.Region Proposal by Guided Anchoring[C/OL].CVPR 2019,2019.https://arxiv.org/abs/1901.03278.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Anchor box optimization for object detection">
+
+                                <b>[17]</b> ZHONG Y,WANG J,PENG J,et al.Anchor box optimization for object detection[J/OL].arXiv preprint,2018.https://arxiv.org/abs/1812.00469v1.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=DetNet:A backbone network for object detection">
+
+                                <b>[18]</b> LI Z,PENG C,YU G,et al.DetNet:A backbone network for object detection[J/OL].arXiv preprint,2014.https://arxiv.org/abs/1804.06215.
+                            </a>
+                        </p>
+                        <p id="39">
+                            <a id="bibliography_19" >
+                                    <b>[19]</b>
+                                 ZHOU P,NI B,GENG C,et al.Scale-transferrable object detection[C].The IEEE Conference on Computer Vision and Pattern Recognition (CVPR),2018:528-537.
+                            </a>
+                        </p>
+                        <p id="41">
+                            <a id="bibliography_20" target="_blank" href="http://scholar.cnki.net/result.aspx?q=M2Det:a single-shot object detector based on multi-level feature pyramid network">
+
+                                <b>[20]</b> ZHAO Q,SHENG T,WANG Y,et al.M2det:A single-shot object detector based on multi-level feature pyramid network.[C/OL].Thirty-Third AAAI Conference on Artificial Intelligence,2019.https://arxiv.org/abs/1811.04533v1.
+                            </a>
+                        </p>
+                        <p id="43">
+                            <a id="bibliography_21" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Single-shot refinement neural network for object detection">
+
+                                <b>[21]</b> ZHANG S,WEN L,BIAN X,et al.Single-shot refinement neural network for object detection[J/OL].arXiv preprint,2018.https://arxiv.org/abs/1711.06897.
+                            </a>
+                        </p>
+                        <p id="45">
+                            <a id="bibliography_22" >
+                                    <b>[22]</b>
+                                 RUSSAKOVSKY O,DENG J,SU H,et al.Imagenet large scale visual recognition challenge[J].International Journal of Computer Vision,2015,115(3):211-252.
+                            </a>
+                        </p>
+                        <p id="47">
+                            <a id="bibliography_23" >
+                                    <b>[23]</b>
+                                 SIMONYAN K,ZISSERMAN A.Very deep convolutional networks for large-scale image recognition[J/OL].arXiv preprint,2015.https://arxiv.org/abs/1409.1556.
+                            </a>
+                        </p>
+                        <p id="49">
+                            <a id="bibliography_24" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD15110200782102&amp;v=Mjc4MDBVcnpJSVYwU2FSTT1OajdCYXJLOUg5RE1yWTlGWStNTkRYdzdvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0RmlubA==&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[24]</b> EVERINGHAM M,VANGOOL L,WILLIAMS C K I,et al.The pascal visual object classes (voc) challenge[J].International journal of computer vision,2010,88(2):303-338.
+                            </a>
+                        </p>
+                        <p id="51">
+                            <a id="bibliography_25" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Microsoft COCO:Common Objects in Context">
+
+                                <b>[25]</b> LIN T Y,MAIRE M,BELONGIE S,et al.Microsoft coco:Common objects in context[C].European Conference on Computer Vision,2014:740-755.
+                            </a>
+                        </p>
+                        <p id="53">
+                            <a id="bibliography_26" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Caffe:convolutional architecture for fast feature embedding">
+
+                                <b>[26]</b> JIA Y,SHELHAMER E,DONAHUE J,et al.Caffe:Convolutional architecture for fast feature embedding[J/OL].arXiv preprint,2014.https://arxiv.org/abs/1408.5093.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="DZCL201919040" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZCL201919040&amp;v=MjY1OTZaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5tVmJ6SklUZklZckc0SDlqTnBvOUI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09pSnNveUxRekc1UDhybXA2TzF5RHYzd3RWOD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=NLcKG8I1SJUaVFrQ0iGpF2klAT0OsmHRaVSZ1rKb5xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

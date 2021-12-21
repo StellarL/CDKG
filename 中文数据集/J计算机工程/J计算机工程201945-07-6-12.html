@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637129917588113750%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201907002%26RESULT%3d1%26SIGN%3dqo0LdcfumBNXPLYrih5AP1Se%252fvU%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201907002&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201907002&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201907002&amp;v=MjI1MzJPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDam1XN3ZMTHo3QmJiRzRIOWpNcUk5RlpvUUtESDg0dlI0VDZqNTQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#33" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="1 相关工作 ">1 相关工作</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#44" data-title="2 基于余弦模式挖掘的群组提取 ">2 基于余弦模式挖掘的群组提取</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#47" data-title="2.1 紧耦合群组">2.1 紧耦合群组</a></li>
+                                                <li><a href="#61" data-title="2.2 紧耦合群组的余弦模式建模">2.2 紧耦合群组的余弦模式建模</a></li>
+                                                <li><a href="#80" data-title="2.3 候选水军群组提取">2.3 候选水军群组提取</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#99" data-title="3 候选群组提取算法的分布式实现 ">3 候选群组提取算法的分布式实现</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#101" data-title="3.1 组投影技术">3.1 组投影技术</a></li>
+                                                <li><a href="#111" data-title="3.2 基于Spark框架的分布式候选水军群组提取">3.2 基于Spark框架的分布式候选水军群组提取</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#118" data-title="4 实验结果与分析 ">4 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#120" data-title="4.1 实验设置">4.1 实验设置</a></li>
+                                                <li><a href="#125" data-title="4.2 性能验证">4.2 性能验证</a></li>
+                                                <li><a href="#130" data-title="4.3 准确性验证">4.3 准确性验证</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#136" data-title="5 案例研究 ">5 案例研究</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#142" data-title="6 结束语 ">6 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#46" data-title="&lt;b&gt;图1 水军群组与非水军群组示意图&lt;/b&gt;"><b>图1 水军群组与非水军群组示意图</b></a></li>
+                                                <li><a href="#109" data-title="&lt;b&gt;表1 事务集示例&lt;/b&gt;"><b>表1 事务集示例</b></a></li>
+                                                <li><a href="#110" data-title="&lt;b&gt;表2 组投影示例&lt;/b&gt;"><b>表2 组投影示例</b></a></li>
+                                                <li><a href="#116" data-title="&lt;b&gt;图2 基于Spark框架的分布式群组提取算法结构&lt;/b&gt;"><b>图2 基于Spark框架的分布式群组提取算法结构</b></a></li>
+                                                <li><a href="#123" data-title="&lt;b&gt;表3 实验数据集&lt;/b&gt;"><b>表3 实验数据集</b></a></li>
+                                                <li><a href="#127" data-title="&lt;b&gt;图3 2种模式提取群组的数量对比&lt;/b&gt;"><b>图3 2种模式提取群组的数量对比</b></a></li>
+                                                <li><a href="#129" data-title="&lt;b&gt;图4 分布式余弦模式挖掘算法运行时间情况&lt;/b&gt;"><b>图4 分布式余弦模式挖掘算法运行时间情况</b></a></li>
+                                                <li><a href="#133" data-title="&lt;b&gt;表4 2种模式检测性能对比&lt;/b&gt;"><b>表4 2种模式检测性能对比</b></a></li>
+                                                <li><a href="#135" data-title="&lt;b&gt;图5 2个水军群组列表中前&lt;i&gt;Y&lt;/i&gt;个群组的重合率情况&lt;/b&gt;"><b>图5 2个水军群组列表中前<i>Y</i>个群组的重合率情况</b></a></li>
+                                                <li><a href="#139" data-title="&lt;b&gt;图6 水军群组1的评论时间分布情况&lt;/b&gt;"><b>图6 水军群组1的评论时间分布情况</b></a></li>
+                                                <li><a href="#141" data-title="&lt;b&gt;图7 水军群组2的目标商品及评论行为&lt;/b&gt;"><b>图7 水军群组2的目标商品及评论行为</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="164">
+
+
+                                    <a id="bibliography_1" title=" CHEVALIER J A, MAYZLIN D.The effect of word of mouth on sales:online book reviews[J].Journal of Marketing Research, 2006, 43 (3) :345-354." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJST&amp;filename=SJST14120300871169&amp;v=MjU2MzU9TmlmWWVySzhIOVBNckk5RmJPd09EWG93b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTGpMSUYwY2JoRQ==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         CHEVALIER J A, MAYZLIN D.The effect of word of mouth on sales:online book reviews[J].Journal of Marketing Research, 2006, 43 (3) :345-354.
+                                    </a>
+                                </li>
+                                <li id="166">
+
+
+                                    <a id="bibliography_2" title=" 李璐旸, 秦兵, 刘挺.虚假评论检测研究综述[J].计算机学报, 2018, 41 (4) :946-968." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201804013&amp;v=MTgwMzMzenFxQnRHRnJDVVJMT2VaZVJwRkNqbVc3dkxMejdCZHJHNEg5bk1xNDlFWjRRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         李璐旸, 秦兵, 刘挺.虚假评论检测研究综述[J].计算机学报, 2018, 41 (4) :946-968.
+                                    </a>
+                                </li>
+                                <li id="168">
+
+
+                                    <a id="bibliography_3" title=" JINDAL N, LIU Bing.Opinion spam and analysis[C]//Proceedings of 2008 International Conference on Web Search and Data Mining.New York, USA:ACM Press, 2008:219-230." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Opinion spam and analysis">
+                                        <b>[3]</b>
+                                         JINDAL N, LIU Bing.Opinion spam and analysis[C]//Proceedings of 2008 International Conference on Web Search and Data Mining.New York, USA:ACM Press, 2008:219-230.
+                                    </a>
+                                </li>
+                                <li id="170">
+
+
+                                    <a id="bibliography_4" title=" 莫倩, 杨珂.网络水军识别研究[J].软件学报, 2014, 25 (7) :1505-1526." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201407011&amp;v=MDUxNzdZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDam1XN3ZMTnlmVGJMRzRIOVhNcUk5RVo=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         莫倩, 杨珂.网络水军识别研究[J].软件学报, 2014, 25 (7) :1505-1526.
+                                    </a>
+                                </li>
+                                <li id="172">
+
+
+                                    <a id="bibliography_5" title=" 金礼仁.基于结构与内容的社交网络水军团体识别[D].南京:南京邮电大学, 2016." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016294255.nh&amp;v=MjkzNzVxcUJ0R0ZyQ1VSTE9lWmVScEZDam1XN3ZMVkYyNkdMR3hHdFBKcXBFYlBJUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         金礼仁.基于结构与内容的社交网络水军团体识别[D].南京:南京邮电大学, 2016.
+                                    </a>
+                                </li>
+                                <li id="174">
+
+
+                                    <a id="bibliography_6" title=" YE Junting, AKOGLU L.Discovering opinion spammer groups by network footprints[C]//Proceedings of 2015 Joint European Conference on Machine Learning and Knowledge Discovery in Databases.Berlin, Germany:Springer, 2015:267-282." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Discovering Opinion Spammer Groups by Network Footprints">
+                                        <b>[6]</b>
+                                         YE Junting, AKOGLU L.Discovering opinion spammer groups by network footprints[C]//Proceedings of 2015 Joint European Conference on Machine Learning and Knowledge Discovery in Databases.Berlin, Germany:Springer, 2015:267-282.
+                                    </a>
+                                </li>
+                                <li id="176">
+
+
+                                    <a id="bibliography_7" title=" MUKHERJEE A, LIU Bing, GLANCE N.Spotting fake reviewer groups in consumer reviews[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2012:191-200." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Spotting Fake Reviewer Groups in Consumer Reviews">
+                                        <b>[7]</b>
+                                         MUKHERJEE A, LIU Bing, GLANCE N.Spotting fake reviewer groups in consumer reviews[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2012:191-200.
+                                    </a>
+                                </li>
+                                <li id="178">
+
+
+                                    <a id="bibliography_8" title=" XU Chang, ZHANG Jie, CHANG Kuiyu, et al.Uncovering collusive spammers in Chinese review websites[C]//Proceedings of ACM International Conference on Information and Knowledge Management.New York, USA:ACM Press, 2013:979-988." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Uncovering collusive spammers in Chinese review websites">
+                                        <b>[8]</b>
+                                         XU Chang, ZHANG Jie, CHANG Kuiyu, et al.Uncovering collusive spammers in Chinese review websites[C]//Proceedings of ACM International Conference on Information and Knowledge Management.New York, USA:ACM Press, 2013:979-988.
+                                    </a>
+                                </li>
+                                <li id="180">
+
+
+                                    <a id="bibliography_9" title=" WANG Youquan, WU Zhang, BU Zhan, et al.Discovering shilling groups in a real e-commerce platform[J].Online Infor-mation Review, 2016, 40 (1) :62-78." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SPQD&amp;filename=SPQD961402E29054E2B5E9F15FC3C199A0FC&amp;v=MTk5MDdScjJFMGNMdmxSY3pzQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TjlpeEx1M3hLcz1OajNhYXJxK0g5WE1yZnBIYmVzS0NBazd2Uk5tNDBsOFRRbQ==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         WANG Youquan, WU Zhang, BU Zhan, et al.Discovering shilling groups in a real e-commerce platform[J].Online Infor-mation Review, 2016, 40 (1) :62-78.
+                                    </a>
+                                </li>
+                                <li id="182">
+
+
+                                    <a id="bibliography_10" title=" 常家伟, 戴牡红.基于PageRank和谱方法的个性化推荐算法[J].计算机科学, 2018, 45 (增刊) :398-401." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJA2018S2083&amp;v=MTE4NzRqbVc3dkxMejdCYjdHNEg5bXZyWTlOWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRkM=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         常家伟, 戴牡红.基于PageRank和谱方法的个性化推荐算法[J].计算机科学, 2018, 45 (增刊) :398-401.
+                                    </a>
+                                </li>
+                                <li id="184">
+
+
+                                    <a id="bibliography_11" title=" LUO Dijun, DING C, HUANG Heng.Parallelization with multiplicative algorithms for big data mining[C]//Proceedings of IEEE International Conference on Data Mining.Washington D.C., USA:IEEE Computer Society, 2012:489-498." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Parallelization with multiplicative algorithms for big data mining">
+                                        <b>[11]</b>
+                                         LUO Dijun, DING C, HUANG Heng.Parallelization with multiplicative algorithms for big data mining[C]//Proceedings of IEEE International Conference on Data Mining.Washington D.C., USA:IEEE Computer Society, 2012:489-498.
+                                    </a>
+                                </li>
+                                <li id="186">
+
+
+                                    <a id="bibliography_12" title=" WANG Zhuo, HOU Tingting, SONG D, et al.Detecting review spammer groups via bipartite graph projection[J].Computer Journal, 2016, 59 (6) :861-874." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Detecting Review Spammer Groups via Bipartite Graph Projection">
+                                        <b>[12]</b>
+                                         WANG Zhuo, HOU Tingting, SONG D, et al.Detecting review spammer groups via bipartite graph projection[J].Computer Journal, 2016, 59 (6) :861-874.
+                                    </a>
+                                </li>
+                                <li id="188">
+
+
+                                    <a id="bibliography_13" title=" CAO Jie, WU Zhang, WU Junjie.Scaling up cosine interesting pattern discovery:a depth-first method[J].Information Sciences, 2014, 266 (5) :31-46." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14021300004768&amp;v=MzA1MTJaZVp1SHlqbVVMakxJRjBjYmhFPU5pZk9mYks4SHRQTnJJOUZaT3NMQzNveG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1udw==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         CAO Jie, WU Zhang, WU Junjie.Scaling up cosine interesting pattern discovery:a depth-first method[J].Information Sciences, 2014, 266 (5) :31-46.
+                                    </a>
+                                </li>
+                                <li id="190">
+
+
+                                    <a id="bibliography_14" title=" GRAHNE G, ZHU Jianfeng.Mining frequent itemsets from secondary memory[C]//Proceedings of IEEE Interna-tional Conference on Data Mining.Washington D.C., USA:IEEE Computer Society, 2004:91-98." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Mining Frequent Itemsets from Secondary Memory">
+                                        <b>[14]</b>
+                                         GRAHNE G, ZHU Jianfeng.Mining frequent itemsets from secondary memory[C]//Proceedings of IEEE Interna-tional Conference on Data Mining.Washington D.C., USA:IEEE Computer Society, 2004:91-98.
+                                    </a>
+                                </li>
+                                <li id="192">
+
+
+                                    <a id="bibliography_15" title=" MUKHERJEE A, KUMAR A, LIU Bing, et al.Spotting opinion spammers using behavioral footprints[C]//Proceedings of ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM Press, 2013:632-640." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Spotting Opinion Spammers Using Behavioral Footprints">
+                                        <b>[15]</b>
+                                         MUKHERJEE A, KUMAR A, LIU Bing, et al.Spotting opinion spammers using behavioral footprints[C]//Proceedings of ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM Press, 2013:632-640.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(07),6-12 DOI:10.19678/j.issn.1000-3428.0052048            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>一种高效的分布式水军群组检测算法</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E7%92%90&amp;code=27295086&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张璐</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9C%B1%E6%B5%B7%E5%A9%B7&amp;code=39217545&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">朱海婷</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8D%97%E4%BA%AC%E8%B4%A2%E7%BB%8F%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0251839&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">南京财经大学信息工程学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8D%97%E4%BA%AC%E9%82%AE%E7%94%B5%E5%A4%A7%E5%AD%A6%E7%89%A9%E8%81%94%E7%BD%91%E5%AD%A6%E9%99%A2&amp;code=0101257&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">南京邮电大学物联网学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>为在电子商务水军群组检测中快速处理真实环境中的大规模用户数据, 提出一种分布式水军群组检测算法。设计基于余弦模式挖掘的候选群组提取算法, 通过余弦相似度衡量群组成员间的耦合性, 以精准提取候选群组并降低后续识别的计算量。结合组投影技术与Spark计算框架, 提出一种分布式群组提取算法, 从而提升群组检测的运行速度。在真实数据集上的实验与案例研究结果表明, 该算法能够保证检测准确率, 且具有较高的运行效率。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B0%B4%E5%86%9B%E7%BE%A4%E7%BB%84%E6%A3%80%E6%B5%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">水军群组检测;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%A3%80%E6%B5%8B%E6%95%88%E7%8E%87&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">检测效率;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%BD%99%E5%BC%A6%E6%A8%A1%E5%BC%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">余弦模式;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%B4%A7%E8%80%A6%E5%90%88%E7%BE%A4%E7%BB%84&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">紧耦合群组;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%BB%84%E6%8A%95%E5%BD%B1&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">组投影;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97%E6%A1%86%E6%9E%B6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">分布式计算框架;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    张璐 (1983—) , 男, 讲师、博士, 主研方向为数据挖掘、分布式计算, E-mail:luzhang@njue.edu.cn;
+                                </span>
+                                <span>
+                                    *朱海婷 (通信作者) , 讲师、博士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-07-09</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家重点研发计划 (2017YFD0401002);</span>
+                                <span>国家自然科学基金 (71801123, 91646204, 61502250);</span>
+                                <span>南京邮电大学引进人才科研启动基金 (NY214188);</span>
+                    </p>
+            </div>
+                    <h1><b>An Efficient Distributed Detection Algorithm for Spammer Group</b></h1>
+                    <h2>
+                    <span>ZHANG Lu</span>
+                    <span>ZHU Haiting</span>
+            </h2>
+                    <h2>
+                    <span>College of Information Engineering, Nanjing University of Finance and Economics</span>
+                    <span>College of Internet of Things, Nanjing University of Posts and Telecommunications</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>In order to quickly process large-scale user data in real environment in e-commerce spammer group detection, a distributed detection algorithm for spammer group is proposed.A candidate group extraction algorithm based on cosine pattern mining is designed to measure the coupling between group members by cosine similarity, so as to extract candidate groups accurately and reduce the computational complexity of subsequent recognition.Combining group projection technology with the Spark computing framework, a distributed group extraction algorithm is proposed to further improve the speed of group detection.Results of experiments and case studies on real data sets show that the proposed algorithm can guarantee the detection accuracy and has high efficiency.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=spammer%20group%20detection&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">spammer group detection;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=detection%20efficiency&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">detection efficiency;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=cosine%20pattern&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">cosine pattern;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=tightly-coupled%20group&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">tightly-coupled group;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=group%20projection&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">group projection;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=distributed%20computing%20framework&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">distributed computing framework;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-07-09</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="33" name="33" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="34">随着电子商务与Web 2.0的快速发展, 在线评论已成为消费者在购买产品或服务时的重要参考依据<citation id="194" type="reference"><link href="164" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。与此同时, 大量水军通过发布虚假评论影响用户的购买决策, 从而攫取不正当的商业利益<citation id="195" type="reference"><link href="166" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>。虽然已有研究试图通过异常的评论特征、行为特征等对水军进行检测<citation id="197" type="reference"><link href="168" rel="bibliography" /><link href="170" rel="bibliography" /><link href="172" rel="bibliography" /><sup>[<a class="sup">3</a>,<a class="sup">4</a>,<a class="sup">5</a>]</sup></citation>, 但是, 近年来越来越多的水军通过组成群组的方式, 共同发布针对目标商品的虚假评论。在这种有组织的行动下, 水军个体能够以更加轻微的异常行为隐藏自己的身份, 且由于群组中包含大量水军, 往往能够形成言论优势, 进而完全控制关于目标商品的评价<citation id="196" type="reference"><link href="174" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>。水军群组对社会产生了巨大危害, 其检测问题成为广受关注的研究热点。</p>
+                </div>
+                <div class="p1">
+                    <p id="35">主流水军群组检测方法一般包含2个阶段<citation id="198" type="reference"><link href="176" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>:提取若干候选群组 (提取阶段) , 从候选群组中识别出水军群组 (识别阶段) 。现有研究工作主要聚焦于检测方法准确率的提升<citation id="199" type="reference"><link href="178" rel="bibliography" /><link href="180" rel="bibliography" /><sup>[<a class="sup">8</a>,<a class="sup">9</a>]</sup></citation>, 较少关注检测效率等性能问题。然而, 随着电子商务平台中用户和商品规模的急剧扩张, 检测方法的效率与扩展性成为限制其广泛应用的瓶颈。水军群组识别阶段主要使用分类、排序等机器学习算法, 已有研究多数致力于解决这些算法的效率问题<citation id="200" type="reference"><link href="182" rel="bibliography" /><link href="184" rel="bibliography" /><sup>[<a class="sup">10</a>,<a class="sup">11</a>]</sup></citation>, 且目前很多分布式框架中已集成了成熟的机器学习工具包 (如Hadoop中的Mahout、Spark中的MLlib等) 。另一方面, 识别算法的运行速度主要受待识别样本量的影响, 如果提取阶段产生的候选群组过多, 且其中包含大量的非水军群组, 将会增加识别阶段的压力, 导致算法整体检测性能降低。</p>
+                </div>
+                <div class="p1">
+                    <p id="36">综上, 精准且高效的候选群组提取是提升水军群组检测算法整体性能的关键。为此, 本文提出一种基于余弦模式挖掘的群组提取算法, 以精准提取候选水军群组。在此基础上, 利用Spark框架设计基于分布式余弦模式挖掘的群组提取算法, 以进一步提升群组提取的效率、扩展性以及算法的整体性能。</p>
+                </div>
+                <h3 id="37" name="37" class="anchor-tag">1 相关工作</h3>
+                <div class="p1">
+                    <p id="38">进行水军群组检测的第1步是从所有用户中提取群组 (提取阶段) 。在电子商务水军检测领域, 群组即一组多次针对不同目标商品共同发布评论的用户。文献<citation id="201" type="reference">[<a class="sup">7</a>]</citation>提出一种基于频繁模式挖掘的群组提取方法, 该方法将共同评论某一商品的用户视为关联规则中的一条事务, 进而将群组提取转化为从多个事务中挖掘多次出现的用户组合, 相当于从事务集中挖掘频繁模式。由于该群组提取方法简单易行, 因此被很多后续的水军群组检测研究所沿用<citation id="202" type="reference"><link href="178" rel="bibliography" /><link href="180" rel="bibliography" /><sup>[<a class="sup">8</a>,<a class="sup">9</a>]</sup></citation>, 成为群组提取的主流方法。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">利用频繁模式挖掘提取出的群组中既包含水军群组, 也包含由于某些特殊原因偶然形成的群组 (如拥有共同的兴趣爱好、同时购买流行商品等) 。因此, 此时提取出的群组仅仅是水军群组的候选, 还需进一步构建群组特征, 利用分类、排序等机器学习方法从中识别出真正的水军群组 (识别阶段) 。目前, 水军群组识别工作主要基于以下3个思路:</p>
+                </div>
+                <div class="p1">
+                    <p id="40">1) 构建群组特征与分类器, 将候选群组分类为水军群组和非水军群组, 如文献<citation id="203" type="reference">[<a class="sup">8</a>]</citation>基于群组评论相似性、群组规模等特征, 利用k近邻分类器对候选群组进行分类。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">2) 利用群组特征建立关联关系网络, 然后通过图排序算法对候选群组的受怀疑程度或恶意性进行排序, 再将可疑度或恶意性高于预设阈值的群组判定为水军群组。如文献<citation id="204" type="reference">[<a class="sup">7</a>]</citation>建立群组-用户、群组-商品以及用户-商品3种关联关系并融合成关系网络, 然后利用类似PageRank的排序算法计算群组恶意性, 从而获得水军群组。</p>
+                </div>
+                <div class="p1">
+                    <p id="42">3) 提取群组特征或群组目标商品的特征, 将每种特征转化为分值并按一定的方式进行加权, 根据最终的分值识别水军群组。如文献<citation id="205" type="reference">[<a class="sup">9</a>]</citation>利用主成分分析对有关群组恶意程度的主要特征值进行加权, 根据最终加权分值判定水军群组。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">在群组提取阶段, 如何高效地从大规模用户中提取群组, 且提取出的群组足够精确, 即尽可能多地排除非水军群组, 减轻识别阶段的计算量, 对于提升水军群组检测的整体性能至关重要, 本文将围绕这一问题展开研究。需要说明的是, 由于识别阶段所采用的多种机器学习算法已有较成熟的分布式工具包, 这一阶段的算法性能分析暂不纳入本文的研究范围。</p>
+                </div>
+                <h3 id="44" name="44" class="anchor-tag">2 基于余弦模式挖掘的群组提取</h3>
+                <div class="p1">
+                    <p id="45">利用频繁模式挖掘提取群组时需设置支持度参数, 即定义构成群组的用户需同时出现的次数。为避免遗漏水军群组, 通常会设置较低的支持度, 由此带来的负面影响是提取出的群组过多, 可能包含大量的非水军群组, 为后续水军群组的识别带来困难。造成这一现象的原因是频繁模式挖掘仅考虑用户间的共现次数, 忽略了对用户间关系的度量。从内部看, 群组成员间不仅有共同评论的商品, 各成员也有各自独立评论的商品, 即非共同评论商品。对一个群组而言, 成员共同评论的商品与被群组成员评论过的商品总和间的比值衡量了群组成员间的紧密程度, 本文用耦合度表示这一概念。相关研究结果表明, 耦合度较高的群组 (下文称为紧耦合群组) 属于水军群组的概率更高<citation id="206" type="reference"><link href="186" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>。如图1所示, 水军群组成员以集体行动为主, 共同评论的商品比例较高, 而由于兴趣聚合而成的群组, 成员往往还有各自购买/评论的需求和偏好, 独立评论的商品比例较高。将群组的耦合度纳入群组提取过程中进行考虑, 将更具针对性并能够过滤掉大量偶然形成的群组。本文从紧耦合群组的定义开始, 利用余弦模式对其进行建模, 设计基于余弦模式挖掘的紧耦合群组提取算法。</p>
+                </div>
+                <div class="area_img" id="46">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907002_046.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 水军群组与非水军群组示意图" src="Detail/GetImg?filename=images/JSJC201907002_046.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 水军群组与非水军群组示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907002_046.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="47" name="47">2.1 紧耦合群组</h4>
+                <div class="p1">
+                    <p id="48">水军群组由一群多次共同评论特定商品或商品集合的用户所组成。令<i>U</i>={<i>u</i><sub>1</sub>, <i>u</i><sub>2</sub>, …, <i>u</i><sub><i>n</i></sub>}表示一组用户的集合, <i>P</i><sub><i>l</i></sub>表示用户<i>u</i><sub><i>l</i></sub>所评论的商品集合。若<i>U</i>中各用户所评论的商品集合完全相同, 即<i>P</i><sub>1</sub>=<i>P</i><sub>2</sub>=…=<i>P</i><sub><i>n</i></sub>, 则称这样的用户集合为完全耦合群组, 并有:</p>
+                </div>
+                <div class="p1">
+                    <p id="49" class="code-formula">
+                        <mathml id="49"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mrow><mo>|</mo><mrow><mstyle displaystyle="true"><munderover><mo>∩</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>Ρ</mi></mstyle><msub><mrow></mrow><mi>l</mi></msub></mrow><mo>|</mo></mrow></mrow><mrow><mrow><mo>|</mo><mrow><mi>Ρ</mi><msub><mrow></mrow><mn>1</mn></msub></mrow><mo>|</mo></mrow></mrow></mfrac><mo>=</mo><mfrac><mrow><mrow><mo>|</mo><mrow><mstyle displaystyle="true"><munderover><mo>∩</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>Ρ</mi></mstyle><msub><mrow></mrow><mi>l</mi></msub></mrow><mo>|</mo></mrow></mrow><mrow><mrow><mo>|</mo><mrow><mi>Ρ</mi><msub><mrow></mrow><mn>2</mn></msub></mrow><mo>|</mo></mrow></mrow></mfrac><mo>=</mo><mo>⋯</mo><mo>=</mo><mfrac><mrow><mrow><mo>|</mo><mrow><mstyle displaystyle="true"><munderover><mo>∩</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>Ρ</mi></mstyle><msub><mrow></mrow><mi>l</mi></msub></mrow><mo>|</mo></mrow></mrow><mrow><mrow><mo>|</mo><mrow><mi>Ρ</mi><msub><mrow></mrow><mi>n</mi></msub></mrow><mo>|</mo></mrow></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="50">其中, <mathml id="51"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mo>|</mo><mo>⋅</mo><mo>|</mo></mrow></mrow></math></mathml>表示集合中元素的数量。定义用户u<sub>l</sub>的共同评论率<mathml id="52"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>R</mi><msub><mrow></mrow><mi>l</mi></msub><mo>=</mo><mrow><mo>|</mo><mrow><mstyle displaystyle="true"><munderover><mo>∩</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>Ρ</mi></mstyle><msub><mrow></mrow><mi>l</mi></msub></mrow><mo>|</mo></mrow><mo>/</mo><mrow><mo>|</mo><mrow><mi>Ρ</mi><msub><mrow></mrow><mi>l</mi></msub></mrow><mo>|</mo></mrow></mrow></math></mathml>, 其表示群组中所有用户共同评论的商品数量与用户<i>u</i><sub><i>l</i></sub>所评论的商品数量间的比值。式 (1) 表明完全耦合群组中用户的共同评论率都为1。根据这一思路, 可以用共同评论率作为水军群组的衡量指标。由于在实际情况中, 完全耦合群组出现的概率极低, 因此需对共同评论率为1这一要求进行必要的松弛。在此之前, 先给出平均共同评论率这一概念的定义。</p>
+                </div>
+                <div class="p1">
+                    <p id="53"><b>定义1</b> (平均共同评论率) 给定一个用户集合<i>U</i> (|<i>U</i>|≥2) , 其平均共同评论率<i>AR</i>定义为集合中所有用户的共同评论率的几何平均数, 即:</p>
+                </div>
+                <div class="p1">
+                    <p id="54" class="code-formula">
+                        <mathml id="54"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>A</mi><mi>R</mi><mo stretchy="false"> (</mo><mi>U</mi><mo stretchy="false">) </mo><mo>=</mo><mroot><mrow><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><mi>u</mi><msub><mrow></mrow><mi>l</mi></msub><mo>∈</mo><mi>U</mi></mrow></munder><mi>R</mi></mstyle><msub><mrow></mrow><mi>l</mi></msub></mrow><mrow><mrow><mo>|</mo><mi>U</mi><mo>|</mo></mrow></mrow></mroot><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="55">由式 (2) 可以看出, 平均共同评论率的取值在0～1之间, 其值越高, 说明用户间共同评论的商品所占比例越大, 用户间的耦合度也越高。因此, 紧耦合群组可视为一个平均共同评论率<i>AR</i>≥<i>τ</i><sub><i>AR</i></sub>的用户集合, 其中, <i>τ</i><sub><i>AR</i></sub>表示预设的阈值。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">此外, 为过滤掉部分共同评论的商品数量过少的用户集合, 还需对共同评论商品的最小数量进行限制。为适应不同规模的商品集合, 本文用共同评论商品占商品总量的比例描述这一限制, 即要求用户集合<i>U</i> (|<i>U</i>|≥2) 满足如下条件:</p>
+                </div>
+                <div class="p1">
+                    <p id="57" class="code-formula">
+                        <mathml id="57"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Μ</mi><mi>S</mi><mo stretchy="false"> (</mo><mi>U</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mrow><mo>|</mo><mrow><mi>Ρ</mi><msub><mrow></mrow><mn>1</mn></msub><mstyle displaystyle="true"><mo>∩</mo><mi>Ρ</mi></mstyle><msub><mrow></mrow><mn>2</mn></msub><mstyle displaystyle="true"><mo>∩</mo><mo>⋯</mo></mstyle><mstyle displaystyle="true"><mo>∩</mo><mi>Ρ</mi></mstyle><msub><mrow></mrow><mrow><mrow><mo>|</mo><mi>U</mi><mo>|</mo></mrow></mrow></msub></mrow><mo>|</mo></mrow></mrow><mi>m</mi></mfrac><mo>≥</mo><mi>τ</mi><msub><mrow></mrow><mrow><mi>Μ</mi><mi>S</mi></mrow></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="58">其中, <i>m</i>表示商品总量, <i>τ</i><sub><i>MS</i></sub>为预设的阈值。由此, 可得到紧耦合群组的定义。</p>
+                </div>
+                <div class="p1">
+                    <p id="59"><b>定义2</b> (紧耦合群组) 当且仅当给定阈值<i>τ</i><sub><i>AR</i></sub>、<i>τ</i><sub><i>MS</i></sub>∈[0, 1]满足<i>AR</i> (<i>U</i>) ≥<i>τ</i><sub><i>AR</i></sub>且<i>MS</i> (<i>U</i>) ≥<i>τ</i><sub><i>MS</i></sub>时, 用户集合<i>U</i>为紧耦合群组。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">特别地, 当<i>τ</i><sub><i>AR</i></sub>=1时紧耦合群组将转化为完全耦合群组。所有群组成员的评论商品完全相同, 这表明紧耦合群组是完全耦合群组的一种松弛版本, 两者的区别随着<i>τ</i><sub><i>AR</i></sub>值的增大而减小。</p>
+                </div>
+                <h4 class="anchor-tag" id="61" name="61">2.2 紧耦合群组的余弦模式建模</h4>
+                <div class="p1">
+                    <p id="62">在对紧耦合群组进行建模前, 先给出余弦模式的定义。余弦模式是频繁模式的变种, 除采用支持度外, 还引入余弦相似度作为模式的兴趣度度量指标<citation id="207" type="reference"><link href="188" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>。假设<i>I</i>={<i>i</i><sub>1</sub>, <i>i</i><sub>2</sub>, …, <i>i</i><sub><i>k</i></sub>} (<i>k</i>≥2) 为事务集<i>D</i>中的一个<i>k</i>项集, <i>I</i>的余弦相似度定义为:</p>
+                </div>
+                <div class="p1">
+                    <p id="63" class="code-formula">
+                        <mathml id="63"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>C</mi><mi>o</mi><mi>s</mi><mo stretchy="false"> (</mo><mi>Ι</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mi>S</mi><mi>u</mi><mi>p</mi><mi>p</mi><mo stretchy="false"> (</mo><mi>Ι</mi><mo stretchy="false">) </mo></mrow><mrow><mroot><mrow><mstyle displaystyle="true"><munderover><mo>∏</mo><mrow><mi>p</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mi>S</mi></mstyle><mi>u</mi><mi>p</mi><mi>p</mi><mo stretchy="false"> (</mo><mo stretchy="false">{</mo><mi>i</mi><msub><mrow></mrow><mi>p</mi></msub><mo stretchy="false">}</mo><mo stretchy="false">) </mo></mrow><mi>k</mi></mroot></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>4</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="64">其中, <i>Supp</i> (·) 表示支持度, 其计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="65" class="code-formula">
+                        <mathml id="65"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>u</mi><mi>p</mi><mi>p</mi><mo stretchy="false"> (</mo><mi>Ι</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mi>S</mi><mi>C</mi><mo stretchy="false"> (</mo><mi>Ι</mi><mo stretchy="false">) </mo></mrow><mrow><mrow><mo>|</mo><mi>D</mi><mo>|</mo></mrow></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>5</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="66">其中, <mathml id="67"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>C</mi><mo stretchy="false"> (</mo><mi>Ι</mi><mo stretchy="false">) </mo><mo>=</mo><mrow><mo>|</mo><mrow><mo stretchy="false">{</mo><mi>Τ</mi><mo stretchy="false">|</mo><mi>Ι</mi><mo>∈</mo><mi>Τ</mi><mo>, </mo><mi>Τ</mi><mo>∈</mo><mi>D</mi><mo stretchy="false">}</mo></mrow><mo>|</mo></mrow></mrow></math></mathml>表示I的支持度计数, T为事务集D中包含项集I的事务。根据余弦相似度, 可给出余弦模式的定义。</p>
+                </div>
+                <div class="p1">
+                    <p id="68"><b>定义3</b> (余弦模式) 分别给定支持度阈值<i>τ</i><sub><i>s</i></sub>∈[0, 1]和余弦相似度阈值<i>τ</i><sub><i>c</i></sub>∈[0, 1], 如果项集<i>I</i>满足<i>Supp</i> (<i>I</i>) ≥<i>τ</i><sub><i>s</i></sub>且<i>Cos</i> (<i>I</i>) ≥<i>τ</i><sub><i>c</i></sub>, 则<i>I</i>为<i>τ</i><sub><i>s</i></sub>和<i>τ</i><sub><i>c</i></sub>约束下的余弦模式。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">在定义3中, 如果将<i>τ</i><sub><i>c</i></sub> 设置为0, 则余弦模式退化为频繁模式, 此时支持度成为唯一的兴趣度度量指标。如果将评论某一特定商品的用户集合视为一条事务, 那么每个商品将产生一条事务并共同组成事务集<i>D</i>, 此时可得到如下命题。</p>
+                </div>
+                <div class="p1">
+                    <p id="70"><b>命题1</b> 给定阈值<i>τ</i><sub><i>AR</i></sub>和<i>τ</i><sub><i>MS</i></sub>, 提取紧耦合群组等价于从事务集中根据阈值<i>τ</i><sub><i>c</i></sub> =<i>τ</i><sub><i>AR</i></sub>和<i>τ</i><sub><i>s</i></sub>=<i>τ</i><sub><i>MS</i></sub>挖掘余弦模式。</p>
+                </div>
+                <div class="p1">
+                    <p id="71"><b>证明</b> 给定一个用户集合<i>U</i>, 如果<i>q</i>为<i>U</i>中所有用户共同评论的某一商品, 即<mathml id="72"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>q</mi><mo>∈</mo><mi>Ρ</mi><msub><mrow></mrow><mn>1</mn></msub><mstyle displaystyle="true"><mo>∩</mo><mi>Ρ</mi></mstyle><msub><mrow></mrow><mn>2</mn></msub><mstyle displaystyle="true"><mo>∩</mo><mo>⋯</mo></mstyle><mstyle displaystyle="true"><mo>∩</mo><mi>Ρ</mi></mstyle><msub><mrow></mrow><mrow><mrow><mo>|</mo><mi>U</mi><mo>|</mo></mrow></mrow></msub></mrow></math></mathml>, 则可认为<i>U</i>包含在商品<i>q</i>对应的事务<i>t</i><sub><i>q</i></sub>∈<i>D</i>中, 因此, 可得到:</p>
+                </div>
+                <div class="p1">
+                    <p id="73">|<i>P</i><sub>1</sub>∩<i>P</i><sub>2</sub>∩…∩<i>P</i><sub>|<i>U</i>|</sub>|=|{<i>t</i><sub><i>q</i></sub>|<i>U</i>⊆<i>t</i><sub><i>q</i></sub>, 1≤<i>q</i>≤<i>m</i>}|=<i>SC</i> (<i>U</i>) </p>
+                </div>
+                <div class="p1">
+                    <p id="75">其中, <i>SC</i> (<i>U</i>) 为<i>U</i>在事务集<i>D</i>中的支持度计数。则可得到:</p>
+                </div>
+                <div class="p1">
+                    <p id="76" class="code-formula">
+                        <mathml id="76"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Μ</mi><mi>S</mi><mo stretchy="false"> (</mo><mi>U</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mrow><mo>|</mo><mrow><mi>Ρ</mi><msub><mrow></mrow><mn>1</mn></msub><mstyle displaystyle="true"><mo>∩</mo><mi>Ρ</mi></mstyle><msub><mrow></mrow><mn>2</mn></msub><mstyle displaystyle="true"><mo>∩</mo><mo>⋯</mo></mstyle><mstyle displaystyle="true"><mo>∩</mo><mi>Ρ</mi></mstyle><msub><mrow></mrow><mrow><mrow><mo>|</mo><mi>U</mi><mo>|</mo></mrow></mrow></msub></mrow><mo>|</mo></mrow></mrow><mi>m</mi></mfrac><mo>=</mo><mi>S</mi><mi>u</mi><mi>p</mi><mi>p</mi><mo stretchy="false"> (</mo><mi>U</mi><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="77">进一步将共同评论率<i>R</i><sub><i>l</i></sub>的定义代入式 (2) , 易得:</p>
+                </div>
+                <div class="p1">
+                    <p id="78" class="code-formula">
+                        <mathml id="78"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>A</mi><mi>R</mi><mo stretchy="false"> (</mo><mi>U</mi><mo stretchy="false">) </mo><mo>=</mo><mroot><mrow><mrow><mrow><mo>|</mo><mrow><mstyle displaystyle="true"><munderover><mo>∩</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mrow><mo stretchy="false">|</mo><mi>U</mi><mo stretchy="false">|</mo></mrow></munderover><mi>Ρ</mi></mstyle><msub><mrow></mrow><mi>l</mi></msub></mrow><mo>|</mo></mrow></mrow><msup><mrow></mrow><mrow><mrow><mo>|</mo><mi>U</mi><mo>|</mo></mrow></mrow></msup><mo>/</mo><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><mi>u</mi><msub><mrow></mrow><mi>l</mi></msub><mo>∈</mo><mi>U</mi></mrow></munder><mi>Ρ</mi></mstyle><msub><mrow></mrow><mi>l</mi></msub></mrow><mrow><mrow><mo>|</mo><mi>U</mi><mo>|</mo></mrow></mrow></mroot><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mrow><mo>|</mo><mrow><mi>Ρ</mi><msub><mrow></mrow><mn>1</mn></msub><mstyle displaystyle="true"><mo>∩</mo><mi>Ρ</mi></mstyle><msub><mrow></mrow><mn>2</mn></msub><mstyle displaystyle="true"><mo>∩</mo><mo>⋯</mo></mstyle><mstyle displaystyle="true"><mo>∩</mo><mi>Ρ</mi></mstyle><msub><mrow></mrow><mrow><mrow><mo>|</mo><mi>U</mi><mo>|</mo></mrow></mrow></msub></mrow><mo>|</mo></mrow><mo>/</mo><mroot><mrow><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><mi>u</mi><msub><mrow></mrow><mi>l</mi></msub><mo>∈</mo><mi>U</mi></mrow></munder><mi>Ρ</mi></mstyle><msub><mrow></mrow><mi>l</mi></msub></mrow><mrow><mrow><mo>|</mo><mi>U</mi><mo>|</mo></mrow></mrow></mroot><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mi>S</mi><mi>C</mi><mo stretchy="false"> (</mo><mi>U</mi><mo stretchy="false">) </mo><mo>/</mo><mroot><mrow><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><mi>u</mi><msub><mrow></mrow><mi>l</mi></msub><mo>∈</mo><mi>U</mi></mrow></munder><mi>S</mi></mstyle><mi>C</mi><mo stretchy="false"> (</mo><mo stretchy="false">{</mo><mi>u</mi><msub><mrow></mrow><mi>l</mi></msub><mo stretchy="false">}</mo><mo stretchy="false">) </mo></mrow><mrow><mrow><mo>|</mo><mi>U</mi><mo>|</mo></mrow></mrow></mroot><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mi>S</mi><mi>u</mi><mi>p</mi><mi>p</mi><mo stretchy="false"> (</mo><mi>U</mi><mo stretchy="false">) </mo><mo>/</mo><mroot><mrow><mstyle displaystyle="true"><munderover><mo>∏</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mrow><mo stretchy="false">|</mo><mi>U</mi><mo stretchy="false">|</mo></mrow></munderover><mrow><mstyle displaystyle="true"><munder><mo>∏</mo><mrow><mi>u</mi><msub><mrow></mrow><mi>l</mi></msub><mo>∈</mo><mi>U</mi></mrow></munder><mi>S</mi></mstyle></mrow></mstyle><mi>u</mi><mi>p</mi><mi>p</mi><mo stretchy="false"> (</mo><mo stretchy="false">{</mo><mi>u</mi><msub><mrow></mrow><mi>l</mi></msub><mo stretchy="false">}</mo><mo stretchy="false">) </mo></mrow><mrow><mrow><mo>|</mo><mi>U</mi><mo>|</mo></mrow></mrow></mroot><mo>=</mo></mtd></mtr><mtr><mtd><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext></mrow><mi>C</mi><mi>o</mi><mi>s</mi><mo stretchy="false"> (</mo><mi>U</mi><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>7</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="79">由式 (6) 、式 (7) 以及定义2、定义3可得, 提取紧耦合群组等价于挖掘余弦模式, 证毕。</p>
+                </div>
+                <h4 class="anchor-tag" id="80" name="80">2.3 候选水军群组提取</h4>
+                <div class="p1">
+                    <p id="81">在紧耦合群组建模为余弦模式后, 可采用余弦模式挖掘算法提取紧耦合群组。为易于进行后续的分布式扩展, 本文选用文献<citation id="208" type="reference">[<a class="sup">13</a>]</citation>提出的余弦模式挖掘算法CIP-Growth进行紧耦合群组提取。该算法是经典频繁模式挖掘算法FP-Growth的扩展, 其基本流程与FP-Growth类似, 如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="82">1) 扫描事务集并计算每个项的支持度计数, 对其降序排列生成头部表<i>Head Table</i>。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">2) 再次扫描事务集构建FP树, 将其作为基础数据结构。</p>
+                </div>
+                <div class="p1">
+                    <p id="84">3) 以递归的方式生成条件FP树, 从中搜索余弦模式。</p>
+                </div>
+                <div class="p1">
+                    <p id="85">基于CIP-Growth的群组提取算法伪代码如下, 具体的设计思想与细节可参考文献<citation id="209" type="reference">[<a class="sup">13</a>]</citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="86"><b>算法1</b> 基于GIP-Growth的紧耦合群组提取算法</p>
+                </div>
+                <div class="p1">
+                    <p id="87"><b>输入</b> 条件FP树<i>Tree</i>, 初始化由事务集<i>D</i>构建;<i>Tree</i>的前缀模式<i>S</i>, 初始化为空;支持度阈值<i>τ</i><sub><i>s</i></sub>;余弦相似度阈值<i>τ</i><sub><i>c</i></sub></p>
+                </div>
+                <div class="p1">
+                    <p id="88"><b>输出</b> 余弦模式集合<i>G</i>, 即紧耦合群组集合, 初始化为空</p>
+                </div>
+                <div class="p1">
+                    <p id="89">1.CIP-Growth (Tree, S, G, τ<sub>s</sub>, τ<sub>c</sub>) </p>
+                </div>
+                <div class="p1">
+                    <p id="90">2.FOR Tree的头部表中的项i<sub>k</sub>;//按降序遍历</p>
+                </div>
+                <div class="p1">
+                    <p id="91">3.生成候选余弦模式S′=S∪{i<sub>k</sub>};</p>
+                </div>
+                <div class="p1">
+                    <p id="92">4.IF Cos (S′) ≥τ<sub>c</sub> THEN</p>
+                </div>
+                <div class="p1">
+                    <p id="93">5.G=G∪S′;</p>
+                </div>
+                <div class="p1">
+                    <p id="94">6.按τ<sub>s</sub>创建S′的条件FP树Tree<sub>S′</sub>;</p>
+                </div>
+                <div class="p1">
+                    <p id="95">7.IF Tree<sub>S′</sub>≠∅ THEN</p>
+                </div>
+                <div class="p1">
+                    <p id="96">8.CIP-Growth (Tree, S, G, τ<sub>s</sub>, τ<sub>c</sub>) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="97">9.返回G.//G中包含所有的余弦模式 (紧耦合群组) </p>
+                </div>
+                <div class="p1">
+                    <p id="98">鉴于余弦模式与紧耦合群组间的等价关系, 挖掘出事务集中的所有余弦模式相当于提取出所有的紧耦合群组。</p>
+                </div>
+                <h3 id="99" name="99" class="anchor-tag">3 候选群组提取算法的分布式实现</h3>
+                <div class="p1">
+                    <p id="100">真实的电子商务平台中包含大量的商品与用户, 由此建立的事务集规模巨大。为应对这一挑战, 本文将对基于余弦模式挖掘的提取算法进行分布式扩展, 以提升其性能。在类FP-Growth算法中, 进行分布式设计的核心是利用组投影技术<citation id="210" type="reference"><link href="190" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>, 通过将头部表划分成若干组, 根据每组包含的项集, 在事务数据集上进行投影, 从而将事务集分割为互不相交的数据子集, 然后对每个数据子集分别构建FP树并进行模式挖掘, 最终汇总得到挖掘结果。本文利用组投影技术对事务集进行分割, 然后基于内存计算框架Spark (http://spark.apache.org/) 设计分布式候选群组提取算法。</p>
+                </div>
+                <h4 class="anchor-tag" id="101" name="101">3.1 组投影技术</h4>
+                <div class="p1">
+                    <p id="102">组投影技术是文献<citation id="211" type="reference">[<a class="sup">14</a>]</citation>为设计并行FP-Growth算法而提出的一种事务集转换切割方法, 其形式化定义为:</p>
+                </div>
+                <div class="p1">
+                    <p id="103"><b>定义4</b> (组投影) 假设按降序排列的头部表<i>FList</i>中的各项自上而下被分为<i>K</i>个不相交的子集, 即<i>FList</i> = <i>β</i><sub>1</sub>∪<i>β</i><sub>2</sub>∪…∪<i>β</i><sub><i>K</i></sub>, 其中, <i>β</i><sub><i>k</i></sub>={<i>i</i><mathml id="104"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>1</mn><mi>k</mi></msubsup></mrow></math></mathml>, <i>i</i><mathml id="105"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mn>2</mn><mi>k</mi></msubsup></mrow></math></mathml>, …, <i>i</i><mathml id="106"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>r</mi><mi>k</mi></msubsup></mrow></math></mathml>}由<i>FList</i>中<i>r</i>个连续项组成, 则事务集<i>D</i>在第<i>k</i>个组<i>β</i><sub><i>k</i></sub>上的组投影数据集为<mathml id="107"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>D</mi><msub><mrow></mrow><mi>k</mi></msub><mo>=</mo><mo stretchy="false">{</mo><mi>Τ</mi><msub><mrow></mrow><mi>p</mi></msub><mstyle displaystyle="true"><mo>∩</mo><mo stretchy="false"> (</mo></mstyle><mstyle displaystyle="true"><munderover><mo>∪</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mi>β</mi></mstyle><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo stretchy="false">|</mo><mi>Τ</mi><msub><mrow></mrow><mi>p</mi></msub><mstyle displaystyle="true"><mo>∩</mo><mi>β</mi></mstyle><msub><mrow></mrow><mi>k</mi></msub><mo>≠</mo><mo>∅</mo><mo>, </mo><mi>Τ</mi><msub><mrow></mrow><mi>p</mi></msub><mo>∈</mo><mi>D</mi><mo stretchy="false">}</mo></mrow></math></mathml>。</p>
+                </div>
+                <div class="p1">
+                    <p id="108">为便于理解组投影的含义, 以表1所示事务集为例, 其按各项支持度降序排列的头部表为{E (7) , D (5) , C (5) , B (4) , A (3) } (括号中的数据代表相应项的支持度计数) 。假设FList被分割为3个组{D, E}、{B, C}、{A}, 则在这种分割下通过组投影技术生成的数据集如表2所示。以组{B, C}投影得到的数据为例, 当删除FList中位于项B之后的A后, 提取所有包含B或C的事务, 得到表2中组{B, C}所对应的包含7个事务的投影数据集, 其中, 括号中的数字表示对应事务在数据集中的数量。</p>
+                </div>
+                <div class="area_img" id="109">
+                                            <p class="img_tit">
+                                                <b>表1 事务集示例</b>
+                                                
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907002_10900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/JSJC201907002_10900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907002_10900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表1 事务集示例" src="Detail/GetImg?filename=images/JSJC201907002_10900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <div class="area_img" id="110">
+                    <p class="img_tit"><b>表2 组投影示例</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="110" border="1"><tr><td><br />组</td><td>投影数据集</td></tr><tr><td><br />{<i>D</i>, <i>E</i>}</td><td>{<i>D</i>, <i>E</i> } (5) , {<i>E</i>} (2) </td></tr><tr><td><br />{<i>B</i>, <i>C</i>}</td><td>{<i>B</i>, <i>C</i>, <i>D</i>, <i>E</i>} (2) , {<i>B</i>, <i>D</i>, <i>E</i>}, {<i>C</i>, <i>D</i>, <i>E</i> } (2) , {<i>B</i>, <i>E</i>}, {<i>C</i>}</td></tr><tr><td><br />{<i>A</i>}</td><td>{<i>A</i>, <i>B</i>, <i>D</i>, <i>E</i>}, {<i>A</i>, <i>C</i>, <i>D</i>, <i>E</i>}, {<i>A</i>, <i>E</i>}</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="111" name="111">3.2 基于Spark框架的分布式候选水军群组提取</h4>
+                <div class="p1">
+                    <p id="112">在Spark框架下, 本文设计的基于余弦模式的分布式水军群组提取算法可封装为2个Map-Reduce过程, 如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="113">1) 横向切割事务集<i>D</i>并加载到Spark的弹性分布式数据集 (Resilient Distributed Datasets, RDD) 中, 触发第1次Map-Reduce过程。在Map阶段计算每个RDD上各项的支持度计数, 然后以项为键、对应的支持度计数为值, 在Reduce阶段汇总计算项在整个事务集中的支持度计数, 并排序生成<i>FList</i>, 这一过程类似于经典的Word Count算法, 在此不再赘述。</p>
+                </div>
+                <div class="p1">
+                    <p id="114">2) 将<i>FList</i>分割为<i>K</i>个子集, 广播到各个RDD上, 触发第2次Map-Reduce过程。在Map阶段根据<i>FList</i>的分割对RDD中的事务进行组投影, 在Reduce阶段, 以组为键, 汇总投影结果生成<i>K</i>个新的RDD, 每个RDD中保存对应组的投影数据。最后, 在新产生的RDD中执行第2.3节的紧耦合群组提取算法, 汇总得到候选群组。</p>
+                </div>
+                <div class="p1">
+                    <p id="115">基于Spark框架的分布式群组提取算法结构如图2所示。</p>
+                </div>
+                <div class="area_img" id="116">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907002_116.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 基于Spark框架的分布式群组提取算法结构" src="Detail/GetImg?filename=images/JSJC201907002_116.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 基于Spark框架的分布式群组提取算法结构</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907002_116.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="117">在得到候选群组后, 可选用已有的水军群组识别方法从中识别水军群组。这些方法大多基于分类、排序等机器学习算法, 如SVM、PageRank等, 其分布式版本已在Spark的机器学习库MLlib中实现, 可与本文分布式水军群组提取算法进行有效结合。</p>
+                </div>
+                <h3 id="118" name="118" class="anchor-tag">4 实验结果与分析</h3>
+                <div class="p1">
+                    <p id="119">本节利用真实数据集从性能和准确性2个方面对分布式水军群组检测算法进行验证和分析。</p>
+                </div>
+                <h4 class="anchor-tag" id="120" name="120">4.1 实验设置</h4>
+                <div class="p1">
+                    <p id="121">实验具体设置如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="122">1) 数据集:实验数据爬取自亚马逊中国网站 (https://www.amazon.cn/) , 共收集了自2009年9月—2017年12月间834 547个用户针对4 837 386个商品发布的190 435 346条评论数据。从中移除冷门商品和用户, 仅保留发布3次以上评论的用户和被评论10次以上的商品以及对应的评论数据, 建立如表3所示的实验数据集。</p>
+                </div>
+                <div class="area_img" id="123">
+                    <p class="img_tit"><b>表3 实验数据集</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="123" border="1"><tr><td>名称</td><td>用户数</td><td>商品数</td><td>评论数</td></tr><tr><td><br />amazon.cn</td><td>488 631</td><td>358 764</td><td>85 464 145</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="124">2) 实验环境:本文使用Spark集群运行分布式水军群组检测算法, 集群共包含8台服务器, 使用InfiniBand万兆网络互联, 每台服务器配置为英特尔E5-2650v2 CPU (4核, 主频2.6 GHz) , 128 GB内存, 240 GB SSD硬盘以及600 GB SAS硬盘, 操作系统为64位RedHat Linux 7.0, Spark版本为1.6.2, 实验代码采用Java语言编写。</p>
+                </div>
+                <h4 class="anchor-tag" id="125" name="125">4.2 性能验证</h4>
+                <div class="p1">
+                    <p id="126">由于水军群组识别阶段的算法未纳入本文研究范围, 因此本次实验主要关注群组提取阶段的性能。本文基于余弦模式挖掘的提取算法能够提取出紧耦合群组, 较频繁模式挖掘方法能够大幅降低候选群组的数量, 有利于提升后续识别的效率。设置余弦阈值<i>τ</i><sub><i>c</i></sub>=0.2, 支持度<i>τ</i><sub><i>s</i></sub>在0.01%～0.05%间变化, 图3所示为余弦模式挖掘和频繁模式挖掘所提取出的群组数量对比。从图3可以看出, 余弦模式挖掘提取出的候选群组数量远少于频繁模式挖掘, 且支持度越小, 两者的差异越大。由于支持度越小, 越不容易遗漏群组, 因此较小支持度下两者的显著性差异更能凸显余弦模式挖掘对于提升检测效率的优势。</p>
+                </div>
+                <div class="area_img" id="127">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907002_127.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 2种模式提取群组的数量对比" src="Detail/GetImg?filename=images/JSJC201907002_127.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 2种模式提取群组的数量对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907002_127.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="128">从运行时间方面比较分布式版本和单机版本的余弦模式挖掘算法的性能差异。设置余弦阈值<i>τ</i><sub><i>c</i></sub>=0.2, 支持度<i>τ</i><sub><i>s</i></sub>=0.01%, <i>FList</i>的分割数<i>K</i>从4变化到20, 经测算单机版算法的运行时间为1 430.27 s, 分布式版本算法的运行时间如图4所示。从图4可以看出, 随着并行度 (即<i>K</i>的数值) 的增大, 提取群组所消耗的时间持续减少, 且分布式版本的运行时间远小于单机版本, 当<i>K</i>=20时, 分布式版本算法比单机版本算法所消耗的时间减少90%以上。该实验结果表明, 分布式余弦模式挖掘算法能够有效提升群组提取的效率, 最终提升水军群组检测的整体性能。</p>
+                </div>
+                <div class="area_img" id="129">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907002_129.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 分布式余弦模式挖掘算法运行时间情况" src="Detail/GetImg?filename=images/JSJC201907002_129.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 分布式余弦模式挖掘算法运行时间情况</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907002_129.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="130" name="130">4.3 准确性验证</h4>
+                <div class="p1">
+                    <p id="131">为验证本文群组提取算法的检测准确性, 选用文献<citation id="212" type="reference">[<a class="sup">7</a>]</citation>提出的GSRank算法从候选群组中识别水军群组。GSRank算法利用群组、用户及商品特征建立群组-用户、群组-商品以及用户-商品3种关联关系并融合成关系网络, 然后利用类似PageRank的算法计算群组恶意度并排序, 选择排序列表中恶意度位于前列的群组, 将其判定为水军群组。</p>
+                </div>
+                <div class="p1">
+                    <p id="132">由于实验所使用的数据集中并未给出用户或群组是否为水军的标记, 即缺乏GroundTruth。因此, 本文采用文献<citation id="213" type="reference">[<a class="sup">15</a>]</citation>提出的间接验证思路对水军群组识别的准确性进行验证。由于GSRank算法会给出群组的恶意度, 在按恶意度排序生成的列表中 (假设按降序排列) , 如果检测算法是准确的, 那么排在列表前列的群组和排在末尾的群组间必然具有较高的区分度, 即前列群组的恶意度很高, 末尾群组的恶意度很低, 截取首尾部分群组组成新的测试集, 使用分类器对测试集进行分类也将取得较好的分类效果。反之, 如果检测算法准确性较低, 则列表首尾部分群组的区分度较低, 分类器将难以取得好的分类效果。在进行间接验证时, 本文设定余弦阈值<i>τ</i><sub><i>c</i></sub>=0.2, 支持度<i>τ</i><sub><i>s</i></sub>=0.01%, 提取候选群组并采用GSRank算法进行排序, 然后分别截取列表首尾5%、10%、15%的群组建立测试集, 再使用SVM和C4.5决策树对测试集进行分类, 分类效果采用准确率 (<i>P</i>) 、召回率 (<i>R</i>) 和综合评价指标 (<i>F</i>) 进行描述, 实验结果如表4所示。由表4可以看出, 本文余弦模式提取算法与频繁模式提取算法在水军检测中所取得的准确率相差无几, 说明本文算法在提升检测效率的同时, 也能保证准确率。由表4还可以看出, 在排序列表首尾截取的群组越少, 群组间的区分度越高, 分类器的分类效果越好。</p>
+                </div>
+                <div class="area_img" id="133">
+                                            <p class="img_tit">
+                                                <b>表4 2种模式检测性能对比</b>
+                                                
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907002_13300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/JSJC201907002_13300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907002_13300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表4 2种模式检测性能对比" src="Detail/GetImg?filename=images/JSJC201907002_13300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <div class="p1">
+                    <p id="134">使用余弦模式挖掘算法提取出的群组数量远少于频繁模式挖掘, 因此, 余弦模式是否会造成水军群组遗漏值得关注。本文分别使用余弦模式和频繁模式提取群组, 然后用GSRank排序得到2个列表并按恶意度降序排列。由于水军群组排在列表的前列, 本文分别截取2个列表的前<i>Y</i>个群组, 考查两者间的重合率, 实验结果如图5所示。由图5可以看出, 2个列表中排序靠前的群组间重合度很高, 当余弦阈值<i>τ</i><sub><i>c</i></sub>=0.2、截取的群组位于列表前2 000时, 2个列表中超过90%的群组是相同的。因此, 相对频繁模式挖掘, 余弦模式挖掘所排除的群组主要是非水军群组, 几乎没有造成水军群组遗漏。</p>
+                </div>
+                <div class="area_img" id="135">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907002_135.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 2个水军群组列表中前Y个群组的重合率情况" src="Detail/GetImg?filename=images/JSJC201907002_135.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 2个水军群组列表中前<i>Y</i>个群组的重合率情况</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907002_135.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="136" name="136" class="anchor-tag">5 案例研究</h3>
+                <div class="p1">
+                    <p id="137">为进一步阐述本文水军群组检测算法的有效性, 本节展现2个由该算法从实验数据集中检测出的水军群组, 并分析其异常行为。本文实验数据取自2009年9月—2013年12月, 由于亚马逊网站本身也会开展水军检测工作, 案例中展现的水军ID可能已被网站删除, 但这也从侧面说明了本文算法的有效性。2个水军群组信息如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="138">1) 水军群组1共包含8名成员, 在2010年5月21日—25日的5天里, 这些用户一共评论了15个商品, 所有商品均给予5星评价。图6所示为用户评论商品的时间分布情况, 可以看出, 这些用户多次在同一天共同评论同一商品, 这种行为有异于偶然形成的普通群组。普通群组的成员虽然有共同评论的商品, 但评论时间通常是不同的。此外, 通过在亚马逊中国网站上搜索群组成员的ID, 发现很多ID或相关评论已被删除, 这说明亚马逊的检测算法与本文得出了一致的结论, 上述用户组成的群组为水军群组。</p>
+                </div>
+                <div class="area_img" id="139">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907002_139.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 水军群组1的评论时间分布情况" src="Detail/GetImg?filename=images/JSJC201907002_139.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 水军群组1的评论时间分布情况</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907002_139.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="140">2) 水军群组2包含5名成员, 并于2010年9月30日共同评论了3件商品, 其中, 3名成员还分别额外评论了2件商品。图7所示为该群组的目标商品及评论行为。首先, 该群组所评论的商品集中属于“书中缘”品牌的图书, 但图书类别各不相同, 因此, 其并非由兴趣形成的群组;其次, 3名成员发布了重复评论, 这是水军发表评论的典型特征;最后, 所有成员均给出了4星或5星的高评分, 其目的在于提升“书中缘”品牌图书的排名, 即该群组属于品牌营销水军。</p>
+                </div>
+                <div class="area_img" id="141">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907002_141.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 水军群组2的目标商品及评论行为" src="Detail/GetImg?filename=images/JSJC201907002_141.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图7 水军群组2的目标商品及评论行为</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907002_141.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="142" name="142" class="anchor-tag">6 结束语</h3>
+                <div class="p1">
+                    <p id="143">本文提出紧耦合群组的概念并用余弦模式进行建模, 基于余弦模式挖掘精准提取候选群组, 在此基础上, 运用组投影和Spark框架设计一种分布式群组提取算法, 以提升算法的运行效率与扩展性。下一步将通过合理划分头部表, 使组投影技术得到更加均衡的数据切割, 以提高分布式算法的运行效率。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="164">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJST&amp;filename=SJST14120300871169&amp;v=MjM5ODl5am1VTGpMSUYwY2JoRT1OaWZZZXJLOEg5UE1ySTlGYk93T0RYb3dvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SA==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> CHEVALIER J A, MAYZLIN D.The effect of word of mouth on sales:online book reviews[J].Journal of Marketing Research, 2006, 43 (3) :345-354.
+                            </a>
+                        </p>
+                        <p id="166">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201804013&amp;v=MDkzNTZXN3ZMTHo3QmRyRzRIOW5NcTQ5RVo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDam0=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 李璐旸, 秦兵, 刘挺.虚假评论检测研究综述[J].计算机学报, 2018, 41 (4) :946-968.
+                            </a>
+                        </p>
+                        <p id="168">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Opinion spam and analysis">
+
+                                <b>[3]</b> JINDAL N, LIU Bing.Opinion spam and analysis[C]//Proceedings of 2008 International Conference on Web Search and Data Mining.New York, USA:ACM Press, 2008:219-230.
+                            </a>
+                        </p>
+                        <p id="170">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201407011&amp;v=MjY5NDRiTEc0SDlYTXFJOUVaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ2ptVzd2TE55ZlQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 莫倩, 杨珂.网络水军识别研究[J].软件学报, 2014, 25 (7) :1505-1526.
+                            </a>
+                        </p>
+                        <p id="172">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016294255.nh&amp;v=MzAyNDd4R3RQSnFwRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ2ptVzd2TFZGMjZHTEc=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 金礼仁.基于结构与内容的社交网络水军团体识别[D].南京:南京邮电大学, 2016.
+                            </a>
+                        </p>
+                        <p id="174">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Discovering Opinion Spammer Groups by Network Footprints">
+
+                                <b>[6]</b> YE Junting, AKOGLU L.Discovering opinion spammer groups by network footprints[C]//Proceedings of 2015 Joint European Conference on Machine Learning and Knowledge Discovery in Databases.Berlin, Germany:Springer, 2015:267-282.
+                            </a>
+                        </p>
+                        <p id="176">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Spotting Fake Reviewer Groups in Consumer Reviews">
+
+                                <b>[7]</b> MUKHERJEE A, LIU Bing, GLANCE N.Spotting fake reviewer groups in consumer reviews[C]//Proceedings of International Conference on World Wide Web.New York, USA:ACM Press, 2012:191-200.
+                            </a>
+                        </p>
+                        <p id="178">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Uncovering collusive spammers in Chinese review websites">
+
+                                <b>[8]</b> XU Chang, ZHANG Jie, CHANG Kuiyu, et al.Uncovering collusive spammers in Chinese review websites[C]//Proceedings of ACM International Conference on Information and Knowledge Management.New York, USA:ACM Press, 2013:979-988.
+                            </a>
+                        </p>
+                        <p id="180">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SPQD&amp;filename=SPQD961402E29054E2B5E9F15FC3C199A0FC&amp;v=MDI2NTNiUTM1TjlpeEx1M3hLcz1OajNhYXJxK0g5WE1yZnBIYmVzS0NBazd2Uk5tNDBsOFRRbVJyMkUwY0x2bFJjenNDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcA==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> WANG Youquan, WU Zhang, BU Zhan, et al.Discovering shilling groups in a real e-commerce platform[J].Online Infor-mation Review, 2016, 40 (1) :62-78.
+                            </a>
+                        </p>
+                        <p id="182">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJA2018S2083&amp;v=MzEwMjF6N0JiN0c0SDltdnJZOU5aNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ2ptVzd2TEw=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 常家伟, 戴牡红.基于PageRank和谱方法的个性化推荐算法[J].计算机科学, 2018, 45 (增刊) :398-401.
+                            </a>
+                        </p>
+                        <p id="184">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Parallelization with multiplicative algorithms for big data mining">
+
+                                <b>[11]</b> LUO Dijun, DING C, HUANG Heng.Parallelization with multiplicative algorithms for big data mining[C]//Proceedings of IEEE International Conference on Data Mining.Washington D.C., USA:IEEE Computer Society, 2012:489-498.
+                            </a>
+                        </p>
+                        <p id="186">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Detecting Review Spammer Groups via Bipartite Graph Projection">
+
+                                <b>[12]</b> WANG Zhuo, HOU Tingting, SONG D, et al.Detecting review spammer groups via bipartite graph projection[J].Computer Journal, 2016, 59 (6) :861-874.
+                            </a>
+                        </p>
+                        <p id="188">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14021300004768&amp;v=MjE5NjliSzhIdFBOckk5RlpPc0xDM294b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTGpMSUYwY2JoRT1OaWZPZg==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> CAO Jie, WU Zhang, WU Junjie.Scaling up cosine interesting pattern discovery:a depth-first method[J].Information Sciences, 2014, 266 (5) :31-46.
+                            </a>
+                        </p>
+                        <p id="190">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Mining Frequent Itemsets from Secondary Memory">
+
+                                <b>[14]</b> GRAHNE G, ZHU Jianfeng.Mining frequent itemsets from secondary memory[C]//Proceedings of IEEE Interna-tional Conference on Data Mining.Washington D.C., USA:IEEE Computer Society, 2004:91-98.
+                            </a>
+                        </p>
+                        <p id="192">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Spotting Opinion Spammers Using Behavioral Footprints">
+
+                                <b>[15]</b> MUKHERJEE A, KUMAR A, LIU Bing, et al.Spotting opinion spammers using behavioral footprints[C]//Proceedings of ACM SIGKDD International Conference on Knowledge Discovery and Data Mining.New York, USA:ACM Press, 2013:632-640.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201907002" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201907002&amp;v=MjI1MzJPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDam1XN3ZMTHo3QmJiRzRIOWpNcUk5RlpvUUtESDg0dlI0VDZqNTQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQwam9BWm83cU5adCswdFNtUXRBUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="1" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=NOOK-mvTMnxl11s6oPYV0boPXN3iP4N7Rc-A56nk4KI1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2fKXReader%2fDetail%3fTIMESTAMP%3d637141818644818750%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJZ201904045%26RESULT%3d1%26SIGN%3dK1HhHjaUb6JWwcviC%252fhWI8sCFYM%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJZ201904045&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJZ201904045&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJZ201904045&amp;v=MDc3NDc0SDlqTXE0OUJZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1Wm1GeXpoVTc3Tkx6N0JkTEc=&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="&lt;b&gt;1 概述&lt;/b&gt; "><b>1 概述</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#40" data-title="&lt;b&gt;2 图象与组件树&lt;/b&gt; "><b>2 图象与组件树</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#49" data-title="&lt;b&gt;3 基于组件树的图象分割方法&lt;/b&gt; "><b>3 基于组件树的图象分割方法</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#53" data-title="&lt;b&gt;3.1 图象预处理&lt;/b&gt;"><b>3.1 图象预处理</b></a></li>
+                                                <li><a href="#57" data-title="&lt;b&gt;3.2 组件树的构造&lt;/b&gt;"><b>3.2 组件树的构造</b></a></li>
+                                                <li><a href="#65" data-title="&lt;b&gt;3.3 组件归约及边界判定&lt;/b&gt;"><b>3.3 组件归约及边界判定</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#89" data-title="&lt;b&gt;4 本文算法描述&lt;/b&gt; "><b>4 本文算法描述</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#111" data-title="&lt;b&gt;5 实验结果分析&lt;/b&gt; "><b>5 实验结果分析</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#121" data-title="&lt;b&gt;6 结语&lt;/b&gt; "><b>6 结语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#48" data-title="&lt;b&gt;图1 图象f组件树构造示意图&lt;/b&gt;"><b>图1 图象f组件树构造示意图</b></a></li>
+                                                <li><a href="#52" data-title="&lt;b&gt;图2 本文算法处理流程&lt;/b&gt;"><b>图2 本文算法处理流程</b></a></li>
+                                                <li><a href="#59" data-title="&lt;b&gt;图3 组件树构造过程&lt;/b&gt;"><b>图3 组件树构造过程</b></a></li>
+                                                <li><a href="#113" data-title="&lt;b&gt;图4 患者肝脏切面CT图&lt;/b&gt;"><b>图4 患者肝脏切面CT图</b></a></li>
+                                                <li><a href="#115" data-title="&lt;b&gt;图5 脑CT图实验结果比较&lt;/b&gt;"><b>图5 脑CT图实验结果比较</b></a></li>
+                                                <li><a href="#117" data-title="&lt;b&gt;图6 胸部CT图实验结果比较&lt;/b&gt;"><b>图6 胸部CT图实验结果比较</b></a></li>
+                                                <li><a href="#119" data-title="&lt;b&gt;表1 本文算法与模糊C均值聚类算法、Canny算子所用时间比较&lt;/b&gt;"><b>表1 本文算法与模糊C均值聚类算法、Canny算子所用时间比较</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" P Chinmayi, L Agilandeeswari, M Prabukumar.Survey of Image Processing Techniques in Medical Image Analysis:Challenges and Methodologies[C].International Conference on Soft Computing &amp;amp; Pattern Recognition, 2016:460-471." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Survey of Image Processing Techniques in Medical Image Analysis Challenges and Methodologies">
+                                        <b>[1]</b>
+                                         P Chinmayi, L Agilandeeswari, M Prabukumar.Survey of Image Processing Techniques in Medical Image Analysis:Challenges and Methodologies[C].International Conference on Soft Computing &amp;amp; Pattern Recognition, 2016:460-471.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 江贵平, 秦文建, 周寿军, 王昌淼.医学图像分割及其发展现状[J].计算机学报, 2015, 38 (6) :1222-1242." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201506011&amp;v=MTE4MDRSN3FmWnVabUZ5emhVNzdOTHo3QmRyRzRIOVRNcVk5RVpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+                                        <b>[2]</b>
+                                         江贵平, 秦文建, 周寿军, 王昌淼.医学图像分割及其发展现状[J].计算机学报, 2015, 38 (6) :1222-1242.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" Li Aiju, Lie Yujie, Wang Tingmei, Wenliang.Medical Image Segmentation Based on Maximum Entropy Multi-threshold Segmentation Optimized by Improved Cuckoo Search Algorithm[C] 2015 8&lt;sup&gt;th&lt;/sup&gt; International Congress on Image and Signal Processing (CISP 2015) , 2015:470-475." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Medical image segmentation based on maximum entropy multi-threshold segmentation optimized by improved cuckoo search algorithm">
+                                        <b>[3]</b>
+                                         Li Aiju, Lie Yujie, Wang Tingmei, Wenliang.Medical Image Segmentation Based on Maximum Entropy Multi-threshold Segmentation Optimized by Improved Cuckoo Search Algorithm[C] 2015 8&lt;sup&gt;th&lt;/sup&gt; International Congress on Image and Signal Processing (CISP 2015) , 2015:470-475.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" R J Frank, T J Grabowski, H Damasio.Voxelvise percentagetissue segmentation of human brain Magnetic resonance images Proceedings of the 25th annual Meeting, Society for Neuro-science, Society for Neuroscience.Washington, DC, USA, 1995:694." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Voxelvise percentagetissue segmentation of human brain Magnetic resonance images">
+                                        <b>[4]</b>
+                                         R J Frank, T J Grabowski, H Damasio.Voxelvise percentagetissue segmentation of human brain Magnetic resonance images Proceedings of the 25th annual Meeting, Society for Neuro-science, Society for Neuroscience.Washington, DC, USA, 1995:694.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" H Wang, et al.Hippocampus segmentation using a stable maximum likelihood classifier ensemble algorithm[C].IEEE International Symposium on Biomedical Imaging:From Nano to Macro.Rotterdam, Holland, 2011:2036-2040." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Hippocampus segmentation using a stable maximum likelihood classifier ensemble algorithm">
+                                        <b>[5]</b>
+                                         H Wang, et al.Hippocampus segmentation using a stable maximum likelihood classifier ensemble algorithm[C].IEEE International Symposium on Biomedical Imaging:From Nano to Macro.Rotterdam, Holland, 2011:2036-2040.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" G K Ouzounis, M H F Wilkinson.Mask-based second-generation connectivity and attribute filters[J].IEEE Transactions on Pattern Analysis and Machine Intelligence, 2007, 29 (6) :990-1004." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Mask-based second-generation connectivity and attribute filters">
+                                        <b>[6]</b>
+                                         G K Ouzounis, M H F Wilkinson.Mask-based second-generation connectivity and attribute filters[J].IEEE Transactions on Pattern Analysis and Machine Intelligence, 2007, 29 (6) :990-1004.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" B Naegel, N Passat, N Boch, M Kocher.Segmentation using vector-attribute filters:methodology and application to dermatological imaging[C].In:ISMM 2007.INPE, 2007-1:239-250." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Segmentation using vector-attribute filters:methodology and application to dermatological imaging">
+                                        <b>[7]</b>
+                                         B Naegel, N Passat, N Boch, M Kocher.Segmentation using vector-attribute filters:methodology and application to dermatological imaging[C].In:ISMM 2007.INPE, 2007-1:239-250.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" P Dokl′adal, I Bloch, M Couprie, D Ruijters, R Urtasun, L Garnero.Topologically controlled segmentation of 3D magnetic resonance images of the head by using morphological operators[J].Pattern Recognition, 2003, 36 (10) :2463-2478." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011600740545&amp;v=MjY1MzcrOFBDWGc4b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadEZpbmxVcmZJSkZvVWF4Yz1OaWZPZmJLN0h0RE5xWTlGWQ==&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+                                        <b>[8]</b>
+                                         P Dokl′adal, I Bloch, M Couprie, D Ruijters, R Urtasun, L Garnero.Topologically controlled segmentation of 3D magnetic resonance images of the head by using morphological operators[J].Pattern Recognition, 2003, 36 (10) :2463-2478.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" M H F Wilkinson, M A Westenberg.Shape preserving filament enhancement filtering.In:Niessen, W.J., Viergever, M.A. (eds.) MICCAI 2001.LNCS, vol.2208, Springer, Heidelberg, 2001:770-777." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Shape preserving filament enhancement filtering">
+                                        <b>[9]</b>
+                                         M H F Wilkinson, M A Westenberg.Shape preserving filament enhancement filtering.In:Niessen, W.J., Viergever, M.A. (eds.) MICCAI 2001.LNCS, vol.2208, Springer, Heidelberg, 2001:770-777.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" Laurent Najman, Michel Couprie, Building the component tree in quasi-linear time[J].IEEE transactions on image processing, 2006, 15 (11) :3531-3539." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Building the component tree in quasi-linear time">
+                                        <b>[10]</b>
+                                         Laurent Najman, Michel Couprie, Building the component tree in quasi-linear time[J].IEEE transactions on image processing, 2006, 15 (11) :3531-3539.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" L Chen, M Berry, W Hargrove.Using dendronal signatures for feature extraction and retrieval.International Journal of Imaging Systems and Technology, 2000, 11 (4) :243-253." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Using dendronal signatures for feature extraction and retrieval">
+                                        <b>[11]</b>
+                                         L Chen, M Berry, W Hargrove.Using dendronal signatures for feature extraction and retrieval.International Journal of Imaging Systems and Technology, 2000, 11 (4) :243-253.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" J Mattes, J Demongeot.Efficient algorithms to implement the confinement tree[C].In:Nystrom, I., Sanniti di Baja, G., Borgefors, G. (eds.) DGCI 2000.LNCS, vol.1953, Springer, Heidelberg, 2000:392-405." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient algorithms to implement the confinement tree">
+                                        <b>[12]</b>
+                                         J Mattes, J Demongeot.Efficient algorithms to implement the confinement tree[C].In:Nystrom, I., Sanniti di Baja, G., Borgefors, G. (eds.) DGCI 2000.LNCS, vol.1953, Springer, Heidelberg, 2000:392-405.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" Nicolas Passat, Benoit Naegel.Component-trees and multivalued images:Stuctural properties[J].J Math Imaging Vis, 2014, 49:37-50." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD14032600015410&amp;v=MTMxNTdIL2lyUmRHZXJxUVRNbndaZVp0RmlubFVyZklKRm9VYXhjPU5qN0Jhcks4SHRMT3FZOUZaT29LQ0gwNW9CTVQ2VDRQUQ==&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+                                        <b>[13]</b>
+                                         Nicolas Passat, Benoit Naegel.Component-trees and multivalued images:Stuctural properties[J].J Math Imaging Vis, 2014, 49:37-50.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" Benoit Caldairou, Benoit Naegel, Nicolas Passat.Segmentation of Complex Images Based on Component-Trees:Methodological Tools[M].M.H.F.Wilkinson and J.B.T.M.Roerdink (Eds.) :ISMM 2009, LNCS 5720, 2009:171-180." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Segmentation of Complex Images Based on Component-Trees:Methodological Tools">
+                                        <b>[14]</b>
+                                         Benoit Caldairou, Benoit Naegel, Nicolas Passat.Segmentation of Complex Images Based on Component-Trees:Methodological Tools[M].M.H.F.Wilkinson and J.B.T.M.Roerdink (Eds.) :ISMM 2009, LNCS 5720, 2009:171-180.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" Edwin Carlinet.A compparetive review of component tree computation algorithms[J].IEEE Trans.on Image Processing, 2014, 23 (9) :3885-3895." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A compparetive review of component tree computation algorithms">
+                                        <b>[15]</b>
+                                         Edwin Carlinet.A compparetive review of component tree computation algorithms[J].IEEE Trans.on Image Processing, 2014, 23 (9) :3885-3895.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" N Sharma, et al.Segmentation of medical images using simulated anneaking based fuzzy C Means algorithm[J].Interntional Journal of Biomedical Engineering Technology, 2009, 2 (3) :260-278." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCW&amp;filename=SJCW29F8D25FAE91B39D478EFCA3F8C12A86&amp;v=MDMwNjB4bUlYN1RjSVBneVRyMlE5Q3JPV05MS1pDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZCckxVMDV0Qmh3THkvd2EwPU5pZkllYkd4YU5tNHJZb3pGWjRHRFE0Ng==&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+                                        <b>[16]</b>
+                                         N Sharma, et al.Segmentation of medical images using simulated anneaking based fuzzy C Means algorithm[J].Interntional Journal of Biomedical Engineering Technology, 2009, 2 (3) :260-278.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" J Canny.A computational approach to edge detection[J].IEEE Transactions on Pattern Analysis and Machine Intelligence, 1986, 8 (6) :679-698." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A computational approach to edge detection">
+                                        <b>[17]</b>
+                                         J Canny.A computational approach to edge detection[J].IEEE Transactions on Pattern Analysis and Machine Intelligence, 1986, 8 (6) :679-698.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJZ" target="_blank">计算机仿真</a>
+                2019,36(04),214-218+456             </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于组件树的CT图像分割算法研究</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%AD%99%E9%9B%AA%E6%A1%84&amp;code=40154137&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" target="_blank">孙雪桄</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%82%B1%E5%8D%AB%E6%A0%B9&amp;code=06750735&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" target="_blank">邱卫根</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%B9%BF%E4%B8%9C%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2&amp;code=0139774&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" target="_blank">广东工业大学计算机学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>CT图像分割对医学图像辅助临床应用具有重要的临床价值, 是应用最广泛的医学影像技术之一。很多常用的图象处理技术, 并不能自然地适应CT图像的分割。研究基于组件树的CT图像分割算法。通过快速建立CT图像组件树, 利用树结点中携带的属性, 实现树的剪枝、结点合并和树的归约, 完成CT图象目标的分割。实验结果表明, 提出的分割算法实现了分割目标更准确, 运行速度更快的目的。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%9B%BE%E5%83%8F&amp;code=&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" target="_blank">图像;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%BB%84%E4%BB%B6%E6%A0%91&amp;code=&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" target="_blank">组件树;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2&amp;code=&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" target="_blank">图像分割;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    孙雪桄 (1992-) , 男 (汉族) , 山西省左权县人, 硕士研究生, 主要研究领域为数字图像处理。;
+                                </span>
+                                <span>
+                                    邱卫根 (1968-) , 男 (汉族) , 广东省广州市人, 教授, 硕士研究生导师, 主要研究领域为图像处理。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-01-07</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金 (61572142);</span>
+                    </p>
+            </div>
+                    <h1><b>A Medical Image Segmentation Algorithm Based on Component Tree</b></h1>
+                    <h2>
+                    <span>SUN Xue-guang</span>
+                    <span>QIU Wei-gen</span>
+            </h2>
+                    <h2>
+                    <span>School of computer Science and Technology, Guangdong University of Technology</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>CT image segmentation has important clinical value for clinical application of medical image, which is one of the most widely used technologies. Due to its complexity, many commonly image processing technology can not be adapted naturally to CT image segmentation. This paper studied the CT image segmentation algorithm based on component tree. Through the rapid establishment of CT image component tree, and by using the attributes carried on the node data structure, tree pruning, reduction and node merging were realized efficiently. The experimental results show that this segmentation algorithm realizes the segmentation target more accurately and shorter running time.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Images&amp;code=&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" target="_blank">Images;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Component%20tree&amp;code=&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" target="_blank">Component tree;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Image%20segmentation&amp;code=&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" target="_blank">Image segmentation;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-01-07</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="37" name="37" class="anchor-tag"><b>1 概述</b></h3>
+                <div class="p1">
+                    <p id="38">图像分割是把图象目标子区域从复杂背景中分离出来, 是更高层次图像处理和分析的基础。近年来, 学者们提出了大量优秀的分割算法<citation id="123" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。在临床应用中, 医学图象分割技术对计算机辅助诊断、影像引导外科手术、放射治疗等具有重大的意义<citation id="126" type="reference"><link href="5" rel="bibliography" /><link href="7" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>]</sup></citation>。Frank等人<citation id="124" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>通过阈值优化, 使用最优阈值成功分割出T1加权的大脑MR图像中的灰质、白质和脑脊液流体。文献<citation id="125" type="reference">[<a class="sup">5</a>]</citation>中, Wang H等将基于区域的分割方法, 成功地应用于海马分割。与普通图像分割相比, 医学图像分割有其应用领域的特殊性, 同时, 在分割精度和速度等方面有更高的要求, 许多在其它领域表现良好的分割方法不能满足医学领域的特殊要求。例如, 基于体素的方法对最优阈值的选择具有一定的主观性, 基于区域的方法不适合于医学图象复杂结构的分割, Snake方法并不适用于肿瘤之类的无规则形状的目标分割。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">近二十年来, 组件树方法已经广泛地应用在医学图象分割算法的研究, 特别是在共聚焦显微镜<citation id="127" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>、皮肤科数据<citation id="128" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>、脑磁共振<citation id="129" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>、CT/MR血管造影<citation id="130" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>等领域。本文研究基于组件树的CT图像分割方法。本文首先使用高斯拉普拉斯 (LoG) 变换对图象进行噪声抑制和细节增强;然后使用浸没算法和并查集算法<citation id="131" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>对图像快速建立组件树;再利用相邻组件属性相似性判定准则对组件进行合并, 达到组件树剪枝和归约的目的;最后输出CT图象分割结果。实验结果表明, 本文分割方法, 时间复杂度低, 算法效率高, 不仅可以有效地去除图象中的噪声, 也抑制了过分割现象, 达到了预期的分割效果。</p>
+                </div>
+                <h3 id="40" name="40" class="anchor-tag"><b>2 图象与组件树</b></h3>
+                <div class="p1">
+                    <p id="41">组件树<citation id="133" type="reference"><link href="23" rel="bibliography" /><link href="25" rel="bibliography" /><sup>[<a class="sup">11</a>,<a class="sup">12</a>]</sup></citation>利用一簇连续阈值算子获取灰度图象的二值截集, 从而描述灰度图象的特征。设<i>Ω</i>是非空有限集, <i>V</i>是非空有限偏序集, 并假设其有最小值⊥。一个图象是函数<i>f</i>:<i>Ω</i>→<i>V</i>, 集合<i>Ω</i>和<i>V</i>分别称为图象<i>f</i>的支持集和值空间。对任意的<i>x</i>∈<i>Ω</i>, <i>f</i> (<i>x</i>) ∈<i>V</i>称为图象<i>f</i>在点<i>x</i>上的像素值。不失一般性, 假设<i>f</i><sup>-1</sup> ({⊥}) ≠Ø。如果 (<i>V</i>, ≤) 是全序 (或者偏序) 集, 则称<i>f</i>是灰度图象 (或多值图象) 。不妨设对任意<i>x</i>∈<i>Ω</i>, <i>f</i> (<i>x</i>) ≤<i>n</i><sub><i>max</i></sub>, <i>n</i><sub><i>max</i></sub>∈<i>V</i>。如果∀<i>x</i>∈<i>Ω</i>, <i>f</i> (<i>x</i>) ∈{0, 1}, 则<i>f</i>退化为二值图象。对任意<i>x</i>∈<i>Ω</i>, 记<i>N</i><sub><i>Ω</i></sub> (<i>x</i>) 为像素点<i>x</i>的邻域。对任意<i>x</i><sub>1</sub>, <i>x</i><sub><i>n</i></sub>∈<i>Ω</i>, 从点<i>x</i><sub>1</sub>到<i>x</i><sub><i>n</i></sub>的路径<i>P</i> (<i>x</i><sub>1</sub>, <i>x</i><sub><i>n</i></sub>) 定义为点的序列 (<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, …, <i>x</i><sub><i>n</i></sub>) , 其中<i>x</i><sub><i>i</i>+1</sub>∈<i>M</i><sub><i>Ω</i></sub> (<i>x</i><sub><i>i</i></sub>) , 任意1≤<i>i</i>&lt;<i>n</i>。子集<i>C</i>⊆<i>Ω</i>称为连通分支, 如果对任意<i>x</i><sub><i>a</i></sub>, <i>x</i><sub><i>b</i></sub>∈<i>C</i>, 都存在路径<i>P</i> (<i>x</i><sub><i>a</i></sub>, <i>x</i><sub><i>b</i></sub>) , 其上全部点都属于<i>C</i>;并且对任意<i>C</i>′, <i>C</i>′⊇<i>C</i>, 这个性质都不成立。扁平域<i>C</i>是图象<i>f</i>的连通组件, 并且对任意<i>x</i><sub><i>a</i></sub>, <i>x</i><sub><i>b</i></sub>∈<i>C</i>, 都有<i>f</i> (<i>x</i><sub><i>a</i></sub>) =<i>f</i> (<i>x</i><sub><i>b</i></sub>) 成立<citation id="132" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="42">下面是部分关于组件树相关概念的定义<citation id="134" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">定义1:设<i>X</i>⊆<i>Ω</i>和<i>v</i>∈<i>V</i>, 阈值函数<i>λ</i><sub><i>v</i>:</sub><i>V</i><sup><i>Ω</i></sup>→2<sup><i>Ω</i></sup>, 对任意图象<i>f</i>:<i>Ω</i>→<i>V</i>, <i>λ</i><sub><i>v</i></sub> (<i>f</i>) ={<i>x</i>∈<i>Ω</i>|<i>f</i> (<i>x</i>) ≥<i>v</i>}。对任意<i>v</i>∈<i>V</i>, 阈值集<i>λ</i><sub><i>v</i></sub> (<i>f</i>) 上连通分支的全体记为<i>C</i>[<i>λ</i><sub><i>v</i></sub> (<i>f</i>) ]。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">定义2:设<i>X</i>⊆<i>Ω</i>和<i>v</i>∈<i>V</i>, 桶函数<i>C</i><sub> (<i>X</i>, <i>v</i>) </sub>:<i>Ω</i>→<i>V</i>, 对任意<i>x</i>∈<i>X</i>, <i>C</i><sub> (<i>X</i>, <i>v</i>) </sub> (<i>x</i>) =<i>v</i>;否则<i>C</i><sub> (<i>X</i>, <i>v</i>) </sub> (<i>x</i>) =⊥。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">利用阈值函数<i>λ</i><sub><i>v</i></sub>可以将<i>f</i>分解成桶函数, 相反地, 图象<i>f</i>也可以由这些桶函数实现重构, f=∨<sub>v∈V</sub>∨<sub>X∈C[λ<sub>v</sub> (f) ]</sub>C<sub> (X, v) </sub>, 其中∨表示点集函数的逐点上确界函数。由于连通分支<i>X</i>可能属于多个<i>C</i>[<i>λ</i><sub><i>v</i></sub> (<i>f</i>) ], 记<i>m</i> (<i>X</i>) =<i>max</i>{<i>v</i>∈<i>V</i>|<i>X</i>∈<i>C</i>[<i>λ</i><sub><i>v</i></sub> (<i>f</i>) ]}。一般地有<i>m</i> (<i>X</i>) =<i>min</i><sub><i>x</i>∈<i>X</i></sub>{<i>f</i> (<i>x</i>) }。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">记<mathml id="47"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ψ</mi><mo>=</mo><mo stretchy="false">{</mo><mo stretchy="false"> (</mo><mtext>X</mtext><mo>, </mo><mtext>m</mtext><mo stretchy="false"> (</mo><mtext>X</mtext><mo stretchy="false">) </mo><mo stretchy="false">) </mo><mo stretchy="false">|</mo><mtext>X</mtext><mo>∈</mo><mstyle displaystyle="true"><munder><mo>∪</mo><mrow><mtext>v</mtext><mo>∈</mo><mtext>V</mtext></mrow></munder><mtext>C</mtext></mstyle><mo stretchy="false">[</mo><mtext>λ</mtext><msub><mrow></mrow><mtext>v</mtext></msub><mo stretchy="false"> (</mo><mtext>f</mtext><mo stretchy="false">) </mo><mo stretchy="false">]</mo><mo stretchy="false">}</mo></mrow></math></mathml>, 在<i>Ψ</i>上定义偏序关系≤: (<i>X</i><sub>1</sub>, <i>m</i> (<i>X</i><sub>1</sub>) ) ≤ (<i>X</i><sub>2</sub>, <i>m</i> (<i>X</i><sub>2</sub>) ) ⇔<i>X</i><sub>1</sub>⊆<i>X</i><sub>2</sub>。由于<i>f</i>是灰度图象, <i>V</i>是全序, 因此必有<i>X</i><sub>1</sub>⊆<i>X</i><sub>2</sub>⇒<i>m</i> (<i>X</i><sub>1</sub>) &gt;<i>m</i> (<i>X</i><sub>2</sub>) 成立。由偏序集 (<i>Ψ</i>, ≤) 确定的哈斯图 (<i>Ψ</i>, <i>L</i>) 是一个树结构, 其根结点是上确界<i>R</i>=<i>sup</i> (<i>Ψ</i>, ≤) =<i>Ω</i>, 根树 (<i>Ψ</i>, <i>L</i>, <i>R</i>) 称为<i>f</i>的组件树, <i>Ψ</i>, <i>L</i>, <i>R</i>分别是树的结点集合、根和边的集合, 结点元素 (<i>X</i>, <i>m</i> (<i>X</i>) ) 称为图象<i>f</i>的组件。对任意结点 (<i>X</i>, <i>m</i> (<i>X</i>) ) ∈<i>Ψ</i>, 如果不存在结点 (<i>Y</i>, <i>m</i> (<i>Y</i>) ) ∈<i>Ψ</i>, 使得 (<i>Y</i>, <i>m</i> (<i>Y</i>) ) ≤ (<i>X</i>, <i>m</i> (<i>X</i>) ) , 则称结点 (<i>X</i>, <i>m</i> (<i>X</i>) ) 为组件树 (<i>Ψ</i>, <i>L</i>, <i>R</i>) 的叶结点。对任意结点 (<i>X</i><sub>1</sub>, <i>m</i> (<i>X</i><sub>1</sub>) ) , (<i>X</i><sub>2</sub>, <i>m</i> (<i>X</i><sub>2</sub>) ) ∈<i>Ψ</i>, 如果 (<i>X</i><sub>1</sub>, <i>m</i> (<i>X</i><sub>1</sub>) ) ≤ (<i>X</i><sub>2</sub>, <i>m</i> (<i>X</i><sub>2</sub>) ) , 则称结点 (<i>X</i><sub>1</sub>, <i>m</i> (<i>X</i><sub>1</sub>) ) 是结点 (<i>X</i><sub>2</sub>, <i>m</i> (<i>X</i><sub>2</sub>) ) 的儿子, 或者 (<i>X</i><sub>2</sub>, <i>m</i> (<i>X</i><sub>2</sub>) ) 是 (<i>X</i><sub>1</sub>, <i>m</i> (<i>X</i><sub>1</sub>) ) 的父亲。如图1, 图象<i>f</i>组件树构造示意图。</p>
+                </div>
+                <div class="area_img" id="48">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJZ201904045_048.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+                                    <img alt="图1 图象f组件树构造示意图" src="Detail/GetImg?filename=images/JSJZ201904045_048.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 图象f组件树构造示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJZ201904045_048.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+                                <p class="img_note">注:图<b>1 (a) 10*10</b>灰度图像<b>f</b>, 灰度区间为[<b>0, 4</b>]. 黑色代表灰度值为<b>0</b>, 白色代表灰度值为<b>4。 (b-f</b>) 分别表示灰度阈值为<b>4, 3, 2, 1</b>时的图像。 (<b>g</b>) 是为图像<b>f</b>建立的组件树。</p>
+
+                </div>
+                <h3 id="49" name="49" class="anchor-tag"><b>3 基于组件树的图象分割方法</b></h3>
+                <div class="p1">
+                    <p id="50">组件树最初是在统计领域提出, 后来被纳入到数学形态学的理论框架中, 变成了一种形态学算子。<b><i>L</i>.<i>Najman</i></b>和<b><i>M</i>.<i>courprie</i>, <i>Bertrend</i></b>等人提出用组件树结构来表示图像, 为组件树的建立奠定了深厚的理论基础<citation id="135" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>。一般地, 在构造组件树的过程中, 它的每个结点上都带有一些定性或定量的例如形状、面积等称为属性的统计信息。这些信息为进一步的图象操作提供基础, 例如树的剪枝, 即所谓的图象过滤。设定剪枝函数<b>F</b><sub><b>P</b></sub>, 其基于某个属性集上的谓词测试<b>P</b>上, 能够移除所有不满足测试<b>P</b>的结点, 其象素归约到邻近的其它结点上, 从而<b>f</b>的组件树 (Ψ, <b>L, R</b>) 演化成 (Ψ′, <b>L′, R</b>) , 记<b>F</b><sub><b>P</b></sub> (Ψ, <b>L, R) = (Ψ′, L′, R</b>) 。这个过程称为组件树的归约。由于组件树算法的高效性以及复杂知识处理的应用, 组件树已经被用于设计各种图象的处理算法, 包括图像滤波到图像检索等几乎全流程的图象处理过程中, 并在机器视觉中动作抽取, 特征提取, 分割, <b>3D</b>视觉等方面得到了很好的应用<citation id="136" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">本文算法包括:图象预处理, 图像组件树构造, 组件规约, 边界判定四个过程, 如图<b>2</b>所示。首先对图像进行预处理, 对图象进行噪声抑制和细节增强。然后使用浸没算法快速构造图像组件树, 将图象处理转化成树结构的处理。再利用树结点携带的相关属性, 对树结点进行剪枝、合并、融合, 达到组件树归约的目的。最后利用边界判定阈值条件确定边界, 输出<b>CT</b>图象分割结果。</p>
+                </div>
+                <div class="area_img" id="52">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJZ201904045_052.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+                                    <img alt="图2 本文算法处理流程" src="Detail/GetImg?filename=images/JSJZ201904045_052.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 本文算法处理流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJZ201904045_052.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="53" name="53"><b>3.1 图象预处理</b></h4>
+                <div class="p1">
+                    <p id="54">本文采用的图像预处理方式为高斯-拉普拉斯 (<b>LoG</b>) 变换, 实验结果如图<b>4</b>所示, 经过<b>LoG</b>变换后的图像噪声得到有效抑制, 图像细节得到显著增强。高斯-拉普拉斯算子为</p>
+                </div>
+                <div class="p1">
+                    <p id="55" class="code-formula">
+                        <mathml id="55"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mtext>L</mtext><mtext>o</mtext><mtext>G</mtext><mo>=</mo><mfrac><mrow><mi>x</mi><msup><mrow></mrow><mn>2</mn></msup><mo>+</mo><mi>y</mi><msup><mrow></mrow><mn>2</mn></msup><mo>-</mo><mn>2</mn><mi>σ</mi><msup><mrow></mrow><mn>2</mn></msup></mrow><mrow><mi>σ</mi><msup><mrow></mrow><mn>4</mn></msup></mrow></mfrac><mi>e</mi><msup><mrow></mrow><mrow><mo>-</mo><mo stretchy="false"> (</mo><mi>x</mi><msup><mrow></mrow><mn>2</mn></msup><mo>+</mo><mi>y</mi><msup><mrow></mrow><mn>2</mn></msup><mo stretchy="false">) </mo></mrow></msup><mo>/</mo><mn>2</mn><mi>σ</mi><msup><mrow></mrow><mn>2</mn></msup><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="56">σ越小, 增强效果越好, 反之, 平滑效果越好。在增强过程中应该选择合适的σ值, 图<b>4</b>所示的实验中σ取值为<b>0.8</b>。</p>
+                </div>
+                <h4 class="anchor-tag" id="57" name="57"><b>3.2 组件树的构造</b></h4>
+                <div class="p1">
+                    <p id="58">组件树的构造算法主要分为三种:浸没算法、流型算法、基于合并的算法, 本文采用浸没算法快速构造组件树。在构造组件树过程中, 本文使用并查集算法<citation id="137" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>实现路径压缩 (图<b>3 (d</b>) ) 。并查集算法由于本身的时间复杂度低, 算法效率高的特点广泛应用于连接操作。如图<b>3 (a</b>上) 所示, 简单图<b>f</b>为四连接, 图像<b>f</b>的所有像素点是<b>R</b>上的全序关系, 并按灰度值降序排列。灰度值相同的像素点按照视频扫描顺序排列。<b>R</b>表示用字典编码对每一个像素点进行标记, 如图<b>3 (a</b>下) 。图像<b>f</b>不同灰度下的组件区域可以用组件树来表示。为了避免数据冗余, 本文在为图像建立组件树的过程中, 树的每个节点只保存<b>L</b><sub><b>k</b></sub> (<b>x) -L</b><sub><b>k+1</b></sub> (<b>x</b>) 的像素点。如果组件树的一个节点存储了多个像素点, 选择最后一个像素点代表该节点。</p>
+                </div>
+                <div class="area_img" id="59">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJZ201904045_059.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+                                    <img alt="图3 组件树构造过程" src="Detail/GetImg?filename=images/JSJZ201904045_059.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 组件树构造过程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJZ201904045_059.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="60">并查集是一种树形结构, 又叫“不相交集合”, 保持了一组不相交的动态集合, 每个集合通过一个代表来识别, 代表即集合中的某个成员, 通常选择根做这个代表。并查集算法主要分为以下三个步骤:</p>
+                </div>
+                <div class="p1">
+                    <p id="61"><b>MakeSet (x</b>) :建立一个新的集合, 其唯一成员就是<b>x</b>, 因此这个集合的代表也是<b>x</b>, 并查集要求各集合是不相交的, 因此要求<b>x</b>没有在其它集合中出现过。</p>
+                </div>
+                <div class="p1">
+                    <p id="62"><b>Find (x</b>) :返回能代表<b>x</b>所在集合的节点, 通常返回<b>x</b>所在集合的根节点。</p>
+                </div>
+                <div class="p1">
+                    <p id="63"><b>Link (x</b>) :将包含<b>x, y</b>的动态集合合并为一个新的集合。合并两个集合的关键是找到两个集合的根节点, 如果两个根节点相同则不用合并;如果不同, 则需要合并。</p>
+                </div>
+                <div class="p1">
+                    <p id="64">从图<b>3 (b</b>上) 可以看到, 图像<b>f</b>在水平截面<b>V=4</b>中有二个组件, 分别为 (<b>A, C) , B</b>;由于<b>A, C</b>同属于一个节点, 按照视频扫描顺序选择<b>C</b>作为结点 (<b>A, C</b>) 的代表元素。图<b>3 (b</b>下) 在截面<b>V=3</b>中有两个组件, 分别为 (<b>E, D) , F</b>, 选择<b>E</b>为结点 (<b>E, D</b>) 的代表元素;<b>V=3</b>与<b>V=4</b>形成包含关系, 为了避免数据冗余, 所以在水平截面<b>V=3</b>中只包含了灰度值为<b>3</b>的组件区域。图<b>4 (c</b>上) 表示, 水平截面<b>L</b><sub><b>2</b></sub>中有两个组件<b>H, G。L</b><sub><b>1</b></sub>中有一个组件 (<b>J, I) , J</b>为结点 (<b>J, I</b>) 的代表元素。由于层与层之间存在的包含关系, 将每一层结点以树结构形式连接起来构成组件树 (图<b>3 (d</b>右) ) 。</p>
+                </div>
+                <h4 class="anchor-tag" id="65" name="65"><b>3.3 组件归约及边界判定</b></h4>
+                <div class="p1">
+                    <p id="66">起初构造的组件树包含了大量的相似组件。这些相似组件大都属于同一个目标区域。为了更准确的分割出图像中的目标, 需要进行进一步的组件归约。组件归约应该基于两个基本原则:①两个组件之间的灰度差;②组件内部像素间的差异。在这两个原则以及组件树结构的指导下, 本文提出了基于组件灰度相似性和面积近似性组件归约准则。</p>
+                </div>
+                <div class="p1">
+                    <p id="67">图像组件树中结点的面积和灰度值需要被统计。根据相邻结点之间的灰度差异和结点的面积进行组件规约。<b>T</b>表示构造的图像组件树, <b>C</b>表示组件树的结点集合, <b>K</b>表示图像灰度值集合。</p>
+                </div>
+                <div class="p1">
+                    <p id="68"><b>1</b>) 结点面积计算:</p>
+                </div>
+                <div class="p1">
+                    <p id="69"><b><i>Compute</i>_<i>Area</i> (<i>T</i>, <i>C</i>, <i>k</i>) </b></p>
+                </div>
+                <div class="p1">
+                    <p id="70"><b> 1 <i>area</i>=0;</b></p>
+                </div>
+                <div class="p1">
+                    <p id="71"><b> 2 <i>for each p</i>∈<i>C</i></b><mathml id="72"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mtext>i</mtext><mtext>k</mtext></msubsup></mrow></math></mathml><b><i>area</i>=<i>area</i>+1;</b></p>
+                </div>
+                <div class="p1">
+                    <p id="73"><b> 3 <i>return area</i>;</b></p>
+                </div>
+                <div class="p1">
+                    <p id="74"><b>2</b>) 查找结点所处的灰度值:</p>
+                </div>
+                <div class="p1">
+                    <p id="75"><b><i>Find</i>_<i>Level</i> (<i>T</i>, <i>C</i>, <i>k</i>) </b></p>
+                </div>
+                <div class="p1">
+                    <p id="76"><b> 1 ∀<i>p</i>∈<i>C</i></b><mathml id="77"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mtext>i</mtext><mtext>k</mtext></msubsup></mrow></math></mathml>, <b><i>parent</i> (<i>p</i>) ;</b></p>
+                </div>
+                <div class="p1">
+                    <p id="78"><b> 2 <i>return L</i> (<i>parent</i> (<i>p</i>) ) ;</b></p>
+                </div>
+                <div class="p1">
+                    <p id="79"><b>3</b>) 组件树归约:</p>
+                </div>
+                <div class="p1">
+                    <p id="80"><b><i>Merge</i>_<i>node</i> (<i>c</i>1, <i>c</i>2) </b></p>
+                </div>
+                <div class="p1">
+                    <p id="81"><b> 1 <i>parent</i> (<i>c</i>1) ←<i>parent</i> (<i>c</i>2) ;</b></p>
+                </div>
+                <div class="p1">
+                    <p id="82"><b> 2 <i>area</i> (<i>c</i>1) =<i>area</i> (<i>c</i>1) +<i>area</i> (<i>c</i>2) ;</b></p>
+                </div>
+                <div class="p1">
+                    <p id="83"><b> 3 <i>return c</i>1</b>;</p>
+                </div>
+                <div class="p1">
+                    <p id="84">定义两个组件<b><i>C</i></b><sub><b>1</b></sub>, <b><i>C</i></b><sub><b>2</b></sub>之间面积变化率, 灰度变化率分别为:</p>
+                </div>
+                <div class="p1">
+                    <p id="85" class="code-formula">
+                        <mathml id="85"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>D</mi><msub><mrow></mrow><mrow><mi>A</mi><mi>r</mi><mi>e</mi><mi>a</mi></mrow></msub><mo>=</mo><mfrac><mrow><mo stretchy="false">|</mo><mi>A</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo stretchy="false"> (</mo><mi>C</mi><msub><mrow></mrow><mn>1</mn></msub><mo stretchy="false">) </mo><mo>-</mo><mi>A</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo stretchy="false"> (</mo><mi>C</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">) </mo><mo stretchy="false">|</mo></mrow><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo stretchy="false"> (</mo><mi>A</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo stretchy="false"> (</mo><mi>C</mi><msub><mrow></mrow><mn>1</mn></msub><mo stretchy="false">) </mo><mo>, </mo><mi>A</mi><mi>r</mi><mi>e</mi><mi>a</mi><mo stretchy="false"> (</mo><mi>C</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow></mfrac><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>D</mi><msub><mrow></mrow><mrow><mi>L</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>l</mi></mrow></msub><mo>=</mo><mfrac><mrow><mo stretchy="false">|</mo><mi>L</mi><mo stretchy="false"> (</mo><mi>C</mi><msub><mrow></mrow><mn>1</mn></msub><mo stretchy="false">) </mo><mo>-</mo><mi>L</mi><mo stretchy="false"> (</mo><mi>C</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">) </mo><mo stretchy="false">|</mo></mrow><mrow><mi>m</mi><mi>a</mi><mi>x</mi><mo stretchy="false"> (</mo><mi>L</mi><mo stretchy="false"> (</mo><mi>C</mi><msub><mrow></mrow><mn>1</mn></msub><mo stretchy="false">) </mo><mo>, </mo><mi>L</mi><mo stretchy="false"> (</mo><mi>C</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mrow></mfrac><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="86"><b>D</b><sub><b>Area</b></sub>取值越接近<b>1</b>, 表示两个组件的面积差异越大, 同理, <b>D</b><sub><b>Level</b></sub>取值越接近于<b>1</b>表示两个组件的灰度差异越大。综合考虑面积差和灰度差可以避免了将噪声作为独立组件而被分割出来, 从而实现图像准确分割。</p>
+                </div>
+                <div class="p1">
+                    <p id="87" class="code-formula">
+                        <mathml id="87"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><mi>i</mi><mi>f</mi><mi>f</mi><mo stretchy="false"> (</mo><mi>C</mi><msub><mrow></mrow><mn>1</mn></msub><mo>, </mo><mi>C</mi><msub><mrow></mrow><mn>2</mn></msub><mo stretchy="false">) </mo><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mn>1</mn></mtd><mtd columnalign="left"><mi>i</mi><mi>f</mi><mspace width="0.25em" /><mi>D</mi><msub><mrow></mrow><mrow><mi>L</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>l</mi></mrow></msub><mo>≥</mo><mi>Τ</mi><msub><mrow></mrow><mi>L</mi></msub><mspace width="0.25em" /><mi>a</mi><mi>n</mi><mi>d</mi><mspace width="0.25em" /><mi>D</mi><msub><mrow></mrow><mrow><mi>A</mi><mi>r</mi><mi>e</mi><mi>a</mi></mrow></msub><mo>&lt;</mo><mi>Τ</mi><msub><mrow></mrow><mi>A</mi></msub><mspace width="0.25em" /></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mi>e</mi><mi>l</mi><mi>s</mi><mi>e</mi><mi>s</mi></mtd></mtr></mtable></mrow></mrow><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>4</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="88">其中, “<b>1</b>”表示存在边界, “<b>0</b>”表示不存在边界, <b>T</b><sub><b>L</b></sub>和<b>T</b><sub><b>A</b></sub>分别表示灰度变化率和面积变化率阈值。在试验中, 分割的图像不同, 二者的取值也发生变化。</p>
+                </div>
+                <h3 id="89" name="89" class="anchor-tag"><b>4 本文算法描述</b></h3>
+                <div class="p1">
+                    <p id="90">下面给出图像组件树建立之后, 基于灰度和面积二重属性的组件合并的算法描述。</p>
+                </div>
+                <div class="p1">
+                    <p id="91"><b><i>Input</i></b>:组件树<b><i>T</i></b>, 阈值<b><i>T</i></b><sub><b><i>A</i></b></sub>, <b><i>T</i></b><sub><b><i>L</i></b></sub></p>
+                </div>
+                <div class="p1">
+                    <p id="92"><b><i>Output</i></b>:合并后的组件树<b><i>T</i></b>′, 分割完成的图像<b><i>f</i> ′</b></p>
+                </div>
+                <div class="p1">
+                    <p id="93"><b>1</b>) 根据输入的图像组件树<b><i>T</i></b>, 计算所有灰度级中每个组件的面积。</p>
+                </div>
+                <div class="p1">
+                    <p id="94"><b><i>for k</i>←10 <i>to</i> 250</b></p>
+                </div>
+                <div class="p1">
+                    <p id="95"><b><i>for each c</i></b><mathml id="96"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mtext>k</mtext><mtext>i</mtext></msubsup></mrow></math></mathml>∈<b><i>C</i></b><sub><b><i>k</i></b></sub><b><i>do Compute</i>_<i>Area</i> (<i>T</i>, <i>C</i>, <i>k</i>) </b></p>
+                </div>
+                <div class="p1">
+                    <p id="97"><b>2</b>) 依据合并准则, 按照灰度级递减的顺序进行组件合并。</p>
+                </div>
+                <div class="p1">
+                    <p id="98"><b><i>for each c</i></b><mathml id="99"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mtext>k</mtext><mtext>i</mtext></msubsup></mrow></math></mathml>∈<b><i>C</i></b><sub><b><i>k</i></b></sub></p>
+                </div>
+                <div class="p1">
+                    <p id="100"><b><i>do Find</i>_<i>Level</i> (<i>T</i>, <i>parent</i> (<i>cki</i>) , <i>k</i>) </b></p>
+                </div>
+                <div class="p1">
+                    <p id="101"><b><i>if D</i></b><sub><b><i>Level</i></b></sub> (<b><i>c</i></b><mathml id="102"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mtext>k</mtext><mtext>i</mtext></msubsup></mrow></math></mathml>, <b><i>parent</i> (<i>c</i></b><mathml id="103"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mtext>k</mtext><mtext>i</mtext></msubsup></mrow></math></mathml>) ) ≥<b><i>T</i></b><sub><b><i>L</i></b></sub><b><i>and D</i></b><sub><b><i>Area</i></b></sub> (<b><i>c</i></b><mathml id="104"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mtext>k</mtext><mtext>i</mtext></msubsup></mrow></math></mathml>, <b><i>parent</i> (<i>c</i></b><mathml id="105"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mtext>k</mtext><mtext>i</mtext></msubsup></mrow></math></mathml>) ) &lt;<b><i>T</i></b><sub><b><i>A</i></b></sub><b><i>continue</i>;</b></p>
+                </div>
+                <div class="p1">
+                    <p id="106"><b><i>else</i></b></p>
+                </div>
+                <div class="p1">
+                    <p id="107"><b><i>merge</i>_<i>node</i> (<i>c</i></b><mathml id="108"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mtext>k</mtext><mtext>i</mtext></msubsup></mrow></math></mathml>, <b><i>parent</i> (<i>c</i></b><mathml id="109"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mtext>k</mtext><mtext>i</mtext></msubsup></mrow></math></mathml>) ) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="110"><b>3</b>) 根据新的组件树<b><i>T</i></b>′, 输出分割后的图像<b><i>f</i></b> ′。</p>
+                </div>
+                <h3 id="111" name="111" class="anchor-tag"><b>5 实验结果分析</b></h3>
+                <div class="p1">
+                    <p id="112">本文设计两组实验, 第一组实验选用比较典型的大脑<b>CT</b>图像进行分割, 第二组选用某患者的胸部<b>CT</b>进行分割。实验中选取的<b>T</b><sub><b>A</b></sub>的取值范围为 (<b>0.10～0.20) , T</b><sub><b>L</b></sub>取值范围为 (<b>0.50～0.60</b>) 。模糊聚类算法在医学图像分割中是一种出色的算法, 广泛应用于<b>CT</b>图像分割<citation id="138" type="reference"><link href="33" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>。<b>Canny</b>算子是最经典的基于边缘的分割算法<citation id="139" type="reference"><link href="35" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>。所以本文的分割方法与模糊聚类算法和<b>Canny</b>算子进行对比。</p>
+                </div>
+                <div class="area_img" id="113">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJZ201904045_113.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+                                    <img alt="图4 患者肝脏切面CT图" src="Detail/GetImg?filename=images/JSJZ201904045_113.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 患者肝脏切面CT图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJZ201904045_113.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="114">图<b>5</b>中, 选取比较典型的人的大脑图像作为测试图像。从图中可以看出本文算法相对模糊<b>C</b>均值算法, <b>Canny</b>算子具有更好的分割效果。</p>
+                </div>
+                <div class="area_img" id="115">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJZ201904045_115.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+                                    <img alt="图5 脑CT图实验结果比较" src="Detail/GetImg?filename=images/JSJZ201904045_115.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 脑CT图实验结果比较</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJZ201904045_115.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="116">图<b>6</b>中, 采用真实患者的胸部<b>CT</b>作为测试图像, 并分别与模糊<b>C</b>均值算法和<b>Canny</b>算子进行比较, 从分割结果可以看出, 本文算法取得了理想的分割效果。</p>
+                </div>
+                <div class="area_img" id="117">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJZ201904045_117.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+                                    <img alt="图6 胸部CT图实验结果比较" src="Detail/GetImg?filename=images/JSJZ201904045_117.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 胸部CT图实验结果比较</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJZ201904045_117.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="118">综合图<b>5</b>, 图<b>6</b>分割结果可以看出模糊<b>C</b>均值算法出现欠分割现象, 相反<b>Canny</b>算子分割结果过细, 出现过分割, 本文算法分割结果更加理想。</p>
+                </div>
+                <div class="area_img" id="119">
+                    <p class="img_tit"><b>表1 本文算法与模糊C均值聚类算法、Canny算子所用时间比较</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="119" border="1"><tr><td><br />图像</td><td>模糊C均值聚类算法</td><td>Canny算子</td><td>本文算法</td></tr><tr><td><br />图5</td><td>5.35s</td><td>4.03s</td><td>1.20s</td></tr><tr><td><br />图6</td><td>5.28s</td><td>3.56s</td><td>0.89s</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="120">从表1可以看出, 本文算法与上述两种算法比较运算速度更快。</p>
+                </div>
+                <h3 id="121" name="121" class="anchor-tag"><b>6 结语</b></h3>
+                <div class="p1">
+                    <p id="122">本文研究基于组件树方法的CT图像分割算法。考虑到图像本身灰度模糊性的特点, 在预处理阶段首先采用LOG增强, 使图像增强, 同时噪声降到最低。然后利用浸没算法和并查集算法快速构造图像的组件树, 并在树结点数据结构中预先安排了所需要的属性数据, 再属性相似性判定准则实现对组件合并、树剪枝和结点归约, 最后实现图象分割。实验结果表明, 本文分割方法, 时间复杂度低, 算法效率高, 不仅可以有效地去除图象中的噪声, 也抑制了过分割现象, 达到了预期的分割效果。本文定义了比较复杂的结点数据结构, 目的是为了以后能扩展到非灰度图象的分割领域, 例如彩色图象的分割。</p>
+                </div>
+                <div class="area_img" id="140">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJZ201904045_14000.jpg&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Survey of Image Processing Techniques in Medical Image Analysis Challenges and Methodologies">
+
+                                <b>[1]</b> P Chinmayi, L Agilandeeswari, M Prabukumar.Survey of Image Processing Techniques in Medical Image Analysis:Challenges and Methodologies[C].International Conference on Soft Computing &amp; Pattern Recognition, 2016:460-471.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201506011&amp;v=MDgyNDFIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVptRnl6aFU3N05MejdCZHJHNEg5VE1xWTlFWllRS0Q=&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+
+                                <b>[2]</b> 江贵平, 秦文建, 周寿军, 王昌淼.医学图像分割及其发展现状[J].计算机学报, 2015, 38 (6) :1222-1242.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Medical image segmentation based on maximum entropy multi-threshold segmentation optimized by improved cuckoo search algorithm">
+
+                                <b>[3]</b> Li Aiju, Lie Yujie, Wang Tingmei, Wenliang.Medical Image Segmentation Based on Maximum Entropy Multi-threshold Segmentation Optimized by Improved Cuckoo Search Algorithm[C] 2015 8<sup>th</sup> International Congress on Image and Signal Processing (CISP 2015) , 2015:470-475.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Voxelvise percentagetissue segmentation of human brain Magnetic resonance images">
+
+                                <b>[4]</b> R J Frank, T J Grabowski, H Damasio.Voxelvise percentagetissue segmentation of human brain Magnetic resonance images Proceedings of the 25th annual Meeting, Society for Neuro-science, Society for Neuroscience.Washington, DC, USA, 1995:694.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Hippocampus segmentation using a stable maximum likelihood classifier ensemble algorithm">
+
+                                <b>[5]</b> H Wang, et al.Hippocampus segmentation using a stable maximum likelihood classifier ensemble algorithm[C].IEEE International Symposium on Biomedical Imaging:From Nano to Macro.Rotterdam, Holland, 2011:2036-2040.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Mask-based second-generation connectivity and attribute filters">
+
+                                <b>[6]</b> G K Ouzounis, M H F Wilkinson.Mask-based second-generation connectivity and attribute filters[J].IEEE Transactions on Pattern Analysis and Machine Intelligence, 2007, 29 (6) :990-1004.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Segmentation using vector-attribute filters:methodology and application to dermatological imaging">
+
+                                <b>[7]</b> B Naegel, N Passat, N Boch, M Kocher.Segmentation using vector-attribute filters:methodology and application to dermatological imaging[C].In:ISMM 2007.INPE, 2007-1:239-250.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011600740545&amp;v=MjIwNjNQUUgvaXJSZEdlcnFRVE1ud1plWnRGaW5sVXJmSUpGb1VheGM9TmlmT2ZiSzdIdEROcVk5RlkrOFBDWGc4b0JNVDZUNA==&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+
+                                <b>[8]</b> P Dokl′adal, I Bloch, M Couprie, D Ruijters, R Urtasun, L Garnero.Topologically controlled segmentation of 3D magnetic resonance images of the head by using morphological operators[J].Pattern Recognition, 2003, 36 (10) :2463-2478.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Shape preserving filament enhancement filtering">
+
+                                <b>[9]</b> M H F Wilkinson, M A Westenberg.Shape preserving filament enhancement filtering.In:Niessen, W.J., Viergever, M.A. (eds.) MICCAI 2001.LNCS, vol.2208, Springer, Heidelberg, 2001:770-777.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Building the component tree in quasi-linear time">
+
+                                <b>[10]</b> Laurent Najman, Michel Couprie, Building the component tree in quasi-linear time[J].IEEE transactions on image processing, 2006, 15 (11) :3531-3539.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Using dendronal signatures for feature extraction and retrieval">
+
+                                <b>[11]</b> L Chen, M Berry, W Hargrove.Using dendronal signatures for feature extraction and retrieval.International Journal of Imaging Systems and Technology, 2000, 11 (4) :243-253.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient algorithms to implement the confinement tree">
+
+                                <b>[12]</b> J Mattes, J Demongeot.Efficient algorithms to implement the confinement tree[C].In:Nystrom, I., Sanniti di Baja, G., Borgefors, G. (eds.) DGCI 2000.LNCS, vol.1953, Springer, Heidelberg, 2000:392-405.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD14032600015410&amp;v=MTQwMTZIdExPcVk5RlpPb0tDSDA1b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadEZpbmxVcmZJSkZvVWF4Yz1OajdCYXJLOA==&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+
+                                <b>[13]</b> Nicolas Passat, Benoit Naegel.Component-trees and multivalued images:Stuctural properties[J].J Math Imaging Vis, 2014, 49:37-50.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Segmentation of Complex Images Based on Component-Trees:Methodological Tools">
+
+                                <b>[14]</b> Benoit Caldairou, Benoit Naegel, Nicolas Passat.Segmentation of Complex Images Based on Component-Trees:Methodological Tools[M].M.H.F.Wilkinson and J.B.T.M.Roerdink (Eds.) :ISMM 2009, LNCS 5720, 2009:171-180.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A compparetive review of component tree computation algorithms">
+
+                                <b>[15]</b> Edwin Carlinet.A compparetive review of component tree computation algorithms[J].IEEE Trans.on Image Processing, 2014, 23 (9) :3885-3895.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCW&amp;filename=SJCW29F8D25FAE91B39D478EFCA3F8C12A86&amp;v=MTU3MDlmT0dRbGZCckxVMDV0Qmh3THkvd2EwPU5pZkllYkd4YU5tNHJZb3pGWjRHRFE0NnhtSVg3VGNJUGd5VHIyUTlDck9XTkxLWkNPTnZGU2lXV3I3SklGcG1hQnVIWQ==&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">
+
+                                <b>[16]</b> N Sharma, et al.Segmentation of medical images using simulated anneaking based fuzzy C Means algorithm[J].Interntional Journal of Biomedical Engineering Technology, 2009, 2 (3) :260-278.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A computational approach to edge detection">
+
+                                <b>[17]</b> J Canny.A computational approach to edge detection[J].IEEE Transactions on Pattern Analysis and Machine Intelligence, 1986, 8 (6) :679-698.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJZ201904045" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJZ201904045&amp;v=MDc3NDc0SDlqTXE0OUJZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1Wm1GeXpoVTc3Tkx6N0JkTEc=&amp;uid=WEEvREdxOWJmbC9oM1NjYkZCcDMwV0J4bGdLbWpqYS9tZVBuZ3FmMU1ESmg=$R1yZ0H6jyaa0en3RxVUd8df-oHi7XMMDo7mtKT6mSmEvTuk11l2gFA!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=842_VlRz_g1CMCLi-M0twVw-4EOFG_noWyi_OsMnrAg1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

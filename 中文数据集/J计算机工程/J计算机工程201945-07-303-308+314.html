@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637129944694025000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201907048%26RESULT%3d1%26SIGN%3dY1PeiUMpgn%252bUL3%252fPVqEQGQTBPD8%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201907048&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201907048&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201907048&amp;v=MTY4MzR6cXFCdEdGckNVUkxPZVplUnBGQ3ZrVTc3TUx6N0JiYkc0SDlqTXFJOUJiSVFLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#47" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#52" data-title="1 相关工作 ">1 相关工作</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#53" data-title="1.1 文本分类">1.1 文本分类</a></li>
+                                                <li><a href="#56" data-title="1.2 词向量">1.2 词向量</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#64" data-title="2 网络模型 ">2 网络模型</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#67" data-title="2.1 短语特征序列提取">2.1 短语特征序列提取</a></li>
+                                                <li><a href="#83" data-title="2.2 文本特征提取">2.2 文本特征提取</a></li>
+                                                <li><a href="#102" data-title="2.3 注意力分布计算">2.3 注意力分布计算</a></li>
+                                                <li><a href="#108" data-title="2.4 Softmax分类">2.4 Softmax分类</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#155" data-title="3 实验与结果分析 ">3 实验与结果分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#156" data-title="3.1 实验数据">3.1 实验数据</a></li>
+                                                <li><a href="#161" data-title="3.2 模型训练及实验设置">3.2 模型训练及实验设置</a></li>
+                                                <li><a href="#164" data-title="3.3 实验结果">3.3 实验结果</a></li>
+                                                <li><a href="#168" data-title="3.4 模型分析">3.4 模型分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#172" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#66" data-title="&lt;b&gt;图1 CNLSTM模型结构&lt;/b&gt;"><b>图1 CNLSTM模型结构</b></a></li>
+                                                <li><a href="#75" data-title="&lt;b&gt;图2 短语特征提取&lt;/b&gt;"><b>图2 短语特征提取</b></a></li>
+                                                <li><a href="#86" data-title="&lt;b&gt;图3 NLSTM记忆单元结构&lt;/b&gt;"><b>图3 NLSTM记忆单元结构</b></a></li>
+                                                <li><a href="#163" data-title="&lt;b&gt;表1 参数设置&lt;/b&gt;"><b>表1 参数设置</b></a></li>
+                                                <li><a href="#166" data-title="&lt;b&gt;表2 模型精确度对比&lt;/b&gt;"><b>表2 模型精确度对比</b></a></li>
+                                                <li><a href="#171" data-title="&lt;b&gt;图4 各参数对实验效果的影响&lt;/b&gt;"><b>图4 各参数对实验效果的影响</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="198">
+
+
+                                    <a id="bibliography_1" title=" 陈钊, 徐睿峰, 桂林, 等.结合卷积神经网络和词语情感序列特征的中文情感分析[J].中文信息学报, 2015, 29 (6) :172-178." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201506024&amp;v=MDI4NzVrVTc3TUtDallmYkc0SDlUTXFZOUhZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ3Y=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         陈钊, 徐睿峰, 桂林, 等.结合卷积神经网络和词语情感序列特征的中文情感分析[J].中文信息学报, 2015, 29 (6) :172-178.
+                                    </a>
+                                </li>
+                                <li id="200">
+
+
+                                    <a id="bibliography_2" title=" 夏从零, 钱涛, 姬东鸿.基于事件卷积特征的新闻文本分类[J].计算机应用研究, 2017, 34 (4) :991-994." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201704007&amp;v=MzAzNzBiTXE0OUZZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ3ZrVTc3TUx6N1NaTEc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         夏从零, 钱涛, 姬东鸿.基于事件卷积特征的新闻文本分类[J].计算机应用研究, 2017, 34 (4) :991-994.
+                                    </a>
+                                </li>
+                                <li id="202">
+
+
+                                    <a id="bibliography_3" title=" MIKOLOV T, SUTSKEVER I, CHEN Kai, et al.Distributed representations of words and phrases and their compositionality[C]//Proceedings of Advances in Neural Information Processing Systems.[S.l.]:Neural Information Processing Systems Foundation, Inc., 2013:3111-3119." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Distributed representations of words and phrases and their compositionality">
+                                        <b>[3]</b>
+                                         MIKOLOV T, SUTSKEVER I, CHEN Kai, et al.Distributed representations of words and phrases and their compositionality[C]//Proceedings of Advances in Neural Information Processing Systems.[S.l.]:Neural Information Processing Systems Foundation, Inc., 2013:3111-3119.
+                                    </a>
+                                </li>
+                                <li id="204">
+
+
+                                    <a id="bibliography_4" title=" HOCHREITER S, SCHMIDHUBER J.Long short-term memory[J].Neural Computation, 1997, 9 (8) :1735-1780." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJBK&amp;filename=SJBK15090500014198&amp;v=MjM1MjV4WT1OaWZKWmJLOUh0ak1xbzlGWk9vTERYVXhvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVVMakxJMThVYQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         HOCHREITER S, SCHMIDHUBER J.Long short-term memory[J].Neural Computation, 1997, 9 (8) :1735-1780.
+                                    </a>
+                                </li>
+                                <li id="206">
+
+
+                                    <a id="bibliography_5" title=" MONIZ J R A, KRUEGER D.Nested LSTM[EB/OL].[2018-04-01].https://arxiv.org/pdf/1801.10308.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Nested LSTM">
+                                        <b>[5]</b>
+                                         MONIZ J R A, KRUEGER D.Nested LSTM[EB/OL].[2018-04-01].https://arxiv.org/pdf/1801.10308.pdf.
+                                    </a>
+                                </li>
+                                <li id="208">
+
+
+                                    <a id="bibliography_6" title=" AGARWAL B, MITTAL N.Text classification using machine learning methods:a survey[C]//Proceedings of the 2nd International Conference on Soft Computing for Problem Solving.Berlin, Germany:Springer, 2014:701-709." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Text classification using machine learning methods:a survey">
+                                        <b>[6]</b>
+                                         AGARWAL B, MITTAL N.Text classification using machine learning methods:a survey[C]//Proceedings of the 2nd International Conference on Soft Computing for Problem Solving.Berlin, Germany:Springer, 2014:701-709.
+                                    </a>
+                                </li>
+                                <li id="210">
+
+
+                                    <a id="bibliography_7" title=" 李荣艳, 金鑫, 王春辉, 等.一种新的中文文本分类算法[J].北京师范大学学报 (自然科学版) , 2006, 42 (5) :510-505." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BSDZ200605018&amp;v=MzA5NTBScEZDdmtVNzdNSno3UGRMRzRIdGZNcW85RWJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         李荣艳, 金鑫, 王春辉, 等.一种新的中文文本分类算法[J].北京师范大学学报 (自然科学版) , 2006, 42 (5) :510-505.
+                                    </a>
+                                </li>
+                                <li id="212">
+
+
+                                    <a id="bibliography_8" title=" PENG Fuchun, SCHUURMANS D.Combining naive Bayes and n-gram language models for text classification[C]//Proceedings of European Conference on Information Retrieval.Berlin, Germany:Springer, 2003:335-350." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Combining naive Bayes and n-gram language models for text classification">
+                                        <b>[8]</b>
+                                         PENG Fuchun, SCHUURMANS D.Combining naive Bayes and n-gram language models for text classification[C]//Proceedings of European Conference on Information Retrieval.Berlin, Germany:Springer, 2003:335-350.
+                                    </a>
+                                </li>
+                                <li id="214">
+
+
+                                    <a id="bibliography_9" title=" 翟林, 刘亚军.支持向量机的中文文本分类研究[J].计算机与数字工程, 2005, 33 (3) :21-23, 45." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSSG200503005&amp;v=MTI3ODl0VE1ySTlGWVlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRkN2a1U3N01MejdZYWJHNEg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         翟林, 刘亚军.支持向量机的中文文本分类研究[J].计算机与数字工程, 2005, 33 (3) :21-23, 45.
+                                    </a>
+                                </li>
+                                <li id="216">
+
+
+                                    <a id="bibliography_10" title=" KALCHBRENNER N, GREFENSTETTE E, BLUNSOM P.A convolutional neural network for modelling sentences[EB/OL].[2018-04-01].https://arxiv.org/pdf/1404.2188.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A convolutional neural network for modelling sentences">
+                                        <b>[10]</b>
+                                         KALCHBRENNER N, GREFENSTETTE E, BLUNSOM P.A convolutional neural network for modelling sentences[EB/OL].[2018-04-01].https://arxiv.org/pdf/1404.2188.pdf.
+                                    </a>
+                                </li>
+                                <li id="218">
+
+
+                                    <a id="bibliography_11" title=" BENGIO Y, DUCHARME R, VINCENT P, et al.A neural probabilistic language model[J].Journal of Machine Learning Research, 2003, 3:1137-1155." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A Neural Probabilistic Language Model">
+                                        <b>[11]</b>
+                                         BENGIO Y, DUCHARME R, VINCENT P, et al.A neural probabilistic language model[J].Journal of Machine Learning Research, 2003, 3:1137-1155.
+                                    </a>
+                                </li>
+                                <li id="220">
+
+
+                                    <a id="bibliography_12" title=" 谢逸, 饶文碧, 段鹏飞, 等.基于CNN 和LSTM混合模型的中文词性标注[J].武汉大学学报 (理学版) , 2017, 63 (3) :246-250." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WHDY201703009&amp;v=MTMxMjllUnBGQ3ZrVTc3TU1pWFBkN0c0SDliTXJJOUZiWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         谢逸, 饶文碧, 段鹏飞, 等.基于CNN 和LSTM混合模型的中文词性标注[J].武汉大学学报 (理学版) , 2017, 63 (3) :246-250.
+                                    </a>
+                                </li>
+                                <li id="222">
+
+
+                                    <a id="bibliography_13" title=" NAIR V, HINTON G E.Rectified linear units improve restricted Boltzmann machines[C]//Proceedings of the 27th International Conferenceon Machine Learning.Haifa, Israel:[s.n.], 2010:807-814." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Rectified linear units improve restricted Boltzmann machines">
+                                        <b>[13]</b>
+                                         NAIR V, HINTON G E.Rectified linear units improve restricted Boltzmann machines[C]//Proceedings of the 27th International Conferenceon Machine Learning.Haifa, Israel:[s.n.], 2010:807-814.
+                                    </a>
+                                </li>
+                                <li id="224">
+
+
+                                    <a id="bibliography_14" title=" MNIH V, HEESS N, GRAVES A, et al.Recurrent models of visual attention[C]//Proceedings of the 27th International Conference on Neural Information Processing Systems.Montreal, Canada:MIT Press, 2014:2204-2212." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Recurrent models of visual attention">
+                                        <b>[14]</b>
+                                         MNIH V, HEESS N, GRAVES A, et al.Recurrent models of visual attention[C]//Proceedings of the 27th International Conference on Neural Information Processing Systems.Montreal, Canada:MIT Press, 2014:2204-2212.
+                                    </a>
+                                </li>
+                                <li id="226">
+
+
+                                    <a id="bibliography_15" title=" BAHDANAU D, CHO K, BENGIO Y.Neural machine translation by jointly learning to align and translate[EB/OL].[2018-04-01].https://arxiv.org/pdf/1409.0473.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Neural machine translation by jointly learning to align and translate">
+                                        <b>[15]</b>
+                                         BAHDANAU D, CHO K, BENGIO Y.Neural machine translation by jointly learning to align and translate[EB/OL].[2018-04-01].https://arxiv.org/pdf/1409.0473.pdf.
+                                    </a>
+                                </li>
+                                <li id="228">
+
+
+                                    <a id="bibliography_16" title=" 周瑛, 刘越, 蔡俊.基于注意力机制的微博情感分析[J].情报理论与实践, 2018, 41 (3) :85-94." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QBLL201803018&amp;v=MjE0MzJySTlFYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRkN2a1U3N01OQy9IWXJHNEg5bk0=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         周瑛, 刘越, 蔡俊.基于注意力机制的微博情感分析[J].情报理论与实践, 2018, 41 (3) :85-94.
+                                    </a>
+                                </li>
+                                <li id="230">
+
+
+                                    <a id="bibliography_17" title=" 张冲.基于Attention-Based LSTM 模型的文本分类技术的研究[D].南京:南京大学, 2016." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016136802.nh&amp;v=MTgyNjR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRkN2a1U3N01WRjI2R0xLN0dObk1yWkViUElRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                         张冲.基于Attention-Based LSTM 模型的文本分类技术的研究[D].南京:南京大学, 2016.
+                                    </a>
+                                </li>
+                                <li id="232">
+
+
+                                    <a id="bibliography_18" title=" 黄磊, 杜昌顺.基于递归神经网络的文本分类研究[J].北京化工大学学报 (自然科学版) , 2017, 44 (1) :98-104." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJHY201701017&amp;v=MjYzOTR2a1U3N01KeWZEZDdHNEg5Yk1ybzlFWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRkM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[18]</b>
+                                         黄磊, 杜昌顺.基于递归神经网络的文本分类研究[J].北京化工大学学报 (自然科学版) , 2017, 44 (1) :98-104.
+                                    </a>
+                                </li>
+                                <li id="234">
+
+
+                                    <a id="bibliography_19" title=" 胡朝举, 梁宁.基于深层注意力的LSTM的特定主体情感分析[J].计算机应用研究, 2019, 36 (5) :10-15." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201904027&amp;v=Mjc1NTQ5SFk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDdmtVNzdNTHo3U1pMRzRIOWpNcTQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[19]</b>
+                                         胡朝举, 梁宁.基于深层注意力的LSTM的特定主体情感分析[J].计算机应用研究, 2019, 36 (5) :10-15.
+                                    </a>
+                                </li>
+                                <li id="236">
+
+
+                                    <a id="bibliography_20" title=" LAI Siwei, XU Liheng, LIU Kang.Recurrent convolutional neural networks for text classification[C]//Proceedings of the 29th AAAI Conference on Artificial Intelligence.Palo Alto, USA:AAAI Publications, 2015:2267-2273." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Recurrent Convolutional Neural Networks for Text Classification">
+                                        <b>[20]</b>
+                                         LAI Siwei, XU Liheng, LIU Kang.Recurrent convolutional neural networks for text classification[C]//Proceedings of the 29th AAAI Conference on Artificial Intelligence.Palo Alto, USA:AAAI Publications, 2015:2267-2273.
+                                    </a>
+                                </li>
+                                <li id="238">
+
+
+                                    <a id="bibliography_21" title=" 彭玉青, 宋初柏, 闫倩, 等.基于VDCNN与LSTM混合模型的中文文本分类研究[J].计算机工程, 2018, 44 (11) :190-196." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201811032&amp;v=MzA2MTBuTnJvOUdab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ3ZrVTc3TUx6N0JiYkc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[21]</b>
+                                         彭玉青, 宋初柏, 闫倩, 等.基于VDCNN与LSTM混合模型的中文文本分类研究[J].计算机工程, 2018, 44 (11) :190-196.
+                                    </a>
+                                </li>
+                                <li id="240">
+
+
+                                    <a id="bibliography_22" title=" 阳馨, 蒋伟, 刘晓玲.基于多种特征池化的中文文本分类算法[J].四川大学学报 (自然科学版) , 2017, 54 (2) :287-292." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SCDX201702011&amp;v=MzA4MDM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDdmtVNzdNTmk3UGRyRzRIOWJNclk5RVpZUUtESDg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[22]</b>
+                                         阳馨, 蒋伟, 刘晓玲.基于多种特征池化的中文文本分类算法[J].四川大学学报 (自然科学版) , 2017, 54 (2) :287-292.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(07),303-308+314 DOI:10.19678/j.issn.1000-3428.0051312            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于注意力CNLSTM模型的新闻文本分类</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%88%98%E6%9C%88&amp;code=37371139&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">刘月</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%BF%9F%E4%B8%9C%E6%B5%B7&amp;code=09208996&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">翟东海</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E4%BB%BB%E5%BA%86%E5%AE%81&amp;code=40276163&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">任庆宁</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E8%A5%BF%E5%8D%97%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&amp;code=0218487&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">西南交通大学信息科学与技术学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>结合卷积神经网络 (CNN) 和嵌套长短期记忆网络 (NLSTM) 2种模型, 基于注意力机制提出一个用于文本表示和分类的CNLSTM模型。采用CNN提取短语序列的特征表示, 利用NLSTM学习文本的特征表示, 引入注意力机制突出关键短语以优化特征提取的过程。在3个公开新闻数据集中进行性能测试, 结果表明, 该模型的分类准确率分别为96.87%、95.43%和97.58%, 其性能比baseline方法有显著提高。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">卷积神经网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%89%B9%E5%BE%81%E8%A1%A8%E7%A4%BA&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">特征表示;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%B5%8C%E5%A5%97%E9%95%BF%E7%9F%AD%E6%9C%9F%E8%AE%B0%E5%BF%86%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">嵌套长短期记忆网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">注意力机制;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%96%87%E6%9C%AC%E5%88%86%E7%B1%BB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">文本分类;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    刘月 (1993—) , 女, 硕士研究生, 主研方向为数据挖掘、自然语言处理;;
+                                </span>
+                                <span>
+                                    翟东海, 副教授、博士;;
+                                </span>
+                                <span>
+                                    任庆宁, 硕士研究生。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-04-23</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金 (61540060);</span>
+                    </p>
+            </div>
+                    <h1><b>News Text Classification Based on CNLSTM Model with Attention Mechanism</b></h1>
+                    <h2>
+                    <span>LIU Yue</span>
+                    <span>ZHAI Donghai</span>
+                    <span>REN Qingning</span>
+            </h2>
+                    <h2>
+                    <span>School of Information Science and Technology, Southwest Jiaotong University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Combining Convolutional Neural Network (CNN) and Nested Long Short-Term Memory (NLSTM) models, this paper proposes a CNLSTM model for text representation and classification based on the attention mechanism.The model uses CNN to extract feature of phrase sequences, and then uses NLSTM to learn the representation of text features.By introducing attention mechanisms, the key phrases are highlighted to optimize feature extraction.Experiments on three published news data sets demonstrate that the classification accuracy of the model is 96.87%, 95.43%, and 97.58%, respectively, and its performance is significantly improved compared with the baseline methods.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Convolutional%20Neural%20Network%20(CNN)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Convolutional Neural Network (CNN) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=feature%20representation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">feature representation;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Nested%20Long%20Short-Term%20Memory%20(NLSTM)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Nested Long Short-Term Memory (NLSTM) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=attention%20mechanism&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">attention mechanism;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=text%20classification&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">text classification;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-04-23</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="47" name="47" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="48">文本分类是自然语言处理的热点和关键技术之一, 在许多实际系统如 Web 内容管理、搜索引擎、邮件过滤等中都扮演着至关重要的角色。而文本分类所要解决的首要问题是捕捉不同文本单元的特征, 如短语、句子和文档等。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">由于具有捕捉局部空间或时间结构相关性的能力, 卷积神经网络 (Convolutional Neural Network, CNN) 自提出以来就受到广泛的关注和应用, 例如在自然语言处理领域。文献<citation id="242" type="reference">[<a class="sup">1</a>]</citation>提出一种结合情感词典和CNN的情感分类方法, 将CNN提取的抽象词语序列特征用于情感极性分类;文献<citation id="243" type="reference">[<a class="sup">2</a>]</citation>提出一种基于事件卷积特征的文本分类方法, 即通过CNN提取文本的事件特征并用于文本分类。然而, CNN在处理文本时仍然存在局限性, 它没有考虑距离较远的词语之间的联系, 忽视了语言中依存关系的结构特点。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">文献<citation id="244" type="reference">[<a class="sup">3</a>]</citation>提出利用基于时间序列的循环神经网络 (Recurrent Neural Network, RNN) 进行文本分类。RNN是一种具有“记忆”功能的网络模型, 通过链式神经网络架构传播历史信息, 因此能够捕获序列的长期依赖关系。但实际上, 随着2个时间步长之间的差距变大, 标准RNN也无法学习长期依赖性。文献<citation id="245" type="reference">[<a class="sup">4</a>]</citation>提出的长短期记忆网络 (Long Short-Term Memory, LSTM) 从根本上解决了长期依赖问题。当前, LSTM主要通过堆叠的方式构造多层前馈网络来处理数据, 上一层输出为下一层的输入。而文献<citation id="246" type="reference">[<a class="sup">5</a>]</citation>提出一种嵌套LSTM (Nested LSTM, NLSTM) , 其含有多层记忆单元, 通过嵌套而不是堆叠的方式增加LSTM的深度。NLSTM 可以选择性地访问内部记忆, 这使得内部记忆能够在更长的时间尺度上记忆和处理事件, 即使这些事件与当前事件无关。因此, 与简单的LSTM和堆叠式LSTM相比较, NLSTM能够处理更长时间尺度的历史信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">本文结合CNN与NLSTM 2种结构的优点, 构造一个CNLSTM混合体系结构, 将基于词语序列的简单NLSTM模型扩展到基于短语序列的混合模型以学习文本特征。由于新闻文本通常为长文本, 因此文本中可能存在与新闻主题无关的信息。通过在NLSTM后引入注意力机制计算注意力概率分布, 获得具有短语重要性区分度的文本特征表示。</p>
+                </div>
+                <h3 id="52" name="52" class="anchor-tag">1 相关工作</h3>
+                <h4 class="anchor-tag" id="53" name="53">1.1 文本分类</h4>
+                <div class="p1">
+                    <p id="54">文本分类的基本过程为文本预处理、特征选择、分类器训练及结果评估, 目的是将文档归类到一组预定义的类中<citation id="247" type="reference"><link href="208" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>。传统的文本分类通常采用机器学习算法, 如K近邻 (K-Nearest Neighbor, KNN) <citation id="248" type="reference"><link href="210" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>、朴素贝叶斯<citation id="249" type="reference"><link href="212" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>和支持向量机 (Support Vector Machine, SVM) <citation id="250" type="reference"><link href="214" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>等, 这些方法通常存在维度高、数据稀疏性问题。神经网络的出现为解决数据稀疏性问题提供了新的思路, 并提出了许多学习词语特征表示的神经模型, 如文献<citation id="251" type="reference">[<a class="sup">10</a>]</citation>用于文本建模的卷积模型和文献<citation id="252" type="reference">[<a class="sup">11</a>]</citation>概率语言模型。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">中文文本与英文文本分类的一个重要差别在于预处理阶段, 中文文本的读取需要分词, 而英文文本直接通过单词间的空格区分词语。从简单的查词典方法, 到基于统计语言模型的分词方法, 中文分词的技术已趋于成熟, 很多开源分词器可直接对中文进行分词, 如jieba、中国科学院计算所开发的汉语词法分析系统ICTCLAS等。本文使用jieba分词器对文本数据进行分词。</p>
+                </div>
+                <h4 class="anchor-tag" id="56" name="56">1.2 词向量</h4>
+                <div class="p1">
+                    <p id="57">要将自然语言理解的问题转化为机器学习的问题, 第一步将自然语言数学化, 转化为计算机能够识别和处理的形式, 即将文本的表达映射到<i>k</i>维向量空间<citation id="253" type="reference"><link href="220" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>, 用词语的分布式表示法——词向量表示词语。</p>
+                </div>
+                <div class="p1">
+                    <p id="58">本文使用Skip-gram模型训练词语的连续词向量表示。Skip-gram 模型是一个带有单层隐藏层的简单神经网络, 通过训练该网络得到隐藏层的权重, 这些权重就是希望学习的词向量。Skip-gram算法已经集成在word2vec开源包中, 可直接调用该软件包训练词向量。将由Skip-gram模型训练得到的词向量存储在一个词嵌入矩阵<b><i>E</i></b>∈<image href="images/JSJC201907048_059.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>n</i>×|<i>V</i>|</sup>中, 其中, |<i>V</i>|表示词汇表的大小, <i>n</i>为词向量维度。假设一个语句<b><i>X</i></b>包含有<i>j</i> 个词, 则此语句可以表示为<b><i>X</i></b><sub>[1:<i>j</i>]</sub>, 每个词语在词嵌入矩阵<b><i>E</i></b>中都有一个唯一的用于检索其对应词向量的索引<i>k</i>, 句子中第<i>i</i>个词的词向量用<b><i>x</i></b><sub><i>i</i></sub>表示:</p>
+                </div>
+                <div class="p1">
+                    <p id="60"><b><i>x</i></b><sub><b><i>i</i></b></sub>=<b><i>Eb</i></b><sub><i>k</i></sub>      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="61">其中, <b><i>b</i></b><sub><i>k</i></sub>是一个维度为词表大小, 值为0或1的二值向量, 除了第<i>k</i>个索引之外的所有位置都是0。则一个分词后的中文句子可以用矩阵<b><i>X</i></b>表示, 计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="62"><b><i>X</i></b>= (<b><i>x</i></b><sub>1</sub>, <b><i>x</i></b><sub>2</sub>, …, <b><i>x</i></b><sub><i>j</i></sub>)      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="63">在训练本文模型的过程中还将对词向量和其他模型参数进行微调, 以期能够达到最佳分类效果。</p>
+                </div>
+                <h3 id="64" name="64" class="anchor-tag">2 网络模型</h3>
+                <div class="p1">
+                    <p id="65">为了有效提高新闻文本分类的准确率, 本文提出一种引入注意力机制的CNLSTM模型用于中文新闻文本分类, 其结构如图1所示。模型主要包括4个部分:第1部分是短语特征序列提取操作, 主要使用一维卷积对词向量提取特征, 利用滑动窗口计算前后词对当前词的影响, 生成短语特征表示;第2部分是新闻文本特征提取操作, 该部分使用NLSTM处理短语特征序列, 逐步合成文本的向量特征表示;第3部分采用注意力机制计算短语的重要性分布, 生成含有注意力概率分布的文本特征表示;第4部分是分类器, 主要由dropout技术防止过拟合, 用Softmax分类器预测文本类别。</p>
+                </div>
+                <div class="area_img" id="66">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907048_066.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 CNLSTM模型结构" src="Detail/GetImg?filename=images/JSJC201907048_066.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 CNLSTM模型结构</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907048_066.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="67" name="67">2.1 短语特征序列提取</h4>
+                <div class="p1">
+                    <p id="68">本文采用一维卷积核在文本的不同位置滑动来提取词语的上下文信息, 生成短语的特征表示。用<b><i>x</i></b><sub><i>i</i></sub>∈<image href="images/JSJC201907048_069.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>d</i></sup>表示句子中第<i>i</i>个词语的<i>d</i>维词向量表示, <b><i>X</i></b>∈<image href="images/JSJC201907048_070.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>L</i>×<i>d</i></sup>代表输入句子, 其中<i>L</i>是句子的长度。用<b><i>k</i></b>∈<image href="images/JSJC201907048_071.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>m</i>×<i>d</i></sup>表示卷积操作所采用的卷积核向量, <i>m</i>为卷积核窗口大小。则在句子中的第<i>j</i>个位置上, 可以得到由<i>m</i>个连续词向量组成的一个窗口矩阵<b><i>w</i></b><sub><i>j</i></sub>, 其表示如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="72"><b><i>w</i></b><sub><i>j</i></sub>=[<b><i>x</i></b><sub><i>j</i></sub>, <b><i>x</i></b><sub><i>j</i>+1</sub>, …, <b><i>x</i></b><sub><i>j</i>+<i>m</i>-1</sub>]      (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="73">其中, 逗号表示行向量连接。卷积核<b><i>k</i></b>以有效的方式在每个位置处与窗口向量 (<i>m</i>-gram) 进行卷积以生成输入文本的特征映射<b><i>F</i></b>∈<image href="images/JSJC201907048_074.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup><i>L</i>-<i>m</i>+1</sup>, 其原理如图2所示。</p>
+                </div>
+                <div class="area_img" id="75">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907048_075.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 短语特征提取" src="Detail/GetImg?filename=images/JSJC201907048_075.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 短语特征提取</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907048_075.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="76">在图2中, 输入的句子为“广播/中/传来/女/播音员/中英文/抱歉/的/通知”, 每个字用一个8维向量表示, 卷积核的窗口大小为3, 不同颜色的网格代表同一卷积核在输入句子的不同位置进行特征提取的过程。由于是一维卷积, 图中向下的箭头表示卷积过程中卷积核的移动方向自上而下, 即只在行方向上进行卷积。此外, 为了方便说明卷积过程, 图2所示的卷积操作的步长stride设为3。图2中<b><i>f</i></b><sub>1</sub>、<b><i>f</i></b><sub>2</sub>、<b><i>f</i></b><sub>3</sub> 代表提取获得的短语特征, 例如:<b><i>f</i></b><sub>3</sub>代表短语“抱歉的通知”的特征。<b><i>f</i></b><sub>1</sub>、<b><i>f</i></b><sub>2</sub>、<b><i>f</i></b><sub>3</sub>连接后的特征向量<b><i>F</i></b>即是整个句子的特征表示。特征映射<b><i>F</i></b>的每个元素<b><i>f</i></b><sub><i>j</i></sub>计算方法如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="77"><b><i>f</i></b><sub><i>j</i></sub>=<i>g</i> (<b><i>w</i></b><sub><i>j</i></sub>⊙<b><i>k</i></b>+<b><i>b</i></b>)      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="78">其中, ⊙是矩阵的元素相乘, <b><i>b</i></b>是偏置项, <i>g</i>是激活函数, 本文选用修正线性单元ReLU<citation id="254" type="reference"><link href="222" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>。在模型中使用多个卷积核以产生多个特征映射。用<i>n</i>个具有相同长度的卷积核, 所生成的<i>n</i>个特征映射可以被重新排列为特征表示:</p>
+                </div>
+                <div class="p1">
+                    <p id="79"><b><i>T</i></b>=[<b><i>F</i></b><sub>1</sub>;<b><i>F</i></b><sub>2</sub>;…;<b><i>F</i></b><sub><i>n</i></sub>]      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="80">其中, 分号表示列向量连接, <b><i>F</i></b><sub><i>i</i></sub>是用第<i>i</i>个卷积核在整个输入数据上卷积生成的特征映射, <b><i>T</i></b>∈<image href="images/JSJC201907048_081.jpg" type="" display="inline" placement="inline"><alt></alt></image><sup> (<i>L</i>-<i>m</i>+1) ×<i>n</i></sup>中的每一行<b><i>T</i></b><sub><i>j</i></sub>是用<i>n</i>个卷积核在句子中的同一位置<i>j</i>处进行卷积操作产生的新的特征表示。然后将这个新的、连续的高阶特征表示<b><i>T</i></b>传送至下文描述的NLSTM中。</p>
+                </div>
+                <div class="p1">
+                    <p id="82">通过卷积操作提取短语特征之后, 会进一步执行池化操作, 但是文本分类是利用现有信息进行预测, 强调特征序列的连续性, 而池化操作会破坏特征序列的连续性。因此, 本文在CNN卷积层之后直接采用NLSTM模型。</p>
+                </div>
+                <h4 class="anchor-tag" id="83" name="83">2.2 文本特征提取</h4>
+                <div class="p1">
+                    <p id="84">虽然通过CNN提取到了短语的特征, 但在卷积的过程中并没有考虑短语之间的相互联系。此外, 由于中文文本中通常含有倒装、前置等复杂的表达形式, 在文本分类过程中可能需要用到以前的某些历史信息。 LSTM作为一种经典的改进结构, 它采用门结构调节信息流动, 通过存储单元存储历史信息, 因此被广泛应用于各种应用中, 且表现突出。</p>
+                </div>
+                <div class="p1">
+                    <p id="85">基于LSTM的特点, 本文采用文献<citation id="255" type="reference">[<a class="sup">5</a>]</citation>提出的NLSTM结构。NLSTM通过嵌套增加LSTM的深度, 即NLSTM中记忆单元的值<b><i>c</i></b><sub><i>t</i></sub>是通过一个LSTM计算而来, 其结构如图3所示。</p>
+                </div>
+                <div class="area_img" id="86">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907048_086.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 NLSTM记忆单元结构" src="Detail/GetImg?filename=images/JSJC201907048_086.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 NLSTM记忆单元结构</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907048_086.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="87">在LSTM中, 各状态和各门的更新方式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="88"><b><i>i</i></b><sub><i>t</i></sub>=<i>σ</i><sub><i>i</i></sub> (<b><i>x</i></b><sub><i>t</i></sub><b><i>W</i></b><sub><i>xi</i></sub>+<b><i>h</i></b><sub><i>t</i>-1</sub><b><i>W</i></b><sub><i>hi</i></sub>+<b><i>b</i></b><sub><i>i</i></sub>)      (6) </p>
+                </div>
+                <div class="p1">
+                    <p id="89"><b><i>f</i></b><sub><i>t</i></sub>=<i>σ</i><sub><i>f</i></sub> (<b><i>x</i></b><sub><i>t</i></sub><b><i>W</i></b><sub><i>xf</i></sub>+<b><i>h</i></b><sub><i>t</i>-1</sub><b><i>W</i></b><sub><i>hf</i></sub>+<b><i>b</i></b><sub><i>f</i></sub>)      (7) </p>
+                </div>
+                <div class="p1">
+                    <p id="90"><b><i>c</i></b><sub><i>t</i></sub>=<b><i>f</i></b><sub><i>t</i></sub>⊙<b><i>c</i></b><sub><i>t</i>-1</sub>+<b><i>i</i></b><sub><i>t</i></sub>⊙<i>σ</i><sub><i>c</i></sub> (<b><i>x</i></b><sub><i>t</i></sub><b><i>W</i></b><sub><i>xc</i></sub>+<b><i>h</i></b><sub><i>t</i>-1</sub><b><i>W</i></b><sub><i>hc</i></sub>+<b><i>b</i></b><sub><i>c</i></sub>)      (8) </p>
+                </div>
+                <div class="p1">
+                    <p id="91"><b><i>o</i></b><sub><i>t</i></sub>=<i>σ</i><sub><i>o</i></sub> (<b><i>x</i></b><sub><i>t</i></sub><b><i>W</i></b><sub><i>xo</i></sub>+<b><i>h</i></b><sub><i>t</i>-1</sub><b><i>W</i></b><sub><i>ho</i></sub>+<b><i>b</i></b><sub><i>o</i></sub>)      (9) </p>
+                </div>
+                <div class="p1">
+                    <p id="92"><b><i>h</i></b><sub><i>t</i></sub>=<b><i>o</i></b><sub><i>t</i></sub>⊙<i>σ</i><sub><i>h</i></sub> (<b><i>c</i></b><sub><i>t</i></sub>)      (10) </p>
+                </div>
+                <div class="p1">
+                    <p id="93">而NLSTM通过一个已经学习的状态函数式 (11) 来替代LSTM中计算<b><i>c</i></b><sub><i>t</i></sub>的加运算。</p>
+                </div>
+                <div class="p1">
+                    <p id="94"><b><i>c</i></b><sub><i>t</i></sub>=<b><i>m</i></b><sub><i>t</i></sub> (<b><i>f</i></b><sub><i>t</i></sub>⊙<b><i>c</i></b><sub><i>t</i>-1</sub>, <b><i>i</i></b><sub><i>t</i></sub>⊙<b><i>g</i></b><sub><i>t</i></sub>)      (11) </p>
+                </div>
+                <div class="p1">
+                    <p id="95">状态函数<b><i>m</i></b><sub><i>t</i></sub>被称为<i>t</i>时刻的内部记忆, 将这个状态函数作为另一个LSTM的记忆单元, 产生一个NLSTM网络。在NLSTM中, 内部记忆函数的输入和隐层状态就变为:</p>
+                </div>
+                <div class="p1">
+                    <p id="96" class="code-formula">
+                        <mathml id="96"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>=</mo><mi mathvariant="bold-italic">f</mi><msub><mrow></mrow><mi>t</mi></msub><mo>⊙</mo><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>2</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">x</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mo>=</mo><mi mathvariant="bold-italic">i</mi><msub><mrow></mrow><mi>t</mi></msub><mo>⊙</mo><mi mathvariant="bold-italic">σ</mi><msub><mrow></mrow><mi>c</mi></msub><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">x</mi><msub><mrow></mrow><mi>t</mi></msub><mi mathvariant="bold-italic">W</mi><msub><mrow></mrow><mrow><mi>x</mi><mi>c</mi></mrow></msub><mo>+</mo><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mi mathvariant="bold-italic">W</mi><msub><mrow></mrow><mrow><mi>h</mi><mi>c</mi></mrow></msub><mo>+</mo><mi mathvariant="bold-italic">b</mi><msub><mrow></mrow><mi>c</mi></msub><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>3</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="97">则内部LSTM的状态和门控信息的更新过程为:</p>
+                </div>
+                <div class="p1">
+                    <p id="98" class="code-formula">
+                        <mathml id="98"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">i</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mo>=</mo><mi mathvariant="bold-italic">σ</mi><msub><mrow></mrow><mi>t</mi></msub><mo stretchy="false"> (</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">x</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">W</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>x</mi><mi>i</mi></mrow></msub><mo>+</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">W</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>h</mi><mi>i</mi></mrow></msub><mo>+</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">b</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>4</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">f</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mo>=</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">σ</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>f</mi></msub><mo stretchy="false"> (</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">x</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">W</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>x</mi><mi>f</mi></mrow></msub><mo>+</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">W</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>h</mi><mi>f</mi></mrow></msub><mo>+</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">b</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>f</mi></msub><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>5</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mo>=</mo><mover accent="true"><mrow><mi mathvariant="bold-italic">f</mi><msub><mrow></mrow><mi>t</mi></msub></mrow><mo stretchy="true">˜</mo></mover><mo>⊙</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">i</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mo>⊙</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">σ</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>c</mi></msub><mo stretchy="false"> (</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">x</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">W</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>x</mi><mi>c</mi></mrow></msub><mo>+</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">W</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>h</mi><mi>c</mi></mrow></msub><mo>+</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">b</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>c</mi></msub><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>6</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">o</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mo>=</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">σ</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>o</mi></msub><mo stretchy="false"> (</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">x</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">W</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>x</mi><mi>o</mi></mrow></msub><mo>+</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">W</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mrow><mi>h</mi><mi>o</mi></mrow></msub><mo>+</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">b</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>o</mi></msub><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>7</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mo>=</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">ο</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mo>⊙</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">σ</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>h</mi></msub><mo stretchy="false"> (</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">c</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>8</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="99">外部LSTM的记忆单元状态信息更新为:</p>
+                </div>
+                <div class="p1">
+                    <p id="100" class="code-formula">
+                        <mathml id="100"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">c</mi><msub><mrow></mrow><mi>t</mi></msub><mo>=</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">h</mi></mstyle><mrow><mspace width="0.25em" /><mo>∼</mo></mrow></mover></mrow><msub><mrow></mrow><mi>t</mi></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mn>9</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="101">由此可见, 在NLSTM中, LSTM通过标准的门控结构选择性地访问内部存储单元, 这一关键特征使得NLSTM比传统的堆栈式LSTM实现更有效的时间层级。因为在访问内部记忆时, NLSTM拥有更高的访问自由度, 从而能处理更长时间规模的历史信息。且实验结果证明, 在参数量相同的情况下, NLSTM表现优于堆栈式LSTM和单层LSTM, 与堆栈式的多层LSTM相比, NLSTM的内部记忆单元能够学习更长期的依赖关系。</p>
+                </div>
+                <h4 class="anchor-tag" id="102" name="102">2.3 注意力分布计算</h4>
+                <div class="p1">
+                    <p id="103">注意力机制是一种资源分配制度, 它通过模拟人脑注意力的特点, 对重要的信息给予较多的注意力, 而对其他内容分配较少的注意力。目前注意力机制已被应用于各领域中, 如文献<citation id="256" type="reference">[<a class="sup">14</a>]</citation>将注意力机制应用于RNN模型进行图像分类;文献<citation id="257" type="reference">[<a class="sup">15</a>]</citation>将注意力机制应用于机器翻译任务中, 提出基于注意力机制的encode—decode模型, 大幅提高了翻译效果;文献<citation id="258" type="reference">[<a class="sup">16</a>]</citation>基于注意力机制进行微博情感分析, 也取得了较好的结果。在自然语言处理中引入注意力机制计算注意力的分布概率, 突出输入各部分对输出的影响程度, 可以达到优化传统模型的效果。本文在NLSTM模块之后引入注意力机制, 以生成含有注意力概率分布的文本语义特征表示, 由此突出输入文本中不同短语特征对文本类别的影响作用, 提高模型分类的准确度。引入注意力机制后, 文本的特征表示计算过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="104"><b><i>u</i></b><sub><i>t</i></sub>=tanh (<b><i>W</i></b><sub><i>s</i></sub><b><i>h</i></b><sub><i>t</i></sub>+<b><i>b</i></b><sub><i>s</i></sub>)      (20) </p>
+                </div>
+                <div class="p1">
+                    <p id="105"><i>α</i><sub><i>t</i></sub>=<i>Softmax</i> (<b><i>u</i></b><sub><i>t</i></sub><sup>T</sup>, <b><i>u</i></b><sub><i>s</i></sub>)      (21) </p>
+                </div>
+                <div class="p1">
+                    <p id="106" class="code-formula">
+                        <mathml id="106"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">v</mi><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mi>t</mi></munder><mi>α</mi></mstyle><msub><mrow></mrow><mi>t</mi></msub><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mi>t</mi></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mn>2</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="107">其中, <b><i>h</i></b><sub><i>t</i></sub>是由NLSTM学习得到的<i>t</i>时刻的特征表示, <b><i>u</i></b><sub><i>t</i></sub>为<b><i>h</i></b><sub><i>t</i></sub>通过一个简单神经网络层得到的隐层表示, <b><i>u</i></b><sub><i>s</i></sub>是一个随机初始化的上下文向量, 可视为对输入的一种语义表示, <i>α</i><sub><i>t</i></sub>为<b><i>u</i></b><sub><i>t</i></sub>通过Sotfmax函数归一化得到的重要性权重, <b><i>v</i></b>即是最终文本信息的特征向量。</p>
+                </div>
+                <h4 class="anchor-tag" id="108" name="108">2.4 Softmax分类</h4>
+                <div class="p1">
+                    <p id="109">为防止模型在训练时出现过拟合现象, 本文引入dropout技术, 并采用Softmax分类器对所获得的文本特征进行多分类处理:</p>
+                </div>
+                <div class="p1">
+                    <p id="110"><b><i>y</i></b>=<i>Softmax</i> (<b><i>v</i></b>)      (23) </p>
+                </div>
+                <div class="p1">
+                    <p id="111">其中, <b><i>y</i></b>是一个维度为类别数量大小的向量, 其每一维都是一个[0, 1]范围内的数字, 代表该文本属于某个类别的概率。<i>n</i>是可能的类别个数, 则输入句子的类别为:</p>
+                </div>
+                <div class="p1">
+                    <p id="112"><mathml id="113"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">y</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><mo>=</mo><mtext>a</mtext><mtext>r</mtext><mtext>g</mtext><mtext>m</mtext><mtext>a</mtext><mtext>x</mtext></mrow></math></mathml> (<b><i>y</i></b>)      (24) </p>
+                </div>
+                <div class="p1">
+                    <p id="114">在本文模型的训练过程中, 通过最小化输出类别与句子真实类别之间的交叉熵误差训练整个模型。给定训练样本<b><i>x</i></b>和样本的真实类别<b><i>l</i></b>, 则其交叉熵误差为:</p>
+                </div>
+                <div class="p1">
+                    <p id="115"><i>E</i> (<b><i>x</i>, <i>l</i></b>;<mathml id="116"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">θ</mi><mo stretchy="false">) </mo><mo>=</mo><mo>-</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>l</mi></mstyle><msub><mrow></mrow><mi>i</mi></msub><mrow><mi>ln</mi></mrow><mo stretchy="false"> (</mo><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></math></mathml>;<i>θ</i>)      (25) </p>
+                </div>
+                <div class="p1">
+                    <p id="117">其中, <i>θ</i>为模型的参数, <i>l</i><sub><i>i</i></sub>指实际的类别标签向量中的第<i>i</i>个值, <i>y</i><sub><i>i</i></sub>为Softmax的输出向量<b><i>y</i></b>的第<i>i</i>个值。对于所获得的误差, 最后取其平均即是该模型的损失函数。此外, 本文还对其进行<i>L</i><sub>2</sub>正则化, 则最终的目标函数为:</p>
+                </div>
+                <div class="p1">
+                    <p id="118" class="code-formula"><mathml id="119"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>J</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">θ</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mn>1</mn><mi>Ν</mi></mfrac><mi>E</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">x</mi><mo>, </mo><mi mathvariant="bold-italic">l</mi></mrow></math></mathml>;<mathml id="120"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">θ</mi><mo stretchy="false">) </mo><mo>+</mo><mfrac><mi>λ</mi><mn>2</mn></mfrac><mrow><mo stretchy="false">∥</mo><mi mathvariant="bold-italic">θ</mi><mo stretchy="false">∥</mo></mrow><msup><mrow></mrow><mn>2</mn></msup><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mn>6</mn><mo stretchy="false">) </mo></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="121">其中, <i>λ</i>是<i>L</i><sub>2</sub>正则项系数, <i>N</i>为训练样本大小。在训练模型的时候可以采用Adam方法来最小化目标函数<i>J</i> (<i>θ</i>) , 它主要利用梯度的一阶矩估计和二阶矩估计动态调整每个参数的学习率。Adam的优点主要在于经过偏置校正后, 每一次迭代学习率都有个确定范围, 使得参数变化比较平稳。</p>
+                </div>
+                <div class="p1">
+                    <p id="122">综上, 本文进行文本分类时所用算法描述如下, 其中, <i>TrainingData</i>为训练数据集 (有标签的中文语料库) , <i>θ</i>为模型参数集, <i>J</i>为优化目标函数, <i>J</i><sub><i>sum</i></sub>为训练集误差和, <b><i>X</i></b>为训练集中的一个新闻文本, <i>l</i>为训练样本的真实类别, <i>L</i>为词数, <i>d</i>为词向量维度, <i>n</i>个卷积核的大小均为<i>k</i>, <i>epochNum</i>为总迭代次数。</p>
+                </div>
+                <div class="p1">
+                    <p id="123"><b>算法1</b> CNLSTM +Attention模型训练算法</p>
+                </div>
+                <div class="area_img" id="197">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201907048_19700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="143">经过上述训练步骤后, 本文网络模型即可用于对未知类别的测试集进行分类处理, 将测试数据集中的新闻样本<b><i>X</i></b>输入到模型中, 该模型的输出即为<b><i>X</i></b>所属类别的概率向量<b><i>y</i></b>, 取<b><i>y</i></b>中最大概率对应的类别为测试样本<b><i>X</i></b>的类别。其具体算法如下, 其中, <i>TestData</i>为测试数据集, <mathml id="144"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi mathvariant="bold-italic">y</mi></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover></mrow></math></mathml>为所求测试样本的类别, <b><i>X</i></b>为测试数据集中的一条新闻文本, <i>L</i>为词数, <i>d</i>为词向量维度。</p>
+                </div>
+                <div class="p1">
+                    <p id="145"><b>算法2</b> 测试样本分类算法</p>
+                </div>
+                <div class="p1">
+                    <p id="146"><b>输入</b><i>TestData</i></p>
+                </div>
+                <div class="p1">
+                    <p id="147">1.初始化:对测试集进行分词, 然后用Word2vec求得词向量。</p>
+                </div>
+                <div class="p1">
+                    <p id="148">2.For X∈TestData</p>
+                </div>
+                <div class="p1">
+                    <p id="149">3.向模型中输入X, 得出X的类别概率向量y:</p>
+                </div>
+                <div class="p1">
+                    <p id="150">y= model (X;l) </p>
+                </div>
+                <div class="p1">
+                    <p id="151">4.输出:该样本的类别</p>
+                </div>
+                <div class="p1">
+                    <p id="152"><mathml id="153"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mtext>y</mtext></mstyle><mrow><mspace width="0.25em" /><mo>^</mo></mrow></mover><mo>=</mo><mtext>a</mtext><mtext>r</mtext><mtext>g</mtext><mtext>m</mtext><mtext>a</mtext><mtext>x</mtext></mrow></math></mathml> (y) </p>
+                </div>
+                <div class="p1">
+                    <p id="154">5.End for</p>
+                </div>
+                <h3 id="155" name="155" class="anchor-tag">3 实验与结果分析</h3>
+                <h4 class="anchor-tag" id="156" name="156">3.1 实验数据</h4>
+                <div class="p1">
+                    <p id="157">本文使用了3个数据集进行文本分类, 以测试Attention-based CNLSTM模型的分类效果, 包括THUCNews新闻数据集 (下载地址:http://thuctc.thunlp.org/message) 、Sogou新闻语料库 (下载地址:http://www.sogou.com/labs/resource/tce.php) 以及复旦新闻语料库 (下载地址:https://dvn.fudan.edu.cn/dataverse.xhtml) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="158">THUCNews是由清华大学自然语言处理实验室推出的新闻文本数据集, 包含74万篇新闻文档, 分为14个候选新闻类别。本文使用其中的10个类别, 每个类别包含5 000个训练样本, 500个验证集样本和1 000条测试样本。</p>
+                </div>
+                <div class="p1">
+                    <p id="159">Sogou语料库是搜狗实验室提供的全网新闻数据, 该数据集来自 2012 年 6 月—7 月新浪、网易、腾讯以及凤凰资讯等若干个新闻站点。由于完整的实验数据量过于庞大, 本文使用其中的9个类别, 每个类别包含2 000个训练样本, 500个验证集样本和500条测试样本。</p>
+                </div>
+                <div class="p1">
+                    <p id="160">复旦大学新闻语料库由该校李荣路老师整理并提供, 分为 20 个新闻话题类别, 共包括 9 000 多个文档。但由于该数据集中某些类别数量过少, 因此本文实验不使用文本数量低于1 000的类别文本。本文使用了5个类别, 每个类别包含1 500个训练样本, 500个验证集, 500条测试样本。</p>
+                </div>
+                <h4 class="anchor-tag" id="161" name="161">3.2 模型训练及实验设置</h4>
+                <div class="p1">
+                    <p id="162">本文采用mini-batch梯度下降法进行模型的训练。网络模型为1层卷积层、1层NLSTM层和1层注意力层, 参数设置如表1所示。</p>
+                </div>
+                <div class="area_img" id="163">
+                    <p class="img_tit"><b>表1 参数设置</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="163" border="1"><tr><td><br />参数</td><td>设置</td></tr><tr><td><br />卷积核大小</td><td>3、4、5、6</td></tr><tr><td><br />卷积核数量</td><td>256</td></tr><tr><td><br />词向量维度</td><td>64</td></tr><tr><td><br />丢弃率<i>P</i></td><td>0.5</td></tr><tr><td><br />mini-batch</td><td>128</td></tr><tr><td><br />句子长度</td><td>1 000</td></tr><tr><td><br />嵌套深度depth</td><td>2、3、4、5、6</td></tr><tr><td><br />学习率<br />正则项因子</td><td>0.01<br />0.001</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="164" name="164">3.3 实验结果</h4>
+                <div class="p1">
+                    <p id="165">为了测试模型的有效性, 本文选择了多个目前在中文文本分类任务上应用广泛且效果较好的网络结构作为Baseline模型进行比较。比较模型包括:单层CNN、单层LSTM、单层NLSTM、CNN+NLSTM、Attention-based LSTM<citation id="259" type="reference"><link href="230" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>、BiLSTM<citation id="260" type="reference"><link href="232" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>、Attention-based BiLSTM<citation id="261" type="reference"><link href="234" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>、BiLSTM+ max-pooling<citation id="262" type="reference"><link href="236" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>。本文也引用在相同数据集上已有的代表性工作作为比较, 其中:文献<citation id="263" type="reference">[<a class="sup">21</a>]</citation>提出一种VDCNN与LSTM相结合的混合模型, 该混合模型在搜狗和复旦数据集上取得了较好效果;文献<citation id="264" type="reference">[<a class="sup">22</a>]</citation>的方法对整个文本的词向量进行多种池化, 最后将多种池化的特征作为一个整体输入到Softmax回归模型中得到文本的类别信息, 该方法在复旦大学的数据集上取得了较好效果。具体对比结果如表2所示。</p>
+                </div>
+                <div class="area_img" id="166">
+                    <p class="img_tit"><b>表2 模型精确度对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"> %</p>
+                    <table id="166" border="1"><tr><td>模型</td><td>THUCNews数据集</td><td>复旦数据集</td><td>Sogou数据集</td></tr><tr><td>CNN</td><td>92.37</td><td>90.30</td><td>91.34</td></tr><tr><td><br />LSTM</td><td>90.86</td><td>89.57</td><td>92.18</td></tr><tr><td><br />NLSTM</td><td>93.39</td><td>91.84</td><td>94.53</td></tr><tr><td><br />CNN+NLSTM</td><td>95.64</td><td>94.21</td><td>96.77</td></tr><tr><td><br />Attention-based LSTM<sup>[17]</sup></td><td>91.16</td><td>92.00</td><td>95.33</td></tr><tr><td><br />BiLSTM<sup>[18]</sup></td><td>80.68</td><td>83.21</td><td>89.40</td></tr><tr><td><br />Attention-based BiLSTM<sup>[19]</sup><br />BiLSTM+max-pooling<sup>[20]</sup></td><td>86.32<br />85.16</td><td>94.01<br />82.81</td><td>94.34<br />90.24</td></tr><tr><td><br />VDCNN+LSTM<sup>[21]</sup></td><td></td><td>93.10</td><td>98.96</td></tr><tr><td><br />多种池化<sup>[22]</sup></td><td></td><td></td><td>94.73</td></tr><tr><td><br />本文方法</td><td>96.87</td><td>95.43</td><td>97.58</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="167">从表2可以看出, NLSTM的分类准确率均高于LSTM, 由此可以说明NLSTM的确能够更有效地学习到文本中的长期依赖关系。从CNN与CNN+NLSTM的对比结果可以看出, 在CNN中引入NLSTM网络层, 使得分类准确度得到显著提升。最终注意力机制的引入更进一步提升了模型的性能。通过表2还可以看出, 在THUCNews数据集和复旦数据集上, 本文模型优于其他的比较模型取得了最佳的效果。与单层CNN和单层NLSTM的比较表明, 本文混合模型的优点在于不但能够更好学习到句子的全局特征表示, 而且能更好地学习具有注意力分布的更高级别表示的长期依赖关系。特别是通过与Attention-based LSTM的比较, 更加突出显示了本文模型的优越性。虽然在Sogou数据集上, 本文模型取得的效果不是最佳, 低于VDCNN+LSTM, 但与其他模型相比, 本文模型的分类准确率高, 且接近VDCNN+LSTM的准确率。</p>
+                </div>
+                <h4 class="anchor-tag" id="168" name="168">3.4 模型分析</h4>
+                <div class="p1">
+                    <p id="169">本文以THUCNews新闻数据集为例进行10分类验证, 考察了卷积核窗口大小、NLSTM嵌套深度2个因素对模型精确度的影响。</p>
+                </div>
+                <div class="p1">
+                    <p id="170">在本文模型的卷积层中, 卷积核用于捕获局部<i>n</i>-gram特征, 即短语特征。因此不同大小的卷积核可以捕获不同的<i>n</i>-gram特征。本文在其他参数保持一致的情况下, 以不同卷积核大小做实例验证观察模型预测精确度的变化, 结果如图4 (a) 所示。从图中可以得出:当窗口大小低于5时, 模型的精确度随着卷积核窗口的增大而逐渐增大;但窗口大小大于5时, 模型的精确度反而随窗口增大而减小。由此可以得出:对于THUCNews数据集而言, 窗口大小为5的卷积核能够捕捉到更加充分、准确的短语特征使得本文模型达到最佳效果。此外, 由于随着NLSTM嵌套深度的增加, 整个模型的复杂度也会增加, 因此需要选择一个合适的嵌套深度, 使得模型在该深度下可以取得最佳效果。图4 (b) 是在THUCNews数据集上使用不同深度得到的本文模型精确度的变化结果, 可以看出对该数据集而言, 最佳嵌套深度为5。</p>
+                </div>
+                <div class="area_img" id="171">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201907048_171.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 各参数对实验效果的影响" src="Detail/GetImg?filename=images/JSJC201907048_171.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 各参数对实验效果的影响</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201907048_171.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="172" name="172" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="173">本文利用CNLSTM模型对词向量化后的文本进行分类处理。CNLSTM模型将CNN和NLSTM相结合, 利用卷积层学习短语级别的特征表示, 这些高层的短语特征表示序列被输入到NLSTM网络中进一步学习短语间的长短依赖关系, 得出整个输入文本的特征表示。在此基础上, 引入注意力机制捕获输入文本中的重要信息, 减少特征提取过程中的信息丢失和信息冗余问题。在3个公开新闻数据集上测试模型性能, 结果表明, 该混合模型在特征提取过程中, 具备保留历史信息且利用前后文信息的能力, 弥补了简单卷积层的不足, 从而有效提高了文本分类的准确率。下一步将优化CNLSTM模型, 在提高模型分类准确度的情况下同时提升其运行速度。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="198">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201506024&amp;v=Mjk5MDM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDdmtVNzdNS0NqWWZiRzRIOVRNcVk5SFlJUUtESDg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 陈钊, 徐睿峰, 桂林, 等.结合卷积神经网络和词语情感序列特征的中文情感分析[J].中文信息学报, 2015, 29 (6) :172-178.
+                            </a>
+                        </p>
+                        <p id="200">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201704007&amp;v=MzIyMDZPZVplUnBGQ3ZrVTc3TUx6N1NaTEc0SDliTXE0OUZZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkw=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 夏从零, 钱涛, 姬东鸿.基于事件卷积特征的新闻文本分类[J].计算机应用研究, 2017, 34 (4) :991-994.
+                            </a>
+                        </p>
+                        <p id="202">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Distributed representations of words and phrases and their compositionality">
+
+                                <b>[3]</b> MIKOLOV T, SUTSKEVER I, CHEN Kai, et al.Distributed representations of words and phrases and their compositionality[C]//Proceedings of Advances in Neural Information Processing Systems.[S.l.]:Neural Information Processing Systems Foundation, Inc., 2013:3111-3119.
+                            </a>
+                        </p>
+                        <p id="204">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJBK&amp;filename=SJBK15090500014198&amp;v=MTQxODRlcnFRVE1ud1plWnVIeWptVUxqTEkxOFVheFk9TmlmSlpiSzlIdGpNcW85RlpPb0xEWFV4b0JNVDZUNFBRSC9pclJkRw==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> HOCHREITER S, SCHMIDHUBER J.Long short-term memory[J].Neural Computation, 1997, 9 (8) :1735-1780.
+                            </a>
+                        </p>
+                        <p id="206">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Nested LSTM">
+
+                                <b>[5]</b> MONIZ J R A, KRUEGER D.Nested LSTM[EB/OL].[2018-04-01].https://arxiv.org/pdf/1801.10308.pdf.
+                            </a>
+                        </p>
+                        <p id="208">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Text classification using machine learning methods:a survey">
+
+                                <b>[6]</b> AGARWAL B, MITTAL N.Text classification using machine learning methods:a survey[C]//Proceedings of the 2nd International Conference on Soft Computing for Problem Solving.Berlin, Germany:Springer, 2014:701-709.
+                            </a>
+                        </p>
+                        <p id="210">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BSDZ200605018&amp;v=MjM4MTVrVTc3TUp6N1BkTEc0SHRmTXFvOUViSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ3Y=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 李荣艳, 金鑫, 王春辉, 等.一种新的中文文本分类算法[J].北京师范大学学报 (自然科学版) , 2006, 42 (5) :510-505.
+                            </a>
+                        </p>
+                        <p id="212">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Combining naive Bayes and n-gram language models for text classification">
+
+                                <b>[8]</b> PENG Fuchun, SCHUURMANS D.Combining naive Bayes and n-gram language models for text classification[C]//Proceedings of European Conference on Information Retrieval.Berlin, Germany:Springer, 2003:335-350.
+                            </a>
+                        </p>
+                        <p id="214">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSSG200503005&amp;v=MTc0OTE0TzN6cXFCdEdGckNVUkxPZVplUnBGQ3ZrVTc3TUx6N1lhYkc0SHRUTXJJOUZZWVFLREg4NHZSNFQ2ajU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 翟林, 刘亚军.支持向量机的中文文本分类研究[J].计算机与数字工程, 2005, 33 (3) :21-23, 45.
+                            </a>
+                        </p>
+                        <p id="216">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A convolutional neural network for modelling sentences">
+
+                                <b>[10]</b> KALCHBRENNER N, GREFENSTETTE E, BLUNSOM P.A convolutional neural network for modelling sentences[EB/OL].[2018-04-01].https://arxiv.org/pdf/1404.2188.pdf.
+                            </a>
+                        </p>
+                        <p id="218">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A Neural Probabilistic Language Model">
+
+                                <b>[11]</b> BENGIO Y, DUCHARME R, VINCENT P, et al.A neural probabilistic language model[J].Journal of Machine Learning Research, 2003, 3:1137-1155.
+                            </a>
+                        </p>
+                        <p id="220">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WHDY201703009&amp;v=MjI0MzZVNzdNTWlYUGQ3RzRIOWJNckk5RmJZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVScEZDdms=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 谢逸, 饶文碧, 段鹏飞, 等.基于CNN 和LSTM混合模型的中文词性标注[J].武汉大学学报 (理学版) , 2017, 63 (3) :246-250.
+                            </a>
+                        </p>
+                        <p id="222">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Rectified linear units improve restricted Boltzmann machines">
+
+                                <b>[13]</b> NAIR V, HINTON G E.Rectified linear units improve restricted Boltzmann machines[C]//Proceedings of the 27th International Conferenceon Machine Learning.Haifa, Israel:[s.n.], 2010:807-814.
+                            </a>
+                        </p>
+                        <p id="224">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Recurrent models of visual attention">
+
+                                <b>[14]</b> MNIH V, HEESS N, GRAVES A, et al.Recurrent models of visual attention[C]//Proceedings of the 27th International Conference on Neural Information Processing Systems.Montreal, Canada:MIT Press, 2014:2204-2212.
+                            </a>
+                        </p>
+                        <p id="226">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Neural machine translation by jointly learning to align and translate">
+
+                                <b>[15]</b> BAHDANAU D, CHO K, BENGIO Y.Neural machine translation by jointly learning to align and translate[EB/OL].[2018-04-01].https://arxiv.org/pdf/1409.0473.pdf.
+                            </a>
+                        </p>
+                        <p id="228">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QBLL201803018&amp;v=MDMzMjg2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ3ZrVTc3TU5DL0hZckc0SDluTXJJOUViSVFLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> 周瑛, 刘越, 蔡俊.基于注意力机制的微博情感分析[J].情报理论与实践, 2018, 41 (3) :85-94.
+                            </a>
+                        </p>
+                        <p id="230">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016136802.nh&amp;v=MzIzMDVSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ3ZrVTc3TVZGMjZHTEs3R05uTXJaRWJQSVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b> 张冲.基于Attention-Based LSTM 模型的文本分类技术的研究[D].南京:南京大学, 2016.
+                            </a>
+                        </p>
+                        <p id="232">
+                            <a id="bibliography_18" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=BJHY201701017&amp;v=MDY0NjJDVVJMT2VaZVJwRkN2a1U3N01KeWZEZDdHNEg5Yk1ybzlFWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[18]</b> 黄磊, 杜昌顺.基于递归神经网络的文本分类研究[J].北京化工大学学报 (自然科学版) , 2017, 44 (1) :98-104.
+                            </a>
+                        </p>
+                        <p id="234">
+                            <a id="bibliography_19" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201904027&amp;v=MjE3MzlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnBGQ3ZrVTc3TUx6N1NaTEc0SDlqTXE0OUhZNFE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[19]</b> 胡朝举, 梁宁.基于深层注意力的LSTM的特定主体情感分析[J].计算机应用研究, 2019, 36 (5) :10-15.
+                            </a>
+                        </p>
+                        <p id="236">
+                            <a id="bibliography_20" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Recurrent Convolutional Neural Networks for Text Classification">
+
+                                <b>[20]</b> LAI Siwei, XU Liheng, LIU Kang.Recurrent convolutional neural networks for text classification[C]//Proceedings of the 29th AAAI Conference on Artificial Intelligence.Palo Alto, USA:AAAI Publications, 2015:2267-2273.
+                            </a>
+                        </p>
+                        <p id="238">
+                            <a id="bibliography_21" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201811032&amp;v=MTI2MzE0TzN6cXFCdEdGckNVUkxPZVplUnBGQ3ZrVTc3TUx6N0JiYkc0SDluTnJvOUdab1FLREg4NHZSNFQ2ajU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[21]</b> 彭玉青, 宋初柏, 闫倩, 等.基于VDCNN与LSTM混合模型的中文文本分类研究[J].计算机工程, 2018, 44 (11) :190-196.
+                            </a>
+                        </p>
+                        <p id="240">
+                            <a id="bibliography_22" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SCDX201702011&amp;v=MDMwNTR2a1U3N01OaTdQZHJHNEg5Yk1yWTlFWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJwRkM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[22]</b> 阳馨, 蒋伟, 刘晓玲.基于多种特征池化的中文文本分类算法[J].四川大学学报 (自然科学版) , 2017, 54 (2) :287-292.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201907048" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201907048&amp;v=MTY4MzR6cXFCdEdGckNVUkxPZVplUnBGQ3ZrVTc3TUx6N0JiYkc0SDlqTXFJOUJiSVFLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9wS0dTT3lHTXAzN1YxWUJuaTVBbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="2" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

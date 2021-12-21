@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637135647405256250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJYRJ201906028%26RESULT%3d1%26SIGN%3dYS3Dfn5AE%252beqro7JLHCzAtXiUrA%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201906028&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201906028&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201906028&amp;v=MDAxMTBadEZ5dm1WN3JLTHpUWlpMRzRIOWpNcVk5SGJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#39" data-title="&lt;b&gt;0 引 言&lt;/b&gt; "><b>0 引 言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#42" data-title="&lt;b&gt;1 获取点云&lt;/b&gt; "><b>1 获取点云</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#47" data-title="&lt;b&gt;2 点云处理&lt;/b&gt; "><b>2 点云处理</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#54" data-title="&lt;b&gt;3 点云配准&lt;/b&gt; "><b>3 点云配准</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#56" data-title="&lt;b&gt;3.1 点云粗配准&lt;/b&gt;"><b>3.1 点云粗配准</b></a></li>
+                                                <li><a href="#68" data-title="&lt;b&gt;3.2 ICP算法简介&lt;/b&gt;"><b>3.2 ICP算法简介</b></a></li>
+                                                <li><a href="#92" data-title="&lt;b&gt;3.3 多片点云配准&lt;/b&gt;"><b>3.3 多片点云配准</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#98" data-title="&lt;b&gt;4 Kinect v2物体重建系统&lt;/b&gt; "><b>4 Kinect v2物体重建系统</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#105" data-title="&lt;b&gt;5 结 语&lt;/b&gt; "><b>5 结 语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#46" data-title="图1 包含目标物体的场景点云">图1 包含目标物体的场景点云</a></li>
+                                                <li><a href="#52" data-title="图2 处理之后的点云">图2 处理之后的点云</a></li>
+                                                <li><a href="#67" data-title="图3 SAC-IA 算法流程图">图3 SAC-IA 算法流程图</a></li>
+                                                <li><a href="#91" data-title="图4 ICP算法流程图">图4 ICP算法流程图</a></li>
+                                                <li><a href="#94" data-title="图5 点云采集示意图">图5 点云采集示意图</a></li>
+                                                <li><a href="#97" data-title="图6 多片点云配准流程图">图6 多片点云配准流程图</a></li>
+                                                <li><a href="#104" data-title="图7 物体重建效果图">图7 物体重建效果图</a></li>
+                                                <li><a href="#104" data-title="图7 物体重建效果图">图7 物体重建效果图</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="171">
+
+
+                                    <a id="bibliography_1" title=" Foix S, Alenya G, Torras C. Lock-in Time-of-Flight (To F) cameras:A survey[J]. IEEE Sensors Journal, 2011, 11 (9) :1917-1926." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Lock-in time-of-flight (ToF) cameras: A survey">
+                                        <b>[1]</b>
+                                         Foix S, Alenya G, Torras C. Lock-in Time-of-Flight (To F) cameras:A survey[J]. IEEE Sensors Journal, 2011, 11 (9) :1917-1926.
+                                    </a>
+                                </li>
+                                <li id="173">
+
+
+                                    <a id="bibliography_2" title=" Shen C H, Fu H B, Chen K, et al. Structure recovery by part assembly[J]. ACM Transactions on Graphics, 2012, 31 (6) :Article No. 180." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000007816&amp;v=MTM1OTk9TmlmSVk3SzdIdGpOcjQ5RlpPc0lCSDAvb0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadEZpbmxVcnpJSTEwUWJ4QQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         Shen C H, Fu H B, Chen K, et al. Structure recovery by part assembly[J]. ACM Transactions on Graphics, 2012, 31 (6) :Article No. 180.
+                                    </a>
+                                </li>
+                                <li id="175">
+
+
+                                    <a id="bibliography_3" title=" Kim Y M, Mitra N J, Yan D M, et al. Acquiring 3D indoor environments with variability and repletion[J]. ACM Transactions on Graphics, 2012, 31 (6) :Article No. 138." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000007774&amp;v=MTEwMjdOcjQ5RlpPc0lDM3M5b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadEZpbmxVcnpJSTEwUWJ4QT1OaWZJWTdLN0h0ag==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         Kim Y M, Mitra N J, Yan D M, et al. Acquiring 3D indoor environments with variability and repletion[J]. ACM Transactions on Graphics, 2012, 31 (6) :Article No. 138.
+                                    </a>
+                                </li>
+                                <li id="177">
+
+
+                                    <a id="bibliography_4" title=" Chaudhuri S, Koltun V. Data-driven suggestions for creativity support in 3D modeling[J]. ACM Transactions on Graphics, 2010, 29 (6) :Article No. 183." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000002893&amp;v=MTU1NjUxMFFieEE9TmlmSVk3SzdIdGpOcjQ5RlpPc05CSFU2b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadEZpbmxVcnpJSQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         Chaudhuri S, Koltun V. Data-driven suggestions for creativity support in 3D modeling[J]. ACM Transactions on Graphics, 2010, 29 (6) :Article No. 183.
+                                    </a>
+                                </li>
+                                <li id="179">
+
+
+                                    <a id="bibliography_5" title=" Newcombe R A, Izadi S, Hilliges O, et al. Kinect Fusion:real-time dense surface mapping and tracking[C]//201110th IEEE International Symposium on Mixed and Augmented Reality (ISMAR) . New York:IEEE Press, 2011:127-136." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=KinectFusion: Real-time dense surface mapping and tracking">
+                                        <b>[5]</b>
+                                         Newcombe R A, Izadi S, Hilliges O, et al. Kinect Fusion:real-time dense surface mapping and tracking[C]//201110th IEEE International Symposium on Mixed and Augmented Reality (ISMAR) . New York:IEEE Press, 2011:127-136.
+                                    </a>
+                                </li>
+                                <li id="181">
+
+
+                                    <a id="bibliography_6" >
+                                        <b>[6]</b>
+                                     Whelan T, Kaess M, Fallon M, et al. Kintinuous:Spatially extended Kinect Fusion[C]//RSS Workshop on RGB-D:Advanced Reasoning with Depth Cameras, 2012.</a>
+                                </li>
+                                <li id="183">
+
+
+                                    <a id="bibliography_7" title=" Whelan T, McDonald J B, Kaess M, et al. Kintinuous:spatially extended kinectfusion[C]//RSS Workshop on RGBD:Advanced Reasoning with Depth Cameras, 2012." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Kintinuous:Spatially extended KinectFusion">
+                                        <b>[7]</b>
+                                         Whelan T, McDonald J B, Kaess M, et al. Kintinuous:spatially extended kinectfusion[C]//RSS Workshop on RGBD:Advanced Reasoning with Depth Cameras, 2012.
+                                    </a>
+                                </li>
+                                <li id="185">
+
+
+                                    <a id="bibliography_8" title=" Chen J, Bautembach D, Izadi S. Scalable real-time volumetric surface reconstruction[J]. ACM Transactions on Graphics, 2013, 32 (4) :Article No. 63." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000012337&amp;v=MjQwMTBLN0h0ak5yNDlGWk9vTkQzOCtvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0RmlubFVyeklJMTBRYnhBPU5pZklZNw==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         Chen J, Bautembach D, Izadi S. Scalable real-time volumetric surface reconstruction[J]. ACM Transactions on Graphics, 2013, 32 (4) :Article No. 63.
+                                    </a>
+                                </li>
+                                <li id="187">
+
+
+                                    <a id="bibliography_9" title="谭歆. Kinect Fusion三维重建的再优化[D].杭州:浙江大学, 2015." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015635504.nh&amp;v=MDk2MDZXN0c5VE1xNUViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl2bVY3cktWRjI2Rzc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                        谭歆. Kinect Fusion三维重建的再优化[D].杭州:浙江大学, 2015.
+                                    </a>
+                                </li>
+                                <li id="189">
+
+
+                                    <a id="bibliography_10" title="周瑾, 潘建江, 童晶, 等.使用Kinect快速重建三维人体[J].计算机辅助设计与图形学学报, 2013, 25 (6) :873-879." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJF201306016&amp;v=MDE3MDM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5dm1WN3JLTHo3QmFMRzRIOUxNcVk5RVlvUUtESDg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                        周瑾, 潘建江, 童晶, 等.使用Kinect快速重建三维人体[J].计算机辅助设计与图形学学报, 2013, 25 (6) :873-879.
+                                    </a>
+                                </li>
+                                <li id="191">
+
+
+                                    <a id="bibliography_11" title="宫钰嵩, 张岩, 文艳, 等. Kinect扫描数据驱动的几何建模方法[J].计算机辅助设计与图形学学报, 2014 (11) :1957-1965." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJF201411006&amp;v=MjA3MjM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5dm1WN3JLTHo3QmFMRzRIOVhOcm85RllvUUtESDg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                        宫钰嵩, 张岩, 文艳, 等. Kinect扫描数据驱动的几何建模方法[J].计算机辅助设计与图形学学报, 2014 (11) :1957-1965.
+                                    </a>
+                                </li>
+                                <li id="193">
+
+
+                                    <a id="bibliography_12" title="李诗锐, 李琪, 李海洋, 等.基于Kinect v2的实时精确三维重建系统[J].软件学报, 2016, 27 (10) :2519-2529." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201610006&amp;v=MDk0NjBGckNVUjdxZlp1WnRGeXZtVjdyS055ZlRiTEc0SDlmTnI0OUZZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                        李诗锐, 李琪, 李海洋, 等.基于Kinect v2的实时精确三维重建系统[J].软件学报, 2016, 27 (10) :2519-2529.
+                                    </a>
+                                </li>
+                                <li id="195">
+
+
+                                    <a id="bibliography_13" title=" Rusu R B, Blodow N, Beetz M. Fast point feature histograms (FPFH) for 3D registration[C]//2009 IEEE International Conference On Robotics and Automation. IEEE, 2009:3212-3217." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Fast Point Feature Histograms (FPFH)for 3D Registration">
+                                        <b>[13]</b>
+                                         Rusu R B, Blodow N, Beetz M. Fast point feature histograms (FPFH) for 3D registration[C]//2009 IEEE International Conference On Robotics and Automation. IEEE, 2009:3212-3217.
+                                    </a>
+                                </li>
+                                <li id="197">
+
+
+                                    <a id="bibliography_14" title=" Besl P J, Mckay N D. A method for registration of 3-d shapes[J]. IEEE Transactions on Pattern Analysis and Machine Intelligence, 1992, 14 (2) :239-256." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A method for registration of 3-D shapes">
+                                        <b>[14]</b>
+                                         Besl P J, Mckay N D. A method for registration of 3-d shapes[J]. IEEE Transactions on Pattern Analysis and Machine Intelligence, 1992, 14 (2) :239-256.
+                                    </a>
+                                </li>
+                                <li id="199">
+
+
+                                    <a id="bibliography_15" title=" Zhang Z. A flexible new technique for camera calibration[J]. IEEE Computer Society, 2000, 22 (11) :1330-1334." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A Flexible New Technique for Camera Calibration">
+                                        <b>[15]</b>
+                                         Zhang Z. A flexible new technique for camera calibration[J]. IEEE Computer Society, 2000, 22 (11) :1330-1334.
+                                    </a>
+                                </li>
+                                <li id="201">
+
+
+                                    <a id="bibliography_16" title=" Konolige K, Mihelich P. Technical description of Kinect calibration[EB/OL]. 2011[2012-08-10]. http://www.ros/wiki/kinect-calibration/technical." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Technical description of Kinect calibration">
+                                        <b>[16]</b>
+                                         Konolige K, Mihelich P. Technical description of Kinect calibration[EB/OL]. 2011[2012-08-10]. http://www.ros/wiki/kinect-calibration/technical.
+                                    </a>
+                                </li>
+                                <li id="203">
+
+
+                                    <a id="bibliography_17" title=" Tu Z Q, Zhang K, Yang C L, et al. The improved ICP stitching algorithm of point cloud on 3D model Reconstruction[J]. Transactions of the China Welding Institution, 2013, 34 (1) :97-100." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The improved ICP stitching algorithm of point cloud on 3D model Reconstruction">
+                                        <b>[17]</b>
+                                         Tu Z Q, Zhang K, Yang C L, et al. The improved ICP stitching algorithm of point cloud on 3D model Reconstruction[J]. Transactions of the China Welding Institution, 2013, 34 (1) :97-100.
+                                    </a>
+                                </li>
+                                <li id="205">
+
+
+                                    <a id="bibliography_18" title=" Rusu R B, Cousins S. 3D is here:Point Cloud Library (PCL) [C]//IEEE International Conference on Robotics and Automation. IEEE, 2011:1-4." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=3D is here:Point Cloud Library (PCL)">
+                                        <b>[18]</b>
+                                         Rusu R B, Cousins S. 3D is here:Point Cloud Library (PCL) [C]//IEEE International Conference on Robotics and Automation. IEEE, 2011:1-4.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JYRJ" target="_blank">计算机应用与软件</a>
+                2019,36(06),136-141 DOI:10.3969/j.issn.1000-386x.2019.06.027            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>Kinect v2的三维物体重建系统设计</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E5%BF%97%E6%9E%97&amp;code=41142679&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张志林</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%8B%97%E5%85%B0%E8%8A%B3&amp;code=09471533&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">苗兰芳</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%B5%99%E6%B1%9F%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E6%95%B0%E7%90%86%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0075331&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">浙江师范大学数理与信息工程学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>三维物体重建一直是计算机图形学领域研究的热点。设计并实现一套基于Kinect v2的三维物体重建系统。使用Kinect v2获取包含物体所在场景的点云, 去除离群点, 并用三维包围盒将特定的物体点云从场景中分离出来;利用SAC-IA算法对相邻两片点云进行粗配准, 将两两配准的ICP算法扩展到多片点云, 提出一种从两边向中间逼近的策略, 减少累积误差, 提高物体点云还原度;实现一套低成本, 精确的针对单个物体的三维重建系统。实验结果表明, 与传统的只使用ICP算法配准相比, 该算法配准的精度更高, 重建还原度更好。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%89%A9%E4%BD%93%E7%82%B9%E4%BA%91&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">物体点云;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=SAC-IA&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">SAC-IA;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=ICP&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">ICP;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%A4%9A%E7%89%87%E7%82%B9%E4%BA%91%E9%85%8D%E5%87%86&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">多片点云配准;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    张志林, 硕士生, 主研领域:计算机图形学。;
+                                </span>
+                                <span>
+                                    苗兰芳, 教授。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-12-25</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金项目 (61170315);</span>
+                    </p>
+            </div>
+                    <h1><b>DESIGN OF 3D OBJECT RECONSTRUCTION SYSTEM BASED ON KINECT V2</b></h1>
+                    <h2>
+                    <span>Zhang Zhilin</span>
+                    <span>Miao Lanfang</span>
+            </h2>
+                    <h2>
+                    <span>College of Mathematics, Physics and Information Engineering, Zhejiang Normal University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>3 D object reconstruction has always been a hot topic in the field of computer graphics. This paper designed and implemented a 3 D object reconstruction system based on Kinect v2. We used Kinect v2 to obtain a point cloud containing the scene in which the object was located, removed the outliers, and separated the particular object point cloud from the scene using a 3 D bounding box. Then the SAC-IA was used to coarsely register two adjacent point clouds, and the two-two registration ICP algorithm was extended to multiple point clouds. A strategy of approaching from the two sides to the middle was proposed to reduce the accumulation and improve the point cloud reduction degree of the object. We implemented a low-cost, accurate 3 D reconstruction system for a single object. The experimental results show that the registration accuracy is higher and the reconstruction reduction is better than the traditional ICP algorithm.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Object%20point%20cloud&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Object point cloud;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=SAC-IA&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">SAC-IA;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=ICP&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">ICP;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Multi-point%20cloud%20registration&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Multi-point cloud registration;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-12-25</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="39" name="39" class="anchor-tag"><b>0 引 言</b></h3>
+                <div class="p1">
+                    <p id="40">传统的三维重建主要由以下三个步骤构成:获取数据并处理、点云配准以及曲面重建。已有大量的研究使用Kinect v1进行三维重建<citation id="211" type="reference"><link href="173" rel="bibliography" /><link href="175" rel="bibliography" /><link href="177" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>。现阶段最为突出的是微软团队的Newcombe等提出Kinect Fusion<citation id="207" type="reference"><link href="179" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>算法, 其利用Kinect v1可以对任意的室内场景的任意光照条件下进行重建。文献<citation id="212" type="reference">[<a class="sup">6</a>,<a class="sup">7</a>,<a class="sup">8</a>,<a class="sup">9</a>]</citation>将Kinect Fusion算法扩展到适用于更大场景的重建, 但是由于受到三维立方体的限制整个场景的重建范围很有限, 没有对单个物体提取出来进行重建的模块。周瑾等<citation id="208" type="reference"><link href="189" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>使用ICP算法寻找输入点云与可变人体模型之间的对应点对, 使用可变形的人体模型来拟合采样点云, 然后迭代获取具有高精度的人体三维模型。但是此方法只能用于重建人体, 局限性很大。宫钰嵩等<citation id="209" type="reference"><link href="191" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>使用Kinect获取不完整的点云数据, 利用网络上已经存在的同类三维模型为参考进行三维重建。但是此方法依赖网络资源, 限制了重建物体种类, 且还原度低。李诗锐等<citation id="210" type="reference"><link href="193" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>利用光滑表面作为物理表面平滑程度的先验知识, 修正后面数据流的噪声, 解决了累积误差问题, 并且基于Kinect v2实现了一套三维重建系统, 该系统可以实时、精确地重建物体和场景。但是此方法是在KinectFusion上进行改进, 依然没有脱离全局立方体对重建范围的限制。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">本文在设计基于Kinect v2三维物体重建系统时, 主要分为三个模块:获取点云, 点云拼接, 物体重建。本文三维重建系统适合做离线的点云处理, 不具有实时性。本系统的贡献主要有:第一, 通过分析Kinect获取点云的噪声分布特点, 将所要提取的物体点云放在较高精度的范围内, 通过设计一种包围盒来获取高质量的物体点云, 添加了物体点云获取模块的设计方案。第二, 将粗配准的SAC-IA<citation id="213" type="reference"><link href="195" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>和细配准的ICP<citation id="214" type="reference"><link href="197" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>算法扩展到多片点云, 并且设计一种可以从两边向中间逼近的点云配准策略, 可以很好地消除累积误差。第三, 实现了一套完整的使用Kinect v2的三维物体重建系统。实验表明, 该系统具有重建精度高、操作方便且设备要求低等优点。</p>
+                </div>
+                <h3 id="42" name="42" class="anchor-tag"><b>1 获取点云</b></h3>
+                <div class="p1">
+                    <p id="43">在使用Kinect v2获取三维点云之前, 需要对Kinect v2进行标定。现阶段被广泛地应用于相机标定的方法是张正友标定法<citation id="215" type="reference"><link href="199" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>。文献<citation id="216" type="reference">[<a class="sup">16</a>]</citation>通过对比标定前和标定后的深度图像, 发现误差很小, 表明Kinect v2的内部芯片已经嵌入了对彩色摄像头和红外摄像头进行标定的程序。本文使用Kinect API中的MapDepthPointTo CameraSpace ( ) 函数直接将深度图像转换为三维点云。所以本文并没有对Kinect v2进行额外的标定。图1获取的是展示台上放一把椅子的场景点云, 可以看出最左边的墙体和边缘出现了大量的噪声和凸起的情况, 采样效果很差。这是由于点到平面距离的标准方差<i>x</i> (mm) 与传感器到平面的距离<i>y</i> (m) 成如下线性关系<citation id="217" type="reference"><link href="193" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="44"><i>y</i>=0.547 2<i>x</i>+1.258      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="45">式 (1) 表明在Kinect v2的有效范围内 (0.5米到5.0米) 随着传感器到平面距离的增大, 采样点云边缘处的残差也随之增大。本文将Kinect v2与所要重建的物体的距离<i>d</i>设置为1米, Kinect v2正对着所要重建物体, 即中心位置。这样可以保证所要重建物体的点云尽量精确且不会由于个别点没有深度数据而产生空洞。</p>
+                </div>
+                <div class="area_img" id="46">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201906028_046.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 包含目标物体的场景点云" src="Detail/GetImg?filename=images/JYRJ201906028_046.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 包含目标物体的场景点云  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201906028_046.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="47" name="47" class="anchor-tag"><b>2 点云处理</b></h3>
+                <div class="p1">
+                    <p id="48">从图1可以看出, 目标物体点云包含在获取的场景点云中, 需要将目标物体点云从整个场景中提取出来。所采样的是具有x、y、z坐标信息的点云。要想分离出这个椅子, 需要保证这个椅子的三维坐标与所在场景及地面、三面墙体和天花板没有交集。本文通过设计一种三维包围盒来分离目标物体点云。具体是使用x、y、z三个方向的直通滤波器将椅子周围的点云过滤出去, 得到只包含椅子的点云。在本文中在x、y、z三个方向上的直通滤波器取值范围为:</p>
+                </div>
+                <div class="area_img" id="49">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JYRJ201906028_04900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="51">分离结果如图2所示, 图2 (a) 是在初始位置分离出的点云, 图2 (b) 是椅子旋转一定角度后分离出的点云。本文需要使用Kinect v2采集椅子360°全方位的点云。为了使得实验便于操作, 本文使用物体绕中心自转360°来代替Kinect v2围绕物体旋转360°获取不同角度的点云。<i>x</i>的坐标范围要适当的大一点, 因为其在旋转过程中<i>x</i>的最大值是椅子点云长和宽的对角线长度。</p>
+                </div>
+                <div class="area_img" id="52">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201906028_052.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 处理之后的点云" src="Detail/GetImg?filename=images/JYRJ201906028_052.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 处理之后的点云  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201906028_052.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="53">从图2 (a) 中可以看出在实际应用中由于受到视线遮挡、障碍物等因素的影响, 点云数据中往往存在着一些离群点, 这些离群点会使重建物体产生毛刺, 降低还原度。本文使用PCL点云库中的去除离群点的滤波器来进行处理, 效果如图2 (c) 所示, 由于篇幅原因去除离群点的原理不再展开论述。</p>
+                </div>
+                <h3 id="54" name="54" class="anchor-tag"><b>3 点云配准</b></h3>
+                <div class="p1">
+                    <p id="55">本节中点云配准分为三步, 第一步是对两片点云进行粗配准, 使得两片点云中公共部分尽量重合, 减少ICP算法的迭代次数。本文使用采样一致性初始配准算法 (Sample Consensus Initial Alignment, SAC-IA) 进行粗配准。第二步利用经典的ICP算法将已经具有较好位置的两片点云进行细配准。第三步设计一种可以减小累积误差从两边逼近的适合多片点云的配准算法, 从而获得一个完整的全方位的物体点云。</p>
+                </div>
+                <h4 class="anchor-tag" id="56" name="56"><b>3.1 点云粗配准</b></h4>
+                <div class="p1">
+                    <p id="57">采样一致性初始配准算法 (Sample Consensus Initial Alignment, SAC-IA) 依赖特征直方图, 所以需要先计算点云的快速特征点直方图描述器 (FPFH) <citation id="218" type="reference"><link href="203" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>, 假设待配准点云记为<i>P</i>, 目标点云记为<i>Q</i>。算法一般流程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="58">1) 从<i>P</i>中选择<i>n</i>个采样点, 两个相邻采样点之间的距离需要大于之前设定好的最小距离阈值<i>d</i>使得采样点具有不同的FPFH特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">2) 在<i>Q</i>中寻找和<i>P</i>中采样点具有相似FPFH特征的点, 当不止一个点时, 就在这些点中随机挑选一个点作为<i>P</i>在<i>Q</i>中的对应点。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">3) 计算这两片点云对应点之间刚体变换矩阵, 使用变换后的距离误差和函数的大小作为当前配准变换后性能优劣的标准。距离误差和函数使用Huber罚函数表示, 记为:</p>
+                </div>
+                <div class="p1">
+                    <p id="61"><mathml id="62"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>Η</mi></mstyle><mo stretchy="false"> (</mo><mi>l</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo></mrow></math></mathml>      (3) </p>
+                </div>
+                <div class="p1">
+                    <p id="63">式中:</p>
+                </div>
+                <div class="area_img" id="64">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JYRJ201906028_06400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="66">式 (4) 中<i>m</i><sub><i>l</i></sub>为之前设定好的阈值, 第<i>i</i>组对应点变换之后的距离差为<i>l</i><sub><i>i</i></sub>。当误差函数的值达到最小时, 此时的配准变换矩阵<citation id="219" type="reference"><link href="205" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>就是最优解。最后将<i>P</i>通过矩阵变换得到配准结果。具体流程如图3所示。</p>
+                </div>
+                <div class="area_img" id="67">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201906028_067.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 SAC-IA 算法流程图" src="Detail/GetImg?filename=images/JYRJ201906028_067.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 SAC-IA 算法流程图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201906028_067.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="68" name="68"><b>3.2 ICP算法简介</b></h4>
+                <div class="p1">
+                    <p id="69">ICP算法将两个来自不同坐标系具有重叠部分的三维数据点集, 通过迭代求解出两个点集之间的刚体变换矩阵来进行配准。迭代最近点算法的基本思想是:已知两个对应点集合为:</p>
+                </div>
+                <div class="p1">
+                    <p id="70"><i>X</i>={<i>x</i><sub>1</sub>, <i>x</i><sub>2</sub>, …, <i>x</i><sub><i>n</i></sub>}      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="71"><i>P</i>={<i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>, …, <i>p</i><sub><i>n</i></sub>}      (6) </p>
+                </div>
+                <div class="p1">
+                    <p id="72">求解:旋转矩阵<b><i>R</i></b>和平移向量<b><i>t</i></b>, 目标函数为:</p>
+                </div>
+                <div class="p1">
+                    <p id="73"><mathml id="74"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>E</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">R</mi><mo>, </mo><mi mathvariant="bold-italic">t</mi><mo stretchy="false">) </mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>arg</mi><mspace width="0.25em" /><mi>min</mi></mrow></mstyle><mrow><mi mathvariant="bold-italic">R</mi><mo>, </mo><mi mathvariant="bold-italic">t</mi></mrow></munder><mfrac><mn>1</mn><mrow><mi>Ν</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>Ν</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></munderover><mo stretchy="false">∥</mo></mstyle><mi>x</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mi mathvariant="bold-italic">R</mi><mi>p</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mi mathvariant="bold-italic">t</mi><mo stretchy="false">∥</mo><msup><mrow></mrow><mn>2</mn></msup></mrow></math></mathml>      (7) </p>
+                </div>
+                <div class="p1">
+                    <p id="75">算法流程概括如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="76">1) 在点集<i>P</i>中寻找与点集<i>X</i>中的对应点:</p>
+                </div>
+                <div class="p1">
+                    <p id="77"><i>y</i>={<i>y</i><sub>1</sub>, <i>y</i><sub>2</sub>, …, <i>y</i><sub><i>n</i></sub>}      (8) </p>
+                </div>
+                <div class="p1">
+                    <p id="78">2) 求解:旋转矩阵<b><i>R</i></b>和平移向量<b><i>t</i></b>, 其目标函数为:</p>
+                </div>
+                <div class="p1">
+                    <p id="79"><mathml id="80"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>E</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">R</mi><mo>, </mo><mi mathvariant="bold-italic">t</mi><mo stretchy="false">) </mo><mo>=</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>arg</mi><mspace width="0.25em" /><mi>min</mi></mrow></mstyle><mrow><mi mathvariant="bold-italic">R</mi><mo>, </mo><mi mathvariant="bold-italic">t</mi></mrow></munder><mfrac><mn>1</mn><mrow><mi>Ν</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></mfrac><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>Ν</mi><msub><mrow></mrow><mi>p</mi></msub></mrow></munderover><mo stretchy="false">∥</mo></mstyle><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mi mathvariant="bold-italic">R</mi><mi>x</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mi mathvariant="bold-italic">t</mi><mo stretchy="false">∥</mo><msup><mrow></mrow><mn>2</mn></msup></mrow></math></mathml>      (9) </p>
+                </div>
+                <div class="p1">
+                    <p id="81">3) 更新点云模型:</p>
+                </div>
+                <div class="p1">
+                    <p id="82"><i>y</i><sup><i>k</i>+1</sup>={<i>y</i><mathml id="83"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>i</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msubsup></mrow></math></mathml>|<i>y</i><mathml id="84"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>i</mi><mi>k</mi></msubsup></mrow></math></mathml>=<b><i>R</i></b><sup><i>k</i></sup><i>x</i><mathml id="85"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>i</mi><mi>k</mi></msubsup></mrow></math></mathml>+<b><i>t</i></b><sup><i>k</i></sup>, <i>x</i><mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>i</mi><mi>k</mi></msubsup></mrow></math></mathml>∈<i>X</i>}      (10) </p>
+                </div>
+                <div class="p1">
+                    <p id="87">4) 计算两个对应点集之间的距离:</p>
+                </div>
+                <div class="p1">
+                    <p id="88"><mathml id="89"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><msup><mrow></mrow><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo stretchy="false">∥</mo></mstyle><mi>y</mi><msubsup><mrow></mrow><mi>i</mi><mrow><mi>k</mi><mo>+</mo><mn>1</mn></mrow></msubsup><mo>-</mo><mi>p</mi><msubsup><mrow></mrow><mi>i</mi><mi>k</mi></msubsup><mo stretchy="false">∥</mo></mrow><mi>n</mi></mfrac></mrow></math></mathml>      (11) </p>
+                </div>
+                <div class="p1">
+                    <p id="90">5) 若 <i>d</i><sup><i>k</i>+1</sup>&lt;<i>l</i> (<i>l</i>为给定阈值) 则算法结束, 否则返回步骤1。具体流程如图4所示。</p>
+                </div>
+                <div class="area_img" id="91">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201906028_091.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 ICP算法流程图" src="Detail/GetImg?filename=images/JYRJ201906028_091.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 ICP算法流程图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201906028_091.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="92" name="92"><b>3.3 多片点云配准</b></h4>
+                <div class="p1">
+                    <p id="93">无论是采样一致性初始配准算法还是ICP算法都是针对两片点云进行配准的, 一个作为目标点云, 一个作为待配准点云, 通过计算一个刚体变换矩阵使得待配准点云尽可能地和目标点云重合。在物体重建的过程中不可能通过两片配准的点云来刻画整个物体所有的三维结构, 因此本节将讨论如何将多片不同角度的点云进行拼接, 并且设计一种可以消除累积误差的多片点云配准算法。如图5所示, 将Kinect v2固定在椅子一米左右的正前方, 然后将椅子绕圆心进行自转。每自转1/24圆的时候用Kinect v2采集一帧深度图像, 转换为点云。记第一片即初始位置的点云为<i>p</i><sub>1</sub>, 第二片为<i>p</i><sub>2</sub>, 以此类推可以得到<i>p</i><sub>3</sub>, …, <i>p</i><sub>24</sub>, 绕完一周之后可知点云<i>p</i><sub>1</sub>和<i>p</i><sub>24</sub>为同一个位置即初始位置上的相同点云。</p>
+                </div>
+                <div class="area_img" id="94">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201906028_094.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 点云采集示意图" src="Detail/GetImg?filename=images/JYRJ201906028_094.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 点云采集示意图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201906028_094.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="95">将多片点云进行配准时, 由于点云采集误差, 人为和所用算法的原因, 多次两两配准时, 会产生累积误差, 使点云配准的精度随着点云数目的增多而逐渐降低, 使得重建的模型没有很好的还原度。本文提出一种从两边向中间进行逼近的适合多片点云的配准算法。其主要思想如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="96">将所采集的点云<i>p</i><sub>1</sub>, <i>p</i><sub>2</sub>, …, <i>p</i><sub>24</sub>依次存入元素为PointXYZ的数组中。全局点云初始值<i>p</i><sub>sum</sub>为<i>p</i><sub>1</sub>, <i>p</i><sub>1</sub>为待配准点云, <i>p</i><sub>2</sub>为目标点云, 通过SAC-IA进行粗配准获得良好的初始位置, 再利用ICP算法计算相邻两片点云即<i>p</i><sub>1</sub>与<i>p</i><sub>2</sub>的刚体变换矩阵<b><i>H</i></b><sub>1</sub>。当全局点云<i>p</i><sub>sum</sub>经过<i>p</i><sub>1</sub>与<i>p</i><sub>2</sub>的变换矩阵<b><i>H</i></b><sub>1</sub>时<i>p</i><sub>sum</sub>被移动到<i>p</i><sub>2</sub>的位置上。<i>p</i><sub>sum</sub>更新为<i>p</i><sub>1</sub>与<i>p</i><sub>2</sub>的和, 接着对<i>p</i><sub>sum</sub>进行降采样除去重叠部分的点云减少重影。以此类推, 再用同样的方法将<i>p</i><sub>sum</sub>移动到<i>p</i><sub>3</sub>, <i>p</i><sub>4</sub>, …的位置上, 当<i>p</i><sub>sum</sub>移动到<i>p</i><sub>24</sub>的位置上时, 即完成所有24片点云的配准, 此时<i>p</i><sub>sum</sub>为一个完整的物体点云。使用这种方法, 虽然一开始<i>p</i><sub>1</sub>和<i>p</i><sub>24</sub>在同一位置上, 但是随着误差的累加, <i>p</i><sub>1</sub>慢慢偏离初始位置, 使其不能与<i>p</i><sub>24</sub>完全重合, 出现不能闭环的现象。由于无论是从轨迹圆的左边开始还是从右边开始, 最终的目的位置都是一致的。在之前的算法中并没有利用这一特性, 导累积致误差增大, 在一些精细的物体进行重建时尤为明显。本文使用从两边向中间逼近的方法来减少累积误差。计算数组的中间值下标mid, 设置一个容错尺度<i>t</i>。左边数组的长度sizeA为mid+<i>t</i>, 右边数组的长度sizeB为mid-<i>t</i>, 通过在中间值的左边和右边多拼接几片点云, 来增加物体的重叠范围, 达到闭环的目的。从<i>p</i><sub>mid+<i>t</i></sub>和<i>p</i><sub>mid-<i>t</i></sub>分别向终点位置<i>p</i><sub>1</sub>和<i>p</i><sub>24</sub>进行逼近, 最后再将左右两边总的点云<i>p</i><sub>sumA</sub>和<i>p</i><sub>sumB</sub>相加即得到整个<i>p</i><sub><i>sum</i></sub>的点云模型, 算法流程图如图6所示。</p>
+                </div>
+                <div class="area_img" id="97">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201906028_097.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 多片点云配准流程图" src="Detail/GetImg?filename=images/JYRJ201906028_097.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 多片点云配准流程图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201906028_097.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="98" name="98" class="anchor-tag"><b>4 Kinect v2物体重建系统</b></h3>
+                <div class="p1">
+                    <p id="99">Kinect v2对平台的要求如下, Win8/ Win8.1操作系统, Visual Studio 2012以上软件开发平台, 显卡支持DX11, 内置USB 3.0, 4 GB以上内存, 64位的CPU, i7, 2.5 GHz以上更佳。本文系统构建的环境是, Win 8.1/Visual Studio 2013/AMD RADEON R9 M290X/ USB3.0/8 GB/i5-4690 3.5 GHz。</p>
+                </div>
+                <div class="p1">
+                    <p id="100">本系统使用C++程序开发语言, 利用Kinect v2内置接口获取点云数据, 以及PCL1.8.0版本<citation id="220" type="reference"><link href="205" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>的点云库对点云数据进行处理。以上都需要在Visual Studio 2013的开发环境下进行编译使用。为了使重建效果更好地表现出来, 本文使用MeshLab2016对配准好的点云进行曲面重建。</p>
+                </div>
+                <div class="p1">
+                    <p id="101">本文重建的物体为一个高约80 cm, 长约55 cm, 宽约45 cm的靠椅。如图7 (a) 所示是左半部分<i>p</i><sub>sumA</sub>的点云配准效果图, 右边的扶手和椅子腿没有重建完整, 点云较为稀疏。图7 (b) 是右半部分<i>p</i><sub>sumB</sub>的点云配准效果图, 左边的扶手和椅子腿有所缺失。图7 (c) 是左右两边进行相加之后p<sub>sum</sub>的点云结果, 可以看到椅子已经完整地配准好。图7 (d) 是使用本文算法的椅子重建效果的细节图, 可以看到椅子背部的曲线, 轮廓几乎一致的, 没有出现重影现象。图7 (e) 是仅仅使用ICP算法将多片点云依次叠加进行配准的椅子局部效果图, 可以看到椅子的背部并没有被完全配准。由于误差的累积, 之后的点云与初始点云的偏差越来越大, 导致后面的点云配准的效果越来越差。为了验证本文算法的一般性, 本文选择了一个精细的高约29 cm, 肩宽约20 cm完全纯白的大卫石膏头像。由于石膏头像具有以下两个特点: (1) 体积较小, 面部精细, 头发的部分特征相似且重复性较高。 (2) Kinect v2本身采样的分辨率较低, 对面部细节刻画较为模糊。这些都给石膏头像点云配准增加了难度, 更容易比较出本文算法在点云配准效果的优越性。本文将大卫头像每次旋转10°采集一次场景点云, 然后设计三维包围盒将石膏头像点云从场景中分离出来。当石膏头像旋转一周之后, 将得到36片不同角度的大卫石膏头像点云, 图7 (f) 是使用传统的ICP算法进行配准的效果图。可以看到肩部和背部叠加在一起, 当配准到第6片点云时由于p<sub><i>sum</i></sub>误差累积过多ICP算法完全失效, 导致整个石膏头像配准失败。图7 (g) 是使用本文算法所配准好的石膏头像点云。可以看出, 石膏头像面部轮廓较为明显和清晰, 石膏头像的肩部平滑, 轮廓清晰。由此可以得出本文算法比传统的ICP算法进行叠加配准物体的准确度更高。为了使得物体的还原度更好, 本文使用MeshLab来对物体点云进行实体显示。图7 (h) 、图7 (i) 为使用本文算法对椅子点云和石膏头像点云在MeshLab中进行曲面重建的效果图。可以看出, 本文所重建的物体具有一般性, 且重建的物体还原度高。</p>
+                </div>
+                <div class="area_img" id="104">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201906028_10400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 物体重建效果图" src="Detail/GetImg?filename=images/JYRJ201906028_10400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 物体重建效果图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201906028_10400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="104">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201906028_10401.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 物体重建效果图" src="Detail/GetImg?filename=images/JYRJ201906028_10401.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 物体重建效果图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201906028_10401.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="105" name="105" class="anchor-tag"><b>5 结 语</b></h3>
+                <div class="p1">
+                    <p id="106">通过分析Kinect获取点云的成像特点, 将所要提取的物体点云放在采样精度高的范围内, 获取高质量的物体点云, 增加了物体点云获取模块的设计方案。本文着重提出一种适用于多片点云的配准算法, 该算法策略配准精度高、适用性好。本文的系统适用于各种物体的重建, 不受到三维立方体约束, 重建物体的体积不受限制且还原度高。下一步的工作重点将使用GPU加速, 实现一种实时三维重建系统。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="171">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Lock-in time-of-flight (ToF) cameras: A survey">
+
+                                <b>[1]</b> Foix S, Alenya G, Torras C. Lock-in Time-of-Flight (To F) cameras:A survey[J]. IEEE Sensors Journal, 2011, 11 (9) :1917-1926.
+                            </a>
+                        </p>
+                        <p id="173">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000007816&amp;v=MjM2NjVpZklZN0s3SHRqTnI0OUZaT3NJQkgwL29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnRGaW5sVXJ6SUkxMFFieGM9Tg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> Shen C H, Fu H B, Chen K, et al. Structure recovery by part assembly[J]. ACM Transactions on Graphics, 2012, 31 (6) :Article No. 180.
+                            </a>
+                        </p>
+                        <p id="175">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000007774&amp;v=MzA0NDRaZVp0RmlubFVyeklJMTBRYnhjPU5pZklZN0s3SHRqTnI0OUZaT3NJQzNzOW9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1udw==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> Kim Y M, Mitra N J, Yan D M, et al. Acquiring 3D indoor environments with variability and repletion[J]. ACM Transactions on Graphics, 2012, 31 (6) :Article No. 138.
+                            </a>
+                        </p>
+                        <p id="177">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000002893&amp;v=MDQ3MDBIdGpOcjQ5RlpPc05CSFU2b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadEZpbmxVcnpJSTEwUWJ4Yz1OaWZJWTdLNw==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> Chaudhuri S, Koltun V. Data-driven suggestions for creativity support in 3D modeling[J]. ACM Transactions on Graphics, 2010, 29 (6) :Article No. 183.
+                            </a>
+                        </p>
+                        <p id="179">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=KinectFusion: Real-time dense surface mapping and tracking">
+
+                                <b>[5]</b> Newcombe R A, Izadi S, Hilliges O, et al. Kinect Fusion:real-time dense surface mapping and tracking[C]//201110th IEEE International Symposium on Mixed and Augmented Reality (ISMAR) . New York:IEEE Press, 2011:127-136.
+                            </a>
+                        </p>
+                        <p id="181">
+                            <a id="bibliography_6" >
+                                    <b>[6]</b>
+                                 Whelan T, Kaess M, Fallon M, et al. Kintinuous:Spatially extended Kinect Fusion[C]//RSS Workshop on RGB-D:Advanced Reasoning with Depth Cameras, 2012.
+                            </a>
+                        </p>
+                        <p id="183">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Kintinuous:Spatially extended KinectFusion">
+
+                                <b>[7]</b> Whelan T, McDonald J B, Kaess M, et al. Kintinuous:spatially extended kinectfusion[C]//RSS Workshop on RGBD:Advanced Reasoning with Depth Cameras, 2012.
+                            </a>
+                        </p>
+                        <p id="185">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000012337&amp;v=MTM5MTJlcnFRVE1ud1plWnRGaW5sVXJ6SUkxMFFieGM9TmlmSVk3SzdIdGpOcjQ5RlpPb05EMzgrb0JNVDZUNFBRSC9pclJkRw==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> Chen J, Bautembach D, Izadi S. Scalable real-time volumetric surface reconstruction[J]. ACM Transactions on Graphics, 2013, 32 (4) :Article No. 63.
+                            </a>
+                        </p>
+                        <p id="187">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015635504.nh&amp;v=MDA2ODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl2bVY3ck5WRjI2RzdXN0c5VE1xNUViUElRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b>谭歆. Kinect Fusion三维重建的再优化[D].杭州:浙江大学, 2015.
+                            </a>
+                        </p>
+                        <p id="189">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJF201306016&amp;v=MjU0MTR6cXFCdEdGckNVUjdxZlp1WnRGeXZtVjdyTkx6N0JhTEc0SDlMTXFZOUVZb1FLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b>周瑾, 潘建江, 童晶, 等.使用Kinect快速重建三维人体[J].计算机辅助设计与图形学学报, 2013, 25 (6) :873-879.
+                            </a>
+                        </p>
+                        <p id="191">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJF201411006&amp;v=MjU5NTlHRnJDVVI3cWZadVp0Rnl2bVY3ck5MejdCYUxHNEg5WE5ybzlGWW9RS0RIODR2UjRUNmo1NE8zenFxQnQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b>宫钰嵩, 张岩, 文艳, 等. Kinect扫描数据驱动的几何建模方法[J].计算机辅助设计与图形学学报, 2014 (11) :1957-1965.
+                            </a>
+                        </p>
+                        <p id="193">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201610006&amp;v=MjE3OThRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0Rnl2bVY3ck5OeWZUYkxHNEg5Zk5yNDlGWW8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b>李诗锐, 李琪, 李海洋, 等.基于Kinect v2的实时精确三维重建系统[J].软件学报, 2016, 27 (10) :2519-2529.
+                            </a>
+                        </p>
+                        <p id="195">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Fast Point Feature Histograms (FPFH)for 3D Registration">
+
+                                <b>[13]</b> Rusu R B, Blodow N, Beetz M. Fast point feature histograms (FPFH) for 3D registration[C]//2009 IEEE International Conference On Robotics and Automation. IEEE, 2009:3212-3217.
+                            </a>
+                        </p>
+                        <p id="197">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A method for registration of 3-D shapes">
+
+                                <b>[14]</b> Besl P J, Mckay N D. A method for registration of 3-d shapes[J]. IEEE Transactions on Pattern Analysis and Machine Intelligence, 1992, 14 (2) :239-256.
+                            </a>
+                        </p>
+                        <p id="199">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A Flexible New Technique for Camera Calibration">
+
+                                <b>[15]</b> Zhang Z. A flexible new technique for camera calibration[J]. IEEE Computer Society, 2000, 22 (11) :1330-1334.
+                            </a>
+                        </p>
+                        <p id="201">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Technical description of Kinect calibration">
+
+                                <b>[16]</b> Konolige K, Mihelich P. Technical description of Kinect calibration[EB/OL]. 2011[2012-08-10]. http://www.ros/wiki/kinect-calibration/technical.
+                            </a>
+                        </p>
+                        <p id="203">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The improved ICP stitching algorithm of point cloud on 3D model Reconstruction">
+
+                                <b>[17]</b> Tu Z Q, Zhang K, Yang C L, et al. The improved ICP stitching algorithm of point cloud on 3D model Reconstruction[J]. Transactions of the China Welding Institution, 2013, 34 (1) :97-100.
+                            </a>
+                        </p>
+                        <p id="205">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=3D is here:Point Cloud Library (PCL)">
+
+                                <b>[18]</b> Rusu R B, Cousins S. 3D is here:Point Cloud Library (PCL) [C]//IEEE International Conference on Robotics and Automation. IEEE, 2011:1-4.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JYRJ201906028" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201906028&amp;v=MDAxMTBadEZ5dm1WN3JLTHpUWlpMRzRIOWpNcVk5SGJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnU=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZKQ28xeDVteFZmK0p3enVSVkNoMD0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

@@ -1,0 +1,779 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637138337149221250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dDGGC201903017%26RESULT%3d1%26SIGN%3dJaOT0sa%252bCL3SkP%252b9XsbM1ruYvsc%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DGGC201903017&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=DGGC201903017&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DGGC201903017&amp;v=MDA2NTVrV3JySUlTck1iYkc0SDlqTXJJOUVZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnFGeXo=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#25" data-title="引言 ">引言</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#29" data-title="1 系统设计 ">1 系统设计</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#30" data-title="1.1 SQLite数据库">1.1 SQLite数据库</a></li>
+                                                <li><a href="#34" data-title="1.2 数据库表设计">1.2 数据库表设计</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#40" data-title="2 系统功能 ">2 系统功能</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#41" data-title="2.1 自动下载NIED的K-NET和KiK-net数据">2.1 自动下载NIED的K-NET和KiK-net数据</a></li>
+                                                <li><a href="#47" data-title="2.2 数据压缩原理及效果">2.2 数据压缩原理及效果</a></li>
+                                                <li><a href="#52" data-title="2.3 格式转换输入输出">2.3 格式转换输入输出</a></li>
+                                                <li><a href="#54" data-title="2.4 相关文献资料存储">2.4 相关文献资料存储</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#56" data-title="3 系统应用实例 ">3 系统应用实例</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#60" data-title="4 结论 ">4 结论</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#31" data-title="&lt;b&gt;表&lt;/b&gt;1 &lt;b&gt;几种常用数据库对比&lt;/b&gt;"><b>表</b>1 <b>几种常用数据库对比</b></a></li>
+                                                <li><a href="#70" data-title="表2 地震信息表">表2 地震信息表</a></li>
+                                                <li><a href="#72" data-title="表3 台站信息表">表3 台站信息表</a></li>
+                                                <li><a href="#37" data-title="&lt;b&gt;表&lt;/b&gt;4 &lt;b&gt;地震动参数表&lt;/b&gt;"><b>表</b>4 <b>地震动参数表</b></a></li>
+                                                <li><a href="#73" data-title="表5 波形数据表">表5 波形数据表</a></li>
+                                                <li><a href="#74" data-title="表6 波形数据表2">表6 波形数据表2</a></li>
+                                                <li><a href="#75" data-title="表7 震源机制表">表7 震源机制表</a></li>
+                                                <li><a href="#76" data-title="表8 文献资料表">表8 文献资料表</a></li>
+                                                <li><a href="#44" data-title="&lt;b&gt;表&lt;/b&gt;9 Kik&lt;b&gt;与&lt;/b&gt;knet&lt;b&gt;目录结构说明&lt;/b&gt;"><b>表</b>9 Kik<b>与</b>knet<b>目录结构说明</b></a></li>
+                                                <li><a href="#45" data-title="&lt;b&gt;表&lt;/b&gt;10 &lt;b&gt;本地数据目录说明&lt;/b&gt;"><b>表</b>10 <b>本地数据目录说明</b></a></li>
+                                                <li><a href="#77" data-title="图1 系统参数设置">图1 系统参数设置</a></li>
+                                                <li><a href="#78" data-title="图2 NIED数据下载及数据库更新">图2 NIED数据下载及数据库更新</a></li>
+                                                <li><a href="#51" data-title="&lt;b&gt;表&lt;/b&gt;11 &lt;b&gt;十进制数据的二进制表示及非零有效字节数&lt;/b&gt;"><b>表</b>11 <b>十进制数据的二进制表示及非零有效字节数</b></a></li>
+                                                <li><a href="#58" data-title="&lt;b&gt;图&lt;/b&gt;3 &lt;b&gt;系统应用功能实例&lt;/b&gt;"><b>图</b>3 <b>系统应用功能实例</b></a></li>
+                                                <li><a href="#59" data-title="&lt;b&gt;图&lt;/b&gt;3 (&lt;b&gt;续&lt;/b&gt;) "><b>图</b>3 (<b>续</b>) </a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="79">
+
+
+                                    <a id="bibliography_1" >
+                                        <b>[1]</b>
+                                     地震工程学编辑委员会.防震减灾百科全书-地震工程学[M].北京:地震出版社, 2014.Editorial Committee of Earthquake Engineering.Encyclopedia of protecting against and mitigating earthquake disasters:Earthquake Engineering[M].Beijing:Seismological Press, 2014. (in Chinese) </a>
+                                </li>
+                                <li id="81">
+
+
+                                    <a id="bibliography_2" title=" 陈永新.基于KiK-net强震动记录对不同土层条件下场地非线性反应的研究[D].北京:中国地震局地球物理研究所, 2015.CHEN Yongxin.Research on nonlinearity in different soil site effect based on KiK-net strong motion records[D].Beijing:Institute of Geophysics, CEA, 2015. (in Chinese) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015398132.nh&amp;v=MTYwMjd4RnREUHJaRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnFGeXprV3JySVZGMjZHN0M=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         陈永新.基于KiK-net强震动记录对不同土层条件下场地非线性反应的研究[D].北京:中国地震局地球物理研究所, 2015.CHEN Yongxin.Research on nonlinearity in different soil site effect based on KiK-net strong motion records[D].Beijing:Institute of Geophysics, CEA, 2015. (in Chinese) 
+                                    </a>
+                                </li>
+                                <li id="83">
+
+
+                                    <a id="bibliography_3" title=" 冀昆.基于H/V谱比法的场地特征研究[D].哈尔滨:中国地震局工程力学研究所, 2014.JI Kun.Estimation on site characteristic based on H/V spectral ratio method[D].Harbin:Institute of Engineering Mechanics, CEA, 2014. (in Chinese) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1014431308.nh&amp;v=MTA5NDI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnFGeXprV3JySVZGMjZHcmU3SDlMTXA1RWJQSVFLREg=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         冀昆.基于H/V谱比法的场地特征研究[D].哈尔滨:中国地震局工程力学研究所, 2014.JI Kun.Estimation on site characteristic based on H/V spectral ratio method[D].Harbin:Institute of Engineering Mechanics, CEA, 2014. (in Chinese) 
+                                    </a>
+                                </li>
+                                <li id="85">
+
+
+                                    <a id="bibliography_4" title=" 王亮.基于KiK-net强震台网的土层地震动特性研究[D].哈尔滨:中国地震局工程力学研究所, 2014.WANG Liang.The Research of soil layer seismic characteristic based on KiK-net strong-motion network[D].Harbin:Institute of Engineering Mechanics, CEA, 2014. (in Chinese) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1014431326.nh&amp;v=MDE1ODI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnFGeXprV3JySVZGMjZHcmU3SDlMT3FaRWJQSVFLREg=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         王亮.基于KiK-net强震台网的土层地震动特性研究[D].哈尔滨:中国地震局工程力学研究所, 2014.WANG Liang.The Research of soil layer seismic characteristic based on KiK-net strong-motion network[D].Harbin:Institute of Engineering Mechanics, CEA, 2014. (in Chinese) 
+                                    </a>
+                                </li>
+                                <li id="87">
+
+
+                                    <a id="bibliography_5" title=" 于海英, 谢礼立, 崔杰.强震及工程震害数据库网站系统研究与实现 [J].地震工程与工程振动, 2003, 23 (6) :1-8.YU Haiying, XIE Lili, CUI Jie.Study on website system of strong motion and engineering seismic damage database[J].Earthquake Engineering and Engineering Dynamics, 2003, 23 (6) :1-8. (in Chinese) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DGGC200303000&amp;v=MjEwNjViRzRIdExNckk5RlpJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacUZ5emtXcnJJSVNyTWI=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         于海英, 谢礼立, 崔杰.强震及工程震害数据库网站系统研究与实现 [J].地震工程与工程振动, 2003, 23 (6) :1-8.YU Haiying, XIE Lili, CUI Jie.Study on website system of strong motion and engineering seismic damage database[J].Earthquake Engineering and Engineering Dynamics, 2003, 23 (6) :1-8. (in Chinese) 
+                                    </a>
+                                </li>
+                                <li id="89">
+
+
+                                    <a id="bibliography_6" title=" 张红才.地震预警系统关键技术研究[D].哈尔滨:中国地震局工程力学研究所, 2013.ZHANG Hongcai.Study of key technologies in earthquake early warning system[D].Harbin:Institute of Engineering Mechanics, CEA, 2013. (in Chinese) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CDFD&amp;filename=1013342709.nh&amp;v=MjI3NTZQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnFGeXprV3JySVZGMjZIYkM4SE5iTXBwRWI=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         张红才.地震预警系统关键技术研究[D].哈尔滨:中国地震局工程力学研究所, 2013.ZHANG Hongcai.Study of key technologies in earthquake early warning system[D].Harbin:Institute of Engineering Mechanics, CEA, 2013. (in Chinese) 
+                                    </a>
+                                </li>
+                                <li id="91">
+
+
+                                    <a id="bibliography_7" title=" 宋晋东.高速铁路运行控制用地震动参数及单台地震预警技术研究[D].哈尔滨:中国地震局工程力学研究所, 2013.SONG Jindong, Research on seismic ground motion indices for operation control and single station earthquake early warning applied for hing-speed railawy[D].Harbin:Institute of Engineering Mechanics, CEA, 2013. (in Chinese) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CDFD&amp;filename=1013342710.nh&amp;v=MTI3MzM1RWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnFGeXprV3JySVZGMjZIYkM4SE5iTnI=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         宋晋东.高速铁路运行控制用地震动参数及单台地震预警技术研究[D].哈尔滨:中国地震局工程力学研究所, 2013.SONG Jindong, Research on seismic ground motion indices for operation control and single station earthquake early warning applied for hing-speed railawy[D].Harbin:Institute of Engineering Mechanics, CEA, 2013. (in Chinese) 
+                                    </a>
+                                </li>
+                                <li id="93">
+
+
+                                    <a id="bibliography_8" title=" 袁维珍.强地震动峰值周期特性研究[D].哈尔滨:中国地震局工程力学研究所, 2015.YUAN Weizhen, A study on peak period characteristics of strong earthquake records[D].Harbin:Institute of Engineering Mechanics, CEA, 2015. (in Chinese) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015652748.nh&amp;v=MDYzNzFJcDVFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacUZ5emtXcnJJVkYyNkc3VzlITmI=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         袁维珍.强地震动峰值周期特性研究[D].哈尔滨:中国地震局工程力学研究所, 2015.YUAN Weizhen, A study on peak period characteristics of strong earthquake records[D].Harbin:Institute of Engineering Mechanics, CEA, 2015. (in Chinese) 
+                                    </a>
+                                </li>
+                                <li id="95">
+
+
+                                    <a id="bibliography_9" title=" 马强.地震预警技术研究及应用[D].哈尔滨:中国地震局工程力学研究所, 2008.MA Qiang.Research on earthquake early warning technologies and application[D].Harbin:Institute of Engineering Mechanics, CEA, 2008. (in Chinese) " target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CDFD&amp;filename=2009057325.nh&amp;v=MTAwNjJDVVI3cWZadVpxRnl6a1dycklWMTI3RjdPOUdkTE9xcEViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         马强.地震预警技术研究及应用[D].哈尔滨:中国地震局工程力学研究所, 2008.MA Qiang.Research on earthquake early warning technologies and application[D].Harbin:Institute of Engineering Mechanics, CEA, 2008. (in Chinese) 
+                                    </a>
+                                </li>
+                                <li id="97">
+
+
+                                    <a id="bibliography_10" title=" Okada Y, Kasahara K, Hori S, et al.Recent progress of seismic observation networks in Japan-Hi-net, F-net, K-NET and KiK-net[J].Earth Planets and Space, 2004, 56:xv-xxviii." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD14070300006615&amp;v=MDk2NDFpbmxVcnZJSkY4ZGJ4ST1OajdCYXJLOEh0Yk1ySTlGWk9zSkNuMDhvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp0Rg==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         Okada Y, Kasahara K, Hori S, et al.Recent progress of seismic observation networks in Japan-Hi-net, F-net, K-NET and KiK-net[J].Earth Planets and Space, 2004, 56:xv-xxviii.
+                                    </a>
+                                </li>
+                                <li id="99">
+
+
+                                    <a id="bibliography_11" title=" Obara K, Kasahara K, Hori S, et al, A densely distributed high-sensitivity seismograph network in Japan:Hi-net by National Research Institute for Earth Science and Disaster Prevention[J].Review of Scientific Instruments, 2005, 76 (2) , 021301 (1-12) , doi.org/10.1063/1.1854197." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A densely distributed high-sensitivity seismograph network in Japan: Hi-net by National Research Institute for Earth Science and Disaster Prevention">
+                                        <b>[11]</b>
+                                         Obara K, Kasahara K, Hori S, et al, A densely distributed high-sensitivity seismograph network in Japan:Hi-net by National Research Institute for Earth Science and Disaster Prevention[J].Review of Scientific Instruments, 2005, 76 (2) , 021301 (1-12) , doi.org/10.1063/1.1854197.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=DGGC" target="_blank">地震工程与工程振动</a>
+                2019,39(03),168-175 DOI:10.13197/j.eeev.2019.03.168.lijg.017            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>NIED强震动数据管理分析系统的实现</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%8E%E4%BA%95%E5%86%88&amp;code=24897788&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">李井冈</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%A7%9A%E8%BF%90%E7%94%9F&amp;code=13540131&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">姚运生</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E4%B8%BD%E8%8A%AC&amp;code=27016205&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张丽芬</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%9B%BD%E5%9C%B0%E9%9C%87%E5%B1%80%E5%9C%B0%E9%9C%87%E7%A0%94%E7%A9%B6%E6%89%80(%E5%9C%B0%E9%9C%87%E5%A4%A7%E5%9C%B0%E6%B5%8B%E9%87%8F%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4)&amp;code=0172051&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中国地震局地震研究所(地震大地测量重点实验室)</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>KiK-net和K-NET是由日本防灾科学技术研究所 (简称:NIED) 负责维护管理的强震动台网。KiK-net和K-NET的观测设施广泛分布在日本全境, 其中KiK-net在观测点同时安装地表及井下强震仪, 进行对比观测, 观测到的强震动记录直接发送到NIED的强震观测中心, 通过网站 (http://www.kyoshin.bosai.go.jp) 对外公开共享。此外, 还提供了观测井的地质钻孔柱状图和钻孔剪切波测试数据。该强震动数据库为世界各地研究人员推进地震各方面研究提供了宝贵资源。根据NIED规则, 用户需要在NIED网站注册获得用户名和密码, 并且确保数据用于本人研究。本文基于C#语言开发了软件系统。设置好用户名和密码, 就可利用本文开发的软件系统自动下载KiK-net和K-NET数据, 并存入或更新研究者的本地数据库, 进而管理和使用本地的强震动数据, 此外系统还集成了强震动数据常用的分析处理算法, 提高研究人员的使用数据的效率。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%BC%BA%E9%9C%87%E5%8A%A8%E8%A7%82%E6%B5%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">强震动观测;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=KiK-net&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">KiK-net;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=K-NET&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">K-NET;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%89%AA%E5%88%87%E6%B3%A2%E9%80%9F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">剪切波速;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%BD%AF%E4%BB%B6%E7%B3%BB%E7%BB%9F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">软件系统;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=SQLite%E6%95%B0%E6%8D%AE%E5%BA%93&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">SQLite数据库;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    李井冈 (1981-) , 男, 助理研究员, 主要从事地震信息技术研究.E-mail:jinggang_li@126.com;
+                                </span>
+                                <span>
+                                    *姚运生 (1962-) , 男, 研究员, 博士, 主要从事地震工程、水库地震研究.E-mail:yunsheng@eqhb.gov.cn;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-04-28</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金项目 (41572354);</span>
+                                <span>中国地震局地震研究所所发展基金项目 (IS201216023);</span>
+                    </p>
+            </div>
+                    <h1><b>Implementation of administration and analysis system of NIED strong motion data</b></h1>
+                    <h2>
+                    <span>LI Jinggang</span>
+                    <span>YAO Yunsheng</span>
+                    <span>ZHANG Lifen</span>
+            </h2>
+                    <h2>
+                    <span>Institute of Seismolgy, CEA (Key Lab of Earthquake Geodesy)</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>KiK-net and K-net are the strong ground motion observation networks maintained by the Disaster Prevention Institute of Science and Technology (hereinafter referred to as NIED) . KiK-net observation facilities are distributed all over the country, and particularly accelerometers are installed both at surface and underground in each observation point for the comparative observation. Observation data are directly send to NIED strong earthquake center which shares the data widely through the website (http://www.kyoshin.bosai.go.jp) . Moreover, the website also provides the geological profile and shear-wave test data of borehole. The strong ground motion database provides valuable resources for researchers around the world to promote all aspects of earthquake research. The user should register in the NIED website and obtain the user name and password, and the data should be used without distributing to others by NIED convention. In this paper, we developed a software system with C# language. After setting user name and password into the software, it can automatically download NIED earthquake data from NIED website, and update/insert the data into local database. Moreover, it provides management tools and many strong motion analysis algorithms, which may improve the use efficiency of the researchers.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=strong%20motion%20observation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">strong motion observation;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=KiK-net&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">KiK-net;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=K-NET&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">K-NET;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=shear%20wave%20velocity&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">shear wave velocity;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=software%20system&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">software system;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=SQLite%20database&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">SQLite database;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-04-28</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>National Natural Science Foundation of China (41572354);</span>
+                                <span>Institute Development Foundation of Institute of Seismology (IS201216023);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="25" name="25" class="anchor-tag">引言</h3>
+                <div class="p1">
+                    <p id="26">强震动台网是布设于地震活动水平较高地区的固定台站或流动台站, 以及服务于特定研究目的的专用台阵组成的强震动观测网。台网记录的强震动数据是研究地震动衰减规律, 进行地震危险性分析、震害预测, 验证和改进结构抗震分析及设计方法, 确定新结构抗震设计标准和抗震措施的基础资料。地震多发国家都建设了不同规模的强震动观测台网, 如中国数字强震动观测台网, 日本K-NET, KiK-net台网, 美国Tri-Net台网等。中国地震局在21个地震重点监视区防御区建设了数字强震动台网, 该台网与2007年完成。在21个地震重点监视防御区布设1154个自由场固定地震动遥测台。中国数字强震动台网除全部采用先进的数字强震动观测仪器外, 对每个固定台站都做了详细的场地勘察, 包括钻孔、波速测量和地脉动测量等。</p>
+                </div>
+                <div class="p1">
+                    <p id="27">日本K-NET台网是由日本防灾科学技术研究所 (NIED) 负责建设管理的全国性强震动台网。日本汲取1995年阪神地震的经验教训, 提出了一系列推进地震灾害预防的措施, 其中之一是大力加强强震动观测, 促进地震工程研究和应用。1996年, NIED完成了K-NET网络建设, 共布设1031个观测台站, 平均间距20km, 使日本成为世界上强震仪布设密度最高的国家。台站设施配置K-NET 95型三分量强震动仪。KiK-net (Kiban-Kyoshin Net:基岩强震动台网) 的观测设施在全国范围内共有近700处, 其特点是在每个观测设施处设置了地表和井下两套强震仪。每个台站均提供了地质钻孔柱状图和剪切波速测试等资料。观测到的强震动数据直接发送到强震观测中心, 由防灾科研的网站 (http://www.kyoshin.bosai.go.jp) 向全球广泛地公开。观测点的地质钻孔柱状图和剪切波测试数据也能在该网站直接下载。为世界各地研究人员提供了宝贵的数据资源<citation id="101" type="reference"><link href="79" rel="bibliography" /><link href="81" rel="bibliography" /><link href="83" rel="bibliography" /><link href="85" rel="bibliography" /><link href="87" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>,<a class="sup">3</a>,<a class="sup">4</a>,<a class="sup">5</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="28">场地条件对地震动的影响显著, 研究其影响的最直接有效的方法是基于强震动观测的三维台站记录, 分析局部场地条件对地震动的影响。强震动观测的三维台阵中国有唐山响堂台阵和通海台阵用于场地效应的研究, 自贡西山公园山体地形影响台阵用于研究地形起伏对地震动的影响。日本KiK-net台站是世界上较密集的强震动台网、地震频发, 记录了大量强震动数据。利用日本强震动台网KiK-net中不同类型台站中大量强震动记录, 对比不同场地的地震动特性, 可以直接分析傅里叶谱卓越频率与震级和距离的关系, 以及上覆岩土层对地震动的影响。地震预警是目前地震服务社会的热点, 地震预警中广泛使用强震动记录数据、利用强震动数据快速确定震源位置以及地震震级是关键。因此要充分发掘KiK-net强震动数据在地震预警中的应用, 改进地震定位和震级确定的精度<citation id="102" type="reference"><link href="89" rel="bibliography" /><link href="91" rel="bibliography" /><link href="93" rel="bibliography" /><link href="95" rel="bibliography" /><sup>[<a class="sup">6</a>,<a class="sup">7</a>,<a class="sup">8</a>,<a class="sup">9</a>]</sup></citation>。NIED提供的KiK-net和K-NET数据在地震学及地震预警、场地效应等地震工程学研究中得到了广泛的应用并取得了众多的成果。为了更便于数据的维护使用, 本文基于.Net平台, 采用C#语言, 使用SQLite作为数据库, 开发了数据分析管理系统, 为研究人员提高数据使用效率, 自动下载、管理NIED强震动。</p>
+                </div>
+                <h3 id="29" name="29" class="anchor-tag">1 系统设计</h3>
+                <h4 class="anchor-tag" id="30" name="30">1.1 SQLite数据库</h4>
+                <div class="area_img" id="31">
+                    <p class="img_tit"><b>表</b>1 <b>几种常用数据库对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 1 Comparisons of common database systems</p>
+                    <p class="img_note"></p>
+                    <table id="31" border="1"><tr><td>数据库</td><td>复杂程度</td><td>单文件大小</td><td>数据库备份</td></tr><tr><td><br />Access</td><td>简单</td><td>小于2 GB</td><td>简单</td></tr><tr><td><br />SQL Server</td><td>复杂</td><td>大于2 GB</td><td>较复杂</td></tr><tr><td><br />Oracle</td><td>复杂</td><td>大于2 GB</td><td>较复杂</td></tr><tr><td><br />SQLite</td><td>简单</td><td>大于2 GB, 小于2 TB</td><td>简单</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="32">SQLite是一款稳定、开源的轻型数据库, 遵守 ACID 的关联式数据库管理系统, 能够与包括 C 语言在内的其他多种程序语言相结合, 能够执行大部分的 SQL 命令, 具有 ODBC 接口。SQLite 程序本身很小, 只在 250 K 左右, 却可以支持最大达到 2TB 的数据库大小, 这足可以满足一般科学与工程需要。相比于其他数据库软件, SQLite 安装简单方便, 不需要任何其他附加软件的安装。鉴于SQLite 的诸多优点, 在数据量不大时使用该数据库来管理数据是一个很好的选择, 这将大大的降低开发和维护成本。SQLite是目前比较流行的轻型嵌入式数据库, 占用资源较少, 效率高可靠性强, 支持主流操作系统, 并能跟多种程序语言相结合, 是存储数据库的首选. 与其他数据管理系统如 SQL Server、Orcalce等不同, SQLite数据库包含在磁盘上的一个文件中, 备份、复制非常方便 (表1) 。用户只需当作一般的文件进行处理即可, 无需了解专业数据库方面的知识。本系统采用SQLite作为数据库进行系统开发。</p>
+                </div>
+                <div class="p1">
+                    <p id="33">由于NIED强震动数据库保存了1996年至目前 (2016) 所有台站的数据, 以NIED提供的数据格式, 数据量大约360 GB, 采用本文提到的数据压缩方法, 大约可以压缩到原来的1/4, 即数据量大约100 GB。</p>
+                </div>
+                <h4 class="anchor-tag" id="34" name="34">1.2 数据库表设计</h4>
+                <div class="p1">
+                    <p id="35">强震动台网记录的数据去掉冗余, 大致可以归为几类:地震基本参数、地震的震源机制解信息、台站 (对于地震工程而言, 台站处钻孔剖面信息十分重要) 基本信息、波形数据、地震动参数信息、地震记录的反应谱、kik/knet相关文献信息是十分重要的。为此, 按台网创建kik和knet两个数据库, 各数据库包括地震基本信息表 (EQList) 、台站信息表 (StaList) 、波形数据表 (waveForm) 、波形无数据信息表 (waveFormNoData) 、地震动参数表 (EQMotionPara) 、震源机制表 (FocMech) 和文献库 (EQDocument) , 具体表结构见表2～表8。</p>
+                </div>
+                <div class="area_img" id="70">
+                                            <p class="img_tit">
+                                                表2 地震信息表
+                                                    <br />
+                                                Table 2 Earthquake information
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/DGGC201903017_07000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/DGGC201903017_07000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/DGGC201903017_07000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表2 地震信息表" src="Detail/GetImg?filename=images/DGGC201903017_07000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <div class="area_img" id="72">
+                                            <p class="img_tit">
+                                                表3 台站信息表
+                                                    <br />
+                                                Table 3 Earthquake stations
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/DGGC201903017_07200.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/DGGC201903017_07200.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/DGGC201903017_07200.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表3 台站信息表" src="Detail/GetImg?filename=images/DGGC201903017_07200.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <div class="area_img" id="37">
+                    <p class="img_tit"><b>表</b>4 <b>地震动参数表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 4 Ground motion parameters</p>
+                    <p class="img_note"></p>
+                    <table id="37" border="1"><tr><td>字段</td><td>含义</td><td>数据类型</td><td>字段</td><td>含义</td><td>数据类型</td></tr><tr><td><br />SerialID</td><td>序号</td><td>int</td><td>PGV</td><td>峰值速度</td><td>decimal</td></tr><tr><td><br />EQName</td><td>地震或</td><td>nchar (20) </td><td>PGD</td><td>峰值位移</td><td>decimal</td></tr><tr><td><br />StaCode</td><td>台站代码</td><td>nchar (10) </td><td>SpecIntensity</td><td>谱烈度</td><td>decimal</td></tr><tr><td><br />Component</td><td>分量</td><td>nchar</td><td>PArrival</td><td>P波到时</td><td>decimal</td></tr><tr><td><br />SampleRate</td><td>采样率</td><td>int</td><td>SArrival</td><td>P波到时</td><td>decimal</td></tr><tr><td><br />RecLength</td><td>记录长度</td><td>decimal</td><td>CharacPeriod</td><td>特征周期</td><td>decimal</td></tr><tr><td><br />Duration</td><td>持时</td><td>decimal</td><td>RespSpectra</td><td>反应谱</td><td>blob</td></tr><tr><td><br />PGA</td><td>峰值加速度</td><td>decimal</td><td>Comment</td><td>备注</td><td>nchar (200) </td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="73">
+                                            <p class="img_tit">
+                                                表5 波形数据表
+                                                    <br />
+                                                Table 5 EQ waveform information
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/DGGC201903017_07300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/DGGC201903017_07300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/DGGC201903017_07300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表5 波形数据表" src="Detail/GetImg?filename=images/DGGC201903017_07300.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <div class="area_img" id="74">
+                                            <p class="img_tit">
+                                                表6 波形数据表2
+                                                    <br />
+                                                Table 6 Seismic waveform data
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/DGGC201903017_07400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/DGGC201903017_07400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/DGGC201903017_07400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表6 波形数据表2" src="Detail/GetImg?filename=images/DGGC201903017_07400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <div class="area_img" id="75">
+                                            <p class="img_tit">
+                                                表7 震源机制表
+                                                    <br />
+                                                Table 7 EQ Focal mechanism
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/DGGC201903017_07500.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/DGGC201903017_07500.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/DGGC201903017_07500.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表7 震源机制表" src="Detail/GetImg?filename=images/DGGC201903017_07500.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <div class="area_img" id="76">
+                                            <p class="img_tit">
+                                                表8 文献资料表
+                                                    <br />
+                                                Table 8 EQ research documents
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/DGGC201903017_07600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/DGGC201903017_07600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/DGGC201903017_07600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表8 文献资料表" src="Detail/GetImg?filename=images/DGGC201903017_07600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <h3 id="40" name="40" class="anchor-tag">2 系统功能</h3>
+                <h4 class="anchor-tag" id="41" name="41">2.1 自动下载NIED的K-NET和KiK-net数据</h4>
+                <div class="p1">
+                    <p id="42">用户需要登录http://www.kik.bosai.go.jp/进行注册, 待网站管理员验证通过后, 即可下载数据。可以通过网页界面逐条数据、逐个地震进行下载。这就要求经常下载更新, 比较繁琐。NIED的KiK-net和K-NET数据是保存在一个FTP服务器上的。IP地址为158.203.31.151, 端口21. 由于数据实际上是存放在FTP服务器上, 用户也可以使用通用的FTP软件进行下载。NIED的FTP服务器上数据的根目录下包含all、kik、knet、utility四个文件夹 (表9) 。knet存储该台网的强震动波形、多种格式台站信息。utility为提供的工具软件。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">本文开发的系统实现了FTP下载功能, 系统可以查看数据是否有更新, 若有更新, 则可以下载数据, 并更新本地数据库。本地文件夹如表10所示, 用于临时存储对应文件。</p>
+                </div>
+                <div class="area_img" id="44">
+                    <p class="img_tit"><b>表</b>9 Kik<b>与</b>knet<b>目录结构说明</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 9 Directory structure illustration of kik and knet in FTP server</p>
+                    <p class="img_note"></p>
+                    <table id="44" border="1"><tr><td><br />目 录</td><td>说  明</td></tr><tr><td><br />/all</td><td>K-NET 和KiK-net加速度、烈度衰减、质点运动等图件</td></tr><tr><td><br />/knet</td><td>NIED发布的所有K-NET数据</td></tr><tr><td><br />/knet/alldata/YYYY/MM/YYYYMMDDHHMISS.tar.gz</td><td>各台站的强震动数据及波形图件压缩存入一个tar.gz压缩包中。例如, 发生于12:34:00 March 12th 2000的地震存储在 /1comp/2000/03/20000312123400.tar.gz</td></tr><tr><td><br />/knet/sitedat/</td><td>K-NET场地条件数据资料目录, 每个台站一个文件。</td></tr><tr><td><br />/knet/sitegif/</td><td>K-NET观测场地土层条件图件</td></tr><tr><td><br />/kik</td><td>存储KiK-net的波形、钻孔及图件</td></tr><tr><td><br />/kik/nonselect/alldata/YYYY/MM/YYYYMMDDHHMISS.tar.gz</td><td>该地震的波形和地图的图件存储在一个tar.gz压缩包。例如发生于12:34:00 March 12th 2000的数据存在目录/ kik /nonselect/alldata/2000/03/20000312123400.tar.gz /</td></tr><tr><td><br />/kik/sitedat/</td><td>KiK-net观测场地的资料目录, 每个台站一个文件。</td></tr><tr><td><br />/kik/sitepdf/, /kik/sitepng/, /kik/sitejpeg/</td><td>观测场地土层条件图件 (钻孔柱状图, pdf、png和jpeg格式) </td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="45">
+                    <p class="img_tit"><b>表</b>10 <b>本地数据目录说明</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 10 Local directory structure illustration of KiK-net and k-net</p>
+                    <p class="img_note"></p>
+                    <table id="45" border="1"><tr><td><br />目 录</td><td>说  明</td></tr><tr><td><br />NIED</td><td>总目录</td></tr><tr><td><br />kik</td><td>与FTP上kik目录对应的目录</td></tr><tr><td><br />Knet</td><td>与FTP上knet目录对应的目录</td></tr><tr><td><br />Asc</td><td>KiK-net与knet文件解压后存放的目录, 格式如图所示, 下一级目录为年, 再下一级为地震名, 然后是KiK-net和knet</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="46">数据下载参数设置界面如图1所示, 可以设置下载相关的参数。通过对比数据库、FTP服务器地址、本地压缩文件和解压文件中的文件, 确定需要下载的数据。系统自动下载, 自动解压、自动更新地震、台站、波形等数据库 (图2) 。</p>
+                </div>
+                <h4 class="anchor-tag" id="47" name="47">2.2 数据压缩原理及效果</h4>
+                <div class="p1">
+                    <p id="48">NIED文本格式*.asc的数据为有符号整数, 每行8个数据, 每个数据为9字节文本格式, 若采用二进制整型存储, 则可以减少到4个字节。考虑到四字节整型范围为从-2147483648～2147483647, 大多数数据用二进制表示时高位基本上是0, 波形数据采用压缩方式存储。首先对一个地震波形的所有数据进行判断, 统一偏移, 保证所有数据转为正数, 记下偏移量, 存储起来;每个数据都是由四字节组成, 确定中每一位 (bit) 均为的0的字节数, 从而确定每个数据的有效字节数neff, 也就是为使所有数据的信息不丢失, 每个数据的最小字节数, 无效字节的每一位都是0, 解码时, 自动补上, 无需存储。压缩后的数据是一串字节数组, 依次是该地震波形的数据量ndata (int, 4字节) , 单个数据有效字节数neff (byte, 1字节) , 为使所有数据为正补上的偏移量数据 (int, 4字节) , 字节数组 (ndata*neff) 。表11中给出了不同大小的数据的压缩效果, 可见数据越小, 压缩的效果越好。</p>
+                </div>
+                <div class="area_img" id="77">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DGGC201903017_07700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 系统参数设置" src="Detail/GetImg?filename=images/DGGC201903017_07700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 系统参数设置  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DGGC201903017_07700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig.1 System parameter setup</p>
+
+                </div>
+                <div class="area_img" id="78">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DGGC201903017_07800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 NIED数据下载及数据库更新" src="Detail/GetImg?filename=images/DGGC201903017_07800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 NIED数据下载及数据库更新  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DGGC201903017_07800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig.2 NIED data download and database update</p>
+
+                </div>
+                <div class="area_img" id="51">
+                    <p class="img_tit"><b>表</b>11 <b>十进制数据的二进制表示及非零有效字节数</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Table 11 Binary expression of Decimal data and nonzero effective bytes</p>
+                    <p class="img_note"></p>
+                    <table id="51" border="1"><tr><td><br />十进制数据</td><td>第1字节</td><td>第2字节</td><td>第3字节</td><td>第4字节</td><td>有效字节数</td></tr><tr><td><br />-2147483647</td><td>-1111111</td><td>11111111</td><td>11111111</td><td>11111111</td><td>4</td></tr><tr><td><br />-83647</td><td>-0000000</td><td>00000001</td><td>01000110</td><td>10111111</td><td>4</td></tr><tr><td><br />83647</td><td>00000000</td><td>00000001</td><td>01000110</td><td>10111111</td><td>3</td></tr><tr><td><br />3647</td><td>00000000</td><td>00000000</td><td>00001110</td><td>00111111</td><td>2</td></tr><tr><td><br />500</td><td>00000000</td><td>00000000</td><td>00000001</td><td>11110100</td><td>2</td></tr><tr><td><br />255</td><td>00000000</td><td>00000000</td><td>00000000</td><td>11111111</td><td>1</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="52" name="52">2.3 格式转换输入输出</h4>
+                <div class="p1">
+                    <p id="53">为了便于软件的应用及与现有软件的结合, 提供多种数据格式转换功能, 可以还原成NIED原来的格式输出。</p>
+                </div>
+                <h4 class="anchor-tag" id="54" name="54">2.4 相关文献资料存储</h4>
+                <div class="p1">
+                    <p id="55">系统提供与强震、KiK-net等相关的文献数据库列表信息, 用户可以自行增加与强震相关的列表和全文文献资料, 便于研究与应用。</p>
+                </div>
+                <h3 id="56" name="56" class="anchor-tag">3 系统应用实例</h3>
+                <div class="p1">
+                    <p id="57">系统提供了地震、台站、波形参数等的相关统计信息 (M-T图等) , 查看台站下方土层速度结构信息;系统提供了快速分析地震峰值加速度、峰值加速度水平垂向比、地表井下比等与震级、震中距、震源机制、场地条件等各种因素的关系。系统还集成了P波到时拾取, 进而可以利用P波S波前几秒信息进行用于地震预警的震级、方位角计算、维诺图生成、震动图回看等。系统集成频谱分析、H/V谱比分析、相干分析等功能。系统收集了全球质心矩张量计划提供的全球震源机制解 (www.globalcmt.org/CMTsearch.html) 信息, 便于研究强震动地震动参数与震源参数的关系。具体实例如图3所示。</p>
+                </div>
+                <div class="area_img" id="58">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DGGC201903017_058.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 系统应用功能实例" src="Detail/GetImg?filename=images/DGGC201903017_058.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图</b>3 <b>系统应用功能实例</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/DGGC201903017_058.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig.3 Examples of Software system's application cases</p>
+
+                </div>
+                <div class="area_img" id="59">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/DGGC201903017_059.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 (续)" src="Detail/GetImg?filename=images/DGGC201903017_059.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图</b>3 (<b>续</b>)   <a class="btn-zoomin" href="Detail/GetImg?filename=images/DGGC201903017_059.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig.3 (Continued) </p>
+
+                </div>
+                <h3 id="60" name="60" class="anchor-tag">4 结论</h3>
+                <div class="p1">
+                    <p id="61">为方便研究人员对日本强震动数据的研究和使用, 本文开发了NIED强震动数据管理分析系统。</p>
+                </div>
+                <div class="p1">
+                    <p id="62"> (1) 该系统自动从日本防灾研究所FTP服务器下载地震、台站钻孔剪切波速度结构、波形数据, 更新本地数据库系统, 省时省力, 采用仅存储有效字节的二进制存储方式, 可将数据存储空间缩减到原格式的1/4左右, 节省磁盘空间, 便于维护、管理、更新和应用。</p>
+                </div>
+                <div class="p1">
+                    <p id="63"> (2) 提供常用的计算反应谱、相关、互相关、谱比、P波到时拾取、预警震级计算等强震动数据分析处理方法。</p>
+                </div>
+                <div class="p1">
+                    <p id="64"> (3) 可视化管理数据, 快速了解数据时间、空间、震级、加速度、震源机制的分布情况, 便于检索地震学及地震工程需研究中所需的地震数据。</p>
+                </div>
+                <div class="p1">
+                    <p id="65"> (4) 提供研究人员集成自行开发算法扩展开发的接口。</p>
+                </div>
+                <div class="p1">
+                    <p id="66"> (5) 本系统稍作修改即可应用到其他台网的数据管理分析中去。</p>
+                </div>
+                <div class="p1">
+                    <p id="67"> (6) 根据NIED的规则, 个人不能分发台网的数据, 本软件主要是供个人研究者使用, 提高个人研究中数据使用的效率。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="79">
+                            <a id="bibliography_1" >
+                                    <b>[1]</b>
+                                 地震工程学编辑委员会.防震减灾百科全书-地震工程学[M].北京:地震出版社, 2014.Editorial Committee of Earthquake Engineering.Encyclopedia of protecting against and mitigating earthquake disasters:Earthquake Engineering[M].Beijing:Seismological Press, 2014. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="81">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015398132.nh&amp;v=MDM2MzR6cXFCdEdGckNVUjdxZlp1WnFGeXprV3JySVZGMjZHN0N4RnREUHJaRWJQSVFLREg4NHZSNFQ2ajU0TzM=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 陈永新.基于KiK-net强震动记录对不同土层条件下场地非线性反应的研究[D].北京:中国地震局地球物理研究所, 2015.CHEN Yongxin.Research on nonlinearity in different soil site effect based on KiK-net strong motion records[D].Beijing:Institute of Geophysics, CEA, 2015. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="83">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1014431308.nh&amp;v=MTg1NTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnFGeXprV3JySVZGMjZHcmU3SDlMTXA1RWJQSVE=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 冀昆.基于H/V谱比法的场地特征研究[D].哈尔滨:中国地震局工程力学研究所, 2014.JI Kun.Estimation on site characteristic based on H/V spectral ratio method[D].Harbin:Institute of Engineering Mechanics, CEA, 2014. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="85">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1014431326.nh&amp;v=MDg2NTViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpxRnl6a1dycklWRjI2R3JlN0g5TE9xWkU=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 王亮.基于KiK-net强震台网的土层地震动特性研究[D].哈尔滨:中国地震局工程力学研究所, 2014.WANG Liang.The Research of soil layer seismic characteristic based on KiK-net strong-motion network[D].Harbin:Institute of Engineering Mechanics, CEA, 2014. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="87">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DGGC200303000&amp;v=MDQ0NTdJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVacUZ5emtXcnJJSVNyTWJiRzRIdExNckk5Rlo=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 于海英, 谢礼立, 崔杰.强震及工程震害数据库网站系统研究与实现 [J].地震工程与工程振动, 2003, 23 (6) :1-8.YU Haiying, XIE Lili, CUI Jie.Study on website system of strong motion and engineering seismic damage database[J].Earthquake Engineering and Engineering Dynamics, 2003, 23 (6) :1-8. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="89">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CDFD&amp;filename=1013342709.nh&amp;v=MjEzNTVrV3JySVZGMjZIYkM4SE5iTXBwRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnFGeXo=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 张红才.地震预警系统关键技术研究[D].哈尔滨:中国地震局工程力学研究所, 2013.ZHANG Hongcai.Study of key technologies in earthquake early warning system[D].Harbin:Institute of Engineering Mechanics, CEA, 2013. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="91">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CDFD&amp;filename=1013342710.nh&amp;v=MDQyNThySVZGMjZIYkM4SE5iTnI1RWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnFGeXprV3I=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 宋晋东.高速铁路运行控制用地震动参数及单台地震预警技术研究[D].哈尔滨:中国地震局工程力学研究所, 2013.SONG Jindong, Research on seismic ground motion indices for operation control and single station earthquake early warning applied for hing-speed railawy[D].Harbin:Institute of Engineering Mechanics, CEA, 2013. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="93">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1015652748.nh&amp;v=MjgyMTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnFGeXprV3JySVZGMjZHN1c5SE5iSXA1RWJQSVE=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 袁维珍.强地震动峰值周期特性研究[D].哈尔滨:中国地震局工程力学研究所, 2015.YUAN Weizhen, A study on peak period characteristics of strong earthquake records[D].Harbin:Institute of Engineering Mechanics, CEA, 2015. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="95">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CDFD&amp;filename=2009057325.nh&amp;v=MzA5NDdmWnVacUZ5emtXcnJJVjEyN0Y3TzlHZExPcXBFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3E=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 马强.地震预警技术研究及应用[D].哈尔滨:中国地震局工程力学研究所, 2008.MA Qiang.Research on earthquake early warning technologies and application[D].Harbin:Institute of Engineering Mechanics, CEA, 2008. (in Chinese) 
+                            </a>
+                        </p>
+                        <p id="97">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD14070300006615&amp;v=MDEyODRKRjhkYnhJPU5qN0Jhcks4SHRiTXJJOUZaT3NKQ24wOG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnRGaW5sVXJ2SQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> Okada Y, Kasahara K, Hori S, et al.Recent progress of seismic observation networks in Japan-Hi-net, F-net, K-NET and KiK-net[J].Earth Planets and Space, 2004, 56:xv-xxviii.
+                            </a>
+                        </p>
+                        <p id="99">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A densely distributed high-sensitivity seismograph network in Japan: Hi-net by National Research Institute for Earth Science and Disaster Prevention">
+
+                                <b>[11]</b> Obara K, Kasahara K, Hori S, et al, A densely distributed high-sensitivity seismograph network in Japan:Hi-net by National Research Institute for Earth Science and Disaster Prevention[J].Review of Scientific Instruments, 2005, 76 (2) , 021301 (1-12) , doi.org/10.1063/1.1854197.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="DGGC201903017" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DGGC201903017&amp;v=MDA2NTVrV3JySUlTck1iYkc0SDlqTXJJOUVZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnFGeXo=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDMwT2dQSUw5Z1E1T2tEOTk5ZTh1ST0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=NLcKG8I1SJUaVFrQ0iGpF2klAT0OsmHRaVSZ1rKb5xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

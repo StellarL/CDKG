@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637136421824658750%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJYRJ201903055%26RESULT%3d1%26SIGN%3dg3MMoZHG3AMqRkv4Gf4BwVJAa2A%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201903055&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201903055&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201903055&amp;v=MDU5MzBac0ZpRGhWTC9CTHpUWlpMRzRIOWpNckk5QVlZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnU=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#29" data-title="&lt;b&gt;0 引 言&lt;/b&gt; "><b>0 引 言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#32" data-title="&lt;b&gt;1 设计思路&lt;/b&gt; "><b>1 设计思路</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#34" data-title="&lt;b&gt;2 研究内容&lt;/b&gt; "><b>2 研究内容</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#35" data-title="&lt;b&gt;2.1 对应关系识别&lt;/b&gt;"><b>2.1 对应关系识别</b></a></li>
+                                                <li><a href="#79" data-title="&lt;b&gt;2.2 优先级划分&lt;/b&gt;"><b>2.2 优先级划分</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#86" data-title="&lt;b&gt;3 模型算法&lt;/b&gt; "><b>3 模型算法</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#91" data-title="&lt;b&gt;3.1 文本挖掘&lt;/b&gt;"><b>3.1 文本挖掘</b></a></li>
+                                                <li><a href="#110" data-title="&lt;b&gt;3.2 权重划分 (熵权法&lt;/b&gt;) "><b>3.2 权重划分 (熵权法</b>) </a></li>
+                                                <li><a href="#137" data-title="&lt;b&gt;3.3 KNN模型&lt;/b&gt;"><b>3.3 KNN模型</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#145" data-title="&lt;b&gt;4 模型构建&lt;/b&gt; "><b>4 模型构建</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#146" data-title="&lt;b&gt;4.1 因子指标设计&lt;/b&gt;"><b>4.1 因子指标设计</b></a></li>
+                                                <li><a href="#150" data-title="&lt;b&gt;4.2 模型结果输出&lt;/b&gt;"><b>4.2 模型结果输出</b></a></li>
+                                                <li><a href="#157" data-title="&lt;b&gt;4.3 模型效果评估&lt;/b&gt;"><b>4.3 模型效果评估</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#171" data-title="&lt;b&gt;5 结 语&lt;/b&gt; "><b>5 结 语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#47" data-title="图1 有号码有户号情况下对应关系匹配流程图">图1 有号码有户号情况下对应关系匹配流程图</a></li>
+                                                <li><a href="#61" data-title="图2 号码记录在档案情况下对应关系匹配流程图">图2 号码记录在档案情况下对应关系匹配流程图</a></li>
+                                                <li><a href="#73" data-title="图3 号码未记录档案情况下对应关系匹配流程图">图3 号码未记录档案情况下对应关系匹配流程图</a></li>
+                                                <li><a href="#148" data-title="&lt;b&gt;表1 宽表&lt;/b&gt;"><b>表1 宽表</b></a></li>
+                                                <li><a href="#149" data-title="&lt;b&gt;续表1&lt;/b&gt;"><b>续表1</b></a></li>
+                                                <li><a href="#153" data-title="&lt;b&gt;表2 模型指标权重&lt;/b&gt;"><b>表2 模型指标权重</b></a></li>
+                                                <li><a href="#156" data-title="&lt;b&gt;表3 得分分布表&lt;/b&gt;"><b>表3 得分分布表</b></a></li>
+                                                <li><a href="#160" data-title="&lt;b&gt;表4 模型结果表&lt;/b&gt;"><b>表4 模型结果表</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" 王洋, 丁志刚, 郑树泉, 等.一种用户画像系统的设计与实现[J].计算机应用与软件, 2018, 35 (3) :8-14." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201803003&amp;v=MTM0OTBac0ZpRGhWTC9CTHpUWlpMRzRIOW5Nckk5Rlo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnU=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         王洋, 丁志刚, 郑树泉, 等.一种用户画像系统的设计与实现[J].计算机应用与软件, 2018, 35 (3) :8-14.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 张爽, 景伟强, 罗欣, 等.基于大数据的95598优质服务管理创新与实践[J].电力需求侧管理, 2017, 19 (5) :52-54." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DLXQ201705014&amp;v=MTI5NjJIVGY3RzRIOWJNcW85RVlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0ZpRGhWTC9CSVM=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         张爽, 景伟强, 罗欣, 等.基于大数据的95598优质服务管理创新与实践[J].电力需求侧管理, 2017, 19 (5) :52-54.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 符保龙.基于背景知识和主动学习的文本挖掘技术研究[J].计算机应用与软件, 2013, 30 (5) :275-278." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201305078&amp;v=MDc3ODRSN3FmWnVac0ZpRGhWTC9CTHpUWlpMRzRIOUxNcW85Q2JJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         符保龙.基于背景知识和主动学习的文本挖掘技术研究[J].计算机应用与软件, 2013, 30 (5) :275-278.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" 陈二静, 姜恩波.文本相似度计算方法研究综述[J].现代图书情报技术, 2017, 1 (6) :1-11." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201706001&amp;v=MTE5NzMzenFxQnRHRnJDVVI3cWZadVpzRmlEaFZML0JQU25mZjdHNEg5Yk1xWTlGWllRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         陈二静, 姜恩波.文本相似度计算方法研究综述[J].现代图书情报技术, 2017, 1 (6) :1-11.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" 盛华, 张桂珠.一种融合K-means和快速密度峰值搜索算法的聚类方法[J].计算机应用与软件, 2016, 33 (10) :260-264, 269." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201610058&amp;v=MTM2NTVxcUJ0R0ZyQ1VSN3FmWnVac0ZpRGhWTC9CTHpUWlpMRzRIOWZOcjQ5QWJJUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         盛华, 张桂珠.一种融合K-means和快速密度峰值搜索算法的聚类方法[J].计算机应用与软件, 2016, 33 (10) :260-264, 269.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 孔欣欣, 苏本昌, 王宏志, 等.基于标签权重评分的推荐模型及算法研究[J].计算机学报, 2017, 40 (6) :1440-1452." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201706013&amp;v=MDg4NTJPM3pxcUJ0R0ZyQ1VSN3FmWnVac0ZpRGhWTC9CTHo3QmRyRzRIOWJNcVk5RVo0UUtESDg0dlI0VDZqNTQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         孔欣欣, 苏本昌, 王宏志, 等.基于标签权重评分的推荐模型及算法研究[J].计算机学报, 2017, 40 (6) :1440-1452.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 江华丽.中文分词算法研究与分析[J].物联网技术, 2016 (1) :87-89." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WLWJ201601035&amp;v=MDgyMzlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGaURoVkwvQk1pSGNaTEc0SDlmTXJvOUdZWVE=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         江华丽.中文分词算法研究与分析[J].物联网技术, 2016 (1) :87-89.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 徐懿彬.基于Aho-Corasick自动机算法的概率模型中文分词CPACA算法[J].电子科技大学学报, 2017, 46 (2) :426-433." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DKDX201702018&amp;v=MTYwODc0SDliTXJZOUViSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGaURoVkwvQklTYlBkckc=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         徐懿彬.基于Aho-Corasick自动机算法的概率模型中文分词CPACA算法[J].电子科技大学学报, 2017, 46 (2) :426-433.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" 张广庆, 朱登峰, 岳琪佳.中文分词在标准信息检索中的应用[J].质量探索, 2017 (1) :79-82." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZLTS201701013&amp;v=MDk3NzFzRmlEaFZML0JQeUhmZmJHNEg5Yk1ybzlFWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVo=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         张广庆, 朱登峰, 岳琪佳.中文分词在标准信息检索中的应用[J].质量探索, 2017 (1) :79-82.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" 雷朔, 刘旭敏, 徐维祥.基于词向量特征扩展的中文短文本分类研究[J].计算机应用与软件, 2018, 35 (8) :269-274." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201808050&amp;v=MTg3NDdUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRmlEaFZML0JMelRaWkxHNEg5bk1wNDlBWklRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         雷朔, 刘旭敏, 徐维祥.基于词向量特征扩展的中文短文本分类研究[J].计算机应用与软件, 2018, 35 (8) :269-274.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" 谢季川, 宗振国, 刘宏国, 等.基于词向量模型的95598工单文本挖掘[J].电子世界, 2017 (23) :176-176." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ELEW201723100&amp;v=MTEyODZHNEg5Yk9ySTVGWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRmlEaFZML0JJQ0hPZWI=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         谢季川, 宗振国, 刘宏国, 等.基于词向量模型的95598工单文本挖掘[J].电子世界, 2017 (23) :176-176.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 郭金维, 蒲绪强, 高祥, 等.一种改进的多目标决策指标权重计算方法[J].西安电子科技大学学报 (自然科学版) , 2014, 41 (6) :118-125." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDKD201406020&amp;v=MjI5OTVIWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRmlEaFZML0JQU25BYXJHNEg5WE1xWTk=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         郭金维, 蒲绪强, 高祥, 等.一种改进的多目标决策指标权重计算方法[J].西安电子科技大学学报 (自然科学版) , 2014, 41 (6) :118-125.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 李洪奇, 杨中国, 朱丽萍, 等.基于数据集特征的KNN最优K值预测方法[J].计算机应用与软件, 2016, 33 (6) :54-58, 83." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201606014&amp;v=MjQxNjZxZlp1WnNGaURoVkwvQkx6VFpaTEc0SDlmTXFZOUVZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjc=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         李洪奇, 杨中国, 朱丽萍, 等.基于数据集特征的KNN最优K值预测方法[J].计算机应用与软件, 2016, 33 (6) :54-58, 83.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JYRJ" target="_blank">计算机应用与软件</a>
+                2019,36(03),301-307 DOI:10.3969/j.issn.1000-386x.2019.03.054            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于大数据算法的电话号码与客户编号对应关系的识别研究与实现</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%88%98%E9%B2%B2%E9%B9%8F&amp;code=37482161&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">刘鲲鹏</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%9B%9B%E5%A6%8D&amp;code=37482159&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">盛妍</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E4%BD%95%E8%96%87&amp;code=36262768&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">何薇</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%AE%AB%E7%AB%8B%E5%8D%8E&amp;code=37482160&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">宫立华</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%9B%BD%E5%AE%B6%E7%94%B5%E7%BD%91%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8%E5%AE%A2%E6%88%B7%E6%9C%8D%E5%8A%A1%E4%B8%AD%E5%BF%83&amp;code=0108958&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">国家电网有限公司客户服务中心</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8C%97%E4%BA%AC%E4%B8%AD%E7%94%B5%E6%99%AE%E5%8D%8E%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&amp;code=0124240&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北京中电普华信息技术有限公司</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>基于95598业务, 利用大数据分析挖掘方法, 构建统一身份识别模型, 有效识别客户来电号码与户号的对应关系。采用大数据文本挖掘技术, 有效解析用电地址信息、客户姓名等内容, 并计算地址相似度得分、姓名相似度得分, 作为对应关系校验以及识别疑似户号的关键因子指标。针对能获取到的对应关系, 构建权重划分模型, 计算对应关系匹配度得分, 根据分值大小, 校验对应关系的可靠性。针对找不到户号对应关系的来电号码, 基于文本相似度得分构建KNN模型, 计算对应关系匹配度得分, 依据分值大小, 识别疑似户号。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%BB%9F%E4%B8%80%E8%BA%AB%E4%BB%BD%E8%AF%86%E5%88%AB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">统一身份识别;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%96%87%E6%9C%AC%E6%8C%96%E6%8E%98&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">文本挖掘;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%9D%83%E9%87%8D%E5%88%92%E5%88%86&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">权重划分;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=KNN%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">KNN模型;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    刘鲲鹏, 高工, 主研领域:电力系统软件设计, 营销客户服务和电力大数据技术研究等。;
+                                </span>
+                                <span>
+                                    盛妍, 高工。;
+                                </span>
+                                <span>
+                                    何薇, 工程师。;
+                                </span>
+                                <span>
+                                    宫立华, 高级经济师。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-09-18</p>
+
+            </div>
+                    <h1><b>RECOGNITION OF CORRESPONDENCE BETWEEN PHONE NUMBER AND CUSTOMER NUMBER BASED ON BIG DATA ALGORITHM</b></h1>
+                    <h2>
+                    <span>Liu Kunpeng</span>
+                    <span>Sheng Yan</span>
+                    <span>He Wei</span>
+                    <span>Gong Lihua</span>
+            </h2>
+                    <h2>
+                    <span>State Grid Corporation of China Customer Service Center</span>
+                    <span>Beijing China-Power Information Technology Co., Ltd.</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>On the basis of hotline 95598, we established a unified identification model by using the method of large data analysis and mining. It could effectively identify the corresponding relationship between customer call number and household number. Big data text mining technology could effectively analyze the user's address information, name and other content, and calculate the address and name similarity score. And these similarity scores were used as a key factor index to verify the corresponding relationship and identify the matching user number. Aiming at the corresponding relationship that can be obtained, we constructed the weight partition model to calculate the matching score. The reliability of the corresponding relationship was checked according to the value of the score. When the caller ID could not be found, the KNN model was constructed based on the text similarity score, and the matching degree score of the corresponding relationship was calculated. According to the score, the matching number could be identified.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Unified%20identity%20recognition&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Unified identity recognition;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Text%20mining&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Text mining;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Weight%20division&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Weight division;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=KNN%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">KNN model;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-09-18</p>
+                            </div>
+
+
+        <!--brief start-->
+                        <h3 id="29" name="29" class="anchor-tag"><b>0 引 言</b></h3>
+                <div class="p1">
+                    <p id="30">国网95598客服人员在受理客户来电业务时, 需要对客户户号进行核对, 以便解决客户来电诉求。由于大部分客户无法提供客户户号, 坐席人员需要通过询问客户用电地址信息与现有档案用电地址进行匹配, 获取客户户号。这种方式势必会造成坐席服务效率低下, 引起客户情绪浮躁等问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="31">另一方面, 目前中心标签是以电话号码为对象构建, 省公司标签是以用户号为对象构建, 为实现中心和省公司标签共享, 需要构建电话号码和用户号之间的动态精准匹配关系, 支撑以电话号码为对象的客户画像和以用户号为对象的客户画像, 实现中心和省公司在标签对象上的融合应用<citation id="179" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。鉴于此, 识别客户来电号码与户号的对应关系势在必行。</p>
+                </div>
+                <h3 id="32" name="32" class="anchor-tag"><b>1 设计思路</b></h3>
+                <div class="p1">
+                    <p id="33">从业务数据入手, 客户档案中的户号和联系方式为静态数据, 而95598数据、IVR数据和网站数据都属于动态数据, 其中的号码与户号关系为动态关系<citation id="180" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>。本文从动态关系出发, 更新、补充、完善静态数据, 通过计算匹配度得分对号码和户号的对应关系进行识别。</p>
+                </div>
+                <h3 id="34" name="34" class="anchor-tag"><b>2 研究内容</b></h3>
+                <h4 class="anchor-tag" id="35" name="35"><b>2.1 对应关系识别</b></h4>
+                <h4 class="anchor-tag" id="36" name="36"><b>2.1.1</b> 有电话号码有户号情况</h4>
+                <h4 class="anchor-tag" id="37" name="37">1) 数据源:</h4>
+                <div class="p1">
+                    <p id="38"> (1) 近两年户号不为空的95598工单数据 (注:根据数据探索结果确定时间范围) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="39"> (2) 客户档案数据。</p>
+                </div>
+                <h4 class="anchor-tag" id="40" name="40">2) 研究步骤:</h4>
+                <div class="p1">
+                    <p id="41"> (1) 数据加工。提取95598工单业务中记录户号与号码的工单, 并加工关系基表 (户号、号码、来电频次、时间点、地址、姓名等) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="42"> (2) 正确性校验。为保证对应关系的准确性, 对提取的对应关系进行数据校验, 排除无效关系。对应关系在档案中成功匹配, 无需进行校验, 规定此情况匹配度得分最高;对应关系在档案没有匹配成功:此类情况需对工单数据中的用电地址信息、客户姓名与档案进行准确性校验。同时, 再结合用户拨打行为特征, 如拨打频次、最近拨打时间、来电时间点、拨打业务类型等行为综合校验对应关系的准确性。在数据校验的过程中, 计算关系匹配度得分, 根据匹配度得分确定关系可靠性。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">计算匹配度得分:借助于大数据文本挖掘技术<citation id="181" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>, 对涉及到文本校验因素, 进行分词并计算文本相似度, 进而将文本相似度作为因素指标<citation id="182" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>;对拨打行为指标 (如号码拨打次数、拨打时间点、最近拨打时间、拨打事件类型、用电地址在历史工单中出现次数、客户姓名在历史工单中出现次数、同一户号是否在历史工单中出现, 出现该户号的频次等因素) 可作为行为量化因素指标;通过使用层次分析法、熵值法、因子分析法等大数据建模方法, 构建指标权重划分模型, 计算各个因子指标权重, 进而计算关系匹配度得分<citation id="183" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">说明:在校验过程中, 若不满足以上因素的检验条件, 则将不满足条件的来电号码放到下一分类情况 (即有号码无户号情况) 进行关系识别。</p>
+                </div>
+                <h4 class="anchor-tag" id="45" name="45">3) 匹配流程:</h4>
+                <div class="p1">
+                    <p id="46">有号码有户号情况下对应关系匹配流程图如图1所示。</p>
+                </div>
+                <div class="area_img" id="47">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201903055_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 有号码有户号情况下对应关系匹配流程图" src="Detail/GetImg?filename=images/JYRJ201903055_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 有号码有户号情况下对应关系匹配流程图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201903055_047.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="48" name="48"><b>2.1.2</b> 有电话号码无户号情况</h4>
+                <h4 class="anchor-tag" id="49" name="49">1) 电话号码记录在档案情况:</h4>
+                <div class="p1">
+                    <p id="50"> (1) 数据源:</p>
+                </div>
+                <div class="p1">
+                    <p id="51">① 近两年户号为空且来电号码在档案中有记录的95598工单数据 (根据数据探索结果确定时间范围) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="52">② 提取步骤2.1.1中判别无效关系且号码出现在档案的95598工单。</p>
+                </div>
+                <div class="p1">
+                    <p id="53">③ 客户档案数据。</p>
+                </div>
+                <div class="p1">
+                    <p id="54"> (2) 研究步骤:</p>
+                </div>
+                <div class="p1">
+                    <p id="55">① 数据加工。提取近两年户号为空且来电号码在档案中有记录的95598工单, 并通过电话号码获取档案中的户号;提取2.1.1节中判别无效关系且号码记录在档案的工单;加工95598工单数据基表 (记录工单编号、来电号码、客户编号、用电地址、客户姓名、拨打频次、最近拨打时间等内容) 、客户档案数据基表 (记录客户编号、用电地址、客户姓名、联系号码等内容) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">② 正确性校验。校验准则:此类情况需对工单数据中的用电地址信息、客户姓名与档案进行准确性校验。同时, 再结合用户拨打行为特征, 如拨打频次、最近拨打时间、来电时间点、拨打业务类型等行为综合校验对应关系的准确性。在数据校验的过程中, 计算关系匹配度得分, 根据匹配度得分确定关系可靠性。</p>
+                </div>
+                <div class="p1">
+                    <p id="57">计算匹配度得分:需借助于大数据文本挖掘技术, 对涉及到文本校验因素进行分词并计算文本相似度, 进而将文本相似度作为因素指标;对拨打行为指标 (如号码拨打次数、拨打时间点、最近拨打时间、拨打事件类型、用电地址在历史工单中出现次数、客户姓名在历史工单中出现次数、同一户号是否在历史工单中出现、出现该户号的频次等因素) 可作为行为量化因素指标;通过使用层次分析法、熵值法、因子分析法等大数据建模方法, 构建指标权重划分模型, 计算各个因子指标权重, 进而计算关系匹配度得分。</p>
+                </div>
+                <div class="p1">
+                    <p id="58">在校验过程中, 若不满足以上因素的检验条件, 则将不满足条件的来电号码放到下一分类情况 (即有号码无户号且号码未记录在档案情况) 进行关系识别。</p>
+                </div>
+                <div class="p1">
+                    <p id="59"> (3) 匹配流程:</p>
+                </div>
+                <div class="p1">
+                    <p id="60">号码记录在档案情况下对应关系匹配流程图如图2所示。</p>
+                </div>
+                <div class="area_img" id="61">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201903055_061.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 号码记录在档案情况下对应关系匹配流程图" src="Detail/GetImg?filename=images/JYRJ201903055_061.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 号码记录在档案情况下对应关系匹配流程图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201903055_061.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="62" name="62">2) 号码未记录在档案情况:</h4>
+                <div class="p1">
+                    <p id="63">此类情况由于来电号码未记录在档案中, 无法通过电话号码获取相应的户号, 因此需要引入大数据模挖掘术, 通过文本挖掘、构建模型, 识别疑似户号。</p>
+                </div>
+                <div class="p1">
+                    <p id="64"> (1) 数据源:</p>
+                </div>
+                <div class="p1">
+                    <p id="65">近两年户号为空且来电号码在档案中没有记录的95598工单数据 (根据数据探索结果确定时间范围) ;提取2.1.1节中判别无效关系且号码未记录在档案的95598工单;提取电话号码记录在档案中判别无效关系的号码工单客户档案数据。</p>
+                </div>
+                <div class="p1">
+                    <p id="66"> (2) 研究步骤:</p>
+                </div>
+                <div class="p1">
+                    <p id="67">① 数据加工。提取近两年户号为空且来电号码在档案中没有记录的95598工单;提取电话号码记录在档案中判别无效关系的工单;加工95598工单数据基表 (工单编号、来电号码、客户编号等) 、客户档案数据基表 (客户编号、用电地址、客户姓名、联系号码等) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="68">② 因素指标。在寻找疑似户号的过程中, 需要构建因子指标, 判别待识别来电客户的通话行为、身份信息、地址信息等因素是否与现存对应关系的行为一致或者相近, 最终寻找此来电号码的疑似户号。现存对应关系可分为两类:基于2.1.1节和电话号码记录在档案中识别出的对应关系;其余的为档案数据中已存在的对应关系。基于以上数据源, 因子指标按照数据结构分为非结构化指标与结构化指标两类。非结构化指标:客户用电地址、客户姓名、受理内容中提取信息量 (户号、电话号码、姓名等) 、处理意见中提取的信息量 (户号、电话号码、姓名等) 等文本内容。结构化指标:来电频次、来电时间点、通话时长、各个业务类型的来电频次、来电时长以及最近来电时间等通话行为。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">③ 数据建模识别户号。非结构化指标相似度计算方法:基于以上几类文本数据, 采用大数据文本挖掘技术, 对其进行文本分词, 进而将非结构化数据转化为结构化处理。将分词之后的各个文本内容根据出现频次, 构造向量空间, 利用余弦夹角度量方法、最长公共子序列方法、最小边际距离算法等, 计算各个对应文本的相似度, 相似度作为建模因子指标。通过输入非结构指标 (即文本挖掘计算出的相似度) , 以及结构化因素指标, 构建KNN数据模型计算每个号码对象与现存对应关系的相似度, 最终来确定该号码对应的疑似户号, 实现号码与户号的匹配。现存对应关系可分为两类:基于2.1.1节和电话号码记录在档案中识别出的对应关系;其余的为档案数据中已存在的对应关系。在训练KNN模型的同时, 需确定出合适的<i>K</i>值作为户号类别归属的判别, 在筛户号归属的同时, 需遵从如下原则:</p>
+                </div>
+                <div class="p1">
+                    <p id="70">在邻近的<i>K</i>个可选户号归属中, 若属于2.1.1节与电话号码记录在档案中的对应关系优先选取该户号 (号码关系相对可靠) , 否则按照模型相似度得分来分配疑似户号归属。</p>
+                </div>
+                <div class="p1">
+                    <p id="71"> (3) 匹配流程:</p>
+                </div>
+                <div class="p1">
+                    <p id="72">号码未记录档案情况下对应关系匹配流程图如图3所示。</p>
+                </div>
+                <div class="area_img" id="73">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201903055_073.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 号码未记录档案情况下对应关系匹配流程图" src="Detail/GetImg?filename=images/JYRJ201903055_073.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 号码未记录档案情况下对应关系匹配流程图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201903055_073.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="74">综合两类情况找寻的户号信息, 进行合并处理, 形成户号与号码的对应关系。在合并后的对应关系中, 对应关系存在如下三种情况:</p>
+                </div>
+                <div class="p1">
+                    <p id="75"> (1) 号码与户号1对1;</p>
+                </div>
+                <div class="p1">
+                    <p id="76"> (2) 号码与户号1对多;</p>
+                </div>
+                <div class="p1">
+                    <p id="77"> (3) 号码与户号多对1。</p>
+                </div>
+                <div class="p1">
+                    <p id="78">针对号码与户号多对多的情况, 需进行优先级划分。</p>
+                </div>
+                <h4 class="anchor-tag" id="79" name="79"><b>2.2 优先级划分</b></h4>
+                <div class="p1">
+                    <p id="80">对于一户多号、一号多户的对应关系, 需制定关系优先级, 选取最可靠的对应关系。制定如下规则对其进行优先级划分:</p>
+                </div>
+                <div class="p1">
+                    <p id="81"> (1) 针对有号码有户号分类情况, 按照匹配度得分, 选取一户多号、一号多户最为可靠的关系;</p>
+                </div>
+                <div class="p1">
+                    <p id="82"> (2) 针对有号码无户号且号码出现在档案分类情况, 按照匹配度得分, 选取一户多号、一号多户最为可靠的关系;</p>
+                </div>
+                <div class="p1">
+                    <p id="83"> (3) 针对有号码无户号且号码未出现在档案) 分类情况, 按照模型相似度得分, 选取一户多号、一号多户最为可靠的关系。</p>
+                </div>
+                <div class="p1">
+                    <p id="84">综合三部分对应关系, 针对合并之后出现一户多号、一号多户的情况再次进行优先级划分, 划分规则遵从如下规定:</p>
+                </div>
+                <div class="p1">
+                    <p id="85">满足条件第一种对应关系的优先级最高;满足条件第二种对应关系的优先级次之;满足条件第三种对应关系的优先级最低。</p>
+                </div>
+                <h3 id="86" name="86" class="anchor-tag"><b>3 模型算法</b></h3>
+                <div class="p1">
+                    <p id="87">为实现来电号码与客户号的动态匹配, 需引入大数据分析、挖掘技术, 校验关系准确性以及识别来电号码的疑似户号。在进行关系动态匹配的过程中, 需用到如下三方面大数据技术:</p>
+                </div>
+                <div class="p1">
+                    <p id="88"> (1) 文本挖掘技术:需对用电地址、客户姓名、工单受理内容等文本进行分词, 并计算文本相似度得分;</p>
+                </div>
+                <div class="p1">
+                    <p id="89"> (2) 权重划分模型:通过权重划分模型输出各个因子指标权重, 进而计算对应关系匹配度得分, 校验准确性<citation id="184" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>;</p>
+                </div>
+                <div class="p1">
+                    <p id="90"> (3) KNN模型:针对未找到户号的来电工单, 构建KNN模型, 通过模型输出该号码的疑似户号。</p>
+                </div>
+                <h4 class="anchor-tag" id="91" name="91"><b>3.1 文本挖掘</b></h4>
+                <h4 class="anchor-tag" id="92" name="92"><b>3.1.1</b> 中文分词技术</h4>
+                <div class="p1">
+                    <p id="93">中文分词指的是将汉字序列切分成若干个词<citation id="185" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>。中文分词是文本挖掘的基础, 现有的分词算法可分为三大类:基于字符串匹配的分词方法、基于理解的分词方法和基于统计的分词方法。机械分词方法, 它是按照一定的策略将待分析的汉字串与一个“充分大的”机器词典中的词条进行配, 若在词典中找到某个词, 则匹配成功<citation id="186" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>。常用的几种机械分词方法如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="94"> (1) 正向最大匹配法 (由左到右的方向) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="95"> (2) 逆向最大匹配法 (由右到左的方向) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="96"> (3) 最少切分 (使每一句中切出的词数最小) ;</p>
+                </div>
+                <div class="p1">
+                    <p id="97"> (4) 双向最大匹配法 (进行由左到右、由右到左两次扫描) <citation id="187" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>。</p>
+                </div>
+                <h4 class="anchor-tag" id="98" name="98"><b>3.1.2</b> 词向量技术</h4>
+                <div class="p1">
+                    <p id="99">自然语言理解的问题要转化为机器学习的问题, 构造词向量<citation id="188" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>, 并计算相似度得分:</p>
+                </div>
+                <div class="p1">
+                    <p id="100">编辑距离, 表示从一个字符串转化为另一个字符串所需要的最少编辑次数, 这里的编辑是指将字符串中的一个字符替换成另一个字符, 或者插入删除字符。编辑距离的核心就是如何计算出一对字符串间的最小编辑次数, 我们可以使用动态规划的思想来计算其最小编辑次数<citation id="189" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>, 两个字符串a=a1a2…an, b=b1b2…bm 的编辑距离递归计算公式如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="101"><mathml id="102"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><msub><mrow></mrow><mrow><mi>i</mi><mn>0</mn></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>i</mi></munderover><mi>w</mi></mstyle><msub><mrow></mrow><mrow><mtext>d</mtext><mtext>e</mtext><mtext>l</mtext></mrow></msub><mo stretchy="false"> (</mo><mi>b</mi><msub><mrow></mrow><mi>k</mi></msub><mo stretchy="false">) </mo><mtext> </mtext><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>m</mi></mrow></math></mathml>      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="103"><mathml id="104"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><msub><mrow></mrow><mrow><mn>0</mn><mi>j</mi></mrow></msub><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>j</mi></munderover><mi>w</mi></mstyle><msub><mrow></mrow><mrow><mtext>i</mtext><mtext>n</mtext><mtext>s</mtext></mrow></msub><mo stretchy="false"> (</mo><mi>a</mi><msub><mrow></mrow><mi>k</mi></msub><mo stretchy="false">) </mo><mtext> </mtext><mn>1</mn><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></math></mathml>      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="105" class="code-formula">
+                        <mathml id="105"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left"><mtr><mtd><mi>d</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>-</mo><mn>1</mn><mo>, </mo><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msub></mtd></mtr><mtr><mtd><mi>min</mi><mo stretchy="false"> (</mo><mi>d</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>-</mo><mn>1</mn><mo>, </mo><mi>j</mi></mrow></msub><mo>+</mo><mi>w</mi><msub><mrow></mrow><mrow><mtext>d</mtext><mtext>e</mtext><mtext>l</mtext></mrow></msub><mo stretchy="false"> (</mo><mi>b</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo>, </mo><mi>d</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo></mtd></mtr><mtr><mtd><mi>w</mi><msub><mrow></mrow><mrow><mtext>i</mtext><mtext>n</mtext><mtext>s</mtext></mrow></msub><mo stretchy="false"> (</mo><mi>a</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo><mo>, </mo><mi>d</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>-</mo><mn>1</mn><mo>, </mo><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>+</mo><mi>w</mi><msub><mrow></mrow><mrow><mtext>s</mtext><mtext>u</mtext><mtext>b</mtext></mrow></msub><mo stretchy="false"> (</mo><mi>a</mi><msub><mrow></mrow><mi>j</mi></msub><mo>, </mo><mi>b</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">) </mo><mo stretchy="false">) </mo></mtd></mtr></mtable></mrow><mtext> </mtext><mtable columnalign="left"><mtr><mtd><mi>a</mi><msub><mrow></mrow><mi>j</mi></msub><mo>=</mo><mi>b</mi><msub><mrow></mrow><mi>i</mi></msub></mtd></mtr><mtr><mtd></mtd></mtr><mtr><mtd><mi>a</mi><msub><mrow></mrow><mi>j</mi></msub><mo>≠</mo><mi>b</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mn>1</mn><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>n</mi><mo>, </mo></mtd></mtr><mtr><mtd><mrow><mtext> </mtext><mtext> </mtext></mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>m</mi></mtd></mtr></mtable><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="106">式中:<i>w</i>表示增删改三种操作的权重, 一般定义为:</p>
+                </div>
+                <div class="area_img" id="107">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JYRJ201903055_10700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="109"><i>d</i><sub><i>i</i>0</sub>=<i>i</i>表示从<i>b</i>=<i>b</i><sub>1</sub><i>b</i><sub>2</sub>…<i>b</i><sub><i>i</i></sub>删除为空的编辑次数;<i>d</i><sub>0<i>j</i></sub>=<i>j</i>表示从空插入成<i>a</i>′=<i>a</i><sub>1</sub><i>a</i><sub>2</sub>…<i>a</i><sub><i>j</i></sub>所需的编辑次数;<i>d</i><sub><i>ij</i></sub>则是对动态规划中分解子问题的过程。其逻辑关系较为复杂, 算法时间复杂度较高。</p>
+                </div>
+                <h4 class="anchor-tag" id="110" name="110"><b>3.2 权重划分 (熵权法</b>) </h4>
+                <div class="p1">
+                    <p id="111">熵权法作为一种客观赋权法, 其优势在于可以避免赋予权重的主观性, 符合数学逻辑且具有较为严格的数学意义<citation id="190" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>。熵权法的基本运算过程如下:</p>
+                </div>
+                <h4 class="anchor-tag" id="112" name="112"><b>3.2.1</b> 原始数据矩阵标准化处理</h4>
+                <div class="p1">
+                    <p id="113">由于得到的原始数据差异较大, 首先需要对数据进行无量纲化的处理。</p>
+                </div>
+                <div class="area_img" id="114">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JYRJ201903055_11400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="116">对正指标无量纲化处理公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="117"><mathml id="118"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>a</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>x</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>-</mo><mi>min</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">{</mo><mi>x</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">}</mo></mrow><mrow><mi>max</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">{</mo><mi>x</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">}</mo><mo>-</mo><mi>min</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">{</mo><mi>x</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">}</mo></mrow></mfrac></mrow></math></mathml>      (6) </p>
+                </div>
+                <div class="p1">
+                    <p id="119">对负指标无量纲化处理公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="120"><mathml id="121"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>a</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>max</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">{</mo><mi>x</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">}</mo><mo>-</mo><mi>x</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><mrow><mi>max</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">{</mo><mi>x</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">}</mo><mo>-</mo><mi>min</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">{</mo><mi>x</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">}</mo></mrow></mfrac></mrow></math></mathml>      (7) </p>
+                </div>
+                <div class="p1">
+                    <p id="122">得到新的矩阵记为<b><i>A</i></b><sub><i>ij</i></sub>。</p>
+                </div>
+                <h4 class="anchor-tag" id="123" name="123"><b>3.2.2</b> 指标熵值的计算</h4>
+                <div class="p1">
+                    <p id="124"><mathml id="125"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>h</mi><msub><mrow></mrow><mi>j</mi></msub><mo>=</mo><mo>-</mo><mi>Τ</mi><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>Ρ</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mrow><mi>ln</mi></mrow><mo stretchy="false"> (</mo><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false">) </mo></mrow></math></mathml>      (8) </p>
+                </div>
+                <div class="p1">
+                    <p id="126">式中:<mathml id="127"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mtext>l</mtext><mtext>n</mtext><mi>n</mi></mrow></mfrac></mrow></math></mathml>, <mathml id="128"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ρ</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>a</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>+</mo><mn>1</mn></mrow><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mo stretchy="false"> (</mo></mstyle><mi>a</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>+</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></mfrac></mrow></math></mathml>。</p>
+                </div>
+                <h4 class="anchor-tag" id="129" name="129"><b>3.2.3</b> 各指标权重的确定</h4>
+                <div class="p1">
+                    <p id="130"><mathml id="131"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>W</mi><msub><mrow></mrow><mi>j</mi></msub><mo>=</mo><mfrac><mrow><mn>1</mn><mo>-</mo><mi>h</mi><msub><mrow></mrow><mi>j</mi></msub></mrow><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></munderover><mo stretchy="false"> (</mo></mstyle><mn>1</mn><mo>-</mo><mi>h</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">) </mo></mrow></mfrac><mtext> </mtext><mi>j</mi><mo>=</mo><mn>1</mn><mo>, </mo><mn>2</mn><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>m</mi></mrow></math></mathml>      (9) </p>
+                </div>
+                <h4 class="anchor-tag" id="132" name="132"><b>3.2.4</b> 计算综合得分</h4>
+                <div class="p1">
+                    <p id="133"><mathml id="134"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn><mo>, </mo><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>n</mi><mo>, </mo><mi>m</mi></mrow></munderover><mi>W</mi></mstyle><msub><mrow></mrow><mi>j</mi></msub><mi mathvariant="bold-italic">A</mi><msub><mrow></mrow><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></math></mathml>      (10) </p>
+                </div>
+                <div class="p1">
+                    <p id="135">式中:<i>W</i><sub><i>j</i></sub>表示每个指标占的权重, <b><i>A</i></b><sub><i>ij</i></sub>表示的是调整后的<b><i>X</i></b><sub><i>ij</i></sub>值。</p>
+                </div>
+                <div class="p1">
+                    <p id="136">在信息论中, 熵是对不确定性的一种度量。信息量越大, 不确定性就越小, 熵也就越小;可根据各项指标的变异程度, 利用信息熵这个工具, 计算出各个指标的权重, 为多指标综合评价提供依据。</p>
+                </div>
+                <h4 class="anchor-tag" id="137" name="137"><b>3.3 KNN模型</b></h4>
+                <div class="p1">
+                    <p id="138">KNN是通过测量不同特征值之间的距离进行分类。它的思路是:如果一个样本在特征空间中的<i>K</i>个最相似 (即特征空间中最邻近) 的样本中的大多数属于某一个类别, 则该样本也属于这个类别。<i>K</i>通常是不大于20的整数。该方法在决策上只依据最邻近的一个或者几个样本的类别来决定待分样本所属的类别<citation id="191" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="139">KNN算法实现步骤综述:</p>
+                </div>
+                <div class="p1">
+                    <p id="140"> (1) 计算样本数据之间距离;</p>
+                </div>
+                <div class="p1">
+                    <p id="141"> (2) 按照距离的递增关系进行排序;</p>
+                </div>
+                <div class="p1">
+                    <p id="142"> (3) 选取距离最小的<i>K</i>个点;</p>
+                </div>
+                <div class="p1">
+                    <p id="143"> (4) 确定前<i>K</i>个点所在类别的出现频率;</p>
+                </div>
+                <div class="p1">
+                    <p id="144"> (5) 返回前<i>K</i>个点中出现频率最高的类别作为测试数据的预测分类。</p>
+                </div>
+                <h3 id="145" name="145" class="anchor-tag"><b>4 模型构建</b></h3>
+                <h4 class="anchor-tag" id="146" name="146"><b>4.1 因子指标设计</b></h4>
+                <div class="p1">
+                    <p id="147">针对寻找到的对应关系需进行关系校验, 通过文本挖掘算法计算文本相似度得分, 进而将文本相似度得分以及拨打行为指标作为构建权重划分模型的输入因子, 通过模型计算相似度得分, 校验关系可靠性。因子指标设计成宽表, 如表1所示。</p>
+                </div>
+                <div class="area_img" id="148">
+                    <p class="img_tit"><b>表1 宽表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="148" border="1"><tr><td><br />序号</td><td>宽表维度</td><td>宽表明细</td></tr><tr><td><br />1</td><td>文本相似度<br />得分</td><td>地址相似度得分</td></tr><tr><td><br />2</td><td></td><td>姓名相似度得分</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="149">
+                    <p class="img_tit"><b>续表1</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="149" border="1"><tr><td><br />序号</td><td>宽表维度</td><td>宽表明细</td></tr><tr><td><br />3</td><td>拨打原因</td><td>催办各业务主体平均拨打次数</td></tr><tr><td><br />4</td><td></td><td>投诉各业务主体平均拨打次数</td></tr><tr><td><br />5</td><td></td><td>催办各业务主体平均拨打时长</td></tr><tr><td><br />6</td><td></td><td>投诉各业务主体平均拨打时长</td></tr><tr><td><br />7</td><td>拨打偏好<br />时段</td><td>22:00-次日7:00拨打次数</td></tr><tr><td><br />8</td><td></td><td>7:00-次日12:00拨打次数</td></tr><tr><td><br />9</td><td></td><td>12:00-次日17:00拨打次数</td></tr><tr><td><br />10</td><td></td><td>17:00-次日22:00拨打次数</td></tr><tr><td><br />11</td><td></td><td>周末拨打次数</td></tr><tr><td><br />12</td><td></td><td>元旦假日拨打次数</td></tr><tr><td><br />13</td><td></td><td>春节假日拨打次数</td></tr><tr><td><br />14</td><td></td><td>清明节假日拨打次数</td></tr><tr><td><br />15</td><td></td><td>劳动节假日拨打次数</td></tr><tr><td><br />16</td><td></td><td>端午节假日拨打次数</td></tr><tr><td><br />17</td><td></td><td>中秋节假日拨打次数</td></tr><tr><td><br />18</td><td></td><td>国庆假日拨打次数</td></tr><tr><td><br />19</td><td></td><td>2-3月拨打次数</td></tr><tr><td><br />20</td><td></td><td>4-6月拨打次数</td></tr><tr><td><br />21</td><td></td><td>7-8月拨打次数</td></tr><tr><td><br />22</td><td></td><td>9月拨打次数</td></tr><tr><td><br />23</td><td></td><td>10月-次年1月拨打次数</td></tr><tr><td><br />24</td><td>户号号码<br />对应关系<br />的指标</td><td>对应关系来电总次数</td></tr><tr><td><br />25</td><td></td><td>对应关系近3月来电次数</td></tr><tr><td><br />26</td><td></td><td>对应关系近6月来电次数</td></tr><tr><td><br />27</td><td></td><td>平均通话时长</td></tr><tr><td><br />28</td><td></td><td>最小通话时长</td></tr><tr><td><br />29</td><td></td><td>最大通话时长</td></tr><tr><td><br />30</td><td></td><td>拨打事件数</td></tr><tr><td><br />31</td><td></td><td>最近来电时间</td></tr><tr><td><br />32</td><td></td><td>历史拨打记录中是否存在该对应关系</td></tr><tr><td><br />33</td><td></td><td>来电时间点 (工作日、节假日) </td></tr><tr><td><br />34</td><td>户号的历史<br />拨打行为<br />数据</td><td>户号来电总次数</td></tr><tr><td><br />35</td><td></td><td>户号来电平均通话时长</td></tr><tr><td><br />36</td><td></td><td>户号来电最大通话时长</td></tr><tr><td><br />37</td><td></td><td>户号来电最小通话时长</td></tr><tr><td><br />38</td><td></td><td>最近记录号码是否为对应号码</td></tr><tr><td><br />39</td><td>号码的历史<br />拨打行为<br />数据</td><td>号码来电总次数</td></tr><tr><td><br />40</td><td></td><td>号码来电平均通话时长</td></tr><tr><td><br />41</td><td></td><td>号码来电最大通话时长</td></tr><tr><td><br />42</td><td></td><td>号码来电最小通话时长</td></tr><tr><td><br />43</td><td></td><td>最近记录户号是否为对应户号</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="150" name="150"><b>4.2 模型结果输出</b></h4>
+                <h4 class="anchor-tag" id="151" name="151"><b>4.2.1</b> 计算各类因素指标权重</h4>
+                <div class="p1">
+                    <p id="152">通过文本分词构造词向量, 并计算出地址相似度、姓名相似度得分作为模型的输入因子, 进而再结合拨打行为、拨打偏好等行为指标, 构建权重划分模型, 模型输出各类指标权重如表2所示。</p>
+                </div>
+                <div class="area_img" id="153">
+                    <p class="img_tit"><b>表2 模型指标权重</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="153" border="1"><tr><td><br />序号</td><td>宽表维度</td><td>模型权重输出</td></tr><tr><td><br />1</td><td>地址相似度</td><td>0.26</td></tr><tr><td><br />2</td><td>姓名相似度</td><td>0.15</td></tr><tr><td><br />3</td><td>拨打原因</td><td>0.15</td></tr><tr><td><br />4</td><td>号码历史拨打行为</td><td>0.13</td></tr><tr><td><br />5</td><td>号码对应关系行为</td><td>0.12</td></tr><tr><td><br />6</td><td>户号历史拨打行为</td><td>0.11</td></tr><tr><td><br />7</td><td>拨打偏好</td><td>0.08</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="154" name="154"><b>4.2.2</b> 计算对应关系匹配度得分</h4>
+                <div class="p1">
+                    <p id="155">依据各类指标权重值, 计算对应关系 (户号与号码对应关系) 匹配度得分, 得分分布如表3所示。</p>
+                </div>
+                <div class="area_img" id="156">
+                    <p class="img_tit"><b>表3 得分分布表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="156" border="1"><tr><td><br />分位等级</td><td>分位数</td><td>综合得分</td></tr><tr><td><br />1</td><td>0%</td><td>0.016 5</td></tr><tr><td><br />2</td><td>5%</td><td>0.539 4</td></tr><tr><td><br />3</td><td>10%</td><td>0.626 2</td></tr><tr><td><br />4</td><td>15%</td><td>0.715 6</td></tr><tr><td><br />5</td><td>20%</td><td>0.826 0</td></tr><tr><td><br />6</td><td>25%</td><td>0.882 0</td></tr><tr><td><br />7</td><td>30%</td><td>0.901 9</td></tr><tr><td><br />8</td><td>35%</td><td>0.903 4</td></tr><tr><td><br />9</td><td>40%</td><td>0.903 9</td></tr><tr><td><br />10</td><td>45%</td><td>0.904 4</td></tr><tr><td><br />11</td><td>50%</td><td>0.914 8</td></tr><tr><td><br />12</td><td>55%～100%</td><td>1.000 0</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="157" name="157"><b>4.3 模型效果评估</b></h4>
+                <h4 class="anchor-tag" id="158" name="158"><b>4.3.1</b> 结果验证</h4>
+                <div class="p1">
+                    <p id="159">选取浙江省2016/04/01至2017/04/01工单数据作为建模数据, 通过构建权重划分模型, 计算对应关系匹配度得分。选取未来5个月内 (2017/04/01-2017/08/31) 有过拨打且记录客户户号的工单作为模型验证集, 对模型输出结果进行关系验证, 并将数据作十分位, 分别验证模型模型的命中率、覆盖率情况, 验证结果如表4所示。</p>
+                </div>
+                <div class="area_img" id="160">
+                    <p class="img_tit"><b>表4 模型结果表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="160" border="1"><tr><td>得分<br />排名</td><td>关系<br />数量</td><td>累计<br />关系数量</td><td>匹配<br />关系数</td><td>累计匹配<br />关系数</td><td>累计<br />命中率</td><td>累计<br />覆盖率</td></tr><tr><td><br />10</td><td>2 958</td><td>2 958</td><td>1 824</td><td>1 824</td><td>61.66%</td><td>17.36%</td></tr><tr><td><br />20</td><td>2 958</td><td>5 916</td><td>1 555</td><td>3 379</td><td>57.12%</td><td>32.16%</td></tr><tr><td><br />30</td><td>2 958</td><td>8 874</td><td>1 266</td><td>4 645</td><td>52.34%</td><td>44.21%</td></tr><tr><td><br />40</td><td>2 958</td><td>11 832</td><td>1 156</td><td>5 801</td><td>49.03%</td><td>55.22%</td></tr><tr><td><br />50</td><td>2 958</td><td>14 790</td><td>1 069</td><td>6 870</td><td>46.45%</td><td>65.39%</td></tr><tr><td><br />60</td><td>2 958</td><td>17 748</td><td>983</td><td>7 853</td><td>44.25%</td><td>74.75%</td></tr><tr><td><br />70</td><td>2 958</td><td>20 706</td><td>851</td><td>8 704</td><td>42.04%</td><td>82.85%</td></tr><tr><td><br />80</td><td>2 958</td><td>23 664</td><td>657</td><td>9 361</td><td>39.56%</td><td>89.10%</td></tr><tr><td><br />90</td><td>2 958</td><td>26 622</td><td>624</td><td>9 985</td><td>37.51%</td><td>95.04%</td></tr><tr><td><br />100</td><td>2 958</td><td>29 580</td><td>521</td><td>10 506</td><td>35.52%</td><td>100.00%</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="161">从表4可知, 分值越高, 模型命中率越高, 符合分值越高, 户号与号码对应关系越紧密的趋势特征。模型命中率在分值排名前70%以内都高于40%, 并且在分值前70%模型覆盖率达到了82.5%, 故建议选取分值排名前70%作为模型预测有效对应关系。</p>
+                </div>
+                <h4 class="anchor-tag" id="162" name="162"><b>4.3.2</b> 不足之处</h4>
+                <div class="p1">
+                    <p id="163"> (1) 目前此方法主要是以95598工单数据为主线寻找户号与号码对应关系, 后期可从智能互动网站、掌上电力、缴费等渠道获取对应关系进行扩充;</p>
+                </div>
+                <div class="p1">
+                    <p id="164"> (2) 此方法在进行KNN模型识别匹配过程中, 计算复杂度较高, 对匹配数据集按照地址范围进行缩减, 一定程度上会降低对应关系准确性;</p>
+                </div>
+                <div class="p1">
+                    <p id="165"> (3) 此方法在构建权重划分模型时, 通过模型计算各类指标的权重, 但一定程度上会忽略业务影响, 后期可结合专家评分, 综合评判各类因素权重得分。</p>
+                </div>
+                <h4 class="anchor-tag" id="166" name="166"><b>4.3.3</b> 不可控因素</h4>
+                <div class="p1">
+                    <p id="167"> (1) 由于95598话务工单地址信息记录不规范, 导致地址相似度得分存在偏差;</p>
+                </div>
+                <div class="p1">
+                    <p id="168"> (2) 由于95598话务工单姓名记录不规范, 导致姓名相似度得分存在偏差;</p>
+                </div>
+                <div class="p1">
+                    <p id="169"> (3) 95598受理内容信息记录不规范, 导致截取客户户号信息、用电地址等信息不准确;</p>
+                </div>
+                <div class="p1">
+                    <p id="170"> (4) 客户档案信息录入不及时、且存在一户多号情况 (如开发商楼宇信息, 针对一个户号对应小区所有业主信息) 。</p>
+                </div>
+                <h3 id="171" name="171" class="anchor-tag"><b>5 结 语</b></h3>
+                <div class="p1">
+                    <p id="172">从浙江省近1 年受理工单情况入手, 通过构建统一身份识别模型, 共有效识别出对应关系272万, 涉及工单量为431.74万工单, 覆盖浙江省近1年工单总量的67.35%, 即有67.35%的受理工单通过模型有效识别出户号。</p>
+                </div>
+                <div class="p1">
+                    <p id="173">综合以上, 本文创新点如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="174"> (1) 基于大数据平台分布式计算环境, 对海量全业务95598工单数据、客户档案数据进行数据分析、数据建模, 弥补传统数据抽样建模的不足, 进而提升模型预测准确度;</p>
+                </div>
+                <div class="p1">
+                    <p id="175"> (2) 创新性地引入文本相似度计算方法, 对工单用电地址、客户姓名进行分词, 进而构造词向量空间, 计算文本相似度;</p>
+                </div>
+                <div class="p1">
+                    <p id="176"> (3) 创新性地使用权重划分模型, 对各项因素指标实现客观权重评级;</p>
+                </div>
+                <div class="p1">
+                    <p id="177"> (4) 创新性地引入KNN模型算法, 实现对应关系 (户号与号码对应关系) 增量有效识别;</p>
+                </div>
+                <div class="p1">
+                    <p id="178"> (5) 基于大数据平台分布式计算环境, 采用分布式计算方法 (MapReduce计算、Spark内存计算) , 并行地实现数据加工处理、模型计算, 提升模型计算高效迭代性, 实现模型快速、高效精准输出。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201803003&amp;v=MTM2MjhIOW5Nckk5Rlo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0ZpRGhWTC9CTHpUWlpMRzQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 王洋, 丁志刚, 郑树泉, 等.一种用户画像系统的设计与实现[J].计算机应用与软件, 2018, 35 (3) :8-14.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DLXQ201705014&amp;v=MDY0NjBGckNVUjdxZlp1WnNGaURoVkwvQklTSFRmN0c0SDliTXFvOUVZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 张爽, 景伟强, 罗欣, 等.基于大数据的95598优质服务管理创新与实践[J].电力需求侧管理, 2017, 19 (5) :52-54.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201305078&amp;v=MTI1ODZxZlp1WnNGaURoVkwvQkx6VFpaTEc0SDlMTXFvOUNiSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjc=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 符保龙.基于背景知识和主动学习的文本挖掘技术研究[J].计算机应用与软件, 2013, 30 (5) :275-278.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201706001&amp;v=MjU5MjRmN0c0SDliTXFZOUZaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGaURoVkwvQlBTbmY=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 陈二静, 姜恩波.文本相似度计算方法研究综述[J].现代图书情报技术, 2017, 1 (6) :1-11.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201610058&amp;v=MTU5MjVSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGaURoVkwvQkx6VFpaTEc0SDlmTnI0OUFiSVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 盛华, 张桂珠.一种融合K-means和快速密度峰值搜索算法的聚类方法[J].计算机应用与软件, 2016, 33 (10) :260-264, 269.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201706013&amp;v=MjI3NDBMejdCZHJHNEg5Yk1xWTlFWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRmlEaFZML0I=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 孔欣欣, 苏本昌, 王宏志, 等.基于标签权重评分的推荐模型及算法研究[J].计算机学报, 2017, 40 (6) :1440-1452.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WLWJ201601035&amp;v=MTg3MDU3cWZadVpzRmlEaFZML0JNaUhjWkxHNEg5Zk1ybzlHWVlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 江华丽.中文分词算法研究与分析[J].物联网技术, 2016 (1) :87-89.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DKDX201702018&amp;v=MjYyOTVFYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRmlEaFZML0JJU2JQZHJHNEg5Yk1yWTk=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 徐懿彬.基于Aho-Corasick自动机算法的概率模型中文分词CPACA算法[J].电子科技大学学报, 2017, 46 (2) :426-433.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ZLTS201701013&amp;v=MzAzNzFNcm85RVo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0ZpRGhWTC9CUHlIZmZiRzRIOWI=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 张广庆, 朱登峰, 岳琪佳.中文分词在标准信息检索中的应用[J].质量探索, 2017 (1) :79-82.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201808050&amp;v=MTI0MTJGaURoVkwvQkx6VFpaTEc0SDluTXA0OUFaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnM=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 雷朔, 刘旭敏, 徐维祥.基于词向量特征扩展的中文短文本分类研究[J].计算机应用与软件, 2018, 35 (8) :269-274.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=ELEW201723100&amp;v=MDY1MzREaFZML0JJQ0hPZWJHNEg5Yk9ySTVGWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRmk=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 谢季川, 宗振国, 刘宏国, 等.基于词向量模型的95598工单文本挖掘[J].电子世界, 2017 (23) :176-176.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDKD201406020&amp;v=MjQ2NjRhckc0SDlYTXFZOUhaSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGaURoVkwvQlBTbkE=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 郭金维, 蒲绪强, 高祥, 等.一种改进的多目标决策指标权重计算方法[J].西安电子科技大学学报 (自然科学版) , 2014, 41 (6) :118-125.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201606014&amp;v=Mjk5NTVFWUlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRmlEaFZML0JMelRaWkxHNEg5Zk1xWTk=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 李洪奇, 杨中国, 朱丽萍, 等.基于数据集特征的KNN最优K值预测方法[J].计算机应用与软件, 2016, 33 (6) :54-58, 83.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JYRJ201903055" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201903055&amp;v=MDU5MzBac0ZpRGhWTC9CTHpUWlpMRzRIOWpNckk5QVlZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnU=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c2Q1UnJpL2tUTHpCSWVzVW9XYz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

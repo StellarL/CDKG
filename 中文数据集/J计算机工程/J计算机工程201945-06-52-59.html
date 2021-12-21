@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130373679207500%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201906009%26RESULT%3d1%26SIGN%3dq%252bCPHd4FWz6oDqEEvZNs8tRVtv0%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201906009&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201906009&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201906009&amp;v=MjY1MDBGckNVUkxPZVplUm9GeW5sVWIvQkx6N0JiYkc0SDlqTXFZOUZiWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#35" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#40" data-title="1 相关工作 ">1 相关工作</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#57" data-title="2 Key-Value数据库系统 ">2 Key-Value数据库系统</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#67" data-title="2.1 主索引结构设计">2.1 主索引结构设计</a></li>
+                                                <li><a href="#116" data-title="2.2 数据分布算法设计">2.2 数据分布算法设计</a></li>
+                                                <li><a href="#132" data-title="2.3 内存磁盘混合存储设计">2.3 内存磁盘混合存储设计</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#154" data-title="3 实验结果与分析 ">3 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#156" data-title="1) 性能数据对比">1) 性能数据对比</a></li>
+                                                <li><a href="#161" data-title="2) 集群规模对比">2) 集群规模对比</a></li>
+                                                <li><a href="#166" data-title="3) 主索引持久化/重建测试">3) 主索引持久化/重建测试</a></li>
+                                                <li><a href="#168" data-title="4) 主索引持久化耗时计算及分析">4) 主索引持久化耗时计算及分析</a></li>
+                                                <li><a href="#172" data-title="5) 主索引重建耗时计算及分析">5) 主索引重建耗时计算及分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#175" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#60" data-title="&lt;b&gt;图1 本文系统架构&lt;/b&gt;"><b>图1 本文系统架构</b></a></li>
+                                                <li><a href="#78" data-title="&lt;b&gt;图2 主索引结构示意图&lt;/b&gt;"><b>图2 主索引结构示意图</b></a></li>
+                                                <li><a href="#101" data-title="&lt;b&gt;图3 主索引持久化流程&lt;/b&gt;"><b>图3 主索引持久化流程</b></a></li>
+                                                <li><a href="#135" data-title="&lt;b&gt;图4 内存/磁盘混合存储技术示意图&lt;/b&gt;"><b>图4 内存/磁盘混合存储技术示意图</b></a></li>
+                                                <li><a href="#158" data-title="&lt;b&gt;图5 Dcache与Redis性能对比测试&lt;/b&gt;"><b>图5 Dcache与Redis性能对比测试</b></a></li>
+                                                <li><a href="#170" data-title="&lt;b&gt;图6 主索引持久化与重建测试数据&lt;/b&gt;"><b>图6 主索引持久化与重建测试数据</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" 马文龙, 朱妤晴, 蒋德钧, 等.Key-Value型NoSQL本地存储系统研究[J].计算机学报, 2018, 41 (8) :1722-1751." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201808003&amp;v=MTkxNjlqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5bmxVYi9CTHo3QmRyRzRIOW5NcDQ5Rlo0UUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         马文龙, 朱妤晴, 蒋德钧, 等.Key-Value型NoSQL本地存储系统研究[J].计算机学报, 2018, 41 (8) :1722-1751.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 姚经纬, 杨福军.Redis分布式缓存技术在Hadoop平台上的应用[J].计算机技术与发展, 2017, 27 (6) :146-150." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJFZ201706031&amp;v=MTU3MjRkTEc0SDliTXFZOUdaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeW5sVWIvQk1pZk4=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         姚经纬, 杨福军.Redis分布式缓存技术在Hadoop平台上的应用[J].计算机技术与发展, 2017, 27 (6) :146-150.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 王胜.持久化主存索引技术研究与应用[D].南京:南京航空航天大学, 2016." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016792033.nh&amp;v=MTE0NzhRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnlubFViL0JWRjI2R0xTeEhOSFBySkViUEk=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         王胜.持久化主存索引技术研究与应用[D].南京:南京航空航天大学, 2016.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" 秦雄军, 张佳程, 陆游游, 等.一种基于裸闪存的Key-Value数据库优化方法[J].计算机研究与发展, 2017, 54 (6) :1326-1336." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201706015&amp;v=MjkzNThRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnlubFViL0JMeXZTZExHNEg5Yk1xWTlFWVk=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         秦雄军, 张佳程, 陆游游, 等.一种基于裸闪存的Key-Value数据库优化方法[J].计算机研究与发展, 2017, 54 (6) :1326-1336.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" 安仲奇, 杜昊, 李强, 等.基于高性能I/O技术的Memcached优化研究[J].计算机研究与发展, 2018, 55 (4) :864-874." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201804019&amp;v=MjY5NjI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeW5sVWIvQkx5dlNkTEc0SDluTXE0OUViWVFLREg=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         安仲奇, 杜昊, 李强, 等.基于高性能I/O技术的Memcached优化研究[J].计算机研究与发展, 2018, 55 (4) :864-874.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 罗军, 陈席林, 李文生.高效Key-Value持久化缓存系统的实现[J].计算机工程, 2014, 40 (3) :33-38." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201403008&amp;v=MjQ0NjRSTE9lWmVSb0Z5bmxVYi9CTHo3QmJiRzRIOVhNckk5RmJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         罗军, 陈席林, 李文生.高效Key-Value持久化缓存系统的实现[J].计算机工程, 2014, 40 (3) :33-38.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" WANG Peng, SUN Guangyu, JIANG Song, et al.An efficient design and implementation of LSM-tree based key-value store on open-channel SSD[C]//Proceedings of the 9th European Conference on Computer Systems.Amsterdam, Netherlands:[s.n.], 2014:16-29." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=An efficient design and implementation of LSM-tree based key-value store on open-channel SSD">
+                                        <b>[7]</b>
+                                         WANG Peng, SUN Guangyu, JIANG Song, et al.An efficient design and implementation of LSM-tree based key-value store on open-channel SSD[C]//Proceedings of the 9th European Conference on Computer Systems.Amsterdam, Netherlands:[s.n.], 2014:16-29.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" OUKID I, LASPERAS J.FPTree:a hybrid SCM-DRAM persistent and concurrent B-tree for storage class memory[C]//Proceedings of 2016 International Conference on Management of Data.San Francisco, USA:[s.n.], 2016:371-386." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=FPTree:A hybrid SCMDRAM persistent and concurrent B-tree for storage class memory">
+                                        <b>[8]</b>
+                                         OUKID I, LASPERAS J.FPTree:a hybrid SCM-DRAM persistent and concurrent B-tree for storage class memory[C]//Proceedings of 2016 International Conference on Management of Data.San Francisco, USA:[s.n.], 2016:371-386.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" 李慧娟, 栾钟治, 王辉, 等.NUMA架构内多个节点间访存延时平衡的内存分配策略[J].计算机学报, 2017, 40 (9) :2111-2126." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201709010&amp;v=MDU3MDVyRzRIOWJNcG85RVpJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5bmxVYi9CTHo3QmQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         李慧娟, 栾钟治, 王辉, 等.NUMA架构内多个节点间访存延时平衡的内存分配策略[J].计算机学报, 2017, 40 (9) :2111-2126.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" 胡森森, 计卫星, 王一拙, 等.片上多核处理器Cache一致性协议优化研究综述[J].软件学报, 2017, 28 (4) :1027-1047." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201704018&amp;v=MjgxNDVMRzRIOWJNcTQ5RWJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5bmxVYi9CTnlmVGI=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         胡森森, 计卫星, 王一拙, 等.片上多核处理器Cache一致性协议优化研究综述[J].软件学报, 2017, 28 (4) :1027-1047.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" MASS L M, KISSINGER T, HABIH D, et al.BUZZARD:a NUMA-aware in-memory indexing system[C]//Proceedings of 2013 ACM SIGMOD’13.New York, USA:ACM Press, 2013:1285-1286." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=BUZZARD:a NUMA-aware in-memory indexing system">
+                                        <b>[11]</b>
+                                         MASS L M, KISSINGER T, HABIH D, et al.BUZZARD:a NUMA-aware in-memory indexing system[C]//Proceedings of 2013 ACM SIGMOD’13.New York, USA:ACM Press, 2013:1285-1286.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" KISSINGER T, SCHLEGEL B, BOEHM M, et al.A high-throughput in-memory index, durable on flash-based SSD:insights into the winning solution of the SIGMOD programming contest 2011[J].ACM SIGMOD Record, 2012, 41 (3) :44-50." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000006941&amp;v=MjMyODFCTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSUlWNFdhaHM9TmlmSVk3SzdIdGpOcjQ5RlpPc0pCWGc0bw==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         KISSINGER T, SCHLEGEL B, BOEHM M, et al.A high-throughput in-memory index, durable on flash-based SSD:insights into the winning solution of the SIGMOD programming contest 2011[J].ACM SIGMOD Record, 2012, 41 (3) :44-50.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 王胜, 秦小麟, 沈尧, 等.可持久化CSB+-树索引技术研究[J].计算机科学与探索, 2015, 9 (2) :182-192." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KXTS201502005&amp;v=MTY4MjdUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnlubFViL0JMalhmZmJHNEg5VE1yWTlGWVlRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         王胜, 秦小麟, 沈尧, 等.可持久化CSB+-树索引技术研究[J].计算机科学与探索, 2015, 9 (2) :182-192.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" HWANG Y, GWAK H, SHIN D.Two level logging with non volatile byte addressable memory in log structured file systems[C]//Proceedings of the 12th ACM International Conference on Computing Frontiers.Ischia, Italy:[s.n.], 2015:108-116." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Two-level logging with non-volatile byte-addressable memory in log-structured file systems">
+                                        <b>[14]</b>
+                                         HWANG Y, GWAK H, SHIN D.Two level logging with non volatile byte addressable memory in log structured file systems[C]//Proceedings of the 12th ACM International Conference on Computing Frontiers.Ischia, Italy:[s.n.], 2015:108-116.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" SEDGEWICK R.算法 (英文版) [M].谢路云, 译.4版.北京:人民邮电出版社, 2012." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787115271464001&amp;v=MDk5NjFidm5LcmlmWnU5dUZDdmpVNzdJSWw0ZFhGcXpHYks1RzlQTHJvdERZT3NQRFJNOHp4VVNtRGQ5U0g3bjN4RTlm&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         SEDGEWICK R.算法 (英文版) [M].谢路云, 译.4版.北京:人民邮电出版社, 2012.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" STONBRAKER M, CETINTEMEL U.“One size fits all”:an idea whose time has come and gone[C]//Proceedings of International Conference on Data Engineering.Washington D.C., USA:IEEE Press, 2008:76-76." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=&amp;quot;One size fits all&amp;quot;:an idea whose time has come and gone">
+                                        <b>[16]</b>
+                                         STONBRAKER M, CETINTEMEL U.“One size fits all”:an idea whose time has come and gone[C]//Proceedings of International Conference on Data Engineering.Washington D.C., USA:IEEE Press, 2008:76-76.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(06),52-59 DOI:10.19678/j.issn.1000-3428.0052612            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>一种优化的Key-Value型NoSQL系统</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%B1%A0%E9%9B%AA%E7%9C%9F&amp;code=40287366&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">屠雪真</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%B1%A0%E8%A6%81%E5%B3%B0&amp;code=28148868&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">屠要峰</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%88%E5%B0%8F%E5%BC%BA&amp;code=25666887&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陈小强</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%B2%B3%E5%8D%97%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0018212&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">河南大学计算机与信息工程学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%85%B4%E9%80%9A%E8%AE%AF%E8%82%A1%E4%BB%BD%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&amp;code=0688192&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中兴通讯股份有限公司</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>Key-Value (KV) 是NoSQL系统中使用较为广泛的一种存储模型。针对当前主流NoSQL系统存在检索功能有限、内存容量小和宕机等问题, 提出一种KV型NoSQL系统设计方法。使用可持久化的混合主索引结构解决范围查询和快速重启, 采用数据分布算法和内外存混合存储技术, 通过数据在内存和固态硬盘之间的智能调度, 实现了大规模数据的高效存取和低成本存储。实验结果表明, 与Redis相比, 对于典型大小Value, 该系统在单节点读写性能上提升约8倍, 配置成本降低约3/4, 在海量数据的低成本高效存储上有明显优势。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=NoSQL%E7%B3%BB%E7%BB%9F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">NoSQL系统;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%A4%9A%E6%A0%B8%E6%9E%B6%E6%9E%84&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">多核架构;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%9B%BA%E6%80%81%E7%A1%AC%E7%9B%98&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">固态硬盘;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%8C%81%E4%B9%85%E5%8C%96%E5%AD%98%E5%82%A8&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">持久化存储;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%95%B0%E6%8D%AE%E5%88%86%E5%B8%83&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">数据分布;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B7%B7%E5%90%88%E5%AD%98%E5%82%A8&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">混合存储;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    屠雪真 (1998—) , 女, 本科生, 主研方向为分布式计算与存储;E-mail: tuxuezhen@qq.com;
+                                </span>
+                                <span>
+                                    屠要峰, 研究员级高级工程师;;
+                                </span>
+                                <span>
+                                    陈小强, 高级工程师。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-09-10</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家重点研发计划 (2018YFB1003300);</span>
+                                <span>深圳市科技应用示范项目 (sf20170036);</span>
+                    </p>
+            </div>
+                    <h1><b>An Optimized Key-Value NoSQL System</b></h1>
+                    <h2>
+                    <span>TU Xuezhen</span>
+                    <span>TU Yaofeng</span>
+                    <span>CHEN Xiaoqiang</span>
+            </h2>
+                    <h2>
+                    <span>School of Computer and Information Engineering, Henan University</span>
+                    <span>ZTE Corporation</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>The Key-Value (KV) is a storage model widely used in NoSQL systems.To address the problems of limited search function, small memory capacity and downtime of the current mainstream NoSQL system, this paper proposes a KV type of NoSQL system design method.The method designs a persistent hybrid primary index structure to solve range queries and fast restarting, uses data distribution algorithms and internal and external hybrid storage technologies, and implements efficient access and low-cost storage of large-scale data through intelligent scheduling of data between memory and Solid State Disk (SSD) .Experimental results show that compared withRedis, the system improves the single-node read/write performance by about 8 times and reduces the configuration cost by about three-fourths when addressing values of typical size.It has obvious advantages in the low-cost and efficient storage of massive data.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=NoSQL%20system&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">NoSQL system;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=multi-core%20architecture&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">multi-core architecture;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Solid%20State%20Disk%20(SSD)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Solid State Disk (SSD) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=persistent%20storage&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">persistent storage;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=data%20distribution&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">data distribution;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=hybrid%20storage&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">hybrid storage;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-09-10</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="35" name="35" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="36">随着信息技术的飞速发展, 数据量呈爆炸式增长。对于日益增长的海量数据处理, 许多新型应用面临高并发、低时延、数据类型复杂、均衡访问、弹性扩展及高可用等挑战。在解决这些实际问题的过程中, 基于Key-Value (KV) 的非关系型数据库系统凭借高性能、高可扩展性的优势和简单灵活的数据模型受到人们的关注<citation id="177" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>, 并在大规模数据处理和存储领域得到了广泛应用。</p>
+                </div>
+                <div class="p1">
+                    <p id="37">在诸多的KV系统中, Redis<citation id="178" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>是应用最广泛且具有代表性的方案, 它支持多种数据类型的存储和操作, 提供RDB和 AOF两种持久化方式, 但这只是其保证数据恢复的措施, Redis的数据存取都是在内存中。Redis适用于多种应用场景, 在互联网和分布式计算领域有很多成功的应用范例。</p>
+                </div>
+                <div class="p1">
+                    <p id="38">现有KV系统都是针对特定应用场景设计的, 在功能和适用范围方面还存在局限与不足。主要有以下3个问题:一是大部分KV系统检索功能有限, 相对于传统数据库, 不支持范围查询和二级索引;二是容量问题, 为了保证数据存取的效率, 系统的数据都是保存在内存中, 相对于磁盘, 内存容量小、价格高, 而且集群中内存的规模容量总是有限的, 虽然Redis提供了对持久化的支持, 但它只是把内存中的数据镜像到磁盘上, 数据容量不能超过内存大小;三是宕机恢复问题, 即系统发生宕机等异常情况时相关数据能够及时有效保存, 并在重启时能够快速恢复, 由于主存的易失性, 内存中的索引和数据需要有持久化机制保障重用性, 重构开销也要尽可能得小, 提高重启时的实时性, 否则, 对于需要快速启动并进行查询处理的实时系统, 如银行交易系统等, 将会带来无法接受的损失<citation id="179" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">上述问题主要归纳为KV系统的索引结构设计和数据组织方法的问题。要解决这些问题, 需要突破传统KV系统和磁盘数据库的设计观念, 利用处理器多核并发、大内存空间高效利用、高速网络通信、SSD外存新硬件等新技术的优势, 重新设计数据的组织方法、机制和相应策略。本文对NoSQL系统进行研究, 并提出一种KV型NoSQL系统设计方法。</p>
+                </div>
+                <h3 id="40" name="40" class="anchor-tag">1 相关工作</h3>
+                <div class="p1">
+                    <p id="41">KV型NoSQL系统有3种实现方式<citation id="180" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>:</p>
+                </div>
+                <div class="p1">
+                    <p id="42">1) 基于Hash表实现, 例如MemCache<citation id="181" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>、Redis。散列法是一种将字符组成的字符串转换为固定长度的数值或索引值的方法。它是根据关键码值而直接访问的数据结构, 在查找、插入、删除时的时间复杂度为<i>O</i> (1) , 其在速度和易用性方面较优。但是, 它的局限性也很明显, 在系统构建时必须确定将要存储多少数据, 哈希表一旦被创建后难于扩展, 当出现大量Hash值碰撞时会导致效率严重下降, 不能支持范围查询等。对于在内存中使用的数据结构, 大多采用一致性Hash及其改进算法<citation id="182" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">2) 基于Log-Structured-Merge tree (LSM tree) <citation id="183" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>实现, 例如HBase、levelDB。它的核心思想是将对数据的修改增量保存在内存中, 达到指定条件后将这些修改操作批量顺序地写入磁盘。其优点是能够在内存中将小粒度聚合成大粒度数据, 然后以追加方式写入磁盘, 写入性能较高。缺点是读性能表现不佳且容易造成严重的写放大。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">3) 基于B-树<citation id="184" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>实现, 例如MongoDB。传统数据库系统也普遍采用B-树作为索引结构。B-树是通过增加节点数目来减小树的高度, 从而减少外存设备的读写次数。数据库系统还利用了磁盘预读原理, 将一个节点在物理上存储在一个页, 每个节点只需要一次I/O就可以完全载入。B-树中一次检索时间复杂度为<i>O</i> (<i>h</i>) =<i>O</i> (log<sub><i>d</i></sub><i>N</i>) , 其中, <i>d</i>为出度, <i>N</i>为数据规模。实际应用中, 出度<i>d</i>值非常大, 因此树的高度<i>h</i>非常小。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">B-树虽然提高了磁盘I/O性能, 但存在遍历效率低下的问题。在数据库中基于范围的查询是非常频繁的, 而B-树做范围查询需要遍历整棵树, 效率较低。然而, B+树只要顺序扫描叶子节点就可以实现整棵树的遍历, 所以B+树支持范围查询非常方便。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">涉及到磁盘上查询的数据结构, 一般都用B+-树。它的检索效率较高, 查询功能也较强大。缺点是数据难以全部驻留在内存, 大量随机写容易造成节点碎片化, 继而导致性能下降。</p>
+                </div>
+                <div class="p1">
+                    <p id="47">近年来, 随着高速网络、多核处理器、内外存技术的快速发展, 越来越多的研究人员借助新兴技术解决现有KV系统的不足。</p>
+                </div>
+                <div class="p1">
+                    <p id="48">多核处理器已经成为通用处理器市场的主流。多核架构凭借可扩展的计算资源提高了计算能力, 但是内存资源依旧是有限的。非一致访存 (Non-Uniform Memory Access, NUMA) 缓解了内存控制器的争用, 但也使得内存管理更加复杂。多核架构的兴起给存储系统的设计带来了新挑战<citation id="185" type="reference"><link href="19" rel="bibliography" /><link href="21" rel="bibliography" /><link href="23" rel="bibliography" /><sup>[<a class="sup">9</a>,<a class="sup">10</a>,<a class="sup">11</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">文献<citation id="186" type="reference">[<a class="sup">5</a>]</citation>研究基于高性能I/O技术的Memcached系统的通信加速和存储扩展问题, 提出基于RDMA进行通信加速的方法, 并设计一种基于NVMe SSD的Memcached服务端存储扩展机制, 采用日志结构管理内存与外存两级存储。但是, 它仅是Memcached内存管理机制的简单扩展, 在内存用尽时才使用FIFO将内存slab队列的队头数据写入磁盘slab, 没有热点管理和分级调度, 也无法改变Memcached索引基于Hash表的实现方式, 不支持范围查询、二级索引等功能。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">文献<citation id="187" type="reference">[<a class="sup">4</a>]</citation>提出基于闪存特点的I/O调度技术提高闪存读写的吞吐率, 运用用户态的空间管理和垃圾回收方法缩短I/O路径, 并设计实现一种基于裸闪存的KV系统Flashkv。但是, 这仅是研究提升KV系统的性能, 没有功能上的增强和存储容量上的扩展。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">随着主存容量和速度的提升, 主存索引作为一种具有高效查询处理能力的工具, 发展非常迅速并已取得诸多研究成果<citation id="188" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。主存索引面临的主要问题是主存易失性导致的低重用性。如果主存索引能够持久化到外存中, 当系统需要时能够将外存中的索引结构快速导入到内存中, 这样既可具备内存的高效处理能力, 又可保证系统的重用性和实时性。</p>
+                </div>
+                <div class="p1">
+                    <p id="52">传统持久化方法是将索引节点数据采用文件方式多次写入到位于外存中的索引文件中。优点是能够直接读写外存进行索引维护操作, 无需占用过多内存。缺点是创建及维护索引、查询等开销都比较大, 不适用于性能要求较高的系统。</p>
+                </div>
+                <div class="p1">
+                    <p id="53">文献<citation id="189" type="reference">[<a class="sup">12</a>]</citation>提出一种可持久化的主存前缀树索引方案DPT (Durable Prefix Tree) 。主要思想是利用一种合并循环日志机制实现更新操作的持久化。但是, 该方案进行索引恢复时重构效率较低, 实时性和重用性较差。</p>
+                </div>
+                <div class="p1">
+                    <p id="54">文献<citation id="190" type="reference">[<a class="sup">13</a>]</citation>提出一种可持久化的主存索引技术DCSBT, 在一定程度上提高了主存索引的重用性和实时性。但是基于内存映射的持久化技术会造成磁盘I/O冲击, 并且随着数据规模变大, 受限的内存空间将不足以容纳索引结构。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">文献<citation id="191" type="reference">[<a class="sup">14</a>]</citation>提出基于新型非易失型内存 (Non-volatile Memory, NVM) 的两层日志, 研究使用NVM的非易失性和高速字节寻址特性解决KV系统中WAL日志缓存的频繁小粒度更新问题, 以及多核在集中式日志上的性能和扩展性问题。但是, 这并没有真正改变集中式日志的本质。NVM器件还存在着各类问题需要解决, 距成熟商用尚需时日。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">以上研究都局限在KV系统的部分功能改进和性能提升, 并没有根本解决前述的3个典型问题。</p>
+                </div>
+                <h3 id="57" name="57" class="anchor-tag">2 Key-Value数据库系统</h3>
+                <div class="p1">
+                    <p id="58">综合以上分析, 本文提出一种新的KV系统设计, 利用多核、大内存和Flash存储介质的最新技术, 系统地解决了KV系统的上述问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">如图1所示, 本文系统由客户端库、服务端集群和运维管理台3个部分组成。</p>
+                </div>
+                <div class="area_img" id="60">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906009_060.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 本文系统架构" src="Detail/GetImg?filename=images/JSJC201906009_060.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 本文系统架构</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906009_060.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="61">客户端库提供访问服务端集群的API接口, 提供本地缓存服务、管理到服务端集群的会话连接和路由信息等。</p>
+                </div>
+                <div class="p1">
+                    <p id="62">运维管理负责整个集群的运维管理和监控, 可提供基于命令行和基于图形界面2种方式。</p>
+                </div>
+                <div class="p1">
+                    <p id="63">服务端集群分为集群与数据分布层和数据存储层:</p>
+                </div>
+                <div class="p1">
+                    <p id="64">1) 集群与数据分布层负责管理集群内节点间通信、数据分布、均衡与迁移、副本管理与数据同步等, 通过核心的数据分布算法和相关策略实现系统的这些功能服务。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">2) 数据存储层实现数据在内存和外存中的可靠存储及调度管理, 并提供范围查询、快速检索、宕机重构及持久化等重要功能。索引管理采用在共享内存中红黑树结构实现的核心技术, 提供了范围查询和二级索引等检索能力, 在部分场合可以对关系数据库做适当补充。同时, 还实现了索引结构数据完整而高效地在内、外存中导入导出, 提高了主存索引的重用性和实时性, 解决了系统持久化和宕机快速重构问题。通过数据管理和热点调度等关键技术模块实现数据在内存/磁盘中的混合存储及调度。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">基于上述数据分布技术和数据存储技术, 本文系统实现了大规模数据低成本极速存储, 解决了海量数据高性能缓存的难题。</p>
+                </div>
+                <h4 class="anchor-tag" id="67" name="67">2.1 主索引结构设计</h4>
+                <div class="p1">
+                    <p id="68">索引技术是整个KV系统的核心, 决定了KV系统能够提供的性能和功能。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">如上文所述, 磁盘上的索引结构一般采用B-树, 内存中的索引结构大都采用Hash表。</p>
+                </div>
+                <div class="p1">
+                    <p id="70">树家族是为了实现方便快捷的查找而存在的。对于一棵树而言, 查找的效率在于树的高度, 在设计时还要考虑查找的平均情况, 叶子节点到根节点的距离不能差别太大。B树等多叉树是用宽度换高度, 树的宽度越大, 高度就越小, 查找起来就越快。但是, 树的高度和宽度又是互相制约的, 宽度太大会增加操作开销, 而且对于稀疏节点将会严重消耗内存。</p>
+                </div>
+                <div class="p1">
+                    <p id="71">二叉查找树简单易实现, 但是高度太高且容易产生不均衡。2-3树的深度比较小且平衡性好, 在最坏情况下仍具有较好的性能。例如, 含有10亿个结点的一颗2-3树的高度范围为19～30, 最多只需要访问30个结点就能在10亿个键中进行任意查找和插入操作。</p>
+                </div>
+                <div class="p1">
+                    <p id="72">但是, 2-3树在插入和删除过程中需要判断插入的结点是2-结点还是3-结点等, 实现起来代码比较复杂, 而且会增加额外的开销。</p>
+                </div>
+                <div class="p1">
+                    <p id="73">红黑树是一种较为“平衡的”二叉查找树, 本质上是用标准的二叉查找树和一些额外的信息 (替换3-结点) 来表示2-3树。其基本思想是将3-结点表示为由一条左斜的红色链接相连的2个2-结点。这样, 对于任意的2-3树, 只要对结点进行转换, 即可派生出一颗对应的二叉查找树。所以, 红黑树既是二叉查找树, 也是2-3树, 既保持了二叉树代码实现的简单化, 又继承了2-3树的高效性<citation id="192" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">红黑树的I/O渐进复杂度也为<i>O</i> (lg <i>N</i>) , 树的高度要比B树高, 在极端情况下逻辑上很近的节点 (父子) 物理上也可能较远, 不能充分利用磁盘局部性, 所以效率比B-树差很多。但是, 如果使用在内存中, 这种局部性的限制就不存在。</p>
+                </div>
+                <div class="p1">
+                    <p id="75">由于内存的易失性, 对于需要快速启动并进行查询处理的实时系统, 主存索引必须要进行持久化, 并且在重启后能够快速重构。</p>
+                </div>
+                <div class="p1">
+                    <p id="76">基于以上分析, 结合红黑树和散列表的优点, 本文设计一种可持久化的混合主存索引结构, 不仅具有传统索引强大的查询功能, 还具有主存索引的高效性和实时性, 解决了范围查询和快速重启等核心问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="77">主索引结构如图2所示, 主索引采用红黑树结构, 但是在一个大的静态数组中实现的红黑树结构, 需要在红黑树结构持久化时启用Hash表做补充。</p>
+                </div>
+                <div class="area_img" id="78">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906009_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 主索引结构示意图" src="Detail/GetImg?filename=images/JSJC201906009_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 主索引结构示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906009_078.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="79">在图2中, 左图是内存索引结构, 以静态数组方式实现, 右上图是一颗红黑树索引, 是左图的逻辑结构, 右下图是Hash索引结构。</p>
+                </div>
+                <div class="p1">
+                    <p id="80">考虑到数据分治和高性能, 系统将一个命名空间中的数据划分成4 096个分区, 在集群各节点均衡分布。每个分区对应创建一棵主索引结构, 在主索引持久化时由多个线程并发执行持久化流程, 主索引重建时也由多个线程并发执行索引重建流程。这种设计在多核多处理器的架构下可以提升多核在索引上的并行执行能力, 避免CPU瓶颈。</p>
+                </div>
+                <div class="p1">
+                    <p id="81">主存索引的存放和持久化可用选择share memory + file方式, 也可用选择memory + mmap file方式。mmap是操作系统提供的内存映射技术, 使得程序可以快速访问硬盘上的文件, 采用内存映射读写文件的效率远高于常规的文件操作。在实际应用中, 为了系统的高可用性, 需要尽量减少主存索引重构次数, 选择share memory的存放方式。</p>
+                </div>
+                <div class="p1">
+                    <p id="82">主存索引的创建:根据本文主索引结构的特点, 创建索引之前需要先根据键值的数量和大小计算索引占用空间的大小。系统启动时从共享内存中一次性申请所需大小的内存, 并按图2所示静态数组结构完成初始化。主索引节点的创建和维护操作都在静态数组结构中管理, 这样主索引结构就落在连续的内存空间。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">在持久化时, 将该内存空间中的主索引结构数据保存到外存中的索引文件中。为了保证数据的完整性, 主存索引持久化时要对红黑树加锁, 持久化期间不能对红黑树进行更新操作。同时, 为了保障主索引持久化期间的对外服务, 需要临时启用Hash索引、缓存发生的Set/Delete操作并提供服务。</p>
+                </div>
+                <div class="p1">
+                    <p id="84">持久化结束后, 释放加在红黑树索引上的锁, 在红黑树上重放Hash索引的操作, 然后红黑树索引重新接管服务。</p>
+                </div>
+                <div class="p1">
+                    <p id="85">当再次启动时, 加载位于外存中的主存索引持久化文件到内存中, 以Root开始的结构就是红黑树索引。</p>
+                </div>
+                <h4 class="anchor-tag" id="86" name="86">2.1.1 主存索引文件结构设计</h4>
+                <div class="p1">
+                    <p id="87">外存中的数据都是以文件方式存储的。本节主要介绍主索引结构持久化到外存中的文件结构设计。每个分区对应一个红黑树索引结构, 持久化到磁盘的文件命名为X.RB, X就是分区编号, 简称红黑树文件。持久化时如果存在同名的文件, 就对同名文件做更名备份。为节省磁盘空间, 最多只保留1个备份。</p>
+                </div>
+                <div class="p1">
+                    <p id="88">红黑树文件的结构有以下的部分组成。</p>
+                </div>
+                <div class="p1">
+                    <p id="89">文件头组成如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="90">特定字符串:标识是一个本文设计的红黑树结构持久化文件, 重启时如果读取到的第1个字符串不是这个特定字符串, 则直接报错。</p>
+                </div>
+                <div class="p1">
+                    <p id="91">Version:版本, 格式为XX.XX.XX, 如03.02.00, 便于兼容以前的版本。</p>
+                </div>
+                <div class="p1">
+                    <p id="92">Node Number:描述文件体中的节点数, 同时校验文件体中左子树/右子树/Next的值。</p>
+                </div>
+                <div class="p1">
+                    <p id="93">Root:记录红黑树的首地址。</p>
+                </div>
+                <div class="p1">
+                    <p id="94">Index of Free List Head:记录空闲链表的首地址。</p>
+                </div>
+                <div class="p1">
+                    <p id="95">文件体和内存中主索引静态数组结构相同。文件体中每条记录的信息格式和长度固定, 其中内存指针没有意义。</p>
+                </div>
+                <div class="p1">
+                    <p id="96">文件尾由2个字段组成:</p>
+                </div>
+                <div class="p1">
+                    <p id="97">EOF:标识文件结束。</p>
+                </div>
+                <div class="p1">
+                    <p id="98">Check Sum:校验和, 对文件体中的内容进行校验。</p>
+                </div>
+                <h4 class="anchor-tag" id="99" name="99">2.1.2 主存索引持久化步骤</h4>
+                <div class="p1">
+                    <p id="100">存放在共享内存中的主存索引, 可以人工命令方式触发持久化操作, 也可在业务不繁忙时定期触发持久化操作。主索引持久化流程如图3所示。</p>
+                </div>
+                <div class="area_img" id="101">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906009_101.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 主索引持久化流程" src="Detail/GetImg?filename=images/JSJC201906009_101.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 主索引持久化流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906009_101.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="102">如图3所示, 存放在共享内存中主索引的持久化流程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="103">1) 定时到触发或者用户触发持久化操作。</p>
+                </div>
+                <div class="p1">
+                    <p id="104">2) 红黑树索引开始持久化, 对红黑树索引加锁, 同时启用Hash索引。</p>
+                </div>
+                <div class="p1">
+                    <p id="105">3) 在持久化期间, 用户可以正常操作。但是, Server端不再对红黑树做更新操作。当Set时只操作Hash索引, 插入到对应的Hash桶中, 当Delete时只操作Hash索引, 打删除标签, 不做实际的删除, 当Get时先在Hash索引中搜索, 查询不到时再到红黑树索引中查询。</p>
+                </div>
+                <div class="p1">
+                    <p id="106">4) 红黑树索引数据写完磁盘后, 释放加在红黑树索引上的锁, 在红黑树上重放Hash索引操作, 重放结束后, 红黑树重新接管服务。</p>
+                </div>
+                <div class="p1">
+                    <p id="107">5) 清除Hash索引。</p>
+                </div>
+                <h4 class="anchor-tag" id="108" name="108">2.1.3 索引导入</h4>
+                <div class="p1">
+                    <p id="109">索引导入是指系统启动后将存储在外存中的索引文件导入到内存中, 并在内存中重构索引结构。由于索引文件中Phead和结点指针都是相对位置, 索引文件加载到内存后, 主存索引结构和数据关系则完全处于内存中。</p>
+                </div>
+                <div class="p1">
+                    <p id="110">由<i>M</i>个线程并行进行本节点上<i>N</i>个分区的索引导入工作, 每个线程处理流程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="111">1) 从索引重建任务队列中获取Partition X索引的重建任务。</p>
+                </div>
+                <div class="p1">
+                    <p id="112">2) 打开X.RB, 根据文件内容重建红黑树索引。</p>
+                </div>
+                <div class="p1">
+                    <p id="113">3) 修改Partition X的索引重建状态为完成。</p>
+                </div>
+                <div class="p1">
+                    <p id="114">4) 索引重建任务完成数量加1。</p>
+                </div>
+                <div class="p1">
+                    <p id="115">5) 检查索引重建任务完成数量。若为<i>N</i>则索引导入工作完成并开始对外服务, 否则循环。</p>
+                </div>
+                <h4 class="anchor-tag" id="116" name="116">2.2 数据分布算法设计</h4>
+                <div class="p1">
+                    <p id="117">本文系统采用无模式数据模型来换取更好的水平扩展能力<citation id="193" type="reference"><link href="33" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>, 使用多级容器组织管理数据记录, 并采用一种分布式Hash和分区内主索引树结构相结合的设计实现数据在集群中的智能分布、动态均衡和自动扩展。</p>
+                </div>
+                <div class="p1">
+                    <p id="118">整个分布式系统可以看成是一个海量数据的存储仓库, 可根据不同业务场景创建多个名字空间, 每个名字空间可以单独配置存储属性, 如存储介质、副本个数、缺省TTL等。数据模型从逻辑上由3级结构组成, 分别是Namespace、Set和Record, 从概念上分别对应传统RDBMS中的Database、Table和Row。</p>
+                </div>
+                <div class="p1">
+                    <p id="119">根据数据分治的原则, 每个Namespace被划分成4 096个分区, 分区被均等地分配到集群中的节点上, 并确保分区在集群节点之间动态均衡分布。每个分区上使用一个2.1节所述的主索引结构管理本分区数据。</p>
+                </div>
+                <div class="p1">
+                    <p id="120">在每个Namespace中, 使用一种一致性哈希算法对数据进行分片。对于用户输入的任何一条记录, 取其主键值, 使用RIPEMD-160算法, 重新Hash出一个20位的定长字符串, 其前12位组成整数值就是分区ID, 将这条记录存放在对应的分区, 这是一个纯算法的计算过程。对于一个全局唯一的主键值, 其计算结果是唯一且不变的, 因此它归属的数据分区ID也是固定的。这样就确保了数据均匀且随机地分布于各节点, 不会出现热点和瓶颈, 也不会出现明显的某个节点比其他节点处理请求多的情况。</p>
+                </div>
+                <div class="p1">
+                    <p id="121">当节点被添加或移除, 或者某个节点增减数据盘时, 集群中数据分布会自动再均衡。增加节点时会从现有节点迁移一些分区给新增节点, 删除节点时该节点上的分区迁移到其他节点。再均衡完毕后所有节点管理的数据分区仍然是均等的。当用户创建一条记录时, 该算法过程总是将记录映射到同一个分区, 在记录的整个生命周期, 它驻留在同一节点上。分区可能从一个节点移动到其他节点, 但是分区不会分裂, 也不会把该记录重新分配到其他分区。</p>
+                </div>
+                <div class="p1">
+                    <p id="122">分区迁移步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="123">1) 计算节点内需要迁移的分区数, 然后开始逐个分区迁移。</p>
+                </div>
+                <div class="p1">
+                    <p id="124">2) 在迁移时, 先锁住该分区的主索引树, 中序遍历分区主索引树, 生成待迁移分区的Key列表。</p>
+                </div>
+                <div class="p1">
+                    <p id="125">3) 将每个Key插入新的主索引树, Value迁移到对应的磁盘。</p>
+                </div>
+                <div class="p1">
+                    <p id="126">4) 迁移过程继续对外服务。如果是读数据, 直接查找原主索引树。如果是写数据, 先写入原主索引 (主要是因为可以随时终止和回滚) , 再写入新主索引。</p>
+                </div>
+                <div class="p1">
+                    <p id="127">5) Key列表中数据迁移完成后, 切换到新的主索引, 同时将原主索引以及对应数据全部清除。</p>
+                </div>
+                <div class="p1">
+                    <p id="128">注意如果此时有节点间分区迁移则停止节点内分区迁移, 待节点间分区迁移结束后再重新开始节点内分区迁移。</p>
+                </div>
+                <div class="p1">
+                    <p id="129">系统维护一份主数据和一份数据副本, 每个节点上主数据的副本被分布到所有的其他节点。当某节点不可用时, 可以从其他节点上获取该节点上数据的副本。</p>
+                </div>
+                <div class="p1">
+                    <p id="130">当出现节点故障时, 系统会自动启动数据再均衡过程。因故障节点上数据的副本早已均匀分布在其他节点上, 只需将这些副本分区转变成主数据分区即可提供服务, 然后再慢慢重新构造它们的新副本分区。当故障节点恢复后, 集群自动发现并把它重新纳入成员, 然后再次启动数据再均衡过程。</p>
+                </div>
+                <div class="p1">
+                    <p id="131">数据再均衡过程是自动的, 且对系统运行性能影响很小, 几乎不影响对外服务, 因此, 系统是高可用和易维护的。</p>
+                </div>
+                <h4 class="anchor-tag" id="132" name="132">2.3 内存磁盘混合存储设计</h4>
+                <div class="p1">
+                    <p id="133">本文系统采用内存/磁盘混合存储技术, 通过数据在内存和SSD之间的智能调度实现大规模数据的高效存取和低成本存储。在磁盘介质使用上, 优先推荐SSD。</p>
+                </div>
+                <div class="p1">
+                    <p id="134">如图4所示, 每个分区的主索引结构是数组实现的红黑树, Value指针指向存放数据的内存地址。Data Buffer是数据在内存中的存放区域, 使用jemalloc管理, 可充分发挥多核处理器的优势。</p>
+                </div>
+                <div class="area_img" id="135">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906009_135.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 内存/磁盘混合存储技术示意图" src="Detail/GetImg?filename=images/JSJC201906009_135.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 内存/磁盘混合存储技术示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906009_135.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="136">热点调度用于管理热点数据的Value指针, 共有5个优先等级的链表组成, 采用一种类似LRU淘汰算法实现数据在内存和SSD之间的热点调度。数据首次读入时放入Level5 List头部。再次在Level5/4/3/2 List命中时, 直接跃迁到Level1 List头部, 然后定时按照Level1～Level5 的顺序降级。当满足内存回收条件阈值时, 从Level5 List的尾部开始回收Value指针指向的数据块。这种调度设计方式可以避免热点数据的抖动。</p>
+                </div>
+                <div class="p1">
+                    <p id="137">写缓存区SWB (SSD Write Buffer) 是一个FIFO队列, 由64个大小固定为1 MB的块组成, 用于管理向SSD写入的新数据。</p>
+                </div>
+                <div class="p1">
+                    <p id="138">SSD擅于随机读和顺序读写, 由于其基于写前擦除的垃圾回收机制和地址转换原理, 随机写不利于其性能的发挥<citation id="194" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>。传统的基于文件系统和闪存转换层的KV系统没有考虑到SSD的特点, 其读写请求需要依次经过内核的虚拟文件系统、页高速缓存、文件系统管理层、通用块层、驱动层才能到达物理设备, 整个过程I/O路径长而复杂且耗时。</p>
+                </div>
+                <div class="p1">
+                    <p id="139">本文系统直接对SSD裸盘进行管理, 包括空间分配、垃圾回收、I/O请求调度, 数据存取绕过底层文件系统, 缩短I/O路径, 充分利用底层SSD读写模式的优势。一块SSD磁盘空间划分成若干个规整为1 MB大小的存储块, 第1个块用于记录日志文件系统全局控制信息外, 其他都是数据块。</p>
+                </div>
+                <div class="p1">
+                    <p id="140">每个命名空间可以配置多块SSD, 这些SSD裸盘在数据存储过程中可以并行I/O, 提升并发吞吐量。在不增加内存设备的情况下, 可以通过添加SSD裸盘来大幅提高系统的数据存储规模, 最大可达TB级规模, 而数据读写性能与纯内存存储模式大致相当。</p>
+                </div>
+                <div class="p1">
+                    <p id="141">Get流程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="142">1) 根据Key查询主索引的Value指针, 如果不为空则表明查询的数据在内存中, 直接通过该内存地址指针读取数据。</p>
+                </div>
+                <div class="p1">
+                    <p id="143">2) 若查到的Value指针为空, 根据主索引的磁盘位置从SSD中读数据到新申请的内存。</p>
+                </div>
+                <div class="p1">
+                    <p id="144">3) Value指针更新为新申请的内存地址。</p>
+                </div>
+                <div class="p1">
+                    <p id="145">4) 新申请的内存位置指针放入Level5 List头部。</p>
+                </div>
+                <div class="p1">
+                    <p id="146">Set流程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="147">1) 根据Key查询索引, 此时Value指针为空。</p>
+                </div>
+                <div class="p1">
+                    <p id="148">2) 数据存入新申请的内存地址中, 更新Value指针。</p>
+                </div>
+                <div class="p1">
+                    <p id="149">3) Value指针放入Level5 List头部。</p>
+                </div>
+                <div class="p1">
+                    <p id="150">4) 数据追加到当前的SWB。</p>
+                </div>
+                <div class="p1">
+                    <p id="151">5) 定时到或者当前SWB写满后, SWB块以追加方式 (Append) 刷写到磁盘。将随机写操作转换成顺序写操作, 从而提高写入性能。</p>
+                </div>
+                <div class="p1">
+                    <p id="152">在写数据时, 对于Insert操作就直接追加新记录到写缓冲区当前Block缓存中即可。对于Update和Delete也要转换成某种形式的写入操作。Uodate操作时采用Copy-On-Write技术, 它先从旧Block读取旧记录值, 然后再把更新后的值写入到当前Block缓存中, 旧Block上的记录不会立即被删除, 它们等待后台维护例程定期扫描回收。Delete操作转换成一个特殊的Update操作, 区别是无需读取旧记录值, 只记录主键和删除标记等信息。</p>
+                </div>
+                <div class="p1">
+                    <p id="153">以上的内存磁盘混合存储结构和设计可以发挥多核多处理器、大内存的硬件环境优势。多个分区的索引和数据组织方式可以发挥多核的并行计算能力, 更多的数据驻留在内存可以高效存取、减少I/O并避免瓶颈, 根据SSD特点优化的磁盘管理机制可以更好地发挥SSD的性能优势。</p>
+                </div>
+                <h3 id="154" name="154" class="anchor-tag">3 实验结果与分析</h3>
+                <div class="p1">
+                    <p id="155">基于上述技术, 本文实现一个高性能分布式缓存系统Dcache, 并以其商用案例进行说明。某运营商业务系统要求支持1亿用户, 10亿条Key数, Value平均大小1 kB, 采用2个副本, 数据处理100万每秒操作数 (Operation Per Second, OPS) 以上, 时延在1 s以内, 这是典型的海量数据高并发低时延应用场景。存储服务器配置为IntelXeon (R) E5-2620v4@2.10 GHz/256 GB DDR3/8×800 GB SSD/12×6TB SATA。</p>
+                </div>
+                <h4 class="anchor-tag" id="156" name="156">1) 性能数据对比</h4>
+                <div class="p1">
+                    <p id="157">基于上述业务模型, Dcache和Redis (V3.4.4) 单节点性能对比测试结果如图5所示。</p>
+                </div>
+                <div class="area_img" id="158">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906009_158.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 Dcache与Redis性能对比测试" src="Detail/GetImg?filename=images/JSJC201906009_158.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 Dcache与Redis性能对比测试</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906009_158.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="159">在单节点情况下, 对于正常Value大小的场景, Dcahe读写性能是Redis的7倍～9倍, 主要原因是Dcache充分利用了CPU的多核架构优势。</p>
+                </div>
+                <div class="p1">
+                    <p id="160">随着Value变大, 两者性能差距逐渐缩小, 当Value大小为1 MB左右时, 性能接近。原因是此时达到了网络带宽瓶颈。</p>
+                </div>
+                <h4 class="anchor-tag" id="161" name="161">2) 集群规模对比</h4>
+                <div class="p1">
+                    <p id="162">由上述业务模型, 业务系统的数据规模为10亿 (Key数量) ×1 kB (Value大小) ×2副本=2 000 GB。</p>
+                </div>
+                <div class="p1">
+                    <p id="163">对于Redis, 简单计算需10台机器。考虑到持久化时Redis对内存和CPU的占用会变大一倍, 单台机器系统内存资源冗余和OPS配比, 共需25台存储服务器组成Redis集群提供服务。</p>
+                </div>
+                <div class="p1">
+                    <p id="164">改造为Dcache后, 因其主索引结构记录大小为64 Byte, 主存索引内存占用为10亿×64 Byte×2副本=128 GB, 数据存储在SSD盘。简单计算只需1台机器。考虑到高可用集群至少需要3个节点, 数据在SSD盘上的访问均衡性和OPS配比, 实际使用6个节点。</p>
+                </div>
+                <div class="p1">
+                    <p id="165">可见, 基于内存磁盘混合存储技术, Dcache实现了大规模数据低成本极速存储, 在成本方面极具竞争力。</p>
+                </div>
+                <h4 class="anchor-tag" id="166" name="166">3) 主索引持久化/重建测试</h4>
+                <div class="p1">
+                    <p id="167">由上述业务场景, Dcache集群是两副本分布在6个节点上。每个节点上有4 096×2/6=1 366个分区。每个分区Key数量为10亿/4 096 (一个命名空间有4 096个分区) =24.4万。每个分区上主索引结构所占用内存大小为24.4万×64 Byte=15.616  MB。</p>
+                </div>
+                <h4 class="anchor-tag" id="168" name="168">4) 主索引持久化耗时计算及分析</h4>
+                <div class="p1">
+                    <p id="169">每个节点上按照16个持久化线程计算, 每个线程串行执行1 366/16=86次持久化操作。如图6所示测试数据可得, 单节点上主索引结构持久化总耗时=单个分区持久化耗时×86=73×86=6 278 ms, 即单节点持久化耗时6 s左右。</p>
+                </div>
+                <div class="area_img" id="170">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201906009_170.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 主索引持久化与重建测试数据" src="Detail/GetImg?filename=images/JSJC201906009_170.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 主索引持久化与重建测试数据</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201906009_170.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="171">主存索引持久化期间启用Hash索引来保障对外的正常服务, 所以, Dcache主存索引持久化方案和时间是可以接受的。</p>
+                </div>
+                <h4 class="anchor-tag" id="172" name="172">5) 主索引重建耗时计算及分析</h4>
+                <div class="p1">
+                    <p id="173">每个节点上按照16个重建索引线程计算, 每个线程串行执行86次重建索引操作。单节点主索引重建总耗时=单个分区主索引重建耗时×86 =38×86=3 268 ms, 即单节点主索引重建耗时3 s左右。</p>
+                </div>
+                <div class="p1">
+                    <p id="174">以上分析结果表明, Dcache主索引持久化和重建耗时都是秒级。因为主索引结构是存放在共享内存中的, 只有在该节点机器断电重启的情况下才需要重建索引, 实际发生的频率很低, 所以Dcache主存索引持久化及重建机制可以满足要求, 解决KV系统宕机重启的问题。</p>
+                </div>
+                <h3 id="175" name="175" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="176">本文提出一种KV型NoSQL系统设计方法。该方法采用可持久化的高效主索引结构和机制实现范围查询功能, 同时解决主存索引的重用性和实时性问题, 并运用数据分布算法设计和内外存混合存储技术, 可使海量数据低成本极速存储。实验结果验证了该系统的有效性。下一步将结合软硬件技术的新发展来优化改进KV数据库系统, 提升本文方法的性价比和适用性。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201808003&amp;v=MDA0OTFNcDQ5Rlo0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5bmxVYi9CTHo3QmRyRzRIOW4=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 马文龙, 朱妤晴, 蒋德钧, 等.Key-Value型NoSQL本地存储系统研究[J].计算机学报, 2018, 41 (8) :1722-1751.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WJFZ201706031&amp;v=MDI5OTVsVWIvQk1pZk5kTEc0SDliTXFZOUdaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeW4=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 姚经纬, 杨福军.Redis分布式缓存技术在Hadoop平台上的应用[J].计算机技术与发展, 2017, 27 (6) :146-150.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016792033.nh&amp;v=MTE5NDIyNkdMU3hITkhQckpFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5bmxVYi9CVkY=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 王胜.持久化主存索引技术研究与应用[D].南京:南京航空航天大学, 2016.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201706015&amp;v=MDQ4MjdUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnlubFViL0JMeXZTZExHNEg5Yk1xWTlFWVlRS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 秦雄军, 张佳程, 陆游游, 等.一种基于裸闪存的Key-Value数据库优化方法[J].计算机研究与发展, 2017, 54 (6) :1326-1336.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201804019&amp;v=MDU0MzZxQnRHRnJDVVJMT2VaZVJvRnlubFViL0JMeXZTZExHNEg5bk1xNDlFYllRS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 安仲奇, 杜昊, 李强, 等.基于高性能I/O技术的Memcached优化研究[J].计算机研究与发展, 2018, 55 (4) :864-874.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201403008&amp;v=MzIzOTFvRnlubFViL0JMejdCYmJHNEg5WE1ySTlGYklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVI=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 罗军, 陈席林, 李文生.高效Key-Value持久化缓存系统的实现[J].计算机工程, 2014, 40 (3) :33-38.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=An efficient design and implementation of LSM-tree based key-value store on open-channel SSD">
+
+                                <b>[7]</b> WANG Peng, SUN Guangyu, JIANG Song, et al.An efficient design and implementation of LSM-tree based key-value store on open-channel SSD[C]//Proceedings of the 9th European Conference on Computer Systems.Amsterdam, Netherlands:[s.n.], 2014:16-29.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=FPTree:A hybrid SCMDRAM persistent and concurrent B-tree for storage class memory">
+
+                                <b>[8]</b> OUKID I, LASPERAS J.FPTree:a hybrid SCM-DRAM persistent and concurrent B-tree for storage class memory[C]//Proceedings of 2016 International Conference on Management of Data.San Francisco, USA:[s.n.], 2016:371-386.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201709010&amp;v=MTQ2MDR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnlubFViL0JMejdCZHJHNEg5Yk1wbzlFWklRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 李慧娟, 栾钟治, 王辉, 等.NUMA架构内多个节点间访存延时平衡的内存分配策略[J].计算机学报, 2017, 40 (9) :2111-2126.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201704018&amp;v=MDM5MDJmVGJMRzRIOWJNcTQ5RWJJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5bmxVYi9CTnk=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 胡森森, 计卫星, 王一拙, 等.片上多核处理器Cache一致性协议优化研究综述[J].软件学报, 2017, 28 (4) :1027-1047.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=BUZZARD:a NUMA-aware in-memory indexing system">
+
+                                <b>[11]</b> MASS L M, KISSINGER T, HABIH D, et al.BUZZARD:a NUMA-aware in-memory indexing system[C]//Proceedings of 2013 ACM SIGMOD’13.New York, USA:ACM Press, 2013:1285-1286.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000006941&amp;v=MDAxNTNPc0pCWGc0b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTG5JSVY0V2Focz1OaWZJWTdLN0h0ak5yNDlGWg==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> KISSINGER T, SCHLEGEL B, BOEHM M, et al.A high-throughput in-memory index, durable on flash-based SSD:insights into the winning solution of the SIGMOD programming contest 2011[J].ACM SIGMOD Record, 2012, 41 (3) :44-50.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KXTS201502005&amp;v=MDAyOTJGeW5sVWIvQkxqWGZmYkc0SDlUTXJZOUZZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm8=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 王胜, 秦小麟, 沈尧, 等.可持久化CSB+-树索引技术研究[J].计算机科学与探索, 2015, 9 (2) :182-192.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Two-level logging with non-volatile byte-addressable memory in log-structured file systems">
+
+                                <b>[14]</b> HWANG Y, GWAK H, SHIN D.Two level logging with non volatile byte addressable memory in log structured file systems[C]//Proceedings of the 12th ACM International Conference on Computing Frontiers.Ischia, Italy:[s.n.], 2015:108-116.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787115271464001&amp;v=MTIzODJkOVNIN24zeEU5ZmJ2bktyaWZadTl1RkN2alU3N0lJbDRkWEZxekdiSzVHOVBMcm90RFlPc1BEUk04enhVU21E&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> SEDGEWICK R.算法 (英文版) [M].谢路云, 译.4版.北京:人民邮电出版社, 2012.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=&amp;quot;One size fits all&amp;quot;:an idea whose time has come and gone">
+
+                                <b>[16]</b> STONBRAKER M, CETINTEMEL U.“One size fits all”:an idea whose time has come and gone[C]//Proceedings of International Conference on Data Engineering.Washington D.C., USA:IEEE Press, 2008:76-76.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201906009" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201906009&amp;v=MjY1MDBGckNVUkxPZVplUm9GeW5sVWIvQkx6N0JiYkc0SDlqTXFZOUZiWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEc=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFQxQTZSZWp6VHBWMkMvWVdDaHZmUT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130624310900000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201903005%26RESULT%3d1%26SIGN%3dxCGTEVfev9n1EuuCgVOsS4GhbM0%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201903005&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201903005&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201903005&amp;v=MjA3OTh0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJQTHo3QmJiRzRIOWpNckk5RllZUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#41" data-title="1 相关工作 ">1 相关工作</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#46" data-title="2 背景知识 ">2 背景知识</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#47" data-title="2.1 MapReduce">2.1 MapReduce</a></li>
+                                                <li><a href="#51" data-title="2.2 HBase">2.2 HBase</a></li>
+                                                <li><a href="#58" data-title="2.3 算法分析">2.3 算法分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#77" data-title="3 本文算法设计与实现 ">3 本文算法设计与实现</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#81" data-title="3.1 关键词统计">3.1 关键词统计</a></li>
+                                                <li><a href="#92" data-title="3.2 日志分析">3.2 日志分析</a></li>
+                                                <li><a href="#106" data-title="3.3 权值计算">3.3 权值计算</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#124" data-title="4 实验评估 ">4 实验评估</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#125" data-title="4.1 实验环境与实验数据">4.1 实验环境与实验数据</a></li>
+                                                <li><a href="#133" data-title="4.2 实验结果与分析">4.2 实验结果与分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#151" data-title="5 结束语 ">5 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#49" data-title="&lt;b&gt;图1 MapReduce编程模型&lt;/b&gt;"><b>图1 MapReduce编程模型</b></a></li>
+                                                <li><a href="#56" data-title="&lt;b&gt;表1 HBase存储逻辑视图&lt;/b&gt;"><b>表1 HBase存储逻辑视图</b></a></li>
+                                                <li><a href="#79" data-title="&lt;b&gt;图2 任务关系示意图&lt;/b&gt;"><b>图2 任务关系示意图</b></a></li>
+                                                <li><a href="#94" data-title="&lt;b&gt;图3 日志表的存储模型&lt;/b&gt;"><b>图3 日志表的存储模型</b></a></li>
+                                                <li><a href="#108" data-title="&lt;b&gt;图4 数据处理过程&lt;/b&gt;"><b>图4 数据处理过程</b></a></li>
+                                                <li><a href="#122" data-title="&lt;b&gt;图5 相关性权重的计算流程&lt;/b&gt;"><b>图5 相关性权重的计算流程</b></a></li>
+                                                <li><a href="#127" data-title="&lt;b&gt;表2 实验配置&lt;/b&gt;"><b>表2 实验配置</b></a></li>
+                                                <li><a href="#129" data-title="&lt;b&gt;表3 节点的配置参数与开发环境&lt;/b&gt;"><b>表3 节点的配置参数与开发环境</b></a></li>
+                                                <li><a href="#140" data-title="&lt;b&gt;图6 算法评分效果对比&lt;/b&gt;"><b>图6 算法评分效果对比</b></a></li>
+                                                <li><a href="#142" data-title="&lt;b&gt;表4 文档得分情况&lt;/b&gt;"><b>表4 文档得分情况</b></a></li>
+                                                <li><a href="#149" data-title="&lt;b&gt;图7 单节点与集群环境性能对比&lt;/b&gt;"><b>图7 单节点与集群环境性能对比</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" 付志超.基于Map/Reduce的分布式智能搜索引擎框架研究[D].武汉:武汉理工大学, 2008." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=2009042149.nh&amp;v=MjgwMDllUm9GeS9oVWJyUFYxMjdGN084SE5ESXBwRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         付志超.基于Map/Reduce的分布式智能搜索引擎框架研究[D].武汉:武汉理工大学, 2008.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" 邓玉林.基于hadoop大数据框架的个性化推荐系统研究与实现[D].成都:电子科技大学, 2016." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016176536.nh&amp;v=MjcxNTdCdEdGckNVUkxPZVplUm9GeS9oVWJyUFZGMjZHTEsvR05UUHFaRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         邓玉林.基于hadoop大数据框架的个性化推荐系统研究与实现[D].成都:电子科技大学, 2016.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 慕慧鸽, 张军.国内情报学领域信息检索相关性研究进展分析[J].图书馆学研究, 2016 (6) :10-14." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=TSSS201606002&amp;v=MjA0NzJxWTlGWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkvaFViclBNVDdZZmJHNEg5Zk0=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         慕慧鸽, 张军.国内情报学领域信息检索相关性研究进展分析[J].图书馆学研究, 2016 (6) :10-14.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" SALTON G, YU C T.On the construction of effective vocabularies for information retrieval[C]//Proceedings of ACM SIGPLAN-SIGIR Interface Meeting.New York, USA:ACM Press, 1973, 9 (3) :48-60." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000073237&amp;v=MjM2MjJNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTG5JSjFvV2J4VT1OaWZJWTdLN0h0ak5yNDlGWk93TURuOCtvQg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         SALTON G, YU C T.On the construction of effective vocabularies for information retrieval[C]//Proceedings of ACM SIGPLAN-SIGIR Interface Meeting.New York, USA:ACM Press, 1973, 9 (3) :48-60.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" SALTON G, FOX E A, WU H.Extended Boolean information retrieval[D].New York, USA:Cornell University, 1982." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Extended Boolean information retrieval">
+                                        <b>[5]</b>
+                                         SALTON G, FOX E A, WU H.Extended Boolean information retrieval[D].New York, USA:Cornell University, 1982.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 李学明, 李海瑞, 薛亮, 等.基于信息增益与信息熵的TFIDF算法[J].计算机工程, 2012, 38 (8) :37-40." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201208015&amp;v=MTg1MzhyUEx6N0JiYkc0SDlQTXA0OUVZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9oVWI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         李学明, 李海瑞, 薛亮, 等.基于信息增益与信息熵的TFIDF算法[J].计算机工程, 2012, 38 (8) :37-40.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 张瑜, 张德贤.一种改进的特征权重算法[J].计算机工程, 2011, 37 (5) :210-212." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201105073&amp;v=MTIyOTJGeS9oVWJyUEx6N0JiYkc0SDlETXFvOUNaNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         张瑜, 张德贤.一种改进的特征权重算法[J].计算机工程, 2011, 37 (5) :210-212.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" 张瑾.基于改进TF-IDF算法的情报关键词提取方法[J].情报杂志, 2014 (4) :153-155." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QBZZ201404028&amp;v=MDYwMzh0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJQTkMvUmRMRzRIOVhNcTQ5SGJJUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         张瑾.基于改进TF-IDF算法的情报关键词提取方法[J].情报杂志, 2014 (4) :153-155.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" 龚静, 周经野.一种基于多重因子加权的文本特征项权值计算方法[J].计算技术与自动化, 2007, 26 (1) :81-83." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJH200701021&amp;v=MjQxNzlQTHo3QlpyRzRIdGJNcm85SFpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         龚静, 周经野.一种基于多重因子加权的文本特征项权值计算方法[J].计算技术与自动化, 2007, 26 (1) :81-83.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" 张玉芳, 陈小莉, 熊忠阳.基于信息增益的特征词权重调整算法研究[J].计算机工程与应用, 2007, 43 (35) :159-161." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSGG200735048&amp;v=MTgxOTBiUHFvOUJiSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9oVWJyUEx6N01hYkc0SHQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         张玉芳, 陈小莉, 熊忠阳.基于信息增益的特征词权重调整算法研究[J].计算机工程与应用, 2007, 43 (35) :159-161.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" 贺科达, 朱铮涛, 程昱.基于改进 TF-IDF 算法的文本分类方法研究[J].广东工业大学学报, 2016, 33 (5) :49-53." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GDGX201605009&amp;v=Mjk2NTdZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJQSWluTWRyRzRIOWZNcW85RmI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         贺科达, 朱铮涛, 程昱.基于改进 TF-IDF 算法的文本分类方法研究[J].广东工业大学学报, 2016, 33 (5) :49-53.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 周源, 刘怀兰, 杜朋朋, 等.基于改进TF-IDF特征提取的文本分类模型研究[J].情报科学, 2017 (5) :111-118." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QBKX201705020&amp;v=MDc5NTh0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJQTkMvQWRyRzRIOWJNcW85SFpJUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         周源, 刘怀兰, 杜朋朋, 等.基于改进TF-IDF特征提取的文本分类模型研究[J].情报科学, 2017 (5) :111-118.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 王锴, 施水才, 王涛, 等.基于MapReduce的术语权重计算方法研究[J].电信科学, 2011, 27 (11) :62-65." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DXKX201111014&amp;v=MDYxOTFOcm85RVlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJQSVRYQWRyRzRIOUQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         王锴, 施水才, 王涛, 等.基于MapReduce的术语权重计算方法研究[J].电信科学, 2011, 27 (11) :62-65.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 李彬.基于Hadoop框架的TF-IDF算法改进[J].微型机与应用, 2012, 31 (7) :14-16." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WXJY201207006&amp;v=MTk4MTVGWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkvaFViclBNalhCZDdHNEg5UE1xSTk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         李彬.基于Hadoop框架的TF-IDF算法改进[J].微型机与应用, 2012, 31 (7) :14-16.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" 姚卫国, 张东波.基于Hadoop分布式平台的Web文本关键词提取方案[J].湘潭大学 (自然科学学报) , 2016, 38 (2) :79-83." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XYDZ201602016&amp;v=MjI4ODg2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9oVWJyUFBUVFBkTEc0SDlmTXJZOUVZb1FLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         姚卫国, 张东波.基于Hadoop分布式平台的Web文本关键词提取方案[J].湘潭大学 (自然科学学报) , 2016, 38 (2) :79-83.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" DEAN J, GHEMAWAT S.MapReduce:simplified data processing on large clusters[C]//Proceedings of Conference on Symposium on Opearting Systems Design and Implementation.[S.1.]:USENIX Association, 2008:10-10." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=MapReduce:simplified data processing on large clusters">
+                                        <b>[16]</b>
+                                         DEAN J, GHEMAWAT S.MapReduce:simplified data processing on large clusters[C]//Proceedings of Conference on Symposium on Opearting Systems Design and Implementation.[S.1.]:USENIX Association, 2008:10-10.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" GEORGE L.HBase权威指南[M].代志远, 刘佳, 蒋杰, 译.北京:人民邮电出版社, 2013." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787115318893000&amp;v=MTkxNTZEQk04enhVU21EZDlTSDduM3hFOWZidm5LcmlmWnU5dUZDdmpVN2pNSWxzVFhGcXpHYks1RzlMTnA0ZE1aK3NQ&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                         GEORGE L.HBase权威指南[M].代志远, 刘佳, 蒋杰, 译.北京:人民邮电出版社, 2013.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(03),26-31 DOI:10.19678/j.issn.1000-3428.0049976            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于Hadoop平台的相关性权重算法设计与实现</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%AB%98%E5%86%9B&amp;code=25893865&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">高军</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%BB%84%E7%8C%AE%E7%AD%96&amp;code=37551716&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">黄献策</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%8A%E6%B5%B7%E6%B5%B7%E4%BA%8B%E5%A4%A7%E5%AD%A6%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0121742&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">上海海事大学信息工程学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>传统TF-IDF算法仅从词频与逆向文档频率的角度计算关键词与文档之间的相关性权重, 忽略了用户兴趣对权重计算的影响。为此, 以满足用户信息检索目的为研究背景, 提出一种基于日志关联的相关性权重算法。从面向用户相关性的角度出发, 通过分析用户的搜索日志建立用户兴趣模型, 并结合分布式计算的思想, 运用MapReduce编程框架实现计算任务的并行化处理。实验结果表明, 该算法在处理海量数据时, 不仅能够提高算法效率, 而且可以根据用户的历史检索记录动态地改变检索词的权重, 提升用户与系统的交互能力。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">分布式计算;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=TF-IDF%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">TF-IDF算法;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%97%A5%E5%BF%97&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">日志;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%85%B4%E8%B6%A3%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">兴趣模型;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">信息检索;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    高军 (1979—) , 男, 副教授、博士, 主研方向为大数据分析、异构计算;;
+                                </span>
+                                <span>
+                                    黄献策, 硕士研究生。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-01-04</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金 (41701523);</span>
+                                <span>上海海事大学研究生创新基金 (YXR2017032);</span>
+                    </p>
+            </div>
+                    <h1><b>Design and Implementation of Correlation Weight Algorithm Based on Hadoop Platform</b></h1>
+                    <h2>
+                    <span>GAO Jun</span>
+                    <span>HUANG Xiance</span>
+            </h2>
+                    <h2>
+                    <span>College of Information Engineering, Shanghai Maritime University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>The traditional TF-IDF algorithm calculates the correlation weights between keywords and documents only by using the perspective of word frequency and reverse document frequency, which ignoes the influence of user interest on weight calculation.In order to meet the purpose of user information retrieval, a correlation weight algorithm based on journal association is proposed.From the perspective of user-oriented comelation, the user interest model is built by analyzing the user's search journal, and combined with the idea of distributed computing, the MapReduce programming framework is used to realize the parallel processing of computing tasks.Experimental results show that it can not only improve the efficiency of the algorithm when dealing with massive data, but also dynamically change the weight of retrieval word according to the user's historical retrieval records, so as to enhance the interaction ability between users and the system.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=distributed%20computing&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">distributed computing;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=TF-IDF%20algorithm&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">TF-IDF algorithm;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=journal&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">journal;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=interest%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">interest model;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=information%20retrieval&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">information retrieval;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-01-04</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="37" name="37" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="38">随着网络中数据量的激增, 当今社会已经进入到大数据时代, 人们在学习和工作中都需要处理大量的数据信息。但是, 当数据量超过一定的阈值后, 在这些海量的数据中有用数据所占的比例往往很少, 大量的无用信息会严重影响人们学习和工作的效率, 这就是学术上常说的信息过载问题<citation id="154" type="reference"><link href="3" rel="bibliography" /><link href="5" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>]</sup></citation>。信息检索<citation id="153" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>技术是解决信息过载问题的常用方法之一, 该技术的核心是相关性权重的计算方式。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">Saltond在1973年提出了TF-IDF (Term Frequency-Inverse Document Frequency) 算法<citation id="155" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>, 该算法是一种可以用于信息检索和文本挖掘的常用加权技术<citation id="156" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>, 可以从统计学的角度来衡量一个字或词与文档集合中一份文档的相关性程度。TF-IDF算法的核心思想是关键词的重要性与其在文档中的出现次数呈正相关, 与其在文档集合中出现的频率呈反相关, 这一思想符合香农信息论。目前, TF-IDF算法已经被广泛应用于各种信息检索系统<citation id="157" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>, 用来评估用户输入的查询语句与文档集合中文档之间的相关性权重, 具有计算简单、易于实现等特点, 但是该算法仅仅从词频和逆向文档频率的角度作为关键词权重的度量方式, 忽略了用户的兴趣对关键词权重的影响。</p>
+                </div>
+                <div class="p1">
+                    <p id="40">本文以TF-IDF算法在信息检索领域的应用为研究背景, 提出一种基于日志关联的相关性权重计算算法, 运用MapReduce编程框架对TF-IDF算法进行改进, 并将改进算法与TF-IDF算法在信息检索系统中进行实验对比。</p>
+                </div>
+                <h3 id="41" name="41" class="anchor-tag">1 相关工作</h3>
+                <div class="p1">
+                    <p id="42">近年来, 国内外学者针对TF-IDF算法的研究较多, 文献<citation id="158" type="reference">[<a class="sup">7</a>]</citation>在传统TF-IDF算法上加入特征词位置作为权重计算影响因子。文献<citation id="159" type="reference">[<a class="sup">8</a>]</citation>对关键词出现的位置及关键词的跨度进行量化, 从而决定关键词的权值大小。文献<citation id="160" type="reference">[<a class="sup">9</a>]</citation>在词长上对算法进行了改进。文献<citation id="161" type="reference">[<a class="sup">10</a>]</citation>将信息熵和信息增益加入到TF-IDF的计算公式中。文献<citation id="162" type="reference">[<a class="sup">11</a>,<a class="sup">12</a>]</citation>通过建立关键词类别库, 根据类别修正关键词的权重。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">以上文献都是基于系统相关性的研究, 即仅从关键词的频率、位置或词长等特征对算法进行改进。这种基于系统相关性的改进存在以下问题:1) 需要反复比较关键词在文档中的分布特征, 查询语句中每一个关键词权重值的计算都需要重复地扫描文档, 显然, 这种方法大大增加了系统的I/O次数, 从而降低系统的性能;2) 从系统相关性角度进行改进, 虽然在一定程度上提高了算法的有效性, 但是忽略了用户在检索信息时往往都带有主观目的的特点, 即用户想要检索的信息与其自身的兴趣领域有很大的关系。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">针对算法效率的问题, 文献<citation id="164" type="reference">[<a class="sup">13</a>,<a class="sup">14</a>]</citation>利用MapReduce编程模型实现了分布式计算关键词相关性权重, 该方法虽然在效率上对算法做出了很大改进, 但是没有对算法的有效性进行研究。文献<citation id="163" type="reference">[<a class="sup">15</a>]</citation>在分布式实现TF-IDF算法的基础上从关键词分布特征的角度对算法有效性进行了改进, 但依然存在基于系统相关性角度改进的缺点。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">通过对上述研究的分析, 本文根据用户日志建立用户兴趣模型, 从用户相关性的角度提出一种基于日志关联的相关性权重计算算法, 将用户行为作为相关性权重计算的影响因子, 并将该算法通过MapReduce分布式编程模型进行实现。实验结果表明, 该算法不仅在评分效果上有了改进, 而且性能也有所提高。</p>
+                </div>
+                <h3 id="46" name="46" class="anchor-tag">2 背景知识</h3>
+                <h4 class="anchor-tag" id="47" name="47">2.1 MapReduce</h4>
+                <div class="p1">
+                    <p id="48">MapReduce是一种开源的分布式编程模型<citation id="165" type="reference"><link href="33" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>, 该编程模型采用“分而治之”的思想可以对海量的数据实现并行处理。MapReduce编程模型主要是通过Map函数和Reduce函数来处理计算任务, 首先对输入数据进行分片, 以&lt;<i>Key</i>1, <i>Value</i>1&gt;键值对的方式输入Map函数, Map函数将输入的&lt;<i>Key</i>1, <i>Value</i>1&gt;键值对按照用户自定义的逻辑进行处理。然后将结果映射成&lt;<i>Key</i>2, <i>Value</i>2&gt;键值对。Reduce函数将Map函数输出的中间结果进行分组迭加, MapReduce作业的输入和输出一般都会保存在HDFS文件系统中, MapReduce编程模型如图1所示。</p>
+                </div>
+                <div class="area_img" id="49">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903005_049.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 MapReduce编程模型" src="Detail/GetImg?filename=images/JSJC201903005_049.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 MapReduce编程模型</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903005_049.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="50">在图1中, 用户只需关心自己作业的业务逻辑的实现, 任务调度与监控都由MapReduce框架负责。MapReduce任务调度的核心是Shuffle (洗牌) , 在很多情况下, Reduce需要跨节点去取被其他节点上Map输出的结果, Shuffle的任务就是负责在跨节点取得数据时尽量减少磁盘I/O对网络带宽的消耗。</p>
+                </div>
+                <h4 class="anchor-tag" id="51" name="51">2.2 HBase</h4>
+                <div class="p1">
+                    <p id="52">HBase是一种基于列存储的非关系型数据库<citation id="166" type="reference"><link href="35" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>, 适用于需要对大量数据进行实时读写的场景。在HBase数据库中, 表是三维的存储结构, 数据单元的值由行健、列族和时间戳共同决定, 如式 (1) 所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="53">{<i>rowkey</i>+<i>conlumn</i>=&lt;<i>family</i>&gt;+&lt;<i>label</i>&gt;+<i>version</i>}→<i>value</i>      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="55">HBase的面向列存储结构本质上是&lt;<i>key</i>, <i>value</i>&gt;的结构, 其中, <i>key</i>为{<i>rowkey</i>+<i>conlumn</i>=&lt;<i>family</i>&gt;+&lt;<i>label</i>&gt;+<i>version</i>}, <i>value</i>为cell中的值。在HBase中, 通过行健和列族可以确定一个存储单元, 每个存储单元中保存同一份数据的不同版本, 版本号根据时间戳自动分配, 这个特点使得HBase适用于需要数据重写的场景, 因此, 本文选用HBase作为用户存储用户日志的数据库。表1为HBase存储的逻辑视图。</p>
+                </div>
+                <div class="area_img" id="56">
+                                            <p class="img_tit">
+                                                <b>表1 HBase存储逻辑视图</b>
+                                                
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903005_05600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/JSJC201903005_05600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903005_05600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表1 HBase存储逻辑视图" src="Detail/GetImg?filename=images/JSJC201903005_05600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <div class="p1">
+                    <p id="57">由表1可以看出, HBase中的列属于特定的列族, 与关系数据库不同的是, HBase在创建表时只需定义列族, 列可以在添加数据时动态增加。另外, 值为空的列不占用存储空间, 这即为HBase存储的稀疏性, 这样既可以节省存储空间又可以提高数据访问性能。</p>
+                </div>
+                <h4 class="anchor-tag" id="58" name="58">2.3 算法分析</h4>
+                <div class="p1">
+                    <p id="59">词频 (Term Frequency, TF) 表示检索词在文档中出现的频率, 目的是对检索词进行归一化处理, 以防止它偏向内容长的文档。检索词与某一特定的文档之间的相关性可以表示为:</p>
+                </div>
+                <div class="p1">
+                    <p id="60" class="code-formula">
+                        <mathml id="60"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>t</mi><mi>f</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mrow><mi>n</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>, </mo><mi>j</mi></mrow></msub></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mi>k</mi></munder><mi>n</mi></mstyle><msub><mrow></mrow><mrow><mi>k</mi><mo>, </mo><mi>j</mi></mrow></msub></mrow></mfrac><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="61">其中, <i>n</i><sub><i>i</i>, <i>j</i></sub>是检索词在文档<i>doc</i><sub><i>j</i></sub>中出现的次数, 而分母是文档中所有字词出现的次数之和。TF根据频率信息给不同的关键词赋予不同的权重, 从而起到区分文档的目的, 但是单纯地以关键词的词频作为评判标准, 可能会出现因关键词均匀分布在文档集合中而无法区分的情况, 因此, 需要计算逆向文档频率 (Inverse Document Frequency, IDF) 值。</p>
+                </div>
+                <div class="p1">
+                    <p id="62">IDF是一个词语普遍重要性的度量, 其目的是给在少数的文档中出现的关键词赋予较高的权重值, 给在较多文献中出现的关键词赋予较低的权重值, 计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="63" class="code-formula">
+                        <mathml id="63"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>i</mi><mi>d</mi><mi>f</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mrow><mi>log</mi></mrow><msub><mrow></mrow><mi>a</mi></msub><mfrac><mrow><mo stretchy="false">|</mo><mi>D</mi><mi>o</mi><mi>c</mi><mo stretchy="false">|</mo></mrow><mrow><mo stretchy="false">|</mo><mi>j</mi><mo>:</mo><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>d</mi><mi>o</mi><mi>c</mi><msub><mrow></mrow><mi>j</mi></msub><mo stretchy="false">|</mo></mrow></mfrac><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="64">其中, |<i>Doc</i>|表示文档集合中的文档总数, |<i>j</i>:<i>t</i><sub>i</sub>∈<i>doc</i><sub><i>j</i></sub>|表示包含关键词<i>t</i><sub><i>i</i></sub>的文档数目。</p>
+                </div>
+                <div class="p1">
+                    <p id="65">式 (2) 、式 (3) 相乘即可得到计算单词与文档之间相关性权重:</p>
+                </div>
+                <div class="p1">
+                    <p id="66"><i>tfidf</i><sub><i>i</i>, <i>j</i></sub>=<i>tf</i><sub><i>i</i>, <i>j</i></sub>×<i>idf</i><sub><i>i</i></sub>      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="67">式 (4) 在对文档进行相关性评分时单纯地以TF值和IDF值作为影响因子, 而忽略了关键词本身的语义对权重计算的影响, 这种做法难以准确地衡量用户在检索信息时的真正意图。例如, 用户想查询Hadoop教程相关的信息时, 输入检索语句“Hadoop教程”得到的结果很可能是与Hadoop没有关系的教程信息。这是因为, 关键词“Hadoop”很可能在文档中出现的次数很少, 而在“教程”出现的次数很多, “Hadoop”所对应的相关性权重值偏小, “教程”得到的相关性权重值偏大, 这明显违背了用户的检索意图。</p>
+                </div>
+                <div class="p1">
+                    <p id="68">根据以上分析, 本文将从语义理解的层次对相关性权重算法进行改进, 通过建立用户搜索日志构建用户兴趣模型, 计算公式见式 (5) , 该方法可以智能地理解用户的搜索意图, 解决了传统方法没有深入到语义理解的层次、不具有联想功能和智能化程度比较低等问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="69"><i>score</i><sub><i>i</i></sub>=<i>tf</i><sub><i>i</i>, <i>j</i></sub>×<i>idf</i><sub><i>i</i></sub>×<i>w</i> (<i>t</i> in log<sub><i>a</i></sub><i>s</i>) ×<i>coord</i> (<i>q</i>, <i>doc</i>)      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="70">其中:</p>
+                </div>
+                <div class="p1">
+                    <p id="71"><i>w</i> (<i>t</i> in log<sub><i>a</i></sub><i>s</i>) =log<sub><i>a</i></sub> (<i>n</i>+1)      (6) </p>
+                </div>
+                <div class="p1">
+                    <p id="72"><i>coord</i> (<i>t</i>, <i>doc</i>) =log<sub><i>a</i></sub> (<i>m</i>+1)      (7) </p>
+                </div>
+                <div class="p1">
+                    <p id="73">在式 (5) 中, <i>score</i><sub><i>i</i></sub>表示关键词<i>t</i><sub><i>i</i></sub>与特定文档之间的相关性得分, <i>w</i> (<i>t</i> in log<sub><i>a</i></sub><i>s</i>) 是通过用户兴趣模型得到的关键词权重, 大小与用户使用次数<i>n</i>有关, <i>coord</i> (<i>q</i>, <i>doc</i>) 是协调因子, 大小与文档包含检索词的个数<i>m</i>有关。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">查询语句的最终得分<i>Score</i>可表示为:</p>
+                </div>
+                <div class="p1">
+                    <p id="75" class="code-formula">
+                        <mathml id="75"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>c</mi><mi>o</mi><mi>r</mi><mi>e</mi><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>t</mi><mspace width="0.25em" /><mtext>i</mtext><mtext>n</mtext><mspace width="0.25em" /><mi>q</mi></mrow></munder><mi>s</mi></mstyle><mi>c</mi><mi>o</mi><mi>r</mi><mi>e</mi><msub><mrow></mrow><mi>i</mi></msub><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>8</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="76">其中, <i>q</i>表示由查询语句经过分词得到的关键词集合。</p>
+                </div>
+                <h3 id="77" name="77" class="anchor-tag">3 本文算法设计与实现</h3>
+                <div class="p1">
+                    <p id="78">本文的计算核心是基于MapReduce实现分布式编程, 从MapReduce执行计算任务时需要将数据抽象成&lt;<i>Key</i>1, <i>Value</i>1&gt;键值对, 可以看出, 其非常适用于本文所设计算法的实现。本文通过设计3个具有依赖组合式关系的MapReduce任务实现基于日志关联的相关性权重计算, 如图2所示。</p>
+                </div>
+                <div class="area_img" id="79">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903005_079.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 任务关系示意图" src="Detail/GetImg?filename=images/JSJC201903005_079.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 任务关系示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903005_079.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="80">在MapReduce1中对输入的文档进行分词, 统计关键词在文档中出现的次数。MapReduce2扫描用户日志, 统计用户历史使用关键词的次数。MapReduce3以 MapReduce1和MapReduce2的统计结果为输入, 计算相关性权重。</p>
+                </div>
+                <h4 class="anchor-tag" id="81" name="81">3.1 关键词统计</h4>
+                <div class="p1">
+                    <p id="82">HDFS中的文档集合经过分片后输入Map函数, 在Map函数中使用IKAnalyzer分词器对文档内容进行分组产生&lt;word&amp;docName, 1&gt;对应的&lt;<i>key</i>, <i>value</i>&gt;键值对, 经过洗牌输入Reduce函数。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">在Reduce函数中实现词频统计, 根据<i>key</i>值对Map函数输出的结果进行分组并迭加运算, 输出结果&lt;word, docName&amp;counts&gt;到临时文件tmp_doc中, 函数设计如下:</p>
+                </div>
+                <div class="area_img" id="167">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201903005_16700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="92" name="92">3.2 日志分析</h4>
+                <div class="p1">
+                    <p id="93">用户日志表的存储模型如图3所示, 其中, 行健userName为用户名, 时间戳<i>t</i>为版本号, 列名称word为用户使用过的关键词, <i>value</i>值wordNumber为关键词在当前查询语句出现的次数。日志查询采用基于HBase的信息过滤机制实现多条件查询, 这种方法与全表扫描的方法相比可以明显提高查询效率。</p>
+                </div>
+                <div class="area_img" id="94">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903005_094.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 日志表的存储模型" src="Detail/GetImg?filename=images/JSJC201903005_094.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 日志表的存储模型</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903005_094.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="95">在Map函数中, 以用户名为行健过滤器, 以关键词为列值过滤器扫描用户日志产生&lt;word, wordNum&gt;对应的&lt;<i>key</i>, <i>value</i>&gt;键值对输出到中间结果。</p>
+                </div>
+                <div class="p1">
+                    <p id="96">Reduce函数按照<i>key</i>值分组统计用户使用过该关键词的总次数, 以&lt;word, wordToNum&gt;对应的&lt;<i>key</i>, <i>value</i>&gt;键值对输出到临时文件tmp_log中。</p>
+                </div>
+                <div class="area_img" id="168">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201903005_16800.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="106" name="106">3.3 权值计算</h4>
+                <div class="p1">
+                    <p id="107">本节将对关键词统计和日志分析的结果进行汇总处理, 但是MapReduce无法同时处理2种数据源。考虑到2份文件内容中都包含了关键字 (检索词) 这一属性, 因此, 可以用关键字作为<i>key</i>将2份文件中的数据做笛卡尔乘积运算, 生成MapReduce可以直接处理的数据。数据处理过程如图4所示。</p>
+                </div>
+                <div class="area_img" id="108">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903005_108.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 数据处理过程" src="Detail/GetImg?filename=images/JSJC201903005_108.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 数据处理过程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903005_108.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="109">在Map函数中读取tmp_doc和tmp_log中的数据, 把所有的数据标记成&lt;<i>key</i>, <i>value</i>&gt;的形式。其中, <i>key</i>是关键词, <i>value</i>则根据数据来源不同取不同的形式, tmp_doc中的记录标记为tmp_doc:doc&amp;counts, tmp_log中的记录标记为tmp_log:wordToNum。</p>
+                </div>
+                <div class="p1">
+                    <p id="110">在Reduce函数中, 首先把每个<i>key</i>建下的<i>value</i>列表拆分成分别来自tmp_doc和tmp_log的2个部分, 分别放入2个矩阵中, 计算2个矩阵的笛卡尔乘积得到&lt;word, doc&amp;counts&amp;wordToNum&gt;的形式, 然后运用相关性权重计算公式进行计算即可得到关键词与文档之间的相关性权重。</p>
+                </div>
+                <div class="p1">
+                    <p id="111">函数设计如下:</p>
+                </div>
+                <div class="area_img" id="169">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJC201903005_16900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="121">基于日志关联的相关性权重的整个计算流程如图5所示。</p>
+                </div>
+                <div class="area_img" id="122">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903005_122.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 相关性权重的计算流程" src="Detail/GetImg?filename=images/JSJC201903005_122.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 相关性权重的计算流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903005_122.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="123">由图5可以看出, 关键词统计和日志分析计算过程相互独立, 权值计算依赖于其他2个任务的计算结果, 即这3个MapReduce任务的组合依赖关系。</p>
+                </div>
+                <h3 id="124" name="124" class="anchor-tag">4 实验评估</h3>
+                <h4 class="anchor-tag" id="125" name="125">4.1 实验环境与实验数据</h4>
+                <div class="p1">
+                    <p id="126">实验所用的Hadoop集群环境由1个Master节点和4个Slave节点组成。集群具体部署情况如表2所示。</p>
+                </div>
+                <div class="area_img" id="127">
+                    <p class="img_tit"><b>表2 实验配置</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="127" border="1"><tr><td><br />主机名</td><td>角色</td><td>IP地址</td></tr><tr><td><br />Master</td><td>Master节点</td><td>10.72.51.111</td></tr><tr><td><br />Slaves1</td><td>Slave节点</td><td>10.72.51.112</td></tr><tr><td><br />Slaves2</td><td>Slave节点</td><td>10.72.51.113</td></tr><tr><td><br />Slaves3</td><td>Slave节点</td><td>10.72.51.114</td></tr><tr><td><br />Slaves4</td><td>Slave节点</td><td>10.72.51.115</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="128">节点的配置参数和开发环境如表3所示。</p>
+                </div>
+                <div class="area_img" id="129">
+                    <p class="img_tit"><b>表3 节点的配置参数与开发环境</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="129" border="1"><tr><td><br />项目</td><td>参数值</td></tr><tr><td><br />硬件环境</td><td>Intel (R) Xeon (R) CPU E5-2620 v2 @ 2.10 GHz</td></tr><tr><td><br />操作系统</td><td>CentOS 6.9</td></tr><tr><td><br />Hadoop版本</td><td>Hadoop-2.7.1</td></tr><tr><td><br />HBase版本</td><td>Hbase-1.2.6</td></tr><tr><td><br />编程语言</td><td>Java</td></tr><tr><td><br />JDK版本</td><td>JDK1.7.0</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="130">本文所采用的实验数据是从搜狗实验室网站 (www.sogou.com/labs) 和知网 (http://www.cnki.net/) 下载, 共收集了2万余篇文档, 经过处理共产生170多万条索引记录。索引记录的格式如式 (9) 所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="131"><i>word</i>:<i>filename</i>→<i>counts</i>      (9) </p>
+                </div>
+                <div class="p1">
+                    <p id="132">其中, <i>word</i>为关键词, <i>fileName</i>为文档名称, <i>counts</i>为关键词在文档中出现的次数。</p>
+                </div>
+                <h4 class="anchor-tag" id="133" name="133">4.2 实验结果与分析</h4>
+                <div class="p1">
+                    <p id="134">为了验证基于日志关联的相关性权重计算方法在信息检索系统中的评分效果, 本文分别从评分效果和时间性能2个方面对本文设计的算法与传统TF-IDF算法进行对比分析。在实验中为了避免分词方法的不同对实验结果产生影响, 2种算法都使用IKAnalyzer分词器对查询语句进行分词。</p>
+                </div>
+                <div class="p1">
+                    <p id="135"><b>实验1</b> 评分效果比较。分别使用本文设计的算法和传统的TF-IDF算法作为信息检索系统的相关性评价算法。实验方案步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="136"><b>步骤1</b> 输入查询语句“民主政治学习” , 观察系统返回查询结果的得分情况。</p>
+                </div>
+                <div class="p1">
+                    <p id="137"><b>步骤2</b> 重复输入查询语句“民主”, 记录某一篇文档得分的变化情况。</p>
+                </div>
+                <div class="p1">
+                    <p id="138"><b>步骤3</b> 输入查询语句“民主政治学习”, 观察系统返回的结果, 并与第一次做比较。</p>
+                </div>
+                <div class="p1">
+                    <p id="139">图6所示为实验步骤2输入关键词“民主”, 执行100次查询任务过程中, 文档“划清中国特色社会主义民主同西方资本主义民主的界限”得分的变化情况。</p>
+                </div>
+                <div class="area_img" id="140">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903005_140.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 算法评分效果对比" src="Detail/GetImg?filename=images/JSJC201903005_140.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 算法评分效果对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903005_140.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="141">表4所示为实验步骤1和步骤3中3篇文档的得分情况。为了叙述方便, 记“划清中国特色社会主义民主同西方资本主义民主的界限”为文档A, “数据挖掘概念与技术”为文档B, “机器学习实战”为文档C。</p>
+                </div>
+                <div class="area_img" id="142">
+                    <p class="img_tit"><b>表4 文档得分情况</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="142" border="1"><tr><td><br />文档</td><td>步骤1得分</td><td>步骤3得分</td></tr><tr><td><br />文档A</td><td>2.052</td><td>13.571</td></tr><tr><td><br />文档B</td><td>4.564</td><td>5.026</td></tr><tr><td><br />文档C</td><td>5.315</td><td>6.248</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="143">由表4可知, 第1次使用查询语句“民主政治学习”时, 文档B和文档C的得分都比文档A高, 这是因为文档B和文档C中“学习”一词出现的次数较多, 导致查询语句中的 “学习”关键词被赋予了较大的权重值, 显然这与查询目的不符。由图6可以看出, 随着用户使用关键词“民主”次数的增加, “民主”一词的权重值也在动态增加。因此, 当再一次使用查询语句“民主政治学习”时, 文档A就获得了最高的评分。</p>
+                </div>
+                <div class="p1">
+                    <p id="144">经过以上分析可知, 基于日志关联的权重计算方法通过对用户搜索日志进行分析建立用户兴趣模型, 动态地增加关键词的权重值, 从而提高了检索结果与用户检索目的之间的相关性。</p>
+                </div>
+                <div class="p1">
+                    <p id="145"><b>实验2</b> 查询性能比较。分别在单个节点环境下和由5个节点组成的集群环境下进行实验, 并记录程序运行的耗时情况。实验方案步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="146"><b>步骤1</b> 在集群环境中, 输入1个～50个关键词, 记录不同关键词个数对应的查询时间。</p>
+                </div>
+                <div class="p1">
+                    <p id="147"><b>步骤2</b> 在单节点环境中, 输入1个～50个关键词, 记录不同关键词个数对应的查询时间。</p>
+                </div>
+                <div class="p1">
+                    <p id="148">图7为在单节点环境下和由5个节点组成的集群环境下, 使用不同数量的关键词进行检索时系统的响应时间。</p>
+                </div>
+                <div class="area_img" id="149">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201903005_149.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 单节点与集群环境性能对比" src="Detail/GetImg?filename=images/JSJC201903005_149.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图7 单节点与集群环境性能对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201903005_149.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="150">由图7可以发现, 在执行海量数据查询时, 集群环境中的查询性能明显优于单节点环境。随着检索词个数的增加, 集群环境下的查询时间整体变化的较为平稳;单节点环境下由于I/O交换过于频繁、CPU开销过大和JVM可用内存不足等原因, 导致算法性能严重下降。相比较而言, 集群环境由于可以并行执行查询任务, 因此具备较好的性能。</p>
+                </div>
+                <h3 id="151" name="151" class="anchor-tag">5 结束语</h3>
+                <div class="p1">
+                    <p id="152">本文在TF-IDF算法的基础上, 提出一种基于日志关联的相关性权重计算算法。该算法通过用户日志建立用户兴趣模型, 从而提高了用户与信息检索系统的交互能力, 解决了传统方法没有深入到语义理解层次、智能化程度比较低等问题。另外, 本文结合分布式计算的思想, 使用MapReduce编程框架实现计算任务的并行化处理, 提高算法的效率和可扩展性。但是随着时间的推移, 用户的兴趣可能会发生变化, 需给用户最近使用过的检索词赋予较大的权重, 因此, 下一步工作重点是将关键词被使用的时间间隔引入到权重的计算方法中, 进一步提高算法性能。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=2009042149.nh&amp;v=MTE1MTFvRnkvaFViclBWMTI3RjdPOEhORElwcEViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 付志超.基于Map/Reduce的分布式智能搜索引擎框架研究[D].武汉:武汉理工大学, 2008.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016176536.nh&amp;v=MTYyMDIyNkdMSy9HTlRQcVpFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJQVkY=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 邓玉林.基于hadoop大数据框架的个性化推荐系统研究与实现[D].成都:电子科技大学, 2016.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=TSSS201606002&amp;v=MDI2MzQvaFViclBNVDdZZmJHNEg5Zk1xWTlGWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 慕慧鸽, 张军.国内情报学领域信息检索相关性研究进展分析[J].图书馆学研究, 2016 (6) :10-14.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000073237&amp;v=MjQyNzJieFU9TmlmSVk3SzdIdGpOcjQ5RlpPd01Ebjgrb0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTG5JSjFvVw==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> SALTON G, YU C T.On the construction of effective vocabularies for information retrieval[C]//Proceedings of ACM SIGPLAN-SIGIR Interface Meeting.New York, USA:ACM Press, 1973, 9 (3) :48-60.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Extended Boolean information retrieval">
+
+                                <b>[5]</b> SALTON G, FOX E A, WU H.Extended Boolean information retrieval[D].New York, USA:Cornell University, 1982.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201208015&amp;v=MjAwNTVFWVlRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkvaFViclBMejdCYmJHNEg5UE1wNDk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 李学明, 李海瑞, 薛亮, 等.基于信息增益与信息熵的TFIDF算法[J].计算机工程, 2012, 38 (8) :37-40.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201105073&amp;v=MjAzMjhaZVJvRnkvaFViclBMejdCYmJHNEg5RE1xbzlDWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2U=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 张瑜, 张德贤.一种改进的特征权重算法[J].计算机工程, 2011, 37 (5) :210-212.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QBZZ201404028&amp;v=MjI2NDY0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJQTkMvUmRMRzRIOVhNcTQ5SGJJUUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> 张瑾.基于改进TF-IDF算法的情报关键词提取方法[J].情报杂志, 2014 (4) :153-155.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJH200701021&amp;v=MjYzNjI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9oVWJyUEx6N0Jackc0SHRiTXJvOUhaWVFLREg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 龚静, 周经野.一种基于多重因子加权的文本特征项权值计算方法[J].计算技术与自动化, 2007, 26 (1) :81-83.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSGG200735048&amp;v=MDQ4ODY0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJQTHo3TWFiRzRIdGJQcW85QmJJUUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 张玉芳, 陈小莉, 熊忠阳.基于信息增益的特征词权重调整算法研究[J].计算机工程与应用, 2007, 43 (35) :159-161.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=GDGX201605009&amp;v=MTg4NzVxcUJ0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJQSWluTWRyRzRIOWZNcW85RmJZUUtESDg0dlI0VDZqNTRPM3o=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 贺科达, 朱铮涛, 程昱.基于改进 TF-IDF 算法的文本分类方法研究[J].广东工业大学学报, 2016, 33 (5) :49-53.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=QBKX201705020&amp;v=Mjg0MzN5L2hVYnJQTkMvQWRyRzRIOWJNcW85SFpJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSb0Y=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 周源, 刘怀兰, 杜朋朋, 等.基于改进TF-IDF特征提取的文本分类模型研究[J].情报科学, 2017 (5) :111-118.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DXKX201111014&amp;v=Mjk4NjllUm9GeS9oVWJyUElUWEFkckc0SDlETnJvOUVZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 王锴, 施水才, 王涛, 等.基于MapReduce的术语权重计算方法研究[J].电信科学, 2011, 27 (11) :62-65.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=WXJY201207006&amp;v=MjAxNDJDVVJMT2VaZVJvRnkvaFViclBNalhCZDdHNEg5UE1xSTlGWW9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 李彬.基于Hadoop框架的TF-IDF算法改进[J].微型机与应用, 2012, 31 (7) :14-16.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XYDZ201602016&amp;v=MjM4NDR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkvaFViclBQVFRQZExHNEg5Zk1yWTlFWW9RS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 姚卫国, 张东波.基于Hadoop分布式平台的Web文本关键词提取方案[J].湘潭大学 (自然科学学报) , 2016, 38 (2) :79-83.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=MapReduce:simplified data processing on large clusters">
+
+                                <b>[16]</b> DEAN J, GHEMAWAT S.MapReduce:simplified data processing on large clusters[C]//Proceedings of Conference on Symposium on Opearting Systems Design and Implementation.[S.1.]:USENIX Association, 2008:10-10.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787115318893000&amp;v=MDE0MTZHOUxOcDRkTVorc1BEQk04enhVU21EZDlTSDduM3hFOWZidm5LcmlmWnU5dUZDdmpVN2pNSWxzVFhGcXpHYks1&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b> GEORGE L.HBase权威指南[M].代志远, 刘佳, 蒋杰, 译.北京:人民邮电出版社, 2013.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201903005" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201903005&amp;v=MjA3OTh0R0ZyQ1VSTE9lWmVSb0Z5L2hVYnJQTHo3QmJiRzRIOWpNckk5RllZUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="4" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

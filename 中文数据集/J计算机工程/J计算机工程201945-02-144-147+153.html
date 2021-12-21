@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637131276080431250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201902024%26RESULT%3d1%26SIGN%3dJUxpyxAE7AIkKmyWNs%252fvDOsWL9g%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201902024&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201902024&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201902024&amp;v=MDE0MjRSTE9lWmVSbkZ5amtVN3ZCTHo3QmJiRzRIOWpNclk5SFlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#67" data-title="0概述 ">0概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#71" data-title="1 形式化定义 ">1 形式化定义</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#79" data-title="2 环签名方案实现步骤 ">2 环签名方案实现步骤</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#91" data-title="3 方案性能分析 ">3 方案性能分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#92" data-title="3.1 正确性分析">3.1 正确性分析</a></li>
+                                                <li><a href="#97" data-title="3.2 不可伪造性分析">3.2 不可伪造性分析</a></li>
+                                                <li><a href="#117" data-title="3.3 无条件匿名性证明">3.3 无条件匿名性证明</a></li>
+                                                <li><a href="#122" data-title="3.4 关联性与转换性证明">3.4 关联性与转换性证明</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#127" data-title="4 不同方案性能比较 ">4 不同方案性能比较</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#134" data-title="5 结束语 ">5 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#129" data-title="表1 运算符号定义">表1 运算符号定义</a></li>
+                                                <li><a href="#170" data-title="表2 不同环签名方案性能比较结果">表2 不同环签名方案性能比较结果</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="35">
+
+
+                                    <a id="bibliography_1" title=" RIVEST R L, SHAMIR A, TAUMAN Y. How to leak a secret[C]//Proceedings of International Conference on Theory and Application of Cryptology and Information Security. Berlin, Germany:Springer, 2001:552-565." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=How to Leak a Secret">
+                                        <b>[1]</b>
+                                         RIVEST R L, SHAMIR A, TAUMAN Y. How to leak a secret[C]//Proceedings of International Conference on Theory and Application of Cryptology and Information Security. Berlin, Germany:Springer, 2001:552-565.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_2" title=" GRITTI C, SUSILO W, PLANTARD T. Logarithmic size ring signatures w ithout random oracles[J]. IET Information Security, 2015, 10 (1) :1-7." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Logarithmic size ring signatures without random oracles">
+                                        <b>[2]</b>
+                                         GRITTI C, SUSILO W, PLANTARD T. Logarithmic size ring signatures w ithout random oracles[J]. IET Information Security, 2015, 10 (1) :1-7.
+                                    </a>
+                                </li>
+                                <li id="39">
+
+
+                                    <a id="bibliography_3" title=" LI J, WANG Y. Universal designated verifier ring signature (proof) w ithout random oracles[C]//Proceedings of 2006 International Conference on Emerging Directions in Embedded and Ubiquitous Computing. Berlin, Germany:Springer, 2006:332-341." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Universal designated verifier ring signature (proof)without random oracles">
+                                        <b>[3]</b>
+                                         LI J, WANG Y. Universal designated verifier ring signature (proof) w ithout random oracles[C]//Proceedings of 2006 International Conference on Emerging Directions in Embedded and Ubiquitous Computing. Berlin, Germany:Springer, 2006:332-341.
+                                    </a>
+                                </li>
+                                <li id="41">
+
+
+                                    <a id="bibliography_4" title=" AMIT K, SUNDER L. ID-based ring signature and proxy ring signature schemes from bilinear pairings[J].International Journal of Netw ork Security, 2007, 4 (2) :187-192." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=ID-based Ring Signature and Proxy Ring Signature Schemes from Bilinear Pairings">
+                                        <b>[4]</b>
+                                         AMIT K, SUNDER L. ID-based ring signature and proxy ring signature schemes from bilinear pairings[J].International Journal of Netw ork Security, 2007, 4 (2) :187-192.
+                                    </a>
+                                </li>
+                                <li id="43">
+
+
+                                    <a id="bibliography_5" title="王化群, 秦波.一些环签名及其扩展签名方案的安全性分析及改进[J].计算机学报, 2012, 35 (5) :1052-1058." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201205021&amp;v=MDY2MjI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm5GeWprVTd2Qkx6N0Jkckc0SDlQTXFvOUhaWVFLREg=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                        王化群, 秦波.一些环签名及其扩展签名方案的安全性分析及改进[J].计算机学报, 2012, 35 (5) :1052-1058.
+                                    </a>
+                                </li>
+                                <li id="45">
+
+
+                                    <a id="bibliography_6" title="王晓兰.基于多变量公钥密码体制的环签名方案[J].河南科学, 2013 (3) :318-321." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HNKX201303017&amp;v=MDc3NDc0SDlMTXJJOUVZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm5GeWprVTd2QkxTUEFkckc=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                        王晓兰.基于多变量公钥密码体制的环签名方案[J].河南科学, 2013 (3) :318-321.
+                                    </a>
+                                </li>
+                                <li id="47">
+
+
+                                    <a id="bibliography_7" title=" MELCHOR C A, BETTAIEB S, BOYEN X, et al.Adapting Lyubashevsky’s signature schemes to the ring signature setting[C]//Proceedings of International Conference on Cryptology in Africa. Berlin, Germany:Springer, 2013:1-25." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Adapting Lyubashevsky&amp;#39;&amp;#39;s signature schemes to the ring signature setting">
+                                        <b>[7]</b>
+                                         MELCHOR C A, BETTAIEB S, BOYEN X, et al.Adapting Lyubashevsky’s signature schemes to the ring signature setting[C]//Proceedings of International Conference on Cryptology in Africa. Berlin, Germany:Springer, 2013:1-25.
+                                    </a>
+                                </li>
+                                <li id="49">
+
+
+                                    <a id="bibliography_8" title=" NOH G, CHUN J Y, JEONG I R. Strongly unforgeable ring signature scheme from lattices in the standard model[J].Journal of Applied Mathematics, 2014 (5) :1-12." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJHD&amp;filename=SJHD14052700000518&amp;v=MDEzNjVySzhIdFRPcUk5RlpPc1BDWDB4b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTGJJSUY4VWJocz1OaWZEYQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         NOH G, CHUN J Y, JEONG I R. Strongly unforgeable ring signature scheme from lattices in the standard model[J].Journal of Applied Mathematics, 2014 (5) :1-12.
+                                    </a>
+                                </li>
+                                <li id="51">
+
+
+                                    <a id="bibliography_9" title=" LIU M, HAN Y, YANG X. A ring signature based on LDGM codes[M]//CHEN W G, YIN G S, ZHAO G S.Big data technology and applications. Berlin, Germany:Springer, 2015." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A ring signature based on LDGM codes">
+                                        <b>[9]</b>
+                                         LIU M, HAN Y, YANG X. A ring signature based on LDGM codes[M]//CHEN W G, YIN G S, ZHAO G S.Big data technology and applications. Berlin, Germany:Springer, 2015.
+                                    </a>
+                                </li>
+                                <li id="53">
+
+
+                                    <a id="bibliography_10" title=" LIU J K, WEI V K, WONG D S. Linkable spontaneous anonymous group signature for Ad Hoc groups[J].Lecture Notes in Computer Science, 2004 (6) :325-335." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Linkable spontaneous anonymous group signature for ad hoc groups">
+                                        <b>[10]</b>
+                                         LIU J K, WEI V K, WONG D S. Linkable spontaneous anonymous group signature for Ad Hoc groups[J].Lecture Notes in Computer Science, 2004 (6) :325-335.
+                                    </a>
+                                </li>
+                                <li id="55">
+
+
+                                    <a id="bibliography_11" title=" FUJISAKI E. Sub-linear size traceable ring signatures without random oracles[M]//LAI J, DENG R H, LIU S, et al. Topics in cryptology-CT-RSA 2011. Berlin, Germany:Springer, 2011:393-415." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Sub-linear size traceable ring signatures without random oracles">
+                                        <b>[11]</b>
+                                         FUJISAKI E. Sub-linear size traceable ring signatures without random oracles[M]//LAI J, DENG R H, LIU S, et al. Topics in cryptology-CT-RSA 2011. Berlin, Germany:Springer, 2011:393-415.
+                                    </a>
+                                </li>
+                                <li id="57">
+
+
+                                    <a id="bibliography_12" title=" YUEN T H, LIU J K, AU M H, et al. Efficient linkable and/or threshold ring signature without random oracles[J].Computer Journal, 2013, 56 (4) :407-421." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient linkable and/or threshold ring signature without random oracles">
+                                        <b>[12]</b>
+                                         YUEN T H, LIU J K, AU M H, et al. Efficient linkable and/or threshold ring signature without random oracles[J].Computer Journal, 2013, 56 (4) :407-421.
+                                    </a>
+                                </li>
+                                <li id="59">
+
+
+                                    <a id="bibliography_13" title=" LIU J K, MAN H A, SUSILO W, et al. Linkable ring signature w ith unconditional anonymity[J]. IEEE Transactions on Know ledge and Data Engineering, 2013, 26 (1) :157-165." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Linkable Ring Signature with Unconditional Anonymity">
+                                        <b>[13]</b>
+                                         LIU J K, MAN H A, SUSILO W, et al. Linkable ring signature w ith unconditional anonymity[J]. IEEE Transactions on Know ledge and Data Engineering, 2013, 26 (1) :157-165.
+                                    </a>
+                                </li>
+                                <li id="61">
+
+
+                                    <a id="bibliography_14" title=" FENG Q, SUN Y L, LIU L, et al. Voting systems with trust mechanisms in cyberspace:vulnerabilities and defenses[J]. IEEE Transactions on Know ledge and Data Engineering, 2010, 22 (12) :1766-1780." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Voting systems with trust mechanisms in cyberspace: Vulnerabilities and defenses">
+                                        <b>[14]</b>
+                                         FENG Q, SUN Y L, LIU L, et al. Voting systems with trust mechanisms in cyberspace:vulnerabilities and defenses[J]. IEEE Transactions on Know ledge and Data Engineering, 2010, 22 (12) :1766-1780.
+                                    </a>
+                                </li>
+                                <li id="63">
+
+
+                                    <a id="bibliography_15" title="李伟, 唐明伟, 范明钰.标准模型下基于线性对的选择关联可转换环签名方案[J].西华大学学报 (自然科学版) , 2013, 32 (2) :1-4." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SCGX201302002&amp;v=MDI3NzBMTXJZOUZab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm5GeWprVTd2Qk5pN01kckc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                        李伟, 唐明伟, 范明钰.标准模型下基于线性对的选择关联可转换环签名方案[J].西华大学学报 (自然科学版) , 2013, 32 (2) :1-4.
+                                    </a>
+                                </li>
+                                <li id="65">
+
+
+                                    <a id="bibliography_16" title="张文芳, 熊丹, 王小敏, 等.基于RSA公钥密码体制的可选择可转换关联环签名[J].计算机学报, 2017, 40 (5) :1168-1180." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201705011&amp;v=MTczOTRqa1U3dkJMejdCZHJHNEg5Yk1xbzlFWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJuRnk=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                        张文芳, 熊丹, 王小敏, 等.基于RSA公钥密码体制的可选择可转换关联环签名[J].计算机学报, 2017, 40 (5) :1168-1180.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(02),144-147+153 DOI:10.19678/j.issn.1000-3428.0050944            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm">基于DLP的可选择链接可转换环签名方案</span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9B%B9%E7%B4%A0%E7%8F%8D&amp;code=10660586&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">曹素珍</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%AD%99%E6%99%97&amp;code=37607188&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">孙晗</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%88%B4%E6%96%87%E6%B4%81&amp;code=37607187&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">戴文洁</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E7%A7%80%E5%A8%85&amp;code=37607189&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王秀娅</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E8%A5%BF%E5%8C%97%E5%B8%88%E8%8C%83%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0012645&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">西北师范大学计算机科学与工程学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>已有多数可链接可转换环签名方案不具备强匿名性。为此, 提出一种基于离散对数问题的环签名方案。实际签名者通过随机选取秘密参数建立关联标签, 以增强方案的匿名性。分析结果表明, 该方案同时具备链接性、转换性和强匿名性, 可抵抗转换性攻击, 且在随机预言模型中具有安全性。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%8E%AF%E7%AD%BE%E5%90%8D%E6%96%B9%E6%A1%88&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">环签名方案;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E7%A6%BB%E6%95%A3%E5%AF%B9%E6%95%B0%E9%97%AE%E9%A2%98&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">离散对数问题;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8F%AF%E9%80%89%E6%8B%A9%E9%93%BE%E6%8E%A5%E6%80%A7&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">可选择链接性;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8F%AF%E8%BD%AC%E6%8D%A2%E6%80%A7&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">可转换性;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%97%A0%E6%9D%A1%E4%BB%B6%E5%8C%BF%E5%90%8D%E6%80%A7&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">无条件匿名性;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    曹素珍 (1976—) , 女, 副教授, 主研方向为公钥密码学、软件安全;
+;
+                                </span>
+                                <span>
+                                    孙晗, 硕士研究生。
+;
+                                </span>
+                                <span>
+                                    戴文洁, 硕士研究生。
+;
+                                </span>
+                                <span>
+                                    王秀娅, 硕士研究生。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-03-26</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金 (61662071, 61562077, 61662069);</span>
+                                <span>西北师范大学青年教师科研能力提升计划 (NWNU-LKQN-14-7);</span>
+                    </p>
+            </div>
+                    <h1>Selectively Linkable and Convertible Ring Signature Scheme Based on DLP</h1>
+                    <h2>
+                    <span>CAO Suzhen</span>
+                    <span>SUN Han</span>
+                    <span>DAI Wenjie</span>
+                    <span>WANG Xiuya</span>
+            </h2>
+                    <h2>
+                    <span>College of Computer Science and Engineering, Northwest Normal University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Most of the existing linkable and convertible ring signature schemes do not have strong anonymity. To solve this problem, a ring signature scheme based on Discrete Logarithm Problem ( DLP) is proposed. The actual signer establishes an association tag by randomly selecting secret parameters to enhance the anonymity of the scheme. Analysis results show that the proposed scheme has linkability, convertibility and strong anonymity, can resist convertible attacks, and has security in random oracle model.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=ring%20signature%20scheme&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">ring signature scheme;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Discrete%20Logarithm%20Problem%20(DLP)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Discrete Logarithm Problem (DLP) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=selectively%20linkability&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">selectively linkability;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=convertibility&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">convertibility;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=unconditional%20anonymity&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">unconditional anonymity;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-03-26</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="67" name="67" class="anchor-tag">0概述</h3>
+                <div class="p1">
+                    <p id="68">用户通过简单地收集包括他自己在内的所有成员的公钥, 形成一个环状结构的公钥环, 该公钥环称为环签名<citation id="171" type="reference"><link href="35" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。在环签名中, 环成员完全不知道自己被征召入群, 即环签名中成员的组合是自发的, 没有任何可以撤销签名者身份的负责人。在环签名被提出后, 有多个环签名方案<citation id="175" type="reference"><link href="37" rel="bibliography" /><link href="39" rel="bibliography" /><link href="41" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>及其改进方案<citation id="176" type="reference"><link href="43" rel="bibliography" /><link href="45" rel="bibliography" /><sup>[<a class="sup">5</a>,<a class="sup">6</a>]</sup></citation>先后被提出。基于格的环签名方案<citation id="177" type="reference"><link href="47" rel="bibliography" /><link href="49" rel="bibliography" /><sup>[<a class="sup">7</a>,<a class="sup">8</a>]</sup></citation>和后量子的环签名方案<citation id="172" type="reference"><link href="51" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>被提出后, 量子计算机便难以伪造签名。环签名允许环中某个成员代表所有环成员进行签名而不必显示其身份, 从而使签名者具有匿名性, 该性质使得环签名在电子投票、云数据的动态匿名访问机制以及车载网等领域有着广泛应用。但是, 无法确定2个环签名的签发者是否为同一人, 这导致了环签名在实际应用中存在很多局限性。例如, 在既需要保证匿名性又要避免参与者重复投票的场合中, 无法发挥环签名的匿名性优势。此外, 环签名无法限制用户一段时间内访问云数据的次数。为此, 文献<citation id="173" type="reference">[<a class="sup">10</a>]</citation>给环签名附加了链接性质, 在该文献中, 实际签名者的身份在环中仍然是匿名的, 但是如果2个环签名是由同一人签发, 则可链接这2个环签名。此后, 多种可链接环签名框架被提出<citation id="178" type="reference"><link href="55" rel="bibliography" /><link href="57" rel="bibliography" /><link href="59" rel="bibliography" /><sup>[<a class="sup">11</a>,<a class="sup">12</a>,<a class="sup">13</a>]</sup></citation>, 同时, 设计出无条件匿名性和强关联性并存的方案也成为研究者关注的热点问题。在实际应用方面, 文献<citation id="174" type="reference">[<a class="sup">14</a>]</citation>利用可链接环签名公开的可验证性、可链接性和匿名性, 将其应用于电子投票系统中并取得了较好效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">在需要将环签名转换为普通签名的特殊场合, 环签名的可转换性得到应用, 若干可选择链接可转换的环签名方案也应运而生。文献<citation id="180" type="reference">[<a class="sup">15</a>]</citation>提出标准模型下基于双线性对的可选择关联可转换的环签名方案, 但是其只能提供计算匿名性且无法抵抗可转换性攻击。文献<citation id="179" type="reference">[<a class="sup">16</a>]</citation>基于RSA公钥密码体制大整数分解问题, 提出满足强匿名性要求的可链接环签名方案。</p>
+                </div>
+                <div class="p1">
+                    <p id="70">本文在随机预言模型下基于离散对数问题 (Discrete Logarithm Problem, DLP) , 提出一种可选择链接可转换的环签名方案。以随机选择私密参数构建关联标签的方式, 在提供方案关联性的同时保证其强匿名性, 同时, 通过私密参数在签名转换时避免其他环成员顶替实际签名者进行操作。</p>
+                </div>
+                <h3 id="71" name="71" class="anchor-tag">1 形式化定义</h3>
+                <div class="p1">
+                    <p id="72">本文可选择链接可转换环签名方案由初始化、密钥生成、签名、验证、关联和转换6种算法组成, 各算法具体如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="73">1) 初始化算法param→Setup (λ) 为概率多项式时间算法, 输入秘密安全参数λ后, 该算法输出包含λ的安全参数集合。本文分别用ε<sub>ID</sub>和M表示事件ID和消息。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">2) 密钥生成算法 (sk, pk) ←Keygen (param) 为概率多项式时间算法, 输入安全参数λ∈N后, 该算法输出一个公私钥对 (sk, pk) 。本文用sk表示可能私钥的域, 用pk表示公钥的域。</p>
+                </div>
+                <div class="p1">
+                    <p id="75">3) 签名算法σ←Sign (m, n, L, sk, M) 。输入事件的描述m、环成员的数量n、n个公钥集合L (与私钥相对应的公钥都包含在L中) 、私钥sk和消息M, 该算法最后产生签名σ。</p>
+                </div>
+                <div class="p1">
+                    <p id="76">4) 验证算法accept/rejest←Verify (m, n, L, M, σ) 。输入事件的描述m、环成员数量n、n个公钥集合L和 (M, σ) , 该算法返回接受或拒绝的回答。如果接受, 则消息签名对有效。</p>
+                </div>
+                <div class="p1">
+                    <p id="77">5) 关联算法linked/unlinked←Rlink (m, n, L, M, σ) 。输入事件的描述m、环的大小n、n个公钥集合L、有效的签名和信息对 (M, σ) , 该算法输出链接或非链接的回答。</p>
+                </div>
+                <div class="p1">
+                    <p id="78">6) 转换算法yes/no← (l, L) 。输入公钥签名环L、公开参数l, 通过计算与比较, 该算法输出是否实现了转换性, 即该环签名是否由本人所签。</p>
+                </div>
+                <h3 id="79" name="79" class="anchor-tag">2 环签名方案实现步骤</h3>
+                <div class="p1">
+                    <p id="80">本文可选择链接可转换环签名方案具体实现步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="81">1) 初始化阶段。选择一个群G, 其阶为大素数p, 在群G上, 离散对数问题是困难的, q∈G是该群的产生元, h∈G是该群的任意元素。本文选择哈希函数H<sub>0</sub>:G→Z<sub>p</sub><sup>*</sup>、H<sub>1</sub>:{0, 1}<sup>*</sup>→G和H<sub>2</sub>:{0, 1}<sup>*</sup>→Z<sub>p</sub><sup>*</sup>, 最后公开的参数集为param={G, p, q, h, H<sub>0</sub>, H<sub>1</sub>, H<sub>2</sub>}。</p>
+                </div>
+                <div class="p1">
+                    <p id="82">2) 密钥生成算法Keygen。用户U<sub>i</sub>选择任意 (x<sub>i</sub>, y<sub>i</sub>) ∈ (Z<sub>p</sub><sup>*</sup>) <sup>2</sup>作为其私钥sk<sub>i</sub>, 然后计算X<sub>i</sub>=q<sup>xi</sup>、Y<sub>i</sub>=h<sup>yi</sup>, 令 (X<sub>i</sub>, Y<sub>i</sub>) 为其公钥pk<sub>i</sub>。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">3) 环签名算法Rsign。设U<sub>t</sub>代表一个实际用户, 编号为t, U<sub>t</sub>作为实际签名者, 代表所有环成员对消息M进行签名操作。其中, n是所有环成员的个数, message是其事件描述, 公钥组成的签名环L={pk<sub>1</sub>, pk<sub>2</sub>, …, pk<sub>n</sub>}={ (X<sub>1</sub>, Y<sub>1</sub>) , (X<sub>2</sub>, Y<sub>2</sub>) , …, (X<sub>n</sub>, Y<sub>n</sub>) }, 且 (X<sub>t</sub>, Y<sub>t</sub>) ∈L。实际签名者U<sub>t</sub> (已知自己的私钥sk<sub>t</sub>= (x<sub>t</sub>, y<sub>t</sub>) ) 执行以下过程:</p>
+                </div>
+                <div class="p1">
+                    <p id="140"> (1) U<sub>t</sub>随机选择l∈G, 计算A<sub>i</sub>=H<sub>0</sub> (l, x<sub>i</sub>, y<sub>i</sub>) (i∈{1, 2, …, n}\t) , σ<sub>i</sub>=A<sub>i</sub>q。</p>
+                </div>
+                <div class="p1">
+                    <p id="141"> (2) 计算v=H<sub>1</sub> (message, L, M) , <image id="142" type="formula" href="images/JSJC201902024_14200.jpg" display="inline" placement="inline"><alt></alt></image></p>
+                </div>
+                <div class="p1">
+                    <p id="143"> (3) U<sub>t</sub>随机选择私密参数c<sub>x</sub>、c<sub>y</sub>∈Z<sup>*</sup><sub>p</sub>, 计算<image id="144" type="formula" href="images/JSJC201902024_14400.jpg" display="inline" placement="inline"><alt></alt></image><image id="144" type="formula" href="images/JSJC201902024_14401.jpg" display="inline" placement="inline"><alt></alt></image>, 并且通过<image id="145" type="formula" href="images/JSJC201902024_14500.jpg" display="inline" placement="inline"><alt></alt></image><image id="145" type="formula" href="images/JSJC201902024_14501.jpg" display="inline" placement="inline"><alt></alt></image>得出A<sub>t</sub>的值。</p>
+                </div>
+                <div class="p1">
+                    <p id="146"> (4) 计算关联标签<image id="147" type="formula" href="images/JSJC201902024_14700.jpg" display="inline" placement="inline"><alt></alt></image><image id="147" type="formula" href="images/JSJC201902024_14701.jpg" display="inline" placement="inline"><alt></alt></image>, 输出对应的环签名<image id="148" type="formula" href="images/JSJC201902024_14800.jpg" display="inline" placement="inline"><alt></alt></image><image id="148" type="formula" href="images/JSJC201902024_14801.jpg" display="inline" placement="inline"><alt></alt></image></p>
+                </div>
+                <div class="p1">
+                    <p id="149">4) 验证算法Verify。验证者接收到 (M, L, σ, message) 后, 通过<image id="150" type="formula" href="images/JSJC201902024_15000.jpg" display="inline" placement="inline"><alt></alt></image><image id="150" type="formula" href="images/JSJC201902024_15001.jpg" display="inline" placement="inline"><alt></alt></image>验证等式<image id="151" type="formula" href="images/JSJC201902024_15100.jpg" display="inline" placement="inline"><alt></alt></image>是否成立。若成立, 说明签名正确, 否则说明签名不合法。</p>
+                </div>
+                <div class="p1">
+                    <p id="89">5) 关联验证算法Rlink。在本文方案中, 签名者不仅能产生可链接环签名, 也可产生非可链接的有效环签名。设<image id="153" type="formula" href="images/JSJC201902024_15300.jpg" display="inline" placement="inline"><alt></alt></image><image id="153" type="formula" href="images/JSJC201902024_15301.jpg" display="inline" placement="inline"><alt></alt></image><image id="153" type="formula" href="images/JSJC201902024_15302.jpg" display="inline" placement="inline"><alt></alt></image>, 如果U<sub>t</sub>选择同一组秘密参数 (c<sub>x</sub>, c<sub>y</sub>, s) , 则会产生同一组关联标签<image id="154" type="formula" href="images/JSJC201902024_15400.jpg" display="inline" placement="inline"><alt></alt></image>, 由此产生的2个环签名具有关联性。签名者若使用不同的秘密参数<image id="155" type="formula" href="images/JSJC201902024_15500.jpg" display="inline" placement="inline"><alt></alt></image>, 则产生的关联标签也并非同一组, 这样产生的2个环签名不具有关联性。</p>
+                </div>
+                <div class="p1">
+                    <p id="90">6) 可转换验证算法Rconvert。签名者U<sub>t</sub>会遇到某些特殊的需要撤销匿名性的场合, 环签名被U<sub>t</sub>转换成其所对应的普通签名, 从而向所有参与者证明自己是实际操作者。首先, U<sub>t</sub>需要公布信息{l, (X<sub>1</sub>, Y<sub>1</sub>) , (X<sub>2</sub>, X<sub>2</sub>) , …, (X<sub>n</sub>, Y<sub>n</sub>) }, 验证者计算A<sub>i</sub>=H<sub>0</sub> (l, x<sub>i</sub>, y<sub>i</sub>) , 其中, i≠t。然后, 验证σ<sub>i</sub>=A<sub>i</sub>q等式是否成立, 若成立, 则说明σ是由实际操作者U<sub>t</sub>所签发。</p>
+                </div>
+                <h3 id="91" name="91" class="anchor-tag">3 方案性能分析</h3>
+                <h4 class="anchor-tag" id="92" name="92">3.1 正确性分析</h4>
+                <div class="p1">
+                    <p id="93">本文方案的正确性验证如下:</p>
+                </div>
+                <div class="area_img" id="94">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JSJC201902024_09400.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="area_img" id="94">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JSJC201902024_09401.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="96">由式 (1) ～式 (3) 可得, 本文方案具有正确性。</p>
+                </div>
+                <h4 class="anchor-tag" id="97" name="97">3.2 不可伪造性分析</h4>
+                <div class="p1">
+                    <p id="98">一个可以构造算法的敌手A在概率多项式时间内, 能够在获知一个消息M、公钥签名环L和事件描述message后, 通过对随机预言机Oracle进行询问而输出一个有效的合法签名σ, 且其成功的概率不可忽略。换言之, 敌手A可构造一个PPT算法, 以不可忽略的概率求出DLP困难问题的一组有效解, 且满足Pr[A (q, q<sup>a</sup>) =a], 其中, q、q<sup>a</sup>∈G。</p>
+                </div>
+                <div class="p1">
+                    <p id="99">证明给定n个离散对数实例问题 (Z<sub>1</sub>, Z<sub>2</sub>, …, Z<sub>n</sub>) 和一个产生元q, 仿真器simu被要求输出至少一个x<sub>i</sub>∈Z<sub>p</sub><sup>*</sup>, 使得X<sub>i</sub>=q<sup>xi</sup>, 其中, i∈{1, 2, …, n}。仿真器simu通过模拟如下各预言机Oracle, 从而得到相应回答。</p>
+                </div>
+                <div class="p1">
+                    <p id="100">1) 随机预言机H<sub>0</sub>。在a值尚未被分配的前提下, simu随机选择a∈Z<sub>p</sub><sup>*</sup>并返回。</p>
+                </div>
+                <div class="p1">
+                    <p id="101">2) 随机预言机H<sub>1</sub>。simu随机选择λ∈Z<sub>p</sub><sup>*</sup>并返回q<sup>λ</sup>。</p>
+                </div>
+                <div class="p1">
+                    <p id="102">3) 随机预言机H<sub>2</sub>。在a值尚未被分配的前提下, simu随机选择a∈Z<sub>p</sub><sup>*</sup>并返回。</p>
+                </div>
+                <div class="p1">
+                    <p id="103">4) Joining预言机JO。假设敌手A查询JO的最多次数为N, 且N≥n。simu随机选择包含n个索引的子集η<sub>n</sub>, 并将编号为i∈[1, n]的 (X<sub>i</sub>, Y<sub>i</sub>) 分配给这n个索引 (simu不知道对应的私钥 (x<sub>i</sub>, y<sub>i</sub>) ) , 而用n+1, n+2, …, N表示其他索引, 并对于其他N-n个索引, simu根据算法生成公私钥对, 在第j次查询后返回相应公钥。</p>
+                </div>
+                <div class="p1">
+                    <p id="104">5) Corruption预言机CO。将JO的输出作为输入, 在一个公钥之后, simu检查其是否对应于子集η<sub>n</sub>, 若是, 则停止, 否则simu输出相对应的sk, 原因是对于其他N-n个索引, simu可根据算法生成公私钥对。</p>
+                </div>
+                <div class="p1">
+                    <p id="105">6) 签名预言机SO。输入 (M, L, σ, message) 后, simu在已知 (X<sub>t</sub>, Y<sub>t</sub>) 是实际签名者U<sub>t</sub>的前提下, 通过调用黑盒子A, 无需任何私钥, 仅通过控制各预言机便能输出一个合法签名。步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="106"> (1) 若H<sub>1</sub>查询尚未执行, 则执行该查询, 并令v=H<sub>1</sub> (message, L, M) , simu知道v～q的离散对数值, 由λ表示, 得出e=q<sup>λ</sup>。</p>
+                </div>
+                <div class="p1">
+                    <p id="107"> (2) 若 (X<sub>t</sub>, Y<sub>t</sub>) 不对应于η<sub>n</sub>中的任何元素, 则simu知道私钥, 否则令 (X<sub>t</sub>, Y<sub>t</sub>) 是来自η<sub>n</sub>的第t个索引, simu设置π=Z<sub>t</sub><sup>λ</sup>。</p>
+                </div>
+                <div class="p1">
+                    <p id="109"> (3) simu随机选择<image id="156" type="formula" href="images/JSJC201902024_15600.jpg" display="inline" placement="inline"><alt></alt></image>, 其中, i∈[1, n]。调用随机预言机H<sub>2</sub>计算出<image id="157" type="formula" href="images/JSJC201902024_15700.jpg" display="inline" placement="inline"><alt></alt></image><image id="157" type="formula" href="images/JSJC201902024_15701.jpg" display="inline" placement="inline"><alt></alt></image>, 并令<image id="158" type="formula" href="images/JSJC201902024_15800.jpg" display="inline" placement="inline"><alt></alt></image><image id="158" type="formula" href="images/JSJC201902024_15801.jpg" display="inline" placement="inline"><alt></alt></image>。若发生冲突, 则说明<image id="159" type="formula" href="images/JSJC201902024_15900.jpg" display="inline" placement="inline"><alt></alt></image>的值已分配给某些H<sub>2</sub>查询, 重复此步骤。</p>
+                </div>
+                <div class="p1">
+                    <p id="112"> (4) simu返回签名<image id="160" type="formula" href="images/JSJC201902024_16000.jpg" display="inline" placement="inline"><alt></alt></image><image id="160" type="formula" href="images/JSJC201902024_16001.jpg" display="inline" placement="inline"><alt></alt></image>, 敌手A不能区分simu模拟与现实。在随机预言模型上, 对于一个成功的模拟, 假设敌手A的伪造是事件message上的<image id="161" type="formula" href="images/JSJC201902024_16100.jpg" display="inline" placement="inline"><alt></alt></image><image id="161" type="formula" href="images/JSJC201902024_16101.jpg" display="inline" placement="inline"><alt></alt></image>和一组公钥L', 其中, L'是η<sub>n</sub>中具有相应索引的那些公钥的子集。令n'=n, 通过对随机预言机模型进行假设, 敌手A具有由v表示的H<sub>1</sub>查询和H<sub>2</sub> (message, L', M, T<sup>1</sup>, T'<sup>1</sup>) 查询的值, 其中, <image id="162" type="formula" href="images/JSJC201902024_16200.jpg" display="inline" placement="inline"><alt></alt></image>。令T=q<sup>β</sup>, β∈Z<sub>p</sub><sup>*</sup>, 假设这是第h次对H<sub>2</sub>进行查询并完成的, simu返回<image id="163" type="formula" href="images/JSJC201902024_16300.jpg" display="inline" placement="inline"><alt></alt></image>, 通过对随机预言模型的假设, 在A<sup>1</sup><sub>0</sub>返回后至少可以确定一个A<sup>1</sup><sub>i</sub>, 1≤i≤n。</p>
+                </div>
+                <div class="p1">
+                    <p id="115">在最好情况下, 只有一个A<sub>i</sub><sup>1</sup>没有在第h次查询后被确定, 可通过一次回溯运算找到对应私钥。在最坏情况下, 所有的A<sub>i</sub><sup>1</sup>在第h次询问后都没有被确定, simu倒回到与敌手A起点相同的输入信息带并一直答复所有查询, 直至第h次的H<sub>2</sub>查询。对于第h次的H<sub>2</sub>查询的第i次倒回, A<sub>0</sub><sup>i</sup>在Z<sub>p</sub><sup>*</sup>中随机选择并返回。simu执行上述过程直到敌手A的模拟全部完成。</p>
+                </div>
+                <div class="p1">
+                    <p id="116">假设所有模拟都是成功的, 该方案伪造n个<image id="164" type="formula" href="images/JSJC201902024_16400.jpg" display="inline" placement="inline"><alt></alt></image>, 其中, i∈[1, n]。simu运行的时间最多为nτ, 其中, τ为敌手A执行一次其算法所用的时间。A的所有模拟都成功, 则simu成功。通过分支引理可得出, 每次成功的倒回运算概率为ε/4, 这是敌手A成功伪造签名的概率, 因此, simu成功的机会是 (ε/4) <sup>n</sup>。由此可以证明, 本文方案具有不可伪造性。</p>
+                </div>
+                <h4 class="anchor-tag" id="117" name="117">3.3 无条件匿名性证明</h4>
+                <div class="p1">
+                    <p id="118">证明挑战签名由环中随机选择的签名者密钥生成。给定一个公钥签名环{ (X<sub>1</sub>, Y<sub>1</sub>) , (X<sub>2</sub>, Y<sub>2</sub>) , …, (X<sub>n</sub>, Y<sub>n</sub>) }、消息M和事件描述message的签名<image id="165" type="formula" href="images/JSJC201902024_16500.jpg" display="inline" placement="inline"><alt></alt></image><image id="165" type="formula" href="images/JSJC201902024_16501.jpg" display="inline" placement="inline"><alt></alt></image>, 对于每个可能的实际签名者对应的公钥 (X<sub>t</sub>, Y<sub>t</sub>) , 任意t∈{1, 2, …, n}, 存在对应私钥 (x<sub>t</sub>, y<sub>t</sub>) , 可产生链接标s=H<sub>1</sub> (message, L, M) <sup>y</sup>t。本文可以利用一组私钥 (x<sub>t</sub>, y<sub>t</sub>) 和一组随机数 (c<sub>xt</sub>, c<sub>yt</sub>) 来创建签名σ。</p>
+                </div>
+                <div class="p1">
+                    <p id="119">由上述过程可以看出, 对于任何t∈{1, 2, …, n}, 元组 (x<sub>t</sub>, y<sub>t</sub>, c<sub>xt</sub>, c<sub>yt</sub>) 的分布是相同的, 并且遵从由签名者使用公钥创建的签名分布, 如下:</p>
+                </div>
+                <div class="area_img" id="120">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JSJC201902024_12000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="121">从攻击者的角度, 签名σ与实际签名者的编号t无关, 即使攻击者有无限计算能力, 也不能以优于随机猜测的概率来输出t值。本文基于该事实构造的公钥对应多个密钥, 对于每个公钥, 存在一个与签名中给定的链接标签匹配的唯一相应私钥。因此, 本文方案具有无条件匿名性。</p>
+                </div>
+                <h4 class="anchor-tag" id="122" name="122">3.4 关联性与转换性证明</h4>
+                <div class="p1">
+                    <p id="123">关联性与转换性证明分别如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="124">1) 在DLP是困难的前提下, 已知一个私钥, 敌手A一定可产生2个具有关联性的签名σ和σ'。</p>
+                </div>
+                <div class="p1">
+                    <p id="125">证明给定Q<sub>1</sub>、Q<sub>2</sub>∈G, 找到φ<sub>1</sub>、φ<sub>2</sub>∈Z<sub>p</sub><sup>*</sup>, 使得<image id="166" type="formula" href="images/JSJC201902024_16600.jpg" display="inline" placement="inline"><alt></alt></image>。如果Q<sub>1</sub>、Q<sub>2</sub>是随机产生的, 那么以上运算的困难程度与DLP问题相当。由于DLP问题是困难的, 因此不可能找到φ<sub>1</sub>、φ<sub>2</sub>的值。相同论述可以进行推广。换言之, 如果敌手A只知道一个私钥 (x<sub>t</sub>, y<sub>t</sub>) , 有s=H<sub>1</sub> (message, L, M) <sup>y</sup>t, 如果A产生2个有效签名使它们不可链接, 即s<sub>1</sub>≠s<sub>2</sub>, 令v=H<sub>1</sub> (message, L, M) , 有<image id="167" type="formula" href="images/JSJC201902024_16700.jpg" display="inline" placement="inline"><alt></alt></image><image id="167" type="formula" href="images/JSJC201902024_16701.jpg" display="inline" placement="inline"><alt></alt></image>, 该等式必须在敌手A已知<image id="168" type="formula" href="images/JSJC201902024_16800.jpg" display="inline" placement="inline"><alt></alt></image>的前提下成立, 这显然与A只知道一个私钥相矛盾。</p>
+                </div>
+                <div class="p1">
+                    <p id="126">2) 当实际签名者公开了消息{l, (X<sub>1</sub>, Y<sub>1</sub>) , (X<sub>2</sub>, X<sub>2</sub>) , …, (X<sub>n</sub>, Y<sub>n</sub>) } (l∈G是签名者已经选择的秘密参数) 后, 验证者计算A<sub>i</sub>=H<sub>0</sub> (l, x<sub>i</sub>, y<sub>i</sub>) , 其中, i≠t。然后判断σ<sub>i</sub>=A<sub>i</sub>q等式是否成立, 若不成立, 则签名者不是签发人, 若成立, 则可确认发布者已获知参数秘密值l, 然后通过A-{ (X<sub>1</sub>, Y<sub>1</sub>) , (X<sub>2</sub>, Y<sub>2</sub>) , …, (X<sub>t-1</sub>, Y<sub>t-1</sub>) , (X<sub>t</sub>, Y<sub>t</sub>) , …, (X<sub>n</sub>, Y<sub>n</sub>) }就可确定该签名的具体操作人。</p>
+                </div>
+                <h3 id="127" name="127" class="anchor-tag">4 不同方案性能比较</h3>
+                <div class="p1">
+                    <p id="128">将本文方案与目前具有代表性的6种环签名方案进行对比和评估, 以验证各方案的性能。表1所示为相关运算符号定义。</p>
+                </div>
+                <div class="area_img" id="129">
+                                            <p class="img_tit">
+                                                表1 运算符号定义
+                                                
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201902024_12900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/JSJC201902024_12900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201902024_12900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表1 运算符号定义" src="Detail/GetImg?filename=images/JSJC201902024_12900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <div class="p1">
+                    <p id="130">表2所示为各方案在签名存储量、匿名性强弱、签名和验证的运算时间复杂度等6个方面的性能比较结果。从表2可以看出, 本文方案签名和验证的时间效率较高, 幂指数运算和多基幂指数运算的数量固定不变, 并且无需进行任何复杂的配对运算。本文方案与文献<citation id="181" type="reference">[<a class="sup">13</a>]</citation>方案效率相似, 但是后者无法提供选择关联性, 且只达到计算匿名。文献<citation id="182" type="reference">[<a class="sup">16</a>]</citation>方案虽能满足强匿名性和选择关联性, 但是其签名和验证的计算开销远大于本文方案。综上, 本文方案能够同时提供强匿名性、选择关联性和转换性, 且具有较小的计算开销。</p>
+                </div>
+                <div class="area_img" id="170">
+                                            <p class="img_tit">
+                                                表2 不同环签名方案性能比较结果
+                                                
+                                                &nbsp;&nbsp;
+                                                <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201902024_17000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a>
+                                                <a class="table downimg" data-tablename="Detail/GetImg?filename=images/JSJC201902024_17000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">下载原表</a>
+                                            </p>
+                                    <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201902024_17000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <img alt="表2 不同环签名方案性能比较结果" src="Detail/GetImg?filename=images/JSJC201902024_17000.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                    </a>
+
+                </div>
+                <h3 id="134" name="134" class="anchor-tag">5 结束语</h3>
+                <div class="p1">
+                    <p id="135">为限制用户在一段时间内访问云数据的次数, 避免参与者滥用投票权, 本文充分考虑在某些特殊场合需要将环签名转化为普通数字签名的需要, 基于离散对数困难问题, 提出一种具有关联性、可转换性和无条件匿名性的环签名方案。分析结果表明, 该方案计算开销较小, 且能抵抗转换性攻击。但该方案依赖随机预言模型, 且签名长度受环成员数量影响较大, 因此, 在标准模型下构建无条件匿名方案, 缩短签名长度, 使其不受环成员数量增加影响, 将是下一步的研究方向。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="35">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=How to Leak a Secret">
+
+                                <b>[1]</b> RIVEST R L, SHAMIR A, TAUMAN Y. How to leak a secret[C]//Proceedings of International Conference on Theory and Application of Cryptology and Information Security. Berlin, Germany:Springer, 2001:552-565.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Logarithmic size ring signatures without random oracles">
+
+                                <b>[2]</b> GRITTI C, SUSILO W, PLANTARD T. Logarithmic size ring signatures w ithout random oracles[J]. IET Information Security, 2015, 10 (1) :1-7.
+                            </a>
+                        </p>
+                        <p id="39">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Universal designated verifier ring signature (proof)without random oracles">
+
+                                <b>[3]</b> LI J, WANG Y. Universal designated verifier ring signature (proof) w ithout random oracles[C]//Proceedings of 2006 International Conference on Emerging Directions in Embedded and Ubiquitous Computing. Berlin, Germany:Springer, 2006:332-341.
+                            </a>
+                        </p>
+                        <p id="41">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=ID-based Ring Signature and Proxy Ring Signature Schemes from Bilinear Pairings">
+
+                                <b>[4]</b> AMIT K, SUNDER L. ID-based ring signature and proxy ring signature schemes from bilinear pairings[J].International Journal of Netw ork Security, 2007, 4 (2) :187-192.
+                            </a>
+                        </p>
+                        <p id="43">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201205021&amp;v=MDM3NjllUm5GeWprVTd2Qkx6N0Jkckc0SDlQTXFvOUhaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVo=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b>王化群, 秦波.一些环签名及其扩展签名方案的安全性分析及改进[J].计算机学报, 2012, 35 (5) :1052-1058.
+                            </a>
+                        </p>
+                        <p id="45">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HNKX201303017&amp;v=MDQ4OTMzenFxQnRHRnJDVVJMT2VaZVJuRnlqa1U3dkJMU1BBZHJHNEg5TE1ySTlFWTRRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b>王晓兰.基于多变量公钥密码体制的环签名方案[J].河南科学, 2013 (3) :318-321.
+                            </a>
+                        </p>
+                        <p id="47">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Adapting Lyubashevsky&amp;#39;&amp;#39;s signature schemes to the ring signature setting">
+
+                                <b>[7]</b> MELCHOR C A, BETTAIEB S, BOYEN X, et al.Adapting Lyubashevsky’s signature schemes to the ring signature setting[C]//Proceedings of International Conference on Cryptology in Africa. Berlin, Germany:Springer, 2013:1-25.
+                            </a>
+                        </p>
+                        <p id="49">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJHD&amp;filename=SJHD14052700000518&amp;v=MTY5NTQweG9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxiSUlGOFViaHM9TmlmRGFySzhIdFRPcUk5RlpPc1BDWA==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> NOH G, CHUN J Y, JEONG I R. Strongly unforgeable ring signature scheme from lattices in the standard model[J].Journal of Applied Mathematics, 2014 (5) :1-12.
+                            </a>
+                        </p>
+                        <p id="51">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A ring signature based on LDGM codes">
+
+                                <b>[9]</b> LIU M, HAN Y, YANG X. A ring signature based on LDGM codes[M]//CHEN W G, YIN G S, ZHAO G S.Big data technology and applications. Berlin, Germany:Springer, 2015.
+                            </a>
+                        </p>
+                        <p id="53">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Linkable spontaneous anonymous group signature for ad hoc groups">
+
+                                <b>[10]</b> LIU J K, WEI V K, WONG D S. Linkable spontaneous anonymous group signature for Ad Hoc groups[J].Lecture Notes in Computer Science, 2004 (6) :325-335.
+                            </a>
+                        </p>
+                        <p id="55">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Sub-linear size traceable ring signatures without random oracles">
+
+                                <b>[11]</b> FUJISAKI E. Sub-linear size traceable ring signatures without random oracles[M]//LAI J, DENG R H, LIU S, et al. Topics in cryptology-CT-RSA 2011. Berlin, Germany:Springer, 2011:393-415.
+                            </a>
+                        </p>
+                        <p id="57">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient linkable and/or threshold ring signature without random oracles">
+
+                                <b>[12]</b> YUEN T H, LIU J K, AU M H, et al. Efficient linkable and/or threshold ring signature without random oracles[J].Computer Journal, 2013, 56 (4) :407-421.
+                            </a>
+                        </p>
+                        <p id="59">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Linkable Ring Signature with Unconditional Anonymity">
+
+                                <b>[13]</b> LIU J K, MAN H A, SUSILO W, et al. Linkable ring signature w ith unconditional anonymity[J]. IEEE Transactions on Know ledge and Data Engineering, 2013, 26 (1) :157-165.
+                            </a>
+                        </p>
+                        <p id="61">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Voting systems with trust mechanisms in cyberspace: Vulnerabilities and defenses">
+
+                                <b>[14]</b> FENG Q, SUN Y L, LIU L, et al. Voting systems with trust mechanisms in cyberspace:vulnerabilities and defenses[J]. IEEE Transactions on Know ledge and Data Engineering, 2010, 22 (12) :1766-1780.
+                            </a>
+                        </p>
+                        <p id="63">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=SCGX201302002&amp;v=MDAxODVyRzRIOUxNclk5RlpvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSbkZ5amtVN3ZCTmk3TWQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b>李伟, 唐明伟, 范明钰.标准模型下基于线性对的选择关联可转换环签名方案[J].西华大学学报 (自然科学版) , 2013, 32 (2) :1-4.
+                            </a>
+                        </p>
+                        <p id="65">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201705011&amp;v=MDgxMDNCZHJHNEg5Yk1xbzlFWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJuRnlqa1U3dkJMejc=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b>张文芳, 熊丹, 王小敏, 等.基于RSA公钥密码体制的可选择可转换关联环签名[J].计算机学报, 2017, 40 (5) :1168-1180.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201902024" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201902024&amp;v=MDE0MjRSTE9lWmVSbkZ5amtVN3ZCTHo3QmJiRzRIOWpNclk5SFlJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VEcmE1Yy9WeVdIeHJGV1pCK3VXND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130615633556250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201904045%26RESULT%3d1%26SIGN%3d9wXDAFZPHewceePPZBmb2csd8%252fk%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201904045&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201904045&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201904045&amp;v=MDUyNjllUm9GeS9uVzcvQUx6N0JiYkc0SDlqTXE0OUJZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#37" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#40" data-title="1 相关研究 ">1 相关研究</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#47" data-title="2 通配符树生成算法 ">2 通配符树生成算法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#49" data-title="2.1 通配符树生成">2.1 通配符树生成</a></li>
+                                                <li><a href="#73" data-title="2.2 基于单次扫描算法的通配符树生成">2.2 基于单次扫描算法的通配符树生成</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#77" data-title="3 通配符节点话题权重 ">3 通配符节点话题权重</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#79" data-title="3.1 基于最大相容类的话题生成">3.1 基于最大相容类的话题生成</a></li>
+                                                <li><a href="#102" data-title="3.2 话题权重计算">3.2 话题权重计算</a></li>
+                                                <li><a href="#110" data-title="3.3 自动阈值分割">3.3 自动阈值分割</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#115" data-title="4 实验结果与分析 ">4 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#117" data-title="4.1 实验指标">4.1 实验指标</a></li>
+                                                <li><a href="#121" data-title="4.2 结果分析">4.2 结果分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#131" data-title="5 结束语 ">5 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#46" data-title="&lt;b&gt;图1 基于通配符节点话题权重的新闻内容抽取流程&lt;/b&gt;"><b>图1 基于通配符节点话题权重的新闻内容抽取流程</b></a></li>
+                                                <li><a href="#52" data-title="&lt;b&gt;图2 由多个DOM树生成的通配符树&lt;/b&gt;"><b>图2 由多个DOM树生成的通配符树</b></a></li>
+                                                <li><a href="#72" data-title="&lt;b&gt;图3 merge方法的具体过程&lt;/b&gt;"><b>图3 merge方法的具体过程</b></a></li>
+                                                <li><a href="#75" data-title="&lt;b&gt;图4 单次扫描算法流程&lt;/b&gt;"><b>图4 单次扫描算法流程</b></a></li>
+                                                <li><a href="#101" data-title="&lt;b&gt;图5 话题生成示例&lt;/b&gt;"><b>图5 话题生成示例</b></a></li>
+                                                <li><a href="#123" data-title="&lt;b&gt;表1 各抽取算法召回率比较结果&lt;/b&gt;"><b>表1 各抽取算法召回率比较结果</b></a></li>
+                                                <li><a href="#124" data-title="&lt;b&gt;表2 各抽取算法准确率比较结果&lt;/b&gt;"><b>表2 各抽取算法准确率比较结果</b></a></li>
+                                                <li><a href="#125" data-title="&lt;b&gt;表3 各抽取算法F1度量值比较结果&lt;/b&gt;"><b>表3 各抽取算法F1度量值比较结果</b></a></li>
+                                                <li><a href="#129" data-title="&lt;b&gt;图6 模板相似度阈值对抽取性能的影响&lt;/b&gt;"><b>图6 模板相似度阈值对抽取性能的影响</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" 蒲梅, 周枫, 周晶晶, 等.基于加权TextRank的新闻关键事件主题句提取[J].计算机工程, 2017, 34 (8) :219-224." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201708038&amp;v=MTUxOTlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9uVzcvQUx6N0JiYkc0SDliTXA0OUdiSVE=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         蒲梅, 周枫, 周晶晶, 等.基于加权TextRank的新闻关键事件主题句提取[J].计算机工程, 2017, 34 (8) :219-224.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" ALLAN J, PAPKA R, LAVRENKO V.On-line new event detection and tracking[C]//Proceedings of the 21st Annual International ACM SIGIR Conference on Research and Development in Information Retrieval.New York, USA:ACM Press, 1998:37-45." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=On-line new event detection and tracking">
+                                        <b>[2]</b>
+                                         ALLAN J, PAPKA R, LAVRENKO V.On-line new event detection and tracking[C]//Proceedings of the 21st Annual International ACM SIGIR Conference on Research and Development in Information Retrieval.New York, USA:ACM Press, 1998:37-45.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 吴共庆, 胡骏, 李莉, 等.基于标签路径特征融合的在线Web新闻内容抽取[J].软件学报, 2016, 27 (3) :714-735." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201603016&amp;v=MzAzNTJGeS9uVzcvQU55ZlRiTEc0SDlmTXJJOUVZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         吴共庆, 胡骏, 李莉, 等.基于标签路径特征融合的在线Web新闻内容抽取[J].软件学报, 2016, 27 (3) :714-735.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" REIS D C, GOLGHER P B, SILVA A S, et al.Automatic Web news extraction using tree edit distance[C]//Proceedings of the 13th International Conference on World Wide Web.New York, USA:ACM Press, 2004:502-511." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Automatic web newse xtraction using tree edit distance">
+                                        <b>[4]</b>
+                                         REIS D C, GOLGHER P B, SILVA A S, et al.Automatic Web news extraction using tree edit distance[C]//Proceedings of the 13th International Conference on World Wide Web.New York, USA:ACM Press, 2004:502-511.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" FANG Y, XIE X, ZHANG X, et al.STEM:a suffix tree-based method for Web data records extraction[J].Knowledge and Information Systems, 2017, 55 (2) :305-331." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=STEM:a suffix tree-based method for Web data records extraction">
+                                        <b>[5]</b>
+                                         FANG Y, XIE X, ZHANG X, et al.STEM:a suffix tree-based method for Web data records extraction[J].Knowledge and Information Systems, 2017, 55 (2) :305-331.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" GULHANE P, MADAAN A, MEHTA R, et al.Web-scale information extraction with vertex[C]//Proceedings of the 27th International Conference on Data Engineering.Washington D.C., USA:IEEE Press, 2011:1209-1220." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Web-scale information extraction with vertex">
+                                        <b>[6]</b>
+                                         GULHANE P, MADAAN A, MEHTA R, et al.Web-scale information extraction with vertex[C]//Proceedings of the 27th International Conference on Data Engineering.Washington D.C., USA:IEEE Press, 2011:1209-1220.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" BING L, WONG T L, LAM W.Unsupervised extraction of popular product attributes from E-commerce Web sites by considering customer reviews[J].ACM Transactions on Internet Technology, 2016, 16 (2) :12-15." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCME084E7F42562AF9B6F4AC502BBED7240&amp;v=MTk1ODFiUTM1TjVodzdxM3dLQT1OaWZJWThhNEZ0VzVxUGxCWnU0SkRnMVB4bVFWbkRzTU8zcmlybUJIRE1hVFI3NmZDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcA==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         BING L, WONG T L, LAM W.Unsupervised extraction of popular product attributes from E-commerce Web sites by considering customer reviews[J].ACM Transactions on Internet Technology, 2016, 16 (2) :12-15.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" CHARRON B, HIRATE Y, PURCELL D, et al.Extracting semantic information for E-commerce[C]//Proceedings of International Semantic Web Conference.Berlin, Germany:Springer, 2016:273-290." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Extracting semantic information for E-commerce">
+                                        <b>[8]</b>
+                                         CHARRON B, HIRATE Y, PURCELL D, et al.Extracting semantic information for E-commerce[C]//Proceedings of International Semantic Web Conference.Berlin, Germany:Springer, 2016:273-290.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" GALI N, MARIESCU-ISTODOR R, FR&#196;NTI P.Using linguistic features to automatically extract Web page title[J].Expert Systems with Applications, 2017, 79:296-312." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES9264F61D30D2EB75BCC1E7B4D361D6DB&amp;v=MTI3MDlZNHhaK3Q3RGdsTHlCTmhtVXg4UFhpUXFHWTJmN1BnUTg3dENPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU41aHc3cTN3S0E9TmlmT2ZicTZHTlc2cQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         GALI N, MARIESCU-ISTODOR R, FR&#196;NTI P.Using linguistic features to automatically extract Web page title[J].Expert Systems with Applications, 2017, 79:296-312.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" ADELBERG B.NoDoSE——a tool for semi-automatically extracting structured and semistructured data from text documents[J].ACM SIGMOD Record, 1998, 27 (2) :283-294." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000068893&amp;v=MDUzOTRVNm9CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVUxuSUoxd2NhaG89TmlmSVk3SzdIdGpOcjQ5RlpPMEhCSA==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         ADELBERG B.NoDoSE——a tool for semi-automatically extracting structured and semistructured data from text documents[J].ACM SIGMOD Record, 1998, 27 (2) :283-294.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" HAMMER J, GARCIA-MOLINA H, NESTOROV S, et al.Template-based wrappers in the TSIMMIS system[J].ACM SIGMOD Record, 1997, 26 (2) :532-535." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000068818&amp;v=MDY5MjNtVUxuSUoxd2NhaG89TmlmSVk3SzdIdGpOcjQ5RlpPMEhCSDB4b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5ag==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         HAMMER J, GARCIA-MOLINA H, NESTOROV S, et al.Template-based wrappers in the TSIMMIS system[J].ACM SIGMOD Record, 1997, 26 (2) :532-535.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 李效东, 顾毓清.基于DOM的Web信息提取[J].计算机学报, 2002, 25 (5) :526-533." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX200205011&amp;v=MzIxNDdlWmVSb0Z5L25XNy9BTHo3QmRyRzRIdFBNcW85RVpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE8=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         李效东, 顾毓清.基于DOM的Web信息提取[J].计算机学报, 2002, 25 (5) :526-533.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" KUSHMERICK N, WELD D S, DOORENBOS R B.Wrapper induction for information extraction[C]//Proceedings of International Joint Conference on Artificial Intelligence.New York, USA:ACM Press, 1997:729-737." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Wrapper Induction for Information Extraction">
+                                        <b>[13]</b>
+                                         KUSHMERICK N, WELD D S, DOORENBOS R B.Wrapper induction for information extraction[C]//Proceedings of International Joint Conference on Artificial Intelligence.New York, USA:ACM Press, 1997:729-737.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" CAI D, YU S, WEN J R, et al.VIPS:a vision-based page segmentation algorithm[EB/OL].[2017-12-11].https://link.springer.com/content/pdf/10.1007/978-3-319-04244-2_22.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=VIPS:a vision-based page segmentation algorithm">
+                                        <b>[14]</b>
+                                         CAI D, YU S, WEN J R, et al.VIPS:a vision-based page segmentation algorithm[EB/OL].[2017-12-11].https://link.springer.com/content/pdf/10.1007/978-3-319-04244-2_22.pdf.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" SONG R, LIU H, WEN J R, et al.Learning block importance models for Web pages[C]//Proceedings of the 13th International Conference on World Wide Web.New York, USA:ACM Press, 2004:203-211." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning Block Importance Models for Web Pages">
+                                        <b>[15]</b>
+                                         SONG R, LIU H, WEN J R, et al.Learning block importance models for Web pages[C]//Proceedings of the 13th International Conference on World Wide Web.New York, USA:ACM Press, 2004:203-211.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" WENINGER T, HSU W H, HAN J.CETR:content extraction via tag ratios[C]//Proceedings of the 19th International Conference on World Wide Web.New York, USA:ACM Press, 2010:971-980." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=CETR:content extraction via tag ratios">
+                                        <b>[16]</b>
+                                         WENINGER T, HSU W H, HAN J.CETR:content extraction via tag ratios[C]//Proceedings of the 19th International Conference on World Wide Web.New York, USA:ACM Press, 2010:971-980.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" WU G, LI L, HU X, et al.Web news extraction via path ratios[C]//Proceedings of the 22nd ACM International Conference on Information and Knowledge Management.New York, USA:ACM Press, 2013:2059-2068." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Web news extraction via path ratios">
+                                        <b>[17]</b>
+                                         WU G, LI L, HU X, et al.Web news extraction via path ratios[C]//Proceedings of the 22nd ACM International Conference on Information and Knowledge Management.New York, USA:ACM Press, 2013:2059-2068.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(04),275-280 DOI:10.19678/j.issn.1000-3428.0050057            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于通配符节点话题权重的Web新闻抽取方法</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E6%81%BA%E8%88%AA&amp;code=36391434&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张恺航</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BE%90%E5%85%8B%E4%BB%98&amp;code=38675247&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">徐克付</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%BC%A0%E9%97%AF&amp;code=32902997&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">张闯</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E7%A0%94%E7%A9%B6%E6%89%80&amp;code=1698670&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中国科学院信息工程研究所</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%9B%BD%E7%A7%91%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%AD%A6%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8%E5%AD%A6%E9%99%A2&amp;code=1698842&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中国科学院大学网络空间安全学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%B9%BF%E5%B7%9E%E5%A4%A7%E5%AD%A6%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%85%88%E8%BF%9B%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E9%99%A2&amp;code=0138954&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">广州大学网络空间先进技术研究院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>现有Web新闻内容自动抽取方法多数未考虑文本中的话题特征, 容易将样式排版与正文相似的噪音文本识别为正文内容。为此, 提出基于通配符节点话题权重的抽取方法。将HTML文档解析成DOM树后, 匹配DOM树对应的通配符树, 并计算每个通配符中的话题权重, 将高权重话题的通配符节点所覆盖的文本节点识别为正文节点。实验结果表明, 与传统新闻抽取方法相比, 该方法能降低Web新闻内容边缘噪音文本的错误识别率, 抽取的新闻内容准确率更高。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%86%85%E5%AE%B9%E6%8A%BD%E5%8F%96&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">内容抽取;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%80%9A%E9%85%8D%E7%AC%A6%E8%8A%82%E7%82%B9&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">通配符节点;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%9C%80%E5%A4%A7%E7%9B%B8%E5%AE%B9%E7%B1%BB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">最大相容类;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Otsu%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Otsu算法;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%9D%E9%A2%98%E7%94%9F%E6%88%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">话题生成;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    张恺航 (1993—) , 男, 硕士研究生, 主研方向为信息检索、舆情计算, E-mail:craigzkh@163.com;;
+                                </span>
+                                <span>
+                                    徐克付, 研究员、博士;;
+                                </span>
+                                <span>
+                                    张闯, 高级工程师、博士。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-01-10</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金 (61602474);</span>
+                    </p>
+            </div>
+                    <h1><b>Web News Extraction Method Based on Topic Weight of Wildcard Node</b></h1>
+                    <h2>
+                    <span>ZHANG Kaihang</span>
+                    <span>XU Kefu</span>
+                    <span>ZHANG Chuang</span>
+            </h2>
+                    <h2>
+                    <span>Institute of Information Engineering, Chinese Academy of Sciences</span>
+                    <span>School of Cyber Security, University of Chinese Academy of Sciences</span>
+                    <span>Cyberspace Institute of Advanced Technology, Guangzhou University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Considering that most of existing methods on news content extraction do not take into account the topics features in the text, noise texts which are formatted like the news content may be identified as news content.Therefore, this paper proposes an extraction method based on topic weight of wildcard node.After parsing an HTML into DOM tree, it can match the DOM tree with a wildcard tree, and then calculates the weights of wildcard nodes.The wildcard nodes with high weight can be distinguish as news content.Experimental results show that the proposed method can reduce the false recognition rate of edge noise text of Web news content, and extract news content with higher accuracy rate compared with traditional news extraction methods.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=content%20extraction&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">content extraction;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=wildcard%20node&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">wildcard node;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=maximal%20compatibility%20class&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">maximal compatibility class;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Otsu%20algorithm&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Otsu algorithm;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=topic%20generation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">topic generation;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-01-10</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="37" name="37" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="38">随着互联网的快速发展以及人们行为习惯的改变, 互联网已成为主要的新闻信息获取渠道之一。每天都有大量的新闻发布在新闻网站上, 为了将大量的新闻数据转化为知识, 对新闻的采集、管理和分析显得尤为重要。很多研究工作都会在整理和存储完备的新闻数据上进行分析和挖掘, 比如新闻话题的跟踪与检测<citation id="133" type="reference"><link href="3" rel="bibliography" /><link href="5" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>]</sup></citation>等。因此, 新闻内容的自动抽取能大幅提升基于新闻内容研究的工作效率。</p>
+                </div>
+                <div class="p1">
+                    <p id="39">在HTML页面上进行内容的抽取研究已开展多年。前端技术的不断优化与发展以及网站的商业发展使得网页承载了更多的广告和推荐等噪音信息, 导致网页内容的抽取工作面临越来越大的挑战。不同网站以及网站下不同模块的网页构造差别较大, 因此自动抽取内容的方法需要有较好的鲁棒性, 才能应用于现实工作中。由于网页结构高度异构, 不同领域的潜在抽取规则难以使用同种方法挖掘, 因此目前自动化的抽取方法多数限定于某种领域, 比如新闻抽取<citation id="135" type="reference"><link href="7" rel="bibliography" /><link href="9" rel="bibliography" /><sup>[<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>、数据记录抽取<citation id="136" type="reference"><link href="11" rel="bibliography" /><link href="13" rel="bibliography" /><sup>[<a class="sup">5</a>,<a class="sup">6</a>]</sup></citation>、电商网站信息抽取<citation id="137" type="reference"><link href="15" rel="bibliography" /><link href="17" rel="bibliography" /><sup>[<a class="sup">7</a>,<a class="sup">8</a>]</sup></citation>、标题抽取<citation id="134" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>等。本文主要研究新闻内容在线自动化抽取, 通过在线聚类不断形成新闻模板, 利用模板上动态变化的节点话题特征进行正文内容抽取。</p>
+                </div>
+                <h3 id="40" name="40" class="anchor-tag">1 相关研究</h3>
+                <div class="p1">
+                    <p id="41">早期的研究方法多数是手动进行抽取规则的生成, 比如Nodose<citation id="138" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>、TSIMMIS<citation id="139" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>方法等。手动生成抽取规则的方法主要是通过工具辅助用户更快地生成抽取规则, 但是对于大量异构网页的抽取, 使用辅助工具也要耗费用户大量时间和精力。</p>
+                </div>
+                <div class="p1">
+                    <p id="42">文献<citation id="141" type="reference">[<a class="sup">12</a>,<a class="sup">13</a>]</citation>使用监督学习方法生成抽取规则。监督学习的缺点在于需要大量的标注数据, 且对于新改版的网页适应能力较差。Vertex<citation id="140" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>系统通过贪心算法抽取少量网页进行标注, 再用Apriori生成网页抽取规则, 一定程度上减少了人工标注的工作量。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">VIPS<citation id="142" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>方法是从视觉特征的角度对网页自上而下进行视觉块的划分。文献<citation id="143" type="reference">[<a class="sup">15</a>]</citation>在VIPS的基础上提出视觉块重要度排序方法, 通过视觉块的位置、大小和包含图片数量等特征, 将内容重要度进行分级, 对噪音内容与重要内容进行分类。但是基于视觉特征的方法需要渲染网页, 并检索当前网页相关的CSS文件, 导致所需的计算机资源和时间消耗非常大。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">无监督学习方法是当前网页内容在线抽取的主流方法, 本文主要借鉴基于模板与基于HTML页面特征 (标签路径、文本长度、标签文本比例、超链接等) 的规则抽取方法。这2类方法只需采集当前的HTML文件, 特征获取途径简单高效。文献<citation id="144" type="reference">[<a class="sup">4</a>]</citation>提出基于模板的内容抽取方法, 使用聚类方法生成能代表模板的通配符树, 从而对通配符节点的文本进行匹配。该方法的缺点为需要离线生成模板通配符树的聚类, 而且也会动态生成网页广告和推荐, 形成与正文节点类似的通配符节点, 导致识别错误。CETR<citation id="145" type="reference"><link href="33" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>、CEPR<citation id="146" type="reference"><link href="35" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>、和CEPF<citation id="147" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>是基于HTML页面特征的抽取方法, 此类方法简单高效, 适合用于线上快速抽取网页内容。但是此类方法都使用高斯平滑提升短文本的特征值, 即提高处在正文边缘的噪音文本的特征值, 从而较难准确识别边界噪音。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">本文分析并研究基于模板与HTML页面特征的抽取方法, 提出一种基于通配符节点话题权重的新闻内容抽取方法。新闻内容抽取流程如图1所示, 将HTML文档解析成DOM树后, 匹配该DOM对应的通配符树 (模板) , 然后计算每个通配符中话题的权重, 将含有高权重话题的通配符节点所包含的所有文本节点识别为正文节点。该方法具有以下特点:1) 使用模板通配符代替高斯平滑, 减少新闻内容边缘噪音文本的错误识别。2) 使用话题权重对通配符节点进行分类, 抽取新闻内容的准确率更高。3) 简化模板生成方法, 使得模板生成能更适应线上环境。</p>
+                </div>
+                <div class="area_img" id="46">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904045_046.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 基于通配符节点话题权重的新闻内容抽取流程" src="Detail/GetImg?filename=images/JSJC201904045_046.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 基于通配符节点话题权重的新闻内容抽取流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904045_046.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h3 id="47" name="47" class="anchor-tag">2 通配符树生成算法</h3>
+                <div class="p1">
+                    <p id="48">经过对大量新闻网站的观察发现新闻网站都有内容管理器, 同一网站同一模块下的新闻基本使用同一套模板, 因此假设新闻网页都有所属模板, 模板上只变动新闻主题内容以及动态生成的广告和推荐等噪音文本。本文提出的通配符树生成算法是对Reis算法<citation id="148" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>的改进, 简化通配符树的生成流程, 使用在线单次扫描匹配的方法代替聚类, 使得模板生成速度更快, 而且能适应改版网站。</p>
+                </div>
+                <h4 class="anchor-tag" id="49" name="49">2.1 通配符树生成</h4>
+                <div class="p1">
+                    <p id="50">通配符树通常由2棵以上的DOM树集合生成。在在线环境下, 匹配不到模板的网页不进行内容抽取, 而是先将该网页以DOM树的形式存储在待处理池, 等待相似页面进入计算再生成模板。</p>
+                </div>
+                <div class="p1">
+                    <p id="51"><b>定义1</b> (通配符树) <i>N</i>={<i>t</i><sub>1</sub>, <i>t</i><sub>2</sub>, …}为DOM树上的HTML标签集合, <i>t</i><sub><i>n</i></sub>代表一个HTML标签, 比如div、span。通配符节点<i>N</i><sup>*</sup>⊆<i>N</i>, 如图2所示, 通配符节点在DOM树上用符号*代替多个标签节点, 生成能匹配多个DOM树的模板, 即为通配符树。</p>
+                </div>
+                <div class="area_img" id="52">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904045_052.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 由多个DOM树生成的通配符树" src="Detail/GetImg?filename=images/JSJC201904045_052.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 由多个DOM树生成的通配符树</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904045_052.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="53">通配符树需要有2棵以上相似度高的DOM树聚合生成, 2棵DOM树聚合生成一棵通配符树的算法记为WTG, 具体过程如算法1所示, <i>T</i><sub>1</sub>、<i>T</i><sub>2</sub>为2棵子树, 若其中有一棵为通配符树, 则赋值到<i>T</i><sub>1</sub>上。</p>
+                </div>
+                <div class="p1">
+                    <p id="54"><b>算法1</b> 通配符树生成算法</p>
+                </div>
+                <div class="p1">
+                    <p id="55"><b>输入</b> 子树<i>T</i><sub>1</sub>、<i>T</i><sub>2</sub></p>
+                </div>
+                <div class="p1">
+                    <p id="56"><b>输出</b> 通配符树</p>
+                </div>
+                <div class="p1">
+                    <p id="57">1.cn1 = childNodes (T<sub>1</sub>) </p>
+                </div>
+                <div class="p1">
+                    <p id="58">2.cn2 = childNodes (T<sub>2</sub>) </p>
+                </div>
+                <div class="p1">
+                    <p id="59">3.m = max (cn1.length, cn2.length) </p>
+                </div>
+                <div class="p1">
+                    <p id="60">4.for i=1:m do</p>
+                </div>
+                <div class="p1">
+                    <p id="61">5.if tag (cn1[i]) != tag (cn2[i]) || cn1[i]== null|| tag (cn1[i]) == ‘*’|| cn2[i]== null do</p>
+                </div>
+                <div class="p1">
+                    <p id="63">6.x, y = merge (cn1[i], cn2[i]) </p>
+                </div>
+                <div class="p1">
+                    <p id="64">7.residues_ WTG (cn1[x], cn2[y]) </p>
+                </div>
+                <div class="p1">
+                    <p id="65">8.break;</p>
+                </div>
+                <div class="p1">
+                    <p id="66">9.else</p>
+                </div>
+                <div class="p1">
+                    <p id="67">10.WTG (cn1[i], cn2[i]) </p>
+                </div>
+                <div class="p1">
+                    <p id="68">11.end if</p>
+                </div>
+                <div class="p1">
+                    <p id="69">12.end for</p>
+                </div>
+                <div class="p1">
+                    <p id="70">13.return T<sub>1</sub></p>
+                </div>
+                <div class="p1">
+                    <p id="71">如算法1所示, 输入2棵子树<i>T</i><sub>1</sub>、<i>T</i><sub>2</sub>后, 通过递归的方式, 每次扫描2棵子树根节点下的子节点, 将不同的节点映射成通配符。childNodes方法用于获取当前根节点下的所有子节点集合, tag方法用于获取节点的HTLM标签。在检测到子节点不同时, 使用merge方法将多个标签映射成一个通配符, 并返回2个数<i>x</i>、<i>y</i>, 表示通配符映射后, 2个子序列分别从<i>x</i>和<i>y</i>开始的子节点标签相同, 即不会被识别为新闻内容的模板节点。然后使用residues_WTG方法对<i>x</i>和<i>y</i>后的子节点序列用算法1进行递归计算, 因为模板节点的子节点可能是内容节点。merge方法如图3所示, 首先将2个序列中连续相同的标签转换成“标签:数量”的格式, 将连续相同标签的节点归为一个大的节点。只有当“标签:数量”相同时, 覆盖的所有节点才能识别为不变的模板节点。将子节点序列中所有“标签:数量”不同的节点连续部分用一个通配符符号*标记, 表示变动的新闻内容节点或动态噪音文本。</p>
+                </div>
+                <div class="area_img" id="72">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904045_072.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 merge方法的具体过程" src="Detail/GetImg?filename=images/JSJC201904045_072.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 merge方法的具体过程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904045_072.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="73" name="73">2.2 基于单次扫描算法的通配符树生成</h4>
+                <div class="p1">
+                    <p id="74">本文使用单次扫描匹配算法生成模板, 使得该算法比Reis算法<citation id="149" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>中的聚类方式更适用于线上环境, 在网页改版时能自适应生成新的模板。单词扫描算法流程如图4所示。</p>
+                </div>
+                <div class="area_img" id="75">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904045_075.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 单次扫描算法流程" src="Detail/GetImg?filename=images/JSJC201904045_075.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 单次扫描算法流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904045_075.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="76">Reis算法<citation id="150" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>使用聚类生成模板, 但是聚类的缺点在于需要离线计算, 当网页改版时容易导致模板失效, 需要重新聚类生成模板。本文使用单次扫描算法快速生成模板, 首先寻找是否存在可以匹配的模板, 若有则使用算法1改进匹配模板;否则进入待处理池, 只需等待2个相似的网页出现, 就能使用算法1对2个页面进行计算, 生成模板的通配符树。2棵树的相似度计算方式如下:通过算法1计算2棵树生成通配符树的公共节点数目<i>n</i>, 2棵树的节点数目为<i>c</i><sub>1</sub>和<i>c</i><sub>2</sub>, 相似度为2<i>n</i>/ (<i>c</i><sub>1</sub>+<i>c</i><sub>2</sub>) 。</p>
+                </div>
+                <h3 id="77" name="77" class="anchor-tag">3 通配符节点话题权重</h3>
+                <div class="p1">
+                    <p id="78">由于噪音文本在网页中可能存在动态生成方式, 因此需要将通配符节点分为2类, 一类是具有新闻内容的内容块, 另一类是包含广告、推荐、导航等动态噪音内容的噪音块。由于新闻抽取的内容具有较强的话题特征, 本文从通配符节点所具有的话题特征出发, 通过话题权重识别具有正文内容的通配符节点, 其中权重计算和CEPF<citation id="151" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>一样考虑内容块中的文本长度和方差特征。</p>
+                </div>
+                <h4 class="anchor-tag" id="79" name="79">3.1 基于最大相容类的话题生成</h4>
+                <div class="p1">
+                    <p id="80">本文使用最大相容类生成通配符节点话题。一个通配符节点中包含多个文本节点, 在生成话题前, 需要对每个文本节点中的文本进行关键词抽取。关键词抽取步骤如下:1) 对文本进行分词;2) 去除文本停用词和常用词;3) 使用TF-IDF算法提取权重高的单词为关键词。</p>
+                </div>
+                <div class="p1">
+                    <p id="81">如果页面中有title和meta标签, 同时提取在title标签节点与meta标签节点中的文本关键词, 计算每一个通配符节点的最大相容类。本文设置最大相容类的相容关系为关键词在不同文本节点中共现大于2次。相容关系是自反和对称的关系, 共现关系符合该条件。</p>
+                </div>
+                <div class="p1">
+                    <p id="82"><b>定义2</b> (最大相容类) 设<i>R</i>为集合<i>U</i>上的相容关系, <i>U</i><sup><i>s</i></sup>⊆<i>U</i>, 并且任意<i>a</i>, <i>b</i>∈<i>U</i><sup><i>s</i></sup>都具有关系<i>R</i>, 则<i>U</i><sup><i>s</i></sup>为相容类。若不存在<i>c</i>∈<i>U</i>-<i>U</i><sup><i>s</i></sup>能加入相容类<i>U</i><sup><i>s</i></sup>, 则<i>U</i><sup><i>s</i></sup>为最大相同类。</p>
+                </div>
+                <div class="p1">
+                    <p id="83">生成最大相容类是一个NP问题, 求解此类问题成本较大。本文只需获取通配符节点中相关性较大的话题, 只遍历一次所有的关键词, 生成最大相容类的局部最优解从而满足计算需求, 提高计算效率。使用最大相容类生成话题, 如算法2所示。在算法2中, <i>C</i>为收集到的所有局部最大相容类, <i>K</i>为通配符节点中所有的关键词集合, relate (word) 方法返回所有与当前word具有相容关系的关键词, pair (relatewords, word) 表示将生成相容类后剩下与word有相容关系的词两两配对, 加入相容类<i>C</i>。该算法只扫描一次所有关键词, 每次扫描都将当前关键词合并到已有相容类中, 最后得到局部最大相容类。</p>
+                </div>
+                <div class="p1">
+                    <p id="84"><b>算法2</b> 话题生成算法</p>
+                </div>
+                <div class="p1">
+                    <p id="85"><b>输入</b> 关键词集合<i>K</i></p>
+                </div>
+                <div class="p1">
+                    <p id="86"><b>输出</b> 最大相容类集合<i>C</i></p>
+                </div>
+                <div class="p1">
+                    <p id="87">1.for i=1:length (K) do</p>
+                </div>
+                <div class="p1">
+                    <p id="88">2.relatewords = relate (K[i]) </p>
+                </div>
+                <div class="p1">
+                    <p id="89">3.usedset = {}</p>
+                </div>
+                <div class="p1">
+                    <p id="90">4.for j=1:length (C) do</p>
+                </div>
+                <div class="p1">
+                    <p id="91">5.if C[j]⊆ relatewords do</p>
+                </div>
+                <div class="p1">
+                    <p id="92">6.usedset.addAll (C[j]) </p>
+                </div>
+                <div class="p1">
+                    <p id="93">7.C[j].add (K[i]) </p>
+                </div>
+                <div class="p1">
+                    <p id="94">8.end if</p>
+                </div>
+                <div class="p1">
+                    <p id="95">9.end for</p>
+                </div>
+                <div class="p1">
+                    <p id="96">10.relatewords.removeAll (usedset) </p>
+                </div>
+                <div class="p1">
+                    <p id="97">11.C.addAll (pair (relatewords, K[i]) ) </p>
+                </div>
+                <div class="p1">
+                    <p id="98">12.end for</p>
+                </div>
+                <div class="p1">
+                    <p id="99">13.return C</p>
+                </div>
+                <div class="p1">
+                    <p id="100">以凤凰网中一篇北京冬奥会与残奥会会徽揭晓的新闻为例, 通过算法2对所有通配符节点按照关键词在不同节点共现2次以上的相容关系生成话题, 如图5所示, 其中有新闻相关的话题和噪音文本产生的话题。本文首先对话题权重进行计算, 然后使用Otsu算法将话题分为新闻话题和噪音话题, 将具有高权重话题的类别判定为新闻话题。通过通配符节点所含有话题的权重, 对文本是否属于正文进行识别。</p>
+                </div>
+                <div class="area_img" id="101">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904045_101.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 话题生成示例" src="Detail/GetImg?filename=images/JSJC201904045_101.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 话题生成示例</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904045_101.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="102" name="102">3.2 话题权重计算</h4>
+                <div class="p1">
+                    <p id="103">在通配符节点产生的话题中, 可以观察到一些话题属于新闻内容, 另一些话题来源于噪音内容。为通过话题特征对通配符节点进行分类, 需要计算话题权重。话题权重计算考虑了话题所在通配符节点的文本长度和方差特征, 话题<i>topic</i>所在通配符节点中文本的平均长度计算如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="104" class="code-formula">
+                        <mathml id="104"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>a</mi><mi>v</mi><mi>g</mi><mo stretchy="false"> (</mo><mi>t</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>n</mi><mo>∈</mo><mi>w</mi><mi>i</mi><mi>l</mi><mi>d</mi><mi>c</mi><mi>a</mi><mi>r</mi><mi>d</mi><mo stretchy="false"> (</mo><mi>t</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><mo stretchy="false">) </mo></mrow></munder><mi>s</mi></mstyle><mi>i</mi><mi>z</mi><mi>e</mi><mo stretchy="false"> (</mo><mi>n</mi><mo stretchy="false">) </mo></mrow><mrow><mrow><mo>|</mo><mrow><mi>w</mi><mi>i</mi><mi>l</mi><mi>d</mi><mi>c</mi><mi>a</mi><mi>r</mi><mi>d</mi><mo stretchy="false"> (</mo><mi>t</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><mo stretchy="false">) </mo></mrow><mo>|</mo></mrow></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="105">通配符中文本长度的方差计算如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="106"><i>var</i> (<i>topic</i>) =<i>variance</i> ({<i>size</i> (<i>n</i>) |<i>n</i>∈<i>wildcard</i> (<i>topic</i>) })      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="107">其中, <i>wildcard</i> (<i>topic</i>) 方法返回话题<i>topic</i>所在的通配符节点。通配符节点是文本节点<i>n</i>的集合, <i>size</i>方法返回节点中文本的长度。基于通配符节点中文本长度的平均值<i>avg</i>和方差<i>var</i>, 对话题权重进行计算:</p>
+                </div>
+                <div class="p1">
+                    <p id="108" class="code-formula">
+                        <mathml id="108"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>w</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><mo stretchy="false"> (</mo><mi>t</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><mo stretchy="false">) </mo><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>x</mi><mo>, </mo><mi>y</mi><mo>∈</mo><mi>t</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi></mrow></munder><mi>r</mi></mstyle><mi>e</mi><mi>l</mi><mi>a</mi><mi>t</mi><mi>e</mi><mo stretchy="false"> (</mo><mi>x</mi><mo>, </mo><mi>y</mi><mo stretchy="false">) </mo><mo>×</mo><mi>a</mi><mi>v</mi><mi>g</mi><mo>×</mo><mrow><mi>v</mi><mi>a</mi><mi>r</mi></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="109"><i>relate</i>方法用于计算在最大相容类话题上任意2个关键词在不同文本节点的共现次数。通配符节点中话题<i>topic</i>的权重计算为话题上任意2个关键词共现次数的总和与话题所在通配符节点中所有文本节点长度的平均值和方差的乘积。通配符节点只取权重最高的话题作为该节点的话题权重进行阈值分割计算。</p>
+                </div>
+                <h4 class="anchor-tag" id="110" name="110">3.3 自动阈值分割</h4>
+                <div class="p1">
+                    <p id="111">在进行话题权重计算后, 需要根据权重分配情况自动生成阈值将话题分为新闻话题和噪音话题。本文使用Otsu算法对话题权重进行自动阈值分割。Otsu算法计算的是最大类间方差, 设当前选择的阈值为<i>t</i>, <i>w</i><sub>0</sub>为权重大于<i>t</i>的话题所占比例, <i>w</i><sub>1</sub>为权重小于<i>t</i>的话题所占比例, <i>u</i><sub>0</sub>为大于<i>t</i>的权重平均值, <i>u</i><sub>1</sub>为小于<i>t</i>的权重平均值, 全局平均值为<i>μ</i>, 阈值分割的目标函数和全局平均值为:</p>
+                </div>
+                <div class="p1">
+                    <p id="112"><i>g</i>=<i>w</i><sub>0</sub> (<i>u</i><sub>0</sub>-<i>μ</i>) <sup>2</sup>+<i>w</i><sub>1</sub> (<i>u</i><sub>1</sub>-<i>μ</i>) <sup>2</sup>      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="113"><i>μ</i>=<i>w</i><sub>0</sub>×<i>u</i><sub>0</sub>+<i>w</i><sub>1</sub>×<i>u</i><sub>1</sub>      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="114">最佳阈值为使<i>g</i>取值最大的阈值, 本文设话题最大的权重为<i>max</i>, 最小的权重为<i>min</i>, 以步长为 (<i>max</i>-<i>min</i>) /100进行阈值的遍历计算, 取得使<i>g</i>最大的值为分割阈值。将权重大的类别识别为正文内容, 权重小的类别识别为噪音内容。</p>
+                </div>
+                <h3 id="115" name="115" class="anchor-tag">4 实验结果与分析</h3>
+                <div class="p1">
+                    <p id="116">本文实验数据集主要采集自一些中英文知名新闻网站, 在新华网、人民网、凤凰网、网易新闻、CNN、NY post、Freep中各随机采集100篇新闻进行实验。对新闻内容进行标注, 抽取结果分别与CEPF算法<citation id="152" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>与Reis算法<citation id="153" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>进行对比。</p>
+                </div>
+                <h4 class="anchor-tag" id="117" name="117">4.1 实验指标</h4>
+                <div class="p1">
+                    <p id="118">本文对新闻内容的标注方式是直接对新闻内容的节点进行标注, 实验指标有召回率 (<i>R</i>) 、准确率 (<i>P</i>) 和F1度量值 (<i>F</i><sub>1</sub>) , 具体计算公式为:</p>
+                </div>
+                <div class="p1">
+                    <p id="119" class="code-formula">
+                        <mathml id="119"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>Ρ</mi><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>t</mi><mo>∈</mo><mi>Ν</mi><msub><mrow></mrow><mtext>e</mtext></msub><mstyle displaystyle="true"><mo>∩</mo><mi>Ν</mi></mstyle><msub><mrow></mrow><mtext>l</mtext></msub></mrow></munder><mi>s</mi></mstyle><mi>i</mi><mi>z</mi><mi>e</mi><mo stretchy="false"> (</mo><mi>t</mi><mo stretchy="false">) </mo></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>w</mi><mo>∈</mo><mi>Ν</mi><msub><mrow></mrow><mtext>e</mtext></msub></mrow></munder><mi>s</mi></mstyle><mi>i</mi><mi>z</mi><mi>e</mi><mo stretchy="false"> (</mo><mi>w</mi><mo stretchy="false">) </mo></mrow></mfrac></mtd></mtr><mtr><mtd><mi>R</mi><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>t</mi><mo>∈</mo><mi>Ν</mi><msub><mrow></mrow><mtext>e</mtext></msub><mstyle displaystyle="true"><mo>∩</mo><mi>Ν</mi></mstyle><msub><mrow></mrow><mtext>l</mtext></msub></mrow></munder><mi>s</mi></mstyle><mi>i</mi><mi>z</mi><mi>e</mi><mo stretchy="false"> (</mo><mi>t</mi><mo stretchy="false">) </mo></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>w</mi><mo>∈</mo><mi>Ν</mi><msub><mrow></mrow><mtext>l</mtext></msub></mrow></munder><mi>s</mi></mstyle><mi>i</mi><mi>z</mi><mi>e</mi><mo stretchy="false"> (</mo><mi>w</mi><mo stretchy="false">) </mo></mrow></mfrac></mtd></mtr><mtr><mtd><mi>F</mi><msub><mrow></mrow><mn>1</mn></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mi>Ρ</mi><mi>R</mi></mrow><mrow><mi>Ρ</mi><mo>+</mo><mi>R</mi></mrow></mfrac></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="120">其中, <i>N</i><sub>e</sub>代表算法抽取出的内容节点, <i>N</i><sub>l</sub>为标记的节点, <i>size</i>方法可以计算节点中文本的长度。</p>
+                </div>
+                <h4 class="anchor-tag" id="121" name="121">4.2 结果分析</h4>
+                <div class="p1">
+                    <p id="122">表1～表3分别展示了本文算法、CEPF算法<citation id="154" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>、Reis算法<citation id="155" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>在不同网站上的抽取性能比较结果。本文算法与Reis算法都需要预先准备训练数据, 在实际应用中, 本文算法通过在线训练的方式将测试数据集增量加入训练数据集, 但是为了实验公平性, 本文在Reis算法中使用相同的训练数据集进行离线训练 (从各网站中随机抽取50个网页) 。而CEPF算法不需要训练和预处理步骤。从表3的F1度量值来看, 本文算法为93.04%, 比CEPF和Reis算法分别高出1.37%和6.05%, 从而验证本文算法在大部分情况下性能最优, 并且在不同算例上本文算法表现比较稳定, 在异构网站上, 均有较好的实验效果。</p>
+                </div>
+                <div class="area_img" id="123">
+                    <p class="img_tit"><b>表1 各抽取算法召回率比较结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note">%</p>
+                    <table id="123" border="1"><tr><td><br />数据集</td><td>本文算法</td><td>CEPF算法</td><td>Reis算法</td></tr><tr><td><br />新华网</td><td>94.67</td><td>90.51</td><td>94.64</td></tr><tr><td><br />人民网</td><td>94.43</td><td>95.12</td><td>93.28</td></tr><tr><td><br />凤凰网</td><td>98.52</td><td>96.80</td><td>96.55</td></tr><tr><td><br />网易新闻</td><td>96.33</td><td>97.76</td><td>97.64</td></tr><tr><td><br />CNN</td><td>92.65</td><td>95.28</td><td>91.96</td></tr><tr><td><br />NY post</td><td>97.34</td><td>93.45</td><td>98.39</td></tr><tr><td><br />Freep</td><td>92.17</td><td>91.23</td><td>95.73</td></tr><tr><td><br />平均</td><td>95.16</td><td>94.31</td><td>95.46</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="124">
+                    <p class="img_tit"><b>表2 各抽取算法准确率比较结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note">%</p>
+                    <table id="124" border="1"><tr><td><br />数据集</td><td>本文算法</td><td>CEPF算法</td><td>Reis算法</td></tr><tr><td><br />新华网</td><td>92.65</td><td>85.13</td><td>76.78</td></tr><tr><td><br />人民网</td><td>93.35</td><td>90.75</td><td>74.36</td></tr><tr><td><br />凤凰网</td><td>95.76</td><td>95.42</td><td>85.64</td></tr><tr><td><br />网易新闻</td><td>92.23</td><td>93.84</td><td>80.56</td></tr><tr><td><br />CNN</td><td>90.78</td><td>91.39</td><td>80.65</td></tr><tr><td><br />NY post</td><td>85.57</td><td>79.23</td><td>78.74</td></tr><tr><td><br />Freep</td><td>86.73</td><td>88.47</td><td>82.59</td></tr><tr><td><br />平均</td><td>91.01</td><td>89.18</td><td>79.90</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="125">
+                    <p class="img_tit"><b>表3 各抽取算法F1度量值比较结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note">%</p>
+                    <table id="125" border="1"><tr><td><br />数据集</td><td>本文算法</td><td>CEPF算法</td><td>Reis算法</td></tr><tr><td><br />新华网</td><td>93.65</td><td>87.74</td><td>84.78</td></tr><tr><td><br />人民网</td><td>93.89</td><td>92.88</td><td>82.75</td></tr><tr><td><br />凤凰网</td><td>97.12</td><td>96.11</td><td>90.77</td></tr><tr><td><br />网易新闻</td><td>94.24</td><td>95.76</td><td>88.28</td></tr><tr><td><br />CNN</td><td>91.71</td><td>93.29</td><td>85.93</td></tr><tr><td><br />NY post</td><td>91.08</td><td>85.75</td><td>87.48</td></tr><tr><td><br />Freep</td><td>89.37</td><td>89.83</td><td>88.68</td></tr><tr><td><br />平均</td><td>93.04</td><td>91.67</td><td>86.99</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="126">表1中召回率最高的是Reis算法<citation id="156" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>, 但由于Reis算法的提出时间较早, 不能适应现在动态噪音较多的页面结构, 导致该算法在现有的网页识别上容易将大量的动态噪音识别为正文文本, 所以在准确率上该算法效果最差, 只有79.9%。正文下方一般会有0到多个推荐阅读, 这些推荐的数量不固定, 在Reis算法<citation id="157" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>识别中会把这部分内容归入通配符, 并且很难在匹配时去掉这部分文本, 因此Reis算法不适应当前动态文本较多的网页结构。</p>
+                </div>
+                <div class="p1">
+                    <p id="127">CEPF算法在大部分的情况下能保持较好的抽取性能, 因为该算法主要获取了新闻文章的文本和标签路径特征, 正文文本方差大、长度长、标点符号多, 并且正文所在的标签路径较短。通过这些特征能在大部分情况下快速抽取正文文本, 但是本文算法的抽取准确率比CEPF算法高1.83%, 首先体现在对正文边缘噪音文本的识别效果上, 由于平滑的作用, 因此CEPF算法容易将先序遍历后正文节点前后的噪音文本节点识别为正文。但是本文以通配符节点为单位进行特征值计算, 在正文边缘处的噪音文本不容易被识别为正文文本。其次本文准确率优于CEPF算法还体现在对长文本、高方差噪音文本的识别上。由于本文使用话题权重对文本进行识别, 长文本噪音可以通过话题权重进行区分, 从话题维度去除与正文排版相似的噪音文本。CEPF算法在只有一段文本的新闻网页上识别效果较差, 但由于本文已通过模板匹配出这段文本处于动态内容的位置, 并且通过与title和meta标签上的话题结合进行计算, 从而提高只有一段文本的页面内容抽取的准确率。</p>
+                </div>
+                <div class="p1">
+                    <p id="128">本文基于模板和HTML页面特征的混合方法进行新闻正文内容的识别, 其中基于模板的部分需要通过相似度阈值<i>μ</i>确定2个网页是否来自同一模板, 相似度<i>μ</i>阈值的确定对于实验结果有较大影响。图6通过0.50～0.95的相似度阈值对识别结果进行测试。随着阈值的增大, 召回率 (<i>R</i>) 呈下降趋势, 准确率 (<i>P</i>) 呈上升趋势, 当相似度阈值为0.90时<i>F</i><sub>1</sub>值最大。因此, 本文模板相似度阈值取0.90。</p>
+                </div>
+                <div class="area_img" id="129">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201904045_129.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 模板相似度阈值对抽取性能的影响" src="Detail/GetImg?filename=images/JSJC201904045_129.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 模板相似度阈值对抽取性能的影响</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201904045_129.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="130">本文算法的模板生成过程需要严格控制阈值, 防止过低的阈值设置将过多的网页融合成通配符树, 使得通配符树上的通配符包含正文和噪音文本, 以通配符为单位进行计算从而包含噪音文本。因此, 需要在模板生成时尽量使用较高的相似度阈值, 但也要防止过高的阈值阻碍本属于同一个模板的网页归类为不同的模板, 导致生成过多的模板, 影响计算效率。本文通过大量实验确定模板相似度阈值, 但模板生成方法还有可优化的空间。</p>
+                </div>
+                <h3 id="131" name="131" class="anchor-tag">5 结束语</h3>
+                <div class="p1">
+                    <p id="132">本文提出一种基于通配符节点话题权重的新闻内容抽取方法, 以通配符节点为单位进行识别, 无需使用平滑方法提高正文中短文本的特征值, 解决了平滑方法容易将正文边缘的噪音文本识别为正文的问题。使用话题权重作为分类特征, 一定程度上可降低将与正文排版相似的噪音内容识别为正文的概率, 同时解决基于模板的方法容易将动态噪音文本识别为正文的问题。实验结果表明, 本文方法在高度异构的新闻网页中具有较好的抽取性能。下一步将融合多种特征 (如文本、话题、样式、结构、标签等) , 提高正文内容抽取准确率, 同时对新闻页面的多种元素 (如标题、正文、作者、时间等) 进行精确抽取。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201708038&amp;v=MTA1MThRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkvblc3L0FMejdCYmJHNEg5Yk1wNDlHYkk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 蒲梅, 周枫, 周晶晶, 等.基于加权TextRank的新闻关键事件主题句提取[J].计算机工程, 2017, 34 (8) :219-224.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=On-line new event detection and tracking">
+
+                                <b>[2]</b> ALLAN J, PAPKA R, LAVRENKO V.On-line new event detection and tracking[C]//Proceedings of the 21st Annual International ACM SIGIR Conference on Research and Development in Information Retrieval.New York, USA:ACM Press, 1998:37-45.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201603016&amp;v=MjM1MzBmTXJJOUVZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9uVzcvQU55ZlRiTEc0SDk=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 吴共庆, 胡骏, 李莉, 等.基于标签路径特征融合的在线Web新闻内容抽取[J].软件学报, 2016, 27 (3) :714-735.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Automatic web newse xtraction using tree edit distance">
+
+                                <b>[4]</b> REIS D C, GOLGHER P B, SILVA A S, et al.Automatic Web news extraction using tree edit distance[C]//Proceedings of the 13th International Conference on World Wide Web.New York, USA:ACM Press, 2004:502-511.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=STEM:a suffix tree-based method for Web data records extraction">
+
+                                <b>[5]</b> FANG Y, XIE X, ZHANG X, et al.STEM:a suffix tree-based method for Web data records extraction[J].Knowledge and Information Systems, 2017, 55 (2) :305-331.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Web-scale information extraction with vertex">
+
+                                <b>[6]</b> GULHANE P, MADAAN A, MEHTA R, et al.Web-scale information extraction with vertex[C]//Proceedings of the 27th International Conference on Data Engineering.Washington D.C., USA:IEEE Press, 2011:1209-1220.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCME084E7F42562AF9B6F4AC502BBED7240&amp;v=MjIzNDY1aHc3cTN3S0E9TmlmSVk4YTRGdFc1cVBsQlp1NEpEZzFQeG1RVm5Ec01PM3Jpcm1CSERNYVRSNzZmQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1Tg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> BING L, WONG T L, LAM W.Unsupervised extraction of popular product attributes from E-commerce Web sites by considering customer reviews[J].ACM Transactions on Internet Technology, 2016, 16 (2) :12-15.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Extracting semantic information for E-commerce">
+
+                                <b>[8]</b> CHARRON B, HIRATE Y, PURCELL D, et al.Extracting semantic information for E-commerce[C]//Proceedings of International Semantic Web Conference.Berlin, Germany:Springer, 2016:273-290.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES9264F61D30D2EB75BCC1E7B4D361D6DB&amp;v=MTk5MTJmN1BnUTg3dENPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU41aHc3cTN3S0E9TmlmT2ZicTZHTlc2cVk0eFordDdEZ2xMeUJOaG1VeDhQWGlRcUdZMg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> GALI N, MARIESCU-ISTODOR R, FRÄNTI P.Using linguistic features to automatically extract Web page title[J].Expert Systems with Applications, 2017, 79:296-312.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000068893&amp;v=MDA5OTVRVE1ud1plWnVIeWptVUxuSUoxd2NhaG89TmlmSVk3SzdIdGpOcjQ5RlpPMEhCSFU2b0JNVDZUNFBRSC9pclJkR2VycQ==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> ADELBERG B.NoDoSE——a tool for semi-automatically extracting structured and semistructured data from text documents[J].ACM SIGMOD Record, 1998, 27 (2) :283-294.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM13091000068818&amp;v=MjMxNjllWnVIeWptVUxuSUoxd2NhaG89TmlmSVk3SzdIdGpOcjQ5RlpPMEhCSDB4b0JNVDZUNFBRSC9pclJkR2VycVFUTW53Wg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> HAMMER J, GARCIA-MOLINA H, NESTOROV S, et al.Template-based wrappers in the TSIMMIS system[J].ACM SIGMOD Record, 1997, 26 (2) :532-535.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX200205011&amp;v=MjMyNDI4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeS9uVzcvQUx6N0Jkckc0SHRQTXFvOUVaWVFLREg=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 李效东, 顾毓清.基于DOM的Web信息提取[J].计算机学报, 2002, 25 (5) :526-533.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Wrapper Induction for Information Extraction">
+
+                                <b>[13]</b> KUSHMERICK N, WELD D S, DOORENBOS R B.Wrapper induction for information extraction[C]//Proceedings of International Joint Conference on Artificial Intelligence.New York, USA:ACM Press, 1997:729-737.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=VIPS:a vision-based page segmentation algorithm">
+
+                                <b>[14]</b> CAI D, YU S, WEN J R, et al.VIPS:a vision-based page segmentation algorithm[EB/OL].[2017-12-11].https://link.springer.com/content/pdf/10.1007/978-3-319-04244-2_22.pdf.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning Block Importance Models for Web Pages">
+
+                                <b>[15]</b> SONG R, LIU H, WEN J R, et al.Learning block importance models for Web pages[C]//Proceedings of the 13th International Conference on World Wide Web.New York, USA:ACM Press, 2004:203-211.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=CETR:content extraction via tag ratios">
+
+                                <b>[16]</b> WENINGER T, HSU W H, HAN J.CETR:content extraction via tag ratios[C]//Proceedings of the 19th International Conference on World Wide Web.New York, USA:ACM Press, 2010:971-980.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Web news extraction via path ratios">
+
+                                <b>[17]</b> WU G, LI L, HU X, et al.Web news extraction via path ratios[C]//Proceedings of the 22nd ACM International Conference on Information and Knowledge Management.New York, USA:ACM Press, 2013:2059-2068.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201904045" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201904045&amp;v=MDUyNjllUm9GeS9uVzcvQUx6N0JiYkc0SDlqTXE0OUJZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVo=&amp;uid=WEEvREcwSlJHSldRa1FhcTdWa2FjcW9vRlJTQ2JLUmN2amRwVFpsWThsTT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

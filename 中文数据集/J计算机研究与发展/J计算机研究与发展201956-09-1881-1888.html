@@ -1,0 +1,917 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+
+</head>
+
+<body>
+
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637127159199520000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJFYZ201909009%26RESULT%3d1%26SIGN%3dP8LOuB%252b2GNBLKXqNdABKTAI40MY%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JFYZ201909009&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JFYZ201909009&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201909009&amp;v=MTY1NDFyQ1VSTE9lWmVSc0Z5L25XcnJKTHl2U2RMRzRIOWpNcG85RmJZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#77" data-title="&lt;b&gt;1 DTcheck查询验证关键问题及解决思路&lt;/b&gt; "><b>1 DTcheck查询验证关键问题及解决思路</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#83" data-title="&lt;b&gt;2 DTcheck查询验证技术路线&lt;/b&gt; "><b>2 DTcheck查询验证技术路线</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#85" data-title="&lt;b&gt;3 预测结果评价及查询验证分析&lt;/b&gt; "><b>3 预测结果评价及查询验证分析</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#88" data-title="&lt;b&gt;3.1 数据集已验证作用关系补充&lt;/b&gt;"><b>3.1 数据集已验证作用关系补充</b></a></li>
+                                                <li><a href="#96" data-title="&lt;b&gt;3.2 BLM方法预测结果查询验证及评价分析&lt;/b&gt;"><b>3.2 BLM方法预测结果查询验证及评价分析</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#101" data-title="&lt;b&gt;4 总  结&lt;/b&gt; "><b>4 总  结</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#69" data-title="&lt;b&gt;表1 各种方法查询验证Top &lt;/b&gt;&lt;i&gt;&lt;b&gt;N&lt;/b&gt;&lt;/i&gt;&lt;b&gt;值&lt;/b&gt;"><b>表1 各种方法查询验证Top </b><i><b>N</b></i><b>值</b></a></li>
+                                                <li><a href="#76" data-title="图1 DTcheck 技术路线及流程">图1 DTcheck 技术路线及流程</a></li>
+                                                <li><a href="#87" data-title="&lt;b&gt;表2 药物靶标及其作用关系信息&lt;/b&gt;"><b>表2 药物靶标及其作用关系信息</b></a></li>
+                                                <li><a href="#90" data-title="&lt;b&gt;表3 药物靶标数据集新增作用关系&lt;/b&gt;"><b>表3 药物靶标数据集新增作用关系</b></a></li>
+                                                <li><a href="#92" data-title="&lt;b&gt;表4 NR数据集新增药物靶标关系&lt;/b&gt;"><b>表4 NR数据集新增药物靶标关系</b></a></li>
+                                                <li><a href="#98" data-title="&lt;b&gt;表5 AUC 评价值&lt;/b&gt;"><b>表5 AUC 评价值</b></a></li>
+                                                <li><a href="#100" data-title="&lt;b&gt;表6 BLMmax 与 BLMd 中Top &lt;/b&gt;&lt;i&gt;&lt;b&gt;N&lt;/b&gt;&lt;/i&gt;&lt;b&gt;中新作用关系比较&lt;/b&gt;"><b>表6 BLMmax 与 BLMd 中Top </b><i><b>N</b></i><b>中新作用关系比较</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="15">
+
+
+                                    <a id="bibliography_1" >
+                                        <b>[1]</b>
+                                    Hopkins A.Network pharmacology:The next paradigm in drug discovery [J].Nature Chemical Biology,2008,4(11):682- 690</a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_2" title="Liu Ailin,Du Guanhua.Network pharmacology:New guidelines for drug discovery [J].Acta Pharmaceutica Sinica,2010,45(12):1472- 1477 (in Chinese)(刘艾林,杜冠华.网络药理学:药物发现的新思[J].药学学报,2010,45(12):1472- 1477)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=YXXB201012003&amp;v=MDQ4MzMzenFxQnRHRnJDVVJMT2VaZVJzRnkvbldyckpQRFhUYkxHNEg5SE5yWTlGWjRRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                        Liu Ailin,Du Guanhua.Network pharmacology:New guidelines for drug discovery [J].Acta Pharmaceutica Sinica,2010,45(12):1472- 1477 (in Chinese)(刘艾林,杜冠华.网络药理学:药物发现的新思[J].药学学报,2010,45(12):1472- 1477)
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_3" title="Ashburn T,Thor K.Drug repositioning:Identifying and developing new uses for existing drugs [J].Nature Reviews Drug Discovery,2004,3(8):673- 683" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Drug repositioning: identifying and developing new uses for existing drugs">
+                                        <b>[3]</b>
+                                        Ashburn T,Thor K.Drug repositioning:Identifying and developing new uses for existing drugs [J].Nature Reviews Drug Discovery,2004,3(8):673- 683
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_4" title="Chong C,Sullivan D.New uses for old drugs [J].Nature,2007,448:645- 646" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=New uses for old drugs">
+                                        <b>[4]</b>
+                                        Chong C,Sullivan D.New uses for old drugs [J].Nature,2007,448:645- 646
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_5" >
+                                        <b>[5]</b>
+                                    Kanehisa M,Goto S,Sato Y,et al.KEGG for integration and interpretation of large-scale molecular data sets [J].Nucleic Acids Research,2012,40(D1):D109- D114</a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_6" title="Wishart D,Knox C,Guo Anchi,et al.DrugBank:A knowledgebase for drugs,drug actions and drug targets [J].Nucleic Acids Research,2008,36(Suppl1):D901- D906" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=DrugBank: a knowledgebase for drugs, drug actions and drug targets">
+                                        <b>[6]</b>
+                                        Wishart D,Knox C,Guo Anchi,et al.DrugBank:A knowledgebase for drugs,drug actions and drug targets [J].Nucleic Acids Research,2008,36(Suppl1):D901- D906
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_7" title="Gaulton A,Bellis L,Bento A,et al.ChEMBL:A large-scale bioactivity database for drug discovery [J].Nucleic Acids Research,2012,40(D1):D1100- D1107" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=ChEMBL:a large-scale bioactivity database for drug discovery">
+                                        <b>[7]</b>
+                                        Gaulton A,Bellis L,Bento A,et al.ChEMBL:A large-scale bioactivity database for drug discovery [J].Nucleic Acids Research,2012,40(D1):D1100- D1107
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_8" title="Mousavian Z,Masoudi N.Drug-target interaction prediction via chemogenomic space:Learning-based methods [J].Expert Opinion on Drug Metabolism &amp;amp; Toxicology,2014,10(9):1273- 1287" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJIH&amp;filename=SJIH15082600367996&amp;v=MzExMTVHZXJxUVRNbndaZVp1SHlqbVVMM0lKMXdkYnhNPU5pZkNacks5SHRuT3FZOUZaKzBJQlhVL29CTVQ2VDRQUUgvaXJSZA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                        Mousavian Z,Masoudi N.Drug-target interaction prediction via chemogenomic space:Learning-based methods [J].Expert Opinion on Drug Metabolism &amp;amp; Toxicology,2014,10(9):1273- 1287
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_9" title="Chen Xing,Yan Chenggang,Zhang Xiaotian,et al.Drug-target interaction prediction:Databases,Web servers and computational models [J].Briefings in Bioinformatics,2016,17(4):696- 712" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Drug–Target Interaction Prediction:Databases,Web Servers and Computational Models">
+                                        <b>[9]</b>
+                                        Chen Xing,Yan Chenggang,Zhang Xiaotian,et al.Drug-target interaction prediction:Databases,Web servers and computational models [J].Briefings in Bioinformatics,2016,17(4):696- 712
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_10" title="Cheng Tiejun,Hao Ming,Takeda T,et al.Large-scale prediction of drug-target interaction:A data-centric review [J].The AAPS Journal,2017,19(5):1264- 1275" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD0C57094BC186E440C0F8FAB7C6C4D8DB&amp;v=MDQ2Mzl6Q3JiZ1RjN3RDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMzVOcGh3N3EyeGFrPU5qN0JhclBMRzliTXBvczNGK29IQ2drOXl4Wmc2a2wxUGc2UXEyRQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                        Cheng Tiejun,Hao Ming,Takeda T,et al.Large-scale prediction of drug-target interaction:A data-centric review [J].The AAPS Journal,2017,19(5):1264- 1275
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_11" title="Anusuya S,Kesherwani M,Priya K,et al.Drug-target interactions:Prediction methods and applications [J].Current Protein &amp;amp; Peptide Science,2018,19(6):537- 561" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SBAD&amp;filename=SBAD0181F20CDB8D51727E7C561B1C86A3B3&amp;v=Mjk2NThuajNoTkdjYlRsUnNpY0NPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU5waHc3cTJ4YWs9TmkvS2FyTzVGdEM2clk4MkVKa0hlSGs0eUJRVW56Z09UWA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                        Anusuya S,Kesherwani M,Priya K,et al.Drug-target interactions:Prediction methods and applications [J].Current Protein &amp;amp; Peptide Science,2018,19(6):537- 561
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_12" title="Hao Ming,Bryant S,Wang Yanli.Open-source chemoge-nomic data-driven algorithms for predicting drug-target interactions[J/OL].Briefings in Bioinformatics,2018 [2018-07-30].https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bby010/4840612" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Open-source chemoge-nomic data-driven algorithms for predicting drug-target interactions">
+                                        <b>[12]</b>
+                                        Hao Ming,Bryant S,Wang Yanli.Open-source chemoge-nomic data-driven algorithms for predicting drug-target interactions[J/OL].Briefings in Bioinformatics,2018 [2018-07-30].https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bby010/4840612
+                                    </a>
+                                </li>
+                                <li id="39">
+
+
+                                    <a id="bibliography_13" title="Guo Quan,Wang Xicheng,Li Chunlian.Research and development of molecule docking design based on grid [J].Journal of Computer Research and Development,2004,41(12):2054- 2059 (in Chinese)(郭权,王希诚,李纯莲.药物分子对接中应用网格的研究与进展[J].计算机研究与发展,2004,41(12):2054- 2059)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ200412002&amp;v=MjI3MDR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJzRnkvbldyckpMeXZTZExHNEh0WE5yWTlGWm9RS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                        Guo Quan,Wang Xicheng,Li Chunlian.Research and development of molecule docking design based on grid [J].Journal of Computer Research and Development,2004,41(12):2054- 2059 (in Chinese)(郭权,王希诚,李纯莲.药物分子对接中应用网格的研究与进展[J].计算机研究与发展,2004,41(12):2054- 2059)
+                                    </a>
+                                </li>
+                                <li id="41">
+
+
+                                    <a id="bibliography_14" title="Yamanishi Y,Araki M,Gutteridge A,et al.Prediction of drug-target interaction networks from the integration of chemical and genomic spaces [J].Bioinformatics,2008,24(13):I232- I240" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Prediction of drug–target interaction networks from the integration of chemical and genomic spaces">
+                                        <b>[14]</b>
+                                        Yamanishi Y,Araki M,Gutteridge A,et al.Prediction of drug-target interaction networks from the integration of chemical and genomic spaces [J].Bioinformatics,2008,24(13):I232- I240
+                                    </a>
+                                </li>
+                                <li id="43">
+
+
+                                    <a id="bibliography_15" title="Bleakley K,Yamanishi Y.Supervised prediction of drug-target interactions using bipartite local models [J].Bioinformatics,2009,25(18):2397- 2403" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Supervised prediction of drug–target interactions using bipartite local models">
+                                        <b>[15]</b>
+                                        Bleakley K,Yamanishi Y.Supervised prediction of drug-target interactions using bipartite local models [J].Bioinformatics,2009,25(18):2397- 2403
+                                    </a>
+                                </li>
+                                <li id="45">
+
+
+                                    <a id="bibliography_16" title="Laarhoven T,Nabuurs S,Marchiori E.Gaussian interaction profile kernels for predicting drug-target interaction [J].Bioinformatics,2011,27(21):3036- 3043" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Gaussian interaction profile kernels for predicting drug-target interaction">
+                                        <b>[16]</b>
+                                        Laarhoven T,Nabuurs S,Marchiori E.Gaussian interaction profile kernels for predicting drug-target interaction [J].Bioinformatics,2011,27(21):3036- 3043
+                                    </a>
+                                </li>
+                                <li id="47">
+
+
+                                    <a id="bibliography_17" title="Gonen M.Predicting drug-target interactions from chemical and genomic kernels using Bayesian matrix factorization [J].Bioinformatics,2012,28(18):2304- 2310" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJRS&amp;filename=SJRS120925012176&amp;v=MDk5MzBqT3FvOUVadW9JQ2hNOHp4VVNtRGQ5U0g3bjN4RTlmYnZuS3JpZlp1OXVGQ3ZuVTdqS0tWc1ZOaWZaZmJLNkh0&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                        Gonen M.Predicting drug-target interactions from chemical and genomic kernels using Bayesian matrix factorization [J].Bioinformatics,2012,28(18):2304- 2310
+                                    </a>
+                                </li>
+                                <li id="49">
+
+
+                                    <a id="bibliography_18" title="Mei Jianping,Kwoh C,Yang Peng,et al.Drug-target interaction prediction by learning from local information and neighbors [J].Bioinformatics,2013,29(2):238- 245" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Drug-target interaction prediction by learning from local information and neighbors">
+                                        <b>[18]</b>
+                                        Mei Jianping,Kwoh C,Yang Peng,et al.Drug-target interaction prediction by learning from local information and neighbors [J].Bioinformatics,2013,29(2):238- 245
+                                    </a>
+                                </li>
+                                <li id="51">
+
+
+                                    <a id="bibliography_19" title="Hao Ming,Wang Yanli,Bryant S.Improved prediction of drug-target interactions using regularized least squares integrating with kernel fusion technique [J].Analytica Chimica Acta,2016,909:41- 50" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES3AE1CBAC744986F9E0C3EA88AA830D6E&amp;v=MTM5Nzc3cTJ4YWs9TmlmT2ZiREphOUMvM2Y0MlkrOExCWFEvdVI5bTZreCtQUTdxcEdORWNiR1VNYnpxQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TnBodw==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[19]</b>
+                                        Hao Ming,Wang Yanli,Bryant S.Improved prediction of drug-target interactions using regularized least squares integrating with kernel fusion technique [J].Analytica Chimica Acta,2016,909:41- 50
+                                    </a>
+                                </li>
+                                <li id="53">
+
+
+                                    <a id="bibliography_20" title="Luo Yunan,Zhao Xinbin,Zhou Jingtian,et al.A network integration approach for drug-target interaction prediction and computational drug repositioning from heterogeneous information [J].Nature Communications,2017,8:573" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A network integration approach for drug-target interaction prediction and computational drug repositioning from heterogeneous information">
+                                        <b>[20]</b>
+                                        Luo Yunan,Zhao Xinbin,Zhou Jingtian,et al.A network integration approach for drug-target interaction prediction and computational drug repositioning from heterogeneous information [J].Nature Communications,2017,8:573
+                                    </a>
+                                </li>
+                                <li id="55">
+
+
+                                    <a id="bibliography_21" title="Hao Ming,Bryant S,Wang Yanli.Predicting drug-target interactions by dual-network integrated logistic matrix factorization [J].Scientific Reports,2017,7:40376" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Predicting drug-target interactions by dual-network integrated logistic matrix factorization">
+                                        <b>[21]</b>
+                                        Hao Ming,Bryant S,Wang Yanli.Predicting drug-target interactions by dual-network integrated logistic matrix factorization [J].Scientific Reports,2017,7:40376
+                                    </a>
+                                </li>
+                                <li id="57">
+
+
+                                    <a id="bibliography_22" title="Olayan R,Ashoor H,Bajic V.DDR:Efficient computational method to predict drug-target interactions using graph mining and machine learning approaches [J].Bioinformatics,2018,34(7):1164- 1173" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=DDR:Efficient computational method to predict drug-target interactions using graph mining and machine learning approaches">
+                                        <b>[22]</b>
+                                        Olayan R,Ashoor H,Bajic V.DDR:Efficient computational method to predict drug-target interactions using graph mining and machine learning approaches [J].Bioinformatics,2018,34(7):1164- 1173
+                                    </a>
+                                </li>
+                                <li id="59">
+
+
+                                    <a id="bibliography_23" title="Peng Lihong,Liao Bo,Zhu Wen,et al.Predicting drug-target interactions with neighbor interaction information and discriminative low-rank representation [J].Current Protein &amp;amp; Peptide Science,2018,19(5):455- 467" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SBAD&amp;filename=SBADEE6C2A74C0370CEF9E585E246E1182B3&amp;v=MDIzMDZiTkdLTE8zb2hCRitzTUMzeEt1bUFhbnpwMVRRcmdxQlJBZUxPY1I4aWNDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMzVOcGh3N3EyeGFrPU5pL0thcw==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[23]</b>
+                                        Peng Lihong,Liao Bo,Zhu Wen,et al.Predicting drug-target interactions with neighbor interaction information and discriminative low-rank representation [J].Current Protein &amp;amp; Peptide Science,2018,19(5):455- 467
+                                    </a>
+                                </li>
+                                <li id="61">
+
+
+                                    <a id="bibliography_24" title="Liu Yong,Wu Ming,Miao Chunyan,et al.Neighborhood regularized logistic matrix factorization for drug-target interaction prediction [J].PLOS Computational Biology,2016,12(2):e1004760" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJLA&amp;filename=SJLACB140E9F40D777D5F0834E8DFA405BE3&amp;v=MzE2NzN4Tmw2amQrVEFycTJHUkVmYktSTjgrY0NPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU5waHc3cTJ4YWs9TmlmSGI4REtIOVhNMm9ZellPdDdDM3MrdQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[24]</b>
+                                        Liu Yong,Wu Ming,Miao Chunyan,et al.Neighborhood regularized logistic matrix factorization for drug-target interaction prediction [J].PLOS Computational Biology,2016,12(2):e1004760
+                                    </a>
+                                </li>
+                                <li id="63">
+
+
+                                    <a id="bibliography_25" title="Apweiler R,Bairoch A,Wu C,et al.UniProt:The universal protein knowledgebase [J].Nucleic Acids Research,2004,32(Suppl1):D115- D119" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=UniProt: the universal protein knowledgebase">
+                                        <b>[25]</b>
+                                        Apweiler R,Bairoch A,Wu C,et al.UniProt:The universal protein knowledgebase [J].Nucleic Acids Research,2004,32(Suppl1):D115- D119
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JFYZ" target="_blank">计算机研究与发展</a>
+                2019,56(09),1881-1888 DOI:10.7544/issn1000-1239.2019.20180830            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>药物靶标作用关系预测结果评价及查询验证</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E4%BD%99%E5%86%AC%E5%8D%8E&amp;code=37188005&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">余冬华</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%83%AD%E8%8C%82%E7%A5%96&amp;code=06991662&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">郭茂祖</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%88%98%E6%99%93%E7%87%95&amp;code=06996352&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">刘晓燕</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%A8%8B%E7%88%BD&amp;code=42840454&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">程爽</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%93%88%E5%B0%94%E6%BB%A8%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&amp;code=0149444&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">哈尔滨工业大学计算机科学与技术学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8C%97%E4%BA%AC%E5%BB%BA%E7%AD%91%E5%A4%A7%E5%AD%A6%E7%94%B5%E6%B0%94%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=1698726&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北京建筑大学电气与信息工程学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%BB%BA%E7%AD%91%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%99%BA%E8%83%BD%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95%E7%A0%94%E7%A9%B6%E5%8C%97%E4%BA%AC%E5%B8%82%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4(%E5%8C%97%E4%BA%AC%E5%BB%BA%E7%AD%91%E5%A4%A7%E5%AD%A6)&amp;code=0206670&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">建筑大数据智能处理方法研究北京市重点实验室(北京建筑大学)</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%B8%AD%E5%9B%BD%E5%B7%A5%E7%A8%8B%E7%89%A9%E7%90%86%E7%A0%94%E7%A9%B6%E9%99%A2%E6%9D%90%E6%96%99%E6%89%80&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">中国工程物理研究院材料所</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>药物靶标作用关系预测是一种重要的辅助药物研发手段,而生物实验验证药物靶标作用关系耗钱耗时,因此,在数据库中查询验证预测的药物靶标作用关系是对预测方法的重要评价.基于KEGG,DrugBank,ChEMBL这3个数据库,利用爬虫获取信息的方式设计开发了药物靶标作用关系查询验证方法DTcheck(drug-target check),实现了对于提供KEGG DRUG ID及KEGG GENES ID的药物靶标对的高效查询验证功能,并利用DTcheck分别为Enzyme,IC(ion channel),GPCR(G-protein-coupled receptor),NR(nuclear receptor)四个标准数据集扩充新增药物靶标作用关系907,766,458,40对.此外,结合DTcheck查询验证,以BLM(bipartite local models)方法为例分析了预测结果的评价问题,结果表明,采用AUC(area under curve)值评价药物靶标作用关系预测方法没有Top <i>N</i>评价合理,且AUC值低的BLMd方法在预测新的药物靶标作用关系时优于AUC值高的BLMmax方法.</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%8D%AF%E7%89%A9%E9%9D%B6%E6%A0%87%E4%BD%9C%E7%94%A8%E5%85%B3%E7%B3%BB%E9%A2%84%E6%B5%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">药物靶标作用关系预测;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%9F%A5%E8%AF%A2%E9%AA%8C%E8%AF%81&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">查询验证;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%8D%AF%E7%89%A9%E9%9D%B6%E6%A0%87%E6%95%B0%E6%8D%AE%E9%9B%86&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">药物靶标数据集;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=AUC%E8%AF%84%E4%BB%B7&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">AUC评价;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Top%20%3Ci%3EN%3C%2Fi%3E%E8%AF%84%E4%BB%B7&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Top <i>N</i>评价;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    *郭茂祖,guomaozu@bucea.edu.cn;
+                                </span>
+                                <span>
+                                    余冬华,donghuayu@hit.edu.cn;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-12-18</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金项目(61871020,61571164,61671189);</span>
+                                <span>北京市教委科技计划重点项目(KZ201810016019);</span>
+                                <span>北京建筑大学市属高校基本科研业务费专项资金(X18197,X18198,X18203);</span>
+                    </p>
+            </div>
+                    <h1><b>Predicted Results Evaluation and Query Verification of Drug-Target Interaction</b></h1>
+                    <h2>
+                    <span>Yu Donghua</span>
+                    <span>Guo Maozu</span>
+                    <span>Liu Xiaoyan</span>
+                    <span>Cheng Shuang</span>
+            </h2>
+                    <h2>
+                    <span>School of Computer Science and Technology, Harbin Institute of Technology</span>
+                    <span>School of Electrical and Information Engineering, Beijing University of Civil Engineering and Architecture</span>
+                    <span>Beijing Key Laboratory of Intelligent Processing for Building Big Data</span>
+                    <span>Institute of Materials, China Academy of Engineering Physics</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>The drug-target interaction prediction is one of the important assistant approaches in drug discovery and design, however, experimental identification and validation of potential drug-target encoded by the human genome is both costly and time-consuming. Therefore, querying and validating the predicted drug-target interaction in databases is an important assessment of prediction methods. In this paper, the query and validation method of drug-target interaction named as DTcheck(drug-target check) is developed and designed with Web spider based on KEGG, DrugBank, ChEMBL databases, which realizes efficient query and validation function for drug-target pair providing both KEGG DRUG ID and KEGG GENES ID. ID mapping function is also designed in DTcheck, which can map Uniprot ID from DrugBank and ChEMBL into KEGG GENE ID. DTcheck expands 907, 766, 458, 40 pairs of new drug-target interaction for Enzyme, IC(ion channel), GPCR(G-protein-coupled receptor), NR(nuclear receptor) standard datasets, respectively. Moreover, combined with query and validation result, the analysis of the prediction results of the BLM(bipartite local models) method shows that evaluation of Top <i>N</i> is more reasonable than AUC(area under curve) value for the prediction method of drug-target interaction. It also shows that the BLMd method with low AUC value is superior to the BLMmax method with high AUC value in predicting the drug-target interaction.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=drug-target%20interaction%20prediction&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">drug-target interaction prediction;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=query%20and%20validation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">query and validation;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=drug-target%20data&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">drug-target data;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=AUC%20evaluation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">AUC evaluation;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Top%20%3Ci%3EN%3C%2Fi%3E%20evaluation&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Top <i>N</i> evaluation;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                            <b>Author：</b>
+                                                        <span>
+                                    Yu Donghua,born in 1988.PhD candidate. Student member of CCF. His main research interests include machine learning and bioinformatics.&lt;image id="128" type="formula" href="images/JFYZ201909009_12800.jpg" display="inline" placement="inline"&gt;&lt;alt&gt;&lt;/alt&gt;&lt;/image&gt;;
+                                </span>
+                                <span>
+                                    Guo Maozu,born in 1966.Professor.PhD supervisor.Member of CCF.His main research  interests include machine learning,smart city and bioinformatics.&lt;image id="130" type="formula" href="images/JFYZ201909009_13000.jpg" display="inline" placement="inline"&gt;&lt;alt&gt;&lt;/alt&gt;&lt;/image&gt;;
+                                </span>
+                                <span>
+                                    Liu Xiaoyan,born in 1963.PhD.Associate professor and master supervisor.Her main research interests include bioinformatics and data mining.(liuxiaoyan@hit.edu.cn)&lt;image id="132" type="formula" href="images/JFYZ201909009_13200.jpg" display="inline" placement="inline"&gt;&lt;alt&gt;&lt;/alt&gt;&lt;/image&gt;;
+                                </span>
+                                <span>
+                                    Cheng Shuang,born in 1985.PhD.Her main research interest is bioinformatics. (chengs777@163.com)&lt;image id="134" type="formula" href="images/JFYZ201909009_13400.jpg" display="inline" placement="inline"&gt;&lt;alt&gt;&lt;/alt&gt;&lt;/image&gt;;
+                                </span>
+                    </p>
+                                    <p><b>Received：</b> 2018-12-18</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>supported by the National Natural Science Foundation of China(61871020,61571164,61671189);</span>
+                                <span>the Scientific Research Key Project of Beijing Educational Committee(KZ201810016019);</span>
+                                <span>the Special Funds for Basic Research Business in Municipal Universities of Beijing Architectural University(X18197,X18198,X18203);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <div class="p1">
+                    <p id="65">药物研发是医药界的驱动力,也引起了学术界的研究热潮,计算机辅助药物设计是对传统的实验型药物发现的补充,加速了新药开发进程,缩短药物研发时间,降低药物研发成本,同时提升药物研发成功率.</p>
+                </div>
+                <div class="p1">
+                    <p id="66">网络药理学(network pharmacology)<citation id="107" type="reference"><link href="15" rel="bibliography" /><link href="17" rel="bibliography" /><sup>[<a class="sup">1</a>,<a class="sup">2</a>]</sup></citation>和药物重定位(drug repositioning)<citation id="108" type="reference"><link href="19" rel="bibliography" /><link href="21" rel="bibliography" /><sup>[<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>颠覆了传统的药物研发理念,完善了药物靶标作用关系(drug-target interaction)预测的理论基础,为计算机辅助药物设计提供了新思路,加速了药物发现与设计.随着公开数据库KEGG<citation id="104" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>,DrugBank<citation id="105" type="reference"><link href="25" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>,ChEMBL<citation id="106" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>等中的可用数据增多,很多预测药物靶标作用关系的计算方法也被提出<citation id="109" type="reference"><link href="29" rel="bibliography" /><link href="31" rel="bibliography" /><link href="33" rel="bibliography" /><link href="35" rel="bibliography" /><link href="37" rel="bibliography" /><link href="39" rel="bibliography" /><sup>[<a class="sup">8</a>,<a class="sup">9</a>,<a class="sup">10</a>,<a class="sup">11</a>,<a class="sup">12</a>,<a class="sup">13</a>]</sup></citation>.其主要思路为:建立合适的药物靶标数据,构建作用关系预测方法并做出合理的评价,然后进行实际作用关系预测.这些计算方法弥补了实验方法中的时间消耗和高昂成本投入的缺陷.</p>
+                </div>
+                <div class="p1">
+                    <p id="67">Yamanishi等人<citation id="110" type="reference"><link href="41" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>在2008年基于KEGG数据库建立了Enzyme,IC(ion channel),GPCR(G -protein-coupled receptor),NR(nuclear receptor)四个药物靶标作用关系数据集(包括药物靶标作用关系矩阵、药物-药物相似度矩阵、靶标-靶标相似度矩阵),其中,已经验证的药物靶标作用关系用1表示,未知作用关系的药物靶标对(unknown interaction)用0表示,受到广泛接受及认同,Google学术显示引用次数为467次,被认为是药物靶标作用关系预测模型的标准检验数据集.2009年,Bleakley等人<citation id="111" type="reference"><link href="43" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>在上述4个数据集的基础上,提出了经典的二分局部模型(bipartite local models, BLM)药物靶标作用关系预测方法,并把其当作二分类模型,采用ROC(receiver operating characteristic curve)曲线及曲线下方面积(area under curve, AUC)作为该方法的评价标准.</p>
+                </div>
+                <div class="p1">
+                    <p id="68">该数据集的建立促使了很多预测方法的诞生,而AUC评价标准也对后续方法产生了重要影响.然而,该评价需要将未知作用关系的药物靶标对视为负例,这是一种不合理的假设,因为很多未知的作用关系可能实际上存在相互作用关系,只是到目前为止,仍没有被实验所证实.况且,预测方法的目标就是需要将潜在的作用关系预测出来,即将作用关系0预测成1.尽管如此,这种不合理的评价方式也一直在延续.作为一种弥补手段,会将预测结果中极有可能的药物靶标对(比如Top <i>N</i>,即按照预测的药物靶标对作用关系可能性从大到小排序,取前<i>N</i>对)在数据库中查询验证.Laarhoven等人<citation id="112" type="reference"><link href="45" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>提出GIP-RLS(Gaussian interaction profile-regularized least squares)方法后,用AUC及AUPR(area under precision-recall curve)进行了评价.对于需要预测的药物靶标作用关系,仅对每个数据集Top 20查验过KEGG,DrugBank,ChEMBL数据库.Gonen<citation id="113" type="reference"><link href="47" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>提出的KBMF2K(kernelized Bayesian matrix factori-zation with twin kernels)预测方法,用AUC进行评价,且仅对每个数据集Top 5查验过KEGG,DrugBank,ChEMBL数据库.Mei等人<citation id="114" type="reference"><link href="49" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>提出BLMNII(bipartite local models with neighbor-based interaction-profile)预测方法后,用AUC及AUPR进行了评价,而没有对预测的药物靶标对进行数据库的查询验证,也就没有验证所预测的作用关系中是否存在已经被实验验证的药物靶标对.Hao等人<citation id="115" type="reference"><link href="51" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>提出的RLS-KF(regularized least squares with kernel fusing)预测方法,用AUC及AUPR进行评价,仅对NR数据集中预测Top 100对药物靶标进行数据库查询验证,虽然其AUC值接近于1,对于二分类模型来说,接近于1的AUC值表示该模型预测接近于完全正确,但对于NR数据集来说,直到Top 100时,才有31对药物靶标已经获得了生物化学实验验证,对于目前可以查询到的已验证的药物靶标对来说,仍然有9对不包含在内,这也表明,如此之高的预测精度,在实际预测中远未达到理想结果.Luo等人<citation id="116" type="reference"><link href="53" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>提出DTINet(network integra-tion pipeline for drug-target interaction)预测方法,也用AUC及AUPR进行了模型评价,并对预测结果的Top 150药物靶标对进行了数据库查询验证,特别地,选择了极有可能具有作用关系的COX inhibitory进行了生物化学实验验证,实验结果证实了DTINet模型的预测准确.Hao等人<citation id="117" type="reference"><link href="55" rel="bibliography" /><sup>[<a class="sup">21</a>]</sup></citation>提出DNILMF(dual-network integrated logistic matrix factorization)预测方法,用AUC及AUPR评价该模型,采用与Yamanishi等人<citation id="118" type="reference"><link href="41" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>相似的方式收集了一个新数据集,在最后的预测结果中,仅对Top 5的药物靶标对进行了查询验证.Olayan等人<citation id="119" type="reference"><link href="57" rel="bibliography" /><sup>[<a class="sup">22</a>]</sup></citation>提出DDR(novel method that improves the drug-target interaction prediction accuracy)预测方法,在方法的评价方面,舍弃了AUC评价,而选择加权平均AUPR评价,并且对预测中的Top 25进行了查询验证.Peng等人<citation id="120" type="reference"><link href="59" rel="bibliography" /><sup>[<a class="sup">23</a>]</sup></citation>提出PreNNDS(drug-target identification mode by integrating neighbor interac-tion profiles, nonnegative matrix factorization, discriminative low-rank representation, and sparse representation classification into a unified frame-work)预测方法,仅采用AUPR进行评价,与其他文章按照预测得分(或概率)选择Top <i>N</i>个药物靶标对进行查询验证不同,Peng 等人选择了2个靶标(ID分别为hsa1132及hsa1124)所对应的Top 20的药物进行查询验证,同样地,选择了2个药物(ID分别为D00255及D00195)所对应的Top 20的靶标进行查询验证.Liu等人<citation id="121" type="reference"><link href="61" rel="bibliography" /><sup>[<a class="sup">24</a>]</sup></citation>提出NRLMF(neighbor-hood regularized logistic matrix factorization)预测方法后,用 AUC及AUPR进行评价,该文在KEGG,DrugBank,ChEMBL,Matador数据库中查询验证了4个数据集中Top 1 000的药物靶标对,因此,其给出了Top 10,Top 30,Top 50的评价结果.然而,其并未提供可以快速高效地对如此大量的未知作用关系药物靶标对查询验证的方法,无法减轻后续学者研究该问题的工作量.实际上,对于Enzyme,IC,GPCR,NR四个数据集来说,Top 1 000仍然是未知药物靶标作用关系中很小的一部分.多种方法的查询验证Top <i>N</i>值总结见表1:</p>
+                </div>
+                <div class="area_img" id="69">
+                    <p class="img_tit"><b>表1 各种方法查询验证Top </b><i><b>N</b></i><b>值</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 1 The Checked Top </b><i><b>N</b></i><b> Values of Various Methods</b></p>
+                    <p class="img_note"></p>
+                    <table id="69" border="1"><tr><td><br />Method</td><td>Top <i>N</i></td><td>Reference</td></tr><tr><td><br />GIP-RLS</td><td>20</td><td>Ref [16]</td></tr><tr><td><br />KBMF2K</td><td>5</td><td>Ref [17]</td></tr><tr><td><br />RLS-KF</td><td>100</td><td>Ref [19]</td></tr><tr><td><br />DTINet</td><td>150</td><td>Ref [20]</td></tr><tr><td><br />DNILMF</td><td>5</td><td>Ref [21]</td></tr><tr><td><br />DDR</td><td>25</td><td>Ref [22]</td></tr><tr><td><br />PreNNDS</td><td>20</td><td>Ref [23]</td></tr><tr><td><br />NRLMF</td><td>1 000</td><td>Ref [24]</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="70">因此,如何验证这些预测结果的准确性是研究者面临的一个挑战,在目前有限条件下,考虑到时间消耗及实验成本,不可能对所有未知的药物靶标作用进行生物化学实验验证.综合现有的各种评价方法,一种可行的方式就是用AUC及AUPR验证预测方法可行性及预测精度,并利用数据共享,如公开数据库DrugBank,KEGG,ChEMBL,提供的很多药物靶标之间的作用关系数据,将预测的作用关系逐对在数据库中进行查询验证,确认该未知的作用关系是否已经被相关实验验证.这种方式得到了学术界普遍认可.然而,现有的方法也仅仅查询验证Top <i>N</i>药物靶标对,因为查询验证是一个重复且耗时的工作,且未知作用关系的药物靶标对占预测总数的绝大多数,而更为合理的验证预测结果的方式为:对所有未知作用关系的药物靶标对在数据库上查询验证一遍.</p>
+                </div>
+                <div class="p1">
+                    <p id="71">针对上述问题,本文不仅为药物靶标作用关系验证提供一种高效、便捷、可行的查询验证方法DTcheck(drug-target check),并利用DTcheck查询的结果对4个标准数据集及AUC评价做了分析,主要贡献归纳为</p>
+                </div>
+                <div class="p1">
+                    <p id="72">1) 结合网络爬虫特性,设计DTcheck查询验证方法并实现.</p>
+                </div>
+                <div class="p1">
+                    <p id="73">2) 基于KEGG,DrugBank,ChEMBL数据库,通过DTcheck将4个数据集中已经验证的药物靶标作用关系补充完整.</p>
+                </div>
+                <div class="p1">
+                    <p id="74">3) 对于(批量)提供KEGG DRUG ID及KEGG GENES ID的药物靶标对,DTcheck可以在线查询并返回其在KEGG,DrugBank,ChEMBL数据库中的验证结果.</p>
+                </div>
+                <div class="p1">
+                    <p id="75">4) 利用DTcheck查询的结果,重新分析了BLM方法的预测结果,探讨了ROC曲线评价药物靶标作用关系的不合理性,并引入Top <i>N</i>评价指标,实际结果表明AUC值低的BLMd在预测新的药物靶标作用关系时要优于AUC值高的BLMmax,给AUC评价的不合理性提供了依据.</p>
+                </div>
+                <div class="area_img" id="76">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JFYZ201909009_076.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 DTcheck 技术路线及流程" src="Detail/GetImg?filename=images/JFYZ201909009_076.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 DTcheck 技术路线及流程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JFYZ201909009_076.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 1 Technical route and flow of DTcheck</p>
+
+                </div>
+                <h3 id="77" name="77" class="anchor-tag"><b>1 DTcheck查询验证关键问题及解决思路</b></h3>
+                <div class="p1">
+                    <p id="78">Yamanishi等人<citation id="122" type="reference"><link href="41" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>提供的标准数据集中采用KEGG ID标注药物及靶标,而DrugBank,ChEMBL有其自己的ID体系.如药物D02441(KEGG DRUG ID)在DrugBank对应的ID为DB00311,在ChEMBL中对应的Compound ID为CHEMBL18,而靶标hsa766(KEGG GENE ID)需要与UniProt数据库<citation id="123" type="reference"><link href="63" rel="bibliography" /><sup>[<a class="sup">25</a>]</sup></citation>中的P43166(UniProt ID)对应起来,通过DrugBank中的药物或者ChEMBL中的药物(或化合物)查询到的对应靶标,会提供对应的UniProt ID.因此,其中一个关键问题就是需要将3个数据库中提供的不同ID合理对应起来.</p>
+                </div>
+                <div class="p1">
+                    <p id="79">药物靶标作用关系是成对出现的,如D02441～hsa766,因此,在查询验证过程中,可通过D02441在KEGG DRUG中查找到对应靶标hsa766,也可在DrugBank中通过DB00311查找到对应靶标P43166(UniProt ID),而hsa766与P43166代表同一个靶标,即不同的ID代表同一个对象.相对应地,也可以从靶标hsa766出发,从KEGG GENE中查找到药物D02441.因此,另一个关键问题就是在查询验证中,需要对药物靶标对进行双向查询验证.</p>
+                </div>
+                <div class="p1">
+                    <p id="80">由于KEGG DRUG中提供了该药物在ChEMBL及DrugBank中的对应ID和相应的网页链接,因此,利用爬虫抓取数据的特性,读取该药物在KEGG DRUG中所提供的对应靶标ID后,需要额外读取该药物在其他2个数据库中的ID及链接.而在KEGG GENE中查询的数据仅是该靶标是否有对应的药物即可.因此,在药物靶标对的双向查询验证中,可以优先查询靶标,然后查询药物.</p>
+                </div>
+                <div class="p1">
+                    <p id="81">从KEGG DRUG中读取该药物在ChEMBL,DrugBank中的链接后,可以独立地进行查询,然后将查询结果合并,最后核对待验证的药物靶标对.KEGG DRUG提供的ChEMBL链接可能会有多个,需要遍历所有可能链接,读取该链接返回的ChEMBL Target信息及其跳转链接,就可以查询到该药物对应靶标的UniProt ID.从KEGG DRUG还可以读取该药物的DrugBank跳转链接,利用爬虫访问该链接,获取返回信息,从其返回信息中读取Targets,Enzymes,Carriers,Transporters四个版块信息所提供的UniProt ID即可.这样就可以获取该药物在ChEMBL,DrugBank两个数据库中所对应靶标的UniProt ID.</p>
+                </div>
+                <div class="p1">
+                    <p id="82">靶标的UniProt ID与KEGG GENE ID并不一样,后者也是4个标准数据集所提供的ID,因此,需要先将UniProt ID转换成KEGG GENE ID才能核查待验证的药物靶标对的作用关系是否已经被证实.此时可以借助UniProt数据库提供的ID mapping功能,将靶标的UniProt ID转换成KEGG GENE ID,这一步的实现需要借助爬虫发送数据请求并获取返回信息的特性.</p>
+                </div>
+                <h3 id="83" name="83" class="anchor-tag"><b>2 DTcheck查询验证技术路线</b></h3>
+                <div class="p1">
+                    <p id="84">解决了DTcheck查询验证中遇到的关键问题,本文设计了如图1所示的技术路线流程,其代码链接为https://github.com/Yu123456/DTcheck.从图1中可以看出,双向查询分成2个部分独立查询,最终需要将2部分查询结果合并,而3个数据库之间,需要先从KEGG DRUG中获取DrugBank,ChEMBL数据库的跳转链接,然后依次获取相应数据库中的靶标信息,而从这2个数据库中返回的靶标是UniProt ID,为了与待验证的药物靶标对核对,需要增加一步ID转换,把UniProt ID转换成KEGG GENE ID.</p>
+                </div>
+                <h3 id="85" name="85" class="anchor-tag"><b>3 预测结果评价及查询验证分析</b></h3>
+                <div class="p1">
+                    <p id="86">Yamanishi等人<citation id="124" type="reference"><link href="41" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>于2008年建立了Enzyme,IC,GPCR,NR四个标准数据集,如表2所示.其中,drug-target interactions代表当时已经验证的药物靶标作用关系;unknown interaction代表当时未知的药物靶标作用关系;从最后2行已知与未知药物靶标作用关系具体数值来看,未知作用关系远多于已知作用关系.该数据集从建立至今已有10年之久,在这期间有很多作用关系得到生物实验验证,本文采用DTcheck查询KEGG,DrugBank,ChEMBL三个数据库,将新增的作用关系补充完整.伴随这4个数据集,Bleakley等人<citation id="125" type="reference"><link href="43" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>于2009年提出了经典的BLM预测方法,并用AUC进行评价,本文将依据DTcheck查询到的结果,重新探讨AUC评价的不合理性,并采用Top <i>N</i>中已经被验证的药物靶标对的数目重新分析预测结果.</p>
+                </div>
+                <div class="area_img" id="87">
+                    <p class="img_tit"><b>表2 药物靶标及其作用关系信息</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 2 Drug-Target and Their Interactions</b></p>
+                    <p class="img_note"></p>
+                    <table id="87" border="1"><tr><td><br />Items</td><td>Enzyme</td><td>IC</td><td>GPCR</td><td>NR</td></tr><tr><td><br />Number of Drugs</td><td>445</td><td>210</td><td>223</td><td>54</td></tr><tr><td><br />Number of Targets</td><td>664</td><td>204</td><td>95</td><td>26</td></tr><tr><td><br />Drug-Target Interactions</td><td>2 926</td><td>1 476</td><td>635</td><td>90</td></tr><tr><td><br />Unknown Interactions</td><td>292 554</td><td>41 364</td><td>20 550</td><td>1 314</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="88" name="88"><b>3.1 数据集已验证作用关系补充</b></h4>
+                <div class="p1">
+                    <p id="89">经过DTcheck的查询,每个数据集都可以找到新验证的药物靶标对,如表3所示.从增长率(increased ratio)来看,新药物靶标关系增加最快的数据集为GPCR;新发现的药物靶标对数最多的却是Enzyme数据集,达到907对;虽然NR药物靶标对的数目最少,但也将近增加一半,达到40对.</p>
+                </div>
+                <div class="area_img" id="90">
+                    <p class="img_tit"><b>表3 药物靶标数据集新增作用关系</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 3 Drug-Target and Their Increased Interactions</b></p>
+                    <p class="img_note"></p>
+                    <table id="90" border="1"><tr><td><br />Items</td><td>Enzyme</td><td>IC</td><td>GPCR</td><td>NR</td></tr><tr><td><br />Number of Drugs</td><td>445</td><td>210</td><td>223</td><td>54</td></tr><tr><td><br />Number of Targets</td><td>664</td><td>204</td><td>95</td><td>26</td></tr><tr><td><br />Drug-Target Interactions</td><td>2 926</td><td>1 476</td><td>635</td><td>90</td></tr><tr><td><br />Increased Interactions</td><td>907</td><td>766</td><td>458</td><td>40</td></tr><tr><td><br />Increased Ratio</td><td>0.310</td><td>0.519</td><td>0.721</td><td>0.444</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="91">表4给出了NR数据集的DTcheck查询到的40对已经验证的药物靶标作用关系.其中,DrugID,TargetID分别表示药物、靶标的ID;<i>C</i>,<i>D</i>分别表示在ChEMBL,DrugBank数据库中查询到该药物靶标对作用关系;<i>K</i>需要做一个区分,在KEGG栏中,表示通过药物找到了对应的靶标,在KEGGh栏中,则表示通过靶标找到了对应的药物;空白表示对应数据库中未查询到相关信息.表4中出现大量空白,表明3个数据库之间的信息并没有完全同步,因此,必须查询每一个数据库,避免遗漏.对于NR数据集来说,DrugBank提供的已验证作用关系最多,其次是KEGG,最后才是ChEMBL.</p>
+                </div>
+                <div class="area_img" id="92">
+                    <p class="img_tit"><b>表4 NR数据集新增药物靶标关系</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 4 New Increased Drug-Target Interactions of NR</b></p>
+                    <p class="img_note"></p>
+                    <table id="92" border="1"><tr><td><br />DrugID</td><td>TargetID</td><td>ChEMBL</td><td>DrugBank</td><td>KEGG</td><td>KEGGh</td></tr><tr><td><br />D00348</td><td>hsa5916</td><td><i>C</i></td><td></td><td><i>K</i></td><td><i>K</i></td></tr><tr><td><br />D00348</td><td>hsa5915</td><td><i>C</i></td><td></td><td><i>K</i></td><td><i>K</i></td></tr><tr><td><br />D00690</td><td>hsa2908</td><td><i>C</i></td><td><i>D</i></td><td><i>K</i></td><td><i>K</i></td></tr><tr><td><br />D00040</td><td>hsa9970</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00040</td><td>hsa7421</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00066</td><td>hsa2908</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00066</td><td>hsa367</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00066</td><td>hsa8856</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00066</td><td>hsa4306</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00067</td><td>hsa2100</td><td></td><td><i>D</i></td><td><i>K</i></td><td><i>K</i></td></tr><tr><td><br />D00067</td><td>hsa367</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00075</td><td>hsa4306</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00075</td><td>hsa2099</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00105</td><td>hsa2104</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00105</td><td>hsa8856</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00312</td><td>hsa2100</td><td></td><td><i>D</i></td><td><i>K</i></td><td><i>K</i></td></tr><tr><td><br />D00312</td><td>hsa367</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00327</td><td>hsa2908</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00443</td><td>hsa2908</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00443</td><td>hsa367</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00443</td><td>hsa8856</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00443</td><td>hsa5241</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00506</td><td>hsa8856</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00554</td><td>hsa8856</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00565</td><td>hsa5468</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00565</td><td>hsa8856</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00577</td><td>hsa367</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00577</td><td>hsa8856</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00585</td><td>hsa8856</td><td></td><td><i>D</i></td><td></td><td></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="93"><b>Continued (Table 4</b>)</p>
+                </div>
+                <div class="area_img" id="94">
+                    <p class="img_tit"> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="94" border="1"><tr><td><br />DrugID</td><td>TargetID</td><td>ChEMBL</td><td>DrugBank</td><td>KEGG</td><td>KEGGh</td></tr><tr><td><br />D00586</td><td>hsa8856</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00596</td><td>hsa6258</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00596</td><td>hsa6257</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00596</td><td>hsa6256</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00596</td><td>hsa5465</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00950</td><td>hsa367</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00951</td><td>hsa2099</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00954</td><td>hsa367</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D05341</td><td>hsa5465</td><td></td><td><i>D</i></td><td></td><td></td></tr><tr><td><br />D00898</td><td>hsa2100</td><td></td><td></td><td><i>K</i></td><td><i>K</i></td></tr><tr><td><br />D00962</td><td>hsa2100</td><td></td><td></td><td><i>K</i></td><td><i>K</i></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note">Note: The blank indicates that the interaction relationship has not been queried yet.</p>
+                </div>
+                <div class="p1">
+                    <p id="95">由于Enzyme,GPCR,IC这3个数据集查询到的新增作用关系数目较多,限于篇幅,不宜在文中直接给出,其查询的相应结果见https://github.com/Yu123456/Drug-targetChecked.</p>
+                </div>
+                <h4 class="anchor-tag" id="96" name="96"><b>3.2 BLM方法预测结果查询验证及评价分析</b></h4>
+                <div class="p1">
+                    <p id="97">BLM可以细分为3个子方法,即BLMd,BLMt,BLMmax,其中BLMmax是取BLMd,BLMt二者预测的较大值.Bleakley等人<citation id="126" type="reference"><link href="43" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>依据AUC(如表5所示,较优者黑体表示)评价指出,在3个方法中,BLMmax性能最好,BLMd性能最差.</p>
+                </div>
+                <div class="area_img" id="98">
+                    <p class="img_tit"><b>表5 AUC 评价值</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 5 AUC of 4 Datasets</b></p>
+                    <p class="img_note"></p>
+                    <table id="98" border="1"><tr><td><br />Method</td><td>Enzyme</td><td>IC</td><td>GPCR</td><td>NR</td></tr><tr><td><br />BLMd</td><td>83.1</td><td>74.5</td><td>82.3</td><td>81.2</td></tr><tr><td><br />BLMt</td><td>94.2</td><td>93.5</td><td>87.2</td><td>53.6</td></tr><tr><td><br />BLMmax</td><td><b>97.3</b></td><td><b>97.0</b></td><td><b>95.3</b></td><td><b>85.8</b></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note">Note: The boldface represents the best one of the three methods.</p>
+                </div>
+                <div class="p1">
+                    <p id="99">从AUC评价来看,BLMmax非常显著地优于BLMd,因此,BLMmax对新药物靶标作用关系的预测结果也应该优于BLMd,然而,表6却展现出截然相反的结论.在Top <i>N</i>评价中,从相同的<i>N</i>中找到更多验证关系者性能更优,在表6中较优者已经加粗表示.在Top 50之前的每一个Top <i>N</i>中,BLMd预测正确的药物靶标对均多于BLMmax;在Top 50至Top 1 000之间,才出现后一种方法优于前一种方法的趋势,如Top 1 000时,BLMmax预测正确的药物靶标对的数目多于BLMd.然而,开发药物靶标作用关系预测方法的初衷是为实验生物化学家提供有实质指导作用的建议,即尽可能少的实验下找到真正的作用关系,因为用生物实验验证药物靶标作用关系既耗时又费钱,因此,Top 50评价会是一个更优的选择.从这个方面来说,BLMd优于BLMmax,这也表明仅用AUC评价药物靶标预测模型不合理.</p>
+                </div>
+                <div class="area_img" id="100">
+                    <p class="img_tit"><b>表6 BLMmax 与 BLMd 中Top </b><i><b>N</b></i><b>中新作用关系比较</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><b>Table 6 Comparing New Interaction of Top </b><i><b>N</b></i><b> Between BLMmax and BLMd</b></p>
+                    <p class="img_note"></p>
+                    <table id="100" border="1"><tr><td rowspan="2"><br />Top <i>N</i></td><td colspan="2"><br />Enzyme</td><td colspan="2">IC</td><td colspan="2">GPCR</td><td colspan="2">NR</td></tr><tr><td><br />BLMd</td><td>BLMmax</td><td>BLMd</td><td>BLMmax</td><td>BLMd</td><td>BLMmax</td><td>BLMd</td><td>BLMmax</td></tr><tr><td><br />Top 10</td><td><b>4</b></td><td>2</td><td><b>10</b></td><td>3</td><td><b>8</b></td><td>6</td><td><b>4</b></td><td>3</td></tr><tr><td><br />Top 20</td><td><b>6</b></td><td><b>6</b></td><td><b>15</b></td><td>7</td><td><b>13</b></td><td>11</td><td><b>6</b></td><td>4</td></tr><tr><td><br />Top 30</td><td><b>9</b></td><td>8</td><td><b>20</b></td><td>13</td><td><b>18</b></td><td>17</td><td><b>7</b></td><td>6</td></tr><tr><td><br />Top 50</td><td><b>20</b></td><td>11</td><td><b>25</b></td><td>22</td><td><b>34</b></td><td>23</td><td>9</td><td><b>10</b></td></tr><tr><td><br />Top 100</td><td><b>27</b></td><td>18</td><td>42</td><td><b>52</b></td><td><b>50</b></td><td>42</td><td>12</td><td><b>13</b></td></tr><tr><td><br />Top 200</td><td><b>41</b></td><td>38</td><td>68</td><td><b>95</b></td><td><b>75</b></td><td>75</td><td>18</td><td><b>22</b></td></tr><tr><td><br />Top 1 000</td><td>90</td><td><b>96</b></td><td>165</td><td><b>250</b></td><td>163</td><td><b>186</b></td><td>36</td><td><b>38</b></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note">Note: The boldface represents the better interaction between BLMd and BLMmax.</p>
+                </div>
+                <h3 id="101" name="101" class="anchor-tag"><b>4 总  结</b></h3>
+                <div class="p1">
+                    <p id="102">本文利用爬虫特性,设计并实现了DTcheck在KEGG,DrugBank,ChEBML数据库上高效、便捷的药物靶标作用关系查询验证,利用DTcheck实现对标准数据集新增作用关系的扩展补充,基于BLM方法的预测结果,说明了AUC评价药物靶标作用关系预测的不合理性,及Top <i>N</i>可以给出更加合理的评价.本文提供的药物靶标对在线查询验证思路及实现,大大节省研究者查询验证时间,使得在方法的验证中不仅仅限于每个数据集仅查询预测排序靠前的少数药物靶标对,有利于更准确地评价药物靶标预测方法.</p>
+                </div>
+                <div class="p1">
+                    <p id="103">DTcheck也有待于继续扩展,目前仅仅查询KEGG,DrugBank,ChEMBL三个数据库,实际上,Matador,SuperTarget等数据库也可以查询到一些相关作用关系.我们将会继续对此工作扩展,以期DTcheck更具有广泛性.</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="15">
+                            <a id="bibliography_1" >
+                                    <b>[1]</b>
+                                Hopkins A.Network pharmacology:The next paradigm in drug discovery [J].Nature Chemical Biology,2008,4(11):682- 690
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=YXXB201012003&amp;v=MjIzODZHNEg5SE5yWTlGWjRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJzRnkvbldyckpQRFhUYkw=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b>Liu Ailin,Du Guanhua.Network pharmacology:New guidelines for drug discovery [J].Acta Pharmaceutica Sinica,2010,45(12):1472- 1477 (in Chinese)(刘艾林,杜冠华.网络药理学:药物发现的新思[J].药学学报,2010,45(12):1472- 1477)
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Drug repositioning: identifying and developing new uses for existing drugs">
+
+                                <b>[3]</b>Ashburn T,Thor K.Drug repositioning:Identifying and developing new uses for existing drugs [J].Nature Reviews Drug Discovery,2004,3(8):673- 683
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=New uses for old drugs">
+
+                                <b>[4]</b>Chong C,Sullivan D.New uses for old drugs [J].Nature,2007,448:645- 646
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_5" >
+                                    <b>[5]</b>
+                                Kanehisa M,Goto S,Sato Y,et al.KEGG for integration and interpretation of large-scale molecular data sets [J].Nucleic Acids Research,2012,40(D1):D109- D114
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=DrugBank: a knowledgebase for drugs, drug actions and drug targets">
+
+                                <b>[6]</b>Wishart D,Knox C,Guo Anchi,et al.DrugBank:A knowledgebase for drugs,drug actions and drug targets [J].Nucleic Acids Research,2008,36(Suppl1):D901- D906
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=ChEMBL:a large-scale bioactivity database for drug discovery">
+
+                                <b>[7]</b>Gaulton A,Bellis L,Bento A,et al.ChEMBL:A large-scale bioactivity database for drug discovery [J].Nucleic Acids Research,2012,40(D1):D1100- D1107
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJIH&amp;filename=SJIH15082600367996&amp;v=MDUwMjFMM0lKMXdkYnhNPU5pZkNacks5SHRuT3FZOUZaKzBJQlhVL29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b>Mousavian Z,Masoudi N.Drug-target interaction prediction via chemogenomic space:Learning-based methods [J].Expert Opinion on Drug Metabolism &amp; Toxicology,2014,10(9):1273- 1287
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Drug–Target Interaction Prediction:Databases,Web Servers and Computational Models">
+
+                                <b>[9]</b>Chen Xing,Yan Chenggang,Zhang Xiaotian,et al.Drug-target interaction prediction:Databases,Web servers and computational models [J].Briefings in Bioinformatics,2016,17(4):696- 712
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD0C57094BC186E440C0F8FAB7C6C4D8DB&amp;v=Mjg3NDVyYmdUYzd0Q09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TnBodzdxMnhhaz1OajdCYXJQTEc5Yk1wb3MzRitvSENnazl5eFpnNmtsMVBnNlFxMkV6Qw==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b>Cheng Tiejun,Hao Ming,Takeda T,et al.Large-scale prediction of drug-target interaction:A data-centric review [J].The AAPS Journal,2017,19(5):1264- 1275
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SBAD&amp;filename=SBAD0181F20CDB8D51727E7C561B1C86A3B3&amp;v=MjY5MjRJRnBtYUJ1SFlmT0dRbGZDcGJRMzVOcGh3N3EyeGFrPU5pL0thck81RnRDNnJZODJFSmtIZUhrNHlCUVVuemdPVFhuajNoTkdjYlRsUnNpY0NPTnZGU2lXV3I3Sg==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b>Anusuya S,Kesherwani M,Priya K,et al.Drug-target interactions:Prediction methods and applications [J].Current Protein &amp; Peptide Science,2018,19(6):537- 561
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Open-source chemoge-nomic data-driven algorithms for predicting drug-target interactions">
+
+                                <b>[12]</b>Hao Ming,Bryant S,Wang Yanli.Open-source chemoge-nomic data-driven algorithms for predicting drug-target interactions[J/OL].Briefings in Bioinformatics,2018 [2018-07-30].https://academic.oup.com/bib/advance-article/doi/10.1093/bib/bby010/4840612
+                            </a>
+                        </p>
+                        <p id="39">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ200412002&amp;v=MTkwNzJGeS9uV3JySkx5dlNkTEc0SHRYTnJZOUZab1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnM=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b>Guo Quan,Wang Xicheng,Li Chunlian.Research and development of molecule docking design based on grid [J].Journal of Computer Research and Development,2004,41(12):2054- 2059 (in Chinese)(郭权,王希诚,李纯莲.药物分子对接中应用网格的研究与进展[J].计算机研究与发展,2004,41(12):2054- 2059)
+                            </a>
+                        </p>
+                        <p id="41">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Prediction of drug–target interaction networks from the integration of chemical and genomic spaces">
+
+                                <b>[14]</b>Yamanishi Y,Araki M,Gutteridge A,et al.Prediction of drug-target interaction networks from the integration of chemical and genomic spaces [J].Bioinformatics,2008,24(13):I232- I240
+                            </a>
+                        </p>
+                        <p id="43">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Supervised prediction of drug–target interactions using bipartite local models">
+
+                                <b>[15]</b>Bleakley K,Yamanishi Y.Supervised prediction of drug-target interactions using bipartite local models [J].Bioinformatics,2009,25(18):2397- 2403
+                            </a>
+                        </p>
+                        <p id="45">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Gaussian interaction profile kernels for predicting drug-target interaction">
+
+                                <b>[16]</b>Laarhoven T,Nabuurs S,Marchiori E.Gaussian interaction profile kernels for predicting drug-target interaction [J].Bioinformatics,2011,27(21):3036- 3043
+                            </a>
+                        </p>
+                        <p id="47">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJRS&amp;filename=SJRS120925012176&amp;v=MDYyNzBzVk5pZlpmYks2SHRqT3FvOUVadW9JQ2hNOHp4VVNtRGQ5U0g3bjN4RTlmYnZuS3JpZlp1OXVGQ3ZuVTdqS0tW&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b>Gonen M.Predicting drug-target interactions from chemical and genomic kernels using Bayesian matrix factorization [J].Bioinformatics,2012,28(18):2304- 2310
+                            </a>
+                        </p>
+                        <p id="49">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Drug-target interaction prediction by learning from local information and neighbors">
+
+                                <b>[18]</b>Mei Jianping,Kwoh C,Yang Peng,et al.Drug-target interaction prediction by learning from local information and neighbors [J].Bioinformatics,2013,29(2):238- 245
+                            </a>
+                        </p>
+                        <p id="51">
+                            <a id="bibliography_19" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES3AE1CBAC744986F9E0C3EA88AA830D6E&amp;v=MDU4MjlRN3FwR05FY2JHVU1ienFDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMzVOcGh3N3EyeGFrPU5pZk9mYkRKYTlDLzNmNDJZKzhMQlhRL3VSOW02a3grUA==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[19]</b>Hao Ming,Wang Yanli,Bryant S.Improved prediction of drug-target interactions using regularized least squares integrating with kernel fusion technique [J].Analytica Chimica Acta,2016,909:41- 50
+                            </a>
+                        </p>
+                        <p id="53">
+                            <a id="bibliography_20" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A network integration approach for drug-target interaction prediction and computational drug repositioning from heterogeneous information">
+
+                                <b>[20]</b>Luo Yunan,Zhao Xinbin,Zhou Jingtian,et al.A network integration approach for drug-target interaction prediction and computational drug repositioning from heterogeneous information [J].Nature Communications,2017,8:573
+                            </a>
+                        </p>
+                        <p id="55">
+                            <a id="bibliography_21" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Predicting drug-target interactions by dual-network integrated logistic matrix factorization">
+
+                                <b>[21]</b>Hao Ming,Bryant S,Wang Yanli.Predicting drug-target interactions by dual-network integrated logistic matrix factorization [J].Scientific Reports,2017,7:40376
+                            </a>
+                        </p>
+                        <p id="57">
+                            <a id="bibliography_22" target="_blank" href="http://scholar.cnki.net/result.aspx?q=DDR:Efficient computational method to predict drug-target interactions using graph mining and machine learning approaches">
+
+                                <b>[22]</b>Olayan R,Ashoor H,Bajic V.DDR:Efficient computational method to predict drug-target interactions using graph mining and machine learning approaches [J].Bioinformatics,2018,34(7):1164- 1173
+                            </a>
+                        </p>
+                        <p id="59">
+                            <a id="bibliography_23" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SBAD&amp;filename=SBADEE6C2A74C0370CEF9E585E246E1182B3&amp;v=MjY3NzdzYk5HS0xPM29oQkYrc01DM3hLdW1BYW56cDFUUXJncUJSQWVMT2NSOGljQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1TnBodzdxMnhhaz1OaS9LYQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[23]</b>Peng Lihong,Liao Bo,Zhu Wen,et al.Predicting drug-target interactions with neighbor interaction information and discriminative low-rank representation [J].Current Protein &amp; Peptide Science,2018,19(5):455- 467
+                            </a>
+                        </p>
+                        <p id="61">
+                            <a id="bibliography_24" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJLA&amp;filename=SJLACB140E9F40D777D5F0834E8DFA405BE3&amp;v=MTU1NzN4Tmw2amQrVEFycTJHUkVmYktSTjgrY0NPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU5waHc3cTJ4YWs9TmlmSGI4REtIOVhNMm9ZellPdDdDM3MrdQ==&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[24]</b>Liu Yong,Wu Ming,Miao Chunyan,et al.Neighborhood regularized logistic matrix factorization for drug-target interaction prediction [J].PLOS Computational Biology,2016,12(2):e1004760
+                            </a>
+                        </p>
+                        <p id="63">
+                            <a id="bibliography_25" target="_blank" href="http://scholar.cnki.net/result.aspx?q=UniProt: the universal protein knowledgebase">
+
+                                <b>[25]</b>Apweiler R,Bairoch A,Wu C,et al.UniProt:The universal protein knowledgebase [J].Nucleic Acids Research,2004,32(Suppl1):D115- D119
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JFYZ201909009" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JFYZ201909009&amp;v=MTY1NDFyQ1VSTE9lWmVSc0Z5L25XcnJKTHl2U2RMRzRIOWpNcG85RmJZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1FhdkJkVG5hVDZ3NE9QeitjSzNYVFdKUUhNMHpVcz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+
+    <link href="/kxreader/Content/css/LeftDetail?v=NLcKG8I1SJUaVFrQ0iGpF2klAT0OsmHRaVSZ1rKb5xg1" rel="stylesheet"/>
+
+</body>
+</html>
+

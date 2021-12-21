@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637136763082783750%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJY201905008%26RESULT%3d1%26SIGN%3df0IJFPg1we6PGgnS0ukIivxy43g%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201905008&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201905008&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201905008&amp;v=MzExNjFIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlEbVY3N0tMejdCZDdHNEg5ak1xbzlGYklRS0Q=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#33" data-title="0 引言 ">0 引言</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#38" data-title="1 法语命名实体识别模型CGC-fr ">1 法语命名实体识别模型CGC-fr</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#41" data-title="1.1 &lt;b&gt;文本特征层&lt;/b&gt;">1.1 <b>文本特征层</b></a></li>
+                                                <li><a href="#61" data-title="1.2 &lt;b&gt;上下文特征层&lt;/b&gt;">1.2 <b>上下文特征层</b></a></li>
+                                                <li><a href="#75" data-title="1.3 CRF&lt;b&gt;层&lt;/b&gt;">1.3 CRF<b>层</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#79" data-title="2 CSRI_FR_NER数据集构建 ">2 CSRI_FR_NER数据集构建</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#83" data-title="3 实验和分析 ">3 实验和分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#89" data-title="3.1 &lt;b&gt;模型中各个特征的贡献度&lt;/b&gt;">3.1 <b>模型中各个特征的贡献度</b></a></li>
+                                                <li><a href="#97" data-title="3.2 &lt;b&gt;与其他两种模型对比&lt;/b&gt;">3.2 <b>与其他两种模型对比</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#104" data-title="4 结语 ">4 结语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#40" data-title="图1 CGC-fr模型的结构">图1 CGC-fr模型的结构</a></li>
+                                                <li><a href="#52" data-title="图2 CNN提取单词字符特征的过程">图2 CNN提取单词字符特征的过程</a></li>
+                                                <li><a href="#82" data-title="&lt;b&gt;表&lt;/b&gt;1 &lt;i&gt;CSRI&lt;/i&gt;_&lt;i&gt;FR&lt;/i&gt;_&lt;i&gt;NER&lt;/i&gt;&lt;b&gt;内文章类型数目和命名实体类型数目&lt;/b&gt;"><b>表</b>1 <i>CSRI</i>_<i>FR</i>_<i>NER</i><b>内文章类型数目和命名实体类型数目</b></a></li>
+                                                <li><a href="#95" data-title="&lt;b&gt;表&lt;/b&gt;2 &lt;i&gt;CGC&lt;/i&gt;-&lt;i&gt;fr&lt;/i&gt;&lt;b&gt;模型特征贡献度的比较&lt;/b&gt;"><b>表</b>2 <i>CGC</i>-<i>fr</i><b>模型特征贡献度的比较</b></a></li>
+                                                <li><a href="#99" data-title="&lt;b&gt;表&lt;/b&gt;3 &lt;b&gt;三种模型在测试集上的评估结果比较&lt;/b&gt;"><b>表</b>3 <b>三种模型在测试集上的评估结果比较</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" &lt;i&gt;NADEAU D&lt;/i&gt;, &lt;i&gt;SEKINE S&lt;/i&gt;.&lt;i&gt;A survey of named entity recognition and classification&lt;/i&gt;[&lt;i&gt;J&lt;/i&gt;].&lt;i&gt;Lingvisticae Investigationes&lt;/i&gt;, 2007, 30 (1) :3-26." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJJB&amp;filename=SJJB9535C08D4629D9AC535F35E1FE5E3C2B&amp;v=MDIxNTVBZk1lWE5yanRDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZCckxVMDV0cGh6THU3d2EwPU5pZkJiTHE5SGRTL3I0Y3hZTzBOQlFnd3ZtVVc2VG9MUzNxWHJXUg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         &lt;i&gt;NADEAU D&lt;/i&gt;, &lt;i&gt;SEKINE S&lt;/i&gt;.&lt;i&gt;A survey of named entity recognition and classification&lt;/i&gt;[&lt;i&gt;J&lt;/i&gt;].&lt;i&gt;Lingvisticae Investigationes&lt;/i&gt;, 2007, 30 (1) :3-26.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" &lt;i&gt;WOLINSKI F&lt;/i&gt;, &lt;i&gt;VICHOT F&lt;/i&gt;, &lt;i&gt;DILLET B&lt;/i&gt;.&lt;i&gt;Automatic processing of&lt;/i&gt;&lt;i&gt;proper names in texts&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 7&lt;i&gt;th Conference on European Chapter of the Association for Computational Linguistics&lt;/i&gt;.&lt;i&gt;San Francisco&lt;/i&gt;, &lt;i&gt;CA&lt;/i&gt;:&lt;i&gt;Morgan Kaufmann Publishers&lt;/i&gt;, 1995:23-30." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Automatic processing of proper names in texts">
+                                        <b>[2]</b>
+                                         &lt;i&gt;WOLINSKI F&lt;/i&gt;, &lt;i&gt;VICHOT F&lt;/i&gt;, &lt;i&gt;DILLET B&lt;/i&gt;.&lt;i&gt;Automatic processing of&lt;/i&gt;&lt;i&gt;proper names in texts&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 7&lt;i&gt;th Conference on European Chapter of the Association for Computational Linguistics&lt;/i&gt;.&lt;i&gt;San Francisco&lt;/i&gt;, &lt;i&gt;CA&lt;/i&gt;:&lt;i&gt;Morgan Kaufmann Publishers&lt;/i&gt;, 1995:23-30.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" &lt;i&gt;AZPEITIA A&lt;/i&gt;, &lt;i&gt;CUDADROS M&lt;/i&gt;, &lt;i&gt;GAINES S&lt;/i&gt;, &lt;i&gt;et al&lt;/i&gt;.&lt;i&gt;NERC&lt;/i&gt;-&lt;i&gt;fr&lt;/i&gt;:&lt;i&gt;supervised named entity recognition for French&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;TSD&lt;/i&gt; 2014:&lt;i&gt;Proceedings of the&lt;/i&gt; 2014 &lt;i&gt;International Conference on Text&lt;/i&gt;, &lt;i&gt;Speech and Dialogue&lt;/i&gt;.&lt;i&gt;Berlin&lt;/i&gt;:&lt;i&gt;Springer&lt;/i&gt;, 2014:158-165." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=NERC-fr:supervised named entity recognition for French">
+                                        <b>[3]</b>
+                                         &lt;i&gt;AZPEITIA A&lt;/i&gt;, &lt;i&gt;CUDADROS M&lt;/i&gt;, &lt;i&gt;GAINES S&lt;/i&gt;, &lt;i&gt;et al&lt;/i&gt;.&lt;i&gt;NERC&lt;/i&gt;-&lt;i&gt;fr&lt;/i&gt;:&lt;i&gt;supervised named entity recognition for French&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;TSD&lt;/i&gt; 2014:&lt;i&gt;Proceedings of the&lt;/i&gt; 2014 &lt;i&gt;International Conference on Text&lt;/i&gt;, &lt;i&gt;Speech and Dialogue&lt;/i&gt;.&lt;i&gt;Berlin&lt;/i&gt;:&lt;i&gt;Springer&lt;/i&gt;, 2014:158-165.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" &lt;i&gt;POIBEAU T&lt;/i&gt;.&lt;i&gt;The multilingual named entity recognition framework&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 10&lt;i&gt;th Conference on European Chapter of the Association for Computational Linguistics&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2003:155-158." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The Multilingual Named Entity Recognition Framework">
+                                        <b>[4]</b>
+                                         &lt;i&gt;POIBEAU T&lt;/i&gt;.&lt;i&gt;The multilingual named entity recognition framework&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 10&lt;i&gt;th Conference on European Chapter of the Association for Computational Linguistics&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2003:155-158.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" &lt;i&gt;PETASIS G&lt;/i&gt;, &lt;i&gt;VICHOT F&lt;/i&gt;, &lt;i&gt;WOLINSKI F&lt;/i&gt;, &lt;i&gt;et al&lt;/i&gt;.&lt;i&gt;Using machine&lt;/i&gt;&lt;i&gt;learning to maintain rule&lt;/i&gt;-&lt;i&gt;based named&lt;/i&gt;-&lt;i&gt;entity recognition and classification systems&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 39&lt;i&gt;th Annual Meeting on Association for Computational Linguistics&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2001:426-433." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Using machine learning to maintain rule-based named-entity recognition and classification systems">
+                                        <b>[5]</b>
+                                         &lt;i&gt;PETASIS G&lt;/i&gt;, &lt;i&gt;VICHOT F&lt;/i&gt;, &lt;i&gt;WOLINSKI F&lt;/i&gt;, &lt;i&gt;et al&lt;/i&gt;.&lt;i&gt;Using machine&lt;/i&gt;&lt;i&gt;learning to maintain rule&lt;/i&gt;-&lt;i&gt;based named&lt;/i&gt;-&lt;i&gt;entity recognition and classification systems&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 39&lt;i&gt;th Annual Meeting on Association for Computational Linguistics&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2001:426-433.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" &lt;i&gt;WU D&lt;/i&gt;, &lt;i&gt;NGAI G&lt;/i&gt;, &lt;i&gt;CARPUAT M&lt;/i&gt;.&lt;i&gt;A stacked&lt;/i&gt;, &lt;i&gt;voted&lt;/i&gt;, &lt;i&gt;stacked model for named entity recognition&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 7&lt;i&gt;th Conference on Natural Language Learning at HLT&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2003:200-203." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A stacked,voted,stacked model for named entity recognition">
+                                        <b>[6]</b>
+                                         &lt;i&gt;WU D&lt;/i&gt;, &lt;i&gt;NGAI G&lt;/i&gt;, &lt;i&gt;CARPUAT M&lt;/i&gt;.&lt;i&gt;A stacked&lt;/i&gt;, &lt;i&gt;voted&lt;/i&gt;, &lt;i&gt;stacked model for named entity recognition&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 7&lt;i&gt;th Conference on Natural Language Learning at HLT&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2003:200-203.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" &lt;i&gt;NOTHMAN J&lt;/i&gt;, &lt;i&gt;RINGLAND N&lt;/i&gt;, &lt;i&gt;RADFORD W&lt;/i&gt;, &lt;i&gt;et al&lt;/i&gt;.&lt;i&gt;Learning multilingual named entity recognition from Wikipedia&lt;/i&gt;[&lt;i&gt;J&lt;/i&gt;].&lt;i&gt;Artificial Intelligence&lt;/i&gt;, 2013, 194:151-175." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14010600018202&amp;v=MTEyMDBaZVp0RmlubFVyM0lLRjBRYXhjPU5pZk9mYks4SHRETXFZOUZaT29IRG53N29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1udw==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         &lt;i&gt;NOTHMAN J&lt;/i&gt;, &lt;i&gt;RINGLAND N&lt;/i&gt;, &lt;i&gt;RADFORD W&lt;/i&gt;, &lt;i&gt;et al&lt;/i&gt;.&lt;i&gt;Learning multilingual named entity recognition from Wikipedia&lt;/i&gt;[&lt;i&gt;J&lt;/i&gt;].&lt;i&gt;Artificial Intelligence&lt;/i&gt;, 2013, 194:151-175.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" &lt;i&gt;HAMMERTON J&lt;/i&gt;.&lt;i&gt;Named entity recognition with long short&lt;/i&gt;-&lt;i&gt;term&lt;/i&gt;&lt;i&gt;memory&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 7&lt;i&gt;th Conference on Natural Language Learning at HLT&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2003:172-175." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Named entity recognition with long short-term memory">
+                                        <b>[8]</b>
+                                         &lt;i&gt;HAMMERTON J&lt;/i&gt;.&lt;i&gt;Named entity recognition with long short&lt;/i&gt;-&lt;i&gt;term&lt;/i&gt;&lt;i&gt;memory&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 7&lt;i&gt;th Conference on Natural Language Learning at HLT&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2003:172-175.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" &lt;i&gt;REI M&lt;/i&gt;, &lt;i&gt;CRICHTON G&lt;/i&gt;, &lt;i&gt;PYYSALO S&lt;/i&gt;.&lt;i&gt;Attending to characters in neural sequence labeling models&lt;/i&gt;[&lt;i&gt;J&lt;/i&gt;/&lt;i&gt;OL&lt;/i&gt;].&lt;i&gt;arXiv Preprint&lt;/i&gt;, 2016, 2016:&lt;i&gt;arXiv&lt;/i&gt;:1611.04361[2016- 11- 14].&lt;i&gt;https&lt;/i&gt;://&lt;i&gt;arxiv&lt;/i&gt;.&lt;i&gt;org&lt;/i&gt;/&lt;i&gt;abs&lt;/i&gt;/1611.04361." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Attending to characters in neural sequence labeling models">
+                                        <b>[9]</b>
+                                         &lt;i&gt;REI M&lt;/i&gt;, &lt;i&gt;CRICHTON G&lt;/i&gt;, &lt;i&gt;PYYSALO S&lt;/i&gt;.&lt;i&gt;Attending to characters in neural sequence labeling models&lt;/i&gt;[&lt;i&gt;J&lt;/i&gt;/&lt;i&gt;OL&lt;/i&gt;].&lt;i&gt;arXiv Preprint&lt;/i&gt;, 2016, 2016:&lt;i&gt;arXiv&lt;/i&gt;:1611.04361[2016- 11- 14].&lt;i&gt;https&lt;/i&gt;://&lt;i&gt;arxiv&lt;/i&gt;.&lt;i&gt;org&lt;/i&gt;/&lt;i&gt;abs&lt;/i&gt;/1611.04361.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" &lt;i&gt;LAMPLE G&lt;/i&gt;, &lt;i&gt;BALLESTEROS M&lt;/i&gt;, &lt;i&gt;SUBRAMANIAN S&lt;/i&gt;, &lt;i&gt;et al&lt;/i&gt;.&lt;i&gt;Neural architectures for named entity recognition&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 2016 &lt;i&gt;Conference of the North American Chapter of the Association for Computational Linguistics&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2016:260-270." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Neural architectures for named entity recognition">
+                                        <b>[10]</b>
+                                         &lt;i&gt;LAMPLE G&lt;/i&gt;, &lt;i&gt;BALLESTEROS M&lt;/i&gt;, &lt;i&gt;SUBRAMANIAN S&lt;/i&gt;, &lt;i&gt;et al&lt;/i&gt;.&lt;i&gt;Neural architectures for named entity recognition&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 2016 &lt;i&gt;Conference of the North American Chapter of the Association for Computational Linguistics&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2016:260-270.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" >
+                                        <b>[11]</b>
+                                     &lt;i&gt;LE Q&lt;/i&gt;, &lt;i&gt;MIKOLOV T&lt;/i&gt;.&lt;i&gt;Distributed representations of sentences and documents&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 31&lt;i&gt;st International Conference on Machine Learning&lt;/i&gt;.&lt;i&gt;New York&lt;/i&gt;:&lt;i&gt;JMLR&lt;/i&gt;.&lt;i&gt;org&lt;/i&gt;, 2014:1188-1196.</a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" &lt;i&gt;PENNINGTON J&lt;/i&gt;, &lt;i&gt;SOCHER R&lt;/i&gt;, &lt;i&gt;MANNING C&lt;/i&gt;.&lt;i&gt;Glove&lt;/i&gt;:&lt;i&gt;global vectors for word representation&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 2014 &lt;i&gt;Conference on Empirical Methods in Natural Language Processing&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2014:1532-1543." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Glove:Global Vectors for Word Representation">
+                                        <b>[12]</b>
+                                         &lt;i&gt;PENNINGTON J&lt;/i&gt;, &lt;i&gt;SOCHER R&lt;/i&gt;, &lt;i&gt;MANNING C&lt;/i&gt;.&lt;i&gt;Glove&lt;/i&gt;:&lt;i&gt;global vectors for word representation&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 2014 &lt;i&gt;Conference on Empirical Methods in Natural Language Processing&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2014:1532-1543.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" &lt;i&gt;SANTOS C D&lt;/i&gt;, &lt;i&gt;ZADROZNY B&lt;/i&gt;.&lt;i&gt;Learning character&lt;/i&gt;-&lt;i&gt;level representations for part&lt;/i&gt;-&lt;i&gt;of&lt;/i&gt;-&lt;i&gt;speech tagging&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 31&lt;i&gt;st International Conference on Machine Learning&lt;/i&gt;.&lt;i&gt;New York&lt;/i&gt;:&lt;i&gt;JMLR&lt;/i&gt;.&lt;i&gt;org&lt;/i&gt;, 2014:1818-1826." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning character-level representations for part-ofspeech tagging">
+                                        <b>[13]</b>
+                                         &lt;i&gt;SANTOS C D&lt;/i&gt;, &lt;i&gt;ZADROZNY B&lt;/i&gt;.&lt;i&gt;Learning character&lt;/i&gt;-&lt;i&gt;level representations for part&lt;/i&gt;-&lt;i&gt;of&lt;/i&gt;-&lt;i&gt;speech tagging&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 31&lt;i&gt;st International Conference on Machine Learning&lt;/i&gt;.&lt;i&gt;New York&lt;/i&gt;:&lt;i&gt;JMLR&lt;/i&gt;.&lt;i&gt;org&lt;/i&gt;, 2014:1818-1826.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" &lt;i&gt;CHO K&lt;/i&gt;, &lt;i&gt;van MERRIENBOER B&lt;/i&gt;, &lt;i&gt;GULCEHRE C&lt;/i&gt;, &lt;i&gt;et al&lt;/i&gt;.&lt;i&gt;Learning phrase representations using RNN encoder&lt;/i&gt;-&lt;i&gt;decoder for statistical machine translation&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 2014 &lt;i&gt;Conference on Empirical Methods in Natural Language Processing&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2014:1724-1734." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Learning phrase representations using RNN encoder-decoder for statistical machine translation">
+                                        <b>[14]</b>
+                                         &lt;i&gt;CHO K&lt;/i&gt;, &lt;i&gt;van MERRIENBOER B&lt;/i&gt;, &lt;i&gt;GULCEHRE C&lt;/i&gt;, &lt;i&gt;et al&lt;/i&gt;.&lt;i&gt;Learning phrase representations using RNN encoder&lt;/i&gt;-&lt;i&gt;decoder for statistical machine translation&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 2014 &lt;i&gt;Conference on Empirical Methods in Natural Language Processing&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 2014:1724-1734.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" &lt;i&gt;SANG E F&lt;/i&gt;, &lt;i&gt;VEENSTRA J&lt;/i&gt;.&lt;i&gt;Representing text chunks&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 9&lt;i&gt;th Conference on European Chapter of the Association for Computational Linguistics&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 1999:173-179." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Representing text chunks">
+                                        <b>[15]</b>
+                                         &lt;i&gt;SANG E F&lt;/i&gt;, &lt;i&gt;VEENSTRA J&lt;/i&gt;.&lt;i&gt;Representing text chunks&lt;/i&gt;[&lt;i&gt;C&lt;/i&gt;]// &lt;i&gt;Proceedings of the&lt;/i&gt; 9&lt;i&gt;th Conference on European Chapter of the Association for Computational Linguistics&lt;/i&gt;.&lt;i&gt;Stroudsburg&lt;/i&gt;, &lt;i&gt;PA&lt;/i&gt;:&lt;i&gt;Association for Computational Linguistics&lt;/i&gt;, 1999:173-179.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+    <div class="head-tag">   
+            <p>
+               <b> 网络首发时间: 2019-01-21 09:47</b>
+            </p>     
+    </div>
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJY" target="_blank">计算机应用</a>
+                2019,39(05),1288-1292 DOI:10.11772/j.issn.1001-9081.2018102155            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于深度神经网络的法语命名实体识别模型</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E4%B8%A5%E7%BA%A2&amp;code=41461901&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">严红</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%99%88%E5%85%B4%E8%9C%80&amp;code=08719733&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">陈兴蜀</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E6%96%87%E8%B4%A4&amp;code=08751635&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王文贤</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%8E%8B%E6%B5%B7%E8%88%9F&amp;code=11092784&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">王海舟</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%AE%B7%E6%98%8E%E5%8B%87&amp;code=41684631&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">殷明勇</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%9B%9B%E5%B7%9D%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2&amp;code=0054367&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">四川大学计算机学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%9B%9B%E5%B7%9D%E5%A4%A7%E5%AD%A6%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8%E5%AD%A6%E9%99%A2&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">四川大学网络空间安全学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%9B%9B%E5%B7%9D%E5%A4%A7%E5%AD%A6%E7%BD%91%E7%BB%9C%E7%A9%BA%E9%97%B4%E5%AE%89%E5%85%A8%E7%A0%94%E7%A9%B6%E9%99%A2&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">四川大学网络空间安全研究院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>现有法语命名实体识别 (NER) 研究中, 机器学习模型多使用词的字符形态特征, 多语言通用命名实体模型使用字词嵌入代表的语义特征, 都没有综合考虑语义、字符形态和语法特征。针对上述不足, 设计了一种基于深度神经网络的法语命名实体识别模型CGC-fr。首先从文本中提取单词的词嵌入、字符嵌入和语法特征向量;然后由卷积神经网络 (CNN) 从单词的字符嵌入序列中提取单词的字符特征;最后通过双向门控循环神经网络 (BiGRU) 和条件随机场 (CRF) 分类器根据词嵌入、字符特征和语法特征向量识别出法语文本中的命名实体。实验中, CGC-fr在测试集的F1值能够达到82.16%, 相对于机器学习模型NERC-fr、多语言通用的神经网络模型LSTM-CRF和Char attention模型, 分别提升了5.67、1.79和1.06个百分点。实验结果表明, 融合三种特征的CGC-fr模型比其他模型更具有优势。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%91%BD%E5%90%8D%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">命名实体识别;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B3%95%E8%AF%AD&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">法语;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%B7%B1%E5%BA%A6%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">深度神经网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">自然语言处理;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%BA%8F%E5%88%97%E6%A0%87%E6%B3%A8&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">序列标注;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    严红 (1994—) , 女, 四川广元人, 硕士研究生, 主要研究方向:命名实体识别、舆情分析;;
+                                </span>
+                                <span>
+                                    陈兴蜀 (1968—) , 女, 四川自贡人, 教授, 博士, 主要研究方向:网络安全、云计算、大数据安全;;
+                                </span>
+                                <span>
+                                    *王文贤 (1978—) , 男, 福建晋江人, 讲师, 博士, 主要研究方向:网络安全、云计算、大数据安全;电子邮箱catean@scu.edu.cn;
+                                </span>
+                                <span>
+                                    王海舟 (1986—) , 男, 四川南充人, 讲师, 博士, 主要研究方向:网络安全、P2P;;
+                                </span>
+                                <span>
+                                    殷明勇 (1983—) , 男, 陕西汉中人, 博士研究生, 主要研究方向:舆情分析。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-10-26</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金资助项目 (61802270);</span>
+                                <span>国家“双创”示范基地之变革性技术国际研发转化平台项目 (C700011);</span>
+                                <span>四川省重点研发项目 (2018G20100);</span>
+                    </p>
+            </div>
+                    <h1><b>Recognition model for French named entities based on deep neural network</b></h1>
+                    <h2>
+                    <span>YAN Hong</span>
+                    <span>CHEN Xingshu</span>
+                    <span>WANG Wenxian</span>
+                    <span>WANG Haizhou</span>
+                    <span>YIN Mingyong</span>
+            </h2>
+                    <h2>
+                    <span>College of Computer Science, Sichuan University</span>
+                    <span>College of Cybersecurity, Sichuan University</span>
+                    <span>Cybersecurity Research Institute, Sichuan University</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>In the existing French Named Entity Recognition (NER) research, the machine learning models mostly use the character morphological features of words, and the multilingual generic named entity models use the semantic features represented by word embedding, both without taking into account the semantic, character morphological and grammatical features comprehensively. Aiming at this shortcoming, a deep neural network based model CGC-fr was designed to recognize French named entity. Firstly, word embedding, character embedding and grammar feature vector were extracted from the text. Then, character feature was extracted from the character embedding sequence of words by using Convolution Neural Network (CNN) . Finally, Bi-directional Gated Recurrent Unit Network (BiGRU) and Conditional Random Field (CRF) were used to label named entities in French text according to word embedding, character feature and grammar feature vector. In the experiments, F1 value of CGC-fr model can reach 82.16% in the test set, which is 5.67 percentage points, 1.79 percentage points and 1.06 percentage points higher than that of NERC-fr, LSTM (Long Short-Term Memory network) -CRF and Char attention models respectively. The experimental results show that CGC-fr model with three features is more advantageous than the others.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Named%20Entity%20Recognition%20(NER)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Named Entity Recognition (NER) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=French&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">French;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=neural%20network&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">neural network;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Natural%20Language%20Processing%20(NLP)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Natural Language Processing (NLP) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=sequence%20labeling&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">sequence labeling;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                            <b>Author：</b>
+                                                        <span>
+                                    YAN Hong, born in 1994, M. S. candidate. Her research interests include named entity recognition, public opinion analysis. ;
+                                </span>
+                                <span>
+                                    CHEN Xingshu, born in 1968, Ph. D. , professor. Her research interests include network security, cloud computing, big data security. ;
+                                </span>
+                                <span>
+                                    WANG Wenxian, born in 1978, Ph. D. , lecturer. His research interests include network security, cloud computing, big data security. ;
+                                </span>
+                                <span>
+                                    WANG Haizhou, born in 1986, Ph. D. , lecturer. His research interests include network security, P2P. ;
+                                </span>
+                                <span>
+                                    YIN Mingyong, born in 1983, Ph. D. candidate. His research interest includes public opinion analysis.;
+                                </span>
+                    </p>
+                                    <p><b>Received：</b> 2018-10-26</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>partially supported by National Natural Science Foundation of China (61802270);</span>
+                                <span>the Transformative Technology International R&amp;D and Transformation Platform of the NationalDouble CreationDemonstration Base (C700011);</span>
+                                <span>the Sichuan Key Research and Development Project (2018G20100);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="33" name="33" class="anchor-tag">0 引言</h3>
+                <div class="p1">
+                    <p id="34">命名实体识别 (Named Entity Recognition, NER) 是指从文本中识别出特定类型事务名称或者符号的过程<citation id="107" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。它提取出更具有意义的人名、组织名、地名等, 使得后续的自然语言处理任务能根据命名实体进一步获取需要的信息。随着全球化发展, 各国之间信息交换日益频繁。相对于中文, 外语信息更能影响其他国家对中国的看法, 多语言舆情分析应运而生。法语在非英语的语种中影响力相对较大, 其文本是多语种舆情分析中重要目标之一。法语NER作为法语文本分析的基础任务, 重要性不可忽视。</p>
+                </div>
+                <div class="p1">
+                    <p id="35">专门针对法语NER进行的研究较少, 早期研究主要是基于规则和词典的方法<citation id="108" type="reference"><link href="5" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>, 后来, 通常将人工选择的特征输入到机器学习模型来识别出文本中存在的命名实体<citation id="110" type="reference"><link href="7" rel="bibliography" /><link href="9" rel="bibliography" /><link href="11" rel="bibliography" /><link href="13" rel="bibliography" /><link href="15" rel="bibliography" /><sup>[<a class="sup">3</a>,<a class="sup">4</a>,<a class="sup">5</a>,<a class="sup">6</a>,<a class="sup">7</a>]</sup></citation>。Azpeitia等<citation id="109" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>提出了NERC-fr模型, 模型采用最大熵方法来识别法语命名实体, 用到的特征包括词后缀、字符窗口、邻近词、词前缀、单词长度和首字母是否大写等。该方法取得了不错的结果, 但可以看出用到的特征多为单词的形态结构特征而非语义特征, 缺乏语义特征可能限制了模型的识别准确率。</p>
+                </div>
+                <div class="p1">
+                    <p id="36">近几年深度神经网络在自然语言处理领域取得了很好的效果: Hammerton<citation id="111" type="reference"><link href="17" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>将长短时记忆网络 (Long Short-Term Memory network, LSTM) 用于英语NER; Rei等<citation id="112" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>提出了多语言通用的Char attention模型, 利用Attention机制融合词嵌入和字符嵌入, 将其作为特征输入到双向长短时记忆网络 (Bi-directional Long Short-Term Memory network, BiLSTM) 中, 得到序列标注产生的命名实体; Lample等<citation id="113" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>提出BiLSTM后接条件随机场 (Conditional Random Field, CRF) 的LSTM-CRF模型, 它也是多语言通用的, 使用了字词嵌入作为特征来识别英语的命名实体, 但LSTM-CRF模型应用在法语上, 和英语差距较大, 这个问题可能是因为没有用到该语言的语法特征, 毕竟法语语法的复杂程度大幅超过英语。</p>
+                </div>
+                <div class="p1">
+                    <p id="37">为了在抽取过程中兼顾语义、字符形态和语法特征, 更为准确地抽取法语的命名实体, 本文设计了模型CGC-fr。该模型使用词嵌入表示文本中单词的语义特征, 使用卷积神经网络 (Convolutional Neural Network, CNN) 提取字符嵌入蕴含的单词字符形态特征以及预先提取的法语语法特征, 拼接后输入到双向门控循环网络 (Gated Recurrent Unit Neural Network, GRU) 和条件随机场结合的复合网络中, 来识别出法语命名实体。CGC-fr充分利用了这些特征, 通过实验证明了每种特征的贡献度, 并与其他模型进行比较证明了融合三种特征的CGC-fr模型更具有优势。除此之外, 本文贡献了一个法语的数据集, 包含1 005篇文章, 29 016个实体, 增加了法语命名实体识别的数据集, 使得后续可以有更多的研究不被数据集的问题困扰。</p>
+                </div>
+                <h3 id="38" name="38" class="anchor-tag">1 法语命名实体识别模型CGC-fr</h3>
+                <div class="p1">
+                    <p id="39">本文设计的面向法语命名实体识别的神经网络模型CGC-fr, 其结构如图1所示, 主要分为三层: 文本特征层、上下文特征层和CRF层。接下来将从模型的输入开始, 由底向上的方式详细介绍它的结构。</p>
+                </div>
+                <div class="area_img" id="40">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201905008_040.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 CGC-fr模型的结构" src="Detail/GetImg?filename=images/JSJY201905008_040.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 CGC-fr模型的结构  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201905008_040.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 1 Structure of CGC-fr model</p>
+
+                </div>
+                <h4 class="anchor-tag" id="41" name="41">1.1 <b>文本特征层</b></h4>
+                <div class="p1">
+                    <p id="42">在法语NER的第一步, 本文对经过tokenize (相当于中文分词步骤) 后的单词序列提取特征。文本特征层的作用在于提取法语文本中的多个特征, 将句子表示成包含法语单词字符形态、语义和语法信息的特征序列。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">文本特征层作为模型的第一层, 和输入层密切相关。输入为一个句子, 由<i>N</i>个单词[<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, …, <i>w</i><sub><i>N</i></sub>]组成。文本特征层把其中每个法语单词转换成一个特征向量<b><i>r</i></b>=[<b><i>r</i></b><sup>word</sup>;<b><i>r</i></b><sup>char</sup>;<b><i>r</i></b><sup>sem</sup>]。<b><i>r</i></b><sup>word</sup>表示词嵌入, 代表单词的语义特征;<b><i>r</i></b><sup>char</sup>表示由该词的所有字符嵌入提取得到的特征, 代表单词的形态结构信息, 比如说词根词缀信息等;<b><i>r</i></b><sup>sem</sup>则代表法语语法特征。<b><i>r</i></b>由三者拼接而成。</p>
+                </div>
+                <h4 class="anchor-tag" id="44" name="44">1.1.1 语义特征</h4>
+                <div class="p1">
+                    <p id="45">词嵌入<b><i>r</i></b><sup>word</sup>的表示法和独热编码 (one-hot) 其实只是相差一个词嵌入矩阵<b><i>W</i></b><sup>word</sup>, 但也正是这个矩阵的存在导致词嵌入比one-hot表示法蕴含更多的语义信息。一个词的词嵌入<b><i>r</i></b><sup>word</sup>计算方式为式 (1) :</p>
+                </div>
+                <div class="p1">
+                    <p id="46"><b><i>r</i></b><mathml id="47"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>i</mi><mrow><mtext>w</mtext><mtext>o</mtext><mtext>r</mtext><mtext>d</mtext></mrow></msubsup></mrow></math></mathml>=<b><i>W</i></b><sup>word</sup>×<b><i>v</i></b><sub><i>i</i></sub>      (1) </p>
+                </div>
+                <div class="p1">
+                    <p id="48">矩阵<b><i>W</i></b><sup>word</sup>代表大小为|<i>V</i>|的词汇表中所有词嵌入, 每列<b><i>W</i></b><mathml id="49"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>i</mi><mrow><mtext>w</mtext><mtext>o</mtext><mtext>r</mtext><mtext>d</mtext></mrow></msubsup></mrow></math></mathml>代表词汇表中的第<i>i</i>个词的词嵌入, <b><i>v</i></b><sub><i>i</i></sub>是一个大小为|<i>V</i>|的向量, 除了词<i>w</i><sub><i>i</i></sub>所在索引<i>i</i>为1其余都为0, 也就是一个one-hot向量。将词嵌入表示为模型的参数, 即可在训练模型时得到。训练的输入输出是词的上下文, 所以生成的词嵌入代表词在该语料中的语义信息<citation id="115" type="reference"><link href="23" rel="bibliography" /><link href="25" rel="bibliography" /><sup>[<a class="sup">11</a>,<a class="sup">12</a>]</sup></citation>。模型中直接加载外部已经训练好的词嵌入, 已经训练好的词嵌入相较于训练时生成的词嵌入会使得模型的效果更好<citation id="114" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>。因为已经训练好的词向量, 通常由大规模的语料训练生成, 出现在各类领域或情景的文本中, 更能代表一个词的语义信息。</p>
+                </div>
+                <h4 class="anchor-tag" id="50" name="50">1.1.2 形态结构特征</h4>
+                <div class="p1">
+                    <p id="51">字符嵌入和词嵌入的定义类似, 给定一个法语单词<i>w</i>, 这个词的字符经过分割后可表示为字符嵌入序列<b><i>C</i></b>=[<b><i>c</i></b><sub>1</sub>, <b><i>c</i></b><sub>2</sub>, …, <b><i>c</i></b><sub><i>M</i></sub>]。词的字符序列不仅难以表达出词的形态特征, 还增加了模型的计算复杂度。卷积神经网络 (CNN) 采用了局部连接和权值共享技术, 对局部的特征非常敏感, 在提取字符特征方面富有成效<citation id="116" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>, 所以本文使用CNN提取一个单词的字符嵌入序列所蕴含的字符形态特征。图2展示了CNN从一个给定法语单词 (Bonjour) 中提取字符特征的过程, 其中〈PAD〉表示填充字符, 为了使所有单词长度对齐, 方便训练模型。</p>
+                </div>
+                <div class="area_img" id="52">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201905008_052.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 CNN提取单词字符特征的过程" src="Detail/GetImg?filename=images/JSJY201905008_052.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 CNN提取单词字符特征的过程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201905008_052.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 2 Process of extracting character features of a word by CNN</p>
+
+                </div>
+                <div class="p1">
+                    <p id="53">本文将每个单词表示为包含<i>M</i>个字符的字符嵌入序列, 作为CNN的输入。定义<i>F</i>个卷积核, 每个卷积核以<i>k</i><sup>char</sup>大小的窗口在字符嵌入序列上以步长为1滑动 (选择步长为1是为了不漏过每个可能的词根词缀信息) , 每次滑动得到一个字符嵌入的子序列, 根据式 (2) 计算得到:</p>
+                </div>
+                <div class="p1">
+                    <p id="54"><b><i>p</i></b><sub><i>i</i></sub>= (<b><i>c</i></b><sub><i>i</i></sub>, <b><i>c</i></b><sub><i>i</i>+1</sub>, …, <b><i>c</i></b><sub><i>i</i>+<i>k</i><sup>char</sup>-1</sub>) <sup>T</sup>      (2) </p>
+                </div>
+                <div class="p1">
+                    <p id="55">再通过池化Max-pooling得到全局字符特征<b><i>r</i></b><sup>char</sup>, 这个特征第<i>j</i>位元素的计算方式如式 (3) :</p>
+                </div>
+                <div class="p1">
+                    <p id="56" class="code-formula">
+                        <mathml id="56"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>r</mi><msubsup><mrow></mrow><mi>j</mi><mrow><mtext>c</mtext><mtext>h</mtext><mtext>a</mtext><mtext>r</mtext></mrow></msubsup><mo>=</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>max</mi></mrow></mstyle><mrow><mn>0</mn><mo>&lt;</mo><mi>i</mi><mo>&lt;</mo><mo stretchy="false"> (</mo><mi>Μ</mi><mo>-</mo><mi>k</mi><msup><mrow></mrow><mrow><mtext>c</mtext><mtext>h</mtext><mtext>a</mtext><mtext>r</mtext></mrow></msup><mo stretchy="false">) </mo></mrow></munder><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">W</mi><msup><mrow></mrow><mi>p</mi></msup><mi mathvariant="bold-italic">p</mi><msub><mrow></mrow><mi>i</mi></msub><mo>+</mo><mi mathvariant="bold-italic">b</mi><msup><mrow></mrow><mi>p</mi></msup><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="57">其中<b><i>W</i></b><sup><i>p</i></sup>为所有卷积核的权重。</p>
+                </div>
+                <h4 class="anchor-tag" id="58" name="58">1.1.3 语法特征</h4>
+                <div class="p1">
+                    <p id="59">通过观察发现, 法语和英语语法上有很多差异。最直观的一点是句子中有非常多的“<i>de</i>” “<i>la</i>”这类词, 它们看似和核心单词不沾边, 却在法语的命名实体中经常出现。虽然英语中也有冠词例如“<i>the</i>”“<i>an</i>”等, 但法语里的冠词都更为复杂, 不仅分为定冠词、不定冠词和部分冠词, 定冠词还能细分阴性、阳性、复数形式。其位置也不似英语中冠词常出现在命名实体之前, 它们经常出现在命名实体的中间, 作为命名实体的一部分而存在。在法语中, 句子里单词序列的词性和英语中是不同的。作为语法的一部分, 法语单词的词性, 也有助于从语法的角度来丰富文本的特征, 使得后续的过程中能通过具有丰富含义的特征更有效地提取命名实体。因此本文将每个单词的词性特征表示为<i>one</i>-<i>hot</i>形式的向量<b><i>r</i></b><sup>sem</sup>, 代表法语单词的语法特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">词嵌入<b><i>r</i></b><sup>word</sup>、字符特征<b><i>r</i></b><sup>char</sup>、语法特征<b><i>r</i></b><sup>sem</sup>串联起来得到最终的词表示<b><i>r</i></b>。文本特征层将一个法语句子表示为特征序列<b><i>S</i></b>=[<b><i>r</i></b><sub>1</sub>, <b><i>r</i></b><sub>2</sub>, …, <b><i>r</i></b><sub><i>N</i></sub>]。</p>
+                </div>
+                <h4 class="anchor-tag" id="61" name="61">1.2 <b>上下文特征层</b></h4>
+                <div class="p1">
+                    <p id="62">文本的上下文信息往往是双向, 当前词语不仅与之前的序列有关还与之后序列有关, 比如说猜测一句话中缺少的一个词语, 可以从左到右推测, 也可从右到左推测, 甚至两者结合来看。本文用特征<b><i>S</i></b>=[<b><i>r</i></b><sub>1</sub>, <b><i>r</i></b><sub>2</sub>, …, <b><i>r</i></b><sub><i>N</i></sub>]代表句子[<i>w</i><sub>1</sub>, <i>w</i><sub>2</sub>, …, <i>w</i><sub><i>N</i></sub>]本身时, 通常希望能综合全文上下文信息来识别句子中的每个命名实体。目前的循环神经网络就可以达成这个目标。最开始循环神经网络 (Recurrent Neural Network, RNN) 被期待能具有记忆功能, 保持前文的信息, 传递给后面的单元使用, 然而它实际表现效果并不好, 会遇到梯度消失问题。为了解决RNN梯度消失问题而提出的门控循环网络 (Gated Recurrent Unit network, GRU) <citation id="117" type="reference"><link href="29" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>, 在传递前文信息的情况下, 包含更少的参数, 训练更快。BiGRU则比GRU更强大, 由正向GRU和逆向GRU组成, 接受上文或者下文传来的信息, 综合考虑当前和上下文信息得到输出。其结构在图1中可以看到。</p>
+                </div>
+                <div class="p1">
+                    <p id="63">文本特征层通过BiGRU提取法语文本序列中的上下文信息。BiGRU中<i>t</i>时刻的输入为<b><i>r</i></b><sub><i>t</i></sub>, 输出为<b><i>a</i></b><sub><i>t</i></sub>。正向GRU网络输出的结果为<b><i>g</i></b><mathml id="64"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>t</mi><mrow><mtext>l</mtext><mtext>e</mtext><mtext>f</mtext><mtext>t</mtext></mrow></msubsup></mrow></math></mathml>, 反向GRU网络输出结果为<b><i>g</i></b><mathml id="65"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>t</mi><mrow><mtext>r</mtext><mtext>i</mtext><mtext>g</mtext><mtext>h</mtext><mtext>t</mtext></mrow></msubsup></mrow></math></mathml>, 都由式 (4) ～ (8) 计算得来。</p>
+                </div>
+                <div class="p1">
+                    <p id="66"><b><i>g</i></b><sub><i>t</i></sub>=<i>σ</i> (<b><i>W</i></b><sup><i>g</i></sup><b><i>x</i></b><sub><i>t</i></sub>+<b><i>U</i></b><sup><i>g</i></sup><b><i>h</i></b><sub><i>t</i></sub>+<b><i>b</i></b><sup><i>g</i></sup>)      (4) </p>
+                </div>
+                <div class="p1">
+                    <p id="67"><b><i>z</i></b><sub><i>t</i></sub>=<i>σ</i> (<b><i>W</i></b><sup><i>z</i></sup><b><i>x</i></b><sub><i>t</i></sub>+<b><i>U</i></b><sup><i>z</i></sup><b><i>h</i></b><sub><i>t</i>-1</sub>)      (5) </p>
+                </div>
+                <div class="p1">
+                    <p id="68"><b><i>u</i></b><sub><i>t</i></sub>=<i>σ</i> (<b><i>W</i></b><sup><i>u</i></sup><b><i>x</i></b><sub><i>t</i></sub>+<b><i>U</i></b><sup><i>u</i></sup><b><i>h</i></b><sub><i>t</i>-1</sub>)      (6) </p>
+                </div>
+                <div class="p1">
+                    <p id="69" class="code-formula">
+                        <mathml id="69"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover accent="true"><mi mathvariant="bold-italic">Η</mi><mo>˜</mo></mover><msub><mrow></mrow><mi>t</mi></msub><mo>=</mo><mrow><mi>tanh</mi></mrow><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">W</mi><msup><mrow></mrow><mi>h</mi></msup><mi mathvariant="bold-italic">x</mi><msub><mrow></mrow><mi>t</mi></msub><mo>+</mo><mi mathvariant="bold-italic">u</mi><msub><mrow></mrow><mi>t</mi></msub><mi mathvariant="bold-italic">U</mi><msup><mrow></mrow><mi>h</mi></msup><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mo stretchy="false">) </mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>7</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="70"><b><i>h</i></b><sub><i>t</i></sub>= (1<mathml id="71"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo>-</mo><mi mathvariant="bold-italic">z</mi><msub><mrow></mrow><mi>t</mi></msub><mo stretchy="false">) </mo><mo>*</mo><mover accent="true"><mi mathvariant="bold-italic">Η</mi><mo>˜</mo></mover><msub><mrow></mrow><mi>t</mi></msub><mo>+</mo><mi mathvariant="bold-italic">z</mi><msub><mrow></mrow><mi>t</mi></msub><mo>*</mo><mi mathvariant="bold-italic">h</mi><msub><mrow></mrow><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>8</mn><mo stretchy="false">) </mo></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="72">二者串联起来得到<b><i>a</i></b><sub><i>t</i></sub>=[<b><i>g</i></b><mathml id="73"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>t</mi><mrow><mtext>l</mtext><mtext>e</mtext><mtext>f</mtext><mtext>t</mtext></mrow></msubsup></mrow></math></mathml>;<b><i>g</i></b><mathml id="74"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>t</mi><mrow><mtext>r</mtext><mtext>i</mtext><mtext>g</mtext><mtext>h</mtext><mtext>t</mtext></mrow></msubsup></mrow></math></mathml>], 双向GRU网络的输出序列则为<b><i>A</i></b>=[<b><i>a</i></b><sub>1</sub>, <b><i>a</i></b><sub>2</sub>, …, <b><i>a</i></b><sub><i>N</i></sub>]。再通过一个线性层, 压缩特征向量的维度, 得到句子的上下文特征, 这也是上下文特征层的输出<b><i>L</i></b>=[<b><i>l</i></b><sub>1</sub>, <b><i>l</i></b><sub>2</sub>, …, <b><i>l</i></b><sub><i>N</i></sub>]。</p>
+                </div>
+                <h4 class="anchor-tag" id="75" name="75">1.3 CRF<b>层</b></h4>
+                <div class="p1">
+                    <p id="76">本文把法语命名实体识别看作一个序列标注问题。序列中的每个词都有对应的命名实体的标签, 模型只需要预测每个词的标签。命名实体往往是一个词组, 因此命名实体的标签不仅标识着类别还标识该词在命名实体中的位置信息。本文使用<i>BIO</i>2<citation id="118" type="reference"><link href="31" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>的方式来表示词的实体类型和在实体中的位置信息。比如说文本序列为“<i>Aller</i> à <i>la Tour Eiffel</i>” (去巴菲尔铁塔) , 其中“<i>Tour Eiffel</i>”为地名<i>LOC</i>实体, 整个句子的实体<i>BIO</i>2标签序列为“<i>O</i>, <i>O</i>, <i>O</i>, <i>B</i>-<i>LOC</i>, <i>I</i>-<i>LOC</i>” (<i>O</i>代表非实体的标签, <i>B</i>-前缀代表实体的第一个词, <i>I</i>-前缀表示实体非头部的词) 。在标签序列中, <i>I</i>-<i>LOC</i>标签后肯定不可后接<i>I</i>-<i>ORG</i>, 所以引入条件随机场 (<i>CRF</i>) 来学习标签序列间的关系, <i>CRF</i>能有效地捕获序列内部之间的联系, 尤其是序列中前后邻近元素词的关系。定义输入特征序列为<b><i>L</i></b>=[<b><i>l</i></b><sub>1</sub>, <b><i>l</i></b><sub>2</sub>, …, <b><i>l</i></b><sub><i>N</i></sub>]且实际标签序列为<b><i>Y</i></b>=[<b><i>y</i></b><sub>1</sub>, <b><i>y</i></b><sub>2</sub>, …, <b><i>y</i></b><sub><i>N</i></sub>]情况下的条件概率由式 (9) 计算得到:</p>
+                </div>
+                <div class="p1">
+                    <p id="77" class="code-formula">
+                        <mathml id="77"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ρ</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">Y</mi><mo stretchy="false">|</mo><mi mathvariant="bold-italic">L</mi><mo stretchy="false">) </mo><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mi>ψ</mi></mstyle><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">y</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>, </mo><mi mathvariant="bold-italic">y</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi mathvariant="bold-italic">L</mi><mo stretchy="false">) </mo></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><msup><mi mathvariant="bold-italic">y</mi><mo>′</mo></msup><mo>∈</mo><mi>f</mi><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">L</mi><mo stretchy="false">) </mo></mrow></munder><mrow><mstyle displaystyle="true"><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mi>ψ</mi></mstyle></mrow></mstyle><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false"> (</mo><mi mathvariant="bold-italic">y</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>´</mo><mo>, </mo><mi mathvariant="bold-italic">y</mi><msub><mrow></mrow><msup><mi>i</mi><mo>′</mo></msup></msub><mo>, </mo><mi mathvariant="bold-italic">L</mi><mo stretchy="false">) </mo></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>9</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="78">其中:<i>ψ</i><sub><i>i</i></sub> (<b><i>y</i></b><sub><i>i</i>-1</sub>, <b><i>y</i></b><sub><i>i</i></sub>, <b><i>L</i></b>) 表示CRF的势函数, <b><i>y</i></b><sub><i>i</i></sub>表示实际标签序列<b><i>Y</i></b>中第<i>i</i>个标签, <b><i>y</i></b>′∈<i>f</i> (<b><i>L</i></b>) 表示预测的标签。训练CRF时, 用最大似然估计使得条件概率最大化, 得到概率最大的标签序列, 就预测得到了句子的命名实体标签序列。</p>
+                </div>
+                <h3 id="79" name="79" class="anchor-tag">2 CSRI_FR_NER数据集构建</h3>
+                <div class="p1">
+                    <p id="80">由于缺乏法语命名实体识别数据集, 本文通过人工标注的方式构建了一个法语命名实体识别数据集<i>CSRI</i>_<i>FR</i>_<i>NER</i> (<i>http</i>://<i>csri</i>.<i>scu</i>.<i>edu</i>.<i>cn</i>/<i>news</i>/308) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="81"><i>CSRI</i>_<i>FR</i>_<i>NER</i>的语料从三大法国新闻网站法国今日报<i>Aujourd</i>'<i>hui en France</i>、法国解放报<i>Lib</i>é<i>ration</i>、法国人道报<i>L</i>'<i>Humanit</i>é上采集而来, 我们从其中随机挑选出不同类别共1 005篇的新闻报道, 交由5位法语专业的标注者人工标注。数据集包含三类命名实体:人名、地名和组织名。标注规范参照<i>CONLL</i>2003, 工具为<i>brat</i>。数据集中的文章类别和标注的实体数目如表1所示, 共11种类别的新闻文章, 实体的总数达到29 016个。</p>
+                </div>
+                <div class="area_img" id="82">
+                    <p class="img_tit"><b>表</b>1 <i>CSRI</i>_<i>FR</i>_<i>NER</i><b>内文章类型数目和命名实体类型数目</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><i>Tab</i>. 1 <i>The number of article types and</i><i>the number of named entity types in CSRI</i>_<i>FR</i>_<i>NER</i></p>
+                    <p class="img_note"></p>
+                    <table id="82" border="1"><tr><td><br />新闻类型</td><td>文章数</td><td>地名数</td><td>组织数</td><td>人名数</td><td>实体总数</td></tr><tr><td>时事</td><td>100</td><td>1 076</td><td>696</td><td>663</td><td>2 435</td></tr><tr><td><br />财经</td><td>100</td><td>758</td><td>1 112</td><td>1 514</td><td>3 384</td></tr><tr><td><br />未来</td><td>100</td><td>1 084</td><td>1 799</td><td>819</td><td>3 702</td></tr><tr><td><br />科技</td><td>3</td><td>4</td><td>29</td><td>8</td><td>41</td></tr><tr><td><br />国际</td><td>100</td><td>1 541</td><td>1 131</td><td>940</td><td>3 612</td></tr><tr><td><br />世界</td><td>100</td><td>1 230</td><td>1 059</td><td>912</td><td>3 201</td></tr><tr><td><br />自然</td><td>100</td><td>1 316</td><td>420</td><td>332</td><td>2 068</td></tr><tr><td><br />政治</td><td>99</td><td>673</td><td>1 492</td><td>1 672</td><td>3 837</td></tr><tr><td><br />科学</td><td>105</td><td>629</td><td>545</td><td>645</td><td>1 819</td></tr><tr><td><br />生态</td><td>98</td><td>616</td><td>1 293</td><td>755</td><td>2 664</td></tr><tr><td><br />交通</td><td>100</td><td>1 086</td><td>975</td><td>192</td><td>2 253</td></tr><tr><td><br />合计</td><td>1 005</td><td>10 013</td><td>10 551</td><td>8 452</td><td>29 016</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h3 id="83" name="83" class="anchor-tag">3 实验和分析</h3>
+                <div class="p1">
+                    <p id="84">将实验数据集<i>CSRI</i>_<i>FR</i>_<i>NER</i>随机划分为三个部分, 作为训练集、验证集和测试集, 分别有800、103和102篇文章。其中, 训练集用于训练模型, 验证集防止模型过拟合, 测试集评估模型的效果和泛化能力。</p>
+                </div>
+                <div class="p1">
+                    <p id="85"><i>CGC</i>-<i>fr</i>模型中已训练的词嵌入由<i>gensim</i>工具的<i>skip</i>-<i>gram</i>模型训练得到, 语料从已采集的新闻报道中随机挑选55 000篇。实验的评估度量方式为准确率 (<i>Precision</i>, P) 、召回率 (<i>Recall</i>, R) 、<i>F</i>1值, 对三类命名实体人名、地名、组织名进行评估:</p>
+                </div>
+                <div class="p1">
+                    <p id="86" class="code-formula">
+                        <mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>Ρ</mi><mo>=</mo><mfrac><mtable columnalign="left"><mtr><mtd><mtext>该</mtext><mtext>类</mtext><mtext>别</mtext><mtext>预</mtext><mtext>测</mtext><mtext>正</mtext><mtext>确</mtext><mtext>的</mtext><mtext>标</mtext><mtext>签</mtext><mtext>数</mtext><mtext>目</mtext></mtd></mtr><mtr><mtd></mtd></mtr></mtable><mrow><mtext>该</mtext><mtext>类</mtext><mtext>别</mtext><mtext>预</mtext><mtext>测</mtext><mtext>的</mtext><mtext>总</mtext><mtext>标</mtext><mtext>签</mtext><mtext>数</mtext><mtext>目</mtext></mrow></mfrac></mtd></mtr><mtr><mtd><mi>R</mi><mo>=</mo><mfrac><mtable columnalign="left"><mtr><mtd><mtext>该</mtext><mtext>类</mtext><mtext>别</mtext><mtext>预</mtext><mtext>测</mtext><mtext>正</mtext><mtext>确</mtext><mtext>的</mtext><mtext>标</mtext><mtext>签</mtext><mtext>数</mtext><mtext>目</mtext></mtd></mtr><mtr><mtd></mtd></mtr></mtable><mrow><mtext>数</mtext><mtext>据</mtext><mtext>集</mtext><mtext>中</mtext><mtext>该</mtext><mtext>类</mtext><mtext>别</mtext><mtext>实</mtext><mtext>际</mtext><mtext>标</mtext><mtext>签</mtext><mtext>数</mtext><mtext>目</mtext></mrow></mfrac></mtd></mtr><mtr><mtd><mi>F</mi><mn>1</mn><mo>=</mo><mfrac><mrow><mn>2</mn><mi>Ρ</mi><mi>R</mi></mrow><mrow><mi>Ρ</mi><mo>+</mo><mi>R</mi><mspace width="0.25em" /></mrow></mfrac></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="87">经过进行多次训练, 得到使模型在测试集上表现最优的超参数组合:词嵌入维度100, 字符嵌入维度25, CNN卷积核数25, CNN窗口大小3, GRU隐含层维度100, GRU Dropout概率0.2。训练使用Adam优化算法, 迭代50轮。</p>
+                </div>
+                <div class="p1">
+                    <p id="88">本文设计了2组实验, 第1组实验比较各个特征的贡献度, 第2组实验将CGC-fr模型与NERC-fr模型<citation id="119" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>、Char attention模型<citation id="120" type="reference"><link href="19" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>和LSTM-CRF模型<citation id="121" type="reference"><link href="21" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>进行比较。</p>
+                </div>
+                <h4 class="anchor-tag" id="89" name="89">3.1 <b>模型中各个特征的贡献度</b></h4>
+                <div class="p1">
+                    <p id="90">在本组实验中, <i>CGC</i>-<i>fr</i>模型分为以下几种情况:</p>
+                </div>
+                <div class="p1">
+                    <p id="91">1) 只缺少词嵌入的<i>CGC</i>-<i>fr</i>模型, 测试词嵌入作为特征对模型的贡献度。</p>
+                </div>
+                <div class="p1">
+                    <p id="92">2) 只缺少字符特征的<i>CGC</i>-<i>fr</i>模型, 测试字符特征对模型的贡献度。</p>
+                </div>
+                <div class="p1">
+                    <p id="93">3) 只缺少语法特征的<i>CGC</i>-<i>fr</i>模型, 测试语法特征对模型的贡献度。</p>
+                </div>
+                <div class="p1">
+                    <p id="94">将三种情况下的模型和包含所有特征的<i>CGC</i>-<i>fr</i>模型进行对比, 表2为对比的实验结果。</p>
+                </div>
+                <div class="area_img" id="95">
+                    <p class="img_tit"><b>表</b>2 <i>CGC</i>-<i>fr</i><b>模型特征贡献度的比较</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><i>Tab</i>. 2 <i>Contribution comparison of each feature in CGC</i>-<i>fr model</i></p>
+                    <p class="img_note"></p>
+                    <table id="95" border="1"><tr><td><br />模型</td><td>准确率/%</td><td>召回率/%</td><td><i>F</i>1值/%</td></tr><tr><td><br />缺少词嵌入的<i>CGC</i>-<i>fr</i>模型</td><td>69.86</td><td>69.37</td><td>69.62</td></tr><tr><td><br />缺少字符特征的<i>CGC</i>-<i>fr</i>模型</td><td>82.74</td><td>72.87</td><td>77.49</td></tr><tr><td><br />缺少语法特征的<i>CGC</i>-<i>fr</i>模型</td><td>81.55</td><td>80.82</td><td>81.19</td></tr><tr><td><br /><i>CGC</i>-<i>fr</i>模型</td><td>82.23</td><td>82.09</td><td>82.16</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="96">从表2中的结果可以看出, 情况1) 缺乏词嵌入的模型<i>F</i>1值下降最多, 达到了12.54个百分点, 说明对于整个模型来说, 词嵌入所代表的语义特征最重要。情况2) 缺乏字符特征也会使模型的<i>F</i>1值下降, 为4.67个百分点, 虽然准确率仍然很高, 但是召回率下降9.22个百分点, 说明缺乏字符特征的情况下, 识别到正确实体数目与测试集中真实实体数目的占比并不高, 有较多识别错误的实体。字符特征对于模型的贡献度排名第二。情况3) 缺乏语法特征的模型<i>F</i>1值下降0.97个百分点, 说明语法特征也有一定贡献度, 但相比前两者的小很多。最后, 包含三个特征的情况下, <i>CGC</i>-<i>fr</i>模型的效果达到最好, 验证了这三个分别包含语义、字符形态和语法信息的特征有效性。</p>
+                </div>
+                <h4 class="anchor-tag" id="97" name="97">3.2 <b>与其他两种模型对比</b></h4>
+                <div class="p1">
+                    <p id="98">本文选择了文献<citation id="122" type="reference">[<a class="sup">3</a>]</citation>中的最大熵模型<i>NERC</i>-<i>fr</i>、文献<citation id="123" type="reference">[<a class="sup">9</a>]</citation>中的<i>Char attention</i>模型和文献<citation id="124" type="reference">[<a class="sup">10</a>]</citation>中的<i>LSTM</i>-<i>CRF</i>模型进行对比。<i>NERC</i>-<i>fr</i>模型是使用了8个特征的最大熵模型。<i>Char attention</i>模型使用<i>Attention</i>机制融合词嵌入和字符嵌入的<i>BiLSTM</i>网络进行识别。<i>LSTM</i>-<i>CRF</i>模型使用字词嵌入作为特征的<i>BiLSTM</i>-<i>CRF</i>识别命名实体。根据文献<citation id="125" type="reference">[<a class="sup">3</a>]</citation>公开的模型参数设置和源码训练<i>NERC</i>-<i>fr</i>模型。<i>Char attention</i>模型与<i>LSTM</i>-<i>CRF</i>模型则在超参数方面和本文保持一致, 使用相同的已训练词嵌入。实验结果如表3所示。</p>
+                </div>
+                <div class="area_img" id="99">
+                    <p class="img_tit"><b>表</b>3 <b>三种模型在测试集上的评估结果比较</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"><i>Tab</i>. 3 <i>Comparison of evaluation results of three models on test set</i></p>
+                    <p class="img_note"></p>
+                    <table id="99" border="1"><tr><td><br />方法</td><td>实体类别</td><td>准确率/%</td><td>召回率/%</td><td><i>F</i>1值/%</td></tr><tr><td rowspan="4"><br /><i>NERC</i>-<i>fr</i><sup>[3]</sup></td><td><br />人名</td><td>85.41</td><td>70.88</td><td>76.49</td></tr><tr><td><br />地名</td><td>79.11</td><td>76.15</td><td>77.66</td></tr><tr><td><br />组织名</td><td>80.14</td><td>70.00</td><td>74.73</td></tr><tr><td><br />平均</td><td>81.29</td><td>72.23</td><td>76.49</td></tr><tr><td rowspan="4"><br /><i>LSTM</i>-<i>CRF</i><sup>[10]</sup></td><td><br />人名</td><td>90.67</td><td>84.20</td><td>87.32</td></tr><tr><td><br />地名</td><td>76.12</td><td>83.40</td><td>79.59</td></tr><tr><td><br />组织名</td><td>80.68</td><td>70.13</td><td>75.03</td></tr><tr><td><br />平均</td><td>82.08</td><td>78.74</td><td>80.37</td></tr><tr><td rowspan="4"><br /><i>Char attention</i><sup>[9]</sup></td><td><br />人名</td><td>90.21</td><td>84.51</td><td>87.26</td></tr><tr><td><br />地名</td><td>79.09</td><td>83.60</td><td>81.29</td></tr><tr><td><br />组织名</td><td>78.56</td><td>72.99</td><td>75.67</td></tr><tr><td><br />平均</td><td>82.28</td><td>79.96</td><td>81.10</td></tr><tr><td rowspan="4"><br /><i>CGC</i>-<i>fr</i></td><td><br />人名</td><td>87.64</td><td>88.59</td><td>88.12</td></tr><tr><td><br />地名</td><td>81.21</td><td>84.61</td><td>82.87</td></tr><tr><td><br />组织名</td><td>78.50</td><td>74.28</td><td>76.33</td></tr><tr><td><br />平均</td><td>82.23</td><td>82.09</td><td>82.16</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="100">由实验结果可以发现, <i>CGC</i>-<i>fr</i>模型效果优于<i>NERC</i>-<i>fr</i>模型, <i>F</i>1值在人名上提高11.63个百分点, 在地名上提高5.21个百分点, 在组织名上提高1.6个百分点, 平均提高5.67个百分点。<i>NERC</i>-<i>fr</i>模型在三个实体类别上的准确率和本文模型差距很小, 甚至组织名准确率高1.64个百分点, 但所有类型召回率普遍比本文模型要低。说明<i>CGC</i>-<i>fr</i>模型识别正确的实体数目对数据集中实际实体总数的占比更高, 这是它识别效果<i>F</i>1值整体效果优于<i>NERC</i>-<i>fr</i>模型的原因。<i>NERC</i>-<i>fr</i>模型从文本中提取8个特征, 而且大多是单词的形态特征, 相对于<i>CGC</i>-<i>fr</i>模型少了语义方面的特征, 可能是造成其效果不如<i>CGC</i>-<i>fr</i>模型的原因。</p>
+                </div>
+                <div class="p1">
+                    <p id="101"><i>CGC</i>-<i>fr</i>模型效果稍优于<i>Char attention</i>模型, 平均<i>F</i>1值高1.06个百分点, <i>Char attention</i>模型比<i>CGC</i>-<i>fr</i>模型少了语法特征, 并且两者的字符特征提取方式也不同。<i>Attention</i>机制融合字词嵌入比<i>LSTM</i>-<i>CRF</i>表现稍好, 说明字符特征的提取方式对命名实体的识别效果有一定影响。</p>
+                </div>
+                <div class="p1">
+                    <p id="102"><i>CGC</i>-<i>fr</i>模型效果稍优于<i>LSTM</i>-<i>CRF</i>模型, 平均<i>F</i>1值高1.79个百分点, 两者较为不同的地方在于<i>CGC</i>-<i>fr</i>模型的字符特征的提取方式和语法特征, 说明这两种特征都对法语命名实体具有一定的影响力。</p>
+                </div>
+                <div class="p1">
+                    <p id="103">而三个模型的共同之处在于人名都普遍高于另外两种类型的命名实体, 推测原因可能在于人名相对来说比较短, 规律性要强一些。而组织名识别率都低一些, 推测组织名包含缩写、全称、简称等形式, 长度不一, 变化性较强。</p>
+                </div>
+                <h3 id="104" name="104" class="anchor-tag">4 结语</h3>
+                <div class="p1">
+                    <p id="105">本文设计了用于法语命名实体识别的深度神经网络<i>CGC</i>-<i>fr</i>模型, 并构建了一个法语命名实体识别数据集。<i>CGC</i>-<i>fr</i>模型将法语文本中单词的词嵌入作为语义特征, 从单词对应的字符嵌入序列提取单词的形态结构特征, 结合语法特征完成对命名实体的识别。这增加了传统统计机器学习方法中特征的多样性, 丰富了特征的内涵, 也避免了多语言通用方法对法语语法的忽视。实验对比模型中各个特征的贡献度, 验证了它们的有效性;还将<i>CGC</i>-<i>fr</i>模型与最大熵模型<i>NERC</i>-<i>fr</i>、多语言通用模型<i>Char attention</i>和<i>LSTM</i>-<i>CRF</i>对比。实验结果表明, <i>CGC</i>-<i>fr</i>模型相对三者的<i>F</i>1值都有提高, 验证了融合三种特征的本文模型在法语命名实体识别上的有效性, 进一步提高了法语命名实体的识别率。</p>
+                </div>
+                <div class="p1">
+                    <p id="106">然而, 本文模型也存在着不足, 在法语文本中组织名的识别率相比其余两种命名实体类型差距较大, 模型对形式存在较大变化的命名实体类型的识别效果不是很好;其次, 相对于英语较高的命名实体识别准确率, 法语命名实体识别还有较大的提升空间。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJJB&amp;filename=SJJB9535C08D4629D9AC535F35E1FE5E3C2B&amp;v=MDg4ODRGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkJyTFUwNXRwaHpMdTd3YTA9TmlmQmJMcTlIZFMvcjRjeFlPME5CUWd3dm1VVzZUb0xTM3FYcldSQWZNZVhOcmp0Q09Odg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> <i>NADEAU D</i>, <i>SEKINE S</i>.<i>A survey of named entity recognition and classification</i>[<i>J</i>].<i>Lingvisticae Investigationes</i>, 2007, 30 (1) :3-26.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Automatic processing of proper names in texts">
+
+                                <b>[2]</b> <i>WOLINSKI F</i>, <i>VICHOT F</i>, <i>DILLET B</i>.<i>Automatic processing of</i><i>proper names in texts</i>[<i>C</i>]// <i>Proceedings of the</i> 7<i>th Conference on European Chapter of the Association for Computational Linguistics</i>.<i>San Francisco</i>, <i>CA</i>:<i>Morgan Kaufmann Publishers</i>, 1995:23-30.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=NERC-fr:supervised named entity recognition for French">
+
+                                <b>[3]</b> <i>AZPEITIA A</i>, <i>CUDADROS M</i>, <i>GAINES S</i>, <i>et al</i>.<i>NERC</i>-<i>fr</i>:<i>supervised named entity recognition for French</i>[<i>C</i>]// <i>TSD</i> 2014:<i>Proceedings of the</i> 2014 <i>International Conference on Text</i>, <i>Speech and Dialogue</i>.<i>Berlin</i>:<i>Springer</i>, 2014:158-165.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The Multilingual Named Entity Recognition Framework">
+
+                                <b>[4]</b> <i>POIBEAU T</i>.<i>The multilingual named entity recognition framework</i>[<i>C</i>]// <i>Proceedings of the</i> 10<i>th Conference on European Chapter of the Association for Computational Linguistics</i>.<i>Stroudsburg</i>, <i>PA</i>:<i>Association for Computational Linguistics</i>, 2003:155-158.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Using machine learning to maintain rule-based named-entity recognition and classification systems">
+
+                                <b>[5]</b> <i>PETASIS G</i>, <i>VICHOT F</i>, <i>WOLINSKI F</i>, <i>et al</i>.<i>Using machine</i><i>learning to maintain rule</i>-<i>based named</i>-<i>entity recognition and classification systems</i>[<i>C</i>]// <i>Proceedings of the</i> 39<i>th Annual Meeting on Association for Computational Linguistics</i>.<i>Stroudsburg</i>, <i>PA</i>:<i>Association for Computational Linguistics</i>, 2001:426-433.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A stacked,voted,stacked model for named entity recognition">
+
+                                <b>[6]</b> <i>WU D</i>, <i>NGAI G</i>, <i>CARPUAT M</i>.<i>A stacked</i>, <i>voted</i>, <i>stacked model for named entity recognition</i>[<i>C</i>]// <i>Proceedings of the</i> 7<i>th Conference on Natural Language Learning at HLT</i>.<i>Stroudsburg</i>, <i>PA</i>:<i>Association for Computational Linguistics</i>, 2003:200-203.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES14010600018202&amp;v=MjgwMTdpZk9mYks4SHRETXFZOUZaT29IRG53N29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnRGaW5sVXIzSUtGMFFheGM9Tg==&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> <i>NOTHMAN J</i>, <i>RINGLAND N</i>, <i>RADFORD W</i>, <i>et al</i>.<i>Learning multilingual named entity recognition from Wikipedia</i>[<i>J</i>].<i>Artificial Intelligence</i>, 2013, 194:151-175.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Named entity recognition with long short-term memory">
+
+                                <b>[8]</b> <i>HAMMERTON J</i>.<i>Named entity recognition with long short</i>-<i>term</i><i>memory</i>[<i>C</i>]// <i>Proceedings of the</i> 7<i>th Conference on Natural Language Learning at HLT</i>.<i>Stroudsburg</i>, <i>PA</i>:<i>Association for Computational Linguistics</i>, 2003:172-175.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Attending to characters in neural sequence labeling models">
+
+                                <b>[9]</b> <i>REI M</i>, <i>CRICHTON G</i>, <i>PYYSALO S</i>.<i>Attending to characters in neural sequence labeling models</i>[<i>J</i>/<i>OL</i>].<i>arXiv Preprint</i>, 2016, 2016:<i>arXiv</i>:1611.04361[2016- 11- 14].<i>https</i>://<i>arxiv</i>.<i>org</i>/<i>abs</i>/1611.04361.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Neural architectures for named entity recognition">
+
+                                <b>[10]</b> <i>LAMPLE G</i>, <i>BALLESTEROS M</i>, <i>SUBRAMANIAN S</i>, <i>et al</i>.<i>Neural architectures for named entity recognition</i>[<i>C</i>]// <i>Proceedings of the</i> 2016 <i>Conference of the North American Chapter of the Association for Computational Linguistics</i>.<i>Stroudsburg</i>, <i>PA</i>:<i>Association for Computational Linguistics</i>, 2016:260-270.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" >
+                                    <b>[11]</b>
+                                 <i>LE Q</i>, <i>MIKOLOV T</i>.<i>Distributed representations of sentences and documents</i>[<i>C</i>]// <i>Proceedings of the</i> 31<i>st International Conference on Machine Learning</i>.<i>New York</i>:<i>JMLR</i>.<i>org</i>, 2014:1188-1196.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Glove:Global Vectors for Word Representation">
+
+                                <b>[12]</b> <i>PENNINGTON J</i>, <i>SOCHER R</i>, <i>MANNING C</i>.<i>Glove</i>:<i>global vectors for word representation</i>[<i>C</i>]// <i>Proceedings of the</i> 2014 <i>Conference on Empirical Methods in Natural Language Processing</i>.<i>Stroudsburg</i>, <i>PA</i>:<i>Association for Computational Linguistics</i>, 2014:1532-1543.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning character-level representations for part-ofspeech tagging">
+
+                                <b>[13]</b> <i>SANTOS C D</i>, <i>ZADROZNY B</i>.<i>Learning character</i>-<i>level representations for part</i>-<i>of</i>-<i>speech tagging</i>[<i>C</i>]// <i>Proceedings of the</i> 31<i>st International Conference on Machine Learning</i>.<i>New York</i>:<i>JMLR</i>.<i>org</i>, 2014:1818-1826.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Learning phrase representations using RNN encoder-decoder for statistical machine translation">
+
+                                <b>[14]</b> <i>CHO K</i>, <i>van MERRIENBOER B</i>, <i>GULCEHRE C</i>, <i>et al</i>.<i>Learning phrase representations using RNN encoder</i>-<i>decoder for statistical machine translation</i>[<i>C</i>]// <i>Proceedings of the</i> 2014 <i>Conference on Empirical Methods in Natural Language Processing</i>.<i>Stroudsburg</i>, <i>PA</i>:<i>Association for Computational Linguistics</i>, 2014:1724-1734.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Representing text chunks">
+
+                                <b>[15]</b> <i>SANG E F</i>, <i>VEENSTRA J</i>.<i>Representing text chunks</i>[<i>C</i>]// <i>Proceedings of the</i> 9<i>th Conference on European Chapter of the Association for Computational Linguistics</i>.<i>Stroudsburg</i>, <i>PA</i>:<i>Association for Computational Linguistics</i>, 1999:173-179.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJY201905008" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201905008&amp;v=MzExNjFIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlEbVY3N0tMejdCZDdHNEg5ak1xbzlGYklRS0Q=&amp;uid=WEEvREcwSlJHSldRa1FhcTdnTnhXM3ZJTWYxaVVtWjVZcnN4dE5mQUIrND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="1" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

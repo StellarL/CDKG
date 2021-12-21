@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637135566534690000%26DBCODE%3dCJFD%26TABLEName%3dCJFDTEMP%26FileName%3dJYRJ201910054%26RESULT%3d1%26SIGN%3dd2h5PM0ACKp4B9Ez2bby82uh7Fk%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201910054&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201910054&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201910054&amp;v=MTU3NTlHRnJDVVI3cWZadVp0RnlubFVydktMelRaWkxHNEg5ak5yNDlBWUlRS0RIODR2UjRUNmo1NE8zenFxQnQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#31" data-title="&lt;b&gt;0 引 言&lt;/b&gt; "><b>0 引 言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#35" data-title="&lt;b&gt;1 相关技术&lt;/b&gt; "><b>1 相关技术</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#36" data-title="&lt;b&gt;1.1 SQLite加密方式&lt;/b&gt;"><b>1.1 SQLite加密方式</b></a></li>
+                                                <li><a href="#41" data-title="&lt;b&gt;1.2 加密算法&lt;/b&gt;"><b>1.2 加密算法</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#47" data-title="&lt;b&gt;2 SQLite数据库加密设计&lt;/b&gt; "><b>2 SQLite数据库加密设计</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#57" data-title="&lt;b&gt;3 AES算法的改进&lt;/b&gt; "><b>3 AES算法的改进</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#58" data-title="&lt;b&gt;3.1 密钥扩展算法的改进&lt;/b&gt;"><b>3.1 密钥扩展算法的改进</b></a></li>
+                                                <li><a href="#67" data-title="&lt;b&gt;3.2 轮变换优化&lt;/b&gt;"><b>3.2 轮变换优化</b></a></li>
+                                                <li><a href="#78" data-title="&lt;b&gt;3.3 CTR模式下的并行运算&lt;/b&gt;"><b>3.3 CTR模式下的并行运算</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#86" data-title="&lt;b&gt;4 实验分析&lt;/b&gt; "><b>4 实验分析</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#91" data-title="&lt;b&gt;4.1 空间使用分析&lt;/b&gt;"><b>4.1 空间使用分析</b></a></li>
+                                                <li><a href="#97" data-title="&lt;b&gt;4.2 效率分析&lt;/b&gt;"><b>4.2 效率分析</b></a></li>
+                                                <li><a href="#105" data-title="&lt;b&gt;4.3 安全性分析&lt;/b&gt;"><b>4.3 安全性分析</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#108" data-title="&lt;b&gt;5 结 语&lt;/b&gt; "><b>5 结 语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#39" data-title="图1 sqlite3CodecAttach()函数流程图">图1 sqlite3CodecAttach()函数流程图</a></li>
+                                                <li><a href="#49" data-title="图2 SQLite数据库安全模型">图2 SQLite数据库安全模型</a></li>
+                                                <li><a href="#55" data-title="图3 SQLite加解密过程">图3 SQLite加解密过程</a></li>
+                                                <li><a href="#61" data-title="图4 改进的密钥扩展算法过程">图4 改进的密钥扩展算法过程</a></li>
+                                                <li><a href="#71" data-title="图5 改进的轮变换过程">图5 改进的轮变换过程</a></li>
+                                                <li><a href="#81" data-title="图6 CTR分组模式加密流程">图6 CTR分组模式加密流程</a></li>
+                                                <li><a href="#82" data-title="图7 CTR分组模式解密流程">图7 CTR分组模式解密流程</a></li>
+                                                <li><a href="#89" data-title="图8 未加密时插入的数据信息">图8 未加密时插入的数据信息</a></li>
+                                                <li><a href="#99" data-title="图9 加密消耗时间比较">图9 加密消耗时间比较</a></li>
+                                                <li><a href="#100" data-title="图10 解密消耗时间比较">图10 解密消耗时间比较</a></li>
+                                                <li><a href="#103" data-title="图11 各线程下加密消耗时间比较">图11 各线程下加密消耗时间比较</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" 陈尚书,李虹.基于用户体验的主流智能手机操作系统比较研究[J].软件导刊,2017,16(9):22-25." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJDK201709007&amp;v=MDI2NzA1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlubFVydktOeWZQWmJHNEg5Yk1wbzlGWTRRS0RIODR2UjRUNmo=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         陈尚书,李虹.基于用户体验的主流智能手机操作系统比较研究[J].软件导刊,2017,16(9):22-25.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" Zhao A,Wei Z,Yang Y.Research on SQLite Database Encryption Technology in Instant Messaging Based on Android Platform[M]//Intelligence Science and Big Data Engineering.Big Data and Machine Learning Techniques.Springer International Publishing,2015:316-325." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Research on SQLite Database Encryption Technology in Instant Messaging Based on Android Platform">
+                                        <b>[2]</b>
+                                         Zhao A,Wei Z,Yang Y.Research on SQLite Database Encryption Technology in Instant Messaging Based on Android Platform[M]//Intelligence Science and Big Data Engineering.Big Data and Machine Learning Techniques.Springer International Publishing,2015:316-325.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 白晋国,孙红胜.基于XXTEA的SQLite3安全存储方法[J].信息工程大学学报,2016,17(2):238-243." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XXGC201602021&amp;v=MjY0Mjg2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5sVXJ2S1BUWE1iYkc0SDlmTXJZOUhaWVFLREg4NHZSNFQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         白晋国,孙红胜.基于XXTEA的SQLite3安全存储方法[J].信息工程大学学报,2016,17(2):238-243.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" 骆子玉,洪璇.AES算法在多核的安卓平台下的改进及应用[J].计算机应用与软件,2017,34(1):209-213,257." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201701038&amp;v=MjgwMjc0SDliTXJvOUdiSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5sVXJ2S0x6VFpaTEc=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         骆子玉,洪璇.AES算法在多核的安卓平台下的改进及应用[J].计算机应用与软件,2017,34(1):209-213,257.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" 李逸瀚.电动汽车信息安全网关研制与wolfSSL协议研究[D].合肥:中国科学技术大学,2017." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017194551.nh&amp;v=MDQwODRHYkt4R3RUSnJwRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5sVXJ2S1ZGMjY=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         李逸瀚.电动汽车信息安全网关研制与wolfSSL协议研究[D].合肥:中国科学技术大学,2017.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" 郑行.AES算法的硬件优化实现及应用研究[D].厦门:厦门大学,2014." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1014190465.nh&amp;v=MTAwNzVsVXJ2S1ZGMjZHckt4SHRYS3FwRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW4=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[6]</b>
+                                         郑行.AES算法的硬件优化实现及应用研究[D].厦门:厦门大学,2014.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" Feiler J.Introducing SQLite for Mobile Developers:Enabling Database Functionality for Android and iPhone[M].Berkeley:Apress,2015." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Introducing SQLite for Mobile Developers:Enabling Database Functionality for Android and iPhone">
+                                        <b>[7]</b>
+                                         Feiler J.Introducing SQLite for Mobile Developers:Enabling Database Functionality for Android and iPhone[M].Berkeley:Apress,2015.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" Jain V,Gaur M S,Laxmi V,et al.Detection of SQLite Database Vulnerabilities in Android Apps[C]//International Conference on Information Systems Security (ICISS-2016).Springer International Publishing,2016:521-531." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Detection of SQLite Database Vulnerabilities in Android Apps">
+                                        <b>[8]</b>
+                                         Jain V,Gaur M S,Laxmi V,et al.Detection of SQLite Database Vulnerabilities in Android Apps[C]//International Conference on Information Systems Security (ICISS-2016).Springer International Publishing,2016:521-531.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" 肖振久,胡驰,姜正涛,et al.AES与RSA算法优化及其混合加密体制[J].计算机应用研究,2014,31(4):1189-1194." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201404057&amp;v=MTg3ODZHNEg5WE1xNDlBWTRRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlubFVydktMejdTWkw=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[9]</b>
+                                         肖振久,胡驰,姜正涛,et al.AES与RSA算法优化及其混合加密体制[J].计算机应用研究,2014,31(4):1189-1194.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" Keller M,Orsini E,Rotaru D,et al.Faster Secure Multi-party Computation of AES and DES Using Lookup Tables[C]//International Conference on Applied Cryptography and Network Security,2017:229-249." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Faster secure multi-party computation of AES and DES using lookup tables">
+                                        <b>[10]</b>
+                                         Keller M,Orsini E,Rotaru D,et al.Faster Secure Multi-party Computation of AES and DES Using Lookup Tables[C]//International Conference on Applied Cryptography and Network Security,2017:229-249.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" 肖国镇,白恩健.AES密码分析的若干新进展[J].电子学报,2003,31(10):1549-1554." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZXU200310024&amp;v=MTU0OThRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlubFVydktJVGZUZTdHNEh0TE5yNDlIWUk=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         肖国镇,白恩健.AES密码分析的若干新进展[J].电子学报,2003,31(10):1549-1554.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 肖淮译.基于64位处理器的Android平台优化AES加密算法[D].哈尔滨:哈尔滨理工大学,2016." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016072720.nh&amp;v=MjQ5NzBiT3I1RWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5sVXJ2S1ZGMjZHTE8vSE4=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         肖淮译.基于64位处理器的Android平台优化AES加密算法[D].哈尔滨:哈尔滨理工大学,2016.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" 董婷婷.基于Android系统的手机隐私数据的加密研究[D].淮南:安徽理工大学,2017." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017207900.nh&amp;v=MDYyODdmWnVadEZ5bmxVcnZLVkYyNkdiRzRHZGpNcjVFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3E=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         董婷婷.基于Android系统的手机隐私数据的加密研究[D].淮南:安徽理工大学,2017.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 赵君.基于64位处理器的Android平台优化AES加密算法[J].哈尔滨理工大学学报,2017,22(3):8-13." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HLGX201703002&amp;v=MjM4NDdUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlubFVydktMU0hNZHJHNEg5Yk1ySTlGWm9RS0RIODR2UjQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         赵君.基于64位处理器的Android平台优化AES加密算法[J].哈尔滨理工大学学报,2017,22(3):8-13.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JYRJ" target="_blank">计算机应用与软件</a>
+                2019,36(10),310-315+333 DOI:10.3969/j.issn.1000-386x.2019.10.053            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于Android平台的SQLite数据库加密研究</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E4%BD%95%E6%96%87%E6%89%8D&amp;code=17685346&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">何文才</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%A9%AC%E9%B9%8F%E6%96%90&amp;code=42911578&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">马鹏斐</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%88%98%E5%9F%B9%E9%B9%A4&amp;code=11198976&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">刘培鹤</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%A8%E4%BA%9A%E6%B6%9B&amp;code=29346494&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">杨亚涛</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%82%96%E8%B6%85%E6%81%A9&amp;code=31307606&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">肖超恩</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E8%A5%BF%E5%AE%89%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%A4%A7%E5%AD%A6%E9%80%9A%E4%BF%A1%E5%B7%A5%E7%A8%8B%E5%AD%A6%E9%99%A2&amp;code=0008505&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">西安电子科技大学通信工程学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8C%97%E4%BA%AC%E7%94%B5%E5%AD%90%E7%A7%91%E6%8A%80%E5%AD%A6%E9%99%A2%E7%94%B5%E5%AD%90%E4%B8%8E%E9%80%9A%E4%BF%A1%E5%B7%A5%E7%A8%8B%E7%B3%BB&amp;code=0030122&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">北京电子科技学院电子与通信工程系</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>SQLite数据库存储作为Android平台本地存储的主要方式,其安全性的强弱显得尤为重要。根据目前Android平台多核、对速率要求高等特点,提出一种基于优化的AES-128算法整库加密SQLite的方案。在AES轮变换过程中,对状态矩阵进行分块、并行处理;密钥扩展算法部分,生成一组与初始密钥无关的密钥作为第一轮密钥,再对其“移位”、“异或”生成第二轮密钥;采用可以对任意长度明文加解密的CTR(Counter)模式,实现并行优化的AES算法。对实验结果分析得出:该方案在对空间影响很小的情况下,SQLite加、解密速率分别提升了28.7%、23.5%,显著提升了对已知明文攻击、穷举攻击的抵抗能力,为解决Android平台隐私泄露提供了一个可行、有效的方案。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Android&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Android;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=SQLite&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">SQLite;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%BC%98%E5%8C%96AES&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">优化AES;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=CTR&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">CTR;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8A%A0%E5%AF%86&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">数据库加密;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    何文才，教授，主研领域:信息安全，编码理论。;
+                                </span>
+                                <span>
+                                    马鹏斐，硕士生。;
+                                </span>
+                                <span>
+                                    刘培鹤，实验师。;
+                                </span>
+                                <span>
+                                    杨亚涛，副教授。;
+                                </span>
+                                <span>
+                                    肖超恩，讲师。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-12-26</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>中央高校基本科研业务费项目(328201801);</span>
+                    </p>
+            </div>
+                    <h1><b>SQLITE DATABASE ENCRYPTION BASED ON ANDROID PLATFORM</b></h1>
+                    <h2>
+                    <span>He Wencai</span>
+                    <span>Ma Pengfei</span>
+                    <span>Liu Peihe</span>
+                    <span>Yang Yatao</span>
+                    <span>Xiao Chao'en</span>
+            </h2>
+                    <h2>
+                    <span>School of Telecommunications Engineering, Xidian University</span>
+                    <span>Department of Electronics and Communication Engineering, Beijing Electronic Science and Technology Institute</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>SQLite database storage is the main way of local storage on the Android platform, and its security is especially important. According to the multi-core and high-speed requirements on the current Android platform, this paper proposed a SQLite encryption scheme based on the optimized AES-128 algorithm. In the AES round conversion process, the state matrix was divided into blocks and ran in parallel. In the part of key expansion algorithm, a set of keys independent of the initial key was generated as the first key, and then the second key was generated by shift and XOR. Finally, the parallel optimized AES algorithm was implemented by using a CTR(Counter) mode which could encrypt and decrypt any length plaintext. The experimental results show that the rate of encryption and decryption of SQLite has been increased by 28.7% and 23.5% respectively with little space impact. It significantly improves the resistance to known plaintext attacks and exhaustive attacks, and provides a feasible and effective solution to the privacy leakage of Android platform.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Android&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Android;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=SQLite&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">SQLite;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Optimized%20AES&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Optimized AES;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=CTR&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">CTR;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Database%20encryption&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Database encryption;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-12-26</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="31" name="31" class="anchor-tag"><b>0 引 言</b></h3>
+                <div class="p1">
+                    <p id="32">Android操作系统在现今的移动领域发展中占据着无法替代的地位。据2017年第一季度移动通信消费者指数显示,在智能移动终端中,Android操作系统所占的市场份额占智能移动设备销量的87.2%,该比重仍在持续上涨<citation id="111" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。嵌入式数据库SQLite作为Android平台数据存储的主要方式,有消耗资源小、存取效率高等优点。然而,在原生SQLite中数据以明文形式存在,导致存于其中的数据会轻易地被人用文本编辑器查看。本文针对SQLite这一缺点,在Android平台下,通过对AES算法进行性能优化,设计一个可靠有效的SQLite数据库加密系统。</p>
+                </div>
+                <div class="p1">
+                    <p id="33">国内外很多学者也对SQLite加密进行了研究。文献<citation id="112" type="reference">[<a class="sup">2</a>]</citation>通过实验验证了AES-256算法在SQLite上的可行性,解决了Android平台下SQLite明文存储的安全问题,但没有对该算法的性能进行分析。文献<citation id="113" type="reference">[<a class="sup">3</a>]</citation>提出的XXTEA加密方案,将攻击所需的明文数量上升为2<sup>80</sup>,提高了SQLite的安全性,但没有考虑Android平台下的工作情况,加密速率不够理想。文献<citation id="114" type="reference">[<a class="sup">4</a>]</citation>针对64位处理器的Android操作系统,对AES-256进行优化,用运算速率的些许降低换来存储空间减少、密码强度的提升,但并没有利用好Android系统多核的特点进行并行处理提升运算速率。在Android平台下,这些对SQLite加密的研究,也都没有考虑到密钥安全问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="34">本文针对目前Android平台多核、存储空间有限、对速率要求高等特点,提出了一个更为安全高效的SQLite加密方案。该方案在安全性较高的CTR模式下,运用优化的AES算法对SQLite文件并行加密。在密钥扩展算法部分,通过对第一轮密钥的分析处理,降低密钥之间的耦合度,有效地抵抗了已知明文攻击。轮变换中,状态矩阵各行(列)进行分块并行处理,采用多核多线程机制,很大程度地提升了加解密过程的运算速率。</p>
+                </div>
+                <h3 id="35" name="35" class="anchor-tag"><b>1 相关技术</b></h3>
+                <h4 class="anchor-tag" id="36" name="36"><b>1.1 SQLite加密方式</b></h4>
+                <div class="p1">
+                    <p id="37">SQLite数据库是以文件的形式存在于Android源码中。对其加密有两种方式:将内容加密后写入数据库和对数据库文件加密<citation id="115" type="reference"><link href="7" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。前者加密不够彻底,加密后写入、搜索将会是问题,故本文选择相对安全可靠的对数据库文件进行加密的方式。</p>
+                </div>
+                <div class="p1">
+                    <p id="38">SQLite源代码没有提供加密功能,却保留了加密接口,供后续开发使用。加密接口包括sqlite3_key()、sqlite3CodecGetKey()、sqlite3_rekey()和sqlite3Codec-Attach()<citation id="116" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>。在本方案的实现中,用本文优化的AES算法来实现这些接口即可。其中,sqlite3CodecAttach()的实现相对复杂,流程图如图1所示。</p>
+                </div>
+                <div class="area_img" id="39">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201910054_039.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 sqlite3CodecAttach()函数流程图" src="Detail/GetImg?filename=images/JYRJ201910054_039.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 sqlite3CodecAttach()函数流程图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201910054_039.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="40">口令的来源有两种,用户创建账号时自行设置的密钥和主数据库的密钥。系统确定密钥来源后,调用相应函数获取口令,实现sqlite3CodecAttach()函数,继而在sqlite3_key()中调用。</p>
+                </div>
+                <h4 class="anchor-tag" id="41" name="41"><b>1.2 加密算法</b></h4>
+                <div class="p1">
+                    <p id="42">根据Android平台可利用硬件、空间资源有限的特点,本文采用优化的AES算法对其进行加密,以保证SQLite数据库的性能和安全性。</p>
+                </div>
+                <div class="p1">
+                    <p id="43">AES加密算法加解密过程中密钥相同,密钥长度有128位、192位、256位三种。加密过程中,不同的密钥长度拥有不同的加密轮次。AES属于分组密码,每次可以处理特定长度的块数据<citation id="117" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="44">AES算法包括明文与初始密钥“异或”、轮变换、密钥扩展算法三个部分。其中,后两部分相对复杂且有良好的优化空间。加密时,明文与初始密钥“异或”后,对其执行轮变换操作。轮变换过程有字节替换(SubBytes)、行移位(ShiftRows)、列混合(MixColumns)、轮密钥加(AddRoundKey)。轮变换过程中最后一轮没有列混合步骤<citation id="118" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">字节替换是非线性变换的过程,用S盒取代“乘逆”、“仿射”运算,通过查表的方式实现字节替换。在AES-128中,每个表需要256字节,10轮就有160个S盒。Android平台是允许这部分空间耗损的。而在AES-256中,S盒由原来的8×8变为16×16。如果使用标准AES的S盒查表实现,则每一张表需要65 536字节的存储空间,10轮共需要160个S盒,占用资源太大,无法查表实现。因此,在空间资源允许的情况下,为了不降低运算速率,本方案选择优化AES-128算法。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">在标准的AES-128算法中,行移位过程是以字节为单位,“左移”<i>N</i>个单位的算法。其中,<i>N</i>为各字节所在行数。列混合部分是利用状态矩阵与固定矩阵相乘来进行混淆。轮密钥过程运用状态矩阵和128位轮密钥“异或”<citation id="119" type="reference"><link href="13" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>。轮变换中,每一轮的轮密钥由初始密钥和密钥扩展函数计算得出。密钥扩展算法部分,将128位初始密钥经过运算扩展出加解密过程所需的176字节的密钥。四个字节为一个字,得到的前四个字作为AES-128算法加解密过程的第一轮密钥。该过程总共需要11组密钥,即10次轮变换密钥和轮变换前“异或”操作的初始密钥。</p>
+                </div>
+                <h3 id="47" name="47" class="anchor-tag"><b>2 SQLite数据库加密设计</b></h3>
+                <div class="p1">
+                    <p id="48">常用的数据库安全机制有:用户身份认证、存取控制机制、数据加密、数据库操作审计和攻击检测<citation id="120" type="reference"><link href="15" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>。本方案主要从前两个方面建立SQLite安全模型,如图2所示。</p>
+                </div>
+                <div class="area_img" id="49">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201910054_049.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 SQLite数据库安全模型" src="Detail/GetImg?filename=images/JYRJ201910054_049.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 SQLite数据库安全模型  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201910054_049.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="50">(1) 用户使用应用程序客户端并根据提示输入正确的密码,只有当系统通过用户身份验证将其识别为合法用户时,用户才能进入SQLite数据库并对其进行操作。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">(2) 为了避免一些恶意攻击者绕过身份认证环节,直接打开SQLite数据库窃取、篡改隐私信息,该模型采用整库加密的方案。</p>
+                </div>
+                <div class="p1">
+                    <p id="52">(3) 一部分不法分子会试图窃取合法用户的认证口令,此安全模型将用户口令单独加密成密令,和密文一起存储在本地数据库,保护用户口令安全。</p>
+                </div>
+                <div class="p1">
+                    <p id="53">经分析得出,SQLite安全性的强弱取决于加密算法的可靠程度。</p>
+                </div>
+                <div class="p1">
+                    <p id="54">用户存取数据时,SQLite加解密的整体结构如图3所示。</p>
+                </div>
+                <div class="area_img" id="55">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201910054_055.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 SQLite加解密过程" src="Detail/GetImg?filename=images/JYRJ201910054_055.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 SQLite加解密过程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201910054_055.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="56">系统首先判断用户是否首次登录;若是,用户创建口令,系统口令经过MD5散列转化为固定长度的输出,作为优化AES加解密算法的初始密钥<i>K</i>,并存储在SQLite中;若不是,继而判断输入口令是否正确,正确则进入系统,执行相应加解密操作。</p>
+                </div>
+                <h3 id="57" name="57" class="anchor-tag"><b>3 AES算法的改进</b></h3>
+                <h4 class="anchor-tag" id="58" name="58"><b>3.1 密钥扩展算法的改进</b></h4>
+                <div class="p1">
+                    <p id="59">密钥是加密算法中尤为重要的一部分。在AES的原始密钥生成算法中,除了初始密钥w<sub>0</sub>、w<sub>1</sub>、w<sub>2</sub>、w<sub>3</sub>之外,每个密钥都是有先前的密钥操作获得的。假设知道其中任何一轮密钥,即可破解全部密钥,这会对数据安全造成极大的威胁。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">针对这一问题,本系统采用一种改进的密钥扩展算法方案,提高密钥的安全性。改进的算法过程如下:生成一组与初始密钥无关的4个字(w<sub>4</sub>,w<sub>5</sub>,w<sub>6</sub>,w<sub>7</sub>)作为第一轮轮密钥。然后将每个字“左移”1位,与w<sub>4</sub>、w<sub>5</sub>、w<sub>6</sub>、w<sub>7</sub>做“异或”运算,再对结果进行原有AES密钥扩展算法运算产生其他轮密钥。改进后算法过程如图4所示。</p>
+                </div>
+                <div class="area_img" id="61">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201910054_061.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 改进的密钥扩展算法过程" src="Detail/GetImg?filename=images/JYRJ201910054_061.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 改进的密钥扩展算法过程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201910054_061.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="62">性能分析:</p>
+                </div>
+                <div class="p1">
+                    <p id="63">设初始密钥为<i>n</i>比特,穷尽密钥攻击最佳情况是1,即一次就猜中初始密钥,最差情况是2<sup><i>n</i></sup>,即尝试了密钥空间所有的可能才得到正确密钥。穷尽密钥攻击的平均复杂度是:</p>
+                </div>
+                <div class="p1">
+                    <p id="64"><mathml id="110"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>2</mn><msup><mrow></mrow><mi>n</mi></msup></mrow></munderover><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><msup><mrow></mrow><mi>n</mi></msup></mrow></mfrac></mrow></mstyle><mo>×</mo><mi>i</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><msup><mrow></mrow><mi>n</mi></msup></mrow></mfrac><mfrac><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>+</mo><mn>2</mn><msup><mrow></mrow><mi>n</mi></msup><mo stretchy="false">)</mo><mo>×</mo><mn>2</mn><msup><mrow></mrow><mi>n</mi></msup></mrow><mn>2</mn></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>+</mo><mn>2</mn><msup><mrow></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></math></mathml>      (1)</p>
+                </div>
+                <div class="p1">
+                    <p id="65">改进前,由式(1)计算出的复杂度为2<sup>127</sup>,而在算法改进后,该值提升为在2<sup>255</sup>～2<sup>511</sup>之间。以目前的计算能力,在有限时间内,完成这种穷尽搜索是几乎不可能的事情。</p>
+                </div>
+                <div class="p1">
+                    <p id="66">改进的密钥扩展算法降低了密钥之间的耦合度,增强了密钥生成阶段的不可逆性,可有效抵抗穷尽密钥攻击。在第一轮、第二轮密钥之间加上简单的“移位”、“异或”操作,既可以有效防止穷举攻击,又可以不影响整体加密速率。就算攻击者得到某一轮的密钥,也无法直接推出初始密钥和第一轮密钥,很好地增强了密钥的安全性。</p>
+                </div>
+                <h4 class="anchor-tag" id="67" name="67"><b>3.2 轮变换优化</b></h4>
+                <div class="p1">
+                    <p id="68">在AES-128算法中,10轮轮变换需160个S盒,一个S盒中的表需256字节。即一轮加密大约需要消耗的空间大小为256×160/1 000=40.96 KB,可见空间占有极少。这种用较低的空间消耗换取运算速率上的提升符合Android平台的需要,故该过程不做变化。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">标准AES算法中的运算是在确定状态矩阵各行或各列都已经过每一步变换,才执行接下来的运算操作。本文研究的加密方案是工作在Android平台下的,而目前Android手机的硬件环境都在四核以上。因此,可以利用这一硬件特点,在轮变换中使用并行计算来提高算法的计算效率。</p>
+                </div>
+                <div class="p1">
+                    <p id="70">经分析得知,SubBytes、ShiftRows变换都作用于行,MixColumns作用于列,AddRoundKey作用于每个元素。据此,可以对状态矩阵进行分块处理:在每一行字节变换后,继续行移位操作;在每一列列混合后,进行AddRoundKey操作。用这种并行方式可以在每一行(列)运算时省去等待其他行(列)运算完毕的时间。以4核4线程为例,优化后的轮变换步骤如图5所示。</p>
+                </div>
+                <div class="area_img" id="71">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201910054_071.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 改进的轮变换过程" src="Detail/GetImg?filename=images/JYRJ201910054_071.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 改进的轮变换过程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201910054_071.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="72">性能分析:</p>
+                </div>
+                <div class="p1">
+                    <p id="73">由图5可知,若SubBytes、ShiftRows、MixColumns、AddRoundKey过程各行(列)运算消耗时间分别为<i>T</i><sub>a</sub>、<i>T</i><sub>b</sub>、<i>T</i><sub>c</sub>、<i>T</i><sub>d</sub>,标准AES-128算法轮变换消耗时为:</p>
+                </div>
+                <div class="p1">
+                    <p id="74"><i>T</i><sub>128</sub>=4(<i>T</i><sub>a</sub>+<i>T</i><sub>b</sub>+<i>T</i><sub>c</sub>+<i>T</i><sub>d</sub>)      (2)</p>
+                </div>
+                <div class="p1">
+                    <p id="75">改进后的轮变换消耗时间为:</p>
+                </div>
+                <div class="p1">
+                    <p id="76"><i>T</i>′<sub>128</sub>=<i>T</i><sub>a</sub>+<i>T</i><sub>b</sub>+<i>T</i><sub>c</sub>+<i>T</i><sub>d</sub>      (3)</p>
+                </div>
+                <div class="p1">
+                    <p id="77">理论计算可得,改进后的轮变换过程消耗的时间为改进前的1/4。扩展可得,对<i>N</i>核<i>N</i>线程的Android手机,使用该方案改进后的轮变换过程消耗时间为改进前轮变换消耗时间的1/<i>N</i>。实际测试中,由于受硬件平台、环境、操作等因素的影响,测试结果不会和理论值一样理想,但仍然可以很大程度地提升运算速率。</p>
+                </div>
+                <h4 class="anchor-tag" id="78" name="78"><b>3.3 CTR模式下的并行运算</b></h4>
+                <div class="p1">
+                    <p id="79">AES分组密码算法的几种基本工作模式中,支持并行计算的有ECB模式(电码本模式)和CTR模式(计算器模式)<citation id="121" type="reference"><link href="9" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>。前者在明文相同时每次加密所得的密文都是一样的,容易在已知明文的情况下受到攻击,安全性不强,故本方案采用CTR模式优化AES算法。</p>
+                </div>
+                <div class="p1">
+                    <p id="80">CTR模式下,分组明文可为任意长度,操作自由便捷,适用于运算速率的提高。其加解密流程分别如图6、图7所示。</p>
+                </div>
+                <div class="area_img" id="81">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201910054_081.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 CTR分组模式加密流程" src="Detail/GetImg?filename=images/JYRJ201910054_081.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图6 CTR分组模式加密流程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201910054_081.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="82">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201910054_082.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 CTR分组模式解密流程" src="Detail/GetImg?filename=images/JYRJ201910054_082.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图7 CTR分组模式解密流程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201910054_082.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="83">由加解密示意图可以看出,CTR模式下有一个自增的算子<i>T</i><sub><i>n</i></sub>,<i>T</i><sub><i>n</i></sub>用密钥<i>K</i>和加密算法加密后的输出,与明文块“异或”得到密文。由于每次运算的算子<i>T</i><sub><i>n</i></sub>不同,相当于该模式下各分组加密时的密钥不同。这弥补了ECB模式的不足,安全性极高。</p>
+                </div>
+                <div class="p1">
+                    <p id="84">本方案中,<i>T</i><sub><i>n</i></sub>为随机产生的128位的计数器,<i>n</i>=1,2,…,<i>q</i>,每次用完自动加1。由于各明文分组输入输出没有关联,因此可以并行处理。本系统将明文按每块128位分组。若最后一组不满128位,则取最高有效<i>length</i>位,余下128-<i>length</i>位舍去。</p>
+                </div>
+                <div class="p1">
+                    <p id="85">本文研究的Android平台应用层基于Java语言开发,通过创建线程池,运用多线程来完成并行处理。在本系统所使用的4核4线程的硬件环境下,每次执行4个分组。由此可得,运用该方案研究的CTR模式,不仅安全性有了很大的提升,加密所消耗的时间理论上也可缩短为串行加密的1/4,运算速率提升明显。</p>
+                </div>
+                <h3 id="86" name="86" class="anchor-tag"><b>4 实验分析</b></h3>
+                <div class="p1">
+                    <p id="87">实验1:在Android平台下新建测试应用程序,在其中创建一个名为man.db的数据库,为其新建一张student表,包含user、phone字段,并设置user字段为主键。向其中插入十条数据,通过DDMS(Dalvik Debug Monitor Service)导出,用SQLite Expert工具查看。</p>
+                </div>
+                <div class="p1">
+                    <p id="88">在不加密的情况下,可以清晰看到各字段信息,查看结果如图8所示。在使用加密算法的情况下,必须输入正确口令通过身份认证方可进入数据库。如果密码错误或直接用工具打开查看,则会有“file is encrypted or is not a database”的错误提示。</p>
+                </div>
+                <div class="area_img" id="89">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201910054_089.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图8 未加密时插入的数据信息" src="Detail/GetImg?filename=images/JYRJ201910054_089.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图8 未加密时插入的数据信息  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201910054_089.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="90">Android平台下数据库加密系统主要的衡量标准,是加密后该数据库的性能没有受到过多影响。表现为加密后占用的存储空间没有明显增加,加密速度足够快,系统的安全系数较高。下面将分别从这几个方面对该SQLite加密系统的性能作以分析。</p>
+                </div>
+                <h4 class="anchor-tag" id="91" name="91"><b>4.1 空间使用分析</b></h4>
+                <div class="p1">
+                    <p id="92">本方案在对SQLite加密时,实现了SQLite接口中的加密函数,无疑会增加SQLite数据库源码的空间占用率。但在编写加密函数时,已尽可能地减少加密过程中对空间的占用。主要表现在:</p>
+                </div>
+                <div class="p1">
+                    <p id="93">(1) 代码编写时,在初始化部分添加了临时数据的释放函数。比如,在使用完计数器<i>T</i><sub><i>n</i></sub>,自增得到<i>T</i><sub><i>n</i></sub><sub>+1</sub>后,及时释放<i>T</i><sub><i>n</i></sub>。</p>
+                </div>
+                <div class="p1">
+                    <p id="94">(2) 在AES算法并行处理部分,使用了Java多线程机制和线程池。在没有任务时,线程在线程池中处于休眠状态,只占据很小的内存空间。本方案中运用线程池管理线程可以防止并发过多,以免内存被过度消耗。</p>
+                </div>
+                <div class="p1">
+                    <p id="95">(3) 该SQLite数据库加密系统使用AES加密,加密前后明文密文的存储量是一样的,只是改变了状态矩阵中的数值。</p>
+                </div>
+                <div class="p1">
+                    <p id="96">由上所述,该安全系统在Android平台下的空间增量可以忽略不计。</p>
+                </div>
+                <h4 class="anchor-tag" id="97" name="97"><b>4.2 效率分析</b></h4>
+                <div class="p1">
+                    <p id="98">实验2:加解密消耗时间的测试。System.currentTimeMills()函数可获取系统当前时间,实验过程中,用此函数分别获取系统加密前后的时间点,从而计算出时间差即为加密所消耗的时间。插入数据的实验可得到加密耗费的时间,如图9所示。查询数据的实验可获取解密耗费的时间,如图10所示。</p>
+                </div>
+                <div class="area_img" id="99">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201910054_099.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图9 加密消耗时间比较" src="Detail/GetImg?filename=images/JYRJ201910054_099.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图9 加密消耗时间比较  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201910054_099.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="100">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201910054_100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图10 解密消耗时间比较" src="Detail/GetImg?filename=images/JYRJ201910054_100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图10 解密消耗时间比较  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201910054_100.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="101">计算分析可知,用本文优化的AES算法不仅没有降低标准AES加密性能,反而将加密速度平均提高了28.7%,解密速度平均提升了23.5%,运算效率较好。</p>
+                </div>
+                <div class="p1">
+                    <p id="102">实验1和实验2是在CPU环境为四核四线程的情况下执行的。实验3将利用本文优化的AES加密算法,通过创建不同数量的线程(实验以单线程、4线程、8线程、16线程为例),对该SQLite加密系统的速率变化作以分析,测试结果如图11所示。</p>
+                </div>
+                <div class="area_img" id="103">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201910054_103.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图11 各线程下加密消耗时间比较" src="Detail/GetImg?filename=images/JYRJ201910054_103.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图11 各线程下加密消耗时间比较  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201910054_103.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="104">可以看出,对于大小在2 MB以下的短小明文,增加并行线程数(8或16个线程)不会导致AES性能的提升,反而会随着线程数增多而下降。经分析,这可能是因为并行化过程中,创建大量线程、对明文分组、处理密文时也需要占用资源和时间。实验表明,使用本文提出的加密系统,4线程比较适合处理短小明文。</p>
+                </div>
+                <h4 class="anchor-tag" id="105" name="105"><b>4.3 安全性分析</b></h4>
+                <div class="p1">
+                    <p id="106">本系统在CTR模式下执行优化的AES算法,每次产生的计数器初值都是不同的,是通过随机函数产生的16个无符号字符,可以避免因每次产生相同初值造成明文攻击。</p>
+                </div>
+                <div class="p1">
+                    <p id="107">在对AES算法做了优化后,解除了初始密钥和轮密钥之间的关系,并对第一轮密钥做了简单运算变换,扰乱了攻击者的思路,提升穷举攻击的难度量级。另外,该安全系统通过MD5单向散列函数对用户口令加密生成初始密钥,并将口令密文存储,密钥安全得到了很好的保障,达到了研究目标。</p>
+                </div>
+                <h3 id="108" name="108" class="anchor-tag"><b>5 结 语</b></h3>
+                <div class="p1">
+                    <p id="109">本文针对Android平台的硬件特点,对AES-128算法进行了优化,并将其应用在SQLite数据库中,保护移动端数据隐私。密钥扩展部分的优化提高了算法的安全性,轮变换部分和CTR模式的并行优化提高了算法的运行效率。实验结果表明,在该方案下,4线程更适合2 MB以下的短小明文加密。与优化前的标准AES算法相比,优化后SQLite加密速率平均提升28.7%,解密速率平均提升23.5%,同时有效抵抗了攻击,增加了Android平台数据隐私保护的安全性,达到了研究目的。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJDK201709007&amp;v=MzI2MDR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlubFVydktOeWZQWmJHNEg5Yk1wbzlGWTRRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 陈尚书,李虹.基于用户体验的主流智能手机操作系统比较研究[J].软件导刊,2017,16(9):22-25.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Research on SQLite Database Encryption Technology in Instant Messaging Based on Android Platform">
+
+                                <b>[2]</b> Zhao A,Wei Z,Yang Y.Research on SQLite Database Encryption Technology in Instant Messaging Based on Android Platform[M]//Intelligence Science and Big Data Engineering.Big Data and Machine Learning Techniques.Springer International Publishing,2015:316-325.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XXGC201602021&amp;v=MDA1MDM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5bmxVcnZLUFRYTWJiRzRIOWZNclk5SFpZUUtESDg=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 白晋国,孙红胜.基于XXTEA的SQLite3安全存储方法[J].信息工程大学学报,2016,17(2):238-243.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201701038&amp;v=MjEyMjFyQ1VSN3FmWnVadEZ5bmxVcnZLTHpUWlpMRzRIOWJNcm85R2JJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 骆子玉,洪璇.AES算法在多核的安卓平台下的改进及应用[J].计算机应用与软件,2017,34(1):209-213,257.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017194551.nh&amp;v=MjI2NjNVUjdxZlp1WnRGeW5sVXJ2S1ZGMjZHYkt4R3RUSnJwRWJQSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 李逸瀚.电动汽车信息安全网关研制与wolfSSL协议研究[D].合肥:中国科学技术大学,2017.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1014190465.nh&amp;v=MDU3MDZLeEh0WEtxcEViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlubFVydktWRjI2R3I=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[6]</b> 郑行.AES算法的硬件优化实现及应用研究[D].厦门:厦门大学,2014.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Introducing SQLite for Mobile Developers:Enabling Database Functionality for Android and iPhone">
+
+                                <b>[7]</b> Feiler J.Introducing SQLite for Mobile Developers:Enabling Database Functionality for Android and iPhone[M].Berkeley:Apress,2015.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Detection of SQLite Database Vulnerabilities in Android Apps">
+
+                                <b>[8]</b> Jain V,Gaur M S,Laxmi V,et al.Detection of SQLite Database Vulnerabilities in Android Apps[C]//International Conference on Information Systems Security (ICISS-2016).Springer International Publishing,2016:521-531.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSYJ201404057&amp;v=MDIzNjM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVadEZ5bmxVcnZLTHo3U1pMRzRIOVhNcTQ5QVk0UUtESDg=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[9]</b> 肖振久,胡驰,姜正涛,et al.AES与RSA算法优化及其混合加密体制[J].计算机应用研究,2014,31(4):1189-1194.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Faster secure multi-party computation of AES and DES using lookup tables">
+
+                                <b>[10]</b> Keller M,Orsini E,Rotaru D,et al.Faster Secure Multi-party Computation of AES and DES Using Lookup Tables[C]//International Conference on Applied Cryptography and Network Security,2017:229-249.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZXU200310024&amp;v=MDkwMTBMTnI0OUhZSVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5sVXJ2S0lUZlRlN0c0SHQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 肖国镇,白恩健.AES密码分析的若干新进展[J].电子学报,2003,31(10):1549-1554.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016072720.nh&amp;v=MjIxNzE0TzN6cXFCdEdGckNVUjdxZlp1WnRGeW5sVXJ2S1ZGMjZHTE8vSE5iT3I1RWJQSVFLREg4NHZSNFQ2ajU=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 肖淮译.基于64位处理器的Android平台优化AES加密算法[D].哈尔滨:哈尔滨理工大学,2016.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1017207900.nh&amp;v=Mjc0ODlkak1yNUViUElRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlubFVydktWRjI2R2JHNEc=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> 董婷婷.基于Android系统的手机隐私数据的加密研究[D].淮南:安徽理工大学,2017.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=HLGX201703002&amp;v=MTgyNDBMU0hNZHJHNEg5Yk1ySTlGWm9RS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVp0RnlubFVydks=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 赵君.基于64位处理器的Android平台优化AES加密算法[J].哈尔滨理工大学学报,2017,22(3):8-13.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JYRJ201910054" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201910054&amp;v=MTU3NTlHRnJDVVI3cWZadVp0RnlubFVydktMelRaWkxHNEg5ak5yNDlBWUlRS0RIODR2UjRUNmo1NE8zenFxQnQ=&amp;uid=WEEvREcwSlJHSldRa1FhdXNzY2Z1OVR2ZlpVSUdIOHYva21ub0pKOEU0cz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="0" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

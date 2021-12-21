@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637136479201846250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJY201909024%26RESULT%3d1%26SIGN%3dSbQ1M%252fCyfakN5i1fMwVRxpLd6%252fY%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201909024&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJY201909024&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201909024&amp;v=MDc4ODVSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeWpuVTd2TUx6N0JkN0c0SDlqTXBvOUhZSVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#51" data-title="0 引言 ">0 引言</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#57" data-title="1 相关定义 ">1 相关定义</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#72" data-title="2 基于Simhash的密文排序检索方案 ">2 基于Simhash的密文排序检索方案</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#74" data-title="2.1 &lt;i&gt;SMRI&lt;/i&gt;&lt;b&gt;索引的构建&lt;/b&gt;">2.1 <i>SMRI</i><b>索引的构建</b></a></li>
+                                                <li><a href="#127" data-title="2.2 &lt;b&gt;基于&lt;/b&gt;SMRI&lt;b&gt;的多关键词检索&lt;/b&gt;">2.2 <b>基于</b>SMRI<b>的多关键词检索</b></a></li>
+                                                <li><a href="#136" data-title="2.3 top-&lt;i&gt;k&lt;/i&gt;&lt;b&gt;检索结果排序&lt;/b&gt;">2.3 top-<i>k</i><b>检索结果排序</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#150" data-title="3 安全性分析 ">3 安全性分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#151" data-title="1)文档隐私保障。">1)文档隐私保障。</a></li>
+                                                <li><a href="#153" data-title="2)关键词隐私保障。">2)关键词隐私保障。</a></li>
+                                                <li><a href="#155" data-title="3)相关分隐私保障。">3)相关分隐私保障。</a></li>
+                                                <li><a href="#159" data-title="4)索引隐私保障。">4)索引隐私保障。</a></li>
+                                                <li><a href="#164" data-title="5)查询无关联性。">5)查询无关联性。</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#166" data-title="4 实验结果与分析 ">4 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#168" data-title="4.1 &lt;b&gt;索引构建效率&lt;/b&gt;">4.1 <b>索引构建效率</b></a></li>
+                                                <li><a href="#174" data-title="4.2 &lt;b&gt;索引检索效率&lt;/b&gt;">4.2 <b>索引检索效率</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#180" data-title="5 结语 ">5 结语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#89" data-title="图1 指纹分段示意图">图1 指纹分段示意图</a></li>
+                                                <li><a href="#135" data-title="图2 基于SMRI的检索">图2 基于SMRI的检索</a></li>
+                                                <li><a href="#149" data-title="图3 候选结果集排序">图3 候选结果集排序</a></li>
+                                                <li><a href="#170" data-title="图4 索引构建时间比较">图4 索引构建时间比较</a></li>
+                                                <li><a href="#173" data-title="&lt;b&gt;表&lt;/b&gt;1 &lt;b&gt;构建索引的空间代价&lt;/b&gt;"><b>表</b>1 <b>构建索引的空间代价</b></a></li>
+                                                <li><a href="#179" data-title="图5 检索时间比较">图5 检索时间比较</a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="204">
+
+
+                                    <a id="bibliography_1" title=" 冯登国,张敏,张妍,等.云计算安全研究[J].软件学报,2011,22(1):71-83.(FENG D G,ZHANG M,ZHANG Y,et al.Study on cloud computing security [J].Journal of Software,2011,22(1):71-83.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201101007&amp;v=MTc0ODM0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5am5VN3ZNTnlmVGJMRzRIOURNcm85Rlk0UUtESDg=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[1]</b>
+                                         冯登国,张敏,张妍,等.云计算安全研究[J].软件学报,2011,22(1):71-83.(FENG D G,ZHANG M,ZHANG Y,et al.Study on cloud computing security [J].Journal of Software,2011,22(1):71-83.)
+                                    </a>
+                                </li>
+                                <li id="206">
+
+
+                                    <a id="bibliography_2" title=" SONG D X,WAGNER D,PERRIG A.Practical techniques for searches on encrypted data [C]// Proceedings of the 2000 IEEE Symposium on Security and Privacy.Piscataway,NJ:IEEE,2000:44-55." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Practical Techniques for Searches onEncrypted Data">
+                                        <b>[2]</b>
+                                         SONG D X,WAGNER D,PERRIG A.Practical techniques for searches on encrypted data [C]// Proceedings of the 2000 IEEE Symposium on Security and Privacy.Piscataway,NJ:IEEE,2000:44-55.
+                                    </a>
+                                </li>
+                                <li id="208">
+
+
+                                    <a id="bibliography_3" title=" GOH E.Secure indexes [EB/OL].[2018- 12- 16].https://eprint.iacr.org/2003/216.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Secure indexes">
+                                        <b>[3]</b>
+                                         GOH E.Secure indexes [EB/OL].[2018- 12- 16].https://eprint.iacr.org/2003/216.pdf.
+                                    </a>
+                                </li>
+                                <li id="210">
+
+
+                                    <a id="bibliography_4" title=" KUZU M,ISLAM M S,KANTARCIOGLU M.Efficient similarity search over encrypted data [C]// Proceedings of the IEEE 28th International Conference on Data Engineering.Piscataway,NJ:IEEE,2012:1156-1167." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient similarity search over encrypted data">
+                                        <b>[4]</b>
+                                         KUZU M,ISLAM M S,KANTARCIOGLU M.Efficient similarity search over encrypted data [C]// Proceedings of the IEEE 28th International Conference on Data Engineering.Piscataway,NJ:IEEE,2012:1156-1167.
+                                    </a>
+                                </li>
+                                <li id="212">
+
+
+                                    <a id="bibliography_5" title=" KRISHNA C R,MITTAL S A.Privacy preserving synonym based fuzzy multi-keyword ranked search over encrypted cloud data [C]// Proceedings of the 2016 International Conference on Computing,Communication and Automation.Piscataway,NJ:IEEE,2016:1187-1194." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Privacy Preserving synonym based fuzzy multi-keyword ranked search over encrypted cloud data">
+                                        <b>[5]</b>
+                                         KRISHNA C R,MITTAL S A.Privacy preserving synonym based fuzzy multi-keyword ranked search over encrypted cloud data [C]// Proceedings of the 2016 International Conference on Computing,Communication and Automation.Piscataway,NJ:IEEE,2016:1187-1194.
+                                    </a>
+                                </li>
+                                <li id="214">
+
+
+                                    <a id="bibliography_6" title=" WANG J,YU X,ZHAO M.Privacy-preserving ranked multi-keyword fuzzy search on cloud encrypted data supporting range query [J].Arabian Journal for Science and Engineering,2015,40(8):2375-2388." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Privacy-Preserving Ranked Multi-keyword Fuzzy Search on Cloud Encrypted Data Supporting Range Query">
+                                        <b>[6]</b>
+                                         WANG J,YU X,ZHAO M.Privacy-preserving ranked multi-keyword fuzzy search on cloud encrypted data supporting range query [J].Arabian Journal for Science and Engineering,2015,40(8):2375-2388.
+                                    </a>
+                                </li>
+                                <li id="216">
+
+
+                                    <a id="bibliography_7" title=" YAO H,XING N,ZHOU J,et al.Secure index for resource-constraint mobile devices in cloud computing [J].IEEE Access,2016,4:9119-9128." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Secure index for resource-constraint mobile devices in cloud computing">
+                                        <b>[7]</b>
+                                         YAO H,XING N,ZHOU J,et al.Secure index for resource-constraint mobile devices in cloud computing [J].IEEE Access,2016,4:9119-9128.
+                                    </a>
+                                </li>
+                                <li id="218">
+
+
+                                    <a id="bibliography_8" title=" LI X,CUI Y,ZHOU M,et al.Efficient multi-keyword fuzzy search on encrypted data in cloud storage [C]// Proceedings of the 2017 4th International Conference on Information Science and Control Engineering.Washington,DC:IEEE Computer Society,2017,1:288-294." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient multi-keyword fuzzy search on encrypted data in cloud storage">
+                                        <b>[8]</b>
+                                         LI X,CUI Y,ZHOU M,et al.Efficient multi-keyword fuzzy search on encrypted data in cloud storage [C]// Proceedings of the 2017 4th International Conference on Information Science and Control Engineering.Washington,DC:IEEE Computer Society,2017,1:288-294.
+                                    </a>
+                                </li>
+                                <li id="220">
+
+
+                                    <a id="bibliography_9" title=" CAO N,WANG C,LI M,et al.Privacy-preserving multi-keyword ranked search over encrypted cloud data [J].IEEE Transactions on Parallel and Distributed Systems,2014,25(1):222-233." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Privacy-preserving multi-keyword rankedsearch over encrypted cloud data">
+                                        <b>[9]</b>
+                                         CAO N,WANG C,LI M,et al.Privacy-preserving multi-keyword ranked search over encrypted cloud data [J].IEEE Transactions on Parallel and Distributed Systems,2014,25(1):222-233.
+                                    </a>
+                                </li>
+                                <li id="222">
+
+
+                                    <a id="bibliography_10" title=" LI H,YANG Y,LUAN T H,et al.Enabling fine-grained multi-keyword search supporting classified sub-dictionaries over encrypted cloud data [J].IEEE Transactions on Dependable and Secure Computing,2016,13(3):312-325." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SPQD&amp;filename=SPQDA93F2AEFAEE0D87C808776B4BB8FEC8E&amp;v=MTI4ODd4SGFmTzN2b3pGWjU2REFneHlHVWI2amQ2VDNtUXFHQkhjY1RoTnJMcUNPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkJyTFUwNXRwaHhMcS94S3c9TmozYWFzSw==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         LI H,YANG Y,LUAN T H,et al.Enabling fine-grained multi-keyword search supporting classified sub-dictionaries over encrypted cloud data [J].IEEE Transactions on Dependable and Secure Computing,2016,13(3):312-325.
+                                    </a>
+                                </li>
+                                <li id="224">
+
+
+                                    <a id="bibliography_11" title=" WONG W K,CHEUNG D W,KAO B,et al.Secure kNN computation on encrypted databases[C]// Proceedings of the 2009 ACM SIGMOD International Conference on Management of Data.New York:ACM,2009:139-152." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Secure kNN computation on encrypted databases">
+                                        <b>[11]</b>
+                                         WONG W K,CHEUNG D W,KAO B,et al.Secure kNN computation on encrypted databases[C]// Proceedings of the 2009 ACM SIGMOD International Conference on Management of Data.New York:ACM,2009:139-152.
+                                    </a>
+                                </li>
+                                <li id="226">
+
+
+                                    <a id="bibliography_12" title=" XIA Z,WANG X,SUN X,et al.A secure and dynamic multi-keyword ranked search scheme over encrypted cloud data [J].IEEE Transactions on Parallel and Distributed Systems,2016,27(2):340-352." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=&amp;quot;A secure and dynamic multi-keyword ranked search s c h e m e o v e r e n c r y p te d c l o u d d a t a&amp;quot;">
+                                        <b>[12]</b>
+                                         XIA Z,WANG X,SUN X,et al.A secure and dynamic multi-keyword ranked search scheme over encrypted cloud data [J].IEEE Transactions on Parallel and Distributed Systems,2016,27(2):340-352.
+                                    </a>
+                                </li>
+                                <li id="228">
+
+
+                                    <a id="bibliography_13" title=" ZHU X,DAI H,YI X,et al.MUSE:an efficient and accurate verifiable privacy-preserving multi-keyword text search over encrypted cloud data [J].Security and Communication Networks,2017,2017(2):No.1923476." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=MUSE:An Efficient and Accurate Verifiable Privacy-Preserving Multikeyword Text Search over Encrypted Cloud Data">
+                                        <b>[13]</b>
+                                         ZHU X,DAI H,YI X,et al.MUSE:an efficient and accurate verifiable privacy-preserving multi-keyword text search over encrypted cloud data [J].Security and Communication Networks,2017,2017(2):No.1923476.
+                                    </a>
+                                </li>
+                                <li id="230">
+
+
+                                    <a id="bibliography_14" title=" CHEN L,SUN X,XIA Z,et al.An efficient and privacy-preserving semantic multi-keyword ranked search over encrypted cloud data [J].International Journal of Security and its Applications,2014,8(2):323-332." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=An efficient and privacy-preserving semantic multi-keyword ranked search over encrypted cloud Data">
+                                        <b>[14]</b>
+                                         CHEN L,SUN X,XIA Z,et al.An efficient and privacy-preserving semantic multi-keyword ranked search over encrypted cloud data [J].International Journal of Security and its Applications,2014,8(2):323-332.
+                                    </a>
+                                </li>
+                                <li id="232">
+
+
+                                    <a id="bibliography_15" title=" 杨宏宇,王玥.云存储环境下的多关键字密文搜索方法[J].计算机应用,2018,38(2):343-347.(YANG H Y,WANG Y.Multi-keyword ciphertext search method in cloud storage environment [J].Journal of Computer Applications,2018,38(2):343-347.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201802009&amp;v=MTE3MjY0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnVac0Z5am5VN3ZNTHo3QmQ3RzRIOW5Nclk5RmJZUUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[15]</b>
+                                         杨宏宇,王玥.云存储环境下的多关键字密文搜索方法[J].计算机应用,2018,38(2):343-347.(YANG H Y,WANG Y.Multi-keyword ciphertext search method in cloud storage environment [J].Journal of Computer Applications,2018,38(2):343-347.)
+                                    </a>
+                                </li>
+                                <li id="234">
+
+
+                                    <a id="bibliography_16" title=" CHARIKAR M S.Similarity estimation techniques from rounding algorithms[C]// Proceedings of the 34th Annual ACM Symposium on Theory of Computing.New York:ACM,2002:380-388." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Similarity Estimation Techniques from Rounding Algorithms">
+                                        <b>[16]</b>
+                                         CHARIKAR M S.Similarity estimation techniques from rounding algorithms[C]// Proceedings of the 34th Annual ACM Symposium on Theory of Computing.New York:ACM,2002:380-388.
+                                    </a>
+                                </li>
+                                <li id="236">
+
+
+                                    <a id="bibliography_17" title=" MANKU G S,JAIN A,das SARMA A.Detecting near-duplicates for Web crawling [C]// Proceedings of the 16th International Conference on World Wide Web.New York:ACM,2007:141-150." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Detecting Near-duplicates for Web Crawling">
+                                        <b>[17]</b>
+                                         MANKU G S,JAIN A,das SARMA A.Detecting near-duplicates for Web crawling [C]// Proceedings of the 16th International Conference on World Wide Web.New York:ACM,2007:141-150.
+                                    </a>
+                                </li>
+                                <li id="238">
+
+
+                                    <a id="bibliography_18" title=" 杨旸,杨书略,柯闽.加密云数据下基于Simhash的模糊排序搜索方案[J].计算机学报,2017,40(2):431-444.(YANG Y,YANG S L,KE M.Ranked fuzzy keyword search based on Simhash over encrypted cloud data [J].Chinese Journal of Computers,2017,40(2):431-444.)" target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201702010&amp;v=MDE3OTc3dk1MejdCZHJHNEg5Yk1yWTlFWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlqblU=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[18]</b>
+                                         杨旸,杨书略,柯闽.加密云数据下基于Simhash的模糊排序搜索方案[J].计算机学报,2017,40(2):431-444.(YANG Y,YANG S L,KE M.Ranked fuzzy keyword search based on Simhash over encrypted cloud data [J].Chinese Journal of Computers,2017,40(2):431-444.)
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+    <div class="head-tag">   
+            <p>
+               <b> 网络首发时间: 2019-04-25 14:25</b>
+            </p>     
+    </div>
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJY" target="_blank">计算机应用</a>
+                2019,39(09),2623-2628 DOI:10.11772/j.issn.1001-9081.2019020269            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于Simhash的安全密文排序检索方案</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%9D%8E%E7%8F%8D&amp;code=35471551&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">李珍</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%A7%9A%E5%AF%92%E5%86%B0&amp;code=11096652&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">姚寒冰</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E7%A9%86%E9%80%B8%E8%AF%9A&amp;code=42779647&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">穆逸诚</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%AD%A6%E6%B1%89%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E9%99%A2&amp;code=0065699&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">武汉理工大学计算机科学与技术学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E4%BA%A4%E9%80%9A%E7%89%A9%E8%81%94%E7%BD%91%E6%8A%80%E6%9C%AF%E6%B9%96%E5%8C%97%E7%9C%81%E9%87%8D%E7%82%B9%E5%AE%9E%E9%AA%8C%E5%AE%A4(%E6%AD%A6%E6%B1%89%E7%90%86%E5%B7%A5%E5%A4%A7%E5%AD%A6)&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">交通物联网技术湖北省重点实验室(武汉理工大学)</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对密文检索中存在的计算量大、检索效率不高的问题,提出一种基于Simhash的安全密文排序检索方案。该方案基于Simhash的降维思想构建安全多关键词密文排序检索索引(SMRI),将文档处理成指纹和向量,利用分段指纹和加密向量构建B+树,并采用“过滤-精化”策略进行检索和排序,首先通过分段指纹的匹配进行快速检索,得到候选结果集;然后通过计算候选结果集与查询陷门的汉明距离和向量内积进行排序,带密钥的Simhash算法和安全<i>k</i>近邻(S<i>k</i>NN)算法保证了检索过程的安全性。实验结果表明,与基于向量空间模型(VSM)的方案相比,基于SMRI的排序检索方案计算量小,能节约时间和空间成本,检索效率高,适用于海量加密数据的快速安全检索。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%AF%86%E6%96%87%E6%A3%80%E7%B4%A2&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">密文检索;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%8E%92%E5%BA%8F%E6%A3%80%E7%B4%A2&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">排序检索;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Simhash&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Simhash;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">隐私保护;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%AE%89%E5%85%A8%3Ci%3Ek%3C%2Fi%3E%E8%BF%91%E9%82%BB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">安全<i>k</i>近邻;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    *李珍(1994—),女,河南商丘人,硕士研究生,主要研究方向:信息安全;电子邮箱2324736304@qq.com;
+                                </span>
+                                <span>
+                                    姚寒冰(1976—),男,湖北武汉人,副教授,博士,主要研究方向:信息安全;;
+                                </span>
+                                <span>
+                                    穆逸诚(1998—),男,湖北武汉人,主要研究方向:信息安全;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2019-02-18</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>内河航运技术湖北省重点实验室基金资助项目(NHHY2017003);</span>
+                                <span>交通物联网技术湖北省重点实验室基金资助项目(2017Ⅲ028-002);</span>
+                    </p>
+            </div>
+                    <h1><b>Secure ranked search scheme based on Simhash over encrypted data</b></h1>
+                    <h2>
+                    <span>LI Zhen</span>
+                    <span>YAO Hanbing</span>
+                    <span>MU Yicheng</span>
+            </h2>
+                    <h2>
+                    <span>College of Computer Science and Technology, Wuhan University of Technology</span>
+                    <span>Hubei Key Laboratory of Transportation Internet of Things (Wuhan University of Technology)</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Concerning the large computation and low search efficiency in ciphertext retrieval, a secure ranked search scheme based on Simhash was proposed. In this scheme, a Secure Multi-keyword Ranked search Index(SMRI) was constructed based on the dimensionality reduction idea of Simhash, the documents were processed into fingerprints and vectors, the B+ tree was built with the segmented fingerprints and encrypted vectors and the “filter-refine” strategy was adopted to searching and sorting. Firstly, the candidate result set was obtained by matching the segmented fingerprints to perform the quick retrieval, then the top-<i>k</i> results were ranked by calculating the Hamming distance and the vector inner product between candidate result set and query trapdoor, and the Simhash algorithm with secret key and the Secure <i>k</i>-Nearest Neighbors(S<i>k</i>NN) algorithm ensured the security of the retrieval process. Simulation results show that compared with the method based on Vector Space Model(VSM), the SMRI-based ranked search scheme has lower computational complexity, saves time and space cost, and has higher search efficiency. It is suitable for fast and secure retrieval of massive ciphertext data.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=ciphertext%20retrieval&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">ciphertext retrieval;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=ranked%20search&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">ranked search;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Simhash&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Simhash;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=privacy-preserving&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">privacy-preserving;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Secure%20%3Ci%3Ek%3C%2Fi%3E-Nearest%20Neighbors(S%3Ci%3Ek%3C%2Fi%3ENN)&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Secure <i>k</i>-Nearest Neighbors(S<i>k</i>NN);</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                            <b>Author：</b>
+                                                        <span>
+                                    LI Zhen, born in 1994, M. S. candidate. Her research interests include information security. ;
+                                </span>
+                                <span>
+                                    YAO Hanbing, born in 1976, Ph. D. , associate professor. His research interests include information security. ;
+                                </span>
+                                <span>
+                                    MU Yicheng, born in 1998. His research interests include information security.;
+                                </span>
+                    </p>
+                                    <p><b>Received：</b> 2019-02-18</p>
+                                    <p>
+                            <b>Fund：</b>
+                                                        <span>partially supported by the Fund of Hubei Key Laboratory of Inland Shipping Technology(NHHY2017003);</span>
+                                <span>the Fund of Hubei Key Laboratory of Transportation Internet of Things(2017Ⅲ028-002);</span>
+                    </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="51" name="51" class="anchor-tag">0 引言</h3>
+                <div class="p1">
+                    <p id="52">随着云存储的发展,越来越多的企业和个人将数据存储到云服务器。云服务器不是完全可信的,为保护敏感数据,用户常将数据加密后存储至云服务器,加密后的数据失去了明文特征,用户无法高效地进行检索。对海量加密数据进行高效检索并保障数据的隐私成为一个亟待解决的问题<citation id="240" type="reference"><link href="204" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="53">Song等<citation id="241" type="reference"><link href="206" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>提出了对称可搜索加密方案,为解决密文检索的问题提供了思路,引起了学术界的普遍关注。Goh等<citation id="242" type="reference"><link href="208" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>将关键词信息映射在布隆过滤器中,通过布隆过滤器判断关键词的有无,实现密文快速检索。Kuzu<citation id="243" type="reference"><link href="210" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>、Krishna等<citation id="244" type="reference"><link href="212" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>基于倒排索引,提出了根据关键词相关分进行排序的密文检索方案,这些方案只适用于单关键词搜索。Wang等<citation id="245" type="reference"><link href="214" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>将改进的计数布隆过滤器直接作为向量计算内积进行排序,但是该方案没有构建搜索索引,不适用于海量密文检索。Yao等<citation id="246" type="reference"><link href="216" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>、Li等<citation id="247" type="reference"><link href="218" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>基于布隆过滤器,改进了传统的倒排索引结构,结合“TF×IDF(Term Frequency-Inverse Document Frequency)”规则进行相关分排序,这些方案都需要授权用户在客户端对结果倒排表进行解密和排序,再向服务器发送请求才能得到top-<i>k</i>密文文档,增加了网络通信量和计算量。</p>
+                </div>
+                <div class="p1">
+                    <p id="54">Cao等<citation id="248" type="reference"><link href="220" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>提出了MRSE多关键词密文排序检索方案,基于向量空间模型(Vector Space Model, VSM)将每篇文档处理成空间向量,通过计算向量夹角余弦值可以直接在云端完成排序操作,但是该方案没有保证关键词的隐私安全。后来许多研究学者,如Li等<citation id="249" type="reference"><link href="222" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>采用安全<i>k</i>近邻(Secure <i>k</i>-Nearest Neighbors, S<i>k</i>NN)<citation id="250" type="reference"><link href="224" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>算法加密向量,将向量与“TF×IDF”规则结合,既保证了安全性,又提高了排序精度。Xia等<citation id="251" type="reference"><link href="226" rel="bibliography" /><sup>[<a class="sup">12</a>]</sup></citation>、Zhu等<citation id="252" type="reference"><link href="228" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>根据加密向量构建了平衡二叉树,Chen等<citation id="253" type="reference"><link href="230" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>、杨宏宇等<citation id="254" type="reference"><link href="232" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>基于MRSE框架,采用动态<i>K</i>-means聚类算法构建了层次索引树。这些方案都是基于VSM,通过计算高维特征向量的内积进行检索和排序,时间复杂度高,计算量大。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">Simhash算法由Charikar<citation id="255" type="reference"><link href="234" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>提出,Manku等<citation id="256" type="reference"><link href="236" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>将该技术运用于海量网页的去重。杨旸等<citation id="257" type="reference"><link href="238" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>基于Simhash的思想,利用<i>n</i>-gram分词技术将单个词处理成哈希指纹,构建指纹索引树,该方案只适用于单关键词,无法进行多关键词的相关分排序。</p>
+                </div>
+                <div class="p1">
+                    <p id="56">针对密文多关键词检索存在的计算量大、检索效率不高的问题,本文提出了一种基于Simhash的安全密文排序检索方案。采用AES算法加密文档,通过带密钥的Simhash函数<i>Sim</i>(<i>hk</i>,·) 将文档处理成Simhash指纹。基于S<i>k</i>NN算法生成加密向量,将分段指纹与加密向量构成的二元组作为叶子节点构建多关键词密文排序检索索引(Simhash-based Secure Multi-keyword Ranked search Index, SMRI)。根据用户的检索关键词生成查询陷门,通过分段指纹的匹配进行快速检索,得到候选结果集,通过计算查询指纹与候选集中指纹的汉明距离,以及查询向量与候选集中向量的内积完成结果排序,相对于已有方案减少了检索排序计算量。</p>
+                </div>
+                <h3 id="57" name="57" class="anchor-tag">1 相关定义</h3>
+                <div class="p1">
+                    <p id="58">本方案主要涉及3个主体:</p>
+                </div>
+                <div class="p1">
+                    <p id="59">1)数据拥有者(Data Owner, DO),主要负责文档指纹和文档特征向量的生成、SMRI索引的构建,以及文档的加密。</p>
+                </div>
+                <div class="p1">
+                    <p id="60">2)云服务器(Cloud Server, CS),负责密文多关键词的检索和排序工作,并将排序后的top-<i>k</i>加密文档发送给授权用户。</p>
+                </div>
+                <div class="p1">
+                    <p id="61">3)授权用户(Data User, DU),提交查询请求,并根据云端返回的top-<i>k</i>密文结果进行解密,最终得到符合需求的明文文件。</p>
+                </div>
+                <div class="p1">
+                    <p id="62">为了方便描述,本方案定义如下符号:</p>
+                </div>
+                <div class="p1">
+                    <p id="63">1)<b><i>F</i></b>:明文文档集,规模为<i>n</i>,表示为<b><i>F</i></b>={<i>f</i><sub>1</sub>, <i>f</i><sub>2</sub>,…, <i>f</i><sub><i>n</i></sub>};</p>
+                </div>
+                <div class="p1">
+                    <p id="64">2)<b><i>EF</i></b>:密文文档集,表示为<b><i>EF</i></b>={<i>d</i><sub>1</sub>,<i>d</i><sub>2</sub>,…,<i>d</i><sub><i>n</i></sub>},<i>d</i><sub><i>i</i></sub>对应于<i>f</i><sub><i>i</i></sub>;</p>
+                </div>
+                <div class="p1">
+                    <p id="65">3)<b><i>S</i></b>:文档指纹集,表示为<b><i>S</i></b>={<i>S</i><sub>1</sub>,<i>S</i><sub>2</sub>,…,<i>S</i><sub><i>n</i></sub>},<i>S</i><sub><i>i</i></sub>对应于<i>f</i><sub><i>i</i></sub>;</p>
+                </div>
+                <div class="p1">
+                    <p id="66">4)<b><i>W</i></b>:关键词词典,规模为<i>m</i>,表示为<b><i>W</i></b>={<i>w</i><sub>1</sub>,<i>w</i><sub>2</sub>,…,<i>w</i><sub><i>m</i></sub>};</p>
+                </div>
+                <div class="p1">
+                    <p id="67">5)<b><i>V</i></b>:明文文档向量集,表示为<b><i>V</i></b>={<b><i>dv</i></b><sub>1</sub>,<b><i>dv</i></b><sub>2</sub>,…,<b><i>dv</i></b><sub><i>n</i></sub>},<b><i>dv</i></b><sub><i>i</i></sub>对应于<i>f</i><sub><i>i</i></sub>;</p>
+                </div>
+                <div class="p1">
+                    <p id="68">6)<b><i>FV</i></b>:扩展文档向量集,表示为<b><i>FV</i></b>={<b><i>DV</i></b><sub>1</sub>,<b><i>DV</i></b><sub>2</sub>,…,<b><i>DV</i></b><sub><i>n</i></sub>},<b><i>DV</i></b><sub><i>i</i></sub>对应于<b><i>dv</i></b><sub><i>i</i></sub>;</p>
+                </div>
+                <div class="p1">
+                    <p id="69">7)<b><i>EV</i></b>:加密文档向量集,表示为<b><i>EV</i></b>={<b><i>ev</i></b><sub>1</sub>,<b><i>ev</i></b><sub>2</sub>,…,<b><i>ev</i></b><sub><i>n</i></sub>},<b><i>ev</i></b><sub><i>i</i></sub>对应于<b><i>DV</i></b><sub><i>i</i></sub>;</p>
+                </div>
+                <div class="p1">
+                    <p id="70">8)<b><i>Doc</i></b>:文档指纹与文档向量构成的二元组集,表示为<b><i>Doc</i></b>={<i>doc</i><sub><i>i</i></sub>=(<i>S</i><sub><i>i</i></sub>,<b><i>ev</i></b><sub><i>i</i></sub>)|<i>i</i>=1,2,…,<i>n</i>},<i>doc</i><sub><i>i</i></sub>对应于<i>f</i><sub><i>i</i></sub>;</p>
+                </div>
+                <div class="p1">
+                    <p id="71">9)<b><i>Tq</i></b>:查询陷门,表示为<b><i>Tq</i></b>={<i>S</i><sub><i>q</i></sub>,<b><i>e</i></b><sub><i>q</i></sub>},其中<i>S</i><sub><i>q</i></sub>表示查询指纹,<b><i>e</i></b><sub><i>q</i></sub>表示加密的查询向量。</p>
+                </div>
+                <h3 id="72" name="72" class="anchor-tag">2 基于Simhash的密文排序检索方案</h3>
+                <div class="p1">
+                    <p id="73">本方案采用“过滤-精化”思想,先通过分段指纹匹配进行初步排序得到候选结果集,缩小目标结果集范围,减少排序计算量,再通过计算汉明距离和向量内积进行精确化排序,得到与查询关键词相关分最高的<i>top</i>-k结果集。</p>
+                </div>
+                <h4 class="anchor-tag" id="74" name="74">2.1 <i>SMRI</i><b>索引的构建</b></h4>
+                <h4 class="anchor-tag" id="75" name="75">1)文档预处理。</h4>
+                <div class="p1">
+                    <p id="76">数据拥有者利用AES算法将明文文档集合<b><i>F</i></b>加密得到密文文档集合<b><i>EF</i></b>,抽取文档集关键词得到关键词词典<b><i>W</i></b>,词典规模为<i>m</i>。然后将每篇文档处理成64位的Simhash指纹<i>S</i><sub><i>i</i></sub>,利用VSM将每篇文档处理成<i>m</i>维文档向量,文档向量的每个维度是对应关键词的权重值<i>TF</i>,若文档中不存在该对应位的关键词,则<i>TF</i>的值为0,<i>TF</i>采用式(1)计算:</p>
+                </div>
+                <div class="p1">
+                    <p id="77" class="code-formula">
+                        <mathml id="77"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">Τ</mi><mi mathvariant="bold-italic">F</mi><msub><mrow></mrow><mrow><mi mathvariant="bold-italic">w</mi><msub><mrow></mrow><mi mathvariant="bold-italic">i</mi></msub></mrow></msub><mo>=</mo><mfrac><mrow><mi mathvariant="bold-italic">Τ</mi><mi mathvariant="bold-italic">F</mi><msub><mrow></mrow><mrow><mi mathvariant="bold-italic">f</mi><mo>,</mo><mi mathvariant="bold-italic">w</mi><msub><mrow></mrow><mi mathvariant="bold-italic">i</mi></msub></mrow></msub><mo>´</mo></mrow><mrow><msqrt><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi mathvariant="bold-italic">w</mi><msub><mrow></mrow><mi mathvariant="bold-italic">i</mi></msub><mo>∈</mo><mi mathvariant="bold-italic">w</mi></mrow></munder><mo stretchy="false">(</mo></mstyle><mi mathvariant="bold-italic">Τ</mi><mi mathvariant="bold-italic">F</mi><msub><mrow></mrow><mrow><mi mathvariant="bold-italic">f</mi><mo>,</mo><mi mathvariant="bold-italic">w</mi><msub><mrow></mrow><mi mathvariant="bold-italic">i</mi></msub></mrow></msub><mo>´</mo></mrow></msqrt><mo stretchy="false">)</mo><msup><mrow></mrow><mn>2</mn></msup></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="78">其中:<i>TF</i><sub><i>wi</i></sub>是文件<i>f</i>中的关键字<i>w</i><sub><i>i</i></sub>的词频值,<i>TF</i><sub><i>f</i>,<i>wi</i></sub>′=1+ln <i>N</i><sub><i>f</i>,<i>wi</i></sub>,<i>N</i><sub><i>f</i>,<i>wi</i></sub>是文件<i>f</i>中关键词<i>w</i><sub><i>i</i></sub>的数量。</p>
+                </div>
+                <h4 class="anchor-tag" id="79" name="79">2)向量加密。</h4>
+                <div class="p1">
+                    <p id="80">基于文献<citation id="258" type="reference">[<a class="sup">11</a>]</citation>中S<i>k</i>NN加密算法的思想,数据拥有者随机生成一个(<i>m</i>+<i>u</i>)维{0,1}指示向量<i><b>P</b></i>和两个(<i>m</i>+<i>u</i>)×(<i>m</i>+<i>u</i>)维可逆矩阵<i><b>M</b></i><sub>1</sub>、<i><b>M</b></i><sub>2</sub>,记为<i>sk</i>={<i><b>P</b></i>, <i><b>M</b></i><sub>1</sub>, <i><b>M</b></i><sub>2</sub>},<i>sk</i>是加密密钥,并发送给授权的数据使用者。对于每个文档向量<i><b>dv</b></i><sub><i>i</i></sub>,首先扩展文档向量得到<i><b>DV</b></i><sub><i>i</i></sub>={<i><b>dv</b></i><sub><i>i</i></sub>,<i>r</i><sub>1</sub>,<i>r</i><sub>2</sub>,…,<i>r</i><sub><i>u</i></sub>},其中<i>r</i><sub>1</sub>～<i>r</i><sub><i>u</i></sub>是随机数。然后利用<i><b>P</b></i>分割扩展向量:当<i><b>P</b></i>[<i>j</i>]=0时,<i><b>DV</b></i>′[<i>j</i>]=<i><b>DV</b></i>″[<i>j</i>]=<i><b>DV</b></i>[<i>j</i>];当<i><b>P</b></i>[<i>j</i>]=1时,将<i><b>DV</b></i>′[<i>j</i>]设置为一个随机数,<i><b>DV</b></i>″[<i>j</i>]=<i><b>DV</b></i>[<i>j</i>]-<i><b>DV</b></i>′[<i>j</i>]。最后通过矩阵变换加密文档向量得到<i><b>ev</b></i><sub><i>i</i></sub>={<i><b>M</b></i><sub><i>l</i></sub><sup>T</sup>×<i><b>DV</b></i>′, <i><b>M</b></i><sub>2</sub><sup>T</sup>×<i><b>DV</b></i>″}。</p>
+                </div>
+                <h4 class="anchor-tag" id="81" name="81">3)构建B+树。</h4>
+                <div class="p1">
+                    <p id="82">本文利用分段指纹和加密向量构建搜索索引树,B+树的叶子节点结构如式(2)所示:</p>
+                </div>
+                <div class="p1">
+                    <p id="83"><i>leafNode</i>=〈<i>segKey</i>,<i>docList</i>〉      (2)</p>
+                </div>
+                <div class="p1">
+                    <p id="84">其中:<i>segkey</i>指分段指纹,<i>docList</i>指具有相同分段指纹的<i>doc</i>集合。例如,指纹<i>S</i><sub>3</sub>和<i>S</i><sub>4</sub>的第一个分段都是001011,则插入B+树后即为叶子节点〈001011, {(<i>S</i><sub>1</sub>, <b><i>ev</i></b><sub>1</sub>), (<i>S</i><sub>2</sub>, <b><i>ev</i></b><sub>2</sub>)}〉。</p>
+                </div>
+                <div class="p1">
+                    <p id="85">B+树的非叶节点结构如式(3)所示:</p>
+                </div>
+                <div class="p1">
+                    <p id="86"><i>Node</i>=〈<i>segKeyList</i>,<i>child</i>[<i>t</i>]〉      (3)</p>
+                </div>
+                <div class="p1">
+                    <p id="87">其中:<i>segkeyList</i>指分段指纹集合,分段指纹是二进制序列,可以进行大小排序;<i>child</i>[<i>t</i>]是指向孩子节点的指针,<i>t</i>是B+树的阶数。</p>
+                </div>
+                <div class="p1">
+                    <p id="88">对于64位的哈希指纹,当指纹之间的汉明距离不大于3时,文档被定义为相似的<citation id="259" type="reference"><link href="236" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>。为了快速找到汉明距离不大于3的指纹,将Simhash指纹分成4段,根据抽屉原理,则必有1段是相等的。为了方便讲解索引树的构建和检索排序过程,将指纹简化为16位。假设有4篇文档,如图1所示,将每个指纹分为4段,前面两位表示分段位置。具体的索引构简算法如算法1所示。</p>
+                </div>
+                <div class="area_img" id="89">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201909024_089.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 指纹分段示意图" src="Detail/GetImg?filename=images/JSJY201909024_089.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 指纹分段示意图  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201909024_089.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 1 Schematic diagram of fingerprint segmentation</p>
+
+                </div>
+                <div class="area_img" id="262">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJY201909024_26200.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="262">
+                                <img alt="" src="Detail/GetImg?filename=images/JSJY201909024_26201.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="127" name="127">2.2 <b>基于</b>SMRI<b>的多关键词检索</b></h4>
+                <h4 class="anchor-tag" id="128" name="128">1)生成查询陷门<b><i>Tq</i></b>。</h4>
+                <div class="p1">
+                    <p id="129">授权用户提交查询关键词<i>Wq</i>,将<i>Wq</i>处理成64位查询指纹<i>Sq</i>并将指纹分成四段,然后利用VSM生成查询向量<b><i>q</i></b>,查询向量的每个维度是对应的关键词的IDF值,IDF的值采用式(2)计算:</p>
+                </div>
+                <div class="p1">
+                    <p id="130" class="code-formula">
+                        <mathml id="130"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">Ι</mi><mi mathvariant="bold-italic">D</mi><mi mathvariant="bold-italic">F</mi><msub><mrow></mrow><mrow><mi mathvariant="bold-italic">w</mi><msub><mrow></mrow><mi mathvariant="bold-italic">i</mi></msub></mrow></msub><mo>=</mo><mfrac><mrow><mi mathvariant="bold-italic">Ι</mi><mi mathvariant="bold-italic">D</mi><mi mathvariant="bold-italic">F</mi><msub><mrow></mrow><mrow><mi mathvariant="bold-italic">w</mi><msub><mrow></mrow><mi mathvariant="bold-italic">i</mi></msub></mrow></msub><mo>´</mo></mrow><mrow><msqrt><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi mathvariant="bold-italic">w</mi><msub><mrow></mrow><mi mathvariant="bold-italic">i</mi></msub><mo>∈</mo><mi mathvariant="bold-italic">w</mi></mrow></munder><mo stretchy="false">(</mo></mstyle><mi mathvariant="bold-italic">Ι</mi><mi mathvariant="bold-italic">D</mi><mi mathvariant="bold-italic">F</mi><msub><mrow></mrow><mrow><mi mathvariant="bold-italic">w</mi><msub><mrow></mrow><mi mathvariant="bold-italic">i</mi></msub></mrow></msub><mo>´</mo></mrow></msqrt><mo stretchy="false">)</mo><msup><mrow></mrow><mn>2</mn></msup></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="131">其中:<i>IDF</i><sub><i>wi</i></sub>′是关键字<i>w</i><sub><i>i</i></sub>的逆文档频率,<i>IDF</i><sub><i>wi</i></sub>′=ln(1+<i>N</i>/<i>N</i><sub><i>wi</i></sub>),<i>N</i><sub><i>wi</i></sub>是包含关键字<i>w</i><sub><i>i</i></sub>的文件数量,<i>N</i>是总文件数。</p>
+                </div>
+                <div class="p1">
+                    <p id="132">授权用户根据数据拥有者发送的加密密钥<i>sk</i>加密查询向量。首先扩展查询向量<b><i>q</i></b>得到<b><i>Q</i></b>={<i>R</i>*<b><i>q</i></b>, <i>R</i><sub>1</sub>, <i>R</i><sub>2</sub>, …, <i>R</i><sub><i>u</i></sub>},从<i>R</i><sub>1</sub>～<i>R</i><sub><i>u</i></sub>中随机选取<i>v</i>位置为1,其余<i>u</i>-<i>v</i>位置为0。然后利用<b><i>P</i></b>分割扩展向量:当<b><i>P</i></b>[<i>j</i>]=0时,将<b><i>Q</i></b>′[<i>j</i>]设置为一个随机数,<b><i>Q</i></b>″[<i>j</i>]=<b><i>Q</i></b>[<i>j</i>]-<b><i>Q</i></b>′[<i>j</i>];当<b><i>P</i></b>[<i>j</i>]=1时,<b><i>Q</i></b>′[<i>j</i>]=<b><i>Q</i></b>″[<i>j</i>]=<b><i>Q</i></b>[<i>j</i>]。最后通过矩阵变换得到加密查询向量<b><i>eq</i></b>={<b><i>M</i></b><sub><i>l</i></sub><sup>-1</sup>×<b><i>Q</i></b>′, <b><i>M</i></b><sub>2</sub><sup>-1</sup>×<b><i>Q</i></b>″}。查询陷门<b><i>Tq</i></b>记为<b><i>Tq</i></b> = (<i>Sq</i>, <b><i>eq</i></b>),授权用户将分段指纹和查询陷门提交给云服务器。</p>
+                </div>
+                <h4 class="anchor-tag" id="133" name="133">2)基于SMRI的分段指纹匹配检索。</h4>
+                <div class="p1">
+                    <p id="134">云服务器根据分段查询指纹在SMRI索引中进行检索,找到所有<i>segKey</i>等于分段指纹的叶子节点,得到候选结果集<b><i>CR</i></b>。如图2所示,假设分段指纹<i>S</i><sub><i>q</i></sub>=1011001101010110,以第一个分段查询指纹<i>S</i><sub><i>q</i>1</sub>=001011为例,由根节点<i>Node</i><sub>0</sub>开始搜索,在<i>Node</i><sub>0</sub>的<i>segKeyList</i>中进行二分查找找到100011,由于001011小于100011,于是向左边查找到<i>Node</i><sub>1</sub>,在<i>Node</i><sub>1</sub>的<i>segKeyList</i>中进行二分查找得到010010,由于001011小于010010,继续向左边查找到<i>Node</i><sub>4</sub>,在<i>Node</i><sub>4</sub>的<i>segKeyList</i>中进行二分查找找到与<i>S</i><sub><i>q</i>1</sub>相等的二进制序列001011,从而得到叶子节点<i>leafNode</i><sub>3</sub>,将<i>leafNode</i><sub>3</sub>中的<i>docList</i>={(<i>S</i><sub>3</sub>,<b><i>ev</i></b><sub>3</sub>),(<i>S</i><sub>4</sub>,<b><i>ev</i></b><sub>4</sub>)}添加至<b><i>CR</i></b>。<i>S</i><sub><i>q</i>2</sub>、<i>S</i><sub><i>q</i>3</sub>、<i>S</i><sub><i>q</i>4</sub>以同样的方式进行查找,分别得到{(<i>S</i><sub>3</sub>,<b><i>ev</i></b><sub>3</sub>)}、{(<i>S</i><sub>3</sub>, <b><i>ev</i></b><sub>3</sub>), (<i>S</i><sub>4</sub>, <b><i>ev</i></b><sub>4</sub>)}、{(<i>S</i><sub>3</sub>,<b><i>ev</i></b><sub>3</sub>), (<i>S</i><sub>3</sub>, <b><i>ev</i></b><sub>3</sub>), (<i>S</i><sub>4</sub>, <b><i>ev</i></b><sub>4</sub>)},最后将所有结果取并集得到<b><i>CR</i></b>={(<i>S</i><sub>2</sub>, <b><i>ev</i></b><sub>2</sub>), (<i>S</i><sub>3</sub>, <b><i>ev</i></b><sub>3</sub>), (<i>S</i><sub>4</sub>,<b><i>ev</i></b><sub>4</sub>)}。</p>
+                </div>
+                <div class="area_img" id="135">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201909024_135.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 基于SMRI的检索" src="Detail/GetImg?filename=images/JSJY201909024_135.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 基于SMRI的检索  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201909024_135.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 2 Search based on SMRI</p>
+
+                </div>
+                <h4 class="anchor-tag" id="136" name="136">2.3 top-<i>k</i><b>检索结果排序</b></h4>
+                <div class="p1">
+                    <p id="137">通过2.2节的分段指纹查找已经过滤了大量不相关文档,完成了初步排序,即汉明距离大于3的文档。汉明距离用式(4)计算:</p>
+                </div>
+                <div class="p1">
+                    <p id="138" class="code-formula">
+                        <mathml id="138"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Η</mi><mi>d</mi><mo stretchy="false">(</mo><mi>S</mi><msub><mrow></mrow><mi>m</mi></msub><mo>,</mo><mi>S</mi><msub><mrow></mrow><mi>n</mi></msub><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mn>6</mn><mn>4</mn></mrow></munderover><mi>S</mi></mstyle><msub><mrow></mrow><mi>m</mi></msub><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mo>⊕</mo><mi>S</mi><msub><mrow></mrow><mi>n</mi></msub><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="139">其中:<i>S</i><sub><i>m</i></sub>、<i>S</i><sub><i>n</i></sub>都是<i>n</i>位的Simhash指纹,⊕表示异或运算。</p>
+                </div>
+                <div class="p1">
+                    <p id="140">相关性分数是用来度量文档与查询关键字的匹配程度。根据“TF×IDF”规则,原始文档向量与查询向量的相关性分数由式(5)计算:</p>
+                </div>
+                <div class="p1">
+                    <p id="141" class="code-formula">
+                        <mathml id="141"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mi>c</mi><mi>o</mi><mi>r</mi><mi>e</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">d</mi><mi mathvariant="bold-italic">v</mi><mo>,</mo><mi mathvariant="bold-italic">q</mi><mo stretchy="false">)</mo><mo>=</mo><mrow><mi mathvariant="bold-italic">d</mi><mi mathvariant="bold-italic">v</mi></mrow><mo>⋅</mo><mi mathvariant="bold-italic">q</mi><mo>=</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub><mo>∈</mo><mi>w</mi><msub><mrow></mrow><mi>q</mi></msub></mrow></munder><mi>Τ</mi></mstyle><mi>F</mi><msub><mrow></mrow><mrow><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></msub><mo>×</mo><mi>Ι</mi><mi>D</mi><mi>F</mi><msub><mrow></mrow><mrow><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="142">扩展向量的相关分计算如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="143" class="code-formula">
+                        <mathml id="143"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi mathvariant="bold-italic">S</mi><mi mathvariant="bold-italic">c</mi><mi mathvariant="bold-italic">o</mi><mi mathvariant="bold-italic">r</mi><mi mathvariant="bold-italic">e</mi><mo stretchy="false">(</mo><mrow><mi mathvariant="bold-italic">D</mi><mi mathvariant="bold-italic">V</mi></mrow><mo>,</mo><mi mathvariant="bold-italic">Q</mi><mo stretchy="false">)</mo><mo>=</mo><mi>S</mi><mi>c</mi><mi>o</mi><mi>r</mi><mi>e</mi><mo stretchy="false">(</mo><mrow><mi mathvariant="bold-italic">d</mi><mi mathvariant="bold-italic">v</mi></mrow><mo>,</mo><mi mathvariant="bold-italic">q</mi><mo stretchy="false">)</mo><mo>+</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>u</mi></munderover><mi>r</mi></mstyle><msub><mrow></mrow><mi>i</mi></msub><mo>×</mo><mi>R</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo></mtd></mtr><mtr><mtd><mi>S</mi><mi>c</mi><mi>o</mi><mi>r</mi><mi>e</mi><mo stretchy="false">(</mo><mi mathvariant="bold-italic">d</mi><mi mathvariant="bold-italic">v</mi><mo>,</mo><mi mathvariant="bold-italic">q</mi><mo stretchy="false">)</mo><mo>+</mo><mi>ε</mi><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>7</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="144">直接将明文向量部署到云服务器上,攻击者可以根据向量每个维度的词频值进行统计攻击,对照词频字典攻击关键词信息,引起隐私泄漏等安全问题。因此在云服务器端计算的是加密向量的相关分,加密文档向量与加密查询向量的相关分计算如式(8):</p>
+                </div>
+                <div class="p1">
+                    <p id="145"><b><i>Score</i></b>(<b><i>ev</i></b>,<b><i>eq</i></b>)=(<b><i>M</i></b><sub>1</sub><sup>T</sup><b><i>DV</i></b>′)·(<b><i>M</i></b><sub>1</sub><sup>-1</sup><b><i>Q</i></b>′)+(<b><i>M</i></b><sub>2</sub><sup>T</sup><b><i>DV</i></b>″)·(<b><i>M</i></b><sub>2</sub><sup>-1</sup><b><i>Q</i></b>″)=(<b><i>M</i></b><sub>1</sub><sup>T</sup><b><i>DV</i></b>′)<sup>T</sup><b><i>M</i></b><sub>1</sub><sup>-1</sup><b><i>Q</i></b>′+(<b><i>M</i></b><sub>2</sub><sup>T</sup><b><i>DV</i></b>″)<sup>T</sup>·<b><i>M</i></b><sub>2</sub><sup>-1</sup><b><i>Q</i></b>″=<b><i>DV</i></b>′<sup>T</sup><i>M</i><sub>1</sub><i>M</i><sub>1</sub><sup>-1</sup><b><i>Q</i></b>′+<b><i>DV</i></b>″<i>M</i><sub>2</sub><i>M</i><sub>2</sub><sup>-1</sup><b><i>Q</i></b>″=</p>
+                </div>
+                <div class="p1">
+                    <p id="146"><b><i>DV</i></b>′·<b><i>Q</i></b>′+<b><i>DV</i></b>″·<b><i>Q</i></b>″=<b><i>DV</i></b>·<b><i>Q</i></b>      (8)</p>
+                </div>
+                <div class="p1">
+                    <p id="147">由式(8)可得,加密向量的相关分与扩展向量相关分保持一致。按照这种方法便可以在云服务器计算各个文档与多关键词查询陷门的相关分并进行排序。</p>
+                </div>
+                <div class="p1">
+                    <p id="148">对于2.2节中得到的候选集<b><i>CR</i></b>,排序过程如图3所示。假设用户要求返回文档数为2,首先计算查询指纹与候选文档指纹的汉明距离<i>Hd</i>,根据汉明距离排序得到对应的排序向量集合<b><i>VR</i></b>,再计算加密查询向量与<b><i>VR</i></b>的向量内积<i>score</i>,根据内积进行排序,得到最后的top-<i>k</i>结果并返回给用户。</p>
+                </div>
+                <div class="area_img" id="149">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201909024_149.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 候选结果集排序" src="Detail/GetImg?filename=images/JSJY201909024_149.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 候选结果集排序  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201909024_149.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 3 Rank of candidate results</p>
+
+                </div>
+                <h3 id="150" name="150" class="anchor-tag">3 安全性分析</h3>
+                <h4 class="anchor-tag" id="151" name="151">1)文档隐私保障。</h4>
+                <div class="p1">
+                    <p id="152">对文档集采用<i>AES</i>算法加密。由于文档和索引向量采用不同的方式进行加密,增加了攻击者的攻击难度。对文件的检索、插入和删除操作都是基于哈希指纹,不会涉及到文件的内容,因此不会泄露文档信息。</p>
+                </div>
+                <h4 class="anchor-tag" id="153" name="153">2)关键词隐私保障。</h4>
+                <div class="p1">
+                    <p id="154">假设<i>u</i>=0,如果要解出文档向量,就要构建方程组<i>C</i>′=<b><i>M</i></b><sub>1</sub><sup>T</sup>×<b><i>DV</i></b>′和<i>C</i>″=<b><i>M</i></b><sub>2</sub><sup>T</sup>×<b><i>DV</i></b>″,在<i>n</i>篇文档向量中有2<i>n</i>×(<i>m</i>+1)个未知量,在可逆矩阵(<b><i>M</i></b><sub>1</sub>, <b><i>M</i></b><sub>2</sub>)中有2(<i>m</i>+1)<sup>2</sup>个未知量,由于只有2<i>n</i>×(<i>m</i>+1)个等式,少于未知量的个数,对于查询向量同理,所以没有足够的信息推断出向量或者密钥矩阵(<b><i>M</i></b><sub>1</sub>, <b><i>M</i></b><sub>2</sub>),攻击者无法得到关键词有关信息。</p>
+                </div>
+                <h4 class="anchor-tag" id="155" name="155">3)相关分隐私保障。</h4>
+                <div class="p1">
+                    <p id="156">根据式(7),在相关分中引入随机值<i>ε</i>。如果<i>ε</i>有2<sup><i>ω</i></sup>种可能性,则两两相等的概率是1/2<sup><i>ω</i></sup>。本文将查询向量扩展<i>u</i>位,随机选取<i>v</i>位设为1,那么<i>ε</i>就有<i>C</i><mathml id="157"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><msubsup><mrow></mrow><mi>u</mi><mi>v</mi></msubsup></mrow></math></mathml>种不同的组合,取<i>v</i>=<i>u</i>/2时,<i>ε</i>能取得最多的可能性。即随机选择一半的扩展位置为1生成扩展查询向量。设置每个扩展位服从均匀分布U(<i>μ</i>′-ϑ, <i>μ</i>′+ϑ),根据中心极限定理可得,<i>ε</i>服从正态分布N(<i>u</i>,<i>σ</i><sup>2</sup>),并且<mathml id="158"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>μ</mi><mo>=</mo><mn>0</mn><mo>.</mo><mn>5</mn><mi>u</mi><msup><mi>μ</mi><mo>′</mo></msup><mo>,</mo><mi>σ</mi><mo>=</mo><msqrt><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>/</mo><mn>6</mn><mo stretchy="false">)</mo><mi>u</mi></mrow></msqrt><mo>⋅</mo><mtext>ϑ</mtext></mrow></math></mathml>。由此可见,词频统计的特殊性被打破,保障了关键词的相关分隐私安全。</p>
+                </div>
+                <h4 class="anchor-tag" id="159" name="159">4)索引隐私保障。</h4>
+                <div class="p1">
+                    <p id="160">指纹索引树中含有指纹及加密后的文档向量,2)中已经分析了文档向量的隐私安全性。文档指纹是基于单向密钥Simhash函数生成的,定义如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="161"><i>Sim</i>(<i>hk</i>,<i>data</i>):<mathml id="162"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo><msup><mrow></mrow><mi>n</mi></msup><mover><mo stretchy="true" symmetric="false">→</mo><mrow><mi>h</mi><mi>k</mi></mrow></mover><mo stretchy="false">{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">}</mo><msup><mrow></mrow><mi>m</mi></msup><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>9</mn><mo stretchy="false">)</mo></mrow></math></mathml></p>
+                </div>
+                <div class="p1">
+                    <p id="163">假设<i>Sim</i>(<i>hk</i>,<i>data</i>)在选择明文攻击中,不具有不可区分性,那么敌手<font face="EU-HT">A</font>可以构建一个算法A′,并利用该算法区分一些函数<i>Sim</i>′(·)是伪随机函数还是真实的随机函数。当A′访问预言机O<sub><i>Sim</i>′(·)</sub>时,输入一个参数<i>a</i>,O<sub><i>Sim</i>′(·)</sub>返回结果值<i>Sim</i>′(<i>a</i>)。敌手<font face="EU-HT">A</font>收到指纹生成请求后,通过询问O<sub><i>Sim</i>′(·)</sub>进行应答。然后敌手输出两个长度相同的挑战<i>c</i><sub>1</sub>和<i>c</i><sub>2</sub>,A′选择一个随机数<i>b</i> (0&lt;<i>b</i>&lt;1),并将<i>c</i><sub><i>b</i></sub>发送给挑战者,得到一个挑战值<i>x</i>。A′将<i>x</i>发送给<font face="EU-HT">A</font>,<font face="EU-HT">A</font>应答一个值<i>b</i>′ (0&lt;<i>b</i>′&lt;1)。假设<font face="EU-HT">A</font>能够以不可忽略的概率猜测正确,即<i>b</i>=<i>b</i>′,那么<i>x</i>就不是随机生成的,也就是说A′可以判断<i>Sim</i>′(·)是一个伪随机函数。然而敌手<font face="EU-HT">A</font>最多只能以1/2的概率猜对<i>b</i>的值,与假设矛盾,所以不存在这样的敌手<font face="EU-HT">A</font>。而且在带密钥的单向哈希函数中,攻击者没有密钥的情况下,由{0,1}<sup><i>m</i></sup>是逆推不出<i>data</i>的,可见密钥哈希函数可以保证文档指纹的安全性,因此云服务器无法从索引中获取任何有关文档或关键字的隐私信息。</p>
+                </div>
+                <h4 class="anchor-tag" id="164" name="164">5)查询无关联性。</h4>
+                <div class="p1">
+                    <p id="165">数据使用者根据数据拥有者发送的密钥<i>sk</i>,通过添加<i>u</i>个虚位扩展查询向量的维度,并将扩展向量拆分成两个向量。向量分割是随机的,因此对于相同的查询,每次产生的查询陷门也不相同,实现了查询的无关联性。</p>
+                </div>
+                <h3 id="166" name="166" class="anchor-tag">4 实验结果与分析</h3>
+                <div class="p1">
+                    <p id="167">选择百度学术上6 000篇英文论文作为测试数据,实验环境:Windows 7 (64位),CPU为Intel Core i7-7700HQ@(2.80 GHz),内存4 GB,使用Java语言编程。</p>
+                </div>
+                <h4 class="anchor-tag" id="168" name="168">4.1 <b>索引构建效率</b></h4>
+                <div class="p1">
+                    <p id="169">本文方案与文献<citation id="260" type="reference">[<a class="sup">12</a>]</citation>中的EDMRS(Enhanced Dynamic Multi-keyword Ranked Search)方案和文献<citation id="261" type="reference">[<a class="sup">13</a>]</citation>中的EASMS(Efficient and Accurate Secure Multi-keyword Search)方案进行比较。假设文档数量为<i>n</i>,构建B+树的时间复杂度为<i>O</i>(<i>n</i>(log<sub><i>t</i></sub><i>n</i>)(<i>t</i>是B+树的阶数,本方案中取<i>t</i>=8),3种方案的索引时间对比实验结果如图4所示。</p>
+                </div>
+                <div class="area_img" id="170">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201909024_170.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 索引构建时间比较" src="Detail/GetImg?filename=images/JSJY201909024_170.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图4 索引构建时间比较  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201909024_170.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 4 Comparison of index construction time</p>
+
+                </div>
+                <div class="p1">
+                    <p id="171">图4(a)词典规模固定<i>m</i>=4 000的情况下,EASMS方案和EDMRS方案都是直接构造了一个带有高维加密向量作为数据节点的索引树,时间复杂度为<i>O</i>(<i>n</i>·(<i>m</i>+<i>u</i>)<sup>2</sup>),<i>m</i>不变时随着文档规模的增大,索引构建时间呈线性增长。而本文SMRI方案是以维度很低的18位Simhash分段指纹为数据节点,通过比较二进制串的大小构建B+树,文档规模增大时,索引构建时间呈线性增长,但是由于主要的时间消耗在密钥矩阵的生成上,而当词典规模固定时,随着文档数量的增加,整体时间增长缓慢。图4(b)文档规模固定<i>n</i>=1 000,影响3种方案构建索引的主要因素是向量维数。向量加密的复杂度为<i>O</i>((<i>m</i>+<i>u</i>)<sup>2</sup>),随着词典大小的增加,向量维数增加,加密向量耗时呈平方级增长,3种方案的索引构建时间都呈现迅速增长。但是由于EDMRS和EASMS方案是通过计算高维向量内积生成索引树的,而SMRI方案是通过分段指纹构建B+树,虽然都呈现平方增长,但是SMRI方案总体耗时较少,增长速度相对缓慢,而且随着词典规模的逐步增加,优势愈发明显,前两个方案可能造成高维空间的“维度灾难”。</p>
+                </div>
+                <div class="p1">
+                    <p id="172">设定文件数<i>n</i>=1 000,不同词典规模下三种方案的索引空间开销如表1所示。当叶节点的数量相同时,B+树具有比二叉树更少的节点个数,并且内部节点是低维散列指纹,高维向量仅存储在叶节点中,相比EDMRS方案和EASMS方案,本方案降低了空间存储代价。</p>
+                </div>
+                <div class="area_img" id="173">
+                    <p class="img_tit"><b>表</b>1 <b>构建索引的空间代价</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit">Tab. 1 Space cost of index construction</p>
+                    <p class="img_note">单位:MB</p>
+                    <table id="173" border="1"><tr><td><br />词典规模</td><td>SMRI</td><td>EASMS</td><td>EDMRS</td></tr><tr><td><br />1 000</td><td>31</td><td>94</td><td>95</td></tr><tr><td><br />2 000</td><td>62</td><td>169</td><td>168</td></tr><tr><td><br />3 000</td><td>92</td><td>238</td><td>241</td></tr><tr><td><br />4 000</td><td>123</td><td>309</td><td>315</td></tr><tr><td><br />5 000</td><td>154</td><td>387</td><td>388</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="174" name="174">4.2 <b>索引检索效率</b></h4>
+                <div class="p1">
+                    <p id="175">如图5所示,假设包含关键词的叶节点数为<i>θ</i>,在EDMRS方案中,索引树的高度为lb <i>n</i>,相关分计算复杂度为<i>O</i>(<i>m</i>+<i>u</i>),整体检索时间复杂度为<i>O</i>(<i>θ</i>·(<i>m</i>+<i>u</i>)(lb <i>n</i>),EASMS方案具有与EDMRS相同的时间复杂度。EASMS方案构建了层次化聚类索引树,先找到聚类中心再计算聚类向量的内积,检索时间接近EDMRS方案的一半。在本方案中,<i>t</i>阶B+树的最大高度为log<sub><i>t</i>/2</sub>(<i>n</i>/2)+1,二分查找的时间复杂度为lb <i>t</i>,因此检索的时间复杂度为<i>O</i>(lb <i>t</i>·(log<sub><i>t</i>/2</sub>(<i>n</i>/2)+1)+<i>θ</i>·(1+<i>m</i>+<i>u</i>))。在实际检索中时间一定小于lb <i>t</i>·(log<sub><i>t</i>/2</sub>(<i>n</i>/2)+1)+<i>θ</i>·(1+<i>m</i>+<i>u</i>),因为一些节点具有共同的祖先并且具有相同的访问路径,不需要每次都从根节点重新搜索。而且本方案在检索过程中是对哈希指纹进行异或操作,EASMS和EDMRS方案是通过计算高维向量的内积进行检索,因此本方案的实际检索耗时很少。</p>
+                </div>
+                <div class="p1">
+                    <p id="176">图5(a) 固定词典规模<i>m</i>=4 000,返回结果数<i>k</i>=20,用户输入检索词个数<i>Wq</i>=10,随着文档规模的增加,EASMS和EDMRS需要计算的向量个数也随之增加,检索时间随文档规模的增加而呈对数增长。对于本方案来讲,在指纹匹配阶段可能对比的节点数会增加,也是呈现对数级增长,但是增长趋势缓慢。</p>
+                </div>
+                <div class="p1">
+                    <p id="177">图5(b) 词典规模固定<i>m</i>=4 000,文档规模固定<i>n</i>=1 000,用户输入检索词个数<i>Wq</i>=10,随着返回结果数<i>k</i>的增加,EASMS和EDMRS需要计算的向量数增加,检索时间随之增加,本方案只需要通过指纹匹配找到候选集,然后计算陷门与候选集中每个元素之间的相关性,复杂度为<i>O</i>(<i>m</i>+<i>u</i>),这样减少了向量内积的计算,节省了大量时间并显著地提高检索效率。</p>
+                </div>
+                <div class="p1">
+                    <p id="178">图5(c)当检索关键词数量增加时,EDMRS和EASMS方案深度遍历二叉树计算向量内积进行排序的时间复杂度和时间不会受到影响,SMRI方案进行分段指纹和向量内积计算的时间复杂度和耗时也不会受到影响,由于SMRI方案前期通过二进制字符串的匹配检索和初步排序,后期计算内积的向量个数相比前两个方案大大减少,因此整体检索时间较少。</p>
+                </div>
+                <div class="area_img" id="179">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJY201909024_179.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 检索时间比较" src="Detail/GetImg?filename=images/JSJY201909024_179.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图5 检索时间比较  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJY201909024_179.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit">Fig. 5 Comparison of search time</p>
+
+                </div>
+                <h3 id="180" name="180" class="anchor-tag">5 结语</h3>
+                <div class="p1">
+                    <p id="181">保证数据的机密性和检索的高效性是密文检索的重点,目前基于VSM的多关键词排序检索方案存在计算量大、检索速度慢的问题。本文提出了一种基于SMRI的密文多关键词排序检索方案,该方案基于“过滤-精化”策略,利用Simhash的降维思想构建搜索索引,减少了索引的计算和存储开销,提高了检索排序效率,使用单向密钥哈希算法和S<i>k</i>NN算法保证了检索过程的安全,实验结果证明了该方案的高效性。下一步研究工作将集中在多关键词模糊检索方面,提高方案的实用性。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="204">
+                            <a id="bibliography_1" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=RJXB201101007&amp;v=MDA4MzBac0Z5am5VN3ZNTnlmVGJMRzRIOURNcm85Rlk0UUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSN3FmWnU=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[1]</b> 冯登国,张敏,张妍,等.云计算安全研究[J].软件学报,2011,22(1):71-83.(FENG D G,ZHANG M,ZHANG Y,et al.Study on cloud computing security [J].Journal of Software,2011,22(1):71-83.)
+                            </a>
+                        </p>
+                        <p id="206">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Practical Techniques for Searches onEncrypted Data">
+
+                                <b>[2]</b> SONG D X,WAGNER D,PERRIG A.Practical techniques for searches on encrypted data [C]// Proceedings of the 2000 IEEE Symposium on Security and Privacy.Piscataway,NJ:IEEE,2000:44-55.
+                            </a>
+                        </p>
+                        <p id="208">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Secure indexes">
+
+                                <b>[3]</b> GOH E.Secure indexes [EB/OL].[2018- 12- 16].https://eprint.iacr.org/2003/216.pdf.
+                            </a>
+                        </p>
+                        <p id="210">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient similarity search over encrypted data">
+
+                                <b>[4]</b> KUZU M,ISLAM M S,KANTARCIOGLU M.Efficient similarity search over encrypted data [C]// Proceedings of the IEEE 28th International Conference on Data Engineering.Piscataway,NJ:IEEE,2012:1156-1167.
+                            </a>
+                        </p>
+                        <p id="212">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Privacy Preserving synonym based fuzzy multi-keyword ranked search over encrypted cloud data">
+
+                                <b>[5]</b> KRISHNA C R,MITTAL S A.Privacy preserving synonym based fuzzy multi-keyword ranked search over encrypted cloud data [C]// Proceedings of the 2016 International Conference on Computing,Communication and Automation.Piscataway,NJ:IEEE,2016:1187-1194.
+                            </a>
+                        </p>
+                        <p id="214">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Privacy-Preserving Ranked Multi-keyword Fuzzy Search on Cloud Encrypted Data Supporting Range Query">
+
+                                <b>[6]</b> WANG J,YU X,ZHAO M.Privacy-preserving ranked multi-keyword fuzzy search on cloud encrypted data supporting range query [J].Arabian Journal for Science and Engineering,2015,40(8):2375-2388.
+                            </a>
+                        </p>
+                        <p id="216">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Secure index for resource-constraint mobile devices in cloud computing">
+
+                                <b>[7]</b> YAO H,XING N,ZHOU J,et al.Secure index for resource-constraint mobile devices in cloud computing [J].IEEE Access,2016,4:9119-9128.
+                            </a>
+                        </p>
+                        <p id="218">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient multi-keyword fuzzy search on encrypted data in cloud storage">
+
+                                <b>[8]</b> LI X,CUI Y,ZHOU M,et al.Efficient multi-keyword fuzzy search on encrypted data in cloud storage [C]// Proceedings of the 2017 4th International Conference on Information Science and Control Engineering.Washington,DC:IEEE Computer Society,2017,1:288-294.
+                            </a>
+                        </p>
+                        <p id="220">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Privacy-preserving multi-keyword rankedsearch over encrypted cloud data">
+
+                                <b>[9]</b> CAO N,WANG C,LI M,et al.Privacy-preserving multi-keyword ranked search over encrypted cloud data [J].IEEE Transactions on Parallel and Distributed Systems,2014,25(1):222-233.
+                            </a>
+                        </p>
+                        <p id="222">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SPQD&amp;filename=SPQDA93F2AEFAEE0D87C808776B4BB8FEC8E&amp;v=MzA0MzkwNXRwaHhMcS94S3c9TmozYWFzS3hIYWZPM3ZvekZaNTZEQWd4eUdVYjZqZDZUM21RcUdCSGNjVGhOckxxQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQnJMVQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> LI H,YANG Y,LUAN T H,et al.Enabling fine-grained multi-keyword search supporting classified sub-dictionaries over encrypted cloud data [J].IEEE Transactions on Dependable and Secure Computing,2016,13(3):312-325.
+                            </a>
+                        </p>
+                        <p id="224">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Secure kNN computation on encrypted databases">
+
+                                <b>[11]</b> WONG W K,CHEUNG D W,KAO B,et al.Secure kNN computation on encrypted databases[C]// Proceedings of the 2009 ACM SIGMOD International Conference on Management of Data.New York:ACM,2009:139-152.
+                            </a>
+                        </p>
+                        <p id="226">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=&amp;quot;A secure and dynamic multi-keyword ranked search s c h e m e o v e r e n c r y p te d c l o u d d a t a&amp;quot;">
+
+                                <b>[12]</b> XIA Z,WANG X,SUN X,et al.A secure and dynamic multi-keyword ranked search scheme over encrypted cloud data [J].IEEE Transactions on Parallel and Distributed Systems,2016,27(2):340-352.
+                            </a>
+                        </p>
+                        <p id="228">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=MUSE:An Efficient and Accurate Verifiable Privacy-Preserving Multikeyword Text Search over Encrypted Cloud Data">
+
+                                <b>[13]</b> ZHU X,DAI H,YI X,et al.MUSE:an efficient and accurate verifiable privacy-preserving multi-keyword text search over encrypted cloud data [J].Security and Communication Networks,2017,2017(2):No.1923476.
+                            </a>
+                        </p>
+                        <p id="230">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=An efficient and privacy-preserving semantic multi-keyword ranked search over encrypted cloud Data">
+
+                                <b>[14]</b> CHEN L,SUN X,XIA Z,et al.An efficient and privacy-preserving semantic multi-keyword ranked search over encrypted cloud data [J].International Journal of Security and its Applications,2014,8(2):323-332.
+                            </a>
+                        </p>
+                        <p id="232">
+                            <a id="bibliography_15" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201802009&amp;v=MDg5OTc3dk1MejdCZDdHNEg5bk1yWTlGYllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnlqblU=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[15]</b> 杨宏宇,王玥.云存储环境下的多关键字密文搜索方法[J].计算机应用,2018,38(2):343-347.(YANG H Y,WANG Y.Multi-keyword ciphertext search method in cloud storage environment [J].Journal of Computer Applications,2018,38(2):343-347.)
+                            </a>
+                        </p>
+                        <p id="234">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Similarity Estimation Techniques from Rounding Algorithms">
+
+                                <b>[16]</b> CHARIKAR M S.Similarity estimation techniques from rounding algorithms[C]// Proceedings of the 34th Annual ACM Symposium on Theory of Computing.New York:ACM,2002:380-388.
+                            </a>
+                        </p>
+                        <p id="236">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Detecting Near-duplicates for Web Crawling">
+
+                                <b>[17]</b> MANKU G S,JAIN A,das SARMA A.Detecting near-duplicates for Web crawling [C]// Proceedings of the 16th International Conference on World Wide Web.New York:ACM,2007:141-150.
+                            </a>
+                        </p>
+                        <p id="238">
+                            <a id="bibliography_18" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJX201702010&amp;v=MDIwOTRqblU3dk1MejdCZHJHNEg5Yk1yWTlFWklRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVI3cWZadVpzRnk=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[18]</b> 杨旸,杨书略,柯闽.加密云数据下基于Simhash的模糊排序搜索方案[J].计算机学报,2017,40(2):431-444.(YANG Y,YANG S L,KE M.Ranked fuzzy keyword search based on Simhash over encrypted cloud data [J].Chinese Journal of Computers,2017,40(2):431-444.)
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJY201909024" />
+        <input id="dpi" type="hidden" value="300" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJY201909024&amp;v=MDc4ODVSNFQ2ajU0TzN6cXFCdEdGckNVUjdxZlp1WnNGeWpuVTd2TUx6N0JkN0c0SDlqTXBvOUhZSVFLREg4NHY=&amp;uid=WEEvREcwSlJHSldRa1FhcEFLUmVhZDN5c0dERktQNlNvSG5VV2tqWXgrbz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

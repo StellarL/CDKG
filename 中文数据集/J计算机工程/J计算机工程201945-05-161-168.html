@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637130531794405000%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201905026%26RESULT%3d1%26SIGN%3dt%252bzIkSY3gWeMjCo33Q1hKOhIckc%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201905026&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201905026&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201905026&amp;v=MDc5MDZPZVplUm9GeTNsVzczQUx6N0JiYkc0SDlqTXFvOUhZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkw=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#33" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#38" data-title="1 相关研究与问题 ">1 相关研究与问题</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#39" data-title="1.1 MOEA/D算法">1.1 MOEA/D算法</a></li>
+                                                <li><a href="#57" data-title="1.2 MOEA/D的邻域更新策略">1.2 MOEA/D的邻域更新策略</a></li>
+                                                <li><a href="#66" data-title="1.3 邻域规模固定的缺点">1.3 邻域规模固定的缺点</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#70" data-title="2 MOEA/D-ANS算法 ">2 MOEA/D-ANS算法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#72" data-title="2.1 基于邻域更新能力的进化状态判断机制">2.1 基于邻域更新能力的进化状态判断机制</a></li>
+                                                <li><a href="#84" data-title="2.2 ANS策略">2.2 ANS策略</a></li>
+                                                <li><a href="#106" data-title="2.3 算法流程">2.3 算法流程</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#113" data-title="3 实验结果与分析 ">3 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#114" data-title="3.1 测试问题与对比算法">3.1 测试问题与对比算法</a></li>
+                                                <li><a href="#117" data-title="3.2 性能指标">3.2 性能指标</a></li>
+                                                <li><a href="#127" data-title="3.3 结果分析">3.3 结果分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#142" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#64" data-title="&lt;b&gt;图1 邻域更新策略示意图&lt;/b&gt;"><b>图1 邻域更新策略示意图</b></a></li>
+                                                <li><a href="#131" data-title="&lt;b&gt;图2 MOEA/D求解2种函数时种群进化状态和指标性能的对比&lt;/b&gt;"><b>图2 MOEA/D求解2种函数时种群进化状态和指标性能的对比</b></a></li>
+                                                <li><a href="#135" data-title="&lt;b&gt;表1 3种算法性能指标的平均值和标准差对比&lt;/b&gt;"><b>表1 3种算法性能指标的平均值和标准差对比</b></a></li>
+                                                <li><a href="#137" data-title="&lt;b&gt;图3 3种算法在不同测试函数下的&lt;i&gt;Spread&lt;/i&gt;指标盒图&lt;/b&gt;"><b>图3 3种算法在不同测试函数下的<i>Spread</i>指标盒图</b></a></li>
+                                                <li><a href="#138" data-title="&lt;b&gt;图4 3种算法在不同测试函数下的&lt;i&gt;IGD&lt;/i&gt;指标盒图&lt;/b&gt;"><b>图4 3种算法在不同测试函数下的<i>IGD</i>指标盒图</b></a></li>
+                                                <li><a href="#140" data-title="&lt;b&gt;图5 3种算法在WFG1～WFG3测试问题中的前沿分布&lt;/b&gt;"><b>图5 3种算法在WFG1～WFG3测试问题中的前沿分布</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" title=" ZITZLER E, THIELE L.Multiobjective optimization using evolutionary algorithms-a comparative case study[C]//Proceedings of International Conference on Parallel Problem Solving from Nature.Berlin, Germany:Springer, 2006:292-301." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Multiobjective optimization using evolutionary algorithms-a comparative case study">
+                                        <b>[1]</b>
+                                         ZITZLER E, THIELE L.Multiobjective optimization using evolutionary algorithms-a comparative case study[C]//Proceedings of International Conference on Parallel Problem Solving from Nature.Berlin, Germany:Springer, 2006:292-301.
+                                    </a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" LI Yuanyong, ZHOU Yuren, ZHAN Zhihui, et al.A primary theoretical study on decomposition-based multiobjective evolutionary algorithms[J].IEEE Transactions on Evolutionary Computation, 2016, 20 (4) :563-576." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A primary theoretical study on decomposition-based multiobjective evolutionary algorithms">
+                                        <b>[2]</b>
+                                         LI Yuanyong, ZHOU Yuren, ZHAN Zhihui, et al.A primary theoretical study on decomposition-based multiobjective evolutionary algorithms[J].IEEE Transactions on Evolutionary Computation, 2016, 20 (4) :563-576.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" WANG Rui, ZHANG Qingfu, ZHANG Tao.Decomposition based algorithms using Pareto adaptive scalarizing methods[J].IEEE Transactions on Evolutionary Computation, 2016, 20 (6) :821-837." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Decomposition Based Algorithms Using Pareto Adaptive Scalarizing Methods">
+                                        <b>[3]</b>
+                                         WANG Rui, ZHANG Qingfu, ZHANG Tao.Decomposition based algorithms using Pareto adaptive scalarizing methods[J].IEEE Transactions on Evolutionary Computation, 2016, 20 (6) :821-837.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" JIANG Siwei, ZHANG Jie, ONG Y S, et al.A simple and fast hypervolume indicator-based multiobjective evolutionary algorithm[J].IEEE Transactions on Cybernetics, 2015, 45 (10) :2202-2213." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A simple and fast hypervolume indicator-based multiobjective evolutionary algorithm">
+                                        <b>[4]</b>
+                                         JIANG Siwei, ZHANG Jie, ONG Y S, et al.A simple and fast hypervolume indicator-based multiobjective evolutionary algorithm[J].IEEE Transactions on Cybernetics, 2015, 45 (10) :2202-2213.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" ZHANG Qingfu, LI Hui.MOEA/D:a multiobjective evolutionary algorithm based on decomposition[J].IEEE Transactions on Evolutionary Computation, 2007, 11 (6) :712-731." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=MOEA/D: A multiobjective evolutionary algorithm based on decomposition">
+                                        <b>[5]</b>
+                                         ZHANG Qingfu, LI Hui.MOEA/D:a multiobjective evolutionary algorithm based on decomposition[J].IEEE Transactions on Evolutionary Computation, 2007, 11 (6) :712-731.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" LI Hui, ZHANG Qingfu.Multiobjective optimization problems with complicated Pareto sets, MOEA/D and NSGA-II[J].IEEE Transactions on Evolutionary Computation, 2009, 13 (2) :284-302." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Multiobjective optimization problems with complicated pareto sets, MOEA/ D and NSGA-II">
+                                        <b>[6]</b>
+                                         LI Hui, ZHANG Qingfu.Multiobjective optimization problems with complicated Pareto sets, MOEA/D and NSGA-II[J].IEEE Transactions on Evolutionary Computation, 2009, 13 (2) :284-302.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" ZHANG Qingfu, LIU Wudong, LI Hui.The performance of a new version of MOEA/D on CEC09 unconstrained MOP test instances[C]//Proceedings of 2009 IEEE Congress on Evolutionary Computation.Washington D.C., USA:IEEE Press, 2009:203-208." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=The Performance of a New Version of MOEA/D on CEC09Unconstrained MOP Test Instances,">
+                                        <b>[7]</b>
+                                         ZHANG Qingfu, LIU Wudong, LI Hui.The performance of a new version of MOEA/D on CEC09 unconstrained MOP test instances[C]//Proceedings of 2009 IEEE Congress on Evolutionary Computation.Washington D.C., USA:IEEE Press, 2009:203-208.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" ISHIBUCHI H, HITOTSUYANAGI Y, TSUKAMOTO N, et al.Use of biased neighborhood structures in multiobjective memetic algorithms[J].Soft Computing, 2009, 13 (8/9) :795-810." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD15110100378584&amp;v=MDEzNjVySzlIOURNcm85Rlord0hDWFE5b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTG5JSlY0Y2FCbz1OajdCYQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[8]</b>
+                                         ISHIBUCHI H, HITOTSUYANAGI Y, TSUKAMOTO N, et al.Use of biased neighborhood structures in multiobjective memetic algorithms[J].Soft Computing, 2009, 13 (8/9) :795-810.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" ZHAO Shizheng, SUGANTHAN P N, ZHANG Qingfu.Decomposition-based multiobjective evolutionary algorithm with an ensemble of neighborhood sizes[J].IEEE Transactions on Evolutionary Computation, 2012, 16 (3) :442-446." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Decomposition-Based Multiobjective Evolutionary Algorithm with an Ensemble of Neighborhood Sizes">
+                                        <b>[9]</b>
+                                         ZHAO Shizheng, SUGANTHAN P N, ZHANG Qingfu.Decomposition-based multiobjective evolutionary algorithm with an ensemble of neighborhood sizes[J].IEEE Transactions on Evolutionary Computation, 2012, 16 (3) :442-446.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" 刘志君, 高亚奎, 章卫国, 等.变邻域分解多目标自适应差分进化算法[J].控制理论与应用, 2014, 31 (11) :1492-1501." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KZLY201411008&amp;v=MjgwMzlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUm9GeTNsVzczQUxqZkhkN0c0SDlYTnJvOUZiSVE=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[10]</b>
+                                         刘志君, 高亚奎, 章卫国, 等.变邻域分解多目标自适应差分进化算法[J].控制理论与应用, 2014, 31 (11) :1492-1501.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" WANG Zhenkun, ZHANG Qingfu, ZHOU Aimin, et al.Adaptive replacement strategies for MOEA/D[J].IEEE Transactions on Cybernetics, 2016, 46 (2) :474-486." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Adaptive replacement strategies for MOEA/D">
+                                        <b>[11]</b>
+                                         WANG Zhenkun, ZHANG Qingfu, ZHOU Aimin, et al.Adaptive replacement strategies for MOEA/D[J].IEEE Transactions on Cybernetics, 2016, 46 (2) :474-486.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" 刘璐, 郑力明.基于邻域和变异算子组合优化的MOEA/D算法[J].计算机工程, 2017, 43 (3) :232-240." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201703039&amp;v=MzE0MjRSTE9lWmVSb0Z5M2xXNzNBTHo3QmJiRzRIOWJNckk5R2JZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[12]</b>
+                                         刘璐, 郑力明.基于邻域和变异算子组合优化的MOEA/D算法[J].计算机工程, 2017, 43 (3) :232-240.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" HUBAND S, HINGSTON P, BARONE L, et al.A review of multiobjective test problems and a scalable test problem toolkit[J].IEEE Transactions on Evolutionary Computation, 2006, 10 (5) :477-506." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A review of multiobjective test problems and a scalable test problem toolkit">
+                                        <b>[13]</b>
+                                         HUBAND S, HINGSTON P, BARONE L, et al.A review of multiobjective test problems and a scalable test problem toolkit[J].IEEE Transactions on Evolutionary Computation, 2006, 10 (5) :477-506.
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" DEB K, PRATAP A, AGARWAL S, et al.A fast and elitist multiobjective genetic algorithm:NSGA-II[J].IEEE Transactions on Evolutionary Computation, 2002, 6 (2) :182-197." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A fast and elitist multiobjective genetic algorithm: NSGA-II">
+                                        <b>[14]</b>
+                                         DEB K, PRATAP A, AGARWAL S, et al.A fast and elitist multiobjective genetic algorithm:NSGA-II[J].IEEE Transactions on Evolutionary Computation, 2002, 6 (2) :182-197.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" WANG Hu, YEN G G.Adaptive multiobjective particle swarm optimization based on parallel cell coordinate system[J].IEEE Transactions on Evolutionary Computation, 2015, 19 (1) :1-18." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Adaptive Multiobjective Particle Swarm Optimization Based on Parallel Cell Coordinate System">
+                                        <b>[15]</b>
+                                         WANG Hu, YEN G G.Adaptive multiobjective particle swarm optimization based on parallel cell coordinate system[J].IEEE Transactions on Evolutionary Computation, 2015, 19 (1) :1-18.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(05),161-168 DOI:10.19678/j.issn.1000-3428.0051232            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于自适应邻域策略的改进型MOEA/D算法</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%80%BF%E7%84%95%E5%90%8C&amp;code=14176678&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">耿焕同</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E9%9F%A9%E4%BC%9F%E6%B0%91&amp;code=39228933&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">韩伟民</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E4%B8%81%E6%B4%8B%E6%B4%8B&amp;code=34672232&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">丁洋洋</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%91%A8%E5%B1%B1%E8%83%9C&amp;code=38617309&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">周山胜</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E5%8D%97%E4%BA%AC%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E4%B8%8E%E8%BD%AF%E4%BB%B6%E5%AD%A6%E9%99%A2&amp;code=0151773&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">南京信息工程大学计算机与软件学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>为避免传统MOEA/D算法使用固定领域规模易造成种群进化效率降低的情况, 提出一种基于自适应邻域策略的改进算法。设计一种能够反映子问题进化幅度和种群进化状态的判断机制。针对进化过程中的收敛性和分布性需求, 提出基于进化状态判断的自适应邻域策略, 从而根据种群和子问题的进化状态设定不同的邻域规模。使用WFG系列测试函数进行实验, 结果表明, 该算法能有效平衡进化过程中种群的收敛性与分布性, 提高解集的整体性能。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%9F%BA%E4%BA%8E%E5%88%86%E8%A7%A3%E7%9A%84%E5%A4%9A%E7%9B%AE%E6%A0%87%E8%BF%9B%E5%8C%96%E7%AE%97%E6%B3%95&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">基于分解的多目标进化算法;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E9%82%BB%E5%9F%9F%E6%9B%B4%E6%96%B0%E8%83%BD%E5%8A%9B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">邻域更新能力;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%BF%9B%E5%8C%96%E7%8A%B6%E6%80%81&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">进化状态;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%88%A4%E6%96%AD%E6%9C%BA%E5%88%B6&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">判断机制;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%87%AA%E9%80%82%E5%BA%94%E9%82%BB%E5%9F%9F%E7%AD%96%E7%95%A5&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">自适应邻域策略;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    耿焕同 (1973—) , 男, 教授、博士生导师, 主研方向为多目标优化、智能计算、数据挖掘;E-mail: htgeng@ nuist. edu. cn;
+                                </span>
+                                <span>
+                                    韩伟民, 硕士研究生。;
+                                </span>
+                                <span>
+                                    丁洋洋, 硕士研究生。;
+                                </span>
+                                <span>
+                                    周山胜, 硕士研究生。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-04-16</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家重点研发计划 (2017YFC1502104);</span>
+                                <span>江苏省自然科学基金 (BK20151458);</span>
+                    </p>
+            </div>
+                    <h1><b>Improved MOEA/D Algorithm Based on Adaptive Neighborhood Strategy</b></h1>
+                    <h2>
+                    <span>GENG Huantong</span>
+                    <span>HAN Weimin</span>
+                    <span>DING Yangyang</span>
+                    <span>ZHOU Shansheng</span>
+            </h2>
+                    <h2>
+                    <span>College of Computer and Software, Nanjing University of Information Science and Technology</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>Traditional Multi-objective Evolutionary Algorithm based on Decomposition (MOEA/D) uses the fixed neighborhood scale, which reduces the population evolution efficiency.To solve this problem, an improved algorithm based on the Adaptive Neighborhood Strategy (ANS) is proposed.This paper designs a kind of judgment mechanism which can reflect the evolution magnitude of the sub-problems and the evolutionary state of the population.Based on evolutionary state judgments, an ANS is proposed to address the requirements of convergence and distribution in the evolutionary process, and then it can set different neighborhood sizes according to the evolutionary states of the population and sub-problems.Use the WFG series of functions to do the test, and the results show that this algorithm can effectively balance the convergence and distribution of population in the evolution the process, and improve the overall performance of the solution set.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Multi-objective%20Evolutionary%20Algorithm%20based%20on%20Decomposition%20(MOEA%2FD)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Multi-objective Evolutionary Algorithm based on Decomposition (MOEA/D) ;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=neighborhood%20updating%20capability&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">neighborhood updating capability;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=evolutionary%20state&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">evolutionary state;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=judgment%20mechanism&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">judgment mechanism;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Adaptive%20Neighborhood%20Strategy%20(ANS)%20&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Adaptive Neighborhood Strategy (ANS) ;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-04-16</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="33" name="33" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="34">多目标优化问题 (Multi-objective Optimization Problems, MOPs) <citation id="144" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>是指有多个优化目标, 且目标之间相互冲突的问题。进化算法作为一种启发式的搜索算法, 可以高效地获得一组或多组最优解, 因此常被用于求解MOPs。</p>
+                </div>
+                <div class="p1">
+                    <p id="35">在过去的十几年中, 许多优秀的多目标进化算法被相继提出<citation id="146" type="reference"><link href="5" rel="bibliography" /><link href="7" rel="bibliography" /><link href="9" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>。其中, 基于分解的多目标进化算法 (Multi-objective Evolutionary Algorithm based on Decomposition, MOEA/D) <citation id="145" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>由于引进了数学规划中的分解策略, 将MOPs分解为若干个单目标优化子问题, 并同时对这些子问题进行优化。因此, MOEA/D算法在处理复杂或高维目标的优化问题时具有更明显的优势。</p>
+                </div>
+                <div class="p1">
+                    <p id="36">MOEA/D算法在2007年被首次提出, 该算法因其简单、高效受到学者们的广泛关注<citation id="147" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>。2009年, 文献<citation id="148" type="reference">[<a class="sup">6</a>]</citation>提出MOEA/D-DE算法, 通过限制邻域更新的最大替换数来维持种群的多样性。同年, 文献<citation id="149" type="reference">[<a class="sup">7</a>]</citation>提出MOEA/D-DRA算法, 根据子问题进化的难易程度动态分配其所需的计算资源。文献<citation id="150" type="reference">[<a class="sup">8</a>]</citation>认为邻域规模<i>T</i>是影响多目标优化算法性能的重要因素之一, 该论断引起众多学者的关注和研究。2012年, 文献<citation id="151" type="reference">[<a class="sup">9</a>]</citation>就邻域规模<i>T</i>对MOEA/D算法性能的影响进行分析, 并提出基于自适应邻域大小的ENS-MOEA/D算法。2014年, 文献<citation id="152" type="reference">[<a class="sup">10</a>]</citation>提出ADEMO/D-ENS算法, 其使用一种变邻域分解方法来实现优化。2015年, 文献<citation id="153" type="reference">[<a class="sup">11</a>]</citation>提出基于自适应全局替换策略的MOEA/D-AGR算法, 将自适应全局替换策略引入邻域更新中, 很好地弥补了其在全局搜索方面的不足。2017年, 文献<citation id="154" type="reference">[<a class="sup">12</a>]</citation>提出MOEA/D-NMO算法, 设置不同邻域规模和变异策略, 并从中选出最优的邻域规模和变异策略组合。</p>
+                </div>
+                <div class="p1">
+                    <p id="37">上述算法对于传统MOEA/D算法中固定邻域的缺陷有一定的改善, 但自适应邻域策略仅从固定的邻域规模侯选池中选取, 未能根据种群的进化状态动态地做出调整。因此, 本文设计了一种基于邻域更新能力的进化状态判断机制, 来反映种群的进化状态和子问题的进化幅度。在该机制的基础上, 提出一种基于自适应邻域策略的改进型MOEA/D算法 (MOEA/D-ANS) , 根据种群和子问题进化状态的改变自适应地调整邻域规模, 以平衡种群收敛性与分布性, 从而达到提高种群进化效率的目的。</p>
+                </div>
+                <h3 id="38" name="38" class="anchor-tag">1 相关研究与问题</h3>
+                <h4 class="anchor-tag" id="39" name="39">1.1 MOEA/D算法</h4>
+                <div class="p1">
+                    <p id="40">传统的MOEA/D算法首先使用聚合函数将MOPs分解成<i>N</i>个单目标子问题<i>P</i>={<i>P</i><sup>1</sup>, <i>P</i><sup>2</sup>, …, <i>P</i><sup><i>N</i></sup>}, 并对其进行优化。为每一个子问题分配一个个体, 并通过计算所有权重向量之间的Euclidean距离给每个子问题划分对应的邻域, 利用邻域内其他的子问题来完成协同进化。</p>
+                </div>
+                <div class="p1">
+                    <p id="41">MOEA/D算法具体步骤如下:</p>
+                </div>
+                <h4 class="anchor-tag" id="42" name="42"><b>步骤1</b> 初始化</h4>
+                <div class="p1">
+                    <p id="43">1) 初始化均匀权重向量<mathml id="44"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">λ</mi><mo>=</mo><mrow><mo>{</mo><mrow><mi>λ</mi><msub><mrow></mrow><mn>1</mn></msub><mo>, </mo><mi>λ</mi><msub><mrow></mrow><mn>2</mn></msub><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>λ</mi><msub><mrow></mrow><mi>Ν</mi></msub></mrow><mo>}</mo></mrow></mrow></math></mathml>为权重划分对应邻域。对于个体x<sub>i</sub> (i=1, 2, …, N) , 设置B (i) ={i<sub>1</sub>, i<sub>2</sub>, …, i<sub>T</sub>}为第i个权重向量的邻域。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">2) 初始化种群x={x<sup>1</sup>, x<sup>2</sup>, …, x<sup>N</sup>}, 同时计算个体x<sub>i</sub>的目标值FV<sup>i</sup>=F (x<sup>i</sup>) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">3) 初始化理想点, 记为<mathml id="47"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi mathvariant="bold-italic">z</mi><mo>=</mo><mrow><mrow><mo>{</mo><mrow><mi>z</mi><msub><mrow></mrow><mn>1</mn></msub><mo>, </mo><mi>z</mi><msub><mrow></mrow><mn>2</mn></msub><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>z</mi><msub><mrow></mrow><mi>m</mi></msub></mrow><mo>}</mo></mrow></mrow><msup><mrow></mrow><mtext>Τ</mtext></msup></mrow></math></mathml>, 其中, <i>m</i>为目标维数, <i>z</i><sub><i>i</i></sub>为当前代中第<i>i</i>维的最优值。</p>
+                </div>
+                <h4 class="anchor-tag" id="48" name="48"><b>步骤2</b> 更新</h4>
+                <div class="p1">
+                    <p id="49">1) 进化:对于<i>i</i>=1, 2, …, <i>N</i>, 从邻域<i>B</i> (<i>i</i>) 中随机选择2个个体<i>x</i><sup>1</sup>和<i>x</i><sup><i>k</i></sup>为父代, 差分进化生成新的个体<i>y</i>, 再通过相应的问题约束改进为<i>y</i>′。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">2) 更新理想点<b><i>z</i></b>:对于<i>j</i>=1, 2, …, <i>N</i>, 若<i>z</i><sub><i>j</i></sub>&gt;<i>f</i><sub><i>j</i></sub> (<i>y</i>′) , 则<i>z</i><sub><i>j</i></sub>=<i>f</i><sub><i>j</i></sub> (<i>y</i>′) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">3) 更新邻域:对于<i>j</i>∈<i>B</i> (<i>i</i>) , 若<i>y</i>′的聚合函数值不大于<i>x</i><sup><i>j</i></sup>的聚合函数值, 则<i>x</i><sup><i>j</i></sup>=<i>y</i>′, 并替换相应目标值<i>FV</i><sup><i>j</i></sup>=<i>F</i> (<i>y</i>′) 。</p>
+                </div>
+                <h4 class="anchor-tag" id="52" name="52"><b>步骤3</b> 停止迭代</h4>
+                <div class="p1">
+                    <p id="53">若满足停止条件, 则输出最优解集并结束算法, 否则, 继续执行步骤2。</p>
+                </div>
+                <div class="p1">
+                    <p id="54">在传统MOEA/D算法中, 可供选择的聚合函数有切比雪夫 (Tchebycheff) 方法、基于惩罚的边界交叉 (PBI) 方法、权重求和 (Weighted Sum) 方法3种。本文采用切比雪夫方法, 其数学描述如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="55" class="code-formula">
+                        <mathml id="55"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mi>min</mi></mrow><mi>g</mi><msup><mrow></mrow><mrow><mi>t</mi><mi>e</mi></mrow></msup><mrow><mo> (</mo><mrow><mi>x</mi><mo stretchy="false">|</mo><mi mathvariant="bold-italic">λ</mi><mo>, </mo><mi mathvariant="bold-italic">z</mi><msup><mrow></mrow><mo>*</mo></msup></mrow><mo>) </mo></mrow><mo>=</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mi>max</mi></mrow></mstyle><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>m</mi></mrow></munder><mspace width="0.25em" /><mrow><mo>{</mo><mrow><mi>λ</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">|</mo><mi>f</mi><msub><mrow></mrow><mi>i</mi></msub><mrow><mo> (</mo><mi>x</mi><mo>) </mo></mrow><mo>-</mo><mi>z</mi><msubsup><mrow></mrow><mi>i</mi><mo>*</mo></msubsup><mo stretchy="false">|</mo></mrow><mo>}</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>1</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="56">其中, <i>z</i><sup>*</sup><sub><i>i</i></sub>代表理想点<b><i>z</i></b><sup>*</sup>的第<i>i</i>维值, <i>λ</i><sub><i>i</i></sub>为权重向量<i>λ</i>的第<i>i</i>维值。</p>
+                </div>
+                <h4 class="anchor-tag" id="57" name="57">1.2 MOEA/D的邻域更新策略</h4>
+                <div class="p1">
+                    <p id="58">传统的<i>MOEA</i>/<i>D</i>算法主要依靠邻域更新策略来推动种群的进化, 使种群快速收敛到前沿面。邻域更新策略使用若干个相邻子问题的信息来优化每个子问题, 使其朝有利方向进化。</p>
+                </div>
+                <div class="p1">
+                    <p id="59">由第1.1节可知, 通过比较新个体与对应邻域其他个体的适应度值, 来进行择优替换, 用新个体替换邻域内所有质量较差的个体, 从而实现邻域更新操作。由于聚合函数值可以较好地评价个体的优劣程度, 因此, <i>MOEA</i>/<i>D</i>算法的邻域更新策略以个体和子问题的聚合函数值作为适应度值来评价个体的优劣程度。计算子代个体y′的聚合函数值<mathml id="60"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>g</mi><msup><mrow></mrow><mrow><mi>t</mi><mi>e</mi></mrow></msup><mrow><mo> (</mo><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>, </mo><mi>λ</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mo>) </mo></mrow></mrow></math></mathml>及其邻域内其他个体对应的聚合函数值<mathml id="61"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>g</mi><msup><mrow></mrow><mrow><mi>t</mi><mi>e</mi></mrow></msup><mrow><mo> (</mo><mrow><mi>x</mi><msub><mrow></mrow><mi>i</mi></msub><mo>, </mo><mi>λ</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mo>) </mo></mrow></mrow></math></mathml>。通过比较它们的聚合函数值, 发现<mathml id="62"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mi>g</mi><msup><mrow></mrow><mrow><mi>t</mi><mi>e</mi></mrow></msup><mrow><mo> (</mo><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>, </mo><mi>λ</mi><msub><mrow></mrow><mn>5</mn></msub></mrow><mo>) </mo></mrow></mrow><mo>&lt;</mo><mi>g</mi><msup><mrow></mrow><mrow><mi>t</mi><mi>e</mi></mrow></msup><mrow><mo> (</mo><mrow><mi>x</mi><msub><mrow></mrow><mn>5</mn></msub><mo>, </mo><mi>λ</mi><msub><mrow></mrow><mn>5</mn></msub></mrow><mo>) </mo></mrow></mrow></math></mathml>、<mathml id="63"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>g</mi><msup><mrow></mrow><mrow><mi>t</mi><mi>e</mi></mrow></msup><mrow><mo> (</mo><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>, </mo><mi>λ</mi><msub><mrow></mrow><mn>6</mn></msub></mrow><mo>) </mo></mrow><mo>&lt;</mo><mi>g</mi><msup><mrow></mrow><mrow><mi>t</mi><mi>e</mi></mrow></msup><mrow><mo> (</mo><mrow><mi>x</mi><msub><mrow></mrow><mn>6</mn></msub><mo>, </mo><mi>λ</mi><msub><mrow></mrow><mn>6</mn></msub></mrow><mo>) </mo></mrow></mrow></math></mathml>, 则用子代个体<i>y</i>′替换邻域中较差的个体<i>x</i><sub>5</sub>、<i>x</i><sub>6</sub>, 如图1所示。每个个体通过邻域更新在进化自身的同时, 也会去优化邻域内其他个体, 并带动其他邻域内部分个体的进化, 由此形成一种邻域协同进化的模式, 可在每一代都选取出更优秀的子代个体, 最终使种群进化收敛到Pareto前沿。</p>
+                </div>
+                <div class="area_img" id="64">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905026_064.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 邻域更新策略示意图" src="Detail/GetImg?filename=images/JSJC201905026_064.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 邻域更新策略示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905026_064.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="65">由上述分析可知, 邻域规模对其更新策略有重要影响。当邻域规模比较大时, 子代个体<i>y</i>′替换邻域内其他个体的概率增大, 种群的收敛速度随之加快。随着邻域规模的增大, 种群的分布性越来越差, 算法容易陷入局部最优。当邻域规模较小时, 子代个体<i>y</i>′替换邻域内其他个体的概率较小, 算法的收敛性随之降低, 只能在局部调整种群的分布, 因此种群整体进化较慢, 甚至处于停滞状态。</p>
+                </div>
+                <h4 class="anchor-tag" id="66" name="66">1.3 邻域规模固定的缺点</h4>
+                <div class="p1">
+                    <p id="67">邻域是影响MOEA/D算法性能的重要因素之一, 它贯穿进化和选择2个关键步骤。因此, MOEA/D算法为每个子问题都划分一个规模大小为<i>T</i>的邻域来作为子问题的交配邻域和替换邻域。</p>
+                </div>
+                <div class="p1">
+                    <p id="68">交配邻域可以为子问题进化提供父代基因, 随着邻域规模的增大, 从中随机选出的2个父代个体的相似度减小, 差分进化生成的子代个体差异增大。当邻域的规模<i>T</i>较小时, 可供选择的父代基因较少, 差分进化生成的子代个体<i>y</i>′进化幅度相对较小。当邻域的规模较大时, 可供选择的父代基因较多, 差分进化生成更优子代个体的概率增加。如果邻域的规模超过一定范围, 则可能生成与子问题<i>P</i><sup><i>i</i></sup>距离过远的子代个体<i>y</i>′, 此时<i>y</i>′的质量相对较差, 对于种群进化的作用较小。替换邻域一般用于子问题的邻域更新操作, 由第1.2节的分析可知, 邻域规模<i>T</i>对邻域更新策略有很大的影响。</p>
+                </div>
+                <div class="p1">
+                    <p id="69">传统MOEA/D算法在不同时期对于邻域规模<i>T</i>有不同的需求。在算法前期, 种群处于快速进化状态, 更加注重收敛性, 不能兼顾种群的分布性。在算法中期, 种群处于进化缓慢状态, 其进化动力不足, 无法收敛到理想的前沿面上。在算法后期, 种群已经收敛到了Pareto前沿, 此时需要更加注重种群的分布性。综上所述, 在进化过程中, 固定的邻域规模无法平衡种群的分布性与收敛性, 致使进化效率降低。因此需要一种自适应的邻域策略 (Adaptive Neighborhood Strategy, ANS) , 对不同进化状态的种群自适应地调整邻域规模, 达到平衡种群收敛性与分布性的目的。</p>
+                </div>
+                <h3 id="70" name="70" class="anchor-tag">2 MOEA/D-ANS算法</h3>
+                <div class="p1">
+                    <p id="71">本文设计了一种基于邻域更新能力的进化状态判断机制, 来判断种群的进化状态和子问题的进化幅度。在该机制的基础上, 提出一种基于进化状态判断的ANS, 根据种群和子问题进化状态的改变自适应地调整邻域规模, 在进化过程中平衡种群的收敛性与分布性。</p>
+                </div>
+                <h4 class="anchor-tag" id="72" name="72">2.1 基于邻域更新能力的进化状态判断机制</h4>
+                <div class="p1">
+                    <p id="73">在传统MOEA/D算法中, 种群的进化状态不断变化, 且不同进化状态下的种群对于收敛性与平衡性的要求不同, 其缺乏能够准确判断种群进化状态的机制。因此, 本文提出一种基于邻域更新能力的进化状态判断机制来判断当前种群的进化状态和子问题的进化幅度。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">由第1.2节可知, 在进化过程中, 每一个子问题都对应一个个体, 当某一个体进化幅度较大时, 其能够更新掉邻域内更多的个体, 最终在MOEA/D的邻域协同进化模式下, 引导种群中大部分的邻域实现进化幅度的提升。反之, 如果一个个体的进化幅度较小, 则其更新邻域内其他个体的数目随之减少, 此时种群的进化效率也会降低。由此可知, 在MOEA/D算法中, 单个邻域的更新频次<i>u</i><sub><i>i</i></sub>能够较好地反映当前子问题对应个体的进化幅度, 而种群中所有邻域的更新情况, 能够反映整个种群的进化状态。因此, 基于邻域更新能力的进化状态判断机制能够准确判断当前种群的进化状态和子问题的进化幅度。设定2个阈值<i>ε</i><sub><i>m</i></sub>和<i>ε</i><sub><i>M</i></sub>, 统计子代个体<i>x</i><sup><i>i</i></sup>更新频次<i>u</i><sub><i>i</i></sub>超过阈值<i>ε</i><sub><i>m</i></sub>的个体数目<i>L</i>, 比较<i>L</i>和<i>ε</i><sub><i>M</i></sub>的大小。当新生成的子代个体<i>x</i><sup><i>i</i></sup>在邻域<i>B</i><sup><i>i</i></sup>内的更新频数<i>u</i><sub><i>i</i></sub>超过阈值<i>ε</i><sub><i>m</i></sub>时, 认为该子问题对应个体的进化幅度较大。当<i>L</i>超过阈值<i>ε</i><sub><i>M</i></sub>时, 认为当前种群处于快速进化阶段, 否则认为种群进化动力不足。</p>
+                </div>
+                <div class="p1">
+                    <p id="75">具体执行步骤如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="76"><b>输入</b> 阈值<i>ε</i><sub><i>m</i></sub>、<i>ε</i><sub><i>M</i></sub></p>
+                </div>
+                <div class="p1">
+                    <p id="77"><b>输出</b> 种群进化状态<i>M</i><sub>dis</sub></p>
+                </div>
+                <div class="p1">
+                    <p id="78"><b>步骤1</b> (子问题对应个体的进化幅度) 统计子代个体<i>y</i>′更新邻域内其他个体的数目<i>u</i><sub><i>i</i></sub>, 通过式 (2) 判断子问题对应个体的进化幅度, 若<i>m</i><sup><i>i</i></sup><sub>dis</sub>=1, 则子问题对应个体的进化幅度较大, 反之则进化幅度较小。</p>
+                </div>
+                <div class="p1">
+                    <p id="79" class="code-formula">
+                        <mathml id="79"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>m</mi><msubsup><mrow></mrow><mrow><mtext>d</mtext><mtext>i</mtext><mtext>s</mtext></mrow><mi>i</mi></msubsup><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mn>0</mn><mo>, </mo><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mi>u</mi><msub><mrow></mrow><mi>i</mi></msub><mo>&lt;</mo><mi>ε</mi><msub><mrow></mrow><mi>m</mi></msub></mtd></mtr><mtr><mtd columnalign="left"><mn>1</mn><mo>, </mo><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mi>u</mi><msub><mrow></mrow><mi>i</mi></msub><mo>≥</mo><mi>ε</mi><msub><mrow></mrow><mi>m</mi></msub></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>2</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="80"><b>步骤2</b> (种群的进化动力) 通过式 (3) 统计<i>N</i>个个体中进化幅度较大的<i>L</i>个个体, 根据式 (4) 判断种群进化动力, 若<i>M</i><sub>eva</sub>=1, 则当前种群的进化动力较大, 反之则认为当前种群进化动力不足。</p>
+                </div>
+                <div class="p1">
+                    <p id="81" class="code-formula">
+                        <mathml id="81"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>L</mi><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mi>m</mi></mstyle><msubsup><mrow></mrow><mrow><mtext>d</mtext><mtext>i</mtext><mtext>s</mtext></mrow><mi>i</mi></msubsup><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>3</mn><mo stretchy="false">) </mo></mtd></mtr><mtr><mtd><mi>Μ</mi><msub><mrow></mrow><mrow><mtext>e</mtext><mtext>v</mtext><mtext>a</mtext></mrow></msub><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mn>0</mn><mo>, </mo><mi>L</mi><mo>&lt;</mo><mi>ε</mi><msub><mrow></mrow><mi>Μ</mi></msub></mtd></mtr><mtr><mtd columnalign="left"><mn>1</mn><mo>, </mo><mi>L</mi><mo>≥</mo><mi>ε</mi><msub><mrow></mrow><mi>Μ</mi></msub></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>4</mn><mo stretchy="false">) </mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="82"><b>步骤3</b> (种群的整体进化状态) 每隔30代统计一次<i>M</i><sub>eva</sub>=1的频数<i>U</i>, 通过式 (5) 判断种群所处的进化状态。当<i>M</i><sub>dis</sub>=0时, 认为种群处于局部调优状态;当<i>M</i><sub>dis</sub>=1, 认为其处于缓慢进化状态;当<i>M</i><sub>dis</sub>=2, 认为其处于快速进化状态。</p>
+                </div>
+                <div class="p1">
+                    <p id="83" class="code-formula">
+                        <mathml id="83"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Μ</mi><msub><mrow></mrow><mrow><mtext>d</mtext><mtext>i</mtext><mtext>s</mtext></mrow></msub><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><mn>0</mn><mo>, </mo><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mi>Μ</mi><msub><mrow></mrow><mrow><mtext>e</mtext><mtext>v</mtext><mtext>a</mtext></mrow></msub><mo>=</mo><mn>0</mn><mspace width="0.25em" /><mo>, </mo><mspace width="0.25em" /><mi>U</mi><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd columnalign="left"><mn>1</mn><mo>, </mo><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mi>Μ</mi><msub><mrow></mrow><mrow><mtext>e</mtext><mtext>v</mtext><mtext>a</mtext></mrow></msub><mo>=</mo><mn>0</mn><mspace width="0.25em" /><mo>, </mo><mspace width="0.25em" /><mi>U</mi><mo>!</mo><mo>=</mo><mn>0</mn><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /></mtd></mtr><mtr><mtd columnalign="left"><mn>2</mn><mo>, </mo><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mi>Μ</mi><msub><mrow></mrow><mrow><mtext>e</mtext><mtext>v</mtext><mtext>a</mtext></mrow></msub><mo>=</mo><mn>1</mn></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>5</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <h4 class="anchor-tag" id="84" name="84">2.2 ANS策略</h4>
+                <div class="p1">
+                    <p id="85">在种群进化过程中, 若要很好地平衡种群的收敛性与分布性, 需要为不同进化状态的种群提供不同的邻域规模。传统MOEA/D算法固定邻域规模, 无法满足上述需求, 致使种群进化效率降低。因此结合第2.1节的判断机制, 提出一种基于进化状态判断的自适应邻域更新策略, 根据种群的进化状态和子问题的进化幅度自适应地调整邻域规模, 最终达到提高种群进化效率的目的。</p>
+                </div>
+                <div class="p1">
+                    <p id="86">根据种群的进化状态, 自适应地调整邻域规模非常重要。在算法前期, 子问题的进化幅度相对较大, 种群处于快速进化状态, 此时算法收敛性强, 分布性较差。ANS能够适当减小邻域规模, 使种群在快速收敛的同时兼顾种群的多样性。在算法中期, 子问题的进化幅度都相对较小, 种群处于进化缓慢状态, 可能无法收敛到理想的前沿面上。ANS能够适当增大邻域规模, 种群的收敛性增加, 为种群提供继续进化的动力, 防止种群陷入进化停滞的状态。在算法后期, 种群逐渐收敛到前沿, 其进入局部调优状态, 需要更加注重分布性。ANS会适当减小邻域规模, 提高算法的局部寻优能力和解集的整体性能, 使种群更加均匀地分布于前沿。</p>
+                </div>
+                <div class="p1">
+                    <p id="87">根据子问题的进化幅度, 自适应地调整邻域规模同样具有重要意义。种群在进化过程中, 子问题的进化幅度差异较大, 对于上代进化幅度较大的子问题, 应适当缩小其对应的邻域规模<i>T</i>, 让个体在新的收敛点周围进行广度探索。对于上代进化幅度较小的子问题, 则适当增大其邻域规模<i>T</i>, 提高更优子代产生的概率, 保证其搜索效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="88">综上所述, 基于进化状态判断的自适应邻域更新策略, 可以很好地平衡种群的收敛性与分布性。其具体执行过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="89"><b>输入</b> 初始种群<mathml id="90"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mo>=</mo><mrow><mo>{</mo><mrow><mi>x</mi><msup><mrow></mrow><mn>1</mn></msup><mo>, </mo><mi>x</mi><msup><mrow></mrow><mn>2</mn></msup><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>x</mi><msup><mrow></mrow><mi>Ν</mi></msup></mrow><mo>}</mo></mrow></mrow></math></mathml>, 种群中每个子问题对应的邻域大小<mathml id="91"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><mo>=</mo><mrow><mo>{</mo><mrow><mi>Τ</mi><msub><mrow></mrow><mn>1</mn></msub><mo>, </mo><mi>Τ</mi><msub><mrow></mrow><mn>2</mn></msub><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>Τ</mi><msub><mrow></mrow><mi>Ν</mi></msub></mrow><mo>}</mo></mrow></mrow></math></mathml>, 种群初始邻域<i>T</i>′</p>
+                </div>
+                <div class="p1">
+                    <p id="92"><b>输出</b> 种群中每个子问题对应邻域的大小<mathml id="93"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><mo>=</mo><mrow><mo>{</mo><mrow><mi>Τ</mi><msub><mrow></mrow><mn>1</mn></msub><mo>, </mo><mi>Τ</mi><msub><mrow></mrow><mn>2</mn></msub><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>Τ</mi><msub><mrow></mrow><mi>Ν</mi></msub></mrow><mo>}</mo></mrow></mrow></math></mathml>, 种群基准邻域<i>T</i><sup>*</sup></p>
+                </div>
+                <div class="p1">
+                    <p id="94"><b>步骤1</b> 初始化<i>T</i><sup>*</sup>=<i>T</i>=<i>T</i>′。</p>
+                </div>
+                <div class="p1">
+                    <p id="95"><b>步骤2</b> 种群进化:</p>
+                </div>
+                <div class="p1">
+                    <p id="96">1) For <i>x</i><sub><i>i</i></sub>∈<i>S</i>, 取其邻域<mathml id="97"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>B</mi><mo stretchy="false"> (</mo><mi>i</mi><mo stretchy="false">) </mo><mo>=</mo><mrow><mo>{</mo><mrow><mi>i</mi><msub><mrow></mrow><mn>1</mn></msub><mo>, </mo><mi>i</mi><msub><mrow></mrow><mn>2</mn></msub><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>i</mi><msub><mrow></mrow><mrow><mi>Τ</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></msub></mrow><mo>}</mo></mrow></mrow></math></mathml>, 并差分进化生成新的子代个体。</p>
+                </div>
+                <div class="p1">
+                    <p id="98">2) 通过第2.2节所述方法获得当前子问题对应个体的进化幅度<i>m</i><sup><i>i</i></sup><sub>dis</sub>和种群的进化状态<i>M</i><sub>dis</sub>。</p>
+                </div>
+                <div class="p1">
+                    <p id="99"><b>步骤3</b> 自适应邻域设置:</p>
+                </div>
+                <div class="p1">
+                    <p id="100">1) 在上一代统计中, 若<i>M</i><sub>dis</sub>=1, 则上代种群处于进化缓慢状态, 可根据式 (6) 扩大当代种群基准邻域<i>T</i><sup>*</sup>。若<i>M</i><sub>dis</sub>!=1, 则上代种群处于快速进化或者局部调优状态, 应缩小当代种群基准邻域<i>T</i><sup>*</sup>。</p>
+                </div>
+                <div class="p1">
+                    <p id="101" class="code-formula">
+                        <mathml id="101"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><msup><mrow></mrow><mo>*</mo></msup><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd columnalign="left"><msup><mi>Τ</mi><mo>′</mo></msup><mo>-</mo><mrow><mo> (</mo><mrow><mfrac><mi>L</mi><mi>Ν</mi></mfrac><mo>×</mo><msup><mi>Τ</mi><mo>′</mo></msup><mo>+</mo><mi>ε</mi></mrow><mo>) </mo></mrow><mo>, </mo><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mi>Μ</mi><msub><mrow></mrow><mrow><mtext>d</mtext><mtext>i</mtext><mtext>s</mtext></mrow></msub><mo>!</mo><mo>=</mo><mn>1</mn><mspace width="0.25em" /></mtd></mtr><mtr><mtd columnalign="left"><msup><mi>Τ</mi><mo>′</mo></msup><mo>+</mo><mrow><mo> (</mo><mrow><mfrac><mi>L</mi><mi>Ν</mi></mfrac><mo>×</mo><msup><mi>Τ</mi><mo>′</mo></msup><mo>+</mo><mi>ε</mi></mrow><mo>) </mo></mrow><mo>, </mo><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mspace width="0.25em" /><mi>Μ</mi><msub><mrow></mrow><mrow><mtext>d</mtext><mtext>i</mtext><mtext>s</mtext></mrow></msub><mo>=</mo><mn>1</mn></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>6</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="102">2) 在上一代统计中, 若<i>m</i><sup><i>i</i></sup><sub>dis</sub>=1, 则上代个体处于快速进化状态, 则通过式 (7) 缩小当前个体的邻域规模<i>T</i><sub><i>i</i></sub>。若<i>m</i><sup><i>i</i></sup><sub>dis</sub>=0, 则扩大当前个体的邻域规模<i>T</i><sub><i>i</i></sub>。</p>
+                </div>
+                <div class="p1">
+                    <p id="103" class="code-formula">
+                        <mathml id="103"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mrow><mo>{</mo><mrow><mtable><mtr><mtd><mi>Τ</mi><msup><mrow></mrow><mo>*</mo></msup><mo>-</mo><mrow><mo> (</mo><mrow><mfrac><mrow><mi>u</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mrow><mi>Τ</mi><msup><mrow></mrow><mo>*</mo></msup></mrow></mfrac><mo>×</mo><msup><mi>Τ</mi><mo>′</mo></msup><mo>+</mo><mi>ε</mi></mrow><mo>) </mo></mrow><mo>, </mo><mspace width="0.25em" /><mi>m</mi><msubsup><mrow></mrow><mrow><mtext>d</mtext><mtext>i</mtext><mtext>s</mtext></mrow><mi>i</mi></msubsup><mo>=</mo><mn>1</mn></mtd></mtr><mtr><mtd><mi>Τ</mi><msup><mrow></mrow><mo>*</mo></msup><mo>+</mo><mrow><mo> (</mo><mrow><mfrac><mrow><mi>u</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mrow><mi>Τ</mi><msup><mrow></mrow><mo>*</mo></msup></mrow></mfrac><mo>×</mo><msup><mi>Τ</mi><mo>′</mo></msup><mo>+</mo><mi>ε</mi></mrow><mo>) </mo></mrow><mo>, </mo><mspace width="0.25em" /><mspace width="0.25em" /><mi>m</mi><msubsup><mrow></mrow><mrow><mtext>d</mtext><mtext>i</mtext><mtext>s</mtext></mrow><mi>i</mi></msubsup><mo>=</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>7</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="104"><b>步骤4</b> 输出<mathml id="105"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><mo>=</mo><mrow><mo>{</mo><mrow><mi>Τ</mi><msub><mrow></mrow><mn>1</mn></msub><mo>, </mo><mi>Τ</mi><msub><mrow></mrow><mn>2</mn></msub><mo>, </mo><mo>⋯</mo><mo>, </mo><mi>Τ</mi><msub><mrow></mrow><mi>Ν</mi></msub></mrow><mo>}</mo></mrow></mrow></math></mathml>和种群基准邻域T<sup>*</sup>。</p>
+                </div>
+                <h4 class="anchor-tag" id="106" name="106">2.3 算法流程</h4>
+                <div class="p1">
+                    <p id="107">本文参照MOEA/D的进化框架, 引入一种基于邻域更新能力的进化状态判断机制和自适应邻域策略, 具体过程如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="108"><b>步骤1</b> 初始化均匀权重向量<i>λ</i>={<i>λ</i><sub>1</sub>, <i>λ</i><sub>2</sub>, …, <i>λ</i><sub><i>N</i></sub>}, 初始化种群<i>x</i>={<i>x</i><sup>1</sup>, <i>x</i><sup>2</sup>, …, <i>x</i><sup><i>N</i></sup>}, 初始化理想点<b><i>z</i></b>={<i>z</i><sub>1</sub>, <i>z</i><sub>2</sub>, …, <i>z</i><sub><i>m</i></sub>}<sup>T</sup>。</p>
+                </div>
+                <div class="p1">
+                    <p id="109"><b>步骤2</b> 对于<i>i</i>=1, 2, …, <i>N</i>, 进化生成新的个体<i>y</i>′, 并更新理想点<b><i>z</i></b>。通过第2.1节所述方法获得种群进化状态<i>M</i><sub>dis</sub>和子问题对应个体的进化幅度。根据第2.2节所述方法获得种群基准邻域<i>T</i><sup>*</sup>和子问题对应的邻域规模<i>T</i><sub><i>i</i></sub>。对邻域进行更新:对于<mathml id="110"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>j</mi><mo>∈</mo><mrow><mi>B</mi><mrow><mo> (</mo><mi>i</mi><mo>) </mo></mrow></mrow></mrow></math></mathml>, 若<i>y</i>′的聚合函数值不大于<i>x</i><sup><i>j</i></sup>, 则<i>x</i><sup><i>j</i></sup>=<i>y</i>′并替换相应目标值<mathml id="111"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>F</mi><mi>V</mi><msup><mrow></mrow><mi>j</mi></msup><mo>=</mo><mi>F</mi><mrow><mo> (</mo><msup><mi>y</mi><mo>′</mo></msup><mo>) </mo></mrow></mrow></math></mathml>。</p>
+                </div>
+                <div class="p1">
+                    <p id="112"><b>步骤3</b> 若满足停止条件, 则输出最优解集并结束算法, 否则继续执行步骤2。</p>
+                </div>
+                <h3 id="113" name="113" class="anchor-tag">3 实验结果与分析</h3>
+                <h4 class="anchor-tag" id="114" name="114">3.1 测试问题与对比算法</h4>
+                <div class="p1">
+                    <p id="115">为了验证基于邻域更新能力的进化状态判断机制的合理性, 以及自适应邻域策略的有效性, 将本文提出的MOEA/D-ANS算法与同类型的经典MOEA/D算法、MOEA/D-DRA算法进行对比。测试函数集则选取WFG系列<citation id="155" type="reference"><link href="27" rel="bibliography" /><sup>[<a class="sup">13</a>]</sup></citation>的全部测试函数 (共8个) 。</p>
+                </div>
+                <div class="p1">
+                    <p id="116">为保证实验的合理性和公平性, 在实验中将所有进化算法的交叉率设置为0.9, 变异率设为1/<i>n</i> (<i>n</i>为决策变量的维数) 。种群规模均设置为100, 最高评价次数为100 000, 独立实验次数为20, 初始邻域规模<i>T</i>′为20。自定义15种<i>ε</i><sub><i>m</i></sub>和<i>ε</i><sub><i>M</i></sub>的阈值组合, 通过实验找出较优值。</p>
+                </div>
+                <h4 class="anchor-tag" id="117" name="117">3.2 性能指标</h4>
+                <div class="p1">
+                    <p id="118">为了评估算法结果的收敛性和多样性, 本文采用多样性 (<i>Spread</i>) 和反转世代距离 (<i>IGD</i>) 来作为性能评估指标<citation id="156" type="reference"><link href="29" rel="bibliography" /><link href="31" rel="bibliography" /><sup>[<a class="sup">14</a>,<a class="sup">15</a>]</sup></citation>。</p>
+                </div>
+                <h4 class="anchor-tag" id="119" name="119">1) 多样性指标的计算过程如下:</h4>
+                <div class="p1">
+                    <p id="120" class="code-formula">
+                        <mathml id="120"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>s</mi><mi>p</mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>d</mi><mo>=</mo><mfrac><mrow><mi>d</mi><msub><mrow></mrow><mi>f</mi></msub><mo>+</mo><mi>d</mi><msub><mrow></mrow><mi>l</mi></msub><mo>+</mo><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>Ν</mi><mo>-</mo><mn>1</mn></mrow></munderover><mrow><mrow><mo>|</mo><mrow><mi>d</mi><msub><mrow></mrow><mi>i</mi></msub><mo>-</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>d</mi></mstyle><mrow><mspace width="0.25em" /><mo>-</mo></mrow></mover></mrow><mo>|</mo></mrow></mrow></mstyle><mspace width="0.25em" /></mrow></mrow><mrow><mi>d</mi><msub><mrow></mrow><mi>f</mi></msub><mo>+</mo><mi>d</mi><msub><mrow></mrow><mi>l</mi></msub><mo>+</mo><mo stretchy="false"> (</mo><mi>Ν</mi><mo>-</mo><mn>1</mn><mo stretchy="false">) </mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>d</mi></mstyle><mrow><mspace width="0.25em" /><mo>-</mo></mrow></mover></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>8</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="121">其中, <i>d</i><sub><i>i</i></sub>、<mathml id="122"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>d</mi></mstyle><mrow><mspace width="0.25em" /><mo>-</mo></mrow></mover></mrow></math></mathml>分别为每个点与其相邻点的距离和平均距离, d<sub>f</sub>、d<sub>l</sub>为边缘点与真实前沿边缘的距离。Spread值越小, 说明算法获得解的分布性越好。</p>
+                </div>
+                <h4 class="anchor-tag" id="123" name="123">2) 反转世代距离:</h4>
+                <div class="p1">
+                    <p id="124">计算每个点到算法所获解集之间的最近距离的平均值, 计算过程如式 (9) 所示。IGD值越低, 表明算法获得的近似<i>Pareto</i>前端的收敛性和多样性越好, 越接近真实<i>Pareto</i>前沿。</p>
+                </div>
+                <div class="p1">
+                    <p id="125" class="code-formula">
+                        <mathml id="125"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Ι</mi><mi>G</mi><mi>D</mi><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>Ν</mi><msup><mrow></mrow><mo>*</mo></msup></mrow></munderover><mi>d</mi></mstyle><msub><mrow></mrow><mi>i</mi></msub></mrow><mrow><mi>Ν</mi><msup><mrow></mrow><mo>*</mo></msup></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false"> (</mo><mn>9</mn><mo stretchy="false">) </mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="126">其中, N<sup>*</sup>为真实解集的规模。</p>
+                </div>
+                <h4 class="anchor-tag" id="127" name="127">3.3 结果分析</h4>
+                <h4 class="anchor-tag" id="128" name="128">3.3.1 进化状态判断机制的合理性分析</h4>
+                <div class="p1">
+                    <p id="129">通过对比种群中每一代进化幅度较大的个体数<i>L</i>以及<i>Spread</i>和<i>IGD</i>值来验证基于邻域更新能力的进化状态判断机制的合理性。选用的算法是MOEA/D, 测试函数为WFG1、WFG2。为提高可比性, 对<i>L</i>、<i>Spread</i>和<i>IGD</i>值进行标准化处理。</p>
+                </div>
+                <div class="p1">
+                    <p id="130">图2所示为MOEA/D求解WFG1和WFG2时的对比结果。由于进化算法是一种随机搜索算法, 其通过种群在目标空间的不断探索和寻优找到理想解, 种群的每一次进化, 指标值会随之发生改变。在图2 (a) 中, <i>L</i>值在45代、60代、120代时处于较大的峰值, 此时对应种群的<i>IGD</i>值也急剧减小, 说明种群的收敛性较强。<i>IGD</i>值在250～260代有些许上升浮动, 但是总体保持不断减小的趋势。300代以后, <i>L</i>值波动范围较小, 而<i>IGD</i>值则也相应的处在相对稳定的区间。由此可知, <i>L</i>值和<i>IGD</i>值具有一定的相关性, <i>L</i>值能够较好地反应种群的整体性能。在图2 (b) 中, 当<i>L</i>值急剧变大时, 对应的<i>Spread</i>值也处于峰值, 此时种群的多样性较差, 当<i>L</i>值波动较小时, 其对应的<i>Spread</i>值则相对平稳, 则种群的多样性较好。图2 (c) 、图2 (d) 的数据分别与图2 (a) 、图2 (b) 类似, 因此得出:<i>L</i>值和<i>IGD</i>值、<i>Spread</i>值都具有一定的相关性。种群<i>L</i>值能够较好地表达种群的整体性能。<i>L</i>值越大, 则<i>Spread</i>值变大, <i>IGD</i>值变小, 种群分布性相对较差, 收敛性较强, 这符合MOEA/D进化规律。</p>
+                </div>
+                <div class="area_img" id="131">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905026_131.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 MOEA/D求解2种函数时种群进化状态和指标性能的对比" src="Detail/GetImg?filename=images/JSJC201905026_131.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 MOEA/D求解2种函数时种群进化状态和指标性能的对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905026_131.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="132">综上所述, 基于邻域更新能力的进化状态判断机制可以较准确地反映出进化状态和子问题的进化幅度。</p>
+                </div>
+                <h4 class="anchor-tag" id="133" name="133">3.3.2 自适应邻域策略的结果分析</h4>
+                <div class="p1">
+                    <p id="134">表1为3种算法求解经典测试问题时, 各指标的平均值和标准差 (表中括号内的值为标准差) 。实验采用均值对比为主、标准差为辅的方式, 将每个算法的性能指标值进行优劣划分, 表中深色阴影为每组实验数据中的最优数据, 浅色阴影为第2优数据。由表1可知, MOEA/D-ANS算法在多数测试函数下的<i>IGD</i>值明显优于MOEA/D算法和MOEA/D-DRA算法。<i>Spread</i>指标方面, 在WFG1～WFG5、WFG8测试函数上, MOEA/D-ANS算法均优于对比算法, 而在WFG6、WFG7测试函数上, 其指标值也排在前两位。由此可以看出, 使用ANS策略极大地提高了种群的收敛性, 也兼顾了分布性, 最优解集的整体性能有较大的提升。同时, 本文使用Wilcoxon’s Sign Rank Test方法对各算法的实验数据进行显著性分析。在表1中, 算法在0.05显著性水平下的数值已用“†”表示。</p>
+                </div>
+                <div class="area_img" id="135">
+                    <p class="img_tit"><b>表1 3种算法性能指标的平均值和标准差对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="135" border="1"><tr><td>性能指标</td><td>测试函数</td><td>MOEA/D-ANS算法</td><td>MOEA/D算法</td><td>MOEA/D-DRA算法</td></tr><tr><td rowspan="8"><br /><i>Spread</i>值</td><td><br />WFG1</td><td>5.57E-01 (1.08E-02) </td><td>5.65E-01 (1.70E-02) †</td><td>5.73E-01 (1.70E-02) †</td></tr><tr><td><br />WFG2</td><td>9.73E-01 (5.76E-04) </td><td>9.99E-01 (4.17E-02) †</td><td>9.78E-01 (7.29E-03) †</td></tr><tr><td><br />WFG3</td><td>5.62E-01 (8.79E-05) </td><td>5.62E-01 (1.35E-04) †</td><td>5.62E-01 (1.17E-04) †</td></tr><tr><td><br />WFG4</td><td>3.09E-01 (8.09E-03) </td><td>3.19E-01 (2.89E-02) †</td><td>3.21E-01 (3.57E-02) †</td></tr><tr><td><br />WFG5</td><td>3.24E-01 (5.57E-03) </td><td>3.35E-01 (6.49E-03) †</td><td>3.32E-01 (5.29E-03) †</td></tr><tr><td><br />WFG6</td><td>2.92E-01 (1.43E-04) </td><td>2.92E-01 (1.96E-04) †</td><td>2.92E-01 (1.58E-04) </td></tr><tr><td><br />WFG7</td><td>2.92E-01 (1.66E-04) </td><td>2.92E-01 (1.34E-04) </td><td>2.92E-01 (1.79E-04) </td></tr><tr><td><br />WFG8</td><td>9.77E-01 (8.02E-02) </td><td>9.83E-01 (6.96E-02) †</td><td>9.95E-01 (7.12E-02) †</td></tr><tr><td rowspan="8"><br /><i>IGD</i>值</td><td><br />WFG1</td><td>2.54E-02 (1.91E-03) </td><td>2.63E-02 (2.50E-03) †</td><td>2.80E-02 (2.99E-03) †</td></tr><tr><td><br />WFG2</td><td>3.79E-02 (1.64E-04) </td><td>6.45E-02 (2.23E-02) †</td><td>5.06E-02 (2.03E-02) †</td></tr><tr><td><br />WFG3</td><td>1.39E-01 (1.14E-05) </td><td>1.39E-01 (1.27E-05) </td><td>1.39E-01 (2.39E-05) †</td></tr><tr><td><br />WFG4</td><td>1.63E-02 (3.91E-04) </td><td>1.64E-02 (1.03E-03) †</td><td>1.66E-02 (1.63E-03) †</td></tr><tr><td><br />WFG5</td><td>6.71E-02 (1.62E-04) </td><td>6.71E-02 (1.69E-04) </td><td>6.71E-02 (1.59E-04) </td></tr><tr><td><br />WFG6</td><td>1.48E-02 (1.02E-05) </td><td>1.48E-02 (1.26E-05) †</td><td>1.48E-02 (1.02E-05) </td></tr><tr><td><br />WFG7</td><td>1.63E-02 (3.82E-06) </td><td>1.63E-02 (8.69E-06) </td><td>1.63E-02 (9.89E-06) †</td></tr><tr><td><br />WFG8</td><td>2.41E-01 (5.64E-02) </td><td>2.43E-01 (5.28E-02) †</td><td>2.51E-01 (5.10E-02) †</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="136">图3、图4分别为3种算法在不同测试函数下的<i>Spread</i>指标和<i>IGD</i>指标的盒图。由图3可知, 在<i>Spread</i>方面, MOEA/D-ANS算法在解决前沿复杂的WFG1～WFG4测试问题时, 其均值、最小值、中位数相较于其他算法有明显的优势。在处理WFG5～WFG8测试问题时, MOEA/D-ANS算法的优势并不明显, 但其在四分位数、中位数方面有较好的表现。由图4可以看出, 在<i>IGD</i>方面, MOEA/D-ANS算法在求解前沿复杂的WFG1～WFG3测试问题时, 其均值、最小值、中位数相较于对比算法有明显优势。而在处理WFG4～WFG8的凸前沿问题时, MOEA/D-ANS算法与对比算法相比优势并不明显, 但其四分位差值较小, 异常数据点较少。这说明在处理凸前沿的问题时, ANS策略既能有效提高算法的收敛性, 也兼顾了解集的分布性。</p>
+                </div>
+                <div class="area_img" id="137">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905026_137.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 3种算法在不同测试函数下的Spread指标盒图" src="Detail/GetImg?filename=images/JSJC201905026_137.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 3种算法在不同测试函数下的<i>Spread</i>指标盒图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905026_137.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="area_img" id="138">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905026_138.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 3种算法在不同测试函数下的IGD指标盒图" src="Detail/GetImg?filename=images/JSJC201905026_138.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 3种算法在不同测试函数下的<i>IGD</i>指标盒图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905026_138.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="139">图5所示为3种算法在WFG1～WFG3测试函数迭代300次后取得的Pareto前沿图。从图5中可以看出, 在复杂前沿的WFG1问题上, MOEA/D-ANS算法在300代时大部分都已收敛到最优前沿, 且解集分布较均匀。MOEA/D-DRA算法和MOEA/D算法都未找到最优的前沿面, 解集的分布性一般, 尤其是MOEA/D-DRA算法的解集分布较差。在求解WFG2函数时, MOEA/D-ANS算法相较于其他算法, 其解集全部收敛到最优前沿面且分布均匀, 而MOEA/D算法和MOEA/D-DRA算法都有部分前沿未找到。在WFG3问题上, 3种算法的性能相差不大。</p>
+                </div>
+                <div class="area_img" id="140">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201905026_140.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 3种算法在WFG1～WFG3测试问题中的前沿分布" src="Detail/GetImg?filename=images/JSJC201905026_140.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 3种算法在WFG1～WFG3测试问题中的前沿分布</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201905026_140.jpg&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="141">综上, 本文提出的自适应邻域更新策略与传统固定邻域相比, 在处理复杂、凸面测试问题时, 既能保证算法的收敛性又能兼顾解的分布性。</p>
+                </div>
+                <h3 id="142" name="142" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="143">为了避免经典MOEA/D算法固定邻域导致的种群进化效率低的问题, 本文提出一种基于自适应邻域策略的改进型MOEA/D算法。设计一种基于邻域更新能力的种群进化状态判断机制, 并基于该机制提出自适应邻域策略, 使邻域规模根据种群和子问题进化状态自适应地进行调整, 达到平衡种群收敛性与分布性的目的。实验结果表明, 该算法较好的分布性和收敛性。下一步将根据子问题的邻域更新能力采取相应的邻域更新策略, 并通过理论分析寻找更优的<i>ε</i><sub><i>m</i></sub>和<i>ε</i><sub><i>M</i></sub>阈值组合。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Multiobjective optimization using evolutionary algorithms-a comparative case study">
+
+                                <b>[1]</b> ZITZLER E, THIELE L.Multiobjective optimization using evolutionary algorithms-a comparative case study[C]//Proceedings of International Conference on Parallel Problem Solving from Nature.Berlin, Germany:Springer, 2006:292-301.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A primary theoretical study on decomposition-based multiobjective evolutionary algorithms">
+
+                                <b>[2]</b> LI Yuanyong, ZHOU Yuren, ZHAN Zhihui, et al.A primary theoretical study on decomposition-based multiobjective evolutionary algorithms[J].IEEE Transactions on Evolutionary Computation, 2016, 20 (4) :563-576.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Decomposition Based Algorithms Using Pareto Adaptive Scalarizing Methods">
+
+                                <b>[3]</b> WANG Rui, ZHANG Qingfu, ZHANG Tao.Decomposition based algorithms using Pareto adaptive scalarizing methods[J].IEEE Transactions on Evolutionary Computation, 2016, 20 (6) :821-837.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A simple and fast hypervolume indicator-based multiobjective evolutionary algorithm">
+
+                                <b>[4]</b> JIANG Siwei, ZHANG Jie, ONG Y S, et al.A simple and fast hypervolume indicator-based multiobjective evolutionary algorithm[J].IEEE Transactions on Cybernetics, 2015, 45 (10) :2202-2213.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="http://scholar.cnki.net/result.aspx?q=MOEA/D: A multiobjective evolutionary algorithm based on decomposition">
+
+                                <b>[5]</b> ZHANG Qingfu, LI Hui.MOEA/D:a multiobjective evolutionary algorithm based on decomposition[J].IEEE Transactions on Evolutionary Computation, 2007, 11 (6) :712-731.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Multiobjective optimization problems with complicated pareto sets, MOEA/ D and NSGA-II">
+
+                                <b>[6]</b> LI Hui, ZHANG Qingfu.Multiobjective optimization problems with complicated Pareto sets, MOEA/D and NSGA-II[J].IEEE Transactions on Evolutionary Computation, 2009, 13 (2) :284-302.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=The Performance of a New Version of MOEA/D on CEC09Unconstrained MOP Test Instances,">
+
+                                <b>[7]</b> ZHANG Qingfu, LIU Wudong, LI Hui.The performance of a new version of MOEA/D on CEC09 unconstrained MOP test instances[C]//Proceedings of 2009 IEEE Congress on Evolutionary Computation.Washington D.C., USA:IEEE Press, 2009:203-208.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD15110100378584&amp;v=MzA4MDlySzlIOURNcm85Rlord0hDWFE5b0JNVDZUNFBRSC9pclJkR2VycVFUTW53WmVadUh5am1VTG5JSlY0Y2FCbz1OajdCYQ==&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[8]</b> ISHIBUCHI H, HITOTSUYANAGI Y, TSUKAMOTO N, et al.Use of biased neighborhood structures in multiobjective memetic algorithms[J].Soft Computing, 2009, 13 (8/9) :795-810.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Decomposition-Based Multiobjective Evolutionary Algorithm with an Ensemble of Neighborhood Sizes">
+
+                                <b>[9]</b> ZHAO Shizheng, SUGANTHAN P N, ZHANG Qingfu.Decomposition-based multiobjective evolutionary algorithm with an ensemble of neighborhood sizes[J].IEEE Transactions on Evolutionary Computation, 2012, 16 (3) :442-446.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KZLY201411008&amp;v=Mjc1NjR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJvRnkzbFc3M0FMamZIZDdHNEg5WE5ybzlGYklRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[10]</b> 刘志君, 高亚奎, 章卫国, 等.变邻域分解多目标自适应差分进化算法[J].控制理论与应用, 2014, 31 (11) :1492-1501.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Adaptive replacement strategies for MOEA/D">
+
+                                <b>[11]</b> WANG Zhenkun, ZHANG Qingfu, ZHOU Aimin, et al.Adaptive replacement strategies for MOEA/D[J].IEEE Transactions on Cybernetics, 2016, 46 (2) :474-486.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201703039&amp;v=MzExMTZxQnRHRnJDVVJMT2VaZVJvRnkzbFc3M0FMejdCYmJHNEg5Yk1ySTlHYllRS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[12]</b> 刘璐, 郑力明.基于邻域和变异算子组合优化的MOEA/D算法[J].计算机工程, 2017, 43 (3) :232-240.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A review of multiobjective test problems and a scalable test problem toolkit">
+
+                                <b>[13]</b> HUBAND S, HINGSTON P, BARONE L, et al.A review of multiobjective test problems and a scalable test problem toolkit[J].IEEE Transactions on Evolutionary Computation, 2006, 10 (5) :477-506.
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A fast and elitist multiobjective genetic algorithm: NSGA-II">
+
+                                <b>[14]</b> DEB K, PRATAP A, AGARWAL S, et al.A fast and elitist multiobjective genetic algorithm:NSGA-II[J].IEEE Transactions on Evolutionary Computation, 2002, 6 (2) :182-197.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Adaptive Multiobjective Particle Swarm Optimization Based on Parallel Cell Coordinate System">
+
+                                <b>[15]</b> WANG Hu, YEN G G.Adaptive multiobjective particle swarm optimization based on parallel cell coordinate system[J].IEEE Transactions on Evolutionary Computation, 2015, 19 (1) :1-18.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201905026" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201905026&amp;v=MDc5MDZPZVplUm9GeTNsVzczQUx6N0JiYkc0SDlqTXFvOUhZb1FLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkw=&amp;uid=WEEvREcwSlJHSldRa1FhcEE0QVN2K0VNZjJWbHVQbXRmcGxDWVVPcjBMVT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

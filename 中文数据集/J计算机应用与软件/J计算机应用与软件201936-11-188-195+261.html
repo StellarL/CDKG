@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637134079710100000%26DBCODE%3dCJFD%26TABLEName%3dCJFDTEMP%26FileName%3dJYRJ201911032%26RESULT%3d1%26SIGN%3daEu4haZrYniHiwI0CRAf5kmZD0E%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201911032&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JYRJ201911032&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201911032&amp;v=MDk3NjRSTE9lWmVWdUZ5L2hVTHZOTHpUWlpMRzRIOWpOcm85R1pvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="&lt;b&gt;0 引 言&lt;/b&gt; "><b>0 引 言</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#47" data-title="&lt;b&gt;1 相关研究&lt;/b&gt; "><b>1 相关研究</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#56" data-title="&lt;b&gt;2 基于BiLSTM-CRF模型的初始识别&lt;/b&gt; "><b>2 基于BiLSTM-CRF模型的初始识别</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#59" data-title="&lt;b&gt;2.1 向量层&lt;/b&gt;"><b>2.1 向量层</b></a></li>
+                                                <li><a href="#62" data-title="&lt;b&gt;2.2 BiLSTM网络层&lt;/b&gt;"><b>2.2 BiLSTM网络层</b></a></li>
+                                                <li><a href="#69" data-title="&lt;b&gt;2.3 CRF层&lt;/b&gt;"><b>2.3 CRF层</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#78" data-title="&lt;b&gt;3 基于词典与规则的校正识别&lt;/b&gt; "><b>3 基于词典与规则的校正识别</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#80" data-title="&lt;b&gt;3.1 基于词典的方法&lt;/b&gt;"><b>3.1 基于词典的方法</b></a></li>
+                                                <li><a href="#83" data-title="&lt;b&gt;3.2 基于规则的方法&lt;/b&gt;"><b>3.2 基于规则的方法</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#86" data-title="&lt;b&gt;4 实 验&lt;/b&gt; "><b>4 实 验</b></a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#87" data-title="&lt;b&gt;4.1 实验数据集&lt;/b&gt;"><b>4.1 实验数据集</b></a></li>
+                                                <li><a href="#90" data-title="&lt;b&gt;4.2 标注策略&lt;/b&gt;"><b>4.2 标注策略</b></a></li>
+                                                <li><a href="#95" data-title="&lt;b&gt;4.3 评判标准&lt;/b&gt;"><b>4.3 评判标准</b></a></li>
+                                                <li><a href="#102" data-title="&lt;b&gt;4.4 实验设计&lt;/b&gt;"><b>4.4 实验设计</b></a></li>
+                                                <li><a href="#108" data-title="&lt;b&gt;4.5 对比实验&lt;/b&gt;"><b>4.5 对比实验</b></a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#122" data-title="&lt;b&gt;5 结 语&lt;/b&gt; "><b>5 结 语</b></a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#58" data-title="图1 BiLSTM-CRF模型">图1 BiLSTM-CRF模型</a></li>
+                                                <li><a href="#64" data-title="图2 BiLSTM模型">图2 BiLSTM模型</a></li>
+                                                <li><a href="#82" data-title="图3 基于词典的文本匹配算法流程">图3 基于词典的文本匹配算法流程</a></li>
+                                                <li><a href="#89" data-title="&lt;b&gt;表1 工艺操作说明文本数据表&lt;/b&gt;"><b>表1 工艺操作说明文本数据表</b></a></li>
+                                                <li><a href="#104" data-title="&lt;b&gt;表2 神经网络参数设置&lt;/b&gt;"><b>表2 神经网络参数设置</b></a></li>
+                                                <li><a href="#106" data-title="&lt;b&gt;表3 特征模板释义&lt;/b&gt;"><b>表3 特征模板释义</b></a></li>
+                                                <li><a href="#110" data-title="&lt;b&gt;表4 11种模型的对比实验结果&lt;/b&gt;"><b>表4 11种模型的对比实验结果</b></a></li>
+                                                <li><a href="#112" data-title="&lt;b&gt;表5 没有校正的各类实体识别的效果&lt;/b&gt;"><b>表5 没有校正的各类实体识别的效果</b></a></li>
+                                                <li><a href="#113" data-title="&lt;b&gt;表6 零件和零件号的识别效果&lt;/b&gt;"><b>表6 零件和零件号的识别效果</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="153">
+
+
+                                    <a id="bibliography_1" title=" Sundheim B M.Named entity task definition,version 2.1[C]//Proceedings of the Sixth Message Understanding Conference.1995:319-322." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Named entity task definition, version 2.1">
+                                        <b>[1]</b>
+                                         Sundheim B M.Named entity task definition,version 2.1[C]//Proceedings of the Sixth Message Understanding Conference.1995:319-322.
+                                    </a>
+                                </li>
+                                <li id="155">
+
+
+                                    <a id="bibliography_2" title=" 宗成庆.统计自然语言处理[M].2版.北京:清华大学出版社,2013:298-299." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787302319115000&amp;v=Mjk3MDVOTE5wbzVFWWVzUERCTTh6eFVTbURkOVNIN24zeEU5ZmJ2bktyaWZadTl1RkNybFU3ak1JMW9SWEZxekdiQzRI&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[2]</b>
+                                         宗成庆.统计自然语言处理[M].2版.北京:清华大学出版社,2013:298-299.
+                                    </a>
+                                </li>
+                                <li id="157">
+
+
+                                    <a id="bibliography_3" title=" 王蕾,谢云,周俊生,等.基于神经网络的片段级中文命名实体识别[J].中文信息学报,2018,32(3):84-90." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201803012&amp;v=MTcwMDlqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVWdUZ5L2hVTHZOS0NqWWZiRzRIOW5Nckk5RVpvUUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         王蕾,谢云,周俊生,等.基于神经网络的片段级中文命名实体识别[J].中文信息学报,2018,32(3):84-90.
+                                    </a>
+                                </li>
+                                <li id="159">
+
+
+                                    <a id="bibliography_4" title=" Krupka G R,Hausman K.Description of the NetOwl(TM) extractor system as used for MUC-7[C]//Chinchor N.Proceedings of the 7th Message Understanding Conference.Fairfax,USA:Linguistic Data Consortium,1998." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Description of the NetOwl TM Extractor System asUsed for MUC-7">
+                                        <b>[4]</b>
+                                         Krupka G R,Hausman K.Description of the NetOwl(TM) extractor system as used for MUC-7[C]//Chinchor N.Proceedings of the 7th Message Understanding Conference.Fairfax,USA:Linguistic Data Consortium,1998.
+                                    </a>
+                                </li>
+                                <li id="161">
+
+
+                                    <a id="bibliography_5" title=" Yang Z,Lin H,Li Y.Exploiting the performance of dictionary-based bio-entity name recognition in biomedical literature[J].Computational Biology and Chemistry,2008,32(4):287-291." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011300468097&amp;v=MTk4NzQwSERIVStvQk1UNlQ0UFFIL2lyUmRHZXJxUVRNbndaZVp1SHlqbVViL0lKMW9YYmhjPU5pZk9mYks3SHRETnJJOUZZTw==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         Yang Z,Lin H,Li Y.Exploiting the performance of dictionary-based bio-entity name recognition in biomedical literature[J].Computational Biology and Chemistry,2008,32(4):287-291.
+                                    </a>
+                                </li>
+                                <li id="163">
+
+
+                                    <a id="bibliography_6" title=" Olsson F,Eriksson G,Franz&#233;n K,et al.Notions of Correctness when Evaluating Protein Name Taggers[C]//Proceedings of the 19th international conference on Computational linguistics-Volume 1.2002." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Notions of Correctness when Evaluating Protein Name Taggers">
+                                        <b>[6]</b>
+                                         Olsson F,Eriksson G,Franz&#233;n K,et al.Notions of Correctness when Evaluating Protein Name Taggers[C]//Proceedings of the 19th international conference on Computational linguistics-Volume 1.2002.
+                                    </a>
+                                </li>
+                                <li id="165">
+
+
+                                    <a id="bibliography_7" title=" Mayfield J,McNamee P,Piatko C.Named entity recognition using hundreds of thousands of features[C]//Proceedings of the Seventh Conference on Natural Language Learning at HLTNAACL,Stroudsburg:Association for Computational Linguistics,2003:184-187." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Named Entity Recognition using Hundreds of Thousands of Features">
+                                        <b>[7]</b>
+                                         Mayfield J,McNamee P,Piatko C.Named entity recognition using hundreds of thousands of features[C]//Proceedings of the Seventh Conference on Natural Language Learning at HLTNAACL,Stroudsburg:Association for Computational Linguistics,2003:184-187.
+                                    </a>
+                                </li>
+                                <li id="167">
+
+
+                                    <a id="bibliography_8" title=" Burger J D,Henderson J C,Morgan W T.Statistical named entity recognizer adaptation[C]//Proceedings of the 6th Conference on Natural Language Learning,Stroudsburg:Association for Computational Linguistics,2002,20." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Statistical Named Entity Recognizer Adaptation">
+                                        <b>[8]</b>
+                                         Burger J D,Henderson J C,Morgan W T.Statistical named entity recognizer adaptation[C]//Proceedings of the 6th Conference on Natural Language Learning,Stroudsburg:Association for Computational Linguistics,2002,20.
+                                    </a>
+                                </li>
+                                <li id="169">
+
+
+                                    <a id="bibliography_9" title=" Biswas S,Mishra S P,Mohanty S.A hybrid oriya named entity recognition system:integrating HMM with MaxEnt[C]//Proceedings of the Second Conference on Emerging Trends in Engineering &amp;amp; Technology,2009:16-18." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A hybrid oriya named entity recognition system:integrating HMM with MaxEnt">
+                                        <b>[9]</b>
+                                         Biswas S,Mishra S P,Mohanty S.A hybrid oriya named entity recognition system:integrating HMM with MaxEnt[C]//Proceedings of the Second Conference on Emerging Trends in Engineering &amp;amp; Technology,2009:16-18.
+                                    </a>
+                                </li>
+                                <li id="171">
+
+
+                                    <a id="bibliography_10" title=" McCallum A,Li W.Early results for named entity recognition with conditional random fields,feature induction and web-enhanced lexicons[C]//Proceedings of the Seventh Conference on Natural Language Learning at HLT-NAACL,Stroudsburg:Association for Computational Linguistics,2003:188-191." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Early results for named entity recognition with conditional random fields, feature induction and web-enhanced lexicons">
+                                        <b>[10]</b>
+                                         McCallum A,Li W.Early results for named entity recognition with conditional random fields,feature induction and web-enhanced lexicons[C]//Proceedings of the Seventh Conference on Natural Language Learning at HLT-NAACL,Stroudsburg:Association for Computational Linguistics,2003:188-191.
+                                    </a>
+                                </li>
+                                <li id="173">
+
+
+                                    <a id="bibliography_11" title=" 买合木提&#183;买买提,卡哈尔江&#183;阿比的热西提,艾山&#183;吾买尔,等.CRF与规则相结合的维吾尔文地名识别研究[J].中文信息学报,2017,32(6):110-118." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201706017&amp;v=MTE0NjFDallmYkc0SDliTXFZOUVZNFFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplVnVGeS9oVUx2Tks=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[11]</b>
+                                         买合木提&#183;买买提,卡哈尔江&#183;阿比的热西提,艾山&#183;吾买尔,等.CRF与规则相结合的维吾尔文地名识别研究[J].中文信息学报,2017,32(6):110-118.
+                                    </a>
+                                </li>
+                                <li id="175">
+
+
+                                    <a id="bibliography_12" title=" Zhang Y,Yang J.Chinese NER using lattice LSTM[EB].ArXiv Preprint ArXiv:1805.02023,2018." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Chinese NER using lattice LSTM[EB]">
+                                        <b>[12]</b>
+                                         Zhang Y,Yang J.Chinese NER using lattice LSTM[EB].ArXiv Preprint ArXiv:1805.02023,2018.
+                                    </a>
+                                </li>
+                                <li id="177">
+
+
+                                    <a id="bibliography_13" title=" Ren Y,Teng C,Fei L I,et al.Relation classification via sequence features and bi-directional LSTMs[J].Wuhan University Journal of Natural Sciences,2017,22(6):489-497." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD9F9954D53A2EF7DCC91EE8C634D96661&amp;v=MDg1NDk3eTh4SzA9Tmo3QmFyck9GOWpKcS90QVo1b05lUW8rdTJWZzR6NElQWGVScWhFeERidVNRN3llQ09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUTM1ZGhodw==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[13]</b>
+                                         Ren Y,Teng C,Fei L I,et al.Relation classification via sequence features and bi-directional LSTMs[J].Wuhan University Journal of Natural Sciences,2017,22(6):489-497.
+                                    </a>
+                                </li>
+                                <li id="179">
+
+
+                                    <a id="bibliography_14" title=" Dong X,Qian L,Guan Y,et al.A multiclass classification method based on deep learning for named entity recognition in electronic medical records[C]//2016 New York Scientific Data Summit (NYSDS).IEEE,2016." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A multiclass classification method based on deep learning for named entity recognition in electronic medical records">
+                                        <b>[14]</b>
+                                         Dong X,Qian L,Guan Y,et al.A multiclass classification method based on deep learning for named entity recognition in electronic medical records[C]//2016 New York Scientific Data Summit (NYSDS).IEEE,2016.
+                                    </a>
+                                </li>
+                                <li id="181">
+
+
+                                    <a id="bibliography_15" title=" Dey R,Salemt F M.Gate-variants of Gated Recurrent Unit (GRU) neural networks[C]//2017 IEEE 60th International Midwest Symposium on Circuits and Systems (MWSCAS).IEEE,2017:1597-1600." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Gate-variants of Gated Recurrent Unit (GRU)neural networks">
+                                        <b>[15]</b>
+                                         Dey R,Salemt F M.Gate-variants of Gated Recurrent Unit (GRU) neural networks[C]//2017 IEEE 60th International Midwest Symposium on Circuits and Systems (MWSCAS).IEEE,2017:1597-1600.
+                                    </a>
+                                </li>
+                                <li id="183">
+
+
+                                    <a id="bibliography_16" title=" Devlin J,Chang M W,Lee K,et al.BERT:Pre-training of deep bidirectional transformers for language understanding[J].ArXiv Preprint ArXiv:1810.04805,2018." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=BERT:Pre-training of deep bidirectional transformers for language understanding">
+                                        <b>[16]</b>
+                                         Devlin J,Chang M W,Lee K,et al.BERT:Pre-training of deep bidirectional transformers for language understanding[J].ArXiv Preprint ArXiv:1810.04805,2018.
+                                    </a>
+                                </li>
+                                <li id="185">
+
+
+                                    <a id="bibliography_17" title=" Chou C L,Chang C H,Huang Y Y.Boosted web named entity recognition via tri-training[J].ACM Transactions on Asian and Low-resource Language Information Processing,2016,16(2):10." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCMAF20BC1CF03B8A4CE23AC181D883A37A&amp;v=MDQzMTEzNWRoaHc3eTh4SzA9TmlmSVk4TE9ITkcrM0k0MkV1c01mblJJeTJWbTZEd01PMzdxcldZOWNiSGxScjN1Q09OdkZTaVdXcjdKSUZwbWFCdUhZZk9HUWxmQ3BiUQ==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[17]</b>
+                                         Chou C L,Chang C H,Huang Y Y.Boosted web named entity recognition via tri-training[J].ACM Transactions on Asian and Low-resource Language Information Processing,2016,16(2):10.
+                                    </a>
+                                </li>
+                                <li id="187">
+
+
+                                    <a id="bibliography_18" title=" Mikolov T,Sutskever I,Chen K,et al.Distributed representations of words and phrases and their compositionality[C]//Proceedings of the 26th International Conference on Neural Information Processing Systems-Volume 2,2013:3111-3119." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Distributed Representations of Words and Phrases and their Compositionality">
+                                        <b>[18]</b>
+                                         Mikolov T,Sutskever I,Chen K,et al.Distributed representations of words and phrases and their compositionality[C]//Proceedings of the 26th International Conference on Neural Information Processing Systems-Volume 2,2013:3111-3119.
+                                    </a>
+                                </li>
+                                <li id="189">
+
+
+                                    <a id="bibliography_19" >
+                                        <b>[19]</b>
+                                     Vaswani A,Shazeer N,Parmar N,et al.Attention is all you need[C]//Advances in Neural Information Processing Systems.2017:5998-6008.</a>
+                                </li>
+                                <li id="191">
+
+
+                                    <a id="bibliography_20" title=" Lafferty J,Mccallum A,Pereira F C N.Conditional random fields:probabilistic models for segmenting and labeling sequence data[J].Proceedings of Icml,2001,3(2):282-289." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Conditional random fields: probabilistic models for segmenting and labeling sequence data">
+                                        <b>[20]</b>
+                                         Lafferty J,Mccallum A,Pereira F C N.Conditional random fields:probabilistic models for segmenting and labeling sequence data[J].Proceedings of Icml,2001,3(2):282-289.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JYRJ" target="_blank">计算机应用与软件</a>
+                2019,36(11),188-195+261 DOI:10.3969/j.issn.1000-386x.2019.11.031            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>面向工艺操作说明文本的命名实体深度学习识别方法</b></span>
+                                    </h1>
+
+            </div>
+                        <h2>
+                                <a href="javascript:;">张娜娜</a>
+                                <a href="javascript:;">王裴岩</a>
+                                <a href="javascript:;">张桂平</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%B2%88%E9%98%B3%E8%88%AA%E7%A9%BA%E8%88%AA%E5%A4%A9%E5%A4%A7%E5%AD%A6%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E9%99%A2&amp;code=0272020&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">沈阳航空航天大学计算机学院</a>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E8%BE%BD%E5%AE%81%E7%9C%81%E7%9F%A5%E8%AF%86%E5%B7%A5%E7%A8%8B%E4%B8%8E%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92%E5%B7%A5%E7%A8%8B%E6%8A%80%E6%9C%AF%E7%A0%94%E7%A9%B6%E4%B8%AD%E5%BF%83&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">辽宁省知识工程与人机交互工程技术研究中心</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>针对工艺操作说明文本中的命名实体,提出一种基于BiLSTM-CRF模型与词典、规则相结合的识别方法,旨在识别图纸编号、参考标准、零件和零件号等11种实体。基于BiLSTM-CRF模型,使用BERT模型预训练的向量,对相关命名实体进行初始识别;针对工艺操作说明文本中零件和零件号表达方式复杂多样的问题,使用基于词典和规则的方法对此类实体的标注结果进行校正。实验结果表明,该方法在工艺操作说明文本中能较好地完成命名实体识别任务,在测试语料上F1值达到94.03%,比基线提升了4.14%。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%B7%A5%E8%89%BA%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E%E6%96%87%E6%9C%AC&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">工艺操作说明文本;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%91%BD%E5%90%8D%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">命名实体识别;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%8F%8C%E5%90%91%E9%95%BF%E7%9F%AD%E6%97%B6%E8%AE%B0%E5%BF%86%E7%BD%91%E7%BB%9C&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">双向长短时记忆网络;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%9D%A1%E4%BB%B6%E9%9A%8F%E6%9C%BA%E5%9C%BA&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">条件随机场;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    张娜娜，硕士生，主研领域:人工智能，自然语言处理。;
+                                </span>
+                                <span>
+                                    王裴岩，博士生。;
+                                </span>
+                                <span>
+                                    张桂平，教授。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2019-01-27</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>辽宁省自然科学基金项目(20170540705);</span>
+                    </p>
+            </div>
+                    <h1><b>NAMED ENTITY DEEP LEARNING RECOGNITION METHOD FOR PROCESS OPERATION DESCRIPTION TEXT</b></h1>
+                    <h2>
+                    <span>Zhang Nana</span>
+                    <span>Wang Peiyan</span>
+                    <span>Zhang Guiping</span>
+            </h2>
+                                    <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>This paper proposed a recognition method based on BiLSTM-CRF model combined with dictionary and rules for the named entities in the process operation description text. The purpose was to identify 11 entities such as drawing numbers, reference standards, parts and part numbers. The method was based on the BiLSTM-CRF model and used the pre-trained vector of the BERT model to initially identify the relevant named entities. Then, the method based on dictionary and rules was used to correct the labeling results of such entities, which aiming at the complex and diverse expressions of parts and part numbers in the process operation description text. The experimental results show that the method can successfully complete the named entity recognition task in the process operation description text. The F1 value reaches 94.03% in the test corpus, which is 4.14% higher than the baseline.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Process%20operation%20description%20text&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Process operation description text;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Named%20entity%20recognition&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Named entity recognition;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Two-way%20long-term%20memory%20network&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Two-way long-term memory network;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=Conditional%20random%20fields&amp;code=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">Conditional random fields;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2019-01-27</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="43" name="43" class="anchor-tag"><b>0 引 言</b></h3>
+                <div class="p1">
+                    <p id="44">命名实体识别<citation id="193" type="reference"><link href="153" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>(Named Entity Recognition,NER)也称为专名识别,是自然语言处理(Nature Language Processing,NLP)中的一项基础任务,是正确理解文本的基础<citation id="194" type="reference"><link href="155" rel="bibliography" /><sup>[<a class="sup">2</a>]</sup></citation>。其在通用领域中的研究已经相对成熟,如在新闻语料中,人名、地名和机构名的识别已经取得了较好的效果<citation id="195" type="reference"><link href="157" rel="bibliography" /><sup>[<a class="sup">3</a>]</sup></citation>。相比通用领域,专业领域中命名实体的识别往往以该领域的知识为依据,兼顾其语言规律特性,使得专业领域的命名实体识别具有一定的难度。在飞机装配工艺中,工艺操作说明文本是用于指导飞机装配过程中的工艺描述文件。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">面向工艺操作说明文本的命名实体包括工程图纸、参考标准、结构特征、零件和零件号、属性和属性值等11种,其中零件和零件号属于复杂实体,是本文识别工作的难点。由于飞机装配精度要求很高,该文本所涉及的零件总类众多且构成结构复杂,此类命名实体的长度没有一定的限制。例如由单个词的“螺栓”、“高锁螺栓”到词和相关符号组成的“5/32高锁螺栓”。由于零件的种类众多,其对应的零件号也是多样,零件号存在简写问题,如:“-002”。零件和零件号在工艺操作说明文本中所占的比重较大且表达方式复杂多样,并且零件本身没有严格的构词规律可循。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">针对以上问题,本文提出了一种面向工艺操作说明文本的命名实体识别方法。首先基于BiLSTM-CRF-BERT模型对该文本中的相关实体进行初始识别;然后利用基于词典的方法先对零件进行校正;最后,在上述基础上,充分利用零件和零件号的外部信息,用基于规则的方法对零件和零件号进行校正。该方法降低了仅使用BiLSTM-CRF-BERT模型对大规模语料的依赖性,有效地提高了零件和零件号的识别效果。</p>
+                </div>
+                <h3 id="47" name="47" class="anchor-tag"><b>1 相关研究</b></h3>
+                <div class="p1">
+                    <p id="48">命名实体识别是指识别出文本中具有特定意义或者指代性强的短语,并对其进行分类。早期的命名实体包括三大类,即实体类、时间类和数字类,这三大类又可以进一步细分为人名、地名、组织机构名、时间、日期、货币和百分比七小类<citation id="196" type="reference"><link href="159" rel="bibliography" /><sup>[<a class="sup">4</a>]</sup></citation>。但随着科学技术和社会的快速发展,命名实体识别的应用范围在不断扩大,从通用领域逐渐扩展到专业领域,针对不同领域内的不同问题,命名实体的种类也越来越多,不再局限于上述几类范围。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">传统的命名实体识别的主要技术方法分为:基于词典和规则的方法、基于统计的机器学习方法以及上述两者相合的方法等。</p>
+                </div>
+                <div class="p1">
+                    <p id="50">基于词典的方法最早应用到命名实体识别任务中,是最简单的一种方法。在识别过程中,使用完全匹配或者模糊匹配这两种词典匹配方式在所构建的词典中查找字符串。Yang等<citation id="197" type="reference"><link href="161" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>使用了基于词典的方法,采用改进编辑距离来进行词典匹配,在JNLPBA2004语料集上达到了53.68%的综合分类率。该方法虽然简单,但是由于词典的容量有限,不能有效识别未登录词,总体识别的效果在很大程度上受限于词典的规模和质量。</p>
+                </div>
+                <div class="p1">
+                    <p id="51">基于规则的方法多采用领域专家手工构造的规则模板,选用统计信息、标点符号、关键字、指示词和方向词、中心词、词性、词形等特征,以模式匹配和字符串相匹配为主要手段来识别文本中的实体。Olsson等<citation id="198" type="reference"><link href="163" rel="bibliography" /><sup>[<a class="sup">6</a>]</sup></citation>构建的基于规则的系统获得了67.1%的综合分类率。基于规则的方法往往依赖于具体语言、领域和文本风格,编制过程耗时且难以涵盖所有的语言现象。同时这些实体并非按照一定规则来命名,很难建立一套一致的规则,系统可移植性不好,对于不同的系统需要语言学专家重新书写不同的规则。</p>
+                </div>
+                <div class="p1">
+                    <p id="52">在基于统计的机器学习方法中,命名实体识别被当作序列标注问题,即利用大规模的语料学习出标注模型,从而对句子的各个位置进行标注。常用的统计机器学习方法有:支持向量机模型<citation id="199" type="reference"><link href="165" rel="bibliography" /><sup>[<a class="sup">7</a>]</sup></citation>(Support Vector Machines,SVM)、隐马尔可夫模型<citation id="200" type="reference"><link href="167" rel="bibliography" /><sup>[<a class="sup">8</a>]</sup></citation>(Hidden Markov Model,HMM)、最大熵隐马尔可夫模型<citation id="201" type="reference"><link href="169" rel="bibliography" /><sup>[<a class="sup">9</a>]</sup></citation>(Maximum Entropy Markov Model,MEMM)、条件随机场模型<citation id="202" type="reference"><link href="171" rel="bibliography" /><sup>[<a class="sup">10</a>]</sup></citation>(Conditional Random Fields,CRFs)等,其中条件随机场模型的表现优于其他统计机器学习模型。同以往的方法相比,基于统计机器学习的方法在系统健壮性、迁移性、识别效果等方面表现更好。但单独使用基于统计机器学习的方法会使得状态搜索空间非常庞大,其主要存在以下两个缺点:(1) 对特征选取的要求较高,需要从文本中选择出对该项任务有影响的各种特征,并将这些特征加入到特征向量中,该过程耗时耗力;(2) 对语料库的依赖比较大,而可以用来建立和评估命名实体识别系统的大规模通用语料库又比较少。</p>
+                </div>
+                <div class="p1">
+                    <p id="53">两者相结合的方法是指在基于统计的机器学习方法中引入规则或者加入词典信息,是近年来解决命名实体识别任务的主流方法之一。文献<citation id="203" type="reference">[<a class="sup">11</a>]</citation>提出了一种CRF与规则相结合的方法来实现维吾尔文地名的识别。首先采用CRF的适应性优势对维吾尔文地名进行初始识别,然后利用规则对初始识别错误的实体进行后处理。虽然两者相结合的方法比上述方法单独使用时,具有较好的准确性及鲁棒性,但是该方法的算法复杂度较高,并且在面对大规模多领域复杂的文本数据时,召回率不稳定,识别效果较差。</p>
+                </div>
+                <div class="p1">
+                    <p id="54">近年来,深度学习模型被广泛用在NER任务中,通过深度神经网络自动学习高层的特征,不依赖于特征工程,减少了人工定义特征和对领域知识的过度依赖,实现了端到端的学习模式。常用的模型有长短时记忆网络<citation id="207" type="reference"><link href="175" rel="bibliography" /><link href="177" rel="bibliography" /><sup>[<a class="sup">12</a>,<a class="sup">13</a>]</sup></citation>(Long Short-term Memory,LSTM)、卷积神经网络<citation id="204" type="reference"><link href="179" rel="bibliography" /><sup>[<a class="sup">14</a>]</sup></citation>(Convolutional Neural Network,CNN)以及门限循环单元<citation id="205" type="reference"><link href="181" rel="bibliography" /><sup>[<a class="sup">15</a>]</sup></citation>(Gated Recurrent Unit,GRU)等。上述网络通常使用语言模型预训练的词向量来处理中文NLP任务,如命名实体识别、文本分类、机器翻译等任务存在一定的相关性,底层网络参数抽取的特征可通用,使用预训练语言模型如BERT(Bidirectional Encoder Representations from Transformers)<citation id="206" type="reference"><link href="183" rel="bibliography" /><sup>[<a class="sup">16</a>]</sup></citation>,可将已学到的模型参数共享给新模型从而加快并优化新模型的学习效率。深度学习模型具备较强的序列建模以及神经网络拟合非线性函数能力,能够很好地捕捉上下文信息,这些也是优于其他统计机器学习的地方。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">通用领域的命名实体识别已经投入了大量的研究,F值可以达到90%以上<citation id="208" type="reference"><link href="185" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>。但在飞机装配工艺中,工艺操作说明文本不同于通用领域的命名实体,有其独特命名法则,识别存在一定的难度,该领域中的命名实体识别的相关研究较少。本文使用深度学习模型结合基于词典和规则的方法,取词典和规则之长,补深度学习之短,不仅能减少机器学习模型中人工设计特征的工作量,而且能够自动从字或者词获取更为有效的特征。</p>
+                </div>
+                <h3 id="56" name="56" class="anchor-tag"><b>2 基于BiLSTM-CRF模型的初始识别</b></h3>
+                <div class="p1">
+                    <p id="57">本文采用的BiLSTM-CRF模型框架如图1所示,该模型共有三部分组成:向量层、BiLSTM 网络层、CRF层。首先将输入的语句转化为向量形式,然后输入到BiLSTM网络层,最后结合CRF层来获取全局最优的输出序列。</p>
+                </div>
+                <div class="area_img" id="58">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201911032_058.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 BiLSTM-CRF模型" src="Detail/GetImg?filename=images/JYRJ201911032_058.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图1 BiLSTM-CRF模型  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201911032_058.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="59" name="59"><b>2.1 向量层</b></h4>
+                <div class="p1">
+                    <p id="60">向量的特征表示与传统的基于统计来记录上下文特征的方法相比,可以更好地捕捉到数据之间的固有联系,包含了更丰富的信息,使得深度神经网络模型具有比传统模型更强的特征抽取能力。因为神经网络的输入是向量形式, 所以应先将工艺操作说明文本转化为向量。文本向量化有两种表示方法: One-hot 表示和分布式表示<citation id="209" type="reference"><link href="187" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>。在One-hot向量表示方法中,任意两个词之间是孤立的,无法表达不同词之间的语义关系,容易出现矩阵稀疏和维度灾难的问题。词语的分布式表示通过学习文本,用词向量的方式表征词的语义信息,能把词映射到低维的向量空间,用向量空间的相似度表示文本语义上的相似度,可以较好地表达不同词之间的相似和类比关系,有利于解决工艺操作说明文本语义含糊的问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="61">本文所使用的神经网络模型依赖于底层的向量的特征表示,因此本文分别使用了两种向量生成方法:BERT模型和Word2Vec模型。前者采取Transformer<citation id="210" type="reference"><link href="189" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>构成的深度神经网络作为特征提取器,第一阶段利用双向语言模型,即根据当前词的上下文来预测当前词,进行预训练,把相关的语言学特征抽取出来并编码到特定任务的网络结构中;第二阶段利用第一阶段预训练好的参数来初始化特定任务的网络结构,并通过微调(Fine-tuning)的模式解决特征集成等下游任务。对于后者,其包含跳字模型(Skip-gram)和连续词袋模型(Continuous Bag of Words,CBOW),由于本文所使用的语料规模相对较小,所以选用CBOW模型。</p>
+                </div>
+                <h4 class="anchor-tag" id="62" name="62"><b>2.2 BiLSTM网络层</b></h4>
+                <div class="p1">
+                    <p id="63">工艺操作说明文本中命名实体的正确识别取决于其所在的上下文,即当前状态之前的状态和之后的状态对预测标签是同等重要的,句子中各个字或者词应该是平权的,如果能够获取过去和将来的信息,对命名实体识别任务很有帮助。如工艺操作说明语句:“按某标准检查______去毛刺和倒角质量。”和“按某标准检查______安装质量。”这两个工艺操作说明前面的内容是一样的,仅从当前词的上文可能预测出“凸头高锁螺栓孔”、“凸头高锁螺栓”等,但若融入文本序列的下文信息,那么工艺操作说明一的当前词是结构特征“凸头高锁螺栓孔”,而工艺操作说明二的当前词是零件“凸头高锁螺栓”的概率就增大了。在BiLSTM中,每一个训练序列向前和向后是两个LSTM,并且都连接着一个输出层,此结构提供给输出层输入序列中每一个点过去和未来的信息,其模型结构如图2所示。</p>
+                </div>
+                <div class="area_img" id="64">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201911032_064.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 BiLSTM模型" src="Detail/GetImg?filename=images/JYRJ201911032_064.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图2 BiLSTM模型  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201911032_064.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="65">在BiLSTM层,当输入为<i>x</i><sub><i>t</i></sub>、输出为<i>y</i><sub><i>t</i></sub>时的概率为:</p>
+                </div>
+                <div class="area_img" id="66">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JYRJ201911032_06600.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="68">式中:i、 f和<i>o</i>分别表示输入门、忘记门和输出门;<i>σ</i>是sigmoid函数;<i>g</i>是softmax函数;⊙表示点积;<i>c</i>表示BiLSTM中每个记忆单元的状态;<i><b>W</b></i>是权重矩阵;<i>b</i>是偏置项;<mathml id="125"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi>h</mi><mo>→</mo></mover></math></mathml><sub><i>t</i></sub>和<mathml id="126"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi>h</mi><mo>←</mo></mover></math></mathml><sub><i>t</i></sub>分别表示前向和后向LSTM在<i>t</i>时刻的输出,两者的拼接即[<mathml id="127"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi>h</mi><mo>→</mo></mover></math></mathml><sub><i>t</i></sub>,<mathml id="128"><math xmlns="http://www.w3.org/1998/Math/MathML"><mover accent="true"><mi>h</mi><mo>←</mo></mover></math></mathml><sub><i>t</i></sub>]是BiLSTM在<i>t</i>时刻的输出。</p>
+                </div>
+                <h4 class="anchor-tag" id="69" name="69"><b>2.3 CRF层</b></h4>
+                <div class="p1">
+                    <p id="70">CRF模型是Lafferty 等<citation id="211" type="reference"><link href="191" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>基于最大熵模型和隐马尔科夫模型,提出的一种判别式概率无向图学习模型。由于CRF能考虑到相邻标签之间的关系,所以将CRF融合到BiLSTM模块的最后一层中,即相当于对BiLSTM层的信息进行再利用,进而获得全局最优的标记序列。对于每一个给定的工艺操作说明语句,其对应的输入序列为<i>X</i>={<i>x</i><sub>1</sub>,<i>x</i><sub>2</sub>,…,<i>x</i><sub><i>n</i></sub>},将特征向量映射到<i>k</i>维,<i>k</i>是标签的种类,定义<i><b>P</b></i>=(<i>p</i><sub>1</sub>,<i>p</i><sub>2</sub>,…,<i>p</i><sub><i>n</i></sub>)∈<b>R</b><sup><i>n</i></sup><sup>×</sup><sup><i>k</i></sup>是BiLSTM层输出的分数矩阵,<i>n</i>是训练集中词的个数。<i>P</i><sub><i>ij</i></sub>表示的是句子中第<i>i</i>个词<i>x</i><sub><i>i</i></sub>分类到第<i>j</i>个标签的概率值。对于句子长度为<i>n</i>的标签预测序列<i>y</i>=(<i>y</i><sub>1</sub>,<i>y</i><sub>2</sub>,…,<i>y</i><sub><i>n</i></sub>),它的打分为:</p>
+                </div>
+                <div class="p1">
+                    <p id="71"><mathml id="129"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>S</mi><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mi>A</mi></mstyle><msub><mrow></mrow><mrow><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub><mo>,</mo><mi>y</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow></msub><mo>+</mo><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mi>Ρ</mi></mstyle><msub><mrow></mrow><mrow><mi>i</mi><mo>,</mo><mi>y</mi><msub><mrow></mrow><mi>i</mi></msub></mrow></msub></mrow></math></mathml>      (2)</p>
+                </div>
+                <div class="p1">
+                    <p id="72">为了描述标签间的依赖关系,引入CRF层进行句子级别的序列标注。CRF 层的参数是一个为(<i>k</i>+2)<sup>2</sup> 的转移分数矩阵<i><b>A</b></i>,其中<i>A</i><sub><i>ij</i></sub>表示从第<i>i</i>个标签转移到第<i>j</i>个标签的概率值。这样在为一个字或者词进行标注的时候可以利用之前已经标注过的标签信息。在输入序列<i>X</i>的条件下产生标记序列<i>y</i>的概率为:</p>
+                </div>
+                <div class="p1">
+                    <p id="73"><mathml id="130"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>p</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mrow><mtext>e</mtext><msup><mrow></mrow><mrow><mi>S</mi><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></msup></mrow><mrow><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mover accent="true"><mi>y</mi><mo>˜</mo></mover><mo>∈</mo><mi>Y</mi><msub><mrow></mrow><mi>X</mi></msub></mrow></munder><mi>S</mi></mstyle><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>y</mi></mstyle><mo>∼</mo></mover><mo stretchy="false">)</mo></mrow></mfrac></mrow></math></mathml>      (3)</p>
+                </div>
+                <div class="p1">
+                    <p id="74">在训练的过程中,我们要最大化正确标签序列的似然概率:</p>
+                </div>
+                <div class="p1">
+                    <p id="75"><mathml id="131"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mrow><mi>log</mi></mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">|</mo><mi>X</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>=</mo><mi>S</mi><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo><mo>-</mo><mrow><mi>log</mi></mrow><mo stretchy="false">(</mo><mstyle displaystyle="true"><munder><mo>∑</mo><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>y</mi></mstyle><mo>∼</mo></mover><mo>∈</mo><mi>Y</mi><msub><mrow></mrow><mi>X</mi></msub></mrow></munder><mi>S</mi></mstyle><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>y</mi></mstyle><mo>∼</mo></mover><mo stretchy="false">)</mo><mo stretchy="false">)</mo></mrow></math></mathml>      (4)</p>
+                </div>
+                <div class="p1">
+                    <p id="76">式中:<i>Y</i><sub><i>X</i></sub>是指一个输入序列<i>X</i>对应的所有可能的标签序列。预测时,通过以下公式输出整体概率最大的一组标记序列:</p>
+                </div>
+                <div class="p1">
+                    <p id="77"><mathml id="132"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>y</mi><msup><mrow></mrow><mo>*</mo></msup><mo>=</mo><munder><mstyle mathsize="140%" displaystyle="true"><mrow><mtext>a</mtext><mtext>r</mtext><mtext>g</mtext><mtext>m</mtext><mtext>a</mtext><mtext>x</mtext></mrow></mstyle><mrow><mover><mstyle mathsize="140%" displaystyle="true"><mi>y</mi></mstyle><mo>∼</mo></mover><mo>∈</mo><mi>Y</mi><msub><mrow></mrow><mi>X</mi></msub></mrow></munder><mi>S</mi><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mover><mstyle mathsize="140%" displaystyle="true"><mi>y</mi></mstyle><mo>∼</mo></mover><mo stretchy="false">)</mo></mrow></math></mathml>      (5)</p>
+                </div>
+                <h3 id="78" name="78" class="anchor-tag"><b>3 基于词典与规则的校正识别</b></h3>
+                <div class="p1">
+                    <p id="79">经过人工分析发现,工艺操作说明文本中的零件和零件号的外部构成存在一定的规律。为进一步提高零件和零件号的识别效果,本文通过分析零件和零件号前后的用词特点,充分发挥零件和零件号所在上下文对其的约束作用,先用基于词典的方法对初始识别后的零件进行校正,再用规则对零件和零件号的标注结果进行校正。</p>
+                </div>
+                <h4 class="anchor-tag" id="80" name="80"><b>3.1 基于词典的方法</b></h4>
+                <div class="p1">
+                    <p id="81">本文人工收集建立零件命名实体库即词典,词条数总计1 259个,如“托板螺母”、“剪切角片”等,词典中的一个词条表示一个零件类型的命名实体。本文依据该词典对BiLSTM-CRF-BERT模型初始识别的结果进行逆向最大匹配,此处校正的是零件。基于词典的文本匹配算法流程如图3所示。</p>
+                </div>
+                <div class="area_img" id="82">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JYRJ201911032_082.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 基于词典的文本匹配算法流程" src="Detail/GetImg?filename=images/JYRJ201911032_082.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit">图3 基于词典的文本匹配算法流程  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JYRJ201911032_082.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="83" name="83"><b>3.2 基于规则的方法</b></h4>
+                <div class="p1">
+                    <p id="84">工艺操作说明文本中频繁使用大量相似的句型句式,如“按照图纸…制…与…的连接孔(导孔或者终孔)”、“按照…安装…”、“按…及参考…定位…并钻定位孔”等,此类句型句式归纳总结为21条。零件和零件号经常嵌套在上述结构中,并且零件后面一般紧跟其对应的零件号。</p>
+                </div>
+                <div class="p1">
+                    <p id="85">上述句型句式中,包含一类固定的词,这些词的出现预示着零件或零件号的出现,将这些词称为触发词。工艺操作说明文本中趋向动词的使用有助于零件或零件号的识别,如“定位”、“安装”、“制出”、“钻制”、“拆除”等,指示词“零件”后面常跟零件号,此类触发词归纳总结为15个。这些词有着鲜明的特征,在一定程度上标识着零件和零件号的类别和边界。 因此,可通过对相似的句型句式结合触发词的识别来校正以上两种实体。如当前句型句式是“根据…完成对…的安装。”时,首先判断“对”和“的”之间的字段是包含英文字母及数字,若没有,则该字段是零件;若有,继续判断是否包含中文字符。若没有中文字符,则该字段是零件号,若有中文字符,则中文字符和英文字母及数字分别是零件和零件号。</p>
+                </div>
+                <h3 id="86" name="86" class="anchor-tag"><b>4 实 验</b></h3>
+                <h4 class="anchor-tag" id="87" name="87"><b>4.1 实验数据集</b></h4>
+                <div class="p1">
+                    <p id="88">实验所使用的数据是某型飞机机身安装的工艺操作说明文本,该文本是由句子级别的工艺操作说明组成,共有10 150条,经过人工标注后为实验语料。本文的实验都是在十折交叉验证下进行的,并且取十次结果的平均值作为对算法精度的估计。文本中需要识别的实体类型及数量如表1所示。</p>
+                </div>
+                <div class="area_img" id="89">
+                    <p class="img_tit"><b>表1 工艺操作说明文本数据表</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="89" border="1"><tr><td>序号</td><td>实体类型</td><td>标记</td><td>数量</td></tr><tr><td><br />1</td><td>工程图纸</td><td>TZ</td><td>12 706</td></tr><tr><td><br />2</td><td>方法图</td><td>US</td><td>2 790</td></tr><tr><td><br />3</td><td>图区</td><td>TZL</td><td>12 127</td></tr><tr><td><br />4</td><td>参考标准</td><td>BZ</td><td>292</td></tr><tr><td><br />5</td><td>零件</td><td>LJ</td><td>14 067</td></tr><tr><td><br />6</td><td>零件号</td><td>LJH</td><td>18 804</td></tr><tr><td><br />7</td><td>零件数量</td><td>NOP</td><td>9 953</td></tr><tr><td><br />8</td><td>属性</td><td>SX</td><td>5 122</td></tr><tr><td><br />9</td><td>属性值</td><td>SXZ</td><td>5 122</td></tr><tr><td><br />10</td><td>结构特征</td><td>KJG</td><td>2 177</td></tr><tr><td><br />11</td><td>结构图</td><td>ZPS</td><td>13 386</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <h4 class="anchor-tag" id="90" name="90"><b>4.2 标注策略</b></h4>
+                <div class="p1">
+                    <p id="91">命名实体识别任务常用的标注方式有以下三种:BIO、BIEO、BISEO,其中:B表示实体首字,I表示实体中间,S表示单个实体,E表示实体尾字,O表示非实体。理论而言,标注得越精细,识别后的效果也越好。结合本文所使用的语料中单个字的实体出现次数非常少的情况,同时为了更好地找出起始和结束边界, 本文采用BIEO形式的标注方式,即定义4种实体范围标签。以下面的工艺操作说明语句为例:</p>
+                </div>
+                <div class="p1">
+                    <p id="92">按照D02344200要求,制出D02313770-005与框之间的16个螺栓孔。</p>
+                </div>
+                <div class="p1">
+                    <p id="93">其对应的标注序列为:</p>
+                </div>
+                <div class="p1">
+                    <p id="94">按/O照/O D/B-TZ 0/I-TZ 2/I-TZ 3/I-TZ 4/I-TZ 4/I-TZ 2/I-TZ 0/I-TZ 0/E-TZ 要/O求/O,/O制/O出/O D/B-LJH 0/I-LJH 2/I-LJH 3/I-LJH 1/I-LJH 3/I-LJH 7/I-LJH 7/I-LJH0/I-LJH -/I-LJH 0/I-LJH 0/I-LJH 5/E-LJH与/O框/B-LJ之/O间/O的/O 1/B-NOP 6/E-NOP个/O螺/B-KLG栓/I-KLG 孔/E-KLG。/O</p>
+                </div>
+                <h4 class="anchor-tag" id="95" name="95"><b>4.3 评判标准</b></h4>
+                <div class="p1">
+                    <p id="96">评判一个命名实体是否被正确识别通常包括以下两个方面:首先,判断实体的边界是否正确,即确定哪些字或者词属于命名实体;其次,判断实体的类型是否标注正确。本文主要通过准确率P、召回率R及F1值这三个指标来对工艺操作说明文本的实体识别结果进行评测,具体公式为:</p>
+                </div>
+                <div class="area_img" id="97">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JYRJ201911032_09700.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="area_img" id="99">
+                            <div class="imgformula">
+                                <img class="pFormula" alt="" src="Detail/GetImg?filename=images/JYRJ201911032_09900.jpg&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                <p class="formula_seq"></p>
+                            </div>
+
+                </div>
+                <div class="p1">
+                    <p id="101"><mathml id="133"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>F</mi><mn>1</mn><mo>=</mo><mfrac><mrow><mn>2</mn><mo>×</mo><mi>Ρ</mi><mo>×</mo><mi>R</mi></mrow><mrow><mi>Ρ</mi><mo>+</mo><mi>R</mi></mrow></mfrac></mrow></math></mathml>      (8)</p>
+                </div>
+                <h4 class="anchor-tag" id="102" name="102"><b>4.4 实验设计</b></h4>
+                <div class="p1">
+                    <p id="103">本文使用的神经网络模型能否取得较好的识别效果与其参数具有密切关系,影响因子较大的参数有向量维度、隐藏层数量、学习率、Dropout、Epoch。本文对这5种参数进行大量的实验,把实验效果取得最好的参数值作为模型的参数。实验表明,以上5种参数均存在局部最优值。图1中的向量层分别使用Word2Vec工具的CBOW模型和BERT模型生成的向量,各参数取表2中对应的值时,模型的综合实验效果达到最佳。</p>
+                </div>
+                <div class="area_img" id="104">
+                    <p class="img_tit"><b>表2 神经网络参数设置</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="104" border="1"><tr><td rowspan="2"><br />参数</td><td colspan="2"><br />值</td></tr><tr><td><br />CBOW</td><td>BERT</td></tr><tr><td><br />向量维度</td><td>200</td><td>512</td></tr><tr><td><br />学习率</td><td>0.001</td><td>0.005</td></tr><tr><td><br />Dropout</td><td>0.5</td><td>0.5</td></tr><tr><td><br />隐藏层数量</td><td>100</td><td>128</td></tr><tr><td><br />Epoch</td><td>100</td><td>60</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="105">本文的baseline实验选取的是机器学习模型中表现最好的CRF模型,该模型的训练使用CRF++0.58工具包来实现。在CRF模型中有一个关键性的问题是,如何针对特定的任务制定合适的特征模板。本文将窗口大小设置为5,通过大量的对比实验,选取效果最好的特征模板作为CRF模型最终的模板,相应的特征模板释义如表3所示。</p>
+                </div>
+                <div class="area_img" id="106">
+                    <p class="img_tit"><b>表3 特征模板释义</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="106" border="1"><tr><td><br />模板<br />类型</td><td>模板内容</td><td>模板释义</td></tr><tr><td><br />一元</td><td>C<sub>-2</sub>,C<sub>-1</sub>,C<sub>0</sub>,C<sub>1</sub>,C<sub>2</sub></td><td>C<sub>0</sub>表示的是当前字,C<sub><i>n</i></sub>(C<sub>-<i>n</i></sub>)表示的是当前字的右(左)边第<i>n</i>个字</td></tr><tr><td><br />二元</td><td>C<sub>-2</sub>C<sub>-1</sub>,C<sub>-1</sub>C<sub>0</sub>,C<sub>0</sub>C<sub>1</sub>,C<sub>1</sub>C<sub>2</sub></td><td>相邻的两个字</td></tr><tr><td><br />三元</td><td>C-<sub>2</sub>C<sub>-1</sub>C<sub>0</sub>,C<sub>-1</sub>C<sub>0</sub>C<sub>1</sub>,C<sub>0</sub>C<sub>1</sub>C<sub>2</sub></td><td>相邻的三个字</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="107">为充分说明本文所使用的特征模板含义,我们以基于字的特征选择为例,做个简单的解释说明。假设C表示单个汉字特征,在工艺操作说明文本的零件序列“加强件”中,当前字C<sub>0</sub>指的是“强”时,则当前字的前一个字C<sub>-1</sub>是“加”,当前字的后一个字C<sub>1</sub>是“件”,C<sub>-1</sub>C<sub>0</sub>指的是“加强”,C<sub>0</sub>C<sub>1</sub>指的是“强件”,而C<sub>-1</sub>C<sub>0</sub>C<sub>1</sub>则表示的是“加强件”。</p>
+                </div>
+                <h4 class="anchor-tag" id="108" name="108"><b>4.5 对比实验</b></h4>
+                <div class="p1">
+                    <p id="109">本文设计了11组实验,通过横向和纵向的对比来检验本文方法的有效性,如表4所示。实验序号2～9中的char表示的是使用Word2Vec工具并基于COBW模型训练的向量作为图1中模型的输入;而实验序号10～11中的BERT表示的是使用BERT模型预训练的向量作为图1中模型的输入。</p>
+                </div>
+                <div class="area_img" id="110">
+                    <p class="img_tit"><b>表4 11种模型的对比实验结果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note">%</p>
+                    <table id="110" border="1"><tr><td>序号</td><td>模型名称</td><td><i>P</i></td><td><i>R</i></td><td><i>F</i>1</td></tr><tr><td><br />1</td><td>CRF(baseline)</td><td>89.20</td><td>90.69</td><td>89.89</td></tr><tr><td><br />2</td><td>LSTM-char</td><td>85.08</td><td>88.43</td><td>86.72</td></tr><tr><td><br />3</td><td>BiLSTM-char</td><td>88.17</td><td>91.01</td><td>89.57</td></tr><tr><td><br />4</td><td>BiGRU-char</td><td>86.64</td><td>87.94</td><td>87.29</td></tr><tr><td><br />5</td><td>BiGRU-CRF-char</td><td>88.91</td><td>89.21</td><td>89.06</td></tr><tr><td><br />6</td><td>LatticeLSTM-char</td><td>87.55</td><td>93.76</td><td>90.55</td></tr><tr><td><br />7</td><td>LSTM-CRF-char</td><td>90.27</td><td>93.29</td><td>91.75</td></tr><tr><td><br />8</td><td>IDCNN-CRF-char</td><td>88.56</td><td>92.58</td><td>90.48</td></tr><tr><td><br />9</td><td>BiLSTM-CRF-char</td><td>90.49</td><td>93.53</td><td>91.98</td></tr><tr><td><br />10</td><td>BiLSTM-CRF-BERT</td><td>90.77</td><td>95.09</td><td>92.85</td></tr><tr><td><br />11</td><td>BiLSTM-CRF-BERT+校正</td><td><b>91.52</b></td><td><b>96.69</b></td><td><b>94.03</b></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="111">对于工程图纸、图区、参考标准、零件数量、属性和属性值等9类没有进行校正的实体,本文给出了CRF、IDCNN-CRF-char、BiLSTM-CRF-char和BiLSTM-CRF-BERT这四种典型模型下的识别结果,如表5所示。而零件和零件号是经过校正的实体,对应的识别效果分别给出了CRF、BiLSTM-CRF-char、BiLSTM-CRF-BERT和BiLSTM-CRF-BERT+校正这四种典型模型下的对比结果,如表6所示。</p>
+                </div>
+                <div class="area_img" id="112">
+                    <p class="img_tit"><b>表5 没有校正的各类实体识别的效果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note">%</p>
+                    <table id="112" border="1"><tr><td>实体<br />类型</td><td>指标</td><td>CRF</td><td>IDCNN-<br />CRF-char</td><td>BiLSTM-<br />CRF-char</td><td>BiLSTM-<br />CRF-BERT</td></tr><tr><td rowspan="3"><br />工程<br />图纸</td><td>P</td><td>94.89</td><td>95.06</td><td>96.68</td><td><b>97.36</b></td></tr><tr><td><br />R</td><td>97.15</td><td>98.02</td><td>97.41</td><td><b>98.80</b></td></tr><tr><td><br />F1</td><td>96.00</td><td>96.51</td><td>97.02</td><td><b>98.07</b></td></tr><tr><td rowspan="3"><br />方法<br />图</td><td>P</td><td>97.75</td><td>96.97</td><td>97.90</td><td><b>98.07</b></td></tr><tr><td><br />R</td><td>98.26</td><td>98.60</td><td><b>99.15</b></td><td>99.12</td></tr><tr><td><br />F1</td><td>98.01</td><td>97.78</td><td>98.52</td><td><b>98.60</b></td></tr><tr><td rowspan="3"><br />图区</td><td>P</td><td>89.39</td><td>88.29</td><td>90.30</td><td><b>92.18</b></td></tr><tr><td><br />R</td><td>91.02</td><td>91.85</td><td>93.15</td><td><b>96.04</b></td></tr><tr><td><br />F1</td><td>90.18</td><td>89.99</td><td>91.72</td><td><b>94.06</b></td></tr><tr><td rowspan="3"><br />参考<br />标准</td><td>P</td><td><b>90.47</b></td><td>84.58</td><td>84.65</td><td>85.60</td></tr><tr><td><br />R</td><td>91.54</td><td>91.64</td><td>90.63</td><td><b>94.57</b></td></tr><tr><td><br />F1</td><td><b>90.80</b></td><td>87.43</td><td>87.13</td><td>89.86</td></tr><tr><td rowspan="3"><br />零件<br />数量</td><td>P</td><td>91.85</td><td>91.34</td><td><b>93.52</b></td><td>91.28</td></tr><tr><td><br />R</td><td>95.50</td><td>95.61</td><td>96.29</td><td><b>96.50</b></td></tr><tr><td><br />F1</td><td>93.99</td><td>93.38</td><td><b>94.84</b></td><td>93.77</td></tr><tr><td rowspan="3"><br />属性</td><td>P</td><td>94.50</td><td>93.78</td><td>93.64</td><td><b>94.79</b></td></tr><tr><td><br />R</td><td>95.25</td><td>97.38</td><td>96.97</td><td><b>97.78</b></td></tr><tr><td><br />F1</td><td>95.11</td><td>95.53</td><td>95.26</td><td><b>96.24</b></td></tr><tr><td rowspan="3"><br />属性<br />值</td><td>P</td><td>84.39</td><td>84.51</td><td><b>88.80</b></td><td>87.29</td></tr><tr><td><br />R</td><td>85.85</td><td>92.70</td><td>93.28</td><td><b>93.98</b></td></tr><tr><td><br />F1</td><td>85.00</td><td>88.32</td><td><b>91.11</b></td><td>90.40</td></tr><tr><td rowspan="3"><br />结构<br />特征</td><td>P</td><td>90.55</td><td><b>91.24</b></td><td>90.73</td><td>84.08</td></tr><tr><td><br />R</td><td>91.43</td><td>92.27</td><td><b>92.64</b></td><td>90.75</td></tr><tr><td><br />F1</td><td>90.75</td><td><b>91.68</b></td><td>91.61</td><td>87.18</td></tr><tr><td rowspan="3"><br />结构<br />图</td><td>P</td><td>98.65</td><td><b>99.11</b></td><td>99.05</td><td>98.94</td></tr><tr><td><br />R</td><td>99.64</td><td>99.45</td><td>99.62</td><td><b>99.74</b></td></tr><tr><td><br />F1</td><td>99.14</td><td>99.28</td><td>99.33</td><td><b>99.34</b></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="area_img" id="113">
+                    <p class="img_tit"><b>表6 零件和零件号的识别效果</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note">%</p>
+                    <table id="113" border="1"><tr><td>实体<br />类型</td><td>指标</td><td>CRF</td><td>BiLSTM-<br />CRF-char</td><td>BiLSTM-<br />CRF-BERT</td><td>BiLSTM-CRF-<br />BERT+校正</td></tr><tr><td rowspan="3"><br />零件</td><td>P</td><td>78.50</td><td>79.35</td><td>81.70</td><td><b>83.93</b></td></tr><tr><td><br />R</td><td>79.65</td><td>86.47</td><td>86.06</td><td><b>90.14</b></td></tr><tr><td><br />F1</td><td>78.92</td><td>82.62</td><td>83.65</td><td><b>86.92</b></td></tr><tr><td rowspan="3"><br />零件<br />号</td><td>P</td><td>82.41</td><td>81.89</td><td>84.07</td><td><b>87.09</b></td></tr><tr><td><br />R</td><td>84.66</td><td>89.98</td><td>89.03</td><td><b>92.08</b></td></tr><tr><td><br />F1</td><td>83.27</td><td>85.58</td><td>86.31</td><td><b>89.52</b></td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="114">本文使用统计机器学习模型CRF测试的结果作为baseline,在十折交叉验证下,比较其与神经网络模型以及本文所提方法在工程图纸、图区、参考标准、零件等11类实体识别上的表现,如表4-表6所示。表4中实验11即本文提出的方法在大部分类别的实体识别效果上,取得比baseline和其他神经网络模型更好的表现,F1值比baseline提高了4.14%。通过分析实验结果,可推得以下研究结论:</p>
+                </div>
+                <div class="p1">
+                    <p id="115">(1) 工艺操作说明文本中的方法图、结构图、图区、属性、零件数量都是属于简单实体,此类实体的特征相对明显,如结构图“US7058240-42”,从词构成而言,结构图的构成具有一定的规律,主要表现形式是“[US]+数字和横线”,虽然构成结构图的各部分数字具有任意性,但总体还是表现出相对集中的特点。并且结构图的前缀“US”是此类实体识别的有用知识。所以,baseline和神经网络模型对以上实体的识别效果表现相当。而baseline 在参考标准这类实体的F1值优于神经网络模型,因为参考标准在工艺操作说明文本中分布较少,并且特征不明显,神经网络模型难以更好地抽象出此类实体所包含的特征。</p>
+                </div>
+                <div class="p1">
+                    <p id="116">CRF是通过特征来区分实体及其类型和非实体,难以捕捉到那些特征不明显的实体,如零件。工艺操作说明文本中的零件存在一定的嵌套及交叉现象,边界错误是影响此类实体识别正确与否的原因之一。如:零件“高锁螺栓”覆盖了零件“高锁”,在有些工艺操作说明语句中,CRF模型只能识别出“高锁螺栓”中的“高锁”;零件“龙骨梁下纵梁”和“翼下纵梁”具有交叉“下纵梁”的现象,CRF只识别出“下纵梁”,即在判断实体的边界时发生错误,而BiLSTM-CRF-BERT+校正方法能在一定程度上克服此问题。在零件识别效果上,不加校正的BiLSTM-CRF-BERT模型较baseline的F1值提升了4.73%。究其原因,主要在于向量的分布中隐含了相对丰富的上下文语法和语义信息,经过BiLSTM-CRF-BERT模型的抽象,可以较好地学习出来。</p>
+                </div>
+                <div class="p1">
+                    <p id="117">本文提出的方法在BiLSTM-CRF-BERT模型的基础上,利用零件前后的用词特点,依次采用基于词典和规则的方法对零件的识别结果进行校正,零件的准确率、召回率和F1值最终可达到83.93%、90.14%和86.92%。该方法在BiLSTM-CRF-BERT模型的基础上继承了基于词典和规则方法的优点,如工艺操作说明语句“按861B3205-000-001的26D区完成SD541框与补偿片、角材、角片间连接的4个标准件的安装。”中“SD541框”在BiLSTM-CRF-BERT模型中被识别为非实体,通过构造的零件词典和规则可以确定“SD541框”是零件。校正后,零件的准确率、召回率和F1值分别提升了2.23%、4.08%和3.27%。</p>
+                </div>
+                <div class="p1">
+                    <p id="118">(2) 表4中的实验结果表明,BiLSTM-CRF-BERT模型对工艺操作说明文本中零件号的识别效果有所提升,较baseline的F1值提升了3.04%,但是其准确率和F1值较其他类型实体如图纸仍然较差。</p>
+                </div>
+                <div class="p1">
+                    <p id="119">通过文本分析发现,零件号的识别需要更加充分的上下文语境信息来区分,并且零件号的上下文,即外部信息存在一定的规律。零件后面一般紧跟其对应的单个或多个零件号,且零件号是由大写的英文字母、数字和横线构成。若零件识别错误,在一定程度上会导致零件号识别出错,即发生错误传播现象。对于此类情况,本文先使用基于词典和句型句式结合触发词规则的方法校正标注错误的零件,然后再使用句法句式结合触发词的规则校正零件号,能在一定程度上提高零件号的识别效果。由表6可知,校正后的零件号的准确率、召回率和F1值与没有校正的BiLSTM-CRF-BERT模型相比,分别提升了3.02%、3.05%和3.21%。</p>
+                </div>
+                <div class="p1">
+                    <p id="120">此外,有些零件号和某些工程图纸组成结构相似,造成有些零件号的类型标注发生错误。由于工艺操作说明文本的某些工程图纸和零件号等是由英文字母、数字和横线组成,并且长度一样,此类实体之间的界限不清晰,特征区分不明显,没有校正的模型将有些零件号识别为工程图纸或者非实体。例如,工艺操作说明语句:“按照〈DPAS151-010〉〈DPAS157-028〉根据772C0000-000-001和684B0000-100-001湿安装紧固件。”,没有校正的模型把“684B0000-100-001”识别为零件号,而校正后的模型就能正确识别为工程图纸。</p>
+                </div>
+                <div class="p1">
+                    <p id="121">(3) 对比表4和表5的实验结果,本文方法的表现比IDCNN-CRF要好,原因在于IDCNN在卷积之后,末层神经元可能只是得到了原始输入数据中一小块的信息,即仅仅考虑到整句话的部分字或词,提供的上下文信息有限。而对NER来讲,整个句子的每个字或者词都有可能都会对当前需要识别的字或者词做出影响,而使用BiLSTM能控制和保存内部记忆,该网络的记忆力能记住更长的信息来对某个字或者词进行识别。比如,下面的工艺操作说明语句:“与顶部蒙皮相连的对接区域连接带板需填角密封。”,IDCNN-CRF把“连接带板”识别为非实体,而本文方法能正确识别为零件。综上所述,本文提出的方法在整体识别效果上表现更佳。</p>
+                </div>
+                <h3 id="122" name="122" class="anchor-tag"><b>5 结 语</b></h3>
+                <div class="p1">
+                    <p id="123">针对工艺操作说明文本的命名实体识别的问题,本文提出了BiLSTM-CRF-BERT模型与词典、规则相结合的方法。该方法在BiLSTM-CRF-BERT模型初始识别的基础上,根据零件和零件号的外部信息的规律特征,用词典和规则对零件和零件号进行校正。实验结果表明,该方法取得了较好的效果,F1值达到了94.03%,比baseline提高了4.14% ,能有效解决工艺操作说明文本的命名实体识别问题。</p>
+                </div>
+                <div class="p1">
+                    <p id="124">本文在初始识别时所使用的BiLSTM-CRF-BERT模型,其输入是基于字级的向量特征信息,而字级向量可能丢失一部分工艺操作说明句子本身潜在的特征信息。后期将考虑把句子信息作为一种补充输入,期许在隐层抽象出更加丰富且有针对性的文本信息。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="153">
+                            <a id="bibliography_1" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Named entity task definition, version 2.1">
+
+                                <b>[1]</b> Sundheim B M.Named entity task definition,version 2.1[C]//Proceedings of the Sixth Message Understanding Conference.1995:319-322.
+                            </a>
+                        </p>
+                        <p id="155">
+                            <a id="bibliography_2" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CBBD&amp;filename=9787302319115000&amp;v=MDQxNTcxb1JYRnF6R2JDNEhOTE5wbzVFWWVzUERCTTh6eFVTbURkOVNIN24zeEU5ZmJ2bktyaWZadTl1RkNybFU3ak1J&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[2]</b> 宗成庆.统计自然语言处理[M].2版.北京:清华大学出版社,2013:298-299.
+                            </a>
+                        </p>
+                        <p id="157">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201803012&amp;v=MTgzNzlLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplVnVGeS9oVUx2TktDallmYkc0SDluTXJJOUVab1E=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 王蕾,谢云,周俊生,等.基于神经网络的片段级中文命名实体识别[J].中文信息学报,2018,32(3):84-90.
+                            </a>
+                        </p>
+                        <p id="159">
+                            <a id="bibliography_4" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Description of the NetOwl TM Extractor System asUsed for MUC-7">
+
+                                <b>[4]</b> Krupka G R,Hausman K.Description of the NetOwl(TM) extractor system as used for MUC-7[C]//Chinchor N.Proceedings of the 7th Message Understanding Conference.Fairfax,USA:Linguistic Data Consortium,1998.
+                            </a>
+                        </p>
+                        <p id="161">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJES&amp;filename=SJES13011300468097&amp;v=MjUzNjJjPU5pZk9mYks3SHRETnJJOUZZTzBIREhVK29CTVQ2VDRQUUgvaXJSZEdlcnFRVE1ud1plWnVIeWptVWIvSUoxb1hiaA==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> Yang Z,Lin H,Li Y.Exploiting the performance of dictionary-based bio-entity name recognition in biomedical literature[J].Computational Biology and Chemistry,2008,32(4):287-291.
+                            </a>
+                        </p>
+                        <p id="163">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Notions of Correctness when Evaluating Protein Name Taggers">
+
+                                <b>[6]</b> Olsson F,Eriksson G,Franzén K,et al.Notions of Correctness when Evaluating Protein Name Taggers[C]//Proceedings of the 19th international conference on Computational linguistics-Volume 1.2002.
+                            </a>
+                        </p>
+                        <p id="165">
+                            <a id="bibliography_7" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Named Entity Recognition using Hundreds of Thousands of Features">
+
+                                <b>[7]</b> Mayfield J,McNamee P,Piatko C.Named entity recognition using hundreds of thousands of features[C]//Proceedings of the Seventh Conference on Natural Language Learning at HLTNAACL,Stroudsburg:Association for Computational Linguistics,2003:184-187.
+                            </a>
+                        </p>
+                        <p id="167">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Statistical Named Entity Recognizer Adaptation">
+
+                                <b>[8]</b> Burger J D,Henderson J C,Morgan W T.Statistical named entity recognizer adaptation[C]//Proceedings of the 6th Conference on Natural Language Learning,Stroudsburg:Association for Computational Linguistics,2002,20.
+                            </a>
+                        </p>
+                        <p id="169">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A hybrid oriya named entity recognition system:integrating HMM with MaxEnt">
+
+                                <b>[9]</b> Biswas S,Mishra S P,Mohanty S.A hybrid oriya named entity recognition system:integrating HMM with MaxEnt[C]//Proceedings of the Second Conference on Emerging Trends in Engineering &amp; Technology,2009:16-18.
+                            </a>
+                        </p>
+                        <p id="171">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Early results for named entity recognition with conditional random fields, feature induction and web-enhanced lexicons">
+
+                                <b>[10]</b> McCallum A,Li W.Early results for named entity recognition with conditional random fields,feature induction and web-enhanced lexicons[C]//Proceedings of the Seventh Conference on Natural Language Learning at HLT-NAACL,Stroudsburg:Association for Computational Linguistics,2003:188-191.
+                            </a>
+                        </p>
+                        <p id="173">
+                            <a id="bibliography_11" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=MESS201706017&amp;v=MjUwNDY0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVWdUZ5L2hVTHZOS0NqWWZiRzRIOWJNcVk5RVk0UUtESDg0dlI=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[11]</b> 买合木提·买买提,卡哈尔江·阿比的热西提,艾山·吾买尔,等.CRF与规则相结合的维吾尔文地名识别研究[J].中文信息学报,2017,32(6):110-118.
+                            </a>
+                        </p>
+                        <p id="175">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Chinese NER using lattice LSTM[EB]">
+
+                                <b>[12]</b> Zhang Y,Yang J.Chinese NER using lattice LSTM[EB].ArXiv Preprint ArXiv:1805.02023,2018.
+                            </a>
+                        </p>
+                        <p id="177">
+                            <a id="bibliography_13" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SSJD&amp;filename=SSJD9F9954D53A2EF7DCC91EE8C634D96661&amp;v=Mjg3ODh3N3k4eEswPU5qN0JhcnJPRjlqSnEvdEFaNW9OZVFvK3UyVmc0ejRJUFhlUnFoRXhEYnVTUTd5ZUNPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNWRoaA==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[13]</b> Ren Y,Teng C,Fei L I,et al.Relation classification via sequence features and bi-directional LSTMs[J].Wuhan University Journal of Natural Sciences,2017,22(6):489-497.
+                            </a>
+                        </p>
+                        <p id="179">
+                            <a id="bibliography_14" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A multiclass classification method based on deep learning for named entity recognition in electronic medical records">
+
+                                <b>[14]</b> Dong X,Qian L,Guan Y,et al.A multiclass classification method based on deep learning for named entity recognition in electronic medical records[C]//2016 New York Scientific Data Summit (NYSDS).IEEE,2016.
+                            </a>
+                        </p>
+                        <p id="181">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Gate-variants of Gated Recurrent Unit (GRU)neural networks">
+
+                                <b>[15]</b> Dey R,Salemt F M.Gate-variants of Gated Recurrent Unit (GRU) neural networks[C]//2017 IEEE 60th International Midwest Symposium on Circuits and Systems (MWSCAS).IEEE,2017:1597-1600.
+                            </a>
+                        </p>
+                        <p id="183">
+                            <a id="bibliography_16" target="_blank" href="http://scholar.cnki.net/result.aspx?q=BERT:Pre-training of deep bidirectional transformers for language understanding">
+
+                                <b>[16]</b> Devlin J,Chang M W,Lee K,et al.BERT:Pre-training of deep bidirectional transformers for language understanding[J].ArXiv Preprint ArXiv:1810.04805,2018.
+                            </a>
+                        </p>
+                        <p id="185">
+                            <a id="bibliography_17" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCMAF20BC1CF03B8A4CE23AC181D883A37A&amp;v=MjgxMDhDT052RlNpV1dyN0pJRnBtYUJ1SFlmT0dRbGZDcGJRMzVkaGh3N3k4eEswPU5pZklZOExPSE5HKzNJNDJFdXNNZm5SSXkyVm02RHdNTzM3cXJXWTljYkhsUnIzdQ==&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[17]</b> Chou C L,Chang C H,Huang Y Y.Boosted web named entity recognition via tri-training[J].ACM Transactions on Asian and Low-resource Language Information Processing,2016,16(2):10.
+                            </a>
+                        </p>
+                        <p id="187">
+                            <a id="bibliography_18" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Distributed Representations of Words and Phrases and their Compositionality">
+
+                                <b>[18]</b> Mikolov T,Sutskever I,Chen K,et al.Distributed representations of words and phrases and their compositionality[C]//Proceedings of the 26th International Conference on Neural Information Processing Systems-Volume 2,2013:3111-3119.
+                            </a>
+                        </p>
+                        <p id="189">
+                            <a id="bibliography_19" >
+                                    <b>[19]</b>
+                                 Vaswani A,Shazeer N,Parmar N,et al.Attention is all you need[C]//Advances in Neural Information Processing Systems.2017:5998-6008.
+                            </a>
+                        </p>
+                        <p id="191">
+                            <a id="bibliography_20" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Conditional random fields: probabilistic models for segmenting and labeling sequence data">
+
+                                <b>[20]</b> Lafferty J,Mccallum A,Pereira F C N.Conditional random fields:probabilistic models for segmenting and labeling sequence data[J].Proceedings of Icml,2001,3(2):282-289.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JYRJ201911032" />
+        <input id="dpi" type="hidden" value="96" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JYRJ201911032&amp;v=MDk3NjRSTE9lWmVWdUZ5L2hVTHZOTHpUWlpMRzRIOWpOcm85R1pvUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1U=&amp;uid=WEEvREcwSlJHSldRa1FhdXNXaEhoRFVsZkNHV25tS3FjcGR3SzhBTGdXQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="0" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>

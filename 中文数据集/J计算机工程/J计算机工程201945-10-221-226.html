@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>全文阅读--XML全文阅读--中国知网</title>
+    <link rel="icon" href="/kxreader/favicon.ico" />
+    <link rel="shortcut Icon" href="/kxreader/favicon.ico" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="文献 XML KBASE CNKI 中国知网" />
+    <meta name="description" content="XML文献检索" />
+    <link href="/kxreader/Content/css/detail?v=qX2z2KjRAEyQiNfAbKtl7dLnsqFoQ5Jdw3TZfDf0n1k1" rel="stylesheet"/>
+
+    <script type="text/javascript">
+        var APPPATH = '/kxreader';
+    </script>
+</head>
+
+<body>
+    
+<script type="text/javascript" src="//login.cnki.net/TopLogin/api/loginapi/get?type=top&amp;localCSS=&amp;returnurl=%2f%2fkns.cnki.net%2f%2fKXReader%2fDetail%3fTIMESTAMP%3d637126203084771250%26DBCODE%3dCJFD%26TABLEName%3dCJFDLAST2019%26FileName%3dJSJC201910037%26RESULT%3d1%26SIGN%3dX5%252fEwxBVsWZjGvLIlQC2oAriyEI%253d"></script>
+
+<div id="headerBox" class="header">
+    <div class="topbar">
+        <div class="textalign">
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201910037&amp;align=md">
+                <i class="icon-cen active" title="居中对齐"></i>
+            </a>
+            <a href="/kxreader/Detail?dbcode=CJFD&amp;filename=JSJC201910037&amp;align=lt">
+                <i class="icon-left " title="左对齐"></i>
+            </a>
+        </div>
+        <h6 class="free-tip"><i class="icon"></i>HTML阅读开放试用阶段，欢迎体验！</h6>
+    </div>
+</div>
+
+    
+
+
+
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201910037&amp;v=MDYwMzMzenFxQnRHRnJDVVJMT2VaZVJ0RnkzaFZMN0xMejdCYmJHNEg5ak5yNDlHWTRRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+
+    <div class="main">
+
+        
+
+    <div class="sidebar-a">
+        <!--sidebar start-->
+        <div class="sidenav">
+            <div class="arrow"><span></span></div>
+            <!--sidebar_list start-->
+            <dl class="sidenav-list">
+                    <dt class="tit">目录结构</dt>
+                            <dd class="guide">
+                                    <p><a href="#43" data-title="0 概述 ">0 概述</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#47" data-title="1 模糊文本 ">1 模糊文本</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#56" data-title="2 模糊文本分类算法 ">2 模糊文本分类算法</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#58" data-title="2.1 文本分类流程">2.1 文本分类流程</a></li>
+                                                <li><a href="#61" data-title="2.2 主题筛选">2.2 主题筛选</a></li>
+                                                <li><a href="#75" data-title="2.3 文本表示模型">2.3 文本表示模型</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#89" data-title="3 实验结果与分析 ">3 实验结果与分析</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#91" data-title="3.1 数据预处理">3.1 数据预处理</a></li>
+                                                <li><a href="#94" data-title="3.2 主题筛选">3.2 主题筛选</a></li>
+                                                <li><a href="#107" data-title="3.3 分类实验">3.3 分类实验</a></li>
+                                                <li><a href="#124" data-title="3.4 结果分析">3.4 结果分析</a></li>
+                                    </ul>
+                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#126" data-title="4 结束语 ">4 结束语</a><i></i></p>
+                                                            </dd>
+                            <dd class="guide">
+                                    <p><a href="#" data-title="文内图表 ">文内图表</a><i></i></p>
+                                                                    <ul class="contentbox">
+                                                <li><a href="#50" data-title="&lt;b&gt;图1 普通文本的主题分布&lt;/b&gt;"><b>图1 普通文本的主题分布</b></a></li>
+                                                <li><a href="#53" data-title="&lt;b&gt;图2 模糊文本的主题分布&lt;/b&gt;"><b>图2 模糊文本的主题分布</b></a></li>
+                                                <li><a href="#60" data-title="&lt;b&gt;图3 文本分类流程&lt;/b&gt;"><b>图3 文本分类流程</b></a></li>
+                                                <li><a href="#93" data-title="&lt;b&gt;图4 文本预处理字词集合示意图&lt;/b&gt;"><b>图4 文本预处理字词集合示意图</b></a></li>
+                                                <li><a href="#97" data-title="&lt;b&gt;表1 模糊文本的模糊主题与清晰主题的主题词分布&lt;/b&gt;"><b>表1 模糊文本的模糊主题与清晰主题的主题词分布</b></a></li>
+                                                <li><a href="#100" data-title="&lt;b&gt;图5 模糊文本中主题在各类文档中的出现次数&lt;/b&gt;"><b>图5 模糊文本中主题在各类文档中的出现次数</b></a></li>
+                                                <li><a href="#103" data-title="&lt;b&gt;表2 普通文本的模糊主题与清晰主题的主题词分布&lt;/b&gt;"><b>表2 普通文本的模糊主题与清晰主题的主题词分布</b></a></li>
+                                                <li><a href="#105" data-title="&lt;b&gt;图6 普通文本中主题在各类文档中的出现次数&lt;/b&gt;"><b>图6 普通文本中主题在各类文档中的出现次数</b></a></li>
+                                                <li><a href="#115" data-title="&lt;b&gt;表3 模糊文本分类准确率、召回率、F1值对比&lt;/b&gt;"><b>表3 模糊文本分类准确率、召回率、F1值对比</b></a></li>
+                                                <li><a href="#118" data-title="&lt;b&gt;表4 普通文本分类的准确率、召回率、F1值对比&lt;/b&gt;"><b>表4 普通文本分类的准确率、召回率、F1值对比</b></a></li>
+                                                <li><a href="#121" data-title="&lt;b&gt;图7 不同分类器的ROC曲线对比&lt;/b&gt;"><b>图7 不同分类器的ROC曲线对比</b></a></li>
+                                    </ul>
+                            </dd>
+                                    <dd class="guide">
+                                        <h6>
+                                            <p><a href="#a_bibliography">参考文献</a> </p>
+                                        </h6>
+                                    </dd>
+
+            </dl>
+        </div>
+        <!--sidebar end-->
+        &nbsp;
+        <!--此处有一空格符 勿删-->
+    </div>
+
+                <div class="sidebar-b three-collumn" style="width:0;">
+            <div class="refer" style="width: 0;">
+                <div class="arrow off" title="参考文献"><span></span></div>
+                <div class="js-scrollbox" >
+                    
+                    <div class="subbox active">
+                        <h4>
+                            <span class="tit">参考文献</span>
+                            <a class="close" href="javascript:void(0)">x</a>
+                        </h4>
+                        <div class="side-scroller">
+                            <ul class="refer-list">
+                                <li id="3">
+
+
+                                    <a id="bibliography_1" >
+                                        <b>[1]</b>
+                                     BLEI D M,NG A Y,JORDAN M I.Latent Dirichlet allocation[J].The Journal of Machine Learning Research,2003,3(4/5):993-1022.</a>
+                                </li>
+                                <li id="5">
+
+
+                                    <a id="bibliography_2" title=" MIKOLOV T,CHEN K,CORRADO G,et al.Efficient estimation of word representations in vector space[EB/OL].[2018-06-05].https://arxiv.org/pdf/1301.3781.pdf." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+                                        <b>[2]</b>
+                                         MIKOLOV T,CHEN K,CORRADO G,et al.Efficient estimation of word representations in vector space[EB/OL].[2018-06-05].https://arxiv.org/pdf/1301.3781.pdf.
+                                    </a>
+                                </li>
+                                <li id="7">
+
+
+                                    <a id="bibliography_3" title=" 熊富林,邓怡豪,唐晓晟.Word2vec的核心架构及其应用[J].南京师范大学学报(工程技术版),2015,15(1):43-48." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=NJSE201501009&amp;v=MDM5NzNvOUZiWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVkw3TEt5ZllhN0c0SDlUTXI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[3]</b>
+                                         熊富林,邓怡豪,唐晓晟.Word2vec的核心架构及其应用[J].南京师范大学学报(工程技术版),2015,15(1):43-48.
+                                    </a>
+                                </li>
+                                <li id="9">
+
+
+                                    <a id="bibliography_4" title=" 周练.Word2vec的工作原理及应用探究[J].科技情报开发与经济,2015,25(2):145-148." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KJQB201502061&amp;v=MTUxMjRiTEc0SDlUTXJZOURaWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckNVUkxPZVplUnRGeTNoVkw3TExpZmE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[4]</b>
+                                         周练.Word2vec的工作原理及应用探究[J].科技情报开发与经济,2015,25(2):145-148.
+                                    </a>
+                                </li>
+                                <li id="11">
+
+
+                                    <a id="bibliography_5" title=" 秦春秀,祝婷,赵捧未,等.自然语言语义分析研究进展[J].图书情报工作,2014,58(22):130-137." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=TSQB201422025&amp;v=MTMxMzlMTVQ3YWJMRzRIOVhPclk5SFlZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hWTDc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[5]</b>
+                                         秦春秀,祝婷,赵捧未,等.自然语言语义分析研究进展[J].图书情报工作,2014,58(22):130-137.
+                                    </a>
+                                </li>
+                                <li id="13">
+
+
+                                    <a id="bibliography_6" title=" ZHAI Chengxiang.Probabilistic topic models for text data retrieval and analysis[C]//Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval.New York,USA:ACM Press,2017:1399-1401." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Probabilistic topic models for text data retrieval and analysis">
+                                        <b>[6]</b>
+                                         ZHAI Chengxiang.Probabilistic topic models for text data retrieval and analysis[C]//Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval.New York,USA:ACM Press,2017:1399-1401.
+                                    </a>
+                                </li>
+                                <li id="15">
+
+
+                                    <a id="bibliography_7" title=" 张勇.基于词性与LDA主题模型的文本分类技术研究[D].合肥:安徽大学,2016." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016128013.nh&amp;v=MzEyOTZxQnRHRnJDVVJMT2VaZVJ0RnkzaFZMN0xWRjI2R0xLNkZ0SE5ySkViUElRS0RIODR2UjRUNmo1NE8zenE=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[7]</b>
+                                         张勇.基于词性与LDA主题模型的文本分类技术研究[D].合肥:安徽大学,2016.
+                                    </a>
+                                </li>
+                                <li id="17">
+
+
+                                    <a id="bibliography_8" title=" BAO Yang,COLLIER N,DATTA A.A partially supervised cross-collection topic model for cross-domain text classification[C]//Proceedings of the 22nd ACM International Conference on Information and Knowledge Management.New York,USA:ACM Press,2013:239-248." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A partially supervised cross-collection topic model for cross-domain text classification">
+                                        <b>[8]</b>
+                                         BAO Yang,COLLIER N,DATTA A.A partially supervised cross-collection topic model for cross-domain text classification[C]//Proceedings of the 22nd ACM International Conference on Information and Knowledge Management.New York,USA:ACM Press,2013:239-248.
+                                    </a>
+                                </li>
+                                <li id="19">
+
+
+                                    <a id="bibliography_9" title=" MEHROTRA R,SANNER S,BUNTINE W,et al.Improving LDA topic models for microblogs via tweet pooling and automatic labeling[C]//Proceedings of the 36th International ACM SIGIR Conference on Research and Development in Information Retrieval.New York,USA:ACM Press,2013:889-892." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Improving LDAtopic models for microblogs via tweet pooling and automatic labeling">
+                                        <b>[9]</b>
+                                         MEHROTRA R,SANNER S,BUNTINE W,et al.Improving LDA topic models for microblogs via tweet pooling and automatic labeling[C]//Proceedings of the 36th International ACM SIGIR Conference on Research and Development in Information Retrieval.New York,USA:ACM Press,2013:889-892.
+                                    </a>
+                                </li>
+                                <li id="21">
+
+
+                                    <a id="bibliography_10" title=" NGUYEN D Q,BILLINGSLEY R,DU L,et al.Improving topic models with latent feature word representations[J].Transactions of the Association for Computational Linguistics,2015,3:299-313." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Improving Topic Models with Latent Feature Word Representations">
+                                        <b>[10]</b>
+                                         NGUYEN D Q,BILLINGSLEY R,DU L,et al.Improving topic models with latent feature word representations[J].Transactions of the Association for Computational Linguistics,2015,3:299-313.
+                                    </a>
+                                </li>
+                                <li id="23">
+
+
+                                    <a id="bibliography_11" title=" WANG Zhibo,MA Long,ZHANG Yanqing.A hybrid document feature extraction method using latent Dirichlet allocation and Word2Vec[C]//Proceedings of International Conference on Data Science in Cyberspace.Washington D.C.,USA:IEEE Press,2016:98-103." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A Hybrid Document Feature Extraction Method Using Latent Dirichlet Allocation and Word2Vec">
+                                        <b>[11]</b>
+                                         WANG Zhibo,MA Long,ZHANG Yanqing.A hybrid document feature extraction method using latent Dirichlet allocation and Word2Vec[C]//Proceedings of International Conference on Data Science in Cyberspace.Washington D.C.,USA:IEEE Press,2016:98-103.
+                                    </a>
+                                </li>
+                                <li id="25">
+
+
+                                    <a id="bibliography_12" title=" NIU Liqiang,DAI Xinyu,ZHANG Jianbing,et al.Topic2Vec:learning distributed representations of topics[C]//Proceedings of International Conference on Asian Language Processing.Washington D.C.,USA:IEEE Press,2015:193-196." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Topic2Vec:learning distributed representations of topics">
+                                        <b>[12]</b>
+                                         NIU Liqiang,DAI Xinyu,ZHANG Jianbing,et al.Topic2Vec:learning distributed representations of topics[C]//Proceedings of International Conference on Asian Language Processing.Washington D.C.,USA:IEEE Press,2015:193-196.
+                                    </a>
+                                </li>
+                                <li id="27">
+
+
+                                    <a id="bibliography_13" title=" WANG Zhibo,ZHANG Yanqing.A text information retrieval method by integrating global and local textual information[C]//Proceedings of the 40th Annual Computer Software and Applications Conference.Washington D.C.,USA:IEEE Press,2016:504-505" target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=A text information retrieval method by integrating global and local textual information">
+                                        <b>[13]</b>
+                                         WANG Zhibo,ZHANG Yanqing.A text information retrieval method by integrating global and local textual information[C]//Proceedings of the 40th Annual Computer Software and Applications Conference.Washington D.C.,USA:IEEE Press,2016:504-505
+                                    </a>
+                                </li>
+                                <li id="29">
+
+
+                                    <a id="bibliography_14" title=" 张群,王红军,王伦文.词向量与LDA相融合的短文本分类方法[J].现代图书情报技术,2016(12):27-35." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201612004&amp;v=Mjk5OTlMUFNuZmY3RzRIOWZOclk5RllJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hWTDc=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[14]</b>
+                                         张群,王红军,王伦文.词向量与LDA相融合的短文本分类方法[J].现代图书情报技术,2016(12):27-35.
+                                    </a>
+                                </li>
+                                <li id="31">
+
+
+                                    <a id="bibliography_15" title=" SHI Min,LIU Jianxun,ZHOU Dong,et al.WE-LDA:a word embeddings augmented LDA model for Web services clustering[C]//Proceedings of IEEE International Conference on Web Services.Washington D.C.,USA:IEEE Press,2017:9-16." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=WE-LDA:A word embeddings augmented LDA model for Web services clustering">
+                                        <b>[15]</b>
+                                         SHI Min,LIU Jianxun,ZHOU Dong,et al.WE-LDA:a word embeddings augmented LDA model for Web services clustering[C]//Proceedings of IEEE International Conference on Web Services.Washington D.C.,USA:IEEE Press,2017:9-16.
+                                    </a>
+                                </li>
+                                <li id="33">
+
+
+                                    <a id="bibliography_16" title=" 陈磊,李俊.基于LF-LDA和Word2vec的文本表示模型研究[J].电子技术,2017,46(7):1-5." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZJS201707001&amp;v=MTQ2MzN5M2hWTDdMSVRmQmZiRzRIOWJNcUk5RlpZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[16]</b>
+                                         陈磊,李俊.基于LF-LDA和Word2vec的文本表示模型研究[J].电子技术,2017,46(7):1-5.
+                                    </a>
+                                </li>
+                                <li id="35">
+
+
+                                    <a id="bibliography_17" title=" XU Hongyang,LU Hui,YANG Guowei,et al.Sentiment analysis of Chinese version using SVM &amp;amp; RNN[C]//Proceedings of the 6th International Conference on Information Engineering.New York,USA:ACM Press,2017:1-5." target="_blank"
+                                       href="http://scholar.cnki.net/result.aspx?q=Sentiment analysis of Chinese version using SVM &amp;amp; RNN">
+                                        <b>[17]</b>
+                                         XU Hongyang,LU Hui,YANG Guowei,et al.Sentiment analysis of Chinese version using SVM &amp;amp; RNN[C]//Proceedings of the 6th International Conference on Information Engineering.New York,USA:ACM Press,2017:1-5.
+                                    </a>
+                                </li>
+                                <li id="37">
+
+
+                                    <a id="bibliography_18" title=" 梁艳红,檀润华,马建红.面向产品创新设计的专利文本分类研究[J].计算机集成制造系统,2013,19(2):382-390." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJJ201302020&amp;v=MDg5ODFyQ1VSTE9lWmVSdEZ5M2hWTDdMTHo3QlpMRzRIOUxNclk5SFpJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0Y=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[18]</b>
+                                         梁艳红,檀润华,马建红.面向产品创新设计的专利文本分类研究[J].计算机集成制造系统,2013,19(2):382-390.
+                                    </a>
+                                </li>
+                                <li id="39">
+
+
+                                    <a id="bibliography_19" title=" 周群,左文革,陈仕吉.基于百分位数的文献计量指标研究综述[J].现代图书情报技术,2013(7/8):82-88." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ2013Z1015&amp;v=MDE4NDNVUkxPZVplUnRGeTNoVkw3TFBTbmZmN0c0SDlLbXJvOUVZWVFLREg4NHZSNFQ2ajU0TzN6cXFCdEdGckM=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[19]</b>
+                                         周群,左文革,陈仕吉.基于百分位数的文献计量指标研究综述[J].现代图书情报技术,2013(7/8):82-88.
+                                    </a>
+                                </li>
+                                <li id="41">
+
+
+                                    <a id="bibliography_20" title=" KRISHNAMURTHI K,PANUGANTI V R,BULUSU V V.Understanding document semantics from summaries[J].ACM Transactions on Asian and Low-resource Language Information Processing,2016,16(1):1-20." target="_blank"
+                                       href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM2C778CE3D8BE1C1F0D5BFACE09716BB4&amp;v=MjczNjRmck9TTjhpYkNPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU50aHdieTR3YXM9TmlmSVk3SExHZGJFM1BwR0VPTjllWDFLem1BVG5qb1BQZzZSMlJJOA==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                        <b>[20]</b>
+                                         KRISHNAMURTHI K,PANUGANTI V R,BULUSU V V.Understanding document semantics from summaries[J].ACM Transactions on Asian and Low-resource Language Information Processing,2016,16(1):1-20.
+                                    </a>
+                                </li>
+                            </ul>
+                            <div style='display: none;' class="zqscroller" >
+                                <h4 class="">附加材料</h4>
+                                <ul></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            &nbsp;
+            <!--此处有一空格符 勿删-->
+        </div>
+
+        
+    <div class="content">
+
+
+
+        <!--tips start-->
+                            <div class="tips">
+                    <a href="http://navi.cnki.net/KNavi/JournalDetail?pcode=CJFD&amp;pykm=JSJC" target="_blank">计算机工程</a>
+                2019,45(10),221-226 DOI:10.19678/j.issn.1000-3428.0052033            </div>
+        <!--tips end-->
+            <div class="top-title">
+                <h1 class="title">
+                    <span class="vm"><b>基于主题分布优化的模糊文本分类研究</b></span>
+ <span class="shoufa"></span>                                     </h1>
+
+            </div>
+                        <h2>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E6%A2%81%E8%89%B3%E7%BA%A2&amp;code=07084364&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">梁艳红</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E5%9D%8E%E5%90%AF%E8%BD%A9&amp;code=40426891&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">坎启轩</a>
+                                <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=au&amp;skey=%E8%8B%8F%E7%BF%8C&amp;code=40426892&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">苏翌</a>
+                </h2>
+                    <h2>
+                    <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=in&amp;skey=%E6%B2%B3%E5%8C%97%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AD%A6%E9%99%A2&amp;code=0149979&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">河北工业大学人工智能与数据科学学院</a>
+            </h2>
+
+        
+<div class="link">
+    <a id="aexport" class="icon icon-output"  onclick="" href="javascript:void(0);"><i></i>导出/参考文献</a>
+    
+    <span class="shareBoard" onmouseover="$('#sharedet').show();$('#this').addClass('shareBoardCUR')" onmouseout="$('#sharedet').hide();$('#this').removeClass('shareBoardCUR')">
+        <a class="icon icon-share" href="#"><i></i>分享<em></em></a>
+        <ul class="shareHide" id="sharedet" style="display: none;">
+            <li><a title="复制链接" class="copy" onclick="" href="#"><i></i>复制链接</a></li>
+            <li><a title="分享到新浪微博" class="xl" onclick="" href="javascript:common.ShareAction('xl');"><i></i>新浪微博</a></li>
+            <li>
+                <a title="分享到微信" class="wx" onclick="" href="#"><i></i>微信扫一扫</a>
+                <div class="qrcode"><img src='' alt='' /></div>
+            </li>
+        </ul>
+
+    </span>
+    
+    <a id="RefTrack" title="创建引文跟踪" class="icon icon-track" onclick="" href="javascript:void(0);"> <i></i>创建引文跟踪 </a>
+    <a id="ashoucang" title="收藏" class="icon icon-favor" onclick="" href="javascript:void(0);"><i></i>收藏</a>
+    <a class="icon icon-print" onclick="window.print();" href="javascript:void(0);"><i></i>打印</a>
+    
+    <!--版本切换 end-->
+</div>
+                            <div class="data" id="a_abstract">
+                <span class="keys">摘<span style="font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;</span>要：</span>
+                <p>在对类别模糊的文本进行分类时,主题模型只考虑文档和主题级别信息,未考虑底层词语间的隐含信息,且多数主题信息复杂、中心不明确。为此,提出一种改进的文本分类方法。通过分位数选择中心明确的主题,将其映射到word2vec词向量空间内,对模糊文本进行分类操作,进而得到文本分类结果。实验结果表明,与C<sub>L</sub>CD+KNN方法相比,该方法分类效果较好,鲁棒性较强。</p>
+            </div>
+                    <div class="data" id="a_keywords">
+                <span class="keys">关键词：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E4%B8%BB%E9%A2%98%E6%A8%A1%E5%9E%8B&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">主题模型;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%8D%E5%90%91%E9%87%8F&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">词向量;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E6%A8%A1%E7%B3%8A%E6%96%87%E6%9C%AC&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">模糊文本;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E8%AF%AD%E4%B9%89%E5%88%86%E6%9E%90&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">语义分析;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=%E5%88%86%E4%BD%8D%E6%95%B0&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">分位数;</a>
+                </p>
+            </div>
+        
+        <!--brief start-->
+        
+            <div class="brief">
+                    <p>
+                            <b>作者简介：</b>
+                                                        <span>
+                                    梁艳红(1973—),女,副教授、博士,主研方向为文本挖掘、信息检索;E-mail:lyh@scse.hebut.edu.cn;
+                                </span>
+                                <span>
+                                    坎启轩,硕士研究生。;
+                                </span>
+                                <span>
+                                    苏翌,硕士研究生。;
+                                </span>
+                    </p>
+                                    <p><b>收稿日期：</b>2018-07-06</p>
+
+                    <p>
+
+                            <b>基金：</b>
+                                                        <span>国家自然科学基金(51605134);</span>
+                                <span>河北省博士后科研项目(2012-14);</span>
+                                <span>京津冀协同创新共同体建设专项(18246224D);</span>
+                    </p>
+            </div>
+                    <h1><b>Research on Fuzzy Text Classification Based on Topic Distribution Optimization</b></h1>
+                    <h2>
+                    <span>LIANG Yanhong</span>
+                    <span>KAN Qixuan</span>
+                    <span>SU Yi</span>
+            </h2>
+                    <h2>
+                    <span>School of Artificial Intellignce,Hebei University of Technology</span>
+            </h2>
+                            <div class="data" id="a_abstractEN">
+                <span class="keys">Abstract：</span>
+                <p>When classifying texts with fuzzy categories,the topic model only considers the document and topic level information,and does not consider the implicit information of the underlying words.The information in most topics is complex and the center is not clear.Therefore,an improved text classification method is proposed.Topics with a clear center are selected by using quantile,and are mapped to the word2 vec space to enable classification for fuzzy texts,so as to obtain the text classification result.Experimental results show that compared with the C<sub>L</sub>CD+KNN method,the proposed method has better classification performance and robustness.</p>
+            </div>
+                    <div class="data" id="a_keywordsEN">
+                <span class="keys">Keyword：</span>
+                <p>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=topic%20model&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">topic model;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=word%20vector&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">word vector;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=fuzzy%20text&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">fuzzy text;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=semantic%20analysis&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">semantic analysis;</a>
+                        <a href="/kcms/detail/knetsearch.aspx?dbcode=CJFD&amp;sfield=kw&amp;skey=quantile&amp;code=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" target="_blank">quantile;</a>
+                </p>
+            </div>
+                    <div class="brief">
+                
+                    <p>
+                                            </p>
+                                    <p><b>Received：</b> 2018-07-06</p>
+                                    <p>
+                                            </p>
+            </div>
+
+
+        <!--brief start-->
+                        <h3 id="43" name="43" class="anchor-tag">0 概述</h3>
+                <div class="p1">
+                    <p id="44">近年来,文本类型的数据呈指数级增长,文本分类已成为信息检索、机器学习领域的一项重要任务。在进行文本分类时,由于汉语语义关系复杂,词语间存在同义词、近义词等复杂结构,因此文本表示模型的性能将直接影响机器学习的效果。</p>
+                </div>
+                <div class="p1">
+                    <p id="45">文本表示模型主要包含向量空间模型(Vector Space Model,VSM)、潜在狄利克雷分配(Latent Dirichlet Allocation,LDA)主题模型<citation id="131" type="reference"><link href="3" rel="bibliography" /><sup>[<a class="sup">1</a>]</sup></citation>及词向量模型(word2vec)<citation id="138" type="reference"><link href="5" rel="bibliography" /><link href="7" rel="bibliography" /><link href="9" rel="bibliography" /><sup>[<a class="sup">2</a>,<a class="sup">3</a>,<a class="sup">4</a>]</sup></citation>等。由于LDA模型可以保留原始语义信息<citation id="132" type="reference"><link href="11" rel="bibliography" /><sup>[<a class="sup">5</a>]</sup></citation>,基于此模型的分类预测<citation id="139" type="reference"><link href="13" rel="bibliography" /><link href="15" rel="bibliography" /><sup>[<a class="sup">6</a>,<a class="sup">7</a>]</sup></citation>均具有较好的效果,为适应不同情景,研究者提出改进的LDA模型<citation id="140" type="reference"><link href="17" rel="bibliography" /><link href="19" rel="bibliography" /><sup>[<a class="sup">8</a>,<a class="sup">9</a>]</sup></citation>。但是在使用LDA主题模型对类别模糊的文本分类时发现,与基于VSM模型所建立的分类器相比,利用主题信息对文本进行分类的效果提升并不明显。这是由于LDA所建立的主题内包含的词语概念被混淆,主题内词语与各个类别均相关,导致分类准确率较低。研究者将LDA主题模型与word2vec模型相结合,提出多种文本分类方法。文献<citation id="133" type="reference">[<a class="sup">10</a>]</citation>在建立LDA模型时利用word2vec所提供的词向量,将其并入到主题词空间,通过伯努利分布来选择词语。文献<citation id="134" type="reference">[<a class="sup">11</a>]</citation>将LDA生成的主题映射到word2vec词向量空间内,根据文档间各个主题的距离对文档进行分类。文献<citation id="135" type="reference">[<a class="sup">12</a>]</citation>将LDA所得到的主题词分布概率应用到word2vec的计算过程中,以提升word2vec计算结果的准确度。除将主题映射到词向量空间内,研究者还提出将主题空间与词向量空间进行连接的方法,文献<citation id="141" type="reference">[<a class="sup">13</a>,<a class="sup">14</a>,<a class="sup">15</a>]</citation>将主题分布与文档在词向量空间内的分布相连接作为分类依据。文献<citation id="136" type="reference">[<a class="sup">16</a>]</citation>提出将浅特征主题模型(Latent Feature-LDA,LF-LDA)与主题映射到词向量空间相结合来提升文本的分类准确率。文献<citation id="137" type="reference">[<a class="sup">17</a>]</citation>提出基于词向量的循环神经网络(Recurrent Neural Network,RNN)分类方法。</p>
+                </div>
+                <div class="p1">
+                    <p id="46">本文筛选有利于分类的主题信息,并将其映射到词向量空间内,综合考虑主题层次信息与词语层次信息并对文本进行分类,从而得到文本分类结果。</p>
+                </div>
+                <h3 id="47" name="47" class="anchor-tag">1 模糊文本</h3>
+                <div class="p1">
+                    <p id="48">在LDA主题模型中,一篇文本的主题由多个服从狄利克雷分布的主题混合而成,不同类别间的文本经常会混用多个主题,当不同类别间文档的主题分布相差较大时,这些文档较容易区分,如搜狗语料库中包含艺术类、历史类、计算机类等较易被区分的文本集合。然而,不同类别间的文本主题分布相似时,就无法区分这些主题分布相似、内容相近的文本,这类不易被区分的文本称为模糊文本,如知网上类别相近的论文集合——电子计算机类、微型计算机类、程序语言类等。模糊文本集合中不同类别间的文档有较多相似的地方,如电子计算机、微型计算机这2类文本集合共享计算机主题信息、系统主题信息等。</p>
+                </div>
+                <div class="p1">
+                    <p id="49">应用LDA算法对搜狗语料库(如历史类、经济类、运动类)建立对应的LDA主题模型,并利用主成分分析(Principal Component Analysis,PCA)构建三维视图,得到普通文本的主题分布如图1所示。</p>
+                </div>
+                <div class="area_img" id="50">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910037_050.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图1 普通文本的主题分布" src="Detail/GetImg?filename=images/JSJC201910037_050.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图1 普通文本的主题分布</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910037_050.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="51">由图1可知,搜狗语料库内这3类文本在三维空间中不同主题下的分布具有规律性,较容易被区分。因此,这种类型的文档集合利用一般的分类模型就可以进行较为准确的分类预测。</p>
+                </div>
+                <div class="p1">
+                    <p id="52">使用LDA算法对知网上的模糊文本集合,即类别相近的文档集合(如程序语言类、程序设计类、电子计算机类、微型计算机类)建立对应的LDA主题模型,并且利用PCA降维后,得到模糊文本的主题分布如图2所示。</p>
+                </div>
+                <div class="area_img" id="53">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910037_053.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图2 模糊文本的主题分布" src="Detail/GetImg?filename=images/JSJC201910037_053.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图2 模糊文本的主题分布</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910037_053.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="54">由图2可知,使用PCA降维后得到的模糊文本主题分布混乱,不同类别的文本相互交叉,很难被区分。</p>
+                </div>
+                <div class="p1">
+                    <p id="55">模糊文本的主题不明确,无法根据当前所有的主题信息对其进行划分。通过研究LDA主题模型内的主题信息时发现,多数主题内的主题词间词义相差较大,且经常出现在不同类别的文档中,由于主题中心不明确,无法准确代表某一类别的主题信息,若依靠这类主题作为分类的特征,将不利于类别模糊文本的分类。因此,需要筛选出利于模糊文本分类的主题作为特征,以提升分类结果的准确性。</p>
+                </div>
+                <h3 id="56" name="56" class="anchor-tag">2 模糊文本分类算法</h3>
+                <div class="p1">
+                    <p id="57">在对文本进行分类时,LDA模型中的主题并非全部都对分类有作用,因此筛选出LDA模型中主题意义集中度较高的主题,利用各主题词在word2vec下的词向量加权求和的方法<citation id="142" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>,将主题映射到词向量空间内,计算文档在词向量空间下的坐标与各个主题的距离,并将其作为分类依据。这样可结合有利于分类的主题信息与词向量空间内的语义信息,同时避免模糊主题对分类的干扰。</p>
+                </div>
+                <h4 class="anchor-tag" id="58" name="58">2.1 文本分类流程</h4>
+                <div class="p1">
+                    <p id="59">文本分类过程主要分为学习阶段与分类阶段2个部分<citation id="143" type="reference"><link href="37" rel="bibliography" /><sup>[<a class="sup">18</a>]</sup></citation>。学习阶段的内容主要是训练一个可靠的分类器,具体过程为:将原始数据集分为训练集与测试集,利用jieba分词工具对训练集与测试集进行分词,去除训练集与测试集内的特殊符号、停用词,并依据训练集建立LDA主题模型与word2vec模型,筛选出清晰主题并将其映射到word2vec词向量空间内,计算各个文档与词向量空间内清晰主题的距离值并将其作为分类特征,建立分类模型,然后计算测试文档与词向量空间内各个主题的距离,利用分类器进行分类预测操作,不断地对模型进行优化,最终生成一个可以实际应用的自动化分类模型。分类过程则是通过使用优化过的模型对待分类文本进行自动化分类操作。文本分类流程如图3所示。</p>
+                </div>
+                <div class="area_img" id="60">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910037_060.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图3 文本分类流程" src="Detail/GetImg?filename=images/JSJC201910037_060.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图3 文本分类流程</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910037_060.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="61" name="61">2.2 主题筛选</h4>
+                <h4 class="anchor-tag" id="62" name="62">2.2.1 分位数</h4>
+                <div class="p1">
+                    <p id="63">分位数是将原始数列排列后,按照数列内的个数划分为<i>N</i>份,处于分割点的数值即为分位数,上四分位数<i>Q</i><sub>1</sub>与下四分位数<i>Q</i><sub>3</sub><citation id="144" type="reference"><link href="39" rel="bibliography" /><sup>[<a class="sup">19</a>]</sup></citation>计算公式如式(1)和式(2)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="64" class="code-formula">
+                        <mathml id="64"><math xmlns="http://www.w3.org/1998/Math/MathML"><mtable columnalign="left"><mtr><mtd><mi>Q</mi><msub><mrow></mrow><mn>1</mn></msub><mo>=</mo><mi>L</mi><msub><mrow></mrow><mrow><mi>Q</mi><msub><mrow></mrow><mn>1</mn></msub></mrow></msub><mo>+</mo><mfrac><mrow><mfrac><mrow><mstyle displaystyle="true"><mo>∑</mo><mi>f</mi></mstyle></mrow><mn>4</mn></mfrac><mo>-</mo><mi>s</mi><msub><mrow></mrow><mrow><mi>Q</mi><msub><mrow></mrow><mn>1</mn></msub><mo>-</mo><mn>1</mn></mrow></msub></mrow><mrow><mi>f</mi><msub><mrow></mrow><mrow><mi>Q</mi><msub><mrow></mrow><mn>1</mn></msub></mrow></msub></mrow></mfrac><mo>×</mo><mi>d</mi><msub><mrow></mrow><mrow><mi>Q</mi><msub><mrow></mrow><mn>1</mn></msub></mrow></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mtd></mtr><mtr><mtd><mi>Q</mi><msub><mrow></mrow><mn>3</mn></msub><mo>=</mo><mi>L</mi><msub><mrow></mrow><mrow><mi>Q</mi><msub><mrow></mrow><mn>3</mn></msub></mrow></msub><mo>+</mo><mfrac><mrow><mfrac><mrow><mn>3</mn><mstyle displaystyle="true"><mo>∑</mo><mi>f</mi></mstyle></mrow><mn>4</mn></mfrac><mo>-</mo><mi>s</mi><msub><mrow></mrow><mrow><mi>Q</mi><msub><mrow></mrow><mn>3</mn></msub><mo>-</mo><mn>1</mn></mrow></msub></mrow><mrow><mi>f</mi><msub><mrow></mrow><mrow><mi>Q</mi><msub><mrow></mrow><mn>3</mn></msub></mrow></msub></mrow></mfrac><mo>×</mo><mi>d</mi><msub><mrow></mrow><mrow><mi>Q</mi><msub><mrow></mrow><mn>3</mn></msub></mrow></msub><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo></mtd></mtr></mtable></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="65">其中,<i>L</i><sub><i>Q</i></sub><sub>1</sub>、<i>L</i><sub><i>Q</i></sub><sub>3</sub>分别代表下四分位和上四分位数所在下限,<i>S</i><sub><i>Q</i></sub><sub>1-1</sub>、<i>S</i><sub><i>Q</i></sub><sub>3-1</sub>分别代表下四分位和上四分位数所在组位置以下的累计次数,<i>f</i>为单位统计量,<i>f</i><sub><i>Q</i></sub><sub>1</sub>、<i>f</i><sub><i>Q</i></sub><sub>3</sub>分别代表下四分位和上四分位数所在组的次数,<i>d</i><sub><i>Q</i></sub><sub>1</sub>、<i>d</i><sub><i>Q</i></sub><sub>2</sub>分别表示下四分位和上四分位数的组距。</p>
+                </div>
+                <h4 class="anchor-tag" id="66" name="66">2.2.2 主题划分</h4>
+                <div class="p1">
+                    <p id="67">利用LDA模型训练后得到的主题,并非全部都对识别文本类别有用,很多主题内的信息比较杂乱,其主题词分属于不同类别,可以认为这些信息混杂的主题就是不同类别的模糊文本交叉处。</p>
+                </div>
+                <div class="p1">
+                    <p id="68"><b>定义1</b>(模糊主题) 主题内的主题词词义间隔大、相似度低,且该主题经常出现在不同类别的文档集合中。模糊主题用集合法描述如式(3)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="69" class="code-formula">
+                        <mathml id="69"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><msub><mrow></mrow><mrow><mtext>f</mtext><mtext>u</mtext><mtext>z</mtext><mtext>z</mtext><mtext>y</mtext></mrow></msub><mo>∈</mo><mrow><mo>{</mo><mrow><mi>Τ</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><mtext> </mtext><mrow><mo>|</mo><mrow><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>C</mi></munderover><mrow></mrow></mstyle><mi>t</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mrow><mi>max</mi><mo stretchy="false">(</mo><mi>t</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mfrac></mrow></mrow><mo>&gt;</mo><mi>Τ</mi><mi>h</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>h</mi><mi>o</mi><mi>l</mi><mi>d</mi><msub><mrow></mrow><mrow><mtext>f</mtext><mtext>u</mtext><mtext>z</mtext><mtext>z</mtext><mtext>y</mtext></mrow></msub></mrow><mo>}</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="70">其中,<i>Topic</i><sub>fuzzy</sub>为模糊主题,<i>C</i>为类别数目,<i>topic</i><sub><i>i</i></sub>为主题<i>topic</i>在第<i>i</i>类文档集合中出现的次数,max(<i>topic</i><sub><i>i</i></sub>)为主题<i>topic</i>在不同类别中出现最多的次数,<i>Threshold</i><sub>fuzzy</sub>为筛选模糊主题的阈值,将各个主题<mathml id="128"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>C</mi></munderover><mi>t</mi></mstyle><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mrow><mi>max</mi><mo stretchy="false">(</mo><mi>t</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mfrac></mrow></math></mathml>的上四分位数作为该阈值。</p>
+                </div>
+                <div class="p1">
+                    <p id="71"><b>定义2</b>(清晰主题) 主题内的主题词词义相近、相似度低,该主题经常出现在某一类别中,在其他类别中基本不出现。清晰主题用集合法描述如式(4)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="72" class="code-formula">
+                        <mathml id="72"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><msub><mrow></mrow><mrow><mtext>c</mtext><mtext>l</mtext><mtext>e</mtext><mtext>a</mtext><mtext>r</mtext></mrow></msub><mo>∈</mo><mrow><mo>{</mo><mrow><mi>Τ</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><mrow><mo>|</mo><mrow><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>C</mi></munderover><mrow></mrow></mstyle><mi>t</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mrow><mi>max</mi><mo stretchy="false">(</mo><mi>t</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mfrac></mrow></mrow><mo>&lt;</mo><mi>Τ</mi><mi>h</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>h</mi><mi>o</mi><mi>l</mi><mi>d</mi><msub><mrow></mrow><mrow><mtext>c</mtext><mtext>l</mtext><mtext>e</mtext><mtext>a</mtext><mtext>r</mtext></mrow></msub></mrow><mo>}</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="73">其中,<i>Topic</i><sub>clear</sub>为清晰主题,<i>Threshold</i><sub>clear</sub>为筛选清晰主题的阈值,将各个主题<mathml id="129"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>C</mi></munderover><mi>t</mi></mstyle><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mrow><mi>max</mi><mo stretchy="false">(</mo><mi>t</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mfrac></mrow></math></mathml>的下四分位数作为该阈值。</p>
+                </div>
+                <div class="p1">
+                    <p id="74">为区分模糊文本,应避免模糊主题对分类的影响,选择清晰主题作为分类的特征,进而提高模糊文本分类的准确性。</p>
+                </div>
+                <h4 class="anchor-tag" id="75" name="75">2.3 文本表示模型</h4>
+                <div class="p1">
+                    <p id="76">为准确区分模糊集文档类别,本文在筛选出清晰主题作为主题层级别语义特征后,将清晰主题映射到词向量空间内,建立文档在词向量空间内的分布向量,并计算与词向量空间内各清晰主题的距离,将其作为新的文档的表示模型。文本表示模型具体步骤描述如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="77"><b>步骤1</b> 利用LDA主题模型处理训练集,得到各个主题的集合<i>T</i>={<i>topic</i><sub>1</sub>,<i>topic</i><sub>2</sub>,…,<i>topic</i><sub><i>n</i></sub>}。</p>
+                </div>
+                <div class="p1">
+                    <p id="78"><b>步骤2</b> 统计各个主题在不同类别中出现的次数<i>Topic</i><sub><i>i</i></sub>,利用式(4)选择清晰主题<i>Topic</i><sub>clear</sub>。</p>
+                </div>
+                <div class="p1">
+                    <p id="79"><b>步骤3</b> 选取清晰主题<i>Topic</i><sub>clear</sub>内前<i>N</i>个词做为主题词,计算各个主题词权重<i>weight</i><sub><i>i</i></sub>,通过主题词在词向量空间下坐标<i>word</i><sub><i>i</i></sub>与权重的乘积和作为清晰主题在词向量空间下的坐标<i>Topic</i><sub>clear</sub>_<i>vec</i>,如式(5)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="80" class="code-formula">
+                        <mathml id="80"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>Τ</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><msub><mrow></mrow><mrow><mtext>c</mtext><mtext>l</mtext><mtext>e</mtext><mtext>a</mtext><mtext>r</mtext></mrow></msub><mo>_</mo><mi>v</mi><mi>e</mi><mi>c</mi><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mrow></mrow></mstyle><mo stretchy="false">[</mo><mi>w</mi><mi>o</mi><mi>r</mi><mi>d</mi><msub><mrow></mrow><mi>i</mi></msub><mo>⋅</mo><mrow><mi>w</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi></mrow><msub><mrow></mrow><mi>i</mi></msub><mo stretchy="false">]</mo></mrow><mi>Ν</mi></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>5</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="81">其中,<mathml id="130"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>w</mi><mi>e</mi><mi>i</mi><mi>g</mi><mi>h</mi><mi>t</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mfrac><mrow><mi>w</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>Ν</mi></munderover><mi>w</mi></mstyle><msub><mrow></mrow><mi>n</mi></msub></mrow></mfrac></mrow></math></mathml>, 为第<i>i</i>个主题词所占主题的比重。</p>
+                </div>
+                <div class="p1">
+                    <p id="82"><b>步骤4</b> 计算文档<i>d</i>内所有词在词向量空间下的坐标和作为文档在词向量空间下的坐标<i>doc</i><sub>vec</sub>,如式(6)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="83" class="code-formula">
+                        <mathml id="83"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><mi>o</mi><mi>c</mi><msub><mrow></mrow><mrow><mtext>v</mtext><mtext>e</mtext><mtext>c</mtext></mrow></msub><mo>=</mo><mfrac><mrow><mstyle displaystyle="true"><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>d</mi><mi>o</mi><mi>c</mi><msub><mrow></mrow><mrow><mtext>w</mtext><mtext>o</mtext><mtext>r</mtext><mtext>d</mtext><mtext>s</mtext></mrow></msub></mrow></munderover><mi>w</mi></mstyle><mi>o</mi><mi>r</mi><mi>d</mi><msub><mrow></mrow><mi>i</mi></msub></mrow><mrow><mi>d</mi><mi>o</mi><mi>c</mi><msub><mrow></mrow><mrow><mtext>w</mtext><mtext>o</mtext><mtext>r</mtext><mtext>d</mtext><mtext>s</mtext></mrow></msub></mrow></mfrac><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>6</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="84">其中,<i>doc</i><sub>words</sub>为文档中词语的数目。</p>
+                </div>
+                <div class="p1">
+                    <p id="85"><b>步骤5</b> 计算文档<i>d</i><sub><i>i</i></sub>与各清晰主题<i>Topic</i><sub>clear</sub><sub><i>j</i></sub>的距离<i>distence</i><sub><i>i</i></sub><sub>,</sub><sub><i>j</i></sub>作为文档<i>d</i><sub><i>i</i></sub>的主题分布<i>doc</i>_<i>topic</i><sub><i>i</i></sub>,如式(7)所示。</p>
+                </div>
+                <div class="p1">
+                    <p id="86" class="code-formula">
+                        <mathml id="86"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mi>d</mi><mi>o</mi><mi>c</mi><mo>_</mo><mi>t</mi><mi>o</mi><mi>p</mi><mi>i</mi><mi>c</mi><msub><mrow></mrow><mi>i</mi></msub><mo>=</mo><mrow><mo>{</mo><mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>,</mo><mn>1</mn></mrow></msub><mo>,</mo><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>,</mo><mn>2</mn></mrow></msub><mo>,</mo><mo>⋯</mo><mo>,</mo><mi>d</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi><msub><mrow></mrow><mrow><mi>i</mi><mo>,</mo><mi>h</mi></mrow></msub></mrow><mo>}</mo></mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mtext> </mtext><mrow><mtext> </mtext><mtext> </mtext><mtext> </mtext></mrow><mo stretchy="false">(</mo><mn>7</mn><mo stretchy="false">)</mo></mrow></math></mathml>
+                    </p>
+                </div>
+                <div class="p1">
+                    <p id="87">其中,<i>distence</i><sub><i>i</i></sub><sub>,</sub><sub><i>j</i></sub>=‖<i>doc</i><sub>vec</sub><sub><i>i</i></sub>-<i>Topic</i><sub>clear</sub><sub><i>j</i></sub>‖<sup>2</sup>。</p>
+                </div>
+                <div class="p1">
+                    <p id="88"><b>步骤6</b> 通过机器学习中的K最近邻(K-Nearest Neighbor,KNN)算法对文档与各清晰主题的距离分布<i>distence</i><sub><i>i</i></sub><sub>,</sub><sub><i>j</i></sub>进行建模,并利用该模型对测试文档进行分类,以验证模型的准确性。</p>
+                </div>
+                <h3 id="89" name="89" class="anchor-tag">3 实验结果与分析</h3>
+                <div class="p1">
+                    <p id="90">不同类别间有较多主题相近的信息,例如电子计算机类与微型计算机类大多都涉及硬件等相关知识,而程序语言类与程序设计类均倾向于软件编程。由于一篇文档的摘要包含大部分的文章信息<citation id="145" type="reference"><link href="41" rel="bibliography" /><sup>[<a class="sup">20</a>]</sup></citation>,本文选取知网上电子计算机类、微型计算机类、程序语言类以及程序设计类共4类同属于信息方向的论文题目与摘要的集合,作为模糊文本分类样本集合,其中每类文档各3 000篇。另外,将搜狗语料库作为普通文本进行对比实验。本文实验内容包括对数据预处理、筛选主题和综合评价分类结果。</p>
+                </div>
+                <h4 class="anchor-tag" id="91" name="91">3.1 数据预处理</h4>
+                <div class="p1">
+                    <p id="92">利用jieba分词的精确模式对模糊文本集与搜狗语料库进行分词,并去除停用词,将文本表示为字词集合,结果如图4所示。</p>
+                </div>
+                <div class="area_img" id="93">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910037_093.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图4 文本预处理字词集合示意图" src="Detail/GetImg?filename=images/JSJC201910037_093.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图4 文本预处理字词集合示意图</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910037_093.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <h4 class="anchor-tag" id="94" name="94">3.2 主题筛选</h4>
+                <div class="p1">
+                    <p id="95">利用LDA主题模型,设置主题数目为200,对模糊文本以及搜狗语料库进行训练,得到主题信息,计算四分位数后设置<i>Threshold</i><sub>clear</sub>=1.5,<i>Threshold</i><sub>fuzzy</sub>=2.0。</p>
+                </div>
+                <div class="p1">
+                    <p id="96">随机抽取模糊文本内的模糊主题和清晰主题,2类主题的主题词分布如表1所示。</p>
+                </div>
+                <div class="area_img" id="97">
+                    <p class="img_tit"><b>表1 模糊文本的模糊主题与清晰主题的主题词分布</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="97" border="1"><tr><td><br />主题</td><td>主题号</td><td>主题词</td></tr><tr><td rowspan="2"><br />模糊主题</td><td><br />1</td><td>数据处理、语言、MATLAB、AT89C51、互联网、可逆、个性化、着重、LXI、个性……</td></tr><tr><td><br />44</td><td>费用、时刻、DDR3、热度、应用服务器、操纵、对此、我院、给定、系统……</td></tr><tr><td rowspan="2"><br />清晰主题</td><td><br />155</td><td>单片机、实验、串行、51、仿真、硬件、设计、系统、原理……</td></tr><tr><td><br />114</td><td>程序设计、 教学、Java、课程、语言、实践、教育、计算机教育……</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="98">从表1可以看出,清晰主题与模糊主题之间主题词涵盖范围区别明显,模糊主题中包含不同类别的词语,如词语“数据处理”倾向于程序设计类,而词语“语言”则倾向于程序语言类别。此外,一个模糊主题内的各个主题词类别也不统一,词语间的间隔大,模糊主题内的主题词类别混杂,不利于模糊文档的分类。相对来讲,清晰主题中词语的语义则比较统一,例如,从主题词“单片机”“串行”“硬件”等词语可以看出,该主题的主题中心明确,主题词均倾向于微型计算机类别,从主题词“程序设计”“教学”“课程”等词语则可以看出,该主题词属于程序语言类,这类文档集合中大多为语言教学方面的论文。由于清晰主题可以将某一类别与其他类别明确的进行区分,因此选取清晰主题作为文档分类的特征之一。</p>
+                </div>
+                <div class="p1">
+                    <p id="99">模糊文本中的模糊主题数目为103,清晰主题数目为32。表1中4个主题在4类文档中出现的次数如图5所示。</p>
+                </div>
+                <div class="area_img" id="100">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910037_100.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图5 模糊文本中主题在各类文档中的出现次数" src="Detail/GetImg?filename=images/JSJC201910037_100.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图5 模糊文本中主题在各类文档中的出现次数</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910037_100.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="101">从图5可以看出,清晰主题只会在某一类别内经常出现,而模糊主题在每个类别下出现的次数大致相同。</p>
+                </div>
+                <div class="p1">
+                    <p id="102">随机抽取搜狗语料库内文本的模糊主题、清晰主题,2类主题的主题词分布如表2所示。</p>
+                </div>
+                <div class="area_img" id="103">
+                    <p class="img_tit"><b>表2 普通文本的模糊主题与清晰主题的主题词分布</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="103" border="1"><tr><td><br />主题</td><td>主题号</td><td>主题词</td></tr><tr><td rowspan="2"><br />模糊主题</td><td><br />16</td><td>农业、发展、经济、地区、艺术、生产、我国、投资、企业、环境……</td></tr><tr><td><br />113</td><td>艺术、经济、发展、生产、市场、政府、中国、企业、国家、农业……</td></tr><tr><td rowspan="2"><br />清晰主题</td><td><br />28</td><td>艺术、文艺、历史、中国、审美、文化、生产、一种、形式、精神……</td></tr><tr><td><br />146</td><td>农业、经济、国家、发展、生产、技术、政府、市场、我国、社会……</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="104">普通文本中的模糊主题数目为34,清晰主题数目为93。表2中4个主题在4类文档中出现的次数如图6所示。</p>
+                </div>
+                <div class="area_img" id="105">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910037_105.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图6 普通文本中主题在各类文档中的出现次数" src="Detail/GetImg?filename=images/JSJC201910037_105.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图6 普通文本中主题在各类文档中的出现次数</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910037_105.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="106">由表1、表2、图5和图6可以看出,对模糊文本和普通文本建立主题模型时,同样会存在模糊主题与清晰主题的差别。模糊文本中清晰主题的数量较少,仅有32个清晰主题,而模糊主题的数量达到103个。对于普通文本,清晰主题的数量则比较多,有93个,模糊主题的数量仅有34个。从清晰主题与模糊主题之间数量的差距就可以看出模糊文本与普通文本间的区别。</p>
+                </div>
+                <h4 class="anchor-tag" id="107" name="107">3.3 分类实验</h4>
+                <div class="p1">
+                    <p id="108">本文利用10折交叉验证方法对模糊文本进行分类实验,选取的对比方法描述如下:</p>
+                </div>
+                <div class="p1">
+                    <p id="109">1)LDA+KNN。将各个文档的主题分布通过KNN模型来对模糊文档进行分类的方法。</p>
+                </div>
+                <div class="p1">
+                    <p id="110">2)C_LDA+KNN。选择清晰主题作为分类特征,并结合KNN模型进行分类的方法。</p>
+                </div>
+                <div class="p1">
+                    <p id="111">3)LDA+word2vec<citation id="146" type="reference"><link href="23" rel="bibliography" /><sup>[<a class="sup">11</a>]</sup></citation>。将LDA生成的主题映射到word2vec词向量空间内的方法。</p>
+                </div>
+                <div class="p1">
+                    <p id="112">4)C_LDA+word2vec。将清晰主题映射到词向量空间后计算各个文档与各清晰主题距离并作为特征,利用KNN模型进行分类的方法。</p>
+                </div>
+                <div class="p1">
+                    <p id="113">5)RNN+word2vec。计算词向量,利用RNN深度学习模型进行分类的方法<citation id="147" type="reference"><link href="35" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>。</p>
+                </div>
+                <div class="p1">
+                    <p id="114">计算上述5种方法的准确率、召回率和F1值,结果如表3所示。</p>
+                </div>
+                <div class="area_img" id="115">
+                    <p class="img_tit"><b>表3 模糊文本分类准确率、召回率、F1值对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="115" border="1"><tr><td>分类器</td><td>准确率</td><td>召回率</td><td>F1值</td></tr><tr><td>LDA+KNN</td><td>0.788 60</td><td>0.763 63</td><td>0.775 91</td></tr><tr><td><br />C_LDA+KNN</td><td>0.812 75</td><td>0.811 70</td><td>0.812 22</td></tr><tr><td><br />LDA+word2vec</td><td>0.830 56</td><td>0.806 43</td><td>0.818 32</td></tr><tr><td><br />C_LDA+word2vec</td><td>0.851 51</td><td>0.835 61</td><td>0.843 49</td></tr><tr><td><br />RNN+word2vec</td><td>0.861 38</td><td>0.837 82</td><td>0.849 43</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="116">从表3可以看出,在对模糊文本进行分类时,选择清晰主题进行优化主题分布的方法(C_LDA+KNN和C_LDA+word2vec),其准确率、召回率和F1值均优于同等条件下使用LDA所用的主题(LDA+KNN和LDA+word2vec)进行分类的方法,同时其效果与深度学习模型分类效果基本相同。</p>
+                </div>
+                <div class="p1">
+                    <p id="117">对普通文本进行分类实验,计算各分类方法10次实验的准确率、召回率和F1值的均值如表4所示。</p>
+                </div>
+                <div class="area_img" id="118">
+                    <p class="img_tit"><b>表4 普通文本分类的准确率、召回率、F1值对比</b> <a class="downexcel" onclick="DownLoadReportExcel(this)">导出到EXCEL</a></p>
+                    <p class="img_tit"></p>
+                    <p class="img_note"></p>
+                    <table id="118" border="1"><tr><td>分类器</td><td>准确率</td><td>召回率</td><td>F1值</td></tr><tr><td>LDA+KNN</td><td>0.954 61</td><td>0.927 31</td><td>0.940 76</td></tr><tr><td><br />C_LDA+KNN</td><td>0.958 17</td><td>0.936 50</td><td>0.947 21</td></tr><tr><td><br />LDA+word2vec</td><td>0.960 17</td><td>0.942 69</td><td>0.951 35</td></tr><tr><td><br />C_LDA+word2vec</td><td>0.959 72</td><td>0.950 87</td><td>0.955 27</td></tr><tr><td><br />RNN+word2vec</td><td>0.967 04</td><td>0.938 25</td><td>0.952 42</td></tr></table>
+                    <form name="form" action="/kxreader/Detail/DownloadReportExcel" method="POST" style="display:inline">
+                        <input type="hidden" name="hidTable" value="" />
+                        <input type="hidden" name="hidFileName" value="" />
+                    </form>
+                    <p class="img_note"></p>
+                    <p class="img_note"></p>
+                </div>
+                <div class="p1">
+                    <p id="119">从表4可以看出,对于普通文本分类,由于清晰主题数量足够多,因此不论是否筛选清晰主题,其最终的实验结果都相差较小,在加入词向量空间后,各项指标提升程度并不明显。</p>
+                </div>
+                <div class="p1">
+                    <p id="120">本文研究目标是对模糊文本进行分类研究,基于主题信息的不同方法,通过工作特征曲线(Receiver Operator Characteristic Curve,ROC)和ROC曲线下的面积(Area Under Curve,AUC)对模糊文本分类器进行对比,结果如图7所示。</p>
+                </div>
+                <div class="area_img" id="121">
+                                <a class="zoom-in" href="Detail/GetImg?filename=images/JSJC201910037_121.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+                                    <img alt="图7 不同分类器的ROC曲线对比" src="Detail/GetImg?filename=images/JSJC201910037_121.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+                                </a>
+                                <p class="img_tit"><b>图7 不同分类器的ROC曲线对比</b>  <a class="btn-zoomin" href="Detail/GetImg?filename=images/JSJC201910037_121.jpg&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!"></a><a class="downimg">&nbsp;&nbsp;下载原图</a></p>
+                            <p class="img_tit"></p>
+
+                </div>
+                <div class="p1">
+                    <p id="122">从图7可以看出,选择清晰主题进行分类的2个分类器的ROC曲线均高于未筛选主题的分类器,且AUC值同样也大于未筛选主题的分类器。</p>
+                </div>
+                <div class="p1">
+                    <p id="123">上述结果表明,利用清晰主题对模糊文本进行分类时,在加入词向量空间后,分类器的分类性能也有了很大程度的提高,说明词语级别的语义信息对模糊文本分类具有重要的作用。使用清晰主题结合词向量空间模型的分类器C_LDA+word2ve进行模糊文本分类,由于其综合考虑了多种信息,使得结果最优,相比之下,单纯使用LDA主题结合机器学习算法KNN进行分类的效果最差。</p>
+                </div>
+                <h4 class="anchor-tag" id="124" name="124">3.4 结果分析</h4>
+                <div class="p1">
+                    <p id="125">由表1与表2中清晰主题与模糊主题之间主题词对比可知,本文通过计算主题分布来选择清晰主题的方法可以选择出主题中心明确的主题。由表3和图7可知,在使用清晰主题进行分类时,效果比使用全部主题来分类的效果更优,也验证了将主题级别的信息映射到词向量空间内的效果比单纯使用主题分布来分类的效果好。其中,将清晰主题映射到word2vec词向量空间下,计算不同文档与清晰主题间的距离来对模糊文档进行分类,此类方法相较于其他方法对模糊文本分类的效果更优。此外,相较于深度学习模型<citation id="148" type="reference"><link href="35" rel="bibliography" /><sup>[<a class="sup">17</a>]</sup></citation>,本文所采取的分类有具体计算过程,避免了深度学习模型的黑盒过程,可以知道文本分类的依据及分类过程的影响因素。由此可知,相较于文献<citation id="149" type="reference">[<a class="sup">7</a>]</citation>与文献<citation id="150" type="reference">[<a class="sup">11</a>]</citation>未筛选主题信息的分类方法,选择出有效的清晰主题并映射到词向量空间内,计算文档与各个主题距离来对文本分类的方法能有效避免模糊文档之间共有的模糊主题的影响,提升模糊文档分类的效果。</p>
+                </div>
+                <h3 id="126" name="126" class="anchor-tag">4 结束语</h3>
+                <div class="p1">
+                    <p id="127">对于主题不明确或不同类别间的文本共享多数主题的模糊文本,利用普通分类方法较难区分。为此,本文提出基于主题优化分布的模糊分类方法。基于LDA主题信息,分析模糊文本与普通文本之间的差别,将四分位数设置为清晰主题筛选的阈值来选择主题,并将其映射到词向量空间内作为分类的特征,进而得到分类结果。实验结果表明,与C_LDA+KNN方法相比,该方法具有较好的文本分类效果。下一步将研究如何在LDA建模时避免产生模糊主题。</p>
+                </div>
+
+        <!--brief end-->
+        
+        <!--conten left  end-->
+        <!--增强附件-->
+        
+
+        <!--reference start-->
+            <div class="reference anchor-tag" id="a_bibliography">
+                    <h3>参考文献</h3>
+                                        <p id="3">
+                            <a id="bibliography_1" >
+                                    <b>[1]</b>
+                                 BLEI D M,NG A Y,JORDAN M I.Latent Dirichlet allocation[J].The Journal of Machine Learning Research,2003,3(4/5):993-1022.
+                            </a>
+                        </p>
+                        <p id="5">
+                            <a id="bibliography_2" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Efficient estimation of word representations in vector space">
+
+                                <b>[2]</b> MIKOLOV T,CHEN K,CORRADO G,et al.Efficient estimation of word representations in vector space[EB/OL].[2018-06-05].https://arxiv.org/pdf/1301.3781.pdf.
+                            </a>
+                        </p>
+                        <p id="7">
+                            <a id="bibliography_3" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=NJSE201501009&amp;v=MjgzMjJmWWE3RzRIOVRNcm85RmJZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hWTDdMS3k=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[3]</b> 熊富林,邓怡豪,唐晓晟.Word2vec的核心架构及其应用[J].南京师范大学学报(工程技术版),2015,15(1):43-48.
+                            </a>
+                        </p>
+                        <p id="9">
+                            <a id="bibliography_4" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=KJQB201502061&amp;v=MzEyNzVEWllRS0RIODR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0RnkzaFZMN0xMaWZhYkxHNEg5VE1yWTk=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[4]</b> 周练.Word2vec的工作原理及应用探究[J].科技情报开发与经济,2015,25(2):145-148.
+                            </a>
+                        </p>
+                        <p id="11">
+                            <a id="bibliography_5" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=TSQB201422025&amp;v=MjcwNjI3YWJMRzRIOVhPclk5SFlZUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hWTDdMTVQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[5]</b> 秦春秀,祝婷,赵捧未,等.自然语言语义分析研究进展[J].图书情报工作,2014,58(22):130-137.
+                            </a>
+                        </p>
+                        <p id="13">
+                            <a id="bibliography_6" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Probabilistic topic models for text data retrieval and analysis">
+
+                                <b>[6]</b> ZHAI Chengxiang.Probabilistic topic models for text data retrieval and analysis[C]//Proceedings of the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval.New York,USA:ACM Press,2017:1399-1401.
+                            </a>
+                        </p>
+                        <p id="15">
+                            <a id="bibliography_7" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CMFD&amp;filename=1016128013.nh&amp;v=MDg1MjhGdEhOckpFYlBJUUtESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hWTDdMVkYyNkdMSzY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[7]</b> 张勇.基于词性与LDA主题模型的文本分类技术研究[D].合肥:安徽大学,2016.
+                            </a>
+                        </p>
+                        <p id="17">
+                            <a id="bibliography_8" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A partially supervised cross-collection topic model for cross-domain text classification">
+
+                                <b>[8]</b> BAO Yang,COLLIER N,DATTA A.A partially supervised cross-collection topic model for cross-domain text classification[C]//Proceedings of the 22nd ACM International Conference on Information and Knowledge Management.New York,USA:ACM Press,2013:239-248.
+                            </a>
+                        </p>
+                        <p id="19">
+                            <a id="bibliography_9" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Improving LDAtopic models for microblogs via tweet pooling and automatic labeling">
+
+                                <b>[9]</b> MEHROTRA R,SANNER S,BUNTINE W,et al.Improving LDA topic models for microblogs via tweet pooling and automatic labeling[C]//Proceedings of the 36th International ACM SIGIR Conference on Research and Development in Information Retrieval.New York,USA:ACM Press,2013:889-892.
+                            </a>
+                        </p>
+                        <p id="21">
+                            <a id="bibliography_10" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Improving Topic Models with Latent Feature Word Representations">
+
+                                <b>[10]</b> NGUYEN D Q,BILLINGSLEY R,DU L,et al.Improving topic models with latent feature word representations[J].Transactions of the Association for Computational Linguistics,2015,3:299-313.
+                            </a>
+                        </p>
+                        <p id="23">
+                            <a id="bibliography_11" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A Hybrid Document Feature Extraction Method Using Latent Dirichlet Allocation and Word2Vec">
+
+                                <b>[11]</b> WANG Zhibo,MA Long,ZHANG Yanqing.A hybrid document feature extraction method using latent Dirichlet allocation and Word2Vec[C]//Proceedings of International Conference on Data Science in Cyberspace.Washington D.C.,USA:IEEE Press,2016:98-103.
+                            </a>
+                        </p>
+                        <p id="25">
+                            <a id="bibliography_12" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Topic2Vec:learning distributed representations of topics">
+
+                                <b>[12]</b> NIU Liqiang,DAI Xinyu,ZHANG Jianbing,et al.Topic2Vec:learning distributed representations of topics[C]//Proceedings of International Conference on Asian Language Processing.Washington D.C.,USA:IEEE Press,2015:193-196.
+                            </a>
+                        </p>
+                        <p id="27">
+                            <a id="bibliography_13" target="_blank" href="http://scholar.cnki.net/result.aspx?q=A text information retrieval method by integrating global and local textual information">
+
+                                <b>[13]</b> WANG Zhibo,ZHANG Yanqing.A text information retrieval method by integrating global and local textual information[C]//Proceedings of the 40th Annual Computer Software and Applications Conference.Washington D.C.,USA:IEEE Press,2016:504-505
+                            </a>
+                        </p>
+                        <p id="29">
+                            <a id="bibliography_14" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ201612004&amp;v=MjkxMjR2UjRUNmo1NE8zenFxQnRHRnJDVVJMT2VaZVJ0RnkzaFZMN0xQU25mZjdHNEg5Zk5yWTlGWUlRS0RIODQ=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[14]</b> 张群,王红军,王伦文.词向量与LDA相融合的短文本分类方法[J].现代图书情报技术,2016(12):27-35.
+                            </a>
+                        </p>
+                        <p id="31">
+                            <a id="bibliography_15" target="_blank" href="http://scholar.cnki.net/result.aspx?q=WE-LDA:A word embeddings augmented LDA model for Web services clustering">
+
+                                <b>[15]</b> SHI Min,LIU Jianxun,ZHOU Dong,et al.WE-LDA:a word embeddings augmented LDA model for Web services clustering[C]//Proceedings of IEEE International Conference on Web Services.Washington D.C.,USA:IEEE Press,2017:9-16.
+                            </a>
+                        </p>
+                        <p id="33">
+                            <a id="bibliography_16" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=DZJS201707001&amp;v=MTU1NjlqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hWTDdMSVRmQmZiRzRIOWJNcUk5RlpZUUtESDg0dlI0VDY=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[16]</b> 陈磊,李俊.基于LF-LDA和Word2vec的文本表示模型研究[J].电子技术,2017,46(7):1-5.
+                            </a>
+                        </p>
+                        <p id="35">
+                            <a id="bibliography_17" target="_blank" href="http://scholar.cnki.net/result.aspx?q=Sentiment analysis of Chinese version using SVM &amp;amp; RNN">
+
+                                <b>[17]</b> XU Hongyang,LU Hui,YANG Guowei,et al.Sentiment analysis of Chinese version using SVM &amp; RNN[C]//Proceedings of the 6th International Conference on Information Engineering.New York,USA:ACM Press,2017:1-5.
+                            </a>
+                        </p>
+                        <p id="37">
+                            <a id="bibliography_18" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJJ201302020&amp;v=MzI3Mzh0R0ZyQ1VSTE9lWmVSdEZ5M2hWTDdMTHo3QlpMRzRIOUxNclk5SFpJUUtESDg0dlI0VDZqNTRPM3pxcUI=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[18]</b> 梁艳红,檀润华,马建红.面向产品创新设计的专利文本分类研究[J].计算机集成制造系统,2013,19(2):382-390.
+                            </a>
+                        </p>
+                        <p id="39">
+                            <a id="bibliography_19" target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=XDTQ2013Z1015&amp;v=MzIxODBESDg0dlI0VDZqNTRPM3pxcUJ0R0ZyQ1VSTE9lWmVSdEZ5M2hWTDdMUFNuZmY3RzRIOUttcm85RVlZUUs=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[19]</b> 周群,左文革,陈仕吉.基于百分位数的文献计量指标研究综述[J].现代图书情报技术,2013(7/8):82-88.
+                            </a>
+                        </p>
+                        <p id="41">
+                            <a id="bibliography_20" target="_blank" href="/kcms/detail/detail.aspx?dbcode=SJCM&amp;filename=SJCM2C778CE3D8BE1C1F0D5BFACE09716BB4&amp;v=MjE1MzVMR2RiRTNQcEdFT045ZVgxS3ptQVRuam9QUGc2UjJSSThmck9TTjhpYkNPTnZGU2lXV3I3SklGcG1hQnVIWWZPR1FsZkNwYlEzNU50aHdieTR3YXM9TmlmSVk3SA==&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">
+
+                                <b>[20]</b> KRISHNAMURTHI K,PANUGANTI V R,BULUSU V V.Understanding document semantics from summaries[J].ACM Transactions on Asian and Low-resource Language Information Processing,2016,16(1):1-20.
+                            </a>
+                        </p>
+            </div>
+        <!--reference end-->
+        <!--footnote start-->
+        <!--footnote end-->
+
+
+
+    </div>
+
+        <input id="fileid" type="hidden" value="JSJC201910037" />
+        <input id="dpi" type="hidden" value="600" />
+    </div>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6e967eb120601ea41b9d312166416aa6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+    
+
+
+<input id="hid_uid" name="hid_uid" type="hidden" value="WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!" />
+<input id="hid_kLogin_headerUrl" name="hid_kLogin_headerUrl" type="hidden" value="/KLogin/Request/GetKHeader.ashx%3Fcallback%3D%3F" />
+<input id="hid_kLogin_footerUrl" name="hid_kLogin_footerUrl" type="hidden" value="/KLogin/Request/GetKFooter.ashx%3Fcallback%3D%3F" />
+<div class="btn-link" style="display: none"><a target="_blank" href="/kcms/detail/detail.aspx?dbcode=CJFD&amp;filename=JSJC201910037&amp;v=MDYwMzMzenFxQnRHRnJDVVJMT2VaZVJ0RnkzaFZMN0xMejdCYmJHNEg5ak5yNDlHWTRRS0RIODR2UjRUNmo1NE8=&amp;uid=WEEvREcwSlJHSldRa1Fhb09jT0lPUU40eEV3U0VXYWdoQkszck0xZ2Fmdz0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!">知网节</a></div>
+<div class="popflow" id="popupTips" style="display: none;">
+    <div class="popflowArr"></div>
+    <div class="popflowCot">
+        <div class="hd"><a href="javascript:void(0);" onclick="$('#popupTips').hide();$('#popupmsg').html('')" class="close">X</a></div>
+        <div class="bd">
+            <p class="mes" id="popupmsg" name="popupmsg"></p>
+          
+        </div>
+    </div>
+</div>
+<input type="hidden" id="myexport" value="//kns.cnki.net" />
+
+<input type="hidden" id="KPCAPIPATH" value="//ishufang.cnki.net" />
+<input type="hidden" id="CitedTimes" value="" />
+<div class="link" id="GLSearch" style="display: none;">
+    <i class="icon-trangle"></i>
+    <div class="inner">
+        <a class="icon" id="copytext">复制</a>
+        <a class="icon" target="_blank" onclick="searchCRFD(this)">工具书搜索</a>
+    </div>
+</div>
+
+
+
+
+<input id="hidVirtualPath" name="hidVirtualPath" type="hidden" value="/kxreader" />
+<script src="/kxreader/bundles/detail?v=-ULdk-c6FkZHtJA2KAXPgHnyA8mtgyPnBde_C2VZ2BY1"></script>
+
+<script src="/kxreader/Scripts/layer.min.js" type="text/javascript"></script>
+
+<div id="footerBox" class="rootw footer">
+</div>
+<script>
+    if (typeof FlushLogin == 'function') {
+        FlushLogin();
+    }
+    modifyEcpHeader(true);
+</script>
+
+<!--图片放大功能 start-->
+<script src="/kxreader/bundles/imagebox?v=W4phPu9SNkGcuPeJclikuVE3PpRyIW_gnfjm_19nynI1"></script>
+
+<script type="text/javascript">
+    $(function () {
+        var j = $.noConflict();
+        j(function () {
+            j(".zoom-in,.btn-zoomin").imgbox({
+                'alignment': 'center',
+                'allowMultiple': false,
+                'overlayShow': true
+            });
+        })
+    });
+</script>
+<!--图片放大功能 end-->
+<div class="fixedbar">
+    <div class="backtop hiddenV" id="backtop">
+        <a id="backTopSide" href="javascript:scroll(0,0);" title=""></a>
+    </div>
+</div>
+<script type="text/javascript" src="/kxreader/Scripts/MathJax-2.6-latest/MathJax.js?config=MML_HTMLorMML-full"></script>
+
+</body>
+</html>
